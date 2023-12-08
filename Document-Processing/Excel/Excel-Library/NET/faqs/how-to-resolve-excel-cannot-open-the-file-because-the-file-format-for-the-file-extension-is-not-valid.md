@@ -1,14 +1,14 @@
 ---
-title: Excel cannot open the file in File Formats XlsIO | Syncfusion
-description: This page shows how to resolve "Excel cannot open the file because the file format is not valid..." using XlsIO.
-platform: file-formats
+title: Excel cannot open the file in Document Processing XlsIO | Syncfusion
+description: This page shows how to resolve "Excel cannot open the file because the Document Processing is not valid..." using XlsIO.
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
 # How to resolve "Excel cannot open the file 'filename.xlsx'..." error?
 
-This error "Excel cannot open the file 'filename.xlsx' because the file format for the file extension is not valid. Verify that the file has not been corrupted and that the file extension matches the format of the file" occurs when there is a mismatch between the file format and its extension. The default workbook creation version in XlsIO is Excel97-2003 (.xls). The application version set to the required version should match its file format during save, as in the below code. 
+This error "Excel cannot open the file 'filename.xlsx' because the Document Processing for the file extension is not valid. Verify that the file has not been corrupted and that the file extension matches the format of the file" occurs when there is a mismatch between the Document Processing and its extension. The default workbook creation version in XlsIO is Excel97-2003 (.xls). The application version set to the required version should match its Document Processing during save, as in the below code. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -57,9 +57,9 @@ workbook.SaveAs("Sample.xlsx")
 
 If the application version is ignored, then the workbook version should be set properly during creation and save.
 
-* To save a workbook in Excel2003 format, set the workbook version to Excel97to2003 and save the file with extension ‘.xls’ i.e. binary file format.
+* To save a workbook in Excel2003 format, set the workbook version to Excel97to2003 and save the file with extension ‘.xls’ i.e. binary Document Processing.
 
-* To save a workbook in Excel 2007 and above formats, set the workbook version to Excel2007 and above and save the file with extension __‘.____xlsx’__ i.e. open XML file format.
+* To save a workbook in Excel 2007 and above formats, set the workbook version to Excel2007 and above and save the file with extension __‘.____xlsx’__ i.e. open XML Document Processing.
 
 These are represented in the below code snippet.
 
@@ -95,4 +95,4 @@ workbook.SaveAs("Sample.xlsx")
 
 * [How to resolve the File does not contain workbook stream error](how-to-resolve-the-file-does-not-contain-workbook-stream-error)
 * [What are the known exceptions of XlsIO?](https://help.syncfusion.com/file-formats/xlsio/known-exceptions)
-* [What are the supported features by file formats?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-file-formats)
+* [What are the supported features by Document Processing?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-file-formats)

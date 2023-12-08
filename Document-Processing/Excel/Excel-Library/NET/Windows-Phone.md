@@ -1,7 +1,7 @@
 ---
 title: Windows Phone
 description: Briefs about loading and saving an Excel document in Windows Phone platform.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

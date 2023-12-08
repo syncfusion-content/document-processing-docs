@@ -1,7 +1,7 @@
 ---
 title: XlsIO Assemblies Required | Syncfusion
 description: Briefs the assemblies required to convert excel document to PDF, excel worksheet to image & excel chart to image for various platforms and frameworks.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Create Excel file in Console Application | Syncfusion
 description: Learn here how to create an Excel file in Console Application using Syncfusion Excel library.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

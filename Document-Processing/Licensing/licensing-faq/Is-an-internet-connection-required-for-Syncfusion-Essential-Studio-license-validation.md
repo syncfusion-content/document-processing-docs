@@ -2,7 +2,7 @@
 layout: post
 title: Licensing FAQ – Net need for ES license validation | Syncfusion
 description: Learn here some information about whether syncfusion Essential Studio license validation needs internet conncetion.
-platform: file-formats
+platform: document-processing
 control: Essential Studio
 documentation: ug
 ---

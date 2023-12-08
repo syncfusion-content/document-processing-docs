@@ -1,7 +1,7 @@
 ---
 title: WinRT
 description: Briefs about loading and saving an Excel document in WinRT platform.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

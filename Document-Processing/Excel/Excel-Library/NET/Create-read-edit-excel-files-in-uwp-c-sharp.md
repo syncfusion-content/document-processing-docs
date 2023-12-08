@@ -1,7 +1,7 @@
 ---
 title: Create, read, and edit Excel files in UWP | Syncfusion
 description: This section explains how to create, read, and edit Excel files in UWP applications using Syncfusion XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

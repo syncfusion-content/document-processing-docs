@@ -1,7 +1,7 @@
 ---
 title: Find and highlight data in Excel | Syncfusion
 description: This page shows how to find and highlight data in Excel using the Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

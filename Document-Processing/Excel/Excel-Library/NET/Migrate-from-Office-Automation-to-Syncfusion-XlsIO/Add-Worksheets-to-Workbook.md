@@ -1,7 +1,7 @@
 ---
 title: Add Worksheets to Workbook | Syncfusion
 description: Explains with an example on how to programmatically add worksheets to a workbook when working with template Excel document using Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

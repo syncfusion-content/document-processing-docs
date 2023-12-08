@@ -1,7 +1,7 @@
 ---
 title: What If Analysis Scenario Manager in Excel | Excel library | Syncfusion
 description: This section illustrates about Excel What If Analysis Scenario Manager and its various features in Syncfusion XlsIO (a .NET Excel library).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

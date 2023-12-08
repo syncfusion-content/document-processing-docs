@@ -1,7 +1,7 @@
 ---
 title: Create, read, and edit Excel files in Azure App Service on Windows | Syncfusion
 description: Explains how to create, read, and edit Excel files in Azure App Service on Windows using Syncfusion XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

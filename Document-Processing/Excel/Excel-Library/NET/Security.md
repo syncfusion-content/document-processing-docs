@@ -1,7 +1,7 @@
 ---
 title: Security in Excel (XlsIO) Library | Excel Protected View | Syncfusion
 description: This section explains all about the security feature(Excel Protected View) of the Syncfusion Excel (XlsIO) Library and more.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

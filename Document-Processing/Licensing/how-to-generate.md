@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Overview of Syncfusion license generation - Syncfusion
-description: Learn here about how to generate Syncfusion FileFormats license key for syncfusion FileFormats application for license validation.
-platform: file-formats
+description: Learn here about how to generate Syncfusion Document Processing license key for syncfusion Document Processing application for license validation.
+platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Generate Syncfusion FileFormats License key
+# Generate Syncfusion Document Processing License key
 
-License keys for FileFormats can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion account. 
+License keys for Document Processing can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion account. 
 
 ![Get License Key](licensing-images/generate-license.png)
 
@@ -48,4 +48,4 @@ If the Syncfusion account is not associated with a trial, license, or expired tr
 
 ## See Also
 
-* [How to Register Syncfusion License Key in FileFormats Application?](https://help.syncfusion.com/file-formats/licensing/how-to-register-in-an-application)
+* [How to Register Syncfusion License Key in Document Processing Application?](https://help.syncfusion.com/file-formats/licensing/how-to-register-in-an-application)

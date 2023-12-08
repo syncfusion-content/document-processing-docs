@@ -1,7 +1,7 @@
 ---
 title: How to set error bars in chart | Syncfusion
 description: This page demonstrates with an example on how to set error bars in chart with Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

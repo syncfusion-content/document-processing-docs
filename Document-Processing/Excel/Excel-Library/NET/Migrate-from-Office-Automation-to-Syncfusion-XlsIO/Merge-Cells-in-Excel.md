@@ -1,7 +1,7 @@
 ---
 title: Merge Cells in Excel | Syncfusion
 description: Explains with an example on how to merge a range of cells in Excel into a single cell programattically, using Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

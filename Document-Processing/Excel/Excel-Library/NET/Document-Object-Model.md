@@ -1,7 +1,7 @@
 ---
 title: Document Object Model representation | Syncfusion
 description: This section describes the structure of Document Object Model structure for Syncfusion Essential XlsIO
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Convert Excel to Image in AWS Lambda | Syncfusion
 description: Convert Excel to Image in AWS Lambda using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

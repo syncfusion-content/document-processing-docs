@@ -1,7 +1,7 @@
 ---
 title: Avoid exception when adding worksheets with same name | Syncfusion
 description: This page helps to avoid exception when adding worksheets with same name in Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

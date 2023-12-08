@@ -1,7 +1,7 @@
 ---
 title: Slicer in Excel | Excel library | Syncfusion
 description: This section illustrates about Excel Slicers and its various features in Syncfusion XlsIO (a .NET Excel library).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

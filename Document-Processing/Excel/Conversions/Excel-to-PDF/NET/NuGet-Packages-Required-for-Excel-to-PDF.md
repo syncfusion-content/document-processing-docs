@@ -1,7 +1,7 @@
 ---
 title: NuGet Packages for Excel to PDF | Syncfusion
 description: This section illustrates the NuGet packages required to perform Excel to PDF conversion in various platforms and frameworks.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

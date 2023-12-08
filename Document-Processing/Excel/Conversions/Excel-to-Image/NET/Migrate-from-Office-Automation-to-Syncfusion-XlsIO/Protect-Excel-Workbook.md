@@ -1,7 +1,7 @@
 ---
 title: Protect Excel Workbook | Syncfusion
 description: Explains with an example on how to protect Excel workbook with password programmatically, using Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

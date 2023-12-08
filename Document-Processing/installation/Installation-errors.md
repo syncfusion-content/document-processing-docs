@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Installation Errors in FileFormats - Syncfusion
-description: Learn here about the common installation errors and solution to those errors in Syncfusion FileFormats Components installation.
-platform: file-formats
+title: Installation Errors in Document Processing - Syncfusion
+description: Learn here about the common installation errors and solution to those errors in Syncfusion Document Processing Components installation.
+platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
@@ -23,7 +23,7 @@ This article describes the most common installation errors, as well as the cause
 
 ### Problem
 
-**Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio for FileFormats installer.
+**Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio for Document Processing installer.
 
 ![Alert Message](Errors/Installation_Errors_img1.png)
 
@@ -40,7 +40,7 @@ Only a licensed unlock key can unlock a licensed installer. So, to unlock the Li
 
 ### Problem
 
-**Error Message:** Your license for Syncfusion Essential Studio for FileFormats has been expired since {date}. Please renew your subscription and try again.
+**Error Message:** Your license for Syncfusion Essential Studio for Document Processing has been expired since {date}. Please renew your subscription and try again.
 
 **Online Installer**
 
@@ -63,7 +63,7 @@ You can choose from the options listed below.
 
 ### Problem
 
-**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio for FileFormats under your account.
+**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio for Document Processing under your account.
 
 <em>**Offline installer**</em>
 

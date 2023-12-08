@@ -1,7 +1,7 @@
 ---
 title: Zip files using the Syncfusion.Compression.Zip namespace | Syncfusion
 description: This page demonstrates with an example on how to zip files using the Syncfusion.Compression.Zip namespace.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

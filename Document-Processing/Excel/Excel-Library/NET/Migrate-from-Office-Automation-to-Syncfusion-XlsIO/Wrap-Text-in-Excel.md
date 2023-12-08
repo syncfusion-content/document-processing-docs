@@ -1,7 +1,7 @@
 ---
 title: Wrap Text in Excel | Syncfusion
 description: Explains with an example on how to apply wrap text in Excel that allows to fit a long text in a single cell using Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

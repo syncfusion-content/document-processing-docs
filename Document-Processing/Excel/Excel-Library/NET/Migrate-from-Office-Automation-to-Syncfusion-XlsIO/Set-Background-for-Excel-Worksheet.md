@@ -1,7 +1,7 @@
 ---
 title: Set Background for Excel Worksheet | Syncfusion
 description: Explains with an example on how to set background for Excel Worksheet with a single image to be tiled to fill the whole screen using Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

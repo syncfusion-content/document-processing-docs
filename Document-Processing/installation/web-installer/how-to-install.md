@@ -1,32 +1,32 @@
 ---
 layout: post
-title: Installing Syncfusion FileFormats web installer - Syncfusion
-description: Learn here about how to install Syncfusion FileFormats web installer after downloading from our Syncfusion website.
-platform: file-formats
+title: Installing Syncfusion Document Processing web installer - Syncfusion
+description: Learn here about how to install Syncfusion Document Processing web installer after downloading from our Syncfusion website.
+platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion FileFormats web installer
+# Installing Syncfusion Document Processing web installer
 
 
 ## Overview
 
-For the Essential Studio FileFormats product, Syncfusion offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio products you have chosen. You can get the most recent version of Essential Studio Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
+For the Essential Studio Document Processing product, Syncfusion offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio products you have chosen. You can get the most recent version of Essential Studio Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
 
  
 ## Installation
 
-The steps below show how to install Essential Studio FileFormats Web Installer.
+The steps below show how to install Essential Studio Document Processing Web Installer.
 
-1.  Open the Syncfusion Essential Studio FileFormats Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.  Open the Syncfusion Essential Studio Document Processing Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
     
     N> The installer wizard extracts the syncfusionessentialfileformatswebinstaller_{version}.exe dialog, which displays the package's unzip operation.
     
-2. 	The Syncfusion FileFormats Web Installer's welcome wizard will be displayed. Click the Next button.
+2. 	The Syncfusion Document Processing Web Installer's welcome wizard will be displayed. Click the Next button.
 
     ![Welcome wizard](images/Step-by-Step-Installation_img2.png)
 
@@ -110,29 +110,29 @@ The steps below show how to install Essential Studio FileFormats Web Installer.
 	
 ## Uninstallation
 
-Syncfusion FileFormats installer can be uninstalled in two ways.
+Syncfusion Document Processing installer can be uninstalled in two ways.
 
-   * Uninstall the FileFormats using the Syncfusion FileFormats web installer
-   * Uninstall the FileFormats from Windows Control Panel
+   * Uninstall the Document Processing using the Syncfusion Document Processing web installer
+   * Uninstall the Document Processing from Windows Control Panel
 
-Follow either one of the option below to uninstall Syncfusion Essential Studio FileFormats installer.
+Follow either one of the option below to uninstall Syncfusion Essential Studio Document Processing installer.
   
-**Option 1: Uninstall the FileFormats using the Syncfusion FileFormats web installer**
+**Option 1: Uninstall the Document Processing using the Syncfusion Document Processing web installer**
 
 Syncfusion provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
 	
-**Option 2: Uninstall the FileFormats from Windows Control Panel**  
+**Option 2: Uninstall the Document Processing from Windows Control Panel**  
 	
-You can uninstall all the installed products by selecting the **Syncfusion Essential Studio {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall FileFormats alone by selecting the **Syncfusion Essential Studio for FileFormats {version}** entry (element 2 in the below screenshot) from the Windows control panel.
+You can uninstall all the installed products by selecting the **Syncfusion Essential Studio {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Document Processing alone by selecting the **Syncfusion Essential Studio for Document Processing {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 	
-N> If the **Syncfusion Essential Studio for FileFormats {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio FileFormats alone will be removed and the below default MSI uninstallation window will be displayed.	
+N> If the **Syncfusion Essential Studio for Document Processing {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio Document Processing alone will be removed and the below default MSI uninstallation window will be displayed.	
 
-1.  The Syncfusion FileFormats Web Installer's welcome wizard will be displayed. Click the Next button
+1.  The Syncfusion Document Processing Web Installer's welcome wizard will be displayed. Click the Next button
 	
     ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 	

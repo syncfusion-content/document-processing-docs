@@ -1,7 +1,7 @@
 ---
 title: Convert image from URL in Excel to PDF | Syncfusion
 description: This page shows how to image from URL in Excel to PDF using the Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

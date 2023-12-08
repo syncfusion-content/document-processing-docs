@@ -1,7 +1,7 @@
 ---
 title: Convert hidden worksheets alone to image | Syncfusion
 description: This page shows how to convert hidden worksheets alone to image using the Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

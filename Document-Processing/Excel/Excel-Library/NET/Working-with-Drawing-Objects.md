@@ -1,7 +1,7 @@
 ---
 title: Working with Drawing Objects | Syncfusion
 description: This section explains about drawing objects in Essential XlsIO. XlsIO provides Option button support only for XLSX format.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

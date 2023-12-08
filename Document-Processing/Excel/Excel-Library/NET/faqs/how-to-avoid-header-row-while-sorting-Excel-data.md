@@ -1,7 +1,7 @@
 ---
 title: How to avoid header row while sorting Excel data | XlsIO | Syncfusion
 description: Code example to avoid header row while sorting Excel data using Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

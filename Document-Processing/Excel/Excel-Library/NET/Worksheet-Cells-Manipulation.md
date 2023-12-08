@@ -1,13 +1,13 @@
 ---
 title: Worksheet Cells Manipulation in .NET XlsIO | Syncfusion
 description: This section illustrates about cells manipulation in Excel worksheet using Syncfusion XlsIO (a .NET Excel library).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, write excel cell, fill excel, write excel, update excel, syncfusion, xlsio
 ---
 
-# Worksheet Cells Manipulation in File Formats XlsIO
+# Worksheet Cells Manipulation in Document Processing XlsIO
 
 The [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) interface represents a single cell or a group of cells in a worksheet. XlsIO has several useful methods for accessing, manipulating and formatting the content in the cells.
 
