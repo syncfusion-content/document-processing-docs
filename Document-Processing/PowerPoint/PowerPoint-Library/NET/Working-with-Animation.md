@@ -1,7 +1,7 @@
 ---
 title: Working with Animations in PowerPoint presentation | Syncfusion
 description: Learn here all about working with animations of Syncfusion PowerPoint Presentation Library and more.
-platform: file-formats
+platform: document-processing
 control: Essential Presentation
 documentation: UG
 keywords: PowerPoint animation, slide animation, shape animation, pptx animation

@@ -1,7 +1,7 @@
 ---
 title: Create Word document in Console Application | Syncfusion 
 description: Create a Word document in Console Application using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

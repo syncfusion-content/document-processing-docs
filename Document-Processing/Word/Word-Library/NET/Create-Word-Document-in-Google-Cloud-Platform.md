@@ -1,7 +1,7 @@
 --- 
 title: Create Word document in GCP | Syncfusion 
 description: Learn how to create a Word document in Google Cloud Platform (GCP) using .NET Core Word (DocIO) library in C#. 
-platform: file-formats 
+platform: document-processing
 control: DocIO 
 documentation: UG 
 --- 

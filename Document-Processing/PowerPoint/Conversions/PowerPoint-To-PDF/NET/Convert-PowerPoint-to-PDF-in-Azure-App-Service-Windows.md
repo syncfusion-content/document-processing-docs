@@ -1,7 +1,7 @@
 ---
 title: Convert PPTX to PDF in Azure App Service on Windows | Syncfusion
 description: Convert PPTX to PDF in Azure App Service on Windows using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

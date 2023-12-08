@@ -1,7 +1,7 @@
 ---
 title: Working with Paragraphs in .NET Word library | Syncfusion
 description: Learn how to work with paragraphs, lists, and child elements of paragraphs in a Word document using the .NET Word (DocIO) library.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

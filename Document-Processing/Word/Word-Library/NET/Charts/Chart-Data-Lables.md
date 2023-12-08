@@ -1,7 +1,7 @@
 ---
 title: Modify the Appearance of Data Labels | Syncfusion
 description: Learn how to modify the appearance of data labels in a chart in a Word document using Syncfusion .NET Word (DocIO) library without Microsoft Word.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Working with Tables in .NET Word (DocIO) library | Syncfusion
 description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word (DocIO) library.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

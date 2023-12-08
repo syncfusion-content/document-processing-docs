@@ -1,7 +1,7 @@
 ---
 title: Loading and saving the PowerPoint Presentation | Syncfusion
 description: Learn here all about loading, saving,and modifying the Presentation of Syncfusion PowerPoint Library and more.
-platform: file-formats
+platform: document-processing
 control: Presentation
 documentation: UG
 ---

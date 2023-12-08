@@ -1,7 +1,7 @@
 ---
 title: Convert Word to Image in Azure App Service on Windows | Syncfusion
 description: Convert Word to image in Azure App Service on Windows using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

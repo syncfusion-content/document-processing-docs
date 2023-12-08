@@ -1,7 +1,7 @@
 ---
 title: Create PowerPoint document in AWS | Syncfusion
 description: Learn how to create a PowerPoint document in Amazon Web Services (AWS) using .NET Core PowerPoint library (Presentation) in C#.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

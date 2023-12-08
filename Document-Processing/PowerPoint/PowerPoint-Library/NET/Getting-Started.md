@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Essential Presentation library | Syncfusion
 description: Getting started with Essential Presentation library; Creating a PowerPoint Presentation; Modifying the existing PowerPoint presentation
-platform: file-formats
+platform: document-processing
 control: Presentation
 documentation: UG
 ---

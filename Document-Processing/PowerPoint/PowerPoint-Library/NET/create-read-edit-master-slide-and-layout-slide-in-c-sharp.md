@@ -1,7 +1,7 @@
 ---
 title: Create, read and edit Master and Layout slides in CSharp |Syncfusion|
 description: Create, read, and edit Master slides and Layout slides using Syncfusion PowerPoint library (Essential Presentation).
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

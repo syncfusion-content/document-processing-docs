@@ -1,7 +1,7 @@
 ---
 title: Open and save Word document in Azure App Service on Linux | Syncfusion
 description: Open and save Word document in Azure App Service on Linux using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

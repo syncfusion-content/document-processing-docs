@@ -1,7 +1,7 @@
 ---
 title: Document Object Model of the Essential Presentation library|Syncfusion
 description: Learn here about the document object model of the Syncfusion Essential PowerPoint Presentation library and more.
-platform: file-formats
+platform: document-processing
 control: Presentation
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Open and save Presentation in WinUI | Syncfusion
 description: Open and save Presentation in WinUI using WinUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Loading & Saving Word document in C# | DocIO | Syncfusion
 description: Learn to open and save the Word document in C# and VB.NET using Syncfusion .NET Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

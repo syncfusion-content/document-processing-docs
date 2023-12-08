@@ -1,7 +1,7 @@
 ---
 title: Find and replace in Word document | DocIO | Syncfusion
 description: Learn how to find a text and replace it with another text, image, or table in a Word document using the .NET Word (DocIO) library.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---
