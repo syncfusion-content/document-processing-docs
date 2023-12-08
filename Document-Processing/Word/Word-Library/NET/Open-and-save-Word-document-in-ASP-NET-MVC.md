@@ -1,7 +1,7 @@
 ---
 title: Open and save Word document in ASP.NET MVC | Syncfusion
 description: Open and save Word document in ASP.NET MVC application using Syncfusion .NET Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Supported and Unsupported Features | Syncfusion
 description: Know more about the File Format’s supported and unsupported features of Presentation Library and its various platforms.
-platform: file-formats
+platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Supported and Unsupported Features of Presentation library

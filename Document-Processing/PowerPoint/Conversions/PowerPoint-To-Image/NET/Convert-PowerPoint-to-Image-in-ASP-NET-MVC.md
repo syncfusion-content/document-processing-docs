@@ -1,7 +1,7 @@
 ---
 title: Convert PowerPoint to Image in ASP.NET MVC | Syncfusion
 description: Convert PowerPoint to image in ASP.NET MVC using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

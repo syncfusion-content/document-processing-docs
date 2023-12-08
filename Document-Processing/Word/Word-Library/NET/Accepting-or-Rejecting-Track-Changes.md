@@ -1,7 +1,7 @@
 ---
 title: Accept or reject track changes | DocIO | Syncfusion
 description: Learn how to accept or reject the track changes in a Word document using the .NET Word (DocIO) library without Microsoft Word.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

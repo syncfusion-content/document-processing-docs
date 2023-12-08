@@ -1,7 +1,7 @@
 ---
 title: Convert PowerPoint to Image in Blazor | Syncfusion
 description: Convert PowerPoint to image in Blazor using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

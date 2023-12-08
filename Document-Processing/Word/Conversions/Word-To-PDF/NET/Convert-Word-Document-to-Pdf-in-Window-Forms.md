@@ -1,7 +1,7 @@
 ---
 title: Convert Word to PDF in Windows Forms | Syncfusion 
 description: Convert Word to PDF in Windows Forms using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

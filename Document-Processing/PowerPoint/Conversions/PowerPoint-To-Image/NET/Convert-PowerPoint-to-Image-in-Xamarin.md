@@ -1,7 +1,7 @@
 ---
 title: Convert PowerPoint to Image in Xamarin | Syncfusion
 description: Convert PowerPoint to image in Xamarin using Xamarin PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

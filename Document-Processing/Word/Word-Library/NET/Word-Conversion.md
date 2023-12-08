@@ -1,7 +1,7 @@
 ---
 title: Work document Conversion | Word library (DocIO) | Syncfusion
 description: Learn how to convert a Word document into other supported file formats such as RTF, Text, HTML, Markdown, PDF, and image using the .NET Word library.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

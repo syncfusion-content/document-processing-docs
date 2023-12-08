@@ -1,7 +1,7 @@
 ---
 title: Open and save Presentation in Azure Functions v1 | Syncfusion
 description: Open and save Presentation in Azure Functions v1 using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Open and save Word document in .NET MAUI | Syncfusion
 description: Open and save Word document in .NET MAUI application using Syncfusion .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

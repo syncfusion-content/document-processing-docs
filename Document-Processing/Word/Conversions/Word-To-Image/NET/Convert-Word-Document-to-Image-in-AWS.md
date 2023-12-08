@@ -1,7 +1,7 @@
 ---
 title: Convert Word to Image in AWS | Syncfusion
 description: Learn how to convert a Word document to image in Amazon Web Services (AWS) using Syncfusion .NET Core Word (DocIO) library in C#.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

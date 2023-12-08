@@ -1,7 +1,7 @@
 ---
 title: Working with Charts in Word document | DocIO | Syncfusion
 description: Learn how to add, edit, and remove charts in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

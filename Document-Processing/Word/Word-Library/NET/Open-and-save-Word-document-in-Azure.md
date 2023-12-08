@@ -1,7 +1,7 @@
 ---
 title: Open and save Word document in Microsoft Azure | Syncfusion
 description: Learn how to open and save a Word document in Azure services using Syncfusion .NET Word (DocIO) library in C#.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

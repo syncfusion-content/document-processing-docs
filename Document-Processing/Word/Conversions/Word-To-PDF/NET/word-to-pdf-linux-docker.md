@@ -1,7 +1,7 @@
 ---
 title: Word document to PDF Conversion in Linux Docker | DocIO | Syncfusion
 description: This section illustrates how to convert Word document to PDF using Syncfusion Word library (Essential DocIO) in Linux Docker
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

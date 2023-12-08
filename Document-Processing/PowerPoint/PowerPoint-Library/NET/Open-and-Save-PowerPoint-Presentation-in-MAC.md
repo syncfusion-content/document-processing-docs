@@ -1,7 +1,7 @@
 ---
 title: Open and save Presentation on macOS | Syncfusion
 description: Open and save Presentation in .NET Core application on macOS using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

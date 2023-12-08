@@ -1,7 +1,7 @@
 ---
 title: Modify the Appearance of Legend | Syncfusion
 description: Learn how to modify the appearance of legend in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

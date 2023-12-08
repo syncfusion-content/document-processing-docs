@@ -1,7 +1,7 @@
 ---
 title: Applying Watermark | DocIO | Syncfusion
 description: Learn how to insert text or picture watermark into a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

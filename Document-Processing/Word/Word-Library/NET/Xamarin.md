@@ -1,7 +1,7 @@
 ---
 title: Working with Xamarin
 description: Create a Xamarin application and load the document
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Create and edit PowerPoint files on Mac OS | Syncfusion
 description: Create, read and edit PowerPoint files in .NET Core application on Mac OS using Syncfusion .NET Core PowerPoint library (Presentation) without Microsoft Office
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

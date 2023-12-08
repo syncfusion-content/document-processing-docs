@@ -1,7 +1,7 @@
 ---
 title: Create Word document in GCP | Syncfusion
 description: Create Word document in Google App Engine using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

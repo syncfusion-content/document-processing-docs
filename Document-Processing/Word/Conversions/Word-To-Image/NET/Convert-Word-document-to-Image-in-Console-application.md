@@ -1,7 +1,7 @@
 ---
 title: Convert Word to Image in Console Application | Syncfusion 
 description: Convert Word to image in Console application using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

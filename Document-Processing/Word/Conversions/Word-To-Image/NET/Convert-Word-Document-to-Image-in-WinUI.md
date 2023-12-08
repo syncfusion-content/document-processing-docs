@@ -1,7 +1,7 @@
 ---
 title: Convert Word to Image in WinUI | Syncfusion
 description: Convert Word to image in WinUI using WinUI Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

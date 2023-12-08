@@ -1,7 +1,7 @@
 ---
 title: Convert Word Document to PDF in Xamarin | Syncfusion
 description: Convert Word to PDF in Xamarin using Xamarin Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

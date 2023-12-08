@@ -1,7 +1,7 @@
 ---
 title: Open and save Presentation in Blazor | Syncfusion
 description: Open and save Presentation in Blazor using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---

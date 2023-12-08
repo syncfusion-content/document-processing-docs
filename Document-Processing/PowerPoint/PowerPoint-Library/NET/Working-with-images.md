@@ -1,7 +1,7 @@
 ---
 title: Add and edit images in PowerPoint slides |C# PowerPoint| |Syncfusion|
 description: C# PowerPoint library to create, read, edit and convert PowerPoint files in .NET applications, ASP.NET Web, MVC, C# [Cross-platform], Xamarin and Azure platforms
-platform: file-formats
+platform: document-processing
 control: Presentation
 documentation: UG
 ---

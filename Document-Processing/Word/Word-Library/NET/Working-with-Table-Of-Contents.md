@@ -1,7 +1,7 @@
 ---
 title: Working with Table of Contents (TOC) | DocIO | Syncfusion
 description: Learn how to add, modify, and update the table of contents (TOC) in a Word document using the .NET Word (DocIO) library without Microsoft Word.
-platform: file-formats
+platform: document-processing
 control: DocIO
 documentation: UG
 ---

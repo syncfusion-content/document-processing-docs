@@ -1,7 +1,7 @@
 --- 
 title: Open and save Word document in GCP | Syncfusion 
 description: Learn how to open and save a Word document in Google Cloud Platform (GCP) using .NET Core Word (DocIO) library in C#. 
-platform: file-formats 
+platform: document-processing
 control: DocIO 
 documentation: UG 
 --- 

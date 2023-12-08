@@ -1,7 +1,7 @@
 ---
 title: Create PowerPoint document in Google App Engine | Syncfusion
 description: Create PowerPoint document in Google App Engine using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
