@@ -658,7 +658,7 @@ When the shape is clicked, the output looks like below.
 ![working with macros](Working-with-Macros_images/Working-with-Macros_image8.png)
 
 ### Saving macro enabled document into stream
-By default, while saving the Excel workbook into stream, the file type will be based on the Excel version used. For Excel97to2003 version, the Document Processing will be XLS type.  Above this version, the document will be saved as XLSX format. So, while saving the macro enabled documents into XLSM and XLTM formats into stream, the [ExcelSaveType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelSaveType.html) should be provided as **SaveAsMacro** and **SaveAsMacroTemplate**. 
+By default, while saving the Excel workbook into stream, the file type will be based on the Excel version used. For Excel97to2003 version, the file format will be XLS type.  Above this version, the document will be saved as XLSX format. So, while saving the macro enabled documents into XLSM and XLTM formats into stream, the [ExcelSaveType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelSaveType.html) should be provided as **SaveAsMacro** and **SaveAsMacroTemplate**. 
 
 The following code illustrate how to save macro-enabled documents into stream.
 
