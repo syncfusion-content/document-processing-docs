@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in Google App Engine| Syncfusion
 description: Open and save PDF document in Google App Engine using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load pdf

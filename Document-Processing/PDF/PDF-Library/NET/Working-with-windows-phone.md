@@ -1,7 +1,7 @@
 ---
 title: Working with Windows Phone
 description: This section explains how to load and save PDF document in Windows Phone
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

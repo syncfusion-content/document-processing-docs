@@ -1,7 +1,7 @@
 ---
 title: Convert a HTML to PDF file in Linux | Syncfusion
 description: Learn how to convert a HTML to PDF file in Linux with easy steps using Syncfusion .NET HTML converter library.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies

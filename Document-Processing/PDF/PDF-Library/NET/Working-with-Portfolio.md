@@ -1,7 +1,7 @@
 ---
 title: Working with Portfolio | Syncfusion
 description: Explains how to create PDF portfolio which helps to bring together content from a variety of sources, including documents, drawings, images, e-mail, & web pages
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

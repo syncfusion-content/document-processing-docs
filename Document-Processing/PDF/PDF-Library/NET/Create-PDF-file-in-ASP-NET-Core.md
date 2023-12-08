@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in ASP.NET Core | Syncfusion
 description: Learn how to create or generate a PDF file in ASP.NET Core with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf

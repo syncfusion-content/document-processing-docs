@@ -1,7 +1,7 @@
 ---
 title: OCR processor for .NET Core with tesseract | Syncfusion
 description: This section explains how to process OCR for the existing PDF documents and Images with different version tesseract.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Convert HTML to PDF in AWS | Syncfusion
 description: Learn how to convert HTML to PDF in AWS with easy steps using Syncfusion .NET HTML converter library.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies

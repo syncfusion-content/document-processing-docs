@@ -1,7 +1,7 @@
 ---
 title: Create PDF document on Linux | Syncfusion
 description: Create PDF document in .NET Core application on Linux using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf

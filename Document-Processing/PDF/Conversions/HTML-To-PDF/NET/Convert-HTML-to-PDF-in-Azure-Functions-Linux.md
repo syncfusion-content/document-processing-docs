@@ -1,7 +1,7 @@
 ---
 title: Convert HTML to PDF in Azure Functions Linux| Syncfusion
 description: Learn how to convert HTML to PDF in Azure Linux with easy steps using Syncfusion .NET HTML to PDF converter library.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

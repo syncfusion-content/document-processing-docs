@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in UWP | Syncfusion
 description: Learn how to create or generate a PDF file in UWP with easy steps using Syncfusion UWP PDF library without depending on Adobe.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

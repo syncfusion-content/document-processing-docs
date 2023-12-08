@@ -1,7 +1,7 @@
 ---
 title: Create PDF document in Azure App Service on Windows | Syncfusion
 description: Create PDF document in Azure App Service on Windows using .NET Core PDF library without the dependency of Adobe Acrobat.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

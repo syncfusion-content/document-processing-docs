@@ -1,7 +1,7 @@
 ---
 title: Converting PDF pages into images in ASP.NET Core| Syncfusion
 description: Learn about Converting PDF pages into images in ASP.NET Core using Syncfusion PdfToImageConverter.
-platform: file-formats
+platform: document-processing
 control: PDF to image
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Working with PDF templates | Syncfusion
 description: This section explains how to create a PDF template is a drawing surface, where contents can be added;
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

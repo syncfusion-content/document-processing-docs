@@ -1,7 +1,7 @@
 ---
 title: Working with ZUGFeRD invoice | Syncfusion
 description: This section explains how to generate,add and extract process on ZUGFeRD invoice and Validating ZUGFeRD invoices using Adobe Acrobat
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

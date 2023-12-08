@@ -1,7 +1,7 @@
 ---
 title: Working with Bookmarks | PDF library | Syncfusion
 description: This section explains how to add, modify and remove bookmarks in the PDF document by using Essential PDF
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
