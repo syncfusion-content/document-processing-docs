@@ -1,7 +1,7 @@
 ---
 title: Convert an Excel document to PDF in ASP.NET MVC | Syncfusion
 description: Convert an Excel document to PDF in ASP.NET MVC using Sycfusion .NET Excel library (XlsIO) without Microsoft Excel or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

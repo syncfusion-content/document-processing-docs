@@ -1,7 +1,7 @@
 ---
 title: Loading and saving workbook in Blazor | Syncfusion
 description: Explains how to load and save Excel files in Blazor applications using Syncfusion XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 --- 
 title: Create Excel document in GCP | Syncfusion 
 description: Learn how to create an Excel document in Google Cloud Platform (GCP) using Syncfusion .NET Core Excel (XlsIO) library in C#. 
-platform: file-formats 
+platform: document-processing 
 control: XlsIO 
 documentation: UG 
 --- 

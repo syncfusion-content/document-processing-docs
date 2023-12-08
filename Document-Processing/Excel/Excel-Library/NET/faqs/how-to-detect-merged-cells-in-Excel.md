@@ -1,7 +1,7 @@
 ---
 title: How to detect merged cells in Excel | XlsIO | Syncfusion
 description: This page explains how to detect merged cells in an Excel document using Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

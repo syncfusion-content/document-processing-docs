@@ -1,7 +1,7 @@
 ---
 title: How to read filtered rows in Excel? |Syncfusion
 description: This page shows how to read the filtered data from the Excel file using Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

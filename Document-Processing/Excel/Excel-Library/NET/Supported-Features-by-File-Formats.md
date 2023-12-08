@@ -1,14 +1,14 @@
 ---
-title: Supported Features by File Formats | Syncfusion
-description: Learn here all about supported and non-supported features of Syncfusion File formats library, and more.
-platform: file-formats
+title: Supported Features by Document Processing | Syncfusion
+description: Learn here all about supported and non-supported features of Syncfusion Document Processing library, and more.
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Supported Features by File Formats
+# Supported Features by Document Processing
 
-The list of supported and non-supported Excel file format features in *Essential XlsIO* is given in the following table. *XLS* represents Excel 97 to 2003 format and *XLSX* represents Excel 2007 and above formats.
+The list of supported and non-supported Excel Document Processing features in *Essential XlsIO* is given in the following table. *XLS* represents Excel 97 to 2003 format and *XLSX* represents Excel 2007 and above formats.
 
 <table>
 <tr>

@@ -1,7 +1,7 @@
 ---
 title: Migration from Office Automation to Syncfusion XlsIO
 description: This section explains how to migrate from Excel Interop to Syncfusion's XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

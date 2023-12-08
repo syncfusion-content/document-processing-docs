@@ -1,7 +1,7 @@
 ---
 title: Syncfusion Excel (XlsIO) Supported Features by Platforms
 description: Learn here all about supported and non-supported features of Syncfusion Excel (XlsIO) Library and more.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---
@@ -581,7 +581,7 @@ The list of supported and non-supported Excel features in Blazor platform is giv
 
 <table>
   <tr>
-    <th rowspan = "2">File formats</th>
+    <th rowspan = "2">Document Processing</th>
 	<th colspan = "2">Blazor Server-Side</th>
 	<th colspan = "2">Blazor Client-Side</th>
   </tr>

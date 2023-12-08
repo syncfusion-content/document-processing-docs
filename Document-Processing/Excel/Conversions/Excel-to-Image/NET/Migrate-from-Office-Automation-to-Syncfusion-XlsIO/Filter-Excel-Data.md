@@ -1,7 +1,7 @@
 ---
 title: Filter Excel Data | Syncfusion
 description: Explains with an example on how to programmatically filter Excel data with specific conditions to show or hide certain rows using Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

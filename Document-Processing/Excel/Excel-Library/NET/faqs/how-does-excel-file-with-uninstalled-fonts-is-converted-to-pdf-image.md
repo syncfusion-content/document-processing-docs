@@ -1,7 +1,7 @@
 ---
 title: Excel file with uninstalled fonts converted to PDF/Image | Syncfusion
 description: This page tells what happens when an Excel file containing uninstalled fonts is converted to PDF/Image using XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

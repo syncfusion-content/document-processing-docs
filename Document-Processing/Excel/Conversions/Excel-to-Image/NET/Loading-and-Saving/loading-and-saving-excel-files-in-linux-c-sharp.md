@@ -1,7 +1,7 @@
 ---
 title: Loading and saving workbook on Linux | Syncfusion
 description: Explains how to load and save Excel files on Linux applications using Syncfusion XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

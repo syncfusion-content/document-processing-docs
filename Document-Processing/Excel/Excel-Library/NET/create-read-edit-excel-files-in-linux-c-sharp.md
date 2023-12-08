@@ -1,7 +1,7 @@
 ---
 title: Create, read, and edit Excel files on Linux | Syncfusion
 description: Create, read, and edit Excel files in .NET Core application on Linux using Syncfusion .NET Core Excel library (XlsIO) without Microsoft Office
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

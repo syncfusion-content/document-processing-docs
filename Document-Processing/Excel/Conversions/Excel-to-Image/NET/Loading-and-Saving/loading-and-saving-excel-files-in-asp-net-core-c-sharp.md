@@ -1,7 +1,7 @@
 ---
 title: Loading and saving workbook in ASP.NET Core | Syncfusion
 description: Explains how to load and save Excel files in ASP.NET Core applications using Syncfusion XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

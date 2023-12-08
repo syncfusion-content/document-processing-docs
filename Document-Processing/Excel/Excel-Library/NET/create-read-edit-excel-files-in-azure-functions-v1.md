@@ -1,7 +1,7 @@
 ---
 title: Create, read, and edit Excel files in Azure Functions v1 | Syncfusion
 description: Explains how to create, read, and edit Excel files in Azure Functions v1 using Syncfusion XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

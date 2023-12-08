@@ -1,7 +1,7 @@
 ---
 title: How to set rounded corner for chart in Excel document | Syncfusion
 description: Code example to set rounded corner for chart in Excel document using Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

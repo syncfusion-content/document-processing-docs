@@ -1,7 +1,7 @@
 ---
 title: Activate a Worksheet | Syncfusion
 description: Explains with an example on how to programmatically activate a worksheet in a workbook in Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

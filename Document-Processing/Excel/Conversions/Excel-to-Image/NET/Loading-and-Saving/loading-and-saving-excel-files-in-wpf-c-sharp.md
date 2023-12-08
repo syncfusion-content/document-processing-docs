@@ -1,7 +1,7 @@
 ---
 title: Loading and saving workbook in WPF | Syncfusion
 description: Explains how to load and save Excel files in WPF applications using Syncfusion Excel library.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

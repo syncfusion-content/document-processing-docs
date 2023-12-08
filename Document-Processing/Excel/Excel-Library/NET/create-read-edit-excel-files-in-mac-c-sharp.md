@@ -1,7 +1,7 @@
 ---
 title: Create, read, and edit Excel files on Mac OS | Syncfusion
 description: Explains how to create, read, and edit Excel files in .NET Core application on Mac OS using Syncfusion .NET Core Excel library (XlsIO) without Microsoft Office
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

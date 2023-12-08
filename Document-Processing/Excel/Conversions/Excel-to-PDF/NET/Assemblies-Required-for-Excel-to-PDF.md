@@ -1,7 +1,7 @@
 ---
 title: Execl to PDF Assemblies Required | Syncfusion
 description: Briefs the assemblies required to convert excel document to PDF for various platforms and frameworks.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

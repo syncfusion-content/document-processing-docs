@@ -1,7 +1,7 @@
 ---
 title: Cone chart shows itself as column or bar chart | Syncfusion
 description: This page tells why cone chart shows itself as column or bar chart.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

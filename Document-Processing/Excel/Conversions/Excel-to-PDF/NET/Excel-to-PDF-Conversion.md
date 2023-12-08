@@ -1,7 +1,7 @@
 ---
 title: Syncfusion Excel to PDF Conversion
 description: In this section, you can learn how to convert Excel Workbook to PDF & Worksheet to PDF file; how to print Excel file and how to convert Excel chart to image
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

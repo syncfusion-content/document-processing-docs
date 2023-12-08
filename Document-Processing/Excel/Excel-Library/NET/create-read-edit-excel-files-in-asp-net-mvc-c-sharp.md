@@ -1,7 +1,7 @@
 ---
 title: Create, read, and edit Excel files in ASP.NET MVC | Syncfusion
 description: Explains how to create, read, and edit Excel files in ASP.NET MVC applications using Syncfusion XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: How to change the grid line color of the Excel sheet | Syncfusion
 description: Code example to change the grid line color of the Excel sheet using Syncfusion .NET Excel library (XlsIO).
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

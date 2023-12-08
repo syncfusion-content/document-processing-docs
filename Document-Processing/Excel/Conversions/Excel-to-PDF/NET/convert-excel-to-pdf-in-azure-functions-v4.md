@@ -1,7 +1,7 @@
 ---
 title: Convert Excel to PDF in Azure Functions v4 | Syncfusion
 description: Convert Excel to PDF in Azure Functions v4 using .NET Excel library (XlsIO) without Microsoft Excel or interop dependencies.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

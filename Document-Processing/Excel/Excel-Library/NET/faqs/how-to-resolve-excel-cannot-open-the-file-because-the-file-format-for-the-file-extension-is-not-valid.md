@@ -1,7 +1,7 @@
 ---
-title: Excel cannot open the file in File Formats XlsIO | Syncfusion
-description: This page shows how to resolve "Excel cannot open the file because the file format is not valid..." using XlsIO.
-platform: file-formats
+title: Excel cannot open the file in Document Processing XlsIO | Syncfusion
+description: This page shows how to resolve "Excel cannot open the file because the Document Processing is not valid..." using XlsIO.
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---
@@ -95,4 +95,4 @@ workbook.SaveAs("Sample.xlsx")
 
 * [How to resolve the File does not contain workbook stream error](how-to-resolve-the-file-does-not-contain-workbook-stream-error)
 * [What are the known exceptions of XlsIO?](https://help.syncfusion.com/file-formats/xlsio/known-exceptions)
-* [What are the supported features by file formats?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-file-formats)
+* [What are the supported features by Document Processing?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-file-formats)

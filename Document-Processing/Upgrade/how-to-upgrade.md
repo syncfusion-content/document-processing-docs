@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Upgrading Syncfusion FileFormats installer to latest version
-description: Learn here about the how upgrade Syncfusion FileFormats installer to a latest version from website and control panel.
-platform: file-formats
+title: Upgrading Syncfusion Document Processing installer to latest version
+description: Learn here about the how upgrade Syncfusion Document Processing installer to a latest version from website and control panel.
+platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Upgrading Syncfusion FileFormats installer to a latest version
+# Upgrading Syncfusion Document Processing installer to a latest version
 
 Syncfusion releases new volumes once every three months, with exciting new features. There will be one Service Pack release for these volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.
 
 You can upgrade to our latest version from any installed Syncfusion version.
 
-See our **Upgrade Guide** for [PDF](https://help.syncfusion.com/upgrade-guide/file-formats/PDF),[XlsIO](https://help.syncfusion.com/upgrade-guide/file-formats/xlsio), [Presentation](https://help.syncfusion.com/upgrade-guide/file-formats/presentation) and [DocIO](https://help.syncfusion.com/upgrade-guide/file-formats/docio) FileFormats controls to learn more about the “Breaking Changes, Bug Fixes, Features and Knows Issues” between your current version and the latest version you are trying to upgrade.
+See our **Upgrade Guide** for [PDF](https://help.syncfusion.com/upgrade-guide/file-formats/PDF),[XlsIO](https://help.syncfusion.com/upgrade-guide/file-formats/xlsio), [Presentation](https://help.syncfusion.com/upgrade-guide/file-formats/presentation) and [DocIO](https://help.syncfusion.com/upgrade-guide/file-formats/docio) Document Processing controls to learn more about the “Breaking Changes, Bug Fixes, Features and Knows Issues” between your current version and the latest version you are trying to upgrade.
 
 
 ## Upgrading to the latest version
 
-The most recent version of Syncfusion FileFormats can be downloaded and installed by clicking on the "Latest Version: {Version}" link at the top of the Syncfusion FileFormats Control Panel.
+The most recent version of Syncfusion Document Processing can be downloaded and installed by clicking on the "Latest Version: {Version}" link at the top of the Syncfusion Document Processing Control Panel.
 
 ![Control Panel](Upgrade-images/upgrade-control-panel.png)
 

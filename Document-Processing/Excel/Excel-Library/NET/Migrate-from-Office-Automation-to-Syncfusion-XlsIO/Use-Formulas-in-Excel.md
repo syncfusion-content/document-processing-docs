@@ -1,7 +1,7 @@
 ---
 title: Use Formulas in Excel | Syncfusion
 description: Explains with an example on how to use formulas or functions (predefined formulas) in Excel using Interop and XlsIO.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---

@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Installing Syncfusion FileFormats offline installer-Syncfusion
-description: Learn here about how to install Syncfusion FileFormats offline installer after downloading from our Syncfusion website.
-platform: file-formats
+title: Installing Syncfusion Document Processing offline installer-Syncfusion
+description: Learn here about how to install Syncfusion Document Processing offline installer after downloading from our Syncfusion website.
+platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion FileFormats offline installer
+# Installing Syncfusion Document Processing offline installer
 
 
 ## Installing with UI   
 
-The steps below show how to install the Essential Studio FileFormats installer.
+The steps below show how to install the Essential Studio Document Processing installer.
 
-1.	Open the Syncfusion FileFormats offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Open the Syncfusion Document Processing offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
@@ -39,7 +39,7 @@ The steps below show how to install the Essential Studio FileFormats installer.
 
     **Use Unlock Key**
    
-    Unlock keys are used to unlock the Syncfusion offline installer, and they are platform and version specific. You should use either Syncfusion licensed or trial Unlock key to unlock Syncfusion FileFormats installer.
+    Unlock keys are used to unlock the Syncfusion offline installer, and they are platform and version specific. You should use either Syncfusion licensed or trial Unlock key to unlock Syncfusion Document Processing installer.
    
     The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key. 
    
@@ -91,24 +91,24 @@ The steps below show how to install the Essential Studio FileFormats installer.
 	
 	![Installing wizard](images/Step-by-Step-Installation_img5.png)
 
-    N> The Completed screen is displayed once the FileFormats product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
+    N> The Completed screen is displayed once the Document Processing product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
 	
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
 	
 7.  After installing, click the **Launch Control Panel** link to open the Syncfusion Control Panel.
 
 
-8.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio FileFormats product.
+8.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio Document Processing product.
 
 ## Installing in silent mode
 
-The Syncfusion Essential Studio FileFormats Installer supports installation and uninstallation via the command line.
+The Syncfusion Essential Studio Document Processing Installer supports installation and uninstallation via the command line.
 
 ### Command Line Installation
 
 To install through the Command Line in Silent mode, follow the steps below.
 
-1.	Run the Syncfusion FileFormats installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Run the Syncfusion Document Processing installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialfileformats_(version).exe file will be extracted into the Temp directory.
 3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialfileformats_(version).exe file will be located in one of the folders.
 4.	Copy the extracted syncfusionessentialfileformats_(version).exe file in local drive.
@@ -124,16 +124,16 @@ To install through the Command Line in Silent mode, follow the steps below.
     **Example:** “D:\Temp\syncfusionessentialfileformats_x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
 
 	
-7.  Essential Studio for FileFormats is installed.
+7.  Essential Studio for Document Processing is installed.
 
     N> x.x.x.x should be replaced with the Essential Studio version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
    
 
 ### Command Line Uninstallation
 
-Syncfusion Essential FileFormats can be uninstalled silently using the Command Line.
+Syncfusion Essential Document Processing can be uninstalled silently using the Command Line.
 
-1.	Run the Syncfusion FileFormats installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Run the Syncfusion Document Processing installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialfileformats_(version).exe file will be extracted into the Temp directory.
 3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialfileformats_(version).exe file will be located in one of the folders.
 4.	Copy the extracted syncfusionessentialfileformats_(version).exe file in local drive.

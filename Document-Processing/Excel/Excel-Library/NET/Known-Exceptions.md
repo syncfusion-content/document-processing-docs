@@ -1,7 +1,7 @@
 ---
 title: Known exceptions thrown in XlsIO | Syncfusion
 description: Learn here all about the Known exceptions thrown in the Syncfusion's Excel (XlsIO) Library and more.
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---
