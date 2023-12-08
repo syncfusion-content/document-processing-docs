@@ -1,7 +1,7 @@
 ---
 title: Working with Metadata | Syncfusion
 description: This section explains how to add metadata in the PDF document and the metadata is a data that describes the characteristics of properties of a document
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

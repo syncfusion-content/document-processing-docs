@@ -1,7 +1,7 @@
 ---
 title: Convert PDF file to Image in Blazor | Syncfusion
 description: Learn how to convert a PDF file to Image in Blazor with easy steps.
-platform: file-formats
+platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies

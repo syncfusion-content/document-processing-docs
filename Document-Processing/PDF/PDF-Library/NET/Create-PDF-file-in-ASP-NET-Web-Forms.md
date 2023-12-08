@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in ASP.NET Web Forms| Syncfusion
 description: Learn how to create or generate a PDF file in ASP.NET Web Forms with easy steps using Syncfusion .NET PDF library without depending on Adobe.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

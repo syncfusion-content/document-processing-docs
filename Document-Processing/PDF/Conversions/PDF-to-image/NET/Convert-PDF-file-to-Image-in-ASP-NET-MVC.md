@@ -1,7 +1,7 @@
 ---
 title: Convert PDF file to Image in ASP.NET MVC | Syncfusion
 description: Learn how to convert a PDF file to Image in ASP.NET MVC with easy steps using System Drawing library.
-platform: file-formats
+platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies

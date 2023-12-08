@@ -1,7 +1,7 @@
 ---
 title: Load PDF file in C# | Syncfusion
 description: This page describes how to load PDF file from stream in C# using Syncfusion PDF to image converter library.
-platform: file-formats
+platform: document-processing
 control: PDF to image
 documentation: UG
 ---

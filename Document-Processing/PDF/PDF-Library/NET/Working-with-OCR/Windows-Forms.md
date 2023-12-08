@@ -1,7 +1,7 @@
 ---
 title: Perform OCR on PDF and image files in Windows Forms | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images in Windows Forms with different tesseract versions using Syncfusion .NET OCR library. 
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies

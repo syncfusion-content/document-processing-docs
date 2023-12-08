@@ -1,7 +1,7 @@
 ---
 title: Working with Security | Syncfusion
 description: This sections explains how to protect the PDF document using encryption and set permission to the PDF document operations like printing, editing, copy content
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

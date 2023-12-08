@@ -1,7 +1,7 @@
 ---
 title: Working with Layers | Syncfusion
 description: This section explains adding the layer in the PDF document and the layers refers to section of Content of PDF document
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

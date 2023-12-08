@@ -1,7 +1,7 @@
 ---
 title: Working with Tables | Syncfusion
 description: Learn how to create or add a table to a PDF document, apply cell style & built-in table styles, automatic pagination, customize the rows and columns, and more.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

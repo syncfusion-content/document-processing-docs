@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in Microsoft Azure | Syncfusion
 description: Learn how to open and save a PDF document in Azure services using Syncfusion .NET PDF library in C#.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

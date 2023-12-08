@@ -1,7 +1,7 @@
 ---
 title: Convert a PDF file to Image file in Windows-Forms | Syncfusion
 description: Learn how to convert a PDF document to Image file in Windows-Forms with easy steps using System Drawing library.
-platform: file-formats
+platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies

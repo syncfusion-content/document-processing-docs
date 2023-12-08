@@ -1,7 +1,7 @@
 ---
 title: Open and Save PDF document in WinUI | Syncfusion
 description: Open and save PDF documents in WinUI application using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: winui os save pdf, winui os load pdf, c# save pdf, c# load pdf

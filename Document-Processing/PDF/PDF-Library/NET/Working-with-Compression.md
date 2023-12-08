@@ -1,7 +1,7 @@
 ---
 title: Working with Compression | Syncfusion
 description: This section explains how to Compress the PDF document with different options by using Essential PDF
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
