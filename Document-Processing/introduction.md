@@ -1,6 +1,6 @@
 ---
 title: Create, read, edit & convert PDF, Excel & Word files | Syncfusion
-description: Create, read, edit, write, and convert PDF, Excel, Word, and PowerPoint Document Processing in .NET applications without Microsoft Office or Adobe dependencies.
+description: Create, read, edit, write, and convert PDF, Excel, Word, and PowerPoint file formats in .NET applications without Microsoft Office or Adobe dependencies.
 platform: document-processing
 control: general
 documentation: UG
@@ -9,7 +9,7 @@ keywords: PDF, Excel, Word, PowerPoint, Office, SDK, Automation, API, create, ed
 
 # Welcome to Syncfusion Essential Document Processing Platform
 
-Essential Document Processing is a collection of .NET class libraries to create, edit, write, and convert PDF, Excel, Word, and PowerPoint Document Processing in .NET Framework [C#, VB.NET], .NET Core, UWP, and Xamarin applications without Microsoft Office or Adobe dependencies.
+Essential Document Processing is a collection of .NET class libraries to create, edit, write, and convert PDF, Excel, Word, and PowerPoint file formats in .NET Framework [C#, VB.NET], .NET Core, UWP, and Xamarin applications without Microsoft Office or Adobe dependencies.
 
 ## How to best read this user guide
 
