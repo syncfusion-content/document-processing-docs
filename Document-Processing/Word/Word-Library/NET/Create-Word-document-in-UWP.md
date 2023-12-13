@@ -14,7 +14,7 @@ Syncfusion Essential DocIO is a [UWP Word library](https://www.syncfusion.com/do
 
 Step 1: Create a new C# Blank App (Universal Windows) project.
 
-![Create UWP application in Visual Studio](UWP_images/CreateProject.png)
+![Create UWP application in Visual Studio](UWP_images/Create_Project.png)
 
 Step 2: Install the [Syncfusion.DocIO.UWP](https://www.nuget.org/packages/Syncfusion.DocIO.UWP/) NuGet package as a reference to your UWP application from [NuGet.org](https://www.nuget.org/).
 
