@@ -1,7 +1,7 @@
 ---
 title: Working with Color Spaces in File Formats PDF library | Syncfusion
 description: Learn here about Working with Color Spaces in Syncfusion Essential File Formats PDF library, its elements, and more.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

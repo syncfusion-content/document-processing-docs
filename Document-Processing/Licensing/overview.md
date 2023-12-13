@@ -2,7 +2,7 @@
 layout: post
 title: Overview of Syncfusion license and unlock keys - Syncfusion
 description: Learn here about the Syncfusion license and unlock keys and difference between license and unlock keys.
-platform: file-formats
+platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
@@ -33,7 +33,7 @@ This application was built using a trial version of Syncfusion Essential Studio.
 </div>
 
 
-Trial message will be displayed as watermark in the generated documents, if FileFormats libraries referred from  trial installer or [nuget.org](https://www.nuget.org/packages?q=syncfusion)
+Trial message will be displayed as watermark in the generated documents, if Document Processing libraries referred from  trial installer or [nuget.org](https://www.nuget.org/packages?q=syncfusion)
 
 **Example**
 
@@ -49,5 +49,5 @@ Trial message will be displayed as watermark in the generated documents, if File
 
 ## See Also
 
-* [How to Generate Syncfusion FileFormats License Key?](https://help.syncfusion.com/file-formats/licensing/how-to-generate)
-* [How to Register Syncfusion License Key in FileFormats Application?](https://help.syncfusion.com/file-formats/licensing/how-to-register-in-an-application)
+* [How to Generate Syncfusion Document Processing License Key?](https://help.syncfusion.com/file-formats/licensing/how-to-generate)
+* [How to Register Syncfusion License Key in Document Processing Application?](https://help.syncfusion.com/file-formats/licensing/how-to-register-in-an-application)

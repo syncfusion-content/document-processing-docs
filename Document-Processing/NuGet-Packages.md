@@ -1,8 +1,8 @@
 ---
 layout: post
-title: File Formats NuGet Packages | Syncfusion
+title: Document Processing NuGet Packages | Syncfusion
 description: NuGet Packages
-platform: file-formats
+platform: document-processing
 control: NuGet Packages
 documentation: ug
 ---
@@ -246,7 +246,7 @@ You should get the private Syncfusion NuGet feed URL to install or upgrade the S
 
 3. Now, use this NuGet feed URL to access the Syncfusion NuGet Packages in Visual Studio. 
 
- N> There is no separate feed link for File Formats, each platform feed link contains File Formats and other Syncfusion component packages.
+ N> There is no separate feed link for Document Processing, each platform feed link contains Document Processing and other Syncfusion component packages.
 
 ### Add the Syncfusion NuGet feed URL
 

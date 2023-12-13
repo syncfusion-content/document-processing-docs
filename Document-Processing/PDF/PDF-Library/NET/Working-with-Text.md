@@ -1,7 +1,7 @@
 ---
 title: Working with Text | Syncfusion
 description: This section explains how to add text to the PDF document using different type of fonts, TrueType fonts and standard fonts
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

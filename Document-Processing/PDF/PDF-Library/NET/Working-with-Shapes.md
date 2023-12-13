@@ -1,11 +1,11 @@
 ---
 title: PDF Working with Shapes | Syncfusion
 description: This section explains how to add shapes such as Line, curve, path, text, rectangle, pie, arc, Bezier, ellipse in the PDF document
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Shapes for File-Formats Platform PDF Control
+# Working with Shapes for Document Processing Platform PDF Control
 
 Essential PDF has support for adding the below shapes.
 

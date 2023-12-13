@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in ASP.NET Core | Syncfusion
 description: Open and save PDF document in ASP.NET Core application using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: .net core save pdf, .net core load pdf, c# save pdf, c# load pdf

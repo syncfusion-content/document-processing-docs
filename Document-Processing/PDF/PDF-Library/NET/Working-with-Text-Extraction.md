@@ -1,7 +1,7 @@
 ---
 title: Working with Text Extraction | Syncfusion
 description: This section explains how to extract text and its bounds from a particular page or the entire PDF document.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

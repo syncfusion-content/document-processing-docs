@@ -1,7 +1,7 @@
 ---
 title: Open and Save PDF Documents in .NET MAUI | Syncfusion
 description: Open and save PDF documents in .NET MAUI application using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdf

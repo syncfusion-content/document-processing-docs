@@ -1,7 +1,7 @@
 ---
 title: How to perform OCR for a PDF document using C# and VB.NET | Syncfusion
 description: This section explains how to perform OCR for a PDF document using syncfusion .NET OCR library in C# and VB.NET.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

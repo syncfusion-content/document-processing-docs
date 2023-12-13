@@ -1,7 +1,7 @@
 ---
 title: Working with Forms | Syncfusion
 description: This section explains how to create, fill, modify, read only and flatten form fields in the PDF document
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

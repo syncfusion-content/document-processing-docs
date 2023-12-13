@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in Windows Forms | Syncfusion
 description: Learn how to create or generate a PDF file in Windows Forms with easy steps using Syncfusion .NET PDF library without depending on Adobe.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 --- 

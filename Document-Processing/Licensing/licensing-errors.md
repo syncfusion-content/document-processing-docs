@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Overview of Syncfusion licensing errors - Syncfusion 
-description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion FileFormats applications.
-platform: file-formats
+description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion Document Processing applications.
+platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
