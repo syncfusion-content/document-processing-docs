@@ -6,6 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
+
 # Create Word document in AWS Elastic Beanstalk
 
 Syncfusion Essential DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in AWS Elastic Beanstalk**.
