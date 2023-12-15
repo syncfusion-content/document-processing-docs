@@ -245,10 +245,10 @@ gcloud app deploy --version v1
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/Deploy-PowerPoint-Presentation-to-Image.png)
+![Add required files to publish folder](GCP_Images/Deploy-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
-![Add required files to publish folder](GCP_Images/Browser-PowerPoint-Presentation-to-Image.png)
+![Add required files to publish folder](GCP_Images/Browser-PowerPoint-Presentation-to-PDF.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/GCP/Google_App_Engine).
 
