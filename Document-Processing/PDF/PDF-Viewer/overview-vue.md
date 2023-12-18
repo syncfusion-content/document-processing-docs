@@ -26,7 +26,7 @@ npm install
 
 ### Adding Syncfusion PDF Viewer package
 
-All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg)registry. To install Vue PDF Viewer package, use the following command.
+All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue PDF Viewer package, use the following command.
 
 ```
 npm install @syncfusion/ej2-vue-pdfviewer --save

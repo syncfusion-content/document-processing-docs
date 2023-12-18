@@ -6,17 +6,10 @@ control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of JavaScript PDF Viewer Component
+# Overview of TypeScript PDF Viewer Component
 
-The Syncfusion [`TypeScript PDF Viewer`](https://www.syncfusion.com/javascript-ui-controls/js-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=javascript-pdf-viewer-npm) control enables you to view, annotate, prepare and fill forms, and print PDF files from your web applications.
+The Syncfusion [`TypeScript PDF Viewer`](https://www.syncfusion.com/javascript-ui-controls/js-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=javascript-pdf-viewer-npm) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
-## Setup
-
-To install PDF Viewer and its dependent packages, use the following command.
-
-```
-npm install @syncfusion/ej2-pdfviewer
-```
 ## Key Features 
 
 *[`View PDF Document`](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
