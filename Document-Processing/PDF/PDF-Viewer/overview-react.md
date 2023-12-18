@@ -89,3 +89,13 @@ root.render(<App />);
 *[`Core Interactions`](https://ej2.syncfusion.com/react/documentation/pdfviewer/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
 *[`Print`](https://ej2.syncfusion.com/react/documentation/pdfviewer/print) - Print the entire document or a specific page directly from the browser.
 *[`Globalization`](https://ej2.syncfusion.com/react/documentation/pdfviewer/globalization) - Provides inherent support to localize the UI.
+
+## Supported Web platforms
+
+* [Javascript(ES5)](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started)
+* [Javascript](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started)
+* [Angular](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started)
+* [Vue](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started)
+* [ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started)
+* [ASP.NET MVC](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started)
+* [Blazor](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/features)

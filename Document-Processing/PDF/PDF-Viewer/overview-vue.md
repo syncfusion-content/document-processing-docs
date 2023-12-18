@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of vue PDF Viewer Component
 
-The [`vue PDF Viewer`](https://www.syncfusion.com/vue-components/vue-pdf-viewer) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [`Vue PDF Viewer`](https://www.syncfusion.com/vue-components/vue-pdf-viewer) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
 ## Setup
 
@@ -114,3 +114,13 @@ Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentati
 *[`Core Interactions`](https://ej2.syncfusion.com/vue/documentation/pdfviewer/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
 *[`Print`](https://ej2.syncfusion.com/vue/documentation/pdfviewer/print) - Print the entire document or a specific page directly from the browser.
 *[`Globalization`](https://ej2.syncfusion.com/vue/documentation/pdfviewer/globalization) - Provides inherent support to localize the UI.
+
+## Supported Web platforms
+
+* [Javascript(ES5)](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started)
+* [Javascript](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started)
+* [Angular](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started)
+* [React](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started)
+* [ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started)
+* [ASP.NET MVC](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started)
+* [Blazor](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/features)
