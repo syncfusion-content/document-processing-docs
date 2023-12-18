@@ -14,7 +14,7 @@ Syncfusion DocIO is a [.NET Core Word library](https://www.syncfusion.com/docume
 
 Step 1: Create a new C# Blank App (Universal Windows) project.
 
-![Create UWP application in Visual Studio](UWP_images/UWP-Template-WordtoImage.png)
+![Create UWP application in Visual Studio](UWP_images/Create-UWP-project-WordtoPDF.png)
 
 Step 2: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/) NuGet package as a reference to your UWP application from [NuGet.org](https://www.nuget.org/).
 
