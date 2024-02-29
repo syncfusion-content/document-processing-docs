@@ -10,7 +10,7 @@ documentation: ug
 
 # Downloading Syncfusion Document Processing offline installer
 
-[DocIO](https://www.syncfusion.com/word-framework/net),[PDF](https://www.syncfusion.com/document-processing/pdf-framework/net),[Presentation](https://www.syncfusion.com/document-processing/powerpoint-framework/net), and [XlsIO](https://www.syncfusion.com/document-processing/excel-framework/net) controls will be included in the Syncfusion Document Processing installer. You can either download the licensed installer or try our trial installer depending on your license. 
+[Word](https://www.syncfusion.com/document-processing/word-framework/net),[PDF](https://www.syncfusion.com/document-processing/pdf-framework/net),[PowerPoint](https://www.syncfusion.com/document-processing/powerpoint-framework/net), and [Excel](https://www.syncfusion.com/document-processing/excel-framework/net) controls will be included in the Syncfusion Document Processing installer. You can either download the licensed installer or try our trial installer depending on your license. 
 
    -	Trial Installer
    -	Licensed Installer
