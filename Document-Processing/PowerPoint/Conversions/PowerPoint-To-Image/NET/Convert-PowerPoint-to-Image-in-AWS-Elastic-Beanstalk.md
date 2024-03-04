@@ -14,7 +14,7 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 
 Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
 
-![Create ASP.NET Core Web application in Visual Studio](Azure_Images/App_Service_Linux/Create-PowerPoint-Presentation-to-PDF.png))
+![Create ASP.NET Core Web application in Visual Studio](Azure_Images/App_Service_Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 

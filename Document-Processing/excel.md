@@ -14,7 +14,7 @@ Syncfusion Excel Document Processing Framework is a collection of Excel document
 
 ## List of Excel Document Processing Products:
 
-* Excel Library - is a class library used to create, read, and write PDF files through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, MAUI] and Flutter applications.
+* Excel Library - is a class library used to create, read, and write Excel files through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, MAUI] and Flutter applications.
 * Excel Conversions - is a class library that convert Excel to PDF, image, HTML, ODS, JSON, CSV.
 * Spreadsheet - GUI component used to view, edit and print Excel documents in Windows Forms, WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, and ASP.NET Core applications.
 
