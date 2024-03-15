@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Opem PDF file from Dropbox cloud file storage
+# Open PDF file from Dropbox cloud file storage
 
 To Open a PDF file from Dropbox cloud file storage, you can follow the steps below
 
