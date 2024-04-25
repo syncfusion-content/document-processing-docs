@@ -1,7 +1,7 @@
 ---
 title: Convert HTML to PDF in Azure Functions Linux| Syncfusion
 description: Learn how to convert HTML to PDF in Azure Linux with easy steps using Syncfusion .NET HTML to PDF converter library.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---
@@ -58,7 +58,7 @@ Step 5: Add the following code example in the Function1 class to convert HTML to
         settings.CommandLineArguments.Add("--no-sandbox");
         settings.CommandLineArguments.Add("--disable-setuid-sandbox");
         settings.BlinkPath = blinkBinariesPath;
-        //Assign WebKit settings to the HTML converter 
+        //Assign BlinkConverter settings to the HTML converter 
         htmlConverter.ConverterSettings = settings;
         //Convert URL to PDF
         PdfDocument document = htmlConverter.Convert(url);

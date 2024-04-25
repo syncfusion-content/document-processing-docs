@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in ASP.NET MVC | Syncfusion
 description: Learn how to create or generate a PDF file in ASP.NET MVC with easy steps using Syncfusion .NET PDF library without depending on Adobe.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: mvc create pdf, mvc generate pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, mvc generate pdf

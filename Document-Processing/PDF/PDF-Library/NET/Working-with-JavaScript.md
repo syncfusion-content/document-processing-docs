@@ -1,7 +1,7 @@
 ---
 title: Working with JavaScript | Syncfusion
 description: This section explains how to add/modify JavaScript action in the existing PDF document by using Essential PDF
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

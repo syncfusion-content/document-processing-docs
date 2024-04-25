@@ -1,7 +1,7 @@
 ---
 title: Perform OCR on PDF and image files in AWS Textract | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images in AWS Textract using Syncfusion .NET OCR library. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: Assemblies
@@ -91,7 +91,7 @@ class AWSExternalOcrEngine : IOcrEngine
         stream.Position = 0;
         MemoryStream memoryStream = new MemoryStream();
         stream.CopyTo(memoryStream);
-        PdfBitmap bitmap = new PdfBitmap(memoryStream);
+        PdfTiffImage bitmap = new PdfTiffImage(memoryStream);
         imageHeight = bitmap.Height;
         imageWidth = bitmap.Width;
 

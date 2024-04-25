@@ -1,7 +1,7 @@
 ---
 title: Working with Attachments | Syncfusion
 description: This section explains how to add, remove and extract attachments in the PDF document. Attachments can contain any kind of file with detailed information. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

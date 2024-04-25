@@ -1,7 +1,7 @@
 ---
 title: Perform OCR on PDF and image files in Azure | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in Azure using Syncfusion .NET OCR library.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: Assemblies

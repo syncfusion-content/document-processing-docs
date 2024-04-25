@@ -1,7 +1,7 @@
 ---
 title: Working with WinRT
 description: This section explains how to load and save PDF document in WinRT
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Working with pages | Syncfusion
 description: This section explains how to add, rearrange, remove pages and detect empty pages from the PDF document
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

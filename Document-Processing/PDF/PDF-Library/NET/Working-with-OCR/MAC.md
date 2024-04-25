@@ -1,7 +1,7 @@
 ---
 title: Perform OCR on PDF and Image Files in Mac | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images in WPF with different Tesseract versions using Syncfusion .NET OCR library. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: Assemblies

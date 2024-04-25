@@ -1,7 +1,7 @@
 ---
 title: Create PDF document on Mac OS | Syncfusion
 description: Create PDF document in ASP.NET Core application on Mac OS using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf

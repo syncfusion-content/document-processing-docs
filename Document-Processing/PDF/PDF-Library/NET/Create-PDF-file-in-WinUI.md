@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in WinUI | Syncfusion
 description: Learn how to create or generate a PDF file in WinUI with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

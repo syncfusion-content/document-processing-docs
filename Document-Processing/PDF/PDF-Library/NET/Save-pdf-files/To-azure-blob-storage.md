@@ -1,7 +1,7 @@
 ---
 title: Save PDF file to Azure blob storage | Syncfusion
 description: This page describes how to save PDF file to file azure blob storage in C#  using Syncfusion .NET PDF library.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---
