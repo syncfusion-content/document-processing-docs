@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Accepting or Rejecting Track Changes
 
-It is used to keep track of the changes made to a Word document. It helps to maintain the record of author, name and time for every insertion, deletion, or modification in a document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
+It is used to keep track of the changes made to a Word document. It helps to maintain the record of author, name and time for every insertion, deletion, or modification in a document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
 
 N> With this support, the changes made in the Word document by DocIO library cannot be tracked.
 
@@ -86,7 +86,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Accept all changes
 
-You can **accept all track changes in Word document** using [AcceptAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_AcceptAll) method.
+You can **accept all track changes in Word document** using [AcceptAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_AcceptAll) method.
 
 The following code example shows how to accept all the tracked changes.
 
@@ -140,7 +140,7 @@ By executing the above code example, it generates output Word document as follow
 
 ## Reject all changes
 
-You can **reject all track changes in Word document** using [RejectAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_RejectAll) method.
+You can **reject all track changes in Word document** using [RejectAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionCollection.html#Syncfusion_DocIO_DLS_RevisionCollection_RejectAll) method.
 
 The following code example shows how to reject all the tracked changes.
 
@@ -193,7 +193,7 @@ By executing the above code example, it generates output Word document as follow
 
 ## Accept all changes by a particular reviewer
 
-You can **accept all changes made by the author** in the Word document using [Accept](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Accept) method.
+You can **accept all changes made by the author** in the Word document using [Accept](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Accept) method.
 
 The following code example shows how to accept the tracked changes made by the author.
 
@@ -263,7 +263,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Reject all changes by particular reviewer
 
-You can **reject all changes made by the author** in the Word document using [Reject](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Reject) method.
+You can **reject all changes made by the author** in the Word document using [Reject](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Revision.html#Syncfusion_DocIO_DLS_Revision_Reject) method.
 
 The following code example shows how to reject the tracked changes made by the author.
 
@@ -394,6 +394,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 **Frequently Asked Questions**
 
-* [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/file-formats/docio/faq#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
-* [How to accept or reject track changes of specific type in the Word document?](https://help.syncfusion.com/file-formats/docio/faq#how-to-accept-or-reject-track-changes-of-specific-type-in-the-word-document)
-* [How to enable track changes for Word document?](https://help.syncfusion.com/file-formats/docio/faq#how-to-enable-track-changes-for-word-document)
+* [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
+* [How to accept or reject track changes of specific type in the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-accept-or-reject-track-changes-of-specific-type-in-the-word-document)
+* [How to enable track changes for Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-enable-track-changes-for-word-document)

@@ -9,7 +9,7 @@ documentation: UG
 
 ## Cloning a Word document
 
-You can create a deep copy of a Word document by using [Clone](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Clone) method of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) class. You can read the template document from file system or stream and create multiple document copies by cloning it. This improves the performance of document generation, as there is no need to read the Word document each time.
+You can create a deep copy of a Word document by using [Clone](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Clone) method of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class. You can read the template document from file system or stream and create multiple document copies by cloning it. This improves the performance of document generation, as there is no need to read the Word document each time.
 
 {% tabs %}
 
@@ -122,7 +122,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Link Paragraph and Character Style
 
-You can link character styles with paragraph and vice versa in a Word document using [LinkedStyleName](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Style.html#Syncfusion_DocIO_DLS_Style_LinkedStyleName) property.
+You can link character styles with paragraph and vice versa in a Word document using [LinkedStyleName](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Style.html#Syncfusion_DocIO_DLS_Style_LinkedStyleName) property.
 
 The following code example explains how to link character and paragraph style.
 
@@ -236,7 +236,7 @@ Document properties, also known as metadata, are details about a file that descr
 
 ### Built-in document properties
 
-The Built-in document properties of a word document is represented by [BuiltinDocumentProperties](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_BuiltinDocumentProperties) property of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) class. The following code example illustrates how to access and modify the Built-in document properties of the document.
+The Built-in document properties of a word document is represented by [BuiltinDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_BuiltinDocumentProperties) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class. The following code example illustrates how to access and modify the Built-in document properties of the document.
 
 {% tabs %}
 
@@ -358,7 +358,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Updating pages count
 
-You can update page count in an existing Word document or document that created from the scratch by passing true for [UpdateWordCount(performLayout)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_UpdateWordCount_System_Boolean_) API.
+You can update page count in an existing Word document or document that created from the scratch by passing true for [UpdateWordCount(performLayout)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_UpdateWordCount_System_Boolean_) API.
 
 The following code example shows how to update page count in an existing word document.
 
@@ -412,11 +412,11 @@ End Using
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Update-pages-count).
 
 N>  1. The word to PDF layout engine is used for updating the page count in word document. Due to its limitations, it may result in an incorrect page count and the execution of this process may take some time.
-N>  2. In ASP.NET Core and Xamarin platforms, to update page count in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/file-formats/docio/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/file-formats/docio/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application to update page count in a Word document.
+N>  2. In ASP.NET Core and Xamarin platforms, to update page count in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application to update page count in a Word document.
 
 ### Adding Custom Document properties
 
-You add a new custom document properties through [Add](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.CustomDocumentProperties.html#Syncfusion_DocIO_DLS_CustomDocumentProperties_Add_System_String_System_Object_) method of [CustomProperties](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_CustomDocumentProperties) class. The following code example illustrates how to add a new custom document properties.
+You add a new custom document properties through [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CustomDocumentProperties.html#Syncfusion_DocIO_DLS_CustomDocumentProperties_Add_System_String_System_Object_) method of [CustomProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_CustomDocumentProperties) class. The following code example illustrates how to add a new custom document properties.
 
 {% tabs %}
 
@@ -515,7 +515,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with Content Type Properties
 
-Content type properties refers the metadata stored in a Word document, such as author name, subject, and company. DocIO represents metadata with [MetaProperty](https://help.syncfusion.com/cr/file-formats/Syncfusion.Office.MetaProperty.html) instance and you can access in the Word document (DOCX, WordML) by using the [ContentTypeProperties](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ContentTypeProperties) collection of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) class.
+Content type properties refers the metadata stored in a Word document, such as author name, subject, and company. DocIO represents metadata with [MetaProperty](https://help.syncfusion.com/cr/document-processing/Syncfusion.Office.MetaProperty.html) instance and you can access in the Word document (DOCX, WordML) by using the [ContentTypeProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ContentTypeProperties) collection of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class.
 
 The following screenshots shows the content type property in the input Word document.
 ![Resultant output Word document](WorkingwithWordDocument_images/QuickPart.png)
@@ -711,7 +711,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Setting the Background for a Word document
 
-Essential DocIO allows to apply background such as color, gradient and picture to the Word document. A background of a Word document is represented by [Background](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Background) property of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) class. 
+Essential DocIO allows to apply background such as color, gradient and picture to the Word document. A background of a Word document is represented by [Background](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Background) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class. 
 
 The following code illustrates how to apply gradient as background to the document.
 
@@ -864,7 +864,7 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
     //Closes the document
     document.Close();
     //Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
-    //https://help.syncfusion.com/file-formats/docio/create-word-document-in-xamarin#helper-files-for-xamarin
+    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
 }
 {% endhighlight %}
 
@@ -885,7 +885,7 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
     //Saves the stream as Word file in local machine
     Save(stream, "Result.docx");
     //Please refer the below link to save Word document in UWP platform
-    //https://help.syncfusion.com/file-formats/docio/create-word-document-in-uwp#save-word-document-in-uwp
+    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
     document.Close();
 }
 {% endhighlight %}
@@ -896,7 +896,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Hide background in the print layout view
 
-You can show or hide background colors and images in the print layout view of Word document using the [DisplayBackgrounds](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_DisplayBackgrounds) API.
+You can show or hide background colors and images in the print layout view of Word document using the [DisplayBackgrounds](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_DisplayBackgrounds) API.
 
 The following code example shows how to hide the background in print layout view of Word document.
 
@@ -945,7 +945,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Remove background in a Word document
 
-You can remove background colors and images in an existing Word document by setting [NoBackground](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BackgroundType.html) as the background type.
+You can remove background colors and images in an existing Word document by setting [NoBackground](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BackgroundType.html) as the background type.
 
 The following code example shows how to remove the background in a Word document:
 
@@ -997,7 +997,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with Alternate chunks
 
-Updating Alternate chunk in the Word document, imports the content from the embedded alternate chunk into the main document. When saving the Word document containing alternate chunk as DOCX format document, the alternate chunk content preserved by default. But, when saving as DOC format or other formats, the alternate chunk content will not be preserved. You can use [UpdateAlternateChunks](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_UpdateAlternateChunks) method to preserve the alternate chunk content by importing into the main document.
+Updating Alternate chunk in the Word document, imports the content from the embedded alternate chunk into the main document. When saving the Word document containing alternate chunk as DOCX format document, the alternate chunk content preserved by default. But, when saving as DOC format or other formats, the alternate chunk content will not be preserved. You can use [UpdateAlternateChunks](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_UpdateAlternateChunks) method to preserve the alternate chunk content by importing into the main document.
 
 The following examples show how to update the alternate chunk in the word document.
 
@@ -1043,9 +1043,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [Iterating Word document elements](https://help.syncfusion.com/file-formats/docio/word-document/iterating-word-document-elements)
-* [Merging Word documents](https://help.syncfusion.com/file-formats/docio/word-document/merging-word-documents)
-* [Print Word documents](https://help.syncfusion.com/file-formats/docio/word-document/print-word-documents)
-* [Split Word documents](https://help.syncfusion.com/file-formats/docio/word-document/split-word-documents)
+* [Iterating Word document elements](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/iterating-word-document-elements)
+* [Merging Word documents](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/merging-word-documents)
+* [Print Word documents](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/print-word-documents)
+* [Split Word documents](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents)
 * [Why it is not possible to access the Word document contents page by page](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page-in-winforms-fileformat-libraries-)
 * [How to find list of used fonts in the Word document?](https://support.syncfusion.com/kb/article/11334/how-to-find-list-of-used-fonts-in-the-word-document)

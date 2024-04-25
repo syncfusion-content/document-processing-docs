@@ -10,7 +10,7 @@ documentation: UG
 
 The Essential DocIO converts the HTML file into Word document and vice versa. You can also convert the Word document (DOC, DOCX, RTF, DOT, DOTX, DOCM, and DOTM) into HTML format. 
 
-In Word library (DocIO) we use [XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8) for parsing the content from input HTML. So, the input HTML should meet XML standard (have proper open and close tags), even if you specify [XHTMLValidationType](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.XHTMLValidationType.html) parameter as [XHTMLValidationType.None](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.XHTMLValidationType.html).
+In Word library (DocIO) we use [XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8) for parsing the content from input HTML. So, the input HTML should meet XML standard (have proper open and close tags), even if you specify [XHTMLValidationType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html) parameter as [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html).
 
 ## XHTML Validation
 
@@ -179,12 +179,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> 1. Inserting XHTML string is not supported in Silverlight, Windows Phone, and Xamarin applications.
 N> 2. XHTML validation against XHTML 1.0 Strict and Transitional schema is not supported in Windows Store applications.
-N> 3. [XHTMLValidationType.None](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Default validation while importing HTML file.
-N> 4. [XHTMLValidationType.None](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Validates the HTML file against XHTML format and it doesn’t perform any schema validation.
+N> 3. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Default validation while importing HTML file.
+N> 4. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Validates the HTML file against XHTML format and it doesn’t perform any schema validation.
 
 ### Customize image data
 
-The Essential DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event, which is used to customize image data while importing and exporting HTML files. You can implement logic to customize the image data by using this [ImageNodeVisited](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event.
+The Essential DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event, which is used to customize image data while importing and exporting HTML files. You can implement logic to customize the image data by using this [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event.
 
 The following code example shows how to load image data based on image source path when importing the HTML files.
 
@@ -280,7 +280,7 @@ N> Calling the above event is mandatory in ASP.NET Core, UWP, and Xamarin platfo
 
 ### Customize image Path
 
-DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which is used to customize the image path that is set in the output HTML file and save images externally while converting a Word document to HTML.
+DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which is used to customize the image path that is set in the output HTML file and save images externally while converting a Word document to HTML.
 
 The following code example illustrates how to save image files during a Word to HTML conversion.
 
@@ -386,10 +386,10 @@ You can customize the Word to HTML conversion with the following options:
 * Specify to consider Text Input field as a editable fields or text
 * Specify the CSS style sheet type and its name
 * Export the images as Base-64 embedded images
-* Omit XML declaration in the exported HTML file using [HtmlExportOmitXmlDeclaration](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportOmitXmlDeclaration).
+* Omit XML declaration in the exported HTML file using [HtmlExportOmitXmlDeclaration](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportOmitXmlDeclaration).
 
 N> 1. When exporting header and footer, DocIO exports the first section of header content at the top of the HTML file and the first section of footer content at the end of the HTML file.
-N> 2. [HtmlExportImagesFolder](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportImagesFolder) and [HtmlExportCssStyleSheetFileName](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportCssStyleSheetFileName) APIs are only supported in the .NET Framework.
+N> 2. [HtmlExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportImagesFolder) and [HtmlExportCssStyleSheetFileName](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportCssStyleSheetFileName) APIs are only supported in the .NET Framework.
 
 The following code sample illustrates how to customize Word to HTML conversion.
 

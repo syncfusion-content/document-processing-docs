@@ -118,11 +118,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating a new Word document from scratch with basic elements
 
-An entire Word document is represented by an instance of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) and it is root element of DocIO’s DOM. Word document contains a collection of sections. A Word document must contain at least one section.
+An entire Word document is represented by an instance of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) and it is root element of DocIO’s DOM. Word document contains a collection of sections. A Word document must contain at least one section.
 
 A section represents group of paragraphs, tables etc., that have a specific set of properties used to define the pages, number of columns, headers and footers and so on that decides how the text appears. A section should contain at least one paragraph in this body.
 
-The following code example explains how to add a section into a [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) instance.
+The following code example explains how to add a section into a [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) instance.
 
 {% tabs %}  
 
@@ -609,7 +609,7 @@ Essential DocIO allows you to manipulate an existing Word document, RTF, WordML,
 
 Here, you can see how an existing Word document is loaded into DocIO’s DOM, replaces an existing content with another and finally saves the Word document.
 
-You can open an existing Word document either by using constructor of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_String_) class or by using [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_String_) method of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) class that reads the document and populates DocIO’s DOM. The following code example shows how to load an existing document.
+You can open an existing Word document either by using constructor of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_String_) class or by using [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_String_) method of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class that reads the document and populates DocIO’s DOM. The following code example shows how to load an existing document.
 
 {% tabs %}
 
@@ -728,7 +728,7 @@ Let’s consider that you have a template Word document with merge fields as sho
 
 ![Performing Mail merge input document](GettingStarted_images/GettingStarted_img2.jpeg)
 
-The [MailMerge](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [Execute](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform Mail merge from various data source. The Mail merge operation replaces the matching merge fields with the respective data.
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform Mail merge from various data source. The Mail merge operation replaces the matching merge fields with the respective data.
 
 The following code example shows how to perform simple Mail merge by using string array.
 
@@ -1046,9 +1046,9 @@ The resultant document looks as follows.
 
 Essential DocIO allows you to convert a Word document into PDF document in a few lines of code. 
 
-Refer [here](https://help.syncfusion.com/file-formats/docio/assemblies-required#converting-word-document-to-pdf) to know about the assemblies required to perform Word to PDF conversion in your application.
+Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) to know about the assemblies required to perform Word to PDF conversion in your application.
 
-[DocToPDFConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a Word document into PDF. 
+[DocToPDFConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a Word document into PDF. 
 
 In portable projects, `DocIORenderer` is responsible for converting a Word document into PDF.
 
@@ -1110,21 +1110,21 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF).
 
-N> 1. When the [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) object is not initialized, then the charts in Word document gets skipped during Word to PDF conversion.
-N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards
+N> 1. When the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) object is not initialized, then the charts in Word document gets skipped during Word to PDF conversion.
+N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards
 
 ## See Also
 
-* [Create Word document in ASP.NET Core](https://help.syncfusion.com/file-formats/docio/create-word-document-in-asp-net-core)
-* [Create Word document in ASP.NET MVC](https://help.syncfusion.com/file-formats/docio/create-word-document-in-asp-net-mvc)
-* [Create Word document in ASP.NET](https://help.syncfusion.com/file-formats/docio/create-word-document-in-asp-net)
-* [Create Word document in Blazor](https://help.syncfusion.com/file-formats/docio/create-word-document-in-blazor)
-* [Create Word document in Xamarin](https://help.syncfusion.com/file-formats/docio/create-word-document-in-xamarin)
-* [Create Word document in Windows Forms](https://help.syncfusion.com/file-formats/docio/create-word-document-in-windows-forms)
-* [Create Word document in WPF](https://help.syncfusion.com/file-formats/docio/create-word-document-in-wpf)
-* [Create Word document in UWP](https://help.syncfusion.com/file-formats/docio/create-word-document-in-uwp)
-* [Create Word document in WinUI](https://help.syncfusion.com/file-formats/docio/create-word-document-in-winui)
-* [Create Word document in .NET MAUI](https://help.syncfusion.com/file-formats/docio/create-word-document-in-maui)
-* [Create Word document in Linux](https://help.syncfusion.com/file-formats/docio/create-word-document-in-linux)
-* [Create Word document in Docker](https://help.syncfusion.com/file-formats/docio/word-to-pdf-linux-docker)
-* [Create Word document in Mac OS](https://help.syncfusion.com/file-formats/docio/create-word-document-in-mac)
+* [Create Word document in ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-core)
+* [Create Word document in ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-mvc)
+* [Create Word document in ASP.NET](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net)
+* [Create Word document in Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-blazor)
+* [Create Word document in Xamarin](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin)
+* [Create Word document in Windows Forms](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-windows-forms)
+* [Create Word document in WPF](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-wpf)
+* [Create Word document in UWP](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp)
+* [Create Word document in WinUI](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-winui)
+* [Create Word document in .NET MAUI](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-maui)
+* [Create Word document in Linux](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-linux)
+* [Create Word document in Docker](https://help.syncfusion.com/file-fdocument-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker)
+* [Create Word document in Mac OS](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-mac)
