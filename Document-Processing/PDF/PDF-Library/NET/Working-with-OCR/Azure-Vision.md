@@ -1,7 +1,7 @@
 ---
 title: Perform OCR on PDF and image files in Azure Vision | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images in Azure Vision using Syncfusion .NET OCR library. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: Assemblies

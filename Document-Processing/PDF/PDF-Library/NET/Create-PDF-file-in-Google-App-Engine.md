@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF document in Google App Engine| Syncfusion
 description: Learn how to create or generate a PDF file in the Google App Engine using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load pdf

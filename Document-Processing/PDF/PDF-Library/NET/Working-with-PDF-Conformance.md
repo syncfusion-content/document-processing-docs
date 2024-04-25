@@ -1,7 +1,7 @@
 ---
 title: Working with PDF conformance in .NET PDF Library | Syncfusion
 description: This section explains how to create a PDF conformance documents and convert PDF to PDF/A conformance document.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---
@@ -25,7 +25,7 @@ The Essential PDF currently supports the following PDF conformances:
 N> 1. To know more details about PDF/A standard refer [https://en.wikipedia.org/wiki/PDF/A#Description](https://en.wikipedia.org/wiki/PDF/A#Description )
 N> 2. To know more details about PDF/X standard refer [https://en.wikipedia.org/wiki/PDF/X](https://en.wikipedia.org/wiki/PDF/X)
 
-N> Essential PDF supports PDF conformances only in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms.
+N> Essential PDF supports PDF conformances only in Windows Forms, WPF, ASP.NET Core, ASP.NET MVC and Xamarin platforms.
 
 ## PDF/A-1b conformance
 

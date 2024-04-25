@@ -1,7 +1,7 @@
 ---
 title: Working with Text | Syncfusion
 description: This section explains how to add text to the PDF document using different type of fonts, TrueType fonts and standard fonts
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---
@@ -1469,7 +1469,7 @@ PdfPage page = doc.Pages.Add();
 PdfGraphics graphics = page.Graphics;
 FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
 //Create a new PDF font instance
-PdfFont font = new PdfTrueTypeFont(fontStream, 10);
+PdfFont pdfFont = new PdfTrueTypeFont(fontStream, 10);
 //Set the format for string
 PdfStringFormat format = new PdfStringFormat();
 //Set the format as complex script layout type

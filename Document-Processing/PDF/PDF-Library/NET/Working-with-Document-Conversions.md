@@ -1,7 +1,7 @@
 ---
 title: Working with Document Conversion in File Formats PDF | Syncfusion
 description: This section explains converting other document types such as Word, Excel, RTF, TIFF, XPS, and HTML to PDF.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---
@@ -1227,7 +1227,8 @@ FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.R
 imageConverter.Load(inputStream);
 //Convert PDF to Image.
 Stream outputStream = imageConverter.Convert(0, false, false);
-return File(outputStream.ToArray(), System.Net.Mime.MediaTypeNames.Image.Png, "sample.png");
+MemoryStream stream = outputStream as MemoryStream;
+return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Image.Jpeg, "sample.jpeg");
 
 {% endhighlight %}
 

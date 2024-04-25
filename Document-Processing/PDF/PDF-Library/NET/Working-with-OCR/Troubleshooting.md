@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting PDF OCR failures | Syncfusion
 description: Learn how to overcome OCR Processor failures using Syncfusion .NET OCR library with the help of Google's Tesseract Optical Character Recognition engine.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: Assemblies
@@ -25,7 +25,8 @@ keywords: Assemblies
 <td>
 Set proper tesseract binaries and tessdata folder with all files and inner folders. The tessdata folder name is case-sensitive and should not change.  
 <br/><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="C# [Cross-platform]" %}
 
 //TesseractBinaries - path of the folder tesseract binaries. 
 OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/");
@@ -34,6 +35,7 @@ OCRProcessor processor = new OCRProcessor(@"TesseractBinaries/");
 processor.PerformOCR(lDoc, @"TessData/");
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 <tr>
@@ -178,38 +180,43 @@ By using the best tessdata, we can improve the OCR results. For more information
 </th>
 <td>To resolve this problem, you should install and utilize Tesseract 5 on your Mac machine. Refer to the following steps for installing Tesseract 5 and integrating it into an OCR processing workflow. 
 <br><br/>
-1.Execute the following command to install Tesserat 5. 
+1.Execute the following command to install Tesseract 5. 
 <br><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 brew install tesseract
 
 {% endhighlight %}
-
+{% endtabs %}
 <br><br/>
 If the "brew" is not installed on your machine, you can install it using the following command.
 <br><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 {% endhighlight %}
-
+{% endtabs %}
 <br><br/>
 
 2.Once Tesseract 5 is successfully installed, you can configure the path to the latest binaries by copying the location of the Tesseract folder and setting it as the Tesseract binaries path when setting up the OCR processor. Refer to the example code below:
 <br><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize the OCR processor by providing the path of tesseract binaries.
 using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract/5.3.2/lib"))
 
 {% endhighlight %}
+{% endtabs %}
 <br><br/>
 
 3.Add the TessDataPath from bin folder. Refer to the example code below:
 <br></br>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="C# [Cross-platform]" %}
 
 using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract/5.3.2/lib"))
 {
@@ -232,6 +239,7 @@ using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract
 }
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -253,39 +261,188 @@ using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract
 <br><br/>
 1. Install the leptonica.
 <br>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 sudo apt-get install libleptonica-dev
 
 {% endhighlight %}
+{% endtabs %}
 <br><br>
 <img src="OCR-Images/Install-leptonica.png">
 <br><br>
 2.Install the tesseract.
 <br>
-
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 sudo apt-get install tesseract-ocr-eng
 
 {% endhighlight %}
+{% endtabs %}
 <br><br>
 <img src="OCR-Images/Install-tesseract.png">
 <br><br>
 3. Copy the binaries (liblept.so and libtesseract.so) to the missing files exception folder in the project location.
 <br>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 cp /usr/lib/x86_64-linux-gnu/liblept.so /home/syncfusion/linuxdockersample/linuxdockersample/bin/Debug/net7.0/liblept1753.so
 
 {% endhighlight %}
+{% endtabs %}
 <br>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 cp /usr/lib/x86_64-linux-gnu/libtesseract.so.4 /home/syncfusion/linuxdockersample/linuxdockersample/bin/Debug/net7.0/libSyncfusionTesseract.so
 
 {% endhighlight %}
+{% endtabs %}
 <br/>
 </td>
 </tr>
 </table>
+
+
+## OCR not working on Linux: Exception has been thrown by the target of an invocation
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Syncfusion.Pdf.PdfException: Exception has been thrown by the target of an invocation" in the Linux machine.</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The problem occurs due to the missing prerequisites dependencies on your Linux machine.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To resolve this problem, you should install all required dependencies in your Linux machine. Refer to the following steps to installing the missing dependencies.
+
+Step 1: Execute the following command in terminal window to check dependencies are installed properly.
+{% tabs %}
+{% highlight C# %}
+
+        ldd  liblept1753.so
+        ldd  libSyncfusionTesseract.so
+
+{% endhighlight %}
+{% endtabs %}
+Run the following commands in terminal
+Step 1:
+{% tabs %}
+{% highlight C# %}
+
+        sudo apt-get install libleptonica-dev libjpeg62
+
+{% endhighlight %}
+{% endtabs %}
+Step 2:
+{% tabs %}
+{% highlight C# %}
+
+        ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+
+{% endhighlight %}
+{% endtabs %}
+Step 3:
+{% tabs %}
+{% highlight C# %}
+
+        ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+</table>
+
+## OCR not working on Docker net 8.0: Exception has been thrown by target of an invocation.
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">OCR not working on Docker net 8.0: Exception has been thrown by target of an invocation.</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The reported issue occurs due to the missing prerequisite dependencies packages in the Docker container in .NET 8.0 version.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+ We can resolve the reported issue by installing the tesseract required dependencies by using Docker file. Please refer the below commands.
+
+{% tabs %}
+
+{% highlight C# %}
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+
+`RUN apt-get update && \`
+
+`apt-get install -yq --no-install-recommends \`
+
+`libgdiplus libc6-dev libleptonica-dev libjpeg62`
+
+`RUN ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5`
+
+`RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so`
+
+ 
+
+USER app
+
+WORKDIR /app
+
+EXPOSE 8080
+
+EXPOSE 8081
+
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+</tr>
+</table>
+
+
+## Default path reference for Syncfusion OCR packages
+When installing the Syncfusion OCR NuGet packages, the tessdata and tesseract path binaries are copied into the runtimes folder. The default binaries path references are added in the package itself, so there is no need to set the manual path.
+
+If you are facing any issues with default reference path in your project. Kindly manually set the Tesseract and Tessdata path using the TessdataPath and TesseractPath in OCRProcessor class. You can find the binaries in the below project in your project location.
+
+<table>
+<tr>
+<th style="font-size:14px" width="100px">Tessdata path
+</th>
+<td>
+Tessdata default path reference is common for all platform. You can find the tessdata in below path in your project.
+
+"bin\Debug\net6.0\runtimes\tessdata"
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Tesseract Path</th>
+<td>
+Tesseract binaries are different based on the OS platform and bit version . You can find the tesseract path in below path in your project.
+<br/><br/>
+Windows Platform:<br/>
+bin\Debug\net6.0\runtimes\win-x86\native (or) bin\Debug\net6.0\runtimes\win-x64\native
+<br/><br/>
+Linux:
+<br/>
+bin\Debug\net6.0\runtimes\linux\native
+<br/><br/>
+ 
+Mac:
+<br/>
+bin\Debug\net6.0.\runtimes\osx\native
+</td>
+</tr>
+</table>
+

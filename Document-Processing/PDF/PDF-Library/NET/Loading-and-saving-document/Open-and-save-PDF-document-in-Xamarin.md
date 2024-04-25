@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in Xamarin | Syncfusion
 description: Open and save PDF document in Xamarin application using Syncfusion Xamarin PDF library without the dependency of Adobe Acrobat. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: c# save pdf, c# load pdf

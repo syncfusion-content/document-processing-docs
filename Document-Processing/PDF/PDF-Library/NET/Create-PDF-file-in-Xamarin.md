@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in Xamarin | Syncfusion
 description: Learn how to create or generate a PDF file in Xamarin with easy steps using Syncfusion Xamarin PDF library without depending on Adobe.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

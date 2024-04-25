@@ -1,7 +1,7 @@
 ---
 title: NuGet Packages for PDF | Syncfusion
 description: This section illustrates the NuGet packages required to use Syncfusion PDF library (Essential PDF) in various platforms and frameworks
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

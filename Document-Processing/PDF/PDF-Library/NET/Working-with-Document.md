@@ -1,7 +1,7 @@
 ---
 title: Working with Document | Syncfusion
 description: This section explains how to set document Settings and properties to the PDF document using Essential PDF
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

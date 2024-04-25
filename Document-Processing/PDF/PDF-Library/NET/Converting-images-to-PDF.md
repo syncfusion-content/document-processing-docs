@@ -1,7 +1,7 @@
 ---
 title: Converting images to PDF | Syncfusion
 description: This section explains how to convert both raster and vector images to PDF document using Syncfusion .NET PDF library. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF document in AWS | Syncfusion
 description: Learn how to create or generate a PDF file in AWS using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: aws create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf

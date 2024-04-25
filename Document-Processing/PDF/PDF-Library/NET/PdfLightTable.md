@@ -1,7 +1,7 @@
 ---
 title: Working with Tables using PdfLightTable | Syncfusion
 description: Learn how to create a table to PDF, apply cell & built-in table styles, automatic pagination, customize the rows and columns, and more using the PdfLightTable.  
-platform: document-processing
+platform: File-formats
 control: PDF
 documentation: UG
 ---

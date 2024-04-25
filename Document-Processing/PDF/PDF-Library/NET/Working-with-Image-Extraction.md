@@ -1,7 +1,7 @@
 ---
 title: Working with image extraction | Syncfusion
 description: This section explains extracting images and extracting information about images from PDF document using Essential PDF
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---
@@ -79,7 +79,7 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 PdfPageBase pageBase = loadedDocument.Pages[0];
 
 //Extracts all the images info from first page
-PdfImageInfo[] imagesInfo= pageBase.GetImagesInfo();
+PdfImageInfo[] imagesInfo= pageBase.ExtractImages();
 //Close the document
 loadedDocument.Close(true);
 
@@ -107,7 +107,7 @@ Dim loadedDocument As New PdfLoadedDocument(fileName)
 Dim pageBase As PdfPageBase = loadedDocument.Pages(0)
 
 'Extracts all the images info from first page
-Dim imagesInfo As PdfImageInfo[] = pageBase.ImagesInfo
+Dim imagesInfo As PdfImageInfo[] = pageBase.ExtractImages()
 'Close the document
 loadedDocument.Close(True)
 

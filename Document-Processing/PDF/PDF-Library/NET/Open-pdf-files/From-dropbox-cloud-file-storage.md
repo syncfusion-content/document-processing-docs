@@ -1,7 +1,7 @@
 ---
 title: Open PDF file from Dropbox cloud file storage| Syncfusion
 description: This page describes how to load PDF file from Dropbox cloud file storage in C#  using Syncfusion .NET PDF library.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

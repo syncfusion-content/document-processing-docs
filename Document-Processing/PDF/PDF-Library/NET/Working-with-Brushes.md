@@ -1,7 +1,7 @@
 ---
 title: Working with Brushes | Syncfusion
 description: This section explains how to add shapes using different brushes such as solid brush, gradient brush, tiling brush, and more.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

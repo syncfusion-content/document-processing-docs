@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in Windows Forms | Syncfusion
 description: Open and save PDF document in Windows Forms application using Syncfusion .NET PDF library without the dependency of Adobe Acrobat. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: winforms save pdf, winforms load pdf, c# save pdf, c# load pdf

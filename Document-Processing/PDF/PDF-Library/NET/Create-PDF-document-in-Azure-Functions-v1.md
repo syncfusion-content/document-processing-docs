@@ -1,7 +1,7 @@
 ---
 title: Create PDF document in Azure Functions v1 | Syncfusion
 description: Create PDF document in Azure Functions v1 using .NET PDF library without the dependency of Adobe Acrobat. 
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Convert a HTML to PDF file in Docker | Syncfusion
 description: Learn how to convert a HTML to PDF file in docker with easy steps using Syncfusion .NET HTML converter library.
-platform: document-processing
+platform: file-formats
 control: PDF
 documentation: UG
 keywords: Assemblies
