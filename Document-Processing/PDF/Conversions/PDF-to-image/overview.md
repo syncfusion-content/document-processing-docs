@@ -11,6 +11,9 @@ keywords: Assemblies
 
 This PDF to image converter library allows converting PDF documents to images without opening the document in the PDF Viewer control. It allows you to selectively export pages as a stream by utilizing the 'Convert' method, facilitating the transformation of PDF files into images.
 
+Watch the following video to quickly get started with converting PDF to image in .NET using a PDF to Image Converter Library.
+{% youtube "https://www.youtube.com/watch?v=Grjtyh5gBr8" %}
+
 <b>NuGet</b>
 
 <table>
@@ -105,5 +108,3 @@ image.Save("sample.png")
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/PDF-to-image).
-
-N> To know more about PdfToImageConverter and features it provides, please refer to [PdfToImageConverter](https://help.syncfusion.com/file-formats/pdf-to-image)
