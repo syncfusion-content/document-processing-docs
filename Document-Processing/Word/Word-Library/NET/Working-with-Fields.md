@@ -203,7 +203,7 @@ The following are the known limitations:
 * Updating of NUMPAGES field and Cross Reference field with Page number and Paragraph number options are not supported in Silverlight, WinRT, Universal, and Windows Phone applications.
 * Currently group shapes, drawing canvas, and table auto resizing are not supported in Word to PDF layouting, and this may lead to update incorrect page number and total number of pages.
 
-N> In ASP.NET Core, Blazor, and Xamarin platforms, to update fields (including Page, NumPages) in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Bordersassemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Bordersnuget-packages-required#converting-word-document-to-pdf) as a reference in your application.
+N> In ASP.NET Core, Blazor, and Xamarin platforms, to update fields (including Page, NumPages) in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/https:/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application.
 
 The following code example explains how to update the fields present in Word document.
 
@@ -1757,3 +1757,5 @@ document.Close()
 
 * [Is it possible to update Include Text field in Word document using Essential DocIO?](https://www.syncfusion.com/kb/3921/is-it-possible-to-update-include-text-field-in-word-document-using-essential-docio)
 * [How to insert author's name in a Word document?](https://www.syncfusion.com/kb/13929/how-to-insert-authors-name-in-a-word-document)
+* [How to insert IF field with multiple body items in Word document?](https://support.syncfusion.com/kb/article/15139/how-to-insert-if-field-with-multiple-body-items-in-word-document-using-net-core-word-library?isInternalRefresh=False)
+* [How to insert Merge field inside an IF field in a Word document?](https://support.syncfusion.com/kb/article/15255/how-to-insert-merge-field-inside-an-if-field-in-a-word-document-using-net-core-word-library?isInternalRefresh=False)

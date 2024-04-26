@@ -8,7 +8,7 @@ documentation: UG
 
 # Working with Windows Phone 
 
-In your Windows Phone application, please add the required assemblies in order to use DocIO. [Refer here for assemblies required](/file-formats/docio/assemblies-required).
+In your Windows Phone application, please add the required assemblies in order to use DocIO. [Refer here for assemblies required](/document-processing/word/word-library/net/assemblies-required).
 
 ## Loading the document 
 

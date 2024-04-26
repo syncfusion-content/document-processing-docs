@@ -1212,7 +1212,7 @@ doc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection).
 
-N> For more information on Mail merge using DocIO, you can refer to online documentation link: [MailMerge](/document-processing/word/conversions/word-to-pdf/net/Working-with-MailMerge)
+N> For more information on Mail merge using DocIO, you can refer to online documentation link: [MailMerge](/document-processing/word/word-library/net/Working-with-MailMerge)
 
 ### Find and Replace
 
@@ -1336,7 +1336,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Find-and-replace-text-using-regex).
 
-N> For more information on performing the find and replace operation using DocIO, you can refer to online documentation link: [Find and Replace](/document-processing/word/conversions/word-to-pdf/net/Working-with-Find-and-Replace)
+N> For more information on performing the find and replace operation using DocIO, you can refer to online documentation link: [Find and Replace](/document-processing/word/word-library/net/Working-with-Find-and-Replace)
 
 ### Bookmarks
 
@@ -1704,7 +1704,7 @@ doc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Watermark/Add-picture-watermark).
 
-N> For more information on adding watermarks to a Word document using DocIO, refer to the online documentation link: [Applying Watermark](/document-processing/word/conversions/word-to-pdf/net/applying-watermark)
+N> For more information on adding watermarks to a Word document using DocIO, refer to the online documentation link: [Applying Watermark](/document-processing/word/word-library/net/applying-watermark)
 
 ### Headers and Footers
 
@@ -2017,7 +2017,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Insert-empty-table).
 
-N> For more information on creating tables using DocIO, refer to online documentation link: [Working with Tables](/document-processing/word/conversions/word-to-pdf/net/working-with-tables)
+N> For more information on creating tables using DocIO, refer to online documentation link: [Working with Tables](/document-processing/word/word-library/net/working-with-tables)
 
 ### Comments 
 
@@ -2124,7 +2124,7 @@ doc.Save("Sample.doc", FormatType.Doc)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Comments/Add-comment-to-Word-document).
 
-N> For more information on working with the comments using DocIO, you can refer to the online documentation link: [Working with Comments](/document-processing/word/conversions/word-to-pdf/net/working-with-comments)
+N> For more information on working with the comments using DocIO, you can refer to the online documentation link: [Working with Comments](/document-processing/word/word-library/net/working-with-comments)
 
 ### Document Protection
 
@@ -2223,7 +2223,7 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Allow-editing-comments-only).
 
 Refer to the online documentation link for more details about the ways to protect the Word documents by using DocIO:
-[Protecting word document from editing](/document-processing/word/conversions/word-to-pdf/net/Working-with-Security)
+[Protecting word document from editing](/document-processing/word/word-library/net/Working-with-Security)
 
 ### Table of Contents
 
@@ -2332,7 +2332,7 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Add-table-of-contents).
 
 Refer to the online documentation link for more information about adding the table of contents to the Word document by using DocIO:
-[Working with table of contents](/document-processing/word/conversions/word-to-pdf/net/working-with-table-of-contents)
+[Working with table of contents](/document-processing/word/word-library/net/working-with-table-of-contents)
 
 ## How to copy necessary fonts to Linux containers
 
@@ -2488,7 +2488,7 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
     //Closes the document
     document.Close();
     //Please refer the below link to save Word document in UWP platform
-    //https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/create-word-document-in-uwp#save-word-document-in-uwp
+    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 }
 {% endhighlight %}
 
@@ -2710,7 +2710,7 @@ The .NET Word library (DocIO) accepts all the changes in input documents and the
 
 ## How to perform Word to PDF in Linux prior to v18.4 release?
 
-In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with Word to PDF conversion capabilities.
+In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with Word to PDF conversion capabilities.
 
 In addition to the previous NuGet packages, SkiaSharp.Linux helper NuGet package is required that can be generated by the following steps: 
 
@@ -2771,7 +2771,7 @@ To preserve the expected images in the PDF/Image conversion, we suggest you conv
 2. Otherwise, you can use the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf/) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same [C# tab](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf) code examples for it. But in Mac and Linux environment, using the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages have limitations.
 
 ## What are the NuGet packages to be installed to perform Word to PDF conversion in Linux OS?
-In Linux OS, you can perform Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to PDF conversion capabilities.
+In Linux OS, you can perform Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to PDF conversion capabilities.
 
 In addition to the previous NuGet packages, the following NuGet packages need to be installed in your application.
 
@@ -2836,13 +2836,13 @@ Before v18.4.0.x
 </td>
 <td>
 Install SkiaSharp.Linux NuGet package for .Net Core application in Linux OS. you can find the SkiaSharp.Linux NuGet package created by us from {{'[here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/SkiaSharp.Linux.1.59.3-2103435070)'| markdownify }}.<br/>
-For more information, Please refer {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/faq#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)'| markdownify }}.
+For more information, Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)'| markdownify }}.
 </td>
 </tr>
 </table>
 
 ## What are the NuGet packages to be installed to perform Word to Image conversion in Linux OS?
-In Linux OS, you can perform Word to Image conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to Image conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required#converting-word-document-to-image) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to Image conversion capabilities.
+In Linux OS, you can perform Word to Image conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to Image conversion NuGet packages](https://help.syncfusion.com//document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-image) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to Image conversion capabilities.
 
 In addition to the previous NuGet packages, the following NuGet package need to be installed in your application.
 
@@ -2889,5 +2889,5 @@ From v20.2
 ## Why are content controls not preserved as editable form fields in the converted PDF document even when PreserveFormFields is enabled? 
 
 Content controls behave differently from legacy form fields, such as Text, Checkbox, and Drop-down fields, during conversions to PDF format. While legacy form fields are typically preserved as editable form fields in the resulting PDF document, content controls are converted to plain text. The [PreserveFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PreserveFormFields) API specifically retains the interactive nature of legacy form fields, not content controls.
-To ensure that form fields remain editable in the PDF converted from Word document, it is recommended to use [Text](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/working-with-form-fields#text-form-field), [Checkbox](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/working-with-form-fields#check-box), and [Drop-down](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/working-with-form-fields#drop-down) form fields instead of content controls in the Word document. Additionally, to preserve the form fields as editable in the resulting PDF, set the [PreserveFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PreserveFormFields) API to true.
+To ensure that form fields remain editable in the PDF converted from Word document, it is recommended to use [Text](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-form-fields#text-form-field), [Checkbox](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-form-fields#check-box), and [Drop-down](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-form-fields#drop-down) form fields instead of content controls in the Word document. Additionally, to preserve the form fields as editable in the resulting PDF, set the [PreserveFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PreserveFormFields) API to true.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Create-fillable-PDF-from-Word).

@@ -737,7 +737,7 @@ document.Close();
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document-processing/Save-Word-with-compatibility).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-file-formats/Save-Word-with-compatibility).
 
 #### Save Word in old compatibility
 
@@ -790,7 +790,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document-processing/Save-Word-in-old-compatibility/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-file-formats/Save-Word-in-old-compatibility/.NET).
 
 ### Open a Word (*.doc) document containing incremental save information
 

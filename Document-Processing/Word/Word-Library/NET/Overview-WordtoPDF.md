@@ -58,7 +58,7 @@ Package manager console command
 </thead>
 <tr>
 <td>
-{{'[Windows Forms](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-window-forms)'|  markdownify }}, Console Application (Targeting .NET Framework)
+{{'[Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms)'|  markdownify }}, Console Application (Targeting .NET Framework)
 </td>
 <td>
 Syncfusion.DocToPdfConverter.WinForms.nupkg
@@ -69,7 +69,7 @@ Install-Package Syncfusion.DocToPdfConverter.WinForms
 </tr>
 <tr>
 <td>
-{{'[WPF](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-wpf)'|  markdownify }}
+{{'[WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf)'|  markdownify }}
 </td>
 <td>
 Syncfusion.DocToPdfConverter.Wpf.nupkg
@@ -91,7 +91,7 @@ Install-Package Syncfusion.DocToPdfConverter.ClientProfile
 </tr>
 <tr>
 <td>
-{{'[ASP.NET](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-asp-net)'|  markdownify }}
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)'|  markdownify }}
 </td>
 <td>
 Syncfusion.DocToPdfConverter.AspNet.nupkg
@@ -102,7 +102,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet
 </tr>
 <tr>
 <td>
-{{'[ASP.NET MVC4](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-asp-net-mvc)'|  markdownify }}
+{{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc)'|  markdownify }}
 </td>
 <td>
 Syncfusion.DocToPdfConverter.AspNet.Mvc4.nupkg
@@ -113,7 +113,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc4
 </tr>
 <tr>
 <td>
-{{'[ASP.NET MVC5](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-asp-net-mvc)'|  markdownify }}
+{{'[ASP.NET MVC5](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc)'|  markdownify }}
 </td>
 <td>
 Syncfusion.DocToPdfConverter.AspNet.Mvc5.nupkg
@@ -124,13 +124,13 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc5
 </tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-asp-net-core)'|  markdownify }}, Console Application (Targeting .NET Core) and {{'[Blazor](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-blazor)'|  markdownify }}
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core)'|  markdownify }}, Console Application (Targeting .NET Core) and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor)'|  markdownify }}
 </td>
 <td>
 Syncfusion.DocIORenderer.Net.Core.nupkg<br/>
 <br/>
 <i>Note:</i><br/>
-<i>Please refer {{'[here](https://help.syncfusion.com/file-formats/docio/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
+<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
 </td>
 <td>
 Install-Package Syncfusion.DocIORenderer.Net.Core
@@ -138,7 +138,7 @@ Install-Package Syncfusion.DocIORenderer.Net.Core
 </tr>
 <tr>
 <td>
-{{'[Xamarin](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-xamarin)'|  markdownify }}
+{{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin)'|  markdownify }}
 </td>
 <td>
 Syncfusion.Xamarin.DocIORenderer.nupkg
@@ -149,7 +149,7 @@ Install-Package Syncfusion.Xamarin.DocIORenderer
 </tr>
 <tr>
 <td>
-{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-winui)'|  markdownify }}<br/> {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/file-formats/docio/convert-word-document-to-pdf-in-maui)'|  markdownify }}
+{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui)'|  markdownify }}<br/> {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui)'|  markdownify }}
 </td>
 <td>
 Syncfusion.DocIORenderer.NET
