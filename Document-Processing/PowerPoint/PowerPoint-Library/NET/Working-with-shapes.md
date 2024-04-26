@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding shapes to a slide
 
-In every slide, there is a shape collection that can contain any form of graphical objects such as AutoShape, chart, text, or picture.  You can add any shape element to this collection. The [IShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IShape.html) is the base type for the shape elements.
+In every slide, there is a shape collection that can contain any form of graphical objects such as AutoShape, chart, text, or picture.  You can add any shape element to this collection. The [IShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IShape.html) is the base type for the shape elements.
 
 The following code example demonstrates how to add an AutoShape and image to the shape collection of a slide.
 
@@ -300,7 +300,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Creating a GroupShape
 
-The shapes in a slide can be grouped into a single shape. The following code snippet demonstrates how to group different slide items into a single [GroupShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IGroupShape.html).
+The shapes in a slide can be grouped into a single shape. The following code snippet demonstrates how to group different slide items into a single [GroupShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IGroupShape.html).
 
 {% tabs %}
 
@@ -374,7 +374,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Iterating and modifying a particular GroupShape
 
-You can iterate through the shape collection of a [GroupShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IGroupShape.html). Below code snippet demonstrates how to iterate through the shapes of a [GroupShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IGroupShape.html) to modify it by removing a specific shape.
+You can iterate through the shape collection of a [GroupShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IGroupShape.html). Below code snippet demonstrates how to iterate through the shapes of a [GroupShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IGroupShape.html) to modify it by removing a specific shape.
 
 {% tabs %}
 
@@ -456,7 +456,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ###  Removing a GroupShape
 
-[GroupShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IGroupShape.html) can be removed from a slide using its instance or by its index position in the [GroupShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IGroupShape.html) collection of the slide. Below code snippet explains how to remove a [GroupShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IGroupShape.html) from a slide.
+[GroupShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IGroupShape.html) can be removed from a slide using its instance or by its index position in the [GroupShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IGroupShape.html) collection of the slide. Below code snippet explains how to remove a [GroupShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IGroupShape.html) from a slide.
 
 {% tabs %}
 
@@ -512,3 +512,6 @@ pptxDoc.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Shapes/Remove-groupshape).
 
 N> The Presentation library do not have support for converting the auto-shapes with modified adjustment values in PowerPoint presentation to image or PDF conversion. To know more about adjustment values in PowerPoint shapes please click [here](https://msdn.microsoft.com/en-us/library/office/aa220882(v=office.11).aspx).
+
+## See Also
+* [How to set Smooth Start and End for animated shapes in Presentation?](https://support.syncfusion.com/kb/article/11450/how-to-set-smooth-start-and-end-for-animated-shapes-in-presentation)

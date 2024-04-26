@@ -9,8 +9,8 @@ documentation: UG
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 
-In Essential DocIO, bookmark is represented by [Bookmark](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html) instance that is a pair of [BookmarkStart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarkStart.html) and [BookmarkEnd](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarkEnd.html).
-[BookmarkStart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarkStart.html) represents start point of a bookmark and [BookmarkEnd](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarkEnd.html) represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the [Bookmarks](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Bookmarks) property of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) class.
+In Essential DocIO, bookmark is represented by [Bookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html) instance that is a pair of [BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html).
+[BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) represents start point of a bookmark and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the [Bookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Bookmarks) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class.
 
 ## Adding a bookmark
 
@@ -194,14 +194,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieving contents within a bookmark 
 
-[BookmarkNavigator](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html) is used for navigating to a bookmark in a Word document. You can retrieve, replace and delete the content of a specified bookmark by using [BookmarkNavigator](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
+[BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) is used for navigating to a bookmark in a Word document. You can retrieve, replace and delete the content of a specified bookmark by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
 
 You can get the content between bookmark start and bookmark end of the specified bookmark in two ways: 
 
-1. You can use [GetBookmarkContent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetBookmarkContent) method for retrieving content as collection of body items when the bookmark start and bookmark end are preserved in a single section.
-2. You can use [GetContent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) method for retrieving content as collection of sections when the bookmark start and bookmark end are preserved in different sections. 
+1. You can use [GetBookmarkContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetBookmarkContent) method for retrieving content as collection of body items when the bookmark start and bookmark end are preserved in a single section.
+2. You can use [GetContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) method for retrieving content as collection of sections when the bookmark start and bookmark end are preserved in different sections. 
 
-The following code example shows how to retrieve the specified bookmark content by using [GetBookmarkContent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetBookmarkContent) method in a Word document.
+The following code example shows how to retrieve the specified bookmark content by using [GetBookmarkContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetBookmarkContent) method in a Word document.
 
 {% tabs %}
 
@@ -263,7 +263,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Get-bookmark-content-as-body-part).
 
-The following code example shows how to retrieve the specified bookmark content by using [GetContent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) method in a Word document.
+The following code example shows how to retrieve the specified bookmark content by using [GetContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) method in a Word document.
 
 {% tabs %}
 
@@ -334,12 +334,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieving bookmark contents within a table 
 
-You can select the column range for bookmarks inside the tables in Word documents by using [FirstColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) and [LastColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) properties.
+You can select the column range for bookmarks inside the tables in Word documents by using [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) properties.
 
-N> 1. [FirstColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) and [LastColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) properties are valid to select table cells, only when the respective bookmark end and start is present within the same row or next rows of the same table.
-N> 2. [FirstColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) property denotes the top left corner cell and [LastColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) property denotes the bottom right corner cell of rectangular selection region since you can only select the content as a rectangular selection by using bookmarks within the table.
-N> 3. [FirstColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) property selects from the first cell of the respective row when this property value is negative (or) greater than the cells of a row (or) greater than the [LastColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) value.
-N> 4. [LastColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) property selects till last cell of the respective row when this property value is negative (or) greater than the cells of a row (or) less than the [FirstColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) value.
+N> 1. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) properties are valid to select table cells, only when the respective bookmark end and start is present within the same row or next rows of the same table.
+N> 2. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) property denotes the top left corner cell and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) property denotes the bottom right corner cell of rectangular selection region since you can only select the content as a rectangular selection by using bookmarks within the table.
+N> 3. [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) property selects from the first cell of the respective row when this property value is negative (or) greater than the cells of a row (or) greater than the [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) value.
+N> 4. [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_LastColumn) property selects till last cell of the respective row when this property value is negative (or) greater than the cells of a row (or) less than the [FirstColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html#Syncfusion_DocIO_DLS_Bookmark_FirstColumn) value.
 
 The following code example shows how to retrieve the bookmark content of a specified column range from a table in a Word document.
 
@@ -570,7 +570,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can insert table, paragraph, simple text and paragraph item at the start or end location of the current bookmark by using bookmark navigator.
 
-The following code example shows how to insert a simple text by using [BookmarkNavigator](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
+The following code example shows how to insert a simple text by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
 
 {% tabs %}
 
@@ -619,7 +619,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Insert-simple-text-into-bookmark).
 
-The following code example shows how to insert a paragraph item by using [BookmarkNavigator](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
+The following code example shows how to insert a paragraph item by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
 
 {% tabs %}
 
@@ -678,7 +678,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Insert-paragraph-item-into-bookmark).
 
-The following code example shows how to insert a paragraph by using [BookmarkNavigator](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
+The following code example shows how to insert a paragraph by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
 
 {% tabs %}
 
@@ -733,7 +733,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Insert-paragraph-into-bookmark).
 
-The following code example shows how to insert a table by using [BookmarkNavigator](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
+The following code example shows how to insert a table by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
 
 {% tabs %}
 
@@ -818,7 +818,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Insert-table-into-bookmark).
 
-The following code example shows how to insert a [TextBodyPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.TextBodyPart.html) by using [BookmarkNavigator](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
+The following code example shows how to insert a [TextBodyPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TextBodyPart.html) by using [BookmarkNavigator](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html).
 
 {% tabs %}
 
@@ -954,7 +954,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Replacing content in a bookmark
 
-You can replace the contents of an existing bookmark with simple text, [TextBodyPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.TextBodyPart.html), [WordDocumentPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocumentPart.html).
+You can replace the contents of an existing bookmark with simple text, [TextBodyPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TextBodyPart.html), [WordDocumentPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocumentPart.html).
 
 N> You cannot replace the multi section contents into a bookmark within table in Word documents. Use "for loop" instead of "foreach loop" to iterate through document elements when replacing the bookmark contents to avoid “collection modified exception”, as there is a chance for modification in the document elements on replacing the bookmark contents.
 
@@ -968,7 +968,7 @@ Case 2
 
 ![Bookmark start placed outside table and end in table](WorkingwithBookmarks_images/WorkingwithBookmarks_img2.jpeg)
 
-The following code example shows how to replace a specified bookmark content by using [ReplaceBookmarkContent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_ReplaceBookmarkContent_Syncfusion_DocIO_DLS_TextBodyPart_) method in Word document.
+The following code example shows how to replace a specified bookmark content by using [ReplaceBookmarkContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_ReplaceBookmarkContent_Syncfusion_DocIO_DLS_TextBodyPart_) method in Word document.
 
 {% tabs %}
 
@@ -1047,7 +1047,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-body-part).
 
-The following code example shows how to replace a specified bookmark content by using [ReplaceContent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_ReplaceContent_Syncfusion_DocIO_DLS_WordDocumentPart_) method in Word document.
+The following code example shows how to replace a specified bookmark content by using [ReplaceContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_ReplaceContent_Syncfusion_DocIO_DLS_WordDocumentPart_) method in Word document.
 
 {% tabs %}
 

@@ -19,15 +19,15 @@ The following table illustrates the supported mail merge overloads for ExecuteGr
 </tr>
 <tbody>
 <tr>
-<td>{{'[ExecuteGroup(MailMergeDataTable)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_)'| markdownify }}</td>
+<td>{{'[ExecuteGroup(MailMergeDataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_)'| markdownify }}</td>
 <td>{{'[Mail merge with .NET objects](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-.NET-objects)'| markdownify }}</td>
 </tr>
 <tr>
-<td>{{'[ExecuteGroup(DataTable)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_)'| markdownify }}</td>
+<td>{{'[ExecuteGroup(DataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_)'| markdownify }}</td>
 <td>{{'[Event for mail merge field](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Event-for-mail-merge-field)'| markdownify }}</td>
 </tr>
 <tr>
-<td>{{'[ExecuteGroup(DataView)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataView_)'| markdownify }}</td>
+<td>{{'[ExecuteGroup(DataView)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataView_)'| markdownify }}</td>
 <td>{{'[Generate letter for filtered contacts](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-letter-for-filtered-contacts)'| markdownify }}</td>
 </tr>
 </tbody>
@@ -52,7 +52,7 @@ In this template, Employees is the group name and the same name should be used w
 
 ## Execute group mail merge
 
-The [MailMerge](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [ExecuteGroup](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method to perform Mail merge within a group from various data sources. 
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [ExecuteGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method to perform Mail merge within a group from various data sources. 
 
 The following code example shows how to perform Mail merge in the specific region with **data source retrieved from SQL connection**.
 
@@ -207,7 +207,7 @@ document.Close();
 Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);
 
 //Download the helper files from the following link to save the stream as file and open the file for viewing in Xamarin platform.
-//https://help.syncfusion.com/file-formats/docio/create-word-document-in-xamarin#helper-files-for-xamarin
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
 
 private void MergeField_Image(object sender, MergeImageFieldEventArgs args)
 {
@@ -244,7 +244,7 @@ document.Close();
 Save(stream, "Sample.docx");
 
 //Refer to the following link to save Word document in UWP platform.
-//https://help.syncfusion.com/file-formats/docio/create-word-document-in-uwp#save-word-document-in-uwp
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 
 private void MergeField_Image(object sender, MergeImageFieldEventArgs args)
 {

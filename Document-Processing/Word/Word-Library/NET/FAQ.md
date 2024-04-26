@@ -1039,7 +1039,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to check the compatibility mode of the Word document?
 
-The [CompatibilityMode](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.CompatibilityMode.html) of a Word document can also be determined. The following code example illustrates how to check the compatibility mode of the Word document.
+The [CompatibilityMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CompatibilityMode.html) of a Word document can also be determined. The following code example illustrates how to check the compatibility mode of the Word document.
 
 {% tabs %}
 
@@ -1080,7 +1080,7 @@ Yes, OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework
 
 ## Can the chart data be refreshed?
 
-Yes, Essential DocIO supports refreshing the chart data. For more details, refer [Working with charts](/File-Formats/DocIO/Working-with-Charts)
+Yes, Essential DocIO supports refreshing the chart data. For more details, refer [Working with charts](/document-processing/word/word-library/net/Working-with-Charts)
 
 ## Is it possible to convert 3D charts to PDF or image?
 
@@ -1088,7 +1088,7 @@ Current version of the DocIO library does not provide support for converting 3D 
 
 ## Is it possible to specify PDF conformance level in Word to PDF conversion?
 
-Yes, you can specify the PDF conformance level in Word to PDF conversion. For more details, refer [PDF Conformance](/file-formats/pdf/working-with-pdf-conformance)
+Yes, you can specify the PDF conformance level in Word to PDF conversion. For more details, refer [PDF Conformance](/document-processing/pdf/pdf-library/net/working-with-pdf-conformance)
 
 ## Migration from Microsoft Office Automation to Essential DocIO
 
@@ -1160,11 +1160,11 @@ wordApp.Quit(nullobject, nullobject, nullobject)
 
 DocIO performs Mail merge by using the following methods:
 
-* [Execute](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_Data_DataTable_)
-* [ExecuteGroup](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_)
-* [ExecuteNestedGroup](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_)
+* [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_Data_DataTable_)
+* [ExecuteGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_)
+* [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_)
 
-The following code example performs Mail merge by using the [Execute](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_Data_DataTable_) method.
+The following code example performs Mail merge by using the [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_Data_DataTable_) method.
 
 {% tabs %}
 
@@ -1212,7 +1212,7 @@ doc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection).
 
-N> For more information on Mail merge using DocIO, you can refer to online documentation link: [MailMerge](/File-Formats/DocIO/Working-with-MailMerge)
+N> For more information on Mail merge using DocIO, you can refer to online documentation link: [MailMerge](/document-processing/word/word-library/net/Working-with-MailMerge)
 
 ### Find and Replace
 
@@ -1336,7 +1336,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Find-and-replace-text-using-regex).
 
-N> For more information on performing the find and replace operation using DocIO, you can refer to online documentation link: [Find and Replace](/File-Formats/DocIO/Working-with-Find-and-Replace)
+N> For more information on performing the find and replace operation using DocIO, you can refer to online documentation link: [Find and Replace](/document-processing/word/word-library/net/Working-with-Find-and-Replace)
 
 ### Bookmarks
 
@@ -1414,7 +1414,7 @@ wordApp.Quit()
 
 ### Using DocIO
 
-The following code example illustrates how to insert the bookmark by using DocIO. Here, the [AppendBookmarkStart()](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendBookmarkStart_System_String_) and [AppendBookmarkEnd()](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendBookmarkEnd_System_String_) methods are used to add the bookmark.
+The following code example illustrates how to insert the bookmark by using DocIO. Here, the [AppendBookmarkStart()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendBookmarkStart_System_String_) and [AppendBookmarkEnd()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendBookmarkEnd_System_String_) methods are used to add the bookmark.
 
 {% tabs %}
 
@@ -1704,7 +1704,7 @@ doc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Watermark/Add-picture-watermark).
 
-N> For more information on adding watermarks to a Word document using DocIO, refer to the online documentation link: [Applying Watermark](/file-formats/docio/applying-watermark)
+N> For more information on adding watermarks to a Word document using DocIO, refer to the online documentation link: [Applying Watermark](/document-processing/word/word-library/net/applying-watermark)
 
 ### Headers and Footers
 
@@ -1787,14 +1787,14 @@ wordApp.Quit()
 
 ### Using DocIO
 
-You can set the header and footer by using the [HeadersFooters](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WSection.html#Syncfusion_DocIO_DLS_WSection_HeadersFooters) property in the Word document section. To access a particular header/footer, you can use the following properties of [WHeadersFooters](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WHeadersFooters.html) class:
+You can set the header and footer by using the [HeadersFooters](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSection.html#Syncfusion_DocIO_DLS_WSection_HeadersFooters) property in the Word document section. To access a particular header/footer, you can use the following properties of [WHeadersFooters](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html) class:
 
-* [FirstPageHeader](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_FirstPageHeader)
-* [FirstPageFooter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_FirstPageFooter)
-* [OddHeader](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_OddHeader)
-* [OddFooter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_OddFooter)
-* [EvenHeader](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_EvenHeader)
-* [EvenFooter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_EvenFooter)
+* [FirstPageHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_FirstPageHeader)
+* [FirstPageFooter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_FirstPageFooter)
+* [OddHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_OddHeader)
+* [OddFooter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_OddFooter)
+* [EvenHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_EvenHeader)
+* [EvenFooter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_EvenFooter)
 
 {% tabs %}
 
@@ -1983,7 +1983,7 @@ wordApp.Quit(nullobject, nullobject, nullobject)
 
 ### Using DocIO
 
-The following code example shows how to insert an empty table to a Word document. The [ResetCells()](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.IWTable.html#Syncfusion_DocIO_DLS_IWTable_ResetCells_System_Int32_System_Int32_) method is used to specify the number of rows and columns in a table.
+The following code example shows how to insert an empty table to a Word document. The [ResetCells()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWTable.html#Syncfusion_DocIO_DLS_IWTable_ResetCells_System_Int32_System_Int32_) method is used to specify the number of rows and columns in a table.
 
 {% tabs %}
 
@@ -2017,7 +2017,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Insert-empty-table).
 
-N> For more information on creating tables using DocIO, refer to online documentation link: [Working with Tables](/file-formats/docio/working-with-tables)
+N> For more information on creating tables using DocIO, refer to online documentation link: [Working with Tables](/document-processing/word/word-library/net/working-with-tables)
 
 ### Comments 
 
@@ -2124,7 +2124,7 @@ doc.Save("Sample.doc", FormatType.Doc)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Comments/Add-comment-to-Word-document).
 
-N> For more information on working with the comments using DocIO, you can refer to the online documentation link: [Working with Comments](/file-formats/docio/working-with-comments)
+N> For more information on working with the comments using DocIO, you can refer to the online documentation link: [Working with Comments](/document-processing/word/word-library/net/working-with-comments)
 
 ### Document Protection
 
@@ -2188,13 +2188,13 @@ wordApp.Quit(nullobject, nullobject, nullobject)
 
 ### Using DocIO
 
-DocIO uses [ProtectionType](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ProtectionType) property to specify the protection type of the Word document. This property uses the following values:
+DocIO uses [ProtectionType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ProtectionType) property to specify the protection type of the Word document. This property uses the following values:
 
-* [AllowOnlyComments](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.ProtectionType.html): Allows only comments to be added to the document.
-* [AllowOnlyFormFields](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.ProtectionType.html): Allows content to be added to the document through form fields only.
-* [AllowOnlyRevisions](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.ProtectionType.html): Allows only revisions to be made to the existing content.
-* [AllowOnlyReading](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.ProtectionType.html): All kinds of editing are restricted here and it makes the Word document as read-only document.
-* [NoProtection](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.ProtectionType.html): Does not protect the document.
+* [AllowOnlyComments](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): Allows only comments to be added to the document.
+* [AllowOnlyFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): Allows content to be added to the document through form fields only.
+* [AllowOnlyRevisions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): Allows only revisions to be made to the existing content.
+* [AllowOnlyReading](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): All kinds of editing are restricted here and it makes the Word document as read-only document.
+* [NoProtection](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): Does not protect the document.
 
 {% tabs %}
 
@@ -2223,7 +2223,7 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Allow-editing-comments-only).
 
 Refer to the online documentation link for more details about the ways to protect the Word documents by using DocIO:
-[Protecting word document from editing](/File-Formats/DocIO/Working-with-Security)
+[Protecting word document from editing](/document-processing/word/word-library/net/Working-with-Security)
 
 ### Table of Contents
 
@@ -2332,7 +2332,7 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Add-table-of-contents).
 
 Refer to the online documentation link for more information about adding the table of contents to the Word document by using DocIO:
-[Working with table of contents](/file-formats/docio/working-with-table-of-contents)
+[Working with table of contents](/document-processing/word/word-library/net/working-with-table-of-contents)
 
 ## How to copy necessary fonts to Linux containers
 
@@ -2488,7 +2488,7 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
     //Closes the document
     document.Close();
     //Please refer the below link to save Word document in UWP platform
-    //https://help.syncfusion.com/file-formats/docio/create-word-document-in-uwp#save-word-document-in-uwp
+    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 }
 {% endhighlight %}
 
@@ -2498,7 +2498,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to check whether a Word document contains tracked changes or not? 
 
-You can check whether a Word document contains tracked changes by using [HasChanges](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_HasChanges) property in Essential DocIO.
+You can check whether a Word document contains tracked changes by using [HasChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_HasChanges) property in Essential DocIO.
 
 The following code example shows how to check whether a Word document contains tracked changes.
 
@@ -2629,7 +2629,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to enable track changes for Word document?
 
-TrackChanges is used to keep track of the changes made to a Word document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
+TrackChanges is used to keep track of the changes made to a Word document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
 
 The following code example shows how to enable track changes of the document.
 
@@ -2710,7 +2710,7 @@ The .NET Word library (DocIO) accepts all the changes in input documents and the
 
 ## How to perform Word to PDF in Linux prior to v18.4 release?
 
-In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/file-formats/docio/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with Word to PDF conversion capabilities.
+In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with Word to PDF conversion capabilities.
 
 In addition to the previous NuGet packages, SkiaSharp.Linux helper NuGet package is required that can be generated by the following steps: 
 
@@ -2768,10 +2768,10 @@ To preserve the expected images in the PDF/Image conversion, we suggest you conv
 **Suggestions:**
 1. You can convert metafile image format to bitmap image format in the Word document using DocIO, you can refer to KB documentation link: [Convert and replace metafile image in word document to bitmap](https://support.syncfusion.com/kb/article/11331/how-to-convert-and-replace-emf-image-in-word-document-to-png-with-same-size?isInternalRefresh=False). As this approach uses System.Drawing.Common, it is known limitation in Linux or cross platforms.
 
-2. Otherwise, you can use the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf/) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same [C# tab](https://help.syncfusion.com/file-formats/docio/word-to-pdf) code examples for it. But in Mac and Linux environment, using the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages have limitations.
+2. Otherwise, you can use the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf/) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same [C# tab](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf) code examples for it. But in Mac and Linux environment, using the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages have limitations.
 
 ## What are the NuGet packages to be installed to perform Word to PDF conversion in Linux OS?
-In Linux OS, you can perform Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/file-formats/docio/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to PDF conversion capabilities.
+In Linux OS, you can perform Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to PDF conversion capabilities.
 
 In addition to the previous NuGet packages, the following NuGet packages need to be installed in your application.
 
@@ -2836,13 +2836,13 @@ Before v18.4.0.x
 </td>
 <td>
 Install SkiaSharp.Linux NuGet package for .Net Core application in Linux OS. you can find the SkiaSharp.Linux NuGet package created by us from {{'[here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/SkiaSharp.Linux.1.59.3-2103435070)'| markdownify }}.<br/>
-For more information, Please refer {{'[here](https://help.syncfusion.com/file-formats/docio/faq#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)'| markdownify }}.
+For more information, Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)'| markdownify }}.
 </td>
 </tr>
 </table>
 
 ## What are the NuGet packages to be installed to perform Word to Image conversion in Linux OS?
-In Linux OS, you can perform Word to Image conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to Image conversion NuGet packages](https://help.syncfusion.com/file-formats/docio/nuget-packages-required#converting-word-document-to-image) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to Image conversion capabilities.
+In Linux OS, you can perform Word to Image conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to Image conversion NuGet packages](https://help.syncfusion.com//document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-image) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to Image conversion capabilities.
 
 In addition to the previous NuGet packages, the following NuGet package need to be installed in your application.
 
@@ -2885,3 +2885,9 @@ From v20.2
 </td>
 </tr>
 </table>
+
+## Why are content controls not preserved as editable form fields in the converted PDF document even when PreserveFormFields is enabled? 
+
+Content controls behave differently from legacy form fields, such as Text, Checkbox, and Drop-down fields, during conversions to PDF format. While legacy form fields are typically preserved as editable form fields in the resulting PDF document, content controls are converted to plain text. The [PreserveFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PreserveFormFields) API specifically retains the interactive nature of legacy form fields, not content controls.
+To ensure that form fields remain editable in the PDF converted from Word document, it is recommended to use [Text](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-form-fields#text-form-field), [Checkbox](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-form-fields#check-box), and [Drop-down](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-form-fields#drop-down) form fields instead of content controls in the Word document. Additionally, to preserve the form fields as editable in the resulting PDF, set the [PreserveFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PreserveFormFields) API to true.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Create-fillable-PDF-from-Word).

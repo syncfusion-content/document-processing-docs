@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding Paragraph to slide
 
-All the textual contents in a Presentation document is represented by Paragraphs. You can have any number of paragraphs within a [TextBody](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextBody.html) of a textbox or shape in a PowerPoint presentation. 
+All the textual contents in a Presentation document is represented by Paragraphs. You can have any number of paragraphs within a [TextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextBody.html) of a textbox or shape in a PowerPoint presentation. 
 
 The following code example demonstrates how to add a paragraph in a slide.
 
@@ -154,7 +154,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with text
 
-With Essential Presentation, you can add or modify the text in a Presentation. Within the paragraph, textual contents are grouped into one or more child elements as [TextParts](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextParts.html). Each [TextPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextPart.html) represents a region of text with a common set of formatted text. The following code example demonstrates how to add text with different formatting into a single paragraph.
+With Essential Presentation, you can add or modify the text in a Presentation. Within the paragraph, textual contents are grouped into one or more child elements as [TextParts](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextParts.html). Each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html) represents a region of text with a common set of formatted text. The following code example demonstrates how to add text with different formatting into a single paragraph.
 
 {% tabs %}
 
@@ -345,7 +345,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Edit a language of TextPart
 
-With Essential Presentation, you can modify the language of Presentation [TextPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextPart.html). This allows viewer application to check spelling and grammar according to the language of each [TextPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextPart.html). The following code example demonstrates how to modify a language of Presentation [TextPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextPart.html).
+With Essential Presentation, you can modify the language of Presentation [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html). This allows viewer application to check spelling and grammar according to the language of each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html). The following code example demonstrates how to modify a language of Presentation [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html).
 
 {% tabs %}
 

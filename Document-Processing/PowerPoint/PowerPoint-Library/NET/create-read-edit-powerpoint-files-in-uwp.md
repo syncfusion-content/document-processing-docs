@@ -8,7 +8,7 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in UWP
 
-You can create or edit a PowerPoint file with the Syncfusion [UWP PowerPoint library](https://www.syncfusion.com/powerpoint-framework/uwp/powerpoint-library). The below are the steps.
+You can create or edit a PowerPoint file with the Syncfusion [UWP PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/powerpoint-library). The below are the steps.
 
 ## Create a PowerPoint file in UWP
 
@@ -156,7 +156,7 @@ slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 
 {% endtabs %}
 
-You can download the image used in the sample from [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Image-1995521764.zip).
+You can download the image used in the sample from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Image-1995521764.zip).
 
 **Add a shape:**
 

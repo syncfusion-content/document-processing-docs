@@ -83,9 +83,9 @@ using Syncfusion.Presentation;
 
 {% endtabs %}
 
-An entire PowerPoint Presentation is represented by an instance of [IPresentation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html) interface and it is the root element of Essential Presentation’s DOM.
+An entire PowerPoint Presentation is represented by an instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) interface and it is the root element of Essential Presentation’s DOM.
 
-The following code example demonstrates how to create an instance of [IPresentation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html) interface.
+The following code example demonstrates how to create an instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) interface.
 
 {% tabs %}
 
@@ -106,7 +106,7 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 
 {% endtabs %}
 
-[IPresentation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html) instance has a slide collection that represents the individual slides present within PowerPoint presentation. A slide may contain textual and other graphics contents like shapes, images, charts etc.
+[IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) instance has a slide collection that represents the individual slides present within PowerPoint presentation. A slide may contain textual and other graphics contents like shapes, images, charts etc.
 
 The following code example demonstrates how to add a blank slide to a PowerPoint Presentation.
 
@@ -131,7 +131,7 @@ Dim firstSlide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 
 N> The 'Point' typographic units are used to add or manipulate any element in a Presentation. 
 
-All the textual contents in a Presentation document are represented by paragraphs. Within the paragraph, textual contents are grouped into one or more child elements as [TextParts](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextParts.html). Each [TextPart](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextParts.html) represents a region of text with a common set of formatted text.
+All the textual contents in a Presentation document are represented by paragraphs. Within the paragraph, textual contents are grouped into one or more child elements as [TextParts](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextParts.html). Each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextParts.html) represents a region of text with a common set of formatted text.
 
 The following code example demonstrates how to add text into a presentation.
 
@@ -424,7 +424,7 @@ Imports Syncfusion.PresentationToPdfConverter
 
 {% endtabs %}
 
-[PresentationToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.html) class is responsible for converting an entire Presentation or a slide into PDF. The following code example demonstrates how to convert the PowerPoint presentation to PDF.
+[PresentationToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.html) class is responsible for converting an entire Presentation or a slide into PDF. The following code example demonstrates how to convert the PowerPoint presentation to PDF.
 
 {% tabs %}
 
@@ -483,10 +483,10 @@ pptxDoc.Close()
 {% endtabs %}
 
 
-N> * Creating an instance of [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts in the PowerPoint presentation to PDF/Image format. Otherwise, the charts are not exported to the converted PDF/Image.
-N> * [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards
+N> * Creating an instance of [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts in the PowerPoint presentation to PDF/Image format. Otherwise, the charts are not exported to the converted PDF/Image.
+N> * [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards
 
-[PresentationToPdfConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html) can be used to customize the conversion of Presentation to PDF document. [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class can be further used to improve the quality of converted charts in the PDF/Image. For more information about this, see [Conversion](https://help.syncfusion.com/file-formats/presentation/getting-started).
+[PresentationToPdfConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html) can be used to customize the conversion of Presentation to PDF document. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class can be further used to improve the quality of converted charts in the PDF/Image. For more information about this, see [Conversion](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/getting-started).
 
 N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/document-processing/powerpoint-framework/net) webpage to see the product’s groundbreaking features. You can also explore our [.NET PowerPoint framework demo](https://www.syncfusion.com/demos/fileformats/powerpoint-library) that shows how to create and modify PowerPoint files from C# with just five lines of code on different platforms.
 

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Silverlight
 
-In your Silverlight application, please add the required assemblies in order to use DocIO. [Refer here for assemblies required](/file-formats/docio/assemblies-required).
+In your Silverlight application, please add the required assemblies in order to use DocIO. [Refer here for assemblies required](/document-processing/word/word-library/net/assemblies-required).
 
 ## Loading the document 
 
