@@ -26,7 +26,7 @@ Ensure that the runtimes folder is copied properly to bin folder of the applicat
 <br/><br/>
 Please refer to the below screenshot,
 <br/><br/>
-<img src="htmlconversion_images/runtime_folder.png">
+<img alt="Runtime folder" src="htmlconversion_images/runtime_folder.png">
 <br/><br/>
 (Or)
 <br/><br/>
@@ -34,7 +34,8 @@ You can set the runtimes folder path explicitly in BlinkPath property in BlinkCo
 <br/><br/>
 Ex path: <i>C:\HtmlConversion\HTMl-to-PDF\HTMl-to-PDF\bin\Debug\net7.0\runtimes\win-x64\native\</i>
 <br/><br/>
-{% highlight html %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -52,6 +53,7 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 
@@ -105,96 +107,26 @@ document.Close(true);
 
 </table>
 
-## Failed to convert Webpage Exception
+## Failed to launch chromium: Running as root without --no-sandbox is not supported
 
 <table>
+
 <th style="font-size:14px" width="100px">Exception
 </th>
-<th style="font-size:14px">Failed to convert Webpage Exception
+<th style="font-size:14px">Failed to launch chromium: Running as root without --no-sandbox is not supported
 </th>
 
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>Missing or mismatch of <a href="https://www.nuget.org/packages/Newtonsoft.Json/13.0.2">Newtonsoft.Json</a> package in the project.
+<td>The exception may occur in the Linux CentOS/Docker environment due to the Chrome browser unable to launch from sandbox mode in CentOS.
 </td>
 </tr>
 <tr>
+
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>For converting HTML to PDF in Blink, you need to refer to the Newtonsoft.Json assembly or NuGet package with current version is 13.0.2 in the application, otherwise conversion will get failed.
-</td>
-</tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>The exception may occur if the Newtonsoft.Json assembly or NuGet package with current version is 13.0.2.
-</td>
-</tr>
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
-<td>The Newtonsoft.Json package version with current version is 13.0.2, then include the following assembly binding redirection in the app.config/web.config file.	
-<br><br/>
-{% highlight html %}
-
-<runtime>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-</runtime>
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>If the temporary folder does not have elevated permission for the respective user, then the Blink HTML converter may throw this exception.
-</td>
-</tr>
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
-<td>The Blink HTML converter has support for setting the temporary path. Using the <i>TempPath</i> property, you can set any folder path that has read/write/execute permission. Then, the converter uses this path for creating temporary files. Refer to the following code snippet to set temp folder.
-<br><br/>
-{% highlight c# tabtitle="C#" %}
-
-BlinkConverterSettings settings = new BlinkConverterSettings();
-settings.TempPath = "D://MyProject//bin";
-
-{% endhighlight %}
-</td>
-</tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>The exception may occur in Windows 7/Windows server 2008 environment due to limitation of <i>ClientWebSocket</i> implementation.
-</td>
-</tr>
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
-<td>To overcome the exception in Windows 7/Windows server 2008 environment, add the <a href="https://www.nuget.org/packages/System.Buffers/">System.Buffers.4.5.0</a> NuGet package in the sample for conversion. 
-</td>
-</tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>The exception may occur in Linux CentOS/Docker environment due to the chrome browser unable to launch from sandbox mode in CentOS.
-</td>
-</tr>
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
-<td>To overcome the exception in Linux CentOS/Docker environment, provide the execute permission for chrome and chrome-wrapper file inside the BlinkBinaries folder.
+<td>To overcome the exception in the Linux CentOS/Docker environment, provide the execute permission for chrome and chrome-wrapper files inside the BlinkBinaries folder.
 <br/>
 <b>Refer to the following screenshot:</b>
 <br/>
@@ -202,18 +134,20 @@ settings.TempPath = "D://MyProject//bin";
 <br/>
 <img src="htmlconversion_images/Permission_chrome-wrapper.png" alt="Blink chrome wrapper file permission">
 <br/>
-Also, please add the below command line arguments in our converter setting,
+Also, please add the following command line arguments in our converter setting.
 <br/>
 <table>
 <tr>
 <td>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 
 //Set command line arguments to run without sandbox.
 blinkConverterSettings.CommandLineArguments.Add("--no-sandbox");
 blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -221,29 +155,135 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 </td>
 </tr>
 
-<tr>
-<th style="font-size:14px" width="100px">Reason
+</table>
+
+## Failed to launch Base
+
+<table>
+<th style="font-size:14px" width="100px">Exception
 </th>
-<td>Including both packages (Blink and Webkit) in the application might lead to the occurrence of the exception.
-</td>
-</tr>
-<tr>
-<th style="font-size:14px" width="100px">Solution
+<th style="font-size:14px">Failed to launch Base
 </th>
-<td>In order to resolve the exception, it's necessary to eliminate one of the packages (Webkit or Blink) from the application and then perform a thorough cleaning and rebuilding process.
-</td>
-</tr>
 
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>Sometimes this exception occurs for only particular URL
+<td>The exception may occur due to missing of required dependent packages.
 </td>
 </tr>
+
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>Please contact Syncfusion <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident">support</a> with input HTML, code snippet, and environment details (OS, culture settings, bit version etc.,).
+<td>To overcome the exception, you can ensure the required dependency in docker file.
+</td>
+</tr>
+</table>
+
+## Failed to launch chromium: Missing required dependent packages
+
+<table>
+
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Failed to launch chromium: Missing required dependent packages
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The required dependencies for the Chromium are not installed on the system.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Ensure all required dependencies for the Chromium are installed on the system. This may include additional libraries or packages.
+</td>
+</tr>
+
+</table>
+
+## Access is denied in runtimes folders. Runtimes folder requires read/write/execute permission
+
+<table>
+
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Access is denied in runtimes folders. Runtimes folder requires read/write/execute permission
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The exception may occur if the runtimes folder is not accessed.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>To overcome the exception, you can add read, write, and execute permissions for the runtimes folder.
+</td>
+</tr>
+
+</table>
+
+## Access denied for specified temporary folder
+
+<table>
+
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Access denied for specified temporary folder
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The specified temporary folder path might be inaccessible.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>To overcome the exception, you can add read, write, and execute permissions for the temporary folder. Refer to the following code sample to set the temp folder.
+<br><br/>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+settings.TempPath = "D://MyProject//bin";
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
+## The temporary folder does not have read permission
+
+<table>
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">The temporary folder does not have read permission
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>If the temporary folder does not have elevated permission for the respective user, then the Blink HTML converter may throw this exception.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>The Blink HTML converter has support for setting the temporary path. Using the <i>TempPath</i> property, you can set any folder path that has read/write/execute permission. Then, the converter uses this path for creating temporary files.
+
 </td>
 </tr>
 
@@ -274,12 +314,12 @@ Check the HTML file or URL is rendered properly in Chrome browser's print previe
 </tr>
 </table>
 
-## Failed to convert webpage exception in Linux Docker
+## Failed to launch chromium: Due to insufficient permission unable to launch the chromium process for conversion
 
 <table>
 <th style="font-size:14px" width="100px">Exception
 </th>
-<th style="font-size:14px">Failed to convert webpage exception in Linux Docker.
+<th style="font-size:14px">Failed to launch chromium: Due to insufficient permission unable to launch chromium process for conversion.
 </th>
 
 <tr>
@@ -292,11 +332,12 @@ Check the HTML file or URL is rendered properly in Chrome browser's print previe
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>To overcome this exception, you can provide a execute permission for chrome and chrome-wrapper file inside the runtimes/linux/native folder by using the docker command.
+<td>To overcome this exception, you can provide an execute permission for chrome and chrome-wrapper files inside the runtimes/linux/native folder by using the docker command.
 <br><br/>
 <img src="htmlconversion_images/Troubleshooting_webpage_exception_Linux.png" alt="ExcludeAssets">
 <br><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 
 COPY . /app
 WORKDIR /app
@@ -305,6 +346,7 @@ RUN chmod +x /app/runtimes/linux/native/chrome && \
     chmod +x /app/runtimes/linux/native/chrome-wrapper
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -328,12 +370,14 @@ RUN chmod +x /app/runtimes/linux/native/chrome && \
 </th>
 <td>To overcome this issue, add suitable delay for the conversion using the <a href="https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay">AdditionalDelay</a> property of the HTMLConverter. 
 <br><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 
 BlinkConverterSettings settings = new BlinkConverterSettings();
-settings.AdditionalDelay = 2000;
+settings.AdditionalDelay = 4000;
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 
@@ -397,12 +441,14 @@ Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-t
 </th>
 <td>You can able to bypass the invalid SSL certificate errors using the command line arguments property of Blink converter settings.
 <br><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 
 BlinkConverterSettings settings = new BlinkConverterSettings();
 settings.CommandLineArguments.Add("--ignore-certificate-errors");
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -427,13 +473,15 @@ settings.CommandLineArguments.Add("--ignore-certificate-errors");
 </th>
 <td>We can resolve this permission related failure in the Blink rendering engine using below command line arguments in our converter settings. 
 <br><br/>
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 
 //Set command line arguments to run without sandbox.
 blinkConverterSettings.CommandLineArguments.Add("--no-sandbox");
 blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 
 {% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -533,35 +581,6 @@ Refer to the following package reference:
 	</tr>
 </table>
 
-## Image rendering issue occurs while converting HTML to PDF using WebKit
-
-<table>
-<th style="font-size:14px" width="100px">Issue
-</th>
-<th style="font-size:14px">Image rendering issue occurs while converting HTML(HTTPS sites) to PDF using Webkit rendering engine in location machine/Azure App Service. 
-</th>
-
-<tr>
-<th style="font-size:14px" width="100px">Reason
-</th>
-<td>When the OPENSSL assemblies are missing in your machine.
-</td>
-</tr>
-
-<tr>
-<th style="font-size:14px" width="100px">Solution
-</th>
-<td>
-Our WebKit rendering engine necessitates OPENSSL assemblies to access resources from HTTPS URLs. If your project involves accessing resources from HTTPS sites, please make sure to include the following assemblies,
-<br><br>
-<img src="htmlconversion_images/OPENSSl_assemblies.png" alt="ExcludeAssets"><br><br>
-You can get the OPENSSL assemblies from the below link,
-<a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/OPENSSL-798051511">https://www.syncfusion.com/downloads/support/directtrac/general/ze/OPENSSL-798051511</a>
-<br><br>
-</td>
-</tr>
-</table>
-
 ## Failed to convert Webpage exception with Linux docker in Mac M1 machine.
 
 <table>
@@ -586,7 +605,7 @@ To resolve this issue, we can install the chromium using the docker file and set
 Docker File:<br><br>
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight C# tabtitle="C#" %}
 
 	FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base 
 
@@ -610,9 +629,12 @@ Docker File:<br><br>
 
 {% endhighlight %}
 
-Code snippet:
+{% endtabs %}
 
-{% highlight c# tabtitle="C#" %}
+Code snippet:
+{% tabs %}
+
+{% highlight C# tabtitle="C#" %}
 
 	BlinkConverterSettings settings = new BlinkConverterSettings();  
 
@@ -626,4 +648,264 @@ Code snippet:
 
 </td>
 </tr>
+</table>
+
+## Background color missing issue in HTML Header and Footer
+
+<table>
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Background color missing issue in HTML Header and Footer.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>We do not have the support for adding a custom CSS style in the HTML header and footer.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>
+To resolve this issue, we can add inline styles in element. However, we have attached the sample and output documents for your reference.
+<br><br>
+
+{% tabs %}
+
+{% highlight C# tabtitle="C#" %}
+
+	HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+	//Initialize blink converter settings. 
+	BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+	//Set the Blink viewport size.
+	blinkConverterSettings.ViewPortSize = new Size(1280, 0);
+	//Set the html margin-top value based on the html header height and margin-top value.
+	blinkConverterSettings.Margin.Top = 70;
+	//Set the html margin-bottom value based on the html footer height and margin-bottom value.
+	blinkConverterSettings.Margin.Bottom = 40;
+	//Set the custom HTML header to add at the top of each page.
+	blinkConverterSettings.HtmlHeader = " <div style=\"background-color: blue; -webkit-print-color-adjust: exact; margin-left: 40px; font-size: 10px;\">HTML Header</div>";
+	//Set the custom HTML footer to add at the bottom of each page.
+	blinkConverterSettings.HtmlFooter = " <div style=\"background-color: blue; -webkit-print-color-adjust: exact;margin-left: 40px; font-size: 10px;\">HTML Footer</div>";
+	//Assign Blink converter settings to the HTML converter.
+	htmlConverter.ConverterSettings = blinkConverterSettings;
+	//Convert the URL to a PDF document.
+	PdfDocument document = htmlConverter.Convert("<div>Hello World</div>",string.Empty);
+	//Create a filestream.
+	FileStream fileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite);
+	//Save and close a PDF document.
+	document.Save(fileStream);
+	document.Close(true);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-Footer-Background-Colour/.NET).
+
+</td>
+</tr>
+</table>
+
+## Zombie process are not closed by default from chrome headless in Linux platform
+
+ The zombie process are not closed by default from chrome headless in Linux. However, We can resolve the zombie process issue by using the below command line arguments in converter settings.
+
+{% tabs %}
+
+{% highlight C# %}
+
+		//Set command line arguments to run without the sandbox.
+
+		settings.CommandLineArguments.Add("--no-sandbox");
+
+		settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+
+		settings.CommandLineArguments.Add("--no-zygote");
+
+		settings.CommandLineArguments.Add("--disable-dev-shm-usage");
+
+		settings.CommandLineArguments.Add("--single-process");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Failed to launch chromium: Missing required dependent packages issue occurs in Azure function Linux with premium plans.
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Failed to launch chromium: Missing required dependent packages issue occurs in Azure function Linux with premium plans.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The reported issue occurs due to missing of required Linux dependencies in Azure function to perform the conversion in premium plans (such as Ep1)
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To overcome this issue by installing the Linux dependencies package in SSH window. Please refer the below commands and screenshot,
+
+{% tabs %}
+
+{% highlight C# %}
+
+apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
+{% endhighlight %}
+
+{% endtabs %}
+<br/><br/>
+Please refer to the below screenshot,
+<br/><br/>
+
+<img src="htmlconversion_images/Failedtolaunchchromium.png"><br>
+<br/><br/>
+(Or)
+<br/><br/>
+We can install the required dependencies using the dependencies vis shell script. Please find the below.
+<br/><br/>
+<img src="htmlconversion_images/dependencies.png"><br>
+<br/><br/>
+code snippet:
+<br/><br/>
+{% tabs %}
+{% highlight C# %}
+
+	private static void InstallLinuxPackages(FileInfo functionAppDirectory)
+	{
+		if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+		{
+			return;
+		}
+		FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
+		FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
+		//Install the dependencies packages for HTML to PDF conversion in Linux
+		string shellFilePath = Path.Combine(functionAppDirectory.Directory.Parent.FullName, @"wwwroot/data");
+		string tempBlinkDir = Path.GetTempPath();
+		string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+		if (!File.Exists(dependenciesPath))
+		{
+			CopyFilesRecursively(shellFilePath, tempBlinkDir);
+			var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+			if (File.Exists(execPath))
+			{
+				var code = Function1.Chmod(execPath, ExecutableFilePermissions);
+				if (code != 0)
+				{
+					throw new Exception("Chmod operation failed");
+				}
+			}
+			Process process = new Process
+			{
+				StartInfo = new ProcessStartInfo
+				{
+					FileName = "/bin/bash",
+					Arguments = "-c " + execPath,
+					CreateNoWindow = true,
+					UseShellExecute = false,
+				}
+			};
+			process.Start();
+			process.WaitForExit();
+		}
+	}
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
+
+## Failed to load Chrome DLL exception occurs on Windows 7/8 and Windows Server 2008/2012 machines
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Failed to load Chrome DLL exception occurs on Windows 7/8 and Windows Server 2008/2012 machines.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The reported issue occurs due to an unsupported OS platform with the latest binaries.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+If you are using Windows 7/8 or Windows Server 2008/2012, please use Chromium version 109 instead of the newer versions. Chromium has discontinued support for these operating systems, and the last compatible version is 109.
+<br/><br/>
+
+Please refer to the below thread for more information,
+<a href="https://support.google.com/chrome/thread/185534985">https://support.google.com/chrome/thread/185534985</a>
+
+<br/>
+
+Blink binaries (Version 109.0.5414.75),
+<a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlinkBinaries_109.0.5414.7560606898">https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlinkBinaries_109.0.5414.7560606898</a>
+
+</td>
+</tr>
+
+</table>
+
+
+## There was an error opening this document. This file is already open or in use by another application.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">There was an error opening this document. This file is already open or in use by another application.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The reported issue occurs due to the document or file not being properly disposed or closed, leading to conflicts when attempting to access it again.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+
+We can resolve the reported issue by using the FileStream within the "using" block.
+{% tabs %}
+{% highlight C# %}
+
+	using (FileStream fs = new FileStream("path_to_file", FileMode.Open))
+	{
+    	// Use the file here
+	} // File stream is automatically closed and disposed
+
+{% endhighlight %}
+{% endtabs %}
+
+Or
+
+Dispose of the FileStream at the end of the process and ensure that the file or document is not already open in another application.
+{% tabs %}
+{% highlight C# %}
+
+	
+	PdfDocument document = htmlConverter.Convert(");
+
+	FileStream fileStream = new FileStream(baseUrl+ "Bill_PDF_04_16_24.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
+
+	//Save and close the PDF document.
+
+	document.Save(fileStream);
+
+	document.Close(true);
+
+	document.Dispose();
+
+	fileStream.Dispose();
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
 </table>
