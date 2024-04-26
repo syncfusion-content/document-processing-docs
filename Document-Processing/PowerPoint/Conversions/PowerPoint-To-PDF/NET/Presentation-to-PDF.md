@@ -430,6 +430,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Initialize-default-fallback-fonts).
+
 ### Fallback fonts based on script type
 
 The following code example demonstrates how a user can add fallback fonts based on the script types, which Presentation considers internally when converting a PowerPoint presentation to PDF.
@@ -542,6 +544,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Fallback-fonts-based-on-scripttype).
+
 ### Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in presentation to PDF conversion.
@@ -653,6 +657,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Fallback-fonts-for-Unicode-range).
+
 ### Modify the exiting fallback fonts
 
 The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting a PowerPoint presentation to PDF.
@@ -752,6 +758,8 @@ pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Modify-the-exiting-fallback-fonts).
 
 ### Supported script types
 
@@ -1463,3 +1471,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to convert PPTX to PDF in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12120/how-to-convert-pptx-to-pdf-in-blazor-webassembly-wasm)
+* [How to resolve font problems during PowerPoint to PDF or image conversion?](https://support.syncfusion.com/kb/article/15472/how-to-resolve-font-problems-during-powerpoint-to-pdf-or-image-conversion)

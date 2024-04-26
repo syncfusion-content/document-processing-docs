@@ -118,6 +118,30 @@ The following code example demonstrates the conversion of an entire Presentation
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
+{
+   //Open the existing PowerPoint presentation.
+   using (IPresentation pptxDoc = Presentation.Open(fileStream))
+   {
+       //Initialize the PresentationRenderer to perform image conversion.
+       pptxDoc.PresentationRenderer = new PresentationRenderer();
+       //Convert PowerPoint to image as stream.
+       Stream[] images = pptxDoc.RenderAsImages(ExportImageFormat.Jpeg);
+       //Saves the images to file system
+       foreach (Stream stream in images)
+       {
+           //Create the output image file stream
+           using (FileStream fileStreamOutput = File.Create("Output" + Guid.NewGuid().ToString() + ".jpg"))
+           {
+               //Copy the converted image stream into created output stream
+               stream.CopyTo(fileStreamOutput);
+           }
+       }
+   }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
@@ -471,6 +495,40 @@ The following code sample demonstrates how to set a substitute font for a missin
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Load the PowerPoint presentation and convert to image
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
+{
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    // Initializes the 'SubstituteFont' event to set the replacement font
+    pptxDoc.FontSettings.SubstituteFont += FontSettings_SubstituteFont;
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+    {
+        //Create the output image file stream
+        using (FileStream fileStreamOutput = File.Create("Output.jpg"))
+        {
+         //Copy the converted image stream into created output stream
+         stream.CopyTo(fileStreamOutput);
+        }
+     }        
+}
+/// <summary>
+/// Sets the alternate font when a specified font is unavailable in the production environment
+/// </summary>
+/// <param name="sender">FontSettings type of the Presentation in which the specified font is used but unavailable in production environment. </param>
+/// <param name="args">Retrieves the unavailable font name and receives the substitute font name for conversion. </param>
+private static void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
+{
+    if (args.OriginalFontName == "Arial Unicode MS")
+
+        args.AlternateFontName = "Arial";
+    else
+        args.AlternateFontName = "Times New Roman";
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint presentation and convert to image
 using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
@@ -581,6 +639,8 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Initialize-default-fallback-fonts).
+
 ### Fallback fonts based on script type
 
 The following code example demonstrates how a user can add fallback fonts based on the script types, which Presentation considers internally when converting a PowerPoint presentation to an Image.
@@ -627,6 +687,8 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Fallback-fonts-based-on-scripttype).
 
 ### Fallback fonts for range of Unicode text
 
@@ -676,6 +738,8 @@ using (FileStream fileStreamInput = new FileStream(@"Template.pptx", FileMode.Op
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Fallback-fonts-for-Unicode-range).
+
 ### Modify the exiting fallback fonts
 
 The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting a PowerPoint presentation to an Image.
@@ -719,6 +783,8 @@ using (FileStream fileStreamInput = new FileStream(@"Template.pptx", FileMode.Op
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Modify-the-exiting-fallback-fonts).
 
 ### Supported script types
 
@@ -834,4 +900,5 @@ N> The .NET PowerPoint Library (Presentation) uses System.Drawing functionalitie
 
 ## See Also
 
-* [How to convert PPTX to Image in Blazor WebAssembly (WASM)?](https://www.syncfusion.com/kb/13884/how-to-convert-pptx-to-image-in-blazor-webassembly-wasm)
+* [How to convert PPTX to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12122/how-to-convert-pptx-to-image-in-blazor-webassembly-wasm)
+* [How custom resolution supported in WinForms PowerPoint slide to image conversion?](https://support.syncfusion.com/kb/article/6685/how-custom-resolution-supported-in-winforms-powerpoint-slide-to-image-conversion)
