@@ -12,7 +12,7 @@ To quickly start creating a chart in a PowerPoint Presentation using .NET PowerP
 
 ## Creating a Chart from scratch
 
-An instance of [IOfficeChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.IOfficeChart.html) can be used to create or modify the charts in PowerPoint Presentation. The following code example demonstrates how to create a simple chart by adding data from scratch.
+An instance of [IOfficeChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeChart.html) can be used to create or modify the charts in PowerPoint Presentation. The following code example demonstrates how to create a simple chart by adding data from scratch.
 
 {% tabs %}
 
@@ -605,25 +605,25 @@ A chart is composed of various elements such as legends, axes, series, etc. Each
 7. A data label that you can use to identify the details of a data point in a data series.
 
 ### Chart Title
-Customize the **chart title** by modifying its name, appearance, and resizing it using the **Presentation library**. For more information, click [here](https://help.syncfusion.com/file-formats/presentation/charts/chart-title).
+Customize the **chart title** by modifying its name, appearance, and resizing it using the **Presentation library**. For more information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-title).
 
 ### Chart Area
-Customize the **chart area** by changing its border, colors, transparency, and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/file-formats/presentation/charts/chart-area).
+Customize the **chart area** by changing its border, colors, transparency, and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-area).
 
 ### Chart Plot Area
-Customize the **chart plot area** by changing its border, colors, transparency, position and adding image using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/file-formats/presentation/charts/chart-plot-area).
+Customize the **chart plot area** by changing its border, colors, transparency, position and adding image using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-plot-area).
 
 ### Chart Series
-Customize the **chart series** by changing the series name, type, color, border, and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/file-formats/presentation/charts/chart-series).
+Customize the **chart series** by changing the series name, type, color, border, and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-series).
 
 ### Chart Legend
-Customize the **chart legend** by changing the position, border, and modifying the legend entry using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/file-formats/presentation/charts/chart-legend).
+Customize the **chart legend** by changing the position, border, and modifying the legend entry using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-legend).
 
 ### Chart Data Labels
-Customize the **chart data labels** by changing the position, size and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/file-formats/presentation/charts/chart-data-labels).
+Customize the **chart data labels** by changing the position, size and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-data-labels).
 
 ### Chart Axis
-Customize the **chart axes** by changing the title, border, font, rotation angle and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/file-formats/presentation/charts/chart-axis).
+Customize the **chart axes** by changing the title, border, font, rotation angle and more using the **Presentation library**. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-axis).
 
 ## Applying 3D Formats
 
@@ -723,10 +723,10 @@ Assemblies for Chart to image
 Cross-platform, Xamarin
 </td>
 <td>
-{{'[PPTX to PDF NuGets](https://help.syncfusion.com/file-formats/presentation/nuget-packages-required#converting-powerpoint-presentation-into-pdf)' |  markdownify }}
+{{'[PPTX to PDF NuGets](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-powerpoint-presentation-into-pdf)' |  markdownify }}
 </td>
 <td>
-{{'[PPTX to PDF assemblies](https://help.syncfusion.com/file-formats/presentation/assemblies-required#converting-powerpoint-presentation-to-pdf)' |  markdownify }}
+{{'[PPTX to PDF assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required#converting-powerpoint-presentation-to-pdf)' |  markdownify }}
 </td>
 </tr>
 <tr>
@@ -734,10 +734,10 @@ Cross-platform, Xamarin
 Windows-specific
 </td>
 <td>
-{{'[PPTX to PDF NuGets](https://help.syncfusion.com/file-formats/presentation/nuget-packages-required#converting-powerpoint-presentation-into-pdf)' |  markdownify }}<br/> {{'[Chart conversion NuGets](https://help.syncfusion.com/file-formats/presentation/nuget-packages-required#converting-charts-in-presentation)' |  markdownify }}
+{{'[PPTX to PDF NuGets](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-powerpoint-presentation-into-pdf)' |  markdownify }}<br/> {{'[Chart conversion NuGets](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-charts-in-presentation)' |  markdownify }}
 </td>
 <td>
-{{'[PPTX to PDF assemblies](https://help.syncfusion.com/file-formats/presentation/assemblies-required#converting-powerpoint-presentation-to-pdf)' |  markdownify }}<br/> {{'[Chart conversion assemblies](https://help.syncfusion.com/file-formats/presentation/nuget-packages-required#converting-charts-in-presentation)' |  markdownify }}
+{{'[PPTX to PDF assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required#converting-powerpoint-presentation-to-pdf)' |  markdownify }}<br/> {{'[Chart conversion assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-charts-in-presentation)' |  markdownify }}
 </td>
 </tr>
 <tr>
@@ -745,17 +745,17 @@ Windows-specific
 UWP
 </td>
 <td>
-{{'[PPTX to PDF NuGets of cross platform](https://help.syncfusion.com/file-formats/presentation/nuget-packages-required#converting-powerpoint-presentation-into-pdf)' |  markdownify }}
+{{'[PPTX to PDF NuGets of cross platform](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-powerpoint-presentation-into-pdf)' |  markdownify }}
 </td>
 <td>
-{{'[PPTX to PDF assemblies of cross platform](https://help.syncfusion.com/file-formats/presentation/assemblies-required#converting-powerpoint-presentation-to-pdf)' |  markdownify }}
+{{'[PPTX to PDF assemblies of cross platform](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required#converting-powerpoint-presentation-to-pdf)' |  markdownify }}
 </td>
 </tr>
 </table>
 
 The following code example demonstrates how to convert the charts in a Presentation slide to image.
 
-T> You can specify the quality of the converted charts by setting the scaling mode. For more details on how to set the scaling mode, see [Converting PowerPoint presentation to Images](/file-formats/presentation/getting-started#converting-powerpoint-presentation-to-images)
+T> You can specify the quality of the converted charts by setting the scaling mode. For more details on how to set the scaling mode, see [Converting PowerPoint presentation to Images](/document-processing/powerpoint/powerpoint-library/net/getting-started#converting-powerpoint-presentation-to-images)
 
 {% tabs %}
 
@@ -1066,7 +1066,7 @@ Essential Presentation supports creating and manipulating new and modern chart t
 
 ### Funnel
 
-[Funnel](https://support.microsoft.com/en-us/office/create-a-funnel-chart-ba21bcba-f325-4d9f-93df-97074589a70e?ui=en-us&rs=en-us&ad=us#) charts show values across multiple stages in a process. Refer to the following code example to create a [Funnel](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.OfficeChartType.html) chart.
+[Funnel](https://support.microsoft.com/en-us/office/create-a-funnel-chart-ba21bcba-f325-4d9f-93df-97074589a70e?ui=en-us&rs=en-us&ad=us#) charts show values across multiple stages in a process. Refer to the following code example to create a [Funnel](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
 
 {% tabs %}
 
@@ -1190,7 +1190,7 @@ The following screenshot shows the output of previous code.
 
 ### Box and Whisker
 
-[Box and Whisker](https://support.microsoft.com/en-us/office/create-a-box-and-whisker-chart-62f4219f-db4b-4754-aca8-4743f6190f0d?ui=en-us&rs=en-us&ad=us#) chart shows distribution of data into quartiles, highlighting the mean and outliers. Box and Whisker charts are most commonly used in statistical analysis. Refer to the following code example to create the [Box and Whisker](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.OfficeChartType.html) chart.
+[Box and Whisker](https://support.microsoft.com/en-us/office/create-a-box-and-whisker-chart-62f4219f-db4b-4754-aca8-4743f6190f0d?ui=en-us&rs=en-us&ad=us#) chart shows distribution of data into quartiles, highlighting the mean and outliers. Box and Whisker charts are most commonly used in statistical analysis. Refer to the following code example to create the [Box and Whisker](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
 
 {% tabs %}
 
@@ -1597,7 +1597,7 @@ The following screenshot shows the output of previous code.
 
 ### Waterfall
 
-[Waterfall](https://support.office.com/en-us/article/Create-a-waterfall-chart-in-Office-2016-8de1ece4-ff21-4d37-acd7-546f5527f185#) chart helps understand the finances of business owners by viewing profit and loss statements. You can quickly illustrate the line items in your financial data and get a clear picture of how each item is impacting your bottom line using a Waterfall chart. Refer to the following code to create a [Waterfall](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.OfficeChartType.html) chart.
+[Waterfall](https://support.office.com/en-us/article/Create-a-waterfall-chart-in-Office-2016-8de1ece4-ff21-4d37-acd7-546f5527f185#) chart helps understand the finances of business owners by viewing profit and loss statements. You can quickly illustrate the line items in your financial data and get a clear picture of how each item is impacting your bottom line using a Waterfall chart. Refer to the following code to create a [Waterfall](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
 
 {% tabs %}
 
@@ -1745,7 +1745,7 @@ The following screenshot shows the output of previous code.
 
 ### Histogram
 
-[Histogram](https://support.microsoft.com/en-us/office/create-a-histogram-85680173-064b-4024-b39d-80f17ff2f4e8?ui=en-us&rs=en-us&ad=us# ) shows the frequencies within a distribution. Each column of the chart is called a bin, which can be changed further to analyze the data. Refer to the following code example to create a [Histogram](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.OfficeChartType.html).
+[Histogram](https://support.microsoft.com/en-us/office/create-a-histogram-85680173-064b-4024-b39d-80f17ff2f4e8?ui=en-us&rs=en-us&ad=us# ) shows the frequencies within a distribution. Each column of the chart is called a bin, which can be changed further to analyze the data. Refer to the following code example to create a [Histogram](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html).
 
 {% tabs %}
 
@@ -1877,7 +1877,7 @@ The following screenshot shows the output of previous code.
 
 ### Pareto
 
-[Pareto](https://support.microsoft.com/en-us/office/create-a-pareto-chart-a1512496-6dba-4743-9ab1-df5012972856?ui=en-us&rs=en-us&ad=us#) is a sorted histogram in which the columns sorted in descending order and a line representing the cumulative total percentage. . Refer to the following code example to create a [Pareto](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.OfficeChartType.html) chart.
+[Pareto](https://support.microsoft.com/en-us/office/create-a-pareto-chart-a1512496-6dba-4743-9ab1-df5012972856?ui=en-us&rs=en-us&ad=us#) is a sorted histogram in which the columns sorted in descending order and a line representing the cumulative total percentage. . Refer to the following code example to create a [Pareto](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
 
 {% tabs %}
 

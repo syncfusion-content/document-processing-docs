@@ -74,7 +74,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Printing a PowerPoint presentation
 
-You can print the Presentation document by converting the PowerPoint presentation slides to images. For more information about converting the PowerPoint presentation slides to images, see [Conversion](/file-formats/presentation/getting-started). You can use the System.Drawing.Printing.[PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?redirectedfrom=MSDN&view=dotnet-plat-ext-7.0) class to print the converted images by the default printer or to any of the available printer with customized settings.
+You can print the Presentation document by converting the PowerPoint presentation slides to images. For more information about converting the PowerPoint presentation slides to images, see [Conversion](/document-processing/powerpoint/powerpoint-library/net/getting-started). You can use the System.Drawing.Printing.[PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?redirectedfrom=MSDN&view=dotnet-plat-ext-7.0) class to print the converted images by the default printer or to any of the available printer with customized settings.
 
 The following code example demonstrates how to convert the slides of a PowerPoint presentation to images.
 
@@ -244,7 +244,7 @@ Document properties, also known as meta data, are details about a file that desc
 
 **Built****-****in** **Document** **Properties**
 
-You can access and modify the built in document properties of a PowerPoint presentation with Essential Presentation library. The Built-in document properties of a PowerPoint presentation is represented by [IBuiltInDocumentProperties](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IBuiltInDocumentProperties.html) type.
+You can access and modify the built in document properties of a PowerPoint presentation with Essential Presentation library. The Built-in document properties of a PowerPoint presentation is represented by [IBuiltInDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IBuiltInDocumentProperties.html) type.
 
 **Accessing** **and** **Modifying** **Built****-****in** **Document** **Properties**
 
@@ -324,7 +324,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Custom Document properties
 
-You can create and modify the custom document properties of a PowerPoint presentation with Essential Presentation library. The collection of custom document properties in a PowerPoint presentation is represented by [ICustomDocumentProperties](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ICustomDocumentProperties.html) object. 
+You can create and modify the custom document properties of a PowerPoint presentation with Essential Presentation library. The collection of custom document properties in a PowerPoint presentation is represented by [ICustomDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ICustomDocumentProperties.html) object. 
 
 ### Adding Custom Document properties
 

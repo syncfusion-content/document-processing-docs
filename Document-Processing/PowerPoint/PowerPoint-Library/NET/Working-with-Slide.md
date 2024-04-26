@@ -449,7 +449,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Merging slide
 
-The Essential Presentation provides ability to clone slides from one Presentation to another Presentation. With this ability, you can split a large Presentation into small ones and also merge multiple presentations to one Presentation. You can choose the theme for the cloned slide by using the enum [PasteOption](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.PasteOptions.html).
+The Essential Presentation provides ability to clone slides from one Presentation to another Presentation. With this ability, you can split a large Presentation into small ones and also merge multiple presentations to one Presentation. You can choose the theme for the cloned slide by using the enum [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html).
 
 {% tabs %}
 
@@ -608,9 +608,9 @@ pptxDoc.Close()
 
 {% endtabs %}
 
-For more details on assemblies required for converting a slide to image,  see [Conversion](https://help.syncfusion.com/file-formats/presentation/presentation-to-image#assemblies-required)
+For more details on assemblies required for converting a slide to image,  see [Conversion](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image#assemblies-required)
 
-N> You can print the PowerPoint presentations by using its ability to convert the slides as images. For more details, refer to [Printing a PowerPoint presentation](/file-formats/presentation/working-with-powerpoint-presentation#printing-a-powerpoint-presentation)
+N> You can print the PowerPoint presentations by using its ability to convert the slides as images. For more details, refer to [Printing a PowerPoint presentation](/document-processing/powerpoint/powerpoint-library/net/working-with-powerpoint-presentation#printing-a-powerpoint-presentation)
 
 ## Changing Slide background
 

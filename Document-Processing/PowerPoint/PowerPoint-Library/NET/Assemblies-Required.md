@@ -24,7 +24,7 @@ Assembly
 												 
 	 
 	
-{{'[WPF](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-windows-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-asp-net-web-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-windows-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
@@ -32,15 +32,15 @@ Syncfusion.OfficeChart.Base<br/>
 </tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/></td></tr>
 <tr>
 <td>
-{{'[Universal Windows Platform](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-uwp)' | markdownify}}<br/></td><td>
+{{'[Universal Windows Platform](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-uwp)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.UWP<br/>Syncfusion.OfficeChart.UWP<br/></td></tr>
 <tr>
 <td>
-{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-maui)' | markdownify}}<br/></td><td>
+{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui)' | markdownify}}<br/></td><td>
 	 
 		 
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
@@ -68,7 +68,7 @@ Assembly
 												 
 	 
 	
-{{'[WPF](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-windows-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-asp-net)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-windows-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
@@ -78,7 +78,7 @@ Syncfusion.PresentationToPDFConverter.Base<br/>
 </tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-blazor)' | markdownify}}<br/></td><td>
 	 
 	
 Syncfusion.Presentation.Portable<br/>
@@ -93,7 +93,7 @@ Skiasharp
 </tr>
 <tr>
 <td>
-{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-pdf-in-maui)' | markdownify}}<br/></td><td>
+{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-maui)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
 Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.SkiaSharpHelper.NET<br/>Skiasharp
 </td>
@@ -115,7 +115,7 @@ Assembly
 </tr>
 <tr>
 <td>
-{{'[WPF](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-windows-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-asp-net)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
@@ -127,7 +127,7 @@ Syncfusion.SfChart.WPF<br/>
 </tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Portable<br/>
 Syncfusion.Compression.Portable<br/>
 Syncfusion.OfficeChart.Portable<br/>
@@ -140,14 +140,14 @@ Skiasharp
 </tr>
 <tr>
 <td>
-{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-maui)' | markdownify}}<br/></td><td>
+{{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-maui)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
 Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.Pdf.NET<br/>Syncfusion.SkiaSharpHelper.NET<br/>Skiasharp
 </td>
 </tr>
 <tr>
 <td>
-{{'[UWP](https://help.syncfusion.com/file-formats/presentation/convert-powerpoint-to-image-in-uwp)' | markdownify}}<br/></td><td>
+{{'[UWP](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-uwp)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.UWP<br/>
 Syncfusion.OfficeChart.UWP<br/>
 Syncfusion.OfficeChartToImageConverter.UWP<br/>
