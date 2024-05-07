@@ -183,12 +183,12 @@ Integrating HTML to PDF converter library in any .NET application is simple. Ple
 <b>Steps to convert HTML to PDF in .NET application</b>
 
 Step 1: Create a new .NET console application.
-<img src="Convert-HTML-To-PDF/htmlconversion_images/createconsolesample1.png" alt="Create .net core console sample" width="100%" Height="Auto"/>
+<img src="htmlconversion_images/createconsolesample1.png" alt="Create .net core console sample" width="100%" Height="Auto"/>
 
-<img src="Convert-HTML-To-PDF/htmlconversion_images/createconsolesample2.png" alt="Select target .net core version" width="100%" Height="Auto"/>
+<img src="htmlconversion_images/createconsolesample2.png" alt="Select target .net core version" width="100%" Height="Auto"/>
 
 Step 2: Install [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) NuGet package as a reference to your .NET application from [NuGet.org](https://www.nuget.org/). 
-<img src="Convert-HTML-To-PDF/htmlconversion_images/createconsolesample3.png" alt="Install HTML to PDF converter .NET package" width="100%" Height="Auto"/>
+<img src="htmlconversion_images/createconsolesample3.png" alt="Install HTML to PDF converter .NET package" width="100%" Height="Auto"/>
 
 Step 3: Include the following namespace in your class file. 
 
@@ -225,7 +225,7 @@ document.Close(true);
 {% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
-<img src="Convert-HTML-To-PDF/htmlconversion_images/htmltopdfoutput.png" alt="htmltopdfoutput" width="100%" Height="Auto"/>
+<img src="htmlconversion_images/htmltopdfoutput.png" alt="htmltopdfoutput" width="100%" Height="Auto"/>
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/.NET).
 
@@ -269,7 +269,7 @@ Refer to [this](/file-formats/pdf/convert-html-to-pdf/troubleshooting) section f
 
 By default, the PDF document generated with the IE rendering engine comes with the following warning message.
 
-<img src="Convert-HTML-To-PDF/htmlconversion_images/IEWarning.png" alt="IEWarning" width="100%" Height="Auto"/>
+<img src="htmlconversion_images/IEWarning.png" alt="IEWarning" width="100%" Height="Auto"/>
 Please refer to the below code snippet to use the DisableIEWarning API to remove the default IE warning from the PDF document.
 
 {% tabs %}
