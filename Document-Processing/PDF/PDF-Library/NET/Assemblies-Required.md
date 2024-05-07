@@ -1,7 +1,7 @@
 ---
 title: Assemblies Required for PDF | Syncfusion
 description: This section explains about the Syncfusion assemblies required to work with PDF file, and conversion such as HTML to PDF, Word to PDF, Excel to PDF, PPTX to PDF
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
@@ -21,32 +21,32 @@ Assembly
 </tr>
 <tr>
 <td>
-{{'[WPF](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-windows-forms)' | markdownify}}, {{'[ ASP. NET](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-asp-net-web-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)' | markdownify}}, {{'[ ASP. NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Pdf.Base<br/>Syncfusion.Compression.Base<br/></td></tr>
 <tr>
 <td>
-{{'[Windows Forms](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-windows-forms)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-wpf)' | markdownify}}<br/></td><td>
+{{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)' | markdownify}}<br/></td><td>
 Syncfusion.Pdf.ClientProfile<br/>Syncfusion.Compression.Base<br/></td></tr>
 <tr>
 <td>
-{{'[Universal Windows Platform](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-uwp)' | markdownify}}<br/></td><td>
+{{'[Universal Windows Platform](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)' | markdownify}}<br/></td><td>
 Syncfusion.Pdf.UWP<br/></td></tr>
 <tr>
 <td>
-{{'[Xamarin](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-xamarin)' | markdownify}}<br/></td><td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)' | markdownify}}<br/></td><td>
 Syncfusion.Pdf.Portable<br/>Syncfusion.Compression.Portable<br/></td></tr>
 <tr>
 <tr>
 <td>
-{{'[Blazor](https://help.syncfusion.com/file-formats/pdf/create-pdf-document-in-blazor)' | markdownify}}, {{'[.NET Core](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-asp-net-core)' | markdownify}} and {{'[.NET Platforms](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)' | markdownify}}, {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)' | markdownify}} and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Compression.Portable.dll<br/>
 Syncfusion.Pdf.Portable.dll
 	
 <br/></td></tr>
 <tr>
 <td>
-{{'[Windows UI library (WinUI)](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-winui)' | markdownify}}<br/>
-{{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-maui)' | markdownify}}</td><td>
+{{'[Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui)' | markdownify}}<br/>
+{{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)' | markdownify}}</td><td>
 Syncfusion.Pdf.NET.dll<br/>
 Syncfusion.Compression.NET.dll
 	
@@ -83,11 +83,11 @@ Windows Phone 8.1 WinRT<br/></td><td>
 Syncfusion.Pdf.WP<br/>Syncfusion.Compression.WP<br/></td></tr>
 <tr>
 <td>
-{{'[ASP.NET (Classic)](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-asp-net-web-forms)' | markdownify}}<br/></td><td>
+{{'[ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)' | markdownify}}<br/></td><td>
 Syncfusion.Pdf.Web<br/>Syncfusion.Compression.Base<br/></td></tr>
 <tr>
 <td>
-{{'[ASP.NET MVC (Classic)](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Pdf.MVC<br/>Syncfusion.Compression.Base<br/></td></tr>
 </table>
 
@@ -99,7 +99,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 
 ## Converting HTML to PDF
 
-Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#windows), [Linux](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#linux), and [Mac](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#mac) respectively. Please refer to the [advanced installation](/file-formats/pdf/convert-html-to-pdf/advanced-installation) steps for more details. 
+Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac) respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
 
 <table>
 <tr>
