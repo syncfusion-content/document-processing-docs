@@ -39,7 +39,7 @@ Essential DocIO can convert various flow document as fixed document by using our
 
 ## Converting Word document to PDF
 
-Essential DocIO allows you to convert a Word document into PDF with a few lines of code. For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/word-to-pdf#).
+Essential DocIO allows you to convert a Word document into PDF with a few lines of code. For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf).
 
 
 ### Customizing the Word document to PDF conversion
@@ -51,29 +51,29 @@ Essential DocIO allows you to customize the Word to PDF conversion with the foll
 * Allows to determine the quality of the JPEG images in the converted PDF
 * Allows to reduce the Main Memory usage in Word to PDF conversion by reusing the identical images.
 
-For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/word-to-pdf#customization-settings#).
+For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#customization-settings).
  
  
 ### Unsupported elements in Word to PDF conversion
 
-Kindly refer the [here](https://help.syncfusion.com/file-formats/docio/word-to-pdf#unsupported-elements-in-word-to-pdf-conversion#) for list of Unsupported elements in Word to PDF conversion
+Kindly refer the [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#unsupported-elements-in-word-to-pdf-conversion) for list of Unsupported elements in Word to PDF conversion
 
 
 ## Rendering / Converting Word document to Image
 
-Essential DocIO supports to convert the Word document to images using [RenderAsImages](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_RenderAsImages_Syncfusion_DocIO_DLS_ImageType_) method. For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/word-to-image#).
+Essential DocIO supports to convert the Word document to images using [RenderAsImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_RenderAsImages_Syncfusion_DocIO_DLS_ImageType_) method. For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image).
 
 
 ## RTF conversion 
 
-Essential DocIO supports to convert the RTF document into Word document and vice versa. For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/rtf#).
+Essential DocIO supports to convert the RTF document into Word document and vice versa. For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/rtf).
 
 
 ## HTML conversion
 
 Essential DocIO supports converting the HTML file into Word document and vice versa. It supports only the HTML files that meet the validation either against XHTML 1.0 strict or XHTML 1.0 Transitional schema. 
 
-For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/html#).
+For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/html).
 
 
 ### Customizing the HTML to Word conversion
@@ -84,7 +84,7 @@ You can customize the HTML to Word conversion with the following options:
 * Insert the HTML string at the specified position of the document body contents
 * Append HTML string to the specified paragraph
 
-For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/html#customization-settings#).
+For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/html#customization-settings).
 
 ### Customizing the Word to HTML conversion
 
@@ -98,18 +98,18 @@ You can customize the Word to HTML conversion with the following options:
 N> 
 While exporting header and footer, DocIO exports the first section header content at the top of the HTML file and first section footer content at the end of the HTML file
 
-For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/html#customization-settings#).
+For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/html#customization-settings).
 
 ### Supported Document elements
 
-Kindly refer the [here](https://help.syncfusion.com/file-formats/docio/html#supported-and-unsupported-items#) for the document elements and attributes are supported by DocIO in Word to HTML and HTML to Word conversions.
+Kindly refer the [here](https://help.syncfusion.com/document-processing/word/word-library/net/html#supported-and-unsupported-items) for the document elements and attributes are supported by DocIO in Word to HTML and HTML to Word conversions.
 
 
 ## Text file
 
-Essential DocIO supports to convert the Word document into Text file and vice versa. For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/text#).
+Essential DocIO supports to convert the Word document into Text file and vice versa. For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/text).
 
   
 ## Word to EPUB
 
-Essential DocIO supports to convert the Word document into EPUB v2.0. It only supports in Windows Forms, UWP, WPF, ASP.NET Web and MVC platforms. For further information kindly refer [here](https://help.syncfusion.com/file-formats/docio/word-to-epub#).
+Essential DocIO supports to convert the Word document into EPUB v2.0. It only supports in Windows Forms, UWP, WPF, ASP.NET Web and MVC platforms. For further information kindly refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/word-to-epub).

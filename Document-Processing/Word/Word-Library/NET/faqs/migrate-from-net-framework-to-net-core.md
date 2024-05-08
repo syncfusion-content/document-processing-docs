@@ -188,8 +188,8 @@ EMF and WMF images are not supported in .NET Core platforms.
 * Graphics library: In .NET Framework, our library makes use of System.Drawing.Common for any text measuring and graphics-related operations. Whereas in .NET Core, our library uses the SkiaSharp graphics library to provide the same type of graphics operations in all the supported environments.
 * The below features are make use of SkiaSharp graphics library, which are separated into a separate package, [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core).
 	* [Word document to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)
-	* [Word document to Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-image)
-	* [Updating table of contents](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/working-with-table-of-contents#updating-table-of-contents)
+	* [Word document to Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image)
+	* [Updating table of contents](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-table-of-contents#updating-table-of-contents)
 	* [Convert chart to image](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/working-with-charts#convert-chart-to-image)
 * During Word to PDF/Image conversion, if you are facing font-related problems (like accessing font from the environment), you can pass the fonts as streams using our [font substitution approach](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#font-substitution).
 
