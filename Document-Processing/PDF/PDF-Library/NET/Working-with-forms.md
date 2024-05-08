@@ -1,7 +1,7 @@
 ---
 title: Working with Forms | Syncfusion
 description: This section explains how to create, fill, modify, read only and flatten form fields in the PDF document
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
@@ -3331,7 +3331,7 @@ The following screenshot shows the enabling and disabling of form fields auto na
 
 ## Adding actions to form fields 
 
-Please refer to the [actions](/file-formats/pdf/working-with-action#adding-an-action-to-the-form-field "Working with action") section for more details.
+Please refer to the [actions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-action#adding-an-action-to-the-form-field) section for more details.
 
 N> Essential PDF allows users to preserve the extended rights for form filling alone.
 

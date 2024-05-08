@@ -1,14 +1,14 @@
 ---
 title: Working with WinRT
 description: This section explains how to load and save PDF document in WinRT
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
 
 # Working with WinRT
 
-In your WinRT application, please add the required assemblies in order to use Essential PDF. [Refer here for assemblies required](/File-Formats/PDF/Assemblies-Required).
+In your WinRT application, please add the required assemblies in order to use Essential PDF. [Refer here for assemblies required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required).
 
 ## Loading the document 
 

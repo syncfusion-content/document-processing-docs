@@ -1,7 +1,7 @@
 ---
 title: Working with PDF conformance in .NET PDF Library | Syncfusion
 description: This section explains how to create a PDF conformance documents and convert PDF to PDF/A conformance document.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

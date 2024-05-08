@@ -1,7 +1,7 @@
 ---
 title: Converting HTML to PDF with IE | Syncfusion
 description: Learn how to convert HTML to PDF using IE rendering engine with various features like HTML string to PDF, PDF A1B etc.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

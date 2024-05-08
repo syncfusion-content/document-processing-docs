@@ -1,7 +1,7 @@
 ---
 title: Save PDF file to Google Drive | Syncfusion
 description: This page describes how to save PDF file to file google drive in C#  using Syncfusion .NET PDF library.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

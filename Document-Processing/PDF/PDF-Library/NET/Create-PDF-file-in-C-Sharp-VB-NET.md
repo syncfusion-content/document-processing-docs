@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in C# and VB.NET | Syncfusion
 description: Learn how to create or generate a PDF file in C# and VB.NET with elements like text, image and table using Syncfusion .NET PDF library without Adobe. 
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: create pdf, edit pdf, write pdf, merge, pdf form, fill form, digital sign, table, c#, vb.net, dotnet pdf
@@ -10,7 +10,7 @@ keywords: create pdf, edit pdf, write pdf, merge, pdf form, fill form, digital s
 
 The [Syncfusion .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) used to create PDF document from scratch and saving it to disk or stream. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
 
-To include the .NET PDF library into your application, please refer to the [NuGet Package Required](https://help.syncfusion.com/file-formats/pdf/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/file-formats/pdf/assemblies-required) documentation.
+To include the .NET PDF library into your application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 N> 2. Unlike System.Drawing APIs all the units are measured in point instead of pixel.
@@ -740,7 +740,7 @@ g.DrawLine(new PdfPen(new PdfColor(126, 151, 173), 0.70f), new PointF(0, result.
 
 {% endtabs %}
 Essential PDF provides two types of table models. The difference between both the table models can be referred from the link 
-[Difference between PdfLightTable and PdfGrid](/file-formats/pdf/working-with-tables#difference-between-pdflighttable-and-pdfgrid "difference-between-pdflighttable-and-pdfgrid")
+[Difference between PdfLightTable and PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables)
 
 Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html).
 
@@ -1300,13 +1300,13 @@ The filled form is shown in adobe reader application as follows.
 
 ## Converting HTML files to PDF
 
-The [HTML-to-PDF converter](https://help.syncfusion.com/file-formats/pdf/converting-html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses the popular rendering engine [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) (Google Chrome) and the result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.  
+The [HTML-to-PDF converter](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/converting-html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses the popular rendering engine [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) (Google Chrome) and the result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.  
 
-The HTML-to-PDF converter works seamlessly in various platforms: [Azure App Services](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/azure#azure-app-service-linux), [Azure Functions](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/azure#azure-app-function-linux), [AWS Lambda](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/aws#steps-to-convert-html-to-pdf-in-aws-lambda), [Docker](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/docker), [WinForms](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/windows-forms), [WPF](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/wpf), [Blazor](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/blazor), [ASP.NET MVC](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/aspnet-mvc), [ASP.NET Core](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/net-core) with [Windows](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/windows-forms), [Linux](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/linux), and [MacOS](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/mac).
+The HTML-to-PDF converter works seamlessly in various platforms: [Azure App Services](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux), [Azure Functions](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux), [AWS Lambda](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-lambda), [Docker](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/docker), [WinForms](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [WPF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/wpf), [Blazor](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/blazor), [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/aspnet-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) with [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/windows-forms), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/linux), and [MacOS](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/mac).
 
 ### Install HTML to PDF .NET library to your project
 
-To include the HTML to PDF .NET library into your application, please refer to the [NuGet Package Required](https://help.syncfusion.com/file-formats/pdf/converting-html-to-pdf#nuget-packages-required-recommended) or [Assemblies Required](https://help.syncfusion.com/file-formats/pdf/converting-html-to-pdf#assemblies-required) documentation. 
+To include the HTML to PDF .NET library into your application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation. 
 
 ### Convert website URL to PDF  
 

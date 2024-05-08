@@ -1,7 +1,7 @@
 ---
 title: Working with named destination | Syncfusion
 description: This section explains about how to add, remove and modify the named destination in the Essential PDF document with example.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
@@ -254,7 +254,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding named destination to the bookmarks
 
-The following code example shows how to add named destination to the [Bookmarks](https://help.syncfusion.com/file-formats/pdf/working-with-bookmarks) in the PDF document.
+The following code example shows how to add named destination to the [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks) in the PDF document.
 
 {% tabs %}
 

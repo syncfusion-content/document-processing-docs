@@ -1,11 +1,11 @@
 ---
 title: PDF Working with Shapes | Syncfusion
 description: This section explains how to add shapes such as Line, curve, path, text, rectangle, pie, arc, Bezier, ellipse in the PDF document
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Shapes for File-Formats Platform PDF Control
+# Working with Shapes for Document-Processing Platform PDF Control
 
 Essential PDF has support for adding the below shapes.
 
@@ -21,7 +21,7 @@ Essential PDF has support for adding the below shapes.
 
 ## Adding Shapes to a PDF document
 
-Essential PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various [color spaces](https://help.syncfusion.com/file-formats/pdf/working-with-colorspace) and transparency levels.
+Essential PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various [color spaces](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-colorspace) and transparency levels.
 
 ### Polygon
 
@@ -671,7 +671,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Text
 
-You can draw text in a PDF document by using the [DrawString](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). To draw different PDF elements based on the position of previously drawn element, draw the text by using [Draw](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html#Syncfusion_Pdf_Graphics_PdfTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_Syncfusion_Pdf_Graphics_PdfLayoutFormat_) method of [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) and store its bounds in [PdfLayoutResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutResult.html). Refer to the [Working with Text](https://help.syncfusion.com/file-formats/pdf/working-with-text) section for more information.
+You can draw text in a PDF document by using the [DrawString](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). To draw different PDF elements based on the position of previously drawn element, draw the text by using [Draw](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html#Syncfusion_Pdf_Graphics_PdfTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_Syncfusion_Pdf_Graphics_PdfLayoutFormat_) method of [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) and store its bounds in [PdfLayoutResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutResult.html). Refer to the [Working with Text](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text) section for more information.
 
 ### Rectangle
 

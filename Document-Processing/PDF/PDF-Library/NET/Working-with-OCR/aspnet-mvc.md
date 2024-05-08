@@ -1,7 +1,7 @@
 ---
 title: Perform OCR on PDF and image files in ASP.NET MVC | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in ASP.NET MVC using Syncfusion .NET OCR library.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies

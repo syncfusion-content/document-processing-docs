@@ -1,7 +1,7 @@
 ---
 title: Working with Text | Syncfusion
 description: This section explains how to add text to the PDF document using different type of fonts, TrueType fonts and standard fonts
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
@@ -744,7 +744,7 @@ Essential PDF provides support to render simple HTML string in a PDF document th
    * BR
    
 2. The [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class enables to break the HTML text into multiple pages.
-3. Complex HTML with CSS are not supported in this class. Please use [HTML to PDF](/file-formats/pdf/converting-html-to-pdf "Converting HTML documents To PDF") section for complex HTML with CSS and URL's
+3. Complex HTML with CSS are not supported in this class. Please use [HTML to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) section for complex HTML with CSS and URL's
 
 The following code example illustrates how to render the HTML string in a PDF document.   
 
@@ -1108,7 +1108,7 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Insert-RTF-text-in-PDF-document/). 
 
-N> For converting complex RTF content to PDF, refer the [RTF to PDF](/file-formats/pdf/working-with-document-conversions#converting-rtf-documents-to-pdf "Working with document conversions") section.
+N> For converting complex RTF content to PDF, refer the [RTF to PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-rtf-documents-to-pdf) section.
 
 ## Adding an Ordered List 
 

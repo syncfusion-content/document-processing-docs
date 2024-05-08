@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in UWP | Syncfusion
 description: Open and save PDF document in UWP application using Syncfusion UWP PDF library without the dependency of Adobe Acrobat. 
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf

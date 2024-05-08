@@ -1,7 +1,7 @@
 ---
 title: Working with Layers | Syncfusion
 description: This section explains adding the layer in the PDF document and the layers refers to section of Content of PDF document
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
@@ -229,7 +229,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding annotation to layer
 
-Essential PDF allows the users to add different types of [Annotation](https://help.syncfusion.com/file-formats/pdf/working-with-annotations) to layers in the PDF document using [Layer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Layer) property in [PdfAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAnnotation.html) class. The following code example illustrates the same. 
+Essential PDF allows the users to add different types of [Annotation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations) to layers in the PDF document using [Layer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Layer) property in [PdfAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAnnotation.html) class. The following code example illustrates the same. 
 
 {% tabs %}  
 

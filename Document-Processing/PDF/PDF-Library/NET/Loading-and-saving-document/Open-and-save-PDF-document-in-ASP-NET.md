@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in ASP.NET | Syncfusion
 description: Open and save PDF document in ASP.NET application using Syncfusion .NET PDF library without the dependency of Adobe Acrobat. 
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: .net save pdf, .net load pdf, c# save pdf, c# load pdf

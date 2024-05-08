@@ -1,7 +1,7 @@
 ---
 title: Create or Generate PDF file in ASP.NET Core | Syncfusion
 description: Learn how to create or generate a PDF file in ASP.NET Core with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
@@ -11,7 +11,7 @@ keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital si
 
 The Syncfusion [.NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
 
-To include the .NET Core PDF library into your ASP.NET Core application, please refer to the [NuGet Package Required](/file-formats/pdf/nuget-packages-required) or [Assemblies Required](/file-formats/pdf/assemblies-required) documentation.
+To include the .NET Core PDF library into your ASP.NET Core application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency on the System.Drawing.Common package from our Syncfusion.Pdf.Imaging.Net.Core package. Instead, we have introduced SkiaSharp as the alternative library.
 
@@ -23,7 +23,7 @@ Step 1: Create a new C# ASP.NET Core Web Application project.
 Step 2: Select Web Application pattern (Model-View-Controller) for the project.
 ![Select Web Application pattern](Asp.Net.Core_images/Creation2.png)
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) [NuGet package](https://help.syncfusion.com/file-formats/nuget-packages) as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) [NuGet package](https://help.syncfusion.com/document-processing/nuget-packages) as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).
 ![Install PDF .NET Core NuGet package](Asp.Net.Core_images/Creation3.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
@@ -255,7 +255,7 @@ graphics.DrawLine(linePen, startPoint, endPoint);
 {% endhighlight %}
 
 Essential PDF provides two types of table models. The difference between both the table models can be referred from the link 
-[Difference between PdfLightTable and PdfGrid](/file-formats/pdf/working-with-tables#difference-between-pdflighttable-and-pdfgrid "difference-between-pdflighttable-and-pdfgrid")
+[Difference between PdfLightTable and PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables)
 
 Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html).
 

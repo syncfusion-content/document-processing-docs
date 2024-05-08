@@ -1,7 +1,7 @@
 ---
 title: Save PDF file to AWS S3 | Syncfusion
 description: This page describes how to save PDF file to file AWS S3 in C#  using Syncfusion .NET PDF library.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: Open and save PDF document in AWS | Syncfusion
 description: Learn how to open and save a PDF document in Amazon Web Services (AWS) using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: aws save pdf, aws load pdf, c# save pdf, c# load pdf

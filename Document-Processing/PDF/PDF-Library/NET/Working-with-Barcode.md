@@ -1,7 +1,7 @@
 ---
 title: Working with Barcode | Syncfusion
 description: This section explains about how to add 1D & 2D barcodes to the PDF document and customize the appearance, position and size of the one dimensional barcode.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: 
 ---

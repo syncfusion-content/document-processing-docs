@@ -1,7 +1,7 @@
 ---
 title: Working with Tables using PdfGrid | Syncfusion
 description: Learn how to create a table to a PDF, apply cell & built-in table styles, automatic pagination, customize the rows and columns, and more using the PdfGrid.
-platform: File-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
@@ -442,7 +442,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Cell customization 
 
-[PdfGridCell](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCell.html) provides various direct options to customize the cells like [ColumnSpan](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_ColumnSpan), [RowSpan](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_RowSpan), [text color](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridStyleBase.html#Syncfusion_Pdf_Grid_PdfGridStyleBase_TextPen), [background color](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridStyleBase.html#Syncfusion_Pdf_Grid_PdfGridStyleBase_BackgroundBrush), [image position](https://help.syncfusion.com/file-formats/pdf/pdfgrid#create-a-simple-table-directly-without-setting-any-data-source) and etc using [PdfGridCellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCellStyle.html).
+[PdfGridCell](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCell.html) provides various direct options to customize the cells like [ColumnSpan](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_ColumnSpan), [RowSpan](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_RowSpan), [text color](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridStyleBase.html#Syncfusion_Pdf_Grid_PdfGridStyleBase_TextPen), [background color](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridStyleBase.html#Syncfusion_Pdf_Grid_PdfGridStyleBase_BackgroundBrush), [image position](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/pdfgrid#create-a-simple-table-directly-without-setting-any-data-source) and etc using [PdfGridCellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGridCellStyle.html).
 
 The following code example illustrates how to customize the cell in the [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html).
 

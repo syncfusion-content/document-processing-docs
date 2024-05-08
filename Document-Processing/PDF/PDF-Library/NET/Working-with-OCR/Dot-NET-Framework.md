@@ -1,7 +1,7 @@
 ---
 title: OCR Processor for .NET PDF Framework with Tesseract | Syncfusion
 description: This section explains how to process OCR for the existing PDF documents and images with different version Tesseract.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
@@ -161,7 +161,7 @@ End Using
 
 {% endtabs %} 
 
-N> The PerformOCR method returns only the text OCRed by OCRProcessor. Other existing text in the PDF page won’t be returned in this method. Please check [text extraction](/file-formats/pdf/working-with-text-extraction) feature for this.
+N> The PerformOCR method returns only the text OCRed by OCRProcessor. Other existing text in the PDF page won’t be returned in this method. Please check [text extraction](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text-extraction) feature for this.
 
 ## Performing OCR with tesseract version 3.05
 

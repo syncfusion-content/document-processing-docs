@@ -1,7 +1,7 @@
 ---
 title: Working with Tagged PDF | Syncfusion
 description: This section explains how to create a tagged PDF document by using Essential PDF. Tagged PDF is useful for people with vision or cognitive impairments.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

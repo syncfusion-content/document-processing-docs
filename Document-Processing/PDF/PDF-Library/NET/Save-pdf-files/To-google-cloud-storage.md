@@ -1,7 +1,7 @@
 ---
 title: Save PDF file to Google cloud storage | Syncfusion
 description: This page describes how to save PDF file to file google cloud storage in C#  using Syncfusion .NET PDF library.
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---

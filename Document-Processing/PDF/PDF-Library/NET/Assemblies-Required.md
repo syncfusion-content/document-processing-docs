@@ -1,7 +1,7 @@
 ---
 title: Assemblies Required for PDF | Syncfusion
 description: This section explains about the Syncfusion assemblies required to work with PDF file, and conversion such as HTML to PDF, Word to PDF, Excel to PDF, PPTX to PDF
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
@@ -91,7 +91,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 
 ## Converting HTML to PDF
 
-Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#windows), [Linux](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#linux), and [Mac](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#mac) respectively. Please refer to the [advanced installation](/file-formats/pdf/convert-html-to-pdf/advanced-installation) steps for more details. 
+Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac) respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
 
 <table>
 <tr>

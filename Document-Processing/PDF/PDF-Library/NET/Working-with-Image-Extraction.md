@@ -1,7 +1,7 @@
 ---
 title: Working with image extraction | Syncfusion
 description: This section explains extracting images and extracting information about images from PDF document using Essential PDF
-platform: file-formats
+platform: document-processing
 control: PDF
 documentation: UG
 ---
