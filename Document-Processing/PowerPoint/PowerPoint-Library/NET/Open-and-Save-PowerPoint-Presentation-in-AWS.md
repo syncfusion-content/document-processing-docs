@@ -33,7 +33,7 @@ NuGet package name<br/></th></tr></thead>
 </td></tr>
 <tr>
 <td>
-{{'[AWS Elastic Beanstalk](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-powerpoint-presentation-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
+{{'[AWS Elastic Beanstalk](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}<br/>
 </td></tr>
 </table>

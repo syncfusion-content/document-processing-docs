@@ -1212,7 +1212,7 @@ doc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection).
 
-N> For more information on Mail merge using DocIO, you can refer to online documentation link: [MailMerge](/document-processing/word/word-library/net/Working-with-MailMerge)
+N> For more information on Mail merge using DocIO, you can refer to online documentation link: [MailMerge](/document-processing/word/word-library/net/working-with-mail-merge)
 
 ### Find and Replace
 
@@ -2842,7 +2842,7 @@ For more information, Please refer {{'[here](https://help.syncfusion.com/documen
 </table>
 
 ## What are the NuGet packages to be installed to perform Word to Image conversion in Linux OS?
-In Linux OS, you can perform Word to Image conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to Image conversion NuGet packages](https://help.syncfusion.com//document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-image) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to Image conversion capabilities.
+In Linux OS, you can perform Word to Image conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to Image conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-image) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) applications with Word to Image conversion capabilities.
 
 In addition to the previous NuGet packages, the following NuGet package need to be installed in your application.
 
