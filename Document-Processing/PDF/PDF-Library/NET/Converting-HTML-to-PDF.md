@@ -13,22 +13,22 @@ Syncfusion HTML-to-PDF converter will work seamlessly in various platforms like 
 
 ## Key features for HTML Converter
 
-* Converts any [webpage to PDF](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#url-to-pdf).
-* Converts any raw [HTML string to PDF](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#html-string-to-pdf).
-* Converts [HTML form to fillable PDF form](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#html-form-to-pdf-form).
-* Automatically creates [Table of Contents](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#table-of-contents).
-* Automatically creates [bookmark hierarchy](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#bookmarks).
-* Converts only a [part of the web page to PDF](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#partial-webpage-to-pdf).
+* Converts any [webpage to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-pdf).
+* Converts any raw [HTML string to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#html-string-to-pdf).
+* Converts [HTML form to fillable PDF form](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#html-form-to-pdf-form).
+* Automatically creates [Table of Contents](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#table-of-contents).
+* Automatically creates [bookmark hierarchy](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#bookmarks).
+* Converts only a [part of the web page to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#partial-webpage-to-pdf).
 * Supports PDF header and PDF footer.
 * Repeats HTML table header and footer in PDF.
 * Supports HTML5, CSS3, SVG, and Web fonts.
-* Converts any [HTML to an image](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#url-to-image).
-* Converts any [SVG to image](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#url-to-image).
-* Supports accessing HTML pages using both [HTTP POST and GET](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#http-get-and-post) methods.
-* Supports [HTTP cookies](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#form-authentication).
-* Supports [cookies-based form authentication](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#form-authentication).
+* Converts any [HTML to an image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-image).
+* Converts any [SVG to image](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#url-to-image).
+* Supports accessing HTML pages using both [HTTP POST and GET](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#http-get-and-post) methods.
+* Supports [HTTP cookies](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#form-authentication).
+* Supports [cookies-based form authentication](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#form-authentication).
 * Thread safe.
-* Supports internal and external [hyperlinks](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/features#hyperlinks).
+* Supports internal and external [hyperlinks](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features#hyperlinks).
 * Sets document properties, page settings, security, viewer preferences, and more.
 * Protects PDF document with password and permission.
 * Compatible with .NET Framework 4.5 and above. 
@@ -132,7 +132,7 @@ ASP.NET MVC
 
 ### Assemblies Required
 
-Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#windows), [Linux](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#linux), and [Mac](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf/advanced-installation#mac), respectively. Please refer to the [advanced installation](/file-formats/pdf/convert-html-to-pdf/advanced-installation) steps for more details. 
+Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac), respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
 
 <table>
 <tr>
@@ -231,39 +231,41 @@ A complete working sample can be downloaded from [Github](https://github.com/Syn
 
 ### Convert HTML to PDF in Linux
 
-HTML to PDF converter .NET library supports conversion in Linux. Refer to [this](/file-formats/pdf/convert-html-to-pdf/linux) section for more information about HTML to PDF conversion in Linux.
+HTML to PDF converter .NET library supports conversion in Linux. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/linux) section for more information about HTML to PDF conversion in Linux.
 
 ### Convert HTML to PDF in Docker
 
-HTML to PDF converter .NET library supports conversion in Docker. Refer to [this](/file-formats/pdf/convert-html-to-pdf/docker) section for more information about HTML to PDF conversion in Docker. 
+HTML to PDF converter .NET library supports conversion in Docker. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/docker) section for more information about HTML to PDF conversion in Docker. 
 
 ### Convert HTML to PDF in Mac
 
-HTML to PDF converter .NET library supports conversion in Mac. Refer to [this](/file-formats/pdf/convert-html-to-pdf/mac) section for more information about HTML to PDF conversion in Mac. 
+HTML to PDF converter .NET library supports conversion in Mac. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/mac) section for more information about HTML to PDF conversion in Mac. 
 
 ### Convert HTML to PDF in ASP.NET Core
 
-HTML to PDF converter .NET library supports conversion in ASP.NET Core. Refer to [this](/file-formats/pdf/convert-html-to-pdf/net-core) section for more information about HTML to PDF conversion in ASP.NET Core. 
+HTML to PDF converter .NET library supports conversion in ASP.NET Core. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) section for more information about HTML to PDF conversion in ASP.NET Core. 
 
 ### Convert HTML to PDF in ASP.NET MVC
-HTML to PDF converter .NET library supports conversion in ASP.NET MVC. Refer to [this](/file-formats/pdf/convert-html-to-pdf/aspnet-mvc) section for more information about HTML to PDF conversion in ASP.NET MVC.
+HTML to PDF converter .NET library supports conversion in ASP.NET MVC. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/aspnet-mvc) section for more information about HTML to PDF conversion in ASP.NET MVC.
 
 ### Convert HTML to PDF in Blazor
-HTML to PDF converter .NET library supports conversion in Blazor. Refer to [this](/file-formats/pdf/convert-html-to-pdf/blazor) section for more information about HTML to PDF conversion in Blazor.
+HTML to PDF converter .NET library supports conversion in Blazor. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/blazor) section for more information about HTML to PDF conversion in Blazor.
 
 ### Convert HTML to PDF in Azure
-HTML to PDF converter .NET library supports conversion in Azure. Refer to [this](/file-formats/pdf/convert-html-to-pdf/azure) section for more information about HTML to PDF conversion in Azure.
+HTML to PDF converter .NET library supports conversion in Azure. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/azure) section for more information about HTML to PDF conversion in Azure.
 
 ### Convert HTML to PDF in AWS
-HTML to PDF converter .NET library supports conversion in AWS. Refer to [this](/file-formats/pdf/convert-html-to-pdf/aws) section for more information about HTML to PDF conversion in AWS.
+HTML to PDF converter .NET library supports conversion in AWS. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/aws) section for more information about HTML to PDF conversion in AWS.
 
 ## Features
 
-Refer to [this](/file-formats/pdf/convert-html-to-pdf/features) section for more information about features in HTML to PDF converter, you can get the details, code examples and demo from this section. 
+Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) section for more information about features in HTML to PDF converter, you can get the details, code examples and demo from this section. 
 
 ## Troubleshooting and FAQ
 
-Refer to [this](/file-formats/pdf/convert-html-to-pdf/troubleshooting) section for troubleshooting HTML to PDF conversion failures and frequently asked questions.
+<<<<<<< HEAD
+Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting) section for troubleshooting HTML to PDF conversion failures and frequently asked questions.
+=======
 
 ## Steps to disable IE warning while performing HTML To PDF using the IE rendering engine
 
@@ -315,4 +317,4 @@ document.Close(True)
 
 {% endtabs %}
 
-N>Please try our [Blink](https://help.syncfusion.com/file-formats/pdf/convert-html-to-pdf) engine to improve the quality and accuracy of the HTML to PDF conversion.
+N>Please try our [Blink](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) engine to improve the quality and accuracy of the HTML to PDF conversion.
