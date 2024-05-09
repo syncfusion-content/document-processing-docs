@@ -1,19 +1,22 @@
 ---
-title: Loading and saving Excel document in AWS S3 Cloud Storage | Syncfusion
-description: Explains how to load and save Excel files in AWS S3 Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and saving Excel document in Google Cloud Storage | Syncfusion
+description: Explains how to load and save Excel files in Google Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel document in AWS S3 Cloud Storage
+# Loading and Saving Excel document in Google Cloud Storage
 
-## Prerequisites  
+## Prerequisites 
+* **[Google cloud storage](https://cloud.google.com/storage/docs/creating-buckets)** is required. 
 
-* **[AWS S3 Cloud Storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)** is required. 
+* **[Service account](https://cloud.google.com/iam/docs/service-accounts-create)** is required.
 
-## Loading Excel document from AWS S3
+* **[Service account key](https://cloud.google.com/iam/docs/keys-create-delete#creating)** is required.
 
-Steps to load an Excel document from AWS S3 Cloud Storage.
+## Loading Excel document from Google Cloud
+
+Steps to load an Excel document from Google Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -25,10 +28,10 @@ Step 2: Name the project.
 
 Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
-* [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)
+* [Google.Cloud.Storage.V1](https://www.nuget.org/packages/Google.Cloud.Storage.V1)
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img3.png)
-![Install AWSSDK.S3 NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img8.png)
+![Install Google.Cloud.Storage.V1 NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img9.png)
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  
@@ -36,7 +39,7 @@ Step 4: Add a new button in the **Index.cshtml** as shown below.
 @{Html.BeginForm("EditDocument", "Home", FormMethod.Get);
     {
         <div>
-            <input type="submit" value="Edit Document" style="width:150px;height:27px" />
+            <input type="submit" value="Download Document" style="width:170px;height:27px" />
         </div>
     }
     Html.EndForm();
@@ -47,99 +50,74 @@ Step 4: Add a new button in the **Index.cshtml** as shown below.
 Step 5: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using Amazon;
-using Amazon.S3;
-using Amazon.S3.Transfer;
 using Syncfusion.XlsIO;
-using Syncfusion.Drawing;
+using Google.Cloud.Storage.V1;
+using Google.Apis.Auth.OAuth2;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from AWS S3 Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from Google Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-//Your AWS Storage Account bucket name 
-string bucketName = "your-bucket-name";
+//Your bucket name
+string bucketName = "Your_bucket_name";
 
-//Name of the Excel file you want to load from AWS S3
-string key = "CreateExcel.xlsx";
+//Your service account key path
+string keyPath = "Your_service_account_key_path";
 
-// Configure AWS credentials and region
-var region = Amazon.RegionEndpoint.USEast1; 
-var credentials = new Amazon.Runtime.BasicAWSCredentials("your-access-key", "your-secret-key"); 
-var config = new AmazonS3Config
+//Name of the file to download from the Google Cloud Storage
+string fileName = "Your_file_name";
+
+//Create Google Credential from the service account key file
+GoogleCredential credential = GoogleCredential.FromFile(keyPath);
+
+//Instantiates a storage client to interact with Google Cloud Storage
+StorageClient storageClient = StorageClient.Create(credential);
+
+//Download a file from Google Cloud Storage
+using (MemoryStream memoryStream = new MemoryStream())
 {
-    RegionEndpoint = region
-};
+    await storageClient.DownloadObjectAsync(bucketName, fileName, memoryStream);
+    memoryStream.Position = 0;
 
-try
-{
-    using (var client = new AmazonS3Client(credentials, config))
+    //Edit the downloaded Excel file
+    using (ExcelEngine excelEngine = new ExcelEngine())
     {
-        // Create a MemoryStream to copy the file content
-        using (MemoryStream stream = new MemoryStream())
-        {
-            // Download the file from S3 into the MemoryStream
-            var response = await client.GetObjectAsync(new Amazon.S3.Model.GetObjectRequest
-            {
-                BucketName = bucketName,
-                Key = key
-            });
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Excel2016;
 
-            // Copy the response stream to the MemoryStream
-            await response.ResponseStream.CopyToAsync(stream);
+        //Loads the downloaded document
+        IWorkbook workbook = application.Workbooks.Open(memoryStream);
 
-            // Set the position to the beginning of the MemoryStream
-            stream.Position = 0;
+        IWorksheet worksheet = workbook.Worksheets[0];
+        worksheet.Range["A3"].Text = "Hello world";
 
-            //Create an instance of ExcelEngine
-            using (ExcelEngine excelEngine = new ExcelEngine())
-            {
-                IApplication application = excelEngine.Excel;
-                application.DefaultVersion = ExcelVersion.Excel2016;
+        //Saving the Excel to the MemoryStream 
+        MemoryStream outputStream = new MemoryStream();
+        workbook.SaveAs(outputStream);
 
-                //Load the downloaded document
-                IWorkbook workbook = application.Workbooks.Open(stream);
+        //Set the position as '0'.
+        outputStream.Position = 0;
 
-                //Access the first worksheet
-                IWorksheet worksheet = workbook.Worksheets[0];
-
-                //Modify the text
-                worksheet.Range["A3"].Text = "Hello world";
-
-                //Saving the workbook to the MemoryStream 
-                MemoryStream outputStream = new MemoryStream();
-                workbook.SaveAs(outputStream);
-
-                //Set the position as '0'.
-                outputStream.Position = 0;
-
-                //Download the Excel file in the browser
-                FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/excel");
-                fileStreamResult.FileDownloadName = "EditExcel.xlsx";
-                return fileStreamResult;
-            }
-        }
+        //Download the Excel file in the browser
+        FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/excel");
+        fileStreamResult.FileDownloadName = "EditExcel.xlsx";
+        return fileStreamResult;
     }
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Error: {ex.Message}");
-    return Content("Error occurred while processing the file.");
 }
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to load an Excel document from AWS S3 Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/AWS/Loading/Edit%20Excel).
+A complete working example of how to load an Excel document from Google Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Google%20Cloud/Loading/Edit%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img5.png)
 
-## Saving Excel document to AWS S3
+## Saving Excel document to Google Cloud
 
-Steps to save an Excel document to AWS S3 Cloud Storage.
+Steps to save an Excel document to Google Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -151,10 +129,10 @@ Step 2: Name the project.
 
 Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
-* [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)
+* [Google.Cloud.Storage.V1](https://www.nuget.org/packages/Google.Cloud.Storage.V1)
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img3.png)
-![Install AWSSDK.S3 NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img8.png)
+![Install Google.Cloud.Storage.V1 NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img9.png)
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  
@@ -173,15 +151,14 @@ Step 4: Add a new button in the **Index.cshtml** as shown below.
 Step 5: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using Amazon;
-using Amazon.S3;
-using Amazon.S3.Transfer;
 using Syncfusion.XlsIO;
 using Syncfusion.Drawing;
+using Google.Cloud.Storage.V1;
+using Google.Apis.Auth.OAuth2;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to AWS S3 Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to Google Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -363,45 +340,30 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Set the position as '0'.
     stream.Position = 0;
 
-    //Your AWS Storage Account bucket name 
-    string bucketName = "your-bucket-name";
+    //Your bucket name
+    string bucketName = "Your_bucket_name";
 
-    //Name of the Excel file you want to upload
-    string keyName = "CreateExcel.xlsx"; 
+    //Your service account key path
+    string keyPath = "Your_service_account_key_path";
 
-    // Configure AWS credentials and region
-    var region = RegionEndpoint.USEast1; 
-    var credentials = new Amazon.Runtime.BasicAWSCredentials("your-access-key", "your-secret-key"); 
-    var config = new AmazonS3Config
-    {
-        RegionEndpoint = region
-    };
+    //Name of the file to upload to Google Cloud Storage
+    string fileName = "Your_file_name";
 
-    using (var client = new AmazonS3Client(credentials, config))
-    {
-        var fileTransferUtility = new TransferUtility(client);
+    //Create Google Credential from the service account key file
+    GoogleCredential credential = GoogleCredential.FromFile(keyPath);
 
-        try
-        {
-            // Upload the stream to AWS S3
-            await fileTransferUtility.UploadAsync(stream, bucketName, keyName);
-            Console.WriteLine("Upload completed successfully");
-        }
-        catch (AmazonS3Exception e)
-        {
-            Console.WriteLine("Error encountered on server. Message:'{0}' when writing an object", e.Message);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
-        }
-    }
-    return Ok("Excel document uploaded to AWS S3 Storage.");
+    //Instantiates a storage client to interact with Google Cloud Storage
+    StorageClient storageClient = StorageClient.Create(credential);
+
+    //Uploads a file to Google Cloud Storage
+    storageClient.UploadObject(bucketName, fileName, null, stream);
+    
+    return Ok($"Uploaded {fileName} to {bucketName}.");
 }
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to save an Excel document to AWS S3 Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/AWS/Saving/Create%20Excel).
+A complete working example of how to save an Excel document to Google Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Google%20Cloud/Saving/Create%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
