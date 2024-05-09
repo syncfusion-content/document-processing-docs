@@ -24,12 +24,12 @@ Azure Services<br/></th><th>
 NuGet packages required<br/></th></tr></thead>
 <tr>
 <td>
-{{'[App Service (Windows)](https://helpstaging.syncfusion.com:14038/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-app-service-windows)' | markdownify}}
+{{'[App Service (Windows)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-app-service-windows)' | markdownify}}
 <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}</td></tr>
 <tr>
 <td>
-{{'[App Service (Linux)](https://helpstaging.syncfusion.com:14038/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-app-service-linux)' | markdownify}}
+{{'[App Service (Linux)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-app-service-linux)' | markdownify}}
 <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
 {{'[SkiaSharp.NativeAssets.Linux v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0)' |markdownify}} <br/></td></tr>
