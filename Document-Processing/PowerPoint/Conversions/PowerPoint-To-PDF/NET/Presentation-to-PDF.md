@@ -12,7 +12,7 @@ PowerPoint allows you to convert an entire Presentation or a single slide into P
 * [Assemblies Information](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
 * [NuGet Information](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-powerpoint-presentation-into-pdf)
 
-To quickly start converting a PowerPoint Presentation to a PDF using .NET PowerPoint library, please check out this video:
+To quickly start converting a PowerPoint Presentation to a PDF using .NET PowerPoint libray, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=nytscOICpWk" %}
 
 [PresentationToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.html) class is responsible for converting an entire Presentation or a slide into PDF. The following code example demonstrates how to convert a PowerPoint presentation to PDF.
@@ -1472,4 +1472,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * [How to convert PPTX to PDF in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12120/how-to-convert-pptx-to-pdf-in-blazor-webassembly-wasm)
 * [How to resolve font problems during PowerPoint to PDF or image conversion?](https://support.syncfusion.com/kb/article/15472/how-to-resolve-font-problems-during-powerpoint-to-pdf-or-image-conversion)
-* [How to convert and replace EMF image to PNG with same size during PowerPoint to PDF conversion?](https://support.syncfusion.com/kb/article/15641/how-to-convert-and-replace-emf-image-to-png-with-same-size-during-powerpoint-to-pdf-conversion)

@@ -1126,5 +1126,5 @@ N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing
 * [Create Word document in WinUI](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-winui)
 * [Create Word document in .NET MAUI](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-maui)
 * [Create Word document in Linux](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-linux)
-* [Create Word document in Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker)
+* [Create Word document in Docker](https://help.syncfusion.com/file-fdocument-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker)
 * [Create Word document in Mac OS](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-mac)

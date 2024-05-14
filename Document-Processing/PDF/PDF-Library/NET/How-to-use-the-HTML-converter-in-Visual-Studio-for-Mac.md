@@ -19,19 +19,19 @@ For more details, refer to this [Assemblies Required](https://help.syncfusion.co
 ## Steps to convert HTML to PDF using WebKit in ASP.NET Core Mac
 
 Create a new C# ASP.NET Core Web Application project.
-![SampleCreation1](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation1.png)
+![SampleCreation1](htmlconversion_images/SampleCreation1.png)
 
 Select the Target Framework of your project.
-![SampleCreation2](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation2.png)
+![SampleCreation2](htmlconversion_images/SampleCreation2.png)
 
 Configure your application and click <b>Create</b>.
-![SampleCreation3](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation3.png)
+![SampleCreation3](htmlconversion_images/SampleCreation3.png)
 
 Install the [Syncfusion.HtmlToPdfConverter.QtWebKit.Net.Core](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.QtWebKit.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
-![SampleCreation4](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation4.png)
+![SampleCreation4](htmlconversion_images/SampleCreation4.png)
 
 Copy the QtBinariesMac folder from the installed HtmlToPdfConverter package and paste it into the folder which contains the HTMLtoPDF.csproj file.
-![SampleCreation5](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation5.png)
+![SampleCreation5](htmlconversion_images/SampleCreation5.png)
 
 A default controller with name HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in that HomeController.cs file.
 
@@ -99,16 +99,16 @@ return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "O
 
 {% endhighlight %}
 
-![SampleCreation6](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation6.png)
+![SampleCreation6](htmlconversion_images/SampleCreation6.png)
 
 Right click the project and select <b>Build</b>. 
-![SampleCreation7](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation7.png)
+![SampleCreation7](htmlconversion_images/SampleCreation7.png)
 
 After Build succeeded. Run the application.
-![SampleCreation8](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation8.png)
+![SampleCreation8](htmlconversion_images/SampleCreation8.png)
 
 A complete working sample can be downloaded from [HtmlToPDF.zip](https://www.syncfusion.com/downloads/support/directtrac/general/ze/HtmlToPDF-545793311)
 
 
 By executing the program, you will get the PDF document as follows.
-![SampleCreation9](Convert-HTML-To-PDF/htmlconversion_images/SampleCreation9.png)
+![SampleCreation9](htmlconversion_images/SampleCreation9.png)
