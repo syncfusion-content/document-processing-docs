@@ -254,7 +254,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding named destination to the bookmarks
 
-The following code example shows how to add named destination to the [Bookmarks](https://help.syncfusion.com/file-formats/pdf/working-with-bookmarks) in the PDF document.
+The following code example shows how to add named destination to the [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks) in the PDF document.
 
 {% tabs %}
 

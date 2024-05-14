@@ -1004,7 +1004,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding an action to the bookmarks
 
-Essential PDF provides support to add the various actions to the [Bookmarks](https://help.syncfusion.com/file-formats/pdf/working-with-bookmarks). The code snippet below shows how to add an URI action to bookmark.
+Essential PDF provides support to add the various actions to the [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks). The code snippet below shows how to add an URI action to bookmark.
 
 {% tabs %}
 

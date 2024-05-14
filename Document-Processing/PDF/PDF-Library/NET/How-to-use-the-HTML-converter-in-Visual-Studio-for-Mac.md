@@ -14,7 +14,7 @@ In your ASP.NET Core application, add the following assemblies to use Essential 
 * Syncfusion.Pdf.Portable.dll
 * Syncfusion.HtmlConverter.Portable.dll
 
-For more details, refer to this [Assemblies Required](/File-Formats/PDF/Assemblies-Required) documentation.
+For more details, refer to this [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 ## Steps to convert HTML to PDF using WebKit in ASP.NET Core Mac
 

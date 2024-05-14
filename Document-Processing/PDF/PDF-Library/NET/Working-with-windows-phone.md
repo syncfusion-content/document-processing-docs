@@ -8,7 +8,7 @@ documentation: UG
 
 # Working with Windows Phone 
 
-In your Windows Phone application, please add the required assemblies in order to use Essential PDF. [Refer here for assemblies required](/File-Formats/PDF/Assemblies-Required).
+In your Windows Phone application, please add the required assemblies in order to use Essential PDF. [Refer here for assemblies required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required).
 
 ## Loading the document 
 
