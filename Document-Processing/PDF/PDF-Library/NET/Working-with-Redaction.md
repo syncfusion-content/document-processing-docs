@@ -812,7 +812,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Redaction/Redact-text-content-alone-on-the-redated-area/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Redact-text-content-alone-on-the-redated-area/).
 
 ## Find text by regular expression pattern and redact it from PDF document.
 
