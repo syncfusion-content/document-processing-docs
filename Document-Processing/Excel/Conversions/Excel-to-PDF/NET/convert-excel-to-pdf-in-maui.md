@@ -174,7 +174,7 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
 </table>
 
-A complete working example of how to convert an Excel document to PDF in .NET MAUI is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/Convert%20Excel%20to%20PDF).
+A complete working example of how to convert an Excel document to PDF in .NET MAUI is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExceltoPDF).
 
 By executing the program, you will get the **PDF document** as follows.
 
