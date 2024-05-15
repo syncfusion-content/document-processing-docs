@@ -7,10 +7,10 @@ documentation: UG
 ---
 # Working with Tables in Word document
 
-A table in Word document is used to arrange document content in rows and columns. [WTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WTable.html) instance represents a table in Word document. A table must contain at least one row.
+A table in Word document is used to arrange document content in rows and columns. [WTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTable.html) instance represents a table in Word document. A table must contain at least one row.
 
-1. A row is a collection of cells and it is represented by an instance of [WTableRow](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WTableRow.html). Each row must contain at least one cell.
-2. A cell can contain one or more paragraphs and tables. An instance of [WTableCell](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WTableCell.html) represents a table cell. Each table cell must contain at least one paragraph.
+1. A row is a collection of cells and it is represented by an instance of [WTableRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html). Each row must contain at least one cell.
+2. A cell can contain one or more paragraphs and tables. An instance of [WTableCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableCell.html) represents a table cell. Each table cell must contain at least one paragraph.
 
 N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential DocIO does the same.
 
@@ -537,7 +537,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Align text within a table
 
-You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/file-formats/docio/working-with-tables#iterating-through-table-elements)
+You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-tables#iterating-through-table-elements)
 
 The following code example illustrates how to align text within a table.
 
@@ -677,12 +677,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Apply formatting to Table, Row and Cell
 
-The following code example illustrates how to load an existing document and apply table formatting options such as [Borders](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Borders), [LeftIndent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_LeftIndent), [Paddings](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Paddings), [IsAutoResized](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_IsAutoResized), etc.
+The following code example illustrates how to load an existing document and apply table formatting options such as [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Borders), [LeftIndent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_LeftIndent), [Paddings](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Paddings), [IsAutoResized](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_IsAutoResized), etc.
 
-N> 1. [BorderStyle.None](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BorderStyle.html) is the default value of [BorderType](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Borders.html#Syncfusion_DocIO_DLS_Borders_BorderType) property in [Borders](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Borders.html) class which will not show borders for the table or cell. It is equivalent to border style not defined and borders can be inherited from style or parent formats.
-N> 2. To hide border for a table or cell in the Word Document, you can set [BorderType](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Borders.html#Syncfusion_DocIO_DLS_Borders_BorderType) property with [BorderStyle.Cleared](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BorderStyle.html). It means border style defined as no border (Don’t show border) and shouldn’t inherit from style or parent formats.
-N> 3. To show/display border for a table or cell in the Word Document, you can set [BorderType](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Borders.html#Syncfusion_DocIO_DLS_Borders_BorderType) property with [BorderStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BorderStyle.html) values (except [BorderStyle.None](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BorderStyle.html) and [BorderStyle.Cleared](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BorderStyle.html)).
-N> 4. As in the Microsoft Word, DocIO supports [RowFormat.Borders](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Borders) in DOC format alone.
+N> 1. [BorderStyle.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BorderStyle.html) is the default value of [BorderType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Borders.html#Syncfusion_DocIO_DLS_Borders_BorderType) property in [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Borders.html) class which will not show borders for the table or cell. It is equivalent to border style not defined and borders can be inherited from style or parent formats.
+N> 2. To hide border for a table or cell in the Word Document, you can set [BorderType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Borders.html#Syncfusion_DocIO_DLS_Borders_BorderType) property with [BorderStyle.Cleared](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BorderStyle.html). It means border style defined as no border (Don’t show border) and shouldn’t inherit from style or parent formats.
+N> 3. To show/display border for a table or cell in the Word Document, you can set [BorderType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Borders.html#Syncfusion_DocIO_DLS_Borders_BorderType) property with [BorderStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BorderStyle.html) values (except [BorderStyle.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BorderStyle.html) and [BorderStyle.Cleared](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BorderStyle.html)).
+N> 4. As in the Microsoft Word, DocIO supports [RowFormat.Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RowFormat.html#Syncfusion_DocIO_DLS_RowFormat_Borders) in DOC format alone.
 
 {% tabs %}
 
@@ -838,7 +838,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Applying cell formatting
   
-The following code example illustrates how to load an existing document and apply cell formatting options such as [VerticalAlignment](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_VerticalAlignment), [TextDirection](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_TextDirection), [Paddings](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Paddings), [Borders](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Borders), etc.
+The following code example illustrates how to load an existing document and apply cell formatting options such as [VerticalAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_VerticalAlignment), [TextDirection](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_TextDirection), [Paddings](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Paddings), [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Borders), etc.
 
 {% tabs %}
 
@@ -1006,7 +1006,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Resize table
 
-You can automatically resize the table cell to fit its contents based on the given **autofit options** such as [FitToContent](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.AutoFitType.html), [FitToWindow](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.AutoFitType.html), [FixedColumnWidth](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.AutoFitType.html). 
+You can automatically resize the table cell to fit its contents based on the given **autofit options** such as [FitToContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.AutoFitType.html), [FitToWindow](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.AutoFitType.html), [FixedColumnWidth](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.AutoFitType.html). 
 
 ![AutoFit options in Word document](WorkingwithTables_images/ResizeTable.png)
 
@@ -1089,11 +1089,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Resize-table).
 
-N> In ASP.NET Core, UWP, and Xamarin platforms, to apply autofit for table in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/file-formats/docio/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/file-formats/docio/nuget-packages-required#converting-word-document-to-pdf) packages as a reference in your application.
+N> In ASP.NET Core, UWP, and Xamarin platforms, to apply autofit for table in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) packages as a reference in your application.
 
 ### Working with Table Style
 
-A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. [WTableStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WTableStyle.html) instance represents table style in a Word document.
+A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. [WTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableStyle.html) instance represents table style in a Word document.
 
 N>  Essential DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
 
@@ -2180,3 +2180,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to insert a row with the same formatting in a Word document](https://support.syncfusion.com/kb/article/11907/how-to-insert-a-row-with-the-same-formatting-in-a-word-document)
 * [How to split a table without losing their format in Word document using C#?](https://support.syncfusion.com/kb/article/12307/how-to-split-a-table-without-losing-their-format-in-word-document-using-c)
 * [How to keep a group of rows always together in a Word document?](https://support.syncfusion.com/kb/article/12367/how-to-keep-a-group-of-rows-always-together-in-a-word-document)
+* [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
+* [How to extract images from tables in a Word document?](https://support.syncfusion.com/kb/article/15812/how-to-extract-images-from-tables-in-a-word-document)

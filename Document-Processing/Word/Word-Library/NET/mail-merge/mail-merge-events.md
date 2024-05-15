@@ -8,21 +8,21 @@ documentation: UG
 
 # Event support for Mail merge
 
-The [MailMerge](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html) class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential DocIO during Mail merge process:
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential DocIO during Mail merge process:
 
-* [MergeField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html)- occurs when a **Mail merge field** except image Mail merge field is encountered.
+* [MergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html)- occurs when a **Mail merge field** except image Mail merge field is encountered.
 
-* [MergeImageField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html)- occurs when an **image Mail merge field** is encountered.
+* [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html)- occurs when an **image Mail merge field** is encountered.
 
-* [BeforeClearField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html)- occurs when an **unmerged field** is encountered.
+* [BeforeClearField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html)- occurs when an **unmerged field** is encountered.
 
-* [BeforeClearGroupField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html)- occurs when an **unmerged group field** is encountered.
+* [BeforeClearGroupField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html)- occurs when an **unmerged group field** is encountered.
 
 ## MergeField Event
 
-You can apply formatting to the merged text or customize the merged text during mail merge process using the [MergeField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html) Event.
+You can apply formatting to the merged text or customize the merged text during mail merge process using the [MergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html) Event.
 
-The following code example shows how to use the [MergeField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html) event during Mail merge process.
+The following code example shows how to use the [MergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html) event during Mail merge process.
 
 {% tabs %}
 
@@ -71,7 +71,7 @@ document.Close()
 
 {% endtabs %}
 
-The following code example shows how to set text color to the alternate Mail merge record by using [MergeFieldEventHandler](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html).
+The following code example shows how to set text color to the alternate Mail merge record by using [MergeFieldEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html).
 
 {% tabs %}
 
@@ -177,9 +177,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## MergeImageField Event
 
-You can format the merged image like resizing the image and more during mail merge process using the [MergeImageField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) Event. 
+You can format the merged image like resizing the image and more during mail merge process using the [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) Event. 
 
-The following code example shows how to use the [MergeImageField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) event during Mail merge process.
+The following code example shows how to use the [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) event during Mail merge process.
 
 {% tabs %}
 
@@ -233,7 +233,7 @@ document.Close()
 
 {% endtabs %}
   
-The following code example shows how to bind the image from file system during Mail merge process by using [MergeImageFieldEventHandler](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html).
+The following code example shows how to bind the image from file system during Mail merge process by using [MergeImageFieldEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html).
 
 {% tabs %}
 
@@ -296,9 +296,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## BeforeClearField Event
 
-You can get the unmerged fields in a Word document during mail merge process using the [BeforeClearField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html) Event.
+You can get the unmerged fields in a Word document during mail merge process using the [BeforeClearField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html) Event.
 
-The following code example shows how to use the [BeforeClearField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html) event during Mail merge process.
+The following code example shows how to use the [BeforeClearField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html) event during Mail merge process.
 
 {% tabs %}
 
@@ -353,7 +353,7 @@ document.Close()
 
 {% endtabs %}
 
-The following code example shows how to bind the data to unmerged fields during Mail merge process by using [BeforeClearFieldEventHandler](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html).
+The following code example shows how to bind the data to unmerged fields during Mail merge process by using [BeforeClearFieldEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html).
 
 {% tabs %}
 
@@ -530,9 +530,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## BeforeClearGroupField Event
 
-You can get the unmerged group fields in a Word document during mail merge process using the [BeforeClearGroupField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html) event.
+You can get the unmerged group fields in a Word document during mail merge process using the [BeforeClearGroupField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html) event.
 
-The following code example shows how to use the [BeforeClearGroupField](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html) event during Mail merge process.
+The following code example shows how to use the [BeforeClearGroupField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html) event during Mail merge process.
 
 {% tabs %}
 
@@ -595,7 +595,7 @@ document.Close()
 
 {% endtabs %}
 
-The following code example shows how to bind the data to unmerged group fields during Mail merge process by using [BeforeClearGroupFieldEventHandler](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html).
+The following code example shows how to bind the data to unmerged group fields during Mail merge process by using [BeforeClearGroupFieldEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html).
 
 {% tabs %}
 

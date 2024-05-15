@@ -42,7 +42,7 @@ using Syncfusion.DocIO.DLS;
 
 ## Opening an existing document
 
-You can open an existing Word document by using either the [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_String_) method or the constructor of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_String_) class
+You can open an existing Word document by using either the [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_String_) method or the constructor of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_String_) class
 
 {% tabs %}
 
@@ -129,7 +129,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Opening an existing document from Stream
 
-You can open an existing document from stream by using either the overloads of [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_IO_Stream_Syncfusion_DocIO_FormatType_) methods or the constructor of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_IO_Stream_Syncfusion_DocIO_FormatType_) class
+You can open an existing document from stream by using either the overloads of [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_IO_Stream_Syncfusion_DocIO_FormatType_) methods or the constructor of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_IO_Stream_Syncfusion_DocIO_FormatType_) class
 
 {% tabs %}
 
@@ -313,7 +313,7 @@ You can download a complete working sample from Stream from [GitHub](https://git
 
 ## Opening the read only Word document
 
-You can open the ready only documents or read only streams using the [OpenReadOnly](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_) method. If the Word document for reading is opened by any other application such as Microsoft Word, then the same document can be opened using DocIO in ReadOnly mode. The following code sample demonstrates the same.
+You can open the ready only documents or read only streams using the [OpenReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_) method. If the Word document for reading is opened by any other application such as Microsoft Word, then the same document can be opened using DocIO in ReadOnly mode. The following code sample demonstrates the same.
 
 {% tabs %}
   
@@ -381,7 +381,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Saving a Word document to file system
 
-You can save the created or manipulated Word document to file system using [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_) method of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) class. When you do not provide the format type, then the document is saved in Word 97-2003 (*.doc) format.
+You can save the created or manipulated Word document to file system using [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_) method of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class. When you do not provide the format type, then the document is saved in Word 97-2003 (*.doc) format.
 
 {% tabs %}
 
@@ -459,7 +459,7 @@ Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Result.docx", "applica
 //Closes the document
 document.Close();
 //Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
-//https://help.syncfusion.com/file-formats/docio/create-word-document-in-xamarin#helper-files-for-xamarin 
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin 
 {% endhighlight %}
 
 {% endtabs %}
@@ -468,7 +468,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Saving a Word document to Stream
 
-You can also save the created or manipulated word document to stream by using overloads of [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_IO_Stream_Syncfusion_DocIO_FormatType_) methods
+You can also save the created or manipulated word document to stream by using overloads of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_IO_Stream_Syncfusion_DocIO_FormatType_) methods
 
 {% tabs %}
 
@@ -516,7 +516,7 @@ await document.SaveAsync(stream, FormatType.Docx);
 //Saves the stream as Word file in local machine
 Save(stream, "Result.docx");
 //Please refer the below link to save Word document in UWP platform
-//https://help.syncfusion.com/file-formats/docio/create-word-document-in-uwp#save-word-document-in-uwp
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 {% endhighlight %}
 
 {% highlight c# tabtitle="ASP.NET Core" %}
@@ -563,7 +563,7 @@ using (WordDocument document = new WordDocument())
     Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Result.docx", "application/msword", stream);
 }
 //Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
-//https://help.syncfusion.com/file-formats/docio/create-word-document-in-xamarin#helper-files-for-xamarin 
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin 
 {% endhighlight %}
 
 {% endtabs %}
@@ -572,7 +572,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Sending to a client browser
 
-You can save and send the document to a client browser from a web site or web application by invoking the following shown overload of [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) method.  This method explicitly makes use of an instance of [HttpResponse](https://docs.microsoft.com/en-us/dotnet/api/system.web.httpresponse?view=netframework-4.8) as its parameter in order to stream the document to client browser. So this overload is suitable for web application that references System.Web assembly.
+You can save and send the document to a client browser from a web site or web application by invoking the following shown overload of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) method.  This method explicitly makes use of an instance of [HttpResponse](https://docs.microsoft.com/en-us/dotnet/api/system.web.httpresponse?view=netframework-4.8) as its parameter in order to stream the document to client browser. So this overload is suitable for web application that references System.Web assembly.
 
 {% tabs %}  
 
@@ -632,11 +632,11 @@ return File(stream, "application/msword", "Result.docx");
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Send-Word-to-client-browser).
 
-N> If you are using [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) package, then the [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) API used in the above sample is not available in it. So, we suggest you to save the document as stream and then download. You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Send-Word-to-client-browser/ASP.NET).
+N> If you are using [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) package, then the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_Syncfusion_DocIO_FormatType_System_Web_HttpResponse_Syncfusion_DocIO_HttpContentDisposition_) API used in the above sample is not available in it. So, we suggest you to save the document as stream and then download. You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Send-Word-to-client-browser/ASP.NET).
 
 ## Closing a document
 
-Once the document manipulation and save operation are completed, you should close the instance of [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html), in order to release all the memory consumed by DocIO’s DOM. The following code example illustrates how to close a WordDocument instance.
+Once the document manipulation and save operation are completed, you should close the instance of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html), in order to release all the memory consumed by DocIO’s DOM. The following code example illustrates how to close a WordDocument instance.
 
 {% tabs %}
 
@@ -690,7 +690,7 @@ Save(stream, "Result.docx");
 //Closes the document
 document.Close();
 //Please refer the below link to save Word document in UWP platform
-//https://help.syncfusion.com/file-formats/docio/create-word-document-in-uwp#save-word-document-in-uwp
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 {% endhighlight %}
 
 {% highlight c# tabtitle="ASP.NET Core" %}
@@ -737,7 +737,7 @@ using (WordDocument document = new WordDocument())
     document.Close();
 }
 //Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
-//https://help.syncfusion.com/file-formats/docio/create-word-document-in-xamarin#helper-files-for-xamarin 
+//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin 
 {% endhighlight %}
 
 {% endtabs %}

@@ -8,7 +8,7 @@ keywords: PowerPoint, slide, table, format-table, rows, columns, pptx
 ---
 # Working with PowerPoint Tables
 
-A [table](https://www.syncfusion.com/document-processing/powerpoint-framework/net/powerpoint-library/powerpoint-tables) in PowerPoint presentation is used to arrange document content in rows and columns. [ITable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITable.html) instance represents a table in PowerPoint presentation. A table must contain at least one row.
+A [table](https://www.syncfusion.com/document-processing/powerpoint-framework/net/powerpoint-library/powerpoint-tables) in PowerPoint presentation is used to arrange document content in rows and columns. [ITable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITable.html) instance represents a table in PowerPoint presentation. A table must contain at least one row.
 
 N> Adding more than 75 rows/columns not supported in the PowerPoint presentation using Microsoft PowerPoint application. It shows alert when you attempt to insert a table with more than 75 rows/columns, which is one of the behaviors of Microsoft PowerPoint and Essential Presentation does the same.
 
@@ -1241,3 +1241,8 @@ pptxDoc.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Tables/Edit-table-contents).
+
+## See Also
+* [How to set background image for a table cell?](https://support.syncfusion.com/kb/article/5731/how-to-set-background-image-for-a-table-cell-in-winforms-)
+* [How to add images to a table cell?](https://support.syncfusion.com/kb/article/6929/how-to-add-images-to-a-table-cell-using-essential-presentation-library)
+* [How to add text with different styles in the same table cell?](https://support.syncfusion.com/kb/article/5606/how-to-add-text-with-different-styles-in-the-same-table-cell)

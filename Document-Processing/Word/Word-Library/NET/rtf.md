@@ -92,4 +92,4 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/RTF-conversions/Convert-Word-to-RTF).
 
 ## Supported and Unsupported features
-The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/file-formats/docio/supported-and-unsupported-features)
+The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features)

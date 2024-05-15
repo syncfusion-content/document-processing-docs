@@ -347,15 +347,15 @@ N> Nested block quotes are not supported in a Word to the Markdown conversion. T
 
 ## Customize image saving
 
-When converting a Word document to a Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_) overloads, DocIO creates a new folder parallel to the output file name and exports all the images into it as default.
+When converting a Word document to a Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_) overloads, DocIO creates a new folder parallel to the output file name and exports all the images into it as default.
 
-When converting a Word document to a Markdown using the [Save(Stream, FormatType)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_IO_Stream_Syncfusion_DocIO_FormatType_) overloads, DocIO preserves the images as base64 format in the output Markdown file as default.
+When converting a Word document to a Markdown using the [Save(Stream, FormatType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_IO_Stream_Syncfusion_DocIO_FormatType_) overloads, DocIO preserves the images as base64 format in the output Markdown file as default.
 
 Also, customize the above default behaviors using the following options in DocIO.
 
 ### Export images to folder
 
-Specify the folder location to export the images using the [MarkdownExportImagesFolder](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_MarkdownExportImagesFolder) API.
+Specify the folder location to export the images using the [MarkdownExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_MarkdownExportImagesFolder) API.
 
 The following code example illustrates how set the images folder to export the images while converting a Word document to a Markdown file.
 
@@ -412,7 +412,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Customize the image path
 
-DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to a Markdown.
+DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to a Markdown.
 
 The following code example illustrates how to save Image files during a Word to Markdown Conversion.
 
@@ -477,7 +477,7 @@ using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResource
         Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("WordtoMd.md", "application/msword", outputStream);
     }
     //Please download the helper files from the following link to save the stream as a file and open the file for viewing in the Xamarin platform.
-    //https://help.syncfusion.com/file-formats/docio/create-word-document-in-xamarin#helper-files-for-xamarin
+    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
 }
 {% endhighlight %}
 

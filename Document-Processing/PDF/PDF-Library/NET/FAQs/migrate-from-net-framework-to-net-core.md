@@ -340,7 +340,7 @@ Barcode.ToImage(SizeF size) <br/> *Sample link:* <br/> {{'[https://github.com/Sy
 {{'[Split()](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_)'| markdownify }}
 </td>
 <td> 
-Not supported due to .NET Core framework limitations. Alternatively, this can be achieved by {{'[importing pages from one document to another](https://help.syncfusion.com/file-formats/pdf/working-with-pages#importing-pages-from-an-existing-document)'| markdownify }}.
+Not supported due to .NET Core framework limitations. Alternatively, this can be achieved by {{'[importing pages from one document to another](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pages#importing-pages-from-an-existing-document)'| markdownify }}.
 </td>
 </tr>
 <tr>
@@ -828,14 +828,14 @@ Not supported
 ## Notable changes
 1. For text measuring and graphics operations in the .NET Framework, our library utilizes *System.Drawing*. In contrast, for similar graphics operations in .NET Core, our library employs *Syncfusion.Drawing*. 
 2. The following features utilize the NuGet package [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) Which is separate from [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package.   
-* [TIFF to PDF](https://help.syncfusion.com/file-formats/pdf/working-with-images#converting-multi-page-tiff-to-pdf)
-* [Compress PDF](https://help.syncfusion.com/file-formats/pdf/working-with-compression)
-* [Extract images from PDF](https://help.syncfusion.com/file-formats/pdf/working-with-image-extraction) 
-* [Get image information from PDF](https://help.syncfusion.com/file-formats/pdf/working-with-image-extraction) 
-* [Redact PDF](https://help.syncfusion.com/file-formats/pdf/working-with-redaction) 
-* [Export barcode to Image](https://help.syncfusion.com/file-formats/pdf/working-with-barcode#export-barcode-as-image)
-* [Convert PDF to PDF/A](https://help.syncfusion.com/file-formats/pdf/working-with-pdf-conformance#pdf-to-pdfa-conversion)
-* [Replace images in an existing PDF document](https://help.syncfusion.com/file-formats/pdf/working-with-images#replacing-images-in-an-existing-pdf-document) 
+* [TIFF to PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images#converting-multi-page-tiff-to-pdf)
+* [Compress PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-compression)
+* [Extract images from PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-image-extraction) 
+* [Get image information from PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-image-extraction) 
+* [Redact PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-redaction) 
+* [Export barcode to Image](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-barcode#export-barcode-as-image)
+* [Convert PDF to PDF/A](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance#pdf-to-pdfa-conversion)
+* [Replace images in an existing PDF document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images#replacing-images-in-an-existing-pdf-document) 
 3. For converting XPS to PDF document, kindly utilize the [Syncfusion.XpsToPdfConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core) NuGet package in your ASP.NET Core application.  
 4. To convert PDF to image, please use the [Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows/) NuGet package in your ASP.NET Core application.  
 

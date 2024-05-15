@@ -23,7 +23,7 @@ N> DocIO supports chart only in DOCX and WordML format documents.
 
 ## Creating a simple Chart from scratch
 
-A new chart can be created or an existing chart can be modified by using the [WChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WChart.html) instance. The following code example illustrates how to create a new chart.
+A new chart can be created or an existing chart can be modified by using the [WChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WChart.html) instance. The following code example illustrates how to create a new chart.
 
 {% tabs %}
 
@@ -467,6 +467,170 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Create-custom-chart).
 
+## Creating a Chart from a Database
+
+Create a chart in a Word document using the .NET Word Library by utilizing the values retrieved from the database.
+
+The following code example illustrates how to create a chart in a Word document from a database.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new instance of WordDocument.
+using (WordDocument document = new WordDocument())
+{
+    document.EnsureMinimal();
+    //Get the data table.
+    DataTable dataTable = GetDataTable();
+    //Create and append the chart to the paragraph.
+    WChart chart = document.LastParagraph.AppendChart(446, 270);
+    chart.ChartType = OfficeChartType.Pie;
+    //Assign the data.
+    AddChartData(chart, dataTable);
+    //Set a chart title.
+    chart.ChartTitle = "Best Selling Products";
+    IOfficeChartSerie pieSeries = chart.Series.Add("Sales");
+    pieSeries.Values = chart.ChartData[2, 2, 11, 2];
+    //Set the data label.
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside;
+    //Set the category labels.
+    chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 11, 1];
+    //Set the legend.
+    chart.HasLegend = true;
+    //Save a Word document.
+    document.Save(Path.GetFullPath(@"../../Result.docx"));
+}
+
+// Get the data to create a pie chart.
+private static DataTable GetDataTable()
+{
+    string path = Path.GetFullPath(@"../../Data/DataBase.mdb");
+    //Create a new instance of OleDbConnection.
+    OleDbConnection connection = new OleDbConnection();
+    //Set the string to open a Database.
+    connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + path;
+    //Open the Database connection.
+    connection.Open();
+    //Get all the data from the Database.
+    OleDbCommand query = new OleDbCommand("select * from Products", connection);
+    //Create a new instance of OleDbDataAdapter.
+    OleDbDataAdapter adapter = new OleDbDataAdapter(query);
+    //Create a new instance of DataSet.
+    DataSet dataSet = new DataSet();
+    //Add rows in the Dataset.
+    adapter.Fill(dataSet);
+    //Create a DataTable from the Dataset.
+    DataTable table = dataSet.Tables[0];
+    table.TableName = "Products";
+    return table;
+}
+
+// Set the value for the chart.
+ private static void AddChartData(WChart chart, DataTable dataTable)
+ {
+     //Set the value for the chart data.
+     chart.ChartData.SetValue(1, 1, "Names");
+     chart.ChartData.SetValue(1, 2, "Product");
+
+     int rowIndex = 2;
+     int colIndex = 1;
+     //Get the value from the DataTable and set the value for the chart data
+     foreach (DataRow row in dataTable.Rows)
+     {
+         foreach (object val in row.ItemArray)
+         {
+             string value = val.ToString();
+             chart.ChartData.SetValue(rowIndex, colIndex, value);
+             colIndex++;
+             if (colIndex == 3)
+                 break;
+         }
+         colIndex = 1;
+         rowIndex++;
+     }
+ }
+
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new instance of WordDocument.
+Using document As New WordDocument()
+    document.EnsureMinimal()
+    ' Get the data table.
+    Dim dataTable As DataTable = GetDataTable()
+    ' Create and append the chart to the paragraph.
+    Dim chart As WChart = document.LastParagraph.AppendChart(446, 270)
+    chart.ChartType = OfficeChartType.Pie
+    ' Assign the data.
+    AddChartData(chart, dataTable)
+    ' Set a chart title.
+    chart.ChartTitle = "Best Selling Products"
+    Dim pieSeries As IOfficeChartSerie = chart.Series.Add("Sales")
+    pieSeries.Values = chart.ChartData(2, 2, 11, 2)
+    ' Set the data label.
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = True
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside
+    ' Set the category labels.
+    chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData(2, 1, 11, 1)
+    ' Set the legend.
+    chart.HasLegend = True
+    ' Save a Word document.
+    document.Save(Path.GetFullPath("..\..\Result.docx"))
+End Using
+
+' Get the data to create a pie chart.
+Private Function GetDataTable() As DataTable
+
+    Dim path As String = System.IO.Path.GetFullPath("..\..\Data\DataBase.mdb")
+    ' Create a new instance of OleDbConnection.
+    Dim connection As New OleDbConnection()
+    ' Set the string to open a Database.
+    connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password="""";User ID=Admin;Data Source=" & path
+    ' Open the Database connection.
+    connection.Open()
+    ' Get all the data from the Database.
+    Dim query As New OleDbCommand("select * from Products", connection)
+    ' Create a new instance of OleDbDataAdapter.
+    Dim adapter As New OleDbDataAdapter(query)
+    ' Create a new instance of DataSet.
+    Dim dataSet As New DataSet()
+    ' Add rows in the Dataset.
+    adapter.Fill(dataSet)
+    ' Create a DataTable from the Dataset.
+    Dim table As DataTable = dataSet.Tables(0)
+    table.TableName = "Products"
+    Return table
+End Function
+
+' Set the value for the chart.
+Private Sub AddChartData(ByVal chart As WChart, ByVal dataTable As DataTable)
+    ' Set the value for the chart data.
+    chart.ChartData.SetValue(1, 1, "Names")
+    chart.ChartData.SetValue(1, 2, "Product")
+
+    Dim rowIndex As Integer = 2
+    Dim colIndex As Integer = 1
+    ' Get the value from the DataTable and set the value for the chart data
+    For Each row As DataRow In dataTable.Rows
+        For Each val As Object In row.ItemArray
+            Dim value As String = val.ToString()
+            chart.ChartData.SetValue(rowIndex, colIndex, value)
+            colIndex += 1
+            If colIndex = 3 Then
+                Exit For
+            End If
+        Next
+        colIndex = 1
+        rowIndex += 1
+    Next
+End Sub
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Create-Pie-chart-from-database).
+
 ## Refreshing the Chart
 
 The chart may not have the data in the referred excel file instead it may represent some other data. For those charts to have the excel data, it should be refreshed. 
@@ -611,25 +775,25 @@ A Chart is composed of various elements such as plot area, chart area, title are
 7. A data label that you can use to identify the details of a data point in a data series.
 
 ### Chart Title
-Customize the **chart title** by modifying its name, appearance, and resizing it using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/file-formats/docio/charts/chart-title).
+Customize the **chart title** by modifying its name, appearance, and resizing it using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-title).
 
 ### Chart Area
-Customize the **chart area** by changing its border, colors, transparency, and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/file-formats/docio/charts/chart-area).
+Customize the **chart area** by changing its border, colors, transparency, and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-area).
 
 ### Chart Plot Area
-Customize the **chart plot area** by changing its border, colors, transparency, position and adding image using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/file-formats/docio/charts/chart-plot-area).
+Customize the **chart plot area** by changing its border, colors, transparency, position and adding image using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-plot-area).
 
 ### Chart Series
- Customize the **chart series** by changing the series name, type, color, border, and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/file-formats/docio/charts/chart-series).
+ Customize the **chart series** by changing the series name, type, color, border, and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-series).
 
 ### Chart Legend
-Customize the **chart legend** by changing the position, border, and modifying the legend entry using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/file-formats/docio/charts/chart-legend).
+Customize the **chart legend** by changing the position, border, and modifying the legend entry using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-legend).
 
 ### Chart Data Labels
-Customize the **chart data labels** by changing the position, size and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/file-formats/docio/charts/chart-data-lables).
+Customize the **chart data labels** by changing the position, size and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-data-lables).
 
 ### Chart Axis
-Customize the **chart axes** by changing the title, border, font, rotation angle and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/file-formats/docio/charts/chart-axis).
+Customize the **chart axes** by changing the title, border, font, rotation angle and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-axis).
 
 ## Applying 3D Formats
 
@@ -829,7 +993,58 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Convert chart to image
 
-You can convert the chart in Word document as image using the [SaveAsImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html#Syncfusion_OfficeChartToImageConverter_ChartToImageConverter_SaveAsImage_Syncfusion_OfficeChart_IOfficeChart_System_IO_Stream_) method in [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ChartToImageConverter).
+You can convert the chart in Word document as image using the [SaveAsImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html#Syncfusion_OfficeChartToImageConverter_ChartToImageConverter_SaveAsImage_Syncfusion_OfficeChart_IOfficeChart_System_IO_Stream_) method in [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ChartToImageConverter).
+
+To convert chart in Word document as an image, refer the below dependencies in your application.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+NuGets for Chart to Image
+</th>
+<th width="40%">
+Assemblies for Chart to image
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+Cross-platform, Xamarin
+</td>
+<td>
+{{'[Word to PDF NuGets](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf)' |  markdownify }}
+</td>
+<td>
+{{'[Word to PDF assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf)' |  markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+Windows-specific
+</td>
+<td>
+{{'[Word to PDF NuGets](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf)' |  markdownify }}<br/> {{'[Chart conversion NuGets](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-charts)' |  markdownify }}
+</td>
+<td>
+{{'[Word to PDF assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf)' |  markdownify }}<br/> {{'[Chart conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-charts)' |  markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+UWP
+</td>
+<td>
+{{'[Word to PDF NuGets of cross platform](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf)' |  markdownify }}
+</td>
+<td>
+{{'[Word to PDF assemblies of cross platform](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf)' |  markdownify }}
+</td>
+</tr>
+</table>
 
 The following code example shows how to convert chart in the Word document as image.
 
@@ -938,7 +1153,7 @@ using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResource
 {% endhighlight %}
 
 {% highlight c# tabtitle="UWP" %}
-//DocIO supports chart to image conversion in Windows Forms, WPF, ASP.NET and ASP.NET MVC platform alone. You can convert chart as images in UWP using DocIORenderer.
+// You can convert a chart to images in UWP using DocIORenderer, by using cross-platform NuGets or assemblies in a UWP application.
 //Open the file as Stream.
 using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.TemplateWithChart.docx"))
 {
@@ -1002,7 +1217,7 @@ async void Save(MemoryStream streams, string filename)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Convert-chart-to-image).
 
-N> 1. To convert chart in Word document as image, it is need to refer chart conversion related [assemblies](https://help.syncfusion.com/file-formats/docio/assemblies-required#converting-charts) or [NuGet packages](https://help.syncfusion.com/file-formats/docio/nuget-packages-required#converting-charts).
+N> 1. To convert chart in Word document as image, it is need to refer chart conversion related [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-charts) or [NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-charts).
 N> 2. The ChartToImageConverter is supported from .NET Framework 4.0 onwards.
 
 ## Word 2016 Charts
@@ -1013,7 +1228,7 @@ Essential DocIO supports creating and manipulating new and modern chart types su
 
 [Waterfall](https://support.microsoft.com/en-us/office/create-a-waterfall-chart-8de1ece4-ff21-4d37-acd7-546f5527f185?ui=en-us&rs=en-us&ad=us#) chart helps understand the finances of business owners by viewing profit and loss statements. You can quickly illustrate the line items in your financial data and get a clear picture of how each item is impacting your bottom line using a Waterfall chart.
 
-The following code example illustrates how to create a [Waterfall](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.OfficeChartType.html) chart.
+The following code example illustrates how to create a [Waterfall](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
 
 {% tabs %}
 

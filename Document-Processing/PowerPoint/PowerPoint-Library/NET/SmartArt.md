@@ -7,14 +7,14 @@ documentation: UG
 ---
 # Working with PowerPoint SmartArt
 
-A [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) diagram is a visual representation of your information, to effectively communicate your ideas in presentations. You can add and modify the [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) diagrams in PowerPoint presentations using Essential Presentation library.
+A [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram is a visual representation of your information, to effectively communicate your ideas in presentations. You can add and modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams in PowerPoint presentations using Essential Presentation library.
 
 To quickly start creating a SmartArt in a PowerPoint Presentation using .NET PowerPoint libray, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=dQhN3i9s3Es" %}
 
 ## Adding SmartArt to a Slide
 
-You can add any of the predefined [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) diagrams to PowerPoint Presentation. The following code example demonstrates adding a [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) to a Slide.
+You can add any of the predefined [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams to PowerPoint Presentation. The following code example demonstrates adding a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) to a Slide.
 
 {% tabs %}
 
@@ -64,7 +64,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a node to the SmartArt
 
-You can add a new node to the [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) diagram. The following code example demonstrates the same.
+You can add a new node to the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -125,7 +125,7 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/SmartArts/Add-SmartArt-node).
 
-In [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) diagrams, you can also add nodes to several nested levels. The maximum limit of nested levels may vary based on SmartArt types. The following code example demonstrates adding nested level nodes in a [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html).
+In [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams, you can also add nodes to several nested levels. The maximum limit of nested levels may vary based on SmartArt types. The following code example demonstrates adding nested level nodes in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html).
 
 {% tabs %}
 
@@ -193,7 +193,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying SmartArt appearance 
 
-You can modify the [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) appearance by modifying the fill type, color, transparency etc. The below code example demonstrates modifying the appearance of [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) nodes.
+You can modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) appearance by modifying the fill type, color, transparency etc. The below code example demonstrates modifying the appearance of [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) nodes.
 
 {% tabs %}
 
@@ -274,7 +274,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Iterating through child nodes of an existing SmartArt
 
-You can iterate through the child nodes and access the properties of each node in a [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html). The following code example demonstrates accessing and modifying the text content of node.
+You can iterate through the child nodes and access the properties of each node in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html). The following code example demonstrates accessing and modifying the text content of node.
 
 {% tabs %}
 
@@ -353,7 +353,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing node from an existing SmartArt
 
-You can remove a node from the [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) diagram. The following code example demonstrates the same.
+You can remove a node from the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -483,7 +483,7 @@ pptxDoc.Close()
 
 ## Limitations
 
-The modifications in a [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) (like add/remove nodes, modify position and size of nodes etc., which involve [SmartArt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ISmartArt.html) layout changes) done by Essential Presentation will not reflected in Image and PDF conversion. Whereas layout changes will be reflected properly in the generated PPTX file when opened using Microsoft PowerPoint.
+The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) (like add/remove nodes, modify position and size of nodes etc., which involve [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) layout changes) done by Essential Presentation will not reflected in Image and PDF conversion. Whereas layout changes will be reflected properly in the generated PPTX file when opened using Microsoft PowerPoint.
 
 ## Supported SmartArt layout types
 

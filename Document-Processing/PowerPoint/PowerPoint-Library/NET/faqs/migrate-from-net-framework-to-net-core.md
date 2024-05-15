@@ -93,7 +93,7 @@ Not applicable - Classes are moved within Syncfusion.PresentationRenderer namesp
 </tr>
 <tr>
 <td>
-{{'[ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html#"")'| markdownify }}
+{{'[ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html#"")'| markdownify }}
 </td>
 <td>
 Not applicable - It is handled internally.
@@ -116,7 +116,7 @@ Not applicable - It is handled internally.
 </tr>
 <tr>
 <td>
-{{'[IPresentation.ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_ChartToImageConverter"")'| markdownify }}
+{{'[IPresentation.ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_ChartToImageConverter"")'| markdownify }}
 </td>
 <td>
 Not applicable - It is handled internally.
@@ -124,7 +124,7 @@ Not applicable - It is handled internally.
 </tr>
 <tr>
 <td>
-{{'[PresentationToPdfConverterSettings.EnablePortableRendering](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html#Syncfusion_PresentationToPdfConverter_PresentationToPdfConverterSettings_EnablePortableRendering"")'| markdownify }}
+{{'[PresentationToPdfConverterSettings.EnablePortableRendering](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html#Syncfusion_PresentationToPdfConverter_PresentationToPdfConverterSettings_EnablePortableRendering"")'| markdownify }}
 </td>
 <td>
 This is the default approach in .NET Core and handled internally.
@@ -132,7 +132,7 @@ This is the default approach in .NET Core and handled internally.
 </tr>
 <tr>
 <td>
-{{'[PresentationToPdfConverterSettings.RecreateNestedMetafile](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html#Syncfusion_PresentationToPdfConverter_PresentationToPdfConverterSettings_RecreateNestedMetafile"")'| markdownify }}
+{{'[PresentationToPdfConverterSettings.RecreateNestedMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html#Syncfusion_PresentationToPdfConverter_PresentationToPdfConverterSettings_RecreateNestedMetafile"")'| markdownify }}
 </td>
 <td>
 Not supported due to .NET Core limitations.
@@ -140,7 +140,7 @@ Not supported due to .NET Core limitations.
 </tr>
 <tr>
 <td>
-{{'[ITextBody.FitTextOption](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.ITextBody.html#Syncfusion_Presentation_ITextBody_FitTextOption"")'| markdownify }}
+{{'[ITextBody.FitTextOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextBody.html#Syncfusion_Presentation_ITextBody_FitTextOption"")'| markdownify }}
 </td>
 <td>
 Not supported
@@ -163,23 +163,23 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[Presentation.Open(String)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_String_"")'| markdownify }}
+{{'[Presentation.Open(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_String_"")'| markdownify }}
 </td>
 <td>
-You can open the document as stream from the file system using {{'[Presentation.Open(Stream)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_IO_Stream"")'| markdownify }} API.
-</td>
-</tr>
-<tr>
-<td>
-{{'[Presentation.Save(String)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Save_System_String_"")'| markdownify }}
-</td>
-<td>
-You can save the document as stream to the file system using {{'[Presentation.Save(Stream)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Save_System_IO_Stream_"")'| markdownify }} API.
+You can open the document as stream from the file system using {{'[Presentation.Open(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_IO_Stream"")'| markdownify }} API.
 </td>
 </tr>
 <tr>
 <td>
-{{'[Presentation.Save(string fileName, FormatType formatType, HttpResponse response)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_Syncfusion_Presentation_FormatType_System_Web_HttpResponse_"")'| markdownify }}
+{{'[Presentation.Save(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Save_System_String_"")'| markdownify }}
+</td>
+<td>
+You can save the document as stream to the file system using {{'[Presentation.Save(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Save_System_IO_Stream_"")'| markdownify }} API.
+</td>
+</tr>
+<tr>
+<td>
+{{'[Presentation.Save(string fileName, FormatType formatType, HttpResponse response)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_Syncfusion_Presentation_FormatType_System_Web_HttpResponse_"")'| markdownify }}
 </td>
 <td>
 You can save the document as stream and then download from browser.
@@ -187,7 +187,7 @@ You can save the document as stream and then download from browser.
 </tr>
 <tr>
 <td>
-{{'[IPresentationChart.SaveAsImage(Stream imageAsStream)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentationChart.html#Syncfusion_Presentation_IPresentationChart_SaveAsImage_System_IO_Stream_"")'| markdownify }}
+{{'[IPresentationChart.SaveAsImage(Stream imageAsStream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentationChart.html#Syncfusion_Presentation_IPresentationChart_SaveAsImage_System_IO_Stream_"")'| markdownify }}
 </td>
 <td>
 IPresentationRenderer.ConvertToImage(IPresentationChart chart, Stream outputStream)
@@ -204,9 +204,9 @@ EMF and WMF images are not supported in .NET Core platform.
 ## Notable changes
 * Graphics library: In .NET Framework, our library makes use of System.Drawing.Common for any text measuring and graphics-related operations. Whereas in .NET Core, our library uses the SkiaSharp graphics library to provide the same type of graphics.
 * The below features are make use of SkiaSharp graphics library, which are separated into a separate package, [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)
-	* [PowerPoint Presentation to PDF](https://help.syncfusion.com/file-formats/presentation/presentation-to-pdf)
-	* [PowerPoint Presentation to Image](https://help.syncfusion.com/file-formats/presentation/presentation-to-image)
-* During PowerPoint Presentation to PDF/Image conversion, if you are facing font-related problems (like accessing font from the environment), you can pass the fonts as streams using our [font substitution approach](https://help.syncfusion.com/file-formats/presentation/presentation-to-pdf#font-substitution-for-unavailable-fonts).
+	* [PowerPoint Presentation to PDF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf)
+	* [PowerPoint Presentation to Image](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image)
+* During PowerPoint Presentation to PDF/Image conversion, if you are facing font-related problems (like accessing font from the environment), you can pass the fonts as streams using our [font substitution approach](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf#font-substitution-for-unavailable-fonts).
 
 N> If you want to migrate without any code changes from [Syncfusion.Presentation.ASP.NET](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4) NuGet in application targeting .NET Framework, you can consider to use anyone of the packages
 N> * [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms)

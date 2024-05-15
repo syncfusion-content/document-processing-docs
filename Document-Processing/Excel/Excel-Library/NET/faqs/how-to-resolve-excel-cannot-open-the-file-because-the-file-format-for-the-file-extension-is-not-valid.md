@@ -95,4 +95,4 @@ workbook.SaveAs("Sample.xlsx")
 
 * [How to resolve the File does not contain workbook stream error](how-to-resolve-the-file-does-not-contain-workbook-stream-error)
 * [What are the known exceptions of XlsIO?](https://help.syncfusion.com/file-formats/xlsio/known-exceptions)
-* [What are the supported features by Document Processing?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-file-formats)
+* [What are the supported features by file formats?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-file-formats)

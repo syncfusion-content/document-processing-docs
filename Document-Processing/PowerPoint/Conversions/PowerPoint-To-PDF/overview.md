@@ -9,13 +9,13 @@ documentation: UG
 
 PowerPoint allows you to convert an entire Presentation or a single slide into PDF document. Refer to the following links for assemblies/nuget packages required based on platforms to [convert PowerPoint document into PDF](https://www.syncfusion.com/document-processing/powerpoint-framework/net/powerpoint-to-pdf-conversion).
 
-* [Assemblies Information](https://help.syncfusion.com/file-formats/presentation/assemblies-required)
-* [NuGet Information](https://help.syncfusion.com/file-formats/presentation/nuget-packages-required#converting-powerpoint-presentation-into-pdf)
+* [Assemblies Information](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
+* [NuGet Information](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-powerpoint-presentation-into-pdf)
 
-To quickly start converting a PowerPoint Presentation to a PDF using .NET PowerPoint libray, please check out this video:
+To quickly start converting a PowerPoint Presentation to a PDF using .NET PowerPoint library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=nytscOICpWk" %}
 
-[PresentationToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.html) class is responsible for converting an entire Presentation or a slide into PDF. The following code example demonstrates how to convert a PowerPoint presentation to PDF.
+[PresentationToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverter.html) class is responsible for converting an entire Presentation or a slide into PDF. The following code example demonstrates how to convert a PowerPoint presentation to PDF.
 
 {% tabs %}
 
@@ -99,19 +99,19 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET).
 
-N> 1. Creating an instance of [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Presentation to PDF. Otherwise, the charts are not exported to the converted PDF
+N> 1. Creating an instance of [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Presentation to PDF. Otherwise, the charts are not exported to the converted PDF
 N> 2. The assembly "Syncfusion.SfChart.WPF" is non compliance with FIPS (Federal Information Processing Standard) algorithm policy.
 N> 3. **In .NET Core targeting applications**, metafile images such as EMF and WMF have some limitations. So, those images will not preserve in Presentation document to PDF conversion using Essential Presentation. 
 
 N> 1. To preserve the expected images in the PDF, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform Presentation to PDF conversion.
-N> 2. Otherwise, you can use the [WPF](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/) or [Windows](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/) Forms platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same [C# tab](https://help.syncfusion.com/file-formats/presentation/presentation-to-pdf) code examples for it. But in Mac and Linux environment, using the WPF or Windows Forms platform NuGet packages have limitations.
+N> 2. Otherwise, you can use the [WPF](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/) or [Windows](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/) Forms platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same [C# tab](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf) code examples for it. But in Mac and Linux environment, using the WPF or Windows Forms platform NuGet packages have limitations.
 
 
 **Customizing the PowerPoint Presentation to PDF conversion**
 
 Essential Presentation library provides you the ability to customize the Presentation to PDF conversion with the following options:
 
-* Specify the number of slides per PDF page with [Handouts](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PublishOptions.html) option. 
+* Specify the number of slides per PDF page with [Handouts](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PublishOptions.html) option. 
 * Convert slides with notes pages to PDF.
 * Embed fonts in a PowerPoint file into the converted PDF document to avoid font-related issues across different machines and different platforms. 
 * Convert a PowerPoint document to PDF with the PDF-A1B conformance standards.
@@ -121,11 +121,11 @@ Essential Presentation library provides you the ability to customize the Present
 
 ## PowerPoint Presentation to PDF conversion in Linux OS
 
-In Linux OS, you can perform the PowerPoint presentation to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [PowerPoint presentation to PDF conversion NuGet packages](https://help.syncfusion.com/file-formats/presentation/nuget-packages-required#converting-powerpoint-presentation-into-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with PowerPoint presentation to PDF conversion capabilities.
+In Linux OS, you can perform the PowerPoint presentation to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [PowerPoint presentation to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-powerpoint-presentation-into-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with PowerPoint presentation to PDF conversion capabilities.
 
 From v23.1.40, in addition to the previous NuGet packages, we recommend to use [SkiaSharp.NativeAssets.Linux v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6) and [HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0) NuGets to perform PowerPoint presentation to PDF conversion in Linux environment.
 
-If you are using prior to v23.1.40 release, please refer [here](https://help.syncfusion.com/file-formats/presentation/faq#what-are-the-nuget-packages-to-be-installed-to-perform-powerpoint-presentation-to-pdf-conversion-in-linux-os) to know about how to perform PowerPoint presentation to PDF conversion in Linux.
+If you are using prior to v23.1.40 release, please refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-powerpoint-presentation-to-pdf-conversion-in-linux-os) to know about how to perform PowerPoint presentation to PDF conversion in Linux.
 
 ## Font substitution for unavailable fonts
 
@@ -430,6 +430,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Initialize-default-fallback-fonts).
+
 ### Fallback fonts based on script type
 
 The following code example demonstrates how a user can add fallback fonts based on the script types, which Presentation considers internally when converting a PowerPoint presentation to PDF.
@@ -542,6 +544,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Fallback-fonts-based-on-scripttype).
+
 ### Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in presentation to PDF conversion.
@@ -653,6 +657,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Fallback-fonts-for-Unicode-range).
+
 ### Modify the exiting fallback fonts
 
 The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting a PowerPoint presentation to PDF.
@@ -752,6 +758,8 @@ pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Modify-the-exiting-fallback-fonts).
 
 ### Supported script types
 
@@ -956,9 +964,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Handouts
 
-The Presentation library allows you to convert a PowerPoint presentation to PDF document with [Handouts](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PublishOptions.html) option. Thus, the library allows selecting the number of slides to be included per PDF page. This helps converting multiple PowerPoint slides within a single PDF page. 
+The Presentation library allows you to convert a PowerPoint presentation to PDF document with [Handouts](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PublishOptions.html) option. Thus, the library allows selecting the number of slides to be included per PDF page. This helps converting multiple PowerPoint slides within a single PDF page. 
  
-The following code sample demonstrates how to convert a PowerPoint presentation to PDF document with [Handouts](https://help.syncfusion.com/cr/file-formats/Syncfusion.PresentationToPdfConverter.PublishOptions.html) property.
+The following code sample demonstrates how to convert a PowerPoint presentation to PDF document with [Handouts](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PublishOptions.html) property.
 
 {% tabs %}
 
@@ -1273,8 +1281,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Presentation library provides an option to decide the quality of the charts to optimize the converted PDF document size. 
 
-N> 1. The default [ScalingMode](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html#Syncfusion_OfficeChartToImageConverter_ChartToImageConverter_ScalingMode) for charts is [ScalingMode.Normal](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.ScalingMode.html). 
-N> 2. Setting the [Best](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChart.ScalingMode.html) scaling mode will improve the quality of the converted charts and increase the converted PDF document size.
+N> 1. The default [ScalingMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html#Syncfusion_OfficeChartToImageConverter_ChartToImageConverter_ScalingMode) for charts is [ScalingMode.Normal](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.ScalingMode.html). 
+N> 2. Setting the [Best](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.ScalingMode.html) scaling mode will improve the quality of the converted charts and increase the converted PDF document size.
 
 The following code sample demonstrates how to set the quality of the charts while PowerPoint presentation to PDF conversion
 
@@ -1463,3 +1471,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to convert PPTX to PDF in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12120/how-to-convert-pptx-to-pdf-in-blazor-webassembly-wasm)
+* [How to resolve font problems during PowerPoint to PDF or image conversion?](https://support.syncfusion.com/kb/article/15472/how-to-resolve-font-problems-during-powerpoint-to-pdf-or-image-conversion)
+* [How to convert and replace EMF image to PNG with same size during PowerPoint to PDF conversion?](https://support.syncfusion.com/kb/article/15641/how-to-convert-and-replace-emf-image-to-png-with-same-size-during-powerpoint-to-pdf-conversion)

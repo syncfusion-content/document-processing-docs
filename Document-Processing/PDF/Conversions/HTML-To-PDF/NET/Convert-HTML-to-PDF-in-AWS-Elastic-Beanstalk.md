@@ -1,6 +1,6 @@
 ---
 title: Convert HTML to PDF in AWS Elastic Beanstalk | Syncfusion
-description: Convert HTML to PDF in AWS Elastic Beanstalk using Syncfusion .NET HTML converter library.
+description: Learn how to convert HTML to PDF in AWS Elastic Beanstalk using Syncfusion .NET HTML converter library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert HTML to PDF file in AWS Elastic Beanstalk
 
-The Syncfusion [HTML to PDF converter](https://www.syncfusion.com/pdf-framework/net/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. Using this library, **convert HTML to PDF document using Blink in AWS Elastic Beanstalk**.
+The Syncfusion [HTML to PDF converter](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. Using this library, **convert HTML to PDF document using Blink in AWS Elastic Beanstalk**.
 
 ## Steps to convert HTML to PDF using Blink in AWS Elastic Beanstalk
 
@@ -52,7 +52,7 @@ Step 5: Add a new button in index.cshtml as follows.
 
 {% endhighlight %}
 
-Step 6: Add a new action method named BlinkToPDF in HomeController.cs and include the following code example to convert HTML to PDF document using the Convert method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/fileformats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
+Step 6: Add a new action method named BlinkToPDF in HomeController.cs and include the following code example to convert HTML to PDF document using the Convert method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
 {% highlight c# tabtitle="C#" %}
 

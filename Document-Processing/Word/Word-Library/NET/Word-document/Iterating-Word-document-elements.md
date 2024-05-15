@@ -10,8 +10,8 @@ documentation: UG
 The following are the important points to be remembered while iterating the document elements
 
 * Document consists of one or more sections.
-* Section contains the contents present in Headers, Footers and main document through the instances of [WTextBody](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WTextBody.html).
-* [WTextBody](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WTextBody.html) contains three type of elements – either paragraph, table or block content control.
+* Section contains the contents present in Headers, Footers and main document through the instances of [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html).
+* [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html) contains three type of elements – either paragraph, table or block content control.
 
 ## Remove paragraph with style
 
@@ -254,7 +254,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modify Hyperlink Uri
 
-The following code example shows how to iterate throughout the paragraph and modify the hyperlink ([Hyperlink](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Hyperlink.html)) Uri and specific text ([WTextRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Hyperlink.html)) with another.
+The following code example shows how to iterate throughout the paragraph and modify the hyperlink ([Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html)) Uri and specific text ([WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html)) with another.
 
 {% tabs %}
 
@@ -634,4 +634,4 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Iterate-document-elements).
 
-T> If you wish to find an item in a Word document rather than iterating through each element one by one, you can use [finding the item functionality](https://help.syncfusion.com/file-formats/docio/find-item-in-word-document) to achieve it.
+T> If you wish to find an item in a Word document rather than iterating through each element one by one, you can use [finding the item functionality](https://help.syncfusion.com/document-processing/word/word-library/net/find-item-in-word-document) to achieve it.

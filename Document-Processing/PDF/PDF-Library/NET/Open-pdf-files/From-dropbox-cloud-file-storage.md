@@ -17,7 +17,7 @@ To create a Dropbox API App, you should follow the official documentation provid
 
 
 Step 2: Create a simple console application
-![Project configuration window](Save-PDF-Images/Console-Application.png)
+![Project configuration window](Open-PDF-Images/Console-Application.png)
 
 Step 3: Install the and [Dropbox.Api](https://www.nuget.org/packages/Dropbox.Api) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 

@@ -301,7 +301,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Find and replace using Regex 
 
-You can find either the first occurrence or all the occurrences of a pattern of text in a PowerPoint presentation using the [Find](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Find_System_Text_RegularExpressions_Regex_) or [FindAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_FindAll_System_Text_RegularExpressions_Regex_) method and replace it with other text.
+You can find either the first occurrence or all the occurrences of a pattern of text in a PowerPoint presentation using the [Find](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Find_System_Text_RegularExpressions_Regex_) or [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_FindAll_System_Text_RegularExpressions_Regex_) method and replace it with other text.
 
 The following code example illustrates how to find all the occurrences of a pattern of text using the Regex and replace it with other text.
 
@@ -373,6 +373,8 @@ End Using
 {% endtabs %} 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Find-and-Replace/Find-and-Replace-in-Powerpoint-using-Regex).
+
+N> When searching for text within a master slide in the presentation, it is recommended to use the [IPresentation.FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_FindAll_System_String_System_Boolean_System_Boolean_) API instead of the [ISlide.FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IBaseSlide.html#Syncfusion_Presentation_IBaseSlide_FindAll_System_String_System_Boolean_System_Boolean_) API. 
 
 ## Find and replace in specific slide
 
@@ -524,7 +526,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Find and highlight using Regex 
 
-You can find either the first occurrence or all the occurrences of a pattern of text in a PowerPoint presentation using the [Find](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Find_System_Text_RegularExpressions_Regex_) or [FindAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_FindAll_System_Text_RegularExpressions_Regex_) method and highlight it.
+You can find either the first occurrence or all the occurrences of a pattern of text in a PowerPoint presentation using the [Find](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Find_System_Text_RegularExpressions_Regex_) or [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_FindAll_System_Text_RegularExpressions_Regex_) method and highlight it.
 
 The following code example illustrates how to find all the occurrences of a pattern of text using a Regex and highlight it.
 
@@ -680,3 +682,7 @@ End Using
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Find-and-Replace/Find-and-highlight-in-slide).
+
+## See Also
+* [How to replace the hyperlink within a SmartArt in PowerPoint Presentation?](https://support.syncfusion.com/kb/article/15293/how-to-replace-the-hyperlink-within-a-smartart-in-powerpoint-presentation)
+* [How to replace a particular image with text in a PowerPoint Presentation?](https://support.syncfusion.com/kb/article/15652/how-to-replace-a-particular-image-with-text-in-a-powerpoint-presentation)

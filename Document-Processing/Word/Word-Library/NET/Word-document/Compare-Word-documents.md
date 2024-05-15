@@ -155,11 +155,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Comparison options
 
-You can customize the Word comparison using our [ComparisonOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.ComparisonOptions.html) in the DocIO.
+You can customize the Word comparison using our [ComparisonOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ComparisonOptions.html) in the DocIO.
 
 ### Ignore format changes
 
-In the .NET Word library (DocIO), document comparison includes formatting changes by default. However, you can configure DocIO to ignore formatting differences using the [DetectFormatChanges](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.ComparisonOptions.html#Syncfusion_DocIO_DLS_ComparisonOptions_DetectFormatChanges) API to concentrate solely on content modifications.
+In the .NET Word library (DocIO), document comparison includes formatting changes by default. However, you can configure DocIO to ignore formatting differences using the [DetectFormatChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ComparisonOptions.html#Syncfusion_DocIO_DLS_ComparisonOptions_DetectFormatChanges) API to concentrate solely on content modifications.
 
 The following code example illustrates how to compare two Word documents by ignoring the format changes.
 
@@ -237,4 +237,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [What happens when Word documents with track changes are used for comparing?](https://help.syncfusion.com/file-formats/docio/faq#what-happens-when-word-documents-with-track-changes-are-used-for-comparing)
+* [What happens when Word documents with track changes are used for comparing?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-happens-when-word-documents-with-track-changes-are-used-for-comparing)

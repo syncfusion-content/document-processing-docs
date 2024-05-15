@@ -55,7 +55,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Opening an existing Presentation from stream
 
-You can open an existing PowerPoint Presentation from stream by using the overloads of [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_IO_Stream_) method.
+You can open an existing PowerPoint Presentation from stream by using the overloads of [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_IO_Stream_) method.
 
 {% tabs %}
 
@@ -96,7 +96,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Opening an encrypted Presentation
 
-You can open an encrypted PowerPoint presentation from either file path or stream by using the following overloads of [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_IO_Stream_System_String_) method as follows.
+You can open an encrypted PowerPoint presentation from either file path or stream by using the following overloads of [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.Presentation.html#Syncfusion_Presentation_Presentation_Open_System_IO_Stream_System_String_) method as follows.
 
 {% tabs %}
 
@@ -156,7 +156,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Saving a PowerPoint Presentation to file system
 
-You can save the created or manipulated PowerPoint Presentation to file system by using [Save()](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_) method of [IPresentation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html) interface. Default format type is *.PPTX.
+You can save the created or manipulated PowerPoint Presentation to file system by using [Save()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_) method of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) interface. Default format type is *.PPTX.
 
 {% tabs %}
 
@@ -232,7 +232,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Saving a PowerPoint Presentation to stream
 
-You can save the created or manipulated PowerPoint Presentation to stream by using overloads of [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_IO_Stream_) method.
+You can save the created or manipulated PowerPoint Presentation to stream by using overloads of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_IO_Stream_) method.
 
 {% tabs %}
 
@@ -296,7 +296,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Sending to a client browser
 
-You can save and send the Presentation to a client browser from a website or web application by invoking the overload of [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_Syncfusion_Presentation_FormatType_System_Web_HttpResponse_) method. This method explicitly make use of an instance of HttpResponse as its parameter in order to stream the presentation to client browser. So, this overload is suitable for web application that refer to [System.Web](https://docs.microsoft.com/en-us/previous-versions/gg145018(v=vs.110)) assembly.
+You can save and send the Presentation to a client browser from a website or web application by invoking the overload of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_Syncfusion_Presentation_FormatType_System_Web_HttpResponse_) method. This method explicitly make use of an instance of HttpResponse as its parameter in order to stream the presentation to client browser. So, this overload is suitable for web application that refer to [System.Web](https://docs.microsoft.com/en-us/previous-versions/gg145018(v=vs.110)) assembly.
 
 {% tabs %}
 
@@ -344,7 +344,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Closing a PowerPoint Presentation
 
-When you are done with the Presentation instance, you should close the instance of [IPresentation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html) in order to release the memory consumed by Essential Presentation library. The following code example illustrates how to close an [IPresentation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Presentation.IPresentation.html) instance.
+When you are done with the Presentation instance, you should close the instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) in order to release the memory consumed by Essential Presentation library. The following code example illustrates how to close an [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) instance.
 
 {% tabs %}
 

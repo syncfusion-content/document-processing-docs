@@ -29,9 +29,9 @@ Essential DocIO can convert various flow document as fixed document by using our
 
 * Microsoft Word file format Conversions.
 * [Word to PDF](https://www.syncfusion.com/document-processing/word-framework/net/word-to-pdf-conversion).
-* [Word to Image](/file-formats/docio/word-to-image).
-* [Word to RTF](/file-formats/docio/rtf).
-* [Word to Text](/file-formats/docio/text).
-* [Word to HTML](/file-formats/docio/html).
-* [Word to ODT](/file-formats/docio/word-to-odt).
-* [Word to EPUB](/file-formats/docio/word-to-epub).
+* [Word to Image](/document-processing/word/conversions/word-to-image/net/word-to-image).
+* [Word to RTF](/document-processing/word/word-library/net/rtf).
+* [Word to Text](/document-processing/word/word-library/net/text).
+* [Word to HTML](/document-processing/word/word-library/net/html).
+* [Word to ODT](/document-processing/word/word-library/net/word-to-odt).
+* [Word to EPUB](/fdocument-processing/word/word-library/net/word-to-epub).
