@@ -99,6 +99,12 @@ paragraph.FirstLineIndent = 10;
 paragraph.HorizontalAlignment = HorizontalAlignmentType.Left;
 //Applies the left indent of the paragraph
 paragraph.LeftIndent = 8;
+//Retrieves the end paragraph properties.
+IFont endParagraphFont = paragraph.EndParagraphFont;
+//Sets the font color
+endParagraphFont.Color = ColorObject.BlanchedAlmond;
+//Sets the font weight
+endParagraphFont.Bold = true;
 //Save the PowerPoint Presentation as stream
 FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
 pptxDoc.Save(outputStream);
@@ -121,6 +127,12 @@ paragraph.FirstLineIndent = 10;
 paragraph.HorizontalAlignment = HorizontalAlignmentType.Left;
 //Applies the left indent of the paragraph
 paragraph.LeftIndent = 8;
+//Retrieves the end paragraph properties.
+IFont endParagraphFont = paragraph.EndParagraphFont;
+//Sets the font color
+endParagraphFont.Color = ColorObject.BlanchedAlmond;
+//Sets the font weight
+endParagraphFont.Bold = true;
 //Saves the Presentation
 pptxDoc.Save("Output.pptx");
 //Closes the Presentation
@@ -142,6 +154,12 @@ paragraph.FirstLineIndent = 10
 paragraph.HorizontalAlignment = HorizontalAlignmentType.Left
 'Applies the left indent of the paragraph
 paragraph.LeftIndent = 8
+'Retrieves the end paragraph properties.
+Dim endParagraphFont As IFont = paragraph.EndParagraphFont
+'Sets the font color
+endParagraphFont.Color = ColorObject.BlanchedAlmond
+'Sets the font weight
+endParagraphFont.Bold = True
 'Saves the Presentation
 pptxDoc.Save("Output.pptx")
 'Closes the Presentation
