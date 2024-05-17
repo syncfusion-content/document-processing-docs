@@ -2117,9 +2117,9 @@ WMath math = paragraph.ChildEntities[0] as WMath;
 if (math != null)
 {
     // Get the LaTeX representation of the math equation
-    string laTeX = math.MathParagraph.LaTeX.ToString();
-    // Replace occurrences of 'a' with 's' in the LaTeX representation
-    math.MathParagraph.LaTeX = laTeX.Replace("a", "s");
+    string laTeX = math.MathParagraph.LaTeX;
+    // Replace occurrences of 'x' with 'k' in the LaTeX representation
+    math.MathParagraph.LaTeX = laTeX.Replace("x", "k");
 }
 //Saves and closes the Word document instance
 MemoryStream stream = new MemoryStream();
@@ -2139,10 +2139,9 @@ WMath math = paragraph.ChildEntities[0] as WMath;
 if (math != null)
 {
     // Get the LaTeX representation of the math equation
-    string laTeX = math.MathParagraph.LaTeX.ToString();
-
-    // Replace occurrences of 'a' with 's' in the LaTeX representation
-    math.MathParagraph.LaTeX = laTeX.Replace("a", "s");
+    string laTeX = math.MathParagraph.LaTeX;
+    // Replace occurrences of 'x' with 'k' in the LaTeX representation
+    math.MathParagraph.LaTeX = laTeX.Replace("x", "k");
 }
 //Saves the word document
 document.Save("Sample.docx");
@@ -2160,9 +2159,9 @@ Dim paragraph As WParagraph = CType(document.LastSection.Body.ChildEntities(0), 
 'Access the mathematical equation from the paragraph
 Dim math As WMath = CType(paragraph.ChildEntities(0), WMath)If math IsNot Nothing Then
     ' Get the LaTeX representation of the math equation
-    Dim laTeX As String = math.MathParagraph.LaTeX.ToString()
-    ' Replace occurrences of 'a' with 's' in the LaTeX representation
-    math.MathParagraph.LaTeX = laTeX.Replace("a", "s")
+    Dim laTeX As String = math.MathParagraph.LaTeX
+    ' Replace occurrences of 'x' with 'k' in the LaTeX representation
+    math.MathParagraph.LaTeX = laTeX.Replace("x", "k")
 End If
 'Saves the word document
 document.Save("Sample.docx")
@@ -2172,4 +2171,4 @@ document.Close()
 
 {% endtabs %}
 
-![Original document vs modified document](WorkingwithMathematicalEquation_images/Math_To_LaTeX.png)
+![Original document vs modified document](WorkingwithMathematicalEquation_images/ModifyLaTeXEquation.png)
