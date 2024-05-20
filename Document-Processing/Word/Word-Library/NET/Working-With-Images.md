@@ -1,5 +1,5 @@
 ---
-title: Working with Images in .NET Word library | Syncfusion
+title: Working with Images | Syncfusion
 description: Learn how to work with images in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -74,7 +74,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Add-image).
 
-### Replace image
+## Replace image
 
 Image present in the document can be replaced with a new image. This can be achieved by iterating through the paragraph items.
 
@@ -164,7 +164,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Replace-image).
 
-### Remove image
+## Remove image
 
 Images can be removed from the document by removing it from the paragraph items.
 
@@ -247,7 +247,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Remove-image).
 
-### Format and rotate images
+## Format and rotate images
 
 Absolute positioned images have properties such as position, wrap formats, and alignments. These properties are not applicable when the text wrapping style is inline. You can also rotate an image and apply flipping (horizontal and vertical) to it.
 
@@ -372,7 +372,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Format-and-rotate-image).
 
-### Find an image by title
+## Find an image by title
 
 An Image with a specific title can be retrieved by iterating the paragraph items that can be used for further manipulations.
 
@@ -477,7 +477,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Find-an-image-by-title).
 
-### Add Image caption
+## Add Image caption
 
 You can add caption to an image and update the caption numbers (Sequence fields) using [AddCaption](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html#Syncfusion_DocIO_DLS_WPicture_AddCaption_System_String_Syncfusion_DocIO_CaptionNumberingFormat_Syncfusion_DocIO_CaptionPosition_) method.
 
@@ -611,7 +611,7 @@ By executing the above code example, it generates output Word document as follow
 
 ![Output of Word document with Image caption](WorkingWithImages_images/ImageCaption.png)
 
-### Add SVG image
+## Add SVG image
 
 To add an SVG image to a paragraph in a Word document using Syncfusion DocIO, you can use the [AppendPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWParagraph.html#Syncfusion_DocIO_DLS_IWParagraph_AppendPicture_System_Byte___System_Byte___) API.
 

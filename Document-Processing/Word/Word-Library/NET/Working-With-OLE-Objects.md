@@ -1,5 +1,5 @@
 ---
-title: Working with OLE Objects in .NET Word library | Syncfusion
+title: Working with OLE Objects | Syncfusion
 description: Learn how to work with OLE Objects in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -12,7 +12,7 @@ OLE (Object Linking and Embedding) objects allow embedding and linking to docume
 
 You can create and manipulate the OLE Objects of both Linked and Embedded types in the Word document by using [WOleObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WOleObject.html) instance.
 
-### Add OLE Objects in Word document
+## Add OLE Objects in Word document
 
 The following code example explains how to add OLE objects to the document.
 
@@ -84,7 +84,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Add-ole-object).
 
-### Extract OLE Objects from Word document
+## Extract OLE Objects from Word document
 
 The following code example explains how to extract OLE objects from the document and save as separate file.
 
@@ -335,7 +335,7 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Extract-ole-object).
 
-### Remove OLE Objects from Word document
+## Remove OLE Objects from Word document
   
 The following code example explains how to remove OLE objects from the document.
   
