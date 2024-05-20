@@ -1159,7 +1159,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with Images
 
-You can create a Word document template using Microsoft Word application or by adding images in the Word document programmatically. For further information, click here.
+DocIO provides support for both inline and absolute positioned images. 
+
+* Inline images: The position of the image is constrained to the lines of text on the page.
+* Absolute positioned images: The images can be positioned anywhere irrespective of the lines of text.
+
+For further information, click here.
 
 ## Working with lists
 
@@ -2972,7 +2977,14 @@ By executing the code example above, it generates the resultant Word document as
 
 ## Working with OLE objects
 
-You can create a Word document template using Microsoft Word application or by adding OLE objects in the Word document programmatically. For further information, click here.
+OLE (Object Linking and Embedding) objects allow embedding and linking to documents and other objects. It allows the content of one program to be used in a Word document. The Objects can be inserted in the following two ways:
+
+* Linked: The content is linked to the source file
+* Embedded: The content is copied to the Word document and is not linked to the source file 
+
+You can create and manipulate the OLE Objects of both Linked and Embedded types in the Word document by using [WOleObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WOleObject.html) instance.
+
+For further information, click here.
 
 ## Working with Text Box
 
