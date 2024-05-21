@@ -22,6 +22,10 @@ The following data sources are supported by Essential DocIO for performing Mail 
 <td>{{'[Mail merge with string arrays](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays)'| markdownify }}</td>
 </tr>
 <tr>
+<td>DataRow</td>
+<td>{{'[Generate multiple Word documents](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-multiple-Word-documents)'| markdownify }}</td>
+</tr>
+<tr>
 <td>DataSet</td>
 <td>{{'[Product catalog](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Product-catalog)'| markdownify }}</td>
 </tr>
@@ -31,11 +35,15 @@ The following data sources are supported by Essential DocIO for performing Mail 
 </tr>
 <tr>
 <td>DataView</td>
-<td>{{'[Generate letter for filtered contacts ](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-letter-for-filtered-contacts)'| markdownify }}</td>
+<td>{{'[Generate letter for filtered contacts](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-letter-for-filtered-contacts)'| markdownify }}</td>
 </tr>
 <tr>
 <td>DbConnection</td>
-<td>{{'[Mail merge using OleDbConnection ](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection)'| markdownify }}</td>
+<td>{{'[Mail merge using OleDbConnection](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection)'| markdownify }}</td>
+</tr>
+<tr>
+<td>IDataReader</td>
+<td>{{'[Generate payroll for employees](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-payroll-for-employees)'| markdownify }}</td>
 </tr>
 <tr>
 <td>OleDbDataReader</td>
