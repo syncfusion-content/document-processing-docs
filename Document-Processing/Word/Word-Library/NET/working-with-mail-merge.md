@@ -22,10 +22,6 @@ The following data sources are supported by Essential DocIO for performing Mail 
 <td>{{'[Mail-mergewithstringarrays](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays)'| markdownify }}</td>
 </tr>
 <tr>
-<td>DataRow</td>
-<td></td>
-</tr>
-<tr>
 <td>DataSet</td>
 <td>{{'[Product-catalog](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Product-catalog)'| markdownify }}</td>
 </tr>
@@ -40,10 +36,6 @@ The following data sources are supported by Essential DocIO for performing Mail 
 <tr>
 <td>DbConnection</td>
 <td>{{'[Mail-merge-using-OleDbConnection ](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection)'| markdownify }}</td>
-</tr>
-<tr>
-<td>IDataReader</td>
-<td></td>
 </tr>
 <tr>
 <td>OleDbDataReader</td>
