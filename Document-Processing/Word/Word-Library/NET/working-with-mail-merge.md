@@ -19,51 +19,51 @@ The following data sources are supported by Essential DocIO for performing Mail 
 <tbody>
 <tr>
 <td>String arrays</td>
-<td>{{'[Mail-mergewithstringarrays](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays)'| markdownify }}</td>
+<td>{{'[Mail merge with string arrays](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays)'| markdownify }}</td>
 </tr>
 <tr>
 <td>DataSet</td>
-<td>{{'[Product-catalog](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Product-catalog)'| markdownify }}</td>
+<td>{{'[Product catalog](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Product-catalog)'| markdownify }}</td>
 </tr>
 <tr>
 <td>DataTable</td>
-<td>{{'[Mail-merge-using-DataTable](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-letter-for-filtered-contacts)'| markdownify }}</td>
+<td>{{'[Mail merge using DataTable](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-for-group)'| markdownify }}</td>
 </tr>
 <tr>
 <td>DataView</td>
-<td>{{'[Generate-letter-for-filtered-contacts ](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-letter-for-filtered-contacts)'| markdownify }}</td>
+<td>{{'[Generate letter for filtered contacts ](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-letter-for-filtered-contacts)'| markdownify }}</td>
 </tr>
 <tr>
 <td>DbConnection</td>
-<td>{{'[Mail-merge-using-OleDbConnection ](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection)'| markdownify }}</td>
+<td>{{'[Mail merge using OleDbConnection ](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection)'| markdownify }}</td>
 </tr>
 <tr>
 <td>OleDbDataReader</td>
-<td>{{'[Generate-certificate-for-employees](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-certificate-for-employees)'| markdownify }}</td>
+<td>{{'[Generate certificate for employees](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-certificate-for-employees)'| markdownify }}</td>
 </tr>
 <tr>
 <td>Dynamic</td>
-<td>{{'[Mail-merge-with-dynamic-objects](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-dynamic-objects)'| markdownify }}</td>
+<td>{{'[Mail merge with dynamic objects](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-dynamic-objects)'| markdownify }}</td>
 </tr>
 <tr>
 <td>IEnumerable </td>
-<td>{{'[Create-Envelopes-for-mailing](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Create-Envelopes-for-mailing)'| markdownify }}</td>
+<td>{{'[Create Envelopes for mailing](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Create-Envelopes-for-mailing)'| markdownify }}</td>
 </tr>
 <tr>
 <td>XML</td>
-<td>{{'[Generate-order-details-of-customer from XML](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Generate-order-details-of-customer)'| markdownify }}</td>
+<td>{{'[Generate order details of customer from XML](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Generate-order-details-of-customer)'| markdownify }}</td>
 </tr>
 <tr>
 <td>JSON</td>
-<td>{{'[Create-and-send-email-messages using JSON](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Create-and-send-email-messages)'| markdownify }}</td>
+<td>{{'[Create and send email messages using JSON](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Create-and-send-email-messages)'| markdownify }}</td>
 </tr>
 <tr>
 <td>MailMergeDataTable </td>
-<td>{{'[Mail-merge-using-MailMergeDataTable](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-.NET-objects)'| markdownify }}</td>
+<td>{{'[Mail merge using MailMergeDataTable](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-.NET-objects)'| markdownify }}</td>
 </tr>
 <tr>
 <td>MailMergeDataSet</td>
-<td>{{'[Mail-merge-using-MailMergeDataSet](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-dynamic-objects)'| markdownify }}</td>
+<td>{{'[Mail merge using MailMergeDataSet](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-dynamic-objects)'| markdownify }}</td>
 </tr>
 </tbody>
 </table>
