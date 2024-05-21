@@ -73,10 +73,6 @@ The following data sources are supported by Essential DocIO for performing Mail 
 <td>MailMergeDataSet</td>
 <td>{{'[Mail-merge-using-MailMergeDataSet](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-dynamic-objects)'| markdownify }}</td>
 </tr>
-<tr>
-<td>{{'[ExecuteNestedGroup(DataSet,ArrayList)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_System_Data_DataSet_System_Collections_ArrayList_)'| markdownify }}</td>
-<td>{{'[Group customer based on products](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Group-customers-based-on-products)'| markdownify }}</td>
-</tr>
 </tbody>
 </table>
 
