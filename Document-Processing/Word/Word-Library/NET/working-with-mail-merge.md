@@ -19,7 +19,7 @@ The following data sources are supported by Essential DocIO for performing Mail 
 <tbody>
 <tr>
 <td>String arrays</td>
-<td>[Mail-mergewithstringarrays](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays)</td>
+<td>{{'[Mail-mergewithstringarrays](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays)'| markdownify }}</td>
 </tr>
 <tr>
 <td>DataRow</td>
