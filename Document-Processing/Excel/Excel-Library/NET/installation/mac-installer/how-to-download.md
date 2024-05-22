@@ -2,7 +2,7 @@
 layout: post
 title: Downloading Syncfusion Excel Mac installer - Syncfusion
 description: Learn here about the how to download Syncfusion Excel Mac installer from our syncfusion website with license.
-platform: file-formats
+platform: document-processing
 control: Installation and Deployment
 documentation: ug
 --- 

@@ -2,7 +2,7 @@
 layout: post
 title: Installing Syncfusion Excel linux installer-Syncfusion
 description: Learn here about how to install Syncfusion Excel linux installer after downloading from our Syncfusion website.
-platform: file-formats
+platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
