@@ -70,7 +70,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOCX]()'| markdownify }}</th>
+<th>{{'[DOCX](https://help.syncfusion.com/file-formats/docio/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
