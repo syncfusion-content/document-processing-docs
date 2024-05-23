@@ -12,11 +12,13 @@ The Essential DocIO converts the HTML file into Word document and vice versa. Yo
 
 In Word library (DocIO) we use [XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8) for parsing the content from input HTML. So, the input HTML should meet XML standard (have proper open and close tags), even if you specify [XHTMLValidationType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html) parameter as [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html).
 
-## XHTML Validation
+## Convert HTML to Word
+
+### XHTML Validation
 
 Every HTML content is validated against a Document Type Declaration (DTD) which is a set of mark-up declarations that define a document type for a SGML-family mark-up language (GML, SGML, XML, HTML).
 
-### XHTML validation types
+#### XHTML validation types
 
 The following XHTML validation types are supported in Essential DocIO while importing an HTML content.
 
@@ -118,10 +120,6 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-Word-to-HTML).
-
-## Customization settings
-
-The Essential DocIO provides settings while performing HTML to Word conversion and vice versa.
 
 ### Customizing the HTML to Word conversion
 
@@ -278,6 +276,101 @@ N> Calling the above event is mandatory in ASP.NET Core, UWP, and Xamarin platfo
 
 * [How to get image from URL while opening HTML in .NET Core targeting applications?](https://www.syncfusion.com/kb/13053/how-to-get-image-from-url-while-opening-html-in-asp-net-core)
 
+## Convert Word to html
+
+### Customizing the Word to HTML conversion
+
+You can customize the Word to HTML conversion with the following options:
+
+* Extract the images used in the HTML document at the specified file directory
+* Specify to export the header and footer of the Word document in the HTML
+* Specify to consider Text Input field as a editable fields or text
+* Specify the CSS style sheet type and its name
+* Export the images as Base-64 embedded images
+* Omit XML declaration in the exported HTML file using [HtmlExportOmitXmlDeclaration](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportOmitXmlDeclaration).
+
+N> 1. When exporting header and footer, DocIO exports the first section of header content at the top of the HTML file and the first section of footer content at the end of the HTML file.
+N> 2. [HtmlExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportImagesFolder) and [HtmlExportCssStyleSheetFileName](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportCssStyleSheetFileName) APIs are only supported in the .NET Framework.
+
+The following code sample illustrates how to customize Word to HTML conversion.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-Platform]" %}
+
+//Load an existing Word document into DocIO instance.
+using (FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{
+   using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+   {
+        //The header and footer in the input are exported.
+        document.SaveOptions.HtmlExportHeadersFooters = true;
+        //Export the text form fields as editable .
+        document.SaveOptions.HtmlExportTextInputFormFieldAsText = false;
+        //Set the style sheet type.
+        document.SaveOptions.HtmlExportCssStyleSheetType = CssStyleSheetType.Inline;
+        //Set value to omit XML declaration in the exported html file.
+        //True- to omit xml declaration, otherwise false.
+        document.SaveOptions.HtmlExportOmitXmlDeclaration = false;
+        //Create a file stream.
+        using (FileStream outputFileStream = new FileStream("WordToHTML.html", FileMode.Create, FileAccess.ReadWrite))
+        {
+            //Save the HTML file to file stream.
+            document.Save(outputFileStream, FormatType.Html);
+        }
+   }
+
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Loads an existing document
+WordDocument document = new WordDocument("Template.docx");
+HTMLExport export = new HTMLExport();
+//The images in the input document are copied to this folder
+document.SaveOptions.HtmlExportImagesFolder = @"D:/Data/";
+//The headers and footers in the input are exported
+document.SaveOptions.HtmlExportHeadersFooters = true;
+//Exports the text form fields as editable
+document.SaveOptions.HtmlExportTextInputFormFieldAsText = false;
+//Sets the style sheet type
+document.SaveOptions.HtmlExportCssStyleSheetType = CssStyleSheetType.External;
+//Sets name for style sheet
+document.SaveOptions.HtmlExportCssStyleSheetFileName = "UserDefinedFileName.css";
+//Export the Word document image as Base-64 embedded image
+document.SaveOptions.HTMLExportImageAsBase64 = true;
+//Set value to omit XML declaration in the exported html file.
+document.SaveOptions.HtmlExportOmitXmlDeclaration = true;
+//Saves the document as html file
+export.SaveAsXhtml(document, "WordtoHtml.html");
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads an existing document
+Dim document As New WordDocument("Template.docx")
+Dim export As New HTMLExport()
+'The images in the input document are copied to this folder
+document.SaveOptions.HtmlExportImagesFolder = "D:/Data/"
+'The headers and footers in the input are exported
+document.SaveOptions.HtmlExportHeadersFooters = True
+'Exports the text form fields as editable
+document.SaveOptions.HtmlExportTextInputFormFieldAsText = False
+'Sets the style sheet type
+document.SaveOptions.HtmlExportCssStyleSheetType = CssStyleSheetType.External
+'Sets name for style sheet
+document.SaveOptions.HtmlExportCssStyleSheetFileName = "UserDefinedFileName.css"
+'Export the Word document image as Base-64 embedded image
+document.SaveOptions.HTMLExportImageAsBase64 = True
+'Set value to omit XML declaration in the exported html file.
+document.SaveOptions.HtmlExportOmitXmlDeclaration = True;
+'Saves the document as html file
+export.SaveAsXhtml(document, "WordtoHtml.html")
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Customize-Word-to-HTML-conversion).
+
 ### Customize image Path
 
 DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which is used to customize the image path that is set in the output HTML file and save images externally while converting a Word document to HTML.
@@ -376,99 +469,6 @@ End Sub
 T> By utilizing the event handler mentioned above, you can also implement logic to store images in the Cloud or other online storage platforms.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Customize-image-path-in-Word-to-html/.NET).
-
-### Customizing the Word to HTML conversion
-
-You can customize the Word to HTML conversion with the following options:
-
-* Extract the images used in the HTML document at the specified file directory
-* Specify to export the header and footer of the Word document in the HTML
-* Specify to consider Text Input field as a editable fields or text
-* Specify the CSS style sheet type and its name
-* Export the images as Base-64 embedded images
-* Omit XML declaration in the exported HTML file using [HtmlExportOmitXmlDeclaration](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportOmitXmlDeclaration).
-
-N> 1. When exporting header and footer, DocIO exports the first section of header content at the top of the HTML file and the first section of footer content at the end of the HTML file.
-N> 2. [HtmlExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportImagesFolder) and [HtmlExportCssStyleSheetFileName](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HtmlExportCssStyleSheetFileName) APIs are only supported in the .NET Framework.
-
-The following code sample illustrates how to customize Word to HTML conversion.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-Platform]" %}
-
-//Load an existing Word document into DocIO instance.
-using (FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-{
-   using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
-   {
-        //The header and footer in the input are exported.
-        document.SaveOptions.HtmlExportHeadersFooters = true;
-        //Export the text form fields as editable .
-        document.SaveOptions.HtmlExportTextInputFormFieldAsText = false;
-        //Set the style sheet type.
-        document.SaveOptions.HtmlExportCssStyleSheetType = CssStyleSheetType.Inline;
-        //Set value to omit XML declaration in the exported html file.
-        //True- to omit xml declaration, otherwise false.
-        document.SaveOptions.HtmlExportOmitXmlDeclaration = false;
-        //Create a file stream.
-        using (FileStream outputFileStream = new FileStream("WordToHTML.html", FileMode.Create, FileAccess.ReadWrite))
-        {
-            //Save the HTML file to file stream.
-            document.Save(outputFileStream, FormatType.Html);
-        }
-   }
-
-{% endhighlight %}
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Loads an existing document
-WordDocument document = new WordDocument("Template.docx");
-HTMLExport export = new HTMLExport();
-//The images in the input document are copied to this folder
-document.SaveOptions.HtmlExportImagesFolder = @"D:/Data/";
-//The headers and footers in the input are exported
-document.SaveOptions.HtmlExportHeadersFooters = true;
-//Exports the text form fields as editable
-document.SaveOptions.HtmlExportTextInputFormFieldAsText = false;
-//Sets the style sheet type
-document.SaveOptions.HtmlExportCssStyleSheetType = CssStyleSheetType.External;
-//Sets name for style sheet
-document.SaveOptions.HtmlExportCssStyleSheetFileName = "UserDefinedFileName.css";
-//Export the Word document image as Base-64 embedded image
-document.SaveOptions.HTMLExportImageAsBase64 = true;
-//Set value to omit XML declaration in the exported html file.
-document.SaveOptions.HtmlExportOmitXmlDeclaration = true;
-//Saves the document as html file
-export.SaveAsXhtml(document, "WordtoHtml.html");
-document.Close();
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads an existing document
-Dim document As New WordDocument("Template.docx")
-Dim export As New HTMLExport()
-'The images in the input document are copied to this folder
-document.SaveOptions.HtmlExportImagesFolder = "D:/Data/"
-'The headers and footers in the input are exported
-document.SaveOptions.HtmlExportHeadersFooters = True
-'Exports the text form fields as editable
-document.SaveOptions.HtmlExportTextInputFormFieldAsText = False
-'Sets the style sheet type
-document.SaveOptions.HtmlExportCssStyleSheetType = CssStyleSheetType.External
-'Sets name for style sheet
-document.SaveOptions.HtmlExportCssStyleSheetFileName = "UserDefinedFileName.css"
-'Export the Word document image as Base-64 embedded image
-document.SaveOptions.HTMLExportImageAsBase64 = True
-'Set value to omit XML declaration in the exported html file.
-document.SaveOptions.HtmlExportOmitXmlDeclaration = True;
-'Saves the document as html file
-export.SaveAsXhtml(document, "WordtoHtml.html")
-document.Close()
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Customize-Word-to-HTML-conversion).
 
 ### Export HTML with body content alone
 
