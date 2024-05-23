@@ -281,7 +281,6 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 ## Online Demo
 
 * Explore how to generate a letter using mail merge functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/letterformat#/material3).
-* See how to format the mail merged data using mail merge events using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/mailmergeevent#/material3).
 
 ## See Also
 
