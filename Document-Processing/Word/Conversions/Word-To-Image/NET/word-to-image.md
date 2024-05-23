@@ -113,6 +113,8 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image).
 
+T> For troubleshooting issues in the .NET Word Library (DocIO), refer this article that provides comprehensive guidance on resolving common problems.
+
 ## Convert specific page of Word to image
 
 You can convert a specific page of the Word document into an image and use it for a thumbnail.
