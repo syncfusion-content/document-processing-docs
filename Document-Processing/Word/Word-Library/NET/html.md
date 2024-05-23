@@ -237,7 +237,7 @@ N> Calling the above event is mandatory in ASP.NET Core, UWP, and Xamarin platfo
 
 * [How to get image from URL while opening HTML in .NET Core targeting applications?](https://www.syncfusion.com/kb/13053/how-to-get-image-from-url-while-opening-html-in-asp-net-core)
 
-## Convert Word to html
+## Convert Word to HTML
 
 The following code example shows how to convert the Word document into HTML.
 
