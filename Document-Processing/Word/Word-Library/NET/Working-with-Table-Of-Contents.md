@@ -1280,6 +1280,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **Word document** as follows.
 
 ![Table of figures exclude caption label and numbers](WorkingWithTableOfContents/Exclude_Caption_and_Number_in_TOF.png)
+
+## Online Demo
+
+* Explore how to insert and update the table of figures in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/tableoffigures#/material3).
+* See how to insert and update the table of contents in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/tableofcontents#/material3).
  
 ## See Also
 

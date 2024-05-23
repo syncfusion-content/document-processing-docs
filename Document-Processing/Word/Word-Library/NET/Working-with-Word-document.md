@@ -1068,6 +1068,11 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Update-alternate-chunks).
 
+## Online Demo
+
+* Explore how to clone and merge Word documents using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/cloneandmerge#/material3).
+* See how to apply various document settings to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/documentsettings#/material3).
+
 ## See Also
 
 * [Iterating Word document elements](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/iterating-word-document-elements)

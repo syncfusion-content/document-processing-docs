@@ -743,3 +743,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the above code example, it generates the resultant Word document as follows.
  
 ![Output Word document of mapping field of ancestor group](../MailMerge_images/generated-mapping-word-document-in-file-formats.png)
+
+## Online Demo
+
+* Explore how to do a mail merge for a nested group in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/nestedmailmerge#/material3).

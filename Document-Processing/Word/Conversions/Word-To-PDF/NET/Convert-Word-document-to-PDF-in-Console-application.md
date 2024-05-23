@@ -126,3 +126,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **PDF** as follows.
 
 ![Output PDF document in .NET FrameWork console application](WordToPDF_images/OutputImage.png)
+
+An online sample link to [convert Word document to PDF](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdf#/material3) in ASP.NET Core.

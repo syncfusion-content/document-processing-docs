@@ -2172,6 +2172,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Remove-particular-row-from-table).
 
+## Online Demo
+
+* Explore how to format a table in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/formattable#/material3).
+* See how to apply built-in and custom styles to the tables of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/tablestyles#/material3). 
+
 ## See Also
 
 * [How to avoid table splitting across the pages in Word document](https://support.syncfusion.com/kb/article/11455/how-to-avoid-table-splitting-across-the-pages-in-word-document)

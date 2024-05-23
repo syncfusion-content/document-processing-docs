@@ -2532,6 +2532,12 @@ T> Using the above Warning API, handle logic to identify the documents with unsu
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Show-Warning-for-unsupported-elements)
 
+## Online Demo
+
+* Explore how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfua#/material3).
+* See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfa#/material3).
+
+
 ## See Also
 
 * [How to perform font substitution in Word to PDF conversion](https://support.syncfusion.com/kb/article/7499/how-to-perform-font-substitution-in-word-to-pdf-conversion)

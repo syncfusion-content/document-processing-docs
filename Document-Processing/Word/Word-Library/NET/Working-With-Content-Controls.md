@@ -2595,6 +2595,12 @@ End Sub
 
 N> In the above-mentioned code samples, for Xamarin platforms the document is saved as stream only. To save the stream to file kindly refer code sample [here](https://help.syncfusion.com/document-processing/word/word-library/net/xamarin#save-the-document#).
 
+## Online Demo
+
+* Explore how to fill a form and protect the content controls in an existing Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/formfillingandprotection#/material3).
+* See how to map custom XML parts to content controls in the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/xmlmapping#/material3).
+
+
 ## See Also
 
 * [How to remove the placeholder text if the meta property is empty in a Word document?](https://www.syncfusion.com/kb/13982/how-to-remove-the-placeholder-text-if-the-meta-property-is-empty-in-a-word-document)

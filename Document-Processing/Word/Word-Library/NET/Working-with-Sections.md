@@ -1516,6 +1516,10 @@ N> * Word viewer/editor renders the contents of the Word document page by page d
 N> * Whereas Essential DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence it is not feasible to set different page margins or page settings to each page instead we can do the same for each section.
 N> * And also, it is not feasible to get the page-wise details from Word document and split the Word document in page by page. 
 
+## Online Demo
+
+* Explore how to insert headers and footers to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/headerandfooter#/material3).
+
 ## See Also
 
 * [How to copy the HeaderFooter content from one Word document and insert them into first page header footer of another Word document](https://www.syncfusion.com/kb/12923/how-to-copy-the-headerfooter-content-from-one-word-document-and-insert-them-into-first-page)

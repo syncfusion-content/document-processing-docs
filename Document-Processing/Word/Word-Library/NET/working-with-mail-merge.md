@@ -278,6 +278,11 @@ You can remove or keep the unmerged merge fields in the output document based on
 
 You can restart the list numbering in a Word document during Mail merge. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-options#restart-numbering-in-lists).
 
+## Online Demo
+
+* Explore how to generate a letter using mail merge functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/letterformat#/material3).
+* See how to format the mail merged data using mail merge events using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/mailmergeevent#/material3).
+
 ## See Also
 
 * [How to mail merge Word document in Azure functions v1](https://support.syncfusion.com/kb/article/9196/how-to-mail-merge-word-document-in-azure-functions-v1)
