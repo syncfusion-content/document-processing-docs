@@ -16,6 +16,8 @@ You can create and manipulate the OLE Objects of both Linked and Embedded types 
 
 ## Add OLE Objects in Word document
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 The following code example explains how to add OLE objects to the document.
 
 {% tabs %}

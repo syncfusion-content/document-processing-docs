@@ -16,6 +16,8 @@ To quickly encrypt and decrypt a Word document with the .NET Word (DOCIO) Librar
 
 The following code example shows how to encrypt the Word document with password.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}

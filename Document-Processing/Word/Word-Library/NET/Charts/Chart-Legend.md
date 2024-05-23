@@ -14,6 +14,8 @@ Legends are visual pictorial hints that provide a viewer information that helps 
 
 The following code snippet illustrates how to set the legend position in chart.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 

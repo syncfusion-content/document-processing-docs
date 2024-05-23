@@ -19,6 +19,8 @@ Just like you can search for a text in a Word document, you can also search for 
 
 Using [FindItemByProperty](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindItemByProperty_Syncfusion_DocIO_DLS_EntityType_System_String_System_String_) API, find the first item in the Word document that has the specified property name and value.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 The following code example illustrates how to find the first item based on one property.
 
 {% tabs %}

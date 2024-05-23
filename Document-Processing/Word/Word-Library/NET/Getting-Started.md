@@ -43,6 +43,8 @@ N> You can also explore our [.NET Word Library](https://www.syncfusion.com/demos
 
 Include the following namespaces in your .cs or .vb file
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
