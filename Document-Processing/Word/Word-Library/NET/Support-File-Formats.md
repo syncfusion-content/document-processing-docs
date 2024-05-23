@@ -206,7 +206,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -224,7 +224,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -242,7 +242,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -260,7 +260,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
