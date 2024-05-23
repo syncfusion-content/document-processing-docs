@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Highlight Cells
+# Highlight Cells in Conditional Formatting
 
 Highlight cell rules are powerful tools for data analysis and presentation, enhancing the ability to quickly interpret and act upon data within worksheets.
 
