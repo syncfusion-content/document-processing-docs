@@ -9,6 +9,129 @@ documentation: UG
 
 You can search a particular text you like to change and replace it with another text or part of the document.
 
+The following table illustrates the supported overloads for Find and Replace functionality.
+
+<table>
+<tr>
+<th>Overloads<br/><br/></th>
+<th>Examples<br/><br/></th>
+</tr>
+<tbody>
+<tr>
+<td>{{ '[Find(String, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find first occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Find(Regex)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[Find first occurrence using regex example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-formatted-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindAll(String, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and highlight all](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-highlight-all)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindAll(Regex)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[Find all and replace text with merge field.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-with-merge-field)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindNext(TextBodyItem, String, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find next occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindNext(TextBodyItem, Regex)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[Find next occurrence using regex example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-and-replace-with-formatted-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindSingleLine(string , bool , bool )](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find first text using string that extend to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next-paragraphs)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindSingleLine(Regex)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[Find first text using string that extend to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-extended-to-several-paragraphs)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindNextSingleLine(TextBodyItem, string, bool, bool)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find next using string that extended to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next-paragraphs)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[FindNextSingleLine(TextBodyItem, Regex)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[Find next using regex that extended to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-multiline-text-and-replace-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(string , IWordDocument , bool , bool)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with Word document.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-with-Word-document)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(string, IWordDocument, bool, bool, bool)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with Word document with formatting.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-Word-document)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(string, TextBodyPart, bool, bool)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with image.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-image)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(string, TextBodyPart, bool, bool, bool)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with document element with formatting.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-body-part)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(String, TextSelection, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with another selected text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-multiline-text-and-replace-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(String, TextSelection, Boolean, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with another selected text with formatting.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-formatted-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(String, String, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with another text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-all/.NET-Standard)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(Regex, IWordDocument, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with HTML.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-in-Word-with-HTML)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(Regex, TextBodyPart)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_)' | markdownify }}</td>
+<td>{{ '[Replace text with content control.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-content-control)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(Regex, TextBodyPart, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace text in headers and footers.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-in-headers-and-footers)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(Regex, TextSelection)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextSelection_)' | markdownify }}</td>
+<td>{{ '[Replace text within table.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-within-table)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[Replace(Regex, String)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_System_String_)' | markdownify }}</td>
+<td>{{ '[Find and replace all using regex.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-pattern-text-with-normal-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[ReplaceSingleLine(String, TextBodyPart, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find and replace multiple paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-multiple-paragraphs)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[ReplaceSingleLine(String, TextSelection, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace text with another formatted text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-and-replace-with-formatted-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[ReplaceSingleLine(String, String, Boolean, Boolean)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace paragraphs with text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-paragraphs-with-text)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[ReplaceSingleLine(Regex, TextBodyPart)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_)' | markdownify }}</td>
+<td>{{ '[Find and replace text with page break.](https://github.com/SyncfusionExamples/</td>
+</tr>
+<tr>
+<td>{{ '[ReplaceSingleLine(Regex, TextSelection)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextSelection_)' | markdownify }}</td>
+<td>{{ '[Replace text extended to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-extended-to-several-paragraphs)' | markdownify }}</td>
+</tr>
+<tr>
+<td>{{ '[ReplaceSingleLine(Regex, String)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_System_String_)' | markdownify }}</td>
+<td>{{ '[Replace multiline text with single line.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-multiline-text-with-single-line)' | markdownify }}</td>
+</tr>
+</tbody>
+</table>
+
 ## Finding contents in a Word document
 
 You can find the first occurrence of a particular text within a single paragraph in the document by using [Find](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_) method and its next occurrence by using [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method. You can also find a particular text pattern in the document.
