@@ -21,7 +21,7 @@ Source Format
 {{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}
 </th>
 <th>
-{{'[DOCX](https://help.syncfusion.com/file-formats/docio/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}
+{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}
 </th>
 <th>
 {{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}
@@ -78,7 +78,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOCX](https://help.syncfusion.com/file-formats/docio/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}</th>
+<th>{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -206,7 +206,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -224,7 +224,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -242,7 +242,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -260,7 +260,7 @@ Source Format
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>-</td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
