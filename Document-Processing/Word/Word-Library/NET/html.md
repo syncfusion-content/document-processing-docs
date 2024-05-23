@@ -14,35 +14,6 @@ In Word library (DocIO) we use [XmlReader](https://learn.microsoft.com/en-us/dot
 
 ## Convert HTML to Word
 
-### XHTML Validation
-
-Every HTML content is validated against a Document Type Declaration (DTD) which is a set of mark-up declarations that define a document type for a SGML-family mark-up language (GML, SGML, XML, HTML).
-
-#### XHTML validation types
-
-The following XHTML validation types are supported in Essential DocIO while importing an HTML content.
-
-<table>
-<thead>
-<tr>
-<td>XHTML validation types</td>
-<td>Description</td>
-</tr>
-</thead>
-<tr>
-<td><b>XHTMLValidationType.None</b></td>
-<td>It does not perform any schema validation but the given HTML content should meet XHTML 1.0 format.</td>
-</tr>
-<tr>
-<td><b>XHTMLValidationType.Transitional</b></td>
-<td>It allows several attributes within the tags.</td>
-</tr>
-<tr>
-<td><b>XHTMLValidationType.Strict</b></td>
-<td>It does not allows the attributes inside the tag.</td>
-</tr>
-</table>
-
 The following code example shows how to convert the HTML file into Word document.
 
 {% tabs %}
@@ -82,44 +53,34 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-HTML-to-Word).
 
-The following code example shows how to convert the Word document into HTML.
+### XHTML Validation
 
-{% tabs %}
+Every HTML content is validated against a Document Type Declaration (DTD) which is a set of mark-up declarations that define a document type for a SGML-family mark-up language (GML, SGML, XML, HTML).
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Opens an existing document from file system through constructor of WordDocument class
-using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
-{
-    //Saves the Word document to MemoryStream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Html);
-    //Closes the Word document
-    document.Close();
-}
-{% endhighlight %}
+#### XHTML validation types
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Loads the template document
-WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Saves the document as Html file
-document.Save("WordToHtml.html", FormatType.Html);
-//Closes the document 
-document.Close();
-{% endhighlight %}
+The following XHTML validation types are supported in Essential DocIO while importing an HTML content.
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads the template document
-Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Saves the document as Html file
-document.Save("WordToHtml.html", FormatType.Html)
-'Closes the document 
-document.Close()
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-Word-to-HTML).
+<table>
+<thead>
+<tr>
+<td>XHTML validation types</td>
+<td>Description</td>
+</tr>
+</thead>
+<tr>
+<td><b>XHTMLValidationType.None</b></td>
+<td>It does not perform any schema validation but the given HTML content should meet XHTML 1.0 format.</td>
+</tr>
+<tr>
+<td><b>XHTMLValidationType.Transitional</b></td>
+<td>It allows several attributes within the tags.</td>
+</tr>
+<tr>
+<td><b>XHTMLValidationType.Strict</b></td>
+<td>It does not allows the attributes inside the tag.</td>
+</tr>
+</table>
 
 ### Customizing the HTML to Word conversion
 
@@ -277,6 +238,45 @@ N> Calling the above event is mandatory in ASP.NET Core, UWP, and Xamarin platfo
 * [How to get image from URL while opening HTML in .NET Core targeting applications?](https://www.syncfusion.com/kb/13053/how-to-get-image-from-url-while-opening-html-in-asp-net-core)
 
 ## Convert Word to html
+
+The following code example shows how to convert the Word document into HTML.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+//Opens an existing document from file system through constructor of WordDocument class
+using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+{
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Html);
+    //Closes the Word document
+    document.Close();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
+//Saves the document as Html file
+document.Save("WordToHtml.html", FormatType.Html);
+//Closes the document 
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx", FormatType.Docx)
+'Saves the document as Html file
+document.Save("WordToHtml.html", FormatType.Html)
+'Closes the document 
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-Word-to-HTML).
 
 ### Customizing the Word to HTML conversion
 
