@@ -24,6 +24,8 @@ You can apply formatting to the merged text or customize the merged text during 
 
 The following code example shows how to use the [MergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html) event during Mail merge process.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}

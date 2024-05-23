@@ -16,6 +16,8 @@ Convert an existing markdown file to a Word document (DOC, DOCX and RTF) using t
 
 The following code example shows how to convert Markdown to Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}

@@ -57,6 +57,8 @@ The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.Do
 
 The following code example shows how to create a Word template document with merge fields.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}

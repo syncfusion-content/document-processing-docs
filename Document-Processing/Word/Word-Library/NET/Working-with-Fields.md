@@ -31,6 +31,8 @@ You can add a field to a Word document by using the [AppendField](https://help.s
 
 The following code example explains how to add a field to the Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}

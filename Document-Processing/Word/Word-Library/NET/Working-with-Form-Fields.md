@@ -22,6 +22,8 @@ You can add new Checkbox form field to a Word document by using [AppendCheckBox]
 
 The following code illustrates how to add new checkbox form field.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
