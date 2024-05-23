@@ -1,7 +1,7 @@
 ---
 title: Top/Bottom | Excel library | Syncfusion
 description: In this section, you can learn how to apply top/bottom rules using conditional formatting in an Excel document with XlsIO
-platform: file-formats
+platform: document-processing
 control: XlsIO
 documentation: UG
 ---
