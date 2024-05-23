@@ -119,3 +119,4 @@ By executing the program, you will get the **image** as follows.
 
 ![Output image file in .NET FrameWork console application](WordToPDF_images/Output-WordtoImage.png)
 
+An online sample link to [convert Word document to image](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtoimage#/material3) in ASP.NET Core.

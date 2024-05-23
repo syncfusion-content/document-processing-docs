@@ -1137,6 +1137,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET-Standard).
 
+## Online Demo
+
+* Explore how to insert bookmarks into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/bookmarks#/material3).  
+* See how to navigate between the bookmarks in a Word document and edit its content using bookmark navigation functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/bookmarknavigation#/material3).
+
 ## See Also
 
 * [How to replace the content between two different existing bookmarks in a word document](https://support.syncfusion.com/kb/article/11463/how-to-replace-the-content-between-two-different-existing-bookmarks-in-a-word-document)

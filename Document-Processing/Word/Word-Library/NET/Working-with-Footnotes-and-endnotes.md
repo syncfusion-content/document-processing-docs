@@ -889,3 +889,7 @@ End Sub
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Footnotes-and-Endnotes/Remove-footnotes-and-endnotes).
+
+## Online Demo
+
+* Explore how to insert the footnotes and endnotes in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/footnotesandendnotes#/material3).

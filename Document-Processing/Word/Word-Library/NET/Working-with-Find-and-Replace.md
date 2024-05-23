@@ -1785,6 +1785,12 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-multiline-text-and-replace-text).
 
+## Online Demo
+
+* Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/findandhighlight#/material3).
+* See how to replace a specific text in the Word document with another text using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/simplereplace#/material3).
+* See how to replace a specific content in the Word document with another document using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/advancedreplace#/material3).
+
 ## See Also
 
 * [How to replace the particular text with hyperlink in Word document](https://support.syncfusion.com/kb/article/10326/how-to-replace-the-particular-text-with-hyperlink-in-word-document)

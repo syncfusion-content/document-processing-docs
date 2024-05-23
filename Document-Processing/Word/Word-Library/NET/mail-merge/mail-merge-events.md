@@ -906,6 +906,10 @@ End Class
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Event-to-bind-data-for-unmerged-group).
 
+## Online Demo
+
+* See how to format the mail merged data using mail merge events using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/mailmergeevent#/material3).
+
 ## See Also
 
 * [How to add QR code to word using C#, VB.NET](https://www.syncfusion.com/kb/12960/how-to-add-qr-code-to-word-using-c-vb-net-docx)

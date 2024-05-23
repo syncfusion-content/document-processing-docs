@@ -8,7 +8,11 @@ documentation: UG
 
 # Text Conversions in Word Library
 
-The Essential DocIO converts the Word document into Text file and vice versa. The following code example shows how to convert the Word document into text file.
+The Essential DocIO converts the Word document into Text file and vice versa. 
+
+## Convert Word to Text
+
+The following code example shows how to convert the Word document into text file.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF.
 
@@ -48,6 +52,8 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Text-file-conversion/Convert-Word-to-text-file).
+
+## Convert Text to Word
 
 The following code example shows how to convert a Text file into Word document.
 
