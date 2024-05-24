@@ -908,7 +908,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* See how to format the mail merged data using mail merge events using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/mailmergeevent#/material3).
+* Explore how to format the mail merged data using mail merge events using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/mailmergeevent#/material3).
 
 ## See Also
 
