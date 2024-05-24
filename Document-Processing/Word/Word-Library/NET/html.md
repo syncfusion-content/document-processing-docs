@@ -12,7 +12,7 @@ The Essential DocIO converts the HTML file into Word document and vice versa. Yo
 
 In Word library (DocIO) we use [XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8) for parsing the content from input HTML. So, the input HTML should meet XML standard (have proper open and close tags), even if you specify [XHTMLValidationType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html) parameter as [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html).
 
-## Convert HTML to Word
+## Convert HTML to Wor
 
 The following code example shows how to convert the HTML file into Word document.
 
