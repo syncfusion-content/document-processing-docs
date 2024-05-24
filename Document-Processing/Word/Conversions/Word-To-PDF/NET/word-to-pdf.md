@@ -128,6 +128,8 @@ This setting allows you to **convert PDF faster** by using direct PDF rendering 
 
 The following code sample shows how to convert the Word document to PDF using direct PDF rendering approach. 
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
