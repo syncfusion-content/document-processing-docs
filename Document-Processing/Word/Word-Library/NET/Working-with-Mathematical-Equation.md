@@ -9,8 +9,10 @@ documentation: UG
 
 Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
 
-* WMath DOM: To add or modify the text and formatting of an existing mathematical equation, [click here](https://help.syncfusion.com/file-formats/docio/working-with-mathematical-equation?cs-save-lang=1&cs-lang=vb#modify-existing-equation).
-* LaTeX: To add or modify the text of a LaTeX equation, click here.
+The .NET Word Library (DocIO) offers two ways to create and modify equations in Word document.
+
+* [Using WMath DOM](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mathematical-equation#types-of-equation).
+* [Using LaTeX](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-latex).
 
 ![Mathematical equation in Microsoft Word document](WorkingwithMathematicalEquation_images/Mathematical Equation.png)
 
