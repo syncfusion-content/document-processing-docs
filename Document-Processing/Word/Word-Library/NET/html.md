@@ -70,7 +70,6 @@ The following XHTML validation types are supported in Essential DocIO while impo
 <td>Description</td>
 </tr>
 </thead>
-<body>
 <tr>
 <td><b>XHTMLValidationType.None</b></td>
 <td>It does not perform any schema validation but the given HTML content should meet XHTML 1.0 format.</td>
@@ -82,7 +81,6 @@ The following XHTML validation types are supported in Essential DocIO while impo
 <tr>
 <td><b>XHTMLValidationType.Strict</b></td>
 <td>It does not allows the attributes inside the tag.</td>
-</body>
 </tr>
 </table>
 
