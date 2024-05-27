@@ -2055,7 +2055,7 @@ document.Close()
 
 {% endtabs %}
 
-![Original document vs modified document](WorkingwithMathematicalEquation_images/ModifyLaTeXEquation.png)
+![Edit equation using LaTeX](WorkingwithMathematicalEquation_images/ModifyLaTeXEquation.png)
 
 ## Online Demo
 
