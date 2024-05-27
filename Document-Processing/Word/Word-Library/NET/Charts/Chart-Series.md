@@ -14,6 +14,8 @@ In a chart, a **series** represents a set of related data points, often depicted
 
 The following code snippet illustrates how to set the series name in chart.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 

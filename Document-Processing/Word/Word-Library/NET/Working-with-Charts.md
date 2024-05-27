@@ -25,6 +25,8 @@ N> DocIO supports chart only in DOCX and WordML format documents.
 
 A new chart can be created or an existing chart can be modified by using the [WChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WChart.html) instance. The following code example illustrates how to create a new chart.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1461,6 +1463,11 @@ The following chart types are supported in DocIO.
 * [Surface_NoColor_3D](https://support.syncfusion.com/kb/article/12247/how-to-create-wireframe-3d-surface-chart-in-word-document-using-c)
 * [Surface_NoColor_Contour](https://support.syncfusion.com/kb/article/12245/how-to-create-wireframe-contour-surface-chart-in-word-document-using-c)
 * [WaterFall](https://support.syncfusion.com/kb/article/12243/how-to-create-waterfall-chart-in-word-document-using-c)
+
+## Online Demo
+
+* Explore how to insert a bar chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/barchart#/material3). 
+* See how to insert a pie chart into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/piechart#/material3). 
 
 ## See Also
 

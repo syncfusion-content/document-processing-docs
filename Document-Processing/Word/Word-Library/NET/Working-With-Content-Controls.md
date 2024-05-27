@@ -26,6 +26,8 @@ To quickly start create and fill a form in Word document, please check out this 
 
 You can add content control to a text body of the Word document using block content control. You can add text, tables, pictures, or other items into the block content control. Refer to the following code.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2594,6 +2596,12 @@ End Sub
 {% endtabs %}
 
 N> In the above-mentioned code samples, for Xamarin platforms the document is saved as stream only. To save the stream to file kindly refer code sample [here](https://help.syncfusion.com/document-processing/word/word-library/net/xamarin#save-the-document#).
+
+## Online Demo
+
+* Explore how to fill a form and protect the content controls in an existing Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/formfillingandprotection#/material3).
+* See how to map custom XML parts to content controls in the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/xmlmapping#/material3).
+
 
 ## See Also
 

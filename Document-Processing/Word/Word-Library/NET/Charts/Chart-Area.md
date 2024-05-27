@@ -14,6 +14,8 @@ Chart area refers to the space that contains the chart or graph you've inserted 
 
 The following code snippet illustrates how to modify the border of the chart area.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 

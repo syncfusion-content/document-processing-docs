@@ -26,6 +26,8 @@ Paragraph is the basic element in a Word document that contains a textual and gr
 
 The following code example explains how to add a new paragraph.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4332,6 +4334,12 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Format-and-rotate-text-box).
+
+## Online Demo
+
+* Explore how to apply built-in and custom styles to the contents of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/styles#/material3).
+* See how to create a Word document with right-to-left language text using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/rtl#/material3).
+* See how to insert breaks to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/insertbreak#/material3).
 
 ## See Also
 

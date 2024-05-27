@@ -15,6 +15,8 @@ Add **accent** equation to a Word document using the LaTeX through [AppendMath](
 
 The following code example illustrates how to create accent equation using LaTeX in Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
@@ -1978,3 +1980,7 @@ document.Save("Output.docx", FormatType.Docx)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mathematical-Equation/Apply-math-justification).
+
+## Online Demo
+
+* Explore how to create a Word document with mathematical equations using LaTeX and the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/latex#/material3).

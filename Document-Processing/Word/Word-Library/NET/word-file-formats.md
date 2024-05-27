@@ -29,6 +29,8 @@ DocIO supports the following WordprocessingML:
 
 The following code example explains how to create a new Word document with few lines of code.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1031,3 +1033,8 @@ using (WordDocument document = new WordDocument())
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-file-formats/Ole-image-as-normal-image).
+
+## Online Demo
+
+* Explore how to convert the Word document to Word processing XML using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtowordml#/material3).
+* See how to convert the Word processing XML to Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordmltoword#/material3).

@@ -16,6 +16,8 @@ Convert an existing Word document or document that is created from scratch into 
 
 The following code example shows how to convert a Word document to a Markdown.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -655,3 +657,7 @@ The following table shows the list of Word document elements supported in Word t
 </tr>
 </tbody>
 </table>
+
+## Online Demo
+
+* Explore how to convert the Word document to Markdown using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtomarkdown#/material3).
