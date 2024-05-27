@@ -381,7 +381,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
         using (WordDocument newDocument = documentPart.GetAsWordDocument())
         {
             //Save the Word document to file stream.
-            using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../" + bookmark.Name + ".docx"), FileMode.Create, FileAccess.ReadWrite))
+            using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"bookmark.Name + ".docx"), FileMode.Create, FileAccess.ReadWrite))
             {
                 newDocument.Save(outputFileStream, FormatType.Docx);
             }
@@ -453,7 +453,6 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
     TextSelection[] textSelections = document.FindAll(new Regex("<<(.*)>>"));
     if (textSelections != null)
     {
-        #region Insert bookmarks at placeholders
         //Unique ID for each bookmark.
         int bkmkId = 1;
         //Collection to hold the inserted bookmarks.
@@ -461,7 +460,6 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
         //Iterate each text selection.
         for (int i = 0; i < textSelections.Length; i++)
         {
-            #region Insert bookmark start before the placeholder
             //Get the placeholder as WTextRange.
             WTextRange textRange = textSelections[i].GetAsOneRange();
             //Get the index of the placeholder text. 
@@ -476,9 +474,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
             startParagraph.ChildEntities.Insert(index, bkmkStart);
             //Remove the placeholder text.
             textRange.Text = string.Empty;
-            #endregion
 
-            #region Insert bookmark end after the placeholder
             i++;
             //Get the placeholder as WTextRange.
             textRange = textSelections[i].GetAsOneRange();
@@ -492,10 +488,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
             bkmkId++;
             //Remove the placeholder text.
             textRange.Text = string.Empty;
-            #endregion
         }
-        #endregion
-        #region Split bookmark content into separate documents 
         BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(document);
         int fileIndex = 1;
         foreach (string bookmark in bookmarks)
@@ -515,7 +508,6 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
             }
          fileIndex++;
         }
-        #endregion
     }
 }
 {% endhighlight %}
@@ -528,7 +520,6 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
     TextSelection[] textSelections = document.FindAll(new Regex("<<(.*)>>"));
     if (textSelections != null)
     {
-        #region Insert bookmarks at placeholders
         //Unique ID for each bookmark.
         int bkmkId = 1;
         //Collection to hold the inserted bookmarks.
@@ -536,7 +527,6 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
         //Iterate each text selection.
         for (int i = 0; i < textSelections.Length; i++)
         {
-            #region Insert bookmark start before the placeholder
             //Get the placeholder as WTextRange.
             WTextRange textRange = textSelections[i].GetAsOneRange();
             //Get the index of the placeholder text. 
@@ -551,9 +541,7 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
             startParagraph.ChildEntities.Insert(index, bkmkStart);
             //Remove the placeholder text.
             textRange.Text = string.Empty;
-            #endregion
 
-            #region Insert bookmark end after the placeholder
             i++;
             //Get the placeholder as WTextRange.
             textRange = textSelections[i].GetAsOneRange();
@@ -567,10 +555,7 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
             bkmkId++;
             //Remove the placeholder text.
             textRange.Text = string.Empty;
-            #endregion
         }
-        #endregion
-        #region Split bookmark content into separate documents 
         BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(document);
         int fileIndex = 1;
         foreach (string bookmark in bookmarks)
@@ -584,7 +569,6 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
                  newDocument.Save("Placeholder_" + fileIndex + ".docx", FormatType.Docx);
          fileIndex++;
         }
-        #endregion
     }
 }
 {% endhighlight %}
@@ -596,14 +580,12 @@ Using document As WordDocument = New WordDocument("Template.docx", FormatType.Do
             Dim textSelections As TextSelection() = document.FindAll(New Regex("<<(.*)>>"))
 
             If textSelections IsNot Nothing Then
-                 #Region "Insert bookmarks at placeholders"
                 'Unique ID for each bookmark.
                 Dim bkmkId = 1
                 'Collection to hold the inserted bookmarks.
                 Dim bookmarks As List(Of String) = New List(Of String)()
                 'Iterate each text selection.
                 For i = 0 To textSelections.Length - 1
-                    #Region "Insert bookmark start before the placeholder"
                     'Get the placeholder as WTextRange.
                     Dim textRange As WTextRange = textSelections(i).GetAsOneRange()
                     'Get the index of the placeholder text. 
@@ -618,9 +600,7 @@ Using document As WordDocument = New WordDocument("Template.docx", FormatType.Do
                     startParagraph.ChildEntities.Insert(index, bkmkStart)
                     'Remove the placeholder text.
                     textRange.Text = String.Empty
-                    #End Region
 
-                    #Region "Insert bookmark end after the placeholder"
                     i += 1
                     'Get the placeholder as WTextRange.
                     textRange = textSelections(i).GetAsOneRange()
@@ -634,10 +614,8 @@ Using document As WordDocument = New WordDocument("Template.docx", FormatType.Do
                     bkmkId += 1
                     'Remove the placeholder text.
                     textRange.Text = String.Empty
-                    #End Region
                 Next
-                #End Region
-                #Region "Split bookmark content into separate documents "
+
                 Dim bookmarksNavigator As BookmarksNavigator = New BookmarksNavigator(document)
                 Dim fileIndex = 1
                 For Each bookmark In bookmarks
@@ -652,7 +630,6 @@ Using document As WordDocument = New WordDocument("Template.docx", FormatType.Do
                     End Using
                     fileIndex += 1
                 Next
-                #End Region
             End If
 End Using
 {% endhighlight %}
