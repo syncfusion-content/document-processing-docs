@@ -29,7 +29,7 @@ FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileA
 //Load the template document as stream
 using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
-    int i = 0;
+    int fileId = 0;
     //Iterate each section from Word document
     foreach (WSection section in document.Sections)
     {
@@ -38,11 +38,11 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
         //Add cloned section into new Word document
         newDocument.Sections.Add(section.Clone());
         //Saves the Word document to  MemoryStream
-        FileStream outputStream = new FileStream("Section" + i + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        FileStream outputStream = new FileStream("Section" + fileId + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
         newDocument.Save(outputStream, FormatType.Docx);
         //Closes the document
         newDocument.Close();
-        i++;
+        fileId++;
     }
 }
 {% endhighlight %}
@@ -51,7 +51,7 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 //Load the template document
 using (WordDocument document = new WordDocument(@"Template.docx"))
 {
-    int i = 0;
+    int fileId = 0;
     //Iterate each section from Word document
     foreach (WSection section in document.Sections)
     {
@@ -60,9 +60,9 @@ using (WordDocument document = new WordDocument(@"Template.docx"))
         //Add cloned section into new Word document
         newDocument.Sections.Add(section.Clone());
         //Save and close the new Word documet
-        newDocument.Save("Section" + i + ".docx");
+        newDocument.Save("Section" + fileId + ".docx");
         newDocument.Close();
-        i++;
+        fileId++;
     }
 }
 {% endhighlight %}
@@ -70,7 +70,7 @@ using (WordDocument document = new WordDocument(@"Template.docx"))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load the template document
 Using document As WordDocument = New WordDocument("Template.docx")
-    Dim i As Integer = 0
+    Dim fileId As Integer = 0
     'Iterate each section from Word document
     For Each section As WSection In document.Sections
         'Create new Word document
@@ -78,9 +78,9 @@ Using document As WordDocument = New WordDocument("Template.docx")
         'Add cloned section into new Word document
         newDocument.Sections.Add(section.Clone())
         'Save and close the new Word documet
-        newDocument.Save("Section" & i & ".docx")
+        newDocument.Save("Section" & fileId & ".docx")
         newDocument.Close()
-        i += 1
+        fileId += 1
     Next
 End Using
 {% endhighlight %}
@@ -100,48 +100,53 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 {
     //Load the template document as stream
     using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
-    {
+    {   
+        MemoryStream memoryStream = null;
         WordDocument newDocument = null;
         WSection newSection = null;
-        int i = 0;
-        //Iterate each section from Word document
+        int headingIndex = 0;
+        /Iterate each section in the Word document.
         foreach (WSection section in document.Sections)
         {
+            // Clone the section and add into new document.
             if (newDocument != null)
-                newSection = AddSection(newDocument, section);
-            foreach (TextBodyItem textbodyitem in section.Body.ChildEntities)
+            newSection = AddSection(newDocument, section);
+            //Iterate each child entity in the Word document.
+            foreach (TextBodyItem item in section.Body.ChildEntities)
             {
-                if (textbodyitem is WParagraph)
+                //If item is paragraph, then check for heading style and split.
+                //else, add the item into new document.
+                if (item is WParagraph)
                 {
-                    WParagraph para = textbodyitem as WParagraph;
-                    if (para.StyleName == "Heading 1")
+                    WParagraph paragraph = item as WParagraph;
+                    //If paragraph has Heading 1 style, then save the traversed content as separate document.
+                    //And create new document for new heading content.
+                    if (paragraph.StyleName == "Heading 1")
                     {
                         if (newDocument != null)
                         {
                             //Saves the Word document
-                            string fileName = "Heading" + i + ".docx";
+                            string fileName = "Document" + (headingIndex + 1) + ".docx";
                             SaveWordDocument(newDocument, fileName);
-                            i++;
+                            headingIndex++;
                         }
-                        //Create new Word document
+                        //Create new document for new heading content.
                         newDocument = new WordDocument();
                         newSection = AddSection(newDocument, section);
-                        //Add cloned paragraphs into new section
-                        AddEntity(newSection, para);
+                        AddEntity(newSection, paragraph);
                     }
                     else if (newDocument != null)
-                        //Add cloned paragraphs into new section
-                        AddEntity(newSection, para);
+                        AddEntity(newSection, paragraph);
                 }
                 else
-                    //Add cloned item into new section
-                    AddEntity(newSection, textbodyitem);
+                    AddEntity(newSection, item);
             }
         }
+        //Save the remaining content as separate document.
         if (newDocument != null)
         {
             //Saves the Word document
-            string fileName = "Heading" + i + ".docx";
+            string fileName = "Document" + (headingIndex + 1) + ".docx";
             SaveWordDocument(newDocument, fileName);
         }
     }
@@ -192,48 +197,52 @@ private static void SaveWordDocument(WordDocument newDocument, string fileName)
 //Load the template document
 using (WordDocument doc = new WordDocument("Template.docx"))
 {
+    MemoryStream memoryStream = null;
     WordDocument newDocument = null;
     WSection newSection = null;
-    int i = 1;
-    //Iterate each section from Word document
-    foreach (WSection section in doc.Sections)
+    int headingIndex = 0;
+    /Iterate each section in the Word document.
+    foreach (WSection section in document.Sections)
     {
+        // Clone the section and add into new document.
         if (newDocument != null)
             newSection = AddSection(newDocument, section);
-        foreach (TextBodyItem textbodyitem in section.Body.ChildEntities)
+        //Iterate each child entity in the Word document.
+        foreach (TextBodyItem item in section.Body.ChildEntities)
         {
-            if (textbodyitem is WParagraph)
+            //If item is paragraph, then check for heading style and split.
+            //else, add the item into new document.
+            if (item is WParagraph)
             {
-                WParagraph para = textbodyitem as WParagraph;
-                // Check whether the paragraph has heading style or normal style
-                if (para.StyleName == "Heading 1")
+                WParagraph paragraph = item as WParagraph;
+                //If paragraph has Heading 1 style, then save the traversed content as separate document.
+                //And create new document for new heading content.
+                if (paragraph.StyleName == "Heading 1")
                 {
                     if (newDocument != null)
                     {
-                        string fileName = "Heading" + i + ".docx";
                         //Saves the Word document
+                        string fileName = "Document" + (headingIndex + 1) + ".docx";
                         SaveWordDocument(newDocument, fileName);
-                        i++;
+                        headingIndex++;
                     }
-                    //Create new Word document
+                    //Create new document for new heading content.
                     newDocument = new WordDocument();
                     newSection = AddSection(newDocument, section);
-                    //Add cloned paragraphs into new section
-                    AddEntity(newSection, para);
+                    AddEntity(newSection, paragraph);
                 }
                 else if (newDocument != null)
-                    //Add cloned paragraphs into new section
-                    AddEntity(newSection, para);
+                    AddEntity(newSection, paragraph);
             }
             else
-                //Add cloned item into new section
-                AddEntity(newSection, textbodyitem);
+                AddEntity(newSection, item);
         }
     }
+    //Save the remaining content as separate document.
     if (newDocument != null)
     {
-        string fileName = "Heading" + i + ".docx";
         //Saves the Word document
+        string fileName = "Document" + (headingIndex + 1) + ".docx";
         SaveWordDocument(newDocument, fileName);
     }
 }
@@ -281,41 +290,42 @@ private static void SaveWordDocument(WordDocument newDocument, string fileName)
 Using doc As WordDocument = New WordDocument("Template.docx")
     Dim newDocument As WordDocument = Nothing
     Dim newSection As WSection = Nothing
-    Dim i As Integer = 1
-    'Iterate each section from Word document
-    For Each section As WSection In doc.Sections
-        If newDocument IsNot Nothing Then
-            newSection = AddSection(newDocument, section)
-        End If
-        For Each textbodyitem As TextBodyItem In section.Body.ChildEntities
-            If TypeOf textbodyitem Is WParagraph Then
-                Dim para As WParagraph = TryCast(textbodyitem, WParagraph)
-                'Check whether the paragraph has heading style or normal style
-                If para.StyleName = "Heading 1" Then
+    Dim headingIndex = 0
+    'Iterate each section in the Word document.
+    For Each section As WSection In document.Sections
+        ' Clone the section and add into new document.
+        If newDocument IsNot Nothing Then newSection = AddSection(newDocument, section)
+        'Iterate each child entity in the Word document.
+        For Each item As TextBodyItem In section.Body.ChildEntities
+            'If item is paragraph, then check for heading style and split.
+            'else, add the item into new document.
+            If TypeOf item Is WParagraph Then
+                Dim paragraph As WParagraph = TryCast(item, WParagraph)
+                'If paragraph has Heading 1 style, then save the traversed content as separate document.
+                'And create new document for new heading content.
+                If paragraph.StyleName Is "Heading 1" Then
                     If newDocument IsNot Nothing Then
-                        'Save and close the new Word documet
-                        Dim fileName As String = "Heading" & i & ".docx"
+                        'Saves the Word document
+                        Dim fileName As String = "Document" & (headingIndex + 1).ToString() & ".docx"
                         SaveWordDocument(newDocument, fileName)
-                        i += 1
+                        headingIndex += 1
                     End If
-                    'Create new Word document
+                    'Create new document for new heading content.
                     newDocument = New WordDocument()
                     newSection = AddSection(newDocument, section)
-                    AddEntity(newSection, para)
+                    AddEntity(newSection, paragraph)
                 ElseIf newDocument IsNot Nothing Then
-                    'Add cloned paragraphs into new section
-                    AddEntity(newSection, para)
+                    AddEntity(newSection, paragraph)
                 End If
             Else
-                'Add cloned items into new section
-                AddEntity(newSection, textbodyitem)
+                AddEntity(newSection, item)
             End If
         Next
     Next
-
+    'Save the remaining content as separate document.
     If newDocument IsNot Nothing Then
-        'Save and close the new Word documet
-        Dim fileName As String = "Heading" & i & ".docx"
+        'Saves the Word document
+        Dim fileName As String = "Document" & (headingIndex + 1).ToString() & ".docx"
         SaveWordDocument(newDocument, fileName)
     End If
 End Using
@@ -359,26 +369,24 @@ The following code example illustrates how to split the Word document using book
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
-    //Create a bookmark navigator instance to access the bookmark.
-    BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(document);
-    //Get the bookmark collections in the document.
+    //Create the bookmark navigator instance to access the bookmark.
+    BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(document);
     BookmarkCollection bookmarkCollection = document.Bookmarks;
+    //Iterate each bookmark in Word document.
     foreach (Bookmark bookmark in bookmarkCollection)
     {
-        //Move the virtual cursor to the location before the end of the bookmark.
-        bookmarkNavigator.MoveToBookmark(bookmark.Name);
-        //Get the bookmark content.
-        TextBodyPart part = bookmarkNavigator.GetBookmarkContent();
-        //Create a new Word document.
-        WordDocument newDocument = new WordDocument();
-        newDocument.AddSection();
-        //Add the retrieved content to another new document.
-        for (int i = 0; i < part.BodyItems.Count; i++)
-            newDocument.LastSection.Body.ChildEntities.Add(part.BodyItems[i].Clone());
-        using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Result" + bookmark.Name + ".docx"), FileMode.Create, FileAccess.ReadWrite))
+         //Move the virtual cursor to the location before the end of the bookmark.
+        bookmarksNavigator.MoveToBookmark(bookmark.Name);
+        //Get the bookmark content as WordDocumentPart.
+        WordDocumentPart documentPart = bookmarksNavigator.GetContent();
+        //Save the WordDocumentPart as separate Word document
+        using (WordDocument newDocument = documentPart.GetAsWordDocument())
         {
-            //Saves the Word document to file stream.
-            newDocument.Save(outputFileStream, FormatType.Docx);
+            //Save the Word document to file stream.
+            using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../" + bookmark.Name + ".docx"), FileMode.Create, FileAccess.ReadWrite))
+            {
+                newDocument.Save(outputFileStream, FormatType.Docx);
+            }
         }
     }
 }
@@ -388,25 +396,21 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 //Load an existing Word document.
 using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx))
 {
-    //Create a bookmark navigator instance to access the bookmark.
-    BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(document);
-    //Get the bookmark collections in the document.
-    BookmarkCollection bookmarkCollection =  document.Bookmarks;
+    //Create the bookmark navigator instance to access the bookmark.
+    BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(document);
+    BookmarkCollection bookmarkCollection = document.Bookmarks;
+    //Iterate each bookmark in Word document.
     foreach (Bookmark bookmark in bookmarkCollection)
     {
         //Move the virtual cursor to the location before the end of the bookmark.
-        bookmarkNavigator.MoveToBookmark(bookmark.Name);
-        //Get the bookmark content.
-        TextBodyPart part = bookmarkNavigator.GetBookmarkContent();
-        //Create a new Word document.
-        WordDocument newDocument = new WordDocument();
-        newDocument.AddSection();
-        //Add the retrieved content to another new document.
-        for (int i = 0; i < part.BodyItems.Count; i++)
-            newDocument.LastSection.Body.ChildEntities.Add(part.BodyItems[i].Clone());
-        //Save the Word document.
-        newDocument.Save(@"Result"+ bookmark.Name + ".docx", FormatType.Docx);
-        newDocument.Close();
+        bookmarksNavigator.MoveToBookmark(bookmark.Name);
+        //Get the bookmark content as WordDocumentPart.
+        WordDocumentPart documentPart = bookmarksNavigator.GetContent();
+        //Save the WordDocumentPart as separate Word document
+        using (WordDocument newDocument = documentPart.GetAsWordDocument())
+        {
+            newDocument.Save(bookmark.Name + ".docx", FormatType.Docx);
+        }
     }
 }
 {% endhighlight %}
@@ -414,25 +418,20 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load an existing Word document.
 Using document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
-    'Create a bookmark navigator instance to access the bookmark.
-    Dim bookmarkNavigator As BookmarksNavigator = New BookmarksNavigator(document)
-    'Get the bookmark collections in the document.
+    'Create the bookmark navigator instance to access the bookmark.
+    Dim bookmarksNavigator As BookmarksNavigator = New BookmarksNavigator(document)
     Dim bookmarkCollection As BookmarkCollection = document.Bookmarks
+    'Iterate each bookmark in Word document.
     For Each bookmark As Bookmark In bookmarkCollection
-        'Move the virtual cursor to the location before the end of the bookmark.
-        bookmarkNavigator.MoveToBookmark(bookmark.Name)
-        'Get the bookmark content.
-        Dim part As TextBodyPart = bookmarkNavigator.GetBookmarkContent()
-        'Create a new Word document.
-        Dim newDocument As WordDocument = New WordDocument()
-        newDocument.AddSection()
-        'Add the retrieved content to another new document.
-        For i As Integer = 0 To part.BodyItems.Count - 1
-            newDocument.LastSection.Body.ChildEntities.Add(part.BodyItems(i).Clone())
-        Next
+    'Move the virtual cursor to the location before the end of the bookmark.
+    bookmarksNavigator.MoveToBookmark(bookmark.Name)
+    'Get the bookmark content as WordDocumentPart.
+    Dim documentPart As WordDocumentPart = bookmarksNavigator.GetContent()
+    'Save the WordDocumentPart as separate Word document
+    Using newDocument As WordDocument = documentPart.GetAsWordDocument()
         'Save the Word document
-        newDocument.Save("Result" & bookmark.Name & ".docx", FormatType.Docx)
-        newDocument.Close()
+        newDocument.Save(bookmark.Name & ".docx", FormatType.Docx)
+    End Using
     Next
 End Using
 {% endhighlight %}
@@ -452,30 +451,73 @@ The following code example illustrates how to split the Word document using the 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
-    String[] findPlaceHolderWord = new string[] { "[First Content Start]", "[Second Content Start]", "[Third Content Start]" };
-    for (int i = 0; i < findPlaceHolderWord.Length; i++)
+    //Finds all the placeholder text in the Word document.
+    TextSelection[] textSelections = document.FindAll(new Regex("<<(.*)>>"));
+    if (textSelections != null)
     {
-        //Get the start placeholder paragraph in the document.
-        WParagraph startParagraph = document.Find(findPlaceHolderWord[i], true, true).GetAsOneRange().OwnerParagraph;
-        //Get the end placeholder paragraph in the document.
-        WParagraph endParagraph = document.Find(findPlaceHolderWord[i].Replace("Start", "End"), true, true).GetAsOneRange().OwnerParagraph;
-        //Get the text body.
-        WTextBody textBody = startParagraph.OwnerTextBody;
-        //Get the start PlaceHolder index.
-        int startPlaceHolderIndex = textBody.ChildEntities.IndexOf(startParagraph);
-        //Get the end PlaceHolder index.
-        int endPlaceHolderIndex = textBody.ChildEntities.IndexOf(endParagraph);
-        //Create a new Word document.
-        WordDocument newDocument = new WordDocument();
-        newDocument.AddSection();
-        //Add the retrieved content to another new document.
-        for (int j = startPlaceHolderIndex + 1; j < endPlaceHolderIndex; j++)
-            newDocument.LastSection.Body.ChildEntities.Add(textBody.ChildEntities[j].Clone());
-        using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Result" + i + ".docx"), FileMode.Create, FileAccess.ReadWrite))
+        #region Insert bookmarks at placeholders
+        //Unique ID for each bookmark.
+        int bkmkId = 1;
+        //Collection to hold the inserted bookmarks.
+        List<string> bookmarks = new List<string>();
+        //Iterate each text selection.
+        for (int i = 0; i < textSelections.Length; i++)
         {
-            //Save the Word document to file stream.
-            newDocument.Save(outputFileStream, FormatType.Docx);
+            #region Insert bookmark start before the placeholder
+            //Get the placeholder as WTextRange.
+            WTextRange textRange = textSelections[i].GetAsOneRange();
+            //Get the index of the placeholder text. 
+            WParagraph startParagraph = textRange.OwnerParagraph;
+            int index = startParagraph.ChildEntities.IndexOf(textRange);
+            string bookmarkName = "Bookmark_" + bkmkId;
+            //Add new bookmark to bookmarks collection.
+            bookmarks.Add(bookmarkName);
+            //Create bookmark start.
+            BookmarkStart bkmkStart = new BookmarkStart(document, bookmarkName);
+            //Insert the bookmark start before the start placeholder.
+            startParagraph.ChildEntities.Insert(index, bkmkStart);
+            //Remove the placeholder text.
+            textRange.Text = string.Empty;
+            #endregion
+
+            #region Insert bookmark end after the placeholder
+            i++;
+            //Get the placeholder as WTextRange.
+            textRange = textSelections[i].GetAsOneRange();
+            //Get the index of the placeholder text. 
+            WParagraph endParagraph = textRange.OwnerParagraph;
+            index = endParagraph.ChildEntities.IndexOf(textRange);
+            //Create bookmark end.
+            BookmarkEnd bkmkEnd = new BookmarkEnd(document, bookmarkName);
+            //Insert the bookmark end after the end placeholder.
+            endParagraph.ChildEntities.Insert(index + 1, bkmkEnd);
+            bkmkId++;
+            //Remove the placeholder text.
+            textRange.Text = string.Empty;
+            #endregion
         }
+        #endregion
+        #region Split bookmark content into separate documents 
+        BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(document);
+        int fileIndex = 1;
+        foreach (string bookmark in bookmarks)
+        {
+            //Move the virtual cursor to the location before the end of the bookmark.
+            bookmarksNavigator.MoveToBookmark(bookmark);
+            //Get the bookmark content as WordDocumentPart.
+            WordDocumentPart wordDocumentPart = bookmarksNavigator.GetContent();
+            //Save the WordDocumentPart as separate Word document.
+            using (WordDocument newDocument = wordDocumentPart.GetAsWordDocument())
+           {
+                //Save the Word document to file stream.
+                using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Placeholder_" + fileIndex + ".docx"), FileMode.Create, FileAccess.ReadWrite))
+                {
+                    newDocument.Save(outputFileStream, FormatType.Docx);
+                }
+            }
+         fileIndex++;
+        }
+        #endregion
     }
 }
 {% endhighlight %}
@@ -484,28 +526,67 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 //Load an existing Word document into DocIO instance.
 using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx))
 {
-    String[] findPlaceHolderWord = new string[] { "[First Content Start]", "[Second Content Start]", "[Third Content Start]" };
-    for (int i = 0; i < findPlaceHolderWord.Length; i++)
+    //Finds all the placeholder text in the Word document.
+    TextSelection[] textSelections = document.FindAll(new Regex("<<(.*)>>"));
+    if (textSelections != null)
     {
-        //Get the start placeholder paragraph in the document.
-        WParagraph startParagraph = document.Find(findPlaceHolderWord[i], true, true).GetAsOneRange().OwnerParagraph;
-        //Get the end placeholder paragraph in the document.
-        WParagraph endParagraph = document.Find(findPlaceHolderWord[i].Replace("Start", "End"), true, true).GetAsOneRange().OwnerParagraph;
-        //Get the text body.
-        WTextBody textBody = startParagraph.OwnerTextBody;
-        //Get the start PlaceHolder index.
-        int startPlaceHolderIndex = textBody.ChildEntities.IndexOf(startParagraph);
-        //Get the end PlaceHolder index.
-        int endPlaceHolderIndex = textBody.ChildEntities.IndexOf(endParagraph);
-        //Create a new Word document.
-        WordDocument newDocument = new WordDocument();
-        newDocument.AddSection();
-        //Add the retrieved content to another new document.
-        for (int j = startPlaceHolderIndex + 1; j < endPlaceHolderIndex; j++)
-            newDocument.LastSection.Body.ChildEntities.Add(textBody.ChildEntities[j].Clone());
-        //Save the Word document.
-        newDocument.Save("Result" + i + ".docx", FormatType.Docx);
-        newDocument.Close();
+        #region Insert bookmarks at placeholders
+        //Unique ID for each bookmark.
+        int bkmkId = 1;
+        //Collection to hold the inserted bookmarks.
+        List<string> bookmarks = new List<string>();
+        //Iterate each text selection.
+        for (int i = 0; i < textSelections.Length; i++)
+        {
+            #region Insert bookmark start before the placeholder
+            //Get the placeholder as WTextRange.
+            WTextRange textRange = textSelections[i].GetAsOneRange();
+            //Get the index of the placeholder text. 
+            WParagraph startParagraph = textRange.OwnerParagraph;
+            int index = startParagraph.ChildEntities.IndexOf(textRange);
+            string bookmarkName = "Bookmark_" + bkmkId;
+            //Add new bookmark to bookmarks collection.
+            bookmarks.Add(bookmarkName);
+            //Create bookmark start.
+            BookmarkStart bkmkStart = new BookmarkStart(document, bookmarkName);
+            //Insert the bookmark start before the start placeholder.
+            startParagraph.ChildEntities.Insert(index, bkmkStart);
+            //Remove the placeholder text.
+            textRange.Text = string.Empty;
+            #endregion
+
+            #region Insert bookmark end after the placeholder
+            i++;
+            //Get the placeholder as WTextRange.
+            textRange = textSelections[i].GetAsOneRange();
+            //Get the index of the placeholder text. 
+            WParagraph endParagraph = textRange.OwnerParagraph;
+            index = endParagraph.ChildEntities.IndexOf(textRange);
+            //Create bookmark end.
+            BookmarkEnd bkmkEnd = new BookmarkEnd(document, bookmarkName);
+            //Insert the bookmark end after the end placeholder.
+            endParagraph.ChildEntities.Insert(index + 1, bkmkEnd);
+            bkmkId++;
+            //Remove the placeholder text.
+            textRange.Text = string.Empty;
+            #endregion
+        }
+        #endregion
+        #region Split bookmark content into separate documents 
+        BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(document);
+        int fileIndex = 1;
+        foreach (string bookmark in bookmarks)
+        {
+            //Move the virtual cursor to the location before the end of the bookmark.
+            bookmarksNavigator.MoveToBookmark(bookmark);
+            //Get the bookmark content as WordDocumentPart.
+            WordDocumentPart wordDocumentPart = bookmarksNavigator.GetContent();
+            //Save the WordDocumentPart as separate Word document.
+            using (WordDocument newDocument = wordDocumentPart.GetAsWordDocument())
+                 newDocument.Save("Placeholder_" + fileIndex + ".docx", FormatType.Docx);
+         fileIndex++;
+        }
+        #endregion
     }
 }
 {% endhighlight %}
@@ -513,29 +594,68 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load an existing Word document into DocIO instance.
 Using document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
-    Dim findPlaceHolderWord As String() = New String() {"[First Content Start]", "[Second Content Start]", "[Third Content Start]"}
-    For i As Integer = 0 To findPlaceHolderWord.Length - 1
-        'Get the start placeholder paragraph in the document.
-        Dim startParagraph As WParagraph = document.Find(findPlaceHolderWord(i), True, True).GetAsOneRange().OwnerParagraph
-        'Get the end placeholder paragraph in the document.
-        Dim endParagraph As WParagraph = document.Find(findPlaceHolderWord(i).Replace("Start", "End"), True, True).GetAsOneRange().OwnerParagraph
-        'Get the text body.
-        Dim textBody As WTextBody = startParagraph.OwnerTextBody
-        'Get the start PlaceHolder index.
-        Dim startPlaceHolderIndex As Integer = textBody.ChildEntities.IndexOf(startParagraph)
-        'Get the end PlaceHolder index.
-        Dim endPlaceHolderIndex As Integer = textBody.ChildEntities.IndexOf(endParagraph)
-        'Create a new Word document.
-        Dim newDocument As WordDocument = New WordDocument()
-        newDocument.AddSection()
-        'Add the retrieved content to another new document.
-        For j As Integer = startPlaceHolderIndex + 1 To endPlaceHolderIndex - 1
-            newDocument.LastSection.Body.ChildEntities.Add(textBody.ChildEntities(j).Clone())
-        Next
-        'Save the Word document.
-        newDocument.Save("Result" & i & ".docx", FormatType.Docx) 
-        newDocument.Close();	   
-    Next
+            'Finds all the placeholder text in the Word document.
+            Dim textSelections As TextSelection() = document.FindAll(New Regex("<<(.*)>>"))
+
+            If textSelections IsNot Nothing Then
+                 #Region "Insert bookmarks at placeholders"
+                'Unique ID for each bookmark.
+                Dim bkmkId = 1
+                'Collection to hold the inserted bookmarks.
+                Dim bookmarks As List(Of String) = New List(Of String)()
+                'Iterate each text selection.
+                For i = 0 To textSelections.Length - 1
+                    #Region "Insert bookmark start before the placeholder"
+                    'Get the placeholder as WTextRange.
+                    Dim textRange As WTextRange = textSelections(i).GetAsOneRange()
+                    'Get the index of the placeholder text. 
+                    Dim startParagraph As WParagraph = textRange.OwnerParagraph
+                    Dim index As Integer = startParagraph.ChildEntities.IndexOf(textRange)
+                    Dim bookmarkName As String = "Bookmark_" & bkmkId.ToString()
+                    'Add new bookmark to bookmarks collection.
+                    bookmarks.Add(bookmarkName)
+                    'Create bookmark start.
+                    Dim bkmkStart As BookmarkStart = New BookmarkStart(document, bookmarkName)
+                    'Insert the bookmark start before the start placeholder.
+                    startParagraph.ChildEntities.Insert(index, bkmkStart)
+                    'Remove the placeholder text.
+                    textRange.Text = String.Empty
+                    #End Region
+
+                    #Region "Insert bookmark end after the placeholder"
+                    i += 1
+                    'Get the placeholder as WTextRange.
+                    textRange = textSelections(i).GetAsOneRange()
+                    'Get the index of the placeholder text. 
+                    Dim endParagraph As WParagraph = textRange.OwnerParagraph
+                    index = endParagraph.ChildEntities.IndexOf(textRange)
+                    'Create bookmark end.
+                    Dim bkmkEnd As BookmarkEnd = New BookmarkEnd(document, bookmarkName)
+                    'Insert the bookmark end after the end placeholder.
+                    endParagraph.ChildEntities.Insert(index + 1, bkmkEnd)
+                    bkmkId += 1
+                    'Remove the placeholder text.
+                    textRange.Text = String.Empty
+                    #End Region
+                Next
+                #End Region
+                #Region "Split bookmark content into separate documents "
+                Dim bookmarksNavigator As BookmarksNavigator = New BookmarksNavigator(document)
+                Dim fileIndex = 1
+                For Each bookmark In bookmarks
+                    'Move the virtual cursor to the location before the end of the bookmark.
+                    bookmarksNavigator.MoveToBookmark(bookmark)
+                    'Get the bookmark content as WordDocumentPart.
+                    Dim wordDocumentPart As WordDocumentPart = bookmarksNavigator.GetContent()
+                    'Save the WordDocumentPart as separate Word document.
+                    Using newDocument As WordDocument = wordDocumentPart.GetAsWordDocument()
+                        'Save the Word document.
+                         newDocument.Save("Placeholder_" & fileIndex & ".docx", FormatType.Docx)
+                    End Using
+                    fileIndex += 1
+                Next
+                #End Region
+            End If
 End Using
 {% endhighlight %}
 
