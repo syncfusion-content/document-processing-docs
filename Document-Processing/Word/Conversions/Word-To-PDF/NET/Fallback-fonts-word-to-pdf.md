@@ -1,6 +1,6 @@
 ---
 title: Fallback Fonts in Word to PDF Conversion in C# | DocIO | Syncfusion
-description: Learn about fallback fonts in Word to PDF conversion using the .NET Word (DocIO) library.
+description: Learn about how to specify fallback fonts during Word to PDF conversion using the .NET Word (DocIO) library..
 platform: document-processing
 control: DocIO
 documentation: UG
