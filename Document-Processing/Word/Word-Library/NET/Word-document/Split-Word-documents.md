@@ -101,7 +101,6 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
     //Load the template document as stream
     using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
     {   
-        MemoryStream memoryStream = null;
         WordDocument newDocument = null;
         WSection newSection = null;
         int headingIndex = 0;
@@ -197,7 +196,6 @@ private static void SaveWordDocument(WordDocument newDocument, string fileName)
 //Load the template document
 using (WordDocument doc = new WordDocument("Template.docx"))
 {
-    MemoryStream memoryStream = null;
     WordDocument newDocument = null;
     WSection newSection = null;
     int headingIndex = 0;
