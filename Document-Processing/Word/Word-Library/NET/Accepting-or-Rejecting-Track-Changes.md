@@ -13,6 +13,8 @@ N> With this support, the changes made in the Word document by DocIO library can
 
 The following code example illustrates how to enable track changes of the document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -391,6 +393,10 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Track-Changes/Get-revision-information).
+
+## Online Demo
+
+* Explore how to accept or reject the tracked changes in the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/trackchanges#/material3).
 
 **Frequently Asked Questions**
 

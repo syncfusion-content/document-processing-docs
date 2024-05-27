@@ -16,6 +16,8 @@ Both footnotes and endnotes consist of two parts:
 
 ## Adding a Footnotes
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 The following code example shows how to insert the footnotes into the Word document.
 
 {% tabs %}
@@ -887,3 +889,7 @@ End Sub
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Footnotes-and-Endnotes/Remove-footnotes-and-endnotes).
+
+## Online Demo
+
+* Explore how to insert the footnotes and endnotes in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/footnotesandendnotes#/material3).

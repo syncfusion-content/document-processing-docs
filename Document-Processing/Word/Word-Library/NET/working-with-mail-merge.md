@@ -11,10 +11,70 @@ Mail merge is a process of merging data from data source to a Word template docu
 
 The following data sources are supported by Essential DocIO for performing Mail merge:
 
-* String Arrays
-* ADO.NET objects
-* Dynamic objects
-* .NET objects
+<table>
+<tr>
+<th>Data Source<br/><br/></th>
+<th>Examples<br/><br/></th>
+</tr>
+<tbody>
+<tr>
+<td>String arrays</td>
+<td>{{'[Mail merge with string arrays](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays)'| markdownify }}</td>
+</tr>
+<tr>
+<td>DataRow</td>
+<td>{{'[Generate multiple Word documents](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-multiple-Word-documents)'| markdownify }}</td>
+</tr>
+<tr>
+<td>DataSet</td>
+<td>{{'[Product catalog](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Product-catalog)'| markdownify }}</td>
+</tr>
+<tr>
+<td>DataTable</td>
+<td>{{'[Mail merge using DataTable](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-for-group)'| markdownify }}</td>
+</tr>
+<tr>
+<td>DataView</td>
+<td>{{'[Generate letter for filtered contacts](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-letter-for-filtered-contacts)'| markdownify }}</td>
+</tr>
+<tr>
+<td>DbConnection</td>
+<td>{{'[Mail merge using OleDbConnection](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-using-OleDbConnection)'| markdownify }}</td>
+</tr>
+<tr>
+<td>IDataReader</td>
+<td>{{'[Generate payroll for employees](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-payroll-for-employees)'| markdownify }}</td>
+</tr>
+<tr>
+<td>OleDbDataReader</td>
+<td>{{'[Generate certificate for employees](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Generate-certificate-for-employees)'| markdownify }}</td>
+</tr>
+<tr>
+<td>Dynamic</td>
+<td>{{'[Mail merge with dynamic objects](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-dynamic-objects)'| markdownify }}</td>
+</tr>
+<tr>
+<td>IEnumerable </td>
+<td>{{'[Create Envelopes for mailing](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Create-Envelopes-for-mailing)'| markdownify }}</td>
+</tr>
+<tr>
+<td>XML</td>
+<td>{{'[Generate order details of customer from XML](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Generate-order-details-of-customer)'| markdownify }}</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>{{'[Create and send email messages using JSON](https://github.com/SyncfusionExamples/Mail-Merge-Examples/tree/master/Create-and-send-email-messages)'| markdownify }}</td>
+</tr>
+<tr>
+<td>MailMergeDataTable </td>
+<td>{{'[Mail merge using MailMergeDataTable](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-.NET-objects)'| markdownify }}</td>
+</tr>
+<tr>
+<td>MailMergeDataSet</td>
+<td>{{'[Mail merge using MailMergeDataSet](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-dynamic-objects)'| markdownify }}</td>
+</tr>
+</tbody>
+</table>
 
 ## Mail merge process
 
@@ -44,6 +104,8 @@ You need to add a prefix (“Image:”) to the merge field name for merging an i
 You can **create Word document template programmatically** by adding merge fields to the Word document using Essential DocIO.
 
 The following code example shows how to create a merge field in the Word document.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
@@ -217,6 +279,10 @@ You can remove or keep the unmerged merge fields in the output document based on
 ### Restart numbering in lists
 
 You can restart the list numbering in a Word document during Mail merge. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-options#restart-numbering-in-lists).
+
+## Online Demo
+
+* Explore how to generate a letter using mail merge functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/letterformat#/material3).
 
 ## See Also
 

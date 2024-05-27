@@ -20,6 +20,8 @@ The following image illustrates how a table in Word document is organized in Ess
 
 The following code example illustrates how to create a simple table with predefined number of rows and cells.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2171,6 +2173,11 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Remove-particular-row-from-table).
+
+## Online Demo
+
+* Explore how to format a table in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/formattable#/material3).
+* See how to apply built-in and custom styles to the tables of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/tablestyles#/material3). 
 
 ## See Also
 

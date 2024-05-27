@@ -56,6 +56,8 @@ The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.Do
 
 The following code example shows how to perform Mail merge in the specific region with **data source retrieved from SQL connection**.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -526,3 +528,7 @@ public class Employee
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-.NET-objects).
+
+## Online Demo
+
+* Explore how to do a mail merge for a group in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/employeereport#/material3). 

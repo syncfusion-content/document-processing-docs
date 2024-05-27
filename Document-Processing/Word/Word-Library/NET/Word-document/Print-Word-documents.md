@@ -11,6 +11,8 @@ You can print a Word document by utilizing DocIO’s capability to convert the d
 
 Initially you have to render the pages as images as shown below
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

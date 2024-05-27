@@ -15,6 +15,8 @@ Most of the Word processors (including Microsoft Word) uses the XML-based file f
 
 The Essential DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -93,3 +95,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Supported and Unsupported features
 The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features)
+
+## Online Demo
+
+* Explore how to convert the RTF file to Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/rtftodoc#/material3).

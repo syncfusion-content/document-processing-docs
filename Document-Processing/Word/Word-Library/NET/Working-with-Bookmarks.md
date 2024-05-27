@@ -16,6 +16,8 @@ In Essential DocIO, bookmark is represented by [Bookmark](https://help.syncfusio
 
 The following code example shows how to add a bookmark in Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1134,6 +1136,11 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET-Standard).
+
+## Online Demo
+
+* Explore how to insert bookmarks into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/bookmarks#/material3).  
+* See how to navigate between the bookmarks in a Word document and edit its content using bookmark navigation functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/bookmarknavigation#/material3).
 
 ## See Also
 

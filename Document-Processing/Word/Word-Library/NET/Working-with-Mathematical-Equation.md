@@ -41,6 +41,8 @@ The following different structures of equation can be created by using the Essen
 
 You can add an accent mark to the equation. The following code example shows how to add an accent mark to the equation.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2093,4 +2095,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the above code example, it generates output Word document as follows.
 ![Resultant output Word document](WorkingwithMathematicalEquation_images/EditedEquation.png)
+
+## Online Demo
+
+* Explore how to create a Word document with mathematical equations using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/createequation#/material3).
+* See how to modify a mathematical equation in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/editequation#/material3).
 
