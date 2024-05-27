@@ -580,41 +580,39 @@ A complete working example to create conditional formats with formula in C# is p
 
 ## Types of Conditional Formatting
 
-### Highlight Cell
+### Highlight Cells
 
 These are conditional formatting rules that apply specific formatting to cells based on their values. Examples include highlighting cells that contain certain text, numbers within a specific range, dates before or after a given date, or values that are duplicates or unique. These rules help in quickly identifying and emphasizing important data points.
 
-For further information, click [here]().
+To learn about how to highlight cells using conditional formatting in C#, click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/highlight-cells).
 
 ### Top/Bottom
 
 These conditional formatting rules are used to highlight cells that contain the highest or lowest values in a dataset. Formatting the top 10 items, bottom 10%, or the highest and lowest values based on specified criteria helps in easily spotting extremes in data, such as best-performing sales figures or lowest test scores.
 
-For further information, click [here]()
+To learn about how to add top bottom rules using conditional formatting in C#, click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/top-bottom).
 
 ### Data Bars
 
 These conditional formatting rules add horizontal bars to cells to visually represent the cell values. The length of the bar corresponds to the value in the cell, making it easy to compare values across a range. Data bars provide a quick visual summary of data distribution and relative magnitudes.
 
-For further information, click [here]()
+To learn about how to add data bar using conditional formatting in C#, Click [here] (https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/data-bars).
 
 ### Color Scales
 
 These conditional formatting rules apply a gradient of colors to cells based on their values. Each color represents a different value range, allowing for a visual representation of data trends and variations. For example, a green-yellow-red scale can indicate low, medium, and high values, respectively.
 
-For further information, click [here]()
+To learn about how to add color scales using conditional formatting in C#, Click [here] (https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/color-scales).
 
 ### Icon Sets
 
 These are collections of icons that are applied to cells based on their values. Icons, such as arrows, traffic lights, or symbols, visually indicate different data levels or conditions. For example, arrows might show upward or downward trends, and traffic lights can indicate performance status.
 
-For further information, click [here]()
+To learn about how to add icon sets using conditional formatting in C#, Click [here] (https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/icon-sets).
 
 #### Custom Icon Sets
 
 Similar to standard icon sets, custom icon sets allow users to define their own icons and the value ranges that trigger each icon. This offers more flexibility and customization, enabling tailored visual representations of data according to specific criteria or business needs.
-
-For further information, click [here]()
 
 ## See Also
 
