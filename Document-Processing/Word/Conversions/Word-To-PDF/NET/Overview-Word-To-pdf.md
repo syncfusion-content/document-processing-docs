@@ -1,10 +1,11 @@
 ---
-title: Convert Word to PDF in .NET Word Library | DocIO | Syncfusion
-description: Learn how to convert a Word document to PDF using the .NET  Word (DocIO) library without Microsoft Word or interop dependencies. 
+title: Overview of Word document to PDF conversion | Syncfusion
+description: Learn about Word document to PDF conversion in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
+
 # Convert Word  to PDF using .NET Word (DocIO) library 
 
 Syncfusion Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
@@ -151,3 +152,104 @@ The .NET Word Library (DocIO) supports below formats to convert into PDF.
 * Text 
 * Markdown 
 * HTML 
+
+# Word to PDF conversion in Linux OS
+
+In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. You can refer [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with Word to PDF conversion capabilities.
+
+From v23.1.40, in addition to the previous NuGet packages, we recommend to use [SkiaSharp.NativeAssets.Linux v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6) and [HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0) NuGets to perform Word to PDF conversion in Linux environment.
+
+If you are using prior to v23.1.40 release, please refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os) to know about how to perform Word to PDF conversion in Linux.
+
+**Frequently Asked Questions**
+* [How to copy necessary fonts to Linux containers?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-copy-necessary-fonts-to-linux-containers)
+* [How to set culture / locale in Docker containers (Windows & Linux containers)?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-set-culturelocale-in-docker-containers-windows-and-linux-containers)
+* [How to copy necessary Microsoft compatible fonts to Linux?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-copy-necessary-microsoft-compatible-fonts-to-linux)
+* [How to resolve LibSkiaSharp not found Exception?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-resolve-libskiasharp-not-found-exception)
+
+# Customization settings 
+
+## Fast rendering 
+
+This setting allows you to convert PDF faster by using direct PDF rendering approach rather than EMF rendering approach. For further information, click [here].
+
+## Embedding fonts 
+
+You can customize the TrueType fonts embedding in two ways as follows: 
+
+* Embed Subset Fonts 
+* Embed Complete Fonts 
+
+## Accessible PDF document 
+
+This setting allows you to determine whether to preserve document structured tags in the converted PDF document for accessibility (508 compliance) support. For further information, click here. 
+
+## Word document headings to PDF bookmarks 
+
+This setting allows you to determine whether to preserve Word document headings (i.e., paragraph with heading style and outline level) as bookmarks in the converted PDF document. For further information, click here. 
+
+## Word document form field to PDF form field. 
+
+This setting allows you to determine whether to preserve Word document form fields (Text form field, Checkbox form field and Drop-down form field) as PDF form fields in the converted PDF document. This features helps in creating fillable PDF forms from Word document. For further information, click here. 
+
+## Image quality 
+
+This setting allows you to determine the quality of the charts and JPEG images in the converted PDF document. For further information, click here. 
+
+## Recreate Nested Metafile 
+
+This setting allows you to regenerate the nested EMF images present in the Word document during PDF conversion. For further information, click here. 
+
+## Identical image optimization 
+
+This setting reduces the Main Memory usage in Word to PDF conversion by reusing the identical images. For further information, click here. 
+
+## PDF Conformance Level 
+
+This setting allows you to set the PDF conformance level. For further information, click here. 
+
+## Enable Alternate Chunks 
+
+In the Word document, another Word documents are embedded in it and referred as AltChunks. This setting allows you to include the alternate chunks while converting Word to PDF conversion. For further information, click here. 
+
+## Complex Script Text 
+
+This setting allows you to preserve the complex script text in the converted PDF document. For further information, click here. 
+
+## Hyphenation in Word-to-PDF conversion 
+
+The .NET Word Library (DocIO) allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. For further information, click here. 
+
+## Track changes in Word-to-PDF conversion 
+
+You can preserve revision marks in a generated PDF when converting Word documents with tracked changes or revisions. For further information, click here. 
+
+## Comments in Word-to-PDF conversion 
+
+You can preserve comments balloon in a generated PDF when converting Word documents with comments. Also you can customize how comments balloon color appears in a generated PDF. For further information, click here. 
+
+## Preserve Ole Equation as bitmap image 
+
+You can preserve Ole Equation as bitmap image in the converted PDF document. For further information, click here. 
+
+## Restrict all permission in a PDF document 
+
+You can restrict all the permission in a PDF document using PdfPermissionsFlags. For further information, click here. 
+ 
+# Font Substitution 
+
+When the necessary fonts used in the Word document has not been installed in the production machine, then Essential DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters.
+
+To avoid this, the Essential DocIO library allows you to set an alternate font for the missing font used in the Word document. For further information, click here.
+
+# Fallback fonts 
+
+During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document. For further information, click here. 
+
+# Unsupported elements in Word to PDF conversion 
+
+Refer here to know about unsupported elements in Word to PDF conversion. 
+
+# Show Warning for Unsupported Elements 
+
+Users can display warning messages for the unsupported elements using the WarningType during Word to PDF conversion. Users can set a flag to stop the conversion process based on the warning. For further information, click here.  
