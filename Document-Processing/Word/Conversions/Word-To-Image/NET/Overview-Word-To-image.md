@@ -1,10 +1,11 @@
 ---
-title: Convert Word to Image in .NET Word Library| DocIO | Syncfusion
-description: Learn how to convert a Word document to Image using the .NET  Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Overview of Word document to Image conversion | Syncfusion
+description: Learn about Word document to Image conversion in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
+
 # Convert Word  to Image using Syncfusion Word (DocIO) library 
 
 Syncfusion Word library (DocIO) allows you to convert Word document to Image within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to Image.  
@@ -142,3 +143,24 @@ By executing the program, you will get the output PDF as follows.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image).
 
 T> For troubleshooting issues in the .NET Word Library (DocIO), refer this article that provides comprehensive guidance on resolving common problems.
+
+# Convert the entire Word to images
+
+You can convert an entire Word document to images.For further information, click [here].
+
+# Convert specific page of Word to image
+
+You can convert a specific page of the Word document into an image and use it for a thumbnail.For further information, click [here].
+
+# Convert a specific range of pages in Word to an image
+
+Users can convert a specific range of pages in a Word document into images.For further information, click [here].
+
+# Custom image resolution
+
+Users can convert Word document to an image using custom image resolution.For further information, click [here].
+
+# Fallback fonts 
+
+During Word to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.For further information, click [here].
+
