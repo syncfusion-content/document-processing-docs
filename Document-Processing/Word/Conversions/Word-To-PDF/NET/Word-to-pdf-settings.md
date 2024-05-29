@@ -1,11 +1,11 @@
 ---
-title: Customization Settings for Word to PDF Conversion in C# | DocIO | Syncfusion
+title: Customization settings for Word to PDF conversion in C# | DocIO | Syncfusion
 description: Learn how to customize Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Customization Settings for Word to PDF Conversion
+# Customization settings for Word to PDF conversion
 
 The Essential DocIO provides settings while performing Word to PDF conversion mentioned below, 
 
