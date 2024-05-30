@@ -888,7 +888,7 @@ The following code example shows how to access existing data connection of Excel
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//XlsIO supports accessing existing data connections in Windows platform.
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
