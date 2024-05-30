@@ -683,7 +683,7 @@ The following code snippet explains the method of importing data through an exte
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//XlsIO supports the creation of tables from external connections in ASP.NET Core on the Windows platform only.
+//XlsIO supports refreshing query table with external connection in windows platform only.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -888,7 +888,7 @@ The following code example shows how to access existing data connection of Excel
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//XlsIO supports accessing existing data connections in ASP.NET Core on the Windows platform only.
+//XlsIO supports accessing existing data connections in Windows platform.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
