@@ -907,8 +907,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   }
 
   //Saving the workbook as stream
-  FileStream ouputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(ouputStream);
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
 }
 {% endhighlight %}
 
