@@ -725,7 +725,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.UsedRange.AutofitColumns();
 
   //Saving the workbook as stream
-  FileStream stream = new FileStream("../../../Output/output.xlsx", FileMode.Create, FileAccess.Write);
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
   workbook.SaveAs(stream);
 }
 
