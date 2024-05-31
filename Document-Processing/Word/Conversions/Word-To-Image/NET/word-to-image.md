@@ -5,145 +5,35 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Convert Word  to Image using Syncfusion Word (DocIO) library 
+# Rendering / Converting Word document to Image in Word Library
 
-Syncfusion Word library (DocIO) allows you to convert Word document to Image within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to Image.  
+The Essential DocIO converts the Word document to images using the [RenderAsImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_RenderAsImages_Syncfusion_DocIO_DLS_ImageType_) method.
 
-The Syncfusion Word to Image converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-azure), [AWS](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-linux), and [macOS](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-mac). 
-
-To quickly start converting a Word document to a Image, please check out this video: 
-
+To quickly start converting a Word document to an image, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=hoV3i7nl85I" %}
 
-# Key Features  
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert the Word document to image.
 
-* Ability to [convert entire word document to images](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-the-entire-word-to-images).
-* Ability to [convert specific page of Word to image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-specific-page-of-word-to-image).
-* Ability to [convert specific range of pages in Word to an image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-a-specific-range-of-pages-in-word-to-an-image).
-* Ability to [convert a Word document to an image using custom image resolution](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#custom-image-resolution).
-* Set fallback fonts for characters when glyphs are not available. 
+* [Word to image conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-image) 
+* [Word to image conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-image)
 
-# Assemblies and NuGets required 
+The following namespaces are required to compile the code in this topic:
 
-Refer to the following links for the assemblies or NuGet packages required based on platforms to convert the Word document to Image: 
+**For WPF, Windows Forms, ASP.NET and ASP.NET MVC applications**
+* using Syncfusion.DocIO
+* using Syncfusion.DocIO.DLS
+* using Syncfusion.OfficeChart
+* using Syncfusion.OfficeChartToImageConverter
 
-* Assemblies Required 
-* NuGet packages Required 
+**For ASP.NET Core, Blazor, Xamarin, WinUI and .NET MAUI applications**
+* using Syncfusion.DocIO
+* using Syncfusion.DocIO.DLS
+* using Syncfusion.DocIORenderer
 
-# Convert Word to Image 
+T> 1. You can get the good quality converted images by specifying the image type as Metafile in the platforms targeting .NET Framework.
+T> 2. You can specify the quality of the converted charts by setting the scaling mode.
 
-The following namespaces are required to compile the code: 
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS; 
-using Syncfusion.DocIORenderer;
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS; 
-using Syncfusion.OfficeChart;
-using Syncfusion.OfficeChartToImageConverter;
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Imports Syncfusion.DocIO
-Imports Syncfusion.DocIO.DLS
-Imports Syncfusion.OfficeChart
-Imports Syncfusion.OfficeChartToImageConverter
-{% endhighlight %}
-
-{% endtabs %}
-
-The following code example illustrates how to convert the entire Word document to images.
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open the file as Stream.
-using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
-{
-    //Load file stream into Word document.
-    using (WordDocument wordDocument = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Create a new instance of DocIORenderer class.
-        using (DocIORenderer render = new DocIORenderer())
-        {
-            //Convert the entire Word document to images.
-            Stream[] imageStreams = wordDocument.RenderAsImages(); 
-            int i = 0;
-            foreach (Stream stream in imageStreams)
-            {
-                //Reset the stream position.
-                stream.Position = 0;
-                //Save the stream as file.
-                using (FileStream fileStreamOutput = File.Create("WordToImage_" + i + ".jpeg"))
-                {
-                    stream.CopyTo(fileStreamOutput);
-                }
-                i++;
-            }
-        }
-    }
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Load an existing Word document.
-using(WordDocument wordDocument = new WordDocument("Template.docx", FormatType.Docx))
-{
-    //Initialize the ChartToImageConverter for converting charts during Word to image conversion.
-    wordDocument.ChartToImageConverter = new ChartToImageConverter();
-    //Set the scaling mode for charts (Normal mode reduces the file size).
-    wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal;
-    //Convert the entire Word document to images.
-    Image[] images = wordDocument.RenderAsImages(ImageType.Bitmap);
-    int i = 0;
-    foreach (Image image in images)
-    {
-        //Save the image as jpeg.
-        image.Save("WordToImage_" + i + ".jpeg", ImageFormat.Jpeg);
-        i++;
-    }
-}
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Load an existing Word document.
-Using wordDocument As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
-    'Initialize the ChartToImageConverter for converting charts during Word to image conversion.
-    wordDocument.ChartToImageConverter = New ChartToImageConverter()
-    'Set the scaling mode for charts (Normal mode reduces the file size).
-    wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal
-    'Convert the entire Word document to images.
-    Dim images As Image() = wordDocument.RenderAsImages(ImageType.Bitmap)
-    Dim i = 0
-    For Each image As Image In images
-        'Save the image as jpeg.
-        image.Save("WordToImage_" & i & ".jpeg", ImageFormat.Jpeg)
-        i += 1
-    Next
-End Using
-{% endhighlight %}
-
-{% endtabs %}
-
-By executing the program, you will get the output PDF as follows. 
-
-![Convert Word to Image](WordToPDF_images/Output-WordtoImage.png)
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image).
-
-T> For troubleshooting issues in the .NET Word Library (DocIO), refer this article that provides comprehensive guidance on resolving common problems.
-
-# Convert the entire Word to images
+## Convert the entire Word to images
 
 You can convert an entire Word document to images.
 
@@ -226,7 +116,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 T> For troubleshooting issues in the .NET Word Library (DocIO), refer this article that provides comprehensive guidance on resolving common problems.
 
-# Convert specific page of Word to image
+## Convert specific page of Word to image
 
 You can convert a specific page of the Word document into an image and use it for a thumbnail.
 
@@ -291,7 +181,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/First-page-of-Word-to-image).
 
-# Convert a specific range of pages in Word to an image
+## Convert a specific range of pages in Word to an image
 
 Users can convert a specific range of pages in a Word document into images.
 
@@ -370,7 +260,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Specific-range-of-pages-Word-to-image).
 
-# Custom image resolution
+## Custom image resolution
 
 The following code snippet illustrates how to convert a Word document to an image using custom image resolution.
 
@@ -445,7 +335,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Custom-image-resolution).
 
-# Fallback fonts
+## Fallback fonts
 
 During Word to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
 
@@ -456,7 +346,7 @@ Users can configure fallback fonts in the following ways:
 
 N> DocIO internally uses user-initialized or specified fallback fonts for Unicode characters during Word to Image conversion. Therefore, the specified fallback fonts must be installed in the production environment or embedded in the input Word document (DOCX). Otherwise, it will not render the text properly using the fallback fonts.
 
-## Initialize default fallback fonts
+### Initialize default fallback fonts
 
 The following code example demonstrates how to initialize a default fallback fonts while converting a Word document to an Image. The *InitializeDefault* API sets the default fallback fonts for specific script types like Arabic, Hebrew, Chinese, Japanese etc.
 
@@ -497,7 +387,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Initialize-default-fallback-fonts).
 
-## Fallback fonts based on script type
+### Fallback fonts based on script type
 
 The following code example demonstrates how a user can add fallback fonts based on the script types, which DocIO considers internally when converting a Word document to an Image.
 
@@ -550,7 +440,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Fallback-fonts-based-on-scripttype).
 
-## Fallback fonts for range of Unicode text
+### Fallback fonts for range of Unicode text
 
 Users can set fallback fonts for specific Unicode range of text to be used in Word to Image conversion.
 
@@ -605,7 +495,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Fallback-fonts-for-Unicode-range).
 
-## Modify the exiting fallback fonts
+### Modify the exiting fallback fonts
 
 The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting a Word document to an Image. 
 
@@ -654,7 +544,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 {% endtabs %}
 
-## Supported script types
+### Supported script types
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Modify-the-exiting-fallback-fonts).
 
@@ -775,3 +665,8 @@ N> 6. In ASP.NET Core, Blazor, Xamarin, WinUI and .NET MAUI platforms, to conver
 N> 7. DocIO supports Word to image conversion in UWP application using DocIORenderer.
 N> 8. In addition to the previous NuGet packages, we recommend to use [SkiaSharp.NativeAssets.Linux v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6) and [HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0) NuGets to perform Word to Image conversion in Linux environment.
 N> 9. The .NET Word Library (DocIO) uses System.Drawing functionalities for Word to image conversion in .NET Framework applications. And System.Drawing itself uses a fallback font to preserve the Unicode text while drawing the text in the image. So, these Fallback fonts APIs are **not supported in .NET Framework**.
+
+## See Also
+
+* [How to convert word to tiff using C#, VB.NET](https://support.syncfusion.com/kb/article/9541/how-to-convert-word-to-tiff-using-c-vb-net)
+* [How to convert Word to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12123/how-to-convert-word-to-image-in-blazor-webassembly-wasm)
