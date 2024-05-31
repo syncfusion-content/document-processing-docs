@@ -1,6 +1,6 @@
 ---
 title: Fallback fonts in Word to Image conversion in C# | DocIO | Syncfusion
-description: Learn about how to specify fallback fonts during Word to Image conversion using the .NET Word (DocIO) library..
+description: Learn about how to specify fallback fonts during Word to image conversion using the .NET Word (DocIO) library..
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Fallback fonts in Word to Image conversion
 
-During Word to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
+During Word to image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
 
 Users can configure fallback fonts in the following ways:
 * Initialize default fallback fonts.
@@ -32,7 +32,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
    {
       //Initialize the default fallback fonts collection.
       wordDocument.FontSettings.FallbackFonts.InitializeDefault();
-      //Instantiation of DocIORenderer for Word to Image conversion.
+      //Instantiation of DocIORenderer for Word to image conversion.
       using (DocIORenderer render = new DocIORenderer())
       {
          //Convert the entire Word document to images.
@@ -85,7 +85,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
       wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Thai, "Tahoma, Microsoft Sans Serif");
       //Adds fallback font for "Korean" script type.
       wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Korean, "Malgun Gothic, Batang");
-      //Instantiation of DocIORenderer for Word to Image conversion.
+      //Instantiation of DocIORenderer for Word to image conversion.
       using (DocIORenderer render = new DocIORenderer())
       {
          //Convert the entire Word document to images.
@@ -115,7 +115,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Users can set fallback fonts for specific Unicode range of text to be used in Word to Image conversion.
 
-The following code example demonstrates how users can add fallback fonts by using a specific Unicode range of text that DocIO considers internally while converting a Word document to an Image.
+The following code example demonstrates how users can add fallback fonts by using a specific Unicode range of text that DocIO considers internally while converting a Word document to an image.
 
 {% tabs %}
 
