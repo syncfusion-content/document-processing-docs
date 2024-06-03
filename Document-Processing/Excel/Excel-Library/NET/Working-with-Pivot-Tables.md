@@ -150,7 +150,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("PivotData.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
   IWorksheet pivotSheet = workbook.Worksheets[1];
@@ -177,7 +177,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
 
   Dim workbook As IWorkbook = application.Workbooks.Open("PivotData.xlsx")
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
@@ -215,71 +215,71 @@ The following code example illustrates how to edit the pivot table.
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[1];
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[1];
     
-    //Accessing the pivot table in the worksheet
-    IPivotTable pivotTable = worksheet.PivotTables[0];
+  //Accessing the pivot table in the worksheet
+  IPivotTable pivotTable = worksheet.PivotTables[0];
 
-    //Layout the pivot table to set the values to the worksheet
-    pivotTable.Layout();
+  //Layout the pivot table to set the values to the worksheet
+  pivotTable.Layout();
 
-    //Set Text in cell B2
-    worksheet.Range["B2"].Text = "William";
+  //Set Text in cell B2
+  worksheet.Range["B2"].Text = "William";
 
-    //Saving the workbook
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+  //Saving the workbook
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
-    IWorksheet worksheet = workbook.Worksheets[1];
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[1];
 
-    //Accessing the pivot table in the worksheet
-    IPivotTable pivotTable = worksheet.PivotTables[0];
+  //Accessing the pivot table in the worksheet
+  IPivotTable pivotTable = worksheet.PivotTables[0];
 
-    //Layout the pivot table to set the values to the worksheet
-    pivotTable.Layout();
+  //Layout the pivot table to set the values to the worksheet
+  pivotTable.Layout();
 
-    //Set Text in cell B2
-    worksheet.Range["B2"].Text = "William";
+  //Set Text in cell B2
+  worksheet.Range["B2"].Text = "William";
 
-    //Saving the workbook
-    workbook.SaveAs("Output.xlsx");
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As New ExcelEngine()
-    Dim application As IApplication = excelEngine.Excel
-    application.DefaultVersion = ExcelVersion.Xlsx
-    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
-    Dim worksheet As IWorksheet = workbook.Worksheets(1)
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(1)
 
-    ' Accessing the pivot table in the worksheet
-    Dim pivotTable As IPivotTable = worksheet.PivotTables(0)
+  ' Accessing the pivot table in the worksheet
+  Dim pivotTable As IPivotTable = worksheet.PivotTables(0)
 
-    ' Layout the pivot table to set the values to the worksheet
-    pivotTable.Layout()
+  ' Layout the pivot table to set the values to the worksheet
+  pivotTable.Layout()
 
-    ' Set text in cell B2
-    worksheet.Range("B2").Text = "William"
+  ' Set text in cell B2
+  worksheet.Range("B2").Text = "William"
 
-    ' Saving the workbook
-    workbook.SaveAs("Output.xlsx")
+  ' Saving the workbook
+  workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
 {% endtabs %}
@@ -290,7 +290,7 @@ A complete working example to edit a pivot table in C# is present on [this GitHu
 
 The Remove method can be used to remove a pivot table from the worksheet. You can either remove it by specifying the index or the pivot table name from the collection.
 
-The following code snippet illustrates how to delete a pivot table at a specified index value using the [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTables.html#Syncfusion_XlsIO_IPivotTables_RemoveAt_System_Int32_) method.
+The following code snippet illustrates how to remove a pivot table at a specified index value using the [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTables.html#Syncfusion_XlsIO_IPivotTables_RemoveAt_System_Int32_) method.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -316,61 +316,61 @@ The following code example illustrates how to remove the pivot table using Remov
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[0];
-    IWorksheet pivotSheet = workbook.Worksheets[1];
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IWorksheet pivotSheet = workbook.Worksheets[1];
 
-    //Remove the pivot table
-    pivotSheet.PivotTables.Remove("PivotTable1")
+  //Remove the pivot table
+  pivotSheet.PivotTables.Remove("PivotTable1")
 
-    #region Save
-    //Saving the workbook
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-    #endregion
+  //Saving the workbook
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open(@"InputTemplate.xlsx");
-    IWorksheet worksheet = workbook.Worksheets[1];
-    IWorksheet pivotSheet = workbook.Worksheets[1];
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open(@"InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[1];
+  IWorksheet pivotSheet = workbook.Worksheets[1];
 
-    //Remove the pivot table
-    pivotSheet.PivotTables.Remove("PivotTable1");
+  //Remove the pivot table
+  pivotSheet.PivotTables.Remove("PivotTable1");
 
-    //Saving the workbook
-    workbook.SaveAs("Output.xlsx");
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As New ExcelEngine()
-    Dim application As IApplication = excelEngine.Excel
-    application.DefaultVersion = ExcelVersion.Xlsx
-    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
-    Dim worksheet As IWorksheet = workbook.Worksheets(1)
-    Dim pivotSheet As IWorksheet = workbook.Worksheets(1)
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(1)
+  Dim pivotSheet As IWorksheet = workbook.Worksheets(1)
 
-    'Remove the pivot table
-    pivotSheet.PivotTables.Remove("PivotTable1")
+  'Remove the pivot table
+  pivotSheet.PivotTables.Remove("PivotTable1")
 
-    'Saving the workbook
-    workbook.SaveAs("Output.xlsx")
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+A complete working example to remove a pivot table in C# is present on [this GitHub page]().
 
 ## Styles and Formatting
 
@@ -455,7 +455,7 @@ The following code example illustrates how to dynamically refresh the data in a 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   FileStream fileStream = new FileStream("PivotTable.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(fileStream);
   IWorksheet pivotSheet = workbook.Worksheets[0];
@@ -475,7 +475,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("PivotTable.xlsx");
   IWorksheet pivotSheet = workbook.Worksheets[0];
 
@@ -489,7 +489,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("PivotTable.xlsx")
   Dim pivotSheet As IWorksheet = workbook.Worksheets(0)
 
@@ -510,7 +510,7 @@ The following code example illustrates how to refresh the pivot table after upda
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(fileStream);
   IWorksheet worksheet = workbook.Worksheets[0];
@@ -536,7 +536,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -557,7 +557,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
@@ -600,3 +600,9 @@ To learn more about grouping of pivot table with the Syncfusion Excel library, [
 
 ## See Also
 
+* [How to create Pivot Table in Excel document using C#, VB.NET?](https://support.syncfusion.com/kb/article/2619/how-to-create-pivot-table-in-excel-document-using-c-vbnet)
+* [Sort Excel pivot table data by row and column fields in C# using XlsIO](https://support.syncfusion.com/kb/article/10009/sort-excel-pivot-table-data-by-row-and-column-fields-in-c-using-xlsio)
+* [How to set custom format on data fields of a Pivot Table?](https://support.syncfusion.com/kb/article/11017/how-to-set-custom-format-on-data-fields-of-a-pivot-table)
+* [Create a pivot table in Excel workbook with data exported using template markers](https://support.syncfusion.com/kb/article/10041/create-a-pivot-table-in-excel-workbook-with-data-exported-using-template-markers)
+* [How to sort pivot fields in Excel using XlsIO?](https://support.syncfusion.com/kb/article/7247/how-to-sort-pivot-fields-in-excel-using-xlsio)
+* [Blog: Excel pivot table in C# and VB.NET](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library/pivot-table)
