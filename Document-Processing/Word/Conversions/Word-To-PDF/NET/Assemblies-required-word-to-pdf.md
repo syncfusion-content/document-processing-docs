@@ -55,5 +55,3 @@ Assembly<br/></th></tr></thead>
 WPF, Windows Forms, ASP. NET, ASP.NET MVC<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
-N> 1. Syncfusion components are available in [nuget.org](https://www.nuget.org/)
-N> 2. Starting with v15.3.0.x, a new Visual Studio add-in "Syncfusion Reference Manager" for WPF, and Windows Forms platforms is included. Using this add-in, you can easily add the necessary reference assemblies to your projects in an automated way. Please refer to this [link](https://help.syncfusion.com/extension/syncfusion-reference-manager/overview) for more information.
