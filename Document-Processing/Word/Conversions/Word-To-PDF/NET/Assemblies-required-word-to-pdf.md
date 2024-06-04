@@ -5,7 +5,9 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Converting Word document to PDF
+# Assemblies required to convert Word document to PDF
+
+## Converting Word document to PDF
 
 For converting a Word document to PDF, the following assemblies need to be referenced in your application
 <table>
