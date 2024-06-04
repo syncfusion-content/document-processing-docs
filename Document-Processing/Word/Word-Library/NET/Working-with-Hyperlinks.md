@@ -442,12 +442,6 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Modify-url-of-hyperlink).
 
-## Online Demo
-
-* Explore how to apply built-in and custom styles to the contents of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/styles#/material3).
-* See how to create a Word document with right-to-left language text using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/rtl#/material3).
-* See how to insert breaks to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/insertbreak#/material3).
-
 ## See Also
 
 * [How to find and modify hyperlink address in Word document in C#, VB.NET](https://support.syncfusion.com/kb/article/12198/find-and-modify-hyperlink-address-in-word-document)
