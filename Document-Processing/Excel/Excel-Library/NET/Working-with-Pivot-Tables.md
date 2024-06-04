@@ -1274,6 +1274,26 @@ pivotTable.Options.RepeatAllLabels(True)
 {% endhighlight %}
 {% endtabs %}
 
+### Show Values Row
+
+To show values in rows in a pivot table, use the **ShowValuesRow** property. The following code illustrates how to show values row option in the pivot table.
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Set the show values row option in pivot table.
+pivotTable.Options.ShowValuesRow = true;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Set the show values row option in pivot table.
+pivotTable.Options.ShowValuesRow = true;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Set the show values row option in pivot table.
+pivotTable.Options.ShowValuesRow = true
+{% endhighlight %}
+{% endtabs %}
+
 ## Sort by value in Pivot Table
 
 Pivot field [AutoSort](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) allows you to sort the pivot row or column fields based on the data field values. You can perform the sorting in following direction:

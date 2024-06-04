@@ -21,22 +21,22 @@ The following code example illustrates how to format unique and duplicate values
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
-  
+
   //Fill worksheet with data
-  worksheet.Range["A1:B1"].Merge();
-  worksheet.Range["A1:B1"].CellStyle.Font.RGBColor = Color.FromArgb(255, 102, 102, 255);
-  worksheet.Range["A1:B1"].CellStyle.Font.Size = 14;
-  worksheet.Range["A1:B1"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter;
+  worksheet.Range["A1:C1"].Merge();
+  worksheet.Range["A1:C1"].CellStyle.Font.RGBColor = Color.FromArgb(255, 102, 102, 255);
+  worksheet.Range["A1:C1"].CellStyle.Font.Size = 14;
+  worksheet.Range["A1:C1"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter;
   worksheet.Range["A1"].Text = "Global Internet Usage";
-  worksheet.Range["A1:B1"].CellStyle.Font.Bold = true;
-  
-  worksheet.Range["A3:B21"].CellStyle.Font.RGBColor = Color.FromArgb(255, 64, 64, 64);
-  worksheet.Range["A3:B3"].CellStyle.Font.Bold = true;
-  worksheet.Range["B3"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignRight;
-  
+  worksheet.Range["A1:C1"].CellStyle.Font.Bold = true;
+
+  worksheet.Range["A3:C21"].CellStyle.Font.RGBColor = Color.FromArgb(255, 64, 64, 64);
+  worksheet.Range["A3:C3"].CellStyle.Font.Bold = true;
+  worksheet.Range["B3:C3"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignRight;
+
   worksheet.Range["A3"].Text = "Country";
   worksheet.Range["A4"].Text = "Northern America";
   worksheet.Range["A5"].Text = "Central America";
@@ -55,8 +55,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A18"].Text = "Eastern Asia";
   worksheet.Range["A19"].Text = "Southern Asia";
   worksheet.Range["A20"].Text = "SouthEast Asia";
-  worksheet.Range["A21"].Text = "Oceania";    
-  
+  worksheet.Range["A21"].Text = "Oceania";
+
   worksheet.Range["B3"].Text = "Usage";
   worksheet.Range["B4"].Value = "88%";
   worksheet.Range["B5"].Value = "61%";
@@ -76,22 +76,55 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["B19"].Value = "36%";
   worksheet.Range["B20"].Value = "58%";
   worksheet.Range["B21"].Value = "69%";
-  
+
+  worksheet.Range["C3"].Text = "Connection Count";
+  worksheet.Range["C3"].AutofitColumns();
+  worksheet.Range["C4"].Number = 1200;  
+  worksheet.Range["C5"].Number = 800;   
+  worksheet.Range["C6"].Number = 600;   
+  worksheet.Range["C7"].Number = 900;   
+  worksheet.Range["C8"].Number = 1500;  
+  worksheet.Range["C9"].Number = 1100;  
+  worksheet.Range["C10"].Number = 1400; 
+  worksheet.Range["C11"].Number = 1000; 
+  worksheet.Range["C12"].Number = 600;  
+  worksheet.Range["C13"].Number = 400;  
+  worksheet.Range["C14"].Number = 300;  
+  worksheet.Range["C15"].Number = 550;  
+  worksheet.Range["C16"].Number = 700;
+  worksheet.Range["C17"].Number = 610; 
+  worksheet.Range["C18"].Number = 750; 
+  worksheet.Range["C19"].Number = 500;  
+  worksheet.Range["C20"].Number = 750;  
+  worksheet.Range["C21"].Number = 910;
+
   worksheet.SetColumnWidth(1, 23.45);
   worksheet.SetColumnWidth(2, 8.09);
-  
-  IConditionalFormats conditionalFormats =
-  worksheet.Range["A4:B21"].ConditionalFormats;
-  IConditionalFormat condition = conditionalFormats.AddCondition();
-  
-  //conditional format to set duplicate format type
-  condition.FormatType = ExcelCFType.Duplicate;
-  condition.BackColorRGB = Color.FromArgb(255, 255, 199, 206);
-  
-  //Saves the excel document to MemoryStream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+
+  IConditionalFormats conditionalFormats1 =
+  worksheet.Range["B4:B21"].ConditionalFormats;
+  IConditionalFormat condition1 = conditionalFormats1.AddCondition();
+
+  //Set solid color conditional formatting for duplicate values.
+  condition1.FormatType = ExcelCFType.Duplicate;
+  condition1.FillPattern = ExcelPattern.Solid;
+  condition1.BackColorRGB = Color.FromArgb(255, 255, 199, 206);
+
+  IConditionalFormats conditionalFormats2 =
+  worksheet.Range["C4:C21"].ConditionalFormats;
+  IConditionalFormat condition2 = conditionalFormats2.AddCondition();
+
+  //Set gradient color conditional formatting for duplicate values.
+  condition2.FormatType = ExcelCFType.Duplicate;
+  condition2.FillPattern = ExcelPattern.Gradient;
+  condition2.BackColorRGB = Color.FromArgb(255, 255, 199, 206);
+  condition2.ColorRGB = Color.FromArgb(200, 255, 5, 79);
+  condition2.GradientStyle = ExcelGradientStyle.Horizontal;
+  condition2.GradientVariant = ExcelGradientVariants.ShadingVariants_1;
+
+  //Saving the workbook as stream
+  FileStream stream = new FileStream("UniqueandDuplicate.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(stream );
 }
 {% endhighlight %}
 
@@ -99,22 +132,22 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
-  
+
   //Fill worksheet with data
-  worksheet.Range["A1:B1"].Merge();
-  worksheet.Range["A1:B1"].CellStyle.Font.RGBColor = Color.FromArgb(255, 102, 102, 255);
-  worksheet.Range["A1:B1"].CellStyle.Font.Size = 14;
-  worksheet.Range["A1:B1"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter;
+  worksheet.Range["A1:C1"].Merge();
+  worksheet.Range["A1:C1"].CellStyle.Font.RGBColor = Color.FromArgb(255, 102, 102, 255);
+  worksheet.Range["A1:C1"].CellStyle.Font.Size = 14;
+  worksheet.Range["A1:C1"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter;
   worksheet.Range["A1"].Text = "Global Internet Usage";
-  worksheet.Range["A1:B1"].CellStyle.Font.Bold = true;
-  
-  worksheet.Range["A3:B21"].CellStyle.Font.RGBColor = Color.FromArgb(255, 64, 64, 64);
-  worksheet.Range["A3:B3"].CellStyle.Font.Bold = true;
-  worksheet.Range["B3"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignRight;
-  
+  worksheet.Range["A1:C1"].CellStyle.Font.Bold = true;
+
+  worksheet.Range["A3:C21"].CellStyle.Font.RGBColor = Color.FromArgb(255, 64, 64, 64);
+  worksheet.Range["A3:C3"].CellStyle.Font.Bold = true;
+  worksheet.Range["B3:C3"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignRight;
+
   worksheet.Range["A3"].Text = "Country";
   worksheet.Range["A4"].Text = "Northern America";
   worksheet.Range["A5"].Text = "Central America";
@@ -133,8 +166,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A18"].Text = "Eastern Asia";
   worksheet.Range["A19"].Text = "Southern Asia";
   worksheet.Range["A20"].Text = "SouthEast Asia";
-  worksheet.Range["A21"].Text = "Oceania";    
-  
+  worksheet.Range["A21"].Text = "Oceania";
+
   worksheet.Range["B3"].Text = "Usage";
   worksheet.Range["B4"].Value = "88%";
   worksheet.Range["B5"].Value = "61%";
@@ -154,42 +187,76 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["B19"].Value = "36%";
   worksheet.Range["B20"].Value = "58%";
   worksheet.Range["B21"].Value = "69%";
-  
+
+  worksheet.Range["C3"].Text = "Connection Count";
+  worksheet.Range["C3"].AutofitColumns();
+  worksheet.Range["C4"].Number = 1200;  
+  worksheet.Range["C5"].Number = 800;   
+  worksheet.Range["C6"].Number = 600;   
+  worksheet.Range["C7"].Number = 900;   
+  worksheet.Range["C8"].Number = 1500;  
+  worksheet.Range["C9"].Number = 1100;  
+  worksheet.Range["C10"].Number = 1400; 
+  worksheet.Range["C11"].Number = 1000; 
+  worksheet.Range["C12"].Number = 600;  
+  worksheet.Range["C13"].Number = 400;  
+  worksheet.Range["C14"].Number = 300;  
+  worksheet.Range["C15"].Number = 550;  
+  worksheet.Range["C16"].Number = 700;
+  worksheet.Range["C17"].Number = 610; 
+  worksheet.Range["C18"].Number = 750; 
+  worksheet.Range["C19"].Number = 500;  
+  worksheet.Range["C20"].Number = 750;  
+  worksheet.Range["C21"].Number = 910;
+
   worksheet.SetColumnWidth(1, 23.45);
   worksheet.SetColumnWidth(2, 8.09);
-  
-  IConditionalFormats conditionalFormats =
-  worksheet.Range["A4:B21"].ConditionalFormats;
-  IConditionalFormat condition = conditionalFormats.AddCondition();
-  
-  //conditional format to set duplicate format type
-  condition.FormatType = ExcelCFType.Duplicate;
-  condition.BackColorRGB = Color.FromArgb(255, 255, 199, 206);
-  
-  //Saves the Excel
+
+  IConditionalFormats conditionalFormats1 =
+  worksheet.Range["B4:B21"].ConditionalFormats;
+  IConditionalFormat condition1 = conditionalFormats1.AddCondition();
+
+  //Set solid color conditional formatting for duplicate values.
+  condition1.FormatType = ExcelCFType.Duplicate;
+  condition1.FillPattern = ExcelPattern.Solid;
+  condition1.BackColorRGB = Color.FromArgb(255, 255, 199, 206);
+
+  IConditionalFormats conditionalFormats2 =
+  worksheet.Range["C4:C21"].ConditionalFormats;
+  IConditionalFormat condition2 = conditionalFormats2.AddCondition();
+
+  //Set gradient color conditional formatting for duplicate values.
+  condition2.FormatType = ExcelCFType.Duplicate;
+  condition2.FillPattern = ExcelPattern.Gradient;
+  condition2.BackColorRGB = Color.FromArgb(255, 255, 199, 206);
+  condition2.ColorRGB = Color.FromArgb(200, 255, 5, 79);
+  condition2.GradientStyle = ExcelGradientStyle.Horizontal;
+  condition2.GradientVariant = ExcelGradientVariants.ShadingVariants_1;
+
+  //Saving the workbook
   workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2016
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
-  
-  'Fill worksheet with data
-  worksheet.Range("A1:B1").Merge()
-  worksheet.Range("A1:B1").CellStyle.Font.RGBColor = Color.FromArgb(255, 102, 102, 255)
-  worksheet.Range("A1:B1").CellStyle.Font.Size = 14
-  worksheet.Range("A1:B1").CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter
+
+  ' Fill worksheet with data
+  worksheet.Range("A1:C1").Merge()
+  worksheet.Range("A1:C1").CellStyle.Font.RGBColor = Color.FromArgb(255, 102, 102, 255)
+  worksheet.Range("A1:C1").CellStyle.Font.Size = 14
+  worksheet.Range("A1:C1").CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter
   worksheet.Range("A1").Text = "Global Internet Usage"
-  
-  worksheet.Range("A1:B1").CellStyle.Font.Bold = True
-  worksheet.Range("A3:B21").CellStyle.Font.RGBColor = Color.FromArgb(255, 64, 64, 64)
-  worksheet.Range("A3:B3").CellStyle.Font.Bold = True
-  worksheet.Range("B3").CellStyle.HorizontalAlignment = ExcelHAlign.HAlignRight
-  
+  worksheet.Range("A1:C1").CellStyle.Font.Bold = True
+
+  worksheet.Range("A3:C21").CellStyle.Font.RGBColor = Color.FromArgb(255, 64, 64, 64)
+  worksheet.Range("A3:C3").CellStyle.Font.Bold = True
+  worksheet.Range("B3:C3").CellStyle.HorizontalAlignment = ExcelHAlign.HAlignRight
+
   worksheet.Range("A3").Text = "Country"
   worksheet.Range("A4").Text = "Northern America"
   worksheet.Range("A5").Text = "Central America"
@@ -209,7 +276,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("A19").Text = "Southern Asia"
   worksheet.Range("A20").Text = "SouthEast Asia"
   worksheet.Range("A21").Text = "Oceania"
-  
+
   worksheet.Range("B3").Text = "Usage"
   worksheet.Range("B4").Value = "88%"
   worksheet.Range("B5").Value = "61%"
@@ -229,18 +296,51 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("B19").Value = "36%"
   worksheet.Range("B20").Value = "58%"
   worksheet.Range("B21").Value = "69%"
-  
+
+  worksheet.Range("C3").Text = "Connection Count"
+  worksheet.Range("C3").AutofitColumns()
+  worksheet.Range("C4").Number = 1200
+  worksheet.Range("C5").Number = 800
+  worksheet.Range("C6").Number = 600
+  worksheet.Range("C7").Number = 900
+  worksheet.Range("C8").Number = 1500
+  worksheet.Range("C9").Number = 1100
+  worksheet.Range("C10").Number = 1400
+  worksheet.Range("C11").Number = 1000
+  worksheet.Range("C12").Number = 600
+  worksheet.Range("C13").Number = 400
+  worksheet.Range("C14").Number = 300
+  worksheet.Range("C15").Number = 550
+  worksheet.Range("C16").Number = 700
+  worksheet.Range("C17").Number = 610
+  worksheet.Range("C18").Number = 750
+  worksheet.Range("C19").Number = 500
+  worksheet.Range("C20").Number = 750
+  worksheet.Range("C21").Number = 910
+
   worksheet.SetColumnWidth(1, 23.45)
   worksheet.SetColumnWidth(2, 8.09)
-  
-  'conditional format to set duplicate format type
-  Dim conditionalFormats As IConditionalFormats =
-  worksheet.Range("A4:B21").ConditionalFormats
-  Dim condition As IConditionalFormat = conditionalFormats.AddCondition()
-  condition.FormatType = ExcelCFType.Duplicate
-  condition.BackColorRGB = Color.FromArgb(255, 255, 199, 206)
-  
-  'Saves the Excel
+
+  Dim conditionalFormats1 As IConditionalFormats = worksheet.Range("B4:B21").ConditionalFormats
+  Dim condition1 As IConditionalFormat = conditionalFormats1.AddCondition()
+
+  ' Set solid color conditional formatting for duplicate values.
+  condition1.FormatType = ExcelCFType.Duplicate
+  condition1.FillPattern = ExcelPattern.Solid
+  condition1.BackColorRGB = Color.FromArgb(255, 255, 199, 206)
+
+  Dim conditionalFormats2 As IConditionalFormats = worksheet.Range("C4:C21").ConditionalFormats
+  Dim condition2 As IConditionalFormat = conditionalFormats2.AddCondition()
+
+  ' Set gradient color conditional formatting for duplicate values.
+  condition2.FormatType = ExcelCFType.Duplicate
+  condition2.FillPattern = ExcelPattern.Gradient
+  condition2.BackColorRGB = Color.FromArgb(255, 255, 199, 206)
+  condition2.ColorRGB = Color.FromArgb(200, 255, 5, 79)
+  condition2.GradientStyle = ExcelGradientStyle.Horizontal
+  condition2.GradientVariant = ExcelGradientVariants.ShadingVariants_1
+
+  ' Saving the workbook
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}

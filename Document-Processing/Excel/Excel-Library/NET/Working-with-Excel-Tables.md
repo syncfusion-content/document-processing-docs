@@ -683,7 +683,68 @@ The following code snippet explains the method of importing data through an exte
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//XlsIO supports creation of table from external connection in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms.
+//XlsIO supports refreshing query table with external connection in windows platform only.
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Excel2013;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+    
+  //Database path
+  string dataPath = Path.GetFullPath("../../../Data/access-sakila.mdb");
+    
+  //Connection string for DataSource, here we are using jet.OLEDB.4.0 which supports only if program targets 32 and for core projects the targe bit is by default OS bit .. so make sure change program's platform target to x86 bit (which is 32 bit) through project -> project config -> build -> platform target -> x86
+  string ConnectionStringOledb4 = "OLEDB;Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + dataPath;
+
+  //Adding a connection to the workbook
+  IConnection Connection = workbook.Connections.Add("Connection1", "Sample connection with MsAccess", ConnectionStringOledb4, "", ExcelCommandType.Table);
+    
+  //Adding a QueryTable to sheet object
+  worksheet.ListObjects.AddEx(ExcelListObjectSourceType.SrcQuery, Connection, worksheet.Range["A1"]);
+
+  //Command text for the connection
+  worksheet.ListObjects[0].QueryTable.CommandText = "select * from actor";
+
+  //The query performs asynchronous action
+  worksheet.ListObjects[0].QueryTable.BackgroundQuery = true;
+
+  //The query table is refreshed when the workbook is opened
+  worksheet.ListObjects[0].QueryTable.RefreshOnFileOpen = true;
+
+  //Represents the connection description
+  Connection.Description = "Sample Connection";
+
+  //Bind the GetDataTable method to OnRefreshConnection.
+  worksheet.ListObjects[0].OnRefreshConnection += GetOleDBDataTable;
+
+  //Import data to the sheet from the database
+  worksheet.ListObjects[0].Refresh();
+
+  //Auto-fits the columns
+  worksheet.UsedRange.AutofitColumns();
+
+  //Saving the workbook as stream
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(stream);
+}
+
+//Helper method to get data table using OLEDB connection
+void GetOleDBDataTable(object sender, RefreshConnectionEventArgs e)
+{
+  OleDbConnection ole_connection = new OleDbConnection();
+  ole_connection.ConnectionString = e.ConnectionString;
+  OleDbCommand command = new OleDbCommand();
+  command.Connection = ole_connection;
+  command.CommandText = e.Query;
+  DataTable table = new DataTable();
+  OleDbDataAdapter Adapter = new OleDbDataAdapter(command);
+  Adapter.Fill(table);
+  ole_connection.Dispose();
+  Adapter.Dispose();
+  command.Dispose();            
+  e.Data = table;
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -827,7 +888,28 @@ The following code example shows how to access existing data connection of Excel
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//XlsIO supports accessing existing data connections in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms.
+
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Excel2016;
+  FileStream inputStream = new FileStream("ExistingDataSource.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Accessing a connection from the workbook
+  IConnection connection = workbook.Connections[0];
+
+  //Refresh all the data by accessing each ListObject 
+  foreach (IListObject listObject in worksheet.ListObjects)
+  {
+    listObject.Refresh();
+  }
+
+  //Saving the workbook as stream
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
