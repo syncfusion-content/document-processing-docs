@@ -1,6 +1,6 @@
 ---
 title: Fallback fonts in PowerPoint to PDF conversion| Syncfusion
-description: This section illustrates the use of fallback fonts in PowerPoint presentation to PDF conversion using the .NET PowerPoint Framework.
+description: Learn about how to specify fallback fonts during PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -19,6 +19,8 @@ N> Presentation internally uses user-initialized or specified fallback fonts for
 ## Initialize default fallback fonts
 
 The following code example demonstrates how to initialize a default fallback font while converting a PowerPoint presentation to PDF. The *InitializeDefault* API sets the default fallback fonts for specific script types like Arabic, Hebrew, Chinese, Japanese etc.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 

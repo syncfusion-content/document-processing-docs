@@ -1,6 +1,6 @@
 ---
 title: Font substitution in PowerPoint to PDF conversion| Syncfusion
-description: This section illustrates font substitution in PowerPoint presentation to PDF conversion using the .NET PowerPoint Framework.
+description: Learn about how to substitute font during PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -12,6 +12,8 @@ When a font used in a PowerPoint presentation is unavailable in the environment 
 ## Set alternate font
 
 The following code example demonstrates how to set alternate font name for a missing font while converting a PowerPoint presentation to PDF. The provided alternate font should be installed in the production environment.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
