@@ -20,8 +20,8 @@ To quickly start splitting Word documents, please check out this video:
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to split Word documents using the .NET Word Library (DocIO).
 
-* [Split Word documents assemblies](../Assemblies-Required.md)
-* [Split Word documents NuGet packages](../NuGet-Packages-Required.md)
+* [Split Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
+* [Split Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
 ## Split by Section
 

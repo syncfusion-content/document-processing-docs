@@ -17,8 +17,8 @@ Most of the Word processors (including Microsoft Word) uses the XML-based file f
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert the RTF document into Word document and vice versa using the .NET Word Library (DocIO).
 
-* [RTF conversions assemblies](Assemblies-Required.md)
-* [RTF conversions NuGet packages](NuGet-Packages-Required.md)
+* [RTF conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
+* [RTF conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
 The Essential DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
 

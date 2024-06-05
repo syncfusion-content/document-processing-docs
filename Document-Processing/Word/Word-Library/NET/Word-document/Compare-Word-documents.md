@@ -23,8 +23,8 @@ To quickly start comparing two Word documents, please check out this video:
 
 Refer to the following links for assemblies and NuGet packages required based on platforms for comparing Word documents using the .NET Word Library (DocIO).
 
-* [Compare Word documents assemblies](../Assemblies-Required.md)
-* [Compare Word documents NuGet packages](../NuGet-Packages-Required.md)
+* [Compare Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
+* [Compare Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
 ## Compare two Word documents 
 

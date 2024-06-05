@@ -14,8 +14,8 @@ Markdown is a lightweight markup language that adds formatting elements to plain
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to a Markdown file using the .NET Word Library (DocIO).
 
-* [Word to Markdown conversion assemblies](Assemblies-Required.md)
-* [Word to Markdown conversion NuGet packages](NuGet-Packages-Required.md)
+* [Word to Markdown conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
+* [Word to Markdown conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
 ## Convert Word to Markdown
 
