@@ -19,6 +19,13 @@ N> 2. Comparing two Word documents supported in DOCX format only.
 To quickly start comparing two Word documents, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=5Q3884kPWOw" %}
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms for comparing Word documents using the .NET Word Library (DocIO).
+
+* [Compare Word documents assemblies](../Assemblies-Required.md)
+* [Compare Word documents NuGet packages](../NuGet-Packages-Required.md)
+
 ## Compare two Word documents 
 
 Compare the existing Word documents or documents created from scratch using the Compare method in the .NET Word library (DocIO).
