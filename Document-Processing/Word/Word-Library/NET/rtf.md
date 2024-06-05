@@ -13,6 +13,13 @@ The [Rich Text Format (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) is 
 
 Most of the Word processors (including Microsoft Word) uses the XML-based file formats, Microsoft has discontinued enhancements to the RTF and still supporting it. The last version was 1.9.1 released in 2008.
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert the RTF document into Word document and vice versa using the .NET Word Library (DocIO).
+
+* [RTF conversions assemblies](Assemblies-Required.md)
+* [RTF conversions NuGet packages](NuGet-Packages-Required.md)
+
 The Essential DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.

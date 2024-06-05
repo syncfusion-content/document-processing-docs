@@ -10,6 +10,13 @@ documentation: UG
 
 The [OpenDocument format (ODF)](http://en.wikipedia.org/wiki/OpenDocument#) is an open file format for office documents originally developed for Open Office suite by Sun Microsystems. OpenDocument Text (ODT) is the file format for Word processing documents and currently for an OASIS and ISO standard.
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to ODT file using the .NET Word Library (DocIO).
+
+* [Word to ODT conversion assemblies](Assemblies-Required.md)
+* [Word to ODT conversion NuGet packages](NuGet-Packages-Required.md)
+
 The Essential DocIO supports converting the Word document into ODT file. The following code example shows how to convert the Word document into ODT file.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.

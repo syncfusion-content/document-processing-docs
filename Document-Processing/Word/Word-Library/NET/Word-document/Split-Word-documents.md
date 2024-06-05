@@ -16,6 +16,13 @@ You can save the resultant document as a Word document (DOCX, WordML, DOC), PDF,
 To quickly start splitting Word documents, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=w9np2NSfq94" %}
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms to split Word documents using the .NET Word Library (DocIO).
+
+* [Split Word documents assemblies](../Assemblies-Required.md)
+* [Split Word documents NuGet packages](../NuGet-Packages-Required.md)
+
 ## Split by Section
 
 The following code example illustrates how to split the Word document by sections.

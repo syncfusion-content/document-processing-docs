@@ -9,6 +9,13 @@ documentation: UG
 
 You can merge multiple Word documents into single Word document by using DocIO’s capability of importing contents from one document to another. The imported contents are appended at the end of document.
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms to merge Word documents using the .NET Word Library (DocIO).
+
+* [Merge Word documents assemblies](../Assemblies-Required.md)
+* [Merge Word documents NuGet packages](../NuGet-Packages-Required.md)
+
 ## Merge document in new page
 
 The following code example illustrates how to import the contents from source document into destination document where the contents are appended. 
