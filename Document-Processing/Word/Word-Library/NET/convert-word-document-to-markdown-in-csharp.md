@@ -10,13 +10,18 @@ documentation: UG
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports the conversion of a Word document to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to a Markdown file using the .NET Word Library (DocIO).
+
+* [Word to Markdown conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
+* [Word to Markdown conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
+
 ## Convert Word to Markdown
 
 Convert an existing Word document or document that is created from scratch into a Markdown file using the .NET Word (DocIO) library.
 
 The following code example shows how to convert a Word document to a Markdown.
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
@@ -171,6 +176,8 @@ The Essential DocIO supports two types of code blocks in Word to Markdown conver
 * Fenced code block: Set the paragraph style as “FencedCode.”
 
 The following code example shows how to create code blocks in a Word document using DocIO.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 

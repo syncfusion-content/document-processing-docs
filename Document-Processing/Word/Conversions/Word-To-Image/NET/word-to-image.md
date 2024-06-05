@@ -1,11 +1,10 @@
 ---
-title: Convert Word to Image in C# | DocIO | Syncfusion
-description: Learn how to convert a Word document to image using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in .NET Word Library| DocIO | Syncfusion
+description: Learn how to convert a Word document to image using the .NET  Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-
 # Rendering / Converting Word document to Image in Word Library
 
 The Essential DocIO converts the Word document to images using the [RenderAsImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_RenderAsImages_Syncfusion_DocIO_DLS_ImageType_) method.
@@ -115,7 +114,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image).
 
-T> For troubleshooting issues in the .NET Word Library (DocIO), refer this article that provides comprehensive guidance on resolving common problems.
+T> For troubleshooting issues in the .NET Word Library (DocIO), refer [this](https://support.syncfusion.com/kb/article/16012/troubleshooting-guide-for-syncfusion-word-docio-library-issues?isInternalRefresh=False) article that provides comprehensive guidance on resolving common problems.
 
 ## Convert specific page of Word to image
 
@@ -349,7 +348,7 @@ N> DocIO internally uses user-initialized or specified fallback fonts for Unicod
 
 ### Initialize default fallback fonts
 
-The following code example demonstrates how to initialize a default fallback fonts while converting a Word document to an Image. The *InitializeDefault* API sets the default fallback fonts for specific script types like Arabic, Hebrew, Chinese, Japanese etc.
+The following code example demonstrates how to initialize a default fallback fonts while converting a Word document to an image. The *InitializeDefault* API sets the default fallback fonts for specific script types like Arabic, Hebrew, Chinese, Japanese etc.
 
 {% tabs %}
 
@@ -390,7 +389,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Fallback fonts based on script type
 
-The following code example demonstrates how a user can add fallback fonts based on the script types, which DocIO considers internally when converting a Word document to an Image.
+The following code example demonstrates how a user can add fallback fonts based on the script types, which DocIO considers internally when converting a Word document to an image.
 
 {% tabs %}
 
@@ -443,9 +442,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Fallback fonts for range of Unicode text
 
-Users can set fallback fonts for specific Unicode range of text to be used in Word to Image conversion.
+Users can set fallback fonts for specific Unicode range of text to be used in Word to image conversion.
 
-The following code example demonstrates how users can add fallback fonts by using a specific Unicode range of text that DocIO considers internally while converting a Word document to an Image.
+The following code example demonstrates how users can add fallback fonts by using a specific Unicode range of text that DocIO considers internally while converting a Word document to an image.
 
 {% tabs %}
 
@@ -498,7 +497,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modify the exiting fallback fonts
 
-The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting a Word document to an Image. 
+The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting a Word document to an image. 
 
 {% tabs %}
 
@@ -671,3 +670,4 @@ N> 9. The .NET Word Library (DocIO) uses System.Drawing functionalities for Word
 
 * [How to convert word to tiff using C#, VB.NET](https://support.syncfusion.com/kb/article/9541/how-to-convert-word-to-tiff-using-c-vb-net)
 * [How to convert Word to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12123/how-to-convert-word-to-image-in-blazor-webassembly-wasm)
+* [How to resolve font problems during Word to Image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
