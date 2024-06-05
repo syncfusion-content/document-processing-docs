@@ -16,6 +16,8 @@ You can create and manipulate the OLE Objects of both Linked and Embedded types 
 
 ## Add OLE Objects in Word document
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 The following code example explains how to add OLE objects to the document.
 
 {% tabs %}
@@ -477,3 +479,7 @@ End Sub
 {% endtabs %}
   
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Remove-ole-object).
+
+## Online Demo
+
+* Explore how to insert an OLE Object into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/insertoleobject#/material3).

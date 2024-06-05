@@ -9,6 +9,11 @@ documentation: UG
 
 Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
 
+The .NET Word Library (DocIO) offers two ways to create and modify equations in Word document.
+
+* [Using WMath DOM](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mathematical-equation#types-of-equation).
+* [Using LaTeX](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-latex).
+
 ![Mathematical equation in Microsoft Word document](WorkingwithMathematicalEquation_images/Mathematical Equation.png)
 
 N> You can use mathematical equation only in documents that are saved in the Open XML Format and cannot be used in the Word 97-2003 document (.doc) format.
@@ -40,6 +45,8 @@ The following different structures of equation can be created by using the Essen
 ### Accent
 
 You can add an accent mark to the equation. The following code example shows how to add an accent mark to the equation.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
@@ -2093,4 +2100,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the above code example, it generates output Word document as follows.
 ![Resultant output Word document](WorkingwithMathematicalEquation_images/EditedEquation.png)
+
+## Online Demo
+
+* Explore how to create a Word document with mathematical equations using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/createequation#/material3).
+* See how to modify a mathematical equation in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/editequation#/material3).
 

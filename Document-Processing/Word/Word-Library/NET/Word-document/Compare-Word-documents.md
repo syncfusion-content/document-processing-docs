@@ -25,6 +25,8 @@ Compare the existing Word documents or documents created from scratch using the 
 
 The following code example illustrates how to compare two Word documents.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
@@ -235,6 +237,11 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Compare-Word-documents/Ignore-format-changes/.NET).
 
+## Online Demo
+
+* Explore how to compare Word documents using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/comparedocuments#/material3).
+
 ## See Also
 
 * [What happens when Word documents with track changes are used for comparing?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-happens-when-word-documents-with-track-changes-are-used-for-comparing)
+

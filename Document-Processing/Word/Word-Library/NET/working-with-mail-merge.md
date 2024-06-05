@@ -105,6 +105,8 @@ You can **create Word document template programmatically** by adding merge field
 
 The following code example shows how to create a merge field in the Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -277,6 +279,10 @@ You can remove or keep the unmerged merge fields in the output document based on
 ### Restart numbering in lists
 
 You can restart the list numbering in a Word document during Mail merge. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-options#restart-numbering-in-lists).
+
+## Online Demo
+
+* Explore how to generate a letter using mail merge functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/letterformat#/material3).
 
 ## See Also
 

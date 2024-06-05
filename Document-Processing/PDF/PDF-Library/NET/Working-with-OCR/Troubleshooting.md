@@ -382,15 +382,15 @@ Step 3:
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 
-`RUN apt-get update && \`
+RUN apt-get update && \
 
-`apt-get install -yq --no-install-recommends \`
+apt-get install -yq --no-install-recommends \
 
-`libgdiplus libc6-dev libleptonica-dev libjpeg62`
+libgdiplus libc6-dev libleptonica-dev libjpeg62
 
-`RUN ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5`
+RUN ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
 
-`RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so`
+RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
  
 

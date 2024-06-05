@@ -29,6 +29,5 @@ HTML to PDF converter .NET library supports conversion in AWS Lambda with NET 6 
 ## Convert HTML to PDF in AWS Elastic Beanstalk.
 
 HTML to PDF converter .NET library supports conversion in AWS Elastic Beanstalk. Refer to [this](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-aws-elastic-beanstalk) section for more information about HTML to PDF conversion in AWS Elastic Beanstalk.
-=======
 
 

@@ -14,6 +14,8 @@ DocIO provides support for both inline and absolute positioned images.
 
 The following code example explains how to add image to the paragraph.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -692,3 +694,7 @@ End Using
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Add-svg-image/.NET).
+
+## Online Demo
+
+* Explore how to insert an image into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/imageinsertion#/material3). 

@@ -10,6 +10,8 @@ documentation: UG
 
 A section contains the contents present in Headers, Footers and main document through the instances of [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html). A section also has a specific set of properties used to define the page settings, number of columns, headers and footers and so on that decide how the text appears. [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html) represents group of paragraphs and tables etc. 
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1515,6 +1517,10 @@ N> * The Word document is a flow document in which contents will not be preserve
 N> * Word viewer/editor renders the contents of the Word document page by page dynamically when opened for viewing or editing and this page wise rendered information will not be preserved in the document level as per the Word file format specification.
 N> * Whereas Essential DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence it is not feasible to set different page margins or page settings to each page instead we can do the same for each section.
 N> * And also, it is not feasible to get the page-wise details from Word document and split the Word document in page by page. 
+
+## Online Demo
+
+* Explore how to insert headers and footers to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/headerandfooter#/material3).
 
 ## See Also
 

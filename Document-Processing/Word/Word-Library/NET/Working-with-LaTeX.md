@@ -15,6 +15,8 @@ Add **accent** equation to a Word document using the LaTeX through [AppendMath](
 
 The following code example illustrates how to create accent equation using LaTeX in Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
@@ -1978,3 +1980,83 @@ document.Save("Output.docx", FormatType.Docx)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mathematical-Equation/Apply-math-justification).
+
+## Modify equation using LaTeX
+
+You can modify the text of an equation by replacing the string value in the LaTeX API, which retrieves the LaTeX string representation of the professional equation in the Word document.
+
+The following code snippet shows how to modify the LaTeX equation in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Open the FileStream for reading and writing the "Template.docx" file
+FileStream fileStream = new FileStream("Template.docx", FileMode.Open, FileAccess.ReadWrite);
+// Load the template Word document from the FileStream
+WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
+// Access the first paragraph from the last section of the document
+WParagraph paragraph = document.LastSection.Body.ChildEntities[0] as WParagraph;
+// Retrieve the first math equation in the paragraph, if it exists
+WMath math = paragraph.ChildEntities[0] as WMath;
+if (math != null)
+{
+    // Get the LaTeX representation of the math equation
+    string laTeX = math.MathParagraph.LaTeX;
+    // Replace occurrences of 'x' with 'k' in the LaTeX representation
+    math.MathParagraph.LaTeX = laTeX.Replace("x", "k");
+}
+//Saves and closes the Word document instance
+MemoryStream stream = new MemoryStream();
+//Saves the Word document to  MemoryStream
+document.Save(stream, FormatType.Docx);
+document.Close();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Open the FileStream for reading and writing the "Template.docx" file
+WordDocument document = new WordDocument("Template.docx");
+// Access the first paragraph from the last section of the document
+WParagraph paragraph = document.LastSection.Body.ChildEntities[0] as WParagraph;
+// Retrieve the first math equation in the paragraph, if it exists
+WMath math = paragraph.ChildEntities[0] as WMath;
+if (math != null)
+{
+    // Get the LaTeX representation of the math equation
+    string laTeX = math.MathParagraph.LaTeX;
+    // Replace occurrences of 'x' with 'k' in the LaTeX representation
+    math.MathParagraph.LaTeX = laTeX.Replace("x", "k");
+}
+//Saves the word document
+document.Save("Sample.docx");
+//Close the word document
+document.Close();
+// Save the modified document to the FileStream in DOCX format
+document.Save(stream, FormatType.Docx);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Opens an existing Word document
+Dim document As WordDocument = New WordDocument("Template.docx")
+'Access the paragraph from Word document
+Dim paragraph As WParagraph = CType(document.LastSection.Body.ChildEntities(0), WParagraph)
+'Access the mathematical equation from the paragraph
+Dim math As WMath = CType(paragraph.ChildEntities(0), WMath)If math IsNot Nothing Then
+    ' Get the LaTeX representation of the math equation
+    Dim laTeX As String = math.MathParagraph.LaTeX
+    ' Replace occurrences of 'x' with 'k' in the LaTeX representation
+    math.MathParagraph.LaTeX = laTeX.Replace("x", "k")
+End If
+'Saves the word document
+document.Save("Sample.docx")
+'Close the word document
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+![Edit equation using LaTeX](WorkingwithMathematicalEquation_images/ModifyLaTeXEquation.png)
+
+## Online Demo
+
+* Explore how to create a Word document with mathematical equations using LaTeX and the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/latex#/material3).
