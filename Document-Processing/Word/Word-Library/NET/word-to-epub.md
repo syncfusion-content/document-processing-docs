@@ -10,6 +10,13 @@ documentation: UG
 
 The Word document files are converted as EPUB v2.0 file format with few lines of code by using the Essential DocIO.
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to EPUB file using the .NET Word Library (DocIO).
+
+* [Word to EPUB conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
+* [Word to EPUB conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
+
 The following code illustrates how to convert the Word document to EPUB file.
 
 {% tabs %}
