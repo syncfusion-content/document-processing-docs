@@ -1085,3 +1085,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to find list of used fonts in the Word document?](https://support.syncfusion.com/kb/article/11334/how-to-find-list-of-used-fonts-in-the-word-document)
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [Is it possible to fetch page numbers in a Word document using .NET Core DocIO?](https://support.syncfusion.com/kb/article/15907/is-it-possible-to-fetch-page-numbers-in-a-word-document-using-net-core-docio?)
+* [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
