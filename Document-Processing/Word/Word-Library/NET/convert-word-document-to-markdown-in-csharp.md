@@ -16,8 +16,6 @@ Convert an existing Word document or document that is created from scratch into 
 
 The following code example shows how to convert a Word document to a Markdown.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -171,6 +169,8 @@ The Essential DocIO supports two types of code blocks in Word to Markdown conver
 * Fenced code block: Set the paragraph style as “FencedCode.”
 
 The following code example shows how to create code blocks in a Word document using DocIO.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
