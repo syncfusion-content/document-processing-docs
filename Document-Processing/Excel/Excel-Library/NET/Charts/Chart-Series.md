@@ -1,6 +1,6 @@
 ---
-title: Modify the Appearance of Series | Syncfusion
-description: Learn how to modify the appearance of series in a chart in an Excel document using Syncfusion .NET Excel (XlsIO) library without Microsoft Excel.
+title: Chart Series | Excel library | Syncfusion
+description: In this section, you can learn about chart series in an Excel document with XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -10,66 +10,77 @@ documentation: UG
 
 In a chart, a **series** represents a set of related data points, often depicted using lines, bars, or markers to show data trends or comparisons. Using XlsIO, you can **customize the series in the chart**.
 
-## Set the Series Name
+## Add
 
-The following code snippet illustrates how to set the series name in chart.
+The following code snippet illustrates how to add series in chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Set name to chart series.
-chart.Series[0].Name = "Amount";
+//Add serie
+IChartSerie Amount = chart.Series.Add("Amount");
+Amount.Values = worksheet.Range["B2:B6"];
+Amount.CategoryLabels = worksheet.Range["A2:A6"];
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set name to chart series.
-chart.Series[0].Name = "Amount";
+//Add serie
+IChartSerie Amount = chart.Series.Add("Amount");
+Amount.Values = worksheet.Range["B2:B6"];
+Amount.CategoryLabels = worksheet.Range["A2:A6"];
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set name to chart series.
-chart.Series[0].Name = "Amount"
+'Add serie
+IChartSerie Amount = chart.Series.Add("Amount")
+Amount.Values = worksheet.Range["B2:B6"]
+Amount.CategoryLabels = worksheet.Range["A2:A6"]
 {% endhighlight %}
 {% endtabs %}
 
-## Set the Series Type
+## Format
 
-The following code snippet illustrates how to set the series type.
+### Border
+
+The following code snippet illustrates how to format the border of the serie.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Set the series type.
-chart.Series[0].SerieType = ExcelChartType.Line_Markers;
-chart.Series[1].SerieType = ExcelChartType.Bar_Clustered;
+//Set the border
+chart.Series[1].SerieFormat.LineProperties.LineColor = Color.Red;
+chart.Series[1].SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot;
+chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set the series type.
-chart.Series[0].SerieType = ExcelChartType.Line_Markers;
-chart.Series[1].SerieType = ExcelChartType.Bar_Clustered;
+//Set the border
+chart.Series[1].SerieFormat.LineProperties.LineColor = Color.Red;
+chart.Series[1].SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot;
+chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set the series type.
-chart.Series[0].SerieType = ExcelChartType.Line_Markers
-chart.Series[1].SerieType = ExcelChartType.Bar_Clustered
+' Set the border
+chart.Series(1).SerieFormat.LineProperties.LineColor = Color.Red
+chart.Series(1).SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot
+chart.Series(1).SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Series Color
+### Color
 
-The following code snippet illustrates how to customize the series color.
+The following code snippet illustrates how to format the color of the serie.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Configure the fill settings for the series in the chart.
+//Set the color
 chart.Series[1].SerieFormat.Fill.FillType = ExcelFillType.Gradient;
 chart.Series[1].SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-chart.Series[1].SerieFormat.Fill.BackColor = Syncfusion.Drawing.Color.FromArgb(205, 217, 234);
-chart.Series[1].SerieFormat.Fill.ForeColor = Syncfusion.Drawing.Color.Red;
+chart.Series[1].SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234);
+chart.Series[1].SerieFormat.Fill.ForeColor = Color.Red;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Configure the fill settings for the series in the chart.
+//Set the color
 chart.Series[1].SerieFormat.Fill.FillType = ExcelFillType.Gradient;
 chart.Series[1].SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor;
 chart.Series[1].SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234);
@@ -77,7 +88,7 @@ chart.Series[1].SerieFormat.Fill.ForeColor = Color.Red;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Configure the fill settings for the series in the chart.
+'Set the color
 chart.Series(1).SerieFormat.Fill.FillType = ExcelFillType.Gradient
 chart.Series(1).SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor
 chart.Series(1).SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234)
@@ -85,30 +96,27 @@ chart.Series(1).SerieFormat.Fill.ForeColor = Color.Red
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the Series Border
+## Series Type
 
-The following code snippet illustrates how to customize the series border.
+The following code snippet illustrates how to set the series type.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Customize series border.
-chart.Series[1].SerieFormat.LineProperties.LineColor = Syncfusion.Drawing.Color.Red;
-chart.Series[1].SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot;
-chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow;
+//Set the series type
+chart.Series[0].SerieType = ExcelChartType.Line_Markers;
+chart.Series[1].SerieType = ExcelChartType.Bar_Clustered;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Customize series border.
-chart.Series[1].SerieFormat.LineProperties.LineColor = Color.Red;
-chart.Series[1].SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot;
-chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow;
+//Set the series type
+chart.Series[0].SerieType = ExcelChartType.Line_Markers;
+chart.Series[1].SerieType = ExcelChartType.Bar_Clustered;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Customize series border.
-chart.Series(1).SerieFormat.LineProperties.LineColor = Color.Red
-chart.Series(1).SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot
-chart.Series(1).SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow
+'Set the series type
+chart.Series(0).SerieType = ExcelChartType.Line_Markers
+chart.Series(1).SerieType = ExcelChartType.Bar_Clustered
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,63 +128,145 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet sheet = workbook.Worksheets[0];
-    IChartShape chart = sheet.Charts[0];
+    IWorkbook workbook = application.Workbooks.Create(1);
+    IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Set name to chart series.
-    chart.Series[0].Name = "Amount";
+    worksheet.Range["A1"].Text = "Items";
+    worksheet.Range["A2"].Text = "Beverages";
+    worksheet.Range["A3"].Text = "Condiments";
+    worksheet.Range["A4"].Text = "Confections";
+    worksheet.Range["A5"].Text = "Dairy Products";
+    worksheet.Range["A6"].Text = "Grains/Cereals";
 
-    //Set the series type.
+    worksheet.Range["B1"].Text = "Amount(in $)";
+    worksheet.Range["B2"].Number = 2776;
+    worksheet.Range["B3"].Number = 1077;
+    worksheet.Range["B4"].Number = 2287;
+    worksheet.Range["B5"].Number = 1368;
+    worksheet.Range["B6"].Number = 3325;
+
+    worksheet.Range["C1"].Text = "Count";
+    worksheet.Range["C2"].Number = 925;
+    worksheet.Range["C3"].Number = 378;
+    worksheet.Range["C4"].Number = 880;
+    worksheet.Range["C5"].Number = 581;
+    worksheet.Range["C6"].Number = 189;
+
+    IChartShape chart = worksheet.Charts.Add();
+
+    //Set chart type
+    chart.ChartType = ExcelChartType.Column_Clustered;
+
+    //Set chart title
+    chart.ChartTitle = "Product Sales";
+
+    //Add first serie
+    IChartSerie serie1 = chart.Series.Add("Amount");
+    serie1.Values = worksheet.Range["B2:B6"];
+    serie1.CategoryLabels = worksheet.Range["A2:A6"];
+
+    //Add second serie
+    IChartSerie serie2 = chart.Series.Add("Count");
+    serie2.Values = worksheet.Range["C2:C6"];
+    serie2.CategoryLabels = worksheet.Range["A2:A6"];
+
+    //Set the series type
     chart.Series[0].SerieType = ExcelChartType.Line_Markers;
     chart.Series[1].SerieType = ExcelChartType.Bar_Clustered;
 
-    // Configure the fill settings for the series in the chart.
+    //Set the color
     chart.Series[1].SerieFormat.Fill.FillType = ExcelFillType.Gradient;
     chart.Series[1].SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-    chart.Series[1].SerieFormat.Fill.BackColor = Syncfusion.Drawing.Color.FromArgb(205, 217, 234);
-    chart.Series[1].SerieFormat.Fill.ForeColor = Syncfusion.Drawing.Color.Red;
+    chart.Series[1].SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234);
+    chart.Series[1].SerieFormat.Fill.ForeColor = Color.Red;
 
-    //Customize series border.
+    //Set the border
     chart.Series[1].SerieFormat.LineProperties.LineColor = Color.Red;
     chart.Series[1].SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot;
     chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow;
 
+    //Positioning chart in a worksheet
+    chart.TopRow = 9;
+    chart.LeftColumn = 1;
+    chart.RightColumn = 10;
+    chart.BottomRow = 25;
+
     //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(outputStream);
-    outputStream.Dispose();
-    inputStream.Dispose();
+    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+    workbook.SaveAs(stream);
+
+    //Dispose streams
+    stream.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
+   IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
-    IWorksheet sheet = workbook.Worksheets[0];
-    IChartShape chart = sheet.Charts[0];
+    IWorkbook workbook = application.Workbooks.Create(1);
+    IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Set name to chart series.
-    chart.Series[0].Name = "Amount";
+    worksheet.Range["A1"].Text = "Items";
+    worksheet.Range["A2"].Text = "Beverages";
+    worksheet.Range["A3"].Text = "Condiments";
+    worksheet.Range["A4"].Text = "Confections";
+    worksheet.Range["A5"].Text = "Dairy Products";
+    worksheet.Range["A6"].Text = "Grains/Cereals";
 
-    //Set the series type.
+    worksheet.Range["B1"].Text = "Amount(in $)";
+    worksheet.Range["B2"].Number = 2776;
+    worksheet.Range["B3"].Number = 1077;
+    worksheet.Range["B4"].Number = 2287;
+    worksheet.Range["B5"].Number = 1368;
+    worksheet.Range["B6"].Number = 3325;
+
+    worksheet.Range["C1"].Text = "Count";
+    worksheet.Range["C2"].Number = 925;
+    worksheet.Range["C3"].Number = 378;
+    worksheet.Range["C4"].Number = 880;
+    worksheet.Range["C5"].Number = 581;
+    worksheet.Range["C6"].Number = 189;
+
+    IChartShape chart = worksheet.Charts.Add();
+
+    //Set chart type
+    chart.ChartType = ExcelChartType.Column_Clustered;
+
+    //Set chart title
+    chart.ChartTitle = "Product Sales";
+
+    //Add first serie
+    IChartSerie serie1 = chart.Series.Add("Amount");
+    serie1.Values = worksheet.Range["B2:B6"];
+    serie1.CategoryLabels = worksheet.Range["A2:A6"];
+
+    //Add second serie
+    IChartSerie serie2 = chart.Series.Add("Count");
+    serie2.Values = worksheet.Range["C2:C6"];
+    serie2.CategoryLabels = worksheet.Range["A2:A6"];
+
+    //Set the series type
     chart.Series[0].SerieType = ExcelChartType.Line_Markers;
     chart.Series[1].SerieType = ExcelChartType.Bar_Clustered;
 
-    // Configure the fill settings for the series in the chart.
+    //Set the color
     chart.Series[1].SerieFormat.Fill.FillType = ExcelFillType.Gradient;
     chart.Series[1].SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor;
     chart.Series[1].SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234);
     chart.Series[1].SerieFormat.Fill.ForeColor = Color.Red;
 
-    //Customize series border.
+    //Set the border
     chart.Series[1].SerieFormat.LineProperties.LineColor = Color.Red;
     chart.Series[1].SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot;
     chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow;
+
+    //Positioning chart in a worksheet
+    chart.TopRow = 9;
+    chart.LeftColumn = 1;
+    chart.RightColumn = 10;
+    chart.BottomRow = 25;
 
     //Saving the workbook
     workbook.SaveAs("Output.xlsx");
@@ -187,27 +277,68 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
-    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
-    Dim sheet As IWorksheet = workbook.Worksheets(0)
-    Dim chart As IChartShape = sheet.Charts(0)
+    Dim workbook As IWorkbook = application.Workbooks.Create(1)
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-    'Set name to chart series.
-    chart.Series(0).Name = "Amount"
+    worksheet.Range("A1").Text = "Items"
+    worksheet.Range("A2").Text = "Beverages"
+    worksheet.Range("A3").Text = "Condiments"
+    worksheet.Range("A4").Text = "Confections"
+    worksheet.Range("A5").Text = "Dairy Products"
+    worksheet.Range("A6").Text = "Grains/Cereals"
 
-    'Set the series type.
+    worksheet.Range("B1").Text = "Amount(in $)"
+    worksheet.Range("B2").Number = 2776
+    worksheet.Range("B3").Number = 1077
+    worksheet.Range("B4").Number = 2287
+    worksheet.Range("B5").Number = 1368
+    worksheet.Range("B6").Number = 3325
+
+    worksheet.Range("C1").Text = "Count"
+    worksheet.Range("C2").Number = 925
+    worksheet.Range("C3").Number = 378
+    worksheet.Range("C4").Number = 880
+    worksheet.Range("C5").Number = 581
+    worksheet.Range("C6").Number = 189
+
+    Dim chart As IChartShape = worksheet.Charts.Add()
+
+    'Set chart type
+    chart.ChartType = ExcelChartType.Column_Clustered
+
+    'Set chart title
+    chart.ChartTitle = "Product Sales"
+
+    'Add first series
+    Dim serie1 As IChartSerie = chart.Series.Add("Amount")
+    serie1.Values = worksheet.Range("B2:B6")
+    serie1.CategoryLabels = worksheet.Range("A2:A6")
+
+    'Add second series
+    Dim serie2 As IChartSerie = chart.Series.Add("Count")
+    serie2.Values = worksheet.Range("C2:C6")
+    serie2.CategoryLabels = worksheet.Range("A2:A6")
+
+    'Set the series type
     chart.Series(0).SerieType = ExcelChartType.Line_Markers
     chart.Series(1).SerieType = ExcelChartType.Bar_Clustered
 
-    ' Configure the fill settings for the series in the chart.
+    'Set the color
     chart.Series(1).SerieFormat.Fill.FillType = ExcelFillType.Gradient
     chart.Series(1).SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor
     chart.Series(1).SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234)
     chart.Series(1).SerieFormat.Fill.ForeColor = Color.Red
 
-    'Customize series border.
+    'Set the border
     chart.Series(1).SerieFormat.LineProperties.LineColor = Color.Red
     chart.Series(1).SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot
     chart.Series(1).SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow
+
+    'Positioning chart in a worksheet
+    chart.TopRow = 9
+    chart.LeftColumn = 1
+    chart.RightColumn = 10
+    chart.BottomRow = 25
 
     'Saving the workbook
     workbook.SaveAs("Output.xlsx")
@@ -215,51 +346,53 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to format the series in C# is present on [this GitHub page]().
+A complete working example for the chart data series in C# is present on [this GitHub page]().
 
-## Set the DataPoint as Total
+## Serie Settings
 
-The following code snippet illustrates how to set the Data Point as total in chart.
+### Add DataPoint as total
+
+The following code snippet illustrates how to add the Data Point as total in chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Data point settings as total in chart.
+//Data point settings as total in chart
 chart.Series[0].DataPoints[3].SetAsTotal = true;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Data point settings as total in chart.
+//Data point settings as total in chart
 chart.Series[0].DataPoints[3].SetAsTotal = true;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Data point settings as total in chart.
+'Data point settings as total in chart
 chart.Series(0).DataPoints(3).SetAsTotal = True
 {% endhighlight %}
 {% endtabs %}
 
-## Set the connector lines between data points 
+### Add Connector lines between data points 
 
-The following code snippet illustrates how to set the connector lines between data points. 
+The following code snippet illustrates how to add the connector lines between data points. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Showing the connector lines between data points.
+//Showing the connector lines between data points
 chart.Series[0].SerieFormat.ShowConnectorLines = true;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Showing the connector lines between data points.
+//Showing the connector lines between data points
 chart.Series[0].SerieFormat.ShowConnectorLines = true;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Showing the connector lines between data points.
+'Showing the connector lines between data points
 chart.Series(0).SerieFormat.ShowConnectorLines = True
 {% endhighlight %}
 {% endtabs %}
 
-## Add space between bars
+### Add space between bars
 
 Spaces between chart bars are of two types.
 
@@ -298,36 +431,36 @@ chart.Series(0).SerieFormat.CommonSerieOptions.GapWidth = 80
 
 A complete working example for adding space between chart bars in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20Bars%20Spacing).
 
-## Add High-Low Lines
+### Add High-Low Lines
 
 The following code snippet illustrates how to add high-low lines.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Set HasHighLowLines property to true.
+//Set HasHighLowLines property to true
 chart.Series[0].SerieFormat.CommonSerieOptions.HasHighLowLines = true;
 
-//Apply formats to HighLowLines.
+//Apply formats to HighLowLines
 chart.Series[0].SerieFormat.CommonSerieOptions.HighLowLines.LineColor = Syncfusion.Drawing.Color.Red;
 chart.Series[0].SerieFormat.CommonSerieOptions.HighLowLines.LinePattern = ExcelChartLinePattern.Dot;
 chart.Series[0].SerieFormat.CommonSerieOptions.HighLowLines.LineWeight = ExcelChartLineWeight.Narrow;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set HasHighLowLines property to true.
+//Set HasHighLowLines property to true
 chart.Series[0].SerieFormat.CommonSerieOptions.HasHighLowLines = true;
 
-//Apply formats to HighLowLines.
+//Apply formats to HighLowLine
 chart.Series[0].SerieFormat.CommonSerieOptions.HighLowLines.LineColor = Color.Red;
 chart.Series[0].SerieFormat.CommonSerieOptions.HighLowLines.LinePattern = ExcelChartLinePattern.Dot;
 chart.Series[0].SerieFormat.CommonSerieOptions.HighLowLines.LineWeight = ExcelChartLineWeight.Narrow;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set HasHighLowLines property to true.
+'Set HasHighLowLines property to true
 chart.Series(0).SerieFormat.CommonSerieOptions.HasHighLowLines = True
 
-'Apply formats to HighLowLines.
+'Apply formats to HighLowLines
 chart.Series(0).SerieFormat.CommonSerieOptions.HighLowLines.LineColor = Color.Red
 chart.Series(0).SerieFormat.CommonSerieOptions.HighLowLines.LinePattern = ExcelChartLinePattern.Dot
 chart.Series(0).SerieFormat.CommonSerieOptions.HighLowLines.LineWeight = ExcelChartLineWeight.Narrow
@@ -336,7 +469,7 @@ chart.Series(0).SerieFormat.CommonSerieOptions.HighLowLines.LineWeight = ExcelCh
 
 A complete working example to show high low lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/High%20Low%20Lines).
 
-## Add Drop Lines
+### Add Drop Lines
 
 The following code snippet illustrates how to add drop lines.
 
@@ -374,36 +507,36 @@ chart.Series(0).SerieFormat.CommonSerieOptions.DropLines.LineWeight = ExcelChart
 
 A complete working example to add drop lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Drop%20Lines).
 
-## Add Series Lines
+### Add Series Lines
 
 The following code snippet illustrates how to add series lines in chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Set HasSeriesLines property to true.
+//Set HasSeriesLines property to true
 chart.Series[0].SerieFormat.CommonSerieOptions.HasSeriesLines = true;
 
-//Apply formats to SeriesLines.
+//Apply formats to SeriesLines
 chart.Series[0].SerieFormat.CommonSerieOptions.PieSeriesLine.LineColor = Syncfusion.Drawing.Color.Red;
 chart.Series[0].SerieFormat.CommonSerieOptions.PieSeriesLine.LinePattern = ExcelChartLinePattern.Dot;
 chart.Series[0].SerieFormat.CommonSerieOptions.PieSeriesLine.LineWeight = ExcelChartLineWeight.Narrow;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set HasSeriesLines property to true.
+//Set HasSeriesLines property to true
 chart.Series[0].SerieFormat.CommonSerieOptions.HasSeriesLines = true;
 
-//Apply formats to SeriesLines.
+//Apply formats to SeriesLines
 chart.Series[0].SerieFormat.CommonSerieOptions.PieSeriesLine.LineColor = Color.Red;
 chart.Series[0].SerieFormat.CommonSerieOptions.PieSeriesLine.LinePattern = ExcelChartLinePattern.Dot;
 chart.Series[0].SerieFormat.CommonSerieOptions.PieSeriesLine.LineWeight = ExcelChartLineWeight.Narrow;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Set HasSeriesLines property to true.
+'Set HasSeriesLines property to true
 chart.Series(0).SerieFormat.CommonSerieOptions.HasSeriesLines = true
 
-'Apply formats to SeriesLines.
+'Apply formats to SeriesLines
 chart.Series(0).SerieFormat.CommonSerieOptions.PieSeriesLine.LineColor = Color.Red
 chart.Series(0).SerieFormat.CommonSerieOptions.PieSeriesLine.LinePattern = ExcelChartLinePattern.Dot
 chart.Series(0).SerieFormat.CommonSerieOptions.PieSeriesLine.LineWeight = ExcelChartLineWeight.Narrow
@@ -411,44 +544,3 @@ chart.Series(0).SerieFormat.CommonSerieOptions.PieSeriesLine.LineWeight = ExcelC
 {% endtabs %}
 
 A complete working example to add series lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Series%20Lines).
-
-## Different Marker Properties
-
-The following code snippet illustrates how to customize the marker properties.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Set the marker style of the first series in the chart.
-chart.Series[0].SerieFormat.MarkerStyle = ExcelChartMarkerType.Star;
-
-//Customize the marker style.
-chart.Series[0].SerieFormat.MarkerSize = 8;
-chart.Series[0].SerieFormat.MarkerBackgroundColor = Syncfusion.Drawing.Color.Red;
-chart.Series[0].SerieFormat.MarkerForegroundColor = Syncfusion.Drawing.Color.Black;
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Set the marker style of the first series in the chart.
-chart.Series[0].SerieFormat.MarkerStyle = ExcelChartMarkerType.Star;
-
-//Customize the marker style.
-chart.Series[0].SerieFormat.MarkerSize = 8;
-chart.Series[0].SerieFormat.MarkerBackgroundColor = Color.Red;
-chart.Series[0].SerieFormat.MarkerForegroundColor = Color.Black;
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-' Set the marker style of the first series in the chart.
-chart.Series(0).SerieFormat.MarkerStyle = ExcelChartMarkerType.Star
-
-'Customize the marker style.
-chart.Series(0).SerieFormat.MarkerSize = 8
-chart.Series(0).SerieFormat.MarkerBackgroundColor = Color.Red
-chart.Series(0).SerieFormat.MarkerForegroundColor = Color.Black
-{% endhighlight %}
-{% endtabs %}
-
-## See Also
-* [How to filter Excel chart series in C#, VB.NET?](https://support.syncfusion.com/kb/article/7509/how-to-filter-excel-chart-series-in-c-vb-net)
-* [How to change Excel chart series color in C#, VB.NET?](https://support.syncfusion.com/kb/article/2733/how-to-change-excel-chart-series-color-in-c-vbnet)
-* [How to set trendlines for Excel chart series in C#, VB.NET?](https://support.syncfusion.com/kb/article/7532/how-to-set-trendlines-for-excel-chart-series-in-c-vb-net)

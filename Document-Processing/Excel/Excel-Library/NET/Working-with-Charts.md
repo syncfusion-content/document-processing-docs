@@ -20,7 +20,7 @@ The following code example illustrates how to create a chart through the existin
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
@@ -45,7 +45,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -65,7 +65,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -96,7 +96,7 @@ The following code example illustrate how to create a chart from directly entere
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -122,7 +122,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -144,7 +144,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -177,7 +177,7 @@ The following code example illustrates how to create a chart through series.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -231,7 +231,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -281,7 +281,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -350,7 +350,7 @@ The following code example illustrates how to create Sparkline chart.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   FileStream inputStream = new FileStream("spark.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
@@ -379,7 +379,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("spark.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -404,7 +404,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("spark.xlsx", ExcelOpenType.Automatic)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -440,7 +440,7 @@ The following code example illustrates how to edit an existing sparkline chart.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   FileStream inputStream = new FileStream("Sparkline.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
@@ -464,7 +464,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sparkline.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -482,7 +482,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sparkline.xlsx", ExcelOpenType.Automatic)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -511,7 +511,7 @@ The following code example illustrates how to remove sparklines.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   FileStream inputStream = new FileStream("Sparkline.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
@@ -539,7 +539,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sparkline.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -562,7 +562,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -1445,6 +1445,940 @@ By executing the program, you will get the Excel file as below
 
 N>These Charts are supported only in Excel 2016 and are not visible in the earlier versions.
 
+## Customizing the chart and its elements
+
+A chart is composed of various elements such as chart area, plot area, legend, axis, series, data labels etc. These elements can be customized to enhance the visual presentation.
+
+### Elements of Chart
+
+The following image illustrates the basic elements of a chart.
+
+![chart elements](Working-with-Charts_images/Working-with-charts_img2.jpeg)
+
+1. The chart area of the chart.
+2. The plot area of the chart.
+3. The data points of the data series that are plotted in the chart.
+4. The horizontal (category) and vertical (value) axis along which the data is plotted in the chart.
+5. The legend of the chart.
+6. A chart axis title that you can use in the chart.
+7. A data label that you can use to identify the details of a data point in a data series.
+
+#### Chart Title
+
+Customize the Chart title by its name, appearance, and resizing it using Excel (XlsIO) library. For further information, click [here]().
+
+#### Chart  Area
+
+Customize the chart area by changing its border, colors, transparency, and more using the Excel (XlsIO) library. For further information, click [here]().
+
+#### Chart Plot Area
+
+Customize the chart plot area by changing its border, colors, transparency, position and adding image using the Excel (XlsIO) library. For further information, click [here]().
+
+#### Chart Series
+
+Customize the chart series by changing the series name, type, color, border, and more using the Excel (XlsIO) library. For further information, click [here]().
+
+#### Chart Legend
+
+Customize the chart legend by changing the position, border, and modifying the legend entry using the Excel (XlsIO) library. For further information, click [here]().
+
+#### Chart Data Labels
+
+Customize the chart data labels by changing the position, size and more using the Excel (XlsIO) library. For further information, click [here]().
+
+#### Chart Axis
+
+Customize the chart axes by changing the title, border, font, rotation angle and more using the Excel (XlsIO) library. For further information, click [here]().
+
+## Chart Appearnace
+ 
+### Fill Settings
+
+#### Solid Fill
+
+The following code example illustrates how to apply a solid color to the chart area, plot area, and data series of the chart.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+    
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set solid fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.FillType = ExcelFillType.SolidColor;
+  chartArea.Fill.ForeColor = Color.FromArgb(208,206,206);
+
+  //Set solid fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.FillType = ExcelFillType.SolidColor;
+  plotArea.Fill.ForeColor = Color.FromArgb(208, 206, 206);
+
+  //Set solid fill to series
+  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl1.FillType = ExcelFillType.SolidColor;
+  chartFillImpl1.ForeColor = Color.FromArgb(255, 192, 203);
+  //chartFillImpl1.ForeColor = Color.Beige;
+
+  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl2.FillType = ExcelFillType.SolidColor;
+  chartFillImpl2.ForeColor = Color.FromArgb(143, 170, 220);
+
+  //Saving the workbook as streams
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+    
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set solid fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.FillType = ExcelFillType.SolidColor;
+  chartArea.Fill.ForeColor = Color.FromArgb(208,206,206);
+
+  //Set solid fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.FillType = ExcelFillType.SolidColor;
+  plotArea.Fill.ForeColor = Color.FromArgb(208, 206, 206);
+
+  //Set solid fill to series
+  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl1.FillType = ExcelFillType.SolidColor;
+  chartFillImpl1.ForeColor = Color.FromArgb(255, 192, 203);
+  //chartFillImpl1.ForeColor = Color.Beige;
+
+  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl2.FillType = ExcelFillType.SolidColor;
+  chartFillImpl2.ForeColor = Color.FromArgb(143, 170, 220);
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+  Dim chart As IChart = worksheet.Charts(0)
+
+  'Get data series
+  Dim serie1 As IChartSerie = chart.Series(0)
+  Dim serie2 As IChartSerie = chart.Series(1)
+
+  'Set solid fill to chart area
+  Dim chartArea As IChartFrameFormat = chart.ChartArea
+  chartArea.Fill.FillType = ExcelFillType.SolidColor
+  chartArea.Fill.ForeColor = Color.FromArgb(208, 206, 206)
+
+  'Set solid fill to plot area
+  Dim plotArea As IChartFrameFormat = chart.PlotArea
+  plotArea.Fill.FillType = ExcelFillType.SolidColor
+  plotArea.Fill.ForeColor = Color.FromArgb(208, 206, 206)
+
+  'Set solid fill to series
+  Dim chartFillImpl1 As ChartFillImpl = TryCast(serie1.SerieFormat.Fill, ChartFillImpl)
+  chartFillImpl1.FillType = ExcelFillType.SolidColor
+  chartFillImpl1.ForeColor = Color.FromArgb(255, 192, 203)
+
+  Dim chartFillImpl2 As ChartFillImpl = TryCast(serie2.SerieFormat.Fill, ChartFillImpl)
+  chartFillImpl2.FillType = ExcelFillType.SolidColor
+  chartFillImpl2.ForeColor = Color.FromArgb(143, 170, 220)
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %} 
+
+A complete working example to apply a solid fill in C# is present on [this GitHub page]().
+
+#### Pattern Fill
+
+The following code example illustrates how to apply a pattern fill to the chart area, plot area, and data series of the chart.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+    
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set pattern fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.FillType = ExcelFillType.Pattern;
+  chartArea.Fill.BackColor = Color.Pink;
+  chartArea.Fill.ForeColor = Color.White;
+  chartArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
+
+  //Set pattern fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.FillType = ExcelFillType.Pattern;
+  plotArea.Fill.BackColor = Color.Pink;
+  plotArea.Fill.ForeColor = Color.White;
+  plotArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
+
+  //Set pattern fill to series
+  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl1.FillType = ExcelFillType.Pattern;
+  chartFillImpl1.BackColor = Color.Pink;
+  chartFillImpl1.ForeColor = Color.White;
+  chartFillImpl1.Pattern = ExcelGradientPattern.Pat_5_Percent;
+
+  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl2.FillType = ExcelFillType.Pattern;
+  chartFillImpl2.BackColor = Color.Gray;
+  chartFillImpl2.ForeColor = Color.White;
+  chartFillImpl2.Pattern = ExcelGradientPattern.Pat_5_Percent;
+
+  //Saving the workbook as streams
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+    
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set pattern fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.FillType = ExcelFillType.Pattern;
+  chartArea.Fill.BackColor = Color.Pink;
+  chartArea.Fill.ForeColor = Color.White;
+  chartArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
+
+  //Set pattern fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.FillType = ExcelFillType.Pattern;
+  plotArea.Fill.BackColor = Color.Pink;
+  plotArea.Fill.ForeColor = Color.White;
+  plotArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
+
+  //Set pattern fill to series
+  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl1.FillType = ExcelFillType.Pattern;
+  chartFillImpl1.BackColor = Color.Pink;
+  chartFillImpl1.ForeColor = Color.White;
+  chartFillImpl1.Pattern = ExcelGradientPattern.Pat_5_Percent;
+
+  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl2.FillType = ExcelFillType.Pattern;
+  chartFillImpl2.BackColor = Color.Gray;
+  chartFillImpl2.ForeColor = Color.White;
+  chartFillImpl2.Pattern = ExcelGradientPattern.Pat_5_Percent;
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+  Dim chart As IChart = worksheet.Charts(0)
+
+  'Get data series
+  Dim serie1 As IChartSerie = chart.Series(0)
+  Dim serie2 As IChartSerie = chart.Series(1)
+
+  'Set pattern fill to chart area
+  Dim chartArea As IChartFrameFormat = chart.ChartArea
+  chartArea.Fill.FillType = ExcelFillType.Pattern
+  chartArea.Fill.BackColor = Color.Pink
+  chartArea.Fill.ForeColor = Color.White
+  chartArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent
+
+  'Set pattern fill to plot area
+  Dim plotArea As IChartFrameFormat = chart.PlotArea
+  plotArea.Fill.FillType = ExcelFillType.Pattern
+  plotArea.Fill.BackColor = Color.Pink
+  plotArea.Fill.ForeColor = Color.White
+  plotArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent
+
+  'Set pattern fill to series
+  Dim chartFillImpl1 As ChartFillImpl = TryCast(serie1.SerieFormat.Fill, ChartFillImpl)
+  chartFillImpl1.FillType = ExcelFillType.Pattern
+  chartFillImpl1.BackColor = Color.Pink
+  chartFillImpl1.ForeColor = Color.White
+  chartFillImpl1.Pattern = ExcelGradientPattern.Pat_5_Percent
+
+  Dim chartFillImpl2 As ChartFillImpl = TryCast(serie2.SerieFormat.Fill, ChartFillImpl)
+  chartFillImpl2.FillType = ExcelFillType.Pattern
+  chartFillImpl2.BackColor = Color.Gray
+  chartFillImpl2.ForeColor = Color.White
+  chartFillImpl2.Pattern = ExcelGradientPattern.Pat_5_Percent
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %} 
+
+A complete working example to apply a pattern fill in C# is present on [this GitHub page]().
+
+#### Gradient Fill
+
+The following code example illustrates how to apply a gradient fill to the chart area, plot area, and data series of the chart.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+    
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set gradient fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.FillType = ExcelFillType.Gradient;                
+  chartArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
+  chartArea.Fill.ForeColor = Color.White;
+
+  //Set gradient fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.FillType = ExcelFillType.Gradient;
+  plotArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
+  plotArea.Fill.ForeColor = Color.White;
+
+  //Set Gradient fill to series
+  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl1.FillType = ExcelFillType.Gradient;
+  chartFillImpl1.GradientColorType = ExcelGradientColor.MultiColor;
+  serie1.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+  GradientStopImpl gradientStopImpl1 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 176, 240)), 50000, 100000);
+  GradientStopImpl gradientStopImpl2 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 112, 192)), 70000, 100000);
+  chartFillImpl1.GradientStops.GradientType = GradientType.Liniar;
+  chartFillImpl1.GradientStops.Add(gradientStopImpl1);
+  chartFillImpl1.GradientStops.Add(gradientStopImpl2);
+
+  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl2.FillType = ExcelFillType.Gradient;
+  chartFillImpl2.GradientColorType = ExcelGradientColor.MultiColor;
+  serie2.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+  GradientStopImpl gradientStopImpl3 = new GradientStopImpl(new ColorObject(Color.FromArgb(244, 177, 131)), 40000, 100000);
+  GradientStopImpl gradientStopImpl4 = new GradientStopImpl(new ColorObject(Color.FromArgb(255, 102, 0)), 70000, 100000);
+  chartFillImpl2.GradientStops.GradientType = GradientType.Liniar;
+  chartFillImpl2.GradientStops.Add(gradientStopImpl3);
+  chartFillImpl2.GradientStops.Add(gradientStopImpl4);
+
+  //Saving the workbook as streams
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+    
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set gradient fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.FillType = ExcelFillType.Gradient;                
+  chartArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
+  chartArea.Fill.ForeColor = Color.White;
+
+  //Set gradient fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.FillType = ExcelFillType.Gradient;
+  plotArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
+  plotArea.Fill.ForeColor = Color.White;
+
+  //Set Gradient fill to series
+  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl1.FillType = ExcelFillType.Gradient;
+  chartFillImpl1.GradientColorType = ExcelGradientColor.MultiColor;
+  serie1.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+  GradientStopImpl gradientStopImpl1 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 176, 240)), 50000, 100000);
+  GradientStopImpl gradientStopImpl2 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 112, 192)), 70000, 100000);
+  chartFillImpl1.GradientStops.GradientType = GradientType.Liniar;
+  chartFillImpl1.GradientStops.Add(gradientStopImpl1);
+  chartFillImpl1.GradientStops.Add(gradientStopImpl2);
+
+  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+  chartFillImpl2.FillType = ExcelFillType.Gradient;
+  chartFillImpl2.GradientColorType = ExcelGradientColor.MultiColor;
+  serie2.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+  GradientStopImpl gradientStopImpl3 = new GradientStopImpl(new ColorObject(Color.FromArgb(244, 177, 131)), 40000, 100000);
+  GradientStopImpl gradientStopImpl4 = new GradientStopImpl(new ColorObject(Color.FromArgb(255, 102, 0)), 70000, 100000);
+  chartFillImpl2.GradientStops.GradientType = GradientType.Liniar;
+  chartFillImpl2.GradientStops.Add(gradientStopImpl3);
+  chartFillImpl2.GradientStops.Add(gradientStopImpl4);
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+  Dim chart As IChart = worksheet.Charts(0)
+
+  'Get data series
+  Dim serie1 As IChartSerie = chart.Series(0)
+  Dim serie2 As IChartSerie = chart.Series(1)
+
+  'Set gradient fill to chart area
+  Dim chartArea As IChartFrameFormat = chart.ChartArea
+  chartArea.Fill.FillType = ExcelFillType.Gradient
+  chartArea.Fill.BackColor = Color.FromArgb(205, 217, 234)
+  chartArea.Fill.ForeColor = Color.White
+
+  'Set gradient fill to plot area
+  Dim plotArea As IChartFrameFormat = chart.PlotArea
+  plotArea.Fill.FillType = ExcelFillType.Gradient
+  plotArea.Fill.BackColor = Color.FromArgb(205, 217, 234)
+  plotArea.Fill.ForeColor = Color.White
+
+  'Set Gradient fill to series
+  Dim chartFillImpl1 As ChartFillImpl = TryCast(serie1.SerieFormat.Fill, ChartFillImpl)
+  chartFillImpl1.FillType = ExcelFillType.Gradient
+  chartFillImpl1.GradientColorType = ExcelGradientColor.MultiColor
+  serie1.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal
+  Dim gradientStopImpl1 As New GradientStopImpl(New ColorObject(Color.FromArgb(0, 176, 240)), 50000, 100000)
+  Dim gradientStopImpl2 As New GradientStopImpl(New ColorObject(Color.FromArgb(0, 112, 192)), 70000, 100000)
+  chartFillImpl1.GradientStops.GradientType = GradientType.Linear
+  chartFillImpl1.GradientStops.Add(gradientStopImpl1)
+  chartFillImpl1.GradientStops.Add(gradientStopImpl2)
+
+  Dim chartFillImpl2 As ChartFillImpl = TryCast(serie2.SerieFormat.Fill, ChartFillImpl)
+  chartFillImpl2.FillType = ExcelFillType.Gradient
+  chartFillImpl2.GradientColorType = ExcelGradientColor.MultiColor
+  serie2.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal
+  Dim gradientStopImpl3 As New GradientStopImpl(New ColorObject(Color.FromArgb(244, 177, 131)), 40000, 100000)
+  Dim gradientStopImpl4 As New GradientStopImpl(New ColorObject(Color.FromArgb(255, 102, 0)), 70000, 100000)
+  chartFillImpl2.GradientStops.GradientType = GradientType.Linear
+  chartFillImpl2.GradientStops.Add(gradientStopImpl3)
+  chartFillImpl2.GradientStops.Add(gradientStopImpl4)
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %} 
+
+A complete working example to apply a gradient fill in C# is present on [this GitHub page]().
+
+#### Picture Fill
+The following code example illustrates how to apply a picture fill to the chart area, plot area, and data series of the chart.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Getting an image from the stream
+  FileStream imageStream1 = new FileStream("../../../Data/Image1.jpg", FileMode.Open, FileAccess.Read);
+  Image image1 = Image.FromStream(imageStream1);
+  FileStream imageStream2 = new FileStream("../../../Data/Image2.jpg", FileMode.Open, FileAccess.Read);
+  Image image2 = Image.FromStream(imageStream2);
+
+  //Set picture fill to chart area
+  chart.ChartArea.Fill.UserPicture(image1, "Image");
+
+  //Set picture fill to plot area
+  chart.PlotArea.Fill.UserPicture(image1, "Image");
+
+  //Set picture fill to series
+  serie1.SerieFormat.Fill.UserPicture(image2, "Image");
+  serie2.SerieFormat.Fill.UserPicture(image2, "Image");
+
+  //Saving the workbook
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+       
+  //Dispose streams
+  outputStream.Dispose();
+  imageStream1.Dispose();
+  imageStream2.Dispose();
+  inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set picture fill to chart area
+  chart.ChartArea.Fill.UserPicture("Image1.png");
+
+  //Set picture fill to plot area
+  chart.PlotArea.Fill.UserPicture("Image1.png");
+
+  //Set picture fill to series
+  serie1.SerieFormat.Fill.UserPicture("Image2.png");
+  serie2.SerieFormat.Fill.UserPicture("Image2.png");
+
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+  Dim chart As IChart = worksheet.Charts(0)
+
+  'Get data series
+  Dim serie1 As IChartSerie = chart.Series(0)
+  Dim serie2 As IChartSerie = chart.Series(1)
+
+  'Set picture fill to chart area
+  chart.ChartArea.Fill.UserPicture("Image1.png")
+
+  'Set picture fill to plot area
+  chart.PlotArea.Fill.UserPicture("Image1.png")
+
+  'Set picture fill to series
+  serie1.SerieFormat.Fill.UserPicture("Image2.png")
+  serie2.SerieFormat.Fill.UserPicture("Image2.png")
+
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to apply a picture fill in C# is present on [this GitHub page]().
+
+#### No Fill
+
+The following code example illustrates how to apply a no fill to the chart area, plot area, and data series of the chart.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set no fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.Visible = false;
+
+  //Set no fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.Visible = false;
+
+  //Set no fill to series
+  serie1.SerieFormat.Fill.Visible = false;
+
+  //Saving the workbook as stream
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+  IChart chart = worksheet.Charts[0];
+
+  //Get data series
+  IChartSerie serie1 = chart.Series[0];
+  IChartSerie serie2 = chart.Series[1];
+
+  //Set no fill to chart area
+  IChartFrameFormat chartArea = chart.ChartArea;
+  chartArea.Fill.Visible = false;
+
+  //Set no fill to plot area
+  IChartFrameFormat plotArea = chart.PlotArea;
+  plotArea.Fill.Visible = false;
+
+  //Set no fill to series
+  serie1.SerieFormat.Fill.Visible = false;
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+  Dim chart As IChart = worksheet.Charts(0)
+
+  'Get data series
+  Dim serie1 As IChartSerie = chart.Series(0)
+  Dim serie2 As IChartSerie = chart.Series(1)
+
+  'Set no fill to chart area
+  Dim chartArea As IChartFrameFormat = chart.ChartArea
+  chartArea.Fill.Visible = False
+
+  'Set no fill to plot area
+  Dim plotArea As IChartFrameFormat = chart.PlotArea
+  plotArea.Fill.Visible = False
+
+  'Set no fill to series
+  serie1.SerieFormat.Fill.Visible = False
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to apply a no fill in C# is present on [this GitHub page]().
+
+### Layout and resizing chart elements
+
+#### Layout
+
+The following code snippet illustrates how to set the layout for chart elements such as the plot area and legend.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Manually positioning chart plot area using Layout
+chart.PlotArea.Layout.LayoutTarget = LayoutTargets.inner;
+chart.PlotArea.Layout.LeftMode = LayoutModes.edge;
+chart.PlotArea.Layout.TopMode = LayoutModes.edge;
+
+//Manually positioning chart plot area using Manual Layout
+chart.PlotArea.Layout.ManualLayout.LayoutTarget = LayoutTargets.inner;
+chart.PlotArea.Layout.ManualLayout.LeftMode = LayoutModes.edge;
+chart.PlotArea.Layout.ManualLayout.TopMode = LayoutModes.edge;
+
+//Manually positioning chart legend area using Layout
+chart.Legend.Layout.LeftMode = LayoutModes.edge;
+chart.Legend.Layout.TopMode = LayoutModes.edge;
+
+//Manually positioning chart legend area using Manual Layout
+chart.Legend.Layout.ManualLayout.LeftMode = LayoutModes.edge;
+chart.Legend.Layout.ManualLayout.TopMode = LayoutModes.edge;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Manually positioning chart plot area using Layout
+chart.PlotArea.Layout.LayoutTarget = LayoutTargets.inner;
+chart.PlotArea.Layout.LeftMode = LayoutModes.edge;
+chart.PlotArea.Layout.TopMode = LayoutModes.edge;
+
+//Manually positioning chart plot area using Manual Layout
+chart.PlotArea.Layout.ManualLayout.LayoutTarget = LayoutTargets.inner;
+chart.PlotArea.Layout.ManualLayout.LeftMode = LayoutModes.edge;
+chart.PlotArea.Layout.ManualLayout.TopMode = LayoutModes.edge;
+
+//Manually positioning chart legend area using Layout
+chart.Legend.Layout.LeftMode = LayoutModes.edge;
+chart.Legend.Layout.TopMode = LayoutModes.edge;
+
+//Manually positioning chart legend area using Manual Layout
+chart.Legend.Layout.ManualLayout.LeftMode = LayoutModes.edge;
+chart.Legend.Layout.ManualLayout.TopMode = LayoutModes.edge;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Manually positioning chart plot area using Layout
+chart.PlotArea.Layout.LayoutTarget = LayoutTargets.inner
+chart.PlotArea.Layout.LeftMode = LayoutModes.edge
+chart.PlotArea.Layout.TopMode = LayoutModes.edge
+
+'Manually positioning chart plot area using Manual Layout
+chart.PlotArea.Layout.ManualLayout.LayoutTarget = LayoutTargets.inner
+chart.PlotArea.Layout.ManualLayout.LeftMode = LayoutModes.edge
+chart.PlotArea.Layout.ManualLayout.TopMode = LayoutModes.edge
+
+'Manually positioning chart legend area using Layout
+chart.Legend.Layout.LeftMode = LayoutModes.edge
+chart.Legend.Layout.TopMode = LayoutModes.edge
+
+'Manually positioning chart legend area using Manual Layout
+chart.Legend.Layout.ManualLayout.LeftMode = LayoutModes.edge
+chart.Legend.Layout.ManualLayout.TopMode = LayoutModes.edge
+{% endhighlight %}
+{% endtabs %} 
+
+#### Resizing
+
+The following code snippet illustrates how to resize chart elements such as the plot area, legend, title area, axis area, and data labels.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Manually resizing chart plot area using Layout
+chart.PlotArea.Layout.Left = 70;
+chart.PlotArea.Layout.Top = 40;
+chart.PlotArea.Layout.Width = 280;
+chart.PlotArea.Layout.Height = 200;
+
+//Manually resizing chart plot area using Manual Layout
+chart.PlotArea.Layout.ManualLayout.Height = 0.80;
+chart.PlotArea.Layout.ManualLayout.Width = 0.65;
+chart.PlotArea.Layout.ManualLayout.Top = 0.03;
+chart.PlotArea.Layout.ManualLayout.Left = -0.1;
+
+//Manually resizing chart legend area using Layout
+chart.Legend.Layout.Left = 400;
+chart.Legend.Layout.Top = 150;
+chart.Legend.Layout.Width = 150;
+chart.Legend.Layout.Height = 100;
+
+//Manually resizing chart legend area using Manual Layout
+chart.Legend.Layout.ManualLayout.Height = 0.09;
+chart.Legend.Layout.ManualLayout.Width = 0.30;
+chart.Legend.Layout.ManualLayout.Top = 0.36;
+chart.Legend.Layout.ManualLayout.Left = 0.68;
+
+//Manually resizing chart title area using Layout
+chart.ChartTitleArea.Text = "Sample Chart";
+chart.ChartTitleArea.Layout.Top = 10;
+chart.ChartTitleArea.Layout.Left = 150;
+
+//Manually resizing chart title area using Manual Layout
+chart.ChartTitleArea.Text = "Sample Chart";
+chart.ChartTitleArea.Layout.ManualLayout.Top = 0.005;
+chart.ChartTitleArea.Layout.ManualLayout.Left = 0.26;
+
+//Manually resizing axis title area using Layout
+chart.PrimaryValueAxis.TitleArea.Layout.Left = 15;
+chart.PrimaryValueAxis.TitleArea.Layout.Top = 20;
+chart.PrimaryCategoryAxis.TitleArea.Layout.Left = 25;
+chart.PrimaryCategoryAxis.TitleArea.Layout.Top = 20;
+
+//Manually resizing axis title area using Manual Layout
+chart.PrimaryValueAxis.TitleArea.Layout.ManualLayout.Left = 0.04;
+chart.PrimaryValueAxis.TitleArea.Layout.ManualLayout.Top = 0.34;
+chart.PrimaryCategoryAxis.TitleArea.Layout.ManualLayout.Left = 0.38;
+chart.PrimaryCategoryAxis.TitleArea.Layout.ManualLayout.Top = 0.95;
+
+//Manually resizing data label area using Layout
+chart.Series[0].DataPoints[0].DataLabels.Layout.Left = 0.09;
+chart.Series[0].DataPoints[0].DataLabels.Layout.Top = 0.01;
+
+//Manually resizing data label area using Manual Layout
+chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Left = 0.09;
+chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Top = 0.01;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Manually resizing chart plot area using Layout
+chart.PlotArea.Layout.Left = 70;
+chart.PlotArea.Layout.Top = 40;
+chart.PlotArea.Layout.Width = 280;
+chart.PlotArea.Layout.Height = 200;
+
+//Manually resizing chart plot area using Manual Layout
+chart.PlotArea.Layout.ManualLayout.Height = 0.80;
+chart.PlotArea.Layout.ManualLayout.Width = 0.65;
+chart.PlotArea.Layout.ManualLayout.Top = 0.03;
+chart.PlotArea.Layout.ManualLayout.Left = -0.1;
+
+//Manually resizing chart legend area using Layout
+chart.Legend.Layout.Left = 400;
+chart.Legend.Layout.Top = 150;
+chart.Legend.Layout.Width = 150;
+chart.Legend.Layout.Height = 100;
+
+//Manually resizing chart legend area using Manual Layout
+chart.Legend.Layout.ManualLayout.Height = 0.09;
+chart.Legend.Layout.ManualLayout.Width = 0.30;
+chart.Legend.Layout.ManualLayout.Top = 0.36;
+chart.Legend.Layout.ManualLayout.Left = 0.68;
+
+//Manually resizing chart title area using Layout
+chart.ChartTitleArea.Text = "Sample Chart";
+chart.ChartTitleArea.Layout.Top = 10;
+chart.ChartTitleArea.Layout.Left = 150;
+
+//Manually resizing chart title area using Manual Layout
+chart.ChartTitleArea.Text = "Sample Chart";
+chart.ChartTitleArea.Layout.ManualLayout.Top = 0.005;
+chart.ChartTitleArea.Layout.ManualLayout.Left = 0.26;
+
+//Manually resizing axis title area using Layout
+chart.PrimaryValueAxis.TitleArea.Layout.Left = 15;
+chart.PrimaryValueAxis.TitleArea.Layout.Top = 20;
+chart.PrimaryCategoryAxis.TitleArea.Layout.Left = 25;
+chart.PrimaryCategoryAxis.TitleArea.Layout.Top = 20;
+
+//Manually resizing axis title area using Manual Layout
+chart.PrimaryValueAxis.TitleArea.Layout.ManualLayout.Left = 0.04;
+chart.PrimaryValueAxis.TitleArea.Layout.ManualLayout.Top = 0.34;
+chart.PrimaryCategoryAxis.TitleArea.Layout.ManualLayout.Left = 0.38;
+chart.PrimaryCategoryAxis.TitleArea.Layout.ManualLayout.Top = 0.95;
+
+//Manually resizing data label area using Layout
+chart.Series[0].DataPoints[0].DataLabels.Layout.Left = 0.09;
+chart.Series[0].DataPoints[0].DataLabels.Layout.Top = 0.01;
+
+//Manually resizing data label area using Manual Layout
+chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Left = 0.09;
+chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Top = 0.01;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Manually resizing chart plot area using Layout
+chart.PlotArea.Layout.Left = 70
+chart.PlotArea.Layout.Top = 40
+chart.PlotArea.Layout.Width = 280
+chart.PlotArea.Layout.Height = 200
+
+'Manually resizing chart plot area using Manual Layout
+chart.PlotArea.Layout.ManualLayout.Height = 0.80
+chart.PlotArea.Layout.ManualLayout.Width = 0.65
+chart.PlotArea.Layout.ManualLayout.Top = 0.03
+chart.PlotArea.Layout.ManualLayout.Left = -0.1
+
+'Manually resizing chart legend area using Layout
+chart.Legend.Layout.Left = 400
+chart.Legend.Layout.Top = 150
+chart.Legend.Layout.Width = 150
+chart.Legend.Layout.Height = 100
+
+'Manually resizing chart legend area using Manual Layout
+chart.Legend.Layout.ManualLayout.Height = 0.09
+chart.Legend.Layout.ManualLayout.Width = 0.30
+chart.Legend.Layout.ManualLayout.Top = 0.36
+chart.Legend.Layout.ManualLayout.Left = 0.68
+
+'Manually resizing chart title area using Layout
+chart.ChartTitleArea.Text = "Sample Chart"
+chart.ChartTitleArea.Layout.Top = 10
+chart.ChartTitleArea.Layout.Left = 150
+
+'Manually resizing chart title area using Manual Layout
+chart.ChartTitleArea.Text = "Sample Chart"
+chart.ChartTitleArea.Layout.ManualLayout.Top = 0.005
+chart.ChartTitleArea.Layout.ManualLayout.Left = 0.26
+
+'Manually resizing axis title area using Layout
+chart.PrimaryValueAxis.TitleArea.Layout.Left = 15
+chart.PrimaryValueAxis.TitleArea.Layout.Top = 20
+chart.PrimaryCategoryAxis.TitleArea.Layout.Left = 25
+chart.PrimaryCategoryAxis.TitleArea.Layout.Top = 20
+
+'Manually resizing axis title area using Manual Layout
+chart.PrimaryValueAxis.TitleArea.Layout.ManualLayout.Left = 0.04
+chart.PrimaryValueAxis.TitleArea.Layout.ManualLayout.Top = 0.34
+chart.PrimaryCategoryAxis.TitleArea.Layout.ManualLayout.Left = 0.38
+chart.PrimaryCategoryAxis.TitleArea.Layout.ManualLayout.Top = 0.95
+
+'Manually resizing data label area using Layout
+chart.Series(0).DataPoints(0).DataLabels.Layout.Left = 0.09
+chart.Series(0).DataPoints(0).DataLabels.Layout.Top = 0.01
+
+'Manually resizing data label area using Manual Layout
+chart.Series(0).DataPoints(0).DataLabels.Layout.ManualLayout.Left = 0.09
+chart.Series(0).DataPoints(0).DataLabels.Layout.ManualLayout.Top = 0.01
+{% endhighlight %}
+{% endtabs %} 
+
 ### Applying 3D Formats
 
 The following code example illustrates how to apply 3D settings such as rotation, side wall, back wall, and floor settings.
@@ -1454,7 +2388,7 @@ The following code example illustrates how to apply 3D settings such as rotation
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(2);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -1514,7 +2448,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(2);
   IWorksheet sheet = workbook.Worksheets[0];
 
@@ -1570,7 +2504,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Create(2)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
@@ -1626,20 +2560,20 @@ End Using
 
 A complete working example to apply 3D chart formats in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/3D%20Chart).
 
-### Explode a Pie chart
+### Explode a Pie Chart
 
-XlsIO allows you to explode either all data points at a single explosion value or each data point at different explosion using [Percent](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IChartSerieDataFormat.html#Syncfusion_XlsIO_IChartSerieDataFormat_Percent) of [IChartSerieDataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChartSerieDataFormat.html) interface.
+Essential XlsIO allows you to explode either all data points at a single explosion value or each data point at different explosion using [Percent](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IChartSerieDataFormat.html#Syncfusion_XlsIO_IChartSerieDataFormat_Percent) of [IChartSerieDataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChartSerieDataFormat.html) interface.
 
 You can either create a pie chart and then explode it or directly create an exploded pie chart using XlsIO. Selecting `Pie_Exploded` as [ChartType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_ChartType) inserts a pie chart with a default explosion of **25%**. Learn how to [Create an Exploded Pie Chart](https://www.syncfusion.com/kb/8539/how-to-create-excel-exploded-pie-chart-in-c-vb-net).
 
-The following code example illustrates how to explode a pie chart.
+Refer the following complete code snippets.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(fileStream);
   IWorksheet worksheet = workbook.Worksheets[0];
@@ -1667,7 +2601,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -1690,7 +2624,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
@@ -1713,110 +2647,40 @@ End Using
 
 A complete working example to explode a pie chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Explode%20Pie%20Chart).
 
-### Creating Custom Chart
+### Add Picture to Chart and assign Hyperlink
 
-A custom chart can be created by using different types of charts for different data series.
+Essential XlsIO supports assigning hyperlink to the picture added in a chart in the Excel workbook. To achieve this, create a [chart in workbook](https://help.syncfusion.com/file-formats/xlsio/working-with-charts#creating-a-chart-sheet) and add picture to the chart using [AddPicture](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Ipictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_String_) of [IPictures](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPictures.html) interface. You can assign hyperlink to the picture using [Add](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IHyperLinks.html#Syncfusion_XlsIO_IHyperLinks_Add_Syncfusion_XlsIO_IShape_Syncfusion_XlsIO_ExcelHyperLinkType_System_String_System_String_) property of [IHyperLinks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IHyperLinks.html) interface.
 
-For example, you can use a column chart for the first data series and a line chart for the second series. As a result you will have a column chart, combined with a line chart.
+Refer to the following complete code snippets.
 
-The following code example illustrates how to create a custom charts.
-
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(fileStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Merge cells
-  sheet.Range["A1:D1"].Merge();
-
-  //Set Font style as bold
-  sheet.Range["A1"].CellStyle.Font.Bold = true;
-
-  //Insert data for the chart
-  sheet.Range["A1"].Text = "Crescent City, CA";
-  sheet.Range["B3"].Text = "Precipitation,in.";
-  sheet.Range["C3"].Text = "Temperature,deg.F";
-  sheet.Range["A4"].Text = "Jan";
-  sheet.Range["A5"].Text = "Feb";
-  sheet.Range["A6"].Text = "March";
-  sheet.Range["B4"].Number = 10.9;
-  sheet.Range["B5"].Number = 8.9;
-  sheet.Range["B6"].Number = 8.6;
-  sheet.Range["C4"].Number = 47.5;
-  sheet.Range["C5"].Number = 48.7;
-  sheet.Range["C6"].Number = 48.9;
-
-  //Adjust column width in used range
-  sheet.UsedRange.AutofitColumns();
-
-  //Add a new chart with data range
-  IChartShape chart = sheet.Charts.Add();
-  chart.DataRange = sheet.Range["A3:C6"];
-
-  //Set chart name and chart title
-  chart.Name = "CrescentCity,CA";
-  chart.ChartTitle = "Crescent City, CA";
+  //Adding chart in the workbook
+  IChart chart = workbook.Charts.Add();
+  chart.DataRange = worksheet.Range["A1:B6"];
+  chart.ChartType = ExcelChartType.Column_Clustered;
   chart.IsSeriesInRows = false;
 
-  //Set primary value axis properties
-  chart.PrimaryValueAxis.Title = "Precipitation,in.";
-  chart.PrimaryValueAxis.TitleArea.TextRotationAngle = 90;
-  chart.PrimaryValueAxis.MaximumValue = 14.0;
-  chart.PrimaryValueAxis.NumberFormat = "0.0";
+  //Getting an image from the stream
+  FileStream imageStream = new FileStream("Image.png", FileMode.Open, FileAccess.Read);
+  Image image = Image.FromStream(imageStream);
 
-  //Format first serie fill properties
-  IChartSerie serieOne = chart.Series[0];
-  serieOne.Name = "Precipitation,in.";
-  serieOne.SerieFormat.Fill.FillType = ExcelFillType.Gradient;
-  serieOne.SerieFormat.Fill.TwoColorGradient(ExcelGradientStyle.Vertical, ExcelGradientVariants.ShadingVariants_2);
-  serieOne.SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-  serieOne.SerieFormat.Fill.ForeColor = Color.Plum;
+  //Adding picture on the chart
+  chart.Pictures.AddPicture(1, 1, imageStream);
 
-  //Format second serie properties
-  IChartSerie serieTwo = chart.Series[1];
-  serieTwo.SerieType = ExcelChartType.Line_Markers;
-  serieTwo.Name = "Temperature,deg.F";
-
-  //Format marker properties
-  serieTwo.SerieFormat.MarkerStyle = ExcelChartMarkerType.Diamond;
-  serieTwo.SerieFormat.MarkerSize = 8;
-  serieTwo.SerieFormat.MarkerBackgroundColor = Color.DarkGreen;
-  serieTwo.SerieFormat.MarkerForegroundColor = Color.DarkGreen;
-  serieTwo.SerieFormat.LineProperties.LineColor = Color.DarkGreen;
-
-  //Use Secondary Axis
-  serieTwo.UsePrimaryAxis = false;
-
-  //MaxCross for secondary axes
-  chart.SecondaryCategoryAxis.IsMaxCross = true;
-  chart.SecondaryValueAxis.IsMaxCross = true;
-
-  //Set title for secondary value axis
-  chart.SecondaryValueAxis.Title = "Temperature,deg.F";
-  chart.SecondaryValueAxis.TitleArea.TextRotationAngle = 90;
-
-  //Set secondary category axis properties
-  chart.SecondaryCategoryAxis.Border.LineColor = Color.Transparent;
-  chart.SecondaryCategoryAxis.MajorTickMark = ExcelTickMark.TickMark_None;
-  chart.SecondaryCategoryAxis.TickLabelPosition = ExcelTickLabelPosition.TickLabelPosition_None;
-  
-  //Set data label from the range of cells
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.ValueFromCellsRange = sheet["B4:B6"];
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.IsValueFromCells = true;
-
-  //Set the position of the data label
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Inside;
-  
-  //Set legend properties
-  chart.Legend.Position = ExcelLegendPosition.Bottom;
-  chart.Legend.IsVerticalLegend = false;
+  //Adding hyperlink to the picture on chart
+  worksheet.HyperLinks.Add((workbook.Charts[0].Pictures[0] as IShape), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here");
 
   //Saving the workbook as stream
-  FileStream stream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
   workbook.SaveAs(stream);
   stream.Dispose();
 }
@@ -1826,247 +2690,208 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];  
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];				
 
-  //Merge cells
-  sheet.Range["A1:D1"].Merge();
-
-  //Set Font style as bold
-  sheet.Range["A1"].CellStyle.Font.Bold = true;
-
-  //Insert data for the chart
-  sheet.Range["A1"].Text = "Crescent City, CA";
-  sheet.Range["B3"].Text = "Precipitation,in.";
-  sheet.Range["C3"].Text = "Temperature,deg.F";
-  sheet.Range["A4"].Text = "Jan";
-  sheet.Range["A5"].Text = "Feb";
-  sheet.Range["A6"].Text = "March";
-  sheet.Range["B4"].Number = 10.9;
-  sheet.Range["B5"].Number = 8.9;
-  sheet.Range["B6"].Number = 8.6;
-  sheet.Range["C4"].Number = 47.5;
-  sheet.Range["C5"].Number = 48.7;
-  sheet.Range["C6"].Number = 48.9;
-
-  //Adjust column width in used range
-  sheet.UsedRange.AutofitColumns();
-
-  //Add a new chart with data range
-  IChartShape chart = sheet.Charts.Add();
-  chart.DataRange = sheet.Range["A3:C6"];
-
-  //Set chart name and chart title
-  chart.Name = "CrescentCity,CA";
-  chart.ChartTitle = "Crescent City, CA";
+  //Adding chart in the workbook
+  IChart chart = workbook.Charts.Add();
+  chart.DataRange = worksheet.Range["A1:B6"];
+  chart.ChartType = ExcelChartType.Column_Clustered;
   chart.IsSeriesInRows = false;
 
-  //Set primary value axis properties
-  chart.PrimaryValueAxis.Title = "Precipitation,in.";
-  chart.PrimaryValueAxis.TitleArea.TextRotationAngle = 90;
-  chart.PrimaryValueAxis.MaximumValue = 14.0;
-  chart.PrimaryValueAxis.NumberFormat = "0.0";
+  //Adding picture on the chart
+  chart.Pictures.AddPicture("Image.png");
 
-  //Format first serie fill properties
-  IChartSerie serieOne = chart.Series[0];
-  serieOne.Name = "Precipitation,in.";
-  serieOne.SerieFormat.Fill.FillType = ExcelFillType.Gradient;
-  serieOne.SerieFormat.Fill.TwoColorGradient(ExcelGradientStyle.Vertical, ExcelGradientVariants.ShadingVariants_2);
-  serieOne.SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-  serieOne.SerieFormat.Fill.ForeColor = Color.Plum;
+  //Adding hyperlink to the picture on chart
+  worksheet.HyperLinks.Add((workbook.Charts[0].Pictures[0] as IShape), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here");
 
-  //Format second serie properties
-  IChartSerie serieTwo = chart.Series[1];
-  serieTwo.SerieType = ExcelChartType.Line_Markers;
-  serieTwo.Name = "Temperature,deg.F";
-
-  //Format marker properties
-  serieTwo.SerieFormat.MarkerStyle = ExcelChartMarkerType.Diamond;
-  serieTwo.SerieFormat.MarkerSize = 8;
-  serieTwo.SerieFormat.MarkerBackgroundColor = Color.DarkGreen;
-  serieTwo.SerieFormat.MarkerForegroundColor = Color.DarkGreen;
-  serieTwo.SerieFormat.LineProperties.LineColor = Color.DarkGreen;
-
-  //Use Secondary Axis
-  serieTwo.UsePrimaryAxis = false;
-
-  //MaxCross for secondary axes
-  chart.SecondaryCategoryAxis.IsMaxCross = true;
-  chart.SecondaryValueAxis.IsMaxCross = true;
-
-  //Set title for secondary value axis
-  chart.SecondaryValueAxis.Title = "Temperature,deg.F";
-  chart.SecondaryValueAxis.TitleArea.TextRotationAngle = 90;
-
-  //Set secondary category axis properties
-  chart.SecondaryCategoryAxis.Border.LineColor = Color.Transparent;
-  chart.SecondaryCategoryAxis.MajorTickMark = ExcelTickMark.TickMark_None;
-  chart.SecondaryCategoryAxis.TickLabelPosition = ExcelTickLabelPosition.TickLabelPosition_None;
-  
-  //Set data label from the range of cells
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.ValueFromCellsRange = sheet["B4:B6"];
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.IsValueFromCells = true;
-
-  //Set the position of the data label
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Inside;
-
-  //Set legend properties
-  chart.Legend.Position = ExcelLegendPosition.Bottom;
-  chart.Legend.IsVerticalLegend = false;
-
-  workbook.SaveAs("Chart.xlsx");
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Dim excelEngine As New ExcelEngine()
-
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
-  Dim workbook As IWorkbook = application.Workbooks.Create(1)
-  Dim sheet As IWorksheet = workbook.Worksheets(0)
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Merge cells
-  sheet.Range("A1:D1").Merge()
-
-  'Set Font style as bold
-  sheet.Range("A1").CellStyle.Font.Bold = True
-
-  'Insert data for the chart
-  sheet.Range("A1").Text = "Crescent City, CA"
-  sheet.Range("B3").Text = "Precipitation,in."
-  sheet.Range("C3").Text = "Temperature,deg.F"
-  sheet.Range("A4").Text = "Jan"
-  sheet.Range("A5").Text = "Feb"
-  sheet.Range("A6").Text = "March"
-  sheet.Range("B4").Number = 10.9
-  sheet.Range("B5").Number = 8.9
-  sheet.Range("B6").Number = 8.6
-  sheet.Range("C4").Number = 47.5
-  sheet.Range("C5").Number = 48.7
-  sheet.Range("C6").Number = 48.9
-
-  'Adjust column width in used range
-  sheet.UsedRange.AutofitColumns()
-
-  'Add a new chart with data range
-  Dim chart As IChartShape = sheet.Charts.Add()
-  chart.DataRange = sheet.Range("A3:C6")
-
-  'Set chart name and chart title
-  chart.Name = "CrescentCity,CA"
-  chart.ChartTitle = "Crescent City, CA"
+  'Adding chart in the workbook
+  Dim chart As IChart = workbook.Charts.Add
+  chart.DataRange = worksheet.Range("A1:B6")
+  chart.ChartType = ExcelChartType.Column_Clustered
   chart.IsSeriesInRows = False
 
-  'Set primary value axis properties
-  chart.PrimaryValueAxis.Title = "Precipitation,in."
-  chart.PrimaryValueAxis.TitleArea.TextRotationAngle = 90
-  chart.PrimaryValueAxis.MaximumValue = 14.0
-  chart.PrimaryValueAxis.NumberFormat = "0.0"
+  'Adding picture on the chart
+  chart.Pictures.AddPicture("Image.png")
 
-  'Format first serie fill properties
-  Dim serieOne As IChartSerie = chart.Series(0)
-  serieOne.Name = "Precipitation,in."
-  serieOne.SerieFormat.Fill.FillType = ExcelFillType.Gradient
-  serieOne.SerieFormat.Fill.TwoColorGradient(ExcelGradientStyle.Vertical, ExcelGradientVariants.ShadingVariants_2)
-  serieOne.SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor
-  serieOne.SerieFormat.Fill.ForeColor = Color.Plum
+  'Adding hyperlink to the picture on chart
+  worksheet.HyperLinks.Add(workbook.Charts(0).Pictures(0), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here")
 
-  'Format second serie properties
-  Dim serieTwo As IChartSerie = chart.Series(1)
-  serieTwo.SerieType = ExcelChartType.Line_Markers
-  serieTwo.Name = "Temperature,deg.F"
-
-  'Format marker properties
-  serieTwo.SerieFormat.MarkerStyle = ExcelChartMarkerType.Diamond
-  serieTwo.SerieFormat.MarkerSize = 8
-  serieTwo.SerieFormat.MarkerBackgroundColor = Color.DarkGreen
-  serieTwo.SerieFormat.MarkerForegroundColor = Color.DarkGreen
-  serieTwo.SerieFormat.LineProperties.LineColor = Color.DarkGreen
-
-  'Use Secondary Axis
-  serieTwo.UsePrimaryAxis = False
-
-  'MaxCross for secondary axes
-  chart.SecondaryCategoryAxis.IsMaxCross = True
-  chart.SecondaryValueAxis.IsMaxCross = True
-
-  'Set title for secondary value axis
-  chart.SecondaryValueAxis.Title = "Temperature,deg.F"
-  chart.SecondaryValueAxis.TitleArea.TextRotationAngle = 90
-
-  'Set secondary category axis properties
-  chart.SecondaryCategoryAxis.Border.LineColor = Color.Transparent
-  chart.SecondaryCategoryAxis.MajorTickMark = ExcelTickMark.TickMark_None
-  chart.SecondaryCategoryAxis.TickLabelPosition = ExcelTickLabelPosition.TickLabelPosition_None
-
-  'Set data label from the range of cells
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.ValueFromCellsRange = sheet("B4:B6")
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.IsValueFromCells = True
-
-  'Set the position of the data label
-  serieOne.DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Inside
-
-  'Set legend properties
-  chart.Legend.Position = ExcelLegendPosition.Bottom
-  chart.Legend.IsVerticalLegend = False
-
-  workbook.SaveAs("Chart.xlsx")
+  workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-A complete working example to create a custom chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Custom%20Chart).
+A complete working example for picture hyperlink in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Hyperlink%20in%20Chart).  
 
-![chart](Working-with-Charts_images/Working-with-charts_img1.jpeg)
+N> XlsIO supports adding picture only to a chart in the workbook,but does not support adding picture to a chart in the worksheet.
 
-## Customizing the chart and its elements
+### Add DataTable to Chart
 
-A chart is composed of various elements such as chart area, plot area, legend, axis, series, data labels etc. These elements can be customized to enhance the visual presentation.
+Data table beneath the chart clearly represents the chart content in table format. While creating a chart, the data table is hidden, and the option should be manually enabled to view it.
 
-### Elements of Chart
+Essential XlsIO supports adding data table using [HasDataTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_HasDataTable) of [IChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html) interface. Enabling this property adds the data table beneath the chart.
 
-The following image illustrates the basic elements of a chart.
+Refer the following complete code snippets.
 
-![chart elements](Working-with-Charts_images/Working-with-charts_img2.jpeg)
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-1. The chart area of the chart.
-2. The plot area of the chart.
-3. The data points of the data series that are plotted in the chart.
-4. The horizontal (category) and vertical (value) axis along which the data is plotted in the chart.
-5. The legend of the chart.
-6. A chart axis title that you can use in the chart.
-7. A data label that you can use to identify the details of a data point in a data series.
+  //Assigning data in the worksheet
+  worksheet.Range["A1"].Text = "Items";
+  worksheet.Range["B1"].Text = "Amount(in $)";
+  worksheet.Range["C1"].Text = "Count";
 
-#### Chart Title
+  worksheet.Range["A2"].Text = "Beverages";
+  worksheet.Range["A3"].Text = "Condiments";
+  worksheet.Range["A4"].Text = "Confections";
+  worksheet.Range["A5"].Text = "Dairy Products";
+  worksheet.Range["A6"].Text = "Grains / Cereals";
 
-Customize the Chart title by its name, appearance, and resizing it using Excel (XlsIO) library. For further information, click [here]().
+  worksheet.Range["B2"].Number = 2776;
+  worksheet.Range["B3"].Number = 1077;
+  worksheet.Range["B4"].Number = 2287;
+  worksheet.Range["B5"].Number = 1368;
+  worksheet.Range["B6"].Number = 3325;
 
-#### Chart  Area
+  worksheet.Range["C2"].Number = 925;
+  worksheet.Range["C3"].Number = 378;
+  worksheet.Range["C4"].Number = 880;
+  worksheet.Range["C5"].Number = 581;
+  worksheet.Range["C6"].Number = 189;
 
-Customize the chart area by changing its border, colors, transparency, and more using the Excel (XlsIO) library. For further information, click [here]().
+  //Adding a chart to the worksheet
+  IChartShape chart = worksheet.Charts.Add();
+  chart.DataRange = worksheet.Range["A1:C6"];
+  chart.ChartType = ExcelChartType.Column_Clustered;
+  chart.IsSeriesInRows = false;
 
-#### Chart Plot Area
+  //Adding title to the chart
+  chart.ChartTitle = "Chart with Data Table";
 
-Customize the chart plot area by changing its border, colors, transparency, position and adding image using the Excel (XlsIO) library. For further information, click [here]().
+  //Adding data table to the chart
+  chart.HasDataTable = true;
 
-#### Chart Series
+  //Saving the workbook as stream
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(stream);
+  stream.Dispose();
+}
+{% endhighlight %}
 
-Customize the chart series by changing the series name, type, color, border, and more using the Excel (XlsIO) library. For further information, click [here]().
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-#### Chart Legend
+  //Assigning data in the worksheet
+  worksheet.Range["A1"].Text = "Items";
+  worksheet.Range["B1"].Text = "Amount(in $)";
+  worksheet.Range["C1"].Text = "Count";
 
-Customize the chart legend by changing the position, border, and modifying the legend entry using the Excel (XlsIO) library. For further information, click [here]().
+  worksheet.Range["A2"].Text = "Beverages";
+  worksheet.Range["A3"].Text = "Condiments";
+  worksheet.Range["A4"].Text = "Confections";
+  worksheet.Range["A5"].Text = "Dairy Products";
+  worksheet.Range["A6"].Text = "Grains / Cereals";
 
-#### Chart Data Labels
+  worksheet.Range["B2"].Number = 2776;
+  worksheet.Range["B3"].Number = 1077;
+  worksheet.Range["B4"].Number = 2287;
+  worksheet.Range["B5"].Number = 1368;
+  worksheet.Range["B6"].Number = 3325;
 
-Customize the chart data labels by changing the position, size and more using the Excel (XlsIO) library. For further information, click [here]().
+  worksheet.Range["C2"].Number = 925;
+  worksheet.Range["C3"].Number = 378;
+  worksheet.Range["C4"].Number = 880;
+  worksheet.Range["C5"].Number = 581;
+  worksheet.Range["C6"].Number = 189;
 
-#### Chart Axis
+  //Adding a chart to the worksheet
+  IChartShape chart = worksheet.Charts.Add();
+  chart.DataRange = worksheet.Range["A1:C6"];
+  chart.ChartType = ExcelChartType.Column_Clustered;
+  chart.IsSeriesInRows = false;
 
-Customize the chart axes by changing the title, border, font, rotation angle and more using the Excel (XlsIO) library. For further information, click [here]().
+  //Adding title to the chart
+  chart.ChartTitle = "Chart with Data Table";
+
+  //Adding data table to the chart
+  chart.HasDataTable = true;
+
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Assigning data in the worksheet
+  worksheet.Range("A1").Text = "Items"
+  worksheet.Range("B1").Text = "Amount(in $)"
+  worksheet.Range("C1").Text = "Count"
+
+  worksheet.Range("A2").Text = "Beverages"
+  worksheet.Range("A3").Text = "Condiments"
+  worksheet.Range("A4").Text = "Confections"
+  worksheet.Range("A5").Text = "Dairy Products"
+  worksheet.Range("A6").Text = "Grains / Cereals"
+
+  worksheet.Range("B2").Number = 2776
+  worksheet.Range("B3").Number = 1077
+  worksheet.Range("B4").Number = 2287
+  worksheet.Range("B5").Number = 1368
+  worksheet.Range("B6").Number = 3325
+
+  worksheet.Range("C2").Number = 925
+  worksheet.Range("C3").Number = 378
+  worksheet.Range("C4").Number = 880
+  worksheet.Range("C5").Number = 581
+  worksheet.Range("C6").Number = 189
+
+  'Adding a chart in the worksheet
+  Dim chart As IChartShape = worksheet.Charts.Add
+  chart.DataRange = worksheet.Range("A1:C6")
+  chart.ChartType = ExcelChartType.Column_Clustered
+  chart.IsSeriesInRows = False
+
+  'Adding title to the chart
+  chart.ChartTitle = "Chart with Data Table"
+
+  'Adding data table to the chart
+  chart.HasDataTable = True
+
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to add data table in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/DataTable%20in%20Chart).
 
 ## Removing a Chart
 
@@ -2077,8 +2902,8 @@ The following code example illustrates how to remove the chart from the workshee
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
   IChartShape chart = sheet.Charts[0];
@@ -2087,7 +2912,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   chart.Remove();
 
   //Saving the workbook as stream
-  FileStream stream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
   workbook.SaveAs(stream);
   stream.Dispose();
 }
@@ -2097,30 +2922,30 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
   IChartShape chart = sheet.Charts[0];
 
   //Remove the chart from the worksheet
   chart.Remove();
 
-  workbook.SaveAs("Chart.xlsx");
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
-  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
   Dim chart As IChartShape = sheet.Charts(0)
 
   'Remove the chart from the worksheet
   chart.Remove()
 
-  workbook.SaveAs("Chart.xlsx")
+  workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
 {% endtabs %}  
@@ -2212,3 +3037,21 @@ The following chart types are supported in XlsIO.
 * [Pareto](https://www.syncfusion.com/kb/8430/how-to-create-excel-pareto-chart-in-c-vb-net)
 * [Treemap](https://www.syncfusion.com/kb/8427/how-to-create-excel-treemap-chart-in-c-vb-net)
 * [Sunburst](https://www.syncfusion.com/kb/8429/how-to-create-excel-sunburst-chart-in-c-vb-net)
+
+## See Also
+
+* [How to add chart title with formula in C#, VB.NET?](https://support.syncfusion.com/kb/article/10217/add-excel-chart-title-with-formula-in-c-vb-net-using-xlsio)
+* [How to create Excel area chart in C#, VB.NET?](https://support.syncfusion.com/kb/article/7478/how-to-create-excel-area-chart-in-c-vb-net)
+* [How to set shadows for plot area or axis in chart using XlsIO?](https://support.syncfusion.com/kb/article/7667/how-to-set-shadows-for-plot-area-or-axis-in-chart-using-xlsio)
+* [How to position and re-size a plot area of chart using WinForms XlsIO?](https://support.syncfusion.com/kb/article/4796/how-to-position-and-re-size-a-plot-area-of-chart-using-winforms-xlsio)
+* [How to delete Excel chart legend in C#, VB.NET?](https://support.syncfusion.com/kb/article/7525/how-to-delete-excel-chart-legend-in-c-vb-net)
+* [Show or hide Excel chart legend in C#, VB.NET](https://support.syncfusion.com/kb/article/2564/show-or-hide-excel-chart-legend-in-c-vb-net)
+* [Add Excel chart data labels with formula in C#, VB.NET using XlsIO](https://support.syncfusion.com/kb/article/10222/add-excel-chart-data-labels-with-formula-in-c-vb-net-using-xlsio)
+* [Format Excel chart data label in C#, VB.NET](https://support.syncfusion.com/kb/article/2731/format-excel-chart-data-label-in-c-vb-net)
+* [How to set the DataLabel position for chart series using XlsIO?](https://support.syncfusion.com/kb/article/2563/how-to-set-the-datalabel-position-for-chart-series-using-xlsio)
+* [How to set vertical axis crosses value for chart axis in C#, VB.NET?](https://support.syncfusion.com/kb/article/7608/how-to-set-vertical-axis-crosses-value-for-chart-axis-in-c-vb-net)
+* [How to reverse Excel chart axis order in C#, VB.NET?](https://support.syncfusion.com/kb/article/7513/how-to-reverse-excel-chart-axis-order-in-c-vb-net)
+* [How to filter Excel chart series in C#, VB.NET?](https://support.syncfusion.com/kb/article/7509/how-to-filter-excel-chart-series-in-c-vb-net)
+* [How to change Excel chart series color in C#, VB.NET?](https://support.syncfusion.com/kb/article/2733/how-to-change-excel-chart-series-color-in-c-vbnet)
+* [How to set trendlines for Excel chart series in C#, VB.NET?](https://support.syncfusion.com/kb/article/7532/how-to-set-trendlines-for-excel-chart-series-in-c-vb-net)
+* [Blog: Excel Charts in C# and VB.NET](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library/charts)
