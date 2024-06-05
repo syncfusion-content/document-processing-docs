@@ -1166,7 +1166,7 @@ DocIO provides support for both inline and absolute positioned images.
 * Inline images: The position of the image is constrained to the lines of text on the page.
 * Absolute positioned images: The images can be positioned anywhere irrespective of the lines of text.
 
-For further information, [click here](https://helpstaging.syncfusion.com:14038/document-processing/word/word-library/net/working-with-images).
+For further information, [click here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-images).
 
 ## Working with lists
 
@@ -2986,7 +2986,7 @@ OLE (Object Linking and Embedding) objects allow embedding and linking to docume
 
 You can create and manipulate the OLE Objects of both Linked and Embedded types in the Word document by using [WOleObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WOleObject.html) instance.
 
-For further information, [Click here](https://helpstaging.syncfusion.com:14038/document-processing/word/word-library/net/working-with-ole-objects).
+For further information, [Click here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-ole-objects).
 
 ## Working with Text Box
 
