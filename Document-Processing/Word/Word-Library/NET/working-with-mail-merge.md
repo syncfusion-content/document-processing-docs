@@ -76,6 +76,13 @@ The following data sources are supported by Essential DocIO for performing Mail 
 </tbody>
 </table>
 
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies and NuGet packages required based on platforms for performing mail merge using the .NET Word Library (DocIO).
+
+* [Mail merge assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
+* [Mail merge NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
+
 ## Mail merge process
 
 The mail merge process involves three documents:

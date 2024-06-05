@@ -99,7 +99,7 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF).
 
-T> For troubleshooting issues in the .NET Word Library (DocIO), refer this article that provides comprehensive guidance on resolving common problems.
+T> For troubleshooting issues in the .NET Word Library (DocIO), refer [this](https://support.syncfusion.com/kb/article/16012/troubleshooting-guide-for-syncfusion-word-docio-library-issues?isInternalRefresh=False) article that provides comprehensive guidance on resolving common problems.
 
 N> 1. For .NET Framework, creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word to PDF. Otherwise, the charts are not preserved in the converted PDF. Whereas this is not necessary for .NET Core, as ChartToImageConverter is initialized internally in Syncfusion.DocIORenderer.Portable assembly.
 N> 2. Total number of pages in the converted PDF may vary based on unsupported elements in the input Word document.
@@ -2564,3 +2564,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to perform Word to PDF conversion in WinForms ?](https://support.syncfusion.com/kb/article/8848/how-to-perform-word-to-pdf-conversion-in-winforms-?isInternalRefresh=False)
 * [How to preserve track changes markup in Word to PDF conversion](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
 * [How to preserve simple markup, all markup, and no markup of track changes during Word to PDF conversion?](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
+* [How to resolve font problems during Word to PDF conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)

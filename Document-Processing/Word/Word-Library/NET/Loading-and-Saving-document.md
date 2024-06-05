@@ -11,8 +11,6 @@ documentation: UG
 
 The following namespaces of Essential DocIO need to be included in your application to load and save the Word document.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}

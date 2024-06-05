@@ -1984,3 +1984,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Online Demo
 
 * Explore how to create a Word document with mathematical equations using LaTeX and the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/latex#/material3).
+
+## See Also
+
+* [How to create equation using LaTeX in Word document?](https://support.syncfusion.com/kb/article/16065/how-to-create-equation-using-latex-in-aspnet-core-word-document)
