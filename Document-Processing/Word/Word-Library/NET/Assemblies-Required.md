@@ -39,7 +39,9 @@ Syncfusion.DocIO.UWP<br/>Syncfusion.OfficeChart.UWP<br/></td></tr>
 Syncfusion.DocIO.NET<br/>Syncfusion.Compression.NET<br/>Syncfusion.OfficeChart.NET<br/></td></tr>
 </table>
 
-#### Retired Products
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
 
 <table>
 <thead>
