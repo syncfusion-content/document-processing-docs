@@ -1465,31 +1465,31 @@ The following image illustrates the basic elements of a chart.
 
 #### Chart Title
 
-Customize the Chart title by its name, appearance, and resizing it using Excel (XlsIO) library. For further information, click [here]().
+With the Syncfusion Excel Library, you can customize the chart title by changing its name, font, color, position and more. Click [here]() for more details.
 
 #### Chart  Area
 
-Customize the chart area by changing its border, colors, transparency, and more using the Excel (XlsIO) library. For further information, click [here]().
+With the Syncfusion Excel Library, you can customize the chart area by changing its border, color and transparency. Click [here]() for more details.
 
 #### Chart Plot Area
 
-Customize the chart plot area by changing its border, colors, transparency, position and adding image using the Excel (XlsIO) library. For further information, click [here]().
+With the Syncfusion Excel Library, you can customize the chart plot area by changing its border, color, transparency and position. Click [here]() for more details.
 
 #### Chart Series
 
-Customize the chart series by changing the series name, type, color, border, and more using the Excel (XlsIO) library. For further information, click [here]().
+With the Syncfusion Excel Library, you can customize the chart series by changing the series name, type, color, border, and more. Click [here]() for more details.
 
 #### Chart Legend
 
-Customize the chart legend by changing the position, border, and modifying the legend entry using the Excel (XlsIO) library. For further information, click [here]().
+With the Syncfusion Excel Library, you can customize the chart legend by changing its border, color, font, position, and more. Click [here]() for more details.
 
 #### Chart Data Labels
 
-Customize the chart data labels by changing the position, size and more using the Excel (XlsIO) library. For further information, click [here]().
+With the Syncfusion Excel Library, you can customize the chart data labels by changing its color, font and position. Click [here]() for more details.
 
 #### Chart Axis
 
-Customize the chart axes by changing the title, border, font, rotation angle and more using the Excel (XlsIO) library. For further information, click [here]().
+With the Syncfusion Excel Library, you can customize the chart axes by changing the title, border, font, rotation angle and more. Click [here]() for more details.
 
 ## Chart Appearnace
  
