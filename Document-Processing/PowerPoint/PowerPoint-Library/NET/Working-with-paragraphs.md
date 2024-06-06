@@ -99,6 +99,8 @@ paragraph.FirstLineIndent = 10;
 paragraph.HorizontalAlignment = HorizontalAlignmentType.Left;
 //Applies the left indent of the paragraph
 paragraph.LeftIndent = 8;
+//Modify the end paragraph font name
+paragraph.EndParagraphFont.FontName = "Times New Roman";
 //Save the PowerPoint Presentation as stream
 FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
 pptxDoc.Save(outputStream);
@@ -121,6 +123,8 @@ paragraph.FirstLineIndent = 10;
 paragraph.HorizontalAlignment = HorizontalAlignmentType.Left;
 //Applies the left indent of the paragraph
 paragraph.LeftIndent = 8;
+//Modify the end paragraph font name
+paragraph.EndParagraphFont.FontName = "Times New Roman";
 //Saves the Presentation
 pptxDoc.Save("Output.pptx");
 //Closes the Presentation

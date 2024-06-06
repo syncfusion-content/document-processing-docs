@@ -853,99 +853,6 @@ Blink binaries (Version 109.0.5414.75),
 
 </table>
 
-## HTML to PDF Performance Benchmarks:
-
-<h3>Environment Details:</h3>
-
- 
-
-OS Edition          : Windows 11 Enterprise
-
-Version               : 22H2
-
-Processor           : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz
-
-Installed RAM    : 20.0 GB (19.7 GB usable)
-
-System type       : 64-bit operating system, x64-based processor
-
- 
-
-<h3>Sample Details:</h3>
-
- 
-
-Application          : ASP.NET Core Web App (Model-View-Controller)
-
-Package Name   : Syncfusion.HtmlToPdfConverter.Net.Windows
-
-Version                : 25.1.35
-
-Sample Link        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/HTMLToPDF_Demo_2-1367619702">https://www.syncfusion.com/downloads/support/directtrac/general/ze/HTMLToPDF_Demo_2-1367619702</a>
-
-Output Files        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/OutputDocuments_1715564825">https://www.syncfusion.com/downloads/support/directtrac/general/ze/OutputDocuments_1715564825</a>
-
-Input Files         : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Input1125518413">https://www.syncfusion.com/downloads/support/directtrac/general/ze/Input1125518413</a>
-
-
-<h3>Results:</h3>
-
-<table border="1">
-<th style="font-size:14px" width="100px">Input Page count</th>
-<th style="font-size:14px">Conversion time
-
-(Avg value of 5 conversions)
-</th>
-<th style="font-size:14px">Process Memory and CPU usage
-</th>
-<tr>
-    <td>10+ Pages</td>
-    <td>2.78 seconds</td>
-    <td>	
-Memory usage: 318 MB
-
-CPU usage: 10%</td>
-</tr>
-<tr>
-    <td>100+ pages</td>
-    <td>3.65 seconds</td>
-    <td>Memory usage: 367 MB
-
-CPU usage: 14%</td>
-</tr>
-<tr>
-    <td>1000+ pages</td>
-    <td>6.72 seconds</td>
-    <td>Memory usage: 813 MB
-
-CPU usage: 27%</td>
-</tr>
-<tr>
-    <td>10 documents with 100+ pages in a loop</td>
-    <td>30.52 seconds</td>
-    <td>	
-Memory usage: 663 MB
-
-CPU usage: 15%</td>
-</tr>
-<tr>
-    <td>10 documents with 1000+ pages in a loop</td>
-    <td>1 minute 10 seconds</td>
-    <td>	
-Memory usage: 2.2 GB
-
-CPU usage: 64%</td>
-</tr>
-</table>
-
-Note: The performance benchmark will vary depending on the following factors,
-
-<ol>
-  <li>External resources loaded in the HTML (Such as Images, Scripts, and Styles)</li>
-  <li>Network speed for online URL conversions.</li>
-  <li>Hardware resources (CPU and Memory)</li>
-</ol>
-
 
 ## There was an error opening this document. This file is already open or in use by another application.
 
@@ -996,6 +903,199 @@ Dispose of the FileStream at the end of the process and ensure that the file or 
 
 	fileStream.Dispose();
 
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
+## HTML to PDF Performance Benchmarks:
+
+We have prepared the following benchmark details for converting HTML to PDF, using the specified machine configuration and input HTML files:
+
+<h2>Environment Details:</h2>
+ 
+
+OS Edition          : Windows 11 Enterprise
+
+Version               : 22H2
+
+Processor           : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz
+
+Installed RAM    : 20.0 GB (19.7 GB usable)
+
+System type       : 64-bit operating system, x64-based processor
+ 
+
+<h2>Example Application:</h2>
+
+The benchmark details were obtained using the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) package. You can refer to the following sample, as well as the input and output files used:
+
+Sample link        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/HTMLToPDF_Demo_2-1367619702">https://www.syncfusion.com/downloads/support/directtrac/general/ze/HTMLToPDF_Demo_2-1367619702</a>
+
+Input Html files         : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Input1125518413">https://www.syncfusion.com/downloads/support/directtrac/general/ze/Input1125518413</a>
+
+Output PDF files        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/OutputDocuments_1715564825">https://www.syncfusion.com/downloads/support/directtrac/general/ze/OutputDocuments_1715564825</a>
+
+
+
+
+<h2>Results:</h2>
+
+<table border="1">
+<th style="font-size:14px" width="100px">Input Page count</th>
+<th style="font-size:14px">Conversion time
+
+(Avg value of 5 conversions)
+</th>
+<th style="font-size:14px">Process Memory and CPU usage
+</th>
+<tr>
+    <td>10+ Pages</td>
+    <td>2.78 seconds</td>
+    <td>	
+Memory usage: 318 MB
+
+CPU usage: 10%</td>
+</tr>
+<tr>
+    <td>100+ pages</td>
+    <td>3.65 seconds</td>
+    <td>Memory usage: 367 MB
+
+CPU usage: 14%</td>
+</tr>
+<tr>
+    <td>1000+ pages</td>
+    <td>6.72 seconds</td>
+    <td>Memory usage: 813 MB
+
+CPU usage: 27%</td>
+</tr>
+<tr>
+    <td>10 documents with 100+ pages in a loop</td>
+    <td>30.52 seconds</td>
+    <td>	
+Memory usage: 663 MB
+
+CPU usage: 15%</td>
+</tr>
+<tr>
+    <td>10 documents with 1000+ pages in a loop</td>
+    <td>1 minute 10 seconds</td>
+    <td>	
+Memory usage: 2.2 GB
+
+CPU usage: 64%</td>
+</tr>
+</table>
+
+N> Note: The performance metrics were recorded on a freshly configured machine. Speed and memory usage may vary if the machine is running other processes. Additionally, performance can be affected by:
+
+* External resources loaded in the HTML (such as images, scripts, and styles)
+* Network speed for online URL conversions
+* Hardware resources (CPU and memory)
+
+## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>We are internally using the Blink rendering engine to convert HTML to PDF document. Due to the sandbox GDI limitation on Azure App services and Function, custom fonts are not rendered (system-installed font is used instead) because of sandbox GDI API limitations that present even in VM-based Azure Apps plans. So, that the converter will automatically renders with default font.
+
+Refer below link for more information. This is a limitation of Azure cloud environment.
+[https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox)
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+we can overcome this issue by using Azure cloud service which has the elevated access permissions. If it is possible to use Azure cloud service API for converting HTML to PDF. Please refer below link for converting HTML to PDF in Azure cloud service. The custom font may work in Azure cloud service/Azure VM, we ensured this by creating simple sample in Azure VM and the font is working properly. If possible, kindly use the Azure cloud service with VM to resolve the reported issue. 
+
+KB: [https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink](https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink)
+</td>
+</tr>
+
+</table>
+
+## Conversion failed in Azure App Service when pushing via Azure Pipeline using the WebKit rendering engine.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Conversion failed in Azure App Service when pushing via Azure Pipeline using the WebKit rendering engine.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+The problem that was reported may be caused by using the Zip deploy method to publish the project. When the project is pushed, it will automatically utilize the zip deploy method within the Azure pipeline.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+We can resolve the reported issue by changing the deployment method to web deploy in the yml file. Please refer to the code snippet below.
+
+{% tabs %}
+{% highlight C# %}
+
+	trigger:
+
+	- main
+
+	pool:
+
+	vmImage: windows-latest
+
+	variables:
+
+	buildConfiguration: 'Release'
+
+	steps:
+
+	- script: dotnet build --configuration $(buildConfiguration)
+
+	displayName: 'dotnet build $(buildConfiguration)'
+
+	- task: DotNetCoreCLI@2
+
+	inputs:
+
+	command: 'publish'
+
+	publishWebProjects: true
+
+	arguments: '--configuration $(buildConfiguration)'
+
+	zipAfterPublish: true
+
+	- task: AzureRmWebAppDeployment@4
+
+	inputs:
+
+	ConnectionType: 'AzureRM'
+
+	azureSubscription: 'htmlconnection'
+
+	appType: 'webApp'
+
+	WebAppName: 'pipelineHtmlToPDF'
+
+	packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
+	enableCustomDeployment: true
+
+	DeploymentType: 'webDeploy'
+
+
+	
 {% endhighlight %}
 {% endtabs %}
 </td>
