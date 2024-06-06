@@ -1053,7 +1053,7 @@ End Function
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Remove-table-of-contents).
 
 ## Table of Figures 
 
