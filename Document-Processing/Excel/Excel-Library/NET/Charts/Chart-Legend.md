@@ -8,7 +8,7 @@ documentation: UG
 
 # Chart Legend in Excel document
 
-Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using DocIO, you can **customize the legend in the chart**.
+Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using XlsIO, you can **customize the legend in the chart**.
 
 ## Add
 
