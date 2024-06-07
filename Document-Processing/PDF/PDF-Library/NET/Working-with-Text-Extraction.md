@@ -354,7 +354,7 @@ You can get single character and its properties by using [TextGlyph](https://hel
 
 {% tabs %}
 
-{% highlight c# tabtitle="Xamarin" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Load the existing PDF document
 PdfLoadedDocument m_loadedDocument = new PdfLoadedDocument(stream);
@@ -385,7 +385,176 @@ float GlyphFontSize = textGlyph.FontSize;
 FontStyle GlyphFontStyle = textGlyph.FontStyle;
 //Gets character in the word
 char GlyphText = textGlyph.Text;
+//Gets the color of the character 
+Color GlyphColor = textGlyph.TextColor; 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document
+PdfLoadedDocument m_loadedDocument = new PdfLoadedDocument(fileName);
+//Get the first page of the loaded PDF document
+PdfPageBase page = m_loadedDocument.Pages[0];
+TextLines lineCollection = new TextLines();
+
+//Extract text from the first page
+string m_extractedText = page.ExtractText(out lineCollection);
+//Gets specific line from the collection
+TextLine line = lineCollection.TextLine[0];
+//Gets collection of the words in the line
+List<TextWord> textWordCollection = line.WordCollection;
+//Gets word from the collection using index
+TextWord textWord = textWordCollection[0];
+// Gets Glyph details of the word
+List<TextGlyph> textGlyphCollection = textWord.Glyphs;
+
+//Gets character of the word
+TextGlyph textGlyph = textGlyphCollection[0];
+//Gets bounds of the character
+RectangleF glyphBounds = textGlyph.Bounds;
+//Gets font name of the character
+string GlyphFontName = textGlyph.FontName;
+//Gets font size of the character
+float GlyphFontSize = textGlyph.FontSize;
+//Gets font style of the character
+FontStyle GlyphFontStyle = textGlyph.FontStyle;
+//Gets character in the word
+char GlyphText = textGlyph.Text;
+//Gets the color of the character 
+Color GlyphColor = textGlyph.TextColor; 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the existing PDF document 
+Dim m_loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream) 
+' Get the first page of the loaded PDF document 
+Dim page As PdfPageBase = m_loadedDocument.Pages(0) 
+Dim lineCollection As New TextLineCollection() 
+
+' Extract text from the first page 
+Dim m_extractedText As String = page.ExtractText(lineCollection) 
+' Get a specific line from the collection 
+Dim line As TextLine = lineCollection.TextLine(0) 
+' Get a collection of the words in the line 
+Dim textWordCollection As List(Of TextWord) = line.WordCollection 
+' Get a word from the collection using an index 
+Dim textWord As TextWord = textWordCollection(0) 
+' Get Glyph details of the word 
+Dim textGlyphCollection As List(Of TextGlyph) = textWord.Glyphs 
+
+' Get a character of the word 
+Dim textGlyph As TextGlyph = textGlyphCollection(0) 
+' Get bounds of the character 
+Dim glyphBounds As RectangleF = textGlyph.Bounds 
+' Get font name of the character 
+Dim GlyphFontName As String = textGlyph.FontName 
+' Get font size of the character 
+Dim GlyphFontSize As Single = textGlyph.FontSize 
+' Get font style of the character 
+Dim GlyphFontStyle As FontStyle = textGlyph.FontStyle 
+' Get the character in the word 
+Dim GlyphText As Char = textGlyph.Text 
+' Get the color of the character 
+Dim GlyphColor As Color = textGlyph.TextColor 
 
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](). 
+
+## Measure tilting space 
+
+The Syncfusion PDF library enables users to accurately measure tilted spaces when drawing or measuring text in italic styles. This feature significantly improves measurement precision in PDF documents, especially when dealing with italicized fonts. To utilize this functionality, you can use the MeasureTiltingSpace property available in the PdfStringFormat class. 
+
+Refer to the following code example for further information. 
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document 
+PdfPage page = document.Pages.Add(); 
+// Load the font file from the stream 
+FileStream fontStream = new FileStream(@"font.ttf", FileMode.Open, FileAccess.Read); 
+//Create a new PDF font instance 
+PdfFont font = new PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic); 
+//Create a new PDF string format instance 
+PdfStringFormat format = new PdfStringFormat(); 
+//Enable the measure tilting space      
+format.MeasureTiltingSpace = true; 
+string text = "Hello World!"; 
+//Measure the tilted text 
+SizeF size = font.MeasureString(text, format); 
+//Draw the text to the PDF document. 
+page.Graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0,0, size.Width, size.Height); 
+//Draw the rectangle with the measured size. 
+Page.Graphcis.DrawRectangle(new RectangleF(0,0, size.Width, size.Height), PdfPens.Red); 
+//Creating the stream object 
+MemoryStream stream = new MemoryStream(); 
+//Save the document as stream 
+document.Save(stream); 
+//Close the document 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+ //Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document 
+PdfPage page = document.Pages.Add(); 
+//Create a new PDF font instance 
+PdfFont font = new PdfTrueTypeFont(new Font("Arial", 14, PdfFontStyle.Italic),true); 
+//Create a new PDF string format instance 
+PdfStringFormat format = new PdfStringFormat(); 
+//Enable the measure tilting space      
+format.MeasureTiltingSpace = true; 
+string text = "Hello World!"; 
+//Measure the tilted text 
+SizeF size = font.MeasureString(text, format); 
+//Draw the text to the PDF document. 
+page.Graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0,0, size.Width, size.Height); 
+//Draw the rectangle with the measured size. 
+Page.Graphcis.DrawRectangle(new RectangleF(0,0, size.Width, size.Height), PdfPens.Red); 
+//Save the document.
+document.Save("Output.pdf"); 
+//Close the document 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create the new PDF document 
+Dim document As PdfDocument = New PdfDocument() 
+'Add a page to the document 
+Dim page As PdfPage = document.Pages.Add() 
+'Load the font file from the stream 
+Dim fontStream As FileStream = New FileStream("font.ttf", FileMode.Open, FileAccess.Read) 
+'Create a new PDF font instance 
+Dim font As PdfFont = New PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic) 
+'Create a new PDF string format instance 
+Dim format As PdfStringFormat = New PdfStringFormat() 
+'Enable a measure tilting space  
+format.MeasureTiltingSpace = True 
+Dim text As String = "Hello World!" 
+'Measure the tilted text 
+Dim size As SizeF = font.MeasureString(text, format) 
+Dim stream As MemoryStream = New MemoryStream() 
+Save the document as stream 
+document.Save(stream) 
+Close the document 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](). 
