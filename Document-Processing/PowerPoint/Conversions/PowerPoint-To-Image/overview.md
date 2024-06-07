@@ -14,7 +14,5 @@ The Syncfusion PowerPoint to Image converter offers high versatility and seamles
 # Key Features
 
 * Ability to convert entire PowerPoint Presentation document to images.
-* Ability to convert specific slide of PowerPoint Presentation document to image.
-* Ability to convert a PowerPoint Presentation document to an image using custom image resolution.
-* Ability to convert slide to image by CancellationToken.
+* Support to convert specific slide of PowerPoint Presentation document to image.
 * Set fallback fonts for characters when glyphs are not available.
