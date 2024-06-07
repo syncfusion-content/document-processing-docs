@@ -284,7 +284,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to edit a pivot table in C# is present on [this GitHub page]().
+A complete working example to edit a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Edit%20Pivot%20Table/NET%20Standard/Edit%20Pivot%20Table).
 
 ### Remove
 
@@ -370,7 +370,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to remove a pivot table in C# is present on [this GitHub page]().
+A complete working example to remove a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Remove%20Pivot%20Table/NET%20Standard/Remove%20Pivot%20Table).
 
 ## Styles and Formatting
 
