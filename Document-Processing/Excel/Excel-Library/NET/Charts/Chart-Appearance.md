@@ -136,7 +136,7 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply a solid fill in C# is present on [this GitHub page]().
+A complete working example to apply a solid fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Solid%20Fill/NET%20Standard/Solid%20Fill).
 
 ### Pattern Fill
 
@@ -284,7 +284,7 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply a pattern fill in C# is present on [this GitHub page]().
+A complete working example to apply a pattern fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Pattern%20Fill/NET%20Standard/Pattern%20Fill).
 
 ### Gradient Fill
 
@@ -450,7 +450,7 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply a gradient fill in C# is present on [this GitHub page]().
+A complete working example to apply a gradient fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Gradient%20Fill/NET%20Standard/Gradient%20Fill).
 
 ### Picture Fill
 The following code example illustrates how to apply a picture fill to the chart area, plot area, and data series of the chart.
@@ -552,7 +552,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply a picture fill in C# is present on [this GitHub page]().
+A complete working example to apply a picture fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Fill/NET%20Standard/Picture%20Fill).
 
 ### No Fill
 
@@ -652,7 +652,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply a no fill in C# is present on [this GitHub page]().
+A complete working example to apply a no fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/No%20Fill/NET%20Standard/No%20Fill).
 
 ## Layout and Resizing Chart Elements
 
