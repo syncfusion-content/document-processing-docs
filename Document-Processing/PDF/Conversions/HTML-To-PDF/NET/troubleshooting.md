@@ -996,3 +996,109 @@ N> Note: The performance metrics were recorded on a freshly configured machine. 
 * External resources loaded in the HTML (such as images, scripts, and styles)
 * Network speed for online URL conversions
 * Hardware resources (CPU and memory)
+
+## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>We are internally using the Blink rendering engine to convert HTML to PDF document. Due to the sandbox GDI limitation on Azure App services and Function, custom fonts are not rendered (system-installed font is used instead) because of sandbox GDI API limitations that present even in VM-based Azure Apps plans. So, that the converter will automatically renders with default font.
+
+Refer below link for more information. This is a limitation of Azure cloud environment.
+[https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox)
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+we can overcome this issue by using Azure cloud service which has the elevated access permissions. If it is possible to use Azure cloud service API for converting HTML to PDF. Please refer below link for converting HTML to PDF in Azure cloud service. The custom font may work in Azure cloud service/Azure VM, we ensured this by creating simple sample in Azure VM and the font is working properly. If possible, kindly use the Azure cloud service with VM to resolve the reported issue. 
+
+KB: [https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink](https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink)
+</td>
+</tr>
+
+</table>
+
+## Conversion failed in Azure App Service when pushing via Azure Pipeline using the WebKit rendering engine.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Conversion failed in Azure App Service when pushing via Azure Pipeline using the WebKit rendering engine.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+The problem that was reported may be caused by using the Zip deploy method to publish the project. When the project is pushed, it will automatically utilize the zip deploy method within the Azure pipeline.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+We can resolve the reported issue by changing the deployment method to web deploy in the yml file. Please refer to the code snippet below.
+
+{% tabs %}
+{% highlight C# %}
+
+	trigger:
+
+	- main
+
+	pool:
+
+	vmImage: windows-latest
+
+	variables:
+
+	buildConfiguration: 'Release'
+
+	steps:
+
+	- script: dotnet build --configuration $(buildConfiguration)
+
+	displayName: 'dotnet build $(buildConfiguration)'
+
+	- task: DotNetCoreCLI@2
+
+	inputs:
+
+	command: 'publish'
+
+	publishWebProjects: true
+
+	arguments: '--configuration $(buildConfiguration)'
+
+	zipAfterPublish: true
+
+	- task: AzureRmWebAppDeployment@4
+
+	inputs:
+
+	ConnectionType: 'AzureRM'
+
+	azureSubscription: 'htmlconnection'
+
+	appType: 'webApp'
+
+	WebAppName: 'pipelineHtmlToPDF'
+
+	packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
+	enableCustomDeployment: true
+
+	DeploymentType: 'webDeploy'
+
+
+	
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>

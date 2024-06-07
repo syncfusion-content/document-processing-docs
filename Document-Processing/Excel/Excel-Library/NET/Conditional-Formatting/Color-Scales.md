@@ -127,4 +127,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply color scales in C# is present on [this GitHub page]().
+A complete working example to apply color scales in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Color%20Scales/NET%20Standard/Color%20Scales).
