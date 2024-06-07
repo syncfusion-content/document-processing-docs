@@ -249,4 +249,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart data label in C# is present on [this GitHub page]().
+A complete working example for the chart data label in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Data%20Labels/NET%20Standard/Data%20Labels).
