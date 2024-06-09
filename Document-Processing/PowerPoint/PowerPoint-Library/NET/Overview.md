@@ -41,3 +41,8 @@ It is a non-UI component that provides a full-fledged PowerPoint presentation in
 N> 1. The current version of Essential Presentation supports the .PPTX, .PPTM, .POTX, .POTM file formats only.
 N> 2. The current version of Essential Presentation does not support some features in Microsoft PowerPoint such as Word Art, creation and editing of Handouts, equations, create and edit audio and video content, built-in themes, and its variants.
 
+## See Also
+
+* [Supported file formats]()
+* [Assemblies required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
+* [NuGet packages required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
