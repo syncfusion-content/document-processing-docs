@@ -737,6 +737,8 @@ using (WordDocument document = new WordDocument())
     docStream.Dispose();
 }
 
+#region Helper methods
+// Removes the table of contents from Word document.
 static void RemoveTableOfContents(TableOfContent toc)
 {
     //Finds the last TOC item.
@@ -758,21 +760,7 @@ static void RemoveTableOfContents(TableOfContent toc)
     //Delete all the items from bookmark start to end (TOC items) using Bookmark Navigator.
     DeleteBookmarkContents(bkmkEnd.Name, toc.Document);
 }
-
-static void DeleteBookmarkContents(string bkmkName, WordDocument document)
-{
-    //Creates the bookmark navigator instance to access the bookmark
-    BookmarksNavigator navigator = new BookmarksNavigator(document);
-    //Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
-    navigator.MoveToBookmark(bkmkName);
-    //Deletes the bookmark content.
-    navigator.DeleteBookmarkContent(false);
-    //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
-    Bookmark bookmark = document.Bookmarks.FindByName(bkmkName);
-    //Removes the bookmark named "tableOfContent" from Word document.
-    document.Bookmarks.Remove(bookmark);
-}
-
+// Finds the last TOC item.
 static Entity FindLastTOCItem(TableOfContent toc)
 {
     int tocIndex = toc.OwnerParagraph.Items.IndexOf(toc);
@@ -801,7 +789,7 @@ static Entity FindLastTOCItem(TableOfContent toc)
     }
     return FindLastItemInTextBody(toc, fieldStack);
 }
-
+// Finds the last TOC item from consequence text body items.
 static Entity FindLastItemInTextBody(TableOfContent toc, Stack<Entity> fieldStack)
 {
     WTextBody tBody = toc.OwnerParagraph.OwnerTextBody;
@@ -833,6 +821,21 @@ static Entity FindLastItemInTextBody(TableOfContent toc, Stack<Entity> fieldStac
     }
     return null;
 }
+// Delete the bookmark items.
+static void DeleteBookmarkContents(string bkmkName, WordDocument document)
+{
+    //Creates the bookmark navigator instance to access the bookmark
+    BookmarksNavigator navigator = new BookmarksNavigator(document);
+    //Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
+    navigator.MoveToBookmark(bkmkName);
+    //Deletes the bookmark content.
+    navigator.DeleteBookmarkContent(false);
+    //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+    Bookmark bookmark = document.Bookmarks.FindByName(bkmkName);
+    //Removes the bookmark named "tableOfContent" from Word document.
+    document.Bookmarks.Remove(bookmark);
+}
+#endregion
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -847,6 +850,8 @@ using (WordDocument document = new WordDocument())
     document.Save("Sample.docx", FormatType.Docx);
 }
 
+#region Helper methods
+// Removes the table of contents from Word document.
 static void RemoveTableOfContents(TableOfContent toc)
 {
     //Finds the last TOC item.
@@ -868,21 +873,7 @@ static void RemoveTableOfContents(TableOfContent toc)
     //Delete all the items from bookmark start to end (TOC items) using Bookmark Navigator.
     DeleteBookmarkContents(bkmkEnd.Name, toc.Document);
 }
-
-static void DeleteBookmarkContents(string bkmkName, WordDocument document)
-{
-    //Creates the bookmark navigator instance to access the bookmark
-    BookmarksNavigator navigator = new BookmarksNavigator(document);
-    //Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
-    navigator.MoveToBookmark(bkmkName);
-    //Deletes the bookmark content.
-    navigator.DeleteBookmarkContent(false);
-    //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
-    Bookmark bookmark = document.Bookmarks.FindByName(bkmkName);
-    //Removes the bookmark named "tableOfContent" from Word document.
-    document.Bookmarks.Remove(bookmark);
-}
-
+// Finds the last TOC item.
 static Entity FindLastTOCItem(TableOfContent toc)
 {
     int tocIndex = toc.OwnerParagraph.Items.IndexOf(toc);
@@ -911,7 +902,7 @@ static Entity FindLastTOCItem(TableOfContent toc)
     }
     return FindLastItemInTextBody(toc, fieldStack);
 }
-
+// Finds the last TOC item from consequence text body items.
 static Entity FindLastItemInTextBody(TableOfContent toc, Stack<Entity> fieldStack)
 {
     WTextBody tBody = toc.OwnerParagraph.OwnerTextBody;
@@ -943,6 +934,21 @@ static Entity FindLastItemInTextBody(TableOfContent toc, Stack<Entity> fieldStac
     }
     return null;
 }
+// Delete the bookmark items.
+static void DeleteBookmarkContents(string bkmkName, WordDocument document)
+{
+    //Creates the bookmark navigator instance to access the bookmark
+    BookmarksNavigator navigator = new BookmarksNavigator(document);
+    //Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
+    navigator.MoveToBookmark(bkmkName);
+    //Deletes the bookmark content.
+    navigator.DeleteBookmarkContent(false);
+    //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+    Bookmark bookmark = document.Bookmarks.FindByName(bkmkName);
+    //Removes the bookmark named "tableOfContent" from Word document.
+    document.Bookmarks.Remove(bookmark);
+}
+#endregion
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -954,6 +960,7 @@ Using document As WordDocument = New WordDocument
     document.Save("Sample.docx", FormatType.Docx)
 End Using
 
+'Removes the table of contents from Word document.
 Private Sub RemoveTableOfContents(ByVal toc As TableOfContent)
     'Finds the last TOC item.
     Dim lastItem As Entity = FindLastTOCItem(toc)
@@ -973,19 +980,7 @@ Private Sub RemoveTableOfContents(ByVal toc As TableOfContent)
     DeleteBookmarkContents(bkmkEnd.Name, toc.Document)
 End Sub
 
-Private Sub DeleteBookmarkContents(ByVal bkmkName As String, ByVal document As WordDocument)
-    'Creates the bookmark navigator instance to access the bookmark
-    Dim navigator As BookmarksNavigator = New BookmarksNavigator(document)
-    'Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
-    navigator.MoveToBookmark(bkmkName)
-    'Deletes the bookmark content.
-    navigator.DeleteBookmarkContent(False)
-    'Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
-    Dim bookmark As Bookmark = document.Bookmarks.FindByName(bkmkName)
-    'Removes the bookmark named "tableOfContent" from Word document.
-    document.Bookmarks.Remove(bookmark)
-End Sub
-
+'Finds the last TOC item.
 Private Function FindLastTOCItem(ByVal toc As TableOfContent) As Entity
     Dim tocIndex As Integer = toc.OwnerParagraph.Items.IndexOf(toc)
     'TOC may contains nested fields and each fields has its owner field end mark 
@@ -1014,6 +1009,7 @@ Private Function FindLastTOCItem(ByVal toc As TableOfContent) As Entity
     Return FindLastItemInTextBody(toc, fieldStack)
 End Function
 
+'Finds the last TOC item from consequence text body items.
 Private Function FindLastItemInTextBody(ByVal toc As TableOfContent, ByVal fieldStack As Stack(Of Entity)) As Entity
     Dim tBody As WTextBody = toc.OwnerParagraph.OwnerTextBody
     'Finds whether TOC end item is exist in text body items.
@@ -1045,6 +1041,20 @@ Private Function FindLastItemInTextBody(ByVal toc As TableOfContent, ByVal field
 
     Return Nothing
 End Function
+
+'Delete the bookmark items.
+Private Sub DeleteBookmarkContents(ByVal bkmkName As String, ByVal document As WordDocument)
+    'Creates the bookmark navigator instance to access the bookmark
+    Dim navigator As BookmarksNavigator = New BookmarksNavigator(document)
+    'Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
+    navigator.MoveToBookmark(bkmkName)
+    'Deletes the bookmark content.
+    navigator.DeleteBookmarkContent(False)
+    'Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+    Dim bookmark As Bookmark = document.Bookmarks.FindByName(bkmkName)
+    'Removes the bookmark named "tableOfContent" from Word document.
+    document.Bookmarks.Remove(bookmark)
+End Sub
 {% endhighlight %}
 
 {% highlight c# tabtitle="UWP" %}
