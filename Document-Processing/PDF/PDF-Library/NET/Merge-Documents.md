@@ -608,3 +608,77 @@ finalDoc.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Extend-the-margin-of-PDF-pages-while-merging-PDFs/). 
+
+##  Merge PDF document without compromising accessibility tags 
+
+The Syncfusion PDF library enables users to merge PDF documents while maintaining their accessibility standards, which are essential for users relying on screen readers and other assistive technologies. By enabling the `MergeAccessibilityTags` property in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class, the tagged structure of the documents is preserved in the final merged PDF. The default value for this property is false. 
+
+ Refer to the following code to merge PDF documents without losing accessibility tags. 
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+ 
+//Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from a stream using the following code snippet. 
+
+//Create a PDF document. 
+PdfDocument finalDoc = new PdfDocument(); 
+//Load the PDF document. 
+FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read); 
+FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read); 
+//Create a PDF stream for merging. 
+Stream[] streams = { stream1, stream2 }; 
+PdfMergeOptions mergeOptions = new PdfMergeOptions(); 
+//Enable the Merge Accessibility Tags. 
+mergeOptions.MergeAccessibilityTags = true; 
+//Merge PDFDocument. 
+PdfDocumentBase.Merge(finalDoc, mergeOptions, streams); 
+//Save the document into stream. 
+MemoryStream stream = new MemoryStream(); 
+finalDoc.Save(stream); 
+//Close the document. 
+finalDoc.Close(true); 
+//Dispose the stream. 
+stream1.Dispose(); 
+stream2.Dispose(); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document. 
+PdfDocument finalDoc = new PdfDocument(); 
+//Create a string array of source files to be merged. 
+string[] source = { "file1.pdf", "file2.pdf" }; 
+PdfMergeOptions mergeOptions = new PdfMergeOptions(); 
+//Enable the Merge Accessibility Tags. 
+mergeOptions.MergeAccessibilityTags = true; 
+//Merge PDFDocument. 
+PdfDocument.Merge(finalDoc, mergeOptions, source); 
+//Save the final document. 
+finalDoc.Save("Sample.pdf"); 
+//Close the document. 
+finalDoc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document 
+Dim finalDoc As New PdfDocument() 
+'Create a string array of source files to be merged 
+Dim source As String() = {"file1.pdf", "file2.pdf"} 
+Dim mergeOptions As New PdfMergeOptions() 
+'Enable the Merge Accessibility Tags. 
+mergeOptions.MergeAccessibilityTags = True 
+'Merge PDFDocument 
+PdfDocument.Merge(finalDoc, mergeOptions, source) 
+'Save the final document 
+finalDoc.Save("Sample.pdf") 
+'Close the document 
+finalDoc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](). 
