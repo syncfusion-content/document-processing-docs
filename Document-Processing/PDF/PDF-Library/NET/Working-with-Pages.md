@@ -1223,7 +1223,7 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //Gets the page 
 PdfLoadedPage loadedPage= loadedDocument.Pages[0] as PdfLoadedPage; 
 //Inserts the duplicate page in the beginning of the document. 
-loadedDocument.Pages.Insert(0,loadedPage); 
+loadedDocument.Pages.Insert(0, loadedPage); 
 //Creating the stream object. 
 MemoryStream stream = new MemoryStream(); 
 //Save the document as stream. 
@@ -1255,7 +1255,7 @@ Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Gets the page. 
 Dim page As PdfPageBase = TryCast(loadedDocument.Pages(0), PdfPageBase)  
 'Inserts the duplicate page in the beginning of the document. 
-loadedDocument.Pages.Insert(0,page) 
+loadedDocument.Pages.Insert(0, page) 
 'Save and close the document. 
 loadedDocument.Save("Output.pdf") 
 'Close the document.
