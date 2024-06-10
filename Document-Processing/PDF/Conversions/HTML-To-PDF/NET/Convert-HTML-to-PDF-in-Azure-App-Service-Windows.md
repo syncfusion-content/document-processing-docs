@@ -36,10 +36,10 @@ Step 5: A default action method named Index will be present in *HomeController.c
 {% highlight c# tabtitle="C#" %}
 
 @{
-    Html.BeginForm("ExportToPDF", "Home", FormMethod.Get);
+    Html.BeginForm("ConvertToPdf", "Home", FormMethod.Get);
     {
         <div>
-            <input type="submit" value="Export To PDF" style="width:200px;height:27px" />
+            <input type="submit" value="Convert To PDF" style="width:200px;height:27px" />
         </div>
     }
     Html.EndForm();
@@ -59,12 +59,12 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method named ExportToPDF in the HomeController.cs file and include the following code example to convert HTML to PDF document in *HomeController.cs*. 
+Step 7: Add a new action method named ConvertToPdf in the HomeController.cs file and include the following code example to convert HTML to PDF document in *HomeController.cs*. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-public IActionResult ExportToPDF()
+public IActionResult ConvertToPdf()
 {
     //Initialize HTML to PDF converter.
     HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Cef);
