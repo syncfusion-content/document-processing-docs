@@ -23,7 +23,7 @@ Step 2: Create a project name and select the location.
 ![Configure your new project](Azure_images/Azure-app-service-windows/project_configuration.png)
 
 Step 3: Click **Create**. 
-![Additional information](Azure_images/Azure-app-service-windows/Framework_selection1.png)
+![Additional information](Azure_images/Azure_app_service_windows/Framework.png)
 
 Step 4: Install the [Syncfusion.HtmlToPdfConverter.Cef.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Cef.Net.Windows) NuGet package to reference your project using the **Package Manager Console**.
 ![NuGet package installation](Azure_images/Azure-app-service-windows/Package_Manager_Console_Nuget.png)
