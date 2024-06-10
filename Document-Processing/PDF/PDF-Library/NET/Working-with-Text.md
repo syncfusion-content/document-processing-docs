@@ -528,6 +528,97 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Measure-the-text-in-PDF-document/). 
 
+
+### Measure tilting space 
+
+The Syncfusion PDF library enables users to accurately measure tilted spaces when drawing or measuring text in italic styles. This feature significantly improves measurement precision in PDF documents, especially when dealing with italicized fonts. To utilize this functionality, you can use the MeasureTiltingSpace property available in the PdfStringFormat class. 
+
+Refer to the following code example for further information. 
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+PdfDocument document = new PdfDocument();
+//Add a page to the document 
+PdfPage page = document.Pages.Add();
+// Load the font file from the stream 
+FileStream fontStream = new FileStream(@"../../../arial.ttf", FileMode.Open, FileAccess.Read);
+//Create a new PDF font instance 
+PdfFont font = new PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic);
+//Create a new PDF string format instance 
+PdfStringFormat format = new PdfStringFormat();
+//Enable the measure tilting space      
+format.MeasureTiltingSpace = true;
+string text = "Hello World!";
+//Measure the tilted text 
+SizeF size = font.MeasureString(text, format);
+//Draw the text to the PDF document. 
+page.Graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0, 0, size.Width, size.Height)); 
+//Creating the stream object 
+MemoryStream stream = new MemoryStream(); 
+//Save the document as stream 
+document.Save(stream); 
+//Close the document 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+ //Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document 
+PdfPage page = document.Pages.Add(); 
+//Create a new PDF font instance 
+PdfFont font = new PdfTrueTypeFont(new Font("Arial", 14, PdfFontStyle.Italic),true); 
+//Create a new PDF string format instance 
+PdfStringFormat format = new PdfStringFormat(); 
+//Enable the measure tilting space      
+format.MeasureTiltingSpace = true; 
+string text = "Hello World!"; 
+//Measure the tilted text 
+SizeF size = font.MeasureString(text, format); 
+//Draw the text to the PDF document. 
+page.Graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0,0, size.Width, size.Height)); 
+//Save the document.
+document.Save("Output.pdf"); 
+//Close the document 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create the new PDF document 
+Dim document As PdfDocument = New PdfDocument() 
+'Add a page to the document 
+Dim page As PdfPage = document.Pages.Add() 
+'Load the font file from the stream 
+Dim fontStream As FileStream = New FileStream("font.ttf", FileMode.Open, FileAccess.Read) 
+'Create a new PDF font instance 
+Dim font As PdfFont = New PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic) 
+'Create a new PDF string format instance 
+Dim format As PdfStringFormat = New PdfStringFormat() 
+'Enable a measure tilting space  
+format.MeasureTiltingSpace = True 
+Dim text As String = "Hello World!" 
+'Measure the tilted text 
+Dim size As SizeF = font.MeasureString(text, format) 
+'Draw the text to the PDF document.
+page.Graphics.DrawString(text, font, PdfBrushes.Black, New RectangleF(0, 0, size.Width, size.Height))
+Dim stream As MemoryStream = New MemoryStream() 
+Save the document as stream 
+document.Save(stream) 
+Close the document 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub]().
+
 ## Embedding fonts and working with Unicode text
 
 To embed a font or display Unicode text in the document, the ‘Unicode’ Boolean parameter of the [PdfTrueTypeFont](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Base__ctor) constructor has to be set to true. The following code illustrates the same.
@@ -2046,92 +2137,3 @@ document.Close(true)
 
 You can download a complete working sample from [GitHub]().
 
-## Measure tilting space 
-
-The Syncfusion PDF library enables users to accurately measure tilted spaces when drawing or measuring text in italic styles. This feature significantly improves measurement precision in PDF documents, especially when dealing with italicized fonts. To utilize this functionality, you can use the MeasureTiltingSpace property available in the PdfStringFormat class. 
-
-Refer to the following code example for further information. 
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-PdfDocument document = new PdfDocument();
-//Add a page to the document 
-PdfPage page = document.Pages.Add();
-// Load the font file from the stream 
-FileStream fontStream = new FileStream(@"../../../arial.ttf", FileMode.Open, FileAccess.Read);
-//Create a new PDF font instance 
-PdfFont font = new PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic);
-//Create a new PDF string format instance 
-PdfStringFormat format = new PdfStringFormat();
-//Enable the measure tilting space      
-format.MeasureTiltingSpace = true;
-string text = "Hello World!";
-//Measure the tilted text 
-SizeF size = font.MeasureString(text, format);
-//Draw the text to the PDF document. 
-page.Graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0, 0, size.Width, size.Height)); 
-//Creating the stream object 
-MemoryStream stream = new MemoryStream(); 
-//Save the document as stream 
-document.Save(stream); 
-//Close the document 
-document.Close(true); 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
- //Create a new PDF document 
-PdfDocument document = new PdfDocument(); 
-//Add a page to the document 
-PdfPage page = document.Pages.Add(); 
-//Create a new PDF font instance 
-PdfFont font = new PdfTrueTypeFont(new Font("Arial", 14, PdfFontStyle.Italic),true); 
-//Create a new PDF string format instance 
-PdfStringFormat format = new PdfStringFormat(); 
-//Enable the measure tilting space      
-format.MeasureTiltingSpace = true; 
-string text = "Hello World!"; 
-//Measure the tilted text 
-SizeF size = font.MeasureString(text, format); 
-//Draw the text to the PDF document. 
-page.Graphics.DrawString(text, font, PdfBrushes.Black, new RectangleF(0,0, size.Width, size.Height)); 
-//Save the document.
-document.Save("Output.pdf"); 
-//Close the document 
-document.Close(true); 
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Create the new PDF document 
-Dim document As PdfDocument = New PdfDocument() 
-'Add a page to the document 
-Dim page As PdfPage = document.Pages.Add() 
-'Load the font file from the stream 
-Dim fontStream As FileStream = New FileStream("font.ttf", FileMode.Open, FileAccess.Read) 
-'Create a new PDF font instance 
-Dim font As PdfFont = New PdfTrueTypeFont(fontStream, 14, PdfFontStyle.Italic) 
-'Create a new PDF string format instance 
-Dim format As PdfStringFormat = New PdfStringFormat() 
-'Enable a measure tilting space  
-format.MeasureTiltingSpace = True 
-Dim text As String = "Hello World!" 
-'Measure the tilted text 
-Dim size As SizeF = font.MeasureString(text, format) 
-'Draw the text to the PDF document.
-page.Graphics.DrawString(text, font, PdfBrushes.Black, New RectangleF(0, 0, size.Width, size.Height))
-Dim stream As MemoryStream = New MemoryStream() 
-Save the document as stream 
-document.Save(stream) 
-Close the document 
-document.Close(True) 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub]().
