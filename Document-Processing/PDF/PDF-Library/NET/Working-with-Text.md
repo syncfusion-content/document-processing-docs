@@ -1968,3 +1968,80 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Find-text-in-PDF-document).
+
+
+## Customizing TrueType fonts in a PDF document
+
+The Syncfusion PDF library provides extensive options for customizing TrueType font settings in PDF documents through the `PdfFontSettings` class. Users can modify font size, style, and choose to embed or subset fonts. Additionally, measurement settings can be adjusted using a floating factor for precise control over font rendering.
+
+The following code example illustrates this.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+//Create PDF graphics for the page. 
+PdfGraphics graphics = page.Graphics; 
+//Load the TrueType font from the local *.ttf file. 
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read); 
+// Initialize the PdfFontSettings 
+PdfFontSettings fontSettings = new PdfFontSettings(10, PdfFontStyle.Bold, true, true, true); 
+PdfFont pdfFont = new PdfTrueTypeFont(fontStream, fontSettings); 
+//Draw the text. graphics.DrawString("Hello World!!!", pdfFont, PdfBrushes.Black, new PointF(0, 0)); 
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document into stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+//Create PDF graphics for the page. 
+PdfGraphics graphics = page.Graphics; 
+// Initialize the PdfFontSettings 
+PdfFontSettings fontSettings = new PdfFontSettings(10, PdfFontStyle.Bold, true, true, true); 
+PdfFont pdfFont = new PdfTrueTypeFont(new Font("Arial"), fontSettings); 
+//Draw the text. graphics.DrawString("Hello World!!!", pdfFont, PdfBrushes.Black, new PointF(0, 0)); 
+//Save the document. 
+document.Save("Output.pdf"); 
+//Close the document. 
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document. 
+Dim document As PdfDocument = New PdfDocument 
+'Add a page to the document. 
+Dim page As PdfPage = document.Pages.Add 
+'Create PDF graphics for the page. 
+Dim graphics As PdfGraphics = page.Graphics 
+'Use the fontStream installed in the machine. 
+Dim fontStream As FileStream = New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read) 
+'Initialize the PdfFontSettings.
+Dim fontSettings As PdfFontSettings = New PdfFontSettings(10, PdfFontStyle.Bold, true, true, true) 
+Dim pdfFont As PdfFont = New PdfTrueTypeFont(fontStream, fontSettings)
+'Draw the text. 
+graphics.DrawString("Hello World!!!", pdfFont, PdfBrushes.Black, New PointF(0, 0)) 
+'Save the document. 
+document.Save("Output.pdf") 
+'Close the document. 
+document.Close(true)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub]().
