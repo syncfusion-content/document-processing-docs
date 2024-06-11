@@ -350,11 +350,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Working with characters
 
-You can get single character and its properties by using [TextGlyph](https://help.syncfusion.com/cr/xamarin/Syncfusion.Pdf.TextGlyph.html). Refer to the following code sample. 
+You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the instance. Refer to the code sample below.  
 
 {% tabs %}
 
-{% highlight c# tabtitle="Xamarin" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Load the existing PDF document
 PdfLoadedDocument m_loadedDocument = new PdfLoadedDocument(stream);
@@ -385,7 +385,48 @@ float GlyphFontSize = textGlyph.FontSize;
 FontStyle GlyphFontStyle = textGlyph.FontStyle;
 //Gets character in the word
 char GlyphText = textGlyph.Text;
+//Gets the color of the character 
+Color GlyphColor = textGlyph.TextColor; 
+
+{% endhighlight %}
+
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the existing PDF document 
+Dim m_loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream) 
+' Get the first page of the loaded PDF document 
+Dim page As PdfPageBase = m_loadedDocument.Pages(0) 
+Dim lineCollection As New TextLineCollection() 
+
+' Extract text from the first page 
+Dim m_extractedText As String = page.ExtractText(lineCollection) 
+' Get a specific line from the collection 
+Dim line As TextLine = lineCollection.TextLine(0) 
+' Get a collection of the words in the line 
+Dim textWordCollection As List(Of TextWord) = line.WordCollection 
+' Get a word from the collection using an index 
+Dim textWord As TextWord = textWordCollection(0) 
+' Get Glyph details of the word 
+Dim textGlyphCollection As List(Of TextGlyph) = textWord.Glyphs 
+
+' Get a character of the word 
+Dim textGlyph As TextGlyph = textGlyphCollection(0) 
+' Get bounds of the character 
+Dim glyphBounds As RectangleF = textGlyph.Bounds 
+' Get font name of the character 
+Dim GlyphFontName As String = textGlyph.FontName 
+' Get font size of the character 
+Dim GlyphFontSize As Single = textGlyph.FontSize 
+' Get font style of the character 
+Dim GlyphFontStyle As FontStyle = textGlyph.FontStyle 
+' Get the character in the word 
+Dim GlyphText As Char = textGlyph.Text 
+' Get the color of the character 
+Dim GlyphColor As Color = textGlyph.TextColor 
 
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub]().
