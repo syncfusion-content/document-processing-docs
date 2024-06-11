@@ -1,38 +1,28 @@
 ---
-title: Delete PDF Pages Service
-description:  Easily remove specific pages from a PDF document using the Delete Pages API. Provide the PDF file and page deletion options to the delete-pages endpoint for precise page management.
+title: Excel to PDF Conversion API
+description: Convert Excel documents to PDF format seamlessly using this API. Customize conversion settings and check job statuses easily. Integrate into your applications effortlessly.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Delete Pages
+# Excel To PDF
 
-This feature allows you to delete pages in a PDF document. To perform this operation, you need to supply a PDF document as input to the Delete Pages API.
+Converting an Excel document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 
-## Delete PDF Pages
+## Convert Excel to PDF
 
-To delete PDF pages, send a request to the /v1/edit-pdf/delete-pages endpoint with a PDF document and its options as shown below.
+To convert an Excel document to PDF, send a request to the /v1/conversion/excel-to-pdf endpoint, including both the Excel file as input and the settings JSON.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/edit-pdf/delete-pages' \
---form 'file=@"merge/example.pdf"' \
+curl --location 'http://localhost:8003/v1/conversion/excel-to-pdf' \
+--form 'file=@"ExpenseReport.xlsx"' \
 --form 'settings="{
-  \"RotationAngle\": \"90\",
   \"File\": \"file\",
   \"Password\": null,
-  \"PageRanges\": [
-    {
-      \"Start\": 1,
-      \"End\": 5
-    },
-    {
-      \"Start\": 6,
-      \"End\": 10
-    }
-  ]
+  \"PdfComplaince\": \"PDF/A-1B\"
 }"'
 
 {% endhighlight %}
@@ -40,8 +30,8 @@ curl --location 'http://localhost:8003/v1/edit-pdf/delete-pages' \
 {% highlight javaScript tabtitle="JavaScript:" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "merge/example.pdf");
-formdata.append("settings", "{\n  \"RotationAngle\": \"90\",\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PageRanges\": [\n    {\n      \"Start\": 1,\n      \"End\": 5\n    },\n    {\n      \"Start\": 6,\n      \"End\": 10\n    }\n  ]\n}");
+formdata.append("file", fileInput.files[0], "ExpenseReport.xlsx");
+formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PdfComplaince\": \"PDF/A-1B\"\n}");
 
 const requestOptions = {
   method: "POST",
@@ -49,7 +39,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/delete-pages", requestOptions)
+fetch("http://localhost:4000/v1/conversion/excel-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -59,23 +49,13 @@ fetch("http://localhost:4000/v1/edit-pdf/delete-pages", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/delete-pages");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/excel-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file", "merge/example.pdf");
+content.Add(new StreamContent(File.OpenRead("ExpenseReport.xlsx")), "file", "ExpenseReport.xlsx");
 content.Add(new StringContent("{
-  \"RotationAngle\": \"90\",
   \"File\": \"file\",
   \"Password\": null,
-  \"PageRanges\": [
-    {
-      \"Start\": 1,
-      \"End\": 5
-    },
-    {
-      \"Start\": 6,
-      \"End\": 10
-    }
-  ]
+  \"PdfComplaince\": \"PDF/A-1B\"
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -86,7 +66,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a job to delete PDF pages and return the job details as follows:
+Once the request is sent, it will create a conversion job to convert the Excel document to PDF and return the job details as follows:
 
 ```bash
 {
@@ -95,14 +75,13 @@ Once the request is sent, it will create a job to delete PDF pages and return th
     "createdAt": "2024-05-06T09:39:13.9505828Z"
 }
 ```
+## Poll the status of the Conversion Job
 
-## Poll the status of the Delete Pages Job
-
-Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
+Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
@@ -115,7 +94,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

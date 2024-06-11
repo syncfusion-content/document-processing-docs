@@ -1,33 +1,29 @@
 ---
-title: Compress PDF Document Service
-description: Reduce the size of PDF documents using the Compress PDF API. Provide the PDF file and desired compression options to the compress endpoint for efficient file size reduction.
+title: PowerPoint to PDF Conversion
+description: Easily convert PowerPoint presentations to PDF format with customizable settings. Integration is simple, allowing you to tailor conversion options to your needs.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Compress PDF 
+# PowerPoint to PDF
 
-The Compress PDF API allows you to reduce the size of a PDF document with various compression options.
+Converting a PowerPoint document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 
-## Flatten PDF Document
+## Convert PowerPoint to PDF
 
-To compress a PDF document, send a request to the /v1/edit-pdf/compress endpoint with the input PDF file and compression options as shown below.
+To convert a PowerPoint document to PDF, send a request to the /v1/conversion/powerpoint-to-pdf endpoint, including both the PowerPoint file as input and the settings JSON.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
---form 'file=@"4mb.pdf"' \
+curl --location 'http://localhost:8003/v1/conversion/powerpoint-to-pdf' \
+--form 'file=@"Images.pptx"' \
 --form 'settings="{
   \"File\": \"file\",
   \"Password\": null,
-  \"ImageQuality\": 50,
-  \"OptimizeFont\": true,
-  \"RemoveMetadata\": false,
-  \"OptimizePageContents\": true,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
+  \"PdfComplaince\": \"PDF/A-1B\",
+  \"EnableAccessibility\": false
 }"'
 
 {% endhighlight %}
@@ -35,8 +31,8 @@ curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
 {% highlight javaScript tabtitle="JavaScript:" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "4mb.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"ImageQuality\": 50,\n  \"OptimizeFont\": true,\n  \"RemoveMetadata\": false,\n  \"OptimizePageContents\": true,\n  \"FlattenFormFields\": true,\n  \"FlattenAnnotations\": true\n}");
+formdata.append("file", fileInput.files[0], "Images.pptx");
+formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PdfComplaince\": \"PDF/A-1B\",\n  \"EnableAccessibility\": false\n}");
 
 const requestOptions = {
   method: "POST",
@@ -44,7 +40,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/compress", requestOptions)
+fetch("http://localhost:4000/v1/conversion/powerpoint-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -54,18 +50,14 @@ fetch("http://localhost:4000/v1/edit-pdf/compress", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/compress");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/powerpoint-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("4mb.pdf")), "file", "4mb.pdf");
+content.Add(new StreamContent(File.OpenRead("Images.pptx")), "file", "Images.pptx");
 content.Add(new StringContent("{
   \"File\": \"file\",
   \"Password\": null,
-  \"ImageQuality\": 50,
-  \"OptimizeFont\": true,
-  \"RemoveMetadata\": false,
-  \"OptimizePageContents\": true,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
+  \"PdfComplaince\": \"PDF/A-1B\",
+  \"EnableAccessibility\": false
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -76,7 +68,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a compression job to compress the PDF and return the job details as follows:
+Once the request is sent, it will create a conversion job to convert the PowerPoint to PDF and return the job details as follows:
 
 ```bash
 {
@@ -86,15 +78,15 @@ Once the request is sent, it will create a compression job to compress the PDF a
 }
 ```
 
-## Poll the status of the Compress PDF Job
+## Poll the status of the Conversion Job
 
-Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
+Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df'
+curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
@@ -104,7 +96,8 @@ const requestOptions = {
   method: "GET",
   redirect: "follow"
 };
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+
+fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
