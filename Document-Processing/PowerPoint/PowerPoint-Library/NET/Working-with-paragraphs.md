@@ -529,3 +529,7 @@ pptxDoc.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Paragraphs/Remove-paragraph).
+
+## See Also
+
+* [How to change all font names in PowerPoint using C#?](https://support.syncfusion.com/kb/article/16089/how-to-change-all-font-names-in-powerpoint-using-c)
