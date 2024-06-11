@@ -2064,3 +2064,8 @@ document.Close()
 ## See Also
 
 * [How to create equation using LaTeX in Word document?](https://support.syncfusion.com/kb/article/16065/how-to-create-equation-using-latex-in-aspnet-core-word-document)
+* [How to insert equation using LaTeX in Word document using C#?](https://support.syncfusion.com/kb/article/16075/how-to-insert-an-equation-using-latex-in-a-word-document)
+* [How to convert equation in Word document to LaTeX using C#?](https://support.syncfusion.com/kb/article/16077/how-to-convert-equation-in-a-word-document-to-latex-using-c)
+* [How to modify existing equation using LaTeX in Word document using C#?](https://support.syncfusion.com/kb/article/16085/how-to-modify-existing-equation-using-latex-in-a-word-document-using-c)
+* [How to create equation using LaTeX and convert as PDF in C#?](https://support.syncfusion.com/kb/article/16082/how-to-create-an-equation-using-latex-and-convert-it-to-a-pdf-in-c)
+* [How to create equation using LaTeX and convert as image in C#?](https://support.syncfusion.com/kb/article/16083/how-to-create-an-equation-using-latex-and-convert-it-to-a-image-in-c)
