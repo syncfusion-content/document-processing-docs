@@ -668,6 +668,7 @@ N> 9. The .NET Word Library (DocIO) uses System.Drawing functionalities for Word
 
 ## See Also
 
+* [Supported file formats](https://help.syncfusion.com/document-processing/word/word-library/net/support-file-formats)
 * [How to convert word to tiff using C#, VB.NET](https://support.syncfusion.com/kb/article/9541/how-to-convert-word-to-tiff-using-c-vb-net)
 * [How to convert Word to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12123/how-to-convert-word-to-image-in-blazor-webassembly-wasm)
 * [How to resolve font problems during Word to Image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
