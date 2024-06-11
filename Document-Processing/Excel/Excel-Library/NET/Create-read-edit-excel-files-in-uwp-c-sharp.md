@@ -184,8 +184,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["D23"].Text = "Total";
 
   //Apply number format
-  worksheet.Range["D16:E22"].NumberFormat = "$.00";
-  worksheet.Range["E23"].NumberFormat = "$.00";
+  worksheet.Range["D16:E22"].NumberFormat = "$0.00";
+  worksheet.Range["E23"].NumberFormat = "$0.00";
 
   //Merge column A and B from row 15 to 22
   worksheet.Range["A15:B15"].Merge();
@@ -390,8 +390,8 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("D23").Text = "Total"
 
   'Apply number format
-  worksheet.Range("D16:E22").NumberFormat = "$.00"
-  worksheet.Range("E23").NumberFormat = "$.00"
+  worksheet.Range("D16:E22").NumberFormat = "$0.00"
+  worksheet.Range("E23").NumberFormat = "$0.00"
 
   'Apply incremental formula for column Amount by multiplying Qty and UnitPrice
   application.EnableIncrementalFormula = True
