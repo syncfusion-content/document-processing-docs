@@ -43,6 +43,5 @@ N> 2. The current version of Essential Presentation does not support some featur
 
 ## See Also
 
-* [Supported file formats]()
 * [Assemblies required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
 * [NuGet packages required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
