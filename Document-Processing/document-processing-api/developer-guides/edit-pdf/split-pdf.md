@@ -1,29 +1,30 @@
 ---
-title: Flatten PDF Document Service
-description: Simplify your PDF by flattening annotations and form fields using the Flatten PDF API. Provide the PDF file and flattening options to the flatten endpoint for streamlined document processing.
+title: PDF Split Service
+description: Easily divide a PDF document into multiple PDF files with the PDF Split Service. Provide the PDF file and desired split options to the split endpoint to perform the operation.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Flatten PDF 
+# Split PDF
 
-You can effortlessly merge one or more PDF documents into a single PDF file. To perform this merge, you need to supply one or more PDF documents as input to the merge PDF document service.
+You can effortlessly split PDF documents into multiple PDF files. To perform this operation, you need to supply a PDF document as input to the Split PDF API.
 
-## Flatten PDF Document
+## Merge PDF Document
 
-To flatten a PDF document, send a request to the /v1/edit-pdf/flatten endpoint with the input PDF and its options as shown below.
+To split a PDF file, send a request to the /v1/edit-pdf/split endpoint with a PDF document and split options as shown below.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/edit-pdf/flatten' \
---form 'file=@"Form.pdf"' \
+curl --location 'http://localhost:8003/v1/edit-pdf/split' \
+--form 'file=@"merge/example.pdf"' \
 --form 'settings="{
   \"File\": \"file\",
   \"Password\": null,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
+  \"SplitOption\": {
+    \"FileCount\": 10
+  }
 }"'
 
 {% endhighlight %}
@@ -31,8 +32,8 @@ curl --location 'http://localhost:8003/v1/edit-pdf/flatten' \
 {% highlight javaScript tabtitle="JavaScript:" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "Form.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"FlattenFormFields\": true,\n  \"FlattenAnnotations\": true\n}");
+formdata.append("file", fileInput.files[0], "merge/example.pdf");
+formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"SplitOption\": {\n    \"FileCount\": 10\n  }\n}");
 
 const requestOptions = {
   method: "POST",
@@ -40,7 +41,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/flatten", requestOptions)
+fetch("http://localhost:4000/v1/edit-pdf/split", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -50,14 +51,15 @@ fetch("http://localhost:4000/v1/edit-pdf/flatten", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/flatten");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/split");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("Form.pdf")), "file", "Form.pdf");
+content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file", "merge/example.pdf");
 content.Add(new StringContent("{
   \"File\": \"file\",
   \"Password\": null,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
+  \"SplitOption\": {
+    \"FileCount\": 10
+  }
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -68,7 +70,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a flatten job to flatten the PDF and return the job details as follows:
+Once the request is sent, it will create a job to split the PDF document and return the job details as follows:
 
 ```bash
 {
@@ -78,16 +80,15 @@ Once the request is sent, it will create a flatten job to flatten the PDF and re
 }
 ```
 
-## Poll the status of the Flatten Pages Job
+## Poll the status of the Split Job
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
---header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
 
@@ -109,7 +110,6 @@ fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
-request.Headers.Add("Authorization", "Bearer {{Placeholder for token}}");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());

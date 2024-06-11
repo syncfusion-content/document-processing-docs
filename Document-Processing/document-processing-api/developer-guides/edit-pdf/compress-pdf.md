@@ -1,38 +1,33 @@
 ---
-title: Rotate PDF Pages Service
-description: Easily rotate pages in a PDF document using the Rotate Pages API. Provide the PDF file and rotation options to the rotate-pages endpoint for precise page adjustments.
+title: Compress PDF Document Service
+description: Reduce the size of PDF documents using the Compress PDF API. Provide the PDF file and desired compression options to the compress endpoint for efficient file size reduction.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Rotate Pages
+# Compress PDF 
 
-This feature allows you to rotate pages in a PDF document. To perform this operation, you need to supply a PDF document as input to the Rotate Pages API.
+The Compress PDF API allows you to reduce the size of a PDF document with various compression options.
 
-## Rotate PDF Pages
+## Flatten PDF Document
 
-To rotate PDF pages, send a request to the /v1/edit-pdf/rotate-pages endpoint with a PDF document and its options as shown below.
+To compress a PDF document, send a request to the /v1/edit-pdf/compress endpoint with the input PDF file and compression options as shown below.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/edit-pdf/rotate-pages' \
---form 'file=@"merge/example.pdf"' \
+curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
+--form 'file=@"4mb.pdf"' \
 --form 'settings="{
-  \"RotationAngle\": \"90\",
   \"File\": \"file\",
   \"Password\": null,
-  \"PageRanges\": [
-    {
-      \"Start\": 1,
-      \"End\": 5
-    },
-    {
-      \"Start\": 6,
-      \"End\": 10
-    }
-  ]
+  \"ImageQuality\": 50,
+  \"OptimizeFont\": true,
+  \"RemoveMetadata\": false,
+  \"OptimizePageContents\": true,
+  \"FlattenFormFields\": true,
+  \"FlattenAnnotations\": true
 }"'
 
 {% endhighlight %}
@@ -40,8 +35,8 @@ curl --location 'http://localhost:8003/v1/edit-pdf/rotate-pages' \
 {% highlight javaScript tabtitle="JavaScript:" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "merge/example.pdf");
-formdata.append("settings", "{\n  \"RotationAngle\": \"90\",\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PageRanges\": [\n    {\n      \"Start\": 1,\n      \"End\": 5\n    },\n    {\n      \"Start\": 6,\n      \"End\": 10\n    }\n  ]\n}");
+formdata.append("file", fileInput.files[0], "4mb.pdf");
+formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"ImageQuality\": 50,\n  \"OptimizeFont\": true,\n  \"RemoveMetadata\": false,\n  \"OptimizePageContents\": true,\n  \"FlattenFormFields\": true,\n  \"FlattenAnnotations\": true\n}");
 
 const requestOptions = {
   method: "POST",
@@ -49,7 +44,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/rotate-pages", requestOptions)
+fetch("http://localhost:4000/v1/edit-pdf/compress", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -59,23 +54,18 @@ fetch("http://localhost:4000/v1/edit-pdf/rotate-pages", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/rotate-pages");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/compress");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file", "merge/example.pdf");
+content.Add(new StreamContent(File.OpenRead("4mb.pdf")), "file", "4mb.pdf");
 content.Add(new StringContent("{
-  \"RotationAngle\": \"90\",
   \"File\": \"file\",
   \"Password\": null,
-  \"PageRanges\": [
-    {
-      \"Start\": 1,
-      \"End\": 5
-    },
-    {
-      \"Start\": 6,
-      \"End\": 10
-    }
-  ]
+  \"ImageQuality\": 50,
+  \"OptimizeFont\": true,
+  \"RemoveMetadata\": false,
+  \"OptimizePageContents\": true,
+  \"FlattenFormFields\": true,
+  \"FlattenAnnotations\": true
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -86,7 +76,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a job to rotate PDF pages and return the job details as follows:
+Once the request is sent, it will create a compression job to compress the PDF and return the job details as follows:
 
 ```bash
 {
@@ -96,15 +86,15 @@ Once the request is sent, it will create a job to rotate PDF pages and return th
 }
 ```
 
-## Poll the status of the Rotate Pages Job
+## Poll the status of the Compress PDF Job
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df'
 
 {% endhighlight %}
 
@@ -114,7 +104,6 @@ const requestOptions = {
   method: "GET",
   redirect: "follow"
 };
-
 fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))

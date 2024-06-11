@@ -1,45 +1,39 @@
 ---
-title: PDF Merge Service
-description: Seamlessly combine one or multiple PDF documents into a unified PDF file with the PDF Merge Service.
+title: Word to PDF Converter API
+description: The Word to PDF Converter API effortlessly transforms Word documents (.doc, .docx, .rtf) into PDFs with customizable settings. Seamlessly integrated into workflows, it provides real-time job tracking and status updates for efficient document management.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Merge PDF 
+# Word to PDF
 
-You can effortlessly merge one or more PDF documents into a single PDF file. To perform this merge, you need to supply one or more PDF documents as input to the merge PDF document service.
+Converting a Word document to PDF is simple with support for .doc, .docx, and .rtf formats. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 
-## Merge PDF Document
+## Convert Word to PDF
 
-To merge PDF documents, send a request to the /v1/edit-pdf/merge endpoint, including both the PDF files as input and the settings as follows:
+To convert a Word document to PDF, send a request to the /v1/conversion/word-to-pdf endpoint, including both the Word file as input and the settings JSON.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
---form 'file1=@"merge/example.pdf"' \
---form 'file2=@"merge/example1.pdf"' \
+curl --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
+--form 'file=@"SalesInvoice.docx"' \
 --form 'settings="{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"PreserveBookmarks\": true
-}"'
+  \"File\": \"file\",
+  \"Password\": null,
+  \"PreserveFormFields\": true,
+  \"PdfComplaince\": \"PDF/A-1B\",
+  \"EnableAccessibility\": false
+}"
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript:" %}
 
 const formdata = new FormData();
-formdata.append("file1", fileInput.files[0], "merge/example.pdf");
-formdata.append("file2", fileInput.files[0], "merge/example1.pdf");
-formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true\n}");
+formdata.append("file", fileInput.files[0], "SalesInvoice.docx");
+formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PreserveFormFields\": true,\n  \"PdfComplaince\": \"PDF/A-1B\",\n  \"EnableAccessibility\": false\n}");
 
 const requestOptions = {
   method: "POST",
@@ -47,30 +41,24 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/merge", requestOptions)
+fetch("http://localhost:8003/v1/conversion/word-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
-  .catch((error) => console.error(error));
 
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/merge");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/word-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file1", "merge/example.pdf");
-content.Add(new StreamContent(File.OpenRead("merge/example1.pdf")), "file2", "merge/example1.pdf");
+content.Add(new StreamContent(File.OpenRead("SalesInvoice.docx")), "file", "SalesInvoice.docx");
 content.Add(new StringContent("{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"PreserveBookmarks\": true
+  \"File\": \"file\",
+  \"Password\": null,
+  \"PreserveFormFields\": true,
+  \"PdfComplaince\": \"PDF/A-1B\",
+  \"EnableAccessibility\": false
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -81,7 +69,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a job to merge PDF documents and return the job details as follows:
+Once the request is sent, it will create a conversion job to convert the Word document to PDF and return the job details as follows:
 
 ```bash
 {
@@ -91,13 +79,13 @@ Once the request is sent, it will create a job to merge PDF documents and return
 }
 ```
 
-## Poll the status of the Merge Job
+## Poll the status of the Conversion Job
 
-Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
+Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
@@ -110,7 +98,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

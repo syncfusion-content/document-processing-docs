@@ -1,39 +1,42 @@
 ---
-title: Word to PDF Converter API
-description: The Word to PDF Converter API effortlessly transforms Word documents (.doc, .docx, .rtf) into PDFs with customizable settings. Seamlessly integrated into workflows, it provides real-time job tracking and status updates for efficient document management.
+title: HTML to PDF Conversion
+description: Utilize the Syncfusion document processing engine to effortlessly convert HTML templates or URLs into PDF documents. Simplify the conversion process by providing the HTML file along with its associated assets.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Word to PDF
+# HTML to PDF
 
-Converting a Word document to PDF is simple with support for .doc, .docx, and .rtf formats. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+With the Syncfusion document processing engine, you can easily convert an HTML template or URL to a PDF document. To convert an HTML template to a PDF document, you need to provide both the HTML template file and its assets.
 
-## Convert Word to PDF
+## Convert HTML to PDF
 
-To convert a Word document to PDF, send a request to the /v1/conversion/word-to-pdf endpoint, including both the Word file as input and the settings JSON.
+To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including both the HTML file as input and its assets as follows:
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
---form 'file=@"SalesInvoice.docx"' \
+curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
+--form 'Index.html=@"html/index.html"' \
+--form 'logo.png=@"html/logo.png"' \
+--form 'font=@"html/SourceSansPro-Regular.ttf"' \
+--form 'style=@"html/style.css"' \
 --form 'settings="{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
-}"
+  \"IndexFile\": \"index.html\",
+  \"Assets\": [\"logo.png\", \"font\",\"style\"]
+}"'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript:" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "SalesInvoice.docx");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PreserveFormFields\": true,\n  \"PdfComplaince\": \"PDF/A-1B\",\n  \"EnableAccessibility\": false\n}");
+formdata.append("Index.html", fileInput.files[0], "html/index.html");
+formdata.append("logo.png", fileInput.files[0], "html/logo.png");
+formdata.append("font", fileInput.files[0], "html/SourceSansPro-Regular.ttf");
+formdata.append("style", fileInput.files[0], "html/style.css");
+formdata.append("settings", "{\n  \"IndexFile\": \"index.html\",\n  \"Assets\": [\"logo.png\", \"font\",\"style\"]\n}");
 
 const requestOptions = {
   method: "POST",
@@ -41,24 +44,25 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8003/v1/conversion/word-to-pdf", requestOptions)
+fetch("http://localhost:4000/v1/conversion/html-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/word-to-pdf");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("SalesInvoice.docx")), "file", "SalesInvoice.docx");
+content.Add(new StreamContent(File.OpenRead("html/index.html")), "Index.html", "html/index.html");
+content.Add(new StreamContent(File.OpenRead("html/logo.png")), "logo.png", "html/logo.png");
+content.Add(new StreamContent(File.OpenRead("html/SourceSansPro-Regular.ttf")), "font", "html/SourceSansPro-Regular.ttf");
+content.Add(new StreamContent(File.OpenRead("html/style.css")), "style", "html/style.css");
 content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
+  \"IndexFile\": \"index.html\",
+  \"Assets\": [\"logo.png\", \"font\",\"style\"]
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -69,7 +73,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a conversion job to convert the Word document to PDF and return the job details as follows:
+Once the request is sent, it will create a conversion job to convert HTML to PDF and return the job details as follows:
 
 ```bash
 {
@@ -85,7 +89,7 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% tabs %}
 
-{% highlight curl tabtitle="curl" %}
+{% highlight sh tabtitle="curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
