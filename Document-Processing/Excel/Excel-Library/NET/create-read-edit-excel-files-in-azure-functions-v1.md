@@ -13,19 +13,19 @@ documentation: UG
 
 Step 1: Create a new Azure Functions project.
 
-![Create an Azure Functions project in visual studio](Azure_Images/Functions_v1/Create_Application.png)
+![Create an Azure Functions project in visual studio](Azure-Images/Functions-v1/Create_Application.png)
 
 Step 2: Name the project.
 
-![Name the project](Azure_Images/Functions_v1/Name_the_Application_Create.png)
+![Name the project](Azure-Images/Functions-v1/Name_the_Application_Create.png)
 
 Step 3: Select functions worker as **.NET Framework v1**. 
 
-![Select functions worker](Azure_Images/Functions_v1/Functions_Worker.png)
+![Select functions worker](Azure-Images/Functions-v1/Functions_Worker.png)
 
 Step 4: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package as reference to your project from [NuGet.org](https://www.nuget.org).
 
-![Install Syncfusion.XlsIO.WinForms NuGet package](Azure_Images/Functions_v1/Install_NuGet_Create.png)
+![Install Syncfusion.XlsIO.WinForms NuGet package](Azure-Images/Functions-v1/Install_NuGet_Create.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
 
@@ -242,39 +242,39 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 Step 7: Right-click the project and select **Publish** option.
 
-![Publish](Azure_Images/Functions_v1/Publish_Create.png)
+![Publish](Azure-Images/Functions-v1/Publish_Create.png)
 
 Step 8: Select the publish target as **Azure**.
 
-![Add a Publish Profile](Azure_Images/Functions_v1/Publish_Profile.png)
+![Add a Publish Profile](Azure-Images/Functions-v1/Publish_Profile.png)
 
 Step 9: Select the **Create new** button.
 
-![Click create new option](Azure_Images/Functions_v1/Create_New.png)
+![Click create new option](Azure-Images/Functions-v1/Create_New.png)
 
 Step 10: Click the **Create** button to proceed with creation. 
 
-![Hosting](Azure_Images/Functions_v1/Hosting_Create.png)
+![Hosting](Azure-Images/Functions-v1/Hosting_Create.png)
 
 Step 11: Click the **Finish** button to finalize the **Azure Function** creation. 
 
-![Creating app service](Azure_Images/Functions_v1/Azure_Function_Create.png)
+![Creating app service](Azure-Images/Functions-v1/Azure_Function_Create.png)
 
 Step 12: Click **Close** button.
 
-![Profile created](Azure_Images/Functions_v1/Profile_Created_Create.png)
+![Profile created](Azure-Images/Functions-v1/Profile_Created_Create.png)
 
 Step 13: Click the **Publish** button.
 
-![Click Publish Button](Azure_Images/Functions_v1/Start_Publish_Create.png)
+![Click Publish Button](Azure-Images/Functions-v1/Start_Publish_Create.png)
 
 Step 14: Publish has been succeeded.
 
-![Publish succeeded](Azure_Images/Functions_v1/Publish_Success_Create.png)
+![Publish succeeded](Azure-Images/Functions-v1/Publish_Success_Create.png)
 
 Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to ** create Excel document**). You will get the output Excel document as follows.
 
-![Output File](Azure_Images/Functions_v1/CreateExcel_Function_v1.png)
+![Output File](Azure-Images/Functions-v1/CreateExcel_Function_v1.png)
 
 ### Steps to post the request to Azure Functions
 
