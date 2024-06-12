@@ -13,17 +13,17 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 ## Steps to convert PowerPoint Presentation to Image in Azure App Service on Windows
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure_Images/App_Service_Linux/Create-PowerPoint-Presentation-to-PDF.png)
+![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Create a project name and select the location.
-![Configure your new project](Azure_Images/App_Service_Linux/Configure-PowerPoint-Presentation-to-Image.png)
+![Configure your new project](Azure-Images/App-Service-Linux/Configure-PowerPoint-Presentation-to-Image.png)
 
 Step 3: Click **Create** button.
-![Additional Information](Azure_Images/App_Service_Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
+![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure_Images/App_Service_Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -153,37 +153,37 @@ public ActionResult ConvertPPTXtoImage(string button)
 ## Steps to publish as Azure App Service on Windows
 
 Step 1: Right-click the project and select **Publish** option.
-![Right-click the project and select the Publish option](Azure_Images/App_Service_Windows/Publish_PowerPoint_Presentation_to_Image.png)
+![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish_PowerPoint_Presentation_to_Image.png)
 
 Step 2: Click the **Add a Publish Profile** button.
-![Click the Add a Publish Profile](Azure_Images/App_Service_Linux/Publish_Profile_PowerPoint_Presentation_to_PDF.png)
+![Click the Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile_PowerPoint_Presentation_to_PDF.png)
 
 Step 3: Select the publish target as **Azure**.
-![Select the publish target as Azure](Azure_Images/App_Service_Linux/Publish_Target_PowerPoint_Presentation_to_PDF.png)
+![Select the publish target as Azure](Azure-Images/App-Service-Linux/Publish_Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Select the Specific target as **Azure App Service (Windows)**.
-![Select the publish target](Azure_Images/App_Service_Windows/Specific_Target_PowerPoint_Presentation_to_PDF.png)
+![Select the publish target](Azure-Images/App-Service-Windows/Specific_Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 5: To create a new app service, click **Create new** option.
-![Click create new option](Azure_Images/App_Service_Linux/Create_New_App_Service_PowerPoint_Presentation_to_PDF.png)
+![Click create new option](Azure-Images/App-Service-Linux/Create_New_App_Service_PowerPoint_Presentation_to_PDF.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
-![Click the Create button](Azure_Images/App_Service_Windows/Hosting_PowerPoint_Presentation_to_Image.png)
+![Click the Create button](Azure-Images/App-Service-Windows/Hosting_PowerPoint_Presentation_to_Image.png)
 
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
-![Click the Finish button](Azure_Images/App_Service_Windows/App_Service_PowerPoint_Presentation_to_Image.png)
+![Click the Finish button](Azure-Images/App-Service-Windows/App_Service_PowerPoint_Presentation_to_Image.png)
 
 Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure_Images/App_Service_Windows/Publish_Finish_PowerPoint_Presentation_to_Image.png)
+![Create a ASP.NET Core Project](Azure-Images/App-Service-Windows/Publish_Finish_PowerPoint_Presentation_to_Image.png)
 
 Step 9: Click the **Publish** button.
-![Click the Publish button](Azure_Images/App_Service_Windows/Before_Publish_PowerPoint_Presentation_to_Image.png)
+![Click the Publish button](Azure-Images/App-Service-Windows/Before_Publish_PowerPoint_Presentation_to_Image.png)
 
 Step 10: Now, Publish has been succeeded.
-![Publish has been succeeded](Azure_Images/App_Service_Windows/After_Publish_PowerPoint_Presentation_to_Image.png)
+![Publish has been succeeded](Azure-Images/App-Service-Windows/After_Publish_PowerPoint_Presentation_to_Image.png)
 
 Step 11: Now, the published webpage will open in the browser. 
-![Browser will open after publish](Azure_Images/App_Service_Windows/Browser_PowerPoint_Presentation_to_Image.png)
+![Browser will open after publish](Azure-Images/App-Service-Windows/Browser_PowerPoint_Presentation_to_Image.png)
 
 Step 12: Select the **PowerPoint Presentation** and Click **Convert to Image** to convert the given PowerPoint Presentation to image.You will get the output **image** document as follows.
 
