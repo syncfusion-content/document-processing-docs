@@ -105,7 +105,7 @@ return File(stream, "application/msword", "Sample.docx");
 ## Steps to publish as Azure App Service on Linux
 
 Step 1: Right-click the project and select **Publish** option.
-![Right-click the project and select the Publish option](Azure-Images/App_Service_Windows/Publish-Create-Word-Document.png)
+![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-Word-Document.png)
 
 Step 2: Click the **Add a Publish Profile** button.
 ![Click the Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile_WordtoPDF.png)

@@ -22,7 +22,7 @@ Step 3: Select function worker as **.NET Framework**.
 ![Select function worker](Azure-Images/Functions-v1/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Install the [Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.Presentation.AspNet NuGet package](Workingwith_Web/InstallNuget.png)
+![Install Syncfusion.Presentation.AspNet NuGet package](Workingwith-Web/InstallNuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -127,7 +127,7 @@ Step 12: Publish has been succeed.
 
 Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **create a PowerPoint document** using the template PowerPoint document). You will get the output PowerPoint document as follows.
 
-![Create a PowerPoint document in Azure Functions v1](Workingwith_Web/GettingStartedSample.png)
+![Create a PowerPoint document in Azure Functions v1](Workingwith-Web/GettingStartedSample.png)
 
 ## Steps to post the request to Azure Functions
 

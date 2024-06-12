@@ -13,17 +13,17 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 ## Steps to Open and save PowerPoint in Azure App Service on Windows
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure_Images/App_Service_Linux/Create-PowerPoint-Presentation-to-PDF.png)
+![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Create a project name and select the location.
-![Configure your new project](Azure_Images/App_Service_Windows/Configure-Open-and-Save-PowerPoint-Presentation.png)
+![Configure your new project](Azure-Images/App-Service-Windows/Configure-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 3: Click **Create** button.
-![Additional Information](Azure_Images/App_Service_Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
+![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Presentation.Net.Core Nuget Package](Azure_Images/App_Service_Windows/Nuget-Package-Create-PowerPoint-Presentation.png)
+![Install Syncfusion.Presentation.Net.Core Nuget Package](Azure-Images/App-Service-Windows/Nuget-Package-Create-PowerPoint-Presentation.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -102,41 +102,41 @@ return File(pptxStream, "application/powerpoint", "Result.pptx");
 ## Steps to publish as Azure App Service on Windows
 
 Step 1: Right-click the project and select **Publish** option.
-![Right-click the project and select the Publish option](Azure_Images/App_Service_Windows/Publish-Create-PowerPoint-Presentation.png)
+![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-PowerPoint-Presentation.png)
 
 Step 2: Click the **Add a Publish Profile** button.
-![Click the Add a Publish Profile](Azure_Images/App_Service_Linux/Publish_Profile_PowerPoint_Presentation_to_PDF.png)
+![Click the Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile_PowerPoint_Presentation_to_PDF.png)
 
 Step 3: Select the publish target as **Azure**.
-![Select the publish target as Azure](Azure_Images/App_Service_Linux/Publish_Target_PowerPoint_Presentation_to_PDF.png)
+![Select the publish target as Azure](Azure-Images/App-Service-Linux/Publish_Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Select the Specific target as **Azure App Service (Windows)**.
-![Select the publish target](Azure_Images/App_Service_Windows/Specific_Target_PowerPoint_Presentation_to_PDF.png)
+![Select the publish target](Azure-Images/App-Service-Windows/Specific_Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 5: To create a new app service, click **Create new** option.
-![Click create new option](Azure_Images/App_Service_Windows/App-Service-Create-PowerPoint-Presentation.png)
+![Click create new option](Azure-Images/App-Service-Windows/App-Service-Create-PowerPoint-Presentation.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
-![Click the Create button](Azure_Images/App_Service_Windows/Hosting-Open-and-Save-PowerPoint-Presentation.png)
+![Click the Create button](Azure-Images/App-Service-Windows/Hosting-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
-![Click the Finish button](Azure_Images/App_Service_Windows/App-Service-Publish-Open-and-Save-PowerPoint-Presentation.png)
+![Click the Finish button](Azure-Images/App-Service-Windows/App-Service-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure_Images/App_Service_Windows/Finish-Open-and-Save-PowerPoint-Presentation.png)
+![Create a ASP.NET Core Project](Azure-Images/App-Service-Windows/Finish-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 9: Click the **Publish** button.
-![Click the Publish button](Azure_Images/App_Service_Windows/Before-Publish-Open-and-Save-PowerPoint-Presentation.png)
+![Click the Publish button](Azure-Images/App-Service-Windows/Before-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 10: Now, Publish has been succeeded.
-![Publish has been succeeded](Azure_Images/App_Service_Windows/After-Publish-Open-and-Save-PowerPoint-Presentation.png)
+![Publish has been succeeded](Azure-Images/App-Service-Windows/After-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 11: Now, the published webpage will open in the browser. 
-![Browser will open after publish](Azure_Images/App_Service_Windows/Browser-Open-and-Save-PowerPoint-Presentation.png)
+![Browser will open after publish](Azure-Images/App-Service-Windows/Browser-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 12: Click **Open and Save PowerPoint** button.You will get the output **PowerPoint document** as follows.
 
-![Open and save PowerPoint in Azure App Service on Windows](Workingwith_Core/Open-and-Save-output-image.png)
+![Open and save PowerPoint in Azure App Service on Windows](Workingwith-Core/Open-and-Save-output-image.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Azure/Azure_App_Service).
 

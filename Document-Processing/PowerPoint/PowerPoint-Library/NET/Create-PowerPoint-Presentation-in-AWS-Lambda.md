@@ -19,7 +19,7 @@ Step 2: Select Blueprint as Empty Function and click **Finish**.
 ![Select Blueprint as Empty Function](AWS_Images/Lambda_Images/Blueprint-AWS-PowerPoint-Presentation-to-PDF.png)
 
 Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.Presentation.Net.Core NuGet package](Workingwith_Blazor/NuGet.png)
+![Install Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -172,7 +172,7 @@ System.Diagnostics.Process.Start("Sample.pptx");
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![Create a PowerPoint document in AWS Lambda](Workingwith_Web/GettingStartedSample.png)
+![Create a PowerPoint document in AWS Lambda](Workingwith-Web/GettingStartedSample.png)
 
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/AWS/Console_Application) and [AWS Lambda](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/AWS/AWS_Lambda) project.
 
