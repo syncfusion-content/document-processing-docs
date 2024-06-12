@@ -17,15 +17,15 @@ To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versi
 
 Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
 
-![Create the MAUI app in Visual Studio](Workingwith_MAUI/Create_Project.png)
+![Create the MAUI app in Visual Studio](Workingwith-MAUI/Create_Project.png)
 
 Step 2: Enter the project name and click **Create**.
 
-![Create a project name for your new project](Workingwith_MAUI/Configure.png)
+![Create a project name for your new project](Workingwith-MAUI/Configure.png)
 
 Step 3: Install the [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Presentation.NET NuGet package](Workingwith_MAUI/Install_Nuget.png)
+![Install Syncfusion.Presentation.NET NuGet package](Workingwith-MAUI/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -113,7 +113,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![.NET MAUI output PowerPoint document](Workingwith_Core/Open-and-Save-output-image.png)
+![.NET MAUI output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
 ## Helper files for .NET MAUI
 

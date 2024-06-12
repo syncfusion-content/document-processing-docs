@@ -14,7 +14,7 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 
 Step 1: Create a new C# Blazor Server app project. Select Blazor App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document ](Workingwith_Blazor/Create_project.png)
+![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
 
 Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
 
@@ -22,7 +22,7 @@ Step 2: Now, the project configuration window will popup. Click Create button to
 
 Step 3: Choose **Blazor Server App** and click Create button to create a new Blazor Server app for .NET Core 3.0.0-preview9.
 
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith_Blazor/Core_application_Server.png)
+![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Server.png)
 
 Step 4: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
@@ -182,24 +182,24 @@ An online sample link to [convert PowerPoint Presentation to PDF](https://blazor
 
 Step 1: Create a new C# Blazor WASM app project. Select Blazor App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint presentation](Workingwith_Blazor/Create_project.png)
+![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint presentation](Workingwith-Blazor/Create_project.png)
 
 Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
 
-![Create a project name for your new project](Workingwith_Blazor/Configure_project.png)
+![Create a project name for your new project](Workingwith-Blazor/Configure_project.png)
 
 Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM app for .NET Core 3.0.0-preview9.
 
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith_Blazor/Core_application_Client.png)
+![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Client.png)
 
 Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) 
 * [SkiaSharp.Views.Blazor v2.88.6](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/2.88.6)
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure_Images/App_Service_Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-![Install SkiaSharp.Views.Blazor v2.88.6 Nuget Package](Workingwith_Blazor/NuGet_package_PPTXtoPDF.png)
+![Install SkiaSharp.Views.Blazor v2.88.6 Nuget Package](Workingwith-Blazor/NuGet_package_PPTXtoPDF.png)
 
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 N> 2. Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime. After installing wasm tools using the above commands, please restart your machine.

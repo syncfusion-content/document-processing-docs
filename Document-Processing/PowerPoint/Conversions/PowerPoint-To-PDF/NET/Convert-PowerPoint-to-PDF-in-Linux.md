@@ -22,7 +22,7 @@ dotnet new console
 {% endhighlight %}
 {% endtabs %}
 
-![Create .NET Core console application on Linux](Workingwith_Linux/CreateCore.png)
+![Create .NET Core console application on Linux](Workingwith-Linux/CreateCore.png)
 
 Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/) by execute the following command.
 
@@ -95,7 +95,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-![Restore the NuGet packages](Workingwith_Linux/Restore.png)
+![Restore the NuGet packages](Workingwith-Linux/Restore.png)
 
 Step 6: Execute the following command in **terminal** to **run the application**.
 
@@ -107,7 +107,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Run the Applcation](Workingwith_Linux/Run.png)
+![Run the Applcation](Workingwith-Linux/Run.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/Linux).
 

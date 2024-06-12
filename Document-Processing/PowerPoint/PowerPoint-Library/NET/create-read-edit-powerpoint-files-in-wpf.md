@@ -14,11 +14,11 @@ You can create or edit a PowerPoint file in WPF with Syncfusion PowerPoint libra
 
 Step 1: Create a new C# WPF application project.
 
-![Create WPF project](Workingwith_WPF/CreateWPF.png)
+![Create WPF project](Workingwith-WPF/CreateWPF.png)
 
 Step 2: Install the [Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Presentation WPF Nuget](Workingwith_WPF/Install_Nuget.png)
+![Install Presentation WPF Nuget](Workingwith-WPF/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -195,7 +195,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The output of the above code example will generate the below PowerPoint slide.
 
-![WPF Output](Workingwith_WPF/GettingStartedSample.png)
+![WPF Output](Workingwith-WPF/GettingStartedSample.png)
 
 ## Read and edit a PowerPoint file in WPF
 

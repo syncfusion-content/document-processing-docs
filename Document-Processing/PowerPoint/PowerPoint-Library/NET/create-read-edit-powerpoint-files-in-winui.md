@@ -18,19 +18,19 @@ To use the WinUI 3 project templates, install the Windows App SDK extension for 
 
 Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged with WAP (WinUI 3 in Desktop) from the template and click the **Next** button.
 
-![Create the WinUI Desktop app in Visual Studio](Workingwith_WinUI/Create_Desktop_Project.png)
+![Create the WinUI Desktop app in Visual Studio](Workingwith-WinUI/Create_Desktop_Project.png)
 
 Step 2: Enter the project name and click **Create**.
 
-![Create a project name for your new project](Workingwith_WinUI/Desktop_Configure.png)
+![Create a project name for your new project](Workingwith-WinUI/Desktop_Configure.png)
 
 Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the Minimum version to Windows 10, version 1809 (build 17763) and then click **OK**.
 
-![Set the target version](Workingwith_WinUI/Target_Version.png)
+![Set the target version](Workingwith-WinUI/Target_Version.png)
 
 Step 4: Install the Syncfusion.Presentation.NET NuGet package as a reference to your .NET Standard applications from the [NuGet.org](https://www.nuget.org/).
 
-![Install the Presentation .NET Nuget](Workingwith_WinUI/Install_Nuget.png)
+![Install the Presentation .NET Nuget](Workingwith-WinUI/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -121,7 +121,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint slide** as follows.
 
-![WinUI Desktop Output](Workingwith_WinUI/GettingStartedSample.png)
+![WinUI Desktop Output](Workingwith-WinUI/GettingStartedSample.png)
 
 ### Read and edit a PowerPoint file in WinUI
 
@@ -158,21 +158,21 @@ An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusi
 
 Step 1: Create a new C# WinUI UWP app. Select Blank App (WinUI 3 in UWP)from the template and **click** the Next button.
 
-![Create the WinUI UWP app in Visual Studio](Workingwith_WinUI/Create_UWP_Project.png)
+![Create the WinUI UWP app in Visual Studio](Workingwith-WinUI/Create_UWP_Project.png)
 
 N> To get the UWP Experimental project templates and build UWP apps with WinUI 3, you should download the [Windows App SDK Experimental Extension](https://aka.ms/projectreunion/previewdownload) for Visual Studio.
 
 Step 2: Enter the project name and click **Create**.
 
-![Create a project name for your new project](Workingwith_WinUI/UWP_Configure.png)
+![Create a project name for your new project](Workingwith-WinUI/UWP_Configure.png)
 
 Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the Minimum version to Windows 10, version 1809 (build 17763) and then click **OK**.
 
-![Set the target version](Workingwith_WinUI/Target_Version.png)
+![Set the target version](Workingwith-WinUI/Target_Version.png)
 
 Step 4: Install the Syncfusion.Presentation.NET NuGet package as a reference to your .NET Standard applications from the [NuGet.org](https://www.nuget.org/).
 
-![Install the Presentation .NET Nuget](Workingwith_WinUI/Install_Nuget.png)
+![Install the Presentation .NET Nuget](Workingwith-WinUI/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -274,7 +274,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint slide** as follows.
 
-![WinUI UWP Output](Workingwith_WinUI/GettingStartedSample.png)
+![WinUI UWP Output](Workingwith-WinUI/GettingStartedSample.png)
 
 ### Read and edit a PowerPoint file in WinUI
 
