@@ -13,13 +13,13 @@ Syncfusion DocIO is a [.NET Word library](https://www.syncfusion.com/document-pr
 ## Steps to create a Word document in Azure Functions v1
 
 Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure_Images/Functions_v1/Azure_Function_WordtoPDF.png)
+![Create a Azure Functions project](Azure-Images/Functions-v1/Azure_Function_WordtoPDF.png)
 
 Step 2: Create a project name and select the location.
-![Create a project name](Azure_Images/Functions_v1/Configuration-Create-Word-Document.png)
+![Create a project name](Azure-Images/Functions-v1/Configuration-Create-Word-Document.png)
 
 Step 3: Select function worker as **.NET Framework**. 
-![Select function worker](Azure_Images/Functions_v1/Additional_Information_WordtoPDF.png)
+![Select function worker](Azure-Images/Functions-v1/Additional_Information_WordtoPDF.png)
 
 Step 4: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.DocIO.AspNet NuGet package](ASP-NET_images/Install_Nuget.jpg)
@@ -280,25 +280,25 @@ return response;
 {% endtabs %}
 
 Step 6: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
-![Create a new profile in the Publish Window](Azure_Images/Functions_v1/Publish-Create-Word-Document.png)
+![Create a new profile in the Publish Window](Azure-Images/Functions-v1/Publish-Create-Word-Document.png)
 
 Step 7: Select the target as **Azure** and click **Next** button.
-![Select the target as Azure](Azure_Images/Functions_v1/Target_WordtoPDF.png)
+![Select the target as Azure](Azure-Images/Functions-v1/Target_WordtoPDF.png)
 
 Step 8: Select the **Create new** button.
-![Configure Hosting Plan](Azure_Images/Functions_v1/Function_Instance_WordtoPDF.png)
+![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_WordtoPDF.png)
 
 Step 9: Click **Create** button. 
-![Select the plan type](Azure_Images/Functions_v1/Hosting-Create-Word-Document.png)
+![Select the plan type](Azure-Images/Functions-v1/Hosting-Create-Word-Document.png)
 
 Step 10: After creating app service then click **Finish** button. 
-![Creating app service](Azure_Images/Functions_v1/App-Create-Word-Document.png)
+![Creating app service](Azure-Images/Functions-v1/App-Create-Word-Document.png)
 
 Step 11: Click the **Publish** button.
-![Click Publish Button](Azure_Images/Functions_v1/Before-Publish-Create-Word-Document.png)
+![Click Publish Button](Azure-Images/Functions-v1/Before-Publish-Create-Word-Document.png)
 
 Step 12: Publish has been succeed.
-![Publish succeeded](Azure_Images/Functions_v1/After-Publish-Create-Word-Document.png)
+![Publish succeeded](Azure-Images/Functions-v1/After-Publish-Create-Word-Document.png)
 
 Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **create a Word document** using the template Word document). You will get the output Word document as follows.
 
