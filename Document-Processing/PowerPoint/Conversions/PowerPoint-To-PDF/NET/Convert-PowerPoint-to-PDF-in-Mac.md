@@ -13,15 +13,15 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 ## Steps to convert PowerPoint to PDF programmatically
 
 Step 1: Create a new C# .NET Core console application.
-![Create .NET Core console project](Workingwith_Mac/CreateProject.png)
+![Create .NET Core console project](Workingwith-Mac/CreateProject.png)
 
 Step 2: Select the project version.
-![Select project version](Workingwith_Mac/selectprojectverion.png)
+![Select project version](Workingwith-Mac/selectprojectverion.png)
 
 Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Nuget from Manage Nuget Package](Workingwith_Mac/Install_Nuget1.png)
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Workingwith_Mac/Install_Nuget.png)
+![Install Nuget from Manage Nuget Package](Workingwith-Mac/Install_Nuget1.png)
+![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Workingwith-Mac/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 

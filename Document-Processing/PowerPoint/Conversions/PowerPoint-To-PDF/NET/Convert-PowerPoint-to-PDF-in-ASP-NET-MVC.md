@@ -14,15 +14,15 @@ Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/
 
 Step 1: Create a new C# ASP.NET MVC application project.
 
-![Create ASP.NET MVC project](Workingwith_MVC/Project-Open-and-Save.png)
+![Create ASP.NET MVC project](Workingwith-MVC/Project-Open-and-Save.png)
 
 Step 2: Select the **MVC** template to create the project.
 
-![Select MVC template](Workingwith_MVC/MVC-Open-and-Save.png)
+![Select MVC template](Workingwith-MVC/MVC-Open-and-Save.png)
 
 Step 3: Install the [Syncfusion.PresentationToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc5) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.PresentationToPdfConverter.AspNet.Mvc5 Nuget Package](Workingwith_MVC/Nuget-Open-and-Save.png)
+![Install Syncfusion.PresentationToPdfConverter.AspNet.Mvc5 Nuget Package](Workingwith-MVC/Nuget-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
