@@ -13,16 +13,16 @@ You can create or edit a PowerPoint file in .NET Core on Mac OS using Syncfusion
 
 Step 1: Create a new C# .NET Core console application.
 
-![Create .NET Core console project](Workingwith_Mac/CreateProject.png)
+![Create .NET Core console project](Workingwith-Mac/CreateProject.png)
 
 Step 2: Select the project version.
 
-![Select project version](Workingwith_Mac/selectprojectverion.png)
+![Select project version](Workingwith-Mac/selectprojectverion.png)
 
 Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Presentation .Net Core Nuget](Workingwith_Mac/Install_Nuget1.png)
-![Install Presentation .Net Core Nuget](Workingwith_Mac/Install_Nuget.png)
+![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget1.png)
+![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -91,7 +91,7 @@ pptxDoc.Close();
 
 The output of the above code example will generate the below PowerPoint slide. The output will be saved in bin folder.
 
-![.Net Core console Output](Workingwith_Mac/GettingStartedSample.png)
+![.Net Core console Output](Workingwith-Mac/GettingStartedSample.png)
 
 ## Read and edit a PowerPoint file in .NET Core Console application project on Mac OS
 

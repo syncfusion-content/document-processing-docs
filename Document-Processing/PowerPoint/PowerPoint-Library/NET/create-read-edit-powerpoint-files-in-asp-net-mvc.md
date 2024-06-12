@@ -14,15 +14,15 @@ You can create or edit a PowerPoint file in ASP.NET MVC with Syncfusion PowerPoi
 
 Step 1: Create a new C# ASP.NET MVC application project.
 
-![Create ASP.NET MVC project](Workingwith_MVC/CreateMVC.png)
+![Create ASP.NET MVC project](Workingwith-MVC/CreateMVC.png)
 
 Step 2: Select the **MVC** template to create the project.
 
-![Select MVC template](Workingwith_MVC/Select_template.png)
+![Select MVC template](Workingwith-MVC/Select_template.png)
 
 Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install ASP.NET MVC Nuget](Workingwith_MVC/Install_Nuget.png)
+![Install ASP.NET MVC Nuget](Workingwith-MVC/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -165,7 +165,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The output of the above code example will generate the below PowerPoint slide.
 
-![ASP.Net MVC Output](Workingwith_MVC/GettingStartedSample.png)
+![ASP.Net MVC Output](Workingwith-MVC/GettingStartedSample.png)
 
 ## Read and edit a PowerPoint file in ASP.NET MVC
 

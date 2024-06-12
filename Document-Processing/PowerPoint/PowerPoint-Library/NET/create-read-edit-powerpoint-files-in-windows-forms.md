@@ -14,11 +14,11 @@ You can create or edit a PowerPoint file in Windows Forms with Syncfusion PowerP
 
 Step 1: Create a new C# Windows Forms application project.
 
-![Create Windows Forms project](Workingwith_Windows/Create_Windows.png)
+![Create Windows Forms project](Workingwith-Windows/Create_Windows.png)
 
 Step 2: Install the [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Presentation Winforms Nuget](Workingwith_Windows/Install_Nuget.png)
+![Install Presentation Winforms Nuget](Workingwith-Windows/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -161,7 +161,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The output of the above code example will generate the below PowerPoint slide.
 
-![Windows Forms Output](Workingwith_Windows/GettingStartedSample.png)
+![Windows Forms Output](Workingwith-Windows/GettingStartedSample.png)
 
 ## Read and edit a PowerPoint file in Windows Forms
 
