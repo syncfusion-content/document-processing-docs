@@ -23,7 +23,7 @@ Step 2: Create a project name and select the location.
 ![Configure your new project](Azure_images/Azure-app-service-windows/project_configuration.png)
 
 Step 3: Click **Create**. 
-![Additional information](Azure_images/Azure_app_service_windows/Framework.png)
+![Additional information](Azure_images/Azure-app-service-windows/Framework_selection.png)
 
 Step 4: Install the [Syncfusion.HtmlToPdfConverter.Cef.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Cef.Net.Windows) NuGet package to reference your project using the **Package Manager Console**.
 ![NuGet package installation](Azure_images/Azure-app-service-windows/Package_Manager_Console_Nuget.png)
@@ -48,7 +48,10 @@ Step 5: A default action method named Index will be present in *HomeController.c
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the following namespaces in *HomeController.cs*.
+Step 6: Open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
+![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
+
+Step 7: Include the following namespaces in *HomeController.cs*.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -59,7 +62,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method named ConvertToPdf in the HomeController.cs file and include the following code example to convert HTML to PDF document in *HomeController.cs*. 
+Step 8: Add a new action method named ConvertToPdf in the HomeController.cs file and include the following code example to convert HTML to PDF document in *HomeController.cs*. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -87,10 +90,11 @@ public IActionResult ConvertToPdf()
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Right-click the project and select the Publish option. Create the publish profile to target Azure app service windows.
-Step 9: After completing the publish profile setup, click the publish.
-Step 10: Publish will be succeeded and the published webpage will open in the browser. Click ExportToPDF button to perform the conversion.
+Step 9: Right-click the project and select the Publish option. Create the publish profile to target Azure app service windows.
+Step 10: After completing the publish profile setup, click the publish.
+Step 11: Publish will be succeeded and the published webpage will open in the browser. Click ExportToPDF button to perform the conversion.
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure%20App%20Service-Windows-CefSharp).
 
 
 ## Steps to convert HTML to PDF file in Azure App Service on Windows using legacy WebKit

@@ -681,4 +681,4 @@ finalDoc.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-PDF-without-compromising-accessibility-tags/.NET). 
