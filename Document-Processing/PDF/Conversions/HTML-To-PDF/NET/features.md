@@ -2092,41 +2092,41 @@ Refer to the following code snippet to resize the page content size.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-	//Initialize the HTML to PDF converter.
-	HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-	//Initialize the blink converter settings.
-	BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
-	//Set the Scale.
-	blinkConverterSettings.Scale = 1.0f;
-	//Assign the Blink converter settings to the HTML converter.
-	htmlConverter.ConverterSettings = blinkConverterSettings;
-	//Convert the URL to a PDF document. 
-	PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
-	//Create a file stream.
-	FileStream fileStream = new FileStream("HTMLtoPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-	//Save a PDF document to a file stream.
-	document.Save(fileStream);
-	//Close the document.
-	document.Close(true);
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize the blink converter settings.
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the Scale.
+blinkConverterSettings.Scale = 1.0f;
+//Assign the Blink converter settings to the HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert the URL to a PDF document. 
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+//Create a file stream.
+FileStream fileStream = new FileStream("HTMLtoPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
+//Save a PDF document to a file stream.
+document.Save(fileStream);
+//Close the document.
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-	'Initialize the HTML to PDF converter.
-	Dim htmlConverter As New HtmlToPdfConverter()
-	'Initialize the blink converter settings.
-	Dim blinkConverterSettings As New BlinkConverterSettings()
-	'Set the Scale.
-	blinkConverterSettings.Scale = 1.0F
-	'Assign the Blink converter settings to HTML converter.
-	htmlConverter.ConverterSettings = blinkConverterSettings
-	'Convert the URL to a PDF document.
-	Dim document As PdfDocument = htmlConverter.Convert("https://www.syncfusion.com")
-	'Save a PDF document to a file stream.
-	document.Save("HTMLtoPDF.pdf")
-	'Close the document.
-	document.Close(True)
+'Initialize the HTML to PDF converter.
+Dim htmlConverter As New HtmlToPdfConverter()
+'Initialize the blink converter settings.
+Dim blinkConverterSettings As New BlinkConverterSettings()
+'Set the Scale.
+blinkConverterSettings.Scale = 1.0F
+'Assign the Blink converter settings to HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings
+'Convert the URL to a PDF document.
+Dim document As PdfDocument = htmlConverter.Convert("https://www.syncfusion.com")
+'Save a PDF document to a file stream.
+document.Save("HTMLtoPDF.pdf")
+'Close the document.
+document.Close(True)
 
 {% endhighlight %}
 

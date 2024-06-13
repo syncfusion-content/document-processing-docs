@@ -13,13 +13,13 @@ Syncfusion DocIO is a [.NET Core Word library](https://www.syncfusion.com/docume
 ## Steps to create Word document in Azure App Service on Linux
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure_Images/App_Service_Linux/Create-Project-WordtoPDF.png)
+![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-Project-WordtoPDF.png)
 
 Step 2: Create a project name and select the location.
-![Configure your new project](Azure_Images/App_Service_Linux/Configure_Project_WordtoPDF.png)
+![Configure your new project](Azure-Images/App-Service-Linux/Configure_Project_WordtoPDF.png)
 
 Step 3: Click **Create** button.
-![Additional Information](Azure_Images/App_Service_Linux/Additional_Information_WordtoPDF.png)
+![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_WordtoPDF.png)
 
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
@@ -304,37 +304,37 @@ public ActionResult CreateWordDocument()
 ## Steps to publish as Azure App Service on Linux
 
 Step 1: Right-click the project and select **Publish** option.
-![Right-click the project and select the Publish option](Azure_Images/App_Service_Windows/Publish-Create-Word-Document.png)
+![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-Word-Document.png)
 
 Step 2: Click the **Add a Publish Profile** button.
-![Click the Add a Publish Profile](Azure_Images/App_Service_Linux/Publish_Profile_WordtoPDF.png)
+![Click the Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile_WordtoPDF.png)
 
 Step 3: Select the publish target as **Azure**.
-![Select the publish target as Azure](Azure_Images/App_Service_Linux/Publish_Target_WordtoPDF.png)
+![Select the publish target as Azure](Azure-Images/App-Service-Linux/Publish_Target_WordtoPDF.png)
 
 Step 4: Select the Specific target as **Azure App Service (Linux)**.
-![Select the publish target](Azure_Images/App_Service_Linux/Specific_Target_WordtoPDF.png)
+![Select the publish target](Azure-Images/App-Service-Linux/Specific_Target_WordtoPDF.png)
 
 Step 5: To create a new app service, click **Create new** option.
-![Click create new option](Azure_Images/App_Service_Linux/Create_New_App_Service_WordtoPDF.png)
+![Click create new option](Azure-Images/App-Service-Linux/Create_New_App_Service_WordtoPDF.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
-![Click the Create button](Azure_Images/App_Service_Linux/Hosting-Plan-Create-Word-Document.png)
+![Click the Create button](Azure-Images/App-Service-Linux/Hosting-Plan-Create-Word-Document.png)
 
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
-![Click the Finish button](Azure_Images/App_Service_Linux/Publish-Finish-Create-Word-Document.png)
+![Click the Finish button](Azure-Images/App-Service-Linux/Publish-Finish-Create-Word-Document.png)
 
 Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure_Images/App_Service_Linux/Publish_Finish_WordtoPDF.png)
+![Create a ASP.NET Core Project](Azure-Images/App-Service-Linux/Publish_Finish_WordtoPDF.png)
 
 Step 9: Click the **Publish** button.
-![Click the Publish button](Azure_Images/App_Service_Linux/Before-Publish-Create-Word-Document.png)
+![Click the Publish button](Azure-Images/App-Service-Linux/Before-Publish-Create-Word-Document.png)
 
 Step 10: Now, Publish has been succeeded.
-![Publish has been succeeded](Azure_Images/App_Service_Linux/After-Publish-Create-Word-Document.png)
+![Publish has been succeeded](Azure-Images/App-Service-Linux/After-Publish-Create-Word-Document.png)
 
 Step 11: Now, the published webpage will open in the **browser**.
-![Browser will open after publish](Azure_Images/App_Service_Linux/Browser-Create-Word-Document.png)
+![Browser will open after publish](Azure-Images/App-Service-Linux/Browser-Create-Word-Document.png)
 
 Step 12: Select the Word document and Click **Create Word document** to create Word document.You will get the output **Word document** as follows.
 

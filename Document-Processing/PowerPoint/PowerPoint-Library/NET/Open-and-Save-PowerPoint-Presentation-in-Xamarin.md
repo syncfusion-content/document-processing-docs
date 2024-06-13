@@ -14,15 +14,15 @@ Syncfusion PowerPoint is a [Xamarin PowerPoint library](https://www.syncfusion.c
 
 Step 1: Create a new C# **Xamarin.Forms** application project.
 
-![Create Xamarin project](Workingwith_Xamarin/Project-Open-and-Save.png)
+![Create Xamarin project](Workingwith-Xamarin/Project-Open-and-Save.png)
 
 Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://docs.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
-![Create Xamarin CodeSharing Option](Workingwith_Xamarin/Template-Project-Open-and-Save.png)
+![Create Xamarin CodeSharing Option](Workingwith-Xamarin/Template-Project-Open-and-Save.png)
 
 Step 3: Install [Syncfusion.Xamarin.Presentation](https://www.nuget.org/packages/Syncfusion.Xamarin.Presentation/) NuGet package as a reference to the .NET Standard project in your Xamarin applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Xamarin.Presentation Nuget Package](Workingwith_Xamarin/Nuget-Package-Project-Open-and-Save.png)
+![Install Syncfusion.Xamarin.Presentation Nuget Package](Workingwith-Xamarin/Nuget-Package-Project-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -189,7 +189,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![Xamarin output PowerPoint document](Workingwith_Core/Open-and-Save-output-image.png)      
+![Xamarin output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)      
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
 

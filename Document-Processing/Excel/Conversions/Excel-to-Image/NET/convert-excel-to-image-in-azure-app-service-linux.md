@@ -14,15 +14,15 @@ Syncfusion XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/docum
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Azure_Images/App_Service_Linux/Create_Application.png)
+![Create a ASP.NET Core Web App project in visual studio](Azure-Images/App-Service-Linux/Create_Application.png)
 
 Step 2: Name the project.
 
-![Name the project](Azure_Images/App_Service_Linux/Name_the_Application_Image.png)
+![Name the project](Azure-Images/App-Service-Linux/Name_the_Application_Image.png)
 
 Step 3: Select the framework and click **Create** button.
 
-![Framework version](Azure_Images/App_Service_Linux/Select_Framework.png)
+![Framework version](Azure-Images/App-Service-Linux/Select_Framework.png)
 
 Step 4: Install the following NuGet packages as reference to your project from [NuGet.org](https://www.nuget.org/).
 
@@ -30,9 +30,9 @@ Step 4: Install the following NuGet packages as reference to your project from [
 * [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.2)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/2.8.2.3)
 
-![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Azure_Images/App_Service_Linux/Install_NuGet_Image.png)
-![Install SkiaSharp NuGet Package](Azure_Images/App_Service_Linux/SkiaSharp_NuGet_Image.png)
-![Install HarfBuzzSharp NuGet Package](Azure_Images/App_Service_Linux/HarfBuzzSharp_NuGet_Image.png)
+![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Install_NuGet_Image.png)
+![Install SkiaSharp NuGet Package](Azure-Images/App-Service-Linux/SkiaSharp_NuGet_Image.png)
+![Install HarfBuzzSharp NuGet Package](Azure-Images/App-Service-Linux/HarfBuzzSharp_NuGet_Image.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
 
@@ -89,47 +89,47 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 Step 1: Right-click the project and select **Publish** option.
 
-![Publish](Azure_Images/App_Service_Linux/Publish_Image.png)
+![Publish](Azure-Images/App-Service-Linux/Publish_Image.png)
 
 Step 2: Select the publish target as **Azure**.
 
-![Add a Publish Profile](Azure_Images/App_Service_Linux/Publish_Profile.png)
+![Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile.png)
 
 Step 3: Select the Specific target as **Azure App Service (Linux)**.
 
-![Select the publish target](Azure_Images/App_Service_Linux/Linux_App_Service.png)
+![Select the publish target](Azure-Images/App-Service-Linux/Linux_App_Service.png)
 
 Step 4: To create a new app service, click **Create new** option.
 
-![Click create new option](Azure_Images/App_Service_Linux/Create_New.png)
+![Click create new option](Azure-Images/App-Service-Linux/Create_New.png)
 
 Step 5: Click the **Create** button to proceed with **App Service** creation.
 
-![Hosting](Azure_Images/App_Service_Linux/Hosting_Image.png)
+![Hosting](Azure-Images/App-Service-Linux/Hosting_Image.png)
 
 Step 6: Click the **Finish** button to finalize the **App Service** creation.
 
-![App Service](Azure_Images/App_Service_Linux/App_Service_Image.png)
+![App Service](Azure-Images/App-Service-Linux/App_Service_Image.png)
 
 Step 7: Click **Close** button.
 
-![Profile created](Azure_Images/App_Service_Linux/Profile_Created_Image.png)
+![Profile created](Azure-Images/App-Service-Linux/Profile_Created_Image.png)
 
 Step 8: Click the **Publish** button.
 
-![Start publish](Azure_Images/App_Service_Linux/Start_Publish_Image.png)
+![Start publish](Azure-Images/App-Service-Linux/Start_Publish_Image.png)
 
 Step 9: Now, Publish has been succeeded.
 
-![Publish has been succeeded](Azure_Images/App_Service_Linux/Publish_Success_Image.png)
+![Publish has been succeeded](Azure-Images/App-Service-Linux/Publish_Success_Image.png)
 
 Step 10: Now, the published webpage will open in the browser. 
 
-![Browser will open after publish](Azure_Images/App_Service_Linux/CreateDocument_Button_Image.png)
+![Browser will open after publish](Azure-Images/App-Service-Linux/CreateDocument_Button_Image.png)
 
 Step 11: Click **Create Document** to convert the given Excel document to Image. You will get the output **Image** as follows.
 
-![Output File](Azure_Images/App_Service_Linux/ExcelToImage_AppService_Linux.png)
+![Output File](Azure-Images/App-Service-Linux/ExcelToImage_AppService_Linux.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Azure%20App%20Service/Convert_Excel_to_Image). 
 

@@ -1,0 +1,340 @@
+---
+title: FAQ about Tables | DocIO | Syncfusion
+description: Learn about the frequently asked questions about tables in Word document in the .NET Word (DocIO) library.
+platform: document-processing
+control: DocIO
+documentation: UG
+---
+# Frequently asked questions about tables in Word document
+
+The frequently asked questions about working with tables in Word documents using DocIO are listed below.
+
+## How to insert a DataTable in a Word document?
+
+You can create new table in a Word document and copy the contents from data table. The following code illustrates how to insert a data table as table in a Word document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates new Word document
+WordDocument document = new WordDocument();
+//Creates new data set and data table
+DataSet dataset = new DataSet();
+GetDataTable(dataset);
+DataTable datatable = new DataTable();
+datatable = dataset.Tables[0];
+//Adds new section
+IWSection section = document.AddSection();
+//Adds new table
+IWTable table = section.AddTable();
+//Adds new row to the table
+WTableRow row = table.AddRow();
+foreach (DataColumn datacolumn in datatable.Columns)
+{
+    //Sets the column names for the table from the data table column names and cell width
+    WTableCell cell = row.AddCell();
+    cell.AddParagraph().AppendText(datacolumn.ColumnName);
+    cell.Width = 150;
+}
+//Iterates through data table rows
+foreach (DataRow datarow in datatable.Rows)
+{
+    //Adds new row to the table
+    row = table.AddRow(true, false);
+    foreach (object datacolumn in datarow.ItemArray)
+    {
+        //Adds new cell
+        WTableCell cell = row.AddCell();
+        //Adds contents from the data table to the table cell
+        cell.AddParagraph().AppendText(datacolumn.ToString());
+    }
+}
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates new Word document
+Dim document As New WordDocument()
+'Creates new data set and data table
+Dim dataset As New DataSet()
+GetDataTable(dataset)
+Dim datatable As New DataTable()
+datatable = dataset.Tables(0)
+'Adds new section
+Dim section As IWSection = document.AddSection()
+'Adds new table
+Dim table As IWTable = section.AddTable()
+'Adds new row to the table
+Dim row As WTableRow = table.AddRow()
+For Each datacolumn As DataColumn In datatable.Columns
+    'Sets the column names for the table from the data table column names and cell width
+    Dim cell As WTableCell = row.AddCell()
+    cell.AddParagraph().AppendText(datacolumn.ColumnName)
+    cell.Width = 150
+Next
+'Iterates through data table rows
+For Each datarow As DataRow In datatable.Rows
+    'Adds new row to the table
+    row = table.AddRow(True, False)
+    For Each datacolumn As Object In datarow.ItemArray
+        'Adds new cell
+        Dim cell As WTableCell = row.AddCell()
+        'Adds contents from the data table to the table cell
+        cell.AddParagraph().AppendText(datacolumn.ToString())
+    Next
+Next
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %} 
+
+{% endtabs %}  
+
+The following code illustrates the method to get data table.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void GetDataTable(DataSet dataset)
+{
+    // List of syncfusion products.
+    string[] products = { "DocIO", "PDF", "XlsIO" };
+    // Adds new Tables to the data set.
+    DataRow row;
+    dataset.Tables.Add();
+    // Adds fields to the Products table.
+    dataset.Tables[0].TableName = "Products";
+    dataset.Tables[0].Columns.Add("ProductName");
+    dataset.Tables[0].Columns.Add("Binary");
+    dataset.Tables[0].Columns.Add("Source");
+    // Inserts values to the tables.
+    foreach (string product in products)
+    {
+        row = dataset.Tables["Products"].NewRow();
+        row["ProductName"] = string.Concat("Essential ", product);
+        row["Binary"] = "$895.00";
+        row["Source"] = "$1,295.00";
+        dataset.Tables["Products"].Rows.Add(row);
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Sub GetDataTable(dataset As DataSet)
+    'List of syncfusion products.
+    Dim products As String() = {"DocIO", "PDF", "XlsIO"}
+    'Adds new Tables to the data set.
+    Dim row As DataRow
+    dataset.Tables.Add()
+    'Adds fields to the Products table.
+    dataset.Tables(0).TableName = "Products"
+    dataset.Tables(0).Columns.Add("ProductName")
+    dataset.Tables(0).Columns.Add("Binary")
+    dataset.Tables(0).Columns.Add("Source")
+    'Inserts values to the tables.
+    For Each product As String In products
+        row = dataset.Tables("Products").NewRow()
+        row("ProductName") = String.Concat("Essential ", product)
+        row("Binary") = "$895.00"
+        row("Source") = "$1,295.00"
+        dataset.Tables("Products").Rows.Add(row)
+    Next
+End Sub
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Insert-data-table-in-Word-document).
+
+## How to insert a table from HTML string in Word document?
+
+An HTML string can be inserted to the Word document at text body or paragraph. The following code illustrates how to insert a table to the document from the HTML string.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx");
+//Gets the text body
+WTextBody textbody = document.Sections[0].Body;
+//Html string that represents table with two rows and two columns
+string htmlString = " <table border='1'><tr><td><p>First Row First Cell</p></td><td><p>First Row Second Cell</p></td></tr><tr><td><p>Second Row First Cell</p></td><td><p>Second Row Second Cell</p></td></tr></table> ";
+//Inserts the string to the text body
+textbody.InsertXHTML(htmlString);
+//Saves and closes the document
+document.Save("Sample.docx");
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx")
+'Gets the text body
+Dim textbody As WTextBody = document.Sections(0).Body
+'Html string that represents table with two rows and two columns
+Dim htmlString As String = " <table border='1'><tr><td><p>First Row First Cell</p></td><td><p>First Row Second Cell</p></td></tr><tr><td><p>Second Row First Cell</p></td><td><p>Second Row Second Cell</p></td></tr></table> "
+'Inserts the string to the text body
+textbody.InsertXHTML(htmlString)
+'Saves and closes the document
+document.Save("Sample.docx")
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Insert-table-from-html-string).
+
+## How to set table cell width?
+
+Each cell in the table can have its own width. The following code illustrates how to set the width of the cell.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates new word document
+WordDocument document = new WordDocument("Template.docx");
+//Gets the text body of first section
+WTextBody textbody = document.Sections[0].Body;
+//Gets the table
+IWTable table = textbody.Tables[0];
+//Iterates through table rows
+foreach (WTableRow row in table.Rows)
+{
+    //Sets width for cells
+    for (int i = 0; i < row.Cells.Count; i++)
+    {
+        WTableCell cell = row.Cells[i];
+        if (i % 2 == 0)
+            //Sets width as 100 for cells in even column
+            cell.Width = 100;
+        else
+            //Sets width as 150 for cell in odd column
+            cell.Width = 150;
+    }
+}
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates new word document
+Dim document As New WordDocument("Template.docx")
+'Gets the text body of first section
+Dim textbody As WTextBody = document.Sections(0).Body
+'Gets the table
+Dim table As IWTable = textbody.Tables(0)
+'Iterates through table rows
+For Each row As WTableRow In table.Rows
+    'Sets width for cells
+    For i As Integer = 0 To row.Cells.Count - 1
+        Dim cell As WTableCell = row.Cells(i)
+        If i Mod 2 = 0 Then
+            'Sets width as 100 for cells in even column
+            cell.Width = 100
+        Else
+            'Sets width as 150 for cell in odd column
+            cell.Width = 150
+        End If
+    Next
+Next
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Set-table-cell-width).
+
+## How to position a table in a Word document?
+
+You can position a table in a Word document by setting position properties. The following code illustrates how to set position properties for a table.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx");
+//Gets the text body of first section
+WTextBody textbody = document.Sections[0].Body;
+//Gets the table
+IWTable table = textbody.Tables[0];
+//Sets the horizontal and vertical position for table
+table.TableFormat.Positioning.HorizPosition = 40;
+table.TableFormat.Positioning.VertPosition = 100;
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx")
+'Gets the text body of first section
+Dim textbody As WTextBody = document.Sections(0).Body
+'Gets the table
+Dim table As IWTable = textbody.Tables(0)
+'Sets the horizontal and vertical position for table
+table.TableFormat.Positioning.HorizPosition = 40
+table.TableFormat.Positioning.VertPosition = 100
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Set-position-for-table).
+
+## How to set the text direction to a table in Word document?
+
+The contents of the table cell can be in vertical or horizontal direction. Each cell content can have different text direction. The following code illustrates how to set the text direction for the text in the table.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx");
+//Gets the text body of first section
+WTextBody textbody = document.Sections[0].Body;
+//Gets the table
+IWTable table = textbody.Tables[0];
+//Iterates through table rows
+foreach (WTableRow row in table.Rows)
+{
+    foreach (WTableCell cell in row.Cells)
+    {
+        //Sets the text direction for the contents
+        cell.CellFormat.TextDirection = Syncfusion.DocIO.DLS.TextDirection.Vertical;
+    }
+}
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx")
+'Gets the text body of first section
+Dim textbody As WTextBody = document.Sections(0).Body
+'Gets the table
+Dim table As IWTable = textbody.Tables(0)
+'Iterates through table rows
+For Each row As WTableRow In table.Rows
+    For Each cell As WTableCell In row.Cells
+        'Sets the text direction for the contents
+        cell.CellFormat.TextDirection = Syncfusion.DocIO.DLS.TextDirection.Vertical
+    Next
+Next
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Set-text-direction-to-table).

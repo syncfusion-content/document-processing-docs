@@ -13,13 +13,13 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 ## Steps to convert PowerPoint Presentation to PDF in Azure App Service on Linux
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure_Images/App_Service_Linux/Create-PowerPoint-Presentation-to-PDF.png)
+![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Create a project name and select the location.
-![Configure your new project](Azure_Images/App_Service_Linux/Configure-PowerPoint-Presentation-to-PDF.png)
+![Configure your new project](Azure-Images/App-Service-Linux/Configure-PowerPoint-Presentation-to-PDF.png)
 
 Step 3: Click **Create** button.
-![Additional Information](Azure_Images/App_Service_Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
+![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 
@@ -27,11 +27,11 @@ Step 4: Install the following **Nuget packages** in your application from [Nuget
 * [SkiaSharp.NativeAssets.Linux v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6)
 * [HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0)
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure_Images/App_Service_Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-![Install SkiaSharp.NativeAssets.Linux v2.88.6 Nuget Package](Azure_Images/App_Service_Linux/SkiaSharp_PowerPoint_Presentation_to_PDF.png)
+![Install SkiaSharp.NativeAssets.Linux v2.88.6 Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_PowerPoint_Presentation_to_PDF.png)
 
-![Install HarfBuzzSharp.NativeAssets.Linux v7.3.0 Nuget Package](Azure_Images/App_Service_Linux/HarfBuzz_PowerPoint_Presentation_to_PDF.png)
+![Install HarfBuzzSharp.NativeAssets.Linux v7.3.0 Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz_PowerPoint_Presentation_to_PDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -163,37 +163,37 @@ public ActionResult ConvertPPTXtoPDF(string button)
 ## Steps to publish as Azure App Service on Linux
 
 Step 1: Right-click the project and select **Publish** option.
-![Right-click the project and select the Publish option](Azure_Images/App_Service_Linux/Publish_PowerPoint_Presentation_to_PDF.png)
+![Right-click the project and select the Publish option](Azure-Images/App-Service-Linux/Publish_PowerPoint_Presentation_to_PDF.png)
 
 Step 2: Click the **Add a Publish Profile** button.
-![Click the Add a Publish Profile](Azure_Images/App_Service_Linux/Publish_Profile_PowerPoint_Presentation_to_PDF.png)
+![Click the Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile_PowerPoint_Presentation_to_PDF.png)
 
 Step 3: Select the publish target as **Azure**.
-![Select the publish target as Azure](Azure_Images/App_Service_Linux/Publish_Target_PowerPoint_Presentation_to_PDF.png)
+![Select the publish target as Azure](Azure-Images/App-Service-Linux/Publish_Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Select the Specific target as **Azure App Service (Linux)**.
-![Select the publish target](Azure_Images/App_Service_Linux/Specific_Target_PowerPoint_Presentation_to_PDF.png)
+![Select the publish target](Azure-Images/App-Service-Linux/Specific_Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 5: To create a new app service, click **Create new** option.
-![Click create new option](Azure_Images/App_Service_Linux/Create_New_App_Service_PowerPoint_Presentation_to_PDF.png)
+![Click create new option](Azure-Images/App-Service-Linux/Create_New_App_Service_PowerPoint_Presentation_to_PDF.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
-![Click the Create button](Azure_Images/App_Service_Windows/Hosting_PowerPoint_Presentation_to_PDF.png)
+![Click the Create button](Azure-Images/App-Service-Windows/Hosting_PowerPoint_Presentation_to_PDF.png)
 
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
-![Click the Finish button](Azure_Images/App_Service_Linux/App_Service_PowerPoint_Presentation_to_PDF.png)
+![Click the Finish button](Azure-Images/App-Service-Linux/App_Service_PowerPoint_Presentation_to_PDF.png)
 
 Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure_Images/App_Service_Linux/Publish_Finish_PowerPoint_Presentation_to_PDF.png)
+![Create a ASP.NET Core Project](Azure-Images/App-Service-Linux/Publish_Finish_PowerPoint_Presentation_to_PDF.png)
 
 Step 9: Click the **Publish** button.
-![Click the Publish button](Azure_Images/App_Service_Linux/Before_Publish_PowerPoint_Presentation_to_PDF.png)
+![Click the Publish button](Azure-Images/App-Service-Linux/Before_Publish_PowerPoint_Presentation_to_PDF.png)
 
 Step 10: Now, Publish has been succeeded.
-![Publish has been succeeded](Azure_Images/App_Service_Linux/After_Publish_PowerPoint_Presentation_to_PDF.png)
+![Publish has been succeeded](Azure-Images/App-Service-Linux/After_Publish_PowerPoint_Presentation_to_PDF.png)
 
 Step 11: Now, the published webpage will open in the browser. 
-![Browser will open after publish](Azure_Images/App_Service_Linux/Browser_PowerPoint_Presentation_to_PDF.png)
+![Browser will open after publish](Azure-Images/App-Service-Linux/Browser_PowerPoint_Presentation_to_PDF.png)
 
 Step 12: Select the **PowerPoint Presentation** and Click **Convert to PDF** to convert the given PowerPoint Presentation to PDF.You will get the output **PDF** document as follows.
 

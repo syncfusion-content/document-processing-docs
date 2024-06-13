@@ -14,11 +14,11 @@ Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/
 
 Step 1: Create a new C# Windows Forms application project.
 
-![Create Windows Forms project](Workingwith_Windows/Project-Open-and-Save.png)
+![Create Windows Forms project](Workingwith-Windows/Project-Open-and-Save.png)
 
 Step 2: Install the [Syncfusion.PresentationToPdfConverter.WinForms](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.PresentationToPdfConverter.WinForms Nuget Package](Workingwith_Windows/Nuget-Package-PPTXtoPDF.png)
+![Install Syncfusion.PresentationToPdfConverter.WinForms Nuget Package](Workingwith-Windows/Nuget-Package-PPTXtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 

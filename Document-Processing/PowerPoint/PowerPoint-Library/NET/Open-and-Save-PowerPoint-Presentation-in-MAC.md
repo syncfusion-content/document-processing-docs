@@ -13,15 +13,15 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 ## Steps to open and save PowerPoint Presentation programmatically
 
 Step 1: Create a new C# .NET Core console application.
-![Create .NET Core console project](Workingwith_Mac/CreateProject.png)
+![Create .NET Core console project](Workingwith-Mac/CreateProject.png)
 
 Step 2: Select the project version.
-![Select project version](Workingwith_Mac/selectprojectverion.png)
+![Select project version](Workingwith-Mac/selectprojectverion.png)
 
 Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Presentation .Net Core Nuget](Workingwith_Mac/Install_Nuget1.png)
-![Install Presentation .Net Core Nuget](Workingwith_Mac/Install_Nuget.png)
+![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget1.png)
+![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -83,6 +83,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![.NET Core macOS output PowerPoint document](Workingwith_Core/Open-and-Save-output-image.png)
+![.NET Core macOS output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features.
