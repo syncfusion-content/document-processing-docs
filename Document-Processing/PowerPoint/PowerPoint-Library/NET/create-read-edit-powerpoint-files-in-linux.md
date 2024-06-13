@@ -23,7 +23,7 @@ dotnet new console
 
 {% endtabs %}
 
-![Create .NET Core console project](Workingwith_Linux/CreateCore.png)
+![Create .NET Core console project](Workingwith-Linux/CreateCore.png)
 
 Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by execute the following command.
 
@@ -37,7 +37,7 @@ dotnet add package Syncfusion.Presentation.Net.Core -v 17.4.0.39 -s https://www.
 
 {% endtabs %}
 
-![Install NuGet packages](Workingwith_Linux/InstallNuGetPackages.png)
+![Install NuGet packages](Workingwith-Linux/InstallNuGetPackages.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -116,7 +116,7 @@ dotnet restore
 
 {% endtabs %}
 
-![Restore the NuGet packages](Workingwith_Linux/Restore.png)
+![Restore the NuGet packages](Workingwith-Linux/Restore.png)
 
 Step 6: Execute the following command in terminal to run the application.
 
@@ -130,11 +130,11 @@ dotnet run
 
 {% endtabs %}
 
-![Run the Applcation](Workingwith_Linux/Run.png)
+![Run the Applcation](Workingwith-Linux/Run.png)
 
 The output of the above code example will generate the below PowerPoint slide. The output will be saved in parallel to program.cs file.
 
-![.Net Core Console Output](Workingwith_Linux/GettingStartedSample.png)
+![.Net Core Console Output](Workingwith-Linux/GettingStartedSample.png)
 
 
 ## Read and edit a PowerPoint file in .NET Core Console application project on Linux

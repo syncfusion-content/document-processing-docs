@@ -14,19 +14,19 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 
 Step 1: Create a new C# Blazor Server app project. Select Blazor App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document ](Workingwith_Blazor/Create_project.png)
+![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
 
 Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
 
-![Create a project name for your new project](Workingwith_Blazor/Configure_project.png)
+![Create a project name for your new project](Workingwith-Blazor/Configure_project.png)
 
 Step 3: Choose **Blazor Server App** and click Create button to create a new Blazor Server app for .NET Core 3.0.0-preview9.
 
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith_Blazor/Core_application_Server.png)
+![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Server.png)
 
 Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith_Core/install_nuget.png)
+![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Core/install_nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -184,7 +184,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![Blazor Server output PowerPoint document](Workingwith_Core/Open-and-Save-output-image.png)
+![Blazor Server output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features.
 
@@ -192,19 +192,19 @@ Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework
 
 Step 1: Create a new C# Blazor WASM app project. Select Blazor App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document](Workingwith_Blazor/Create_project.png)
+![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Create_project.png)
 
 Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
 
-![Create a project name for your new project](Workingwith_Blazor/Configure_project.png)
+![Create a project name for your new project](Workingwith-Blazor/Configure_project.png)
 
 Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM app for .NET Core 3.0.0-preview9.
 
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith_Blazor/Core_application_Client.png)
+![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Client.png)
 
 Step 4: To **create a PowerPoint document in WASM app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 
-![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith_Blazor/NuGet.png)
+![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Blazor/NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -329,7 +329,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![Blazor WASM output PowerPoint document](Workingwith_Core/Open-and-Save-output-image.png)
+![Blazor WASM output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
 N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size. You can also explore our [Blazor PowerPoint library demo](https://blazor.syncfusion.com/demos/powerpoint/getting-started) that shows how to create and modify PowerPoint files from C# with just five lines of code.
 

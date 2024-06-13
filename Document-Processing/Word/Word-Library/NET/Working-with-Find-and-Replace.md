@@ -1837,3 +1837,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to find and replace a text with Table of Contents (TOC) in Word document?](https://support.syncfusion.com/kb/article/13958/how-to-find-and-replace-a-text-with-table-of-contents-toc-in-word-document)
 * [How to replace text in a Word document with HTML in ASP.NET Core?](https://support.syncfusion.com/kb/article/15520/how-to-replace-text-in-a-word-document-with-html-in-aspnet-core?)
 * [How to find and replace text with list paragraphs in Word document?](https://support.syncfusion.com/kb/article/15922/how-to-find-and-replace-with-multiple-list-paragraphs-in-word-document)
+* [How to find and replace a text with the Excel content in a Word document?](https://support.syncfusion.com/kb/article/15947/how-to-find-and-replace-a-text-with-the-excel-content-in-a-word-document)

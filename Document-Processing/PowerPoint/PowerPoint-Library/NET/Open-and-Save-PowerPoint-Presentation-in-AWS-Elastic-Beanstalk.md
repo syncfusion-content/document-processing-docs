@@ -13,17 +13,17 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 ## Steps to open and save Presentation in AWS Elastic Beanstalk
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure_Images/App_Service_Linux/Create-PowerPoint-Presentation-to-PDF.png)
+![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Create a project name and select the location.
-![Configure your new project](Azure_Images/App_Service_Windows/Configuration-Create-PowerPoint-Presentation.png)
+![Configure your new project](Azure-Images/App-Service-Windows/Configuration-Create-PowerPoint-Presentation.png)
 
 Step 3: Click **Create** button.
-![Additional Information](Azure_Images/App_Service_Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
+![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Presentation.Net.Core Nuget Package](Azure_Images/App_Service_Windows/Nuget-Package-Create-PowerPoint-Presentation.png)
+![Install Syncfusion.Presentation.Net.Core Nuget Package](Azure-Images/App-Service-Windows/Nuget-Package-Create-PowerPoint-Presentation.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -131,6 +131,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![Open and save in AWS Elastic Beanstalk](Workingwith_Core/Open-and-Save-output-image.png)
+![Open and save in AWS Elastic Beanstalk](Workingwith-Core/Open-and-Save-output-image.png)
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 

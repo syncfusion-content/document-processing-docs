@@ -14,15 +14,15 @@ Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/
 
 Step 1: Create a new C# ASP.NET web application project.
 
-![Create ASP.NET Web project](Workingwith_Web/Project-Open-and-Save.png)
+![Create ASP.NET Web project](Workingwith-Web/Project-Open-and-Save.png)
 
 Step 2: Select the **Empty** template to create the project.
 
-![Select Web Forms template](Workingwith_Web/Empty-Open-and-Save.png)
+![Select Web Forms template](Workingwith-Web/Empty-Open-and-Save.png)
 
 Step 3: Install the [Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Presentation.AspNet Nuget package](Workingwith_Web/Nuget-Open-and-Save.png)
+![Install Syncfusion.Presentation.AspNet Nuget package](Workingwith-Web/Nuget-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -103,6 +103,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
-![ASP.Net output PowerPoint document](Workingwith_Core/Open-and-Save-output-image.png)
+![ASP.Net output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features.

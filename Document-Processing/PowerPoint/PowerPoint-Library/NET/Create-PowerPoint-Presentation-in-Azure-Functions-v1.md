@@ -13,16 +13,16 @@ Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/
 ## Steps to create a PowerPoint document in Azure Functions v1
 
 Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure_Images/Functions_v1/Azure_PowerPoint_Presentation_to_PDF.png)
+![Create a Azure Functions project](Azure-Images/Functions-v1/Azure_PowerPoint_Presentation_to_PDF.png)
 
 Step 2: Create a project name and select the location.
-![Create a project name](Azure_Images/Functions_v1/Configuration-Create-PowerPoint.png)
+![Create a project name](Azure-Images/Functions-v1/Configuration-Create-PowerPoint.png)
 
 Step 3: Select function worker as **.NET Framework**. 
-![Select function worker](Azure_Images/Functions_v1/Additional_Information_PowerPoint_Presentation_to_PDF.png)
+![Select function worker](Azure-Images/Functions-v1/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
 Step 4: Install the [Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.Presentation.AspNet NuGet package](Workingwith_Web/InstallNuget.png)
+![Install Syncfusion.Presentation.AspNet NuGet package](Workingwith-Web/InstallNuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -105,29 +105,29 @@ return response;
 {% endtabs %}
 
 Step 6: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
-![Create a new profile in the Publish Window](Azure_Images/Functions_v1/Publish-Create-PowerPoint.png)
+![Create a new profile in the Publish Window](Azure-Images/Functions-v1/Publish-Create-PowerPoint.png)
 
 Step 7: Select the target as **Azure** and click **Next** button.
-![Select the target as Azure](Azure_Images/Functions_v1/Target_PowerPoint_Presentation_to_PDF.png)
+![Select the target as Azure](Azure-Images/Functions-v1/Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 8: Select the **Create new** button.
-![Configure Hosting Plan](Azure_Images/Functions_v1/Function_Instance_PowerPoint_Presentation_to_PDF.png)
+![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_PowerPoint_Presentation_to_PDF.png)
 
 Step 9: Click **Create** button. 
-![Select the plan type](Azure_Images/Functions_v1/Hosting-Create-PowerPoint.png)
+![Select the plan type](Azure-Images/Functions-v1/Hosting-Create-PowerPoint.png)
 
 Step 10: After creating app service then click **Finish** button. 
-![Creating app service](Azure_Images/Functions_v1/Finish-Create-PowerPoint.png)
+![Creating app service](Azure-Images/Functions-v1/Finish-Create-PowerPoint.png)
 
 Step 11: Click the **Publish** button.
-![Click Publish Button](Azure_Images/Functions_v1/Before-Publish-Create-PowerPoint.png)
+![Click Publish Button](Azure-Images/Functions-v1/Before-Publish-Create-PowerPoint.png)
 
 Step 12: Publish has been succeed.
-![Publish succeeded](Azure_Images/Functions_v1/After-Publish-Create-PowerPoint.png)
+![Publish succeeded](Azure-Images/Functions-v1/After-Publish-Create-PowerPoint.png)
 
 Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **create a PowerPoint document** using the template PowerPoint document). You will get the output PowerPoint document as follows.
 
-![Create a PowerPoint document in Azure Functions v1](Workingwith_Web/GettingStartedSample.png)
+![Create a PowerPoint document in Azure Functions v1](Workingwith-Web/GettingStartedSample.png)
 
 ## Steps to post the request to Azure Functions
 

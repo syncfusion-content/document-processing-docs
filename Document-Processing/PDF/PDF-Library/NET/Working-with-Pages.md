@@ -1207,3 +1207,64 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Span-text-element-to-multiple-pages-in-a-PDF/). 
 
+
+## Inserting duplicate pages in the existing pdf document
+
+The Syncfusion PDF library enables users to duplicate existing pages and insert them at various locations within a document. This functionality is especially valuable for creating templates, replicating forms, and expanding content without the need to manually recreate each page. The [Insert](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_Insert_System_Int32_) method in the PdfLoadedPageCollection facilitates the creation of duplicate pages. 
+
+Refer to the following code example for creating duplicate page in a PDF document. 
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document. 
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
+//Gets the page 
+PdfLoadedPage loadedPage= loadedDocument.Pages[0] as PdfLoadedPage; 
+//Inserts the duplicate page in the beginning of the document. 
+loadedDocument.Pages.Insert(0, loadedPage); 
+//Creating the stream object. 
+MemoryStream stream = new MemoryStream(); 
+//Save the document as stream. 
+loadedDocument.Save(stream); 
+//Close the document. 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
+//Gets the Page 
+PdfLoadedPage loadedPage= loadedDocument.Pages[0] as PdfLoadedPage; 
+//Inserts the duplicate page in the beginning of the document. 
+loadedDocument.Pages.Insert(0, loadedPage); 
+//Save and close the document. 
+loadedDocument.Save("Output.pdf"); 
+//Close the document.
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the PDF document. 
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf") 
+'Gets the page. 
+Dim page As PdfPageBase = TryCast(loadedDocument.Pages(0), PdfPageBase)  
+'Inserts the duplicate page in the beginning of the document. 
+loadedDocument.Pages.Insert(0, page) 
+'Save and close the document. 
+loadedDocument.Save("Output.pdf") 
+'Close the document.
+loadedDocument.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from [GitHub](). 
+

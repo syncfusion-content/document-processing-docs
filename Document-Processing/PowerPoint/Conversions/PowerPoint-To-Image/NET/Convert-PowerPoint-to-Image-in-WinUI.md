@@ -17,15 +17,15 @@ To use the WinUI 3 project templates, install the Windows App SDK extension for 
 
 Step 1: Create a new C# WinUI Desktop app. Select Blank App, Packaged with WAP (WinUI 3 in Desktop) from the template and click the **Next** button.
 
-![Create the WinUI Desktop app in Visual Studio](Workingwith_WinUI/Create-Project-WinUI-PPTXtoPDF.png)
+![Create the WinUI Desktop app in Visual Studio](Workingwith-WinUI/Create-Project-WinUI-PPTXtoPDF.png)
 
 Step 2: Enter the project name and click **Create**.
 
-![Create a project name for your new project](Workingwith_WinUI/Configuration_PPTXtoPDF.png)
+![Create a project name for your new project](Workingwith-WinUI/Configuration_PPTXtoPDF.png)
 
 Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.PresentationRenderer.NET NuGet package](Workingwith_MAUI/Nuget_Package_PPTXtoPDF.png)
+![Install Syncfusion.PresentationRenderer.NET NuGet package](Workingwith-MAUI/Nuget_Package_PPTXtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion license key in your application to use our components.
 
