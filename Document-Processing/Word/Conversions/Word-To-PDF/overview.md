@@ -12,18 +12,418 @@ Syncfusion Word library (DocIO) allows you to convert Word document to PDF withi
 
 The Syncfusion Word to PDF converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms), [WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-azure), [AWS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux), [Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker), and [macOS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-mac). 
 
-# Key Features  
+## Key Features  
 
-* Ability to embed fonts within the PDF for consistent display. 
-* Support for converting Word documents to PDF/UA (Section 508 compliant). 
-* Support for converting Word documents to PDF/A with various PDF conformance levels for long-term archiving and standardization. 
-* Ability to preserve Word document form fields as PDF forms, allowing the creation of editable PDFs. 
-* Convert Word headings to PDF bookmarks, generating PDF documents with bookmarks based on Word document paragraph styles and outline levels. 
-* Support for font substitution when fonts are not available during Word to PDF conversion. 
-* Set fallback fonts for characters when glyphs are not available. 
-* Ability to optimize identical images to reduce PDF file size. 
-* Option to include or exclude alternate chunks during Word to PDF conversion. 
-* Ability to use custom dictionaries for text hyphenation in the converted PDF. 
-* Support for preserving revision marks of tracked changes in the converted PDF. 
-* Option to toggle between preserving or excluding comments during Word to PDF conversions. 
-* Option to show warnings for any unsupported elements during conversion. 
+* Ability to [embed fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#embedding-fonts) within the PDF for consistent display. 
+* Support for converting Word documents to [PDF/UA](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#accessible-pdf-document) (Section 508 compliant). 
+* Support for converting Word documents to [PDF/A](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level) with various PDF conformance levels for long-term archiving and standardization. 
+* Ability to preserve Word document form fields as PDF forms, allowing the creation of [editable PDFs](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field). 
+* Convert Word headings to [PDF bookmarks](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks), generating PDF documents with bookmarks based on Word document paragraph styles and outline levels. 
+* Support for [font substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf) when fonts are not available during Word to PDF conversion. 
+* Set [fallback fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf) for characters when glyphs are not available. 
+* Ability to [optimize identical images](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#identical-image-optimization) to reduce PDF file size. 
+* Option to [include or exclude alternate chunks](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#enable-alternate-chunks) during Word to PDF conversion. 
+* Ability to use custom dictionaries for [text hyphenation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion) in the converted PDF. 
+* Support for preserving revision marks of [tracked changes](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#track-changes-in-word-to-pdf-conversion) in the converted PDF. 
+* Option to toggle between preserving or excluding [comments](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion) during Word to PDF conversions. 
+* Option to [show warnings for any unsupported elements](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#show-warning-for-unsupported-elements) during conversion. 
+
+## Assemblies and NuGet packages required
+
+Refer to the following links for assemblies required based on platforms to convert the Word document to PDF.
+
+* [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) 
+* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf)
+
+## Convert Word to PDF
+
+The following namespaces are required to compile the code:
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP .NET MAUI, WinUI, and ***C# [Windows-specific]*** or ***VB.NET [Windows-specific]*** for WinForms, WPF, ASP.NET and ASP.NET MVC applications.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIORenderer;
+using Syncfusion.Pdf;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.OfficeChart;
+using Syncfusion.DocToPDFConverter;
+using Syncfusion.OfficeChartToImageConverter;
+using Syncfusion.Pdf;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using Syncfusion.DocIO
+Using Syncfusion.DocIO.DLS
+Using Syncfusion.OfficeChart
+Using Syncfusion.DocToPDFConverter
+Using Syncfusion.OfficeChartToImageConverter
+Using Syncfusion.Pdf
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example illustrates how to convert a Word document into PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Open the file as Stream
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
+//Loads file stream into Word document
+WordDocument wordDocument = new WordDocument(docStream, Syncfusion.DocIO.FormatType.Automatic);
+//Instantiation of DocIORenderer for Word to PDF conversion
+DocIORenderer render = new DocIORenderer();
+//Sets Chart rendering Options.
+render.Settings.ChartRenderingOptions.ImageFormat =  ExportImageFormat.Jpeg;
+//Converts Word document into PDF document
+PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
+//Releases all resources used by the Word document and DocIO Renderer objects
+render.Dispose();
+wordDocument.Dispose();
+//Saves the PDF file
+MemoryStream outputStream = new MemoryStream();
+pdfDocument.Save(outputStream);
+//Closes the instance of PDF document object
+pdfDocument.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document
+WordDocument wordDocument = new WordDocument("Template.docx", FormatType.Docx);
+//Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
+wordDocument.ChartToImageConverter = new ChartToImageConverter();
+//Creates an instance of the DocToPDFConverter
+DocToPDFConverter converter = new DocToPDFConverter();
+//Converts Word document into PDF document
+PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
+//Saves the PDF file 
+pdfDocument.Save("WordtoPDF.pdf");
+//Closes the instance of document objects
+pdfDocument.Close(true);
+wordDocument.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads an existing Word document
+Dim wordDocument As New WordDocument("Template.docx", FormatType.Docx)
+'Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
+wordDocument.ChartToImageConverter = New ChartToImageConverter()
+'Creates an instance of the DocToPDFConverter
+Dim converter As New DocToPDFConverter()
+'Converts Word document into PDF document
+Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
+'Saves the PDF file 
+pdfDocument.Save("WordtoPDF.pdf")
+'Closes the instance of document objects
+pdfDocument.Close(True)
+wordDocument.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+By executing the program, you will get the output PDF as follows. 
+
+![Word to PDF conversion](https://help.syncfusion.com/file-formats/docio/WordToPDF_images/OutputImage.png).
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF).
+
+T> For troubleshooting issues in the .NET Word Library (DocIO), refer [this](https://support.syncfusion.com/kb/article/16012/troubleshooting-guide-for-syncfusion-word-docio-library-issues?isInternalRefresh=False) article that provides comprehensive guidance on resolving common problems.
+
+N> 1. For .NET Framework, creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word to PDF. Otherwise, the charts are not preserved in the converted PDF. Whereas this is not necessary for .NET Core, as ChartToImageConverter is initialized internally in Syncfusion.DocIORenderer.Portable assembly.
+N> 2. Total number of pages in the converted PDF may vary based on unsupported elements in the input Word document.
+N> 3. "DocIO supports Word to PDF conversion in UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
+
+## Supported File formats
+
+The .NET Word Library (DocIO) supports below formats to convert into PDF. 
+
+* DOC, DOCX, Word Processing XML (2003 & 2007), DOT, DOTX, DOCM, and DOTM
+* RTF 
+* Text 
+* Markdown 
+* HTML 
+
+## Customization settings
+
+The Essential DocIO provides settings while performing Word to PDF conversion mentioned below, 
+
+### Fast rendering
+
+This setting allows you to **convert PDF faster** by using direct PDF rendering approach rather than EMF rendering approach. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#fast-rendering).
+
+### Embedding fonts
+
+You can customize the TrueType fonts embedding in two ways as follows:
+
+* [Embed Subset Fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#embed-subset-fonts).
+* [Embed Complete Fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#embed-complete-fonts).
+
+### Accessible PDF document
+
+This setting allows you to determine whether to preserve document structured tags in the converted **PDF document for accessibility (508 compliance) support**. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#accessible-pdf-document).
+
+### Word document headings to PDF bookmarks
+
+This setting allows you to determine whether to **preserve Word document headings** (i.e., paragraph with heading style and outline level) as bookmarks in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks).
+
+### Word document form field to PDF form field.
+
+This setting allows you to determine whether to **preserve Word document form fields** (Text form field, Checkbox form field and Drop-down form field) as PDF form fields in the converted PDF document. This features helps in creating fillable PDF forms from Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field).
+
+### Image quality 
+
+This setting allows you to determine the **quality of the charts and JPEG images** in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#image-quality).
+
+### Recreate Nested Metafile
+
+This setting allows you to regenerate the nested EMF images present in the Word document during PDF conversion. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#recreate-nested-metafile).
+
+### Identical image optimization 
+
+This setting **reduces the Main Memory usage** in Word to PDF conversion by reusing the identical images. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#identical-image-optimization).
+
+### PDF Conformance Level
+
+This setting allows you to set the PDF conformance level. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level).
+
+### Enable Alternate Chunks
+
+In the Word document, another Word documents are embedded in it and referred as AltChunks. This setting allows you to include the alternate chunks while converting Word to PDF conversion. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#enable-alternate-chunks).
+
+### Complex Script Text
+
+This setting allows you to preserve the **complex script text** in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#complex-script-text).
+
+### Hyphenation in Word-to-PDF conversion
+
+Essential DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion).
+
+### Track changes in Word-to-PDF conversion
+
+You can **preserve revision marks in a generated PDF document** when converting Word documents with tracked changes or revisions. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#track-changes-in-word-to-pdf-conversion).
+
+### Comments in Word-to-PDF conversion
+
+You can **preserve comments balloon in a generated PDF** when converting Word documents with comments. Also you can customize how comments balloon color appears in a generated PDF. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion).
+
+### Preserve Ole Equation as bitmap image
+
+You can preserve Ole Equation as bitmap image in the converted PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#preserve-ole-equation-as-bitmap-image).
+
+### Restrict all permission in a PDF document
+
+You can restrict all the permission in a PDF document using [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html). For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#restrict-all-permission-in-a-pdf-document).
+
+## Font Substitution
+
+When the necessary fonts used in the Word document has not been installed in the production machine, then Essential DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. 
+
+To avoid this, the Essential DocIO library allows you to set an alternate font for the missing font used in the Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf).
+
+## Fallback fonts
+
+During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf).
+
+## Unsupported elements in Word to PDF conversion
+
+Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf) to know about unsupported elements in Word to PDF conversion.
+
+## Show Warning for Unsupported Elements
+
+When converting a Word document to a PDF, the presence of unsupported elements in the input Word document can lead to preservation issues in the converted PDF. The .NET Word library (DocIO) contains [Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_Warning) API, which helps to detect and handle these unsupported elements during the conversion process. This API holds the information of unsupported elements once found in the input Word document. 
+
+Users can display warning messages for the unsupported elements using the [WarningType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WarningInfo.html#Syncfusion_DocIO_DLS_WarningInfo_WarningType) during Word to PDF conversion. Users can set a flag to stop the conversion process based on the warning. 
+
+The following code demonstrates how to stop conversion if the input Word document has an unsupported element like SmartArt during Word to PDF conversion.
+
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open))
+{
+    //Loads an existing Word document.
+    using (WordDocument wordDocument = new WordDocument(fileStream, Syncfusion.DocIO.FormatType.Automatic))
+    {
+        //Creates an instance of DocIORenderer.
+        using (DocIORenderer renderer = new DocIORenderer())
+        {
+            renderer.Settings.Warning = new DocumentWarning();
+            //Converts Word document into a PDF document.
+            using (PdfDocument pdfDocument = renderer.ConvertToPDF(wordDocument))
+            {
+                //If the IsCanceled boolean is enabled, the input document will contain an unsupported element.
+                if (renderer.IsCanceled)
+                {
+                    Console.WriteLine("The execution stopped due to unsupported element.");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    //Saves the PDF file.
+                    FileStream outputFile = new FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                    pdfDocument.Save(outputFile);
+                    outputFile.Dispose();
+                    Console.WriteLine("Success");
+                }
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+WordDocument wordDocument = new WordDocument("Input.docx");
+DocToPDFConverter converter = new DocToPDFConverter();
+converter.Settings.Warning = new DocumentWarning();
+PdfDocument pdfDocument = converter.ConvertToPDF(document);
+//If the IsCanceled boolean is enabled, the input document will contain an unsupported element.
+if (converter.IsCanceled)
+{
+    Console.WriteLine("The execution stopped due to unsupported element.");
+    Console.ReadKey();
+}
+else
+{
+    //Saves the PDF file.
+    FileStream outputFile = new FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+    pdfDocument.Save(outputFile);
+    outputFile.Dispose();
+    Console.WriteLine("Success");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim wordDocument As New WordDocument("Input.docx")
+Dim converter As New DocToPDFConverter()
+converter.Settings.Warning = New DocumentWarning()
+Dim pdfDocument As PdfDocument = converter.ConvertToPDF(document)
+
+' If the IsCanceled boolean is enabled, the input document will contain an unsupported element.
+If converter.IsCanceled Then
+    Console.WriteLine("The execution stopped due to unsupported element.")
+    Console.ReadKey()
+Else
+    ' Saves the PDF file.
+    Using outputFile As New FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)
+        pdfDocument.Save(outputFile)
+        Console.WriteLine("Success")
+    End Using
+End If
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code demonstrates how to initialize the [Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_Warning) API and display warning messages for all unsupported elements in the input document. Additionally, this code shows how to set a flag to stop Word to PDF conversion if an unsupported element is identified.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+public class DocumentWarning : IWarning
+{
+    public bool ShowWarnings(List<WarningInfo> warningInfo)
+    {
+        bool isContinueConversion = true;
+        foreach (WarningInfo warning in warningInfo)
+        {
+            //Based on the WarningType enumeration, you can do your manipulation.
+            //Skip the Word to PDF conversion by setting the isContinueConversion value to false.
+            //To stop execution if the input document has a SmartArt.
+            if (warning.WarningType == WarningType.SmartArt)
+                isContinueConversion = false;
+
+            //Warning messages for unsupported elements in the input document.
+            Console.WriteLine("The input document contains " + warning.WarningType + " unsupported element.");
+        }
+        return isContinueConversion;
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+public class DocumentWarning : IWarning
+{
+    public bool ShowWarnings(List<WarningInfo> warningInfo)
+    {
+        bool isContinueConversion = true;
+        foreach (WarningInfo warning in warningInfo)
+        {
+            //Based on the WarningType enumeration, you can do your manipulation.
+            //Skip the Word to PDF conversion by setting the isContinueConversion value to false.
+            //To stop execution if the input document has a SmartArt.
+            if (warning.WarningType == WarningType.SmartArt)
+                isContinueConversion = false;
+
+            //Warning messages for unsupported elements in the input document.
+            Console.WriteLine("The input document contains " + warning.WarningType + " unsupported element.");
+        }
+        return isContinueConversion;
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Public Class DocumentWarning
+    Implements IWarning
+
+    Public Function ShowWarnings(warningInfo As List(Of WarningInfo)) As Boolean Implements IWarning.ShowWarnings
+        Dim isContinueConversion As Boolean = True
+
+        For Each warning As WarningInfo In warningInfo
+            ' Based on the WarningType enumeration, you can perform your manipulation.
+            ' Skip the Word to PDF conversion by setting the isContinueConversion value to false.
+            ' To stop execution if the input document has a SmartArt.
+            If warning.WarningType = WarningType.SmartArt Then
+                isContinueConversion = False
+            End If
+
+            ' Warning messages for unsupported elements in the input document.
+            Console.WriteLine("The input document contains " & warning.WarningType & " unsupported element.")
+        Next
+
+        Return isContinueConversion
+    End Function
+End Class
+{% endhighlight %}
+
+{% endtabs %}
+
+T> Using the above Warning API, handle logic to identify the documents with unsupported elements and notify the end users to use supported elements for good preservation in the output PDF.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Show-Warning-for-unsupported-elements)
+
+## Online Demo
+
+* Explore how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfua#/material3).
+* See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfa#/material3).
+
+## See Also
+
+* [Supported file formats](https://help.syncfusion.com/document-processing/word/word-library/net/support-file-formats)
+* [How to perform font substitution in Word to PDF conversion](https://support.syncfusion.com/kb/article/7499/how-to-perform-font-substitution-in-word-to-pdf-conversion)
+* [What happens when the Word document used fonts for a text is not installed in production machine during Word to PDF or Image conversion](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production)
+* [How to resolve font problems during Word to PDF or image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
+* [How to convert multiple Word documents to multiple PDFs and zip the PDFs in C#?](https://support.syncfusion.com/kb/article/13837/how-to-convert-multiple-word-documents-to-multiple-pdfs-and-zip-the-pdfs-in-c)
+* [How to convert and replace EMF image in word document to PNG with same size](https://support.syncfusion.com/kb/article/11331/how-to-convert-and-replace-emf-image-in-word-document-to-png-with-same-size)
+* [How to convert Word document to PDF in UWP](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
+* [How to avoid conflicts while using DocIORenderer and other controls in UWP](https://support.syncfusion.com/kb/article/11445/how-to-avoid-conflicts-while-using-dociorenderer-and-other-controls-in-uwp)
+* [How to deploy .NET Core application with Word to PDF conversion capabilities in Linux OS](https://www.syncfusion.com/kb/8470/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os)
+* [How to convert Word document to PDF in Azure App service on Linux](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os)
+* [Is it possible to perform Word to PDF conversion in Azure Environment ?](https://www.syncfusion.com/kb/7751/is-it-possible-to-perform-word-to-pdf-conversion-in-azure-environment)
+* [How to perform Word to PDF conversion in Azure Functions v1](https://www.syncfusion.com/kb/10056/how-to-perform-word-to-pdf-conversion-in-azure-functions-v1)
+* [How to mail merge Word documents and convert to PDF in Azure Functions v2](https://support.syncfusion.com/kb/article/6939/is-it-possible-to-perform-word-to-pdf-conversion-in-azure-environment)
+* [How to convert Word document to PDF in AWS Lambda](https://support.syncfusion.com/kb/article/10534/how-to-convert-word-document-to-pdf-in-aws-lambda)
+* [How to add signature field in the PDF converted from Word](https://support.syncfusion.com/kb/article/11438/how-to-add-signature-field-in-the-pdf-converted-from-word)
+* [How to convert Word to PDF in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12239/how-to-convert-word-to-pdf-in-blazor-webassembly-wasm)
+* [How to perform Word to PDF conversion in WinForms ?](https://support.syncfusion.com/kb/article/8848/how-to-perform-word-to-pdf-conversion-in-winforms-?isInternalRefresh=False)
+* [How to preserve track changes markup in Word to PDF conversion](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
+* [How to preserve simple markup, all markup, and no markup of track changes during Word to PDF conversion?](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
+* [How to resolve font problems during Word to PDF conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
