@@ -24,8 +24,11 @@ The Syncfusion Word to image converter offers high versatility and seamless perf
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert the Word document to image.
 
-* [Word to image conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-image) 
-* [Word to image conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-image)
+* [Word to image conversion assemblies](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/assemblies-required-word-to-image) 
+* [Word to image conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image)
+
+To quickly start converting a Word document to an image, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=hoV3i7nl85I" %}
 
 ## Convert Word to Image
 
@@ -49,10 +52,10 @@ using Syncfusion.OfficeChartToImageConverter;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using Syncfusion.DocIO
-Using Syncfusion.DocIO.DLS
-Using Syncfusion.OfficeChart
-Using Syncfusion.OfficeChartToImageConverter
+Imports Syncfusion.DocIO
+Imports Syncfusion.DocIO.DLS
+Imports Syncfusion.OfficeChart
+Imports Syncfusion.OfficeChartToImageConverter
 {% endhighlight %}
 
 {% endtabs %}

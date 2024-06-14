@@ -32,8 +32,11 @@ The Syncfusion Word to PDF converter offers high versatility and seamless perfor
 
 Refer to the following links for assemblies required based on platforms to convert the Word document to PDF.
 
-* [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) 
-* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf)
+* [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf) 
+* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)
+
+To quickly start converting a Word document to a PDF, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=8QdevnBxgHk" %}
 
 ## Convert Word to PDF
 
@@ -60,12 +63,12 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using Syncfusion.DocIO
-Using Syncfusion.DocIO.DLS
-Using Syncfusion.OfficeChart
-Using Syncfusion.DocToPDFConverter
-Using Syncfusion.OfficeChartToImageConverter
-Using Syncfusion.Pdf
+Imports Syncfusion.DocIO
+Imports Syncfusion.DocIO.DLS
+Imports Syncfusion.OfficeChart
+Imports Syncfusion.DocToPDFConverter
+Imports Syncfusion.OfficeChartToImageConverter
+Imports Syncfusion.Pdf
 {% endhighlight %}
 
 {% endtabs %}
@@ -150,6 +153,17 @@ The .NET Word Library (DocIO) supports below formats to convert into PDF.
 * Text 
 * Markdown 
 * HTML 
+
+## Word to PDF conversion in Linux OS
+
+In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux).
+
+**Frequently Asked Questions**
+
+* [How to copy necessary fonts to Linux containers?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-copy-necessary-fonts-to-linux-containers)
+* [How to set culture / locale in Docker containers (Windows & Linux containers)?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-set-culturelocale-in-docker-containers-windows-and-linux-containers)
+* [How to copy necessary Microsoft compatible fonts to Linux?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-copy-necessary-microsoft-compatible-fonts-to-linux)
+* [How to resolve LibSkiaSharp not found Exception?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-resolve-libskiasharp-not-found-exception)
 
 ## Customization settings
 
