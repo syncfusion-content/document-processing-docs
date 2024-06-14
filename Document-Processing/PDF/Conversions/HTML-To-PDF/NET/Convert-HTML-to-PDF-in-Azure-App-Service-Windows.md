@@ -25,8 +25,8 @@ Step 2: Create a project name and select the location.
 Step 3: Click **Create**. 
 ![Additional information](Azure_images/Azure-app-service-windows/Framework_selection.png)
 
-Step 4: Install the [Syncfusion.HtmlToPdfConverter.Cef.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Cef.Net.Windows) NuGet package to reference your project using the **Package Manager Console**.
-![NuGet package installation](Azure_images/Azure-app-service-windows/Package_Manager_Console_Nuget.png)
+Step 4: Install the [Syncfusion.HtmlToPdfConverter.Cef.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Cef.Net.Windows) NuGet package to reference your project using the [nuget.org](https://www.nuget.org/).
+![NuGet package installation](Azure_images/Azure-app-service-windows/Nuget_Manager-Console.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from the trial setup or NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application to use our components.
 
@@ -48,10 +48,7 @@ Step 5: A default action method named Index will be present in *HomeController.c
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
-![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
-
-Step 7: Include the following namespaces in *HomeController.cs*.
+Step 6: Include the following namespaces in *HomeController.cs*.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -62,7 +59,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add a new action method named ConvertToPdf in the HomeController.cs file and include the following code example to convert HTML to PDF document in *HomeController.cs*. 
+Step 7: Add a new action method named ConvertToPdf in the HomeController.cs file and include the following code example to convert HTML to PDF document in *HomeController.cs*. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -90,7 +87,11 @@ public IActionResult ConvertToPdf()
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Right-click the project and select the Publish option. Create the publish profile to target Azure app service windows.
+Step 8: Right-click the project and select the Publish option. Create the publish profile to target Azure app service windows.
+
+Step 9: Open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
+![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
+
 Step 10: After completing the publish profile setup, click the publish.
 Step 11: Publish will be succeeded and the published webpage will open in the browser. Click ExportToPDF button to perform the conversion.
 
