@@ -470,6 +470,211 @@ The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Pdf
 {% endhighlight %}
 {% endtabs %}
 
+### Save the PDF Document on Different Platforms
+
+Now, we need to implement platform-specific code to save the PDF document.
+
+#### Andriod
+ Include the following code example in ``SaveAndroid.cs`` class to save the file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+    public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
+    {
+        var fileUri = saveToGallery(stream);
+        var intent = new Intent(Intent.ActionView);
+        intent.SetDataAndType(fileUri,"application/pdf");
+        intent.AddFlags(ActivityFlags.GrantReadUriPermission);
+        intent.AddFlags(ActivityFlags.NoHistory);
+        intent.AddFlags(ActivityFlags.NewTask);
+        Android.App.Application.Context.StartActivity(intent);
+    }
+    public Android.Net.Uri saveToGallery(MemoryStream root)
+    {
+        Android.Net.Uri contentCollection = null;
+        ContentResolver resolver = Android.App.Application.Context.ContentResolver;
+
+        if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Q)
+        {
+            contentCollection = MediaStore.Downloads.GetContentUri(MediaStore.VolumeExternalPrimary);
+        }
+        else
+        {
+            contentCollection = MediaStore.Downloads.ExternalContentUri;
+        }
+
+        ContentValues valuesmedia = new ContentValues();
+        valuesmedia.Put(MediaStore.MediaColumns.DisplayName, "Output.pdf");
+        valuesmedia.Put(MediaStore.MediaColumns.MimeType, "application/pdf");
+        valuesmedia.Put(MediaStore.MediaColumns.RelativePath, Environment.DirectoryDownloads);
+
+        Android.Net.Uri savedPdfUri = resolver.Insert(contentCollection, valuesmedia);
+        try
+        {
+            Stream outdata = resolver.OpenOutputStream(savedPdfUri);
+            outdata.Write(root.ToArray());
+
+            valuesmedia.Clear();
+            Toast.MakeText(Android.App.Application.Context, "Pdf saved to Downloads", ToastLength.Short).Show();
+        }
+        catch (Exception exception)
+        {
+            Toast.MakeText(Android.App.Application.Context, "Pdf not saved to Downloads", ToastLength.Short).Show();
+        }
+        return savedPdfUri;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### IOS
+ Include the following code example in ``SaveIOS.cs`` class to save the file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+    public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
+    {
+        string exception = string.Empty;
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+        string filePath = Path.Combine(path, filename);
+        try
+        {
+            FileStream fileStream = File.Open(filePath, FileMode.Create);
+            stream.Position = 0;
+            stream.CopyTo(fileStream);
+            fileStream.Flush();
+            fileStream.Close();
+        }
+        catch (Exception e)
+        {
+            exception = e.ToString();
+        }
+        if (contentType != "application/html" || exception == string.Empty)
+        {
+            UIViewController? currentController = UIApplication.SharedApplication!.KeyWindow!.RootViewController;
+            while (currentController!.PresentedViewController != null)
+                currentController = currentController.PresentedViewController;
+
+            QLPreviewController qlPreview = new();
+            QLPreviewItem item = new QLPreviewItemBundle(filename, filePath);
+            qlPreview.DataSource = new PreviewControllerDS(item);
+            currentController.PresentViewController((UIViewController)qlPreview, true, null);
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### windows
+ Include the following code example in ``SaveWindows.cs`` class to save the file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+    public async partial void SaveAndView(string filename, string contentType, MemoryStream stream)
+    {
+        StorageFile stFile;
+        string extension = Path.GetExtension(filename);
+        //Gets process windows handle to open the dialog in application process. 
+        IntPtr windowHandle = System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle;
+        if (!Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons"))
+        {
+            //Creates file save picker to save a file. 
+            FileSavePicker savePicker = new();
+            if (extension == ".xlsx")
+            {
+                savePicker.DefaultFileExtension = ".xlsx";
+                savePicker.SuggestedFileName = filename;
+                //Saves the file as xlsx file.
+                savePicker.FileTypeChoices.Add("XLSX", new List<string>() { ".xlsx" });
+            }
+            if (extension == ".docx")
+            {
+                savePicker.DefaultFileExtension = ".docx";
+                savePicker.SuggestedFileName = filename;
+                //Saves the file as Docx file.
+                savePicker.FileTypeChoices.Add("DOCX", new List<string>() { ".docx" });
+            }
+            else if (extension == ".doc")
+            {
+                savePicker.DefaultFileExtension = ".doc";
+                savePicker.SuggestedFileName = filename;
+                //Saves the file as Doc file.
+                savePicker.FileTypeChoices.Add("DOC", new List<string>() { ".doc" });
+            }
+            else if (extension == ".rtf")
+            {
+                savePicker.DefaultFileExtension = ".rtf";
+                savePicker.SuggestedFileName = filename;
+                //Saves the file as Rtf file.
+                savePicker.FileTypeChoices.Add("RTF", new List<string>() { ".rtf" });
+            }
+            else if (extension == ".pdf")
+            {
+                savePicker.DefaultFileExtension = ".pdf";
+                savePicker.SuggestedFileName = filename;
+                //Saves the file as Pdf file.
+                savePicker.FileTypeChoices.Add("PDF", new List<string>() { ".pdf" });
+            }
+            else if (extension == ".pptx")
+            {
+                savePicker.DefaultFileExtension = ".pptx";
+                savePicker.SuggestedFileName = filename;
+                //Saves the file as pptx file.
+                savePicker.FileTypeChoices.Add("PPTX", new List<string>() { ".pptx" });
+            }
+            else if (extension == ".png")
+            {
+                savePicker.DefaultFileExtension = ".png";
+                savePicker.SuggestedFileName = filename;
+                //Saves the file as png file.
+                savePicker.FileTypeChoices.Add("PNG", new List<string>() { ".png" });
+            }
+
+            WinRT.Interop.InitializeWithWindow.Initialize(savePicker, windowHandle);
+            stFile = await savePicker.PickSaveFileAsync();
+        }
+        else
+        {
+            StorageFolder local = ApplicationData.Current.LocalFolder;
+            stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+        }
+        if (stFile != null)
+        {
+            using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
+            {
+                //Writes compressed data from memory to file.
+                using Stream outstream = zipStream.AsStreamForWrite();
+                outstream.SetLength(0);
+                //Saves the stream as file.
+                byte[] buffer = stream.ToArray();
+                outstream.Write(buffer, 0, buffer.Length);
+                outstream.Flush();
+            }
+            //Create message dialog box. 
+            MessageDialog msgDialog = new("Do you want to view the document?", "File has been created successfully");
+            UICommand yesCmd = new("Yes");
+            msgDialog.Commands.Add(yesCmd);
+            UICommand noCmd = new("No");
+            msgDialog.Commands.Add(noCmd);
+
+            WinRT.Interop.InitializeWithWindow.Initialize(msgDialog, windowHandle);
+
+            //Showing a dialog box. 
+            IUICommand cmd = await msgDialog.ShowAsync();
+            if (cmd.Label == yesCmd.Label)
+            {
+                //Launch the saved file. 
+                await Windows.System.Launcher.LaunchFileAsync(stFile);
+            }
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 You can download a complete working sample from [GitHub]().
 
 By executing the program, you will get the following output in the browser.
