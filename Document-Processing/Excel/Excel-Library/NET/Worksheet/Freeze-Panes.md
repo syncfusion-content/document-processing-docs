@@ -1,0 +1,289 @@
+---
+title: Freeze Panes | Syncfusion
+description: In this section, you can learn about how to use the freeze panes in an Excel worksheets using Syncfusion Essential XlsIO.
+platform: document-processing
+control: XlsIO
+documentation: UG
+---
+
+# Freeze and UnFreeze Panes
+
+## Freeze Panes
+
+Freezing panes allows you to keep a portion of the worksheet visible while you scroll through the rest of the sheet. The [FreezePanes](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FreezePanes) method of the [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) interface can be used to achieve this.
+
+You can set the first visible row and the first visible column in the non-frozen area through the [FirstVisibleRow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleRow) and [FirstVisibleColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleColumn) properties.
+
+N> **FirstVisibleColumn** and **FirstVisibleRow** indexes are "zero-based".
+
+### Freeze Rows
+
+The following code example illustrates how to freeze rows in the worksheet.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    FileStream inputStream = new FileStream(@"../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Applying freeze rows to the sheet by specifying a cell
+    worksheet.Range["A3"].FreezePanes();
+
+    //Set first visible row in the bottom pane
+    worksheet.FirstVisibleRow = 3;
+
+    //Saving the workbook as stream
+    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+    workbook.SaveAs(outputStream);
+
+    //Dispose streams
+    outputStream.Dispose();
+    inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open("SourceWorkbookTemplate.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Applying freeze rows to the sheet by specifying a cell
+    worksheet.Range["A3"].FreezePanes();
+
+    //Set first visible row in the bottom pane
+    worksheet.FirstVisibleRow = 3;
+
+    //Saving the workbook
+    workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+    Dim workbook As IWorkbook = application.Workbooks.Open("SourceWorkbookTemplate.xlsx")
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+    'Applying freeze rows to the sheet by specifying a cell
+    worksheet.Range("A3").FreezePanes()
+
+    'Set first visible row in the bottom pane
+    worksheet.FirstVisibleRow = 3
+
+    'Saving the workbook
+    workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}   
+
+A complete working example to freeze rows in C# is present on [this GitHub page]().
+
+### Freeze Columns
+
+The following code example illustrates how to freeze columns in the worksheet.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    FileStream inputStream = new FileStream(@"../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Applying freeze columns to the sheet by specifying a cell
+    worksheet.Range["C1"].FreezePanes();
+
+    //Set first visible column in the right pane
+    worksheet.FirstVisibleColumn = 4;
+
+    //Saving the workbook as stream
+    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+    workbook.SaveAs(outputStream);
+
+    //Dispose streams
+    outputStream.Dispose();
+    inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Applying freeze columns to the sheet by specifying a cell
+    worksheet.Range["C1"].FreezePanes();
+
+    //Set first visible column in the right pane
+    worksheet.FirstVisibleColumn = 4;
+
+    //Saving the workbook
+    workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+    'Applying freeze columns to the sheet by specifying a cell
+    worksheet.Range("C1").FreezePanes()
+
+    'Set first visible column in the right pane
+    worksheet.FirstVisibleColumn = 4
+
+    'Saving the workbook
+    workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}   
+
+A complete working example to freeze columns in C# is present on [this GitHub page]().
+
+## Unfreeze Panes
+
+Unfreezing panes allows you to remove any previously frozen sections in an Excel worksheet using the [RemovePanes](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method of the [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) interface.
+
+The following code example illustrates how to unfreeze panes in the worksheet.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Unfreeze panes in the worksheet
+    worksheet.RemovePanes();
+
+    //Saving the workbook as stream
+    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+    workbook.SaveAs(outputStream);
+
+    //Dispose streams
+    outputStream.Dispose();
+    inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Unfreeze panes in the worksheet
+    worksheet.RemovePanes();
+
+    //Saving the workbook
+    workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+    'Unfreeze panes in the worksheet
+    worksheet.RemovePanes()
+
+    //Saving the workbook
+    workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to unfreeze panes in C# is present on [this GitHub page]().
+
+## Split Panes 
+
+Split panes allow you to divide a worksheet into separate sections, or panes, which can be scrolled independently.
+
+The following code example illustrates how to split the window through the [HorizontalSplit](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HorizontalSplit) and [VerticalSplit](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VerticalSplit) properties.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet sheet = workbook.Worksheets[0];
+
+  //split panes
+  sheet.FirstVisibleColumn = 5;
+  sheet.FirstVisibleRow = 11;
+  sheet.VerticalSplit = 1100;
+  sheet.HorizontalSplit = 1000;
+  sheet.ActivePane = 1;
+
+  //Saving the workbook as stream
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(stream);
+  stream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet sheet = workbook.Worksheets[0];
+
+  //split panes
+  sheet.FirstVisibleColumn = 5;
+  sheet.FirstVisibleRow = 11;
+  sheet.VerticalSplit = 1100;
+  sheet.HorizontalSplit = 1000;
+  sheet.ActivePane = 1;
+
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+  Dim sheet As IWorksheet = workbook.Worksheets(0)
+
+  'Split Panes
+  sheet.FirstVisibleColumn = 5
+  sheet.FirstVisibleRow = 11
+  sheet.VerticalSplit = 1100
+  sheet.HorizontalSplit = 1000
+  sheet.ActivePane = 1
+
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}   
+
+A complete working example to split panes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Split%20Panes).
