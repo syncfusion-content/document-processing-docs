@@ -2057,6 +2057,8 @@ document.Close()
 
 ![Edit equation using LaTeX](WorkingwithMathematicalEquation_images/ModifyLaTeXEquation.png)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mathematical-Equation/LaTeX-equations/Modify-equation-using-LaTeX).
+
 ## Online Demo
 
 * Explore how to create a Word document with mathematical equations using LaTeX and the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/latex#/material3).
