@@ -617,7 +617,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Measure-tilting-space-in-PDF/.NET).
 
 ## Embedding fonts and working with Unicode text
 
