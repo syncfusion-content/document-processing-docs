@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Authentication Configuration
 
-The document processing engine uses JSON Web Token (JWT) format for authentication. By default, this authentication is disabled. You can enable it using the following environment variables:
+The document processing engine uses [JSON Web Token](https://jwt.io/) (JWT) format for authentication. By default, this authentication is disabled. You can enable it using the following environment variables:
 
 ```
 environment:

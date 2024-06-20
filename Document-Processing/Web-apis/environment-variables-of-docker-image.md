@@ -19,76 +19,65 @@ You may want to adjust certain settings of the Syncfusion Document Processing AP
 </thead>
 <tbody>  
 <tr>
-<td>
-SYNCFUSION_LICENSE_KEY<br/><br/></td><td>
-Required<br/><br/></td><td>
-To apply license key of the product.To generate a valid license key, refer to this link https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key?utm_source=docker&utm_medium=listing&utm_campaign=javascript-word-processor-docker<br/><br/></td></tr>
+<td>SYNCFUSION_LICENSE_KEY<br/><br/></td>
+<td>Required<br/><br/></td>
+<td>To apply license key of the product. To generate a valid license key, refer to this <a href="https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key?utm_source=docker&utm_medium=listing&utm_campaign=javascript-word-processor-docker">link</a>.<br/><br/></td>
+</tr>
 <tr>
+<td>ASPNETCORE_HTTP_PORTS<br/><br/></td>
+<td>Required<br/><br/></td>
+<td>This option determines the port where document processing engine listens for traffic.<br/><br/></td>
+</tr>
 <tr>
-<td>
-ASPNETCORE_HTTP_PORTS<br/><br/></td><td>
-Required<br/><br/></td><td>
-This option determines the port where document processing engine listens for traffic.<br/><br/></td></tr>
+<td>PGHOST<br/><br/></td>
+<td>Required<br/><br/></td>
+<td>Postgresql host address.<br/><br/></td>
+</tr>
 <tr>
+<td>PGUSER<br/><br/></td>
+<td>Required<br/><br/></td>
+<td>Postgresql user name.<br/><br/></td>
+</tr>
 <tr>
-<td>
-PGHOST<br/><br/></td><td>
-Required<br/><br/></td><td>
-Postgresql host address.<br/><br/></td></tr>
+<td>PGPASSWORD<br/><br/></td>
+<td>Required<br/><br/></td>
+<td>Postgresql password.<br/><br/></td>
+</tr>
 <tr>
+<td>PGDATABASE<br/><br/></td>
+<td>Required<br/><br/></td>
+<td>Postgresql database name.<br/><br/></td>
+</tr>
 <tr>
-<td>
-PGUSER<br/><br/></td><td>
-Required<br/><br/></td><td>
-Postgresql use name.<br/><br/></td></tr>
+<td>PGPORT<br/><br/></td>
+<td>Required<br/><br/></td>
+<td>Postgresql port address.<br/><br/></td>
+</tr>
 <tr>
+<td>WORKER_POOL_SIZE<br/><br/></td>
+<td>Optional<br/><br/></td>
+<td>This setting determines the number of concurrent processes initiated for managing document processing tasks. Default value is 3.<br/><br/></td>
+</tr>
 <tr>
-<td>
-PGPASSWORD<br/><br/></td><td>
-Required<br/><br/></td><td>
-Postgresql password.<br/><br/></td></tr>
+<td>ENABLE_JWT_SECURITY<br/><br/></td>
+<td>Optional<br/><br/></td>
+<td>Enable the JWT authentication. Default value is "false".<br/><br/></td>
+</tr>
 <tr>
+<td>JWT_PUBLIC_KEY<br/><br/></td>
+<td>Optional<br/><br/></td>
+<td>This is the public key used to verify the JSON Web Token (JWT) payload signature. Ensure that this public key corresponds to the private key used to generate JWTs in your app.<br/><br/></td>
+</tr>
 <tr>
-<td>
-PGDATABASE<br/><br/></td><td>
-Required<br/><br/></td><td>
-Postgresql database name.<br/><br/></td></tr>
+<td>ENABLE_DELETE_RESOURCE<br/><br/></td>
+<td>Optional<br/><br/></td>
+<td>This enables deletion of job details and both input and generated files. By default, "true".<br/><br/></td>
+</tr>
 <tr>
-<tr>
-<td>
-PGPORT<br/><br/></td><td>
-Required<br/><br/></td><td>
-Postgresql port address.<br/><br/></td></tr>
-<tr>
-<tr>
-<td>
-WORKER_POOL_SIZE<br/><br/></td><td>
-Optional<br/><br/></td><td>
-This setting determines the number of concurrent processes initiated for managing document processing tasks. Default value is 3.<br/><br/></td></tr>
-<tr>
-<tr>
-<td>
-ENABLE_JWT_SECURITY<br/><br/></td><td>
-Optional<br/><br/></td><td>
-Enable the JWT authentication, Default value is "false".<br/><br/></td></tr>
-<tr>
-<tr>
-<td>
-JWT_PUBLIC_KEY<br/><br/></td><td>
-Optional<br/><br/></td><td>
-This is the public key used to verify the JSON Web Token (JWT) payload signature. Ensure that this public key corresponds to the private key used to generate JWTs in your app.<br/><br/></td></tr>
-<tr>
-<tr>
-<td>
-ENABLE_DELETE_RESOURCE<br/><br/></td><td>
-Optional<br/><br/></td><td>
-This enables to delete job details and both input and generated files. by default, "true".<br/><br/></td></tr>
-<tr>
-<tr>
-<td>
-RESOURCE_EXPIRATION_TIME <br/><br/></td><td>
-Optional<br/><br/></td><td>
-The expiration time in minutes is used to delete resources such as job details and other input and generated files after ethe expiration time, this setting is used only if  ENABLE_DELETE_RESOURCE enabled. by default, value is "30" minutes.<br/><br/></td></tr>
+<td>RESOURCE_EXPIRATION_TIME <br/><br/></td>
+<td>Optional<br/><br/></td>
+<td>The expiration time in minutes is used to delete resources such as job details and other input and generated files after the expiration time. This setting is used only if ENABLE_DELETE_RESOURCE is enabled. By default, the value is "30" minutes.<br/><br/></td>
+</tr>
 </tbody>
 </table>
 

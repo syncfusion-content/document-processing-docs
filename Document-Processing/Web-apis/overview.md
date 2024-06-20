@@ -31,7 +31,7 @@ In today's fast-paced digital world, businesses and developers require efficient
 
 **4. Cost-Effective:** By leveraging containerization, organizations can optimize resource usage and reduce costs associated with traditional virtual machines or dedicated servers.
 
-## Benefits
+## Use cases
 
 - **Document Conversion:** Convert office documents Word, Excel, PowerPoint to PDF and HTML to PDF.
 

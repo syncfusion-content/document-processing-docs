@@ -31,9 +31,10 @@ The following software requirements are necessary to run document processing API
 ## Steps to configure and run docker container
 
 Step1: Create a docker-compose.yml file with the following configuration, to customize the configuration refer the below link 
+
 [Environment variables of docker image.loop](https://syncfusion.sharepoint.com/:fl:/g/contentstorage/CSP_34e3bf40-7d33-43f5-824e-7d613a8bfc28/ERSLoykFXbxHjEX5U7xbYgABJ0oxej5yrCIEHLta4Kp8Vg?e=3350sz&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF8zNGUzYmY0MC03ZDMzLTQzZjUtODI0ZS03ZDYxM2E4YmZjMjgmZD1iJTIxUUxfak5ETjk5VU9DVG4xaE9vdjhLSmtSNUNuckgxQkZrYU9IN3pwQ3lpQjF3bjNmaFNJelFKSVU4c1QwRndJVCZmPTAxUVFYQk1MQVVST1JTU0JLNVhSRFlZUlBaS082RldZUUEmYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lciZ4PSU3QiUyMnclMjIlM0ElMjJUMFJUVUh4emVXNWpablZ6YVc5dUxuTm9ZWEpsY0c5cGJuUXVZMjl0ZkdJaFVVeGZhazVFVGprNVZVOURWRzR4YUU5dmRqaExTbXRTTlVOdWNrZ3hRa1pyWVU5SU4zcHdRM2xwUWpGM2JqTm1hRk5KZWxGS1NWVTRjMVF3Um5kSlZId3dNVkZSV0VKTlRFZzNVVUpRVEZFMFIxQTNRa0ZaVUV4U1JVRlFUbEpRTWpKUSUyMiUyQyUyMmklMjIlM0ElMjIyMThlOWMxMi02ZTYwLTRkYWUtODA0Mi1jNWFlYjdiZGJmZjIlMjIlN0Q%3D)
 
-N> The Document Processing API is part of Syncfusion's Essential Studio and requires a valid license key for use in a production environment. Replace SYNCFUSION_LICENSE_KEY with your valid license key in the docker-compose.yml file. To generate a valid license key, refer to this https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key?utm_source=docker&utm_medium=listing&utm_campaign=javascript-word-processor-docker.  
+N> The Document Processing API is part of Syncfusion's Essential Studio and requires a valid license key for use in a production environment. Replace SYNCFUSION_LICENSE_KEY with your valid license key in the docker-compose.yml file. To generate a valid license key, refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key?utm_source=docker&utm_medium=listing&utm_campaign=javascript-word-processor-docker).
 
 If the license key is not applied, a watermark will be added to the generated PDF documents. The license key is version specific. If you are upgrading the Docker image, you need to update the license key to match the new version.
 
