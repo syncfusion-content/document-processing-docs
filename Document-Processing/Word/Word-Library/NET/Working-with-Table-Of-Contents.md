@@ -715,6 +715,363 @@ End Using
 
 {% endtabs %}
 
+## Removing table of contents
+
+The following code example shows how to remove table of contents (TOC) in Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (WordDocument document = new WordDocument())
+{
+    //Opens the Word template document.
+    Stream docStream = File.OpenRead(Path.GetFullPath(@"../../../Data/TOC.docx"));
+    document.Open(docStream, FormatType.Docx);
+    docStream.Dispose();
+    //Removes the TOC field.
+    TableOfContent toc = document.Sections[0].Body.Paragraphs[2].Items[0] as TableOfContent;
+    RemoveTableOfContents(toc);
+    //Saves the file in the given path
+    docStream = File.Create(Path.GetFullPath(@"../../../Sample.docx"));
+    document.Save(docStream, FormatType.Docx);
+    docStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (WordDocument document = new WordDocument())
+{
+    //Opens the Word template document.
+    document.Open("../../TOC.docx", FormatType.Docx);
+    //Removes the TOC field.
+    TableOfContent toc = document.Sections[0].Body.Paragraphs[2].Items[0] as TableOfContent;
+    RemoveTableOfContents(toc);
+    //Saves the file in the given path
+    document.Save("Sample.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using document As WordDocument = New WordDocument
+    document.Open("../../TOC.docx", FormatType.Docx)
+    Dim toc As TableOfContent = CType(document.Sections(0).Body.Paragraphs(2).Items(0), TableOfContent)
+    RemoveTableOfContents(toc)
+    'Saves the file in the given path
+    document.Save("Sample.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% highlight c# tabtitle="UWP" %}
+//DocIO supports Table of contents in WPF, Windows Forms platforms alone
+{% endhighlight %}
+
+{% endtabs %}
+
+The helper methods helps for removing table of contents (TOC) in Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Removes the table of contents from Word document.
+static void RemoveTableOfContents(TableOfContent toc)
+{
+    //Finds the last TOC item.
+    Entity lastItem = FindLastTOCItem(toc);
+
+    //TOC field end mark wasn't exist.
+    if (lastItem == null)
+        return;
+
+    //Inserts the bookmark start before the TOC instance.
+    BookmarkStart bkmkStart = new BookmarkStart(toc.Document, "tableOfContent");
+    toc.OwnerParagraph.Items.Insert(toc.OwnerParagraph.Items.IndexOf(toc), bkmkStart);
+
+    //Inserts the bookmark end to next of TOC last item.
+    BookmarkEnd bkmkEnd = new BookmarkEnd(toc.Document, "tableOfContent");
+    WParagraph paragraph = lastItem.Owner as WParagraph;
+    paragraph.Items.Insert(paragraph.Items.IndexOf(lastItem) + 1, bkmkEnd);
+
+    //Delete all the items from bookmark start to end (TOC items) using Bookmark Navigator.
+    DeleteBookmarkContents(bkmkEnd.Name, toc.Document);
+}
+// Finds the last TOC item.
+static Entity FindLastTOCItem(TableOfContent toc)
+{
+    int tocIndex = toc.OwnerParagraph.Items.IndexOf(toc);
+    //TOC may contains nested fields and each fields has its owner field end mark 
+    //so to identify the TOC Field end mark (WFieldMark instance) used the stack.
+    Stack<Entity> fieldStack = new Stack<Entity>();
+    fieldStack.Push(toc);
+
+    //Finds whether TOC end item is exist in same paragraph.
+    for (int i = tocIndex + 1; i < toc.OwnerParagraph.Items.Count; i++)
+    {
+        Entity item = toc.OwnerParagraph.Items[i];
+
+        if (item is WField)
+            fieldStack.Push(item);
+        else if (item is WFieldMark && (item as WFieldMark).Type == FieldMarkType.FieldEnd)
+        {
+            if (fieldStack.Count == 1)
+            {
+                fieldStack.Clear();
+                return item;
+            }
+            else
+                fieldStack.Pop();
+        }
+    }
+    return FindLastItemInTextBody(toc, fieldStack);
+}
+// Finds the last TOC item from consequence text body items.
+static Entity FindLastItemInTextBody(TableOfContent toc, Stack<Entity> fieldStack)
+{
+    WTextBody tBody = toc.OwnerParagraph.OwnerTextBody;
+
+    //Finds whether TOC end item is exist in text body items.
+    for (int i = tBody.ChildEntities.IndexOf(toc.OwnerParagraph) + 1; i < tBody.ChildEntities.Count; i++)
+    {
+        WParagraph paragraph = null;
+        if (tBody.ChildEntities[i] is WParagraph)
+            paragraph = tBody.ChildEntities[i] as WParagraph;
+        else
+            continue;
+
+        foreach (Entity item in paragraph.Items)
+        {
+            if (item is WField)
+                fieldStack.Push(item);
+            else if (item is WFieldMark && (item as WFieldMark).Type == FieldMarkType.FieldEnd)
+            {
+                if (fieldStack.Count == 1)
+                {
+                    fieldStack.Clear();
+                    return item;
+                }
+                else
+                    fieldStack.Pop();
+            }
+        }
+    }
+    return null;
+}
+// Delete the bookmark items.
+static void DeleteBookmarkContents(string bkmkName, WordDocument document)
+{
+    //Creates the bookmark navigator instance to access the bookmark
+    BookmarksNavigator navigator = new BookmarksNavigator(document);
+    //Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
+    navigator.MoveToBookmark(bkmkName);
+    //Deletes the bookmark content.
+    navigator.DeleteBookmarkContent(false);
+    //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+    Bookmark bookmark = document.Bookmarks.FindByName(bkmkName);
+    //Removes the bookmark named "tableOfContent" from Word document.
+    document.Bookmarks.Remove(bookmark);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+#region Helper methods
+// Removes the table of contents from Word document.
+static void RemoveTableOfContents(TableOfContent toc)
+{
+    //Finds the last TOC item.
+    Entity lastItem = FindLastTOCItem(toc);
+
+    //TOC field end mark wasn't exist.
+    if (lastItem == null)
+        return;
+
+    //Inserts the bookmark start before the TOC instance.
+    BookmarkStart bkmkStart = new BookmarkStart(toc.Document, "tableOfContent");
+    toc.OwnerParagraph.Items.Insert(toc.OwnerParagraph.Items.IndexOf(toc), bkmkStart);
+
+    //Inserts the bookmark end to next of TOC last item.
+    BookmarkEnd bkmkEnd = new BookmarkEnd(toc.Document, "tableOfContent");
+    WParagraph paragraph = lastItem.Owner as WParagraph;
+    paragraph.Items.Insert(paragraph.Items.IndexOf(lastItem) + 1, bkmkEnd);
+
+    //Delete all the items from bookmark start to end (TOC items) using Bookmark Navigator.
+    DeleteBookmarkContents(bkmkEnd.Name, toc.Document);
+}
+// Finds the last TOC item.
+static Entity FindLastTOCItem(TableOfContent toc)
+{
+    int tocIndex = toc.OwnerParagraph.Items.IndexOf(toc);
+    //TOC may contains nested fields and each fields has its owner field end mark 
+    //so to identify the TOC Field end mark (WFieldMark instance) used the stack.
+    Stack<Entity> fieldStack = new Stack<Entity>();
+    fieldStack.Push(toc);
+
+    //Finds whether TOC end item is exist in same paragraph.
+    for (int i = tocIndex + 1; i < toc.OwnerParagraph.Items.Count; i++)
+    {
+        Entity item = toc.OwnerParagraph.Items[i];
+
+        if (item is WField)
+            fieldStack.Push(item);
+        else if (item is WFieldMark && (item as WFieldMark).Type == FieldMarkType.FieldEnd)
+        {
+            if (fieldStack.Count == 1)
+            {
+                fieldStack.Clear();
+                return item;
+            }
+            else
+                fieldStack.Pop();
+        }
+    }
+    return FindLastItemInTextBody(toc, fieldStack);
+}
+// Finds the last TOC item from consequence text body items.
+static Entity FindLastItemInTextBody(TableOfContent toc, Stack<Entity> fieldStack)
+{
+    WTextBody tBody = toc.OwnerParagraph.OwnerTextBody;
+
+    //Finds whether TOC end item is exist in text body items.
+    for (int i = tBody.ChildEntities.IndexOf(toc.OwnerParagraph) + 1; i < tBody.ChildEntities.Count; i++)
+    {
+        WParagraph paragraph = null;
+        if (tBody.ChildEntities[i] is WParagraph)
+            paragraph = tBody.ChildEntities[i] as WParagraph;
+        else
+            continue;
+
+        foreach (Entity item in paragraph.Items)
+        {
+            if (item is WField)
+                fieldStack.Push(item);
+            else if (item is WFieldMark && (item as WFieldMark).Type == FieldMarkType.FieldEnd)
+            {
+                if (fieldStack.Count == 1)
+                {
+                    fieldStack.Clear();
+                    return item;
+                }
+                else
+                    fieldStack.Pop();
+            }
+        }
+    }
+    return null;
+}
+// Delete the bookmark items.
+static void DeleteBookmarkContents(string bkmkName, WordDocument document)
+{
+    //Creates the bookmark navigator instance to access the bookmark
+    BookmarksNavigator navigator = new BookmarksNavigator(document);
+    //Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
+    navigator.MoveToBookmark(bkmkName);
+    //Deletes the bookmark content.
+    navigator.DeleteBookmarkContent(false);
+    //Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+    Bookmark bookmark = document.Bookmarks.FindByName(bkmkName);
+    //Removes the bookmark named "tableOfContent" from Word document.
+    document.Bookmarks.Remove(bookmark);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Removes the table of contents from Word document.
+Private Sub RemoveTableOfContents(ByVal toc As TableOfContent)
+    'Finds the last TOC item.
+    Dim lastItem As Entity = FindLastTOCItem(toc)
+    'TOC field end mark wasn't exist.
+    If (lastItem Is Nothing) Then
+        Return
+    End If
+
+    'Inserts the bookmark start before the TOC instance.
+    Dim bkmkStart As BookmarkStart = New BookmarkStart(toc.Document, "tableOfContent")
+    toc.OwnerParagraph.Items.Insert(toc.OwnerParagraph.Items.IndexOf(toc), bkmkStart)
+    'Inserts the bookmark end to next of TOC last item.
+    Dim bkmkEnd As BookmarkEnd = New BookmarkEnd(toc.Document, "tableOfContent")
+    Dim paragraph As WParagraph = CType(lastItem.Owner, WParagraph)
+    paragraph.Items.Insert((paragraph.Items.IndexOf(lastItem) + 1), bkmkEnd)
+    'Delete all the items from bookmark start to end (TOC items) using Bookmark Navigator.
+    DeleteBookmarkContents(bkmkEnd.Name, toc.Document)
+End Sub
+
+'Finds the last TOC item.
+Private Function FindLastTOCItem(ByVal toc As TableOfContent) As Entity
+    Dim tocIndex As Integer = toc.OwnerParagraph.Items.IndexOf(toc)
+    'TOC may contains nested fields and each fields has its owner field end mark 
+    'so to identify the TOC Field end mark (WFieldMark instance) used the stack.
+    Dim fieldStack As Stack(Of Entity) = New Stack(Of Entity)
+    fieldStack.Push(toc)
+    'Finds whether TOC end item is exist in same paragraph.
+    Dim i As Integer = (tocIndex + 1)
+    Do While (i < toc.OwnerParagraph.Items.Count)
+        Dim item As Entity = toc.OwnerParagraph.Items(i)
+        If (TypeOf item Is WField) Then
+            fieldStack.Push(item)
+        ElseIf (TypeOf item Is WFieldMark AndAlso (CType(item, WFieldMark).Type = FieldMarkType.FieldEnd)) Then
+            If (fieldStack.Count = 1) Then
+                fieldStack.Clear()
+                Return item
+            Else
+                fieldStack.Pop()
+            End If
+
+        End If
+
+        i = (i + 1)
+    Loop
+
+    Return FindLastItemInTextBody(toc, fieldStack)
+End Function
+
+'Finds the last TOC item from consequence text body items.
+Private Function FindLastItemInTextBody(ByVal toc As TableOfContent, ByVal fieldStack As Stack(Of Entity)) As Entity
+    Dim tBody As WTextBody = toc.OwnerParagraph.OwnerTextBody
+    'Finds whether TOC end item is exist in text body items.
+    Dim i As Integer = (tBody.ChildEntities.IndexOf(toc.OwnerParagraph) + 1)
+    Do While (i < tBody.ChildEntities.Count)
+        Dim paragraph As WParagraph = Nothing
+        If (TypeOf tBody.ChildEntities(i) Is WParagraph) Then
+            paragraph = CType(tBody.ChildEntities(i), WParagraph)
+        Else
+            'TODO: Warning!!! continue Else
+        End If
+
+        For Each item As Entity In paragraph.Items
+            If (TypeOf item Is WField) Then
+                fieldStack.Push(item)
+            ElseIf (TypeOf item Is WFieldMark AndAlso (CType(item, WFieldMark).Type = FieldMarkType.FieldEnd)) Then
+                If (fieldStack.Count = 1) Then
+                    fieldStack.Clear()
+                    Return item
+                Else
+                    fieldStack.Pop()
+                End If
+
+            End If
+
+        Next
+        i = (i + 1)
+    Loop
+
+    Return Nothing
+End Function
+
+'Delete the bookmark items.
+Private Sub DeleteBookmarkContents(ByVal bkmkName As String, ByVal document As WordDocument)
+    'Creates the bookmark navigator instance to access the bookmark
+    Dim navigator As BookmarksNavigator = New BookmarksNavigator(document)
+    'Moves the virtual cursor to the location before the end of the bookmark "tableOfContent".
+    navigator.MoveToBookmark(bkmkName)
+    'Deletes the bookmark content.
+    navigator.DeleteBookmarkContent(False)
+    'Gets the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+    Dim bookmark As Bookmark = document.Bookmarks.FindByName(bkmkName)
+    'Removes the bookmark named "tableOfContent" from Word document.
+    document.Bookmarks.Remove(bookmark)
+End Sub
+{% endhighlight %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Remove-table-of-contents).
+
 ## Table of Figures 
 
 You can create captions for images, tables, charts, or other items using the SEQ field. Now, create a Table of Figures, tables, charts, or other items that are numbered by a SEQ (Sequence) field using the SEQIdentifier in the TableOfFiguresLabel API.
