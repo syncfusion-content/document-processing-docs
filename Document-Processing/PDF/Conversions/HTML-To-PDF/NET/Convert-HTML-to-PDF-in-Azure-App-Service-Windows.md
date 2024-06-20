@@ -93,10 +93,10 @@ Step 9: Open the created web app service in the Azure portal. Go to Settings -> 
 ![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
 
 Step 10: After completing the publish profile setup, click the publish.
-
 Step 11: Publish will be succeeded and the published webpage will open in the browser. Click ExportToPDF button to perform the conversion.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure%20App%20Service-Windows-CefSharp).
+
 
 ## Steps to convert HTML to PDF file in Azure App Service on Windows using legacy WebKit
 
