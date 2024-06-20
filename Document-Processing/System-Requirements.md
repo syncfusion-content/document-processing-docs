@@ -36,9 +36,6 @@ Syncfusion Document Processing libraries are supported on any of the following o
 
 In order to develop applications with the Syncfusion Document Processing libraries, you need to install any of the Visual Studio versions.
 
-* Microsoft Visual Studio 2010
-* Microsoft Visual Studio 2012
-* Microsoft Visual Studio 2013
 * Microsoft Visual Studio 2015
 * Microsoft Visual Studio 2017
 * Microsoft Visual Studio 2019
