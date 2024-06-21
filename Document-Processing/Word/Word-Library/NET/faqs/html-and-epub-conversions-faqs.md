@@ -12,7 +12,7 @@ The frequently asked questions about HTML and EPUB conversions using DocIO are l
 ## How to set title when converting Word document to EPUB?
 
 You can set title for EPUB file by setting the required title (string) to the built-in property "Title". If the built-in property "Title" doesn't have value, then no title will be applied for EPUB file.
-![Create Title for EPUB file](FAQ_images/Title_EPUB_img.png)
+![Create Title for EPUB file](../FAQ_images/Title_EPUB_img.png)
 
 The following code example illustrates how to set title for EPUB when converting a Word document to EPUB using DocIO.
 
