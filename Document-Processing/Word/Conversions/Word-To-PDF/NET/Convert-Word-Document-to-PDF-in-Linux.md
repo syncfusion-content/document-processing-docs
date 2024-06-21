@@ -120,3 +120,9 @@ By executing the program, you will get the **PDF** as follows. The output will b
 Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/Word/WordToPDF#/material3) in ASP.NET Core. 
+
+## Frequently Asked Questions
+
+* [How to perform Word to PDF in Linux prior to v18.4 release?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)
+* [What are the NuGet packages to be installed to perform Word to PDF conversion in Linux OS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)
+* [How to resolve LibSkiaSharp not found exception?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-resolve-libskiasharp-not-found-exception)
