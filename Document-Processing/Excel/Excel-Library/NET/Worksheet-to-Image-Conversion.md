@@ -12,8 +12,8 @@ documentation: UG
 
 Refer to the following links for assemblies/nuget packages required based on platforms to convert the worksheet to image.
 
-* [Assemblies Information](https://help.syncfusion.com/file-formats/xlsio/assemblies-required#converting-excel-worksheet-to-image) 
-* [NuGet Information](https://help.syncfusion.com/file-formats/xlsio/nuget-packages-required#converting-excel-worksheet-to-image)
+* [Assemblies Information](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required#converting-excel-worksheet-to-image)
+* [NuGet Information](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#converting-excel-worksheet-to-image)
 
 N> Worksheet To Image conversion can be performed by referring [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package in UWP platform. 
 
@@ -150,7 +150,7 @@ End Using
 A complete working example to convert Excel worksheet to image in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20to%20Image/Worksheet%20to%20Image). 
 
 N> 1. Instance of [XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html) class is mandatory to convert the worksheet to image using .NET Standard assemblies.
-N> 2. In .NET Standard, the Image format and quality can be specified using the **ExportImageOptions** class. By default the [ImageFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Drawing.ImageFormat.html) is set to PNG and [ScalingMode](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ScalingMode.html) is set to Best.
+N> 2. In .NET Standard, the Image format and quality can be specified using the **ExportImageOptions** class. By default the [ImageFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.ImageFormat.html) is set to PNG and [ScalingMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ScalingMode.html) is set to Best.
 N> 3. Worksheet to image conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
 
 **Non****-****Supported** **Features****:**

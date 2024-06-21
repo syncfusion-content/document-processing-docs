@@ -122,7 +122,7 @@ By executing the program, you will get the Excel file as below.
 
 ### Edit Scenario
 
-An existing scenario can be edited or modified through [ModifyScenario](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_ModifyScenario_Syncfusion_XlsIO_IRange_System_Collections_Generic_List_System_Object__) method of [IScenario](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html).
+An existing scenario can be edited or modified through [ModifyScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_ModifyScenario_Syncfusion_XlsIO_IRange_System_Collections_Generic_List_System_Object__) method of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -191,7 +191,7 @@ End Using
 
 ### Delete Scenario
 
-A scenario can be deleted from the Excel worksheet through [Delete](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Delete) method of [IScenario](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html).
+A scenario can be deleted from the Excel worksheet through [Delete](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Delete) method of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -258,7 +258,7 @@ End Using
 
 ### Merge Scenario
 
-Scenarios in one Excel worksheet can be merged in to another, using [Merge](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenarios.html#Syncfusion_XlsIO_IScenarios_Merge_Syncfusion_XlsIO_IWorksheet_) method of [IScenarios](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenarios.html).
+Scenarios in one Excel worksheet can be merged in to another, using [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html#Syncfusion_XlsIO_IScenarios_Merge_Syncfusion_XlsIO_IWorksheet_) method of [IScenarios](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -318,7 +318,7 @@ End Using
 
 ### Create Summary
 
-[CreateSummary](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenarios.html#Syncfusion_XlsIO_IScenarios_CreateSummary_Syncfusion_XlsIO_IRange_) method of [IScenarios](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenarios.html) creates a new worksheet that contains a summary report for the scenarios on the specified worksheet.
+[CreateSummary](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html#Syncfusion_XlsIO_IScenarios_CreateSummary_Syncfusion_XlsIO_IRange_) method of [IScenarios](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenarios.html) creates a new worksheet that contains a summary report for the scenarios on the specified worksheet.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -430,7 +430,7 @@ End Using
 
 ### Apply Scenario
 
-Update the scenario values in the worksheet and display it using the [Show](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Show) method.
+Update the scenario values in the worksheet and display it using the [Show](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Show) method.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -501,7 +501,7 @@ A complete working example to show scenario in C# is present on [this GitHub pag
 
 ### Set Name
 
-The name of the scenario can be defined using the [Name](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Name) property..
+The name of the scenario can be defined using the [Name](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Name) property..
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -566,7 +566,7 @@ End Using
 
 ### Hide Scenario
 
-The scenario can be hidden by enabling the [Hidden](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Hidden) property of [IScenario](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html).
+The scenario can be hidden by enabling the [Hidden](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Hidden) property of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -634,7 +634,7 @@ A complete working example to hide a scenario in C# is present on [this GitHub p
 
 ### Protect Scenario
 
-The scenario can be locked or unlocked through [Locked](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Locked) property of [IScenario](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html). A scenario is locked by default.
+The scenario can be locked or unlocked through [Locked](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Locked) property of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html). A scenario is locked by default.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -703,7 +703,7 @@ A complete working example to unprotect a scenario in C# is present on [this Git
 
 ### Add Comment
 
-The comment associated with that particular scenario can be generated using the [Comment](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Comment) property.
+The comment associated with that particular scenario can be generated using the [Comment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Comment) property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # WinRT 
 
-In order to use XlsIO in your WinRT application, please add the required assemblies in your WinRT application. Refer [Assemblies Required](/File-Formats/XlsIO/Assemblies-Required).
+In order to use XlsIO in your WinRT application, please add the required assemblies in your WinRT application. Refer [Assemblies Required](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required).
 
 ## Loading the document
 

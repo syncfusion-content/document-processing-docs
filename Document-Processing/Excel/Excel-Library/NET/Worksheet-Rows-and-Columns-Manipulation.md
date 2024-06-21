@@ -8,7 +8,7 @@ documentation: UG
 
 # Worksheet Rows and Columns Manipulation
 
-The Essential XlsIO provides rows and columns manipulation options equivalent to Excel such as insertion, deletion, hiding, adjusting dimensions, grouping, sub-totaling and more through [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) interface.
+The Essential XlsIO provides rows and columns manipulation options equivalent to Excel such as insertion, deletion, hiding, adjusting dimensions, grouping, sub-totaling and more through [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
 
 ## Insert Rows and Columns 
 
@@ -74,7 +74,7 @@ A complete working example to insert rows and columns in an Excel worksheet in C
 
 N> Row and Column index of Insert methods are "one based".
 
-To know more about insert rows and columns, refer to the [WorksheetImpl](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html) in API section.
+To know more about insert rows and columns, refer to the [WorksheetImpl](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html) in API section.
 
 ## Delete Rows and Columns 
 
@@ -138,7 +138,7 @@ End Using
 
 A complete working example to delete rows and columns in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Format%20rows%20and%20columns/Delete%20Rows%20and%20Columns).
 
-T>To extract values little faster or to delete a larger number of rows and columns, use Un-Safe code option of [IApplication](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html) interface as follows
+T>To extract values little faster or to delete a larger number of rows and columns, use Un-Safe code option of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) interface as follows
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -156,7 +156,7 @@ application.DataProviderType = ExcelDataProviderType.Unsafe
   
 ### Move Rows and Columns 
 
-In addition, cells can be deleted by shifting other cells in a row or column towards up/left by one step. This can be done by using the [Clear](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Clear) method as shown in the following code.
+In addition, cells can be deleted by shifting other cells in a row or column towards up/left by one step. This can be done by using the [Clear](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Clear) method as shown in the following code.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -221,7 +221,7 @@ N> Row/Column index of these methods are "one based".
 
 ## Show or Hide Rows and Columns 
 
-Visibility of rows and columns can be set by using the [ShowRow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRow_System_Int32_System_Boolean_) and [ShowColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowColumn_System_Int32_System_Boolean_) methods as shown as follows.
+Visibility of rows and columns can be set by using the [ShowRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRow_System_Int32_System_Boolean_) and [ShowColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowColumn_System_Int32_System_Boolean_) methods as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -280,7 +280,7 @@ A complete working example to hide rows and columns in an Excel worksheet in C# 
 
 ## Show or Hide Specific Range
 
-The Essential XlsIO allows to set visibility for a specific range through [ShowRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRange_Syncfusion_XlsIO_IRange___System_Boolean_). The following code snippet shows how to set the visibility of a range.
+The Essential XlsIO allows to set visibility for a specific range through [ShowRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRange_Syncfusion_XlsIO_IRange___System_Boolean_). The following code snippet shows how to set the visibility of a range.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -360,8 +360,8 @@ End Using
 
 A complete working example to hide specific range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Format%20rows%20and%20columns/Hide%20Range).
 
-N> Resetting column width manually or through AutoFit, for the columns hidden using [ShowColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowColumn_System_Int32_System_Boolean_)/[HideColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HideColumn_System_Int32_) methods will make the hidden columns visible.
-N> Resetting row height manually or through AutoFit,  for the rows hidden using [ShowRow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRow_System_Int32_System_Boolean_) /[HideRow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HideRow_System_Int32_) methods will make the hidden rows visible.
+N> Resetting column width manually or through AutoFit, for the columns hidden using [ShowColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowColumn_System_Int32_System_Boolean_)/[HideColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HideColumn_System_Int32_) methods will make the hidden columns visible.
+N> Resetting row height manually or through AutoFit,  for the rows hidden using [ShowRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRow_System_Int32_System_Boolean_) /[HideRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HideRow_System_Int32_) methods will make the hidden rows visible.
 
 ## Adjust Row Height and Column Width 
 
@@ -372,7 +372,7 @@ Rows and columns can be [resized](https://support.microsoft.com/en-us/office/cha
 
 ### Resize a specific row or column
 
-A single row or column can be resized by the [SetRowHeight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeight_System_Int32_System_Double_) and [SetColumnWidth](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetColumnWidth_System_Int32_System_Double_) methods of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html). Similarly, the height and width of a single row or column can be accessed using the [GetRowHeight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetRowHeight_System_Int32_) or [GetColumnWidth](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetColumnWidth_System_Int32_).
+A single row or column can be resized by the [SetRowHeight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeight_System_Int32_System_Double_) and [SetColumnWidth](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetColumnWidth_System_Int32_System_Double_) methods of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). Similarly, the height and width of a single row or column can be accessed using the [GetRowHeight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetRowHeight_System_Int32_) or [GetColumnWidth](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetColumnWidth_System_Int32_).
 
 The following code snippet shows how to resize a single row and column.
 
@@ -433,7 +433,7 @@ End Using
 
 ### Resize a range of rows or columns
 
-Multiple rows or columns can be resized and accessed by using the [RowHeight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_RowHeight) and [ColumnWidth](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ColumnWidth) properties of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html). The following code snippet shows how to resize multiple rows and columns.
+Multiple rows or columns can be resized and accessed by using the [RowHeight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_RowHeight) and [ColumnWidth](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ColumnWidth) properties of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). The following code snippet shows how to resize multiple rows and columns.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -493,7 +493,7 @@ End Using
 A complete working example to resize rows and columns in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Format%20rows%20and%20columns/Resize%20Rows%20and%20Columns).
 
 N> If a column width or a row height is 0, then the column or row is hidden.
-N> Column width and row height can also be set in pixels, by using the [SetColumnWidthInPixels](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetColumnWidthInPixels_System_Int32_System_Int32_) and [SetRowHeightInPixels](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeightInPixels_System_Int32_System_Double_) methods of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) respectively.
+N> Column width and row height can also be set in pixels, by using the [SetColumnWidthInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetColumnWidthInPixels_System_Int32_System_Int32_) and [SetRowHeightInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeightInPixels_System_Int32_System_Double_) methods of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) respectively.
 
 ## Auto-Fit Rows and Columns
 
@@ -683,10 +683,10 @@ End Using
 
 A complete working example to autofit rows and columns in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Format%20rows%20and%20columns/Autofit%20Rows%20and%20Columns).
 
-N> 1) If a Range is text wrapped, the [AutoFitColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_AutofitColumn_System_Int32_) method will not be applied on it.
+N> 1) If a Range is text wrapped, the [AutoFitColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_AutofitColumn_System_Int32_) method will not be applied on it.
 N> 2) If a Range is merged, the Auto-Fit methods will not be applied on it. Note that this is the behavior of Excel as well.
 N> 3) Auto fitting is a time consuming process so, it might cause performance issues when used excessively.
-N> 4) When using [AutoFitRows](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitRows) or [AutofitColumns](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitColumns), the hidden rows or columns in the range will be adjusted based on the cell content which makes the row height or column width increase from zero. So, the hidden rows or columns will be visible. This is the behavior of XlsIO.
+N> 4) When using [AutoFitRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitRows) or [AutofitColumns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitColumns), the hidden rows or columns in the range will be adjusted based on the cell content which makes the row height or column width increase from zero. So, the hidden rows or columns will be visible. This is the behavior of XlsIO.
 
 ## Group or Ungroup Rows and Columns 
 
@@ -775,7 +775,7 @@ A complete working example to ungroup rows and columns in an Excel worksheet in 
 
 ### Expand or Collapse Groups
 
-Groups can be expanded and collapsed using the [ExpandGroup](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ExpandGroup_Syncfusion_XlsIO_ExcelGroupBy_) and [CollapseGroup](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CollapseGroup_Syncfusion_XlsIO_ExcelGroupBy_) methods of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html), which is given in the following code snippet.
+Groups can be expanded and collapsed using the [ExpandGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ExpandGroup_Syncfusion_XlsIO_ExcelGroupBy_) and [CollapseGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CollapseGroup_Syncfusion_XlsIO_ExcelGroupBy_) methods of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html), which is given in the following code snippet.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -911,5 +911,4 @@ The screenshot of the output with SubTotal generated from the previous code.
 
 ![Subtotal applied to the range](Worksheet-Rows-and-Columns-Manipulation_images/Worksheet-Rows-and-Columns-Manipulation_img1.jpeg)
 
-N> Summary of a group can be shown above the rows and left of the column using the [IsSummaryRowBelow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) and [IsSummaryColumnRight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) properties of [IPageSetup](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html) interface. By default, these properties are set to TRUE.
-
+N> Summary of a group can be shown above the rows and left of the column using the [IsSummaryRowBelow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) and [IsSummaryColumnRight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) properties of [IPageSetup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html) interface. By default, these properties are set to TRUE.
