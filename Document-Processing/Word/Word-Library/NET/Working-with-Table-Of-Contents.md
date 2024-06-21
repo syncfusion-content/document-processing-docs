@@ -1070,6 +1070,8 @@ Private Sub DeleteBookmarkContents(ByVal bkmkName As String, ByVal document As W
 End Sub
 {% endhighlight %}
 
+{% endtabs %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Remove-table-of-contents).
 
 ## Table of Figures 
