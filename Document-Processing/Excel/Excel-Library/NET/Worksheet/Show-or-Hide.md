@@ -1,5 +1,5 @@
 ---
-title: Show or Hide | Syncfusion
+title: Show or Hide Options | Syncfusion
 description: In this section, you can learn how to use show or hide options in an Excel worksheets using Syncfusion Essential XlsIO.
 platform: document-processing
 control: XlsIO
