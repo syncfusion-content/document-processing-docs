@@ -16,7 +16,7 @@ The Syncfusion Word to image converter offers high versatility and seamless perf
 
 * Ability to [convert entire word document to images](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-the-entire-word-to-images).
 * Ability to [convert specific page of Word to image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-specific-page-of-word-to-image).
-* Ability to [convert specific range of pages in Word to an image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-a-specific-range-of-pages-in-word-to-an-image).
+* Ability to [convert specific range of pages in Word to images](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-a-specific-range-of-pages-in-word-to-images).
 * Ability to [convert a Word document to an image using custom image resolution](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#custom-image-resolution).
 * Set [fallback fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/fallback-fonts-word-to-image) for characters when glyphs are not available. 
 
