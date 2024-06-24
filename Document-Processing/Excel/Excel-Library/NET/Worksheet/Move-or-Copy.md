@@ -1,12 +1,12 @@
 ---
-title: Working with Excel Worksheet | Syncfusion
+title: Move or Copy Options | Syncfusion
 description: In this section, you can learn how to use the copy and move operation in an Excel using Syncfusion Essential XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Move and Copy
+# Move and Copy in Excel Document
 
 ## Copy
 
@@ -136,7 +136,7 @@ End Using
 
 A complete working example for copying Excel worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Copy%20Worksheet).
 
-Specific copy options can be chosen while copying a worksheet, which helps to achieve customized copying by ignoring certain formatting. For more information about copy options, please refer [ExcelWorksheetCopyFlags](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelWorksheetCopyFlags.html).
+Specific copy options can be chosen while copying a worksheet, which helps to achieve customized copying by ignoring certain formatting. For more information about copy options, please refer [ExcelWorksheetCopyFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelWorksheetCopyFlags.html).
 
 ### Copy Row
 
@@ -368,7 +368,7 @@ A complete working example for copying a cell range from one worksheet to anothe
 
 #### Copy Cell Range Options
 
-[ExcelCopyRangeOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) allows you to copy a cell range with specific options.
+[ExcelCopyRangeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) allows you to copy a cell range with specific options.
 
 The following code example illustrates how to copy a cell range with copy range options from one worksheet to another.
 

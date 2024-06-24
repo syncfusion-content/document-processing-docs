@@ -8,7 +8,7 @@ documentation: UG
 
 # Excel to CSV Conversion
 
-XlsIO supports converting Excel file to CSV file by saving the workbook using the [SaveAs](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SaveAs_System_IO_Stream_System_String_) method. When saving as CSV, users can specify various delimiters to structure the data appropriately. By default, Syncfusion XlsIO uses a comma (,) as the delimiter.
+XlsIO supports converting Excel file to CSV file by saving the workbook using the [SaveAs](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SaveAs_System_IO_Stream_System_String_) method. When saving as CSV, users can specify various delimiters to structure the data appropriately. By default, Syncfusion XlsIO uses a comma (,) as the delimiter.
 
 **Delimiters Used in CSV files**
 
@@ -80,7 +80,7 @@ A complete working example to convert an Excel file to CSV in C# is present on [
 
 ## Maximum Rows and Columns for CSV
 
-By default, XlsIO allows only 1048576 rows and 16256 columns while loading or saving a CSV document. This limit can be increased by modifying the [MaximumRowsForCsv](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumRowsForCsv) and [MaximumColumnsForCsv](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumColumnsForCsv) properties. 
+By default, XlsIO allows only 1048576 rows and 16256 columns while loading or saving a CSV document. This limit can be increased by modifying the [MaximumRowsForCsv](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumRowsForCsv) and [MaximumColumnsForCsv](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumColumnsForCsv) properties. 
 
 The following code example illustrates how to set the maximum rows and columns for saving as CSV files.
 

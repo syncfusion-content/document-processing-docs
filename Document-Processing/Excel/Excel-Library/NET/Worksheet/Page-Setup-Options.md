@@ -6,11 +6,11 @@ control: XlsIO
 documentation: UG
 ---
 
-# Page Setup Options
+# Page Setup Options in Excel Document
 
 ## Fit all rows on one page
 
-[FitToPagesTall](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) enables the functionality of fitting all rows on one printed page.
+[FitToPagesTall](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) enables the functionality of fitting all rows on one printed page.
 
 The following code example illustrates how to use FitToPagesTall.
 
@@ -96,7 +96,7 @@ A complete working example to fit all rows on one page in C# is present on [this
 
 ## Fit all columns on one page.
 
-[FitToPagesWide](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) enables the functionality of fitting all columns on one printed page.
+[FitToPagesWide](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) enables the functionality of fitting all columns on one printed page.
 
 The following code example illustrates how to use FitToPagesWide.
 
@@ -182,7 +182,7 @@ A complete working example to fit all columns on one page in C# is present on [t
 
 ## Fit the page content.
 
-[IsFitToPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) enables the functionality of fitting the page content before printing.
+[IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) enables the functionality of fitting the page content before printing.
 
 The following code example illustrates how to use IsFitToPage.
 
@@ -265,7 +265,7 @@ A complete working example to fit page content before printing in C# is present 
 
 ## Summary Column Right
 
-To enable the [IsSummaryColumnRight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) property, the page orientation must be Portrait, the [FitToPagesTall](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
+To enable the [IsSummaryColumnRight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) property, the page orientation must be Portrait, the [FitToPagesTall](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
 
 The following code snippet shows how to use IsSummaryColumnRight.
 
@@ -357,7 +357,7 @@ A complete working example to enable IsSummaryColumnRight in C# is present on [t
 
 ## Summary Row Below.
 
-To enable the [IsSummaryRowBelow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) property, the page orientation must be Portrait, the [FitToPagesWide](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
+To enable the [IsSummaryRowBelow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) property, the page orientation must be Portrait, the [FitToPagesWide](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
 
 The following code snippet shows how to use IsSummaryRowBelow.
 
@@ -450,7 +450,7 @@ A complete working example to enable IsSummaryRowBelow in C# is present on [this
 
 ## Print Area.
 
-The [PrintArea](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintArea) functionality allows you to set the range to be printed.
+The [PrintArea](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintArea) functionality allows you to set the range to be printed.
 
 The following code snippet shows how to use the PrintArea.
 
@@ -533,7 +533,7 @@ A complete working example to set the range to be printed in C# is present on [t
 
 ## Print Gridlines.
 
-The [PrintGridlines](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintGridlines) functionality allows you to set the gridlines to be printed.
+The [PrintGridlines](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintGridlines) functionality allows you to set the gridlines to be printed.
 
 The following code snippet shows how to use PrintGridlines.
 
@@ -616,7 +616,7 @@ A complete working example to set the gridlines to be printed in C# is present o
 
 ## Print Headings.
 
-The [PrintHeadings](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintHeadings) functionality allows you to set the row and column headings to be printed.
+The [PrintHeadings](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintHeadings) functionality allows you to set the row and column headings to be printed.
 
 The following code snippet shows how to use PrintHeadings.
 
@@ -699,7 +699,7 @@ A complete working example to set the row and column headings to be printed in C
 
 ## Print TitleColumns.
 
-The [PrintTitleColumns](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleColumns) functionality allows you to specify the columns containing cells that will be repeated on the left side of each printed page.
+The [PrintTitleColumns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleColumns) functionality allows you to specify the columns containing cells that will be repeated on the left side of each printed page.
 
 The following code snippet shows how to use PrintTitleColumns.
 
@@ -783,7 +783,7 @@ A complete working example to set the PrintTitleColumns in C# is present on [thi
 
 ## Print TitleRows.
 
-The [PrintTitleRows](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) functionality allows you to specify the rows containing cells that will be repeated on the top side of each printed page.
+The [PrintTitleRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) functionality allows you to specify the rows containing cells that will be repeated on the top side of each printed page.
 
 The following code snippet shows how to use PrintTitleRows.
 

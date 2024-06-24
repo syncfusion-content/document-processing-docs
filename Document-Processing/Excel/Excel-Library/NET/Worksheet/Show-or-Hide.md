@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Show or Hide
+# Show or Hide in Excel Document
 
 ## Show Row and Column
 
@@ -138,7 +138,7 @@ A complete working example to hide row and column in an Excel worksheet using C#
 
 ## Show or Hide Worksheet 
 
-The following code example illustrates how to hide the worksheets using [Visibility](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Visibility) property.
+The following code example illustrates how to hide the worksheets using [Visibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Visibility) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -199,7 +199,7 @@ A complete working example to hide an Excel worksheet in C# is present on [this 
 
 ## Show or Hide Grid Lines 
 
-The following code example illustrates how to hide the grid lines using [IsGridLinesVisible](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsGridLinesVisible) property.
+The following code example illustrates how to hide the grid lines using [IsGridLinesVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsGridLinesVisible) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -259,7 +259,7 @@ A complete working example to hide gridlines in an Excel worksheet in C# is pres
 
 ## Show or Hide Row and Column Headers 
 
-The following code example illustrates how to hide the row and column headings using the [IsRowColumnHeadersVisible](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsRowColumnHeadersVisible) property of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html).
+The following code example illustrates how to hide the row and column headings using the [IsRowColumnHeadersVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsRowColumnHeadersVisible) property of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html).
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -314,7 +314,7 @@ A complete working example to hide row and column headers in an Excel worksheet 
 
 ## Show or Hide Worksheet Tabs 
 
-The following code example illustrates how to hide the worksheet tabs using [DisplayWorkbookTabs](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_DisplayWorkbookTabs) property.
+The following code example illustrates how to hide the worksheet tabs using [DisplayWorkbookTabs](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_DisplayWorkbookTabs) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -380,7 +380,7 @@ A complete working example to hide Excel worksheet tab in C# is present on [this
 
 ## Zoom level
 
-The following code example illustrates how to set the zoom level by using [Zoom](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Zoom) property.
+The following code example illustrates how to set the zoom level by using [Zoom](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Zoom) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
