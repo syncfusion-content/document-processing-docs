@@ -725,16 +725,18 @@ The following code example shows how to remove table of contents (TOC) in Word d
 using (WordDocument document = new WordDocument())
 {
     //Opens the Word template document.
-    Stream docStream = File.OpenRead(Path.GetFullPath(@"../../../Data/TOC.docx"));
+    FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
     document.Open(docStream, FormatType.Docx);
     docStream.Dispose();
     //Removes the TOC field.
     TableOfContent toc = document.Sections[0].Body.Paragraphs[2].Items[0] as TableOfContent;
     RemoveTableOfContents(toc);
     //Saves the file in the given path
-    docStream = File.Create(Path.GetFullPath(@"../../../Sample.docx"));
-    document.Save(docStream, FormatType.Docx);
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
     docStream.Dispose();
+    //Closes the document
+    document.Close();
 }
 {% endhighlight %}
 
@@ -742,7 +744,7 @@ using (WordDocument document = new WordDocument())
 using (WordDocument document = new WordDocument())
 {
     //Opens the Word template document.
-    document.Open("../../TOC.docx", FormatType.Docx);
+    document.Open("Template.docx", FormatType.Docx);
     //Removes the TOC field.
     TableOfContent toc = document.Sections[0].Body.Paragraphs[2].Items[0] as TableOfContent;
     RemoveTableOfContents(toc);
@@ -753,7 +755,7 @@ using (WordDocument document = new WordDocument())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using document As WordDocument = New WordDocument
-    document.Open("../../TOC.docx", FormatType.Docx)
+    document.Open("Template.docx", FormatType.Docx)
     Dim toc As TableOfContent = CType(document.Sections(0).Body.Paragraphs(2).Items(0), TableOfContent)
     RemoveTableOfContents(toc)
     'Saves the file in the given path
@@ -762,7 +764,7 @@ End Using
 {% endhighlight %}
 
 {% highlight c# tabtitle="UWP" %}
-//DocIO supports Table of contents in WPF, Windows Forms platforms alone
+//DocIO does not support a table of contents directly in the UWP platform. You can achieve this by using the Syncfusion.DocIORenderer.Net.Core NuGet package in UWP.
 {% endhighlight %}
 
 {% endtabs %}
@@ -1347,6 +1349,11 @@ Using document As New WordDocument("Input.docx", FormatType.Docx)
 End Using
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="UWP" %}
+//DocIO does not support a table of figures directly in the UWP platform. You can achieve this by using the Syncfusion.DocIORenderer.Net.Core NuGet package in UWP.
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Table-Of-Contents/Table_of_figures).
