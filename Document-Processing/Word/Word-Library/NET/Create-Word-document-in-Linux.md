@@ -321,3 +321,10 @@ By executing the program, you will get the **Word document** as follows. The out
 Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion Word library (DocIO) features. 
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core. 
+
+## Frequently Asked Questions
+
+* [How to copy necessary fonts to Linux containers?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-copy-necessary-fonts-to-linux-containers)
+* [How to copy necessary Microsoft compatible fonts to Linux?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-copy-necessary-microsoft-compatible-fonts-to-linux)
+* [How to install necessary fonts in Linux containers?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-install-necessary-fonts-in-linux-containers)
+* [How to set culture/locale in Docker containers (Windows and Linux containers)?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-set-culturelocale-in-docker-containers-windows-and-linux-containers)

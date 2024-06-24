@@ -1536,3 +1536,7 @@ N> * And also, it is not feasible to get the page-wise details from Word documen
 * [How to add different header and footer for last page alone in the Word document?](https://www.syncfusion.com/kb/13948/how-to-add-different-header-and-footer-for-last-page-alone-in-the-word-document)
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [Is it possible to fetch page numbers in a Word document using .NET Core DocIO?](https://support.syncfusion.com/kb/article/15907/is-it-possible-to-fetch-page-numbers-in-a-word-document-using-net-core-docio?)
+
+## Frequently Asked Questions
+
+* [How to remove headers and footers from the document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/sections-faqs#how-to-remove-headers-and-footers-from-the-document)

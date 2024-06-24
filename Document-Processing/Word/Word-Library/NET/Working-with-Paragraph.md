@@ -3220,3 +3220,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [How to extract images from tables in a Word document?](https://support.syncfusion.com/kb/article/15812/how-to-extract-images-from-tables-in-a-word-document)
 * [How to replace all OLE objects with text in a Word document?](https://support.syncfusion.com/kb/article/15654/how-to-replace-all-ole-objects-with-text-in-a-word-document)
+
+## Frequently Asked Questions
+
+* [How to modify an existing style?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-modify-an-existing-style)
+* [How to set OpenType Font Features?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-opentype-font-features)
