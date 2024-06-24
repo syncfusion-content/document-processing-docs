@@ -13,9 +13,9 @@ The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET M
 
 **Key Features**
 
-* Ability to convert Excel [workbook to PDF](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-conversion).
-* Ability to convert Excel workbook with [chart to PDF](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-conversion#excel-with-chart-to-pdf).
-* [Font substitution](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-conversion#substitute-font-in-excel-to-pdf-conversion) during Excel to PDF.
-* Ability to convert Excel to PDF with different [conversion options](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-converter-settings).
+* Ability to convert Excel [workbook to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-conversion#workbook-to-pdf).
+* Ability to convert Excel workbook with [chart to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-conversion#excel-with-chart-to-pdf).
+* [Font substitution](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-conversion#substitute-font-in-excel-to-pdf-conversion) during Excel to PDF.
+* Ability to convert Excel to PDF with different [conversion options](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings).
 
 N> You can also explore our [.Net Excel Framework demo](https://www.syncfusion.com/demos/fileformats/excel-library) that shows how to create, modify and convert Excel files from C# with 5 lines of code on different platforms.

@@ -157,7 +157,7 @@ The output screen-shot of the above code.
 
 ## Create a Simple Excel File
 
-An instance of the [ExcelEngine](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelEngine.html) gives access to create an application instance that is similar to launching Microsoft Excel application. The following code snippet shows how to initialize the application object for creating or manipulating Excel documents.
+An instance of the [ExcelEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelEngine.html) gives access to create an application instance that is similar to launching Microsoft Excel application. The following code snippet shows how to initialize the application object for creating or manipulating Excel documents.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -338,7 +338,7 @@ worksheet.Pictures.AddPicture(10, 2, "image.jpg")
 {% endhighlight %}
 {% endtabs %}  
 
-Finally, save the document in file system and close/dispose the instance of [IWorkbook](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html) and [ExcelEngine](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelEngine.html).
+Finally, save the document in file system and close/dispose the instance of [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html) and [ExcelEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelEngine.html).
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -570,7 +570,7 @@ The screen-shot of the output for above code is given below.
 
 ## Export Data to Excel Worksheets
 
-[XlsIO](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.html) helps to export data from various data sources into an Excel worksheet. The data from following data sources can be exported to Excel using XlsIO:
+[XlsIO](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.html) helps to export data from various data sources into an Excel worksheet. The data from following data sources can be exported to Excel using XlsIO:
 
 * Collection Objects
 * Data Table
@@ -815,11 +815,11 @@ End Class
 {% endhighlight %}
 {% endtabs %}  
 
-You can refer various exporting options in the [Working with Data](https://help.syncfusion.com/file-formats/xlsio/working-with-data) section.
+You can refer various exporting options in the [Working with Data](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data) section.
 
 ## Export Data from Excel Worksheets 
 
-The worksheet data can be exported to a data table using the [ExportDataTable()](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ExportDataTable_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelExportDataTableOptions_) method. This method provides various options that allows to export data through [ExcelExportDataTableOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelExportDataTableOptions.html). 
+The worksheet data can be exported to a data table using the [ExportDataTable()](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ExportDataTable_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelExportDataTableOptions_) method. This method provides various options that allows to export data through [ExcelExportDataTableOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelExportDataTableOptions.html). 
 
 The following code demonstrates how to export data from a worksheet to a data table with the **ColumnNames** and **DetectColumnTypes** options.
 
@@ -1072,7 +1072,7 @@ The following screenshot shows the DataTable of previous code.
 
 ![Excel to Data Table](Getting-Started_images/Getting-Started_img2.jpeg)
 
-You can refer various exporting options in the [Working with Data](https://help.syncfusion.com/file-formats/xlsio/working-with-data) section.
+You can refer various exporting options in the [Working with Data](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data) section.
 
 ## Template based data filling using Template Markers
 
@@ -1099,7 +1099,7 @@ Use the following syntax to maintain row formats while filling data.
 %&lt;MarkerVariable&gt;.&lt;Property&gt;;insert:copystyles<br/><br/>For example: %Reports.SalesPerson;insert:copystyles<br/><br/></td></tr>
 </table>
 
-Find more details in [Template marker section for arguments](https://help.syncfusion.com/file-formats/xlsio/working-with-template-markers#template-marker-syntax)
+Find more details in [Template marker section for arguments](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-template-markers#template-marker-syntax)
 
 For example – let’s consider that you have a template document as shown below.
 

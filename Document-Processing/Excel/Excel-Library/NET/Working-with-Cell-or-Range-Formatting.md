@@ -163,7 +163,7 @@ T> To apply styles for whole column instead of applying in each cell, use defaul
 
 The XlsIO adds styles globally that can be applied to one or more cells in a workbook. This is a recommended approach to apply single style in different rows and columns, which improves memory and performance considerably.
 
-To learn more about performance, refer to the [Improving Performing section for better performance in XlsIO](https://help.syncfusion.com/file-formats/xlsio/improving-performance).
+To learn more about performance, refer to the [Improving Performing section for better performance in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/improving-performance).
 
 The following code snippet illustrates how to set header style and body style to the cells.
 
@@ -546,7 +546,7 @@ These codes display the characters in the specified colors. <br/><br/>Note: n is
 Condition may be <, >, =, >=, <=, &lt;&gt; and value may be any number.<br/><br/>Note: A number format may contain up to two conditions.<br/><br/></td></tr>
 </tbody>
 </table>
-XlsIO provides support for reading and writing various built-in and custom number formats in a cell by using the [NumberFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_NumberFormat) property of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) interface.
+XlsIO provides support for reading and writing various built-in and custom number formats in a cell by using the [NumberFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_NumberFormat) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface.
 
 The following code snippet illustrates how to set different number formats in a worksheet range.
 
@@ -781,7 +781,7 @@ A complete working example to apply number formats in C# is present on [this Git
 
 **Access** **number** **format** **applied** **results** **at** **runtime**
 
-Cell values can be accessed as [Text](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Text), [Number](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Number), [DateTime](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_DateTime) and [Formula](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) interface. In addition to this, there is an another property [DisplayText](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_DisplayText) in **IRange**, which returns a resultant value of a cell with its number format applied.
+Cell values can be accessed as [Text](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Text), [Number](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Number), [DateTime](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_DateTime) and [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface. In addition to this, there is an another property [DisplayText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_DisplayText) in **IRange**, which returns a resultant value of a cell with its number format applied.
 
 The following code example illustrates how to display the text of a cell.
 
@@ -852,7 +852,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-You can set [DetectDateTimeInValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_DetectDateTimeInValue) property of [IWorkbook](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html) as **false** with [Value2](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Value2) property, if you are sure that the given value is not of **DateTime** data type which improves time performance. 
+You can set [DetectDateTimeInValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_DetectDateTimeInValue) property of [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html) as **false** with [Value2](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Value2) property, if you are sure that the given value is not of **DateTime** data type which improves time performance. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -870,7 +870,7 @@ workbook.DetectDateTimeInValue = False
   
 ## Hide Cell Content by setting Number Format
 
-Essential XlsIO supports [hiding rows or columns](https://help.syncfusion.com/file-formats/xlsio/worksheet-rows-and-columns-manipulation#show-or-hide-rows-and-columns) in a worksheet along with [hiding specific range](https://help.syncfusion.com/file-formats/xlsio/worksheet-rows-and-columns-manipulation#show-or-hide-specific-range). You can also hide a particular cell content by setting a specific number format to that cell.
+Essential XlsIO supports [hiding rows or columns](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-rows-and-columns) in a worksheet along with [hiding specific range](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-specific-range). You can also hide a particular cell content by setting a specific number format to that cell.
 
 Refer to the following complete code snippets.
 
@@ -1009,7 +1009,7 @@ worksheet.Range("C6").CellStyle.IndentLevel = 6
 
 **Orientation**
 
-This helps to rotate the cell text diagonally or vertically. The text orientation can be set by using the [Rotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Rotation) property as shown as follows. 
+This helps to rotate the cell text diagonally or vertically. The text orientation can be set by using the [Rotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Rotation) property as shown as follows. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1030,7 +1030,7 @@ worksheet.Range("C2").CellStyle.Rotation = 60
 
 **Text** **Direction**
 
-You can specify the text direction by using the [ReadingOrder](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ReadingOrder) property as shown as follows.
+You can specify the text direction by using the [ReadingOrder](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ReadingOrder) property as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1222,7 +1222,7 @@ The following screenshot is the output of previous code:
 
 ## Merging and Un-Merging Cells
 
-The cells can be merged using the [Merge](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Merge) method in [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) as shown as follows. 
+The cells can be merged using the [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Merge) method in [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) as shown as follows. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1241,7 +1241,7 @@ worksheet.Range("A16:C16").Merge()
 {% endhighlight %}
 {% endtabs %}    
 
-Merged cells can be unmerged using the [UnMerge](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_UnMerge) method in [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) as shown below. 
+Merged cells can be unmerged using the [UnMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_UnMerge) method in [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) as shown below. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1321,7 +1321,7 @@ A complete working example to merge and unmerge cells in C# is present on [this 
 
 ## Apply Wrap Text
 
-If a cell content is too wide to fit a column and do not want to split over into adjacent cells, you can use the [WrapText](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_WrapText) property. This will set the content within the cell border. The following code snippet illustrates this behavior.
+If a cell content is too wide to fit a column and do not want to split over into adjacent cells, you can use the [WrapText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_WrapText) property. This will set the content within the cell border. The following code snippet illustrates this behavior.
 
 N> Applying wrap-text will not auto-fit the rows by default. It is recommended to [auto-fit](#_AutoFit_Rows_or "") manually.
 
@@ -1390,7 +1390,7 @@ A complete working example to apply wrap text in C# is present on [this GitHub p
 
 ## Unwrap Text
 
-Similarly, the wrapped text can be unwrapped by disabling the [WrapText](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_WrapText) property. The following code explains this.
+Similarly, the wrapped text can be unwrapped by disabling the [WrapText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_WrapText) property. The following code explains this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1483,7 +1483,7 @@ A complete working example to autofit rows and columns in C# is present on [this
 
 ## Apply Font Settings 
 
-The appearance of a text can be controlled by font settings of a cell. These settings can be done by using the [Font](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Font) property in [CellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IStyle.html). Refer to the following code.
+The appearance of a text can be controlled by font settings of a cell. These settings can be done by using the [Font](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Font) property in [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html). Refer to the following code.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1628,7 +1628,7 @@ Colors give enhancement to cell values to highlight the data. These color settin
 
 **Back** **Color** **settings**
 
-Back color of a cell can be set using the [ColorIndex](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ColorIndex) property of [CellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IStyle.html) as shown as follows.
+Back color of a cell can be set using the [ColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ColorIndex) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1649,7 +1649,7 @@ worksheet.Range("A1").CellStyle.ColorIndex = ExcelKnownColors.Aqua
 
 **Fore** **Color** **Settings**
 
-Fore color of a cell can be set using the [PatternColorIndex](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColorIndex) property of [CellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IStyle.html) as shown as follows.
+Fore color of a cell can be set using the [PatternColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColorIndex) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1670,7 +1670,7 @@ worksheet.Range("A2").CellStyle.PatternColorIndex = ExcelKnownColors.Green
 
 **Pattern** **Settings**
 
-Excel provides various pattern styles for highlighting the cells. These patterns can be applied using the [FillPattern](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillPattern) property of [CellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IStyle.html) as shown as follows.
+Excel provides various pattern styles for highlighting the cells. These patterns can be applied using the [FillPattern](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillPattern) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1693,7 +1693,7 @@ A complete working example to apply different color settings in C# is present on
 
 ## Apply Border Settings
 
-The XlsIO applies cell borders and format it through [IBorder](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IBorder.html)Applying HTML String interface as shown as follows. 
+The XlsIO applies cell borders and format it through [IBorder](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IBorder.html)Applying HTML String interface as shown as follows. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1854,7 +1854,7 @@ XlsIO supports adding HTML Rich-Text to a range of cells in worksheet.
 
 ### Applying HTML String
 
-The following code snippet illustrates how to read and write HTML Rich-Text using [HtmlString](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HtmlString) property of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html).
+The following code snippet illustrates how to read and write HTML Rich-Text using [HtmlString](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HtmlString) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1944,7 +1944,7 @@ These mentioned tags do support the following style attributes.
 
 ## Rich-Text Formatting 
 
-You can format each character in a cell with different font styles. XlsIO reads and writes rich-text by using the [IRichTextString](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRichTextString.html) interface. 
+You can format each character in a cell with different font styles. XlsIO reads and writes rich-text by using the [IRichTextString](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRichTextString.html) interface. 
 
 N> Currently XlsIO cannot process and write RTF codes to cells.
 

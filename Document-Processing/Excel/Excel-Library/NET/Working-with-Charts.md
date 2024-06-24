@@ -11,7 +11,7 @@ Essential XlsIO has support for creating and modifying Excel charts inside a wor
 
 ## Creating a Chart
 
-The [IChartShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChartShape.html) interface represents the chart in a worksheet. A chart can be created either through the existing data in the worksheet, directly entering series or by adding series one by one.
+The [IChartShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartShape.html) interface represents the chart in a worksheet. A chart can be created either through the existing data in the worksheet, directly entering series or by adding series one by one.
 
 The following code example illustrates how to create a chart through the existing data in the worksheet.
 
@@ -338,10 +338,10 @@ A complete working example to create a chart through series in C# is present on 
 
 XlsIO provides support for creation, modification and removal of Sparklines.
 
-* [ISparklineGroups](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ISparklineGroups.html) interface caches the SparklineGroup that need to be added to the Spreadsheet. 
-* [ISparklineGroup](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ISparklineGroup.html) represents Sparklines in object, and has properties that allows  to customize it. 
-* [ISparklines](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ISparklines.html) interface returns the collection of Sparkline present in a Worksheet. 
-* [ISparkline](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ISparkline.html) represents a sparkline in the Sparklines. Currently, XlsIO supports all the three types of sparklines - Line, Column, Win/Loss.
+* [ISparklineGroups](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparklineGroups.html) interface caches the SparklineGroup that need to be added to the Spreadsheet. 
+* [ISparklineGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparklineGroup.html) represents Sparklines in object, and has properties that allows  to customize it. 
+* [ISparklines](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparklines.html) interface returns the collection of Sparkline present in a Worksheet. 
+* [ISparkline](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISparkline.html) represents a sparkline in the Sparklines. Currently, XlsIO supports all the three types of sparklines - Line, Column, Win/Loss.
 
 The following code example illustrates how to create Sparkline chart.
 
@@ -1499,7 +1499,7 @@ With the Syncfusion Excel Library, you can customize various aspects of chart ap
 
 ## Removing a Chart
 
-The following code example illustrates how to remove the chart from the worksheet using [Remove](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_Remove) method.
+The following code example illustrates how to remove the chart from the worksheet using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_Remove) method.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

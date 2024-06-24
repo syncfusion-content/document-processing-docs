@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Data Validation 
 
-Data Validation is a list of rules to the data that can be entered in a cell. This can be applied by using [IDataValidation](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IDataValidation.html) interface. XlsIO supports following validation types.
+Data Validation is a list of rules to the data that can be entered in a cell. This can be applied by using [IDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html) interface. XlsIO supports following validation types.
 
 * **Text** **Length** **Validation**
 * **Time** **Validation**
@@ -124,7 +124,7 @@ validation.ListOfValues = New String() {"ListItem1", "ListItem2", "ListItem3"}
 
 A complete working example for list data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/List%20Validation). 
 
-N> The [ListOfValues](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_ListOfValues) property should be used when the values in the Data Validation list are entered manually whose limit is only 255 characters including separators.
+N> The [ListOfValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_ListOfValues) property should be used when the values in the Data Validation list are entered manually whose limit is only 255 characters including separators.
 
 ## Number Validation
 
@@ -210,7 +210,7 @@ A complete working example for number data validation in C# is present on [this 
 
 ## Custom Validation
 
-Custom validation can be set to a cell with its [AllowType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_AllowType) as **User**. The following code snippet illustrates how to set custom validation.
+Custom validation can be set to a cell with its [AllowType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_AllowType) as **User**. The following code snippet illustrates how to set custom validation.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
