@@ -134,7 +134,7 @@ wordDocument.Close()
 
 By executing the program, you will get the output PDF as follows. 
 
-![Word to PDF conversion](https://help.syncfusion.com/file-formats/docio/WordToPDF_images/OutputImage.png).
+![Word to PDF conversion](../WordToPDF_images/OutputImage.png).
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF).
 
