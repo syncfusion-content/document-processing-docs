@@ -1,12 +1,12 @@
 ---
-title: Import to Excel | Syncfusion
-description: In this section, you can learn how to import data to Excel using XlsIO.
+title: Import to Excel document | Syncfusion
+description: In this section, you can learn how to import data to Excel document using Syncfusion Essential XlsIO..
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Import to Excel
+# Import to Excel Document
 
 ## DataTable to Excel
 

@@ -1,12 +1,12 @@
 ---
-title: Export from Excel | Syncfusion
-description: In this section, you can learn how to export data from Excel using XlsIO.
+title: Export from Excel document | Syncfusion
+description: In this section, you can learn how to export data from Excel document using Syncfusion Essential XlsIO..
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Export from Excel
+# Export from Excel Document
 
 ## Excel to DataTable
 
