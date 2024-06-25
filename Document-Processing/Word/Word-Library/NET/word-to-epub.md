@@ -121,5 +121,6 @@ The following elements are supported in Word to EPUB conversion.
 * Table of Contents
 * Document Properties
 
-**Frequently Asked Questions**
-* [How to set title when converting Word document to EPUB](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-set-title-when-converting-word-document-to-epub)
+## Frequently Asked Questions
+
+* [How to set title when converting Word document to EPUB?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-to-set-title-when-converting-word-document-to-epub)

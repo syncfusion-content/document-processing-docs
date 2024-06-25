@@ -23,7 +23,7 @@ Each marker starts with a prefix character (by default it is “%” character).
 <td>
 %&lt;MarkerVariable&gt;.&lt;Property&gt; <br/><br/>For example: %Customers.CompanyName<br/><br/>Where, “Customers” is marker variable name and CompanyName is the property name</td></tr>
 </table>
-You can change the marker prefix and delimiter characters by the [MarkerPrefix](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_MarkerPrefix) and [ArgumentSeparator](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_ArgumentSeparator) properties of the [ITemplateMarkersProcessor](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITemplateMarkersProcessor.html) instance respectively. 
+You can change the marker prefix and delimiter characters by the [MarkerPrefix](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_MarkerPrefix) and [ArgumentSeparator](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html#Syncfusion_XlsIO_ITemplateMarkersProcessor_ArgumentSeparator) properties of the [ITemplateMarkersProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITemplateMarkersProcessor.html) instance respectively. 
 
 **Arguments**
 
@@ -282,7 +282,7 @@ End Using
 <td>
 %&lt;DataSource&gt;.&lt;FieldName&gt; <br/><br/>For example: %Products.ProductName<br/><br/>Where, “Products” is a data source which can be data tables, datasets, data readers and data views and ProductName is the field name or column name<br/><br/></td></tr>
 </table>
-By default, DataTable values will be filled in the worksheet as a string format. You can detect data type and number format of DataTable values by using [VariableTypeAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.VariableTypeAction.html) enumerator.
+By default, DataTable values will be filled in the worksheet as a string format. You can detect data type and number format of DataTable values by using [VariableTypeAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.VariableTypeAction.html) enumerator.
 
 The following screenshot represents the input template which has a template marker.
 
@@ -443,7 +443,7 @@ __Marker__ __added__ __for__ __merging__ __images__
 
 N> Image can be used in array, DataTable, and collection objects.
 
-Different positions of the image are maintained internally in the [ImageVerticalPosition](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.TemplateMarkers.ImageVerticalPosition.html) and [ImageHorizontalPosition](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.TemplateMarkers.ImageHorizontalPosition.html) enumerators.
+Different positions of the image are maintained internally in the [ImageVerticalPosition](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.TemplateMarkers.ImageVerticalPosition.html) and [ImageHorizontalPosition](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.TemplateMarkers.ImageHorizontalPosition.html) enumerators.
 
 The output of all the image insertion options with input templates are as follows.
 
@@ -497,7 +497,7 @@ Generated output
 
 ![Import collection objects with images Example](Working-with-Template-Markers_images/Working-with-Template_Markers_img15.jpeg)
 
-You can also refer to the [Template based data filling using Template Markers](https://help.syncfusion.com/file-formats/xlsio/getting-started-create-excel-file-csharp-vbnet#template-based-data-filling-using-template-markers) section in [Getting Started](https://help.syncfusion.com/file-formats/xlsio/getting-started-create-excel-file-csharp-vbnet) for the sample regarding template marker with images.
+You can also refer to the [Template based data filling using Template Markers](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-excel-file-csharp-vbnet#template-based-data-filling-using-template-markers) section in [Getting Started](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-excel-file-csharp-vbnet) for the sample regarding template marker with images.
 
 ## Bind from Nested Collection Objects with import data and group options
 

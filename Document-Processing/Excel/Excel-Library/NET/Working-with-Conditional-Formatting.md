@@ -8,11 +8,11 @@ documentation: UG
 
 # Working with Conditional Formatting
 
-Conditional formatting allows to format the contents of a cell dynamically. This can be defined and applied in XlsIO through the [IConditionalFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IConditionalFormat.html) interface.
+Conditional formatting allows to format the contents of a cell dynamically. This can be defined and applied in XlsIO through the [IConditionalFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html) interface.
 
 ## Create a Conditional Format 
 
-The [IConditionalFormats](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IConditionalFormats.html) represents a collection of conditional formats for a single [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html). One or more conditional formats can be added to the range as follows.
+The [IConditionalFormats](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html) represents a collection of conditional formats for a single [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). One or more conditional formats can be added to the range as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -35,7 +35,7 @@ Dim condition1 As IConditionalFormat = condition.AddCondition()
 
 {% endtabs %}  
 
-The target range should meet the criteria, which is set using the **IConditionalFormat** interface. The  desired format type is set through the [ExcelCFType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelCFType.html) enumerator, which are the supported conditional format types in XlsIO. Refer to the following code.
+The target range should meet the criteria, which is set using the **IConditionalFormat** interface. The  desired format type is set through the [ExcelCFType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCFType.html) enumerator, which are the supported conditional format types in XlsIO. Refer to the following code.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -339,7 +339,7 @@ A complete working example to read an existing conditional formatting in C# is p
 
 ## Removing Conditional Formats
 
-All the conditional formats for a specified range can be removed using the [Remove](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_Remove) method. 
+All the conditional formats for a specified range can be removed using the [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_Remove) method. 
 
 The following code example illustrates how to remove conditional formats.
 
@@ -398,7 +398,7 @@ A complete working example to remove conditional formatting in C# is present on 
 
 ### Removing Conditional Formats at specified index value
 
-A particular conditional format at the specified range can be removed by using the [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_RemoveAt_System_Int32_) method.
+A particular conditional format at the specified range can be removed by using the [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormats.html#Syncfusion_XlsIO_IConditionalFormats_RemoveAt_System_Int32_) method.
 
 The following code example illustrates how to remove conditional formats at specified index value.
 

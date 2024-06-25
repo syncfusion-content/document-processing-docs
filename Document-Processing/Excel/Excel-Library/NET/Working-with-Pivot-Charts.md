@@ -8,11 +8,11 @@ documentation: UG
 
 # Working with Pivot Charts in Excel Library
 
-**PivotCharts** are interactive graphical representations of **PivotTable** data that allows rapid analysis of the displayed data. In XlsIO, **PivotCharts** are created by [IChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html) interface by setting its pivot source as **PivotTable**.
+**PivotCharts** are interactive graphical representations of **PivotTable** data that allows rapid analysis of the displayed data. In XlsIO, **PivotCharts** are created by [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface by setting its pivot source as **PivotTable**.
 
 N> XlsIO supports PivotCharts only for XLSX format.
 
-To create a pivot table, refer [Create Pivot Table](/file-formats/xlsio/working-with-pivot-tables#create-a-pivot-table). 
+To create a pivot table, refer [Create Pivot Table](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pivot-tables#create). 
 
 The following code snippet illustrates how to create a PivotChart.
 

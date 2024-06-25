@@ -9,11 +9,11 @@ keywords: c#, vb.net, excel, syncfusion, xlsio, read excel, extract data, data f
 
 # Working with Excel Worksheet 
 
-A workbook contains a collection of worksheets where the actual contents resides. It is possible to add and manipulate worksheets and [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) instance represents an Excel worksheet.
+A workbook contains a collection of worksheets where the actual contents resides. It is possible to add and manipulate worksheets and [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) instance represents an Excel worksheet.
 
 ## Create a Worksheet 
 
-A new worksheet can be added into the workbook through [Create](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheets.html#Syncfusion_XlsIO_IWorksheets_Create) method of [IWorksheets](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheets.html) interface. It is also possible to specify the required number of worksheets and if not specified, XlsIO creates three worksheets by default.
+A new worksheet can be added into the workbook through [Create](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheets.html#Syncfusion_XlsIO_IWorksheets_Create) method of [IWorksheets](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheets.html) interface. It is also possible to specify the required number of worksheets and if not specified, XlsIO creates three worksheets by default.
 
 The following code snippet shows how to create worksheets within a workbook.
 
@@ -76,7 +76,7 @@ A complete working example for creating Excel worksheets in C# is present on [th
 
 ## Access a Worksheet 
 
-[Worksheets](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_Worksheets) collection holds one or more worksheets present in a workbook. Accessing a particular worksheet can be done by the following ways. 
+[Worksheets](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_Worksheets) collection holds one or more worksheets present in a workbook. Accessing a particular worksheet can be done by the following ways. 
 
 1. Specifying the index 
 2. Specifying the sheet name. 
@@ -140,7 +140,7 @@ End Using
 
 A complete working example for accessing Excel worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Access%20Worksheet).
 
-T>If the workbook contains multiple worksheets, then the parsing of the workbook will consume time. **ParseWorksheetsOnDemand** of [ExcelParseOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelParseOptions.html) can be used in [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_Syncfusion_XlsIO_ExcelOpenType_Syncfusion_XlsIO_ExcelParseOptions_) method of [IWorkbooks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) to parse the worksheet only when it is accessed. This option can be used in a scenario where workbook contains multiple worksheets but you are going to use only few worksheets among them.
+T>If the workbook contains multiple worksheets, then the parsing of the workbook will consume time. **ParseWorksheetsOnDemand** of [ExcelParseOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelParseOptions.html) can be used in [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_Syncfusion_XlsIO_ExcelOpenType_Syncfusion_XlsIO_ExcelParseOptions_) method of [IWorkbooks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html) to parse the worksheet only when it is accessed. This option can be used in a scenario where workbook contains multiple worksheets but you are going to use only few worksheets among them.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -274,11 +274,11 @@ End Using
 
 A complete working example for copying Excel worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Copy%20Worksheet).
 
-Specific copy options can be chosen while copying a worksheet, which helps to achieve customized copying by ignoring certain formatting. For more information about copy options, please refer [ExcelWorksheetCopyFlags](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelWorksheetCopyFlags.html).
+Specific copy options can be chosen while copying a worksheet, which helps to achieve customized copying by ignoring certain formatting. For more information about copy options, please refer [ExcelWorksheetCopyFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelWorksheetCopyFlags.html).
 
 ### Moving a Worksheet
 
-XlsIO allows moving worksheets from one position to another by using the [Move](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Move_System_Int32_) method. The following code example illustrates how a worksheet is moved.
+XlsIO allows moving worksheets from one position to another by using the [Move](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Move_System_Int32_) method. The following code example illustrates how a worksheet is moved.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -333,7 +333,7 @@ A complete working example for moving Excel worksheets in C# is present on [this
 
 ## Highlight Worksheet Tabs 
 
-A particular worksheet tab can be highlighted to denote its importance. Tab color can be set through the [TabColor](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_TabColor) property, as given below.
+A particular worksheet tab can be highlighted to denote its importance. Tab color can be set through the [TabColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_TabColor) property, as given below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -388,7 +388,7 @@ A complete working example to highlight an Excel worksheet tab in C# is present 
 
 ## Freeze Panes 	
 
-It is possible to [freeze](https://support.microsoft.com/en-gb/office/freeze-panes-to-lock-rows-and-columns-dab2ffc9-020d-4026-8121-67dd25f2508f?redirectSourcePath=%252fen-us%252farticle%252fFreeze-rows-and-columns-32b23056-d13b-4b2d-aabb-de55a4c2f708) a portion of the sheet to keep it visible while you scroll through the rest of the sheet. The following code snippet shows how to freeze panes through the [FreezePanes](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FreezePanes) method of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html). 
+It is possible to [freeze](https://support.microsoft.com/en-gb/office/freeze-panes-to-lock-rows-and-columns-dab2ffc9-020d-4026-8121-67dd25f2508f?redirectSourcePath=%252fen-us%252farticle%252fFreeze-rows-and-columns-32b23056-d13b-4b2d-aabb-de55a4c2f708) a portion of the sheet to keep it visible while you scroll through the rest of the sheet. The following code snippet shows how to freeze panes through the [FreezePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FreezePanes) method of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -439,7 +439,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-You can set first visible row and first visible column in non-frozen area, through the [FirstVisibleRow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleRow) and [FirstVisibleColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleColumn) properties as shown below
+You can set first visible row and first visible column in non-frozen area, through the [FirstVisibleRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleRow) and [FirstVisibleColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FirstVisibleColumn) properties as shown below
 
 N> **FirstVisibleColumn** and **FirstVisibleRow** indexes are "zero-based".
 
@@ -508,7 +508,7 @@ A complete working example to freeze panes in C# is present on [this GitHub page
 
 ## Unfreeze Panes
 
-It is possible to unfreeze panes in an Excel worksheet using the [RemovePanes](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) interface. Refer to the following complete code snippet.
+It is possible to unfreeze panes in an Excel worksheet using the [RemovePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface. Refer to the following complete code snippet.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -562,7 +562,7 @@ End Using
 
 ## Split Panes 
 
-The window into can be divided into different [panes](https://support.microsoft.com/en-us/office/split-panes-to-lock-rows-or-columns-in-separate-worksheet-areas-516a7001-b3ed-4122-a6bb-fd6d4a9d6434?ui=en-us&rs=en-us&ad=us) that scroll separately each. The following code snippets illustrates how to split the window through the [HorizontalSplit](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HorizontalSplit) and [VerticalSplit](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VerticalSplit) properties.
+The window into can be divided into different [panes](https://support.microsoft.com/en-us/office/split-panes-to-lock-rows-or-columns-in-separate-worksheet-areas-516a7001-b3ed-4122-a6bb-fd6d4a9d6434?ui=en-us&rs=en-us&ad=us) that scroll separately each. The following code snippets illustrates how to split the window through the [HorizontalSplit](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HorizontalSplit) and [VerticalSplit](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VerticalSplit) properties.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -631,7 +631,7 @@ A complete working example to split panes in C# is present on [this GitHub page]
 
 ### Fit all rows on one page.
 
-[FitToPagesTall](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) enables the functionality of fitting all rows on one printed page.
+[FitToPagesTall](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) enables the functionality of fitting all rows on one printed page.
 
 The following code snippet shows how to use FitToPagesTall.
 
@@ -717,7 +717,7 @@ A complete working example for how to fit all rows on one page in C# is present 
 
 ### Fit all columns on one page.
 
-[FitToPagesWide](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) enables the functionality of fitting all columns on one printed page.
+[FitToPagesWide](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) enables the functionality of fitting all columns on one printed page.
 
 The following code snippet shows how to use FitToPagesWide.
 
@@ -803,7 +803,7 @@ A complete working example for how to fit all columns on one page in C# is prese
 
 ###  Fit the page content.
 
-[IsFitToPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) enables the functionality of fitting the page content before printing.
+[IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) enables the functionality of fitting the page content before printing.
 
 The following code snippet shows how to use IsFitToPage.
 
@@ -887,7 +887,7 @@ A complete working example for how to fit page content before printing in C# is 
 
 ### Conditions for Enabling SummaryColumnRight.
 
-To enable the [IsSummaryColumnRight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) property, the page orientation must be Portrait, the [FitToPagesTall](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
+To enable the [IsSummaryColumnRight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) property, the page orientation must be Portrait, the [FitToPagesTall](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesTall) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
 
 The following code snippet shows how to use IsSummaryColumnRight.
 
@@ -979,7 +979,7 @@ A complete working example for how to enable IsSummaryColumnRight in C# is prese
 
 ### Conditions for Enabling SummaryRowBelow.
 
-To enable the [IsSummaryRowBelow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) property, the page orientation must be Portrait, the [FitToPagesWide](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
+To enable the [IsSummaryRowBelow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) property, the page orientation must be Portrait, the [FitToPagesWide](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_FitToPagesWide) property value must be 0 and the [IsFitToPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsFitToPage) property must be true.
 
 The following code snippet shows how to use IsSummaryRowBelow.
 
@@ -1072,7 +1072,7 @@ A complete working example for how to enable IsSummaryRowBelow in C# is present 
 
 ### Print Area.
 
-The [PrintArea](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintArea) functionality allows you to set the range to be printed.
+The [PrintArea](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintArea) functionality allows you to set the range to be printed.
 
 The following code snippet shows how to use the PrintArea.
 
@@ -1155,7 +1155,7 @@ A complete working example for set the range to be printed in C# is present on [
 
 ### Print Gridlines.
 
-The [PrintGridlines](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintGridlines) functionality allows you to set the gridlines to be printed.
+The [PrintGridlines](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintGridlines) functionality allows you to set the gridlines to be printed.
 
 The following code snippet shows how to use PrintGridlines.
 
@@ -1239,7 +1239,7 @@ A complete working example for how to set the gridlines to be printed in C# is p
 
 ### Print Headings.
 
-The [PrintHeadings](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintHeadings) functionality allows you to set the row and column headings to be printed.
+The [PrintHeadings](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintHeadings) functionality allows you to set the row and column headings to be printed.
 
 The following code snippet shows how to use PrintHeadings.
 
@@ -1322,7 +1322,7 @@ A complete working example for how to set the row and column headings to be prin
 
 ### Print TitleColumns.
 
-The [PrintTitleColumns](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleColumns) functionality allows you to specify the columns containing cells that will be repeated on the left side of each printed page.
+The [PrintTitleColumns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleColumns) functionality allows you to specify the columns containing cells that will be repeated on the left side of each printed page.
 
 The following code snippet shows how to use PrintTitleColumns.
 
@@ -1406,7 +1406,7 @@ A complete working example for how to set the PrintTitleColumns in C# is present
 
 ### Print TitleRows.
 
-The [PrintTitleRows](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) functionality allows you to specify the rows containing cells that will be repeated on the top side of each printed page.
+The [PrintTitleRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) functionality allows you to specify the rows containing cells that will be repeated on the top side of each printed page.
 
 The following code snippet shows how to use PrintTitleRows.
 
@@ -1576,7 +1576,7 @@ End Using
 
 ## Show or Hide Worksheet 
 
-The following code snippet shows how to hide the worksheets using [Visibility](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Visibility) property.
+The following code snippet shows how to hide the worksheets using [Visibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Visibility) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1634,7 +1634,7 @@ A complete working example to show or hide an Excel worksheet in C# is present o
 
 ## Activate a Worksheet
 
-A worksheet in an Excel workbook can be activated through [Activate](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Activate) method. The following code snippet explains this.
+A worksheet in an Excel workbook can be activated through [Activate](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Activate) method. The following code snippet explains this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1692,7 +1692,7 @@ A complete working example to activate an Excel worksheet in C# is present on [t
 
 ## Show or Hide Worksheet Tabs 
 
-The following code snippet shows how to hide the worksheet tabs using [DisplayWorkbookTabs](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_DisplayWorkbookTabs) property.
+The following code snippet shows how to hide the worksheet tabs using [DisplayWorkbookTabs](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_DisplayWorkbookTabs) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1758,7 +1758,7 @@ A complete working example to hide Excel worksheet tab in C# is present on [this
 
 ### Show or Hide Row and Column Headers 
 
-Row and column headings can be displayed or hidden through [IsRowColumnHeadersVisible](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsRowColumnHeadersVisible) property of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html).
+Row and column headings can be displayed or hidden through [IsRowColumnHeadersVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsRowColumnHeadersVisible) property of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html).
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1813,7 +1813,7 @@ A complete working example to hide row and column headers in an Excel worksheet 
 
 ### Show or Hide Grid Lines 
 
-The following code snippet shows how to hide the grid lines using [IsGridLinesVisible](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsGridLinesVisible) property.
+The following code snippet shows how to hide the grid lines using [IsGridLinesVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_IsGridLinesVisible) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1871,7 +1871,7 @@ A complete working example to hide gridlines in an Excel worksheet in C# is pres
 
 ### Set Zoom Level
 
-The following code snippet shows how to set the zoom level by using [Zoom](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Zoom) property.
+The following code snippet shows how to set the zoom level by using [Zoom](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Zoom) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1972,7 +1972,7 @@ End Using
 
 ## Maximum Rows and Columns for CSV
 
-By default, XlsIO allows only 1048576 rows and 16256 columns while loading or saving a CSV document. This limit can be increased by modifying the [MaximumRowsForCsv](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumRowsForCsv) and [MaximumColumnsForCsv](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumColumnsForCsv) properties. The following code snippet explains this.
+By default, XlsIO allows only 1048576 rows and 16256 columns while loading or saving a CSV document. This limit can be increased by modifying the [MaximumRowsForCsv](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumRowsForCsv) and [MaximumColumnsForCsv](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumColumnsForCsv) properties. The following code snippet explains this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2289,5 +2289,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to save an Excel worksheet as HTML file using [HtmlSaveOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.HtmlSaveOptions.html) in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Save%20HTML).
-
+A complete working example to save an Excel worksheet as HTML file using [HtmlSaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.HtmlSaveOptions.html) in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Save%20HTML).

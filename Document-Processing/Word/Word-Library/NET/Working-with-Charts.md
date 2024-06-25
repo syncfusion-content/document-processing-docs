@@ -1480,3 +1480,8 @@ The following chart types are supported in DocIO.
 * [How to set column space for column charts in Word document?](https://support.syncfusion.com/kb/article/12296/how-to-set-column-space-for-column-charts-in-word-document)
 * [How to set Y-axis interval for column charts in Word document?](https://support.syncfusion.com/kb/article/12294/how-to-set-y-axis-interval-for-column-charts-in-word-document)
 * [How to change chart title position in the Word document?](https://support.syncfusion.com/kb/article/12292/how-to-change-chart-title-position-in-the-word-document)
+
+## Frequently Asked Questions
+
+* [Can the chart data be refreshed?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#can-the-chart-data-be-refreshed)
+
