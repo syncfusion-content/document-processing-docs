@@ -1,11 +1,11 @@
 ---
 title: Working with Images in .NET Word library | Syncfusion
-description: Learn how to work with images in a Word document using the .NET Word (DocIO) library.
+description: Learn how to work with images in a Microsoft Word document using the Syncfusion .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Images
+# Working with Images in Word document
 
 DocIO provides support for both inline and absolute positioned images. 
 
