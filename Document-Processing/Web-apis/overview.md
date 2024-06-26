@@ -1,5 +1,5 @@
 ---
-title: Syncfusion Ready-to-Deploy Docker Image for Document Processing Web APIs
+title: Syncfusion Docker Image for Document Processing APIs
 description: Explore Docker-based solution for efficient Syncfusion Document Processing Web APIs, designed for rapid deployment, scalability, and security.
 platform: document-processing
 control: general

@@ -1,6 +1,6 @@
 ---
 title: Syncfusion HTML to PDF Conversion Guide
-description: Convert HTML templates or URLs into PDF documents seamlessly using Syncfusion's document processing engine. Simplify the process by including HTML files and associated assets.
+description: Convert HTML templates or URLs to PDF with Syncfusion's engine. Simplify the process by including HTML files and associated assets seamlessly.
 platform: document-processing
 control: general
 documentation: UG

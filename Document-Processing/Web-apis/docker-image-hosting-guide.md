@@ -1,6 +1,6 @@
 ---
 title: Docker Image Hosting Guide for Syncfusion Document Processing API
-description: Deploy and manage Syncfusion Document Processing API with Docker. Includes setup for hardware, software, Docker Compose, and PostgreSQL. Ensure seamless deployment for processing documents in minutes.
+description: Deploy and manage Syncfusion Document Processing API with Docker. Setup includes hardware, software, Docker Compose, and PostgreSQL for seamless deployment.
 platform: document-processing
 control: general
 documentation: UG
@@ -85,9 +85,9 @@ Step2: Run the command below, this command will start the document processing se
 docker-compose up -d
 ```
 
-![LogDetails](images/logdetails.png)
+![LogDetails](images/logdetails.jpg)
 
 
 Step3: After successfully running the server, you'll encounter the following message upon opening the host URL in your browser  http://localhost:8003/
 
-![Browser](images/browser.png)
+![Browser](images/browser.jpg)
