@@ -1,6 +1,6 @@
 ---
 title: Chart Data Label | Excel library | Syncfusion
-description: In this section, you can learn about chart data label in an Excel document with XlsIO.
+description: In this section, you can learn about chart data label in an Excel document with the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
