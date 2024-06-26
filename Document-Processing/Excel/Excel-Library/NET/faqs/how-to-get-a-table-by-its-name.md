@@ -1,6 +1,6 @@
 ---
 title: How to get a table by its name | Syncfusion
-description: This page shows how to get a table by its name using the Syncfusion .NET Excel library (XlsIO).
+description: This page shows how to get a table by its name in an Excel document using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
