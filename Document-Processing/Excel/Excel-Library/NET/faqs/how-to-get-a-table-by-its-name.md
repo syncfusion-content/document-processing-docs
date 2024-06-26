@@ -23,7 +23,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Initialize the table
     IListObject table = null;
 
-    //Find the table by its name
+    //Get the table by its name
     for (int i = 0; i < worksheet.ListObjects.Count; i++)
     {
         IListObject currentTable = worksheet.ListObjects[i];
@@ -55,7 +55,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Initialize the table
     IListObject table = null;
 
-    //Find the table by its name
+    //Get the table by its name
     for (int i = 0; i < worksheet.ListObjects.Count; i++)
     {
         IListObject currentTable = worksheet.ListObjects[i];
@@ -85,7 +85,7 @@ Using excelEngine As New ExcelEngine()
     'Initialize the table
     Dim table As IListObject = Nothing
 
-    'Find the table with its name
+    'Get the table by its name
     For i As Integer = 0 To worksheet.ListObjects.Count - 1
         Dim currentTable As IListObject = worksheet.ListObjects(i)
         If currentTable.DisplayName = "SampleTable" Then
