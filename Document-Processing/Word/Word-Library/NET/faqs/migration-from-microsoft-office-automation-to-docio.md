@@ -1,6 +1,6 @@
 ---
 title: Migration from Office Automation to DocIO | DocIO | Syncfusion
-description: Learn how to migrate from Word Interop to DocIO.
+description: This section illustrates how to migrate from Word Interop to the Syncfusion .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -1101,7 +1101,7 @@ wordApp.Quit(nullobject, nullobject, nullobject)
 
 {% endtabs %}
 
-## Using DocIO
+### Using DocIO
 
 DocIO uses [ProtectionType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ProtectionType) property to specify the protection type of the Word document. This property uses the following values:
 
