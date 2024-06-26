@@ -6,9 +6,9 @@ control: DocIO
 documentation: UG
 ---
 
-# Frequently asked questions about Word to PDF and Word and image conversions
+# Frequently asked questions about Word to PDF and image conversions
 
-The frequently asked questions about Word to PDF and Word and image conversions using DocIO are listed below.
+The frequently asked questions about Word to PDF and image conversions using DocIO are listed below.
 
 ## Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework? 
 
