@@ -1349,3 +1349,40 @@ End Using
 {% endtabs %}  
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Get-image-rotation-angle-from-OCR).
+
+## Image Enhancement in OCR Processor library
+
+We have support to improve the image quality while performing OCR for a image or PDF document. In this process we can improve the image quality by using the binarization, grayscale, enhance resolution method with third party libraries. Please refer the below code snippet.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    //Initialize the OCR processor. 
+    using (OCRProcessor processor = new OCRProcessor()) 
+    { 
+        //Load an existing PDF document. 
+        FileStream stream = new FileStream("../../../document.pdf", FileMode.Open); 
+        PdfLoadedDocument lDoc = new PdfLoadedDocument(stream); 
+        //Set the OCR language. 
+        processor.Settings.Language = Languages.English; 
+        processor.ImageProcessor = new ImageProcessor(); 
+        //Perform OCR with input document. 
+        string text = processor.PerformOCR(lDoc); 
+        //Create file stream. 
+        FileStream fileStream = new FileStream("../../../OCR.pdf", FileMode.CreateNew); 
+        //Save the document into stream. 
+        lDoc.Save(fileStream); 
+        //Close the document. 
+        lDoc.Close(); 
+        stream.Dispose(); 
+        fileStream.Dispose(); 
+    } 
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+N> Note: In this sample, we are using the SixLabors.ImageSharp library to improve the image quality. You can any image processing library as per your requirement.
+
+You can downloaded a complete working sample from [GitHub]().
