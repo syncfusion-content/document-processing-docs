@@ -1,11 +1,11 @@
 ---
-title: PowerPoint to PDF Conversion
-description: Easily convert PowerPoint presentations to PDF format with customizable settings. Integration is simple, allowing you to tailor conversion options to your needs.
+title: Syncfusion PowerPoint to PDF Conversion Guide
+description: Convert PowerPoint presentations to PDF format seamlessly using Syncfusion's API. Customize settings for integration tailored to your needs.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# PowerPoint to PDF
+# Guide to Converting PowerPoint to PDF Using Syncfusion API
 
 Converting a PowerPoint document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 

@@ -1,6 +1,6 @@
 ---
-title: Authentication Configuration
-description: Learn how to configure authentication for the document processing engine using JSON Web Token (JWT) format. By default, authentication is disabled, but you can enable it by setting specific environment variables.
+title: Syncfusion Guide to Authentication Configuration in Web APIs
+description: Learn how to configure authentication for the document processing engine using JSON Web Token (JWT). Enable it by setting specific environment variables.
 platform: document-processing
 control: general
 documentation: UG

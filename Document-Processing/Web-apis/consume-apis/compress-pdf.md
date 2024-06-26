@@ -1,11 +1,11 @@
 ---
-title: Compress PDF Document Service
-description: Reduce the size of PDF documents using the Compress PDF API. Provide the PDF file and desired compression options to the compress endpoint for efficient file size reduction.
+title: Syncfusion PDF Compression Service Guide
+description: Use the Syncfusion Compress PDF API to reduce PDF file size efficiently by providing the PDF and compression options to the compress endpoint.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Compress PDF 
+# Guide to Compressing PDF Files with Syncfusion API 
 
 The Compress PDF API allows you to reduce the size of a PDF document with various compression options.
 

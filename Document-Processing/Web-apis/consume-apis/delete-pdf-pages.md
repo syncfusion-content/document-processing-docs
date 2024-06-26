@@ -1,11 +1,11 @@
 ---
-title: Delete PDF Pages Service
-description:  Easily remove specific pages from a PDF document using the Delete Pages API. Provide the PDF file and page deletion options to the delete-pages endpoint for precise page management.
+title: Syncfusion PDF Page Deletion Service Guide
+description:  Easily remove specific pages from a PDF document using Syncfusion's Delete Pages API. Provide the PDF and page deletion options for precise management.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Delete Pages
+# How to Delete Pages from a PDF Using Syncfusion API
 
 This feature allows you to delete pages in a PDF document. To perform this operation, you need to supply a PDF document as input to the Delete Pages API.
 

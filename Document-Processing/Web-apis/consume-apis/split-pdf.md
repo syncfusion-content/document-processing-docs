@@ -1,11 +1,11 @@
 ---
-title: PDF Split Service
-description: Easily divide a PDF document into multiple PDF files with the PDF Split Service. Provide the PDF file and desired split options to the split endpoint to perform the operation.
+title: Syncfusion PDF Split Service Guide
+description: Divide a PDF document into multiple files effortlessly using Syncfusion's PDF Split Service. Specify the PDF and split options for efficient document handling.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Split PDF
+# Guide to Splitting PDFs Using Syncfusion API
 
 You can effortlessly split PDF documents into multiple PDF files. To perform this operation, you need to supply a PDF document as input to the Split PDF API.
 
