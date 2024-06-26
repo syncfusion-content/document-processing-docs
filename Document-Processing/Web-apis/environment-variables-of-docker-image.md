@@ -1,6 +1,6 @@
 ---
 title: Syncfusion Docker Image Environment Variables and Configuration
-description:  Configure environment variables for deploying Syncfusion Document Processing API via Docker. 
+description:  Configure Docker environment variables for deploying Syncfusion Document Processing API seamlessly. Customize settings for optimal performance.
 platform: document-processing
 control: general
 documentation: UG
