@@ -1,6 +1,6 @@
 ---
 title: Syncfusion Docker Image Environment Variables and Configuration
-description:  Configure environment variables for deploying Syncfusion Document Processing API via Docker. Customize settings for license key, PostgreSQL, JWT, storage, and fonts.
+description:  Configure environment variables for deploying Syncfusion Document Processing API via Docker. 
 platform: document-processing
 control: general
 documentation: UG

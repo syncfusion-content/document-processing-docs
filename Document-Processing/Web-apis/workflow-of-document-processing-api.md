@@ -1,6 +1,6 @@
 ---
 title: Workflow of Syncfusion Document Processing API
-description: Learn the Syncfusion Document Processing API workflow for asynchronous task handling.
+description: Explore Syncfusion's Document Processing API workflow for handling asynchronous tasks efficiently. Simplify document processing with structured workflows.
 platform: document-processing
 control: general
 documentation: UG
