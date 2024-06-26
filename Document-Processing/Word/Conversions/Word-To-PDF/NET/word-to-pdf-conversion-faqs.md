@@ -1,40 +1,40 @@
 ---
-title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion
-description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word (DocIO) library.
+title: Word to PDF conversion FAQs | DocIO | Syncfusion
+description: Learn about the frequently asked questions of Word to PDF conversion in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Frequently asked questions about Word to PDF and Word and image conversions
+# Frequently Asked Questions
 
-The frequently asked questions about Word to PDF and Word and image conversions using DocIO are listed below.
+The frequently asked questions about Word to PDF conversion in Essential DocIO are listed below.
 
 ## Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework? 
 
 Yes, OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework and it is available in .NET 4.0 Framework.
 
-## Is it possible to convert 3D charts to PDF or image?
+## Is it possible to convert 3D charts to PDF?
 
-Current version of the DocIO library does not provide support for converting 3D charts to PDF or image format.
+Current version of the DocIO library does not provide support for converting 3D charts to PDF format.
 
 ## Is it possible to specify PDF conformance level in Word to PDF conversion?
 
 Yes, you can specify the PDF conformance level in Word to PDF conversion. For more details, refer [PDF Conformance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance).
 
-## Which one is better Azure App Service or Cloud Service for Word to PDF or image using DocIO?
+## Which one is better Azure App Service or Cloud Service for Word to PDF using DocIO?
 
 When the Word document contains metafile images (*.emf or *.wmf), we recommend using Azure Cloud Service.
 
-We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
+We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential DocIO preserves RedX images in the same size during the Word to PDF conversion to avoid pagination problems.
 
-## Why images are preserved as RedX images in Word to PDF or image conversion?
+## Why images are preserved as RedX images in Word to PDF conversion?
 
-**In .NET Core or .NET targeting applications**, metafile (*.wmf, *.emf) images have some limitations in DocIORenderer. Internally, DocIORenderer used the SkiaSharp graphics library to layout the text and images in PDF or image conversion. And SkiaSharp library does not support the metafile (".emf", ".wmf") images, so, it does not preserve the images in the mentioned applications.
+**In .NET Core or .NET targeting applications**, metafile (*.wmf, *.emf) images have some limitations in DocIORenderer. Internally, DocIORenderer used the SkiaSharp graphics library to layout the text and images in PDF conversion. And SkiaSharp library does not support the metafile (".emf", ".wmf") images, so, it does not preserve the images in the mentioned applications.
 
-If the Word document contains metafile (*.wmf" or *.emf") images, internally, DocIO preserves those images as RedX images with the same size of the original images during the Word to PDF or image conversion to avoid pagination problems.
+If the Word document contains metafile (*.wmf" or *.emf") images, internally, DocIO preserves those images as RedX images with the same size of the original images during the Word to PDF conversion to avoid pagination problems.
 
-To preserve the expected images in the PDF or image conversion, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform Word to PDF or image conversion.
+To preserve the expected images in the PDF conversion, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform Word to PDF conversion.
 
 **Suggestions:**
 
