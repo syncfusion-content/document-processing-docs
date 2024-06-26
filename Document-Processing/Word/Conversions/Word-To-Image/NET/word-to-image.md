@@ -367,9 +367,3 @@ During Word to Image conversions, if a glyph of the input text is unavailable in
 * [How to convert word to tiff using C#, VB.NET](https://support.syncfusion.com/kb/article/9541/how-to-convert-word-to-tiff-using-c-vb-net)
 * [How to convert Word to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12123/how-to-convert-word-to-image-in-blazor-webassembly-wasm)
 * [How to resolve font problems during Word to Image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
-
-## Frequently Asked Questions
-
-* [Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#could-not-find-syncfusionofficecharttoimageconverter-assembly-in-net-35-framework-does-it-mean-there-is-no-support-for-chart-conversion-in-this-framework-1)
-* [Which one is better Azure App Service or Cloud Service for Word to Image using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#which-one-is-better-azure-app-service-or-cloud-service-for-word-to-image-using-docio)
-* [Why images are preserved as RedX images in Word to Image conversion?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-images-are-preserved-as-redx-images-in-word-to-image-conversion)
