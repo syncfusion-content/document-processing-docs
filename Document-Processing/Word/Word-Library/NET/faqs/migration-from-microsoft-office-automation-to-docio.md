@@ -1101,7 +1101,7 @@ wordApp.Quit(nullobject, nullobject, nullobject)
 
 {% endtabs %}
 
-## Using DocIO
+### Using DocIO
 
 DocIO uses [ProtectionType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ProtectionType) property to specify the protection type of the Word document. This property uses the following values:
 
