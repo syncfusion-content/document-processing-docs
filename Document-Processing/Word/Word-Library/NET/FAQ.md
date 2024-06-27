@@ -1,6 +1,6 @@
 ---
 title: FAQ Section | DocIO | Syncfusion
-description: Learn about the frequently asked questions in the .NET Word (DocIO) library.
+description: This section lists the frequently asked questions in the Syncfusion .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
