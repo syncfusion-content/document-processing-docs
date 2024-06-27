@@ -376,7 +376,7 @@ A complete working example to remove a pivot table in C# is present on [this Git
 
 A pivot table can be accessed from the [IPivotTables](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTables.html) interface, which contains the collection of pivot tables in the worksheet. You can apply styles and formatting to the pivot table using  [IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) properties and methods.
 
-To learn more about styling and formatting the pivot table with the Syncfusion Excel library, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/styles-and-formatting).
+To learn more about styling and formatting the pivot table with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/styles-and-formatting)
 
 ## Layout
 
