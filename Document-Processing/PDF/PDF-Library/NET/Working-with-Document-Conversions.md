@@ -83,7 +83,7 @@ For ASP.NET Core and Xamarin applications
 * using Syncfusion.DocIORenderer
 * using Syncfusion.Pdf
 
-[DocToPDFConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a Word document into PDF. The following code snippet illustrates how to convert a Word document into PDF document.
+[DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a Word document into PDF. The following code snippet illustrates how to convert a Word document into PDF document.
 
 {% tabs %}
 
@@ -153,13 +153,13 @@ wordDocument.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Word-to-PDF/Converting-Word-to-PDF-document).
 
 Note:
-* Initializing the [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is mandatory to convert the charts present in the Word document to PDF. Otherwise the charts will not be exported to the converted PDF.
-* [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards.
+* Initializing the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is mandatory to convert the charts present in the Word document to PDF. Otherwise the charts will not be exported to the converted PDF.
+* [ChartToImageConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards.
 * Total number of pages may vary  based on unsupported elements in the converted PDF document when compare to Word document.
 
 ### Customizing the Word document to PDF conversion
 
-Essential DocIO allows you to customize the Word to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
+Essential DocIO allows you to customize the Word to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
 
 * Allows to determine the quality of the charts in the converted PDF.
 * Allows to determine the quality of the JPEG images in the converted PDF.
@@ -235,7 +235,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Converting Excel documents to PDF
 
-[ExcelToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPDFConverter.Base~Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) is responsible for converting an Excel document into PDF. Essential PDF allows you to convert an entire workbook or a single worksheet into PDF document. Refer to the following links for assemblies/nuget packages required based on platforms to convert Excel document into PDF. 
+[ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.ExcelToPDFConverter.Base~Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) is responsible for converting an Excel document into PDF. Essential PDF allows you to convert an entire workbook or a single worksheet into PDF document. Refer to the following links for assemblies/nuget packages required based on platforms to convert Excel document into PDF. 
 
 * [Assemblies Information](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required#converting-excel-document-to-pdf)
 * [NuGet Information](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required#converting-excel-document-to-pdf)
@@ -244,7 +244,7 @@ N> Excel to PDF conversion works proper in Blazor server-side alone and not in c
 
 ### Converting a Workbook to PDF
 
-The following code illustrates how to convert a workbook to PDF Document using [IWorkbook](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html) type in [ExcelToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorkbook_) class.
+The following code illustrates how to convert a workbook to PDF Document using [IWorkbook](https://help.syncfusion.com/cr/document-processings/Syncfusion.XlsIO.IWorkbook.html) type in [ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorkbook_) class.
 
 {% tabs %}
 
@@ -316,7 +316,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Converting a Worksheet to PDF
 
-The following code shows how to convert a particular sheet to PDF Document using [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) type in [ExcelToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorksheet_) class.
+The following code shows how to convert a particular sheet to PDF Document using [IWorksheet](https://help.syncfusion.com/cr/document-processings/Syncfusion.XlsIO.IWorksheet.html) type in [ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorksheet_) class.
 
 {% tabs %}
 
@@ -393,7 +393,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Creating individual PDF document for each worksheet
 
-The following code snippet shows how to create an individual PDF document for each worksheet in a workbook using [ExcelToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorksheet_) class.
+The following code snippet shows how to create an individual PDF document for each worksheet in a workbook using [ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorksheet_) class.
 
 {% tabs %}
 
@@ -474,7 +474,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Excel with Chart to PDF
 
-To preserve the charts during Excel to PDF conversion, you should initialize the [ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter) of [IApplication](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Base~Syncfusion.XlsIO.IApplication.html) interface, otherwise the charts present in worksheet will get skipped. The following code illustrate how to convert an Excel with chart to PDF document.
+To preserve the charts during Excel to PDF conversion, you should initialize the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter) of [IApplication](https://help.syncfusion.com/cr/document-processings/Syncfusion.XlsIO.Base~Syncfusion.XlsIO.IApplication.html) interface, otherwise the charts present in worksheet will get skipped. The following code illustrate how to convert an Excel with chart to PDF document.
 
 {% tabs %}
 
@@ -634,7 +634,7 @@ For ASP.NET Core and Xamarin applications
 * using Syncfusion.DocIORenderer
 * using Syncfusion.Pdf
 
-[DocToPDFConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocToPDFConverter.Base~Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a RTF to PDF. The following code snippet illustrates how to convert a RTF to PDF document.
+[DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.Base~Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a RTF to PDF. The following code snippet illustrates how to convert a RTF to PDF document.
 
 {% tabs %}
 
@@ -704,7 +704,7 @@ N> Total number of pages may vary  based on unsupported elements in the converte
 
 ### Customizing the RTF to PDF conversion
 
-Essential DocIO allows you to customize the RTF to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
+Essential DocIO allows you to customize the RTF to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
 
 * Allows to determine the quality of the JPEG images in the converted PDF.
 * Allows to reduce the Main Memory usage in RTF to PDF conversion by reusing the identical images.
@@ -769,7 +769,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Converting multi page TIFF to PDF
 
-Multi frame TIFF image can be converted to PDF document using [PdfBitmap](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. This can be done by accessing each frame of the multi frame TIFF image and rendering it in each page of the PDF document.
+Multi frame TIFF image can be converted to PDF document using [PdfBitmap](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. This can be done by accessing each frame of the multi frame TIFF image and rendering it in each page of the PDF document.
 
 The code snippet to illustrate the same is given below.
 
@@ -898,7 +898,7 @@ N> 1. Essential PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging
 
 Essential PDF supports JBIG2 compression for best compression of monochrome images.
 
-Refer the below code snippet to draw a single frame monochrome TIFF image with JBIG2 compression using [EncodingType](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.EncodingType.html) Enum.
+Refer the below code snippet to draw a single frame monochrome TIFF image with JBIG2 compression using [EncodingType](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Graphics.EncodingType.html) Enum.
 
 {% tabs %}
 
@@ -958,7 +958,7 @@ N> 2. By default, all monochrome images will be compressed in CITTT4 compression
 
 The XPS (XML Paper Specification) document format is a fixed document format which consists of structured XML markup that defines the layout of a document and the visual appearance of each page, along with rendering rules for distributing, archiving, rendering, processing and printing the documents.
 
-Essential PDF provides support for converting XPS to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Base~Syncfusion.XPS.XPSToPdfConverter.html) class.
+Essential PDF provides support for converting XPS to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Base~Syncfusion.XPS.XPSToPdfConverter.html) class.
 
 The below code illustrates how to convert XPS to PDF.
 
@@ -1264,7 +1264,7 @@ image.Save("sample.png")
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/PDF-to-image).
 
-N> To know more about PdfToImageConverter and features it provides, please refer to [PdfToImageConverter](hhttps://help.syncfusion.com/document-processing/pdf/conversions/pdf-to-image/net/convert-pdf-file-to-image-in-asp-net-core)
+N> To know more about PdfToImageConverter and features it provides, please refer to [PdfToImageConverter](https://help.syncfusion.com/document-processing/pdf/conversions/pdf-to-image/net/convert-pdf-file-to-image-in-asp-net-core)
 
 ## MHTML to PDF
 
