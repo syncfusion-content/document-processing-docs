@@ -3757,11 +3757,11 @@ End Using
 
 ### Comment
 
-For more details about Comment, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-drawing-objects#comments).
+For more details about Comment, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-drawing-objects#comments)
 
 ### Conditional Formats
 
-For more details about Conditional Formats, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-conditional-formatting).
+For more details about Conditional Formats, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-conditional-formatting)
 
 ### Count
 
@@ -3825,7 +3825,7 @@ End Using
 
 ### Data Validation
 
-For more details about Data Validation, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation).
+For more details about Data Validation, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation)
 
 ### End
 
@@ -4101,7 +4101,7 @@ End Using
 
 ### Formula Array
 
-For more details about FormulaArray, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#array-of-formula).
+For more details about FormulaArray, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#array-of-formula)
 
 ### Formula Bool Value
 
@@ -5019,4 +5019,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-For more details about RichText, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#rich-text-formatting).
+For more details about RichText, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#rich-text-formatting)

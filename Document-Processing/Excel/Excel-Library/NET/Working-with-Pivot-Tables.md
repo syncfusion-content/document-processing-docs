@@ -437,7 +437,7 @@ End Using
 
 A complete working example to layout a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Layout). 
 
-To learn more about pivot table layout with the Syncfusion Excel library, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/pivot-layout).
+To learn more about pivot table layout with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/pivot-layout)
 
 ## Refresh
 
@@ -590,13 +590,13 @@ Sorting enables users to rearrange the data in the pivot table based on specifie
 
 Filtering allows users to display only the specific data they want to see within the pivot table. Users can apply filters to individual fields in the pivot table to include or exclude certain values, categories, or ranges of data.
 
-To learn more about sorting and filtering of pivot table with the Syncfusion Excel library, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/sorting-and-filtering).
+To learn more about sorting and filtering of pivot table with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/sorting-and-filtering)
 
 ## Grouping
 
 Grouping is the process of categorizing data based on common characteristics or values to facilitate analysis and visualization. It allows users to summarize and organize large datasets more effectively.
 
-To learn more about grouping of pivot table with the Syncfusion Excel library, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/grouping).
+To learn more about grouping of pivot table with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/grouping)
 
 ## See Also
 
