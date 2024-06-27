@@ -1812,7 +1812,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-a-document-link-annotation-in-PDF-document).
 
-### Pdf Redaction Annotation
+### Redaction Annotation
 
 The essential PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
 
@@ -1932,6 +1932,188 @@ document.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Removing-the-sensitive-text-and-images-from-PDF-document).
 
 N>The redaction annotation flatten operation is currently supported in the .NET Framework and ASP.NET Core platforms only, it is not supported in the UWP, Xamarin platforms.
+
+### Watermark Annotation
+
+A watermark annotation is used to represent graphics that are expected to be printed at a fixed size and position on a page, regardless of the dimensions of the printed page. [PdfWatermarkAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfWatermarkAnnotation.html) can be used.
+The following code example explains how to add a watermark annotation in the PDF document
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the page 
+PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Creates PDF watermark annotation 
+PdfWatermarkAnnotation watermark = new PdfWatermarkAnnotation(new RectangleF(50, 100, 100, 50));
+//Sets properties to the annotation 
+watermark.Opacity = 0.5f; 
+//Create the appearance of watermark 
+watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", new PdfStandardFont(PdfFontFamily.Helvetica, 20), PdfBrushes.Red, new RectangleF(0, 0, 200, 50), new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle));
+//Adds the annotation to page 
+lpage.Annotations.Add(watermark);
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Close the document 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+//Get the page 
+PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Creates PDF watermark annotation 
+PdfWatermarkAnnotation watermark = new PdfWatermarkAnnotation(new RectangleF(50, 100, 100, 50));
+//Sets properties to the annotation 
+watermark.Opacity = 0.5f; 
+//Create the appearance of watermark 
+watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", new PdfStandardFont(PdfFontFamily.Helvetica, 20), PdfBrushes.Red, new RectangleF(0, 0, 200, 50), new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle));
+//Adds the annotation to page 
+lpage.Annotations.Add(watermark); 
+
+//Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf"); 
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the existing PDF document
+ Dim loadedDocument As New PdfLoadedDocument("input.pdf")
+'Get the page 
+Dim lpage As PdfLoadedPage = TryCast(loadedDocument.Pages(0),PdfLoadedPage)
+
+'Creates PDF watermark annotation
+Dim watermark As New PdfWatermarkAnnotation(New RectangleF(50, 100, 100, 50)) 
+watermark.Opacity = 0.5f; 
+'Creates the appearance of watermark
+watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", New PdfStandardFont(PdfFontFamily.Helvetica, 20), PdfBrushes.Red, New RectangleF(0, 0, 200, 50), New PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle))
+'Adds annotation to the page 
+lpage.Annotations.Add(watermark)
+
+'Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf")
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-watermark-annotation-in-the-PDF-document).
+
+### Text Markup Annotation
+
+You can highlight the Markup Text using the [PdfTextMarkupAnnotationType](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfTextMarkupAnnotationType.html) enum of the [TextMarkupAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfTextMarkupAnnotation.html) class. This is explained in the following code example.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Create a new page.
+PdfPage page = document.Pages.Add();
+FileStream fontStream = new FileStream("arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont pdfFont = new PdfTrueTypeFont(fontStream, 14);
+//Create a new PDF brush.
+PdfBrush pdfBrush = new PdfSolidBrush(Color.Black);
+//Draw text in the new page.
+page.Graphics.DrawString("Text Markup Annotation Demo", pdfFont, pdfBrush, new PointF(150, 10));
+string markupText = "Text Markup";
+SizeF size = pdfFont.MeasureString(markupText);
+RectangleF rectangle = new RectangleF(175, 40, size.Width, size.Height);
+page.Graphics.DrawString(markupText, pdfFont, pdfBrush, rectangle);
+
+//Create a PDF text markup annotation.
+PdfTextMarkupAnnotation markupAnnotation = new PdfTextMarkupAnnotation("Markup annotation", "Markup annotation with highlight style", markupText, new PointF(175, 40), pdfFont);
+markupAnnotation.TextMarkupColor = new PdfColor(Color.BlueViolet);
+markupAnnotation.TextMarkupAnnotationType = PdfTextMarkupAnnotationType.Highlight;
+//Add this annotation to a new page.
+page.Annotations.Add(markupAnnotation);
+
+//Save the document to disk.
+Save(document, "Output.pdf");
+//close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Create a new page.
+PdfPage page = document.Pages.Add();
+//Create a PDF font and font style.
+Font font = new Font("Calibri", 10, FontStyle.Bold);
+PdfFont pdfFont = new PdfTrueTypeFont(font, false);
+//Create a new PDF brush.
+PdfBrush pdfBrush = new PdfSolidBrush(Color.Black);
+//Draw text in the new page.
+page.Graphics.DrawString("Text Markup Annotation Demo", pdfFont, pdfBrush, new PointF(150, 10));
+string markupText = "Text Markup";
+SizeF size = pdfFont.MeasureString(markupText);
+RectangleF rectangle = new RectangleF(175, 40, size.Width, size.Height);
+page.Graphics.DrawString(markupText, pdfFont, pdfBrush, rectangle);
+
+//Create a PDF text markup annotation.
+PdfTextMarkupAnnotation markupAnnotation = new PdfTextMarkupAnnotation("Markup annotation", "Markup annotation with highlight style", markupText, new PointF(175, 40), pdfFont);
+markupAnnotation.TextMarkupColor = new PdfColor(Color.BlueViolet);
+markupAnnotation.TextMarkupAnnotationType = PdfTextMarkupAnnotationType.Highlight;
+//Add this annotation to a new page.
+page.Annotations.Add(markupAnnotation);
+
+//Save the document to disk.
+document.Save("Output.pdf");
+//close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Create a new PDF document.
+Dim document As New PdfDocument()
+'Create a new page.
+Dim page As PdfPage = document.Pages.Add()
+'Create a pdf font and pdf font style.
+Dim font As New Font("Calibri", 10, FontStyle.Bold)
+Dim pdfFont As PdfFont = New PdfTrueTypeFont(font, False)
+'Create a new PdfBrush.
+Dim pdfBrush As PdfBrush = New PdfSolidBrush(Color.Black)
+'Draw text in the new page.
+page.Graphics.DrawString("Text Markup Annotation Demo", pdfFont, pdfBrush, New PointF(150, 10))
+Dim markupText As String = "Text Markup"
+Dim size As SizeF = pdfFont.MeasureString(markupText)
+Dim rectangle As New RectangleF(175, 40, size.Width, size.Height)
+page.Graphics.DrawString(markupText, pdfFont, pdfBrush, rectangle)
+
+'Create a pdf text markup annotation.
+Dim markupAnnotation As New PdfTextMarkupAnnotation("Markup annotation", "Markup annotation with highlight style", markupText, New PointF(175, 40), pdfFont)
+markupAnnotation.TextMarkupColor = New PdfColor(Color.BlueViolet)
+markupAnnotation.TextMarkupAnnotationType = PdfTextMarkupAnnotationType.Highlight
+'Add this annotation to a new page.
+page.Annotations.Add(markupAnnotation)
+
+'Save the document to disk.
+document.Save("Output.pdf")
+'close the document.
+document.Close(True)
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Highlight-text-in-the-newly-created-PDF-document).
+
 
 ## Cloud border style Annotation
 
@@ -2160,83 +2342,6 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-a-cloud-border-styled-polygon-annotation-in-the-PDF).
 
-### Watermark Annotation
-
-A watermark annotation is used to represent graphics that are expected to be printed at a fixed size and position on a page, regardless of the dimensions of the printed page. [PdfWatermarkAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfWatermarkAnnotation.html) can be used.
-The following code example explains how to add a watermark annotation in the PDF document
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the page 
-PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
-
-//Creates PDF watermark annotation 
-PdfWatermarkAnnotation watermark = new PdfWatermarkAnnotation(new RectangleF(50, 100, 100, 50));
-//Sets properties to the annotation 
-watermark.Opacity = 0.5f; 
-//Create the appearance of watermark 
-watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", new PdfStandardFont(PdfFontFamily.Helvetica, 20), PdfBrushes.Red, new RectangleF(0, 0, 200, 50), new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle));
-//Adds the annotation to page 
-lpage.Annotations.Add(watermark);
-
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document 
-loadedDocument.Close(true); 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get the page 
-PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
-
-//Creates PDF watermark annotation 
-PdfWatermarkAnnotation watermark = new PdfWatermarkAnnotation(new RectangleF(50, 100, 100, 50));
-//Sets properties to the annotation 
-watermark.Opacity = 0.5f; 
-//Create the appearance of watermark 
-watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", new PdfStandardFont(PdfFontFamily.Helvetica, 20), PdfBrushes.Red, new RectangleF(0, 0, 200, 50), new PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle));
-//Adds the annotation to page 
-lpage.Annotations.Add(watermark); 
-
-//Saves the document to disk. 
-loadedDocument.Save("WatermarkAnnotation.pdf"); 
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document
- Dim loadedDocument As New PdfLoadedDocument("input.pdf")
-'Get the page 
-Dim lpage As PdfLoadedPage = TryCast(loadedDocument.Pages(0),PdfLoadedPage)
-
-'Creates PDF watermark annotation
-Dim watermark As New PdfWatermarkAnnotation(New RectangleF(50, 100, 100, 50)) 
-watermark.Opacity = 0.5f; 
-'Creates the appearance of watermark
-watermark.Appearance.Normal.Graphics.DrawString("Watermark Text", New PdfStandardFont(PdfFontFamily.Helvetica, 20), PdfBrushes.Red, New RectangleF(0, 0, 200, 50), New PdfStringFormat(PdfTextAlignment.Center, PdfVerticalAlignment.Middle))
-'Adds annotation to the page 
-lpage.Annotations.Add(watermark)
-
-'Saves the document to disk. 
-loadedDocument.Save("WatermarkAnnotation.pdf")
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-watermark-annotation-in-the-PDF-document).
 
 ## Measurement Annotations
 
@@ -4396,108 +4501,6 @@ End Function
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-custom-stamp-in-an-existing-PDF-document).
 
-## Text Markup Annotation
-
-You can highlight the Markup Text using the [PdfTextMarkupAnnotationType](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfTextMarkupAnnotationType.html) enum of the [TextMarkupAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfTextMarkupAnnotation.html) class. This is explained in the following code example.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Create a new page.
-PdfPage page = document.Pages.Add();
-FileStream fontStream = new FileStream("arial.ttf", FileMode.Open, FileAccess.Read);
-PdfFont pdfFont = new PdfTrueTypeFont(fontStream, 14);
-//Create a new PDF brush.
-PdfBrush pdfBrush = new PdfSolidBrush(Color.Black);
-//Draw text in the new page.
-page.Graphics.DrawString("Text Markup Annotation Demo", pdfFont, pdfBrush, new PointF(150, 10));
-string markupText = "Text Markup";
-SizeF size = pdfFont.MeasureString(markupText);
-RectangleF rectangle = new RectangleF(175, 40, size.Width, size.Height);
-page.Graphics.DrawString(markupText, pdfFont, pdfBrush, rectangle);
-
-//Create a PDF text markup annotation.
-PdfTextMarkupAnnotation markupAnnotation = new PdfTextMarkupAnnotation("Markup annotation", "Markup annotation with highlight style", markupText, new PointF(175, 40), pdfFont);
-markupAnnotation.TextMarkupColor = new PdfColor(Color.BlueViolet);
-markupAnnotation.TextMarkupAnnotationType = PdfTextMarkupAnnotationType.Highlight;
-//Add this annotation to a new page.
-page.Annotations.Add(markupAnnotation);
-
-//Save the document to disk.
-Save(document, "Output.pdf");
-//close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Create a new page.
-PdfPage page = document.Pages.Add();
-//Create a PDF font and font style.
-Font font = new Font("Calibri", 10, FontStyle.Bold);
-PdfFont pdfFont = new PdfTrueTypeFont(font, false);
-//Create a new PDF brush.
-PdfBrush pdfBrush = new PdfSolidBrush(Color.Black);
-//Draw text in the new page.
-page.Graphics.DrawString("Text Markup Annotation Demo", pdfFont, pdfBrush, new PointF(150, 10));
-string markupText = "Text Markup";
-SizeF size = pdfFont.MeasureString(markupText);
-RectangleF rectangle = new RectangleF(175, 40, size.Width, size.Height);
-page.Graphics.DrawString(markupText, pdfFont, pdfBrush, rectangle);
-
-//Create a PDF text markup annotation.
-PdfTextMarkupAnnotation markupAnnotation = new PdfTextMarkupAnnotation("Markup annotation", "Markup annotation with highlight style", markupText, new PointF(175, 40), pdfFont);
-markupAnnotation.TextMarkupColor = new PdfColor(Color.BlueViolet);
-markupAnnotation.TextMarkupAnnotationType = PdfTextMarkupAnnotationType.Highlight;
-//Add this annotation to a new page.
-page.Annotations.Add(markupAnnotation);
-
-//Save the document to disk.
-document.Save("Output.pdf");
-//close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Create a new PDF document.
-Dim document As New PdfDocument()
-'Create a new page.
-Dim page As PdfPage = document.Pages.Add()
-'Create a pdf font and pdf font style.
-Dim font As New Font("Calibri", 10, FontStyle.Bold)
-Dim pdfFont As PdfFont = New PdfTrueTypeFont(font, False)
-'Create a new PdfBrush.
-Dim pdfBrush As PdfBrush = New PdfSolidBrush(Color.Black)
-'Draw text in the new page.
-page.Graphics.DrawString("Text Markup Annotation Demo", pdfFont, pdfBrush, New PointF(150, 10))
-Dim markupText As String = "Text Markup"
-Dim size As SizeF = pdfFont.MeasureString(markupText)
-Dim rectangle As New RectangleF(175, 40, size.Width, size.Height)
-page.Graphics.DrawString(markupText, pdfFont, pdfBrush, rectangle)
-
-'Create a pdf text markup annotation.
-Dim markupAnnotation As New PdfTextMarkupAnnotation("Markup annotation", "Markup annotation with highlight style", markupText, New PointF(175, 40), pdfFont)
-markupAnnotation.TextMarkupColor = New PdfColor(Color.BlueViolet)
-markupAnnotation.TextMarkupAnnotationType = PdfTextMarkupAnnotationType.Highlight
-'Add this annotation to a new page.
-page.Annotations.Add(markupAnnotation)
-
-'Save the document to disk.
-document.Save("Output.pdf")
-'close the document.
-document.Close(True)
-
-{% endhighlight %}
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Highlight-text-in-the-newly-created-PDF-document).
 
 ## Get images from custom rubber stamp annotation
 
