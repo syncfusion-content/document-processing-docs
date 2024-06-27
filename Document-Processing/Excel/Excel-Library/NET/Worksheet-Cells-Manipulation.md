@@ -3825,7 +3825,7 @@ End Using
 
 ### Data Validation
 
-For more details about Data Validation, [click here](https://help.syncfusion.com/document-processing/xlsio/working-with-data-validation).
+For more details about Data Validation, [click here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation).
 
 ### End
 
