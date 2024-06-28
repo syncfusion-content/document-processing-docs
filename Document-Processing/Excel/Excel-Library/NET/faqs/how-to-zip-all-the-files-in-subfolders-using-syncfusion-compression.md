@@ -21,7 +21,9 @@ class Program
 {
   private static List<DirectoryInfo> arrOfItems = new List<DirectoryInfo>();
   private static ZipArchive zipArchive = new ZipArchive();
-  private static string folderPath = "D:\\Compress"; // Enter the folder path
+
+  // Enter the folder path
+  private static string folderPath = "Your_folder_path"; 
   private static List<Stream> arrOfStreamItems = new List<Stream>();
 
   private static void SubFoldersFiles(string path)
@@ -204,7 +206,9 @@ Imports System.IO
 Module Module1
   Private arrOfItems As New List(Of DirectoryInfo)()
   Private zipArchive As New ZipArchive()
-  Private folderPath As String = "D:\Compress" 'Enter the folder path 
+
+  'Enter the folder path
+  Private folderPath As String = "Your_folder_path"  
   Private arrOfStreamItems As New List(Of Stream)()
 
   Private Sub SubFoldersFiles(path As String)
