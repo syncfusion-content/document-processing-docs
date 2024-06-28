@@ -1,6 +1,6 @@
 ---
 title: How to access a table in Excel document using the table name | Syncfusion
-description: This page shows how to access a table in Excel document using the table name using the Syncfusion .NET Excel library (XlsIO).
+description: This page shows how to access a table using its name using XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
