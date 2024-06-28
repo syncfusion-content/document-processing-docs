@@ -951,4 +951,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page]().
+A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/NET%20Standard/Header%20and%20Footer)

@@ -74,7 +74,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of copying an Excel workbook in C# is present on [this GitHub page]().
+A complete working example of copying an Excel workbook in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Copy%20Workbook/NET%20Standard/Copy%20Workbook)
 
 ### Copy Worksheet
 
@@ -212,7 +212,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of copying a row in C# is present on [this GitHub page]().
+A complete working example of copying a row in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Copy%20Row/NET%20Standard/Copy%20Row)
 
 ### Copy Column
 
@@ -288,7 +288,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of copying a column in C# is present on [this GitHub page]().
+A complete working example of copying a column in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Copy%20Column/NET%20Standard/Copy%20Column)
 
 ### Copy Cell Range
 
@@ -364,7 +364,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for copying a cell range from one worksheet to another in C# is present on [this GitHub page]().
+A complete working example for copying a cell range from one worksheet to another in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Copy%20Cell%20Range/NET%20Standard/Copy%20Cell%20Range)
 
 #### Copy Cell Range Options
 
@@ -441,8 +441,6 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
-
-A complete working example of copying a cell range with copy range options from one worksheet to another in C# is present on [this GitHub page]().
 
 ## Move
 
@@ -579,7 +577,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of moving a row in C# is available on [this GitHub page]().
+A complete working example of moving a row in C# is available on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Move%20Row/NET%20Standard/Move%20Row)
 
 ### Move Column
 
@@ -655,7 +653,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of moving a column in C# is present on [this GitHub page]().
+A complete working example of moving a column in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Move%20Column/NET%20Standard/Move%20Column)
 
 ### Move Cell Range
 
@@ -731,4 +729,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for moving a cell range from one worksheet to another in C# is present on [this GitHub page]().
+A complete working example for moving a cell range from one worksheet to another in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Move%20Cell%20Range/NET%20Standard/Move%20Cell%20Range)
