@@ -27,20 +27,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
-  sheet.Range["A1:M20"].Text = "document";
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Saving the sheet and workbook as streams
-  FileStream sheetStream = new FileStream("Sample.csv", FileMode.Create, FileAccess.ReadWrite);
-  sheet.SaveAs(sheetStream,",");
-  
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  //Saving the workbook as streams
+  FileStream outputStream = new FileStream("Sample.csv", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(outputStream, ",");
 
-  //Dispose stream
-  sheetStream.Dispose();
-  stream.Dispose();
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -49,36 +45,29 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
-  sheet.Range["A1:M20"].Text = "document";
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
 
-  //Save the sheet as CSV
-  sheet.SaveAs("Sample.csv", ",");
-
-  workbook.SaveAs("Output.xlsx");
+  //Saving the workbook
+  workbook.SaveAs("Output.csv", ",");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
-  Dim workbook As IWorkbook = application.Workbooks.Create(1)
-  Dim sheet As IWorksheet = workbook.Worksheets(0)
-  sheet.Range("A1:M20").Text = "document"
-  
-  'Save the sheet as CSV 
-  sheet.SaveAs("Sample.csv", ",")
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
 
-  workbook.SaveAs("Output.xlsx")
+  ' Saving the workbook
+  worksheet.SaveAs("Output.csv", ",")
 End Using
+
 {% endhighlight %}
 {% endtabs %}  
  
 A complete working example to convert an Excel file to CSV in C# is present on [this GitHub page]().
 
-## Maximum Rows and Columns for CSV
+**Maximum Rows and Columns for CSV**
 
 By default, XlsIO allows only 1048576 rows and 16256 columns while loading or saving a CSV document. This limit can be increased by modifying the [MaximumRowsForCsv](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumRowsForCsv) and [MaximumColumnsForCsv](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_MaximumColumnsForCsv) properties. 
 
@@ -146,3 +135,50 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## Excel to TSV Conversion
+
+TSV (Tab-Separated Values) files can be created by saving a workbook with the tab separator (\t).
+
+The following code example illustrates how to convert an Excel file to TSV.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+  //Save the workbook in CSV format with tab(\t) as delimiter
+  FileStream outputStream = new FileStream("Output.tsv", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(outputStream, "\t");
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+
+  //Saving the workbook in CSV format with tab(\t) as delimiter
+  workbook.SaveAs("Output.tsv", "\t");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+
+  ' Saving the workbook in CSV format with tab(\t) as delimiter
+  workbook.SaveAs("Output.tsv", vbTab)
+End Using
+{% endhighlight %}
+{% endtabs %}  
+ 
+A complete working example to convert an Excel file to TSV in C# is present on [this GitHub page]().
