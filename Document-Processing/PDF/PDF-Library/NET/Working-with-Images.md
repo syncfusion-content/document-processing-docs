@@ -422,7 +422,7 @@ N> 1. Essential PDF supports image masking with [Syncfusion.Pdf.Imaging.Portable
 
 ## Replacing Images in an existing PDF document
 
-Essential PDF allows you to replace images in an existing document. The [ReplaceImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_) method of the page collection allows you to replace an image.
+Essential PDF allows you to replace images in an existing document. The [ReplaceImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_) method of the PdfLoadedPage collection allows you to replace an image.
 
 {% tabs %} 
 

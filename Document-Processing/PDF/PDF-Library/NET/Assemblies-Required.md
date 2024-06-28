@@ -94,12 +94,13 @@ Syncfusion.Pdf.MVC<br/>Syncfusion.Compression.Base<br/></td></tr>
 
 N> The .NET Standard assemblies can be found in the following Essential Studio installation path
 {Installed directory}\Syncfusion\Essential Studio\{Product version}\precompiledassemblies\{Product version}\.NET Standard 1.2\
-
+<br/><br/>
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+<br/><br/>
 
 ## Converting HTML to PDF
 
-Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac) respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
+Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac) respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
 
 <table>
 <tr>
