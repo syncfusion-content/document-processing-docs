@@ -14,7 +14,7 @@ Essential PDF provides support to create, add and merge the layers into PDF docu
 
 ## Adding Layers in a PDF document
 
-Essential PDF allows the users to create a layer in a PDF page using [PdfPageLayer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayer.html) class. The below code example illustrates how to add the multiple layers in a new PDF document.
+Essential PDF allows the users to create a layer in a PDF page using [PdfPageLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayer.html) class. The below code example illustrates how to add the multiple layers in a new PDF document.
 
 {% tabs %} 
 
@@ -120,7 +120,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Layer/Adding-layers-in-a-PDF-document).
 
-The below code illustrates how to add the multiple layers in an existing PDF document using [PdfPageLayer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayer.html) class. 
+The below code illustrates how to add the multiple layers in an existing PDF document using [PdfPageLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayer.html) class. 
 
 {% tabs %} 
 
@@ -229,7 +229,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding annotation to layer
 
-Essential PDF allows the users to add different types of [Annotation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations) to layers in the PDF document using [Layer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Layer) property in [PdfAnnotation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAnnotation.html) class. The following code example illustrates the same. 
+Essential PDF allows the users to add different types of [Annotation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations) to layers in the PDF document using [Layer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Layer) property in [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) class. The following code example illustrates the same. 
 
 {% tabs %}  
 
@@ -438,7 +438,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Nested Layers
 
-Essential PDF allows users to add nested layers in the PDF document by adding child layer to parent layer using [Layers](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Layers) property of [PdfLayer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLayer.html) class. Refer to the following code example. 
+Essential PDF allows users to add nested layers in the PDF document by adding child layer to parent layer using [Layers](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Layers) property of [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class. Refer to the following code example. 
 
 {% tabs %} 
 
@@ -551,7 +551,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing layers from an existing PDF document
 
-You can remove the layers using [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayerCollection.html#Syncfusion_Pdf_PdfPageLayerCollection_RemoveAt_System_Int32_) method or [Remove](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayerCollection.html#Syncfusion_Pdf_PdfPageLayerCollection_Remove_System_String_) method from layer collection, represented by the [PdfPageLayerCollection](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayerCollection.html) of the [PdfLoadedPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLoadedPage.html). This is illustrated in the following code sample.
+You can remove the layers using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html#Syncfusion_Pdf_PdfPageLayerCollection_RemoveAt_System_Int32_) method or [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html#Syncfusion_Pdf_PdfPageLayerCollection_Remove_System_String_) method from layer collection, represented by the [PdfPageLayerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html) of the [PdfLoadedPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLoadedPage.html). This is illustrated in the following code sample.
 
 {% tabs %} 
 
@@ -627,7 +627,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  
 ## Flattening the layers in an existing PDF document
 
-You can flatten a layer in a PDF document by removing it from the [PdfDocumentLayerCollection](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentLayerCollection.html) using [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_RemoveAt_System_Int32_) method or [Remove](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_Remove_System_String_) method. The following code snippet explains this.
+You can flatten a layer in a PDF document by removing it from the [PdfDocumentLayerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html) using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_RemoveAt_System_Int32_) method or [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_Remove_System_String_) method. The following code snippet explains this.
 
 {% tabs %}
 
@@ -694,7 +694,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Toggling the visibility of layers
 
-The visibility of a layer can be mentioned while creating a new page layer using [Add](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayerCollection.html#Syncfusion_Pdf_PdfPageLayerCollection_Add_System_String_System_Boolean_) method in [PdfPageLayerCollection](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayerCollection.html) class by specifying the *visibility* as **true**.
+The visibility of a layer can be mentioned while creating a new page layer using [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html#Syncfusion_Pdf_PdfPageLayerCollection_Add_System_String_System_Boolean_) method in [PdfPageLayerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html) class by specifying the *visibility* as **true**.
 
 The below code illustrates how to toggle the visibility of layers in new PDF document. 
 
@@ -806,7 +806,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Layer/Toggle-the-visibility-of-layers-in-new-PDF-document).
 
-The following code illustrates how to toggle the visibility of layers in an existing PDF document by disabling the [Visible](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Visible) property of the [PdfLayer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLayer.html) class.
+The following code illustrates how to toggle the visibility of layers in an existing PDF document by disabling the [Visible](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Visible) property of the [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class.
 
 {% tabs %}  
 
@@ -876,7 +876,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Lock or Unlock layers
 
-The layers can be locked or unlocked while creating a new layer in a PDF document by enabling or disabling the [Locked](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Locked) property in [PdfLayer](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLayer.html) class.  
+The layers can be locked or unlocked while creating a new layer in a PDF document by enabling or disabling the [Locked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Locked) property in [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class.  
 
 The following code sample shows how to add a lock state to the layer in a new PDF document.
  
@@ -972,7 +972,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Removing the layer with its graphical content
 
 The Syncfusion PDF library allows users to remove layers from PDF documents, and we can also remove the graphical content of layers upto n layer recursively.
-We can remove  layers from the layer collection, represented by the ['PdfPageLayerCollection'](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLayerCollection.html) of the loaded page by mentioning only the index ['RemoveAt(0)'](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_Remove_System_String_). We can also remove the graphic content of the layer by using ['RemoveAt(0, true)'](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_RemoveAt_System_Int32_System_Boolean_) method from the layer collection by mentioning the index and enabling the removeGraphicalContent parameter.
+We can remove  layers from the layer collection, represented by the ['PdfPageLayerCollection'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html) of the loaded page by mentioning only the index ['RemoveAt(0)'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_Remove_System_String_). We can also remove the graphic content of the layer by using ['RemoveAt(0, true)'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_RemoveAt_System_Int32_System_Boolean_) method from the layer collection by mentioning the index and enabling the removeGraphicalContent parameter.
 
 This is illustrated in the following code sample.
 

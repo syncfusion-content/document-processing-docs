@@ -350,11 +350,11 @@ return File(outputStream, contentType, fileName);
 
 {% endtabs %} 
 
-N> The [PerformOCR](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.Base~Syncfusion.OCRProcessor.OCRProcessor~PerformOCR(PdfLoadedDocument,String).html) methods return only the text OCRed by [OCRProcessor](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html). Other existing text in the PDF page will not be returned in this method.
+N> The [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.Base~Syncfusion.OCRProcessor.OCRProcessor~PerformOCR(PdfLoadedDocument,String).html) methods return only the text OCRed by [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html). Other existing text in the PDF page will not be returned in this method.
 
 ## Performing OCR for a region
 
-You can perform OCR on particular region of the PDF page with help of the [PageRegion](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.PageRegion.html) class. Refer to the following code snippet,
+You can perform OCR on particular region of the PDF page with help of the [PageRegion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.PageRegion.html) class. Refer to the following code snippet,
 
 {% tabs %}   
 
@@ -535,7 +535,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Layout result 
 
-You can get the OCRed text and its bounds from an input PDF document by using the [OCRLayoutResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRLayoutResult.html) Class. Refer to the following code snippet. 
+You can get the OCRed text and its bounds from an input PDF document by using the [OCRLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRLayoutResult.html) Class. Refer to the following code snippet. 
  
 {% tabs %} 
 
@@ -710,7 +710,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 When performing OCR with an existing scanned PDF document, the OCR Processor will create temporary files images and temporary files in a temporary folder. The files will be deleted after the OCR process is completed.
 
-By default, the system temporary folder will be used for the process. The temporary folder path can be changed by using the [TempFolder](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TempFolder) property available in the [OCRSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html) Instance. Refer to the following code snippet.
+By default, the system temporary folder will be used for the process. The temporary folder path can be changed by using the [TempFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TempFolder) property available in the [OCRSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html) Instance. Refer to the following code snippet.
 
 {% tabs %} 
 

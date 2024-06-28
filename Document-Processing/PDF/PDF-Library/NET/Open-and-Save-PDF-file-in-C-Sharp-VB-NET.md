@@ -34,7 +34,7 @@ Imports Syncfusion.Pdf.Parsing
 
 ## Opening an existing PDF document
 
-You can open an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following example shows how to load an existing document from physical path.
+You can open an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following example shows how to load an existing document from physical path.
 
 {% tabs %}
 
@@ -64,7 +64,7 @@ Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
 ## Opening an existing PDF document from Stream
 
-You can open an existing document from stream by using [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown below.
+You can open an existing document from stream by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown below.
 
 {% tabs %} 
 
@@ -94,7 +94,7 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFStream)
 
 ## Opening an existing PDF document from byte array
 
-You can open an existing document from byte array by using [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown in the below code example.
+You can open an existing document from byte array by using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class as shown in the below code example.
 
 {% tabs %} 
 
@@ -123,7 +123,7 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFByteArray)
 
 ## Opening an Encrypted PDF document
 
-You can open an existing encrypted PDF document from either the file system or the stream or the byte array using [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_) class as shows in the below code example. 
+You can open an existing encrypted PDF document from either the file system or the stream or the byte array using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_) class as shows in the below code example. 
 
 {% tabs %}
 
@@ -204,7 +204,7 @@ Dim loadedDocument As New PdfLoadedDocument(inputPDFByteArray,"password")
 
 ## Opening a corrupted PDF document
 
-You can open a corrupted PDF document from either the file system or the stream or the byte array using the [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_System_Boolean_) as shown below.
+You can open a corrupted PDF document from either the file system or the stream or the byte array using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_System_Boolean_) as shown below.
 
 {% tabs %}
 
@@ -288,7 +288,7 @@ N> 2.  Using this overload may cause performance delay when compared with other 
 
 ## Saving a PDF document to file system
 
-You can save the manipulated PDF document to file system using [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method of [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+You can save the manipulated PDF document to file system using [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
 {% tabs %}
 
@@ -341,7 +341,7 @@ loadedDocument.Save("Output.pdf")
 
 ## Saving a PDF document to stream
 
-You can also save the manipulated PDF document to stream using overloads of [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method.
+You can also save the manipulated PDF document to stream using overloads of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method.
 
 {% tabs %}
 
@@ -388,7 +388,7 @@ loadedDocument.Save(stream)
 
 ## Saving a PDF document into the same file or stream
 
-You can also resave the manipulated PDF document to the same file using overloads of [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method.
+You can also resave the manipulated PDF document to the same file using overloads of [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method.
 
 {% tabs %}
 
@@ -456,7 +456,7 @@ loadedDocument.Save()
 
 ## Closing a document
 
-After the document manipulation and save operation are completed, you should close the instance of [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html), in order to release all the memory consumed by PDF DOM. The following code snippet illustrates how to [Close](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Close_System_Boolean_) a ```PdfLoadedDocument``` instance.
+After the document manipulation and save operation are completed, you should close the instance of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html), in order to release all the memory consumed by PDF DOM. The following code snippet illustrates how to [Close](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Close_System_Boolean_) a ```PdfLoadedDocument``` instance.
 
 {% tabs %}
 
@@ -504,7 +504,7 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 N> 1. Close() method will dispose all the memory consumed by PDF DOM.
-N> 2. [Close(true)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Close_System_Boolean_) method will dispose all the memory consumed by PDF DOM as well as disposes its document stream.
+N> 2. [Close(true)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Close_System_Boolean_) method will dispose all the memory consumed by PDF DOM as well as disposes its document stream.
 
 ## Secured documents exception
 

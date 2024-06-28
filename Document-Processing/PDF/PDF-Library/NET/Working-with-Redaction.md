@@ -17,7 +17,7 @@ To quickly get started with redacting PDF documents in .NET using the PDF Librar
 
 ## Removing sensitive content from the PDF document
 
-The following code example demonstrates the redaction of PDF documents from the specified bounds using [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction__ctor_System_Drawing_RectangleF_System_Drawing_Color_) class. 
+The following code example demonstrates the redaction of PDF documents from the specified bounds using [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction__ctor_System_Drawing_RectangleF_System_Drawing_Color_) class. 
 
 {% tabs %}
 
@@ -87,7 +87,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Display text on the redacted area
 
-You can draw overlay text on the redacted area using the [Appearance](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_Appearance) property available in [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html) class, and customize the overlay text with different font, style, color and brushes.
+You can draw overlay text on the redacted area using the [Appearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_Appearance) property available in [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class, and customize the overlay text with different font, style, color and brushes.
 
 The following code example explains how to add overlay text in the redacted area.
 
@@ -171,7 +171,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Drawing image on the redacted area
 
-You can draw the image on the redacted area using the [Appearance](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_Appearance) property in [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html) class.
+You can draw the image on the redacted area using the [Appearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_Appearance) property in [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class.
 
 The following code example explains how to redact the information from a page by drawing image on the redacted area using appearance.
 
@@ -252,7 +252,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Drawing pattern on the redacted area
 
-You can draw the different patterns on the redacted area using the [Appearance](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_Appearance) property in the [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html) class.
+You can draw the different patterns on the redacted area using the [Appearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_Appearance) property in the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class.
 
 The following code example explains how to redact the information from a page by drawing mosaic pattern on the redacted area using appearance.
 
@@ -401,7 +401,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Fill color on the redacted area
 
-You can draw the filled rectangle on the redacted bounds using the [FillColor](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_FillColor) property in [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html) class.
+You can draw the filled rectangle on the redacted bounds using the [FillColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction_FillColor) property in [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class.
 
 The following code example explains how to redact the information from a page with filled rectangle.
 
@@ -479,7 +479,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Redaction without fill color and appearance
 
-You can redact PDF without drawing the filled rectangle or text on the redacted bounds using the [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction__ctor_System_Drawing_RectangleF_) class.
+You can redact PDF without drawing the filled rectangle or text on the redacted bounds using the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction__ctor_System_Drawing_RectangleF_) class.
 
 The following code snippet explains how to redact the information from a page without drawing fill color and appearance on the redaction bounds.
 
@@ -552,7 +552,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Get redaction progress 
 
-You can get the redaction process using [RedactionProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_RedactionProgress) event in [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.   
+You can get the redaction process using [RedactionProgress](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_RedactionProgress) event in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.   
 
 The code snippet to illustrate the same is given below.
 
@@ -642,7 +642,7 @@ MessageBox.Show(String.Format("Redaction Process " + arguments.Progress + " % co
 
 ## Redaction result 
 
-Using [PdfRedactionResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedactionResult.html) class, you can get the status of the redaction with other information. The result of the redaction operation can be obtained using Essential PDF and the below code example illustrates the same. 
+Using [PdfRedactionResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedactionResult.html) class, you can get the status of the redaction with other information. The result of the redaction operation can be obtained using Essential PDF and the below code example illustrates the same. 
 
 {% tabs %}
 
@@ -743,7 +743,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Redact text content alone on the redated area
 
-You can get the Redact text content alone on the redated area using [RedactionProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_RedactionProgress) event in [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.   
+You can get the Redact text content alone on the redated area using [RedactionProgress](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_RedactionProgress) event in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.   
 
 The code snippet to illustrate the same is given below.
 
@@ -816,7 +816,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Find text by regular expression pattern and redact it from PDF document.
 
-You can find text by regular expression pattern and redact it from PDF document using the [PdfRedaction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction__ctor_System_Drawing_RectangleF_) class.
+You can find text by regular expression pattern and redact it from PDF document using the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html#Syncfusion_Pdf_Redaction_PdfRedaction__ctor_System_Drawing_RectangleF_) class.
 
 The following code snippet explains how to find text by regular expression pattern and redact it from PDF document.
 
