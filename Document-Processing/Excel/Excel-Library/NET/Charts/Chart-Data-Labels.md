@@ -1,6 +1,6 @@
 ---
 title: Chart Data Label | Excel library | Syncfusion
-description: In this section, you can learn about chart data label in an Excel document with XlsIO.
+description: In this section, you can learn about chart data label in an Excel document with the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -105,6 +105,30 @@ chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Bold = true;
 {% endhighlight %}
 {% endtabs %}
 
+### Number Format
+
+The following code snippet illustrates how to set the number format in the data label.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Set the number format
+IChartDataLabels dataLabel = chart.Series[0].DataPoints.DefaultDataPoint.DataLabels;
+(dataLabel as ChartDataLabelsImpl).NumberFormat = "#,##0.00";
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Set the number format
+IChartDataLabels dataLabel = chart.Series[0].DataPoints.DefaultDataPoint.DataLabels;
+(dataLabel as ChartDataLabelsImpl).NumberFormat = "#,##0.00";
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Set the number format
+Dim dataLabel As IChartDataLabels = chart.Series(0).DataPoints.DefaultDataPoint.DataLabels
+CType(dataLabel, ChartDataLabelsImpl).NumberFormat = "#,##0.00"
+{% endhighlight %}
+{% endtabs %}
+
 ## Set Position
 
 The following code snippet illustrates how to set the position of the data label.
@@ -159,6 +183,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     chart.Series[1].DataPoints.DefaultDataPoint.DataLabels.FontName = "calibri";
     chart.Series[1].DataPoints.DefaultDataPoint.DataLabels.Bold = true;
 
+    //Set the number format
+    IChartDataLabels dataLabel = chart.Series[0].DataPoints.DefaultDataPoint.DataLabels;
+    (dataLabel as ChartDataLabelsImpl).NumberFormat = "#,##0.00";
+
     //Set the position
     chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Outside;
     chart.Series[1].DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Outside;
@@ -178,7 +206,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open(@"D:\Support Sample\Format-Data-Labels\Format-Data-Labels\Data\InputTemplate.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
     IChartShape chart = worksheet.Charts[0];
 
@@ -202,6 +230,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     chart.Series[1].DataPoints.DefaultDataPoint.DataLabels.FontName = "calibri";
     chart.Series[1].DataPoints.DefaultDataPoint.DataLabels.Bold = true;
 
+    //Set the number format
+    IChartDataLabels dataLabel = chart.Series[0].DataPoints.DefaultDataPoint.DataLabels;
+    (dataLabel as ChartDataLabelsImpl).NumberFormat = "#,##0.00";
+
     //Set the position
     chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Outside;
     chart.Series[1].DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Outside;
@@ -215,7 +247,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
-    Dim workbook As IWorkbook = application.Workbooks.Open("D:\Support Sample\Format-Data-Labels\Format-Data-Labels\Data\InputTemplate.xlsx")
+    Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
     Dim chart As IChartShape = worksheet.Charts(0)
 
@@ -238,6 +270,10 @@ Using excelEngine As New ExcelEngine()
     chart.Series(1).DataPoints.DefaultDataPoint.DataLabels.Size = 10
     chart.Series(1).DataPoints.DefaultDataPoint.DataLabels.FontName = "calibri"
     chart.Series(1).DataPoints.DefaultDataPoint.DataLabels.Bold = True
+
+    'Set the number format
+    Dim dataLabel As IChartDataLabels = chart.Series(0).DataPoints.DefaultDataPoint.DataLabels
+    CType(dataLabel, ChartDataLabelsImpl).NumberFormat = "#,##0.00"
 
     'Set the position
     chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Outside
