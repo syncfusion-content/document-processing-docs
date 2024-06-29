@@ -15,7 +15,7 @@ To compress a PDF document, send a request to the /v1/edit-pdf/compress endpoint
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
 --form 'file=@"4mb.pdf"' \
@@ -32,7 +32,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "4mb.pdf");
@@ -92,13 +92,13 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df'
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

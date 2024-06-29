@@ -15,7 +15,7 @@ To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoin
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
 --form 'Index.html=@"html/index.html"' \
@@ -29,7 +29,7 @@ curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("Index.html", fileInput.files[0], "html/index.html");
@@ -89,13 +89,13 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",
