@@ -1,11 +1,11 @@
 ---
-title: Excel to PDF Conversion API
-description: Convert Excel documents to PDF format seamlessly using this API. Customize conversion settings and check job statuses easily. Integrate into your applications effortlessly.
+title: Syncfusion Excel to PDF Converter API Guide
+description: Convert Excel to PDF seamlessly using Syncfusion's API. Customize settings, monitor job status, and integrate effortlessly into your applications.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Excel To PDF
+# Guide to Excel to PDF Conversion Using Syncfusion API
 
 Converting an Excel document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 
@@ -15,7 +15,7 @@ To convert an Excel document to PDF, send a request to the /v1/conversion/excel-
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/excel-to-pdf' \
 --form 'file=@"ExpenseReport.xlsx"' \
@@ -27,7 +27,7 @@ curl --location 'http://localhost:8003/v1/conversion/excel-to-pdf' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "ExpenseReport.xlsx");
@@ -81,13 +81,13 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

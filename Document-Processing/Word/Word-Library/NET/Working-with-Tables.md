@@ -2190,3 +2190,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [How to extract images from tables in a Word document?](https://support.syncfusion.com/kb/article/15812/how-to-extract-images-from-tables-in-a-word-document)
 * [How to extract content from Excel and insert it into a Word document?](https://support.syncfusion.com/kb/article/15946/how-to-extract-content-from-excel-and-insert-it-into-a-word-document)
+
+## Frequently Asked Questions
+
+* [How to insert a DataTable in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-insert-a-datatable-in-a-word-document)
+* [How to insert a table from HTML string in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-insert-a-table-from-html-string-in-word-document)
+* [How to set table cell width?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-table-cell-width)
+* [How to position a table in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-position-a-table-in-a-word-document)
+* [How to set the text direction to a table in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-the-text-direction-to-a-table-in-word-document)
+

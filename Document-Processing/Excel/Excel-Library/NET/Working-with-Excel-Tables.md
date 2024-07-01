@@ -11,10 +11,10 @@ documentation: UG
 
 XlsIO supports reading and writing the table which helps to organize and analyze the related data. 
 
-* [IListObjects](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IListObjects.html) represents a collection of tables in the worksheet. 
-* [IListObject](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IListObject.html) represent a table in the worksheet.
+* [IListObjects](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjects.html) represents a collection of tables in the worksheet. 
+* [IListObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html) represent a table in the worksheet.
 
-You can also create a calculated column in the table. For more details, refer [here](/file-formats/xlsio/working-with-formulas#calculated-column).
+You can also create a calculated column in the table. For more details, refer [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculated-column).
 
 N> In XlsIO, tables are supported only for Excel 2007 and later formats (*.xlsx files).
 
@@ -517,7 +517,7 @@ The following screenshot represents generated Excel file with custom table style
 
 ## Insert or remove columns in a table
 
-[IListObject](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IListObject.html) is a collection of columns, whereas a single column is represented by an instance of [IListObjectColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IListObjectColumn.html). XlsIO supports to insert or remove columns from the table using worksheet, as follows.
+[IListObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html) is a collection of columns, whereas a single column is represented by an instance of [IListObjectColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjectColumn.html). XlsIO supports to insert or remove columns from the table using worksheet, as follows.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -599,7 +599,7 @@ N> Inserting rows or columns in a worksheet within the table range modifies tabl
 
 ## Adding a total row
 
-The "Total Row" is added to a table by accessing the **Table** **Columns**. It is possible to set calculation function to be used to the total row cells by using the [ExcelTotalsCalculation](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelTotalsCalculation.html) enumerator. These cells are updated after they are calculated.
+The "Total Row" is added to a table by accessing the **Table** **Columns**. It is possible to set calculation function to be used to the total row cells by using the [ExcelTotalsCalculation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelTotalsCalculation.html) enumerator. These cells are updated after they are calculated.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -882,7 +882,7 @@ Stars with ODBC<br/><br/></td></tr>
 
 ### Refresh external data connection in Excel table
 
-Excel tables (i.e., ListObjects) that are connected to external data connection can be refreshed programmatically. The [Refresh()](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IListObject.html#Syncfusion_XlsIO_IListObject_Refresh) method in [IListObject](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IListObject.html) updates the data, similar to [Refresh](https://support.office.com/en-us/article/refresh-an-external-data-connection-in-excel-1524175f-777a-48fc-8fc7-c8514b984440) operation in Microsoft Excel. Here, there is not RefreshAll() option to refresh all the tables in a worksheet. To achieve that, all the tables (ListObjects) has to be accessed and refreshed individually.
+Excel tables (i.e., ListObjects) that are connected to external data connection can be refreshed programmatically. The [Refresh()](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html#Syncfusion_XlsIO_IListObject_Refresh) method in [IListObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html) updates the data, similar to [Refresh](https://support.office.com/en-us/article/refresh-an-external-data-connection-in-excel-1524175f-777a-48fc-8fc7-c8514b984440) operation in Microsoft Excel. Here, there is not RefreshAll() option to refresh all the tables in a worksheet. To achieve that, all the tables (ListObjects) has to be accessed and refreshed individually.
 
 The following code example shows how to access existing data connection of Excel tables in a sheet and refresh data of all the tables.
 

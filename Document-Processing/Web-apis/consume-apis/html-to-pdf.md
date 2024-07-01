@@ -1,11 +1,11 @@
 ---
-title: HTML to PDF Conversion
-description: Utilize the Syncfusion document processing engine to effortlessly convert HTML templates or URLs into PDF documents. Simplify the conversion process by providing the HTML file along with its associated assets.
+title: Syncfusion HTML to PDF Conversion Guide
+description: Convert HTML templates or URLs to PDF with Syncfusion's engine. Simplify the process by including HTML files and associated assets seamlessly.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# HTML to PDF
+# Guide to Converting HTML to PDF Using Syncfusion API
 
 With the Syncfusion document processing engine, you can easily convert an HTML template or URL to a PDF document. To convert an HTML template to a PDF document, you need to provide both the HTML template file and its assets.
 
@@ -15,7 +15,7 @@ To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoin
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
 --form 'Index.html=@"html/index.html"' \
@@ -29,7 +29,7 @@ curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("Index.html", fileInput.files[0], "html/index.html");
@@ -89,13 +89,13 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

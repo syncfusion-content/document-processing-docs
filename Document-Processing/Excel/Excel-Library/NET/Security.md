@@ -91,7 +91,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-Now, the encrypted workbook can be saved. Refer [Save Excel file](https://help.syncfusion.com/file-formats/xlsio/loading-and-saving-workbook#saving-a-excel-workbook-to-file-system). 
+Now, the encrypted workbook can be saved. Refer [Save Excel file](https://help.syncfusion.com/document-processing/excel/excel-library/net/loading-and-saving-workbook#saving-a-excel-workbook-to-file-system). 
 
 **Opening** **an** **encrypted** **workbook**
 
@@ -289,7 +289,7 @@ End Using
 
 ## Protect Worksheet 
 
-XlsIO provides support for protecting and unprotecting elements in worksheets by using the [Protect](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Protect_System_String_) method of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html). The following code example illustrates how to protect a worksheet with a password. 
+XlsIO provides support for protecting and unprotecting elements in worksheets by using the [Protect](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Protect_System_String_) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). The following code example illustrates how to protect a worksheet with a password. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -340,7 +340,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-N> By using the [ExcelSheetProtection](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelSheetProtection.html) enumerator, you can set protection to the workbook elements/operations.
+N> By using the [ExcelSheetProtection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelSheetProtection.html) enumerator, you can set protection to the workbook elements/operations.
 
 **Chart** **Sheet** **Protection**
 
@@ -398,7 +398,7 @@ End Using
 
 **Un****-****Protect** **Worksheet** 
 
-You can also unprotect the worksheet by using the [Unprotect](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Unprotect_System_String_) method of XlsIO. The following code example illustrates how to remove worksheet protection.
+You can also unprotect the worksheet by using the [Unprotect](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Unprotect_System_String_) method of XlsIO. The following code example illustrates how to remove worksheet protection.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -506,7 +506,7 @@ End Using
 
 ## Protect Cell
 
-XlsIO supports locking and unlocking cells by using the cell's [Locked](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Locked) property of [CellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyle). This can be manipulated to make certain cells editable in a protected worksheet. 
+XlsIO supports locking and unlocking cells by using the cell's [Locked](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Locked) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyle). This can be manipulated to make certain cells editable in a protected worksheet. 
 
 N> By default, cells are locked. Lock or Unlock cell in an unprotected worksheet has no effect. 
 

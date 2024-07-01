@@ -1,11 +1,11 @@
 ---
-title: Rotate PDF Pages Service
-description: Easily rotate pages in a PDF document using the Rotate Pages API. Provide the PDF file and rotation options to the rotate-pages endpoint for precise page adjustments.
+title: Syncfusion PDF Page Rotation Service Guide
+description: Rotate pages in a PDF document with precision using Syncfusion's Rotate Pages API. Specify rotation options and the PDF file for seamless adjustments.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Rotate Pages
+# Guide to Rotating PDF Pages Using Syncfusion API
 
 This feature allows you to rotate pages in a PDF document. To perform this operation, you need to supply a PDF document as input to the Rotate Pages API.
 
@@ -15,7 +15,7 @@ To rotate PDF pages, send a request to the /v1/edit-pdf/rotate-pages endpoint wi
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/rotate-pages' \
 --form 'file=@"merge/example.pdf"' \
@@ -37,7 +37,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/rotate-pages' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "merge/example.pdf");
@@ -102,13 +102,13 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

@@ -1,11 +1,11 @@
 ---
-title: Word to PDF Converter API
-description: The Word to PDF Converter API effortlessly transforms Word documents into PDFs with customizable settings. Seamlessly integrated into workflows, it provides real-time job tracking and status updates for efficient document management.
+title: Syncfusion Word to PDF Converter Service Guide
+description: Effortlessly convert Word documents to PDF using Syncfusion's API. Customize settings and integrate seamlessly for efficient document management.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Word to PDF
+# Guide to Converting Word to PDF Using Syncfusion API
 
 Converting a Word document to PDF is simple with support for .doc, .docx, and .rtf formats. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 
@@ -15,7 +15,7 @@ To convert a Word document to PDF, send a request to the /v1/conversion/word-to-
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
 --form 'file=@"SalesInvoice.docx"' \
@@ -29,7 +29,7 @@ curl --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "SalesInvoice.docx");
@@ -85,13 +85,13 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

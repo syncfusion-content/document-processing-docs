@@ -588,7 +588,7 @@ The following image shows the PDF document with simple table created using the f
 
 ## Flow model using PdfLayoutResult
 
-Syncfusion Essential PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element in [PdfLayoutResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutResult.html).
+Syncfusion Essential PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element in [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html).
 
 The following code snippet explains how to create a PDF document with image, paragraph text, header text, a line below the header text, and a table using flow model.
 

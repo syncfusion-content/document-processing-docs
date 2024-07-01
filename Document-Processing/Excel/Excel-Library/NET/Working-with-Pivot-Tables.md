@@ -24,7 +24,7 @@ Steps to create a simple pivot table:
 * Add row and column fields
 * Add data fields
 
-Pivot tables do not take data directly from the source data, but take from the pivot cache that memorizes a snapshot of the data. The [IPivotCache](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotCache.html) interface caches the data that needs to be summarized. 
+Pivot tables do not take data directly from the source data, but take from the pivot cache that memorizes a snapshot of the data. The [IPivotCache](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotCache.html) interface caches the data that needs to be summarized. 
 
 The data in worksheet is added to the pivot cache as follows.
 
@@ -45,7 +45,7 @@ Dim cache As IPivotCache = workbook.PivotCaches.Add(worksheet("A1:H50"))
 {% endhighlight %}
 {% endtabs %}  
 
-[IPivotTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html) represents a single pivot table object created from the cache. It has properties that customizes the pivot table. The following code creates a blank pivot table. 
+[IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) represents a single pivot table object created from the cache. It has properties that customizes the pivot table. The following code creates a blank pivot table. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -64,7 +64,7 @@ Dim pivotTable As IPivotTable = worksheet.PivotTables.Add("PivotTable1", workshe
 {% endhighlight %}
 {% endtabs %}  
 
-The pivot table should be populated with required fields. The [IPivotField](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotField.html) represents a single field in the pivot table, which includes row, column, and data field axes. 
+The pivot table should be populated with required fields. The [IPivotField](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html) represents a single field in the pivot table, which includes row, column, and data field axes. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -89,7 +89,7 @@ pivotTable.Fields(3).Axis = PivotAxisTypes.Column
 {% endhighlight %}
 {% endtabs %}  
 
-The [IPivotDataFields](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotDataFields.html) represents a collection of data fields in the pivot table. The data field is added with the required subtotal function using the [PivotSubtotalTypes](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.PivotSubtotalTypes.html) enumeration. The following code explains how to configure a pivot field as a data field.
+The [IPivotDataFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotDataFields.html) represents a collection of data fields in the pivot table. The data field is added with the required subtotal function using the [PivotSubtotalTypes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.PivotSubtotalTypes.html) enumeration. The following code explains how to configure a pivot field as a data field.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -207,7 +207,7 @@ A complete working example to create a pivot table in C# is present on [this Git
 
 ### Edit
 
-To edit a pivot table, use the [Layout](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_Layout) function to set the pivot data on the worksheet. With this, you can easily edit the pivot table, access its values, and make other modifications.
+To edit a pivot table, use the [Layout](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_Layout) function to set the pivot data on the worksheet. With this, you can easily edit the pivot table, access its values, and make other modifications.
 
 The following code example illustrates how to edit the pivot table.
 
@@ -290,7 +290,7 @@ A complete working example to edit a pivot table in C# is present on [this GitHu
 
 The Remove method can be used to remove a pivot table from the worksheet. You can either remove it by specifying the index or the pivot table name from the collection.
 
-The following code snippet illustrates how to remove a pivot table at a specified index value using the [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTables.html#Syncfusion_XlsIO_IPivotTables_RemoveAt_System_Int32_) method.
+The following code snippet illustrates how to remove a pivot table at a specified index value using the [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTables.html#Syncfusion_XlsIO_IPivotTables_RemoveAt_System_Int32_) method.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -374,9 +374,9 @@ A complete working example to remove a pivot table in C# is present on [this Git
 
 ## Styles and Formatting
 
-A pivot table can be accessed from the [IPivotTables](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTables.html) interface, which contains the collection of pivot tables in the worksheet. You can apply styles and formatting to the pivot table using  [IPivotTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html) properties and methods.
+A pivot table can be accessed from the [IPivotTables](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTables.html) interface, which contains the collection of pivot tables in the worksheet. You can apply styles and formatting to the pivot table using  [IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) properties and methods.
 
-To learn more about styling and formatting the pivot table with the Syncfusion Excel library, [click here]().
+To learn more about styling and formatting the pivot table with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/styles-and-formatting)
 
 ## Layout
 
@@ -435,13 +435,13 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to layout a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Pivot%20Layout). 
+A complete working example to layout a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Layout). 
 
-To learn more about pivot table layout with the Syncfusion Excel library, [click here]().
+To learn more about pivot table layout with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/pivot-layout)
 
 ## Refresh
 
-When you update the pivot table data source, you should refresh the pivot table manually to load the new data source into it. Essential XlsIO supports this refreshing of pivot table data source through [IsRefreshOnLoad](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotCacheImpl_IsRefreshOnLoad) property of [PivotCacheImpl](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html).
+When you update the pivot table data source, you should refresh the pivot table manually to load the new data source into it. Essential XlsIO supports this refreshing of pivot table data source through [IsRefreshOnLoad](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotCacheImpl_IsRefreshOnLoad) property of [PivotCacheImpl](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html).
 
 The following code example illustrates how to dynamically refresh the data in a pivot table. In prior:
 
@@ -590,13 +590,13 @@ Sorting enables users to rearrange the data in the pivot table based on specifie
 
 Filtering allows users to display only the specific data they want to see within the pivot table. Users can apply filters to individual fields in the pivot table to include or exclude certain values, categories, or ranges of data.
 
-To learn more about sorting and filtering of pivot table with the Syncfusion Excel library, [click here]().
+To learn more about sorting and filtering of pivot table with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/sorting-and-filtering)
 
 ## Grouping
 
 Grouping is the process of categorizing data based on common characteristics or values to facilitate analysis and visualization. It allows users to summarize and organize large datasets more effectively.
 
-To learn more about grouping of pivot table with the Syncfusion Excel library, [click here]().
+To learn more about grouping of pivot table with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/grouping)
 
 ## See Also
 

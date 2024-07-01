@@ -1,11 +1,11 @@
 ---
-title: PDF Split Service
-description: Easily divide a PDF document into multiple PDF files with the PDF Split Service. Provide the PDF file and desired split options to the split endpoint to perform the operation.
+title: Syncfusion PDF Split Service Guide
+description: Divide a PDF document into multiple files effortlessly using Syncfusion's PDF Split Service. Specify the PDF and split options for efficient document handling.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Split PDF
+# Guide to Splitting PDFs Using Syncfusion API
 
 You can effortlessly split PDF documents into multiple PDF files. To perform this operation, you need to supply a PDF document as input to the Split PDF API.
 
@@ -15,7 +15,7 @@ To split a PDF file, send a request to the /v1/edit-pdf/split endpoint with a PD
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/split' \
 --form 'file=@"merge/example.pdf"' \
@@ -29,7 +29,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/split' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "merge/example.pdf");
@@ -86,13 +86,13 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

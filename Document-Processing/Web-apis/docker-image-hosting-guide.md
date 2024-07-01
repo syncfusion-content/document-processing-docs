@@ -1,11 +1,11 @@
 ---
 title: Docker Image Hosting Guide for Syncfusion Document Processing API
-description: Learn how to efficiently deploy and manage the Syncfusion Document Processing API using Docker, including hardware and software requirements, Docker Compose configuration, and setting up a PostgreSQL database. Ensure seamless deployment and start processing documents in minutes.
+description: Deploy and manage Syncfusion Document Processing API with Docker. Setup includes hardware, software, Docker Compose, and PostgreSQL for seamless deployment.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Docker image hosting guide
+# Docker Image Hosting Guide
 
 We aim to assist developers in reducing deployment time and simplifying the publishing process using Docker images. The Syncfusion Document Processing API is available on Docker Hub, providing a seamless experience for Docker users. The following sections will guide you on how to run Docker commands or configure a YAML file for use with Docker Compose.
 
@@ -30,11 +30,10 @@ The following software requirements are necessary to run document processing API
 
 ## Steps to configure and run docker container
 
-Step1: Create a docker-compose.yml file with the following configuration, to customize the configuration refer the below link 
+Step1: Create a docker-compose.yml file with the following configuration, to customize the configuration refer the below link.
+(Environment variables of docker image)[https://help.syncfusion.com/document-processing/web-apis/environment-variables-of-docker-image].
 
-[Environment variables of docker image.loop](https://syncfusion.sharepoint.com/:fl:/g/contentstorage/CSP_34e3bf40-7d33-43f5-824e-7d613a8bfc28/ERSLoykFXbxHjEX5U7xbYgABJ0oxej5yrCIEHLta4Kp8Vg?e=3350sz&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF8zNGUzYmY0MC03ZDMzLTQzZjUtODI0ZS03ZDYxM2E4YmZjMjgmZD1iJTIxUUxfak5ETjk5VU9DVG4xaE9vdjhLSmtSNUNuckgxQkZrYU9IN3pwQ3lpQjF3bjNmaFNJelFKSVU4c1QwRndJVCZmPTAxUVFYQk1MQVVST1JTU0JLNVhSRFlZUlBaS082RldZUUEmYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lciZ4PSU3QiUyMnclMjIlM0ElMjJUMFJUVUh4emVXNWpablZ6YVc5dUxuTm9ZWEpsY0c5cGJuUXVZMjl0ZkdJaFVVeGZhazVFVGprNVZVOURWRzR4YUU5dmRqaExTbXRTTlVOdWNrZ3hRa1pyWVU5SU4zcHdRM2xwUWpGM2JqTm1hRk5KZWxGS1NWVTRjMVF3Um5kSlZId3dNVkZSV0VKTlRFZzNVVUpRVEZFMFIxQTNRa0ZaVUV4U1JVRlFUbEpRTWpKUSUyMiUyQyUyMmklMjIlM0ElMjIyMThlOWMxMi02ZTYwLTRkYWUtODA0Mi1jNWFlYjdiZGJmZjIlMjIlN0Q%3D)
-
-N> The Document Processing API is part of Syncfusion's Essential Studio and requires a valid license key for use in a production environment. Replace SYNCFUSION_LICENSE_KEY with your valid license key in the docker-compose.yml file. To generate a valid license key, refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key?utm_source=docker&utm_medium=listing&utm_campaign=javascript-word-processor-docker).
+N> The Document Processing API uses Syncfusion's Essential Studio and requires a valid license key for use in a production environment. To add your valid license key, set the SYNCFUSION_LICENSE_KEY environment variable in the docker-compose.yml file. To generate a valid license key, refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key).
 
 If the license key is not applied, a watermark will be added to the generated PDF documents. The license key is version specific. If you are upgrading the Docker image, you need to update the license key to match the new version.
 
@@ -87,9 +86,9 @@ Step2: Run the command below, this command will start the document processing se
 docker-compose up -d
 ```
 
-![LogDetails](images/logdetails.png)
+![LogDetails](images/logdetails.jpg)
 
 
-Step3: After successfully running the server, you'll encounter the following message upon opening the host URL in your browser  http://localhost:8003/
+Step3: After successfully running the server, you'll encounter the following message upon opening the host URL in your browser http://localhost:8003/
 
-![Browser](images/browser.png)
+![Browser](images/browser.jpg)

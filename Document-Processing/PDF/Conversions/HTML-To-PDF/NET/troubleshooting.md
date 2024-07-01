@@ -368,7 +368,7 @@ RUN chmod +x /app/runtimes/linux/native/chrome && \
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>To overcome this issue, add suitable delay for the conversion using the <a href="https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay">AdditionalDelay</a> property of the HTMLConverter. 
+<td>To overcome this issue, add suitable delay for the conversion using the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay">AdditionalDelay</a> property of the HTMLConverter. 
 <br><br/>
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
@@ -1102,3 +1102,31 @@ We can resolve the reported issue by changing the deployment method to web deplo
 </tr>
 
 </table>
+
+## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
+
+The problem is limited to Azure Functions with premium plans in Net 8.0 version. To fix this, we can either manually install the necessary Chromium dependencies in the SSH portal or include the runtimes folder (Blink binaries) in the project location.
+
+Prerequisites dependencies:
+
+{% tabs %}
+{% highlight C# %}
+
+	apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Note: We have option to exclude the default Blink binaries from the installation package. This will reduce the size of your deployment package in azure. Please refer to the code snippet below.
+
+{% tabs %}
+{% highlight C# %}
+
+	<PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Linux" Version="25.1.35" >
+
+	<ExcludeAssets>native</ExcludeAssets>
+
+	</PackageReference>
+
+{% endhighlight %}
+{% endtabs %}

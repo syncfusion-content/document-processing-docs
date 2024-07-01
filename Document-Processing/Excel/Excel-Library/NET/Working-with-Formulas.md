@@ -12,7 +12,7 @@ keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, excel form
 
 ## Enable and Disable Calculation
 
-To perform calculation in an Excel workbook, it is recommended to invoke [EnableSheetCalculations](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_EnableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html). Enabling this method will initialize [CalcEngine](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#calculation-engine) objects and retrieves calculated values of formulas in a worksheet. 
+To perform calculation in an Excel workbook, it is recommended to invoke [EnableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_EnableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). Enabling this method will initialize [CalcEngine](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculation-engine) objects and retrieves calculated values of formulas in a worksheet. 
 
 The following code sample illustrates on how to enable worksheet formula calculations.
 
@@ -39,7 +39,7 @@ sheet.EnableSheetCalculations()
 {% endhighlight %}
 {% endtabs %}   
 
-On completion of worksheet calculation, it is recommended to invoke [DisableSheetCalculations](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_DisableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html). This will dispose all the [CalcEngine](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#calculation-engine) objects.
+On completion of worksheet calculation, it is recommended to invoke [DisableSheetCalculations](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_DisableSheetCalculations) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). This will dispose all the [CalcEngine](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculation-engine) objects.
 
 The following code sample illustrates on how to disable worksheet formula calculations.
 
@@ -68,7 +68,7 @@ sheet.DisableSheetCalculations()
 
 ## Writing a Formula
 
-In a worksheet, formulas can be entered by using the [Formula](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) instance. Following code example illustrates on how to write a formula.
+In a worksheet, formulas can be entered by using the [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance. Following code example illustrates on how to write a formula.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -190,7 +190,7 @@ A complete working example to insert formula in Excel cell with cross sheet refe
 
 ## Reading a Formula
 
-Formulas are string values which can be accessed using [Formula](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html). If a cell has formula, the [Value](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Value) property of **IRange** will also return the formula as string.
+Formulas are string values which can be accessed using [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html). If a cell has formula, the [Value](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Value) property of **IRange** will also return the formula as string.
 
 The following code shows how to read a formula.
 
@@ -213,7 +213,7 @@ Dim formula as String = sheet("C1").Formula
 
 ## Accessing a Calculated value
 
-To evaluate formula, it is must to [enable sheet calculation](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#enable-and-disable-calculation) in prior. After enabling the sheet calculation, the formula can be evaluated using [CalculatedValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html), which returns a string value.
+To evaluate formula, it is must to [enable sheet calculation](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#enable-and-disable-calculation) in prior. After enabling the sheet calculation, the formula can be evaluated using [CalculatedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html), which returns a string value.
 
 The following code shows how to access a calculated value.
 
@@ -283,7 +283,7 @@ A complete working example to access calculated value of a formula in C# is pres
 
 Apart from **CalculatedValue** property, the evaluated values can also be accessed as **bool**, **DateTime** and **double** data types. To obtain the updated values of these types, **CalculatedValue** property must be called in prior.
 
-To know more about evaluated values, please refer [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) in API section.
+To know more about evaluated values, please refer [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) in API section.
 
 The following code shows how to access calculated values in different types.
 
@@ -427,7 +427,7 @@ N> Calculated value for external reference formulas can also be evaluated in Xls
 
 ## Applying Argument Separators Based on Cultures
 
-Formula separators vary for different cultures, and exceptions can be thrown in such cases. This can be overcome by setting the separators by using [SetSeparators](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SetSeparators_System_Char_System_Char_) method of [IWorkbook](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html).
+Formula separators vary for different cultures, and exceptions can be thrown in such cases. This can be overcome by setting the separators by using [SetSeparators](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SetSeparators_System_Char_System_Char_) method of [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html).
 
 Following code illustrates on how to change the formula separators.
 
@@ -482,9 +482,9 @@ A complete working example to add argument separator in C# is present on [this G
 
 ## Array of Formula
 
-Array formula is a special type of formula in Excel. It works with an array or series of data values, rather than a single data value which can be done through [FormulaArray](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FormulaArray) property of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) instance.
+Array formula is a special type of formula in Excel. It works with an array or series of data values, rather than a single data value which can be done through [FormulaArray](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FormulaArray) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
 
-Following code shows how an array of values from [Named Range](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#defined-names) is used for computation. 
+Following code shows how an array of values from [Named Range](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#defined-names) is used for computation. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -558,7 +558,7 @@ A complete working example to add formula array in C# is present on [this GitHub
 
 ## Incremental Formula
 
-The relative cell references in the formulas are automatically incremented by 1, when you fill formulas down a column or across a row by enabling the [EnableIncrementalFormula](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_EnableIncrementalFormula) property of [IApplication](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html) interface.
+The relative cell references in the formulas are automatically incremented by 1, when you fill formulas down a column or across a row by enabling the [EnableIncrementalFormula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_EnableIncrementalFormula) property of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) interface.
 
 The below code snippet shows how to increment the cell references by 1 in the formulas.
 
@@ -2300,7 +2300,7 @@ A complete working example to delete named ranges in C# is present on [this GitH
 
 Microsoft Excel constantly checks in the background for potential errors in your worksheets, when open. If an error is located (or, at the least, what Excel thinks is an error), then the cell is "flagged" with a small green triangle in the upper-left corner of the cell. Auditing a formula helps to identify the error in it. 
 
-In certain cases, these errors can be ignored so that the error will not appear in further error checks. The [IgnoreErrorOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_IgnoreErrorOptions) property of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) manages different types of errors checks, for example numbers stored as text, formula calculation errors and validation errors.
+In certain cases, these errors can be ignored so that the error will not appear in further error checks. The [IgnoreErrorOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_IgnoreErrorOptions) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) manages different types of errors checks, for example numbers stored as text, formula calculation errors and validation errors.
 
 Following code illustrates on how to ignore or set error indicators.
 
@@ -2440,7 +2440,7 @@ A complete working example of calculation modes in C# is present on [this GitHub
 
 ### Recalculate Before Save
 
-In Manual mode, this option controls whether Microsoft Excel should recalculate the workbook as a part of Save process. This option can be set through [RecalcOnSave](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ICalculationOptions.html#Syncfusion_XlsIO_ICalculationOptions_RecalcOnSave) property of [ICalculationOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ICalculationOptions.html) interface.
+In Manual mode, this option controls whether Microsoft Excel should recalculate the workbook as a part of Save process. This option can be set through [RecalcOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICalculationOptions.html#Syncfusion_XlsIO_ICalculationOptions_RecalcOnSave) property of [ICalculationOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICalculationOptions.html) interface.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2469,7 +2469,7 @@ calcOptions.RecalcOnSave = False
 
 Iteration is the repeated recalculation of a worksheet until a specific numeric condition is met. If a formula refers back to one of its own cells, it is must determine how many times the formula should recalculate.
 
-Iteration settings will control the maximum number of iteration and the amount of acceptable change. By default, [IsIterationEnabled](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ICalculationOptions.html#Syncfusion_XlsIO_ICalculationOptions_IsIterationEnabled) is false, so that Excel does not try to solve accidental circular references. 
+Iteration settings will control the maximum number of iteration and the amount of acceptable change. By default, [IsIterationEnabled](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICalculationOptions.html#Syncfusion_XlsIO_ICalculationOptions_IsIterationEnabled) is false, so that Excel does not try to solve accidental circular references. 
 
 Following code snippet illustrates how to set the Iterations.
 

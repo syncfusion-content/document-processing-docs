@@ -9,7 +9,7 @@ keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, write exce
 
 # Worksheet Cells Manipulation in Document Processing XlsIO
 
-The [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) interface represents a single cell or a group of cells in a worksheet. XlsIO has several useful methods for accessing, manipulating and formatting the content in the cells.
+The [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface represents a single cell or a group of cells in a worksheet. XlsIO has several useful methods for accessing, manipulating and formatting the content in the cells.
 
 ## Accessing a Cell or a Range
 
@@ -110,11 +110,11 @@ End Using
 
 A complete working example to access a cell or range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range).
 
-T> You can make use of [GetText](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetText_System_Int32_System_Int32_), [SetText](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetText_System_Int32_System_Int32_System_String_), [GetNumber](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetNumber_System_Int32_System_Int32_) and [SetNumber](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetNumber_System_Int32_System_Int32_System_Double_) methods from worksheet object that enable users to get/set values without range object.
+T> You can make use of [GetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetText_System_Int32_System_Int32_), [SetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetText_System_Int32_System_Int32_System_String_), [GetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetNumber_System_Int32_System_Int32_) and [SetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetNumber_System_Int32_System_Int32_System_Double_) methods from worksheet object that enable users to get/set values without range object.
 
 ## Accessing Relative Range
 
-By default, accessing a range by index will return the cell or range from worksheet level. To get a relative range for the indexes provided, it is recommended to set the [ExcelRangeIndexerMode](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelRangeIndexerMode.html) option. Here, the RowIndex and ColumnIndex arguments are relative offsets, where specifying a RowIndex of 1 returns cells in the first row of the range not the first  row of the worksheet.
+By default, accessing a range by index will return the cell or range from worksheet level. To get a relative range for the indexes provided, it is recommended to set the [ExcelRangeIndexerMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelRangeIndexerMode.html) option. Here, the RowIndex and ColumnIndex arguments are relative offsets, where specifying a RowIndex of 1 returns cells in the first row of the range not the first  row of the worksheet.
 
 For example, if a range is mentioned as "B3:D5", then accessing a range with the index [1,1] will return the cell "A1" from worksheet. If the **ExcelRangeIndexerMode** is set to **Relative** then it returns "B3".
 
@@ -215,7 +215,7 @@ A complete working example to access relative range in an Excel worksheet in C# 
 
 ### Accessing Discontinuous Ranges
 
-It is possible to modify the contents or apply formatting to discontinuous range by accessing and adding them to the [RangesCollection](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.Collections.RangesCollection.html).
+It is possible to modify the contents or apply formatting to discontinuous range by accessing and adding them to the [RangesCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.Collections.RangesCollection.html).
 
 Following code snippet illustrates how to access discontinuous range.
 
@@ -293,7 +293,7 @@ A complete working example to access discontinuous range in an Excel worksheet i
 
 ### Accessing a Cell or Range using IMigrantRange 
 
-The [IMigrantRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IMigrantRange.html) interface can also be used to access a single cell or group of cells and manipulate it.  It is recommended to prefer **IMigrantRange** instead of [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) for writing large amount of data in an optimal way. 
+The [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html) interface can also be used to access a single cell or group of cells and manipulate it.  It is recommended to prefer **IMigrantRange** instead of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) for writing large amount of data in an optimal way. 
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -377,7 +377,7 @@ A complete working example to access migrant range in an Excel worksheet in C# i
 
 The following code snippet shows how to get the range of used cells in a given Excel worksheet.
 
-N> By default, XlsIO considers a cell as used, even if there exists some formatting alone. This behavior can be disabled, and make XlsIO consider a cell as used, only when there exists data, through the [UsedRangeIncludesFormatting](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_UsedRangeIncludesFormatting) property.
+N> By default, XlsIO considers a cell as used, even if there exists some formatting alone. This behavior can be disabled, and make XlsIO consider a cell as used, only when there exists data, through the [UsedRangeIncludesFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_UsedRangeIncludesFormatting) property.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -580,7 +580,7 @@ End Using
 
 ### Get Direct Precedent and Dependent Cells
 
-[GetDirectDependents](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_GetDirectDependents) and [GetDirectPrecedents](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_GetDirectPrecedents) methods are used to get direct dependent/precedent cells for source range, excluding inner dependent/precedent cells. 
+[GetDirectDependents](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_GetDirectDependents) and [GetDirectPrecedents](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_GetDirectPrecedents) methods are used to get direct dependent/precedent cells for source range, excluding inner dependent/precedent cells. 
 
 Following code example illustrates how to get direct precedent cells from a worksheet and entire workbook.
 
@@ -769,7 +769,7 @@ A complete working example to clear cell content in an Excel worksheet in C# is 
 
 ## Copy or Move a Range
 
-A single cell or a range of cells can be copied to another range using [CopyTo](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_) method. It is also possible to copy all the formats or only specific formats using [ExcelCopyRangeOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) options. 
+A single cell or a range of cells can be copied to another range using [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_) method. It is also possible to copy all the formats or only specific formats using [ExcelCopyRangeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) options. 
 
 Following code example illustrates how to copy a cell from the source to destination.
 
@@ -831,7 +831,7 @@ End Using
 
 A complete working example to copy range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Copy%20Range).
 
-[MoveTo](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_MoveTo_Syncfusion_XlsIO_IRange_) method is used for moving a range of cells to another range as shown below. 
+[MoveTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_MoveTo_Syncfusion_XlsIO_IRange_) method is used for moving a range of cells to another range as shown below. 
 
 N> **MoveTo** method does not update formulas.
 
@@ -895,7 +895,7 @@ A complete working example to move range in an Excel worksheet in C# is present 
 
 ## Copy and Paste As Link
 
-A range can be copied and paste the range as link to another range using a bool parameter in [CopyTo](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_System_Boolean_) method.
+A range can be copied and paste the range as link to another range using a bool parameter in [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_System_Boolean_) method.
 
 Following code example illustrates how to paste a range of cells as link.
 
@@ -959,7 +959,7 @@ A complete working example to copy and paste as link in an Excel worksheet in C#
 
 ## Skip Blanks While Copying
 
-Blank cells can be skipped while copying from source to destination range by setting the parameter **skipBlanks** to TRUE in [CopyTo](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_System_Boolean_) method.
+Blank cells can be skipped while copying from source to destination range by setting the parameter **skipBlanks** to TRUE in [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_System_Boolean_) method.
 
 The following code illustrates how to skip blank cells while copying.
 
@@ -1033,9 +1033,9 @@ XlsIO provides following options to perform [find and replace](https://support.m
 *	Search for data in formulas, values or comments.
 *	Search for case-sensitive data and to match entire cell contents of the cell.
 
-To know more about these options, please refer the [ExcelFindType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelFindType.html), [ExcelFindOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelFindOptions.html) in the API documentation section.
+To know more about these options, please refer the [ExcelFindType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindType.html), [ExcelFindOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindOptions.html) in the API documentation section.
 
-All the occurrences of a text in Excel worksheet can be found through [FindAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FindAll_System_Boolean_) method. 
+All the occurrences of a text in Excel worksheet can be found through [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FindAll_System_Boolean_) method. 
 
 The following code illustrates how to find all the occurrences of text in a worksheet with different find options.
 
@@ -1134,9 +1134,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-It is possible to replace a text with another text with the help of [Replace](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Replace_System_String_System_String_) method which searches for text which should be changed. A string can be replaced, with the data of various data types and data sources, such as data table, data column and array.
+It is possible to replace a text with another text with the help of [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Replace_System_String_System_String_) method which searches for text which should be changed. A string can be replaced, with the data of various data types and data sources, such as data table, data column and array.
 
-To know more about replace overloads, please refer [Replace](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Replace_System_String_System_Data_DataColumn_System_Boolean_) in the API documentation section.
+To know more about replace overloads, please refer [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Replace_System_String_System_Data_DataColumn_System_Boolean_) in the API documentation section.
 
 The following code example illustrates how to replace all occurrences of given string with various data.
 
@@ -1828,7 +1828,7 @@ A complete working example to apply combination filter on Excel data in C# is pr
 
 ### Dynamic Filter
 
-Dynamic filter is a relative date filter, which filters data based on [DynamicFilterType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.DynamicFilterType.html) enumeration. Following code snippet illustrates how to apply Dynamic filter.
+Dynamic filter is a relative date filter, which filters data based on [DynamicFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.DynamicFilterType.html) enumeration. Following code snippet illustrates how to apply Dynamic filter.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1974,7 +1974,7 @@ End Using
 
 A complete working example to apply color filter on Excel data based on cell color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Cell%20Color%20Filter).
 
-To filter cells based on Font color of the text inside cells just change the [ExcelColorFilterType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelColorFilterType.html) to Font Color. The following snippet show how to filter the cells based on font color.
+To filter cells based on Font color of the text inside cells just change the [ExcelColorFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelColorFilterType.html) to Font Color. The following snippet show how to filter the cells based on font color.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2674,7 +2674,7 @@ A complete working example to add hyperlinks in C# is present on [this GitHub pa
 
 ### Modifying Existing Hyperlink
 
-The properties of existing hyperlink can be modified by accessing it through the [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) instance.
+The properties of existing hyperlink can be modified by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2733,7 +2733,7 @@ A complete working example to modify existing hyperlink in C# is present on [thi
 
 ### Removing Hyperlink
 
-Similarly, a hyperlink can also be removed from a range by accessing it through the [IRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html) instance.
+Similarly, a hyperlink can also be removed from a range by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -2893,7 +2893,7 @@ A complete working example to add hyperlink to shape in C# is present on [this G
 
 **Modifying** **Hyperlinks** **on** **Shapes**
 
-Properties of existing hyperlink can be modified by accessing it through [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) instance or [IShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IShape.html) instance.
+Properties of existing hyperlink can be modified by accessing it through [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) instance or [IShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html) instance.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3022,7 +3022,7 @@ A complete working example to remove shape hyperlink in C# is present on [this G
 
 ### Cell Address
 
-The following code snippet explains the usage of [Address](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Address), [AddressGlobal](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressGlobal), [AddressLocal](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressLocal), [AddressR1C1](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1), [AddressR1C1Local](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1Local) properties.
+The following code snippet explains the usage of [Address](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Address), [AddressGlobal](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressGlobal), [AddressLocal](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressLocal), [AddressR1C1](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1), [AddressR1C1Local](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddressR1C1Local) properties.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3118,7 +3118,7 @@ End Using
 
 ### Boolean
 
-As the name says, [Boolean](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Boolean) property gets or sets the boolean value in a worksheet range. The following code snippet explains this.
+As the name says, [Boolean](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Boolean) property gets or sets the boolean value in a worksheet range. The following code snippet explains this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3193,7 +3193,7 @@ End Using
 
 ### Borders
 
-The following code snippet explains how to set border styles for a worksheet range using [Borders](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Borders) property.
+The following code snippet explains how to set border styles for a worksheet range using [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Borders) property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3286,7 +3286,7 @@ End Using
 
 ### Built-In-Style
 
-The following code snippet explains how to add [BuiltInStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_BuiltInStyle) for a worksheet range.
+The following code snippet explains how to add [BuiltInStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_BuiltInStyle) for a worksheet range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3355,7 +3355,7 @@ End Using
 
 ### Calculated Value
 
-[CalculatedValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) is the evaluated value of the formula. The following code snippet explains how to get the **CalculatedValue** of the formula.
+[CalculatedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) is the evaluated value of the formula. The following code snippet explains how to get the **CalculatedValue** of the formula.
 
 N> It is mandatory to enable sheet calculations i.e., **worksheet.EnableSheetCalculations();** before accessing the **CalculatedValue**. Else, **CalculatedValue** will be returned as null.
 
@@ -3456,7 +3456,7 @@ End Using
 
 ### Cells
 
-[Cells](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Cells) property maintains the collection of cells in a worksheet range. The following code snippet explains how to access this property.
+[Cells](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Cells) property maintains the collection of cells in a worksheet range. The following code snippet explains how to access this property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3533,7 +3533,7 @@ End Using
 
 ### Cell Style Name
 
-[CellStyleName](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyleName) represents the name of the style of worksheet range/cell. The default value is **Normal**.
+[CellStyleName](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyleName) represents the name of the style of worksheet range/cell. The default value is **Normal**.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3620,7 +3620,7 @@ End Using
 
 ### Column
 
-[Column](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Column) property gets the column index of first column in worksheet range, which is one-index based. 
+[Column](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Column) property gets the column index of first column in worksheet range, which is one-index based. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3680,7 +3680,7 @@ End Using
 
 ### Columns
 
-[Columns](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Columns) property maintains the collection of columns in a worksheet range. 
+[Columns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Columns) property maintains the collection of columns in a worksheet range. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3757,15 +3757,15 @@ End Using
 
 ### Comment
 
-For more details about Comment, [click here](https://help.syncfusion.com/file-formats/xlsio/working-with-drawing-objects#comments).
+For more details about Comment, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-drawing-objects#comments)
 
 ### Conditional Formats
 
-For more details about Conditional Formats, [click here](https://help.syncfusion.com/file-formats/xlsio/working-with-conditional-formatting).
+For more details about Conditional Formats, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-conditional-formatting)
 
 ### Count
 
-[Count](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Count) property returns the number of cells in that particular worksheet range.
+[Count](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Count) property returns the number of cells in that particular worksheet range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3825,11 +3825,11 @@ End Using
 
 ### Data Validation
 
-For more details about Data Validation, [click here](https://help.syncfusion.com/file-formats/xlsio/working-with-data-validation).
+For more details about Data Validation, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation)
 
 ### End
 
-[End](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_End) property returns the last cell in the particular worksheet range.
+[End](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_End) property returns the last cell in the particular worksheet range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3889,7 +3889,7 @@ End Using
 
 ### Entire Column
 
-[EntireColumn](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireColumn), as the name says gets the entire column of the particular range.
+[EntireColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireColumn), as the name says gets the entire column of the particular range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -3951,7 +3951,7 @@ N> Using EntireColumn property excessively leads to time consumption and affects
 
 ### Entire Row
 
-[EntireRow](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireRow), as the name says gets the entire row of the particular range.
+[EntireRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_EntireRow), as the name says gets the entire row of the particular range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4011,7 +4011,7 @@ End Using
 
 ### Formula
 
-[Formula](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property gets or sets the formula in specified range.
+[Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property gets or sets the formula in specified range.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4101,11 +4101,11 @@ End Using
 
 ### Formula Array
 
-For more details about FormulaArray, [click here](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#array-of-formula).
+For more details about FormulaArray, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#array-of-formula)
 
 ### Formula Bool Value
 
-[FormulaBoolValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FormulaBoolValue) gets the [CalculatedValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) of formula as boolean.
+[FormulaBoolValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FormulaBoolValue) gets the [CalculatedValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CalculatedValue) of formula as boolean.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4216,7 +4216,7 @@ End Using
 
 ### Has Boolean
 
-[HasBoolean](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasBoolean) returns whether the range has boolean value.
+[HasBoolean](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasBoolean) returns whether the range has boolean value.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4297,7 +4297,7 @@ End Using
 
 ### Has DataValidation
 
-The following code snippet explains the behavior of [HasDataValidation](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasDataValidation) property.
+The following code snippet explains the behavior of [HasDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasDataValidation) property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4381,7 +4381,7 @@ End Using
 
 ### Has DateTime
 
-The following code snippet explains the behavior of [HasDateTime](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasDateTime) property.
+The following code snippet explains the behavior of [HasDateTime](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasDateTime) property.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4483,7 +4483,7 @@ End Using
 
 ### Has External Formula
 
-The following code snippet explains the behavior of [HasExternalFormula](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasExternalFormula) property. 
+The following code snippet explains the behavior of [HasExternalFormula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasExternalFormula) property. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4567,7 +4567,7 @@ End Using
 
 ### Has Formula
 
-The following code snippet explains the behavior of [HasFormula](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasFormula) property. 
+The following code snippet explains the behavior of [HasFormula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasFormula) property. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4648,7 +4648,7 @@ End Using
 
 ### Has Formula Array
 
-The following code snippet explains the behavior of [HasFormulaArray](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasFormulaArray) property. 
+The following code snippet explains the behavior of [HasFormulaArray](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasFormulaArray) property. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4732,7 +4732,7 @@ End Using
 
 ### Has Formula Bool Value
 
-The following code snippet explains the behavior of [HasFormulaBoolValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasFormulaBoolValue) property. 
+The following code snippet explains the behavior of [HasFormulaBoolValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasFormulaBoolValue) property. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4828,7 +4828,7 @@ End Using
 
 ### Has Number
 
-[HasNumber](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasNumber) property determines whether the cell has number in it.
+[HasNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasNumber) property determines whether the cell has number in it.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -4903,7 +4903,7 @@ End Using
 
 ### Has RichText
 
-[HasRichText](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasRichText) property determines whether the cell has rich-text in it.
+[HasRichText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_HasRichText) property determines whether the cell has rich-text in it.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -5019,4 +5019,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-For more details about RichText, [click here](https://help.syncfusion.com/file-formats/xlsio/working-with-cell-or-range-formatting#rich-text-formatting).
+For more details about RichText, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#rich-text-formatting)

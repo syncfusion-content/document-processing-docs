@@ -23,7 +23,7 @@ This section explains the usage of the following [Form Controls](https://support
 
 ### Text Box
 
-The [ITextBoxShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITextBoxShape.html) interface represents a text box in a worksheet. Various properties like Horizontal and Vertical Alignment, Alternative Text, Text Rotation, and so on are also supported.
+The [ITextBoxShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITextBoxShape.html) interface represents a text box in a worksheet. Various properties like Horizontal and Vertical Alignment, Alternative Text, Text Rotation, and so on are also supported.
 
 The following code example illustrates how to add and manipulate a text box control.
 
@@ -213,7 +213,7 @@ End Using
 
 ### Check Box
 
-[ICheckBoxShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ICheckBoxShape.html) object represents a check box in a worksheet. The following code example illustrates how to insert and manipulate a check box control.
+[ICheckBoxShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICheckBoxShape.html) object represents a check box in a worksheet. The following code example illustrates how to insert and manipulate a check box control.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -313,7 +313,7 @@ A complete working example to add a check box in C# is present on [this GitHub p
 
 ### Combo Box
 
-[IComboBoxShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IComboBoxShape.html) object represents a combo box in a worksheet. The following code example illustrates how to insert and manipulate a combo box control.
+[IComboBoxShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IComboBoxShape.html) object represents a combo box in a worksheet. The following code example illustrates how to insert and manipulate a combo box control.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -446,7 +446,7 @@ A complete working example to add a combo box in C# is present on [this GitHub p
 
 ### Option Button
 
-[IOptionButtonShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IOptionButtonShape.html) object represents an option button in a worksheet. The following code example illustrates how to insert and manipulate an option button control.
+[IOptionButtonShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IOptionButtonShape.html) object represents an option button in a worksheet. The following code example illustrates how to insert and manipulate an option button control.
 
 N> XlsIO provides Option button support only for XLSX format.
 
@@ -566,7 +566,7 @@ A complete working example to add option button in C# is present on [this GitHub
 
 ## Comments
 
-[ICommentShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ICommentShape.html) object represents a [comment](https://support.microsoft.com/en-gb/office/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8?redirectsourcepath=%252fen-us%252farticle%252fannotate-a-worksheet-by-using-comments-3b7065dd-531a-4ffe-8f18-8d047a6ccae7) in a worksheet. You can insert both **Regular** and **Rich** **Text** comments. The following code example illustrates how to insert and manipulate comments.
+[ICommentShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICommentShape.html) object represents a [comment](https://support.microsoft.com/en-gb/office/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8?redirectsourcepath=%252fen-us%252farticle%252fannotate-a-worksheet-by-using-comments-3b7065dd-531a-4ffe-8f18-8d047a6ccae7) in a worksheet. You can insert both **Regular** and **Rich** **Text** comments. The following code example illustrates how to insert and manipulate comments.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -652,7 +652,7 @@ End Using
 
 A complete working example to add comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Comment).
 
-You can also fill the comments with various types of fills by using the [IFill](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html) interface. Following code example illustrates how to fill the comment shape with a TwoColor gradient.
+You can also fill the comments with various types of fills by using the [IFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html) interface. Following code example illustrates how to fill the comment shape with a TwoColor gradient.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -737,7 +737,7 @@ A complete working example to fill comment in C# is present on [this GitHub page
 
 ### Show or Hide Excel Comments
 
-Comments in an Excel document can be shown or hidden using [IsVisible](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IComment.html#Syncfusion_XlsIO_IComment_IsVisible) property. The following code example illustrates this.
+Comments in an Excel document can be shown or hidden using [IsVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IComment.html#Syncfusion_XlsIO_IComment_IsVisible) property. The following code example illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -876,11 +876,11 @@ A complete working example to remove comment in C# is present on [this GitHub pa
 
 ## Threaded Comments
 
-Threaded comments are a way to add and organize annotations or discussions related to specific cells in a worksheet. [IThreadedComment](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IThreadedComment.html) object represents a threaded comment in a worksheet.
+Threaded comments are a way to add and organize annotations or discussions related to specific cells in a worksheet. [IThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html) object represents a threaded comment in a worksheet.
 
 ### Create
 
-The following code explains how to create a threaded comment for a specific cell using [AddThreadedComment](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddThreadedComment_System_String_System_String_System_DateTime_) method.
+The following code explains how to create a threaded comment for a specific cell using [AddThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddThreadedComment_System_String_System_String_System_DateTime_) method.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -939,7 +939,7 @@ A complete working example to create a threaded comment in C# is present on [thi
 
 ### Reply
 
-The following code adds a replies to an existing threaded comment using the [AddReply](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_AddReply_System_String_System_String_System_DateTime_) method of [IThreadedComment](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IThreadedComment.html).
+The following code adds a replies to an existing threaded comment using the [AddReply](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_AddReply_System_String_System_String_System_DateTime_) method of [IThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1005,7 +1005,7 @@ The following screenshot represents the output Excel file of threaded comments g
 
 ### Mark as resolved
 
-The threaded comment discussion can be marked as resolved by enabling the [IsResolved](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_IsResolved) property. By default, the value is set to **false**.
+The threaded comment discussion can be marked as resolved by enabling the [IsResolved](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_IsResolved) property. By default, the value is set to **false**.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1073,7 +1073,7 @@ A complete working example to mark a treaded comment as resolved in C# is presen
 
 ### Delete
 
-The following code shows how to delete a threaded comment from the collection of threaded comments using the [Delete](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_Delete) method.
+The following code shows how to delete a threaded comment from the collection of threaded comments using the [Delete](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_Delete) method.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1139,7 +1139,7 @@ End Using
 
 ### Clear
 
-The following code clears all the threaded comments in the worksheet using the [Clear](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IThreadedComments.html#Syncfusion_XlsIO_IThreadedComments_Clear) method of [IThreadedComments](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IThreadedComments.html).
+The following code clears all the threaded comments in the worksheet using the [Clear](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComments.html#Syncfusion_XlsIO_IThreadedComments_Clear) method of [IThreadedComments](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComments.html).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1205,9 +1205,9 @@ End Using
 
 ## AutoShapes
 
-The [IShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IShape.html) interface represents an [AutoShape](https://support.microsoft.com/en-gb/office/add-shapes-0e492bb4-3f91-43b5-803f-dd0998e0eb89?redirectsourcepath=%252fen-us%252farticle%252fadd-change-or-delete-shapes-4f7931c3-7794-440e-820e-9469ad756f05) in an Excel workbook. 
+The [IShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html) interface represents an [AutoShape](https://support.microsoft.com/en-gb/office/add-shapes-0e492bb4-3f91-43b5-803f-dd0998e0eb89?redirectsourcepath=%252fen-us%252farticle%252fadd-change-or-delete-shapes-4f7931c3-7794-440e-820e-9469ad756f05) in an Excel workbook. 
 
-To learn more about various AutoShape types supported in XlsIO, refer to the [AutoShapeType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.AutoShapeType.html) enumeration in API section.
+To learn more about various AutoShape types supported in XlsIO, refer to the [AutoShapeType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.AutoShapeType.html) enumeration in API section.
 
 The following code example illustrates how to insert and format AutoShapes.
 
@@ -1317,7 +1317,7 @@ For example, you can change positions, size or set colors for all shapes at the 
 
 ### Create Group Shapes
 
-The shapes in the worksheet can be grouped into a single shape by creating group shape in XlsIO using [IGroupShape](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IGroupShape.html) interface. 
+The shapes in the worksheet can be grouped into a single shape by creating group shape in XlsIO using [IGroupShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IGroupShape.html) interface. 
 
 The following code example illustrates how to create a group shape.
 
@@ -1449,7 +1449,7 @@ A complete working example to ungroup shapes in C# is present on [this GitHub pa
 ### Ungroup all shapes
 
 When ungrouping the group shape, its immediate inner shapes only be ungrouped. Ungroup the group shape and its all the inner shapes can be possible in XlsIO. 
-In [Ungroup](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IShapes.html#Syncfusion_XlsIO_IShapes_Ungroup_Syncfusion_XlsIO_IGroupShape_System_Boolean_) method, **isAll** boolean value indicates whether the group inner shape will be grouped or not. 
+In [Ungroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShapes.html#Syncfusion_XlsIO_IShapes_Ungroup_Syncfusion_XlsIO_IGroupShape_System_Boolean_) method, **isAll** boolean value indicates whether the group inner shape will be grouped or not. 
 
 The following code example illustrates how to ungroup the group shape and its inner shapes.
 
@@ -1510,7 +1510,7 @@ A complete working example to ungroup all shapes in C# is present on [this GitHu
 
 ## OLE Objects 
 
-[IOleObject](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IOleObject.html) object represents an [OLE Object](https://support.microsoft.com/en-gb/office/assign-an-action-to-a-picture-or-an-ole-object-4051f10f-5d82-4180-90e7-a91d54d86738?redirectsourcepath=%252fen-us%252farticle%252fcreate-change-or-delete-an-ole-object-f767f0f1-4170-4850-9b96-0b6c07ec6ea4) in a worksheet. 
+[IOleObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IOleObject.html) object represents an [OLE Object](https://support.microsoft.com/en-gb/office/assign-an-action-to-a-picture-or-an-ole-object-4051f10f-5d82-4180-90e7-a91d54d86738?redirectsourcepath=%252fen-us%252farticle%252fcreate-change-or-delete-an-ole-object-f767f0f1-4170-4850-9b96-0b6c07ec6ea4) in a worksheet. 
 
 N> XlsIO supports OLE Objects for XLSX format in Windows, ASP.NET, and WPF platforms only.
 
@@ -1647,7 +1647,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-The following code example illustrates how to insert and manipulate OLEObjects with their properties through [IOleObjects](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IOleObjects.html) interface.
+The following code example illustrates how to insert and manipulate OLEObjects with their properties through [IOleObjects](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IOleObjects.html) interface.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
