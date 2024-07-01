@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Guide to Flattening PDFs Using Syncfusion API
 
-You can effortlessly merge one or more PDF documents into a single PDF file. To perform this merge, you need to supply one or more PDF documents as input to the merge PDF document service.
+This feature enables you to flatten annotations and form fields in a PDF document. To use this functionality, you need to provide a PDF document as input to the Flatten PDF API.
 
 ## Flatten PDF Document
 
