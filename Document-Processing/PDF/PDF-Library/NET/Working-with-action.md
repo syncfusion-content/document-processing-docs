@@ -11,7 +11,7 @@ Essential PDF supports different actions that can be triggered by different even
 
 ## Adding an action to the PDF
 
-The below code example illustrates how to add the action to the PDF document using [PdfLaunchAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) class. 
+The below code example illustrates how to add the action to the PDF document using [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) class. 
 
 {% tabs %}
 
@@ -78,18 +78,18 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Essential PDF supports the following types of actions.
 
-* [PdfSoundAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfSoundAction.html) that plays the music file
-* [PdfJavaScriptAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) that executes PDF JavaScript code
-* [PdfUriAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfUriAction.html) that launches the URI
-* [PdfGoToAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfGoToAction.html) that goes to the specified page of the document
-* [PdfLaunchAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) that launches the application or opens the document
-* [PdfNamedAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfNamedAction.html) that goes to the named destination: next, previous, first or last page
-* [PdfSubmitAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfSubmitAction.html) that submits the data that is entered into the PDF form
-* [PdfResetAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfResetAction.html) that resets the fields of the PDF form
+* [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAction.html) that plays the music file
+* [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) that executes PDF JavaScript code
+* [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfUriAction.html) that launches the URI
+* [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfGoToAction.html) that goes to the specified page of the document
+* [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) that launches the application or opens the document
+* [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfNamedAction.html) that goes to the named destination: next, previous, first or last page
+* [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSubmitAction.html) that submits the data that is entered into the PDF form
+* [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfResetAction.html) that resets the fields of the PDF form
 
 ### Sound action
 
-The [PdfSoundAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfSoundAction.html) plays a specified music file in the PDF document. Volume and repeat can be specified for the sound action.
+The [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAction.html) plays a specified music file in the PDF document. Volume and repeat can be specified for the sound action.
 
 {% tabs %}
 
@@ -178,7 +178,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### JavaScript action
 
-The [PdfJavaScriptAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) allows execution of **JavaScript** code embedded in the PDF document.
+The [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) allows execution of **JavaScript** code embedded in the PDF document.
 
 {% tabs %}
 
@@ -257,7 +257,7 @@ N> [https://opensource.adobe.com/dc-acrobat-sdk-docs/library/jsdevguide/index.ht
 
 ### URI action
 
-The [PdfUriAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfUriAction.html) allows you to create a hyperlink that can open web page in a web browser.
+The [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfUriAction.html) allows you to create a hyperlink that can open web page in a web browser.
 
 {% tabs %}
 
@@ -327,7 +327,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### GoTo action
 
-The [PdfGoToAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfGoToAction.html) displays the specified page in the current document. The location can be specified for the destination page.
+The [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfGoToAction.html) displays the specified page in the current document. The location can be specified for the destination page.
 
 {% tabs %}
 
@@ -415,7 +415,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Launch action
 
-The [PdfLaunchAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) allows execution of an external file. The following code example explains how to add a launch action in PDF document. 
+The [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html) allows execution of an external file. The following code example explains how to add a launch action in PDF document. 
 
 {% tabs %}
 
@@ -483,7 +483,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Named action
 
-The [PdfNamedAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfNamedAction.html) allows execution of below predefined **PDF** actions using [PdfActionDestination](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfActionDestination.html) Enum. 
+The [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfNamedAction.html) allows execution of below predefined **PDF** actions using [PdfActionDestination](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfActionDestination.html) Enum. 
 
 * Go to next page
 * Go to previous page 
@@ -567,7 +567,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Submit action
 
-The [PdfSubmitAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfSubmitAction.html) allows submission of data that is entered in the PDF form using [PdfButtonField](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfButtonField.html) form field. 
+The [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSubmitAction.html) allows submission of data that is entered in the PDF form using [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) form field. 
 
 {% tabs %}
 
@@ -661,7 +661,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Reset action
 
-The [PdfResetAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfResetAction.html) allows execution of reset of all the form fields in the PDF document.
+The [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfResetAction.html) allows execution of reset of all the form fields in the PDF document.
 
 {% tabs %}
 
@@ -901,7 +901,7 @@ You can download a complete working sample from [GitHub]
 
 ## Adding an action to the form field
 
-Essential PDF provides support to add various actions to the form fields. The following code example illustrates how to add actions to the form field in PDF document using [PdfFieldActions](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class. 
+Essential PDF provides support to add various actions to the form fields. The following code example illustrates how to add actions to the form field in PDF document using [PdfFieldActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class. 
 
 {% tabs %}
 

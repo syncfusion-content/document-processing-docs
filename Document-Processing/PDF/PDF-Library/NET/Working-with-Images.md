@@ -10,7 +10,7 @@ documentation: UG
 
 Essential PDF supports both raster and vector images.
 
-Images are supported through the [PdfImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfImage.html) class, which is an abstract base class that provides the common functionality for [PdfBitmap](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfBitmap.html) and [PdfMetafile](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfMetafile.html) classes.
+Images are supported through the [PdfImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html) class, which is an abstract base class that provides the common functionality for [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) and [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html) classes.
 
 ## Inserting an image in a new document
 
@@ -24,7 +24,7 @@ The following raster images are supported in Essential PDF.
 * TIFF
 * ICO and ICON
 
-You can load image streams, files on disk, and use System.Drawing.Bitmap objects to draw the images through the [DrawImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
+You can load image streams, files on disk, and use System.Drawing.Bitmap objects to draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 The following code snippet shows how to add a file from disk to the PDF document.
 
@@ -261,7 +261,7 @@ Essential PDF supports adding Metafile vector image. During the insertion, Metaf
 * EMF plus dual
 * WMF
 
-[PdfMetafile](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfMetafile.html) class is used to load EMF images. Additionally the [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class allows you to prevent text and image split across pages in the PDF document.
+[PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html) class is used to load EMF images. Additionally the [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class allows you to prevent text and image split across pages in the PDF document.
 
 The following code illustrate this,
 
@@ -331,7 +331,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with image masking
 
-Essential PDF supports image masking through the [PdfImageMask](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfImageMask.html) class.
+Essential PDF supports image masking through the [PdfImageMask](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImageMask.html) class.
 
 The following code illustrate shows how to add a mask to TIFF image.
 
@@ -422,7 +422,7 @@ N> 1. Essential PDF supports image masking with [Syncfusion.Pdf.Imaging.Portable
 
 ## Replacing Images in an existing PDF document
 
-Essential PDF allows you to replace images in an existing document. The [ReplaceImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_) method of the page collection allows you to replace an image.
+Essential PDF allows you to replace images in an existing document. The [ReplaceImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_) method of the PdfLoadedPage allows you to replace an image.
 
 {% tabs %} 
 
@@ -484,7 +484,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Image Pagination
 
-You can allow a large image to paginate across multiple pages in the PDF document. This can be done through the [PdfLayoutFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class as shown below.
+You can allow a large image to paginate across multiple pages in the PDF document. This can be done through the [PdfLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class as shown below.
 
 {% tabs %} 
 
@@ -564,7 +564,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Applying transparency and rotation to the image
 
-You can add transparency and rotation to the image using [SetTransparency](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) and [RotateTransform](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) methods of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html) respectively. This is explained in the below code snippet.
+You can add transparency and rotation to the image using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) and [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) methods of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) respectively. This is explained in the below code snippet.
 
 {% tabs %}  
 
@@ -663,7 +663,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Converting multi page TIFF to PDF
 
-Multi frame TIFF image can be converted to PDF document. This can be done by accessing each frame of the multi frame TIFF image and rendering it in each page of the PDF document using [PdfBitmap](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfBitmap.html) class.
+Multi frame TIFF image can be converted to PDF document. This can be done by accessing each frame of the multi frame TIFF image and rendering it in each page of the PDF document using [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class.
 
 The code snippet to illustrate the same is given below.
 
@@ -757,7 +757,7 @@ N> 1. Essential PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging
 
 ## Remove Images
 
-The [RemoveImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_) method of the page collection allows you to remove an image. You can remove images from an existing document using Essential PDF.
+The [RemoveImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_) method of the page collection allows you to remove an image. You can remove images from an existing document using Essential PDF.
 
 The code snippet to illustrate the same is given below.
 

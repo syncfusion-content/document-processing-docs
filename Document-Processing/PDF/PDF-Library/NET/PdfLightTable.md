@@ -12,7 +12,7 @@ The [Syncfusion .NET PDF library](https://www.syncfusion.com/document-processing
 
 ## Creating a simple table 
 
-The Syncfusion .NET PDF library allows you to create the table with [DataSource](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from DataSet, DataTable, arrays and IEnumerable objects using [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) class. It allows you to perform simple formatting. 
+The Syncfusion .NET PDF library allows you to create the table with [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from DataSet, DataTable, arrays and IEnumerable objects using [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) class. It allows you to perform simple formatting. 
 
 N> In Silverlight, Windows store apps and Xamarin only strongly typed IEnumerable objects are supported.
 
@@ -115,9 +115,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Create a simple table directly without setting any data source 
 
-Directly add rows and columns instead of a data source, by setting the [DataSourceType](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSourceType) property to ``TableDirect`` of [PdfLightTableDataSourceType](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTableDataSourceType.html) Enum. 
+Directly add rows and columns instead of a data source, by setting the [DataSourceType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSourceType) property to ``TableDirect`` of [PdfLightTableDataSourceType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableDataSourceType.html) Enum. 
 
-The following code illustrates how to add the data directly into the [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html). 
+The following code illustrates how to add the data directly into the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html). 
 
 {% tabs %}
 
@@ -219,7 +219,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Creating a simple table in an existing PDF document 
 
-Create a table using the [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) in the existing PDF document by using the following code sample. 
+Create a table using the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) in the existing PDF document by using the following code sample. 
 
 {% tabs %}
 
@@ -324,7 +324,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Support for cell customization 
 
-The [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) allows users to customize cell font, background, border, etc. using [PdfCellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfCellStyle.html).
+The [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) allows users to customize cell font, background, border, etc. using [PdfCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfCellStyle.html).
 
 The following code sample illustrates how to customize the cell properties in ``PdfLightTable``.
 
@@ -465,7 +465,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Draw graphics elements in a particular cell 
 
-You can set different styles for particular cell using [BeginCellLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) and [EndCellLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) events in [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) class. 
+You can set different styles for particular cell using [BeginCellLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) and [EndCellLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) events in [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) class. 
 
 The following code example illustrates how to draw the graphics elements in the particular cell using these event handlers. 
 
@@ -626,7 +626,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Row customization 
 
-[PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) doesn't provide direct support for row customization. However, this can be done through the event handlers. The following code sample illustrates how to customize the row in ``PdfLightTable`` using [BeginRowLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_BeginRowLayout) and [EndRowLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_EndRowLayout) event handlers.
+[PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) doesn't provide direct support for row customization. However, this can be done through the event handlers. The following code sample illustrates how to customize the row in ``PdfLightTable`` using [BeginRowLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_BeginRowLayout) and [EndRowLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_EndRowLayout) event handlers.
 
 {% tabs %}
 
@@ -809,7 +809,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Column customization 
 
-The following code sample illustrates how to customize the column in [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) using the [PdfStringFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class. 
+The following code sample illustrates how to customize the column in [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) using the [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class. 
 
 {% tabs %}
 
@@ -944,9 +944,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Table customization 
 
-The Syncfusion .NET PDF library supports users to create a customizable PDF table like [CellSpacing](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellSpacing), [CellPadding](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellPadding), [RepeatHeader](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_RepeatHeader), [ShowHeader](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_ShowHeader), etc. This can be achieved by using the [PdfLightTableStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTableStyle.html) class. 
+The Syncfusion .NET PDF library supports users to create a customizable PDF table like [CellSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellSpacing), [CellPadding](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellPadding), [RepeatHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_RepeatHeader), [ShowHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_ShowHeader), etc. This can be achieved by using the [PdfLightTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html) class. 
 
-The following code sample illustrates how to customize the table using [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html).
+The following code sample illustrates how to customize the table using [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html).
 
 {% tabs %}
 
@@ -1081,7 +1081,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Built-in table styles 
 
-In-built table styles can be applied to [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html), and the appearance is made similar to Microsoft Word’s built-in table styles. You can also apply in-built table styles with the following additional table style options.
+In-built table styles can be applied to [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html), and the appearance is made similar to Microsoft Word’s built-in table styles. You can also apply in-built table styles with the following additional table style options.
 
 * Banded columns
 * Banded rows
@@ -1090,7 +1090,7 @@ In-built table styles can be applied to [PdfLightTable](https://help.syncfusion.
 * Header row
 * Last row
 
-The following code example illustrates how to apply built-in table style using [ApplyBuiltinStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_ApplyBuiltinStyle_Syncfusion_Pdf_PdfLightTableBuiltinStyle_) method of the ``PdfLightTable`` with styles from [PdfLightTableBuiltinStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfLightTableBuiltinStyle.html) Enum.
+The following code example illustrates how to apply built-in table style using [ApplyBuiltinStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_ApplyBuiltinStyle_Syncfusion_Pdf_PdfLightTableBuiltinStyle_) method of the ``PdfLightTable`` with styles from [PdfLightTableBuiltinStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLightTableBuiltinStyle.html) Enum.
 
 {% tabs %}
 
@@ -1211,7 +1211,7 @@ The following image shows the PDF document with ```PdfGridBuiltinStyle.Gridtable
 
 ## Pagination 
 
-The Syncfusion .NET PDF library provides support to paginate the [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) using [PdfLightTableLayoutFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTableLayoutFormat.html) class. 
+The Syncfusion .NET PDF library provides support to paginate the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) using [PdfLightTableLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableLayoutFormat.html) class. 
 
 The following sample illustrates how to allow the ``PdfLightTable`` to flow across pages. 
 
@@ -1326,11 +1326,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## String formatting 
 
-The Syncfusion .NET PDF library supports applying string formatting for a whole table, a column in the table, a row in a table, and a cell in a table using the [PdfStringFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class. 
+The Syncfusion .NET PDF library supports applying string formatting for a whole table, a column in the table, a row in a table, and a cell in a table using the [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class. 
 
 ### String formatting for whole table in PdfLightTable
 
-The following code sample explains how to add string formatting for the whole table in [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html).
+The following code sample explains how to add string formatting for the whole table in [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html).
 
 {% tabs %}
 
@@ -1464,9 +1464,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### String formatting to a column in PdfGrid
 
-The following code sample explains how to add string formatting to a column in the [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html).
+The following code sample explains how to add string formatting to a column in the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html).
 
-The following code sample explains how to add string formatting to a column in the [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html).
+The following code sample explains how to add string formatting to a column in the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html).
 
 {% tabs %}
 
