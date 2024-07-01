@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Guide to Flattening PDFs Using Syncfusion API
 
-You can effortlessly merge one or more PDF documents into a single PDF file. To perform this merge, you need to supply one or more PDF documents as input to the merge PDF document service.
+This feature enables you to flatten annotations and form fields in a PDF document. To use this functionality, you need to provide a PDF document as input to the Flatten PDF API.
 
 ## Flatten PDF Document
 
@@ -15,7 +15,7 @@ To flatten a PDF document, send a request to the /v1/edit-pdf/flatten endpoint w
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/flatten' \
 --form 'file=@"Form.pdf"' \
@@ -28,7 +28,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/flatten' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "Form.pdf");
@@ -84,14 +84,14 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 --header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

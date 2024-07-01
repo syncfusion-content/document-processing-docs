@@ -15,7 +15,7 @@ To rotate PDF pages, send a request to the /v1/edit-pdf/rotate-pages endpoint wi
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/rotate-pages' \
 --form 'file=@"merge/example.pdf"' \
@@ -37,7 +37,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/rotate-pages' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "merge/example.pdf");
@@ -102,13 +102,13 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% tabs %}
 
-{% highlight c# tabtitle="curl" %}
+{% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 
 {% endhighlight %}
 
-{% highlight javaScript tabtitle="JavaScript:" %}
+{% highlight javaScript tabtitle="JavaScript" %}
 
 const requestOptions = {
   method: "GET",

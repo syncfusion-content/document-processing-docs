@@ -5,7 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Docker image hosting guide
+# Docker Image Hosting Guide
 
 We aim to assist developers in reducing deployment time and simplifying the publishing process using Docker images. The Syncfusion Document Processing API is available on Docker Hub, providing a seamless experience for Docker users. The following sections will guide you on how to run Docker commands or configure a YAML file for use with Docker Compose.
 
@@ -30,9 +30,10 @@ The following software requirements are necessary to run document processing API
 
 ## Steps to configure and run docker container
 
-Step1: Create a docker-compose.yml file with the following configuration, to customize the configuration refer the document section of Environment variables of docker image.
+Step1: Create a docker-compose.yml file with the following configuration, to customize the configuration refer the below link.
+(Environment variables of docker image)[https://help.syncfusion.com/document-processing/web-apis/environment-variables-of-docker-image].
 
-N> The Document Processing API is part of Syncfusion's Essential Studio and requires a valid license key for use in a production environment. Replace SYNCFUSION_LICENSE_KEY with your valid license key in the docker-compose.yml file. To generate a valid license key, refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key).
+N> The Document Processing API uses Syncfusion's Essential Studio and requires a valid license key for use in a production environment. To add your valid license key, set the SYNCFUSION_LICENSE_KEY environment variable in the docker-compose.yml file. To generate a valid license key, refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key).
 
 If the license key is not applied, a watermark will be added to the generated PDF documents. The license key is version specific. If you are upgrading the Docker image, you need to update the license key to match the new version.
 
@@ -88,6 +89,6 @@ docker-compose up -d
 ![LogDetails](images/logdetails.jpg)
 
 
-Step3: After successfully running the server, you'll encounter the following message upon opening the host URL in your browser  http://localhost:8003/
+Step3: After successfully running the server, you'll encounter the following message upon opening the host URL in your browser http://localhost:8003/
 
 ![Browser](images/browser.jpg)

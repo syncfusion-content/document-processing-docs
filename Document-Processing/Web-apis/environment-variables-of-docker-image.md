@@ -5,7 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Environment variables of docker image
+# Environment Variables of Docker Image
 
 You may want to adjust certain settings of the Syncfusion Document Processing API to fit your application. The configuration options can be accessed through environment variables within the container environment. Here are the available options:
 
