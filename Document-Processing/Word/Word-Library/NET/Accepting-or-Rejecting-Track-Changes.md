@@ -398,12 +398,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * Explore how to accept or reject the tracked changes in the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/trackchanges#/material3).
 
-**Frequently Asked Questions**
-
-* [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
-* [How to accept or reject track changes of specific type in the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-accept-or-reject-track-changes-of-specific-type-in-the-word-document)
-* [How to enable track changes for Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-enable-track-changes-for-word-document)
-
 ## Frequently Asked Questions
 
 * [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
