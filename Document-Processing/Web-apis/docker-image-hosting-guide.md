@@ -31,7 +31,7 @@ The following software requirements are necessary to run document processing API
 ## Steps to configure and run docker container
 
 Step1: Create a docker-compose.yml file with the following configuration, to customize the configuration refer the below link.
-(Environment variables of docker image)[https://help.syncfusion.com/document-processing/web-apis/environment-variables-of-docker-image].
+[Environment variables of docker image](https://help.syncfusion.com/document-processing/web-apis/environment-variables-of-docker-image).
 
 N> The Document Processing API uses Syncfusion's Essential Studio and requires a valid license key for use in a production environment. To add your valid license key, set the SYNCFUSION_LICENSE_KEY environment variable in the docker-compose.yml file. To generate a valid license key, refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key).
 
