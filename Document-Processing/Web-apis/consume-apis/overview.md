@@ -11,7 +11,7 @@ Consuming hosted web APIs for document processing enables developers to integrat
 
 The document Processing API provides following capabilities
 
-- [Word to PD](https://help.syncfusion.com/document-processing/web-apis/consume-apis/word-to-pdf)
+- [Word to PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/word-to-pdf)
 - [Excel to PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/excel-to-pdf)
 - [PowerPoint to PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/powerpoint-to-pdf)
 - [HTML to PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/html-to-pdf)
