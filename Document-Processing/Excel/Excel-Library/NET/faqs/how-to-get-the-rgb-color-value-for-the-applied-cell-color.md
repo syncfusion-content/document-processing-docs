@@ -1,12 +1,12 @@
 ---
-title: How to get the RGB color value for the applied cell color in an Excel document |Syncfusion.
+title: How to get the RGB color value for the applied cell color |Syncfusion.
 description: This page explains how to get the RGB color value for the applied cell color in an Excel document using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the RGB color value for the applied cell color in an Excel document?
+# How to get the RGB color value for the applied cell color?
 
 The following code example illustrates how to get the RGB color value for the applied cell color in an Excel document.
 
