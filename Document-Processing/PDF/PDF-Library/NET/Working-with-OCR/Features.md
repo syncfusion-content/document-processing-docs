@@ -1352,7 +1352,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Image Enhancement in OCR Processor library
 
-We have support to improve the image quality while performing OCR for a image or PDF document. In this process we can improve the image quality by using the binarization, grayscale, enhance resolution method with third party libraries. Please refer the below code snippet.
+We have support to improve the image quality while performing OCR for an image or PDF document. In this process, we can enhance the image quality by using binarization, grayscale, and resolution enhancement methods with third-party libraries. Please refer to the code snippet below.
 
 {% tabs %}  
 
@@ -1374,7 +1374,7 @@ We have support to improve the image quality while performing OCR for a image or
         //Save the document into stream. 
         lDoc.Save(fileStream); 
         //Close the document. 
-        lDoc.Close(); 
+        lDoc.Close(true); 
         stream.Dispose(); 
         fileStream.Dispose(); 
     } 
@@ -1403,7 +1403,7 @@ We have support to improve the image quality while performing OCR for a image or
         lDoc.Save(fileStream)
         
         ' Close the document.
-        lDoc.Close()
+        lDoc.Close(true)
         stream.Dispose()
         fileStream.Dispose()
     End Using
