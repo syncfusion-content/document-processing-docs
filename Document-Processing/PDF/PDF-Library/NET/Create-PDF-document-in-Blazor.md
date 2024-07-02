@@ -568,7 +568,7 @@ Create a new class file named `SaveAndroid.cs` within the Android folder and add
 
 {% endtabs %}
 
-N> Note: Introduced a new runtime permission model for the Android SDK version 23 and above. So, include the following code for enabling the Android file provider to save and view the generated PDF document.
+N> Introduced a new runtime permission model for the Android SDK version 23 and above. So, include the following code for enabling the Android file provider to save and view the generated PDF document.
 
 1.	Create a new XML file with the name of `file_paths.xml` under the Android project Resources/xml folder and add the following code in it.
 
