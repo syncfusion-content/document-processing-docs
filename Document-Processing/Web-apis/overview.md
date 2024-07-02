@@ -11,25 +11,25 @@ In today's fast-paced digital world, businesses and developers require efficient
 
 ## Key features
 
-**1. Pre-configured Environment:** The Docker image comes with all necessary software, libraries, and dependencies pre-installed, ensuring a consistent and hassle-free setup.
+- **Pre-configured Environment:** The Docker image comes with all necessary software, libraries, and dependencies pre-installed, ensuring a consistent and hassle-free setup.
 
-**2. Scalability:** Easily scale the document processing capabilities by deploying multiple containers, handling high loads efficiently.
+- **Scalability:** Easily scale the document processing capabilities by deploying multiple containers, handling high loads efficiently.
 
-**3. Portability:** The Docker image can run on any system that supports Docker, making it highly portable across different environments (development, staging, production).
+- **Portability:** The Docker image can run on any system that supports Docker, making it highly portable across different environments (development, staging, production).
 
-**4. Security:** The image is designed with security best practices, ensuring that the document processing APIs are robust against common vulnerabilities.
+- **Security:** The image is designed with security best practices, ensuring that the document processing APIs are robust against common vulnerabilities.
 
-**5. Customizability:** Users can extend and customize the Docker image to fit specific requirements, adding additional tools or adjusting configurations as needed.
+- **Flexibility:** Users can extend and customize the Docker image to fit specific requirements, adding additional tools or adjusting configurations as needed.
 
 ## Benefits
 
-**1. Rapid Deployment:** With the Docker image, setting up a fully functional document processing API service takes minutes instead of hours or days.
+- **Rapid Deployment:** With the Docker image, setting up a fully functional document processing API service takes minutes instead of hours or days.
 
-**2. Consistent Performance:** The containerized environment ensures consistent performance across different deployments, minimizing the risk of configuration issues.
+- **Consistent Performance:** The containerized environment ensures consistent performance across different deployments, minimizing the risk of configuration issues.
 
-**3. Simplified Maintenance:** Managing and updating the document processing service is simplified, as Docker images can be easily updated and redeployed.
+- **Simplified Maintenance:** Managing and updating the document processing service is simplified, as Docker images can be easily updated and redeployed.
 
-**4. Cost-Effective:** By leveraging containerization, organizations can optimize resource usage and reduce costs associated with traditional virtual machines or dedicated servers.
+- **Cost-Effective:** By leveraging containerization, organizations can optimize resource usage and reduce costs associated with traditional virtual machines or dedicated servers.
 
 ## Use cases
 
