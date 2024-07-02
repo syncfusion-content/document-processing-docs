@@ -19,7 +19,7 @@ In today's fast-paced digital world, businesses and developers require efficient
 
 - **Security:** The image is designed with security best practices, ensuring that the document processing APIs are robust against common vulnerabilities.
 
-- **Customizability:** Users can extend and customize the Docker image to fit specific requirements, adding additional tools or adjusting configurations as needed.
+- **Flexibility:** Users can extend and customize the Docker image to fit specific requirements, adding additional tools or adjusting configurations as needed.
 
 ## Benefits
 
