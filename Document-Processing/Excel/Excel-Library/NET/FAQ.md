@@ -86,3 +86,4 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to hide columns using column name?](faqs/how-to-hide-columns-using-column-name)
 * [How to convert xls document to xlsx format document?](faqs/how-to-convert-xls-document-to-xlsx-format-document)
 * [How to access a table in Excel document using the table name?](faqs/how-to-access-a-table-in-Excel-document-using-the-table-name)
+* [How to insert a picture into a cell in an Excel document?](faqs/how-to-insert-a-picture-into-a-cell-in-an-excel-document)
