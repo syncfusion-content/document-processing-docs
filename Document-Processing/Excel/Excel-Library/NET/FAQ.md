@@ -88,3 +88,4 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to access a table in Excel document using the table name?](faqs/how-to-access-a-table-in-Excel-document-using-the-table-name)
 * [How to check whether the loaded file is an Excel file?](faqs/how-to-check-whether-the-loaded-file-is-an-excel-file)
 * [How to insert a picture into a cell in an Excel document?](faqs/how-to-insert-a-picture-into-a-cell-in-an-excel-document)
+* [How to get the RGB color value for the applied cell color in an Excel document?](faqs/how-to-get-the-rgb-color-value-for-the-applied-cell-color)
