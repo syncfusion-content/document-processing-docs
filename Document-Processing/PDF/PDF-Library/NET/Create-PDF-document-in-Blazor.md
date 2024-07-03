@@ -835,7 +835,7 @@ Create a new class file named `SaveWindows.cs` within the Windows folder and inc
 
 The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page. You can refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page for more details.
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
 
 By executing the program, you will get the following output in the browser.
 ![Blazor client browser window](Create-PDF-Blazor/Maui_Blazor_browser_output.png)
