@@ -1216,7 +1216,7 @@ processor.Settings.Performance = Performance.Fast
 
 Starting with v21.1.x, TesseractBinaries, and Tesseract language data folder paths are added by default. So, there is no need to provide these paths explicitly. However, you can refer to TesseractBinaries and Tessdata paths manually in your application as per the requirement.
 
-N> You can get the TessseractBinaries or TessData files from the NuGet package runtimes folder or bin folder of the application.
+N> You can get the TesseractBinaries  or TessData files from the NuGet package run times folder or bin folder of the application.
 
 {% tabs %}  
 
@@ -1349,3 +1349,68 @@ End Using
 {% endtabs %}  
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Get-image-rotation-angle-from-OCR).
+
+## Image Enhancement in OCR Processor library
+
+We have support to improve the image quality while performing OCR for an image or PDF document. In this process, we can enhance the image quality by using binarization, grayscale, and resolution enhancement methods with third-party libraries. Please refer to the code snippet below.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    //Initialize the OCR processor. 
+    using (OCRProcessor processor = new OCRProcessor()) 
+    { 
+        //Load an existing PDF document. 
+        FileStream stream = new FileStream("../../../document.pdf", FileMode.Open); 
+        PdfLoadedDocument lDoc = new PdfLoadedDocument(stream); 
+        //Set the OCR language. 
+        processor.Settings.Language = Languages.English; 
+        processor.ImageProcessor = new ImageProcessor(); 
+        //Perform OCR with input document. 
+        string text = processor.PerformOCR(lDoc); 
+        //Create file stream. 
+        FileStream fileStream = new FileStream("../../../OCR.pdf", FileMode.CreateNew); 
+        //Save the document into stream. 
+        lDoc.Save(fileStream); 
+        //Close the document. 
+        lDoc.Close(true); 
+        stream.Dispose(); 
+        fileStream.Dispose(); 
+    } 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Initialize the OCR processor.
+    Using processor As New OCRProcessor()
+        ' Load an existing PDF document.
+        Dim stream As New FileStream("../../../document.pdf", FileMode.Open)
+        Dim lDoc As New PdfLoadedDocument(stream)
+
+        ' Set the OCR language.
+        processor.Settings.Language = Languages.English
+        processor.ImageProcessor = New ImageProcessor()
+        
+        ' Perform OCR with input document.
+        Dim text As String = processor.PerformOCR(lDoc)
+
+        ' Create file stream.
+        Dim fileStream As New FileStream("../../../OCR.pdf", FileMode.CreateNew)
+        
+        ' Save the document into stream.
+        lDoc.Save(fileStream)
+
+        ' Close the document.
+        lDoc.Close(true)
+        stream.Dispose()
+        fileStream.Dispose()
+    End Using
+{% endhighlight %}
+
+{% endtabs %}  
+
+N> Note: In this sample, we are using the SixLabors.ImageSharp library to improve the image quality. You can any image processing library as per your requirement.
+
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-ImageEnhancement).
