@@ -1257,7 +1257,7 @@ A complete working example to apply cell text alignment in C# is present on [thi
 
 The following screenshot is the output of previous code:
 
-!["Excel document with different alignment options](Working-with-Cell-or-Range-Formatting_images/Working-with-Cell-or-Range-Formatting_img3.jpeg)
+![Excel document with different alignment options](Working-with-Cell-or-Range-Formatting_images/Working-with-Cell-or-Range-Formatting_img3.jpeg)
 
 ## Merging and Un-Merging Cells
 
