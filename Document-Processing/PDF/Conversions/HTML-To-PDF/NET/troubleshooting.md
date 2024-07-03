@@ -991,11 +991,11 @@ CPU usage: 64%</td>
 </tr>
 </table>
 
-N> Note: The performance metrics were recorded on a freshly configured machine. Speed and memory usage may vary if the machine is running other processes. Additionally, performance can be affected by:
+N> The performance metrics were recorded on a freshly configured machine. Speed and memory usage may vary if the machine is running other processes. Additionally, performance can be affected by:
 
-* External resources loaded in the HTML (such as images, scripts, and styles)
-* Network speed for online URL conversions
-* Hardware resources (CPU and memory)
+N> * External resources loaded in the HTML (such as images, scripts, and styles)
+N> * Network speed for online URL conversions
+N> * Hardware resources (CPU and memory)
 
 ## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
 
