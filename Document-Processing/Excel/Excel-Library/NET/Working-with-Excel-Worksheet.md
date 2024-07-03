@@ -359,4 +359,4 @@ With the Syncfusion Excel Library, you can show or hide rows, columns, or specif
 * [How to copy Excel worksheet to another workbook in C#, VB.NET?](https://support.syncfusion.com/kb/article/2629/copy-excel-worksheet-to-another-workbook-in-c-vb-net)
 * [How range Copy To method overloads on WinForms XIsIO?](https://support.syncfusion.com/kb/article/2751/how-range-copy-to-method-overloads-on-winforms-xisio?isInternalRefresh=False)
 * [How to set freeze panes in Excel document using C#, VB.NET?](https://support.syncfusion.com/kb/article/2684/how-to-set-freeze-panes-in-excel-document-using-c-vbnet)
-* [Blog:Freeze panes](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet/freeze-panes)
+* [Blog: Freeze panes](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet/freeze-panes)
