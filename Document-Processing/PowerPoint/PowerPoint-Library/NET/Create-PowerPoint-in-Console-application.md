@@ -15,7 +15,7 @@ Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/
 The below steps illustrates **create a PowerPoint** in console application using **.NET Core**.
 
 Step 1: Create a new **.NET Core console application** project.
-![Create a .NET Core Console application in Visual Studio](Console-Images/.NET/Console-Template-Net-Core.png)
+![Create a .NET Core Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
 
 Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
