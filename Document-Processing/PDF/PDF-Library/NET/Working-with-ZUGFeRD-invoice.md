@@ -22,7 +22,7 @@ The ZUGFeRD has five conformance levels,
 
 N> * The ZUGFeRD conformance levels *Minimum* and *EN16931* are only supported in ZugferdVersion2.0.
 
-The ZUGFeRD invoice document can be created by specifying the conformance level as ``Pdf_A3B`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document and set the [ZugferdConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *Basic* in [ZugferdConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.ZugferdConformanceLevel.html) Enum. 
+The ZUGFeRD invoice document can be created by specifying the conformance level as ``Pdf_A3B`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document and set the [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *Basic* in [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.ZugferdConformanceLevel.html) Enum. 
 
 {% tabs %} 
 
@@ -58,7 +58,7 @@ document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic
 
 {% endtabs %}  
 
-Using PDF/A-3b conformance, you can create a ZUGFeRD invoice PDF by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as *ZugferdVersion2_0* of [ZugferdVersion](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.ZugferdVersion.html) Enum. By default, ZugferdVersion1.0 used. 
+Using PDF/A-3b conformance, you can create a ZUGFeRD invoice PDF by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as *ZugferdVersion2_0* of [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.ZugferdVersion.html) Enum. By default, ZugferdVersion1.0 used. 
 
 {% tabs %} 
 
@@ -96,7 +96,7 @@ document.ZugferdVersion = ZugferdVersion.ZugferdVersion2_0
 
 ## Adding ZUGFeRD structured data as attachment
 
-The PDF/A-3b conformance supports the external files as attachment to the PDF document using [PdfAttachment](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. 
+The PDF/A-3b conformance supports the external files as attachment to the PDF document using [PdfAttachment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. 
 
 {% tabs %} 
 
@@ -238,7 +238,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract ZUGFeRD invoice from PDF
 
-You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. 
+You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. 
 
 {% tabs %}
 
