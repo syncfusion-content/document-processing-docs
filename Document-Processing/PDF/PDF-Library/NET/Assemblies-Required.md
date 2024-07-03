@@ -90,8 +90,7 @@ Syncfusion.Pdf.Web<br/>Syncfusion.Compression.Base<br/></td></tr>
 {{'[ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Pdf.MVC<br/>Syncfusion.Compression.Base<br/></td></tr>
 </table>
-
-
+<br/><br/>
 N> The .NET Standard assemblies can be found in the following Essential Studio installation path
 {Installed directory}\Syncfusion\Essential Studio\{Product version}\precompiledassemblies\{Product version}\.NET Standard 1.2\
 <br/><br/>
