@@ -85,7 +85,7 @@ By executing the program, you will get the **PowerPoint** as follows.
 The below steps illustrates **open and save a PowerPoint** in console application using **.NET Framework**.
 
 Step 1: Create a new **.NET FrameWork console application** project.
-![Create a .NET FrameWork Console application in Visual Studio](Console-Images/.NET-FrameWork/Console-Template-Net-FrameWork.png)
+![Create a .NET FrameWork Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
 Step 2: Install [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
 

@@ -15,7 +15,7 @@ Syncfusion DocIO is a [.NET Word library](https://www.syncfusion.com/document-pr
 The below steps illustrates creating a simple **Word document** in console application using **.NET Core**.
 
 Step 1: Create a new **.NET Core console application** project.
-![Create a C# Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
+![Create a Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
 
 Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
@@ -277,7 +277,7 @@ By executing the program, you will get the **Word document** as follows.
 The below steps illustrates creating a simple **Word document** in console application using **.NET Framework**.
 
 Step 1: Create a new **.NET FrameWork console application** project.
-![Create a C# Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
+![Create a Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
 Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
 
