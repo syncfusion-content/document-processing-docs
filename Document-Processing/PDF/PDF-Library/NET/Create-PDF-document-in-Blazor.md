@@ -386,7 +386,7 @@ Step 2: Now, the project configuration window appears. Set the project name and 
 ![Blazor client configuration window](Create-PDF-Blazor/Maui_Blazor_configuration_window.png)
 
 
-Step 3: Install the [Syncfusion.PDF.Net](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet_Net.png)
 
 Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
@@ -395,13 +395,11 @@ Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
 
 {% highlight c# tabtitle="C#" %}
 
-@using Syncfusion.Pdf
-@using Syncfusion.Pdf.Grid;
-@using Syncfusion.Drawing;
-@using Syncfusion.Pdf.Graphics;
-@inject Microsoft.JSInterop.IJSRuntime JS
-@using System.IO;
-@using BlazorMauiAppCreatePdfSample.Services;
+    @using Syncfusion.Pdf;
+    @using Syncfusion.Pdf.Graphics;
+    @using Syncfusion.Pdf.Grid;
+    @using Syncfusion.Drawing;
+    @using BlazorMauiAppCreatePdfSample.Services
 
 {% endhighlight %}
 
@@ -478,7 +476,7 @@ The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Pdf
 
 {% endtabs %}
 
-### Save the PDF Document on Different Platforms
+### Save the PDF document on different platforms
 
 Create a folder named `Services`, then add a class called `SaveService.cs` within this folder, and insert the following code into it.
 {% tabs %}
@@ -723,7 +721,7 @@ Create a new class file named  `SaveMac.cs` within the MacCatalyst folder and in
 
 {% endtabs %}
 
-#### windows
+#### Windows
 Create a new class file named `SaveWindows.cs` within the Windows folder and include the following code to enable file saving on the Windows platform.
 
 {% tabs %}
@@ -837,10 +835,10 @@ The helper files mentioned above are available on [this](https://help.syncfusion
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
 
-By executing the program, you will get the following output in the browser.
+By running the program, you will see the output in the browser when you click the "Whether" option in the left-side menu.
 ![Blazor client browser window](Create-PDF-Blazor/Maui_Blazor_browser_output.png)
 
-Click the Export to PDF button and you will get the PDF document with the following output.
+Click the `Export to PDF` button to get the PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion PDF library features.
