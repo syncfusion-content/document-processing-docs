@@ -14,7 +14,7 @@ Essential PDF provides support to add barcodes to the PDF document. The followin
 
 ## Adding a one dimensional barcode to the PDF document
 
-The below code example shows how to add Code39 barcode using the [PdfCode39Barcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfCode39Barcode.html) class to a PDF document.
+The below code example shows how to add Code39 barcode using the [PdfCode39Barcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfCode39Barcode.html) class to a PDF document.
 
 {% tabs %}
 
@@ -98,7 +98,7 @@ doc.Close(true);
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/One%20dimensional%20barcode/Add-Code39-barcode-to-the-PDF-document).
 
-The below code snippet shows how to add PdfEan13 barcode using the [PdfEan13Barcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfEan13Barcode.html) class to a PDF document.
+The below code snippet shows how to add PdfEan13 barcode using the [PdfEan13Barcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfEan13Barcode.html) class to a PDF document.
 
 {% tabs %}
 
@@ -188,7 +188,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/One%20dimensional%20barcode/Add-PdfEan13-barcode-to-a-PDF-document).
 
-The below code example shows how to add PdfEan8 barcode using the [PdfEan8Barcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfEan8Barcode.html) class to a PDF document.
+The below code example shows how to add PdfEan8 barcode using the [PdfEan8Barcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfEan8Barcode.html) class to a PDF document.
 
 {% tabs %}
 
@@ -280,7 +280,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a two dimensional barcode to a PDF document
 
-The below code snippet shows how to add a QR code using [PdfQRBarcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfQRBarcode.html) class to the PDF document.
+The below code snippet shows how to add a QR code using [PdfQRBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfQRBarcode.html) class to the PDF document.
 
 {% tabs %}
 
@@ -371,7 +371,7 @@ doc.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Two%20dimensional%20barcode/Add-a-QRBarcode-to-the-PDF-document).
 
-The below code example shows how to add a Pdf417 barcode code using [Pdf417Barcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.Pdf417Barcode.html) class to the PDF document.
+The below code example shows how to add a Pdf417 barcode code using [Pdf417Barcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.Pdf417Barcode.html) class to the PDF document.
 
 {% tabs %}
 
@@ -469,7 +469,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set location and size to the barcode
 
-The following code snippets show how to set [Size](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_size) and [Location](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_Location) for Codabar barcode using [PdfCodabarBarcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfCodabarBarcode.html) class to a PDF document.
+The following code snippets show how to set [Size](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_size) and [Location](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_Location) for Codabar barcode using [PdfCodabarBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfCodabarBarcode.html) class to a PDF document.
 
 {% tabs %}
 
@@ -560,7 +560,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a barcode to the PDF document without displaying the barcode text
 
-The following code example shows how to add a barcode to the PDF document without displaying the barcode text by specifying the [TextDisplayLocation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_TextDisplayLocation) as **None** through the [TextLocation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.TextLocation.html) Enum.
+The following code example shows how to add a barcode to the PDF document without displaying the barcode text by specifying the [TextDisplayLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_TextDisplayLocation) as **None** through the [TextLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.TextLocation.html) Enum.
 
 {% tabs %}
 
@@ -658,7 +658,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Export Barcode as Image
 
-Essential PDF supports converting one dimensional barcodes such as Code 39, Code 39 Extended, Code 11, Codabar, Code 32, Code 93, Code 93 Extended, Code 128A, Code 128B, UPC bar code, and Code 128C barcodes to image using the [ToImage()](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage) method of [PdfUnidimensionalBarcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html) instance. 
+Essential PDF supports converting one dimensional barcodes such as Code 39, Code 39 Extended, Code 11, Codabar, Code 32, Code 93, Code 93 Extended, Code 128A, Code 128B, UPC bar code, and Code 128C barcodes to image using the [ToImage()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage) method of [PdfUnidimensionalBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html) instance. 
 
 N> To export barcode as image in .NET Core, the following assembly should be referenced in your application [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core/) .
 
@@ -722,7 +722,7 @@ barcodeImage.Save("Image.png", ImageFormat.Png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Export-one-dimensional-barcode-as-image/).
 
-Essential PDF supports converting two-dimensional barcodes such as QR Code and Data Matrix barcode to image. The following code snippet explains how to convert a QR code to image using the [ToImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfQRBarcode.html#Syncfusion_Pdf_Barcode_PdfQRBarcode_ToImage) method of [PdfQRBarcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfQRBarcode.html) instance.
+Essential PDF supports converting two-dimensional barcodes such as QR Code and Data Matrix barcode to image. The following code snippet explains how to convert a QR code to image using the [ToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfQRBarcode.html#Syncfusion_Pdf_Barcode_PdfQRBarcode_ToImage) method of [PdfQRBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfQRBarcode.html) instance.
 
 {% tabs %}
 
@@ -784,11 +784,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Customizing the barcode appearance
 
-The height of the barcode can be changed using the [BarHeight](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_barHeight) property. The equivalent property to change the block size for two dimensional barcode is [XDimension](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfBidimensionalBarcode_XDimension). You can also customize the barcode color by changing the DarkBarColor and LightBarColor properties.
+The height of the barcode can be changed using the [BarHeight](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_barHeight) property. The equivalent property to change the block size for two dimensional barcode is [XDimension](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfBidimensionalBarcode_XDimension). You can also customize the barcode color by changing the DarkBarColor and LightBarColor properties.
 
 N> This color customization is possible only for one dimensional barcodes and it is not supported for two dimensional barcodes.
 
-The following code sample explains how to customize the one-dimensional barcode such as Code 39 using the [BarHeight](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_BarHeight), [BarColor](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_BarColor), etc. in [PdfCode93Barcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfCode93Barcode.html) class. 
+The following code sample explains how to customize the one-dimensional barcode such as Code 39 using the [BarHeight](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_BarHeight), [BarColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcode.html#Syncfusion_Pdf_Barcode_PdfBarcode_BarColor), etc. in [PdfCode93Barcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfCode93Barcode.html) class. 
 
 {% tabs %}
 
@@ -876,7 +876,7 @@ document.Close(True)
 
 {% endtabs %}
 
-The following code example shows how to customize the two-dimensional barcode such as QR code using the [XDimension](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfBidimensionalBarcode_XDimension) property in [PdfBidimensionalBarcode](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Barcode.PdfBidimensionalBarcode.html) class. 
+The following code example shows how to customize the two-dimensional barcode such as QR code using the [XDimension](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfBidimensionalBarcode_XDimension) property in [PdfBidimensionalBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBidimensionalBarcode.html) class. 
 
 {% tabs %}
 

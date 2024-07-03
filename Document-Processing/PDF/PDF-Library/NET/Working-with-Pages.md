@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding a new page to the document
 
-The following code sample explains you on how to add a [PdfPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPage.html) in a PDF document. When multiple pages are added, the new page is always added to the end of the document.
+The following code sample explains you on how to add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) in a PDF document. When multiple pages are added, the new page is always added to the end of the document.
 
 {% tabs %}  
 
@@ -88,7 +88,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Inserting pages in a document
 
-You can insert an empty page at any location in the existing PDF document using [Insert](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_Insert_System_Int32_) method. The below code snippet explains the same.
+You can insert an empty page at any location in the existing PDF document using [Insert](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_Insert_System_Int32_) method. The below code snippet explains the same.
 
 {% tabs %} 
 
@@ -139,7 +139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding margin to the PDF pages
 
-You can add margin to all the PDF pages of the PDF document using the [PageSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_PageSettings) property. The following code snippet illustrates the same.
+You can add margin to all the PDF pages of the PDF document using the [PageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_PageSettings) property. The following code snippet illustrates the same.
 
 {% tabs %}  
 
@@ -224,7 +224,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding sections with different page settings
 
-Essential PDF supports adding sections with different page settings like [Height](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Height), [Margins](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Margins), [Orientation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Orientation), [Rotate](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Rotate), [Size](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Size), [Transition](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Transition) and [Width](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Width). You can add sections to a PDF document by using the [PdfSection](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfSection.html) available in [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html) instance and create page settings to the ``PdfSection`` using the [PageSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfSection.html#Syncfusion_Pdf_PdfSection_PageSettings) property. 
+Essential PDF supports adding sections with different page settings like [Height](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Height), [Margins](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Margins), [Orientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Orientation), [Rotate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Rotate), [Size](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Size), [Transition](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Transition) and [Width](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html#Syncfusion_Pdf_PdfPageSettings_Width). You can add sections to a PDF document by using the [PdfSection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSection.html) available in [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance and create page settings to the ``PdfSection`` using the [PageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSection.html#Syncfusion_Pdf_PdfSection_PageSettings) property. 
 
 The following code snippet explains how to add more sections to a PDF document with different page settings.
 
@@ -487,7 +487,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Importing pages from an existing document.
 
-Essential PDF allows you to import a page or import a range of pages from one document to the other. The following code sample illustrates how to import a range of pages from an existing document using [ImportPageRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_) method.
+Essential PDF allows you to import a page or import a range of pages from one document to the other. The following code sample illustrates how to import a range of pages from an existing document using [ImportPageRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_) method.
 
 {% tabs %}   
 
@@ -558,7 +558,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Importing pages from an existing document without bookmarks.
 
-You can import a page or range of pages from one document to other without bookmarks using [ImportPageRange](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_System_Boolean_) method. Refer to the following code sample. 
+You can import a page or range of pages from one document to other without bookmarks using [ImportPageRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_System_Boolean_) method. Refer to the following code sample. 
 
 N> Performance will be effective only in the large PDF document.
 
@@ -633,7 +633,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Rearranging pages in an existing document
 
-You can rearrange the pages in an existing PDF document using [ReArrange](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_ReArrange_System_Int32___) method. This method uses zero based start index. The following code snippet illustrates the same.
+You can rearrange the pages in an existing PDF document using [ReArrange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_ReArrange_System_Int32___) method. This method uses zero based start index. The following code snippet illustrates the same.
 
 {% tabs %}  
 
@@ -684,7 +684,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Changing the page numbers in a PDF document
 
-You can alter the page label for the existing PDF document using [PdfPageLabel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageLabel.html) class. Refer to the following code example. 
+You can alter the page label for the existing PDF document using [PdfPageLabel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLabel.html) class. Refer to the following code example. 
 
 {% tabs %}  
 
@@ -755,7 +755,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing pages from a document
 
-You can remove the pages from the existing PDF document using [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method as shown in the below code example. 
+You can remove the pages from the existing PDF document using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method as shown in the below code example. 
 
 {% tabs %}  
 
@@ -808,7 +808,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Rotating a PDF page
 
-You can rotate a particular PDF page in the PDF document using [PdfPageRotateAngle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageRotateAngle.html) Enum as shown the following code example. 
+You can rotate a particular PDF page in the PDF document using [PdfPageRotateAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageRotateAngle.html) Enum as shown the following code example. 
 
 {% tabs %}  
 
@@ -898,7 +898,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Rotating an existing PDF page
 
-You can also rotate a PDF page in the existing PDF document using [PdfPageRotateAngle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageRotateAngle.html) as shown in the following code example.
+You can also rotate a PDF page in the existing PDF document using [PdfPageRotateAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageRotateAngle.html) as shown in the following code example.
 
 {% tabs %}  
 
@@ -958,7 +958,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Detect empty pages from a PDF document
 
-You can find the empty pages from the PDF document using the [IsBlank](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_IsBlank) property as shown in the following code sample.  
+You can find the empty pages from the PDF document using the [IsBlank](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_IsBlank) property as shown in the following code sample.  
 
 {% tabs %}  
 
@@ -1018,7 +1018,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Splitting a PDF file to individual pages
 
-Essential PDF allows to split the pages of an existing PDF document into multiple individual PDF documents using [Split](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code snippet explains the same.
+Essential PDF allows to split the pages of an existing PDF document into multiple individual PDF documents using [Split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code snippet explains the same.
 
 {% tabs %}  
 
@@ -1078,8 +1078,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Span a text element to multiple pages and draw the next element
 
-The ['PdfLayoutFormat'](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class helps to allow the text to flow across pages. The ['PdfLayoutResult'](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) class provides the rendered bounds of the previously added text, which can be used to place successive elements without overlapping. 
-The ['Syncfusion PDF library'](https://www.syncfusion.com/document-processing/pdf-framework/net) provides ['PageAddedEventArgs'](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PageAddedEventArgs.html) to get the current Page details, and we can draw the next new text element from where the last text element ends.
+The ['PdfLayoutFormat'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class helps to allow the text to flow across pages. The ['PdfLayoutResult'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) class provides the rendered bounds of the previously added text, which can be used to place successive elements without overlapping. 
+The ['Syncfusion PDF library'](https://www.syncfusion.com/document-processing/pdf-framework/net) provides ['PageAddedEventArgs'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PageAddedEventArgs.html) to get the current Page details, and we can draw the next new text element from where the last text element ends.
 The following code example illustrates the same.
 
 {% tabs %}  
@@ -1210,7 +1210,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Inserting duplicate pages in the existing pdf document
 
-The Syncfusion PDF library enables users to duplicate existing pages and insert them at various locations within a document. This functionality is especially valuable for creating templates, replicating forms, and expanding content without the need to manually recreate each page. The [Insert](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_Insert_System_Int32_) method in the PdfLoadedPageCollection facilitates the creation of duplicate pages. 
+The Syncfusion PDF library enables users to duplicate existing pages and insert them at various locations within a document. This functionality is especially valuable for creating templates, replicating forms, and expanding content without the need to manually recreate each page. The [Insert](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_Insert_System_Int32_) method in the PdfLoadedPageCollection facilitates the creation of duplicate pages. 
 
 Refer to the following code example for creating duplicate page in a PDF document. 
 

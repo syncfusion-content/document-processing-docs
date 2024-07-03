@@ -29,7 +29,7 @@ N> Essential PDF supports PDF conformances only in Windows Forms, WPF, ASP.NET C
 
 ## PDF/A-1b conformance
 
-You can create a PDF/A-1b document by specifying the conformance level as ```Pdf_A1B``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document, as shown below.
+You can create a PDF/A-1b document by specifying the conformance level as ```Pdf_A1B``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document, as shown below.
 
 {% tabs %} 
 
@@ -120,7 +120,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF/A-2b conformance
 
-You can create a PDF/A-2b document by specifying the conformance level as ```Pdf_A2B``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
+You can create a PDF/A-2b document by specifying the conformance level as ```Pdf_A2B``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
 
 {% tabs %}  
 
@@ -213,7 +213,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The PDF/A-3b conformance supports the external files as attachment to the PDF document. So you can attach any document format such as Excel, Word, HTML, CAD, or XML files.
 
-You can create a PDF/A-3b document by specifying the conformance level as Pdf_A3B through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
+You can create a PDF/A-3b document by specifying the conformance level as Pdf_A3B through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
 
 {% tabs %}  
 
@@ -331,7 +331,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 PDF/A-1a conformance includes all PDF/A-1b requirements in addition to the features intended to improve a document's accessibility. PDF/A-1a conformance additionally have crucial properties of Tagged PDF.
 
-You can create a PDF/A-1a document by specifying the conformance level as ```Pdf_A1A``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document, as shown below.
+You can create a PDF/A-1a document by specifying the conformance level as ```Pdf_A1A``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document, as shown below.
 
 {% tabs %} 
 
@@ -421,7 +421,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 PDF/A-2a conformance includes all PDF/A-2b requirements in addition to the features intended to improve a document's accessibility. PDF/A-2a conformance additionally have crucial properties of Tagged PDF.
 
-You can create a PDF/A-2a document by specifying the conformance level as ```Pdf_A2A``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
+You can create a PDF/A-2a document by specifying the conformance level as ```Pdf_A2A``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
 
 {% tabs %} 
 
@@ -511,7 +511,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 PDF/A-3a conformance includes all PDF/A-3b requirements in addition to the features intended to improve a document's accessibility. PDF/A-3a conformance additionally have crucial properties of Tagged PDF.
 
-You can create a PDF/A-3a document by specifying the conformance level as ``Pdf_A3A`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
+You can create a PDF/A-3a document by specifying the conformance level as ``Pdf_A3A`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
 
 {% tabs %}  
 
@@ -631,7 +631,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 PDF/A-2u conformance includes all PDF/A-2b requirements, and additionally Unicode mapping for all text in the document. 
 
-You can create a PDF/A-2u document by specifying the conformance level as ```Pdf_A2U``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
+You can create a PDF/A-2u document by specifying the conformance level as ```Pdf_A2U``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
 
 {% tabs %}  
 
@@ -721,7 +721,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 PDF/A-3u conformance includes all PDF/A-3b requirements, and additionally Unicode mapping for all text in the document. 
 
-You can create a PDF/A-3u document by specifying the conformance level as ``Pdf_A3U`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
+You can create a PDF/A-3u document by specifying the conformance level as ``Pdf_A3U`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
 
 {% tabs %}  
 
@@ -841,7 +841,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The separate conformance levels a, b, and u are not used in a PDF/A-4. Instead, PDF/A-4 encourages but does not require the addition of higher-level logical structures, and it requires Unicode mappings for all fonts.
 
-Create a PDF/A-4 document by specifying the conformance level as ``Pdf_A4`` through the [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating a new PDF document as follows.
+Create a PDF/A-4 document by specifying the conformance level as ``Pdf_A4`` through the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating a new PDF document as follows.
 
 {% tabs %}  
 
@@ -931,7 +931,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The PDF/A-4E ("Engineering") is intended for technical documents and replaces PDF/E. PDF/A-4e supports 3D models, rich media, and 3D annotations as well as embedded files.
 
-Create a PDF/A-4E document by specifying the conformance level as ``Pdf_A4E`` through the [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
+Create a PDF/A-4E document by specifying the conformance level as ``Pdf_A4E`` through the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document as follows.
 
 {% tabs %}  
 
@@ -1021,7 +1021,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The requirements of the PDF/A-3 have also been partially incorporated into PDF/A-4. Thus, the PDF/A-4f allows the embedding of arbitrary files.
 
-Create a PDF/A-4f document by specifying the conformance level as ``Pdf_A4F`` through the [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating a new PDF document as follows.
+Create a PDF/A-4f document by specifying the conformance level as ``Pdf_A4F`` through the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating a new PDF document as follows.
 
 {% tabs %}  
 
@@ -1133,7 +1133,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF/X-1a conformance
 
-You can create a PDF/X-1a document by specifying the conformance level as ```Pdf_X1A2001``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document, as shown below.
+You can create a PDF/X-1a document by specifying the conformance level as ```Pdf_X1A2001``` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document, as shown below.
 
 {% tabs %}  
 
@@ -1194,7 +1194,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF to PDF/A conversion
 
-An existing PDF document can be converted to PDF/A conformance document, by setting the [Conformance](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) value in the [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) to ```Pdf_A1B```,```Pdf_A2B```,```Pdf_A3B```, and ```Pdf_A4``` of  [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html). Refer to the following code sample to achieve the same.
+An existing PDF document can be converted to PDF/A conformance document, by setting the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) value in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) to ```Pdf_A1B```,```Pdf_A2B```,```Pdf_A3B```, and ```Pdf_A4``` of  [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html). Refer to the following code sample to achieve the same.
 
 N> To convert the existing PDF to PDF/A conformance document in .NET Core, you need to include the Syncfusion.Pdf.Imaging.Portable assembly reference in the .NET Core project.
 
@@ -1314,7 +1314,7 @@ N> 3. From the .NET Framework 3.5 version, the Essential PDF is compatible with 
 
 ## Get PDF Conformance Level
 
-You can find the conformance level of the existing PDF document using the [Conformance](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) property in the [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. Refer to the following code sample to get the conformance level of the existing PDF document. 
+You can find the conformance level of the existing PDF document using the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) property in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. Refer to the following code sample to get the conformance level of the existing PDF document. 
 
 {% tabs %} 
 
@@ -1364,7 +1364,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Get PDF to PDF/A conversion progress
 
-You can get conversion progress using [PdfAConversionProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_PdfAConversionProgress) event.
+You can get conversion progress using [PdfAConversionProgress](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_PdfAConversionProgress) event.
 
 The following code sample shows the delegate for handling PDF to PDF/A conversion process
 
@@ -1454,7 +1454,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF/A to PDF conversion
 
-An existing PDF/A conformance document can be converted to a PDF document using the [RemoveConformance](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_RemoveConformance) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. Refer to the following code sample to achieve the same,
+An existing PDF/A conformance document can be converted to a PDF document using the [RemoveConformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_RemoveConformance) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. Refer to the following code sample to achieve the same,
 
 {% tabs %}  
 
