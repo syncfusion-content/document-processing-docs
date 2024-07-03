@@ -18,7 +18,7 @@ XMP standardizes the definition, creation, and processing of metadata.
 
 ## Adding XMP metadata in a PDF document
 
-You can add XMP metadata in a PDF document using the [XmpMetadata](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.XmpMetadata.html) class as shown in the following code example.
+You can add XMP metadata in a PDF document using the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class as shown in the following code example.
 
 {% tabs %}  
 
@@ -127,7 +127,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding XMP metadata in an existing PDF document
 
-You can add metadata in an existing PDF document using the [XmpMetadata](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.XmpMetadata.html) class, as follows.
+You can add metadata in an existing PDF document using the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class, as follows.
 
 {% tabs %}  
 
@@ -254,7 +254,7 @@ Basic Schema contains properties that provide basic descriptive information such
 * Nickname
 * Rating
 
-The [BasicSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.BasicSchema.html) class is used to create the basic schema properties. Refer the following code sample to create XMP basic schema in PDF document. 
+The [BasicSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.BasicSchema.html) class is used to create the basic schema properties. Refer the following code sample to create XMP basic schema in PDF document. 
 
 {% tabs %}  
 
@@ -375,7 +375,7 @@ The Dublin Core schema provides a set of commonly used properties such as,
 * Publisher
 * Title
 
-The [DublinCoreSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.DublinCoreSchema.html) class is used to create the Dublin core schema properties in PDF document. 
+The [DublinCoreSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.DublinCoreSchema.html) class is used to create the Dublin core schema properties in PDF document. 
 
 {% tabs %}  
 
@@ -477,7 +477,7 @@ This schema includes properties related to rights management. These properties p
 * UsageTerm
 * WebStatement
 
-The [RightsManagementSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.RightsManagementSchema.html) class is used to create the Rights management schema properties.
+The [RightsManagementSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.RightsManagementSchema.html) class is used to create the Rights management schema properties.
 
 {% tabs %} 
 
@@ -564,7 +564,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Basic Job Ticket Schema
 
-This schema describes very simple workflow or job information and the [BasicJobTicketSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.BasicJobTicketSchema.html) class is used to create the Basic Job Ticket Schema properties in PDF document.
+This schema describes very simple workflow or job information and the [BasicJobTicketSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.BasicJobTicketSchema.html) class is used to create the Basic Job Ticket Schema properties in PDF document.
 
 * JobRef
 
@@ -655,7 +655,7 @@ The Paged-Text schema is used for text appearance on page in a document.
 * Colorants
 * PlateNames
 
-The [PagedTextSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.PagedTextSchema.html) class is used for creating Paged-Text schema properties in PDF document. 
+The [PagedTextSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.PagedTextSchema.html) class is used for creating Paged-Text schema properties in PDF document. 
 
 {% tabs %} 
 
@@ -746,7 +746,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### PDF schema
 
-This schema specifies the properties used with Adobe PDF documents. The [PDFSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.PDFSchema.html) class is used to create the PDF Schema properties in PDF document. It has the following set of properties.
+This schema specifies the properties used with Adobe PDF documents. The [PDFSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.PDFSchema.html) class is used to create the PDF Schema properties in PDF document. It has the following set of properties.
 
 {% tabs %} 
 
@@ -834,7 +834,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Custom Schema
 
-A custom schema defines the structure of the customized information records. You can use the [CustomSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.CustomSchema.html) class to: 
+A custom schema defines the structure of the customized information records. You can use the [CustomSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.CustomSchema.html) class to: 
 
 * Define custom metadata files and, 
 * Add them to the PDF document 
@@ -929,7 +929,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding Custom Schema to the PDF document
 
-Essential PDF allows you to add required metadata (custom schema) to a PDF document using the [CustomSchema](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.CustomSchema.html) class with [XmpMetadata](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.XmpMetadata.html) class. The following code illustrates this.
+Essential PDF allows you to add required metadata (custom schema) to a PDF document using the [CustomSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.CustomSchema.html) class with [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class. The following code illustrates this.
 
 {% tabs %}  
 
@@ -1014,7 +1014,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding Custom Metadata to the PDF document
 
-The custom metadata can be added in PDF document by using the [CustomMetadata](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_CustomMetadata) property in [PdfDocumentInformation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentInformation.html) class. Please refer to the following code. 
+The custom metadata can be added in PDF document by using the [CustomMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_CustomMetadata) property in [PdfDocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html) class. Please refer to the following code. 
 
 {% tabs %}  
 
@@ -1087,7 +1087,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing Custom Metadata from an existing PDF document
 
-Removing the custom metadata from an existing PDF document using the [Remove](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.CustomMetadata.html#Syncfusion_Pdf_CustomMetadata_Remove_System_String_) method in [CustomMetadata](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_CustomMetadata) class. 
+Removing the custom metadata from an existing PDF document using the [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.CustomMetadata.html#Syncfusion_Pdf_CustomMetadata_Remove_System_String_) method in [CustomMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html#Syncfusion_Pdf_PdfDocumentInformation_CustomMetadata) class. 
 
 {% tabs %}  
 
@@ -1153,7 +1153,7 @@ Image metadata is a data that describes the characteristics or properties of an 
 
 ## Adding XMP metadata along with an image in a PDF document
 
-You can add the XMP metadata along with an image to the PDF document. The [PdfBitmap](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfBitmap.html) class is used to load the image files and draw an images through the [DrawImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. 
+You can add the XMP metadata along with an image to the PDF document. The [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class is used to load the image files and draw an images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. 
 
 {% tabs %} 
 
@@ -1236,7 +1236,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extracting XMP metadata from PDF image
 
-To extract the [XmpMetadata](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Xmp.XmpMetadata.html) from an image in an existing PDF document, you can use the [ImagesInfo](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo) property in the [PdfPageBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html) class.
+To extract the [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) from an image in an existing PDF document, you can use the [ImagesInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo) property in the [PdfPageBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html) class.
 
 Refer to the following code example to extract the image metadata from a PDF image.
 
