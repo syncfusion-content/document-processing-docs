@@ -18,19 +18,19 @@ Steps to open a Word document from AWS S3 Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Cloud-Storage/AWS/AWS-img1.png)
+![Create a ASP.NET Core Web App project in visual studio](Cloud-Storage/AWS/Create-ASPNET-Core-App.png)
 
 Step 2: Name the project.
 
-![Name the project](Cloud-Storage/AWS/AWS-img2.png)
+![Name the project](Cloud-Storage/AWS/Name-the-project-for-open-document.png)
 
 Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)
 * [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)
 
-![Install Syncfusion.DocIO.Net.Core NuGet Package](Cloud-Storage/AWS/AWS-img3.png)
-![Install AWSSDK.S3 NuGet Package](Cloud-Storage/AWS/AWS-img4.png)
+![Install Syncfusion.DocIO.Net.Core NuGet Package](Cloud-Storage/AWS/DocIO-NuGet-package-for-ASPNET-Core-for-open-document.png)
+![Install AWSSDK.S3 NuGet Package](Cloud-Storage/AWS/AWS-SDK-for-open-document.png)
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 
@@ -95,9 +95,6 @@ public async Task<IActionResult> EditDocument()
             MemoryStream outputStream = new MemoryStream();
             wordDocument.Save(outputStream, Syncfusion.DocIO.FormatType.Docx);
 
-            //Set the position as '0'.
-            outputStream.Position = 0;
-
             //Download the Word file in the browser
             FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/msword");
             fileStreamResult.FileDownloadName = "EditWord.docx";
@@ -113,12 +110,18 @@ public async Task<IActionResult> EditDocument()
 {% endhighlight %}
 {% endtabs %}
 
-### Get Word document from AWS S3 cloud storage
+### Download file from AWS S3 cloud storage
 
-This is the helper method to get Word document from AWS S3 cloud storage.
+This is the helper method to download Word document from AWS S3 cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+/// <summary>
+/// Download file from AWS S3 cloud storage
+/// </summary>
+/// <param name="bucketName"></param>
+/// <param name="key"></param>
+/// <returns></returns>
 public async Task<MemoryStream> GetDocumentFromS3(string bucketName, string key)
 {
     //Configure AWS credentials and region
@@ -161,13 +164,9 @@ public async Task<MemoryStream> GetDocumentFromS3(string bucketName, string key)
 
 You can download a complete working sample from [GitHub]().
 
-The input Word document used in the sample looks like below.
-
-![Input File](Cloud-Storage/AWS/AWS-img5.png)
-
 By executing the program, you will get the **Word document** as follows.
 
-![Output File](Cloud-Storage/AWS/AWS-img6.png)
+![Output File](Cloud-Storage/AWS/Output-Word-for-open-document.png)
 
 ## Save Word document to AWS S3
 
@@ -175,19 +174,19 @@ Steps to save a Word document to AWS S3 Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Cloud-Storage/AWS/AWS-img1.png)
+![Create a ASP.NET Core Web App project in visual studio](Cloud-Storage/AWS/Create-ASPNET-Core-App.png)
 
 Step 2: Name the project.
 
-![Name the project](Cloud-Storage/AWS/AWS-img7.png)
+![Name the project](Cloud-Storage/AWS/Name-the-project-for-save-document.png)
 
 Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)
 * [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)
 
-![Install Syncfusion.DocIO.Net.Core NuGet Package](Cloud-Storage/AWS/AWS-img8.png)
-![Install AWSSDK.S3 NuGet Package](Cloud-Storage/AWS/AWS-img9.png)
+![Install Syncfusion.DocIO.Net.Core NuGet Package](Cloud-Storage/AWS/DocIO-NuGet-package-for-ASPNET-Core-for-save-document.png)
+![Install AWSSDK.S3 NuGet Package](Cloud-Storage/AWS/AWS-SDK-for-save-document.png)
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 
@@ -451,7 +450,6 @@ public async Task<IActionResult> UploadDocument()
     //Saves the Word document to  MemoryStream
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Docx);
-    stream.Position = 0;
     
     //Your AWS Storage Account bucket name 
     string bucketName = "your-bucket-name";
@@ -467,12 +465,19 @@ public async Task<IActionResult> UploadDocument()
 {% endhighlight %}
 {% endtabs %}
 
-### Upload Word document to AWS S3 cloud storage
+### Upload file to AWS S3 cloud storage
 
 This is the helper method to upload Word document to AWS S3 cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+/// <summary>
+/// Upload file to AWS S3 cloud storage
+/// </summary>
+/// <param name="bucketName"></param>
+/// <param name="key"></param>
+/// <param name="stream"></param>
+/// <returns></returns>
 public async Task<MemoryStream> UploadDocumentToS3(string bucketName, string key, MemoryStream stream)
 {
     //Configure AWS credentials and region
@@ -511,4 +516,4 @@ You can download a complete working sample from [GitHub]().
 
 By executing the program, you will get the **Word document** as follows.
 
-![Output File](Cloud-Storage/AWS/AWS-img10.png)
+![Output File](Cloud-Storage/AWS/Output-Word-for-create-document.png)
