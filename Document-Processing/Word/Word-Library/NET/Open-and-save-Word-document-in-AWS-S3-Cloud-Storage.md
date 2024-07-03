@@ -166,7 +166,7 @@ You can download a complete working sample from [GitHub]().
 
 By executing the program, you will get the **Word document** as follows.
 
-![Output File](Cloud-Storage/AWS/Output-Word-for-open-document.png)
+![Output Word document](Cloud-Storage/AWS/Output-Word-for-open-document.png)
 
 ## Save Word document to AWS S3
 
@@ -516,4 +516,4 @@ You can download a complete working sample from [GitHub]().
 
 By executing the program, you will get the **Word document** as follows.
 
-![Output File](Cloud-Storage/AWS/Output-Word-for-create-document.png)
+![Output Word document](Cloud-Storage/AWS/Output-Word-for-create-document.png)
