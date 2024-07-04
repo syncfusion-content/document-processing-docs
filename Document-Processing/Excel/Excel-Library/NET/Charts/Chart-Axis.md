@@ -256,7 +256,7 @@ N> 1) The [MinimumValue](https://help.syncfusion.com/cr/document-processing/Sync
 
 N> 2) When the [IsAutoMax](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_IsAutoMax) and [IsAutoMin](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_IsAutoMin) properties are set to true, the chart automatically determines its default maximum and minimum values.
 
-### Gridline Visibiility
+### Gridline Visibility
 
 The following code snippet illustrates how to hide or show major and minor gridlines.
 
@@ -286,9 +286,9 @@ chart.PrimaryValueAxis.HasMinorGridLines = False
 {% endhighlight %}
 {% endtabs %}
 
-### Maxcross
+### Max cross
 
-The following code snippet illustrates how to set the maxcross in the chart axis.
+The following code snippet illustrates how to set the max cross in the chart axis.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
