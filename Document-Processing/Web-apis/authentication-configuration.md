@@ -60,6 +60,8 @@ Example public key (jwtRS256_pub.pem):
  -----END PUBLIC KEY-----
  ```
 
+ N> The public key provided in the example code above is for demonstration purposes only. It is recommended to generate your own RSA key pair and use your own public key in the configuration. To generate your keys, follow the steps provided in the documentation on creating a key via `ssh-keygen`.
+
 **2. Install the System.IdentityModel.Tokens.Jwt NuGet package:**
 
  ```
@@ -94,6 +96,13 @@ return tokenHandler.WriteToken(token);
  
 {% endtabs %}
 
+> **Note:**
+> Ensure that the `jwtRS256.key` file is present in the appropriate location. This file contains the private key used to sign the JWTs issued to clients. Without this key, the tokens cannot be signed correctly. 
+>
+> If you have not already generated this key, please refer to the steps provided in the documentation on generating the key using `ssh-keygen` and `openssl`. Make sure to follow these steps to create both the private key (`jwtRS256.key`) and the corresponding public key (`jwtRS256_pub.pem`). The public key must be added to the document processing engine’s configuration to enable token signature validation.
+
+You can download a sample for JWT generation from [GitHub](https://github.com/SyncfusionExamples/document-processing-apis-examples).
+
 ## Validate a JWT
 
 To validate a request with a JWT token, include the token in the request header as follows. The Syncfusion Document Processing Engine will validate the token and proceed to process the request. If validation fails, it will return an unauthorized exception.
@@ -122,3 +131,5 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endhighlight %}
  
 {% endtabs %}
+
+ N> The bearer token used in the example above is for demonstration purposes. It is recommended to generate your own JWT using the private key. To generate a JWT, refer to the steps provided in the documentation on how to create a JWT using your private key.
