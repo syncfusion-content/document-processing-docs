@@ -1496,3 +1496,58 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Retrieve_BaseUri_from_the_existing_PDF/). 
+
+## PDF Save Progress
+
+Essential PDF allows you to save a PDF document using [SaveProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_SaveProgress) event of [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+      //Create a new PDF document.
+      PdfDocument document = new PdfDocument();
+      //Add new pages to the document.
+      PdfPage page = document.Pages.Add();
+      //Create font and font style.
+      PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12f, PdfFontStyle.Bold);
+      //Draw text in the new page.
+      page.Graphics.DrawString("Essential PDF", font, PdfBrushes.Black, new PointF(10, 10));
+      document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
+      //Saves the document
+      document.Save("Document.pdf");
+      //Close the document
+      document.Close(true);
+      // Event handler for PageAdded event
+      void document_SaveProgress(object sender, ProgressEventArgs arguments)
+      {
+      Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total {2}", arguments.Current, arguments.Progress, arguments.Total));
+      }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+      'Create a new PDF document.
+      Private document As PdfDocument = New PdfDocument()
+      'Add new pages to the document.
+      Private page As PdfPage = document.Pages.Add()
+      'Create font and font style.
+      Private font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12f, PdfFontStyle.Bold)
+      'Draw text in the new page.
+      page.Graphics.DrawString("Essential PDF", font, PdfBrushes.Black, New PointF(10, 10))
+      AddHandler document.SaveProgress, AddressOf document_SaveProgress
+      'Saves the document
+      document.Save("Document.pdf")
+      'Close the document
+      document.Close(True)
+      ' Event handler for PageAdded event
+      Private Sub document_SaveProgress(ByVal sender As Object, ByVal arguments As ProgressEventArgs)
+      Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total {2}", arguments.Current, arguments.Progress, arguments.Total))
+      End Sub
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](). 
