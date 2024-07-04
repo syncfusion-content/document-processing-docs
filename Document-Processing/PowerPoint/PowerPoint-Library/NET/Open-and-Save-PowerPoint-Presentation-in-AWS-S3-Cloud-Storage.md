@@ -12,9 +12,9 @@ documentation: UG
 
 * **[AWS S3 Cloud Storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)** is required.
 
-## Open Presentation document from AWS S3
+## Open Presentation from AWS S3
 
-Steps to open a Presentation document from AWS S3 Cloud Storage.
+Steps to open a Presentation from AWS S3 Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -56,22 +56,16 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **open a Presentation document from AWS S3 Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **open a Presentation from AWS S3 Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public async Task<IActionResult> EditDocument()
 {
-    //Your AWS Storage Account bucket name 
-    string bucketName = "your-bucket-name";
-
-    //Name of the PowerPoint file you want to load from AWS S3
-    string key = "PowerPointTemplate.pptx";
-
     try
     {
         //Retrieve the document from AWS S3
-        MemoryStream stream = await GetDocumentFromS3(bucketName, key);
+        MemoryStream stream = await GetDocumentFromS3();
 
         //Set the position to the beginning of the MemoryStream
         stream.Position = 0;
@@ -89,7 +83,7 @@ public async Task<IActionResult> EditDocument()
             if (shape.TextBody.Text == "Company History")
                 shape.TextBody.Text = "Company Profile";
 
-            //Saving the PowerPoint document to a MemoryStream 
+            //Saving the PowerPoint file to a MemoryStream 
             MemoryStream outputStream = new MemoryStream();
             pptxDocument.Save(outputStream);
 
@@ -110,7 +104,7 @@ public async Task<IActionResult> EditDocument()
 
 ### Download file from AWS S3 cloud storage
 
-This is the helper method to download Presentation document from AWS S3 cloud storage.
+This is the helper method to download Presentation from AWS S3 cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -120,8 +114,14 @@ This is the helper method to download Presentation document from AWS S3 cloud st
 /// <param name="bucketName"></param>
 /// <param name="key"></param>
 /// <returns></returns>
-public async Task<MemoryStream> GetDocumentFromS3(string bucketName, string key)
+public async Task<MemoryStream> GetDocumentFromS3()
 {
+    //Your AWS Storage Account bucket name 
+    string bucketName = "your-bucket-name";
+
+    //Name of the PowerPoint file you want to load from AWS S3
+    string key = "PowerPointTemplate.pptx";
+
     //Configure AWS credentials and region
     var region = Amazon.RegionEndpoint.USEast1;
     var credentials = new Amazon.Runtime.BasicAWSCredentials("your-access-key", "your-secret-key");
@@ -148,7 +148,6 @@ public async Task<MemoryStream> GetDocumentFromS3(string bucketName, string key)
             await response.ResponseStream.CopyToAsync(stream);
 
             return stream;
-
         }
     }
     catch (Exception ex)
@@ -162,13 +161,13 @@ public async Task<MemoryStream> GetDocumentFromS3(string bucketName, string key)
 
 You can download a complete working sample from [GitHub]().
 
-By executing the program, you will get the **Presentation document** as follows.
+By executing the program, you will get the **Presentation** as follows.
 
-![Output Presentation document](Cloud-Storage/AWS/Output-Presentation-for-open-document.png)
+![Output Presentation](Cloud-Storage/AWS/Output-Presentation-for-open-document.png)
 
-## Save Presentation document to AWS S3
+## Save Presentation to AWS S3
 
-Steps to save a Presentation document to AWS S3 Cloud Storage.
+Steps to save a Presentation to AWS S3 Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -211,7 +210,7 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **save a Presentation document to AWS S3 Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **save a Presentation to AWS S3 Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -267,27 +266,21 @@ public async Task<IActionResult> UploadDocument()
     stampShape.Fill.FillType = FillType.None;
     stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
 
-    //Saves the PowerPoint document to MemoryStream
+    //Saves the PowerPoint to MemoryStream
     MemoryStream stream = new MemoryStream();
-    pptxDocument.Save(stream);
-
-    //Your AWS Storage Account bucket name 
-    string bucketName = "your-bucket-name";
-
-    //Name of the PowerPoint file you want to upload
-    string key = "CreatePowerPoint.pptx";
+    pptxDocument.Save(stream);            
 
     //Upload the document to AWS S3
-    await UploadDocumentToS3(bucketName, key, stream);
+    await UploadDocumentToS3(stream);
 
-    return Ok("PowerPoint document uploaded to AWS S3 Storage.");
+    return Ok("PowerPoint uploaded to AWS S3 Storage.");
 }
 {% endhighlight %}
 {% endtabs %}
 
 ### Upload file to AWS S3 cloud storage
 
-This is the helper method to upload Presentation document to AWS S3 cloud storage.
+This is the helper method to upload Presentation to AWS S3 cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -298,8 +291,14 @@ This is the helper method to upload Presentation document to AWS S3 cloud storag
 /// <param name="key"></param>
 /// <param name="stream"></param>
 /// <returns></returns>
-public async Task<MemoryStream> UploadDocumentToS3(string bucketName, string key, MemoryStream stream)
+public async Task<MemoryStream> UploadDocumentToS3(MemoryStream stream)
 {
+    //Your AWS Storage Account bucket name 
+    string bucketName = "your-bucket-name";
+
+    //Name of the PowerPoint file you want to upload
+    string key = "CreatePowerPoint.pptx";
+
     //Configure AWS credentials and region
     var region = Amazon.RegionEndpoint.USEast1;
     var credentials = new Amazon.Runtime.BasicAWSCredentials("your-access-key", "your-secret-key");
@@ -334,6 +333,6 @@ public async Task<MemoryStream> UploadDocumentToS3(string bucketName, string key
 
 You can download a complete working sample from [GitHub]().
 
-By executing the program, you will get the **Presentation document** as follows.
+By executing the program, you will get the **Presentation** as follows.
 
-![Output Presentation document](Cloud-Storage/AWS/Output-Presentation-for-create-document.png)
+![Output Presentation](Cloud-Storage/AWS/Output-Presentation-for-create-document.png)
