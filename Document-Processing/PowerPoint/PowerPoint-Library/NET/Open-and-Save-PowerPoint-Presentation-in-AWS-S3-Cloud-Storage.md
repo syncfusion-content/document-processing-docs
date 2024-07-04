@@ -111,8 +111,6 @@ This is the helper method to download Presentation from AWS S3 cloud storage.
 /// <summary>
 /// Download file from AWS S3 cloud storage
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="key"></param>
 /// <returns></returns>
 public async Task<MemoryStream> GetDocumentFromS3()
 {
@@ -287,8 +285,6 @@ This is the helper method to upload Presentation to AWS S3 cloud storage.
 /// <summary>
 /// Upload file to AWS S3 cloud storage
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="key"></param>
 /// <param name="stream"></param>
 /// <returns></returns>
 public async Task<MemoryStream> UploadDocumentToS3(MemoryStream stream)
