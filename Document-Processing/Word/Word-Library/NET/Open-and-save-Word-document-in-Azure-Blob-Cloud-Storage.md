@@ -116,8 +116,6 @@ This is the helper method to download Word document from Azure Blob cloud storag
 /// <summary>
 /// Download file from Azure Blob cloud storage
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="key"></param>
 /// <returns></returns>
 public async Task<MemoryStream> GetDocumentFromAzure()
 {
@@ -459,8 +457,7 @@ This is the helper method to upload Word document to Azure Blob cloud storage.
 /// <summary>
 /// Upload file to Azure Blob cloud storage
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="key"></param>
+/// <param name="stream"></param>
 /// <returns></returns>
 public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
 {

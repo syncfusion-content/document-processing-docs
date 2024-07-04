@@ -114,8 +114,6 @@ This is the helper method to download Presentation from Azure Blob cloud storage
 /// <summary>
 /// Download file from Azure Blob cloud storage
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="key"></param>
 /// <returns></returns>
 public async Task<MemoryStream> GetDocumentFromAzure()
 {
@@ -279,8 +277,7 @@ This is the helper method to upload Presentation to Azure Blob cloud storage.
 /// <summary>
 /// Upload file to Azure Blob cloud storage
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="key"></param>
+/// <param name="stream"></param>
 /// <returns></returns>
 public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
 {
