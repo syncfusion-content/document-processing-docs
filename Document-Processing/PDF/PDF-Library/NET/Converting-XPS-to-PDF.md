@@ -9,7 +9,7 @@ documentation: UG
 
 The XPS (XML Paper Specification) document format is a fixed document format which consists of structured XML markup that defines the layout of a document and the visual appearance of each page, along with rendering rules for distributing, archiving, rendering, processing and printing the documents.
 
-The following code example illustrates how to converting XPS document to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.XPS.XPSToPdfConverter.html) class.
+The following code example illustrates how to converting XPS document to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XPS.XPSToPdfConverter.html) class.
 
 {% tabs %}
 

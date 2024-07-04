@@ -15,7 +15,7 @@ Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/
 The below steps illustrates **convert PowerPoint to PDF** in console application using **.NET Core**.
 
 Step 1: Create a new **.NET Core console application** project.
-![Create a .NET Core Console application in Visual Studio](Console-Images/.NET/Console-Template-Net-Core.png)
+![Create a .NET Core Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
 
 Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
@@ -72,7 +72,7 @@ By executing the program, you will get the **PDF** as follows.
 The below steps illustrates **convert PowerPoint to PDF** in console application using **.NET Framework**.
 
 Step 1: Create a new **.NET FrameWork console application** project.
-![Create a .NET FrameWork Console application in Visual Studio](Console-Images/.NET-FrameWork/Console-Template-Net-FrameWork.png)
+![Create a .NET FrameWork Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
 Step 2: Install [Syncfusion.PresentationToPdfConverter.WinForms](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
 

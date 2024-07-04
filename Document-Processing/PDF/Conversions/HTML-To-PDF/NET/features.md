@@ -10,7 +10,7 @@ documentation: UG
 
 ## URL to PDF
 
-To convert website URL or local HTML file to PDF document using [Convert](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
+To convert website URL or local HTML file to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
 
 {% tabs %}
 
@@ -57,7 +57,7 @@ For example, if the above image is in <i>“C:/Temp/ HTMLFiles/syncfusion_logo.g
 
 <b>baseURL:</b> C:/Temp/HTMLFiles/
 
-To convert the HTML string to PDF using [Convert](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_System_String_) method, refer to the following code example. 
+To convert the HTML string to PDF using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_System_String_) method, refer to the following code example. 
 
 {% tabs %}
 
@@ -112,7 +112,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## URL to Image
 
-To convert website URL or local HTML file to Image using [ConvertToImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_) method, refer to the following code example.
+To convert website URL or local HTML file to Image using [ConvertToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_) method, refer to the following code example.
 
 {% tabs %}
 
@@ -169,7 +169,7 @@ For example, if the previous image is in <i>“C:/Temp/ HTMLFiles/syncfusion_log
 
 <b>baseURL:</b> C:/Temp/HTMLFiles/
 
-To convert the HTML string to Image using [ConvertToImage](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_System_String_) method, refer to the following code example.
+To convert the HTML string to Image using [ConvertToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_System_String_) method, refer to the following code example.
 
 {% tabs %} 
 
@@ -241,7 +241,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## JavaScript
 
-The Blink HTML converter supports enabling or disabling the JavaScript using [EnableJavaScript](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableJavaScript) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. while converting HTML to PDF. Refer to the following code example.
+The Blink HTML converter supports enabling or disabling the JavaScript using [EnableJavaScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableJavaScript) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. while converting HTML to PDF. Refer to the following code example.
 
 {% tabs %}
 
@@ -290,7 +290,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Additional delay
 
-The Blink HTML converter provides an option to set the [AdditionalDelay](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay) property while converting HTML to PDF. Additional delay is the waiting time of the converter for loading the external resources (styles, scripts, images and more). Refer to the following code example.
+The Blink HTML converter provides an option to set the [AdditionalDelay](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay) property while converting HTML to PDF. Additional delay is the waiting time of the converter for loading the external resources (styles, scripts, images and more). Refer to the following code example.
 
 {% tabs %}
 
@@ -340,7 +340,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Hyperlinks
 
-The Blink HTML converter support preserving URL links from HTML to PDF using [EnableHyperLink ](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableHyperLink) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Refer to the following code snippet.
+The Blink HTML converter support preserving URL links from HTML to PDF using [EnableHyperLink ](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableHyperLink) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Refer to the following code snippet.
 
 {% tabs %}
 
@@ -389,7 +389,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Bookmarks
 
-The Blink HTML converter provides support for creating bookmarks automatically by enabling the [EnableBookmarks](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableBookmarks) property.
+The Blink HTML converter provides support for creating bookmarks automatically by enabling the [EnableBookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableBookmarks) property.
 
 N> The bookmarks are added from the ```<h>``` tag, it supports from ```<h1>``` to ```<h6>```.
 
@@ -484,7 +484,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Table of contents
 
-The Blink HTML converter provides support for creating a table of contents automatically by using the [EnableToc](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Toc) property.
+The Blink HTML converter provides support for creating a table of contents automatically by using the [EnableToc](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Toc) property.
 
 N> TOC are added from the ```<h>``` tag, it supports from ```<h1>``` to ```<h6>```.
 
@@ -580,7 +580,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Table of contents with custom style
 
-The Blink HTML converter provides support for customizing the table of contents style. Each header tag style can be customized by using [HtmlToPdfTocStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfTocStyle.html). 
+The Blink HTML converter provides support for customizing the table of contents style. Each header tag style can be customized by using [HtmlToPdfTocStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfTocStyle.html). 
 
 Refer to the following code snippet.
 
@@ -688,7 +688,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Media Type
 
-The Blink HTML Converter allows selection of media type while converting HTML to PDF. Blink rendering engine supports <b>Screen</b> and <b>Print</b> media types. Refer to the following code snippet to select Print [MediaType](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_MediaType).
+The Blink HTML Converter allows selection of media type while converting HTML to PDF. Blink rendering engine supports <b>Screen</b> and <b>Print</b> media types. Refer to the following code snippet to select Print [MediaType](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_MediaType).
 
 {% tabs %}
 
@@ -735,11 +735,11 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Selection-of-media-type-while-converting-HTML-to-PDF).
 
-N> Print [MediaType](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_MediaType) MediaType enables the repeat html table header and footer support on every PDF page. 
+N> Print [MediaType](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_MediaType) MediaType enables the repeat html table header and footer support on every PDF page. 
 
 ## HTML Form to PDF Form
 
-Blink rendering engine provides support for converting HTML forms to PDF fillable forms automatically by using the [EnableForm](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableForm) property. To convert HTML form to PDF form, refer to the following code example.
+Blink rendering engine provides support for converting HTML forms to PDF fillable forms automatically by using the [EnableForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableForm) property. To convert HTML form to PDF form, refer to the following code example.
 
 {% tabs %}
 
@@ -788,7 +788,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Windows authentication
 
-The webpage you want to convert may protected with windows authentication. Blink rendering engine provides support for converting the Windows Authenticated webpage to PDF document by providing the [Username](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Username) and [Password](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Password) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Refer to the following code example.
+The webpage you want to convert may protected with windows authentication. Blink rendering engine provides support for converting the Windows Authenticated webpage to PDF document by providing the [Username](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Username) and [Password](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Password) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Refer to the following code example.
 
 {% tabs %}
 
@@ -837,7 +837,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Form authentication
 
-The Blink HTML converter provides support for form authentication by using [Cookies](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Cookies) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. The cookies are send to web server for form authentication when the HTML page is requested. Each cookie is represented by a name and value. Refer to the following code example.
+The Blink HTML converter provides support for form authentication by using [Cookies](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Cookies) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. The cookies are send to web server for form authentication when the HTML page is requested. Each cookie is represented by a name and value. Refer to the following code example.
 
 {% tabs %}
 
@@ -888,7 +888,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Token-based authentication
 
-The Blink HTML converter supports token-based authentication by using the [HttpRequestHeaders](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_HttpRequestHeaders) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.. The token values will be send to web server when the HTML page is requested. Refer to the following code example.
+The Blink HTML converter supports token-based authentication by using the [HttpRequestHeaders](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_HttpRequestHeaders) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.. The token values will be send to web server when the HTML page is requested. Refer to the following code example.
 
 {% tabs %}
 
@@ -937,7 +937,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Offline conversion
 
-The Blink HTML converter supports converting HTML to PDF in offline mode using [EnableOfflineMode](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableOfflineMode) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. While converting HTML to PDF in offline mode, the converter does not access the resources from the internet. This may increase the performance in slow internet connection.
+The Blink HTML converter supports converting HTML to PDF in offline mode using [EnableOfflineMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableOfflineMode) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. While converting HTML to PDF in offline mode, the converter does not access the resources from the internet. This may increase the performance in slow internet connection.
 
 N> If an online URL is converted in offline mode, the converter will generate empty PDF as it will not try to load any resource from online.
 
@@ -990,7 +990,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## HTTP GET and POST
 
-The Blink HTML converter supports transmitting the parameter to the webpage. There are two methods to access a webpage. By default, Blink uses GET method. By using HTTP GET method, the parameters can be passed in the query string. In POST method, the parameters can be passed by using the [HttpPostFields](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_HttpPostFields) property.
+The Blink HTML converter supports transmitting the parameter to the webpage. There are two methods to access a webpage. By default, Blink uses GET method. By using HTTP GET method, the parameters can be passed in the query string. In POST method, the parameters can be passed by using the [HttpPostFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_HttpPostFields) property.
 Refer to the following code snippet to access a webpage using HTTP POST.
 
 {% tabs %}
@@ -1103,7 +1103,7 @@ By default, the Blink rendering engine use system proxy settings for converting 
 
 ## Manual proxy
 
-You can specify the manual proxy settings for the conversion using the [ProxySettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ProxySettings) property. Refer to the following code snippet to configure the manual proxy settings for the conversion.
+You can specify the manual proxy settings for the conversion using the [ProxySettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ProxySettings) property. Refer to the following code snippet to configure the manual proxy settings for the conversion.
 
 {% tabs %}
 
@@ -1155,7 +1155,7 @@ document.Close(True)
 
 ## Viewport
 
-Adjusting the HTML content size in PDF is possible by using the [ViewPortSize](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of Blink HTML converter. 
+Adjusting the HTML content size in PDF is possible by using the [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of Blink HTML converter. 
 Refer to the following code snippet to adjust Blink viewport.
 
 {% tabs %}
@@ -1205,7 +1205,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Partial webpage to PDF
 
-The Blink rendering engine provides support for converting only the part of an HTML document like a table, div, or image elements from the URL/HTML string. You can convert the particular HTML element using [ConvertPartialHtml](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertPartialHtml_System_String_System_String_) method by specifying the HTML element ID, refer to the following code example.
+The Blink rendering engine provides support for converting only the part of an HTML document like a table, div, or image elements from the URL/HTML string. You can convert the particular HTML element using [ConvertPartialHtml](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertPartialHtml_System_String_System_String_) method by specifying the HTML element ID, refer to the following code example.
 
 {% tabs %}
 
@@ -1261,7 +1261,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## HTML to single PDF page
 
-By using this [SinglePageLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_SinglePageLayout) property, you can render the whole HTML content into a single PDF page. The PDF page size is limited to 14400 points. There are two options to enable this feature since this is disabled by default.
+By using this [SinglePageLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_SinglePageLayout) property, you can render the whole HTML content into a single PDF page. The PDF page size is limited to 14400 points. There are two options to enable this feature since this is disabled by default.
 
 	1. FitWidth
 	2. FitHeight
@@ -1316,7 +1316,7 @@ document.Close(True)
 
 ## Layout Result
 
-Getting height of the HTML content in PDF document is possible by using the [PdfLayoutResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) class. Using this result, you can add contents after converting HTML to PDF. Refer to the following code example.
+Getting height of the HTML content in PDF document is possible by using the [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) class. Using this result, you can add contents after converting HTML to PDF. Refer to the following code example.
 
 {% tabs %}
 
@@ -1359,7 +1359,7 @@ document.Close(True)
 
 ## Windows status
 
-Windows status can be used instead of additional delay. In additional delay, the amount of time required for loading the resources is unpredictable. This behavior can be avoided by using [WindowStatus ](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WindowStatus) property.
+Windows status can be used instead of additional delay. In additional delay, the amount of time required for loading the resources is unpredictable. This behavior can be avoided by using [WindowStatus ](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WindowStatus) property.
 
 N> This feature requires changes in the HTML file.
 
@@ -1434,7 +1434,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Page size customization
 
-To set the page size when converting HTML to PDF, utilize the [PdfPageSize](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PdfPageSize) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
+To set the page size when converting HTML to PDF, utilize the [PdfPageSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PdfPageSize) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
 
 {% tabs %}
 
@@ -1486,7 +1486,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Margin customization
 
-To set the margin when converting HTML to PDF, utilize the [Margin](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Margin) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
+To set the margin when converting HTML to PDF, utilize the [Margin](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Margin) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
 
 {% tabs %}
 
@@ -1538,7 +1538,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Header and footer
 
-To set the header and footer when converting HTML to PDF, utilize the [PdfHeader](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PdfHeader) and [PdfFooter](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PdfFooter) properties in the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
+To set the header and footer when converting HTML to PDF, utilize the [PdfHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PdfHeader) and [PdfFooter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PdfFooter) properties in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
 
 {% tabs %}
 
@@ -1630,7 +1630,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Page orientation customization
 
-To set the Orientation when converting HTML to PDF, utilize the [Orientation](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Orientation) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
+To set the Orientation when converting HTML to PDF, utilize the [Orientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Orientation) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
 
 {% tabs %}
 
@@ -1682,7 +1682,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Rotate page
 
-To set the page rotation when converting HTML to PDF, utilize the [PageRotateAngle](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PageRotateAngle) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
+To set the page rotation when converting HTML to PDF, utilize the [PageRotateAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_PageRotateAngle) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. Please refer to the following code example.
 
 {% tabs %}
 
@@ -1734,7 +1734,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## HTML Header and Footer
 
-When converting HTML to PDF, you can set an HTML file as header and footer. Use the **HtmlHeader** and **HtmlFooter** properties within the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class to do this.
+When converting HTML to PDF, you can set an HTML file as header and footer. Use the **HtmlHeader** and **HtmlFooter** properties within the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class to do this.
 
 {% tabs %}
 
@@ -1805,7 +1805,7 @@ N> Adjust the HTML margin top and bottom values according to the height of the H
 
 ## Inject custom CSS
 
-The Blink rendering engine supports the injection of custom CSS to be applied to HTML or a URL before rendering it into a PDF document using the 'Css' property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class 
+The Blink rendering engine supports the injection of custom CSS to be applied to HTML or a URL before rendering it into a PDF document using the 'Css' property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class 
 
 {% tabs %}
 
@@ -1857,7 +1857,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Inject custom JavaScript
 
-The Blink rendering engine offers support for injecting custom JavaScript to be applied to the HTML or a URL before rendering it into a PDF document using the 'JavaScript' property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
+The Blink rendering engine offers support for injecting custom JavaScript to be applied to the HTML or a URL before rendering it into a PDF document using the 'JavaScript' property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
 {% tabs %}
 
@@ -1909,7 +1909,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Performance optimization
 
-The Blink rendering engine provides support for reusing the browser process to optimize the HTML to a PDF performance for multiple operations using the 'ReuseBrowserProcess' property of the [HtmlToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
+The Blink rendering engine provides support for reusing the browser process to optimize the HTML to a PDF performance for multiple operations using the 'ReuseBrowserProcess' property of the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
 {% tabs %}
 
@@ -1982,7 +1982,7 @@ The Blink HTML converter launching Chrome browser to perform conversion. While l
 
 By default, HTML converter takes system temporary path (C:\Users\<<username>>\AppData\Local\Temp or C:\Windows\Temp) to perform the conversion.
 
-The temporary path can be changed by using the [TempPath](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_TempPath) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html). If this property is set, the converter uses the provided path to perform the conversion. Refer to the following code example.
+The temporary path can be changed by using the [TempPath](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_TempPath) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html). If this property is set, the converter uses the provided path to perform the conversion. Refer to the following code example.
 
 {% tabs %}
 
@@ -2030,7 +2030,7 @@ document.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Set-temporary-path-while-converting-HTML-to-PDF).
 
 ## Blink path 
-When converting HTML to a PDF document, the default reference to the blink binaries path eliminates the need for manual addition. Nonetheless, if you prefer to manually add the blink binaries path or reference it from a custom location, simply set the path of the BlinkBinaries folder to the [BlinkPath](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_BlinkPath) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html).
+When converting HTML to a PDF document, the default reference to the blink binaries path eliminates the need for manual addition. Nonetheless, if you prefer to manually add the blink binaries path or reference it from a custom location, simply set the path of the BlinkBinaries folder to the [BlinkPath](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_BlinkPath) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html).
 
 N> * The BlinkBinaries will be available in the HTMLConverter installed location ($SystemDrive\Program Files (x86)\Syncfusion\HTMLConverter\xx.x.x.xx\BlinkBinaries)
 N> * The BlinkBinaries also available in NuGet package installed location if you are using Blink HTML converter from NuGet packages. 
@@ -2082,7 +2082,7 @@ document.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Set_blink_path_in_HTML_to_PDF).
 
 ## Scale
-Resizing the HTML content within a PDF can be achieved through the utilization of the [Scale](https://help.syncfusion.com/cr/file-formats/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Scale) property of Blink in HTML Converter.
+Resizing the HTML content within a PDF can be achieved through the utilization of the [Scale](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_Scale) property of Blink in HTML Converter.
 
 N> The scaling factor should be within the range of 0.1 to 2.0. 
 

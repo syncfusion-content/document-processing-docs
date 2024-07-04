@@ -1,6 +1,6 @@
 ---
 title: Chart Axis | Excel library | Syncfusion
-description: In this section, you can learn about chart axis in an Excel document with XlsIO.
+description: In this section, you can learn about chart axis in an Excel document using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -252,7 +252,11 @@ chart.SecondaryValueAxis.MinimumValue = 46.5
 {% endhighlight %}
 {% endtabs %}
 
-### Gridline Visibiility
+N> 1) The [MinimumValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_MinimumValue) and [MaximumValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_MaximumValue) properties can only be read when they are explicitly set; otherwise, the default value of 0 is returned. This is the behavior of XlsIO.
+
+N> 2) When the [IsAutoMax](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_IsAutoMax) and [IsAutoMin](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_IsAutoMin) properties are set to true, the chart automatically determines its default maximum and minimum values.
+
+### Gridline Visibility
 
 The following code snippet illustrates how to hide or show major and minor gridlines.
 
@@ -282,9 +286,9 @@ chart.PrimaryValueAxis.HasMinorGridLines = False
 {% endhighlight %}
 {% endtabs %}
 
-### Maxcross
+### Max cross
 
-The following code snippet illustrates how to set the maxcross in the chart axis.
+The following code snippet illustrates how to set the max cross in the chart axis.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
