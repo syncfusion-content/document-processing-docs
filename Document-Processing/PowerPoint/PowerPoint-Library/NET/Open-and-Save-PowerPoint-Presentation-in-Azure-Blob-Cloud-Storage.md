@@ -14,9 +14,9 @@ documentation: UG
 
 * **[Azure Cloud Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal)** is required. 
 
-## Open Presentation document from Azure Blob
+## Open Presentation from Azure Blob
 
-Steps to open a Presentation document from Azure Blob Cloud Storage.
+Steps to open a Presentation from Azure Blob Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -59,25 +59,16 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **open a Presentation document from Azure Blob Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **open a Presentation from Azure Blob Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public async Task<IActionResult> EditDocument()
 {
-    //Your Azure Storage Account connection string
-    string connectionString = "Your_connection_string";
-
-    //Name of the Azure Blob Storage container
-    string containerName = "Your_container_name";
-
-    //Name of the Powerpoint file you want to load
-    string blobName = "PowerPointTemplate.pptx";
-
     try
     {
         //Retrieve the document from Azure
-        MemoryStream stream = await GetDocumentFromAzure(connectionString, containerName, blobName);
+        MemoryStream stream = await GetDocumentFromAzure();
 
         //Set the position to the beginning of the MemoryStream
         stream.Position = 0;
@@ -95,7 +86,7 @@ public async Task<IActionResult> EditDocument()
             if (shape.TextBody.Text == "Company History")
                 shape.TextBody.Text = "Company Profile";
 
-            //Saving the PowerPoint document to a MemoryStream 
+            //Saving the PowerPoint file to a MemoryStream 
             MemoryStream outputStream = new MemoryStream();
             pptxDocument.Save(outputStream);
 
@@ -104,7 +95,6 @@ public async Task<IActionResult> EditDocument()
             fileStreamResult.FileDownloadName = "EditPowerPoint.pptx";
             return fileStreamResult;
         }
-
     }
     catch (Exception ex)
     {
@@ -117,7 +107,7 @@ public async Task<IActionResult> EditDocument()
 
 ### Download file from Azure Blob cloud storage
 
-This is the helper method to download Presentation document from Azure Blob cloud storage.
+This is the helper method to download Presentation from Azure Blob cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -127,11 +117,20 @@ This is the helper method to download Presentation document from Azure Blob clou
 /// <param name="bucketName"></param>
 /// <param name="key"></param>
 /// <returns></returns>
-public async Task<MemoryStream> GetDocumentFromAzure(string connectionString, string containerName, string blobName)
+public async Task<MemoryStream> GetDocumentFromAzure()
 {
     try
     {
-        //Download the PowerPoint document from Azure Blob Storage
+        //Your Azure Storage Account connection string
+        string connectionString = "Your_connection_string";
+
+        //Name of the Azure Blob Storage container
+        string containerName = "Your_container_name";
+
+        //Name of the Powerpoint file you want to load
+        string blobName = "PowerPointTemplate.pptx";
+
+        //Download the PowerPoint from Azure Blob Storage
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
         BlobClient blobClient = containerClient.GetBlobClient(blobName);
@@ -152,15 +151,15 @@ public async Task<MemoryStream> GetDocumentFromAzure(string connectionString, st
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Azure-Blob-Storage/Open-PowerPoint-document).
 
-By executing the program, you will get the **Presentation document** as follows.
+By executing the program, you will get the **Presentation** as follows.
 
-![Output Presentation document](Cloud-Storage/Azure-Blob/Output-Presentation-for-open-document.png)
+![Output Presentation](Cloud-Storage/Azure-Blob/Output-Presentation-for-open-document.png)
 
-## Save Presentation document to Azure Blob
+## Save Presentation to Azure Blob
 
-Steps to save a Presentation document to Azure Blob Cloud Storage.
+Steps to save a Presentation to Azure Blob Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -203,7 +202,7 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **save a Presentation document to Azure Blob Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **save a Presentation to Azure Blob Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -261,28 +260,19 @@ public async Task<IActionResult> UploadDocument()
 
     //Saves the PowerPoint document to MemoryStream
     MemoryStream stream = new MemoryStream();
-    pptxDocument.Save(stream);
-
-    //Your Azure Storage Account connection string
-    string connectionString = "Your_connection_string";
-
-    //Name of the Azure Blob Storage container
-    string containerName = "Your_container_name";
-
-    //Name of the PowerPoint file you want to load
-    string blobName = "CreatePowerPoint.pptx";
+    pptxDocument.Save(stream);            
 
     //Upload the document to azure
-    await UploadDocumentToAzure(connectionString, containerName, blobName, stream);
+    await UploadDocumentToAzure(stream);
 
-    return Ok("PowerPoint document uploaded to Azure Blob Storage.");
+    return Ok("PowerPoint uploaded to Azure Blob Storage.");
 }
 {% endhighlight %}
 {% endtabs %}
 
 ### Upload file to Azure Blob cloud storage
 
-This is the helper method to upload Presentation document to Azure Blob cloud storage.
+This is the helper method to upload Presentation to Azure Blob cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -291,13 +281,21 @@ This is the helper method to upload Presentation document to Azure Blob cloud st
 /// </summary>
 /// <param name="bucketName"></param>
 /// <param name="key"></param>
-/// <param name="stream"></param>
 /// <returns></returns>
-public async Task<MemoryStream> UploadDocumentToAzure(string connectionString, string containerName, string blobName, MemoryStream stream)
+public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
 {
     try
     {
-        //Download the PowerPoint document from Azure Blob Storage
+        //Your Azure Storage Account connection string
+        string connectionString = "Your_connection_string";
+
+        //Name of the Azure Blob Storage container
+        string containerName = "Your_container_name";
+
+        //Name of the PowerPoint file you want to load
+        string blobName = "CreatePowerPoint.pptx";
+
+        //Download the PowerPoint from Azure Blob Storage
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
         BlobClient blobClient = containerClient.GetBlobClient(blobName);
@@ -314,8 +312,8 @@ public async Task<MemoryStream> UploadDocumentToAzure(string connectionString, s
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Azure-Blob-Storage/Save-PowerPoint-document).
 
-By executing the program, you will get the **Presentation document** as follows.
+By executing the program, you will get the **Presentation** as follows.
 
-![Output Presentation document](Cloud-Storage/Azure-Blob/Output-Presentation-for-create-document.png)
+![Output Presentation](Cloud-Storage/Azure-Blob/Output-Presentation-for-create-document.png)

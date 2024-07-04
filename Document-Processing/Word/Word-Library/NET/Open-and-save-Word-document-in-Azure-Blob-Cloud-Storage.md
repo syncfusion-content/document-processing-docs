@@ -65,19 +65,10 @@ Step 6: Include the below code snippet in **HomeController.cs** to **open a Word
 {% highlight c# tabtitle="C#" %}
 public async Task<IActionResult> EditDocument()
 {
-    //Your Azure Storage Account connection string
-    string connectionString = "Your_connection_string";
-
-    //Name of the Azure Blob Storage container
-    string containerName = "Your_container_name";
-
-    //Name of the Word file you want to load
-    string blobName = "WordTemplate.docx";
-
     try
     {
         //Retrieve the document from Azure
-        MemoryStream stream = await GetDocumentFromAzure(connectionString, containerName, blobName);
+        MemoryStream stream = await GetDocumentFromAzure();
 
         //Set the position to the beginning of the MemoryStream
         stream.Position = 0;
@@ -106,7 +97,6 @@ public async Task<IActionResult> EditDocument()
             fileStreamResult.FileDownloadName = "EditWord.docx";
             return fileStreamResult;
         }
-
     }
     catch (Exception ex)
     {
@@ -129,10 +119,19 @@ This is the helper method to download Word document from Azure Blob cloud storag
 /// <param name="bucketName"></param>
 /// <param name="key"></param>
 /// <returns></returns>
-public async Task<MemoryStream> GetDocumentFromAzure(string connectionString, string containerName, string blobName)
+public async Task<MemoryStream> GetDocumentFromAzure()
 {
     try
     {
+        //Your Azure Storage Account connection string
+        string connectionString = "Your_connection_string";
+
+        //Name of the Azure Blob Storage container
+        string containerName = "Your_container_name";
+
+        //Name of the Word file you want to load
+        string blobName = "WordTemplate.docx";
+
         //Download the Word document from Azure Blob Storage
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
@@ -154,7 +153,7 @@ public async Task<MemoryStream> GetDocumentFromAzure(string connectionString, st
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Azure-Blob-Storage/Open-Word-document).
 
 By executing the program, you will get the **Word document** as follows.
 
@@ -441,19 +440,10 @@ public async Task<IActionResult> UploadDocument()
 
     //Saves the Word document to MemoryStream
     MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.Docx);
-
-    //Your Azure Storage Account connection string
-    string connectionString = "Your_connection_string";
-
-    //Name of the Azure Blob Storage container
-    string containerName = "Your_container_name";
-
-    //Name of the Word file you want to load
-    string blobName = "CreateWord.docx";
+    document.Save(stream, FormatType.Docx);            
 
     //Upload the document to azure
-    await UploadDocumentToAzure(connectionString, containerName, blobName, stream);
+    await UploadDocumentToAzure(stream);
 
     return Ok("Word document uploaded to Azure Blob Storage.");
 }
@@ -471,12 +461,20 @@ This is the helper method to upload Word document to Azure Blob cloud storage.
 /// </summary>
 /// <param name="bucketName"></param>
 /// <param name="key"></param>
-/// <param name="stream"></param>
 /// <returns></returns>
-public async Task<MemoryStream> UploadDocumentToAzure(string connectionString, string containerName, string blobName, MemoryStream stream)
+public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
 {
     try
     {
+        //Your Azure Storage Account connection string
+        string connectionString = "Your_connection_string";
+
+        //Name of the Azure Blob Storage container
+        string containerName = "Your_container_name";
+
+        //Name of the Word file you want to load
+        string blobName = "CreateWord.docx";
+
         //Download the Word document from Azure Blob Storage
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
@@ -494,7 +492,7 @@ public async Task<MemoryStream> UploadDocumentToAzure(string connectionString, s
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Azure-Blob-Storage/Save-Word-document).
 
 By executing the program, you will get the **Word document** as follows.
 
