@@ -25,7 +25,7 @@ Essential PDF supports adding shapes with different types of brushes like solid 
 
 ### Polygon
 
-You can draw a polygon in PDF document by using the [DrawPolygon](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPolygon_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF___) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a polygon in new PDF document.
+You can draw a polygon in PDF document by using the [DrawPolygon](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPolygon_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF___) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a polygon in new PDF document.
 
 {% tabs %}
 
@@ -209,7 +209,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Line
 
-You can draw a line in PDF document by using the [DrawLine](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawLine_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_PointF_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a line in new PDF document.
+You can draw a line in PDF document by using the [DrawLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawLine_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_PointF_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a line in new PDF document.
 
 {% tabs %}
 
@@ -359,7 +359,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Curve
 
-You can draw a curve in PDF document by using the [Draw](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_) method of [PdfBezierCurve](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfBezierCurve.html). The following code snippet explains how to draw a curve in new PDF document.
+You can draw a curve in PDF document by using the [Draw](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutElement.html#Syncfusion_Pdf_Graphics_PdfLayoutElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_) method of [PdfBezierCurve](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBezierCurve.html). The following code snippet explains how to draw a curve in new PDF document.
 
 {% tabs %}
 
@@ -506,7 +506,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Path
 
-You can draw a path in PDF document by using the [DrawPath](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPath_Syncfusion_Pdf_Graphics_PdfBrush_Syncfusion_Pdf_Graphics_PdfPath_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw path in a new PDF document.
+You can draw a path in PDF document by using the [DrawPath](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPath_Syncfusion_Pdf_Graphics_PdfBrush_Syncfusion_Pdf_Graphics_PdfPath_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw path in a new PDF document.
 
 {% tabs %}
 
@@ -671,11 +671,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Text
 
-You can draw text in a PDF document by using the [DrawString](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). To draw different PDF elements based on the position of previously drawn element, draw the text by using [Draw](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html#Syncfusion_Pdf_Graphics_PdfTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_Syncfusion_Pdf_Graphics_PdfLayoutFormat_) method of [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) and store its bounds in [PdfLayoutResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutResult.html). Refer to the [Working with Text](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text) section for more information.
+You can draw text in a PDF document by using the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). To draw different PDF elements based on the position of previously drawn element, draw the text by using [Draw](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html#Syncfusion_Pdf_Graphics_PdfTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_Syncfusion_Pdf_Graphics_PdfLayoutFormat_) method of [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) and store its bounds in [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html). Refer to the [Working with Text](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text) section for more information.
 
 ### Rectangle
 
-You can draw a rectangle in PDF document by using the [DrawRectangle](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawRectangle_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_RectangleF_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a rectangle in new PDF document.
+You can draw a rectangle in PDF document by using the [DrawRectangle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawRectangle_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_RectangleF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a rectangle in new PDF document.
 
 {% tabs %}
 
@@ -822,7 +822,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Pie
 
-You can draw a pie in PDF document by using the [DrawPie](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPie_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_RectangleF_System_Single_System_Single_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a pie in new PDF document.
+You can draw a pie in PDF document by using the [DrawPie](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPie_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_RectangleF_System_Single_System_Single_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a pie in new PDF document.
 
 {% tabs %}
 
@@ -981,7 +981,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Arc
 
-You can draw an arc in PDF document by using the [DrawArc](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawArc_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_RectangleF_System_Single_System_Single_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw an arc in new PDF document.
+You can draw an arc in PDF document by using the [DrawArc](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawArc_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_RectangleF_System_Single_System_Single_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw an arc in new PDF document.
 
 {% tabs %}
 
@@ -1139,7 +1139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Bezier
 
-You can draw a bezier in PDF document by using the [DrawBezier](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawBezier_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_PointF_System_Drawing_PointF_System_Drawing_PointF_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a bezier in new PDF document.
+You can draw a bezier in PDF document by using the [DrawBezier](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawBezier_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_PointF_System_Drawing_PointF_System_Drawing_PointF_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw a bezier in new PDF document.
 
 {% tabs %}
 
@@ -1274,7 +1274,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Ellipse
 
-You can draw an ellipse in PDF document by using the [DrawEllipse](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawEllipse_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_RectangleF_) method of [PdfGraphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw an ellipse in new PDF document.
+You can draw an ellipse in PDF document by using the [DrawEllipse](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawEllipse_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_RectangleF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The following code snippet explains how to draw an ellipse in new PDF document.
 
 {% tabs %}
 
@@ -1409,7 +1409,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with shape pagination
 
-You can also allow large shapes to paginate across pages by assigning ```Paginate``` of [PdfLayoutType](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutType.html) Enum to [Layout](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html#Syncfusion_Pdf_Graphics_PdfLayoutFormat_Layout) property of [PdfLayoutFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class. 
+You can also allow large shapes to paginate across pages by assigning ```Paginate``` of [PdfLayoutType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutType.html) Enum to [Layout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html#Syncfusion_Pdf_Graphics_PdfLayoutFormat_Layout) property of [PdfLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html) class. 
 
 {% tabs %}
 

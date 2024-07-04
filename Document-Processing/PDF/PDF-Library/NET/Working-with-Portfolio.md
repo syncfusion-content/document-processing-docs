@@ -11,7 +11,7 @@ PDF Portfolios allows the user to bring together content from a variety of sourc
 
 ## Creating a PDF portfolio
 
-You can create a portfolio using [PdfPortfolioInformation](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPortfolioInformation.html) class and attach a variety of documents using [PdfAttachment](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. The following code example illustrates this.
+You can create a portfolio using [PdfPortfolioInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPortfolioInformation.html) class and attach a variety of documents using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. The following code example illustrates this.
 
 {% tabs %}
 
@@ -106,7 +106,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extracting file from PDF Portfolio
 
-The Essential PDF provides support for extracting the files from the PDF Portfolio using [Attachments](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Attachments) property of [PdfLoadedDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class and saving the files to the disk. The following code sample shows the steps to extract files from PDF Portfolio.
+The Essential PDF provides support for extracting the files from the PDF Portfolio using [Attachments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Attachments) property of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class and saving the files to the disk. The following code sample shows the steps to extract files from PDF Portfolio.
 
 {% tabs %} 
 
@@ -185,7 +185,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing files from PDF Portfolio
 
-The following code example illustrates how to remove files from an existing PDF portfolio using [RemoveAt](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_RemoveAt_System_Int32_) method or [Remove](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_Remove_Syncfusion_Pdf_Interactive_PdfAttachment_) method of [PdfAttachmentCollection](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html) class. 
+The following code example illustrates how to remove files from an existing PDF portfolio using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_RemoveAt_System_Int32_) method or [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_Remove_Syncfusion_Pdf_Interactive_PdfAttachment_) method of [PdfAttachmentCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html) class. 
 
 {% tabs %}  
 

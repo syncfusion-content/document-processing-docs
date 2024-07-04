@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Image Extraction
 
-The Essential PDF provides support to extract images from a particular page or an entire PDF document. You can extract the images from a page using the [ExtractImages](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages().html) method in the [PdfPageBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html) class.
+The Essential PDF provides support to extract images from a particular page or an entire PDF document. You can extract the images from a page using the [ExtractImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages().html) method in the [PdfPageBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html) class.
 
 Refer to the following code snippet to extract the images from a PDF page.
 
@@ -64,7 +64,7 @@ N> To extract the images from PDF page in .NET Core, you need to include [Syncfu
 
 ## Image informations
 
-To extract the image properties such as bounds, image index, and more from a page, you can use the [ImagesInfo](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo) property in the [PdfPageBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPageBase.html) class.
+To extract the image properties such as bounds, image index, and more from a page, you can use the [ImagesInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo) property in the [PdfPageBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html) class.
 
 Refer to the following code snippet to extract the image info from a PDF page.
 
@@ -119,7 +119,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract images from PDF documents with better memory consumption and performance
 
-The following code example illustrates how to extract images from an entire PDF document using the [PdfDocumentExtractor](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html) class.
+The following code example illustrates how to extract images from an entire PDF document using the [PdfDocumentExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html) class.
 
 {% tabs %}
 

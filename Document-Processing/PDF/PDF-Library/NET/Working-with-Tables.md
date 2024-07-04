@@ -10,14 +10,14 @@ documentation: UG
 
 The Syncfusion .NET PDF library provides support for two types of [PDF table](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables) models, both having a different levels of customization, which is explained as follows. The two types of table models are:
 
-1. [PdfGrid* (Recommended)](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html)
-2. [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html)
+1. [PdfGrid* (Recommended)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html)
+2. [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html)
 
 N> We strongly recommend to use ``PdfGrid`` for creating table in PDF document since it represents flexible grid which supports various customization of rows and columns. 
 
 ## Difference between PdfLightTable and PdfGrid
 
-Both the [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html) and [PdfLightTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Tables.PdfLightTable.html) models are supported across all the platforms and the following table explains the level of customizations both the models provide.
+Both the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) and [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) models are supported across all the platforms and the following table explains the level of customizations both the models provide.
 
 <table>
     <thead>

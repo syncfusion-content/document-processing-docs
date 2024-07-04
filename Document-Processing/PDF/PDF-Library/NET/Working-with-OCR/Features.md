@@ -11,7 +11,7 @@ keywords: Assemblies
 
 ## Performing OCR for an entire document
 
-To perform OCR for an entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html) class. Refer to the following code example. 
+To perform OCR for an entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. Refer to the following code example. 
 
 {% tabs %}   
 
@@ -63,13 +63,13 @@ End Using
 
 {% endtabs %} 
 
-N> The [PerformOCR](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method returns only the text OCRed by OCRProcessor. Other existing text in the PDF page will not be returned in this method. Please check [text extraction](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text-extraction) feature for this.
+N> The [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method returns only the text OCRed by OCRProcessor. Other existing text in the PDF page will not be returned in this method. Please check [text extraction](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text-extraction) feature for this.
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-for-the-entire-PDF-document).
 
 ## Performing OCR for a region of the document
 
-To perform OCR on a particular region or several regions of a PDF page with the help of [PageRegion](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.PageRegion.html) class in [OCRSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html), refer to the following code sample. 
+To perform OCR on a particular region or several regions of a PDF page with the help of [PageRegion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.PageRegion.html) class in [OCRSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html), refer to the following code sample. 
 
 {% tabs %} 
 
@@ -157,7 +157,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Performing OCR with tesseract version 3.05
 
-The [TesseractVersion](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version between 3.02 and 3.05. By default, OCR works with tesseract version 3.02.
+The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version between 3.02 and 3.05. By default, OCR works with tesseract version 3.02.
 
 N> The starting supported version of tesseract in ASP.NET Core is 4.0. So the lower tesseract versions 3.02 and 3.05 are not supported and we don't have the property called ``TesseractVersion`` in ASP.NET Core platform.
 
@@ -223,7 +223,7 @@ End Using
 
 ## Performing OCR with Tesseract Version 4.0
 
-The [TesseractVersion](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 4.0. By default, OCR will be performed with tesseract version 3.02.
+The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version to 4.0. By default, OCR will be performed with tesseract version 3.02.
 
 N> In ASP.NET Core platform, the default and starting supported version of tesseract is 4.0. So we did not have the property called ``TesseractVersion`` in ASP.NET Core platform. 
 
@@ -289,7 +289,7 @@ End Using
 
 ## Performing OCR on image
 
-The below code example illustrates how to perform OCR on image file using [PerformOCR](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_System_Drawing_Bitmap_System_String_) method in [OCRProcessor](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html) class.
+The below code example illustrates how to perform OCR on image file using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_System_Drawing_Bitmap_System_String_) method in [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class.
 
 {% tabs %} 
 
@@ -326,7 +326,7 @@ End Using
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-on-image-file).
 
-You can get the OCRed Unicode text from an image file by using the ``UnicodeFont`` property in [OCRProcessor](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html). For more information, refer to the following code sample. 
+You can get the OCRed Unicode text from an image file by using the ``UnicodeFont`` property in [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html). For more information, refer to the following code sample. 
 
 {% tabs %} 
 
@@ -368,7 +368,7 @@ using (OCRProcessor processor = new OCRProcessor())
 
 ## Performing OCR for large PDF documents
 
-To optimize memory to performing OCR on large PDF documents, enable the ``isMemoryOptimized`` property in [PerformOCR](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_System_Boolean_) method of [OCRProcessor](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRProcessor.html) class. Optimization will be effective only with Multithreading environment or PDF document with more images. For more details, refer to the following code examples.
+To optimize memory to performing OCR on large PDF documents, enable the ``isMemoryOptimized`` property in [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_System_Boolean_) method of [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. Optimization will be effective only with Multithreading environment or PDF document with more images. For more details, refer to the following code examples.
 
 N> Memory optimization for performing OCR on large PDF documents is not supported in ASP.NET Core platform. 
 
@@ -427,7 +427,7 @@ End Using
 
 ## Performing OCR on rotated page of PDF document
 
-You can get the OCRed text from the rotated page of PDF document using the [PageSegment](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property by specifying ``AutoOsd`` through [PageSegmentMode](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.PageSegmentMode.html) Enum. For more details, refer to the following code sample. 
+You can get the OCRed text from the rotated page of PDF document using the [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property by specifying ``AutoOsd`` through [PageSegmentMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.PageSegmentMode.html) Enum. For more details, refer to the following code sample. 
 
 {% tabs %} 
 
@@ -491,7 +491,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Layout result from OCR
 
-You can get the OCRed text and its bounds from a scanned PDF document by using the [OCRLayoutResult](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRLayoutResult.html) Class. Refer to the following code sample. 
+You can get the OCRed text and its bounds from a scanned PDF document by using the [OCRLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRLayoutResult.html) Class. Refer to the following code sample. 
  
 {% tabs %} 
 
@@ -579,7 +579,7 @@ Tesseract 3.02 supports only 32-bit version. By default, OCR works with this tes
 
 N> Enabling native calls will not work in 64-bit tesseract 3.02 version. Instead, a temporary process will be launched for OCR processing.
 
-The following code sample demonstrates the OCR processor with native call support of tesseract 3.02 by setting [TesseractVersion](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) as 3.02. 
+The following code sample demonstrates the OCR processor with native call support of tesseract 3.02 by setting [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) as 3.02. 
 
 {% tabs %} 
 
@@ -648,7 +648,7 @@ You can download the x64 supporting tesseract binaries from the following link.
 N> This 64-bit binaries are required only when the native call property is enabled.
 N> Make sure to provide the 64-bit binaries path while using the 64-bit environment.
 
-The following code sample demonstrates the OCR processor with native call support of tesseract 3.05 by setting [TesseractVersion](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) as 3.05.
+The following code sample demonstrates the OCR processor with native call support of tesseract 3.05 by setting [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) as 3.05.
 
 {% tabs %} 
 
@@ -718,7 +718,7 @@ For surrogate process, it requires permission for creating and executing a proce
 
 ## Customizing temp folder
 
-While performing OCR on an existing scanned PDF document, the OCR Processor will create temporary files (.temp, .tiff, .txt) and the files are deleted after the process is completed. You can change this temporary files folder location using the [TempFolder](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TempFolder) property available in the [OCRSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html) Instance. Refer to the following code sample to change the path of temp folder when performing the OCR. 
+While performing OCR on an existing scanned PDF document, the OCR Processor will create temporary files (.temp, .tiff, .txt) and the files are deleted after the process is completed. You can change this temporary files folder location using the [TempFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TempFolder) property available in the [OCRSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html) Instance. Refer to the following code sample to change the path of temp folder when performing the OCR. 
 
 {% tabs %}  
 
@@ -780,7 +780,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Performing OCR with different Page Segmentation Mode
 
-The [PageSegment](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property is used to set the page segmentation mode. By default, OCR works with the "Auto" page segmentation mode. Kindly refer to the following code example to perform OCR with different page segmentation mode. 
+The [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property is used to set the page segmentation mode. By default, OCR works with the "Auto" page segmentation mode. Kindly refer to the following code example to perform OCR with different page segmentation mode. 
 
 N> The page segmentation mode is supported only in the Tesseract version 4.0 and above.
  
@@ -847,7 +847,7 @@ End Using
 
 ## Performing OCR with different OCR Engine Mode
 
-The [OCREngineMode](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_OCREngineMode) property is used to set the OCR Engine modes. By default, OCR works with OCR Engine mode "Default". Refer to the following code example to perform OCR with different OCR engine mode. 
+The [OCREngineMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_OCREngineMode) property is used to set the OCR Engine modes. By default, OCR works with OCR Engine mode "Default". Refer to the following code example to perform OCR with different OCR engine mode. 
  
 {% tabs %} 
 
@@ -913,7 +913,7 @@ N> The OCR Engine Mode is supported only in the Tesseract version 4.0 and above.
 
 ## White List
 
-The [WhiteList](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_WhiteList) property specifies a list of characters that the OCR engine is only allowed to recognize. If a character is not on the white list, it will not be included in the output OCR results. For more information, refer to the following code sample. 
+The [WhiteList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_WhiteList) property specifies a list of characters that the OCR engine is only allowed to recognize. If a character is not on the white list, it will not be included in the output OCR results. For more information, refer to the following code sample. 
 
 {% tabs %}
 
@@ -981,7 +981,7 @@ End Using
 
 ## Black List
 
-The [BlackList](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_BlackList) property specifies the characters that exclude from the character set used for recognition and the OCR will not return any of the characters you are specified in the list. For more information, refer to the following code sample.
+The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_BlackList) property specifies the characters that exclude from the character set used for recognition and the OCR will not return any of the characters you are specified in the list. For more information, refer to the following code sample.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1048,7 +1048,7 @@ End Using
 
 ## OCR an Image to PDF
 
-You can perform OCR on an image and convert it to a searchable PDF document. It is also possible to specify the conformance level through [PdfConformanceLevel](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfConformanceLevel.html) Enum to the output PDF document using OCR processor settings. 
+You can perform OCR on an image and convert it to a searchable PDF document. It is also possible to specify the conformance level through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum to the output PDF document using OCR processor settings. 
 
 N> This PDF conformance option only applies for image OCR to PDF documents.
 
@@ -1180,7 +1180,7 @@ For more details regarding quality improvement, refer to the following link.
 
 [https://github.com/tesseract-ocr/tesseract/wiki/ImproveQuality](https://github.com/tesseract-ocr/tesseract/wiki/ImproveQuality )
 
-**You can set the different performance level to the OCRProcessor using [Performance](https://help.syncfusion.com/cr/file-formats/Syncfusion.OCRProcessor.Performance.html) enumeration.**
+**You can set the different performance level to the OCRProcessor using [Performance](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.Performance.html) enumeration.**
 
 * Rapid - high speed OCR performance and provide normal OCR accuracy.
 * Fast - provides moderate OCR processing speed and accuracy.
