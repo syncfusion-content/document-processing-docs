@@ -96,6 +96,29 @@ chart.Series(1).SerieFormat.Fill.ForeColor = Color.Red
 {% endhighlight %}
 {% endtabs %}
 
+### Transparency
+
+The following code snippet illustrates how to apply transparency to the serie.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Set the transparency
+chart.Series[1].SerieFormat.Fill.Transparency = 1.0;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Set the transparency 
+chart.Series[1].SerieFormat.Fill.Transparency = 1.0;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Set the transparency 
+chart.Series(1).SerieFormat.Fill.Transparency = 1.0
+{% endhighlight %}
+{% endtabs %}
+
+N> [Transparency](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. Color-shaded fill is represented as a floating-point value ranging from 0.0 (Clear) to 1.0 (Opaque).
+
 ## Series Type
 
 The following code snippet illustrates how to set the series type.
