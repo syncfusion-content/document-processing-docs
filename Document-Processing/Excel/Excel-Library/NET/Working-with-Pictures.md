@@ -141,9 +141,101 @@ End Using
 
 A complete working example to position and resize picture in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Position%20and%20Resize%20Picture).   
 
+## Move and Size with cells
+To move and size a picture along with cell modifications, we need to set the [IsMoveWithCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_IsMoveWithCell) and [IsSizeWithCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_IsSizeWithCell) properties to true.
+
+The following code example illustrates how to move and size a picture along with cells.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Adding a picture
+  FileStream imageStream = new FileStream("../../../Data/Image.png", FileMode.Open, FileAccess.Read);
+  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, 5, 3, imageStream);
+  shape = worksheet.Pictures.AddPicture(1, 5, 5, 7, imageStream);
+    
+  //Set move picture with cell
+  shape.IsMoveWithCell = true;
+
+  //Set size picture with cell
+  shape.IsSizeWithCell = true;
+
+  //Hide the column
+  worksheet.HideColumn(5);
+
+  //Saving the workbook as stream
+  FileStream OutputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(OutputStream);
+
+  //Dispose streams
+  imageStream.Dispose();
+  OutputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Adding a picture
+  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, 5, 3, "../../Data/Image.png");
+  shape = worksheet.Pictures.AddPicture(1, 5, 5, 7, "../../Data/Image.png");
+
+  //Set move picture with cell
+  shape.IsMoveWithCell = true;
+
+  //Set size picture with cell
+  shape.IsSizeWithCell = true;
+
+  //Hide the column
+  worksheet.HideColumn(5);
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Adding a picture
+  Dim shape As IPictureShape = worksheet.Pictures.AddPicture(1, 1, 5, 3, "../../Data/Image.png")
+  shape = worksheet.Pictures.AddPicture(1, 5, 5, 7, "../../Data/Image.png")
+
+  'Set move picture with cell
+  shape.IsMoveWithCell = True
+
+  'Set size picture with cell
+  shape.IsSizeWithCell = True
+
+  'Hide the column
+  worksheet.HideColumn(5)
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to move and size a picture with cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Move%20and%20Size%20with%20cells/NET%20Standard/Move%20and%20Size%20with%20cells).  
+
 ## Align picture
 
-The following code snipper explains to align a picture within a cell.
+The following code snippet explains to align a picture within a cell.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
