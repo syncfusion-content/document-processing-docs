@@ -16,7 +16,7 @@ documentation: UG
 
 * **[Service account key](https://cloud.google.com/iam/docs/keys-create-delete#creating)** is required.
 
-## Open Word document from Google Cloud
+## Open Word document from Google Cloud Storage
 
 Steps to open a Word document from Google Cloud Storage.
 
@@ -67,17 +67,8 @@ Step 6: Include the below code snippet in **HomeController.cs** to **open a Word
 {% highlight c# tabtitle="C#" %}
 public async Task<IActionResult> EditDocument()
 {
-    //Your bucket name
-    string bucketName = "Your_bucket_name";
-
-    //Your service account key path
-    string keyPath = "Your_service_account_key_path";
-
-    //Name of the file to download from the Google Cloud Storage
-    string fileName = "WordTemplate.docx";
-
     //Download the file from Google
-    MemoryStream memoryStream = await GetDocumentFromGoogle(bucketName, keyPath, fileName);
+    MemoryStream memoryStream = await GetDocumentFromGoogle();
 
     //Create an instance of WordDocument
     using (WordDocument wordDocument = new WordDocument(memoryStream, Syncfusion.DocIO.FormatType.Docx))
@@ -116,14 +107,20 @@ This is the helper method to download Word document from Google cloud storage.
 /// <summary>
 /// Download file from Google
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="keyPath"></param>
-/// <param name="fileName"></param>
 /// <returns></returns>
-public async Task<MemoryStream> GetDocumentFromGoogle(string bucketName, string keyPath, string fileName)
+public async Task<MemoryStream> GetDocumentFromGoogle()
 {
     try
     {
+        //Your bucket name
+        string bucketName = "Your_bucket_name";
+
+        //Your service account key path
+        string keyPath = "Your_service_account_key_path";
+
+        //Name of the file to download from the Google Cloud Storage
+        string fileName = "WordTemplate.docx";
+
         //Create Google Credential from the service account key file
         GoogleCredential credential = GoogleCredential.FromFile(keyPath);
 
@@ -131,13 +128,11 @@ public async Task<MemoryStream> GetDocumentFromGoogle(string bucketName, string 
         StorageClient storageClient = StorageClient.Create(credential);
 
         //Download a file from Google Cloud Storage
-        using (MemoryStream memoryStream = new MemoryStream())
-        {
-            await storageClient.DownloadObjectAsync(bucketName, fileName, memoryStream);
-            memoryStream.Position = 0;
+        MemoryStream memoryStream = new MemoryStream();
+        await storageClient.DownloadObjectAsync(bucketName, fileName, memoryStream);
+        memoryStream.Position = 0;
 
-            return memoryStream;
-        }
+        return memoryStream;
     }
     catch (Exception ex)
     {
@@ -154,7 +149,7 @@ By executing the program, you will get the **Word document** as follows.
 
 ![Output Word document](Cloud-Storage/Google/Output-Word-for-open-document.png)
 
-## Save Word document to Google Cloud
+## Save Word document to Google Cloud Storage
 
 Steps to save a Word document to Google Cloud Storage.
 
@@ -437,17 +432,8 @@ public async Task<IActionResult> UploadDocument()
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Docx);
 
-    //Your bucket name
-    string bucketName = "Your_bucket_name";
-
-    //Your service account key path
-    string keyPath = "Your_service_account_key_path";
-
-    //Name of the file to upload to Google Cloud Storage
-    string fileName = "CreateWord.docx";
-
     //Upload the document to Google
-    await UploadDocumentToGoogle(bucketName, keyPath, fileName, stream);
+    await UploadDocumentToGoogle(stream);
 
     return Ok("Word document uploaded to Google Cloud Storage.");
 }
@@ -463,15 +449,21 @@ This is the helper method to upload Word document to Google cloud storage.
 /// <summary>
 /// Upload file to Google
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="keyPath"></param>
-/// <param name="fileName"></param>
 /// <param name="stream"></param>
 /// <returns></returns>
-public async Task<MemoryStream> UploadDocumentToGoogle(string bucketName, string keyPath, string fileName, MemoryStream stream)
+public async Task<MemoryStream> UploadDocumentToGoogle(MemoryStream stream)
 {
     try
     {
+        //Your bucket name
+        string bucketName = "Your_bucket_name";
+
+        //Your service account key path
+        string keyPath = "Your_service_account_key_path";
+
+        //Name of the file to upload to Google Cloud Storage
+        string fileName = "CreateWord.docx";
+
         //Create Google Credential from the service account key file
         GoogleCredential credential = GoogleCredential.FromFile(keyPath);
 

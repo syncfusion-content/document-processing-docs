@@ -16,9 +16,9 @@ documentation: UG
 
 * **[Service account key](https://cloud.google.com/iam/docs/keys-create-delete#creating)** is required.
 
-## Open Presentation document from Google Cloud
+## Open Presentation from Google Cloud Storage
 
-Steps to open a Presentation document from Google Cloud Storage.
+Steps to open a Presentation from Google Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -61,23 +61,14 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **open a Presentation document from Google Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **open a Presentation from Google Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 public async Task<IActionResult> EditDocument()
 {
-    //Your bucket name
-    string bucketName = "Your_bucket_name";
-
-    //Your service account key path
-    string keyPath = "Your_service_account_key_path";
-
-    //Name of the file to download from the Google Cloud Storage
-    string fileName = "PowerPointTemplate.pptx";
-
     //Download the file from Google
-    MemoryStream memoryStream = await GetDocumentFromGoogle(bucketName, keyPath, fileName);
+    MemoryStream memoryStream = await GetDocumentFromGoogle();
 
     //Create an instance of PowerPoint Presentation file
     using (IPresentation pptxDocument = Presentation.Open(memoryStream))
@@ -92,7 +83,7 @@ public async Task<IActionResult> EditDocument()
         if (shape.TextBody.Text == "Company History")
             shape.TextBody.Text = "Company Profile";
 
-        //Saving the PowerPoint document to a MemoryStream 
+        //Saving the PowerPoint to a MemoryStream 
         MemoryStream outputStream = new MemoryStream();
         pptxDocument.Save(outputStream);
 
@@ -107,21 +98,27 @@ public async Task<IActionResult> EditDocument()
 
 ### Download file from Google cloud storage
 
-This is the helper method to download Presentation document from Google cloud storage.
+This is the helper method to download Presentation from Google cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 /// <summary>
 /// Download file from Google
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="keyPath"></param>
-/// <param name="fileName"></param>
 /// <returns></returns>
-public async Task<MemoryStream> GetDocumentFromGoogle(string bucketName, string keyPath, string fileName)
+public async Task<MemoryStream> GetDocumentFromGoogle()
 {
     try
     {
+        //Your bucket name
+        string bucketName = "Your_bucket_name";
+
+        //Your service account key path
+        string keyPath = "Your_service_account_key_path";
+
+        //Name of the file to download from the Google Cloud Storage
+        string fileName = "PowerPointTemplate.pptx";
+
         //Create Google Credential from the service account key file
         GoogleCredential credential = GoogleCredential.FromFile(keyPath);
 
@@ -129,13 +126,11 @@ public async Task<MemoryStream> GetDocumentFromGoogle(string bucketName, string 
         StorageClient storageClient = StorageClient.Create(credential);
 
         //Download a file from Google Cloud Storage
-        using (MemoryStream memoryStream = new MemoryStream())
-        {
-            await storageClient.DownloadObjectAsync(bucketName, fileName, memoryStream);
-            memoryStream.Position = 0;
+        MemoryStream memoryStream = new MemoryStream();
+        await storageClient.DownloadObjectAsync(bucketName, fileName, memoryStream);
+        memoryStream.Position = 0;
 
-            return memoryStream;
-        }
+        return memoryStream;
     }
     catch (Exception ex)
     {
@@ -148,13 +143,13 @@ public async Task<MemoryStream> GetDocumentFromGoogle(string bucketName, string 
 
 You can download a complete working sample from [GitHub]().
 
-By executing the program, you will get the **Presentation document** as follows.
+By executing the program, you will get the **Presentation** as follows.
 
-![Output Presentation document](Cloud-Storage/Google/Output-Presentation-for-open-document.png)
+![Output Presentation](Cloud-Storage/Google/Output-Presentation-for-open-document.png)
 
-## Save Presentation document to Google Cloud
+## Save Presentation to Google Cloud Storage
 
-Steps to save a Presentation document to Google Cloud Storage.
+Steps to save a Presentation to Google Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -197,7 +192,7 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **save a Presentation document to Google Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **save a Presentation to Google Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -253,45 +248,42 @@ public async Task<IActionResult> UploadDocument()
     stampShape.Fill.FillType = FillType.None;
     stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
 
-    //Saves the PowerPoint document to MemoryStream
+    //Saves the PowerPoint to MemoryStream
     MemoryStream stream = new MemoryStream();
-    pptxDocument.Save(stream);
+    pptxDocument.Save(stream);            
 
-    //Your bucket name
-    string bucketName = "Your_bucket_name";
+    //Upload the file to Google
+    await UploadDocumentToGoogle(stream);
 
-    //Your service account key path
-    string keyPath = "Your_service_account_key_path";
-
-    //Name of the file to upload to Google Cloud Storage
-    string fileName = "CreatePowerPoint.pptx";
-
-    //Upload the document to Google
-    await UploadDocumentToGoogle(bucketName, keyPath, fileName, stream);
-
-    return Ok("PowerPoint document uploaded to Google Cloud Storage.");
+    return Ok("PowerPoint uploaded to Google Cloud Storage.");
 }
 {% endhighlight %}
 {% endtabs %}
 
 ### Upload file to Google cloud storage
 
-This is the helper method to upload Presentation document to Google cloud storage.
+This is the helper method to upload Presentation to Google cloud storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 /// <summary>
 /// Upload file to Google
 /// </summary>
-/// <param name="bucketName"></param>
-/// <param name="keyPath"></param>
-/// <param name="fileName"></param>
 /// <param name="stream"></param>
 /// <returns></returns>
-public async Task<MemoryStream> UploadDocumentToGoogle(string bucketName, string keyPath, string fileName, MemoryStream stream)
+public async Task<MemoryStream> UploadDocumentToGoogle(MemoryStream stream)
 {
     try
     {
+        //Your bucket name
+        string bucketName = "Your_bucket_name";
+
+        //Your service account key path
+        string keyPath = "Your_service_account_key_path";
+
+        //Name of the file to upload to Google Cloud Storage
+        string fileName = "CreatePowerPoint.pptx";
+
         //Create Google Credential from the service account key file
         GoogleCredential credential = GoogleCredential.FromFile(keyPath);
 
@@ -314,6 +306,6 @@ public async Task<MemoryStream> UploadDocumentToGoogle(string bucketName, string
 
 You can download a complete working sample from [GitHub]().
 
-By executing the program, you will get the **Presentation document** as follows.
+By executing the program, you will get the **Presentation** as follows.
 
-![Output Presentation document](Cloud-Storage/Google/Output-Presentation-for-create-document.png)
+![Output Presentation](Cloud-Storage/Google/Output-Presentation-for-create-document.png)
