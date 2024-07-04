@@ -16,13 +16,13 @@ It refers to the process of importing data from various sources into an Excel wo
 
 XlsIO provides the ability to import data into an Excel from the following data structures:
 
-* [DataTable to Excel]()
-* [DataColumn to Excel]()
-* [DataView to Excel]()
-* [Collection Objects to Excel]()
-* [Array to Excel]()
-* [Microsoft Grid Controls to Excel]()
-* [HTML Table to Excel]()
+* [DataTable to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#datatable-to-excel)
+* [DataColumn to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#datacolumn-to-excel)
+* [DataView to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#dataview-to-excel)
+* [Collection Objects to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#collection-objects-to-excel)
+* [Array to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#array-to-excel)
+* [Microsoft Grid Controls to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#microsoft-grid-controls-to-excel)
+* [HTML Table to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#html-table-to-excel)
 
 ## Export from Excel
 
@@ -30,8 +30,8 @@ It refers to the process of exporting data from an Excel worksheet and transferr
 
 XlsIO provides the ability to export data from Excel to the following data structures:
 
-* [Excel to Data Table]()
-* [Excel to Collection Objects]()
+* [Excel to Data Table](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/export-from-excel#excel-to-datatable)
+* [Excel to Collection Objects](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/export-from-excel#excel-to-collection-objects)
 
 ## See Also
 
@@ -43,3 +43,4 @@ XlsIO provides the ability to export data from Excel to the following data struc
 * [How to export delimited string in the Excel worksheet into collection object and add it as a string array using C#, VB.NET?](https://support.syncfusion.com/kb/article/15999/how-to-export-delimited-string-in-the-excel-worksheet-into-collection-object-and-add-it-as-a-string-array-using-c-vbnet)
 * [How to Import data from dynamic collection to Excel worksheet in C#, VB.NET?](https://support.syncfusion.com/kb/article/7572/import-data-from-dynamic-collection-to-excel-worksheet-in-c-vb-net)
 * [How to preserve long number while exporting in XlsIO?](https://support.syncfusion.com/kb/article/7742/how-to-preserve-long-number-while-exporting-in-xlsio)
+* [Blog: Export data from data sources to Excel and vice-versa in C#.](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library/import-data-to-excel)
