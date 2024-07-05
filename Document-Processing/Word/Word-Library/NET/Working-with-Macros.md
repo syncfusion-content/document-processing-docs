@@ -20,16 +20,25 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//DocIO supports mail merge operation in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
+using (FileStream fileStream = new FileStream("Template.dotm", FileMode.Open, FileAccess.ReadWrite))
+{
+    //Opens the template document.
+    using (WordDocument document = new WordDocument(fileStream, FormatType.Dotm))
+    {
+        //Creates file stream.
+        using (MemoryStream stream = new MemoryStream();)
+        {
+            //Saves the Word document to stream.
+            document.Save(stream, FormatType.Word2013Docm);
+            }
+        }
+    }
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the macro-enabled template
 WordDocument document = new WordDocument("Template.dotm");
-//Gets the table
-DataTable table = GetDataTable();
-//Executes Mail Merge with groups
-document.MailMerge.ExecuteGroup(table);
 //Saves and closes the document
 document.Save("Sample.docm", FormatType.Word2013Docm);
 document.Close();
@@ -38,73 +47,9 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads the macro-enabled template
 Dim document As New WordDocument("Template.dotm")
-'Gets the table
-Dim table As DataTable = GetDataTable()
-'Executes Mail Merge with groups
-document.MailMerge.ExecuteGroup(table)
 'Saves and closes the document
 document.Save("Sample.docm", FormatType.Word2013Docm)
 document.Close()
-{% endhighlight %}
-
-{% endtabs %}
-
-The following code example illustrates the method used to get the tables from data set.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//DocIO supports mail merge operation in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-private DataTable GetDataTable()
-{
-    //List of syncfusion products name
-    string[] products = { "DocIO", "PDF", "XlsIO" };
-    //Adds new Tables to the data set
-    DataRow row;
-    DataTable table = new DataTable();
-    //Adds fields to the Products table
-    table.TableName = "Products";
-    table.Columns.Add("ProductName");
-    table.Columns.Add("Binary");
-    table.Columns.Add("Source");
-    //Inserts values to the tables
-    foreach (string product in products)
-    {
-        row = table.NewRow();
-        row["ProductName"] = string.Concat("Essential ", product);
-        row["Binary"] = "$895.00";
-        row["Source"] = "$1,295.00";
-        table.Rows.Add(row);
-    }
-    return table;
-}
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Private Function GetDataTable() As DataTable
-    'List of syncfusion products name
-    Dim products As String() = {"DocIO", "PDF", "XlsIO"}
-    'Adds new Tables to the data set
-    Dim row As DataRow
-    Dim table As New DataTable()
-    'Adds fields to the Products table
-    table.TableName = "Products"
-    table.Columns.Add("ProductName")
-    table.Columns.Add("Binary")
-    table.Columns.Add("Source")
-    'Inserts values to the tables
-    For Each product As String In products
-        row = table.NewRow()
-        row("ProductName") = String.Concat("Essential ", product)
-        row("Binary") = "$895.00"
-        row("Source") = "$1,295.00"
-        table.Rows.Add(row)
-    Next
-    Return table
-End Function
 {% endhighlight %}
 
 {% endtabs %}
