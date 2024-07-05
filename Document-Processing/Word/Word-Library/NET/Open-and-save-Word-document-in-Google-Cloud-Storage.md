@@ -143,7 +143,7 @@ public async Task<MemoryStream> GetDocumentFromGoogle()
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Google-Cloud-Storage/Open-Word-document).
 
 By executing the program, you will get the **Word document** as follows.
 
@@ -484,7 +484,7 @@ public async Task<MemoryStream> UploadDocumentToGoogle(MemoryStream stream)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Google-Cloud-Storage/Save-Word-document).
 
 By executing the program, you will get the **Word document** as follows.
 
