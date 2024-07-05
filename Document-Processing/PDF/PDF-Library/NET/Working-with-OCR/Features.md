@@ -1366,6 +1366,7 @@ We have support to improve the image quality while performing OCR for an image o
         PdfLoadedDocument lDoc = new PdfLoadedDocument(stream); 
         //Set the OCR language. 
         processor.Settings.Language = Languages.English; 
+        // Initialize the OCR image processor.
         processor.ImageProcessor = new ImageProcessor(); 
         //Perform OCR with input document. 
         string text = processor.PerformOCR(lDoc); 
@@ -1391,6 +1392,7 @@ We have support to improve the image quality while performing OCR for an image o
 
         ' Set the OCR language.
         processor.Settings.Language = Languages.English
+        ` Initialize the OCR image processor.
         processor.ImageProcessor = New ImageProcessor()
         
         ' Perform OCR with input document.
@@ -1417,173 +1419,195 @@ Create a new class file named `ImageProcessor.cs` and include the following code
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    public Stream ProcessImage(Stream imageStream)
-    {
-        //Process the image from stream with any third party library and return the processed image.
-        Stream processedImageStream = ConvertToGrayscaleImage(imageStream);
-        return processedImageStream;
-    }
-        
-    public Stream EnhanceResolution(Stream imgstream)
-    {
-        var imageStream = new MemoryStream();
-        imgstream.CopyTo(imageStream);
-        SKBitmap bitmap = SKBitmap.Decode(imageStream.ToArray());
-
-        // Create a new SKImageInfo with the same width and height as the original image
-        SKImageInfo info = new SKImageInfo(bitmap.Width, bitmap.Height);
-
-        // Create a new SKSurface with the SKImageInfo
-        using (SKSurface surface = SKSurface.Create(info))
+        public Stream ProcessImage(Stream imageStream)
         {
-            // Get the SKCanvas from the SKSurface
-            SKCanvas canvas = surface.Canvas;
+            //Process the image from stream with any third party library and return the processed image.
 
-            // Create a new SKPaint for drawing
-            SKPaint paint = new SKPaint();
+            // Convert the image stream to a grayscale image stream.
+            Stream processedImageStream = ConvertToGrayscaleImage(imageStream);
 
-            // Create a sharpening factor (experiment with different values)
-            float sharpenFactor = 12;
+            // Convert the image stream to a enhance resolution image stream.
+            //Stream processedImageStream = EnhanceResolution(imageStream);
 
-            // Loop through each pixel and apply sharpening
-            for (int x = 1; x < bitmap.Width - 1; x++)
+            // Enhances the image by applying Gaussian sharpening, converts it to grayscale, and then binarizes it
+            //Stream processedImageStream = EnhanceGrayscaleAndBinarize(imageStream);
+
+            //MemoryStream Stream = new MemoryStream();
+            
+            //processedImageStream.CopyTo(Stream);
+            //Stream.Position = 0;
+            //File.WriteAllBytes("sample.png", Stream.ToArray());
+
+            // Process the image data.
+            //Stream processedImageStream = imageBinarization(imageStream);
+
+            // return the processed ImageStream.
+            return processedImageStream;
+
+            
+
+        }
+       
+        public Stream EnhanceResolution(Stream imgstream)
+        {
+            var imageStream = new MemoryStream();
+            imgstream.CopyTo(imageStream);
+            SKBitmap bitmap = SKBitmap.Decode(imageStream.ToArray());
+
+            // Create a new SKImageInfo with the same width and height as the original image
+            SKImageInfo info = new SKImageInfo(bitmap.Width, bitmap.Height);
+
+            // Create a new SKSurface with the SKImageInfo
+            using (SKSurface surface = SKSurface.Create(info))
             {
-                for (int y = 1; y < bitmap.Height - 1; y++)
+                // Get the SKCanvas from the SKSurface
+                SKCanvas canvas = surface.Canvas;
+
+                // Create a new SKPaint for drawing
+                SKPaint paint = new SKPaint();
+
+                // Create a sharpening factor (experiment with different values)
+                float sharpenFactor = 12;
+
+                // Loop through each pixel and apply sharpening
+                for (int x = 1; x < bitmap.Width - 1; x++)
                 {
-                    // Get the pixel values from the surrounding pixels
-                    SKColor center = bitmap.GetPixel(x, y);
-                    SKColor left = bitmap.GetPixel(x - 1, y);
-                    SKColor right = bitmap.GetPixel(x + 1, y);
-                    SKColor top = bitmap.GetPixel(x, y - 1);
-                    SKColor bottom = bitmap.GetPixel(x, y + 1);
+                    for (int y = 1; y < bitmap.Height - 1; y++)
+                    {
+                        // Get the pixel values from the surrounding pixels
+                        SKColor center = bitmap.GetPixel(x, y);
+                        SKColor left = bitmap.GetPixel(x - 1, y);
+                        SKColor right = bitmap.GetPixel(x + 1, y);
+                        SKColor top = bitmap.GetPixel(x, y - 1);
+                        SKColor bottom = bitmap.GetPixel(x, y + 1);
 
-                    // Calculate the sharpened pixel value
-                    byte red = Clamp((int)(center.Red + sharpenFactor * (center.Red - (left.Red + right.Red + top.Red + bottom.Red) / 4)));
-                    byte green = Clamp((int)(center.Green + sharpenFactor * (center.Green - (left.Green + right.Green + top.Green + bottom.Green) / 4)));
-                    byte blue = Clamp((int)(center.Blue + sharpenFactor * (center.Blue - (left.Blue + right.Blue + top.Blue + bottom.Blue) / 4)));
+                        // Calculate the sharpened pixel value
+                        byte red = Clamp((int)(center.Red + sharpenFactor * (center.Red - (left.Red + right.Red + top.Red + bottom.Red) / 4)));
+                        byte green = Clamp((int)(center.Green + sharpenFactor * (center.Green - (left.Green + right.Green + top.Green + bottom.Green) / 4)));
+                        byte blue = Clamp((int)(center.Blue + sharpenFactor * (center.Blue - (left.Blue + right.Blue + top.Blue + bottom.Blue) / 4)));
 
-                    // Apply the sharpened pixel value
-                    SKColor sharpenedColor = new SKColor(red, green, blue);
-                    paint.Color = sharpenedColor;
+                        // Apply the sharpened pixel value
+                        SKColor sharpenedColor = new SKColor(red, green, blue);
+                        paint.Color = sharpenedColor;
 
-                    // Draw a rectangle representing the sharpened pixel
-                    canvas.DrawRect(x, y, 1, 1, paint);
+                        // Draw a rectangle representing the sharpened pixel
+                        canvas.DrawRect(x, y, 1, 1, paint);
+                    }
+                }
+
+                // Create a new SKImage from the SKSurface
+                SKImage image = surface.Snapshot();
+
+                // Encode the SKImage to a new SKData
+                SKData data = image.Encode(SKEncodedImageFormat.Png, 100);
+                using (var stream1 = System.IO.File.OpenWrite("sharpened1.png"))
+                {
+                    data.SaveTo(stream1);
+                    //  stream.Dispose();
+                }
+                return data.AsStream();
+            }
+        }
+        static byte Clamp(int value)
+        {
+            return (byte)(value < 0 ? 0 : (value > 255 ? 255 : value));
+        }
+        private Stream ConvertToGrayscaleImage(Stream imgstream)
+        {
+            var imageStream = new MemoryStream();
+            imgstream.CopyTo(imageStream);
+            SKBitmap originalBitmap = SKBitmap.Decode(imageStream.ToArray());
+            // Create a new bitmap with the same dimensions as the original
+            SKBitmap grayscaleBitmap = new SKBitmap(originalBitmap.Width, originalBitmap.Height);
+
+            // Iterate through each pixel in the original bitmap
+            for (int x = 0; x < originalBitmap.Width; x++)
+            {
+                for (int y = 0; y < originalBitmap.Height; y++)
+                {
+                    // Get the color of the original pixel
+                    SKColor originalColor = originalBitmap.GetPixel(x, y);
+
+                    // Calculate the grayscale value
+                    byte grayscaleValue = (byte)((originalColor.Red + originalColor.Green + originalColor.Blue) / 3);
+
+                    // Create a new color with the same grayscale value for all channels
+                    SKColor grayscaleColor = new SKColor(grayscaleValue, grayscaleValue, grayscaleValue);
+
+                    // Set the pixel in the new grayscale bitmap
+                    grayscaleBitmap.SetPixel(x, y, grayscaleColor);
                 }
             }
 
-            // Create a new SKImage from the SKSurface
-            SKImage image = surface.Snapshot();
+            // Save or use the grayscale image as needed
+            SKImage grayscaleImage = SKImage.FromBitmap(grayscaleBitmap);
 
-            // Encode the SKImage to a new SKData
-            SKData data = image.Encode(SKEncodedImageFormat.Png, 100);
-            using (var stream1 = System.IO.File.OpenWrite("sharpened1.png"))
-            {
-                data.SaveTo(stream1);
-                //  stream.Dispose();
-            }
+            // Encode and save the image
+            SKData data = grayscaleImage.Encode();
             return data.AsStream();
         }
-    }
-    static byte Clamp(int value)
-    {
-        return (byte)(value < 0 ? 0 : (value > 255 ? 255 : value));
-    }
-    private Stream ConvertToGrayscaleImage(Stream imgstream)
-    {
-        var imageStream = new MemoryStream();
-        imgstream.CopyTo(imageStream);
-        SKBitmap originalBitmap = SKBitmap.Decode(imageStream.ToArray());
-        // Create a new bitmap with the same dimensions as the original
-        SKBitmap grayscaleBitmap = new SKBitmap(originalBitmap.Width, originalBitmap.Height);
-
-        // Iterate through each pixel in the original bitmap
-        for (int x = 0; x < originalBitmap.Width; x++)
+        private Stream EnhanceGrayscaleAndBinarize(Stream imageStream)
         {
-            for (int y = 0; y < originalBitmap.Height; y++)
+            MemoryStream stream = new MemoryStream();
+            using (Image image = Image.Load(imageStream))
             {
-                // Get the color of the original pixel
-                SKColor originalColor = originalBitmap.GetPixel(x, y);
-
-                // Calculate the grayscale value
-                byte grayscaleValue = (byte)((originalColor.Red + originalColor.Green + originalColor.Blue) / 3);
-
-                // Create a new color with the same grayscale value for all channels
-                SKColor grayscaleColor = new SKColor(grayscaleValue, grayscaleValue, grayscaleValue);
-
-                // Set the pixel in the new grayscale bitmap
-                grayscaleBitmap.SetPixel(x, y, grayscaleColor);
+                image.Mutate(x => x.GaussianSharpen());
+                image.Mutate(x => x.Grayscale());
+                image.Mutate(x => x.BinaryThreshold(0.75f));
+                image.Save(stream, new PngEncoder());
             }
+            return stream;
         }
-
-        // Save or use the grayscale image as needed
-        SKImage grayscaleImage = SKImage.FromBitmap(grayscaleBitmap);
-
-        // Encode and save the image
-        SKData data = grayscaleImage.Encode();
-        return data.AsStream();
-    }
-    private Stream Sixlaborslib(Stream imageStream)
-    {
-        MemoryStream stream = new MemoryStream();
-        using (Image image = Image.Load(imageStream))
+        private Stream imageBinarization(Stream imgstream)
         {
-            image.Mutate(x => x.GaussianSharpen());
-            image.Mutate(x => x.Grayscale());
-            image.Mutate(x => x.BinaryThreshold(0.75f));
-            image.Save(stream, new PngEncoder());
-        }
-        return stream;
-    }
-    private Stream imageBinarization(Stream imgstream)
-    {
-        var imageStream = new MemoryStream();
-        imgstream.CopyTo(imageStream);
-        SKBitmap bitmap = SKBitmap.Decode(imageStream.ToArray());
+            var imageStream = new MemoryStream();
+            imgstream.CopyTo(imageStream);
+            SKBitmap bitmap = SKBitmap.Decode(imageStream.ToArray());
 
-        // Create a new SKImageInfo with the same width and height as the original image
-        SKImageInfo info = new SKImageInfo(bitmap.Width, bitmap.Height);
+            // Create a new SKImageInfo with the same width and height as the original image
+            SKImageInfo info = new SKImageInfo(bitmap.Width, bitmap.Height);
 
-        // Create a new SKSurface with the SKImageInfo
-        using (SKSurface surface = SKSurface.Create(info))
-        {
-            // Get the SKCanvas from the SKSurface
-            SKCanvas canvas = surface.Canvas;
-
-            // Create a new SKPaint for drawing
-            SKPaint paint = new SKPaint();
-
-            // Loop through each pixel and apply binarization based on a threshold
-            for (int x = 0; x < bitmap.Width; x++)
+            // Create a new SKSurface with the SKImageInfo
+            using (SKSurface surface = SKSurface.Create(info))
             {
-                for (int y = 0; y < bitmap.Height; y++)
+                // Get the SKCanvas from the SKSurface
+                SKCanvas canvas = surface.Canvas;
+
+                // Create a new SKPaint for drawing
+                SKPaint paint = new SKPaint();
+
+                // Loop through each pixel and apply binarization based on a threshold
+                for (int x = 0; x < bitmap.Width; x++)
                 {
-                    SKColor pixelColor = bitmap.GetPixel(x, y);
+                    for (int y = 0; y < bitmap.Height; y++)
+                    {
+                        SKColor pixelColor = bitmap.GetPixel(x, y);
 
-                    // Adjust the threshold value based on your needs
-                    int threshold = 205;
+                        // Adjust the threshold value based on your needs
+                        int threshold = 205;
 
-                    // Perform binarization
-                    SKColor binarizedColor = (pixelColor.Red + pixelColor.Green + pixelColor.Blue) / 3 > threshold
-                        ? SKColors.White
-                        : SKColors.Black;
+                        // Perform binarization
+                        SKColor binarizedColor = (pixelColor.Red + pixelColor.Green + pixelColor.Blue) / 3 > threshold
+                            ? SKColors.White
+                            : SKColors.Black;
 
-                    paint.Color = binarizedColor;
+                        paint.Color = binarizedColor;
 
-                    // Draw a rectangle representing the binarized pixel
-                    canvas.DrawRect(x, y, 1, 1, paint);
+                        // Draw a rectangle representing the binarized pixel
+                        canvas.DrawRect(x, y, 1, 1, paint);
+                    }
                 }
+
+                // Create a new SKImage from the SKSurface
+                SKImage image = surface.Snapshot();
+
+                // Encode the SKImage to a new SKData
+                SKData data = image.Encode(SKEncodedImageFormat.Png, 100);
+
+                return data.AsStream();
+
             }
-
-            // Create a new SKImage from the SKSurface
-            SKImage image = surface.Snapshot();
-
-            // Encode the SKImage to a new SKData
-            SKData data = image.Encode(SKEncodedImageFormat.Png, 100);
-
-            return data.AsStream();
-
         }
-    }
 
 {% endhighlight %}
 
