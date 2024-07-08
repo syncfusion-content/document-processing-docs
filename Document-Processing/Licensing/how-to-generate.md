@@ -48,4 +48,4 @@ If the Syncfusion account is not associated with a trial, license, or expired tr
 
 ## See Also
 
-* [How to Register Syncfusion License Key in Document Processing Application?](https://help.syncfusion.com/file-formats/licensing/how-to-register-in-an-application)
+* [How to Register Syncfusion License Key in Document Processing Application?](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application)

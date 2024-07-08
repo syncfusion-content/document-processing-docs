@@ -15,7 +15,7 @@ Essential Document Processing is a collection of .NET class libraries to create,
 
 * The best way to get started would be to read the “Getting Started” section for the component you would like to start first. The “Getting Started” and “Assemblies required” sections gives enough information, so it is recommended to read these sections end-to-end before starting to write a code. All other information can be referred as needed. 
 * After learning the basics about the component, integrate the component into your application. A good starting point is to refer to the code examples in the sample browser and in this user guide. It is very likely that you can find a code example that resembles your intended usage scenario. 
-* Another valuable resource is available in the [API reference](https://help.syncfusion.com/cr/file-formats) that provides detailed information on the object hierarchy as well as the settings available on every object.
+* Another valuable resource is available in the [API reference](https://help.syncfusion.com/cr/document-processing) that provides detailed information on the object hierarchy as well as the settings available on every object.
 
 ## Additional help resources
 
@@ -43,7 +43,7 @@ Description
 Essential PDF
 </td>
 <td>
-.NET Class library used to create, read, and write PDF files in .NET Framework [Windows Forms, WPF, ASP.NET MVC, ASP.NET], .NET Core, UWP and Xamarin applications.
+.NET Class library used to create, read, and write PDF files in [.NET Framework](https://www.syncfusion.com/document-processing/pdf-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/pdf-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/pdf-framework/uwp/) and [Xamarin](https://www.syncfusion.com/document-processing/pdf-framework/xamarin/) applications.
 </td>
 </tr>
 <tr>
@@ -51,7 +51,7 @@ Essential PDF
 Essential XlsIO
 </td>
 <td>
-.NET Class library used to create, read, edit, write, and convert Microsoft Excel files in .NET Framework [Windows Forms, WPF, ASP.NET MVC, ASP.NET], .NET Core, UWP, and Xamarin applications.
+.NET Class library used to create, read, edit, write, and convert Microsoft Excel files in [.NET Framework](https://www.syncfusion.com/document-processing/excel-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/excel-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/excel-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/excel-framework/xamarin/) applications.
 </td>
 </tr>
 <tr>
@@ -59,7 +59,7 @@ Essential XlsIO
 Essential DocIO
 </td>
 <td>
-.NET Class library used to create, read, edit, and convert Microsoft Word files in .NET Framework [Windows Forms, WPF, ASP.NET MVC, ASP.NET], .NET Core, UWP, and Xamarin applications.
+.NET Class library used to create, read, edit, and convert Microsoft Word files in [.NET Framework](https://www.syncfusion.com/document-processing/word-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/word-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/word-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/word-framework/xamarin/) applications.
 </td>
 </tr>
 <tr>
@@ -67,7 +67,7 @@ Essential DocIO
 Essential Presentation
 </td>
 <td>
-.NET Class library used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in .NET Framework [Windows Forms, WPF, ASP.NET MVC, ASP.NET], .NET Core, UWP, and Xamarin applications.
+.NET Class library used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in [.NET Framework](https://www.syncfusion.com/document-processing/powerpoint-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin/) applications.
 </td>
 </tr>
 </table>
@@ -84,7 +84,7 @@ Our customers cannot use any hosted Web APIs provided by syncfusion.  We provide
 	
 ## Quick Start links:
 
-[Create a PDF file in C# without Adobe](https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-c-sharp-vb-net)
-[Create Excel file in C# without Microsoft Office](https://help.syncfusion.com/file-formats/xlsio/getting-started)
-[Create Word file in C# without Microsoft Office](https://help.syncfusion.com/file-formats/docio/getting-started)
-[Create PowerPoint file in C# without Microsoft Office](https://help.syncfusion.com/file-formats/presentation/getting-started)
+[Create a PDF file in C# without Adobe](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-c-sharp-vb-net)
+[Create Excel file in C# without Microsoft Office](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-excel-file-csharp-vbnet)
+[Create Word file in C# without Microsoft Office](https://help.syncfusion.com/document-processing/word/word-library/net/getting-started)
+[Create PowerPoint file in C# without Microsoft Office](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/getting-started)

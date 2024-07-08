@@ -16,9 +16,7 @@ The system requirements for using our Syncfusion Document Processing platform ar
 Syncfusion Document Processing libraries are supported on any of the following operating systems:
 
 * Windows 10
-* Windows 8, 8.1
-* Windows 7
-* Windows Vista
+* Windows 11
 * Windows Server 2008 and later
 * Alpine: 3.10+
 * Debian: 9+
@@ -42,9 +40,9 @@ In order to develop applications with the Syncfusion Document Processing librari
 
 Syncfusion Document Processing libraries supports the following .NET Framework and .NET Core versions
 
-* .NET Framework 3.5
+* .NET 6.0
+* .NET 8.0
 * .NET Framework 4.0
-* .NET Framework 4.5
 * .NET Framework 4.6
 * .NET Standard 2.0 (Can be used in .NET Core 2.1/3.1, .NET 5.0, .NET 6.0 application)
 
