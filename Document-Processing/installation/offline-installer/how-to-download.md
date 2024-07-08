@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Downloading Syncfusion Document Processing offline installer - Syncfusion
+title: Downloading Syncfusion Document Processing offline installer
 description: Learn here about how to download the Syncfusion Document Processing offline installer from our Syncfusion website with license.
 platform: document-processing
 control: Installation and Deployment
