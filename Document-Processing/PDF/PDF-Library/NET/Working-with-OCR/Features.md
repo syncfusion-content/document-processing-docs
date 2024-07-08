@@ -1216,7 +1216,7 @@ processor.Settings.Performance = Performance.Fast
 
 Starting with v21.1.x, TesseractBinaries, and Tesseract language data folder paths are added by default. So, there is no need to provide these paths explicitly. However, you can refer to TesseractBinaries and Tessdata paths manually in your application as per the requirement.
 
-N> You can get the TessseractBinaries or TessData files from the NuGet package runtimes folder or bin folder of the application.
+N> You can get the TesseractBinaries or TessData files from the NuGet package runtimes folder or bin folder of the application.
 
 {% tabs %}  
 
@@ -1349,3 +1349,227 @@ End Using
 {% endtabs %}  
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Get-image-rotation-angle-from-OCR).
+
+## Image enhancement in OCR processor library
+
+We have support to improve the image quality while performing OCR for an image or PDF document. In this process, we can enhance the image quality by using binarization, grayscale, and resolution enhancement methods with third-party libraries. Please refer to the code snippet below.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    //Initialize the OCR processor. 
+    using (OCRProcessor processor = new OCRProcessor()) 
+    { 
+        //Load an existing PDF document. 
+        FileStream stream = new FileStream("../../../document.pdf", FileMode.Open); 
+        PdfLoadedDocument lDoc = new PdfLoadedDocument(stream); 
+        //Set the OCR language. 
+        processor.Settings.Language = Languages.English; 
+        // Initialize the OCR image processor.
+        processor.ImageProcessor = new ImageProcessor(); 
+        //Perform OCR with input document. 
+        string text = processor.PerformOCR(lDoc); 
+        //Create file stream. 
+        FileStream fileStream = new FileStream("../../../OCR.pdf", FileMode.CreateNew); 
+        //Save the document into stream. 
+        lDoc.Save(fileStream); 
+        //Close the document. 
+        lDoc.Close(true); 
+        stream.Dispose(); 
+        fileStream.Dispose(); 
+    } 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Initialize the OCR processor.
+    Using processor As New OCRProcessor()
+    ' Load an existing PDF document.
+    Dim stream As New FileStream("../../../document.pdf", FileMode.Open)
+    Dim lDoc As New PdfLoadedDocument(stream)        ' Set the OCR language.
+    processor.Settings.Language = Languages.English
+    ` Initialize the OCR image processor.
+    processor.ImageProcessor = New ImageProcessor()
+    ' Perform OCR with input document.
+    Dim text As String = processor.PerformOCR(lDoc)
+    ' Create file stream.
+    Dim fileStream As New FileStream("../../../OCR.pdf", FileMode.CreateNew)
+    ' Save the document into stream.
+    lDoc.Save(fileStream)
+    ' Close the document.
+    lDoc.Close(true)
+    stream.Dispose()
+    fileStream.Dispose()
+    End Using
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+Create a new class file named `ImageProcessor.cs` and include the following code.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    public Stream ProcessImage(Stream imageStream)
+    {
+        //Process the image from stream with any third party library and return the processed image.
+        // Convert the image stream to a grayscale image stream.
+        Stream processedImageStream = ConvertToGrayscaleImage(imageStream);
+        // Convert the image stream to a enhance resolution image stream.
+        //Stream processedImageStream = EnhanceResolution(imageStream);
+        // Enhances the image by applying Gaussian sharpening, converts it to grayscale, and then binarizes it
+        //Stream processedImageStream = EnhanceGrayscaleAndBinarize(imageStream);
+        //MemoryStream Stream = new MemoryStream();
+        //processedImageStream.CopyTo(Stream);
+        //Stream.Position = 0;
+        //File.WriteAllBytes("sample.png", Stream.ToArray());
+        // Process the image data.
+        //Stream processedImageStream = imageBinarization(imageStream);
+        // return the processed ImageStream.
+        return processedImageStream;
+    }
+    public Stream EnhanceResolution(Stream imgstream)
+    {
+        var imageStream = new MemoryStream();
+        imgstream.CopyTo(imageStream);
+        SKBitmap bitmap = SKBitmap.Decode(imageStream.ToArray());
+        // Create a new SKImageInfo with the same width and height as the original image
+        SKImageInfo info = new SKImageInfo(bitmap.Width, bitmap.Height);
+        // Create a new SKSurface with the SKImageInfo
+        using (SKSurface surface = SKSurface.Create(info))
+        {
+            // Get the SKCanvas from the SKSurface
+            SKCanvas canvas = surface.Canvas;
+            // Create a new SKPaint for drawing
+            SKPaint paint = new SKPaint();
+            // Create a sharpening factor (experiment with different values)
+            float sharpenFactor = 12;
+            // Loop through each pixel and apply sharpening
+            for (int x = 1; x < bitmap.Width - 1; x++)
+            {
+                for (int y = 1; y < bitmap.Height - 1; y++)
+                {
+                    // Get the pixel values from the surrounding pixels
+                    SKColor center = bitmap.GetPixel(x, y);
+                    SKColor left = bitmap.GetPixel(x - 1, y);
+                    SKColor right = bitmap.GetPixel(x + 1, y);
+                    SKColor top = bitmap.GetPixel(x, y - 1);
+                    SKColor bottom = bitmap.GetPixel(x, y + 1);
+                    // Calculate the sharpened pixel value
+                    byte red = Clamp((int)(center.Red + sharpenFactor * (center.Red - (left.Red + right.Red + top.Red + bottom.Red) / 4)));
+                    byte green = Clamp((int)(center.Green + sharpenFactor * (center.Green - (left.Green + right.Green + top.Green + bottom.Green) / 4)));
+                    byte blue = Clamp((int)(center.Blue + sharpenFactor * (center.Blue - (left.Blue + right.Blue + top.Blue + bottom.Blue) / 4)));
+                    // Apply the sharpened pixel value
+                    SKColor sharpenedColor = new SKColor(red, green, blue);
+                    paint.Color = sharpenedColor;
+                    // Draw a rectangle representing the sharpened pixel
+                    canvas.DrawRect(x, y, 1, 1, paint);
+                }
+            }
+            // Create a new SKImage from the SKSurface
+            SKImage image = surface.Snapshot();
+            // Encode the SKImage to a new SKData
+            SKData data = image.Encode(SKEncodedImageFormat.Png, 100);
+            using (var stream1 = System.IO.File.OpenWrite("sharpened1.png"))
+            {
+                data.SaveTo(stream1);
+                //  stream.Dispose();
+            }
+            return data.AsStream();
+        }
+    }
+    static byte Clamp(int value)
+    {
+        return (byte)(value < 0 ? 0 : (value > 255 ? 255 : value));
+    }
+    private Stream ConvertToGrayscaleImage(Stream imgstream)
+    {
+        var imageStream = new MemoryStream();
+        imgstream.CopyTo(imageStream);
+        SKBitmap originalBitmap = SKBitmap.Decode(imageStream.ToArray());
+        // Create a new bitmap with the same dimensions as the original
+        SKBitmap grayscaleBitmap = new SKBitmap(originalBitmap.Width, originalBitmap.Height);
+        // Iterate through each pixel in the original bitmap
+        for (int x = 0; x < originalBitmap.Width; x++)
+        {
+            for (int y = 0; y < originalBitmap.Height; y++)
+            {
+                // Get the color of the original pixel
+                SKColor originalColor = originalBitmap.GetPixel(x, y);
+                // Calculate the grayscale value
+                byte grayscaleValue = (byte)((originalColor.Red + originalColor.Green + originalColor.Blue) / 3);
+                // Create a new color with the same grayscale value for all channels
+                SKColor grayscaleColor = new SKColor(grayscaleValue, grayscaleValue, grayscaleValue);
+                // Set the pixel in the new grayscale bitmap
+                grayscaleBitmap.SetPixel(x, y, grayscaleColor);
+            }
+        }
+        // Save or use the grayscale image as needed
+        SKImage grayscaleImage = SKImage.FromBitmap(grayscaleBitmap);
+        // Encode and save the image
+        SKData data = grayscaleImage.Encode();
+        return data.AsStream();
+    }
+    private Stream EnhanceGrayscaleAndBinarize(Stream imageStream)
+    {
+        MemoryStream stream = new MemoryStream();
+        using (Image image = Image.Load(imageStream))
+        {
+            image.Mutate(x => x.GaussianSharpen());
+            image.Mutate(x => x.Grayscale());
+            image.Mutate(x => x.BinaryThreshold(0.75f));
+            image.Save(stream, new PngEncoder());
+        }
+        return stream;
+    }
+    private Stream imageBinarization(Stream imgstream)
+    {
+        var imageStream = new MemoryStream();
+        imgstream.CopyTo(imageStream);
+        SKBitmap bitmap = SKBitmap.Decode(imageStream.ToArray());
+        // Create a new SKImageInfo with the same width and height as the original image
+        SKImageInfo info = new SKImageInfo(bitmap.Width, bitmap.Height);
+        // Create a new SKSurface with the SKImageInfo
+        using (SKSurface surface = SKSurface.Create(info))
+        {
+            // Get the SKCanvas from the SKSurface
+            SKCanvas canvas = surface.Canvas;
+            // Create a new SKPaint for drawing
+            SKPaint paint = new SKPaint();
+            // Loop through each pixel and apply binarization based on a threshold
+            for (int x = 0; x < bitmap.Width; x++)
+            {
+                for (int y = 0; y < bitmap.Height; y++)
+                {
+                    SKColor pixelColor = bitmap.GetPixel(x, y);
+                    // Adjust the threshold value based on your needs
+                    int threshold = 205;
+                    // Perform binarization
+                    SKColor binarizedColor = (pixelColor.Red + pixelColor.Green + pixelColor.Blue) / 3 > threshold
+                            ? SKColors.White
+                            : SKColors.Black;
+
+                    paint.Color = binarizedColor;
+                    // Draw a rectangle representing the binarized pixel
+                    canvas.DrawRect(x, y, 1, 1, paint);
+                }
+            }
+            // Create a new SKImage from the SKSurface
+            SKImage image = surface.Snapshot();
+            // Encode the SKImage to a new SKData
+            SKData data = image.Encode(SKEncodedImageFormat.Png, 100);
+            return data.AsStream();
+        }
+    }
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+N> In this sample, we are using the [SixLabors.ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp) library to improve the image quality. You can any image processing library as per your requirement.
+
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-ImageEnhancement).
