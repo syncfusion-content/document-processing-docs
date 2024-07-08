@@ -1855,6 +1855,8 @@ document.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Inject_custom_CSS_to_HTML).
 
+N> We're injecting custom CSS into the header tag of the input HTML/URL.
+
 ## Inject custom JavaScript
 
 The Blink rendering engine offers support for injecting custom JavaScript to be applied to the HTML or a URL before rendering it into a PDF document using the 'JavaScript' property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
@@ -1906,6 +1908,8 @@ document.Close(true)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Inject_custom_JavaScript_to_HTML).
+
+N> We're injecting custom JavaScript into the header tag of the input HTML/URL.
 
 ## Performance optimization
 
