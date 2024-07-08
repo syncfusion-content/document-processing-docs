@@ -101,7 +101,7 @@ return tokenHandler.WriteToken(token);
 >
 > If you have not already generated this key, please refer to the steps provided in the documentation on generating the key using `ssh-keygen` and `openssl`. Make sure to follow these steps to create both the private key (`jwtRS256.key`) and the corresponding public key (`jwtRS256_pub.pem`). The public key must be added to the document processing engine’s configuration to enable token signature validation.
 
-You can download a sample for JWT generation from [GitHub](https://github.com/SyncfusionExamples/document-processing-apis-examples).
+You can download a complete sample from [GitHub](https://github.com/SyncfusionExamples/document-processing-apis-examples).
 
 ## Validate a JWT
 
