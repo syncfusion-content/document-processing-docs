@@ -180,6 +180,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A1"].Text = "CustomerID";
   worksheet.Range["B1"].Text = "CompanyName";
   worksheet.Range["C1"].Text = "ContactName";
+  worksheet.Range["D1"].Text = "TotalSales (in USD)";
   worksheet.Range["A2"].Text = "ALFKI";
   worksheet.Range["A3"].Text = "ANATR";
   worksheet.Range["A4"].Text = "BONAP";
@@ -192,6 +193,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["C3"].Text = "Ana Trujillo";
   worksheet.Range["C4"].Text = "Laurence Lebihan";
   worksheet.Range["C5"].Text = "Victoria Ashworth";
+  worksheet.Range["D2"].Number = 15000.107;
+  worksheet.Range["D3"].Number = 27000.208;
+  worksheet.Range["D4"].Number = 18700.256;
+  worksheet.Range["D5"].Number = 25000.450;
 
   //Formatting
   //Global styles should be used when the same style needs to be applied to more than one cell. This usage of a global style reduces memory usage.
@@ -220,10 +225,18 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bodyStyle.Borders[ExcelBordersIndex.EdgeRight].LineStyle = ExcelLineStyle.Thin;
   bodyStyle.EndUpdate();
 
+  //Defining number format style
+  IStyle numberformatStyle = workbook.Styles.Add("NumberFormatStyle");
+  numberformatStyle.BeginUpdate();
+  numberformatStyle.NumberFormat = "0.00";
+  numberformatStyle.EndUpdate();
+
   //Apply Header style
   worksheet.Rows[0].CellStyle = headerStyle;
   //Apply Body Style
   worksheet.Range["A2:C5"].CellStyle = bodyStyle;
+  //Apply Number Format style
+  worksheet.Range["D2:D5"].CellStyle = numberformatStyle;
   //Auto-fit the columns
   worksheet.UsedRange.AutofitColumns();
 
@@ -246,6 +259,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A1"].Text = "CustomerID";
   worksheet.Range["B1"].Text = "CompanyName";
   worksheet.Range["C1"].Text = "ContactName";
+  worksheet.Range["D1"].Text = "TotalSales (in USD)";
   worksheet.Range["A2"].Text = "ALFKI";
   worksheet.Range["A3"].Text = "ANATR";
   worksheet.Range["A4"].Text = "BONAP";
@@ -258,6 +272,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["C3"].Text = "Ana Trujillo";
   worksheet.Range["C4"].Text = "Laurence Lebihan";
   worksheet.Range["C5"].Text = "Victoria Ashworth";
+  worksheet.Range["D2"].Number = 15000.107;
+  worksheet.Range["D3"].Number = 27000.208;
+  worksheet.Range["D4"].Number = 18700.256;
+  worksheet.Range["D5"].Number = 25000.450;
 
   //Formatting
   //Global styles should be used when the same style needs to be applied to more than one cell. This usage of a global style reduces memory usage.
@@ -286,10 +304,18 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   bodyStyle.Borders[ExcelBordersIndex.EdgeRight].LineStyle = ExcelLineStyle.Thin;
   bodyStyle.EndUpdate();
 
+  //Defining number format style
+  IStyle numberformatStyle = workbook.Styles.Add("NumberFormatStyle");
+  numberformatStyle.BeginUpdate();
+  numberformatStyle.NumberFormat = "0.00";
+  numberformatStyle.EndUpdate();
+
   //Apply Header style
   worksheet.Rows[0].CellStyle = headerStyle;
   //Apply Body Style
   worksheet.Range["A2:C5"].CellStyle = bodyStyle;
+  //Apply Number Format style
+  worksheet.Range["D2:D5"].CellStyle = numberformatStyle;
   //Auto-fit the columns
   worksheet.UsedRange.AutofitColumns();
 
@@ -308,6 +334,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("A1").Text = "CustomerID"
   worksheet.Range("B1").Text = "CompanyName"
   worksheet.Range("C1").Text = "ContactName"
+  worksheet.Range("D1").Text = "TotalSales (in USD)"
   worksheet.Range("A2").Text = "ALFKI"
   worksheet.Range("A3").Text = "ANATR"
   worksheet.Range("A4").Text = "BONAP"
@@ -320,6 +347,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("C3").Text = "Ana Trujillo"
   worksheet.Range("C4").Text = "Laurence Lebihan"
   worksheet.Range("C5").Text = "Victoria Ashworth"
+  worksheet.Range["D2"].Number = 15000.107
+  worksheet.Range["D3"].Number = 27000.208
+  worksheet.Range["D4"].Number = 18700.256
+  worksheet.Range["D5"].Number = 25000.450
 
   'Formatting
   'Global styles should be used when the same style needs to be applied to more than one cell. This usage of a global style reduces memory usage.
@@ -348,10 +379,18 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   bodyStyle.Borders(ExcelBordersIndex.EdgeRight).LineStyle = ExcelLineStyle.Thin
   bodyStyle.EndUpdate()
 
+  'Defining number format style
+  IStyle numberformatStyle = workbook.Styles.Add("NumberFormatStyle")
+  numberformatStyle.BeginUpdate()
+  numberformatStyle.NumberFormat = "0.00"
+  numberformatStyle.EndUpdate()
+
   'Apply Header style
   worksheet.Rows(0).CellStyle = headerStyle
   'Apply Body Style
   worksheet.Range("A2:C5").CellStyle = bodyStyle
+  'Apply Number Format style
+  worksheet.Range("D2:D5").CellStyle = numberformatStyle
   'Auto-fit the columns
   worksheet.UsedRange.AutofitColumns()
 
@@ -1218,7 +1257,7 @@ A complete working example to apply cell text alignment in C# is present on [thi
 
 The following screenshot is the output of previous code:
 
-!["Excel document with different alignment options](Working-with-Cell-or-Range-Formatting_images/Working-with-Cell-or-Range-Formatting_img3.jpeg)
+![Excel document with different alignment options](Working-with-Cell-or-Range-Formatting_images/Working-with-Cell-or-Range-Formatting_img3.jpeg)
 
 ## Merging and Un-Merging Cells
 

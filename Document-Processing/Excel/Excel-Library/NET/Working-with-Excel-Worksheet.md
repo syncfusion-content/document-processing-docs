@@ -332,22 +332,31 @@ Worksheet operations encompass a wide range of actions and manipulations that ca
 
 Moving or copying in Excel refers to the actions of relocating or duplicating cells, rows, columns, or entire sheets within the same workbook or to another workbook.
 
-With the Syncfusion Excel Library, you can move or copy cells, rows, columns, or entire worksheets within an Excel workbook using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can move or copy cells, rows, columns, or entire worksheets within an Excel workbook using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/move-or-copy) for more details.
 
 ### Freeze Panes
 
 Freezing panes in Excel allows you to lock specific rows or columns so that they remain visible while scrolling through the rest of the worksheet.
 
-With the Syncfusion Excel Library, you can freeze panes in an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can freeze panes in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/freeze-panes) for more details.
 
 ### Page Setup Options
 
 Page setup options in Excel include settings related to printing, such as adjusting margins, setting paper size and orientation, adding headers and footers, and scaling the worksheet to fit on a specified number of pages.
 
-With the Syncfusion Excel Library, you can manage page setup options in an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can manage page setup options in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/page-setup-options) for more details.
 
 ### Show or Hide
 
 Showing or hiding in Excel refers to making rows, columns, or specific elements visible or invisible within the worksheet.
 
-With the Syncfusion Excel Library, you can show or hide rows, columns, or specific elements within an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can show or hide rows, columns, or specific elements within an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/show-or-hide) for more details.
+
+## See Also
+
+* [How to hide worksheet tabs using XlsIO?](https://support.syncfusion.com/kb/article/2603/how-to-hide-worksheet-tabs-using-xlsio)
+* [How to set worksheet visibility to very hidden?](https://support.syncfusion.com/kb/article/4586/how-to-set-worksheet-visibility-to-very-hidden)
+* [How to copy Excel worksheet to another workbook in C#, VB.NET?](https://support.syncfusion.com/kb/article/2629/copy-excel-worksheet-to-another-workbook-in-c-vb-net)
+* [How range Copy To method overloads on WinForms XIsIO?](https://support.syncfusion.com/kb/article/2751/how-range-copy-to-method-overloads-on-winforms-xisio?isInternalRefresh=False)
+* [How to set freeze panes in Excel document using C#, VB.NET?](https://support.syncfusion.com/kb/article/2684/how-to-set-freeze-panes-in-excel-document-using-c-vbnet)
+* [Blog: Freeze panes](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet/freeze-panes)

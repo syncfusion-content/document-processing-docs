@@ -1,6 +1,6 @@
 ---
 title: Chart Series | Excel library | Syncfusion
-description: In this section, you can learn about chart series in an Excel document with XlsIO.
+description: In this section, you can learn about chart series in an Excel document using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -16,21 +16,21 @@ The following code snippet illustrates how to add series in chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Add serie
+//Add series
 IChartSerie Amount = chart.Series.Add("Amount");
 Amount.Values = worksheet.Range["B2:B6"];
 Amount.CategoryLabels = worksheet.Range["A2:A6"];
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Add serie
+//Add series
 IChartSerie Amount = chart.Series.Add("Amount");
 Amount.Values = worksheet.Range["B2:B6"];
 Amount.CategoryLabels = worksheet.Range["A2:A6"];
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Add serie
+'Add series
 IChartSerie Amount = chart.Series.Add("Amount")
 Amount.Values = worksheet.Range["B2:B6"]
 Amount.CategoryLabels = worksheet.Range["A2:A6"]
@@ -41,7 +41,7 @@ Amount.CategoryLabels = worksheet.Range["A2:A6"]
 
 ### Border
 
-The following code snippet illustrates how to format the border of the serie.
+The following code snippet illustrates how to format the border of the series.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -68,7 +68,7 @@ chart.Series(1).SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Nar
 
 ### Color
 
-The following code snippet illustrates how to format the color of the serie.
+The following code snippet illustrates how to format the color of the series.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -95,6 +95,29 @@ chart.Series(1).SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234)
 chart.Series(1).SerieFormat.Fill.ForeColor = Color.Red
 {% endhighlight %}
 {% endtabs %}
+
+### Transparency
+
+The following code snippet illustrates how to apply transparency to the series.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Set the transparency
+chart.Series[1].SerieFormat.Fill.Transparency = 1.0;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Set the transparency 
+chart.Series[1].SerieFormat.Fill.Transparency = 1.0;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Set the transparency 
+chart.Series(1).SerieFormat.Fill.Transparency = 1.0
+{% endhighlight %}
+{% endtabs %}
+
+N> [Transparency](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_FillType) is set as SolidColor. Color-shaded fill is represented as a floating-point value ranging from 0.0 (Clear) to 1.0 (Opaque).
 
 ## Series Type
 
@@ -348,7 +371,7 @@ End Using
 
 A complete working example for the chart data series in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Series%20Lines/NET%20Standard/Series%20Lines).
 
-## Serie Settings
+## Series Settings
 
 ### Add DataPoint as total
 
