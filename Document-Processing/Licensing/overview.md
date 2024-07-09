@@ -28,7 +28,7 @@ Following licensing error will be shown if the license key is not registered in 
 
 <div id="license">
 
-This application was built using a trial version of Syncfusion Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this <a href="/file-formats/licensing/overview">help topic</a> for more information 
+This application was built using a trial version of Syncfusion Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this <a href="/document-processing/licensing/overview">help topic</a> for more information 
 
 </div>
 
@@ -43,11 +43,11 @@ Trial message will be displayed as watermark in the generated documents, if Docu
 
 | Source of Syncfusion assemblies | Details | License Key needs to be registered? | Where to get license key from |
 | ------------- | ------------- | ------------- | ------------- |
-| **NuGet package** | If the Syncfusion assemblies used in Build Server were from the Syncfusion NuGet packages, then no need to install any Syncfusion installer. We can directly use the required Syncfusion NuGet packages at [nuget.org](http://nuget.org/). <br><br>But, if using NuGet packages from the [nuget.org](https://www.nuget.org/packages?q=syncfusion), then we should register the Syncfusion license key in the application.| Yes | Use any developer license to [generate](https://help.syncfusion.com/file-formats/licensing/how-to-generate) keys for Build Environments as well. |
-| **Trial installer** | If the Syncfusion assemblies used in Build Server were from Trial Installer, we should register the license key in the application for the corresponding version and platforms, to avoid trial license warning. | Yes | Use any developer trial license to [generate](https://help.syncfusion.com/file-formats/licensing/how-to-generate) keys for Build Environments as well. |
-| **Licensed installer** |If the Syncfusion assemblies used in Build Server were from Licensed Installer, then there is no need to register the license keys.<br><br>You can [download](https://help.syncfusion.com/file-formats/installation/web-installer/how-to-download#download-the-license-version) and [install](https://help.syncfusion.com/file-formats/installation/web-installer/how-to-install) the licensed version of our installer. | No | Not applicable |
+| **NuGet package** | If the Syncfusion assemblies used in Build Server were from the Syncfusion NuGet packages, then no need to install any Syncfusion installer. We can directly use the required Syncfusion NuGet packages at [nuget.org](http://nuget.org/). <br><br>But, if using NuGet packages from the [nuget.org](https://www.nuget.org/packages?q=syncfusion), then we should register the Syncfusion license key in the application.| Yes | Use any developer license to [generate](https://help.syncfusion.com/document-processing/licensing/how-to-generate) keys for Build Environments as well. |
+| **Trial installer** | If the Syncfusion assemblies used in Build Server were from Trial Installer, we should register the license key in the application for the corresponding version and platforms, to avoid trial license warning. | Yes | Use any developer trial license to [generate](https://help.syncfusion.com/document-processing/licensing/how-to-generate) keys for Build Environments as well. |
+| **Licensed installer** |If the Syncfusion assemblies used in Build Server were from Licensed Installer, then there is no need to register the license keys.<br><br>You can [download](https://help.syncfusion.com/document-processing/installation/web-installer/how-to-download#download-the-license-version) and [install](https://help.syncfusion.com/document-processing/installation/web-installer/how-to-install) the licensed version of our installer. | No | Not applicable |
 
 ## See Also
 
-* [How to Generate Syncfusion Document Processing License Key?](https://help.syncfusion.com/file-formats/licensing/how-to-generate)
-* [How to Register Syncfusion License Key in Document Processing Application?](https://help.syncfusion.com/file-formats/licensing/how-to-register-in-an-application)
+* [How to Generate Syncfusion Document Processing License Key?](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+* [How to Register Syncfusion License Key in Document Processing Application?](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application)
