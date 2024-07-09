@@ -38,13 +38,12 @@ In order to develop applications with the Syncfusion Document Processing librari
 * Microsoft Visual Studio 2017
 * Microsoft Visual Studio 2019
 
-Syncfusion Document Processing libraries supports the following .NET Framework and .NET Core versions
+Syncfusion Document Processing libraries supports the following .NET Framework and .NET versions
 
+* .NET Framework 4.6.2
+* .NET Standard 2.0
 * .NET 6.0
 * .NET 8.0
-* .NET Framework 4.0
-* .NET Framework 4.6
-* .NET Standard 2.0 (Can be used in .NET Core 2.1/3.1, .NET 5.0, .NET 6.0 application)
 
 You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Blazor, UWP, Xamarin, WinUI and .NET MAUI applications. 
 

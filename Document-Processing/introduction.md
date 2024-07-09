@@ -43,7 +43,7 @@ Description
 Essential PDF
 </td>
 <td>
-.NET Class library used to create, read, and write PDF files in [.NET Framework](https://www.syncfusion.com/document-processing/pdf-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/pdf-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/pdf-framework/uwp/) and [Xamarin](https://www.syncfusion.com/document-processing/pdf-framework/xamarin/) applications.
+.NET Class library used to create, read, and write PDF files in [.NET Framework](https://www.syncfusion.com/document-processing/pdf-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/pdf-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/pdf-framework/uwp/), [Xamarin](https://www.syncfusion.com/document-processing/pdf-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/pdf-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/pdf-framework/maui/) applications.
 </td>
 </tr>
 <tr>
@@ -51,7 +51,7 @@ Essential PDF
 Essential XlsIO
 </td>
 <td>
-.NET Class library used to create, read, edit, write, and convert Microsoft Excel files in [.NET Framework](https://www.syncfusion.com/document-processing/excel-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/excel-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/excel-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/excel-framework/xamarin/) applications.
+.NET Class library used to create, read, edit, write, and convert Microsoft Excel files in [.NET Framework](https://www.syncfusion.com/document-processing/excel-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/excel-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/excel-framework/uwp/), [Xamarin](https://www.syncfusion.com/document-processing/excel-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/excel-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/excel-framework/maui/) applications.
 </td>
 </tr>
 <tr>
@@ -59,7 +59,7 @@ Essential XlsIO
 Essential DocIO
 </td>
 <td>
-.NET Class library used to create, read, edit, and convert Microsoft Word files in [.NET Framework](https://www.syncfusion.com/document-processing/word-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/word-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/word-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/word-framework/xamarin/) applications.
+.NET Class library used to create, read, edit, and convert Microsoft Word files in [.NET Framework](https://www.syncfusion.com/document-processing/word-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/word-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/word-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/word-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/word-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/word-framework/maui/) applications.
 </td>
 </tr>
 <tr>
@@ -67,7 +67,7 @@ Essential DocIO
 Essential Presentation
 </td>
 <td>
-.NET Class library used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in [.NET Framework](https://www.syncfusion.com/document-processing/powerpoint-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin/) applications.
+.NET Class library used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in [.NET Framework](https://www.syncfusion.com/document-processing/powerpoint-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/powerpoint-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/) applications.
 </td>
 </tr>
 </table>
