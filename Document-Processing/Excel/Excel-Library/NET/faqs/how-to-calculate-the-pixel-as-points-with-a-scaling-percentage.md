@@ -1,5 +1,5 @@
 ---
-title: How to calculate pixels as points with a scaling percentage |Syncfusion.
+title: How to calculate pixels as points |Syncfusion.
 description: This page explains how to calculate pixels as points with a scaling percentage using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
