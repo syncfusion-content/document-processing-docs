@@ -1,16 +1,16 @@
 ---
-title: How to save the same Excel docuemnt after opening | Syncfusion.
-description: This page explains how to save the same Excel docuemnt after opening using Syncfusion .NET Excel library (XlsIO).
+title: How to save the edited changes in the same Excel document | Syncfusion.
+description: This page explains how to save the edited changes in the same Excel document using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to save the same Excel docuemnt after opening?
+# How to save the edited changes in the same Excel document?
 
 The [Save](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_Save) method is only supported on the framework platform. 
 
-The following code example illustrates how to save the same Excel document after opening.
+The following code example illustrates how to save the edited changes in the same Excel document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
