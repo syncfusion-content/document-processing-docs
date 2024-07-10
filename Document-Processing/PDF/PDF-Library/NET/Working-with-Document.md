@@ -1496,3 +1496,86 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Retrieve_BaseUri_from_the_existing_PDF/). 
+
+## Tracking save progress
+
+Essential PDF enables you to track the save progress through the [SaveProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_SaveProgress) event available in the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) instance.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+      // Create a new PDF document.
+      PdfDocument document = new PdfDocument();
+      // Add multiple pages to the document.
+      for (int i = 0; i < 10; i++)
+      {
+         // Add a new page.
+         PdfPage page = document.Pages.Add();
+         // Create PDF graphics for the page.
+         PdfGraphics graphics = page.Graphics;
+         // Set the font to Helvetica with size 20.
+         PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+         // Draw text on the page.
+         graphics.DrawString($"This is page {i + 1}", font, PdfBrushes.Black, new PointF(0, 0));
+      }
+      // Subscribe to the SaveProgress event.
+      document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
+      // Create a file stream to save the PDF document.
+      using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+      {
+         // Save the PDF document to the file stream.
+         document.Save(outputFileStream);
+      }
+      // Close the document.
+      document.Close(true);
+
+      // Event handler for the SaveProgress event.
+      void document_SaveProgress(object sender, ProgressEventArgs arguments)
+      {
+         // Output the current progress of the save operation.
+         Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total));
+      }      
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+      Module Program
+         Sub Main()
+            ' Create a new PDF document.
+            Dim document As New PdfDocument()
+            ' Add multiple pages to the document.
+            For i As Integer = 0 To 9
+                  ' Add a new page.
+                  Dim page As PdfPage = document.Pages.Add()
+                  ' Create PDF graphics for the page.
+                  Dim graphics As PdfGraphics = page.Graphics
+                  ' Set the font to Helvetica with size 20.
+                  Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 20)
+                  ' Draw text on the page.
+                  graphics.DrawString(String.Format("This is page {0}", i + 1), font, PdfBrushes.Black, New PointF(0, 0))
+            Next
+            ' Subscribe to the SaveProgress event.
+            AddHandler document.SaveProgress, AddressOf document_SaveProgress
+            ' Create a file stream to save the PDF document.
+            Using outputFileStream As New FileStream(Path.GetFullPath("../../../Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite)
+                  ' Save the PDF document to the file stream.
+                  document.Save(outputFileStream)
+            End Using
+            ' Close the document.
+            document.Close(True)
+         End Sub
+
+         ' Event handler for the SaveProgress event.
+         Private Sub document_SaveProgress(ByVal sender As Object, ByVal arguments As ProgressEventArgs)
+            ' Output the current progress of the save operation.
+            Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total))
+         End Sub
+      End Module
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Create-a-PDF-document-with-save-progress/.NET/PDF-document-with-save-progress). 
