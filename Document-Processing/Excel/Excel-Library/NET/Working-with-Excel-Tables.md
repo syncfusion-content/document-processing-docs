@@ -515,6 +515,8 @@ The following screenshot represents generated Excel file with custom table style
 
 ![custom table style](Working-with-Pivot-Tables_images/Working-with-Tables_img1.jpg)
 
+N> The [Tablestyles](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITableStyles.html) API only retrieves custom table styles.
+
 ## Insert or remove columns in a table
 
 [IListObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html) is a collection of columns, whereas a single column is represented by an instance of [IListObjectColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjectColumn.html). XlsIO supports to insert or remove columns from the table using worksheet, as follows.
