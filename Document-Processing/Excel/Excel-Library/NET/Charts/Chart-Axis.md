@@ -253,7 +253,6 @@ chart.SecondaryValueAxis.MinimumValue = 46.5
 {% endtabs %}
 
 N> 1) The [MinimumValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_MinimumValue) and [MaximumValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_MaximumValue) properties can only be read when they are explicitly set; otherwise, the default value of 0 is returned. This is the behavior of XlsIO.
-
 N> 2) When the [IsAutoMax](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_IsAutoMax) and [IsAutoMin](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html#Syncfusion_XlsIO_IChartValueAxis_IsAutoMin) properties are set to true, the chart automatically determines its default maximum and minimum values.
 
 ### Gridline Visibility

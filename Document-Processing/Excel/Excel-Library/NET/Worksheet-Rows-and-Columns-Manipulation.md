@@ -574,7 +574,6 @@ End Using
 {% endtabs %}
 
 N> 1) Row and Column indexes are "one based".
-
 N> 2) The [Rows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Rows) and [Columns](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Columns) API contains only the used rows and columns collection. So, when you access a row or column based on an index, it will use the index as a position in the rows and columns collection.
 
 There is an alternative way to auto-fit row or column by accessing the row or column, which is shown in the following code snippet.
