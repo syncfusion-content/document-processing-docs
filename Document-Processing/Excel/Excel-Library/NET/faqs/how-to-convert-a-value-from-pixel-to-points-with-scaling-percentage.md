@@ -1,14 +1,14 @@
 ---
 title: How to convert a value from pixel to points |Syncfusion.
-description: This page explains how to convert a value from pixel to points along with scaling percentage using Syncfusion .NET Excel library (XlsIO).
+description: This page explains how to convert a value from pixel to points with scaling percentage using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert a value from pixel to points along with scaling percentage?
+# How to convert a value from pixel to points with scaling percentage?
 
-The following code example illustrates how to convert a value from pixel to points along with scaling percentage.
+The following code example illustrates how to convert a value from pixel to points with scaling percentage.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
