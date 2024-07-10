@@ -1497,9 +1497,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Retrieve_BaseUri_from_the_existing_PDF/). 
 
-## PDF Save Progress
+## Tracking save progress
 
-Essential PDF allows you to save a PDF document using [SaveProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_SaveProgress) event of [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class.
+Essential PDF enables you to track the save progress through the [SaveProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_SaveProgress) event available in the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) instance.
 
 {% tabs %}
 
