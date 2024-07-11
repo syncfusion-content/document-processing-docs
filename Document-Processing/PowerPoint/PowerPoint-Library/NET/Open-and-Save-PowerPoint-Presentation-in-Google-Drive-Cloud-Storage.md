@@ -105,7 +105,7 @@ public async Task<IActionResult> EditDocument()
 {% endhighlight %}
 {% endtabs %}
 
-### Download file from Google Dirve cloud storage
+### Download file from Google Drive cloud storage
 
 This is the helper method to download Presentation from Google Drive cloud storage.
 
