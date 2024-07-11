@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Sorting Data
+# Sorting Data in Excel Document
 
 A range of cells in Excel worksheet can be sorted based on data in one or more columns. Following types of sorting is supported in XlsIO:
 

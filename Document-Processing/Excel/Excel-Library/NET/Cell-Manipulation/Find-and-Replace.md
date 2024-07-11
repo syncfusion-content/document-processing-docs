@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Find and Replace
+# Find and Replace in Excel Document
 
 **Find**
 

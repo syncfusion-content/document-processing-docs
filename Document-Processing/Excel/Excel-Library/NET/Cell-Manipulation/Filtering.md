@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Filtering Data
+# Filtering Data in Excel Document
 
 Using [AutoFilters](https://support.office.com/en-US/article/Filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e), data can be filtered to enable quick and easy way to find and work with a subset of data in a range of cells. When the data is filtered, entire rows are hidden if values in one or more columns does not meet the filtering criteria. The following are the types of filters that can be used in XlsIO.
 
@@ -360,7 +360,7 @@ A complete working example to apply dynamic filter on Excel data in C# is presen
 
 Color Filter can be used to filter data based on the color applied to the cell or the color applied to the text in the cell. 
 
-The following code example illsutrates how to apply color filter based on cell color (fill color applied to the cell).
+The following code example illustrates how to apply color filter based on cell color (fill color applied to the cell).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

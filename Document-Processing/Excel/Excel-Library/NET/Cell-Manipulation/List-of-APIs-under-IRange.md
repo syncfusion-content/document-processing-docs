@@ -106,7 +106,7 @@ End Using
 
 ## Boolean
 
-As the name says, [Boolean](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Boolean) property gets or sets the boolean value in a worksheet range. The following code exmaple illustrates this.
+As the name says, [Boolean](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Boolean) property gets or sets the boolean value in a worksheet range. The following code example illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

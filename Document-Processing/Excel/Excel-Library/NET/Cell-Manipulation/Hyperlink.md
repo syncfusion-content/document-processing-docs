@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Hyperlink
+# Hyperlink in Excel Document
 
 ## Create Hyperlink
 
