@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert HTML to PDF file in Azure Functions on Windows
 
-As the Azure Windows platform is a Sandboxed environment, the default HTML rendering engine Blink used in our HTML to PDF conversion is incompatible due to GDI Limitations. It is recommended that you use [Azure web applications in the Linux container.](Convert-HTML-to-PDF-in-Azure-App-Service-Linux.md) For converting HTML to PDF in Azure Functions on Windows you can use the following approach that fit your requirement,
+As the Azure Windows platform is a Sandbox environment, the default HTML rendering engine Blink used in our HTML to PDF conversion is incompatible due to GDI Limitations. It is recommended that you use [Azure functions in Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux) For converting HTML to PDF in Azure Functions on Windows you can use the following approach that fit your requirement,
 
 * [CefSharp](https://www.nuget.org/packages/CefSharp.OffScreen.NETCore/119.4.30) - this open-source library comes under a [BSD](https://github.com/cefsharp/CefSharp/blob/master/README.md) license.
 
@@ -16,14 +16,14 @@ As the Azure Windows platform is a Sandboxed environment, the default HTML rende
 
 ## Steps to convert HTML to PDF file in Azure Functions on Windows using CefSharp
 
-Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure_images/Azure-function/AzureFunctions1.png)
+Step 1: Create the Azure functions project.
+![Create the Azure functions project.](Azure_images/Azure-function/AzureFunctions1.png)
 
 Step 2: Create a project name and select the location.
 ![Project naming](Azure_images/Azure-function/AzureFunctions2.png)
 
-Step 3: Select the function worker as .NET 6.0(Long-term support), and the selected HTTP triggers as follows. 
-![Convert HTMLToPDF Azure Functions Step3](Azure_images/Azure-function/AzureFunctions3.png)
+Step 3: Select the function worker as .NET 6.0 isolated (Long-term support), and the selected HTTP triggers as follows. 
+![Convert HTMLToPDF Azure Functions Step3](Azure_images/Azure-function/AzureFunctions5.png)
 
 Step 4: Install the [Syncfusion.HtmlToPdfConverter.Cef.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Cef.Net.Windows) NuGet package to reference your project using the [nuget.org](https://www.nuget.org/).
 ![NuGet package installation](Azure_images/Azure-app-service-windows/Nuget_Manager-Console.png)
@@ -35,8 +35,9 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.HtmlConverter;
-using Syncfusion.Pdf;
+    using Syncfusion.HtmlConverter;
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
 
 {% endhighlight %}
 {% endtabs %}
@@ -46,85 +47,69 @@ Step 6: Add the following code example in the **Run** method of the **Function1*
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-[FunctionName("Function1")]
-public static async Task<HttpResponseMessage> Run(
-    [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
-    ILogger log)
-{
-    MemoryStream ms = new MemoryStream();
-    try
+    [FunctionName("Function1")]
+    public static async Task<HttpResponseMessage> Run(
+        [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+        ILogger log)
     {
-        //Initialize HTML to PDF converter.
-        HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Cef);
-        CefConverterSettings settings = new CefConverterSettings();
-        //Assign WebKit settings to HTML converter.
-        htmlConverter.ConverterSettings = settings;
-        //Convert URL to PDF.
-        PdfDocument document = htmlConverter.Convert("https://www.google.com");
+        MemoryStream ms = new MemoryStream();
+        try
+        {
+            //Initialize HTML to PDF converter.
+            HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Cef);
+            CefConverterSettings settings = new CefConverterSettings();
+            //Assign WebKit settings to HTML converter.
+            htmlConverter.ConverterSettings = settings;
+            //Convert URL to PDF.
+            PdfDocument document = htmlConverter.Convert("https://www.google.com/");
+            //Save and close the PDF document.
+            document.Save(ms);
+            document.Close();
+            ms.Position = 0;
+        }
 
-        //Save and close the PDF document.
-        document.Save(ms);
-        document.Close();
-        ms.Position = 0;
+        catch (Exception ex)
+        {
+            //Create a new PDF document.
+            PdfDocument document = new PdfDocument();
+            //Add a page to the document.
+            PdfPage page = document.Pages.Add();
+            //Create PDF graphics for the page.
+            PdfGraphics graphics = page.Graphics;
+
+            //Set the standard font.
+            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 5);
+            //Draw the text.
+            graphics.DrawString(ex.ToString(), font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
+
+            //Creating the stream object.
+            ms = new MemoryStream();
+            //Save the document into memory stream.
+            document.Save(ms);
+            //Close the document.
+            document.Close(true);
+            ms.Position = 0;
+        }
+        HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+        response.Content = new ByteArrayContent(ms.ToArray());
+        response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
+        {
+            FileName = "Sample.pdf"
+        };
+        response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+        return response;
     }
-
-    catch (Exception ex)
-    {
-        //Create a new PDF document.
-        PdfDocument document = new PdfDocument();
-        //Add a page to the document.
-        PdfPage page = document.Pages.Add();
-        //Create PDF graphics for the page.
-        PdfGraphics graphics = page.Graphics;
-
-        //Set the standard font.
-        PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 5);
-        //Draw the text.
-        graphics.DrawString(ex.ToString(), font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
-
-        //Creating the stream object.
-        ms = new MemoryStream();
-        //Save the document into memory stream.
-        document.Save(ms);
-        //Close the document.
-        document.Close(true);
-        ms.Position = 0;
-    }
-    HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
-    response.Content = new ByteArrayContent(ms.ToArray());
-    response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
-    {
-        FileName = "Sample.pdf"
-    };
-    response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
-    return response;
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Copy the OpenSSL assemblies and paste them into the **runtimes/win-x64/native** folder containing the HTML_to_PDF_Azure_Functions.csproj file.
-
-N> The OpenSSL libraries can be installed by downloading their setup from this [link.](https://www.syncfusion.com/downloads/support/directtrac/general/ze/OPENSSL-798051511)
-
-![Right-click the project and select the publish option](Azure_images/Azure-function/runtimes.png)
-
-Step 8: Set **Copy if newer** for all the OpenSSL assemblies.
-![Right-click the project and select the publish option](Azure_images/Azure-function/copy_if_newer.png)
+Step 7: Steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows#Steps-to-publish-as-azure-function-on-windows) as Azure Function on Windows.
 
 Step 8: Open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
 ![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
 
-Step 9: Open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
-![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
 
-Step 10: Right-click the project and select the Publish option. Create the publish profile to target Azure app service windows.
-
-Step 11: After completing the publish profile setup, click the publish.
-
-Step 12: Publish will be succeeded and the published webpage will open in the browser. Click ExportToPDF button to perform the conversion.
-
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure-Function-Windows-CefSharp).
 
 
 ## Steps to convert HTML to PDF file in Azure Functions on Windows using legacy WebKit
@@ -225,6 +210,10 @@ N> The OpenSSL libraries can be installed by downloading their setup from this [
 Step 8: Set **Copy if newer** for all the OpenSSL assemblies.
 ![Right-click the project and select the publish option](Azure_images/Azure-function/copy_if_newer.png)
 
+Step 9: Steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows#Steps-to-publish-as-azure-function-on-windows) as Azure Function on Windows.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure-Functions(Windows)).
+
 ## Steps to publish as Azure Function on Windows 
 
 Step 1: Right-click the project and select Publish. Then, create a new profile in the Publish Window.
@@ -254,4 +243,3 @@ Step 8: Now, Publish has succeeded.
 Step 9: Now, go to the Azure portal and select App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into a new browser tab. You will get a PDF document as follows. 
 ![Output document](Azure_images/Azure-function/Output.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure-Functions(Windows)).

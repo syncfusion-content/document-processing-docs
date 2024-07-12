@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert HTML to PDF file in Azure App Service on Windows
 
-As the Azure Windows platform is a Sandboxed environment, the default HTML rendering engine Blink used in our HTML to PDF conversion is incompatible due to GDI Limitations. It is recommended that you use [Azure web applications in the Linux container.](Convert-HTML-to-PDF-in-Azure-App-Service-Linux.md) For converting HTML to PDF in Azure Windows you can use the following approach that fit your requirement,
+As the Azure Windows platform is a Sandboxed environment, the default HTML rendering engine Blink used in our HTML to PDF conversion is incompatible due to GDI Limitations. It is recommended that you use [Azure web applications in the Linux container.](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux) For converting HTML to PDF in Azure Windows you can use the following approach that fit your requirement,
 
 * [CefSharp](https://www.nuget.org/packages/CefSharp.OffScreen.NETCore/119.4.30) - this open-source library comes under a [BSD](https://github.com/cefsharp/CefSharp/blob/master/README.md) license.
 
@@ -53,8 +53,8 @@ Step 6: Include the following namespaces in *HomeController.cs*.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.HtmlConverter;
-using Syncfusion.Pdf;
+    using Syncfusion.HtmlConverter;
+    using Syncfusion.Pdf;
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,35 +64,36 @@ Step 7: Add a new action method named ConvertToPdf in the HomeController.cs file
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-public IActionResult ConvertToPdf()
-{
-    //Initialize HTML to PDF converter.
-    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Cef);
-    CefConverterSettings cefConverterSettings = new CefConverterSettings();
-    //Set Blink viewport size.
-    cefConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
-    //Assign Blink converter settings to HTML converter.
-    htmlConverter.ConverterSettings = cefConverterSettings;
-    //Convert URL to PDF document.
-    PdfDocument document = htmlConverter.Convert("https://www.google.com");
-    //Create memory stream.
-    MemoryStream stream = new MemoryStream();
-    //Save and close the document. 
-    document.Save(stream);
-    document.Close();
-    return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
-}
+    public IActionResult ConvertToPdf()
+    {
+        //Initialize HTML to PDF converter.
+        HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Cef);
+        CefConverterSettings cefConverterSettings = new CefConverterSettings();
+        //Set Blink viewport size.
+        cefConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
+        //Assign Blink converter settings to HTML converter.
+        htmlConverter.ConverterSettings = cefConverterSettings;
+        //Convert URL to PDF document.
+        PdfDocument document = htmlConverter.Convert("https://www.google.com");
+        //Create memory stream.
+        MemoryStream stream = new MemoryStream();
+        //Save and close the document. 
+        document.Save(stream);
+        document.Close();
+        return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
+    }
 
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Right-click the project and select the Publish option. Create the publish profile to target Azure app service windows.
+Step 8: Steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows#steps-to-publish-as-azure-app-service-on-windows) as Azure App Service on Windows 
 
 Step 9: Open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
 ![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
 
 Step 10: After completing the publish profile setup, click the publish.
+
 Step 11: Publish will be succeeded and the published webpage will open in the browser. Click ExportToPDF button to perform the conversion.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure%20App%20Service-Windows-CefSharp).
@@ -137,8 +138,8 @@ Step 6: Include the following namespaces in *HomeController.cs*.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.HtmlConverter;
-using Syncfusion.Pdf;
+    using Syncfusion.HtmlConverter;
+    using Syncfusion.Pdf;
 
 {% endhighlight %}
 {% endtabs %}
@@ -148,17 +149,17 @@ Step 7: Add a new action method named ExportToPDF in the HomeController.cs file 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-public IActionResult ExportToPDF() 
-{
-    //Initialize HTML to PDF converter. 
-    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.WebKit);         
-    //Convert URL to PDF.
-    PdfDocument document = htmlConverter.Convert("https://www.google.com");
-    //Saving the PDF to the MemoryStream.
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream);
-    return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
-}
+    public IActionResult ExportToPDF() 
+    {
+        //Initialize HTML to PDF converter. 
+        HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.WebKit);         
+        //Convert URL to PDF.
+        PdfDocument document = htmlConverter.Convert("https://www.google.com");
+        //Saving the PDF to the MemoryStream.
+        MemoryStream stream = new MemoryStream();
+        document.Save(stream);
+        return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -171,6 +172,11 @@ N> The OpenSSL libraries can be installed by downloading their setup from this [
 
 Step 9: Set **Copy if newer** for all the OpenSSL assemblies.
 ![Right-click the project and select the publish option](Azure_images/Azure-app-service-windows/copy_if_newer.png)
+
+Step 10: Steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows#steps-to-publish-as-azure-app-service-on-windows) as Azure App Service on Windows.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure-app-service(Windows)).
+
 
 ## Steps to publish as Azure App Service on Windows 
 
@@ -210,4 +216,3 @@ Step 11: Now, the published webpage will open in the browser.
 Step 12: Select a PDF document and click **Export to PDF** to create a PDF document. You will get the output PDF document as follows.
 ![Create PDF document in Azure App Service on Windows](Azure_images/Azure-app-service-windows/Output.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure-app-service(Windows)).
