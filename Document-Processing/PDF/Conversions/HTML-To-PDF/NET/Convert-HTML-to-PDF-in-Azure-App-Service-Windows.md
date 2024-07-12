@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert HTML to PDF file in Azure App Service on Windows
 
-As the Azure Windows platform is a Sandboxed environment, the default HTML rendering engine Blink used in our HTML to PDF conversion is incompatible due to GDI Limitations. It is recommended that you use [Azure web applications in the Linux container.](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux) For converting HTML to PDF in Azure Windows you can use the following approach that fit your requirement,
+As the Azure Windows platform is a Sandbox environment, the default HTML rendering engine Blink used in our HTML to PDF conversion is incompatible due to GDI Limitations. It is recommended that you use [Azure web applications in the Linux container.](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux) For converting HTML to PDF in Azure Windows you can use the following approach that fit your requirement,
 
 * [CefSharp](https://www.nuget.org/packages/CefSharp.OffScreen.NETCore/119.4.30) - this open-source library comes under a [BSD](https://github.com/cefsharp/CefSharp/blob/master/README.md) license.
 
