@@ -439,6 +439,8 @@ A complete working example to layout a pivot table in C# is present on [this Git
 
 To learn more about pivot table layout with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/pivot-layout)
 
+N> Based on Excel behavior, when the **Layout** method is invoked, it automatically sets the IsRefreshOnLoad property to false. To ensure data refresh on load, it's recommended to set **IsRefreshOnLoad** to true after calling Layout.
+
 ## Refresh
 
 When you update the pivot table data source, you should refresh the pivot table manually to load the new data source into it. Essential XlsIO supports this refreshing of pivot table data source through [IsRefreshOnLoad](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotCacheImpl_IsRefreshOnLoad) property of [PivotCacheImpl](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html).

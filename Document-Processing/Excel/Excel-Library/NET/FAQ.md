@@ -89,3 +89,5 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to check whether the loaded file is an Excel file?](faqs/how-to-check-whether-the-loaded-file-is-an-excel-file)
 * [How to insert a picture into a cell in an Excel document?](faqs/how-to-insert-a-picture-into-a-cell-in-an-excel-document)
 * [How to get the RGB color value for the applied cell color?](faqs/how-to-get-the-rgb-color-value-for-the-applied-cell-color)
+* [How to convert a value from pixel to points with scaling percentage?](faqs/how-to-convert-a-value-from-pixel-to-points-with-scaling-percentage)
+* [How to save the edited changes in the same Excel document?](faqs/how-to-save-the-edited-chages-in-the-same-excel-document)
