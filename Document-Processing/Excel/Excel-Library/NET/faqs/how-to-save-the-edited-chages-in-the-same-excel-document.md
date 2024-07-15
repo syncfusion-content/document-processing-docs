@@ -28,7 +28,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Set text in the cell
-    worksheet["B1"].Text = "XlsIO";
+    worksheet["B1"].Text = "Text";
 
     //Close the input stream before writing
     fileStream.Close();
@@ -56,7 +56,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Set text in the cell
-    worksheet["B1"].Text = "XlsIO"; 
+    worksheet["B1"].Text = "Text"; 
 
     //Save the workbook to the same file
     workbook.Save();
@@ -76,7 +76,7 @@ Using excelEngine As New ExcelEngine()
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
     'Set text in the cell
-    worksheet("B1").Text = "XlsIO"
+    worksheet("B1").Text = "Text"
 
     'Save the workbook to the same file
     workbook.Save()
