@@ -128,7 +128,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to find all occurrences of text in a worksheet with different find options in C# is present on [this GitHub page]().
+A complete working example to find all occurrences of text in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Find/NET%20Standard/Find).
 
 **Replace** 
 
@@ -227,4 +227,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to replace all occurrences of given string in a worksheet with different find options in C# is present on [this GitHub page]().
+A complete working example to replace all occurrences of given string in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Replace/NET%20Standard/Replace).
