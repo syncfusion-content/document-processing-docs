@@ -119,7 +119,7 @@ public async Task<MemoryStream> GetDocumentFromDropBox()
     //Define the access token for authentication with the Dropbox API
     var accessToken = "Access_Token";
 
-    //Define the file path in Dropbox where the file is located
+    //Define the file path in Dropbox where the file is located. For ex: "/Template.docx" or "/Apps/Template.docx"
     var filePathInDropbox = "FilePath";
 
     try
@@ -461,13 +461,16 @@ public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
     //Define the access token for authentication with the Dropbox API
     var accessToken = "Access_Token";
 
+    //Define the file path in Dropbox where the file should be saved. For ex: "/Template.docx" or "/Apps/Template.docx"
+    var filePathInDropbox = "FilePath";
+
     try
     {
         //Create a new DropboxClient instance using the provided access token
         using (var dbx = new DropboxClient(accessToken))
         {
             //Upload the file to Dropbox
-            var uploadResult = await dbx.Files.UploadAsync("FilePath", WriteMode.Overwrite.Instance, body: new MemoryStream(stream.ToArray()));
+            var uploadResult = await dbx.Files.UploadAsync(filePathInDropbox, WriteMode.Overwrite.Instance, body: new MemoryStream(stream.ToArray()));
         }
         Console.WriteLine("Upload completed successfully");
     }
