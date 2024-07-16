@@ -25,6 +25,8 @@ Step 2: Create a project name and select the location.
 Step 3: Select the function worker as .NET 6.0 isolated (Long-term support), and the selected HTTP triggers as follows. 
 ![Convert HTMLToPDF Azure Functions Step3](Azure_images/Azure-function/AzureFunctions5.png)
 
+N> We have ensured the conversion in Azure functions isolated app and the conversion supports Azure functions isolated app only. The normal Azure Function app has a limitation of copying the runtime files at publish.
+
 Step 4: Install the [Syncfusion.HtmlToPdfConverter.Cef.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Cef.Net.Windows) NuGet package to reference your project using the [nuget.org](https://www.nuget.org/).
 ![NuGet package installation](Azure_images/Azure-app-service-windows/Nuget_Manager-Console.png)
 
