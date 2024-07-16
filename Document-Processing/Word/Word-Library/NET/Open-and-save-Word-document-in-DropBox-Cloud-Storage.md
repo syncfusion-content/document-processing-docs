@@ -10,7 +10,7 @@ documentation: UG
 
 ## Prerequisites  
 
-* Create a Dropbox API App, by following the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+* Create a DropBox API App, by following the official documentation provided by DropBox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the DropBox Developer website and using their App Console to set up your API app. This app will allow you to interact with DropBox programmatically, enabling secure access to files and data.
 
 ## Open Word document from DropBox Cloud Storage
 
