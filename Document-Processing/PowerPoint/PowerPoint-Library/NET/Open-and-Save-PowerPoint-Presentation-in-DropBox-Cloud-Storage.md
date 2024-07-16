@@ -146,7 +146,7 @@ public async Task<MemoryStream> GetDocumentFromDropBox()
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/DropBox-Cloud-Storage/Open-PowerPoint-document).
 
 By executing the program, you will get the **Presentation** as follows.
 
@@ -304,7 +304,7 @@ public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/DropBox-Cloud-Storage/Save-PowerPoint-document).
 
 By executing the program, you will get the **Presentation** as follows.
 
