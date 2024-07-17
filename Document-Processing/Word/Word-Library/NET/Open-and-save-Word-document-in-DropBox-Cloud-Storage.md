@@ -200,7 +200,7 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **save a Word document to DropBox Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **save a Word document to DropBox Cloud Storage**. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
