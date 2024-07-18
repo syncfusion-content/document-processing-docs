@@ -33,10 +33,10 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  
 {% highlight CSHTML %}
-@{Html.BeginForm("CreateDocument", "Home", FormMethod.Get);
+@{Html.BeginForm("ConvertExceltoImage", "Home", FormMethod.Get);
     {
         <div>
-            <input type="submit" value="Create Document" style="width:150px;height:27px" />
+            <input type="submit" value="Convert Excel to Image" style="width:180px;height:27px" />
         </div>
     }
     Html.EndForm();
