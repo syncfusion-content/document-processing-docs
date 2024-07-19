@@ -795,7 +795,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Essential PDF allows you to set various PDF viewer preferences to be used when the generated PDF document is displayed in a PDF reader application.
 
-You can hide the menu bar and toolbar by enabling [HideMenubar](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html#Syncfusion_Pdf_PdfViewerPreferences_HideMenubar) and [HideToolbar](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html#Syncfusion_Pdf_PdfViewerPreferences_HideToolbar) properties of [PdfViewerPreferences](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html) respectively. This is illustrated in the following code sample.
+You can hide the menu bar and toolbar by enabling [`HideMenubar`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html#Syncfusion_Pdf_PdfViewerPreferences_HideMenubar) and [`HideToolbar`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html#Syncfusion_Pdf_PdfViewerPreferences_HideToolbar) properties of [PdfViewerPreferences](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html) respectively. This is illustrated in the following code sample.
 
 {% tabs %}
 
