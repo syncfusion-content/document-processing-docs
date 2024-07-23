@@ -3411,6 +3411,403 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
 
+--------------------
+
+## Choose default value for radio button field
+
+You can choose default value for radio button field field using [SelectedItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedItem) or [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedIndex) properties of [PdfLoadedRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html) class. Please refer the below code snippet to fill the radio button field in an existing PDF document. 
+
+### Method 1:
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Create a new PDF document
+    PdfDocument document = new PdfDocument();
+    // Add a new page to the PDF document
+    PdfPage page = document.Pages.Add();
+    // Create a new radio button list field named "employeesRadioList"
+    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+    // Create a new radio button item for "Male"
+    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+    // Set the bounds for the radio button
+    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
+    // Create a font
+    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
+    // Draw the label "Male"
+    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem1); 
+    // Create a new radio button item for "Female"
+    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+    // Set the bounds for the radio button
+    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+    // Draw the label "Female"
+    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem2);
+    // Create a new radio button item for "Transgender"
+    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
+    // Set the bounds for the radio button
+    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
+    // Draw the label "Transgender"
+    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem3);
+    // Add the radio button list to the form
+    document.Form.Fields.Add(employeesRadioList);
+    // Save the document to a memory stream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream);
+    // Uncomment the line below to save the PDF to a file
+    // File.WriteAllBytes("FormOutput.pdf", stream.ToArray());
+    // Load the saved document from the memory stream
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+    // Get the radio button list field from the loaded document
+    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
+    // Loop through each item in the radio button list
+    for (int j = 0; j < radiobuttonField.Items.Count; j++)
+    {
+        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
+        
+        // Check the radio button if its value is "Female"
+        if (radioButtonFieldItem.Value == "Female")
+        {
+            radioButtonFieldItem.Checked = true;
+        }
+    }
+    // Save the modified document to a new memory stream
+    MemoryStream ms = new MemoryStream();
+    loadedDocument.Save(ms);
+    // Write the modified document to a file
+    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray());
+    // Close the loaded document
+    loadedDocument.Close(true);
+    // Close the original document
+    document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Create a new PDF document
+    PdfDocument document = new PdfDocument();
+    // Add a new page to the PDF document
+    PdfPage page = document.Pages.Add();
+    // Create a new radio button list field named "employeesRadioList"
+    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+    // Create a new radio button item for "Male"
+    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+    // Set the bounds for the radio button
+    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
+    // Create a font
+    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
+    // Draw the label "Male"
+    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem1); 
+    // Create a new radio button item for "Female"
+    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+    // Set the bounds for the radio button
+    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+    // Draw the label "Female"
+    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem2);
+    // Create a new radio button item for "Transgender"
+    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
+    // Set the bounds for the radio button
+    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
+    // Draw the label "Transgender"
+    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem3);
+    // Add the radio button list to the form
+    document.Form.Fields.Add(employeesRadioList);
+    // Save the document.
+    document.Save("FormOutput.pdf");
+    // Load the saved document.
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("FormOutput.pdf");
+    // Get the radio button list field from the loaded document
+    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
+    // Loop through each item in the radio button list
+    for (int j = 0; j < radiobuttonField.Items.Count; j++)
+    {
+        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
+        
+        // Check the radio button if its value is "Female"
+        if (radioButtonFieldItem.Value == "Female")
+        {
+            radioButtonFieldItem.Checked = true;
+        }
+    }
+    // Save the modified document.
+    loadedDocument.Save("FormOutput1.pdf");
+    // Close the loaded document
+    loadedDocument.Close(true);
+    // Close the original document
+    document.Close(true);
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Create a new PDF document
+    Dim document As New PdfDocument()
+    ' Add a new page to the PDF document
+    Dim page As PdfPage = document.Pages.Add()
+    ' Create a new radio button list field named "employeesRadioList"
+    Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
+    ' Create a new radio button item for "Male"
+    Dim radioItem1 As New PdfRadioButtonListItem("Male")
+    ' Set the bounds for the radio button
+    radioItem1.Bounds = New RectangleF(90, 203, 15, 15)
+    ' Create a font
+    Dim Font_12_Regular As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular)
+    ' Draw the label "Male"
+    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, New RectangleF(110, 204, 180, 20))
+    ' Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem1)
+    ' Create a new radio button item for "Female"
+    Dim radioItem2 As New PdfRadioButtonListItem("Female")
+    ' Set the bounds for the radio button
+    radioItem2.Bounds = New RectangleF(205, 203, 15, 15)
+    ' Draw the label "Female"
+    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, New RectangleF(225, 204, 180, 20))
+    ' Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem2)
+    ' Create a new radio button item for "Transgender"
+    Dim radioItem3 As New PdfRadioButtonListItem("Transgender")
+    ' Set the bounds for the radio button
+    radioItem3.Bounds = New RectangleF(300, 203, 15, 15)
+    ' Draw the label "Transgender"
+    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, New RectangleF(320, 204, 180, 20))
+    ' Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem3)
+    ' Add the radio button list to the form
+    document.Form.Fields.Add(employeesRadioList)
+    ' Save the document to a memory stream
+    Dim stream As New MemoryStream()
+    document.Save(stream)
+    ' Uncomment the line below to save the PDF to a file
+    ' File.WriteAllBytes("FormOutput.pdf", stream.ToArray())
+    ' Load the saved document from the memory stream
+    Dim loadedDocument As New PdfLoadedDocument(stream)
+    ' Get the radio button list field from the loaded document
+    Dim radiobuttonField As PdfLoadedRadioButtonListField = TryCast(loadedDocument.Form.Fields("employeesRadioList"), PdfLoadedRadioButtonListField)
+    ' Loop through each item in the radio button list
+    For j As Integer = 0 To radiobuttonField.Items.Count - 1
+    Dim radioButtonFieldItem As PdfLoadedRadioButtonItem = TryCast(radiobuttonField.Items(j), PdfLoadedRadioButtonItem)
+    ' Check the radio button if its value is "Female"
+    If radioButtonFieldItem.Value = "Female" Then
+        radioButtonFieldItem.Checked = True
+    End If
+    Next
+    ' Save the modified document to a new memory stream
+    Dim ms As New MemoryStream()
+    loadedDocument.Save(ms)
+    ' Write the modified document to a file
+    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray())
+    ' Close the loaded document
+    loadedDocument.Close(True)
+    ' Close the original document
+    document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+### Method 2:
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Create a new PDF document
+    PdfDocument document = new PdfDocument();
+    // Add a new page to the PDF document
+    PdfPage page = document.Pages.Add();
+    // Create a new radio button list field named "employeesRadioList"
+    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+    // Create a new radio button item for "Male"
+    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+    // Set the bounds for the radio button
+    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
+    // Create a font
+    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
+    // Draw the label "Male"
+    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem1); 
+    // Create a new radio button item for "Female"
+    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+    // Set the bounds for the radio button
+    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+    // Draw the label "Female"
+    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem2);
+    // Create a new radio button item for "Transgender"
+    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
+    // Set the bounds for the radio button
+    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
+    // Draw the label "Transgender"
+    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem3);
+    // Add the radio button list to the form
+    document.Form.Fields.Add(employeesRadioList);
+    // Save the document to a memory stream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream);
+    // Uncomment the line below to save the PDF to a file
+    // File.WriteAllBytes("FormOutput.pdf", stream.ToArray());
+    // Load the saved document from the memory stream
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+    // Get the radio button list field from the loaded document
+    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
+    // Loop through each item in the radio button list
+    for (int j = 0; j < radiobuttonField.Items.Count; j++)
+    {
+        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
+        // set the value for the radio button field
+        radiobuttonField.SelectedIndex = 1;
+    }
+    // Save the modified document to a new memory stream
+    MemoryStream ms = new MemoryStream();
+    loadedDocument.Save(ms);
+    // Write the modified document to a file
+    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray());
+    // Close the loaded document
+    loadedDocument.Close(true);
+    // Close the original document
+    document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Create a new PDF document
+    PdfDocument document = new PdfDocument();
+    // Add a new page to the PDF document
+    PdfPage page = document.Pages.Add();
+    // Create a new radio button list field named "employeesRadioList"
+    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+    // Create a new radio button item for "Male"
+    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+    // Set the bounds for the radio button
+    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
+    // Create a font
+    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
+    // Draw the label "Male"
+    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem1); 
+    // Create a new radio button item for "Female"
+    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+    // Set the bounds for the radio button
+    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+    // Draw the label "Female"
+    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem2);
+    // Create a new radio button item for "Transgender"
+    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
+    // Set the bounds for the radio button
+    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
+    // Draw the label "Transgender"
+    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
+    // Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem3);
+    // Add the radio button list to the form
+    document.Form.Fields.Add(employeesRadioList);
+    // Save the document.
+    document.Save("FormOutput.pdf");
+    // Load the saved document.
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("FormOutput.pdf");
+    // Get the radio button list field from the loaded document
+    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
+    // Loop through each item in the radio button list
+    for (int j = 0; j < radiobuttonField.Items.Count; j++)
+    {
+        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
+        // set the value for the radio button field
+        radiobuttonField.SelectedIndex = 1;
+    }
+    // Save the modified document.
+    loadedDocument.Save("FormOutput1.pdf");
+    // Close the loaded document
+    loadedDocument.Close(true);
+    // Close the original document
+    document.Close(true);
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Create a new PDF document
+    Dim document As New PdfDocument()
+    ' Add a new page to the PDF document
+    Dim page As PdfPage = document.Pages.Add()
+    ' Create a new radio button list field named "employeesRadioList"
+    Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
+    ' Create a new radio button item for "Male"
+    Dim radioItem1 As New PdfRadioButtonListItem("Male")
+    ' Set the bounds for the radio button
+    radioItem1.Bounds = New RectangleF(90, 203, 15, 15)
+    ' Create a font
+    Dim Font_12_Regular As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular)
+    ' Draw the label "Male"
+    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, New RectangleF(110, 204, 180, 20))
+    ' Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem1)
+    ' Create a new radio button item for "Female"
+    Dim radioItem2 As New PdfRadioButtonListItem("Female")
+    ' Set the bounds for the radio button
+    radioItem2.Bounds = New RectangleF(205, 203, 15, 15)
+    ' Draw the label "Female"
+    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, New RectangleF(225, 204, 180, 20))
+    ' Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem2)
+    ' Create a new radio button item for "Transgender"
+    Dim radioItem3 As New PdfRadioButtonListItem("Transgender")
+    ' Set the bounds for the radio button
+    radioItem3.Bounds = New RectangleF(300, 203, 15, 15)
+    ' Draw the label "Transgender"
+    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, New RectangleF(320, 204, 180, 20))
+    ' Add the radio button item to the list
+    employeesRadioList.Items.Add(radioItem3)
+    ' Add the radio button list to the form
+    document.Form.Fields.Add(employeesRadioList)
+    ' Save the document to a memory stream
+    Dim stream As New MemoryStream()
+    document.Save(stream)
+    ' Uncomment the line below to save the PDF to a file
+    ' File.WriteAllBytes("FormOutput.pdf", stream.ToArray())
+    ' Load the saved document from the memory stream
+    Dim loadedDocument As New PdfLoadedDocument(stream)
+    ' Get the radio button list field from the loaded document
+    Dim radiobuttonField As PdfLoadedRadioButtonListField = TryCast(loadedDocument.Form.Fields("employeesRadioList"), PdfLoadedRadioButtonListField)
+    ' Loop through each item in the radio button list
+    For j As Integer = 0 To radiobuttonField.Items.Count - 1
+    Dim radioButtonFieldItem As PdfLoadedRadioButtonItem = TryCast(radiobuttonField.Items(j), PdfLoadedRadioButtonItem)
+    ' set the value for the radio button field
+    radiobuttonField.SelectedIndex = 1;
+    ' Save the modified document to a new memory stream
+    Dim ms As New MemoryStream()
+    loadedDocument.Save(ms)
+    ' Write the modified document to a file
+    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray())
+    ' Close the loaded document
+    loadedDocument.Close(True)
+    ' Close the original document
+    document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub]().
+
 ## Troubleshooting
 
 Form fields may appear empty in adobe reader some time due to the absence of the appearance dictionary. To resolve this, you have to enable the Adobe Reader default appearance by using the [SetDefaultAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_SetDefaultAppearance_System_Boolean_) method in [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class.
