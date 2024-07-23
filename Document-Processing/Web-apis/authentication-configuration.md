@@ -62,6 +62,8 @@ Example public key (jwtRS256_pub.pem):
  
  N> The public key provided in the example code above is for demonstration purposes only. It is recommended to generate your own RSA key pair and use your own public key in the configuration. To generate your keys, follow the steps provided in the documentation on creating a key via `ssh-keygen`.
 
+ N> The public key provided in the example code above is for demonstration purposes only. It is recommended to generate your own RSA key pair and use your own public key in the configuration. To generate your keys, follow the steps provided in the documentation on creating a key via `ssh-keygen`.
+
 **2. Install the System.IdentityModel.Tokens.Jwt NuGet package:**
 
  ```

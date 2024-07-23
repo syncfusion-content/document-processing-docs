@@ -1158,8 +1158,6 @@ document.Close(True)
 Adjusting the HTML content size in PDF is possible by using the [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of Blink HTML converter. 
 Refer to the following code snippet to adjust Blink viewport.
 
-N> The HTML converter internally uses the viewport size in points.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1911,7 +1909,7 @@ document.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Inject_custom_JavaScript_to_HTML).
 
-N> We're injecting custom JavaScript into the header tag of the input HTML/URL.
+N> Note: We're injecting custom JavaScript into the header tag of the input HTML/URL.
 
 ## Performance optimization
 
