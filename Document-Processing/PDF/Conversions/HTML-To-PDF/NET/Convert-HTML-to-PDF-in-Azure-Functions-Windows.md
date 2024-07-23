@@ -28,7 +28,7 @@ Step 3: Select the function worker as .NET 6.0 isolated (Long-term support), and
 N> We have ensured the conversion in Azure functions isolated app and the conversion supports Azure functions isolated app only. The normal Azure Function app has a limitation of copying the runtime files at publish.
 
 Step 4: Install the [Syncfusion.HtmlToPdfConverter.Cef.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Cef.Net.Windows) NuGet package to reference your project using the [nuget.org](https://www.nuget.org/).
-![NuGet package installation](Azure_images/Azure-app-service-windows/Nuget_Manager-Console.png)
+![NuGet package installation](Azure_images/Azure-function/Nuget_Manager-Console.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from the trial setup or NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application to use our components.
 
