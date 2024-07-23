@@ -87,7 +87,7 @@ Step 7: Add a new action method named ConvertToPdf in the HomeController.cs file
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows#steps-to-publish-as-azure-app-service-on-windows) as Azure App Service on Windows 
+Step 8: Refer the steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows#steps-to-publish-as-azure-app-service-on-windows) as Azure App Service on Windows 
 
 Step 9: Open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
 ![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
@@ -173,7 +173,7 @@ N> The OpenSSL libraries can be installed by downloading their setup from this [
 Step 9: Set **Copy if newer** for all the OpenSSL assemblies.
 ![Right-click the project and select the publish option](Azure_images/Azure-app-service-windows/copy_if_newer.png)
 
-Step 10: Steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows#steps-to-publish-as-azure-app-service-on-windows) as Azure App Service on Windows.
+Step 10: Refer the steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows#steps-to-publish-as-azure-app-service-on-windows) as Azure App Service on Windows.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure-app-service(Windows)).
 
