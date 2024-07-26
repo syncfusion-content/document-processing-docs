@@ -92,3 +92,4 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to convert a value from pixel to points with scaling percentage?](faqs/how-to-convert-a-value-from-pixel-to-points-with-scaling-percentage)
 * [How to save the edited changes in the same Excel document?](faqs/how-to-save-the-edited-chages-in-the-same-excel-document)
 * [How to get the frozen rows and columns in an Excel document?](faqs/how-to-get-the-frozen-rows-and-columns-in-an-excel-document)
+* [How to find duplicate values in the Excel document using formulas?](faqs/how-to-find-duplicate-values-in-the-Excel-document-using-formulas)
