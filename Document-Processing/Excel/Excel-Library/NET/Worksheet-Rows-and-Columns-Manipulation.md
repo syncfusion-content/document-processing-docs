@@ -590,7 +590,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set row height in pixels
   worksheet.SetRowHeightInPixels(2, 50);
 
-  //Get column width in pixels
+  //Set column width in pixels
   worksheet.SetColumnWidthInPixels(3, 100);
 
   //Save the workbook as stream
@@ -614,7 +614,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set row height in pixels
   worksheet.SetRowHeightInPixels(2, 50);
 
-  //Get column width in pixels
+  //Set column width in pixels
   worksheet.SetColumnWidthInPixels(3, 100);
 
   //Save the workbook
