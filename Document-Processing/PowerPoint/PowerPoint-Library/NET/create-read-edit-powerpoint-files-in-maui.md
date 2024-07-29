@@ -163,7 +163,7 @@ saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedoc
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/.NET-MAUI/Read-and-edit-presentationn).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/.NET-MAUI/Read-and-edit-presentation).
 
 ## Helper files for .NET MAUI
 
