@@ -131,7 +131,7 @@ You will receive one of the following statuses until the job is completed. Upon 
 
 ```
 {
-    "jobId": "4b2782b2-9f08-478b-98fc-4464bd219ca0",
+    "jobID": "4b2782b2-9f08-478b-98fc-4464bd219ca0",
     "status": "queued"
 }
 ```
@@ -139,7 +139,7 @@ You will receive one of the following statuses until the job is completed. Upon 
 
 ```
 {
-    "jobId": "ef0766ab-bc74-456c-8143-782e730a89df",
+    "jobID": "ef0766ab-bc74-456c-8143-782e730a89df",
     "status": "in progress"
 }
 ```
@@ -147,7 +147,7 @@ You will receive one of the following statuses until the job is completed. Upon 
 
 ```
 {
-    "jobId": "ef0766ab-bc74-456c-8143-782e730a89df",
+    "jobID": "ef0766ab-bc74-456c-8143-782e730a89df",
     "status": "errror",
     "code": "500",
     "message": "Failed to convert the document to PDF"        
