@@ -36,7 +36,7 @@ The client continuously polls the status of the job by sending a request to /sta
 
 ```
 {
-    "jobId": "6be827c5-d86d-4fe5-9bd5-c8fd5887a455",
+    "jobID": "6be827c5-d86d-4fe5-9bd5-c8fd5887a455",
     "status": "queued"
 }
 ```
@@ -44,7 +44,7 @@ The client continuously polls the status of the job by sending a request to /sta
 
 ```
 {
-    "jobId": "6be827c5-d86d-4fe5-9bd5-c8fd5887a455",
+    "jobID": "6be827c5-d86d-4fe5-9bd5-c8fd5887a455",
     "status": "in progress"
 }
 ```
@@ -52,7 +52,7 @@ The client continuously polls the status of the job by sending a request to /sta
 
 ```
 {
-    "jobId": "6be827c5-d86d-4fe5-9bd5-c8fd5887a455",
+    "jobID": "6be827c5-d86d-4fe5-9bd5-c8fd5887a455",
     "status": "errror",
     "code": "500",
     "message": "Failed to convert the document to PDF"        
