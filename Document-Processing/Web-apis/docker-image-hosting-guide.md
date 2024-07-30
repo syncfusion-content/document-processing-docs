@@ -46,7 +46,7 @@ networks:
 services:
   syncfusion.api:
     container_name: document_processing
-    image: praveen245/document-processing-apis:latest 
+    image: syncfusion/document-processing-apis:latest 
     environment:
       - SYNCFUSION_LICENSE_KEY= {Your key here}     
       - ASPNETCORE_HTTP_PORTS=8080
