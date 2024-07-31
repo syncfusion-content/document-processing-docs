@@ -97,6 +97,9 @@ Step 6: Add a new action method named CreatePDF in HomeController.cs file and in
         MemoryStream stream = new MemoryStream();
         //Save the document to the memory stream.
         document.Save(stream);
+        //Close the documet
+	    document.Close(true); 
+	    //Return the PDF file as a download
         return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Output.pdf");
     }
 
@@ -126,7 +129,7 @@ By executing the program, you will get the PDF document as follows.
 
 ![Open and save a PDF document in AWS Lambda](GettingStarted_images/Output.png)
 
-Users can download the [AWS Elastic Beanstalk]() project from GitHub.
+Users can download the [AWS Elastic Beanstalk](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSElasticBeanstalk) project from GitHub.
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core?_gl=1*7czwz1*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY4OTg0NTE0Ni4zMzguMC4xNjg5ODQ1MTQ2LjYwLjAuMA..) to explore the rich set of Syncfusion PDF library features.
 
