@@ -123,7 +123,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a digital signature using stream
 
-The following code example illustrates how to add a digital signature in the PDF document as stream using the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html) class as follows.
+The following code example illustrates how to add a digital signature in the PDF document as stream using the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class as follows.
 
 {% tabs %}
 
