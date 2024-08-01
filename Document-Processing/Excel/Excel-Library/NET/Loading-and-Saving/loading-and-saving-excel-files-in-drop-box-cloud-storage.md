@@ -1,5 +1,5 @@
 ---
-title: Loading and saving Excel document in Drop Box Cloud Storage | Syncfusion
+title: Loading and saving Excel document in Drop Box Storage | Syncfusion
 description: Explains how to load and save Excel files in Drop Box Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
