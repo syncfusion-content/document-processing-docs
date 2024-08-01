@@ -9,6 +9,9 @@ documentation: UG
 
 Essential PDF supports [merging multiple PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/merge-pdf) documents from disk and stream.
 
+Check the following video to quickly get started with merge PDF document in .NET using the PDF Library.
+{% youtube "https://www.youtube.com/watch?v=IHOgJnFyj6A" %}
+
 ## Merging multiple documents from disk and stream
 
 You can merge the multiple PDF document using [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method of [PdfDocumentBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html) class, by specifying the path of the documents in a string array.
