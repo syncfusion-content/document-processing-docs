@@ -446,3 +446,24 @@ bin\Debug\net6.0.\runtimes\osx\native
 </tr>
 </table>
 
+## System.NullReferenceException in Azure linux VM
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">System.NullReferenceException in Azure linux VM</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The problem occurs while extracting the Image from PDF without a skia sharp dependency in a Linux environment.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Installing the following Skia sharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.
+</br></br>
+Please find the NuGet link below,
+NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8</a>
+</td>
+</tr>
+</table>
