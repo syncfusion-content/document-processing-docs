@@ -123,7 +123,7 @@ public async Task<MemoryStream> GetDocumentFromDropBox()
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to load an Excel document from Dropbox Cloud Storage in ASP.NET Core is present on [this GitHub page]().
+A complete working example of how to load an Excel document from Dropbox Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Dropbox/Loading/Edit%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
@@ -388,7 +388,7 @@ public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to save an Excel document to Dropbox Cloud Storage in ASP.NET Core is present on [this GitHub page]().
+A complete working example of how to save an Excel document to Dropbox Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Dropbox/Saving/Create%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
