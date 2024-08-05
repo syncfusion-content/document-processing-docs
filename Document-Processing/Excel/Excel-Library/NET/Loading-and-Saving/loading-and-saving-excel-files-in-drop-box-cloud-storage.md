@@ -1,20 +1,20 @@
 ---
-title: Loading and saving Excel document in Drop Box Storage | Syncfusion
-description: Explains how to load and save Excel files in Drop Box Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and saving Excel document in Dropbox Storage | Syncfusion
+description: Explains how to load and save Excel files in Dropbox Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel document in Drop Box Cloud Storage
+# Loading and Saving Excel document in Dropbox Cloud Storage
 
 ## Prerequisites
 
 * Create a [Dropbox API app](https://www.dropbox.com/developers/documentation/dotnet#tutorial) using the Dropbox Developer website.
 * Use the App Console to set up your API app for secure access to Dropbox files and data.
 
-## Loading Excel document from Drop Box
+## Loading Excel document from Dropbox
 
-Steps to load an Excel document from Drop Box Cloud Storage.
+Steps to load an Excel document from Dropbox Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -54,7 +54,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from Drop Box Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from Dropbox Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -123,15 +123,15 @@ public async Task<MemoryStream> GetDocumentFromDropBox()
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to load an Excel document from Drop Box Cloud Storage in ASP.NET Core is present on [this GitHub page]().
+A complete working example of how to load an Excel document from Dropbox Cloud Storage in ASP.NET Core is present on [this GitHub page]().
 
 By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img5.png)
 
-## Saving Excel document to Drop Box
+## Saving Excel document to Dropbox
 
-Steps to save an Excel document to Drop Box Cloud Storage.
+Steps to save an Excel document to Dropbox Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -171,7 +171,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to Drop Box Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to Dropbox Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -388,7 +388,7 @@ public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to save an Excel document to Drop Box Cloud Storage in ASP.NET Core is present on [this GitHub page]().
+A complete working example of how to save an Excel document to Dropbox Cloud Storage in ASP.NET Core is present on [this GitHub page]().
 
 By executing the program, you will get the **Excel document** as follows.
 
