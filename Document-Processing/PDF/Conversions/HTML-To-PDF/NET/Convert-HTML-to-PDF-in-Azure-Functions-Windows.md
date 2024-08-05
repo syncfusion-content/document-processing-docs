@@ -105,7 +105,7 @@ Step 6: Add the following code example in the **Run** method of the **Function1*
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Refer the steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows#Steps-to-publish-as-azure-function-on-windows) as Azure Function on Windows.
+Step 7: Refer the steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows#steps-to-publish-as-azure-function-on-windows) as Azure Function on Windows.
 
 Step 8: After publish open the created web app service in the Azure portal. Go to Settings -> Configuration -> Platform settings and change the platform to 64-bit.
 ![Platform Configuration](Azure_images/Azure-app-service-windows/Configuration.png)
@@ -207,7 +207,7 @@ N> The OpenSSL libraries can be installed by downloading their setup from this [
 Step 8: Set **Copy if newer** for all the OpenSSL assemblies.
 ![Right-click the project and select the publish option](Azure_images/Azure-function/copy_if_newer.png)
 
-Step 9: Refer the steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows#Steps-to-publish-as-azure-function-on-windows) as Azure Function on Windows.
+Step 9: Refer the steps to [publish](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows#steps-to-publish-as-azure-function-on-windows) as Azure Function on Windows.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-Azure-Functions(Windows)).
 
