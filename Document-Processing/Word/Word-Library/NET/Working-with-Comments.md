@@ -264,7 +264,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Comments/Find-text-and-insert-comment).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Comments/Find-text-using-regex-and-add-comments).
 
 ## Removing Comments
 

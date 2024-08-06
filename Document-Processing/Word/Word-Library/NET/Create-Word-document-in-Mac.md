@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Create Word document on Mac OS
+# Create Word document on Mac OS 
 
 Syncfusion Essential DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in .NET Core application on Mac OS**.
 
