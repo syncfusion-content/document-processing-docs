@@ -5,7 +5,7 @@ platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# Create, read and edit a PowerPoint file in .NET MAUI
+# Create, read and edit a PowerPoint file in .NET MAUI 
 
 Syncfusion Essential Presentation is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/powerpoint-framework/maui/powerpoint-library) used to create, read, and edit PowerPoint documents programmatically without Microsoft PowerPoint or interop dependencies. Using this library, you can create a PowerPoint document in .NET MAUI.
 
@@ -163,7 +163,7 @@ saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedoc
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/.NET-MAUI/Read-and-edit-presentationn).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/.NET-MAUI/Read-and-edit-presentation).
 
 ## Helper files for .NET MAUI
 
