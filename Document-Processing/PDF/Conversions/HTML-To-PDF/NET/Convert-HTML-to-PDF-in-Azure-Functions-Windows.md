@@ -12,7 +12,6 @@ As the Azure Windows platform is a Sandbox environment, the default HTML renderi
 
 * [CefSharp](https://www.nuget.org/packages/CefSharp.OffScreen.NETCore/119.4.30) - this open-source library comes under a [BSD](https://github.com/cefsharp/CefSharp/blob/master/README.md) license.
 
-* Legacy [WebKit](https://github.com/syncfusion/SfQtWebKit) - this open-source library comes under [LGPL license](https://github.com/syncfusion/SfQtWebKit?tab=License-3-ov-file). It has some known rendering issues and limitations, and some of the advanced Bootstrap CSS styles are not supported.
 
 ## Steps to convert HTML to PDF file in Azure Functions on Windows using CefSharp
 
