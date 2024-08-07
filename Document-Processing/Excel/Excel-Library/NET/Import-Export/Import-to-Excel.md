@@ -2491,3 +2491,123 @@ worksheet.ImportHtmlTable("Sample.html", 1, 1, HtmlImportOptions.DetectFormulas)
 worksheet.ImportHtmlTable("Sample.html", 1, 1, HtmlImportOptions.DetectFormulas)
 {% endhighlight %}
 {% endtabs %}
+
+## Xml Data to Excel
+
+XlsIO supports importing XML data into Excel worksheets. The **ImportXml** method is used to load an XML file and import the data into the worksheet.
+
+The following code example shows how to import XML data into an Excel.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Import Xml data into the worksheet
+  worksheet.ImportXml(@"../../../Data/XmlFile.xml", 1, 6);
+
+  //Saving the workbook as stream
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(stream);
+
+  //Dispose stream
+  stream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Import Xml data into the worksheet
+  worksheet.ImportXml(@"../../Data/XmlFile.xml", 1, 6);
+
+  //Saving the workbook 
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Import XML data into the worksheet
+  worksheet.ImportXml("../../Data/XmlFile.xml", 1, 6)
+
+  'Save the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to import Xml data to Excel in C# is present on [this GitHub page]().
+
+### Adding XML Maps to Excel
+
+XlsIO also supports adding XML maps to Excel workbooks, enabling you to map XML elements to cells in a worksheet.
+
+The following code example shows how to add XML maps to an Excel workbook.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create();
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Adding Xml maps to the workbook
+  workbook.XmlMaps.Add(@"../../../Data/XmlFile.xml");
+
+  //Saving the workbook as stream
+  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(stream);
+
+  //Dispose stream
+  stream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create();
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Adding Xml maps to the workbook
+  workbook.XmlMaps.Add(@"../../Data/XmlFile.xml");
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create()
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Adding XML maps to the workbook
+  workbook.XmlMaps.Add("../../Data/XmlFile.xml")
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
