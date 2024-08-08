@@ -453,13 +453,13 @@ bin\Debug\net6.0.\runtimes\osx\native
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>The problem occurs while extracting the Image from PDF without a skia sharp dependency in a Linux environment.
+<td>The problem occurs while extracting the Image from PDF without a Skiasharp dependency in a Linux environment.
 </td>
 </tr>
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-Installing the following Skia sharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.
+Installing the following Skiasharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.
 </br></br>
 Please find the NuGet link below,
 </br>
