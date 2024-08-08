@@ -463,7 +463,7 @@ Installing the following Skia sharp NuGet for the Linux environment will resolve
 </br></br>
 Please find the NuGet link below,
 </br>
-NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8</a>
+NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
 </td>
 </tr>
 </table>
