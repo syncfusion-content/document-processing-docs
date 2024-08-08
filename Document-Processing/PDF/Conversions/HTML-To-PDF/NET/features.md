@@ -290,7 +290,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Additional delay
 
-The Blink HTML converter provides an option to set the [AdditionalDelay](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay) property while converting HTML to PDF. Additional delay is the waiting time of the converter for loading the external resources (styles, scripts, images and more). Refer to the following code example.
+The Blink HTML converter provides an option to set the [AdditionalDelay](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay) property while converting HTML to PDF. When a converter loads a webpage, it often needs to retrieve external resources like stylesheets, scripts, and images. This process can introduce additional delays, especially if the resources are large or hosted on slow servers. This property allows you to increase or decrease the waiting time (additional delay) of converter based on the input HTML specified for converting to PDF. Most of the HTML takes around 1000 to 2000 milliseconds for loading completely in the browser, hence we used default value 2000 milliseconds for this property. You can reduce this delay to 0 or 1, if your HTML files are small and no external resource dependency. Also, you can change this additional delay property for each HTML you input.
+ 
+Refer the following code example to set the [AdditionalDelay](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay) property while converting HTML to PDF.
 
 {% tabs %}
 
