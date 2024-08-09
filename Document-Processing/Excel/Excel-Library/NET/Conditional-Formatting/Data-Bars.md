@@ -109,4 +109,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply data bars in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Data%20Bars/NET%20Standard/Data%20Bars).
+A complete working example to apply data bars in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Data%20Bars/NET/Data%20Bars).
