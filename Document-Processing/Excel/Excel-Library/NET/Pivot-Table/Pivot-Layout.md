@@ -79,7 +79,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply a compact layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Compact%20Layout/NET%20Standard/Compact%20Layout).
+A complete working example to apply a compact layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Compact%20Layout/NET/Compact%20Layout).
 
 By executing the program, you will get the Excel file as below
 
@@ -154,7 +154,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply a tabular layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Tabular%20Layout/NET%20Standard/Tabular%20Layout).
+A complete working example to apply a tabular layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Tabular%20Layout/NET/Tabular%20Layout).
 
 By executing the program, you will get the Excel file as below
 
@@ -229,7 +229,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply a outline layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Outline%20Layout/NET%20Standard/Outline%20Layout).
+A complete working example to apply a outline layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Outline%20Layout/NET/Outline%20Layout).
 
 By executing the program, you will get the Excel file as below
 

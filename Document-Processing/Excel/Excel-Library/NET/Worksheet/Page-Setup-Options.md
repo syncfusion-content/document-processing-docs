@@ -92,7 +92,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fit all rows on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesTall/NET%20Standard/FitToPagesTall).
+A complete working example to fit all rows on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesTall/NET/FitToPagesTall).
 
 ## Fit all columns on one page.
 
@@ -178,7 +178,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fit all columns on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesWide/NET%20Standard/FitToPagesWide).
+A complete working example to fit all columns on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesWide/NET/FitToPagesWide).
 
 ## Fit the page content.
 
@@ -261,7 +261,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fit page content before printing in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsFitToPage/NET%20Standard/IsFitToPage).
+A complete working example to fit page content before printing in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsFitToPage/NET/IsFitToPage).
 
 ## Summary Column Right
 
@@ -353,7 +353,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to enable IsSummaryColumnRight in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryColumnRight/NET%20Standard/IsSummaryColumnRight).
+A complete working example to enable IsSummaryColumnRight in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryColumnRight/NET/IsSummaryColumnRight).
 
 ## Summary Row Below.
 
@@ -445,7 +445,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to enable IsSummaryRowBelow in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryRowBelow/NET%20Standard/IsSummaryRowBelow).
+A complete working example to enable IsSummaryRowBelow in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryRowBelow/NET/IsSummaryRowBelow).
 
 
 ## Print Area.
@@ -529,7 +529,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the range to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintArea/NET%20Standard/PrintArea).
+A complete working example to set the range to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintArea/NET/PrintArea).
 
 ## Print Gridlines.
 
@@ -612,7 +612,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the gridlines to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintGridlines/NET%20Standard/PrintGridlines).
+A complete working example to set the gridlines to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintGridlines/NET/PrintGridlines).
 
 ## Print Headings.
 
@@ -695,7 +695,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the row and column headings to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintHeadings/NET%20Standard/PrintHeadings).
+A complete working example to set the row and column headings to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintHeadings/NET/PrintHeadings).
 
 ## Print TitleColumns.
 
@@ -778,7 +778,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the PrintTitleColumns in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleColumns/NET%20Standard/PrintTitleColumns).
+A complete working example to set the PrintTitleColumns in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleColumns/NET/PrintTitleColumns).
 
 
 ## Print TitleRows.
@@ -862,7 +862,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the PrintTitleRows in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleRows/NET%20Standard/PrintTitleRows).
+A complete working example to set the PrintTitleRows in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleRows/NET/PrintTitleRows).
 
 ## Headers and Footers
 
@@ -951,4 +951,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/NET%20Standard/Header%20and%20Footer)
+A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/NET/Header%20and%20Footer)

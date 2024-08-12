@@ -100,7 +100,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply Icon sets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Icon%20Sets/NET%20Standard/Icon%20Sets).
+A complete working example to apply Icon sets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Icon%20Sets/NET/Icon%20Sets).
 
 ## Custom Icon Sets
 

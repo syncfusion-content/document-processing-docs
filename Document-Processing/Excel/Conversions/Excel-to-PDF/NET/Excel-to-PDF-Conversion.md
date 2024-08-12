@@ -1228,7 +1228,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Initialize default fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Initialize%20default%20fallback%20fonts/NET%20Standard/Initialize_default-fallback_fonts).
+A complete working example for Initialize default fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Initialize%20default%20fallback%20fonts/NET/Initialize_default-fallback_fonts).
 
 ### Fallback fonts based on script type
 
@@ -1334,7 +1334,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Fallback fonts based on script type in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20based%20on%20script%20type/NET%20Standard/Fallback_fonts_based_on_scripttype).
+A complete working example for Fallback fonts based on script type in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20based%20on%20script%20type/NET/Fallback_fonts_based_on_scripttype).
 
 ### Fallback fonts for range of Unicode text
 
@@ -1444,7 +1444,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Fallback fonts for range of Unicode text in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20for%20unicode%20range/NET%20Standard/Fallback_fonts_for_unicode_range).
+A complete working example for Fallback fonts for range of Unicode text in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20for%20unicode%20range/NET/Fallback_fonts_for_unicode_range).
 
 ### Modify the existing fallback fonts
 
@@ -1547,7 +1547,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Modify the existing fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Modify%20the%20existing%20fallback%20fonts/NET%20Standard/Modify_the_existing_fallback_fonts).
+A complete working example for Modify the existing fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Modify%20the%20existing%20fallback%20fonts/NET/Modify_the_existing_fallback_fonts).
 
 ### Supported script types
 
