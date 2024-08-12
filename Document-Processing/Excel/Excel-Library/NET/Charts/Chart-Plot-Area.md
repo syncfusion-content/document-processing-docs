@@ -224,4 +224,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart plot area in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Plot%20Area/NET%20Standard/Plot%20Area).
+A complete working example for the chart plot area in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Plot%20Area/NET/Plot%20Area).

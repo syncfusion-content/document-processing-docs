@@ -84,7 +84,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example to freeze rows in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Rows/NET%20Standard/Freeze%20Rows)
+A complete working example to freeze rows in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Rows/NET/Freeze%20Rows)
 
 ### Freeze Columns
 
@@ -154,7 +154,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example to freeze columns in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Columns/NET%20Standard/Freeze%20Columns)
+A complete working example to freeze columns in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Columns/NET/Freeze%20Columns)
 
 ## Unfreeze Panes
 
@@ -217,7 +217,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to unfreeze panes in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/UnFreeze%20Panes/NET%20Standard/UnFreeze%20Panes)
+A complete working example to unfreeze panes in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/UnFreeze%20Panes/NET/UnFreeze%20Panes)
 
 ## Split Panes 
 
