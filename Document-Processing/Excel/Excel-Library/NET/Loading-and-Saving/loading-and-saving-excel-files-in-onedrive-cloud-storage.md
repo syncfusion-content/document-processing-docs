@@ -1,23 +1,21 @@
 ---
-title: Loading and saving Excel document in Google Drive Storage | Syncfusion
-description: Explains how to load and save Excel files in Google Drive Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and saving Excel document in OneDrive Storage | Syncfusion
+description: Explains how to load and save Excel files in OneDrive Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel document in Google Drive Cloud Storage
+# Loading and Saving Excel document in OneDrive Cloud Storage
 
 ## Prerequisites
 
-* Google Cloud Project in the **[Google Cloud Console](https://developers.google.com/workspace/guides/create-project)** is required.
-* **[Service account](https://cloud.google.com/iam/docs/service-accounts-create)** within your GCP project is required.
-* **[Service account key](https://cloud.google.com/iam/docs/keys-create-delete#creating)** in JSON format is required
-* Enabling the **[Google Drive API](https://cloud.google.com/endpoints/docs/openapi/enable-api#enabling_an_api)** permission is required.
-* **[Google Drive account](https://drive.google.com/)** is required.
+* **[Microsoft Azure subscription](https://portal.azure.com/#home)** is required. 
+* **[Register an application in App Registrations within the Azure portal](https://learn.microsoft.com/en-us/graph/auth-register-app-v2)** is required
+* The **Application (client) ID**, **Tenant ID**, and **Client Secret** from the registered app are required for authentication and API access.
 
-## Loading Excel document from Google Drive
+## Loading Excel document from OneDrive
 
-Steps to load an Excel document from Google Drive Cloud Storage.
+Steps to load an Excel document from OneDrive Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -29,10 +27,10 @@ Step 2: Name the project.
 
 Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
-* [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3)
+* [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img12.png)
-![Install Google.Apis.Drive.v3 NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img14.png)
+![Install Microsoft.Identity.Client NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img15.png)
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  
@@ -51,15 +49,13 @@ Step 4: Add a new button in the **Index.cshtml** as shown below.
 Step 5: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Drive.v3;
-using Google.Apis.Services;
 using Syncfusion.XlsIO;
 using Syncfusion.Drawing;
+using Microsoft.Identity.Client;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from Google Drive Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **load an Excel document from OneDrive Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -68,8 +64,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //Download the document from Google Drive
-    MemoryStream stream = await GetDocumentFromGoogleDrive();
+    //Download the document from OneDrive
+    MemoryStream stream = await DownloadDocumentFromOneDrive();
 
     //Set the position as '0'
     stream.Position = 0;
@@ -93,53 +89,73 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     return fileStreamResult;
 }
 
-// Download file from Google Drive
-public async Task<MemoryStream> GetDocumentFromGoogleDrive()
+// Download file from OneDrive
+public async Task<MemoryStream> DownloadDocumentFromOneDrive()
 {
-    //Define the path to the service account key file
-    string serviceAccountKeyPath = "Your_service_account_key_path";
+    //Replace with your application (client) ID, tenant ID, and secret
+    string clientId = "your-client-id";
+    string tenantId = "your-tenant-id";
+    string clientSecret = "your-client-secret";
 
-    //Specify the FileID of the file to download
-    string fileID = "Your_file_id"; 
+    //Replace with the user ID (email address) whose OneDrive you want to access
+    string userId = "user@example.com";
 
-    try
+    //Replace with the OneDrive file path where you want to download the file For ex: "/Template.xlsx"
+    string filePath = "FilePath";
+
+    //Initialize the MSAL client
+    var confidentialClientApplication = ConfidentialClientApplicationBuilder
+        .Create(clientId)
+        .WithClientSecret(clientSecret)
+        .WithAuthority(new Uri($"https://login.microsoftonline.com/{tenantId}"))
+        .Build();
+
+    //Acquire an access token
+    string[] scopes = { "https://graph.microsoft.com/.default" };
+    var authenticationResult = await confidentialClientApplication
+        .AcquireTokenForClient(scopes)
+        .ExecuteAsync();
+
+    //Create an HTTP client with the access token
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authenticationResult.AccessToken);
+
+    //Construct the OneDrive download URL using user ID and file path
+    var downloadUrl = $"https://graph.microsoft.com/v1.0/users/{userId}/drive/root:{filePath}:/content";
+
+    //Download the file from OneDrive
+    var response = await httpClient.GetAsync(downloadUrl);
+    if (response.IsSuccessStatusCode)
     {
-        //Authenticate the Google Drive API access using the service account key
-        GoogleCredential credential = GoogleCredential.FromFile(serviceAccountKeyPath).CreateScoped(DriveService.ScopeConstants.Drive);
+        var stream = new MemoryStream();
+        await response.Content.CopyToAsync(stream);
 
-        //Create the Google Drive service
-        DriveService service = new DriveService(new BaseClientService.Initializer()
-        {
-            HttpClientInitializer = credential
-        });
+        // Reset the stream position to the beginning
+        stream.Position = 0;
 
-        //Create a request to get the file from Google Drive
-        var request = service.Files.Get(fileID);
-
-        //Download the file into a MemoryStream
-        MemoryStream stream = new MemoryStream();
-        await request.DownloadAsync(stream);
-
+        Console.WriteLine("File downloaded successfully.");
         return stream;
     }
-    catch (Exception ex)
+    else
     {
-        Console.WriteLine($"Error retrieving document from Google Drive: {ex.Message}");
-        throw;
+        Console.WriteLine($"Failed to download file. Status code: {response.StatusCode}");
+        string responseBody = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"Error details: {responseBody}");
+        return null;
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to load an Excel document from Google Drive Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Google%20Drive/Loading/Edit%20Excel).
+A complete working example of how to load an Excel document from OneDrive Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/OneDrive/Loading/Edit%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img5.png)
 
-## Saving Excel document to Google Drive
+## Saving Excel document to OneDrive
 
-Steps to save an Excel document to Google Drive Cloud Storage.
+Steps to save an Excel document to OneDrive Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -151,10 +167,10 @@ Step 2: Name the project.
 
 Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
 * [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core)
-* [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3)
+* [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img3.png)
-![Install Google.Apis.Drive.v3 NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img13.png)
+![Install Microsoft.Identity.Client NuGet Package](Loading-and-Saving_images/Loading-and-Saving_images_img16.png)
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  
@@ -173,13 +189,13 @@ Step 4: Add a new button in the **Index.cshtml** as shown below.
 Step 5: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using Dropbox.Api;
 using Syncfusion.XlsIO;
 using Syncfusion.Drawing;
+using Microsoft.Identity.Client;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to Google Drive Cloud Storage**.
+Step 6: Include the below code snippet in **HomeController.cs** to **Save an Excel document to OneDrive Cloud Storage**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -361,56 +377,69 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Set the position as '0'.
     stream.Position = 0;
 
-    //Upload the document to Google Drive
-    await UploadDocumentToGoogleDrive(stream);
+    //Upload the document to OneDrive
+    await UploadDocumentToOneDrive(stream);
 
-    return Ok("Excel document uploaded to Google Drive Cloud Storage.");
+    return Ok("Excel document uploaded to OneDrive cloud Storage.");
 }
 
-// Upload file to Google Drive
-public async Task UploadDocumentToGoogleDrive(MemoryStream stream)
+// Upload file to OneDrive
+public async Task<MemoryStream> UploadDocumentToOneDrive(MemoryStream stream)
 {
-    //Define the path to the service account key file
-    string serviceAccountKeyPath = "Your_service_account_key_path";
+    //Replace with your application (client) ID, tenant ID, and secret
+    string clientId = "your-client-id";
+    string tenantId = "your-tenant-id";
+    string clientSecret = "your-client-secret";
 
-    //Specify the DirectoryID of the folder to upload the file
-    string directoryID = "Your_directory_id";
+    //Replace with the user ID (email address) whose OneDrive you want to access
+    string userId = "user@example.com";
 
-    //Authenticate the Google Drive API access using the service account key
-    GoogleCredential credential = GoogleCredential.FromFile(serviceAccountKeyPath).CreateScoped(DriveService.ScopeConstants.Drive);
+    //Replace with the OneDrive file path where you want to save the file For ex: "/Template.xlsx"
+    string filePath = "FilePath";
 
-    //Create the Google Drive service
-    DriveService service = new DriveService(new BaseClientService.Initializer()
+    //Initialize the MSAL client
+    var confidentialClientApplication = ConfidentialClientApplicationBuilder
+        .Create(clientId)
+        .WithClientSecret(clientSecret)
+        .WithAuthority(new Uri($"https://login.microsoftonline.com/{tenantId}"))
+        .Build();
+
+    //Acquire an access token
+    string[] scopes = { "https://graph.microsoft.com/.default" };
+    var authenticationResult = await confidentialClientApplication
+        .AcquireTokenForClient(scopes)
+        .ExecuteAsync();
+
+    //Create an HTTP client with the access token
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authenticationResult.AccessToken);
+
+    //Upload the file to OneDrive
+    var content = new StreamContent(stream);
+    content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+
+    //Construct the OneDrive upload URL using user ID and file path
+    var uploadUrl = $"https://graph.microsoft.com/v1.0/users/{userId}/drive/root:{filePath}:/content";
+
+    using (var response = await httpClient.PutAsync(uploadUrl, content))
     {
-        HttpClientInitializer = credential
-    });
-
-    //Upload file metadata
-    var fileMetadata = new Google.Apis.Drive.v3.Data.File()
-    {
-        Name = "Excel.xlsx",
-        Parents = new List<string>() { directoryID }
-    };
-
-    //Create a new file in Google Drive
-    var request = service.Files.Create(fileMetadata, stream, "application/excel");
-    request.Fields = "*";
-    var results = await request.UploadAsync(CancellationToken.None);
-
-    // Check the upload status and log the result
-    if (results.Status == UploadStatus.Failed)
-    {
-        Console.WriteLine("Error uploading");
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("File uploaded successfully.");
+        }
+        else
+        {
+            Console.WriteLine($"Failed to upload file. Status code: {response.StatusCode}");
+            string responseBody = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Error details: {responseBody}");
+        }
     }
-    else
-    {
-        Console.WriteLine("File uploaded successfully");
-    }
+    return stream;
 }
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to save an Excel document to Google Drive Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Google%20Drive/Saving/Create%20Excel).
+A complete working example of how to save an Excel document to OneDrive Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/OneDrive/Saving/Create%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
