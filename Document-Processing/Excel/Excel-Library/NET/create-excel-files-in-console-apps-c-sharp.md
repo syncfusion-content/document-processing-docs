@@ -1,6 +1,6 @@
 ---
 title: Create Excel file in Console Application | Syncfusion
-description: Learn here how to create an Excel file in Console Application using Syncfusion Excel library.
+description: Learn here how to create an Excel file in Console Application using Syncfusion Excel(XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -418,7 +418,7 @@ The below steps illustrates creating a simple Invoice formatted Excel document i
 
 Step 1: Create a new C# Console Application(.NET Framework) project.
 
-![Create console application(.NET Framework) in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
+![Create console application .NET Framework in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
 
 Step 2: Name the project.
 
