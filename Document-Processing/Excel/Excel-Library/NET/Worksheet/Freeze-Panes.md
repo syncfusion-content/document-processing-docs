@@ -21,7 +21,7 @@ N> **FirstVisibleColumn** and **FirstVisibleRow** indexes are "zero-based".
 The following code example illustrates how to freeze rows in the worksheet.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Freeze%20Rows/.NET/Freeze%20Rows/Freeze%20Rows/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -84,14 +84,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example to freeze rows in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Rows/NET/Freeze%20Rows)
+A complete working example to freeze rows in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Rows/.NET/Freeze%20Rows)
 
 ### Freeze Columns
 
 The following code example illustrates how to freeze columns in the worksheet.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Freeze%20Columns/.NET/Freeze%20Columns/Freeze%20Columns/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -154,7 +154,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example to freeze columns in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Columns/NET/Freeze%20Columns)
+A complete working example to freeze columns in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Freeze%20Columns/.NET/Freeze%20Columns)
 
 ## Unfreeze Panes
 
@@ -163,7 +163,7 @@ Unfreezing panes allows you to remove any previously frozen sections in an Excel
 The following code example illustrates how to unfreeze panes in the worksheet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/UnFreeze%20Panes/.NET/UnFreeze%20Panes/UnFreeze%20Panes/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -217,7 +217,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to unfreeze panes in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/UnFreeze%20Panes/NET/UnFreeze%20Panes)
+A complete working example to unfreeze panes in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/UnFreeze%20Panes/.NET/UnFreeze%20Panes)
 
 ## Split Panes 
 
@@ -226,7 +226,7 @@ Split panes allow you to divide a worksheet into separate sections, or panes, wh
 The following code example illustrates how to split the window through the [HorizontalSplit](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HorizontalSplit) and [VerticalSplit](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VerticalSplit) properties.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Split%20Panes/.NET/Split%20Panes/Split%20Panes/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -286,4 +286,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example to split panes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Split%20Panes).
+A complete working example to split panes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Split%20Panes/.NET/Split%20Panes).

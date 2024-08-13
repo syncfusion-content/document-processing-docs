@@ -21,7 +21,7 @@ N> Currently XlsIO don’t support sorting based on cell icon, parsing and seria
 The following code example illustrates how to sort a range of cells by values.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Values/.NET/Sort%20On%20Cell%20Values/Sort%20On%20Cell%20Values/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -106,14 +106,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to sort Excel data based on cell values in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Values).
+A complete working example to sort Excel data based on cell values in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Values/.NET/Sort%20On%20Cell%20Values).
 
 ## Font Color
 
 The following code example illustrates how to move a range of cells with the specified font color to either top or bottom of the sorting range.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20on%20Font%20Color/.NET/Sort%20on%20Font%20Color/Sort%20on%20Font%20Color/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -216,14 +216,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to sort Excel data based on font color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Sort%20on%20Font%20Color).
+A complete working example to sort Excel data based on font color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Sort%20on%20Font%20Color/.NET/Sort%20on%20Font%20Color).
 
 ## Cell Color
 
 The following code example illustrates how to move a range of cells with the specified cell background color to either top or bottom of the sorting range.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Color/.NET/Sort%20On%20Cell%20Color/Sort%20On%20Cell%20Color/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -324,4 +324,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to sort Excel data based on cell color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Color).
+A complete working example to sort Excel data based on cell color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Color/.NET/Sort%20On%20Cell%20Color).

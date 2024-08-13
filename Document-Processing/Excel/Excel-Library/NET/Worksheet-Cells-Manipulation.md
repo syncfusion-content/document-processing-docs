@@ -20,7 +20,7 @@ The following code example illustrates the different ways of accessing a single 
 N> Here row and column indexes in the range are "one-based". 
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range/.NET/Access%20Cell%20or%20Range/Access%20Cell%20or%20Range/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -110,7 +110,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access a cell or range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range).
+A complete working example to access a cell or range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range/.NET/Access%20Cell%20or%20Range).
 
 T> You can make use of [GetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetText_System_Int32_System_Int32_), [SetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetText_System_Int32_System_Int32_System_String_), [GetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetNumber_System_Int32_System_Int32_) and [SetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetNumber_System_Int32_System_Int32_System_Double_) methods from worksheet object that enable users to get/set values without range object.
 
@@ -125,7 +125,7 @@ The following code example illustrates how to access the range relatively to the
 N> Here row and column indexes in the range are "one-based".
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Relative%20Range/.NET/Access%20Relative%20Range/Access%20Relative%20Range/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -213,7 +213,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access relative range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Relative%20Range).
+A complete working example to access relative range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Relative%20Range/.NET/Access%20Relative%20Range).
 
 ### Accessing Discontinuous Ranges
 
@@ -222,7 +222,7 @@ It is possible to modify the contents or apply formatting to discontinuous range
 The following code example illustrates how to access discontinuous range.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Discontinuous%20Range/.NET/Access%20Discontinuous%20Range/Access%20Discontinuous%20Range/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -291,14 +291,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access discontinuous range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Discontinuous%20Range).
+A complete working example to access discontinuous range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Discontinuous%20Range/.NET/Access%20Discontinuous%20Range).
 
 ### Accessing a Cell or Range using IMigrantRange 
 
 The [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html) interface can also be used to access a single cell or group of cells and manipulate it.  It is recommended to prefer **IMigrantRange** instead of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) for writing large amount of data in an optimal way. 
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Migrant%20Range/.NET/Access%20Migrant%20Range/Access%20Migrant%20Range/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -373,7 +373,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access migrant range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Migrant%20Range).
+A complete working example to access migrant range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Migrant%20Range/.NET/Access%20Migrant%20Range).
 
 ### Accessing Precedent and Dependent Cells or Range
 
@@ -387,7 +387,7 @@ Accessing list of precedent and dependent cells can be obtained:
 The following code example illustrates how to access the precedent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -450,7 +450,7 @@ End Using
 The following code example illustrates how to access the dependent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -517,7 +517,7 @@ End Using
 The following code example illustrates how to access the direct precedent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -580,7 +580,7 @@ End Using
 The following code example illustrates how to access the direct dependent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -640,38 +640,38 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access the precedent and dependent cells in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells).
+A complete working example to access the precedent and dependent cells in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells).
 
 ## Find and Replace
 
 Find and replace operations across worksheet text, formulas, values, and comments allow users to seamlessly update and manage data within Excel workbooks.
 
-With the Syncfusion Excel Library, you can perform find and replace operations in an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can perform find and replace operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/find-and-replace) for more details.
 
 ## Sorting
 
 Sorting is the process of arranging data in a specific order, typically in ascending or descending sequence.
 
-With the Syncfusion Excel Library, you can perform sorting operations in an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can perform sorting operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/sorting) for more details.
 
 ## Filtering
 
 Filtering is the process of selectively displaying data in a worksheet based on specified criteria.
 
-With the Syncfusion Excel Library, you can perform filtering operations in an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can perform filtering operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/filtering) for more details.
 
-## Hyperlinks
+## Hyperlink
 
 Hyperlink is a reference or navigation element in a document that allows users to access another location, such as specific cells within the same worksheet, other worksheets, external files, websites, or email addresses.
 
-With the Syncfusion Excel Library, you can perform hyperlinks operations in an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can perform hyperlink operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/hyperlink) for more details.
 
 ## Clear
 
 Either entire cell content, or just formatting, contents, or comments can be removed from Excel cell. The following code example illustrates how to clear a range along with its formatting.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Clear%20Content/.NET/Clear%20Content/Clear%20Content/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -721,10 +721,10 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to clear cell content in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Clear%20Content).
+A complete working example to clear cell content in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Clear%20Content/.NET/Clear%20Content).
 
 ## List of API under IRange
 
 The [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface offers a robust collection of properties for in-depth manipulation and management of Excel worksheet ranges.
 
-With the Syncfusion Excel Library, you can perform hyperlinks operations in an Excel worksheets using C#. Click [here]() for more details.
+With the Syncfusion Excel Library, you can perform various operations under IRange in an Excel worksheet using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/list-of-apis-under-irange) for more details.

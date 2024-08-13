@@ -169,7 +169,7 @@ hyperlink4.TextToDisplay = "Hyperlink to cell A15"
 The complete code example illustrating the above options is shown below.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Hyperlinks/.NET/Hyperlinks/Hyperlinks/Program.cs , 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -307,14 +307,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add hyperlinks in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Hyperlinks).
+A complete working example to add hyperlinks in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Hyperlinks/.NET/Hyperlinks).
 
 ## Modifying Existing Hyperlink
 
 The properties of existing hyperlink can be modified by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Modify%20Hyperlink/.NET/Modify%20Hyperlink/Modify%20Hyperlink/Program.cs, 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -366,14 +366,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to modify existing hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Modify%20Hyperlink).
+A complete working example to modify existing hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Modify%20Hyperlink/.NET/Modify%20Hyperlink).
 
 ## Removing Hyperlink
 
 Similarly, a hyperlink can also be removed from a range by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Remove%20Hyperlink/.NET/Remove%20Hyperlink/Remove%20Hyperlink/Program.cs, 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -422,7 +422,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to remove existing hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Remove%20Hyperlink).
+A complete working example to remove existing hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Remove%20Hyperlink/.NET/Remove%20Hyperlink).
 
 ## Hyperlinks on Shapes
 
@@ -437,7 +437,7 @@ Hyperlink can be added to the following shapes.
 The following code example illustrates how to insert hyperlinks to shapes.
 
 {% tabs %} 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Shape%20Hyperlink/.NET/Shape%20Hyperlink/Shape%20Hyperlink/Program.cs, 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -526,14 +526,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add hyperlink to shape in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Shape%20Hyperlink).
+A complete working example to add hyperlink to shape in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Shape%20Hyperlink/.NET/Shape%20Hyperlink).
 
 ### Modifying Hyperlinks on Shapes
 
 Properties of existing hyperlink can be modified by accessing it through [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) instance or [IShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html) instance.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Modify%20Shape%20Hyperlink/.NET/Modify%20Shape%20Hyperlink/Modify%20Shape%20Hyperlink/Program.cs, 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -597,14 +597,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to modify shape hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Modify%20Shape%20Hyperlink).
+A complete working example to modify shape hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Modify%20Shape%20Hyperlink/.NET/Modify%20Shape%20Hyperlink).
 
 ### Removing Hyperlinks from Shapes
 
 The following code snippet explains how to remove hyperlink of shape.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Remove%20Shape%20Hyperlink/.NET/Remove%20Shape%20Hyperlink/Remove%20Shape%20Hyperlink/Program.cs, 180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -653,4 +653,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to remove shape hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Remove%20Shape%20Hyperlink).
+A complete working example to remove shape hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Remove%20Shape%20Hyperlink/.NET/Remove%20Shape%20Hyperlink).
