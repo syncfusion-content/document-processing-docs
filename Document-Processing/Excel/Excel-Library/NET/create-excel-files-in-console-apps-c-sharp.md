@@ -1,6 +1,6 @@
 ---
 title: Create Excel file in Console Application | Syncfusion
-description: Learn here how to create an Excel file in Console Application using Syncfusion Excel library.
+description: Learn here how to create an Excel file in Console Application using Syncfusion Excel(XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -48,7 +48,7 @@ Imports Syncfusion.Drawing
 Step 5: Include the below code snippet in program.cs to create an Excel file.
 {% capture codesnippet3 %}
 {% tabs %}  
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Core/Create%20Excel/Create%20Excel/Program.cs, 180" %}
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -418,7 +418,7 @@ The below steps illustrates creating a simple Invoice formatted Excel document i
 
 Step 1: Create a new C# Console Application(.NET Framework) project.
 
-![Create console application(.NET Framework) in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
+![Create console application .NET Framework in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
 
 Step 2: Name the project.
 
@@ -433,7 +433,7 @@ N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.Xls
 Step 4: Include the following namespaces in the program.cs file.
 {% capture codesnippet1 %}
 {% tabs %}  
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Framework/Create%20Excel/Create%20Excel/Program.cs", 180 %}
 using Syncfusion.XlsIO;
 using System.IO;
 using System.Drawing;
