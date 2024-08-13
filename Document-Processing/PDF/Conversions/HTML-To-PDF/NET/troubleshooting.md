@@ -932,15 +932,6 @@ System type       : 64-bit operating system, x64-based processor
 
 The benchmark details were obtained using the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) package. You can refer to the following sample, as well as the input and output files used:
 
-Sample link        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/HTMLToPDF_Demo_2-1367619702">https://www.syncfusion.com/downloads/support/directtrac/general/ze/HTMLToPDF_Demo_2-1367619702</a>
-
-Input Html files         : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Input1125518413">https://www.syncfusion.com/downloads/support/directtrac/general/ze/Input1125518413</a>
-
-Output PDF files        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/OutputDocuments_1715564825">https://www.syncfusion.com/downloads/support/directtrac/general/ze/OutputDocuments_1715564825</a>
-
-
-
-
 <h2>Results:</h2>
 
 <table border="1">
@@ -996,6 +987,8 @@ N> The performance metrics were recorded on a freshly configured machine. Speed 
 N> * External resources loaded in the HTML (such as images, scripts, and styles)
 N> * Network speed for online URL conversions
 N> * Hardware resources (CPU and memory)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF).
 
 ## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
 
