@@ -571,6 +571,176 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Add-radio-button-in-existing-PDF-document).
 
+#### Choose default value for radio button field
+
+You can choose default value for radio button field using [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedIndex) properties of [PdfLoadedRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html) class. Please refer the below code snippet to choose default value for radio button field in PDF document. 
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a new page to the PDF document
+PdfPage page = document.Pages.Add();
+
+// Create a new radio button list field named "employeesRadioList"
+PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+// Create a font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular);
+
+// Create a new radio button item for "Male"
+PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+// Set the bounds for the radio button
+radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
+ // Draw the label "Male"
+page.Graphics.DrawString("Male", font, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+// Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem1); 
+
+// Create a new radio button item for "Female"
+PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+ // Set the bounds for the radio button
+radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+ // Draw the label "Female"
+page.Graphics.DrawString("Female", font, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+ // Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem2);
+
+// Create a new radio button item for "Transgender"
+PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
+ // Set the bounds for the radio button
+radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
+ // Draw the label "Transgender"
+page.Graphics.DrawString("Transgender", font, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
+ // Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem3);
+
+employeesRadioList.SelectedIndex = 1;
+
+// Add the radio button list to the form
+document.Form.Fields.Add(employeesRadioList);
+
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);   
+ 
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+// Add a new page to the PDF document
+PdfPage page = document.Pages.Add();
+
+// Create a new radio button list field named "employeesRadioList"
+PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+// Create a font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular);
+
+// Create a new radio button item for "Male"
+PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
+// Set the bounds for the radio button
+radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
+ // Draw the label "Male"
+page.Graphics.DrawString("Male", font, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
+// Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem1); 
+
+// Create a new radio button item for "Female"
+PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
+ // Set the bounds for the radio button
+radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
+ // Draw the label "Female"
+page.Graphics.DrawString("Female", font, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
+ // Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem2);
+
+// Create a new radio button item for "Transgender"
+PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
+ // Set the bounds for the radio button
+radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
+ // Draw the label "Transgender"
+page.Graphics.DrawString("Transgender", font, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
+ // Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem3);
+
+employeesRadioList.SelectedIndex = 1;
+
+// Add the radio button list to the form
+document.Form.Fields.Add(employeesRadioList);
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document
+Dim document As New PdfDocument()
+
+' Add a new page to the PDF document
+Dim page As PdfPage = document.Pages.Add()
+
+' Create a new radio button list field named "employeesRadioList"
+Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
+
+' Create a font
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular)
+
+' Create a new radio button item for "Male"
+Dim radioItem1 As New PdfRadioButtonListItem("Male")
+' Set the bounds for the radio button
+radioItem1.Bounds = New RectangleF(90, 203, 15, 15)
+' Draw the label "Male"
+page.Graphics.DrawString("Male", font, PdfBrushes.Black, New RectangleF(110, 204, 180, 20))
+' Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem1)
+
+' Create a new radio button item for "Female"
+Dim radioItem2 As New PdfRadioButtonListItem("Female")
+' Set the bounds for the radio button
+radioItem2.Bounds = New RectangleF(205, 203, 15, 15)
+' Draw the label "Female"
+page.Graphics.DrawString("Female", font, PdfBrushes.Black, New RectangleF(225, 204, 180, 20))
+' Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem2)
+
+' Create a new radio button item for "Transgender"
+Dim radioItem3 As New PdfRadioButtonListItem("Transgender")
+' Set the bounds for the radio button
+radioItem3.Bounds = New RectangleF(300, 203, 15, 15)
+' Draw the label "Transgender"
+page.Graphics.DrawString("Transgender", font, PdfBrushes.Black, New RectangleF(320, 204, 180, 20))
+' Add the radio button item to the list
+employeesRadioList.Items.Add(radioItem3)
+
+' Set the default selection (e.g., "Female")
+employeesRadioList.SelectedIndex = 1
+
+' Add the radio button list to the form
+document.Form.Fields.Add(employeesRadioList)
+
+' Save the document
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)    
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+
+You can download a complete working sample from [GitHub]().
+
 ### Retrieving option values from acroform radio button
 
 The Essential PDF supports retrieving option values from acroform radio button. The [OptionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonItem_OptionValue) property is used to get option values of [PdfLoadedRadioButtonItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html) instance.
@@ -1372,30 +1542,238 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-button-field-in-an-existing-PDF-document).
 
-## Set appearance to the PDF form fields
+## Complex script support for form fields
 
-After filling the form fields in the PDF document, it may appear empty due to the absence of the appearance dictionary. By setting false to the [SetDefaultAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_SetDefaultAppearance_System_Boolean_) method in [PdfForm](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.Pdf.Interactive.PdfForm.html) class, you can create the appearance dictionary. By this, the text will be visible in all PDF Viewers.
+You can add a complex script language text in PDF AcroForm fields by using the [ComplexScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html#Syncfusion_Pdf_Interactive_PdfTextBoxField_ComplexScript) property of the form field instance. The following code snippet illustrates this.
 
-The following code snippet explains how to set appearance to the PDF form fields.
+{% tabs %}
 
-{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}	
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new PDF page.
+PdfPage page = document.Pages.Add();
 
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Set the default appearance.
-loadedForm.SetDefaultAppearance(false);
+//Create the new PDF text box field.
+PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
+//Set bounds.
+textField.Bounds = new RectangleF(10, 10, 200, 30);
+//Set text.
+textField.Text = "สวัสดีชาวโลก";
+FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
+//Create a new PDF font instance.
+PdfFont font = new PdfTrueTypeFont(fontStream, 10);
+//Set font.
+textField.Font = font;
+//Enable complex script layout.
+textField.ComplexScript = true;
+//Add the text box field to the form collection.
+document.Form.Fields.Add(textField);
+//Set default appearance as false.
+document.Form.SetDefaultAppearance(false);
 
-//Get the loaded form field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-loadedTextBoxField.Text ="text";
-
-//Save the document into stream.
+//Save the PDF document.
 MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the PDF document.
+document.Close(true);
+
+{% endhighlight %}      
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new PDF page.
+PdfPage page = document.Pages.Add();
+
+//Create new PDF text box field.
+PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
+//Set bounds.
+textField.Bounds = new RectangleF(10, 10, 200, 30);
+//Set text.
+textField.Text = "สวัสดีชาวโลก";
+//Create new PdfTrueTypeFont instance.
+PdfTrueTypeFont font = new PdfTrueTypeFont(new Font("Tahoma", 10), true);
+//Set font.
+textField.Font = font;
+//Enable complex script layout.
+textField.ComplexScript = true;
+//Add the text box field to the form collection.
+document.Form.Fields.Add(textField);
+//Set default appearance as false.
+document.Form.SetDefaultAppearance(false);
+
+//Save the PDF document.
+document.Save("Form.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+'Add a new PDF page.
+Dim page As PdfPage = document.Pages.Add()
+
+'Create new PDF text box field.
+Dim textField As New PdfTextBoxField(page, "textBox")
+'Set bounds.
+textField.Bounds = New RectangleF(10, 10, 200, 30)
+'Set text.
+textField.Text = "สวัสดีชาวโลก"
+'Create new PdfTrueTypeFont instance.
+Dim font As New PdfTrueTypeFont(New Font("Tahoma", 10), True)
+'Set font.
+textField.Font = font
+'Enable complex script layout.
+textField.ComplexScript = True
+'Add the text box field to the form collection.
+document.Form.Fields.Add(textField)
+'Set default appearance as false.
+document.Form.SetDefaultAppearance(False)
+
+'Save the PDF document.
+document.Save("Form.pdf")
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}                                                                                                                
+
+{% endtabs %}
+
+You can add the complex script for all the supported form fields by enabling the [ComplexScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_ComplexScript) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) or [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) instance.
+
+Supported form fields:
+
+* Text box field
+* Combo box field
+* List box field
+* Button field
+
+The following code example illustrates how to add complex script support for all the supported fields in PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}	
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new PDF page.
+PdfPage page = document.Pages.Add();
+
+//Create the new PDF text box field.
+PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
+//Set bounds.
+textField.Bounds = new RectangleF(10, 10, 200, 30);
+//Set text.
+textField.Text = "สวัสดีชาวโลก";
+FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
+//Create a new PDF font instance.
+PdfFont font = new PdfTrueTypeFont(fontStream, 10);
+//Set font.
+textField.Font = font;
+//Add the text box field to the form collection.
+document.Form.Fields.Add(textField);
+//Set default appearance as false.
+document.Form.SetDefaultAppearance(false);
+//Enable complex script layout for form.
+document.Form.ComplexScript = true;
+
+//Save the PDF document.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the PDF document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new PDF page.
+PdfPage page = document.Pages.Add();
+
+//Create the new PDF text box field.
+PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
+//Set bounds.
+textField.Bounds = new RectangleF(10, 10, 200, 30);
+//Set text.
+textField.Text = "สวัสดีชาวโลก";
+//Create new PdfTrueTypeFont instance.
+PdfTrueTypeFont font = new PdfTrueTypeFont(new Font("Tahoma", 10), true);
+//Set font.
+textField.Font = font;
+//Add the text box field to the form collection.
+document.Form.Fields.Add(textField);
+//Set default appearance to false.
+document.Form.SetDefaultAppearance(false);
+//Enable complex script layout for form.
+document.Form.ComplexScript = true;
+
+//Save the PDF document.
+document.Save("Form.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+Dim document As New PdfDocument()
+'Add a new PDF page
+Dim page As PdfPage = document.Pages.Add()
+
+'Create the new PDF text box field
+Dim textField As New PdfTextBoxField(page, "textBox")
+'Set bounds
+textField.Bounds = New RectangleF(10, 10, 200, 30)
+'Set text
+textField.Text = "สวัสดีชาวโลก"
+'Create new PdfTrueTypeFont instance
+Dim font As New PdfTrueTypeFont(New Font("Tahoma", 10), True)
+'Set font
+textField.Font = font
+'Add the text box field to the form collection
+document.Form.Fields.Add(textField)
+'Set default appearance to false
+document.Form.SetDefaultAppearance(False)
+'Enable complex script layout for form
+document.Form.ComplexScript = True
+
+'Save the PDF document
+document.Save("Form.pdf")
+'Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can also flatten the existing form fields with complex script layout by using the following code snippet.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}		
+
+//Load the existing PDF document.
+FileStream inputFileStream = new FileStream("Form.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
+//Get the existing PDF form.
+PdfLoadedForm lForm = loadedDocument.Form as PdfLoadedForm;
+//Set the complex script layout.
+lForm.ComplexScript = true;
+//Set flatten.
+lForm.Flatten = true;
+
+//Create memory stream.
+MemoryStream stream = new MemoryStream();
+//Save the document.
 loadedDocument.Save(stream);
 //Close the document.
 loadedDocument.Close(true);
@@ -1404,19 +1782,17 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Set the default appearance.
-loadedForm.SetDefaultAppearance(false);
-
-//Get the loaded form field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-loadedTextBoxField.Text = "Text";
+//Load the existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
+//Get the existing PDF form.
+PdfLoadedForm lForm = loadedDocument.Form as PdfLoadedForm;
+//Set the complex script layout.
+lForm.ComplexScript = true;
+//Set flatten.
+lForm.Flatten = true;
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("flatten.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -1424,194 +1800,145 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Set the default appearance.
-loadedForm.SetDefaultAppearance(False)
-
-'Get the loaded form field.
-Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
-loadedTextBoxField.Text = "Text"
-
-'Save the document.
-loadedDocument.Save("Form.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-appearance-to-the-PDF-form-fields).
-
-## Modifying the existing form field in PDF document 
-
-You can modify an existing form field by getting the field from the [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html). You can retrieve a field from the field collection by index or by field name. 
-
-The following code snippet explains how to modify an existing form field in a PDF document.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field and modify the properties.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-RectangleF newBounds = new RectangleF(100, 100, 150, 50);
-loadedTextBoxField.Bounds = newBounds;
-loadedTextBoxField.SpellCheck = true;
-loadedTextBoxField.Text = "New text of the field.";
-loadedTextBoxField.Password = false;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field and modify the properties.
-PdfLoadedTextBoxField loadedTextBoxField= loadedForm.Fields[0] as PdfLoadedTextBoxField;
-RectangleF newBounds = new RectangleF(100, 100, 150, 50);
-loadedTextBoxField.Bounds = newBounds;
-loadedTextBoxField.SpellCheck = true;
-loadedTextBoxField.Text = "New text of the field.";
-loadedTextBoxField.Password = false;
-
-//Save the document.
-loadedDocument.Save("sample.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-'Get the loaded form field and Modify the properties.
-Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
-Dim newBounds As New RectangleF(100, 100, 150, 50)
-loadedTextBoxField.Bounds = newBounds
-loadedTextBoxField.SpellCheck = True
-loadedTextBoxField.Text = "New text of the field."
-loadedTextBoxField.Password = False
-
-'Save the document.
-loadedDocument.Save("sample.pdf")
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modify-the-existing-form-field-in-PDF-document).
-
-## Retrieving/Modifying the fore and back color of an existing form fields
-
-You can retrieve/modify the fore and background color of existing form fields in a PDF document by using [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_ForeColor) and [BackColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_BackColor) properties of the respective form fields. The following code snippet illustrate this. 
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-//Get fore color of the field.
-PdfColor foreColor = loadedTextBoxField.ForeColor;
-//Set the fore color.
-loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
-//Get background color of the field.
-PdfColor backColor = loadedTextBoxField.BackColor;
-//Set the background color.
-loadedTextBoxField.BackColor = new PdfColor(Color.Green);
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);         
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Get the loaded form field.
-PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
-//Get fore color of the field.
-PdfColor foreColor = loadedTextBoxField.ForeColor;
-//Set the fore color.
-loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
-//Get background color of the field.
-PdfColor backColor = loadedTextBoxField.BackColor;
-//Set the background color.
-loadedTextBoxField.BackColor = new PdfColor(Color.Green);
-
-//Save the document.
-loadedDocument.Save("Form.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-'Load the PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Get the loaded form
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-'Get the loaded form field
-Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
-'Get fore color of the field
-Dim foreColor As PdfColor = loadedTextBoxField.ForeColor
-'Set the fore color
-loadedTextBoxField.ForeColor = New PdfColor(Color.Red)
-'Get background color of the field
-Dim backColor As PdfColor = loadedTextBoxField.BackColor
-'Set the background color
-loadedTextBoxField.BackColor = New PdfColor(Color.Green)
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Form.pdf")
+'Get the existing PDF form
+Dim lForm As PdfLoadedForm = TryCast(loadedDocument.Form, PdfLoadedForm)
+'Set the complex script layout
+lForm.ComplexScript = True
+'Set flatten
+lForm.Flatten = True
 
 'Save the document
-loadedDocument.Save("Form.pdf")
+loadedDocument.Save("flatten.pdf")
 'Close the document
 loadedDocument.Close(True)
 
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flatten-the-existing-form-fields-with-complex-script).
+
+## Auto naming of form fields
+
+The Essential PDF supports auto naming of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
+
+While enabling this property, the field names are auto naming. If the fields are created using same/common name, the created fields will act as individual. 
+
+While disabling this property, the field names are not auto naming and the created fields are saved in a single group. The same value will be referred in all the same name fields.
+
+By default, the value is set to true. This is illustrated in the following code sample.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}	
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to the PDF document.
+PdfPage page = document.Pages.Add();
+
+//Create the form.
+PdfForm form = document.Form;
+//Enable the field auto naming. 
+form.FieldAutoNaming = true;
+//Create a text box field and add the properties.
+PdfTextBoxField textBoxField = new PdfTextBoxField(page, "Name");
+textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
+textBoxField.ToolTip = "FirstName";
+textBoxField.Text = "John";
+//Add the form field to the document.
+document.Form.Fields.Add(textBoxField);
+//Create a text box field with the same name and add the properties.
+PdfTextBoxField textBoxField1 = new PdfTextBoxField(page, "Name");
+textBoxField1.Bounds = new RectangleF(0, 50, 100, 20);
+textBoxField1.ToolTip = "LastName";
+textBoxField1.Text = "Doe";
+//Add form field to the document.
+document.Form.Fields.Add(textBoxField1);
+
+//Create memory stream.
+MemoryStream stream = new MemoryStream();
+//Save the document as stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to the PDF document.
+PdfPage page = document.Pages.Add();
+
+//Create the form.
+PdfForm form = document.Form;
+//Enable the field auto naming. 
+form.FieldAutoNaming = true;
+//Create a textbox field and add the properties.
+PdfTextBoxField textBoxField = new PdfTextBoxField(page, "Name");
+textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
+textBoxField.ToolTip = "FirstName";
+textBoxField.Text = "John";
+//Add the form field to the document.
+document.Form.Fields.Add(textBoxField);
+//Create a text box field with the same name and add the properties.
+PdfTextBoxField textBoxField1 = new PdfTextBoxField(page, "Name");
+textBoxField1.Bounds = new RectangleF(0, 50, 100, 20);
+textBoxField1.ToolTip = "LastName";
+textBoxField1.Text = "Doe";
+//Add form field to the document.
+document.Form.Fields.Add(textBoxField1);
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+Dim document As New PdfDocument()
+'Add a new page to the PDF document
+Dim page As PdfPage = document.Pages.Add()
+
+'Create the form
+Dim form As PdfForm = document.Form
+'Enable the field auto naming 
+form.FieldAutoNaming = True
+'Create a text box field and add the properties
+Dim textBoxField As New PdfTextBoxField(page, "Name")
+textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
+textBoxField.ToolTip = "FirstName"
+textBoxField.Text = "John"
+'Add the form field to the document
+document.Form.Fields.Add(textBoxField)
+'Create a text box field with the same name and add the properties
+Dim textBoxField1 As New PdfTextBoxField(page, "Name")
+textBoxField1.Bounds = New RectangleF(0, 50, 100, 20)
+textBoxField1.ToolTip = "LastName"
+textBoxField1.Text = "Doe"
+'Add form field to the document
+document.Form.Fields.Add(textBoxField1)
+
+'Save the document
+document.Save("Output.pdf")
+'Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-naming-of-form-fields-in-a-PDF-document).
+
+The following screenshot shows the enabling and disabling of form fields auto naming in PDF documents. 
+<img src="Form_images/Form_img1.png" alt="Output screenshot" width="100%" Height="Auto"/>
 
 ## Filling form fields in an existing PDF Document
 
@@ -2284,6 +2611,323 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-the-field-from-collection-using-TryGetValue).
 
+## Set appearance to the PDF form fields
+
+After filling the form fields in the PDF document, it may appear empty due to the absence of the appearance dictionary. By setting false to the [SetDefaultAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_SetDefaultAppearance_System_Boolean_) method in [PdfForm](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.Pdf.Interactive.PdfForm.html) class, you can create the appearance dictionary. By this, the text will be visible in all PDF Viewers.
+
+The following code snippet explains how to set appearance to the PDF form fields.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document.
+FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Set the default appearance.
+loadedForm.SetDefaultAppearance(false);
+
+//Get the loaded form field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+loadedTextBoxField.Text ="text";
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+//Set the default appearance.
+loadedForm.SetDefaultAppearance(false);
+
+//Get the loaded form field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+loadedTextBoxField.Text = "Text";
+
+//Save the document.
+loadedDocument.Save("Form.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument(fileName)
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+'Set the default appearance.
+loadedForm.SetDefaultAppearance(False)
+
+'Get the loaded form field.
+Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
+loadedTextBoxField.Text = "Text"
+
+'Save the document.
+loadedDocument.Save("Form.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-appearance-to-the-PDF-form-fields).
+
+## Modifying the existing form field in PDF document 
+
+You can modify an existing form field by getting the field from the [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html). You can retrieve a field from the field collection by index or by field name. 
+
+The following code snippet explains how to modify an existing form field in a PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document.
+FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded form field and modify the properties.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+RectangleF newBounds = new RectangleF(100, 100, 150, 50);
+loadedTextBoxField.Bounds = newBounds;
+loadedTextBoxField.SpellCheck = true;
+loadedTextBoxField.Text = "New text of the field.";
+loadedTextBoxField.Password = false;
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded form field and modify the properties.
+PdfLoadedTextBoxField loadedTextBoxField= loadedForm.Fields[0] as PdfLoadedTextBoxField;
+RectangleF newBounds = new RectangleF(100, 100, 150, 50);
+loadedTextBoxField.Bounds = newBounds;
+loadedTextBoxField.SpellCheck = true;
+loadedTextBoxField.Text = "New text of the field.";
+loadedTextBoxField.Password = false;
+
+//Save the document.
+loadedDocument.Save("sample.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument(fileName)
+'Get the loaded form.
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+'Get the loaded form field and Modify the properties.
+Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
+Dim newBounds As New RectangleF(100, 100, 150, 50)
+loadedTextBoxField.Bounds = newBounds
+loadedTextBoxField.SpellCheck = True
+loadedTextBoxField.Text = "New text of the field."
+loadedTextBoxField.Password = False
+
+'Save the document.
+loadedDocument.Save("sample.pdf")
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modify-the-existing-form-field-in-PDF-document).
+
+## Retrieving/Modifying the fore and back color of an existing form fields
+
+You can retrieve/modify the fore and background color of existing form fields in a PDF document by using [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_ForeColor) and [BackColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_BackColor) properties of the respective form fields. The following code snippet illustrate this. 
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document.
+FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded form field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+//Get fore color of the field.
+PdfColor foreColor = loadedTextBoxField.ForeColor;
+//Set the fore color.
+loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
+//Get background color of the field.
+PdfColor backColor = loadedTextBoxField.BackColor;
+//Set the background color.
+loadedTextBoxField.BackColor = new PdfColor(Color.Green);
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Close the document.
+loadedDocument.Close(true);         
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Get the loaded form field.
+PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedTextBoxField;
+//Get fore color of the field.
+PdfColor foreColor = loadedTextBoxField.ForeColor;
+//Set the fore color.
+loadedTextBoxField.ForeColor = new PdfColor(Color.Red);
+//Get background color of the field.
+PdfColor backColor = loadedTextBoxField.BackColor;
+//Set the background color.
+loadedTextBoxField.BackColor = new PdfColor(Color.Green);
+
+//Save the document.
+loadedDocument.Save("Form.pdf");
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument(fileName)
+'Get the loaded form
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+'Get the loaded form field
+Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), PdfLoadedTextBoxField)
+'Get fore color of the field
+Dim foreColor As PdfColor = loadedTextBoxField.ForeColor
+'Set the fore color
+loadedTextBoxField.ForeColor = New PdfColor(Color.Red)
+'Get background color of the field
+Dim backColor As PdfColor = loadedTextBoxField.BackColor
+'Set the background color
+loadedTextBoxField.BackColor = New PdfColor(Color.Green)
+
+'Save the document
+loadedDocument.Save("Form.pdf")
+'Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields).
+
+## Auto resizing text box field text
+
+The Essential PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
+
+The following code illustrates how to set [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) in an existing PDF text box field. 
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document.
+FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the loaded form.
+PdfLoadedForm loadedForm = loadedDocument.Form;
+
+//Read the text box field.
+PdfLoadedTextBoxField loadedField = loadedDocument.Form.Fields[0] as PdfLoadedTextBoxField;
+//Enable auto resize.
+loadedField.AutoResizeText = true;
+//Flatten the form.
+form.Flatten = true;
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load an existing document.
+PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
+//Read the text box field.
+PdfLoadedForm form = doc.Form;
+
+//Read the text box field.
+PdfLoadedTextBoxField loadedField = doc.Form.Fields[0] as PdfLoadedTextBoxField;
+//Enable auto resize.
+loadedField.AutoResizeText = true;
+//Flatten the form.
+form.Flatten = true;
+
+//Save the document.
+doc.Save("Form.pdf");
+//Close the document.
+doc.Close(true);
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load an existing document.
+Dim doc As PdfLoadedDocument = New PdfLoadedDocument("SourceForm.pdf")
+Dim form As PdfLoadedForm = doc.Form
+
+'Read the text box field.
+Dim loadedField As PdfLoadedTextBoxField = TryCast(doc.Form.Fields(0), PdfLoadedTextBoxField)
+'Enable auto resize.
+loadedField.AutoResizeText = True
+'Flatten the form.
+form.Flatten = True
+
+'Save the document.
+doc.Save("Form.pdf")
+'Close the document.
+doc.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
+
 ## Fill the XFA form fields along with Acroform in a same API
 
 The static XFA document contains both the XFA and Acroform.
@@ -2816,518 +3460,6 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document).
 
-## Importing FDF file to PDF
-
-FDF stands for Forms Data Format. FDF is a file format for representing form data and annotations that are contained in a PDF form. You can import the FDF file to PDF using [ImportDataFDF](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataFDF_System_Byte___) method in [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
-
-The below code illustrates how to import FDF file to PDF.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Get stream from an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get stream from an existing PDF document.
-FileStream fdfStream = new FileStream("ImportFDF.fdf", FileMode.Open, FileAccess.Read);
-//Import the FDF stream.
-loadedDocument.Form.ImportDataFDF(fdfStream, true);
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load an existing document.  
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Load the existing form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Load the FDF file.
-FileStream stream = new FileStream("ImportFDF.fdf", FileMode.Open);
-//Import the FDF stream.
-loadedForm.ImportDataFDF(stream, true);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load an existing document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Load the existing form.
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Load the FDF file.
-Dim stream As New FileStream("ImportFDF.fdf", FileMode.Open)
-'Import the FDF stream.
-loadedForm.ImportDataFDF(stream, True)
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
- 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Importing-FDF-file-to-PDF-document).
-
-## Export PDF file to FDF
-
-To export the FDF file from PDF document, you can use [ExportData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_String_) method in [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
-
-The below code illustrates how to export FDF file from PDF document.
-
-{% tabs %} 
-
-{% highlight c# tabtitle="ASP.NET Core" %}
-
-//Get stream from an existing PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-//Load the PDF document from stream.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Load an existing form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Load the FDF file.
-FileStream stream = new FileStream("Export.fdf", FileMode.Create, FileAccess.ReadWrite);
-//Export the existing PDF document to FDF file.
-loadedForm.ExportData(stream, DataFormat.Fdf, "SourceForm.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-//Load an existing document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
-//Load an existing form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-//Export the existing PDF document to FDF file.
-loadedForm.ExportData("Export.fdf", DataFormat.Fdf, "SourceForm.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-
-'Load an existing document
-Dim loadedDocument As New PdfLoadedDocument(fileName)
-'Load an existing form
-Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-'Export the existing PDF document to FDF file
-loadedForm.ExportData("Export.fdf", DataFormat.Fdf, "SourceForm.pdf")
-'Close the document
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export-FDF-file-from-PDF-document).
-
-## Complex script support for form fields
-
-You can add a complex script language text in PDF AcroForm fields by using the [ComplexScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html#Syncfusion_Pdf_Interactive_PdfTextBoxField_ComplexScript) property of the form field instance. The following code snippet illustrates this.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new PDF page.
-PdfPage page = document.Pages.Add();
-
-//Create the new PDF text box field.
-PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
-//Set bounds.
-textField.Bounds = new RectangleF(10, 10, 200, 30);
-//Set text.
-textField.Text = "สวัสดีชาวโลก";
-FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
-//Create a new PDF font instance.
-PdfFont font = new PdfTrueTypeFont(fontStream, 10);
-//Set font.
-textField.Font = font;
-//Enable complex script layout.
-textField.ComplexScript = true;
-//Add the text box field to the form collection.
-document.Form.Fields.Add(textField);
-//Set default appearance as false.
-document.Form.SetDefaultAppearance(false);
-
-//Save the PDF document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the PDF document.
-document.Close(true);
-
-{% endhighlight %}      
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new PDF page.
-PdfPage page = document.Pages.Add();
-
-//Create new PDF text box field.
-PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
-//Set bounds.
-textField.Bounds = new RectangleF(10, 10, 200, 30);
-//Set text.
-textField.Text = "สวัสดีชาวโลก";
-//Create new PdfTrueTypeFont instance.
-PdfTrueTypeFont font = new PdfTrueTypeFont(new Font("Tahoma", 10), true);
-//Set font.
-textField.Font = font;
-//Enable complex script layout.
-textField.ComplexScript = true;
-//Add the text box field to the form collection.
-document.Form.Fields.Add(textField);
-//Set default appearance as false.
-document.Form.SetDefaultAppearance(false);
-
-//Save the PDF document.
-document.Save("Form.pdf");
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Create a new PDF document.
-Dim document As New PdfDocument()
-'Add a new PDF page.
-Dim page As PdfPage = document.Pages.Add()
-
-'Create new PDF text box field.
-Dim textField As New PdfTextBoxField(page, "textBox")
-'Set bounds.
-textField.Bounds = New RectangleF(10, 10, 200, 30)
-'Set text.
-textField.Text = "สวัสดีชาวโลก"
-'Create new PdfTrueTypeFont instance.
-Dim font As New PdfTrueTypeFont(New Font("Tahoma", 10), True)
-'Set font.
-textField.Font = font
-'Enable complex script layout.
-textField.ComplexScript = True
-'Add the text box field to the form collection.
-document.Form.Fields.Add(textField)
-'Set default appearance as false.
-document.Form.SetDefaultAppearance(False)
-
-'Save the PDF document.
-document.Save("Form.pdf")
-'Close the document.
-document.Close(True)
-
-{% endhighlight %}                                                                                                                
-
-{% endtabs %}
-
-You can add the complex script for all the supported form fields by enabling the [ComplexScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_ComplexScript) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) or [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) instance.
-
-Supported form fields:
-
-* Text box field
-* Combo box field
-* List box field
-* Button field
-
-The following code example illustrates how to add complex script support for all the supported fields in PDF document.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new PDF page.
-PdfPage page = document.Pages.Add();
-
-//Create the new PDF text box field.
-PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
-//Set bounds.
-textField.Bounds = new RectangleF(10, 10, 200, 30);
-//Set text.
-textField.Text = "สวัสดีชาวโลก";
-FileStream fontStream = new FileStream("tahoma.ttf", FileMode.Open, FileAccess.Read);
-//Create a new PDF font instance.
-PdfFont font = new PdfTrueTypeFont(fontStream, 10);
-//Set font.
-textField.Font = font;
-//Add the text box field to the form collection.
-document.Form.Fields.Add(textField);
-//Set default appearance as false.
-document.Form.SetDefaultAppearance(false);
-//Enable complex script layout for form.
-document.Form.ComplexScript = true;
-
-//Save the PDF document.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Close the PDF document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new PDF page.
-PdfPage page = document.Pages.Add();
-
-//Create the new PDF text box field.
-PdfTextBoxField textField = new PdfTextBoxField(page, "textBox");
-//Set bounds.
-textField.Bounds = new RectangleF(10, 10, 200, 30);
-//Set text.
-textField.Text = "สวัสดีชาวโลก";
-//Create new PdfTrueTypeFont instance.
-PdfTrueTypeFont font = new PdfTrueTypeFont(new Font("Tahoma", 10), true);
-//Set font.
-textField.Font = font;
-//Add the text box field to the form collection.
-document.Form.Fields.Add(textField);
-//Set default appearance to false.
-document.Form.SetDefaultAppearance(false);
-//Enable complex script layout for form.
-document.Form.ComplexScript = true;
-
-//Save the PDF document.
-document.Save("Form.pdf");
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Create a new PDF document
-Dim document As New PdfDocument()
-'Add a new PDF page
-Dim page As PdfPage = document.Pages.Add()
-
-'Create the new PDF text box field
-Dim textField As New PdfTextBoxField(page, "textBox")
-'Set bounds
-textField.Bounds = New RectangleF(10, 10, 200, 30)
-'Set text
-textField.Text = "สวัสดีชาวโลก"
-'Create new PdfTrueTypeFont instance
-Dim font As New PdfTrueTypeFont(New Font("Tahoma", 10), True)
-'Set font
-textField.Font = font
-'Add the text box field to the form collection
-document.Form.Fields.Add(textField)
-'Set default appearance to false
-document.Form.SetDefaultAppearance(False)
-'Enable complex script layout for form
-document.Form.ComplexScript = True
-
-'Save the PDF document
-document.Save("Form.pdf")
-'Close the document
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can also flatten the existing form fields with complex script layout by using the following code snippet.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}		
-
-//Load the existing PDF document.
-FileStream inputFileStream = new FileStream("Form.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
-//Get the existing PDF form.
-PdfLoadedForm lForm = loadedDocument.Form as PdfLoadedForm;
-//Set the complex script layout.
-lForm.ComplexScript = true;
-//Set flatten.
-lForm.Flatten = true;
-
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document.
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Form.pdf");
-//Get the existing PDF form.
-PdfLoadedForm lForm = loadedDocument.Form as PdfLoadedForm;
-//Set the complex script layout.
-lForm.ComplexScript = true;
-//Set flatten.
-lForm.Flatten = true;
-
-//Save the document.
-loadedDocument.Save("flatten.pdf");
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("Form.pdf")
-'Get the existing PDF form
-Dim lForm As PdfLoadedForm = TryCast(loadedDocument.Form, PdfLoadedForm)
-'Set the complex script layout
-lForm.ComplexScript = True
-'Set flatten
-lForm.Flatten = True
-
-'Save the document
-loadedDocument.Save("flatten.pdf")
-'Close the document
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flatten-the-existing-form-fields-with-complex-script).
-
-## Auto naming of form fields
-
-The Essential PDF supports auto naming of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
-
-While enabling this property, the field names are auto naming. If the fields are created using same/common name, the created fields will act as individual. 
-
-While disabling this property, the field names are not auto naming and the created fields are saved in a single group. The same value will be referred in all the same name fields.
-
-By default, the value is set to true. This is illustrated in the following code sample.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new page to the PDF document.
-PdfPage page = document.Pages.Add();
-
-//Create the form.
-PdfForm form = document.Form;
-//Enable the field auto naming. 
-form.FieldAutoNaming = true;
-//Create a text box field and add the properties.
-PdfTextBoxField textBoxField = new PdfTextBoxField(page, "Name");
-textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
-textBoxField.ToolTip = "FirstName";
-textBoxField.Text = "John";
-//Add the form field to the document.
-document.Form.Fields.Add(textBoxField);
-//Create a text box field with the same name and add the properties.
-PdfTextBoxField textBoxField1 = new PdfTextBoxField(page, "Name");
-textBoxField1.Bounds = new RectangleF(0, 50, 100, 20);
-textBoxField1.ToolTip = "LastName";
-textBoxField1.Text = "Doe";
-//Add form field to the document.
-document.Form.Fields.Add(textBoxField1);
-
-//Create memory stream.
-MemoryStream stream = new MemoryStream();
-//Save the document as stream.
-document.Save(stream);
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a new page to the PDF document.
-PdfPage page = document.Pages.Add();
-
-//Create the form.
-PdfForm form = document.Form;
-//Enable the field auto naming. 
-form.FieldAutoNaming = true;
-//Create a textbox field and add the properties.
-PdfTextBoxField textBoxField = new PdfTextBoxField(page, "Name");
-textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
-textBoxField.ToolTip = "FirstName";
-textBoxField.Text = "John";
-//Add the form field to the document.
-document.Form.Fields.Add(textBoxField);
-//Create a text box field with the same name and add the properties.
-PdfTextBoxField textBoxField1 = new PdfTextBoxField(page, "Name");
-textBoxField1.Bounds = new RectangleF(0, 50, 100, 20);
-textBoxField1.ToolTip = "LastName";
-textBoxField1.Text = "Doe";
-//Add form field to the document.
-document.Form.Fields.Add(textBoxField1);
-
-//Save the document.
-document.Save("Output.pdf");
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Create a new PDF document
-Dim document As New PdfDocument()
-'Add a new page to the PDF document
-Dim page As PdfPage = document.Pages.Add()
-
-'Create the form
-Dim form As PdfForm = document.Form
-'Enable the field auto naming 
-form.FieldAutoNaming = True
-'Create a text box field and add the properties
-Dim textBoxField As New PdfTextBoxField(page, "Name")
-textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
-textBoxField.ToolTip = "FirstName"
-textBoxField.Text = "John"
-'Add the form field to the document
-document.Form.Fields.Add(textBoxField)
-'Create a text box field with the same name and add the properties
-Dim textBoxField1 As New PdfTextBoxField(page, "Name")
-textBoxField1.Bounds = New RectangleF(0, 50, 100, 20)
-textBoxField1.ToolTip = "LastName"
-textBoxField1.Text = "Doe"
-'Add form field to the document
-document.Form.Fields.Add(textBoxField1)
-
-'Save the document
-document.Save("Output.pdf")
-'Close the document
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-naming-of-form-fields-in-a-PDF-document).
-
-The following screenshot shows the enabling and disabling of form fields auto naming in PDF documents. 
-<img src="Form_images/Form_img1.png" alt="Output screenshot" width="100%" Height="Auto"/>
 
 ## Adding actions to form fields 
 
@@ -3335,478 +3467,6 @@ Please refer to the [actions](https://help.syncfusion.com/document-processing/pd
 
 N> Essential PDF allows users to preserve the extended rights for form filling alone.
 
-## Auto resizing text box field text
-
-The Essential PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
-
-The following code illustrates how to set [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) in an existing PDF text box field. 
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Load the PDF document.
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the loaded form.
-PdfLoadedForm loadedForm = loadedDocument.Form;
-
-//Read the text box field.
-PdfLoadedTextBoxField loadedField = loadedDocument.Form.Fields[0] as PdfLoadedTextBoxField;
-//Enable auto resize.
-loadedField.AutoResizeText = true;
-//Flatten the form.
-form.Flatten = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load an existing document.
-PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
-//Read the text box field.
-PdfLoadedForm form = doc.Form;
-
-//Read the text box field.
-PdfLoadedTextBoxField loadedField = doc.Form.Fields[0] as PdfLoadedTextBoxField;
-//Enable auto resize.
-loadedField.AutoResizeText = true;
-//Flatten the form.
-form.Flatten = true;
-
-//Save the document.
-doc.Save("Form.pdf");
-//Close the document.
-doc.Close(true);
- 
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load an existing document.
-Dim doc As PdfLoadedDocument = New PdfLoadedDocument("SourceForm.pdf")
-Dim form As PdfLoadedForm = doc.Form
-
-'Read the text box field.
-Dim loadedField As PdfLoadedTextBoxField = TryCast(doc.Form.Fields(0), PdfLoadedTextBoxField)
-'Enable auto resize.
-loadedField.AutoResizeText = True
-'Flatten the form.
-form.Flatten = True
-
-'Save the document.
-doc.Save("Form.pdf")
-'Close the document.
-doc.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF).
-
---------------------
-
-## Choose default value for radio button field
-
-You can choose default value for radio button field field using [SelectedItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedItem) or [SelectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonListField_SelectedIndex) properties of [PdfLoadedRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonListField.html) class. Please refer the below code snippet to fill the radio button field in an existing PDF document. 
-
-### Method 1:
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-    // Create a new PDF document
-    PdfDocument document = new PdfDocument();
-    // Add a new page to the PDF document
-    PdfPage page = document.Pages.Add();
-    // Create a new radio button list field named "employeesRadioList"
-    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
-    // Create a new radio button item for "Male"
-    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
-    // Set the bounds for the radio button
-    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
-    // Create a font
-    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
-    // Draw the label "Male"
-    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1); 
-    // Create a new radio button item for "Female"
-    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
-    // Set the bounds for the radio button
-    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
-    // Draw the label "Female"
-    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2);
-    // Create a new radio button item for "Transgender"
-    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
-    // Set the bounds for the radio button
-    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
-    // Draw the label "Transgender"
-    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem3);
-    // Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList);
-    // Save the document to a memory stream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream);
-    // Uncomment the line below to save the PDF to a file
-    // File.WriteAllBytes("FormOutput.pdf", stream.ToArray());
-    // Load the saved document from the memory stream
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
-    // Get the radio button list field from the loaded document
-    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
-    // Loop through each item in the radio button list
-    for (int j = 0; j < radiobuttonField.Items.Count; j++)
-    {
-        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
-        
-        // Check the radio button if its value is "Female"
-        if (radioButtonFieldItem.Value == "Female")
-        {
-            radioButtonFieldItem.Checked = true;
-        }
-    }
-    // Save the modified document to a new memory stream
-    MemoryStream ms = new MemoryStream();
-    loadedDocument.Save(ms);
-    // Write the modified document to a file
-    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray());
-    // Close the loaded document
-    loadedDocument.Close(true);
-    // Close the original document
-    document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-    // Create a new PDF document
-    PdfDocument document = new PdfDocument();
-    // Add a new page to the PDF document
-    PdfPage page = document.Pages.Add();
-    // Create a new radio button list field named "employeesRadioList"
-    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
-    // Create a new radio button item for "Male"
-    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
-    // Set the bounds for the radio button
-    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
-    // Create a font
-    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
-    // Draw the label "Male"
-    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1); 
-    // Create a new radio button item for "Female"
-    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
-    // Set the bounds for the radio button
-    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
-    // Draw the label "Female"
-    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2);
-    // Create a new radio button item for "Transgender"
-    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
-    // Set the bounds for the radio button
-    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
-    // Draw the label "Transgender"
-    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem3);
-    // Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList);
-    // Save the document.
-    document.Save("FormOutput.pdf");
-    // Load the saved document.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("FormOutput.pdf");
-    // Get the radio button list field from the loaded document
-    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
-    // Loop through each item in the radio button list
-    for (int j = 0; j < radiobuttonField.Items.Count; j++)
-    {
-        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
-        
-        // Check the radio button if its value is "Female"
-        if (radioButtonFieldItem.Value == "Female")
-        {
-            radioButtonFieldItem.Checked = true;
-        }
-    }
-    // Save the modified document.
-    loadedDocument.Save("FormOutput1.pdf");
-    // Close the loaded document
-    loadedDocument.Close(true);
-    // Close the original document
-    document.Close(true);
- 
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-    ' Create a new PDF document
-    Dim document As New PdfDocument()
-    ' Add a new page to the PDF document
-    Dim page As PdfPage = document.Pages.Add()
-    ' Create a new radio button list field named "employeesRadioList"
-    Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
-    ' Create a new radio button item for "Male"
-    Dim radioItem1 As New PdfRadioButtonListItem("Male")
-    ' Set the bounds for the radio button
-    radioItem1.Bounds = New RectangleF(90, 203, 15, 15)
-    ' Create a font
-    Dim Font_12_Regular As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular)
-    ' Draw the label "Male"
-    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, New RectangleF(110, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1)
-    ' Create a new radio button item for "Female"
-    Dim radioItem2 As New PdfRadioButtonListItem("Female")
-    ' Set the bounds for the radio button
-    radioItem2.Bounds = New RectangleF(205, 203, 15, 15)
-    ' Draw the label "Female"
-    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, New RectangleF(225, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2)
-    ' Create a new radio button item for "Transgender"
-    Dim radioItem3 As New PdfRadioButtonListItem("Transgender")
-    ' Set the bounds for the radio button
-    radioItem3.Bounds = New RectangleF(300, 203, 15, 15)
-    ' Draw the label "Transgender"
-    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, New RectangleF(320, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem3)
-    ' Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList)
-    ' Save the document to a memory stream
-    Dim stream As New MemoryStream()
-    document.Save(stream)
-    ' Uncomment the line below to save the PDF to a file
-    ' File.WriteAllBytes("FormOutput.pdf", stream.ToArray())
-    ' Load the saved document from the memory stream
-    Dim loadedDocument As New PdfLoadedDocument(stream)
-    ' Get the radio button list field from the loaded document
-    Dim radiobuttonField As PdfLoadedRadioButtonListField = TryCast(loadedDocument.Form.Fields("employeesRadioList"), PdfLoadedRadioButtonListField)
-    ' Loop through each item in the radio button list
-    For j As Integer = 0 To radiobuttonField.Items.Count - 1
-    Dim radioButtonFieldItem As PdfLoadedRadioButtonItem = TryCast(radiobuttonField.Items(j), PdfLoadedRadioButtonItem)
-    ' Check the radio button if its value is "Female"
-    If radioButtonFieldItem.Value = "Female" Then
-        radioButtonFieldItem.Checked = True
-    End If
-    Next
-    ' Save the modified document to a new memory stream
-    Dim ms As New MemoryStream()
-    loadedDocument.Save(ms)
-    ' Write the modified document to a file
-    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray())
-    ' Close the loaded document
-    loadedDocument.Close(True)
-    ' Close the original document
-    document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-### Method 2:
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-    // Create a new PDF document
-    PdfDocument document = new PdfDocument();
-    // Add a new page to the PDF document
-    PdfPage page = document.Pages.Add();
-    // Create a new radio button list field named "employeesRadioList"
-    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
-    // Create a new radio button item for "Male"
-    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
-    // Set the bounds for the radio button
-    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
-    // Create a font
-    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
-    // Draw the label "Male"
-    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1); 
-    // Create a new radio button item for "Female"
-    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
-    // Set the bounds for the radio button
-    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
-    // Draw the label "Female"
-    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2);
-    // Create a new radio button item for "Transgender"
-    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
-    // Set the bounds for the radio button
-    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
-    // Draw the label "Transgender"
-    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem3);
-    // Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList);
-    // Save the document to a memory stream
-    MemoryStream stream = new MemoryStream();
-    document.Save(stream);
-    // Uncomment the line below to save the PDF to a file
-    // File.WriteAllBytes("FormOutput.pdf", stream.ToArray());
-    // Load the saved document from the memory stream
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
-    // Get the radio button list field from the loaded document
-    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
-    // Loop through each item in the radio button list
-    for (int j = 0; j < radiobuttonField.Items.Count; j++)
-    {
-        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
-        // set the value for the radio button field
-        radiobuttonField.SelectedIndex = 1;
-    }
-    // Save the modified document to a new memory stream
-    MemoryStream ms = new MemoryStream();
-    loadedDocument.Save(ms);
-    // Write the modified document to a file
-    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray());
-    // Close the loaded document
-    loadedDocument.Close(true);
-    // Close the original document
-    document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-    // Create a new PDF document
-    PdfDocument document = new PdfDocument();
-    // Add a new page to the PDF document
-    PdfPage page = document.Pages.Add();
-    // Create a new radio button list field named "employeesRadioList"
-    PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
-    // Create a new radio button item for "Male"
-    PdfRadioButtonListItem radioItem1 = new PdfRadioButtonListItem("Male");
-    // Set the bounds for the radio button
-    radioItem1.Bounds = new RectangleF(90, 203, 15, 15); 
-    // Create a font
-    PdfFont Font_12_Regular = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular); 
-    // Draw the label "Male"
-    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, new RectangleF(110, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1); 
-    // Create a new radio button item for "Female"
-    PdfRadioButtonListItem radioItem2 = new PdfRadioButtonListItem("Female");
-    // Set the bounds for the radio button
-    radioItem2.Bounds = new RectangleF(205, 203, 15, 15);
-    // Draw the label "Female"
-    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, new RectangleF(225, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2);
-    // Create a new radio button item for "Transgender"
-    PdfRadioButtonListItem radioItem3 = new PdfRadioButtonListItem("Transgender");
-    // Set the bounds for the radio button
-    radioItem3.Bounds = new RectangleF(300, 203, 15, 15);
-    // Draw the label "Transgender"
-    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, new RectangleF(320, 204, 180, 20));
-    // Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem3);
-    // Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList);
-    // Save the document.
-    document.Save("FormOutput.pdf");
-    // Load the saved document.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("FormOutput.pdf");
-    // Get the radio button list field from the loaded document
-    PdfLoadedRadioButtonListField radiobuttonField = loadedDocument.Form.Fields["employeesRadioList"] as PdfLoadedRadioButtonListField;
-    // Loop through each item in the radio button list
-    for (int j = 0; j < radiobuttonField.Items.Count; j++)
-    {
-        PdfLoadedRadioButtonItem radioButtonFieldItem = radiobuttonField.Items[j] as PdfLoadedRadioButtonItem;
-        // set the value for the radio button field
-        radiobuttonField.SelectedIndex = 1;
-    }
-    // Save the modified document.
-    loadedDocument.Save("FormOutput1.pdf");
-    // Close the loaded document
-    loadedDocument.Close(true);
-    // Close the original document
-    document.Close(true);
- 
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-    ' Create a new PDF document
-    Dim document As New PdfDocument()
-    ' Add a new page to the PDF document
-    Dim page As PdfPage = document.Pages.Add()
-    ' Create a new radio button list field named "employeesRadioList"
-    Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
-    ' Create a new radio button item for "Male"
-    Dim radioItem1 As New PdfRadioButtonListItem("Male")
-    ' Set the bounds for the radio button
-    radioItem1.Bounds = New RectangleF(90, 203, 15, 15)
-    ' Create a font
-    Dim Font_12_Regular As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Regular)
-    ' Draw the label "Male"
-    page.Graphics.DrawString("Male", Font_12_Regular, PdfBrushes.Black, New RectangleF(110, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem1)
-    ' Create a new radio button item for "Female"
-    Dim radioItem2 As New PdfRadioButtonListItem("Female")
-    ' Set the bounds for the radio button
-    radioItem2.Bounds = New RectangleF(205, 203, 15, 15)
-    ' Draw the label "Female"
-    page.Graphics.DrawString("Female", Font_12_Regular, PdfBrushes.Black, New RectangleF(225, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem2)
-    ' Create a new radio button item for "Transgender"
-    Dim radioItem3 As New PdfRadioButtonListItem("Transgender")
-    ' Set the bounds for the radio button
-    radioItem3.Bounds = New RectangleF(300, 203, 15, 15)
-    ' Draw the label "Transgender"
-    page.Graphics.DrawString("Transgender", Font_12_Regular, PdfBrushes.Black, New RectangleF(320, 204, 180, 20))
-    ' Add the radio button item to the list
-    employeesRadioList.Items.Add(radioItem3)
-    ' Add the radio button list to the form
-    document.Form.Fields.Add(employeesRadioList)
-    ' Save the document to a memory stream
-    Dim stream As New MemoryStream()
-    document.Save(stream)
-    ' Uncomment the line below to save the PDF to a file
-    ' File.WriteAllBytes("FormOutput.pdf", stream.ToArray())
-    ' Load the saved document from the memory stream
-    Dim loadedDocument As New PdfLoadedDocument(stream)
-    ' Get the radio button list field from the loaded document
-    Dim radiobuttonField As PdfLoadedRadioButtonListField = TryCast(loadedDocument.Form.Fields("employeesRadioList"), PdfLoadedRadioButtonListField)
-    ' Loop through each item in the radio button list
-    For j As Integer = 0 To radiobuttonField.Items.Count - 1
-    Dim radioButtonFieldItem As PdfLoadedRadioButtonItem = TryCast(radiobuttonField.Items(j), PdfLoadedRadioButtonItem)
-    ' set the value for the radio button field
-    radiobuttonField.SelectedIndex = 1;
-    ' Save the modified document to a new memory stream
-    Dim ms As New MemoryStream()
-    loadedDocument.Save(ms)
-    ' Write the modified document to a file
-    File.WriteAllBytes("FormOutput1.pdf", ms.ToArray())
-    ' Close the loaded document
-    loadedDocument.Close(True)
-    ' Close the original document
-    document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub]().
 
 ## Troubleshooting
 
