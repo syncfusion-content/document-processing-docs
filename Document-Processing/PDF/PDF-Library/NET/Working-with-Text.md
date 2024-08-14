@@ -2137,7 +2137,7 @@ document.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Customizing-truetype-fonts-in-a-PDF/.NET).
 
-## LineLimit,ClipPath,NoClip for PdfStringFormat
+## LineLimit, ClipPath, NoClip for PdfStringFormat
 
 **PdfStringFormat.ClipPath:** If we enable the Clip Path option, the text rendering mode is set to a clipping mode within a text object.
 
