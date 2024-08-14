@@ -2139,9 +2139,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## LineLimit, ClipPath, NoClip properties in PdfStringFormat
 
-**ClipPath:** When the ClipPath option is enabled, the text rendering mode within a text object will switch to clipping mode. The default value of the ClipPath property is false.
-
-
 **LineLimit:** When LineLimit is enabled, the provided string will be laid out within the specified bounds. If the LineLimit property is disabled, the layout will continue to fill any remaining space. The default value of the LineLimit property is true.
 
 
@@ -2155,8 +2152,6 @@ The following code example illustrates this.
 
     // Create a new PdfStringFormat and set its properties
     PdfStringFormat format = new PdfStringFormat();
-    //Set clip path
-    format.ClipPath = true;
     //Set no clip
     format.NoClip = true;
     //Set line limit
@@ -2196,8 +2191,6 @@ The following code example illustrates this.
 
     // Create a new PdfStringFormat and set its properties
     PdfStringFormat format = new PdfStringFormat();
-    //Set clip path
-    format.ClipPath = true;
     //Set no clip
     format.NoClip = true;
     //Set line limit
@@ -2234,8 +2227,6 @@ The following code example illustrates this.
 
     ' Create a new PdfStringFormat and set its properties
     Dim format As New PdfStringFormat()
-    ' Set clip path
-    format.ClipPath = True
     ' Set no clip
     format.NoClip = True
     ' Set line limit
