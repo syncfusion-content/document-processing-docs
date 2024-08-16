@@ -1,6 +1,6 @@
 ---
 title: Split PDF Documents | Syncfusion
-description:  Split a PDF file into single-page or multiple-page PDFs using the Syncfusion .NET PDF library.
+description:  Split a PDF into individual or multiple-page documents using the Syncfusion .NET PDF library with ease and precision.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -47,24 +47,41 @@ for (int i = 0; i < loadedDocument.Pages.Count; i++)
 
 //Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Set a output path
-const string destinationFilePattern = "Output" + "{0}.pdf";
-//Split the pages into separate documents
-loadedDocument.Split(destinationFilePattern);
-//Close the document
-loadedDocument.Close(true);
+
+for (int i = 0; i < loadedDocument.Pages.Count; i++)
+{
+    //Creates a new document.
+    PdfDocument document = new PdfDocument();
+    //Imports the pages from the loaded document.
+    document.ImportPage(loadedDocument, i);
+    //Save the document to the specified path.
+    document.Save("Output" + i + ".pdf");
+    //Close the document.
+    document.Close(true);
+    //Close the document
+    loadedDocument.Close(true);
+}   
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the PDF document
+' Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'Set a output path
-Const destinationFilePattern As String = "Output" + "{0}.pdf"
-'Split the pages into separate documents
-loadedDocument.Split(destinationFilePattern)
-'Close the document
+For i As Integer = 0 To loadedDocument.Pages.Count - 1
+    ' Creates a new document.
+    Dim document As New PdfDocument()
+    ' Imports the pages from the loaded document.
+    document.ImportPage(loadedDocument, i)
+    ' Save the document to the specified path.
+    document.Save("Output" & i & ".pdf")
+    ' Close the document.
+    document.Close(True)
+    'Close the document
+    loadedDocument.Close(True)
+Next
+
+' Close the loaded document.
 loadedDocument.Close(True)
 
 {% endhighlight %}
