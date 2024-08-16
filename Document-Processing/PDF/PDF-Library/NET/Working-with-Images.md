@@ -30,7 +30,7 @@ The following code snippet shows how to add a file from disk to the PDF document
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-a-new-PDF-document/.NET/Insert-image-in-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -106,7 +106,7 @@ You can also add images into an existing PDF document using the below code snipp
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-an-existing-PDF-document/.NET/Insert-image-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -178,7 +178,7 @@ To add image from stream, use the below code snippet.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-an-existing-PDF-document/.NET/Insert-image-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -267,7 +267,7 @@ The following code illustrate this,
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %} 
 
 //PDF doesn't support inserting a vector image C#.NET Cross platforms.
 
@@ -337,7 +337,7 @@ The following code illustrate shows how to add a mask to TIFF image.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Add-a-mask-to-TIFF-image/.NET/Add-a-mask-to-TIFF-image/Program.cs" %} 
 
 //Create a PDF document
 PdfDocument doc = new PdfDocument();
@@ -426,7 +426,7 @@ Essential PDF allows you to replace images in an existing document. The [Replace
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %} 
 
 //Load an existing PDF document. 
 FileStream pdfStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -488,7 +488,7 @@ You can allow a large image to paginate across multiple pages in the PDF documen
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Paginate-an-image-in-PDF-document/.NET/Paginate-an-image-in-PDF-document/Program.cs" %} 
 
 //Create Document
 PdfDocument doc = new PdfDocument();
@@ -568,7 +568,7 @@ You can add transparency and rotation to the image using [SetTransparency](https
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Add-transparancy-and-rotation-to-the-image/.NET/Add-transparancy-and-rotation-to-the-image/Program.cs" %} 
 
 //Create Document
 PdfDocument doc = new PdfDocument();
@@ -669,7 +669,7 @@ The code snippet to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Converting-multi-page-TIFF-to-PDF/.NET/Converting-multi-page-TIFF-to-PDF/Program.cs" %} 
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -763,7 +763,7 @@ The code snippet to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Remove-images-from-PDF-document/.NET%20Standard/Remove-images-from-PDF-document/Program.cs" %} 
 
 //Load an existing PDF.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
