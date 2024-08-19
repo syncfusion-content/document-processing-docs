@@ -1,6 +1,6 @@
 ---
 title: Split PDF Documents | Syncfusion
-description:  Split a PDF file into single-page or multiple-page PDFs using the Syncfusion .NET PDF library.
+description:  Effortlessly Split large PDF documents into smaller ones, each comprising single or multiple pages, using the Syncfusion .NET PDF C# library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -9,6 +9,9 @@ documentation: UG
 # Split PDF Documents using .NET PDF Library
 
 The Syncfusion .NET PDF library supports [Splitting PDF file](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/split-pdf) into single-page or multiple-page PDF documents.
+
+Check the following video to quickly get started with split PDF document in .NET using the PDF Library.
+{% youtube "https://www.youtube.com/watch?v=GfPY3wwAKF4" %}
 
 ## Splitting a PDF file into individual pages
 
