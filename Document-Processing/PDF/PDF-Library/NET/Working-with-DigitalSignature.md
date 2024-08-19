@@ -1024,7 +1024,7 @@ The following code example shows how to sign a PDF document with LTA using [Time
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_with_LTA/Sign_PDF_with_LTA/Program.cs" %} 	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_with_LTA/.NET/Sign_PDF_with_LTA/Program.cs" %} 	
 
 //Load existing PDF document.
 FileStream documentStream1 = new FileStream("PDF_Succinctly.pdf", FileMode.Open, FileAccess.Read);
@@ -1154,7 +1154,7 @@ The following code example shows how to create a PDF digital signature using the
 
 {% tabs %}
 
-{% highlight c# tabTitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_Windows_Certificate/Sign_PDF_Windows_Certificate/Program.cs" %}
+{% highlight c# tabTitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_Windows_Certificate/.NET/Sign_PDF_Windows_Certificate/Program.cs" %}
 
 //Initialize the Windows store.
 X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
@@ -3189,7 +3189,7 @@ Added support for LTV validation and getting CRL and OCSP embedded details from 
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-LTV-information/Get-LTV-information/Program.cs" %} 	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-LTV-information/.NET/Get-LTV-information/Program.cs" %} 	
 
 //Gets the stream from the document.
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3270,7 +3270,7 @@ Added support to customize revocation validation using [PdfSignatureValidationOp
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customized-revocation-validation/Customized-revocation-validation/Program.cs" %} 		
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customized-revocation-validation/.NET/Customized-revocation-validation/Program.cs" %} 		
 
 //Gets the stream from the document
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
