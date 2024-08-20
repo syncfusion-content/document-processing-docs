@@ -22,7 +22,7 @@ You can add XMP metadata in a PDF document using the [XmpMetadata](https://help.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-in-PDF-document/.NET/Adding-XMP-metadata-in-PDF-document/Program.cs" %}
 
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -131,7 +131,7 @@ You can add metadata in an existing PDF document using the [XmpMetadata](https:/
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-to-an-existing-PDF-document/.NET/Adding-XMP-metadata-to-an-existing-PDF-document/Program.cs" %}	
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -258,7 +258,7 @@ The [BasicSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-XMP-basic-schema/.NET/Create-PDF-document-with-XMP-basic-schema/Program.cs" %}
 
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -379,7 +379,7 @@ The [DublinCoreSchema](https://help.syncfusion.com/cr/document-processing/Syncfu
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-dubline-core-schema-properties/.NET/Create-PDF-document-with-dubline-core-schema-properties/Program.cs" %}
 
 //Create new PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -481,7 +481,7 @@ The [RightsManagementSchema](https://help.syncfusion.com/cr/document-processing/
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-right-management-schema/.NET/Create-PDF-document-with-right-management-schema/Program.cs" %}
 
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -570,7 +570,7 @@ This schema describes very simple workflow or job information and the [BasicJobT
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-basic-job-ticket-schema/.NET/Create-PDF-document-with-basic-job-ticket-schema/Program.cs" %}
 
 //Create a document
 PdfDocument pdfDoc = new PdfDocument();
@@ -659,7 +659,7 @@ The [PagedTextSchema](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-pages-text-schema/.NET/Create-PDF-document-with-pages-text-schema/Program.cs" %}	
 
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -750,7 +750,7 @@ This schema specifies the properties used with Adobe PDF documents. The [PDFSche
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-PDF-schema/.NET/Create-PDF-document-with-PDF-schema/Program.cs" %}
 
 //Create a PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -843,7 +843,7 @@ Add the following code sample to define the custom schema in a PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Create-PDF-document-with-custom-schema/.NET/Create-PDF-document-with-custom-schema/Program.cs" %}
 
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -933,7 +933,7 @@ Essential PDF allows you to add required metadata (custom schema) to a PDF docum
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-custom-schema-to-the-PDF-document/.NET/Adding-custom-schema-to-the-PDF-document/Program.cs" %}
 
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -1018,7 +1018,7 @@ The custom metadata can be added in PDF document by using the [CustomMetadata](h
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-custom-metadata-to-the-PDF-document/.NET/Adding-custom-metadata-to-the-PDF-document/Program.cs" %}
 
 //Create PDF document
 PdfDocument pdfDoc = new PdfDocument();
@@ -1091,7 +1091,7 @@ Removing the custom metadata from an existing PDF document using the [Remove](ht
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Remove-custom-metadata-from-an-existing-PDF-document/.NET/Remove-custom-metadata-from-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1157,7 +1157,7 @@ You can add the XMP metadata along with an image to the PDF document. The [PdfBi
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Adding-XMP-metadata-along-with-an-image-in-PDF/.NET/Adding-XMP-metadata-along-with-an-image-in-PDF/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -1242,7 +1242,7 @@ Refer to the following code example to extract the image metadata from a PDF ima
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Metadata/Extracting-XMP-metadata-from-PDF-image/.NET/Extracting-XMP-metadata-from-PDF-image/Program.cs" %}
 
 //Load an existing PDF
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

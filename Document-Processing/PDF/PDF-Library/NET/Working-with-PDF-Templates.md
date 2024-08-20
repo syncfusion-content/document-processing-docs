@@ -17,7 +17,7 @@ The below code snippet illustrates how to add contents to the [PdfTemplate](http
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Add-the-contents-to-template-and-render-into-PDF-page/.NET/Add-the-contents-to-template-and-render-into-PDF-page/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -107,7 +107,7 @@ The below code snippet illustrates how to render the [PdfTemplate](https://help.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Render-the-template-in-an-existing-PDF-document/.NET/Render-the-template-in-an-existing-PDF-document/Program.cs" %}	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -202,7 +202,7 @@ The below code illustrates how to create the template from an existing page and 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Create-template-from-an-existing-PDF-document/.NET/Create-template-from-an-existing-PDF-document/Program.cs" %}	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -294,7 +294,7 @@ The below code illustrates how to add the page template elements in a PDF docume
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Add-the-page-template-elements-in-a-PDF-document/.NET/Add-the-page-template-elements-in-a-PDF-document/Program.cs" %}	
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -427,7 +427,7 @@ Multiple templates can be drawn over a PDF page, to create a document-overlay us
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Creating-the-document-overlays/.NET/Creating-the-document-overlays/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream1 = new FileStream(fileName1, FileMode.Open, FileAccess.Read);
@@ -533,7 +533,7 @@ The following code sample shows how to add a [PdfPageTemplate](https://help.sync
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Templates/Add-a-template-from-an-existing-PDF-document/.NET/Add-a-template-from-an-existing-PDF-document/Program.cs" %}
 
 //Loads an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

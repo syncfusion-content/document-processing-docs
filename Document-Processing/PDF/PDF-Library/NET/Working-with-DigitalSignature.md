@@ -18,7 +18,7 @@ The following code example explains how to add a digital signature to the PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-the-PDF-document/.NET/Add-a-digital-signature-to-the-PDF-document/Program.cs" %}	
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -127,7 +127,7 @@ The following code example illustrates how to add a digital signature in the PDF
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-an-existing-document/.NET/Add-a-digital-signature-to-an-existing-document/Program.cs" %} 	
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -236,7 +236,7 @@ You can add a digital signature to an existing document as follows.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-an-existing-document/.NET/Add-a-digital-signature-to-an-existing-document/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -326,7 +326,7 @@ The following code example illustrates how to add digital signature in a PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/Digital%20Signature/Add-digital-signature-using-X509Certificate2/.NET/Add-digital-signature-using-X509Certificate2/Program.cs" %} 	
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -440,7 +440,7 @@ You can load the signature field from the existing PDF document using [PdfLoaded
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Signing-an-existing-PDF-document/.NET/Signing-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -520,7 +520,7 @@ You can load the signature field from an existing PDF document using [PdfLoadedS
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -609,7 +609,7 @@ The following code example shows how to sign the PDF document from an external s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Externally-sign-a-PDF-document/.NET/Externally-sign-a-PDF-document/Program.cs" %} 
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
@@ -721,7 +721,7 @@ The following code example shows how to sign the PDF document from external sign
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/.NET/Externally-sign-the-PDF-document/Program.cs" %} 	
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
@@ -915,7 +915,7 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Create-LTV-when-signing-PDF-documents-externally/.NET/Create-LTV-when-signing-PDF-documents-externally/Program.cs" %} 	
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
@@ -1024,7 +1024,7 @@ The following code example shows how to sign a PDF document with LTA using [Time
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_with_LTA/.NET/Sign_PDF_with_LTA/Program.cs" %} 	
 
 //Load existing PDF document.
 FileStream documentStream1 = new FileStream("PDF_Succinctly.pdf", FileMode.Open, FileAccess.Read);
@@ -1154,7 +1154,7 @@ The following code example shows how to create a PDF digital signature using the
 
 {% tabs %}
 
-{% highlight c# tabtitle="ASP.NET Core" %}
+{% highlight c# tabTitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_Windows_Certificate/.NET/Sign_PDF_Windows_Certificate/Program.cs" %}
 
 //Initialize the Windows store.
 X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
@@ -1257,7 +1257,7 @@ Refer to the following code sample.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-signature-validation-appearance-in-a-PDF/.NET/Adding-a-signature-validation-appearance-in-a-PDF/Program.cs" %} 
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1371,7 +1371,7 @@ Essential PDF allows you to add timestamp in the digital signature of the PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-in-digital-signature-of-PDF/.NET/Adding-a-timestamp-in-digital-signature-of-PDF/Program.cs" %} 
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1489,7 +1489,7 @@ You can add timestamp to the PDF document using [TimeStampServer](https://help.s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-to-PDF-document/.NET/Adding-a-timestamp-to-PDF-document/Program.cs" %} 	
 
 //Create a new pdf document
 PdfDocument document = new PdfDocument();
@@ -1562,7 +1562,7 @@ You can add timestamp to the existing PDF document using [TimeStampServer](https
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-to-an-existing-PDF/.NET/Adding-a-timestamp-to-an-existing-PDF/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1646,7 +1646,7 @@ You can get the above certificate details from an existing signed PDF document u
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-certificate-details-from-an-existing-PDF/.NET/Retrieve-certificate-details-from-an-existing-PDF/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1751,7 +1751,7 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Enable-LTV-PDF-signature/.NET/Enable-LTV-PDF-signature/Program.cs" %} 	
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1880,7 +1880,7 @@ The following code example explains how to add a digital signature with [cryptog
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-digital-signature-with-CAdES-format/.NET/Adding-a-digital-signature-with-CAdES-format/Program.cs" %} 
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2010,7 +2010,7 @@ The following code example explains how to add a digital signature with various 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-digital-signature-with-digest-algorithm/.NET/Add-digital-signature-with-digest-algorithm/Program.cs" %} 	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2143,7 +2143,7 @@ The following code example explains how to validate the digitally signed PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET/Validate-the-digitally-signed-PDF-signature/Program.cs" %} 	
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -2271,7 +2271,7 @@ The following code example explains how to validate all the signatures in digita
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-all-signatures-in-digitally-signed-PDF/.NET/Validate-all-signatures-in-digitally-signed-PDF/Program.cs" %} 
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -2352,7 +2352,7 @@ Steps for deferred signing:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Deferred-signing-in-PDF-document/.NET/Deferred-signing-in-PDF-document/Program.cs" %} 
 
 //Get the stream from the document.
 FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
@@ -2702,7 +2702,7 @@ The following code sample shows how to add the estimated size of the signature i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-the-estimated-size-of-the-signature/.NET/Adding-the-estimated-size-of-the-signature/Program.cs" %} 
 
 //Creating a new PDF Document. 
 PdfDocument document = new PdfDocument();
@@ -2794,7 +2794,7 @@ Steps for deferred signing:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" %} 	
 
 //Get the stream from a document.
 FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
@@ -3079,7 +3079,7 @@ The following code example illustrates how to draw text/images in a digital appe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Draw-text-or-images-in-the-signature-appearance/.NET/Draw-text-or-images-in-the-signature-appearance/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3189,7 +3189,7 @@ Added support for LTV validation and getting CRL and OCSP embedded details from 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-LTV-information/.NET/Get-LTV-information/Program.cs" %} 	
 
 //Gets the stream from the document.
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3270,7 +3270,7 @@ Added support to customize revocation validation using [PdfSignatureValidationOp
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}		
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customized-revocation-validation/.NET/Customized-revocation-validation/Program.cs" %} 		
 
 //Gets the stream from the document
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3339,7 +3339,7 @@ The following code example illustrates how to remove existing digital signatures
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Remove_existing_digital_signature_from_PDF/.NET/Remove_existing_digital_signature_from_PDF/Program.cs" %} 
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3407,7 +3407,7 @@ The following code snippet illustrates how to sign a PDF document without showin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign-PDF-without-showing-digital-signature/.NET/Sign-PDF-without-showing-digital-signature/Program.cs" %} 
 
 //Get stream from an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3494,7 +3494,7 @@ The following code snippet illustrates how to retrieve digital signature informa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-digital-signature-information-from-PDF/.NET/Retrieve-digital-signature-information-from-PDF/Program.cs" %} 
 
 //Get stream from an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3570,7 +3570,7 @@ N> It is recommended to use licensed assemblies or registered license keys in yo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Multiple-digital-signature/.NET/Multiple-digital-signature/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream("SignatureFields.pdf", FileMode.Open, FileAccess.Read);
@@ -3724,7 +3724,7 @@ The following code example illustrates how to retrieve revocation certificate in
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-revocation-certificate-information/.NET/Retrieve-revocation-certificate-information/Program.cs" %} 
 
 //Load an existing signed PDF document.
 FileStream documentStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3885,7 +3885,7 @@ The following code example illustrates how to retrieve signed revision informati
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-signed-revision-information/.NET/Retrieve-signed-revision-information/Program.cs" %} 
 
 //Load an existing PDF document.
 FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3955,7 +3955,7 @@ The following code example illustrates how to retrieve revocation certificate in
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-revocation-certificate-information-from-digital-signature-embed-timestamp/.NET/Program.cs" %} 
 
 //Load an existing PDF document.
 FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -4011,7 +4011,7 @@ Utilize the **GetImages** method within the [PdfLoadedSignatureField](https://he
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-images-from-the-existing-signed-signature-field/.NET/Get-images-from-the-existing-signed-signature-field/Program.cs" %} 
 
 //Load an existing PDF file.
 FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -4073,7 +4073,7 @@ Effortlessly Integrate **signature and timestamp** certificates into the Documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %} 
 
 //Loads an existing document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
