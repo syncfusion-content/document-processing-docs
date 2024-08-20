@@ -48,7 +48,7 @@ Imports Syncfusion.Drawing
 Step 5: Include the below code snippet in program.cs to create an Excel file.
 {% capture codesnippet3 %}
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Core/Create%20Excel/Create%20Excel/Program.cs, 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET/Create%20Excel/Create%20Excel/Program.cs,180" %}
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -407,7 +407,7 @@ End Using
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-A complete working example of how to create an Excel file in Console Application using .NET Core in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET%20Core/Create%20Excel).
+A complete working example of how to create an Excel file in Console Application using .NET Core in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET/Create%20Excel).
 
 By executing the program, you will get the Excel file as below.
 ![Output File](Console-Apps-images/Console-Apps-images_img4.png)
@@ -433,7 +433,7 @@ N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.Xls
 Step 4: Include the following namespaces in the program.cs file.
 {% capture codesnippet1 %}
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Framework/Create%20Excel/Create%20Excel/Program.cs", 180 %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 using Syncfusion.XlsIO;
 using System.IO;
 using System.Drawing;
