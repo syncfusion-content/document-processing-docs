@@ -21,7 +21,7 @@ Refer to the following code example to split a PDF into individual pages.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Splitting-PDF-file-into-individual-pages/.NET/Splitting-PDF-file-into-individual-pages/Program.cs" %} 
 
 //Due to platform limitations, Essential PDF supports splitting a PDF file into individual pages only in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms. However this can be achieved by using the following code snippet. 
 
@@ -83,7 +83,7 @@ The Syncfusion .NET PDF library allows splitting a certain range of pages into a
 Refer to the following code example to split a range of pages.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %} 
 {% raw %}
 
 //Load the existing PDF file.
@@ -151,7 +151,7 @@ Refer to the following code example to split by a fixed number of pages.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %} 
 
 //Load the existing PDF file.
 PdfLoadedDocument loadDocument = new PdfLoadedDocument(new FileStream("Input.pdf", FileMode.Open));
@@ -211,7 +211,7 @@ Refer to the following code example to split a PDF using bookmarks.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Split-PDF-based-Bookmarks/.NET/Split-PDF-based-Bookmarks/Program.cs" %} 
 
 // Load the PDF document 
 using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read)) 
@@ -313,7 +313,7 @@ The Syncfusion PDF library enables the splitting of PDF documents and offers the
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Remove-Unused-Resources-when-Splitting-PDF-Documents/.NET/Remove-Unused-Resources-when-Splitting-PDF-Documents/Program.cs" %} 
 {% raw %}
 
 //Load the existing PDF file.
@@ -393,7 +393,7 @@ The Syncfusion PDF library enables the splitting of PDF documents and offers the
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Import-tagged-structure-when-splitting-PDF-documents/.NET/Import-tagged-structure-when-splitting-PDF-documents/Program.cs" %} 
 {% raw %}
 
 //Load an existing PDF file.

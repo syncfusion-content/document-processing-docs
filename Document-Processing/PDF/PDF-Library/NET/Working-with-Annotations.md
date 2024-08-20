@@ -16,7 +16,7 @@ You can add, delete and modify the annotation from the PDF documents.
 You can add a popup annotation to the page using [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html) class. The following code example explains this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-popup-annotation-to-the-PDF-document/.NET/Add-a-popup-annotation-to-the-PDF-document/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -100,7 +100,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To add [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html) to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-popup-annotation-to-an-existing-PDF-document/.NET/Add-a-popup-annotation-to-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -182,7 +182,7 @@ Annotations can be flattened by removing the existing annotation and replacing i
 This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) property. Please refer the sample for flattening all the annotations in the PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document/.NET/Flatten-the-annotations-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -242,7 +242,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To flatten the specific annotation in the PDF document, use the below code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-specific-annotaiton-in-the-PDF-document/.NET/Flatten-the-specific-annotaiton-in-the-PDF-document/Program.cs" %}
+
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
@@ -322,7 +323,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To flatten pop-up annotation [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) property to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-popup-annotation-in-the-PDF-document/.NET/Flatten-popup-annotation-in-the-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("PopupAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -408,7 +409,7 @@ To flatten the redaction annotation in PDF document, use the following code exam
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %}
 
 //Get stream from an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -505,7 +506,7 @@ This can be achieved by calling the [FlattenAnnotations](https://help.syncfusion
 To flatten the annotation without pop-ups [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-without-calling-save-method/.NET/Flattening-annotations-without-calling-save-method/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -557,7 +558,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To flatten the annotation with pop-ups [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations_System_Boolean_) method to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-with-popups-in-PDF/.NET/Flattening-annotations-with-popups-in-PDF/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -609,7 +610,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can add a 3D annotation in PDF document using [Pdf3DAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.Pdf3DAnnotation.html) class. The following example illustrates this.
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-3D-annotation-in-PDF-document/.NET/Add-a-3D-annotation-in-PDF-document/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -689,7 +690,7 @@ You can add the JavaScript script to the 3D annotation using the [OnInstantiate]
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-the-JavaScript-script-to-the-3D-annotation-in-a-PDF/.NET/Add-the-JavaScript-script-to-the-3D-annotation-in-a-PDF/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -764,7 +765,7 @@ Links for external files can be added in a PDF document by using the [PdfFileLin
 The following code example explains how to add a file link annotation in PDF.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %}
 
 //PDF doesn't support File Link Annotation C#.NET Cross platforms.
 
@@ -827,7 +828,7 @@ The following rich media types are supported:
 The following code examples explain how to add a rich media annotation in a PDF document using the [PdfRichMediaAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRichMediaAnnotation.html).
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-rich-media-annotation-to-PDF-document/.NET/Add-rich-media-annotation-to-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream inputStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -918,7 +919,7 @@ Free text annotation enables you to display the text directly on the page. When 
 The following code example explains how to add a free text annotation in the PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-free-text-annotation-in-the-PDF-document/.NET/Add-a-free-text-annotation-in-the-PDF-document/Program.cs" %}
 
 //Creates a new pdf document
 PdfDocument document = new PdfDocument();
@@ -1023,7 +1024,7 @@ Line annotation displays a single straight line on the page. When you open it, i
 
 [PdfLineAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLineAnnotation.html) is used to create and set the properties of the Line annotation.
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-line-annotation-to-the-PDF-document/.NET/Add-line-annotation-to-the-PDF-document/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1155,7 +1156,7 @@ When opened, it displays a pop-up window containing the text of the associated n
 [PdfRubberStampAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRubberStampAnnotation.html) is used to create rubber stamp annotation.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-rubberstamp-annotation-to-the-PDF-document/.NET/Add-rubberstamp-annotation-to-the-PDF-document/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1233,7 +1234,7 @@ When you open it, it displays a pop-up window containing text of the associated 
 [PdfInkAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfInkAnnotation.html) is used to create ink annotation in a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-ink-annotation-to-the-PDF-document/.NET/Add-ink-annotation-to-the-PDF-document/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1306,7 +1307,7 @@ You can get ink list points from the [PdfLoadedInkAnnotation](https://help.syncf
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-the-ink-list-points-from-the-existing-PDF-document/.NET/Get-the-ink-list-points-from-the-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1385,7 +1386,7 @@ It typically does not appear alone, but is associated with markup annotation, it
 [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html) is used to add pop-up annotation in a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-popup-annotation-to-the-PDF-document/.NET/Add-a-popup-annotation-to-the-PDF-document/Program.cs" %}
 
 //Create new PDF document
 PdfDocument document = new PdfDocument();
@@ -1472,7 +1473,7 @@ File attachment annotation contains reference to a file that typically is embedd
 [PdfAttachmentAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentAnnotation.html) is used to add a file attachment annotation in a PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-file-attachment-annotation-in-a-PDF-document/.NET/Add-file-attachment-annotation-in-a-PDF-document/Program.cs" %}
 
 //Creates a new PDF Document.
 PdfDocument document = new PdfDocument();
@@ -1552,7 +1553,7 @@ Sound annotation is used to play the sound clip in the PDF Document.
 
 The following code example explains how to add a sound annotation in a PDF document using [PdfSoundAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAnnotation.html).
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-sound-annotation-in-a-PDF-document/.NET/Add-a-sound-annotation-in-a-PDF-document/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1642,7 +1643,8 @@ URI annotation is used to navigate to a particular web URI
 
 The following code example explains how to add URI annotation in a PDF document using [PdfUriAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfUriAnnotation.html).
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-URI-annotation-in-a-PDF-document/.NET/Add-URI-annotation-in-a-PDF-document/Program.cs" %}
+
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
 //Creates a new page
@@ -1719,7 +1721,7 @@ This annotation is used to navigate to a specific destination within the documen
 
 [PdfDocumentLinkAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfDocumentLinkAnnotation.html) is used to add a document link annotation in PDF document.
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-document-link-annotation-in-PDF-document/.NET/Add-a-document-link-annotation-in-PDF-document/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1817,7 +1819,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The essential PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Removing-the-sensitive-text-and-images-from-PDF-document/.NET/Removing-the-sensitive-text-and-images-from-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();			
@@ -1939,7 +1941,7 @@ A watermark annotation is used to represent graphics that are expected to be pri
 The following code example explains how to add a watermark annotation in the PDF document
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-watermark-annotation-in-the-PDF-document/.NET/Add-watermark-annotation-in-the-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -2017,7 +2019,7 @@ You can highlight the Markup Text using the [PdfTextMarkupAnnotationType](https:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Highlight-text-in-the-newly-created-PDF-document/.NET/Highlight-text-in-the-newly-created-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2123,7 +2125,7 @@ Cloud border style can be added to the [PdfRectangleAnnotation](https://help.syn
 The following code sample explains how to add cloud border styled rectangle annotation in the PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-cloud-border-styled-rectangle-annotation-in-the-PDF/.NET/Add-cloud-border-styled-rectangle-annotation-in-the-PDF/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2232,7 +2234,7 @@ Cloud border style can be added to the [PdfPolygonAnnotation](https://help.syncf
 The following code sample explains how to add cloud border styled polygon annotation in the PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-cloud-border-styled-polygon-annotation-in-the-PDF/.NET/Add-a-cloud-border-styled-polygon-annotation-in-the-PDF/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2356,7 +2358,7 @@ The line measurement annotation is displayed as the straight line in the page. T
 [PdfLineMeasurementAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLineMeasurementAnnotation.html) to add a line measurement annotation to the page.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-line-measurement-annotation-to-the-PDF-document/.NET/Add-a-line-measurement-annotation-to-the-PDF-document/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2472,7 +2474,7 @@ The square measurement annotation is displayed as square shape in the page. The 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-square-measurement-annotation-to-PDF-document/.NET/Add-a-square-measurement-annotation-to-PDF-document/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2570,7 +2572,7 @@ The circle measurement annotation is displayed as circle shape in the page. The 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-circle-measurement-annotation-to-the-PDF-document/.NET/Add-a-circle-measurement-annotation-to-the-PDF-document/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2673,7 +2675,7 @@ The angle measurement annotation calculates the angle between three points and d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %}
 
 //PDF doesn't support angle measurement annotation C#.NET Cross platforms.
 
@@ -2734,7 +2736,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Essential PDF allows you to modify the annotation of existing document. The following code illustrates this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modifying-annotation-of-existing-PDF-document/.NET/Modifying-annotation-of-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -2810,7 +2812,7 @@ The redaction annotations from the existing document can be modified using the E
 The following code sample explains this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modify-the-redaction-annotation-in-PDF-document/.NET/Modify-the-redaction-annotation-in-PDF-document/Program.cs" %}
 
 //Load the PDF document 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open,FileAccess.Read);
@@ -2931,7 +2933,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can remove the annotation from the annotation collection, represented by the [PdfLoadedAnnotationCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html) of the loaded page. The following code illustrates this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Removing-annotations-from-an-existing-PDF-document/.NET/Removing-annotations-from-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -2993,7 +2995,7 @@ FDF stands for Forms Data Format. FDF is a file format for representing annotati
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-FDF-file-to-PDF-document/.NET/Importing-annotations-from-FDF-file-to-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3043,7 +3045,7 @@ XFDF stands for XML Forms Data Format. XFDF is the XML version of FDF for repres
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-XFDF-file-to-PDF-document/.NET/Importing-annotations-from-XFDF-file-to-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3094,7 +3096,7 @@ JSON stands for JavaScript Object Notation. It is a collection of key or value p
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document/.NET/Importing-annotations-from-JSON-file-to-PDF-document/Program.cs" %}
 
 //Load the PDF document 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read); 
@@ -3146,7 +3148,7 @@ To export annotation data to the FDF file from PDF document, you can use the [Ex
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-annotation-to-FDF-file-from-PDF-document/.NET/Exporting-annotation-to-FDF-file-from-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3191,7 +3193,7 @@ To export annotation data to the XFDF file from PDF document, you can use the [E
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-annotations-to-XFDF-file-from-PDF-document/.NET/Exporting-annotations-to-XFDF-file-from-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3236,7 +3238,7 @@ To export annotation data to the JSON file from PDF document, you can use the [E
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-annotations-to-JSON-file-from-PDF-document/.NET/Exporting-annotations-to-JSON-file-from-PDF-document/Program.cs" %}
 
 //Load the PDF document 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read); 
@@ -3287,7 +3289,7 @@ The following code example explains how to add comments to the PDF annotation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-comments-to-the-PDF-annotation/.NET/Add-comments-to-the-PDF-annotation/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -3407,7 +3409,7 @@ To add comments [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-pro
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-comments-to-the-existing-PDF-annotation/.NET/Add-comments-to-the-existing-PDF-annotation/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -3511,7 +3513,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can add a review status in a newly created PDF annotation using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum as shown the following code snippet.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-a-review-status-in-a-newly-created-PDF-annotation/.NET/Add-a-review-status-in-a-newly-created-PDF-annotation/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -3630,7 +3632,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To add the review status  [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum to an existing PDF document using [PDFLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-the-review-status-to-the-existing-PDF-annotation/.NET/Add-the-review-status-to-the-existing-PDF-annotation/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -3737,7 +3739,7 @@ The following code example explains how to remove comments using [RemoveAt](http
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Remove-commets-from-the-existing-PDF-annotation/.NET/Remove-commets-from-the-existing-PDF-annotation/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -3811,7 +3813,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To remove review status [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method to an existing PDF document using [PDFLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code example explain this.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Remove-review-status-to-the-existing-PDF-document/.NET/Remove-review-status-to-the-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -3889,7 +3891,7 @@ The Essential PDF supports modifying comments using [Comments](https://help.sync
 The following code example explains how to modify comments in the existing PDF annotation.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modify-comments-in-the-existing-PDF-annotation/.NET/Modify-comments-in-the-existing-PDF-annotation/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -3968,7 +3970,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To modify review status [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum to an existing PDF document using [PDFLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.  The following code example explain this.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modify-review-status-to-the-existing-PDF-annotation/.NET/Modify-review-status-to-the-existing-PDF-annotation/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("inputAnnotation.pdf", FileMode.Open, FileAccess.Read);
@@ -4056,7 +4058,7 @@ You can retrieve the annotation review history from the existing PDF document an
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations/.NET/Retrieve-review-status-from-the-existing-PDF-annotations/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -4134,7 +4136,7 @@ The following code example explains how to retrieve the annotation comments from
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Retrieve-the-annotation-comments-from-the-existing-PDF/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -4192,7 +4194,7 @@ The following code example illustrates how to print annotation in the PDF docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Print-annotation-in-the-PDF-document/.NET/Print-annotation-in-the-PDF-document/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -4325,7 +4327,8 @@ The following code snippet explains how to add custom stamp in an existing PDF d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-custom-stamp-in-an-existing-PDF-document/.NET/Add-custom-stamp-in-an-existing-PDF-document/Program.cs" %}
+
 //Load an existing PDF document
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream);
@@ -4508,7 +4511,7 @@ You can get the images from the custom rubber stamp annotation appearance using 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %}
 
 //Load the existing PDF file.
 FileStream fileStream = new FileStream("input.pdf", FileMode.Open);

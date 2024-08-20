@@ -17,7 +17,7 @@ You can add a text file attachment to a PDF document using [PdfAttachment](https
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-attachment-to-a-PDF-document/.NET/Adding-attachment-to-a-PDF-document/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -82,7 +82,7 @@ Essential PDF also provides support for adding the attachments to existing PDF d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-the-attachments-to-an-existing-PDF-document/.NET/Adding-the-attachments-to-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -158,7 +158,7 @@ Essential PDF allows you to remove the attachments from the existing document by
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Remove-attachment-from-an-existing-PDF-document/.NET/Remove-attachment-from-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -216,7 +216,7 @@ Essential PDF provides support for extracting the attachments and saving them to
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Extract-and-saving-an-attachment-to-the-disk/.NET/Extract-and-saving-an-attachment-to-the-disk/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Output.pdf", FileMode.Open, FileAccess.Read);

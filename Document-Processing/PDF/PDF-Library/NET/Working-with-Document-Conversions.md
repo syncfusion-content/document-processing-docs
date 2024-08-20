@@ -87,7 +87,7 @@ For ASP.NET Core and Xamarin applications
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Word-to-PDF/Converting-Word-to-PDF-document/.NET/Converting-Word-to-PDF-document/Program.cs" %}
 
 // Open the file as Stream.
 FileStream docStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read);
@@ -167,7 +167,7 @@ Essential DocIO allows you to customize the Word to PDF conversion using [DocToP
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support customizing the Word document C#.NET Cross platforms.
 
@@ -248,7 +248,7 @@ The following code illustrates how to convert a workbook to PDF Document using [
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Convert-workbook-to-PDF-document/.NET/Convert-workbook-to-PDF-document/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -320,7 +320,7 @@ The following code shows how to convert a particular sheet to PDF Document using
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Converting-a-worksheet-to-PDF-document/.NET/Converting-a-worksheet-to-PDF-document/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -397,7 +397,7 @@ The following code snippet shows how to create an individual PDF document for ea
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Creating-individual-PDF-document-for-each-worksheet/.NET/Creating-individual-PDF-document-for-each-worksheet/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -478,7 +478,7 @@ To preserve the charts during Excel to PDF conversion, you should initialize the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Converting-Excel-with-chart-to-PDF-document/.NET/Converting-Excel-with-chart-to-PDF-document/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -638,7 +638,7 @@ For ASP.NET Core and Xamarin applications
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/RTF-to-PDF/Convert-RTF-to-PDF-document/.NET/Convert-RTF-to-PDF-document/Program.cs" %}
 
 //Open the file as Stream
 FileStream docStream = new FileStream(@"Input.rtf", FileMode.Open, FileAccess.Read);
@@ -711,7 +711,7 @@ Essential DocIO allows you to customize the RTF to PDF conversion using [DocToPD
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support customizing the RTF to PDF conversion C#.NET Cross platforms.
 
@@ -775,7 +775,7 @@ The code snippet to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/TIFF-to-PDF/Converting-multipage-TIFF-to-PDF-document/.NET/Converting-multipage-TIFF-to-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -902,7 +902,7 @@ Refer the below code snippet to draw a single frame monochrome TIFF image with J
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support compressing monochrome images C#.NET Cross platforms.
 
@@ -964,7 +964,7 @@ The below code illustrates how to convert XPS to PDF.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Converting-XPS-to-PDF-document/.NET/Converting-XPS-to-PDF-document/Program.cs" %}
 
 //Initialize XPS to PDF converter.
 XPSToPdfConverter converter = new XPSToPdfConverter();
@@ -1218,7 +1218,7 @@ N> The above mentioned NuGet packages are available in [nuget.org](https://www.n
 The following code snippet illustrates how to convert PDF page into image using Convert method in PdfToImageConverter.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -1266,55 +1266,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> To know more about PdfToImageConverter and features it provides, please refer to [PdfToImageConverter](https://help.syncfusion.com/document-processing/pdf/conversions/pdf-to-image/net/convert-pdf-file-to-image-in-asp-net-core)
 
-## MHTML to PDF
-
-The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting the MHTML file to PDF document. Please refer to the following code example. 
-
-*HTML to PDF Features:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) 
-    
-*Troubleshooting:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting)
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Initialize HTML to PDF converter 
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert MHTML to PDF
-PdfDocument document = htmlConverter.Convert(@"input.mhtml");
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-//Close the document
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert MHTML to PDF
-PdfDocument document = htmlConverter.Convert("input.mhtml");  
-//Save the document
-document.Save("Sample.pdf");
-document.Close();
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Initialize HTML to PDF converter
-Dim htmlConverter As New HtmlToPdfConverter()
-'Convert MHTML to PDF
-Dim document As PdfDocument = htmlConverter.Convert("input.mhtml")
-'Save and close the document
-document.Save("Sample.pdf")
-document.Close()
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Convert-MHTML-to-PDF-document).
 
 ## HTML to MHTML
 
@@ -1326,7 +1277,7 @@ The [HTML to PDF converter library](https://www.syncfusion.com/document-processi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support converting HTML to MHTML C#.NET Cross platforms.
 
@@ -1354,180 +1305,13 @@ htmlConverter.ConvertToMhtml("http://www.syncfusion.com", "sample.mhtml")
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Convert-HTML-to-MHTML).
 
-## HTML to Raster Image
-
-The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting the webpage to an image. Please refer to the following code example. 
-
-*HTML to PDF Features:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) 
-    
-*Troubleshooting:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting)
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert URL to Image
-Image image = htmlConverter.ConvertToImage("http://www.google.com");
-byte[] imageByte = image.ImageData;
-//Save the image
-File.WriteAllBytes("Sample.jpg", imageByte);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert URL to Image
-Image[] image = htmlConverter.ConvertToImage("http://www.syncfusion.com");
-//Save the image
-image[0].Save("Sample.jpg");
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Initialize HTML to PDF converter
-Dim htmlConverter As New HtmlToPdfConverter()
-'Convert URL to Image
-Dim image As Image() = htmlConverter.ConvertToImage("http://www.syncfusion.com")
-'Save the image
-image(0).Save("Sample.jpg")
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Convert-HTML-to-raster-image).
-
-## HTML string to Raster Image
-
-The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting the HTML string to an image. Please refer to the following code example. 
-
-*HTML to PDF Features:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) 
-    
-*Troubleshooting:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting)
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//HTML string and Base URL
-string htmlString = "<html><body>Hello World!!!</body></html>";
-string baseURL = "";
-//Convert HTML string to Image
-Image image = htmlConverter.ConvertToImage(htmlString, baseURL);
-byte[] imageByte = image.ImageData;
-//Save the image
-File.WriteAllBytes("Output.jpg", imageByte);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-string htmlString = "<html><body>Hello World!!!</body></html>";
-string baseURL = "";
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert HTML string to Image
-Image[] image = htmlConverter.ConvertToImage(htmlString, baseURL);
-//Save the image
-image[0].Save("Sample.jpg");
-
-{% endhighlight %}
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Dim htmlString As String = "<html><body>Hello World!!!</body></html>"
-Dim baseURL As String = ""
-'Initialize HTML to PDF converter
-Dim htmlConverter As New HtmlToPdfConverter()
-'Convert HTML string to Image
-Dim image As Image() = htmlConverter.ConvertToImage(htmlString, baseURL)
-'Save the image
-image(0).Save("Sample.jpg")
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/HTML-string-to-raster-image/.NET-Standard).
-
-## Partial webpage to Raster Image
-
-The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting the partial webpage to an image. Please refer to the following code example. 
-
-*HTML to PDF Features:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/features) 
-    
-*Troubleshooting:* [https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/troubleshooting)
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert Partial HTML to Image
-Image image = htmlConverter.ConvertPartialHtmlToImage("http://www.google.com", "lga");
-byte[] imageByte = image.ImageData;
-//Save the image
-File.WriteAllBytes("Output.jpg", imageByte);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert Partial HTML to Image
-Image[] image = htmlConverter.ConvertPartialHtmlToImage("input.html", "pic");
-//Save Image
-image[0].Save("Output.jpg");
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Initialize HTML to PDF converter
-Dim htmlConverter As New HtmlToPdfConverter()
-'Convert Partial HTML to Image
-Dim image As Image() = htmlConverter.ConvertPartialHtmlToImage("input.html", "pic")
-'Save Image
-image(0).Save("Output.jpg")
-
-{% endhighlight %}
-
-{% highlight html %}
-
-<html>
-<head>
-</head>
-<body>
-Hello world
-	<div id="pic">
-		<img src=" syncfusion_logo.gif" alt="Smiley face" width="42" height="42"><br>
-		This is a Syncfusion Logo
-	</div>
-	<div>
-		Hello world
-	</div>
-</body>
-</html>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Convert-partial-webpage-to-raster-image).
-
 ## SVG to PDF 
 
 The [HTML to PDF converter library](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) supports converting the SVG to PDF document. Please refer to the following code example.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //Initialize HTML to PDF converter
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();

@@ -18,7 +18,7 @@ The below code example shows how to add Code39 barcode using the [PdfCode39Barco
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/One%20dimensional%20barcode/Add-Code39-barcode-to-the-PDF-document/.NET/Add-Code39-barcode-to-the-PDF-document/Program.cs" %}
 
 //Creating new PDF Document
 PdfDocument doc = new PdfDocument();
@@ -102,7 +102,7 @@ The below code snippet shows how to add PdfEan13 barcode using the [PdfEan13Barc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/One%20dimensional%20barcode/Add-PdfEan13-barcode-to-a-PDF-document/.NET/Add-PdfEan13-barcode-to-a-PDF-document/Program.cs" %}
 
 //Creates a new PdfEan13 Barcode.
 PdfEan13Barcode barcode = new PdfEan13Barcode ();
@@ -192,7 +192,7 @@ The below code example shows how to add PdfEan8 barcode using the [PdfEan8Barcod
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/One%20dimensional%20barcode/Add-PdfEan8-barcode-to-a-PDF-document/.NET/Add-PdfEan8-barcode-to-a-PDF-document/Program.cs" %}
 
 //Creates a new PdfEan8 Barcode.
 PdfEan8Barcode barcode = new PdfEan8Barcode ();
@@ -284,7 +284,7 @@ The below code snippet shows how to add a QR code using [PdfQRBarcode](https://h
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Two%20dimensional%20barcode/Add-a-QRBarcode-to-the-PDF-document/.NET/Add-a-QRBarcode-to-the-PDF-document/Program.cs" %}
 
 //Drawing QR Barcode
 PdfQRBarcode barcode = new PdfQRBarcode();
@@ -375,7 +375,7 @@ The below code example shows how to add a Pdf417 barcode code using [Pdf417Barco
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Two%20dimensional%20barcode/Add-a-Pdf417-barcode-to-the-PDF-document/.NET/Add-a-Pdf417-barcode-to-the-PDF-document/Program.cs" %}
 
 //Creates a new Pdf417 Barcode.
 Pdf417Barcode barcode = new Pdf417Barcode();
@@ -473,7 +473,7 @@ The following code snippets show how to set [Size](https://help.syncfusion.com/c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Set-location-and-size-to-the-barcode-in-a-PDF-document/.NET/Set-location-and-size-to-the-barcode-in-a-PDF-document/Program.cs" %}
 
 //Creating new PDF document
 PdfDocument doc = new PdfDocument();
@@ -564,7 +564,7 @@ The following code example shows how to add a barcode to the PDF document withou
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Add-a-barcode-to-the-PDF-document-without-displaying-text/.NET/Add-a-barcode-to-the-PDF-document-without-displaying-text/Program.cs" %}
 
 //Creating new PDF document 
 PdfDocument doc = new PdfDocument();
@@ -666,7 +666,7 @@ The below code example shows how to convert one dimensional barcode to
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Export-one-dimensional-barcode-as-image/.NET/Export-one-dimensional-barcode-as-image/Program.cs" %}	
 
 //Initialize a new PdfCode39Barcode instance
 PdfCode39Barcode barcode = new PdfCode39Barcode();
@@ -726,7 +726,7 @@ Essential PDF supports converting two-dimensional barcodes such as QR Code and D
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Export-two-dimensional-barcode-as-image/.NET/Export-two-dimensional-barcode-as-image/Program.cs" %}
 
 //Initialize a new PdfQRBarcode instance 
 PdfQRBarcode barcode = new PdfQRBarcode();
@@ -792,7 +792,7 @@ The following code sample explains how to customize the one-dimensional barcode 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabTitle="C# [Cross-platform]" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -880,7 +880,7 @@ The following code example shows how to customize the two-dimensional barcode su
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" %}
 
 //Drawing QR Barcode
 PdfQRBarcode barcode = new PdfQRBarcode();
@@ -978,7 +978,7 @@ The following code example demonstrates how to generate a QR barcode with a logo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}		
+{% highlight c# tabTitle="C# [Cross-platform]" %}		
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();

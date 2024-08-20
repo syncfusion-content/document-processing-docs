@@ -13,7 +13,7 @@ The following code example illustrates how to converting XPS document to PDF usi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Converting-XPS-to-PDF-document/.NET/Converting-XPS-to-PDF-document/Program.cs" %} 
 
 //Initialize XPS to PDF converter.
 XPSToPdfConverter converter = new XPSToPdfConverter();
