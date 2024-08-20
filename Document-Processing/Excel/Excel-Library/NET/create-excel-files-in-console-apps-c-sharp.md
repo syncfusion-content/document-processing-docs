@@ -407,7 +407,7 @@ End Using
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-A complete working example of how to create an Excel file in Console Application using .NET Core in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET%20Core/Create%20Excel).
+A complete working example of how to create an Excel file in Console Application using .NET Core in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET/Create%20Excel).
 
 By executing the program, you will get the Excel file as below.
 ![Output File](Console-Apps-images/Console-Apps-images_img4.png)
