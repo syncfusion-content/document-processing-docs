@@ -352,7 +352,7 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //By default, Unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
 
@@ -1153,7 +1153,7 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //By default unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
 

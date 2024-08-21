@@ -1605,7 +1605,7 @@ loadedDocument.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");

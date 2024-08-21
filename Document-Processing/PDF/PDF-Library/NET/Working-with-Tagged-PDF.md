@@ -1756,7 +1756,7 @@ You can extract the existing tag details by using the [StructureElement](https:/
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" %} 	
 
 //Get the stream from the document.
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1849,7 +1849,7 @@ You can also extract the accessibility tags page-wise with the help of the [Stru
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Get the stream from the document.
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

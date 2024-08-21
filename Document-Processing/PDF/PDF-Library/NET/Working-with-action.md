@@ -785,7 +785,7 @@ The PdfRemoteGoToAction in a PDF document enables users to navigate to a specifi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
