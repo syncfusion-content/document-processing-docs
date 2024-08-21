@@ -1,6 +1,6 @@
 ---
 title: Create PDF file in Console Application | Syncfusion
-description: Learn here how to create a PDF file in Console Application using the Syncfusion PDF library.
+description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
 platform: document-processing
 control: PDF
 documentation: UG
