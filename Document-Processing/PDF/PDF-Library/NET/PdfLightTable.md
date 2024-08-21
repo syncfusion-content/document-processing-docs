@@ -22,7 +22,7 @@ The following code sample illustrates how to create a simple table from a data s
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Create-simple-table-from-data-source/.NET/Create-simple-table-from-data-source/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Create-simple-table-from-data-source/.NET/Create-simple-table-from-data-source/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -121,7 +121,7 @@ The following code illustrates how to add the data directly into the [PdfLightTa
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-the-data-directly-into-the-PDF-table/.NET/Add-the-data-directly-into-the-PDF-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-the-data-directly-into-the-PDF-table/.NET/Add-the-data-directly-into-the-PDF-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -223,7 +223,7 @@ Create a table using the [PdfLightTable](https://help.syncfusion.com/cr/document
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Creating-the-table-in-an-existing-PDF-document/.NET/Creating-the-table-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Creating-the-table-in-an-existing-PDF-document/.NET/Creating-the-table-in-an-existing-PDF-document/Program.cs" %} 
 
 //Get stream from an existing PDF document. 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -330,7 +330,7 @@ The following code sample illustrates how to customize the cell properties in ``
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Customize-the-table-cell-in-PDF-document/.NET/Customize-the-table-cell-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Customize-the-table-cell-in-PDF-document/.NET/Customize-the-table-cell-in-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -471,7 +471,7 @@ The following code example illustrates how to draw the graphics elements in the 
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Draw-graphics-element-in-particular-cell/.NET/Draw-graphics-element-in-particular-cell/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Draw-graphics-element-in-particular-cell/.NET/Draw-graphics-element-in-particular-cell/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -630,7 +630,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Row-customization-of-the-table-in-PDF-document/.NET/Row-customization-of-the-table-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Row-customization-of-the-table-in-PDF-document/.NET/Row-customization-of-the-table-in-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -813,7 +813,7 @@ The following code sample illustrates how to customize the column in [PdfLightTa
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Column-customization-of-the-table-in-PDF-document/.NET/Column-customization-of-the-table-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Column-customization-of-the-table-in-PDF-document/.NET/Column-customization-of-the-table-in-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -950,7 +950,7 @@ The following code sample illustrates how to customize the table using [PdfLight
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Customize-the-table-in-a-PDF-document/.NET/Customize-the-table-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Customize-the-table-in-a-PDF-document/.NET/Customize-the-table-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1094,7 +1094,7 @@ The following code example illustrates how to apply built-in table style using [
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Create-table-with-built-in-style/.NET/Create-table-with-built-in-style/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Create-table-with-built-in-style/.NET/Create-table-with-built-in-style/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1217,7 +1217,7 @@ The following sample illustrates how to allow the ``PdfLightTable`` to flow acro
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Paginate-table-in-a-PDF-document/.NET/Paginate-table-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Paginate-table-in-a-PDF-document/.NET/Paginate-table-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1334,7 +1334,7 @@ The following code sample explains how to add string formatting for the whole ta
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-string-formatting-for-whole-table-in-a-PDF/.NET/Add-string-formatting-for-whole-table-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-string-formatting-for-whole-table-in-a-PDF/.NET/Add-string-formatting-for-whole-table-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1470,7 +1470,7 @@ The following code sample explains how to add string formatting to a column in t
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-string-formatting-to-a-column-in-table/.NET/Add-string-formatting-to-a-column-in-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Add-string-formatting-to-a-column-in-table/.NET/Add-string-formatting-to-a-column-in-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();

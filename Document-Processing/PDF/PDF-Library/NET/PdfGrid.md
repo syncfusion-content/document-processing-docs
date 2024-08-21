@@ -24,7 +24,7 @@ The following code sample illustrates how to create a simple table from a data s
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-from-data-source-in-a-PDF/.NET/Create-table-from-data-source-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-from-data-source-in-a-PDF/.NET/Create-table-from-data-source-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -125,7 +125,7 @@ The below code sample illustrates how to create the simple table directly using 
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-the-data-directly-to-the-table-in-a-PDF/.NET/Add-the-data-directly-to-the-table-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-the-data-directly-to-the-table-in-a-PDF/.NET/Add-the-data-directly-to-the-table-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -235,7 +235,7 @@ Refer to the following code sample to create a table using [PdfGrid](https://hel
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-from-list-in-a-PDF-document/.NET/Create-table-from-list-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-from-list-in-a-PDF-document/.NET/Create-table-from-list-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -340,7 +340,7 @@ You can create a table from a [DataSource](https://help.syncfusion.com/cr/docume
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-in-an-existing-document/.NET/Create-table-in-an-existing-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-in-an-existing-document/.NET/Create-table-in-an-existing-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -448,7 +448,7 @@ The following code example illustrates how to customize the cell in the [PdfGrid
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Cell-customization-in-PdfGrid/.NET/Cell-customization-in-PdfGrid/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Cell-customization-in-PdfGrid/.NET/Cell-customization-in-PdfGrid/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -626,7 +626,7 @@ The following code sample illustrates how to customize the row in ``PdfGrid``.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Row-customization-of-PdfGrid-in-a-PDF/.NET/Row-customization-of-PdfGrid-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Row-customization-of-PdfGrid-in-a-PDF/.NET/Row-customization-of-PdfGrid-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -764,7 +764,7 @@ The following code snippet illustrates how to customize the column in ``PdfGrid`
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Column-customization-of-PdfGrid-in-a-PDF/.NET/Column-customization-of-PdfGrid-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Column-customization-of-PdfGrid-in-a-PDF/.NET/Column-customization-of-PdfGrid-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -896,7 +896,7 @@ The following code snippet illustrates how to customize the table using [PdfGrid
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Customize-the-table-in-a-PDF-document/.NET/Customize-the-table-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Customize-the-table-in-a-PDF-document/.NET/Customize-the-table-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1037,7 +1037,7 @@ The below code example illustrates how to apply built-in table style using [Appl
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-with-built-in-style/.NET/Create-table-with-built-in-style/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-table-with-built-in-style/.NET/Create-table-with-built-in-style/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1159,7 +1159,7 @@ The below code example illustrates how to apply built-in table styles with table
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-built-in-style-to-table-with-table-option/.NET/Apply-built-in-style-to-table-with-table-option/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-built-in-style-to-table-with-table-option/.NET/Apply-built-in-style-to-table-with-table-option/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -1296,7 +1296,7 @@ The below sample illustrates how to allow the ``PdfGrid`` to flow across pages.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Paginate-the-table-in-PDF-document/.NET/Paginate-the-table-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Paginate-the-table-in-PDF-document/.NET/Paginate-the-table-in-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1411,7 +1411,7 @@ The following code sample illustrates how to automatically adjust the width of t
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Automatically-adjust-the-table-width-in-a-PDF/.NET/Automatically-adjust-the-table-width-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Automatically-adjust-the-table-width-in-a-PDF/.NET/Automatically-adjust-the-table-width-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1540,7 +1540,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The Essential PDF supports maintaining the position of a PDF grid drawn on a PDF page using [PdfGridLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutResult.html). It provides the rendered bounds of the previously added grid, which can be used to place successive elements without overlapping. Add multiple PDF grids using the bottom position of the previously rendered PDF grid. The following code sample illustrates this.
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-multiple-tables-in-a-PDF-document/.NET/Add-multiple-tables-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-multiple-tables-in-a-PDF-document/.NET/Add-multiple-tables-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1699,7 +1699,7 @@ The following code snippet explains how to apply string formatting for the whole
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-string-formatting-for-whole-table-in-a-PDF/.NET/Apply-string-formatting-for-whole-table-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-string-formatting-for-whole-table-in-a-PDF/.NET/Apply-string-formatting-for-whole-table-in-a-PDF/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1834,7 +1834,7 @@ The following code snippet explains how to add string formatting to a particular
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-to-a-column-in-table/.NET/Add-string-formatting-to-a-column-in-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-to-a-column-in-table/.NET/Add-string-formatting-to-a-column-in-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1957,7 +1957,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code sample illustrates how to add the string formatting for a particular [PdfGridCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCell.html) using [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) in [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html).
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-for-a-cell-in-table/.NET/Add-string-formatting-for-a-cell-in-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-for-a-cell-in-table/.NET/Add-string-formatting-for-a-cell-in-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2078,7 +2078,7 @@ The following code sample illustrates how to add the string formatting for a par
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-for-a-row-in-table/.NET/Add-string-formatting-for-a-row-in-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-string-formatting-for-a-row-in-table/.NET/Add-string-formatting-for-a-row-in-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2216,7 +2216,7 @@ The following code sample illustrates how to span a row in the [PdfGrid](https:/
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-row-spanning-in-a-PDF-table/.NET/Add-row-spanning-in-a-PDF-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-row-spanning-in-a-PDF-table/.NET/Add-row-spanning-in-a-PDF-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2336,7 +2336,7 @@ The following code sample illustrates how to span a column in the [PdfGrid](http
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-column-spanning-in-a-PDF-table/.NET/Add-column-spanning-in-a-PDF-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-column-spanning-in-a-PDF-table/.NET/Add-column-spanning-in-a-PDF-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2458,7 +2458,7 @@ The following code sample explains how to add different cell styles to a cell in
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-cell-styles-to-a-cell-in-a-PDF-table/.NET/Add-different-cell-styles-to-a-cell-in-a-PDF-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-cell-styles-to-a-cell-in-a-PDF-table/.NET/Add-different-cell-styles-to-a-cell-in-a-PDF-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -2689,7 +2689,7 @@ The Syncfusion .NET PDF library supports applying different styles to a row in t
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-styles-to-a-row-in-PDF-table/.NET/Add-different-styles-to-a-row-in-PDF-table/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-styles-to-a-row-in-PDF-table/.NET/Add-different-styles-to-a-row-in-PDF-table/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -2886,7 +2886,7 @@ The following code sample explains how to apply word wrap in the PDF table cell.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-word-wrap-in-the-PDF-table-cell/.NET/Apply-word-wrap-in-the-PDF-table-cell/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Apply-word-wrap-in-the-PDF-table-cell/.NET/Apply-word-wrap-in-the-PDF-table-cell/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3034,7 +3034,7 @@ The following code sample illustrates how to rotate the [PdfGrid](https://help.s
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-rotated-table-in-PDF-document/.NET/Draw-rotated-table-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-rotated-table-in-PDF-document/.NET/Draw-rotated-table-in-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3203,7 +3203,7 @@ The following code example illustrates how to render the HTML string in a [PdfGr
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-HTML-styled-text-in-a-PDF-table-cell/.NET/Draw-HTML-styled-text-in-a-PDF-table-cell/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-HTML-styled-text-in-a-PDF-table-cell/.NET/Draw-HTML-styled-text-in-a-PDF-table-cell/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3318,7 +3318,7 @@ The following code illustrates adding the background image into a table cell.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-the-background-image-in-a-PDF-table-cell/.NET/Add-the-background-image-in-a-PDF-table-cell/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-the-background-image-in-a-PDF-table-cell/.NET/Add-the-background-image-in-a-PDF-table-cell/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3472,7 +3472,7 @@ The following code illustrates how to create a table with different font styles 
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-font-style-for-particular-table-cell/.NET/Add-different-font-style-for-particular-table-cell/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-different-font-style-for-particular-table-cell/.NET/Add-different-font-style-for-particular-table-cell/Program.cs" %} 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
 //Create the page.
@@ -3661,7 +3661,7 @@ The following code sample shows how to insert the image in a particular [PdfGrid
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Insert-image-in-a-particular-table-cell/.NET/Insert-image-in-a-particular-table-cell/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Insert-image-in-a-particular-table-cell/.NET/Insert-image-in-a-particular-table-cell/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -3809,7 +3809,7 @@ The following code sample illustrates how to draw a border less table in a PDF d
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-borderless-table-in-PDF-document/.NET/Draw-borderless-table-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Draw-borderless-table-in-PDF-document/.NET/Draw-borderless-table-in-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4008,7 +4008,7 @@ The following code illustrates how to create the nested table in a PDF document 
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-nested-table-in-a-PDF-document/.NET/Create-nested-table-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Create-nested-table-in-a-PDF-document/.NET/Create-nested-table-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -4171,7 +4171,7 @@ The following code sample illustrates how to add a hyperlink in a table cell.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-a-hyperlink-in-a-table-cell/.NET/Add-a-hyperlink-in-a-table-cell/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-a-hyperlink-in-a-table-cell/.NET/Add-a-hyperlink-in-a-table-cell/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();

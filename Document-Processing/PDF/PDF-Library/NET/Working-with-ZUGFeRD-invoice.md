@@ -26,7 +26,7 @@ The ZUGFeRD invoice document can be created by specifying the conformance level 
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Create ZUGFeRD invoice PDF document
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -62,7 +62,7 @@ Using PDF/A-3b conformance, you can create a ZUGFeRD invoice PDF by specifying t
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" %} 	
 
 //Create ZUGFeRD invoice PDF document
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -100,7 +100,7 @@ The PDF/A-3b conformance supports the external files as attachment to the PDF do
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Creates an attachment
 FileStream fontStream = new FileStream("../../Data/ZUGFeRD-invoice.xml", FileMode.Open, FileAccess.Read);
@@ -152,7 +152,7 @@ The complete code to create ZUGFeRD invoice PDF document as follows.
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Create-ZUGFeRD-compliment-PDF-invoice/.NET/Create-ZUGFeRD-compliment-PDF-invoice/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Create-ZUGFeRD-compliment-PDF-invoice/.NET/Create-ZUGFeRD-compliment-PDF-invoice/Program.cs" %} 
 
 //Create ZUGFeRD invoice PDF document
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -242,7 +242,7 @@ You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusio
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Extract-ZUGFeRD-invoice-from-PDF-document/.NET/Extract-ZUGFeRD-invoice-from-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Extract-ZUGFeRD-invoice-from-PDF-document/.NET/Extract-ZUGFeRD-invoice-from-PDF-document/Program.cs" %} 	
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);

@@ -15,7 +15,7 @@ You can choose the standard or custom page size when you add a page to the PDF d
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-standard-page-size/.NET/Create-a-PDF-document-with-standard-page-size/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-standard-page-size/.NET/Create-a-PDF-document-with-standard-page-size/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -94,7 +94,7 @@ You can create a PDF document with custom page size in [PdfPageSettings Size](ht
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-custom-page-size/.NET/Create-a-PDF-document-with-custom-page-size/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-custom-page-size/.NET/Create-a-PDF-document-with-custom-page-size/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -173,7 +173,7 @@ You can change page orientation from portrait to landscape, through [PdfPageOrie
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Change-the-page-orientation-from-portrait-to-landscape/.NET/Change-the-page-orientation-from-portrait-to-landscape/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Change-the-page-orientation-from-portrait-to-landscape/.NET/Change-the-page-orientation-from-portrait-to-landscape/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -260,7 +260,7 @@ You can also change orientation by setting the rotation angle using [PdfPageRota
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Rotate_PDF_based_on_angle/.NET/Rotate_PDF_based_on_angle/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Rotate_PDF_based_on_angle/.NET/Rotate_PDF_based_on_angle/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -347,7 +347,7 @@ PDF sections are parts of the PDF document, which may contain one or more pages 
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_sections_in_PDF_document/.NET/Create_sections_in_PDF_document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_sections_in_PDF_document/.NET/Create_sections_in_PDF_document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -484,7 +484,7 @@ The following code snippet illustrates how to set PDF document information.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Add_PDF_document_properties/.NET/Add_PDF_document_properties/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Add_PDF_document_properties/.NET/Add_PDF_document_properties/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -581,7 +581,7 @@ To read and modify the document [DocumentInformation](https://help.syncfusion.co
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Change_existing_PDF_properties/.NET/Change_existing_PDF_properties/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Change_existing_PDF_properties/.NET/Change_existing_PDF_properties/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -654,7 +654,7 @@ To remove specific details from the existing document information, use the **Rem
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Remove-specific-keys-from-the-existing-document-information/.NET/Remove-specific-keys-from-the-existing-document-information/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Remove-specific-keys-from-the-existing-document-information/.NET/Remove-specific-keys-from-the-existing-document-information/Program.cs" %}
 
 //Load an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -733,7 +733,7 @@ The Essential PDF supports incremental update for PDF document. The content of a
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Perform-incremental-update-for-the-PDF-document/.NET/Perform-incremental-update-for-the-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Perform-incremental-update-for-the-PDF-document/.NET/Perform-incremental-update-for-the-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -799,7 +799,7 @@ You can hide the menu bar and toolbar by enabling [HideMenubar](https://help.syn
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_PDF_with_viewer_preference/.NET/Create_PDF_with_viewer_preference/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_PDF_with_viewer_preference/.NET/Create_PDF_with_viewer_preference/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -890,7 +890,7 @@ You can also allow the reader application to initially display the bookmarks, th
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-PDF-with-display-of-specific-panel/.NET/Create-PDF-with-display-of-specific-panel/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-PDF-with-display-of-specific-panel/.NET/Create-PDF-with-display-of-specific-panel/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1113,7 +1113,7 @@ The Essential PDF allows you to create a PDF document with proper uniform resour
 The following code snippet explains how to have uniform resource naming in a PDF document.
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_PDF_with_Uniform_Resouce_Naming/.NET/Create_PDF_with_Uniform_Resouce_Naming/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create_PDF_with_Uniform_Resouce_Naming/.NET/Create_PDF_with_Uniform_Resouce_Naming/Program.cs" %}
 
 //Disable unique resource naming
 PdfDocument.EnableUniqueResourceNaming = false;
@@ -1220,7 +1220,7 @@ Essential PDF provides support for optimization of memory using [EnableMemoryOpt
 Enabling this property will optimize the memory but difference in time occurs based on the document size. This is illustrated in the following code sample.
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Manage_memory_while_appending_PDF_document/.NET/Manage_memory_while_appending_PDF_document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Manage_memory_while_appending_PDF_document/.NET/Manage_memory_while_appending_PDF_document/Program.cs" %}
 
 //Load an existing PDF document
 FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
@@ -1292,7 +1292,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Syncfusion PDF Library provides support to check whether the existing PDF document is corrupted or not with corruption details using [PdfDocumentAnalyzer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html) class. The following code snippet explains how to find the corrupted PDF document.
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Find_corrupted_PDF_document/.NET/Find_corrupted_PDF_document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Find_corrupted_PDF_document/.NET/Find_corrupted_PDF_document/Program.cs" %}
 //Load the PDF document 
 FileStream  docStream = new  FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
 //Create a new instance for the PDF analyzer
@@ -1413,7 +1413,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The Essential PDF allows you to get or set the [BaseUri](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_BaseUri) in the PDF document. This is illustrated in the following code sample.
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Add_BaseUri_in_the_PDF_document/.NET/Add_BaseUri_in_the_PDF_document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Add_BaseUri_in_the_PDF_document/.NET/Add_BaseUri_in_the_PDF_document/Program.cs" %}
 
 //Create a new instance of the PdfDocument class.
 PdfDocument document = new PdfDocument();
@@ -1465,7 +1465,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code example illustrates the retrieval of [BaseUri](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_BaseUri) from the loaded document.
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Retrieve_BaseUri_from_the_existing_PDF/.NET/Retrieve_BaseUri_from_the_existing_PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Retrieve_BaseUri_from_the_existing_PDF/.NET/Retrieve_BaseUri_from_the_existing_PDF/Program.cs" %}
 
 //Load the PDF document as file stream.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

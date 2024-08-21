@@ -20,7 +20,7 @@ The following code snippet explains how to extract the texts from a page.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-the-texts-from-a-page-in-the-PDF-document/.NET/Extract-the-texts-from-a-page-in-the-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-the-texts-from-a-page-in-the-PDF-document/.NET/Extract-the-texts-from-a-page-in-the-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
@@ -76,7 +76,7 @@ The below code illustrates how to extract the text from entire PDF document:
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-text-from-the-entire-PDF-document/.NET/Extract-text-from-the-entire-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-text-from-the-entire-PDF-document/.NET/Extract-text-from-the-entire-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
@@ -143,7 +143,7 @@ Please refer the following code snippet to extract the text with layout.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-the-text-with-layout-in-a-PDF-document/.NET/Extract-the-text-with-layout-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-the-text-with-layout-in-a-PDF-document/.NET/Extract-the-text-with-layout-in-a-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
@@ -207,7 +207,7 @@ You can get the line and its properties that contains texts by using [TextLine](
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document/.NET/Extract-each-lines-from-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document/.NET/Extract-each-lines-from-an-existing-PDF-document/Program.cs" %} 
 
 //PDF supports getting the lines and its properties using TextLine only in WinForms, WPF and Xamarin platforms. Instead of TextLine, TextLineCollection can be used in ASP.NET Core.
 
@@ -277,7 +277,7 @@ You can get the single word and its properties by using [TextWord](https://help.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-collection-of-words-from-PDF-document/.NET/Extract-collection-of-words-from-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Extract-collection-of-words-from-PDF-document/.NET/Extract-collection-of-words-from-PDF-document/Program.cs" %} 
 
 //PDF supports getting the word and its properties using TextWord only in WinForms, WPF and Xamarin platforms. Instead of TextLine, TextLineCollection can be used in ASP.NET Core.
 
@@ -354,7 +354,7 @@ You can retrieve a single character and its properties, including bounds, font n
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/.NET/Get-text-glyph-details-from-extract-text/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/.NET/Get-text-glyph-details-from-extract-text/Program.cs" %} 
 
 //Load the existing PDF document
 PdfLoadedDocument m_loadedDocument = new PdfLoadedDocument(stream);

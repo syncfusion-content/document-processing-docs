@@ -22,7 +22,7 @@ The following code example explains how to add a new page using [PdfXfaPage](htt
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-new-page-in-a-PDF-XFA-document/.NET/Add-a-new-page-in-a-PDF-XFA-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-new-page-in-a-PDF-XFA-document/.NET/Add-a-new-page-in-a-PDF-XFA-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -108,7 +108,7 @@ The below sample illustrates how to create a new PDF document with XFA page size
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-new-PDF-document-with-XFA-page-size/.NET/Create-a-new-PDF-document-with-XFA-page-size/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-new-PDF-document-with-XFA-page-size/.NET/Create-a-new-PDF-document-with-XFA-page-size/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -198,7 +198,7 @@ You can create a custom page size to the PDF document by using following code sn
  
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-custom-page-size-to-the-PDF-document/.NET/Create-a-custom-page-size-to-the-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-custom-page-size-to-the-PDF-document/.NET/Create-a-custom-page-size-to-the-PDF-document/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -288,7 +288,7 @@ You can change page orientation from portrait to landscape by using [PdfXfaPageO
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Change-page-orientation-from-portrait-to-landscape-in-PDF/.NET/Change-page-orientation-from-portrait-to-landscape-in-PDF/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Change-page-orientation-from-portrait-to-landscape-in-PDF/.NET/Change-page-orientation-from-portrait-to-landscape-in-PDF/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -386,7 +386,7 @@ To create a dynamic XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-dynamic-XFA-forms-in-a-PDF-document/.NET/Create-a-dynamic-XFA-forms-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-dynamic-XFA-forms-in-a-PDF-document/.NET/Create-a-dynamic-XFA-forms-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -478,7 +478,7 @@ To create a static XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/d
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-static-XFA-forms-in-a-PDF-document/.NET/Create-a-static-XFA-forms-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Create-a-static-XFA-forms-in-a-PDF-document/.NET/Create-a-static-XFA-forms-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -572,7 +572,7 @@ The below code snippet illustrates how to add a textbox field to a new PDF docum
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-textbox-field-to-a-new-PDF-document/.NET/Add-a-textbox-field-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-textbox-field-to-a-new-PDF-document/.NET/Add-a-textbox-field-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -662,7 +662,7 @@ The below code snippet illustrates how to add a textbox field to an existing PDF
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-textbox-field-to-an-existing-PDF-document/.NET/Add-a-textbox-field-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-textbox-field-to-an-existing-PDF-document/.NET/Add-a-textbox-field-to-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -745,7 +745,7 @@ The below code snippet illustrates how to add a numeric field to a new PDF docum
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-XFA-numeric-field-to-a-new-PDF-document/.NET/Add-a-XFA-numeric-field-to-a-new-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-XFA-numeric-field-to-a-new-PDF-document/.NET/Add-a-XFA-numeric-field-to-a-new-PDF-document/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -829,7 +829,7 @@ The below code snippet illustrates how to add the numeric field to an existing P
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-numeric-field-to-an-existing-PDF-document/.NET/Add-the-XFA-numeric-field-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-numeric-field-to-an-existing-PDF-document/.NET/Add-the-XFA-numeric-field-to-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -906,7 +906,7 @@ The below code snippet illustrates how to add a combo box field to a new PDF doc
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-combobox-field-to-a-new-PDF-document/.NET/Add-a-combobox-field-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-a-combobox-field-to-a-new-PDF-document/.NET/Add-a-combobox-field-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1004,7 +1004,7 @@ The below code snippet illustrates how to add the combo box field to an existing
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-combobox-field-to-an-existing-PDF-document/.NET/Add-the-combobox-field-to-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-combobox-field-to-an-existing-PDF-document/.NET/Add-the-combobox-field-to-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1093,7 +1093,7 @@ The below code snippet illustrates how to add a list box field to a new PDF docu
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-listbox-field-to-a-new-PDF-document/.NET/Add-the-XFA-listbox-field-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-listbox-field-to-a-new-PDF-document/.NET/Add-the-XFA-listbox-field-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1196,7 +1196,7 @@ The below code snippet illustrates how to add the list box field to an existing 
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-listbox-field-to-an-existing-PDF-document/.NET/Add-the-XFA-listbox-field-to-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-listbox-field-to-an-existing-PDF-document/.NET/Add-the-XFA-listbox-field-to-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1291,7 +1291,7 @@ The below code snippet illustrates how to add a check box field to a new PDF doc
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-checkbox-field-to-a-new-PDF-document/.NET/Add-the-XFA-checkbox-field-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-checkbox-field-to-a-new-PDF-document/.NET/Add-the-XFA-checkbox-field-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1379,7 +1379,7 @@ The below code snippet illustrates how to add the check box field to an existing
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-checkbox-field-to-an-existing-PDF-document/.NET/Add-the-XFA-checkbox-field-to-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-checkbox-field-to-an-existing-PDF-document/.NET/Add-the-XFA-checkbox-field-to-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1459,7 +1459,7 @@ The below code snippet illustrates how to add a radio button field to a new PDF 
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-radio-button-field-to-a-new-PDF-document/.NET/Add-the-XFA-radio-button-field-to-a-new-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-radio-button-field-to-a-new-PDF-document/.NET/Add-the-XFA-radio-button-field-to-a-new-PDF-document/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1571,7 +1571,7 @@ The below code snippet illustrates how to add the radio button field to an exist
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-radio-button-field-to-an-existing-PDF-document/.NET/Add-the-XFA-radio-button-field-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-radio-button-field-to-an-existing-PDF-document/.NET/Add-the-XFA-radio-button-field-to-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1605,7 +1605,7 @@ loadedDocument.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
 
 //Load the existing XFA document.
 PdfLoadedXfaDocument loadedDocument = new PdfLoadedXfaDocument("XfaForm.pdf");
@@ -1675,7 +1675,7 @@ The below code snippet illustrates how to add a date time field to a new PDF doc
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-datetime-field-in-a-new-PDF-document/.NET/Add-the-XFA-datetime-field-in-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-datetime-field-in-a-new-PDF-document/.NET/Add-the-XFA-datetime-field-in-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1766,7 +1766,7 @@ The below code snippet illustrates how to add the date time field to an existing
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-datetime-field-in-an-existing-PDF-document/.NET/Add-the-XFA-datetime-field-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-datetime-field-in-an-existing-PDF-document/.NET/Add-the-XFA-datetime-field-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1849,7 +1849,7 @@ The below code snippet illustrates how to add a button field to a new PDF docume
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-button-field-to-a-new-PDF-document/.NET/Add-the-XFA-button-field-to-a-new-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-button-field-to-a-new-PDF-document/.NET/Add-the-XFA-button-field-to-a-new-PDF-document/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -1934,7 +1934,7 @@ The below code snippet illustrates how to add the button field to an existing PD
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-button-field-to-an-existing-PDF-document/.NET/Add-the-XFA-button-field-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-button-field-to-an-existing-PDF-document/.NET/Add-the-XFA-button-field-to-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2011,7 +2011,7 @@ The below code snippet illustrates how to add a text element to a new PDF docume
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-text-element-to-a-new-PDF-document/.NET/Add-the-XFA-text-element-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-text-element-to-a-new-PDF-document/.NET/Add-the-XFA-text-element-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -2096,7 +2096,7 @@ The below code snippet illustrates how to add a text element to an existing PDF 
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-text-element-to-an-existing-PDF-document/.NET/Add-the-XFA-text-element-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-text-element-to-an-existing-PDF-document/.NET/Add-the-XFA-text-element-to-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2173,7 +2173,7 @@ The below code snippet illustrates how to add the rectangle field to a new PDF d
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-rectangle-field-to-a-new-PDF-document/.NET/Add-the-XFA-rectangle-field-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-rectangle-field-to-a-new-PDF-document/.NET/Add-the-XFA-rectangle-field-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -2258,7 +2258,7 @@ The below code snippet illustrates how to add the rectangle field to an existing
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-rectangle-field-to-an-existing-PDF-document/.NET/Add-the-XFA-rectangle-field-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-rectangle-field-to-an-existing-PDF-document/.NET/Add-the-XFA-rectangle-field-to-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2335,7 +2335,7 @@ The below code snippet illustrates how to add the circle field to a new PDF docu
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-circle-field-to-a-new-PDF-document/.NET/Add-the-XFA-circle-field-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-circle-field-to-a-new-PDF-document/.NET/Add-the-XFA-circle-field-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -2420,7 +2420,7 @@ The below code snippet illustrates how to add the circle field to an existing PD
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/XFA/Add-circle-field-to-an-existing-PDF-document/.NET/Add-circle-field-to-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/XFA/Add-circle-field-to-an-existing-PDF-document/.NET/Add-circle-field-to-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2497,7 +2497,7 @@ The below code snippet illustrates how to add a line to a new PDF document using
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-line-to-a-new-PDF-document/.NET/Add-the-XFA-line-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-line-to-a-new-PDF-document/.NET/Add-the-XFA-line-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -2582,7 +2582,7 @@ The below code snippet illustrates how to add a line to an existing PDF document
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-XFA-line-to-an-existing-PDF-document/.NET/Add-XFA-line-to-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-XFA-line-to-an-existing-PDF-document/.NET/Add-XFA-line-to-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2659,7 +2659,7 @@ The below code snippet illustrates how to add an image to a new PDF document usi
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-image-to-a-new-PDF-document/.NET/Add-the-XFA-image-to-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-image-to-a-new-PDF-document/.NET/Add-the-XFA-image-to-a-new-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -2740,7 +2740,7 @@ The below code snippet illustrates how to add an image to an existing PDF docume
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-image-to-an-existing-PDF-document/.NET/Add-the-XFA-image-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-XFA-image-to-an-existing-PDF-document/.NET/Add-the-XFA-image-to-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2820,7 +2820,7 @@ You can set the flow direction to an XFA form while creating, using [PdfXfaFlowD
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Set-the-horizontal-flow-direction-in-XFA-forms/.NET/Set-the-horizontal-flow-direction-in-XFA-forms/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Set-the-horizontal-flow-direction-in-XFA-forms/.NET/Set-the-horizontal-flow-direction-in-XFA-forms/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -2931,7 +2931,7 @@ You can set the flow direction to an XFA form while creating, using [PdfXfaFlowD
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Set-the-vertical-flow-direction-in-XFA-forms/.NET/Set-the-vertical-flow-direction-in-XFA-forms/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Set-the-vertical-flow-direction-in-XFA-forms/.NET/Set-the-vertical-flow-direction-in-XFA-forms/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3042,7 +3042,7 @@ You can rotate a form field in XFA document, using [PdfXfaRotateAngle](https://h
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Rotating-the-XFA-form-fields-in-a-PDF-document/.NET/Rotating-the-XFA-form-fields-in-a-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Rotating-the-XFA-form-fields-in-a-PDF-document/.NET/Rotating-the-XFA-form-fields-in-a-PDF-document/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3141,7 +3141,7 @@ You can validate the date time fields of the input text by enabling the [Require
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Validating-the-XFA-datetime-field-in-a-PDF-document/.NET/Validating-the-XFA-datetime-field-in-a-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Validating-the-XFA-datetime-field-in-a-PDF-document/.NET/Validating-the-XFA-datetime-field-in-a-PDF-document/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3242,7 +3242,7 @@ Please refer the below link for numeric pattern format in detail,
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Customizing-the-XFA-numeric-field-in-a-PDF-document/.NET/Customizing-the-XFA-numeric-field-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Customizing-the-XFA-numeric-field-in-a-PDF-document/.NET/Customizing-the-XFA-numeric-field-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3335,7 +3335,7 @@ You can add the nested sub forms by using [PdfXfaForm](https://help.syncfusion.c
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-XFA-nested-subforms-in-a-PDF-document/.NET/Add-XFA-nested-subforms-in-a-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-XFA-nested-subforms-in-a-PDF-document/.NET/Add-XFA-nested-subforms-in-a-PDF-document/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3467,7 +3467,7 @@ You can add the horizontal alignments in XFA form fields through [HorizontalAlig
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-horizontal-alignments-in-XFA-form-fields/.NET/Add-the-horizontal-alignments-in-XFA-form-fields/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-horizontal-alignments-in-XFA-form-fields/.NET/Add-the-horizontal-alignments-in-XFA-form-fields/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3560,7 +3560,7 @@ You can add the vertical alignments in XFA form fields through [VerticalAlignmen
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-vertical-alignments-in-XFA-form-fields/.NET/Add-the-vertical-alignments-in-XFA-form-fields/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-vertical-alignments-in-XFA-form-fields/.NET/Add-the-vertical-alignments-in-XFA-form-fields/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3653,7 +3653,7 @@ You can add margin to the XFA form fields by using [Margins](https://help.syncfu
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Adding-margins-to-the-XFA-form-fields/.NET/Adding-margins-to-the-XFA-form-fields/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Adding-margins-to-the-XFA-form-fields/.NET/Adding-margins-to-the-XFA-form-fields/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3749,7 +3749,7 @@ You can add padding to the XFA form fields by using [padding](https://help.syncf
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/XFA/Add-the-padding-to-XFA-form-fields/.NET/Add-the-padding-to-XFA-form-fields/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/XFA/Add-the-padding-to-XFA-form-fields/.NET/Add-the-padding-to-XFA-form-fields/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3842,7 +3842,7 @@ You can add border to the XFA fields by using [Border](https://help.syncfusion.c
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-border-to-the-XFA-form-fields/.NET/Add-border-to-the-XFA-form-fields/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-border-to-the-XFA-form-fields/.NET/Add-border-to-the-XFA-form-fields/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3942,7 +3942,7 @@ Please refer the below sample for filling the XFA text box field using [PdfLoade
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-textbox-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-textbox-field-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-textbox-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-textbox-field-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4013,7 +4013,7 @@ You can fill the XFA numeric field by using [PdfLoadedXfaNumericField](https://h
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-numeric-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-numeric-field-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-numeric-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-numeric-field-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4084,7 +4084,7 @@ You can fill the XFA combo box field by using [PdfLoadedXfaComboBoxField](https:
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4153,7 +4153,7 @@ You can fill and save hidden items in XFA combo box field by using [HiddenItems]
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-and-save-hidden-items-in-XFA-combobox-field/.NET/Fill-and-save-hidden-items-in-XFA-combobox-field/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-and-save-hidden-items-in-XFA-combobox-field/.NET/Fill-and-save-hidden-items-in-XFA-combobox-field/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4233,7 +4233,7 @@ You can fill the XFA list box field by using [PdfLoadedXfaListBoxField](https://
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-listbox-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-listbox-field-in-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-listbox-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-listbox-field-in-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4302,7 +4302,7 @@ You can also select the multiple values by using [SelectedItems](https://help.sy
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Select-multiple-values-in-an-existing-XFA-listbox-field/.NET/Select-multiple-values-in-an-existing-XFA-listbox-field/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Select-multiple-values-in-an-existing-XFA-listbox-field/.NET/Select-multiple-values-in-an-existing-XFA-listbox-field/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4373,7 +4373,7 @@ You can fill the XFA date time field by using [PdfLoadedXfaDateTimeField](https:
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-datetime-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-datetime-field-in-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-datetime-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-datetime-field-in-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4444,7 +4444,7 @@ You can fill the XFA check box field by using [PdfLoadedXfaCheckBoxField](https:
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-checkbox-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-checkbox-field-in-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-checkbox-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-checkbox-field-in-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4515,7 +4515,7 @@ You can fill the XFA radio button field by using [PdfLoadedXfaRadioButtonField](
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4594,7 +4594,7 @@ The below code snippet illustrates how to set the [ReadOnly](https://help.syncfu
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Removing-editing-capability-of-form-fields-in-a-new-PDF/.NET/Removing-editing-capability-of-form-fields-in-a-new-PDF/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Removing-editing-capability-of-form-fields-in-a-new-PDF/.NET/Removing-editing-capability-of-form-fields-in-a-new-PDF/Program.cs" %} 	
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -4685,7 +4685,7 @@ The below code snippet illustrates how to set the [ReadOnly](https://help.syncfu
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Remove-editing-capability-to-an-existing-form-fields/.NET/Remove-editing-capability-to-an-existing-form-fields/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Remove-editing-capability-to-an-existing-form-fields/.NET/Remove-editing-capability-to-an-existing-form-fields/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4749,7 +4749,7 @@ The following code snippet illustrates how to flatten the XFA form field.
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]"  %} 			
+{% highlight c# tabtitle="C# [Cross-platform]"  %} 			
 
 //PDF doesn't support flattening XFA form fields in C# .NET Cross platforms. 
 
@@ -4793,7 +4793,7 @@ You can remove the dynamic XFA form fields by using [Remove](https://help.syncfu
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Removing-the-dynamic-form-fields-from-an-existing-PDF/.NET/Removing-the-dynamic-form-fields-from-an-existing-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Removing-the-dynamic-form-fields-from-an-existing-PDF/.NET/Removing-the-dynamic-form-fields-from-an-existing-PDF/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4864,7 +4864,7 @@ You can modify the existing dynamic XFA fields like Width, Height and Text by us
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Modidy-the-existing-fields-in-XFA-document/.NET/Modidy-the-existing-fields-in-XFA-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Modidy-the-existing-fields-in-XFA-document/.NET/Modidy-the-existing-fields-in-XFA-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4946,7 +4946,7 @@ The following sample illustrates how to clear the date time field in an existing
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/.NET/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/.NET/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);

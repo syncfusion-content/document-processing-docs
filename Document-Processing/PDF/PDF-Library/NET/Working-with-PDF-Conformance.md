@@ -33,7 +33,7 @@ You can create a PDF/A-1b document by specifying the conformance level as ```Pdf
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA1B-document/.NET/Creating-the-new-PDFA1B-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA1B-document/.NET/Creating-the-new-PDFA1B-document/Program.cs" %}	
 
 //Create a new document with PDF/A-1b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A1B);
@@ -124,7 +124,7 @@ You can create a PDF/A-2b document by specifying the conformance level as ```Pdf
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2B-document/.NET/Creating-the-new-PDFA2B-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2B-document/.NET/Creating-the-new-PDFA2B-document/Program.cs" %}
 
 //Create a new document with PDF/A-2b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2B);
@@ -217,7 +217,7 @@ You can create a PDF/A-3b document by specifying the conformance level as Pdf_A3
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3B-document/.NET/Creating-the-new-PDFA3B-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3B-document/.NET/Creating-the-new-PDFA3B-document/Program.cs" %}
 
 //Create a new document with PDF/A-3b standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -335,7 +335,7 @@ You can create a PDF/A-1a document by specifying the conformance level as ```Pdf
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA1A-document/.NET/Creating-the-new-PDFA1A-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA1A-document/.NET/Creating-the-new-PDFA1A-document/Program.cs" %}
 
 //Create a new document with PDF/A-1a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A1A);
@@ -425,7 +425,7 @@ You can create a PDF/A-2a document by specifying the conformance level as ```Pdf
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2A-document/.NET/Creating-the-new-PDFA2A-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2A-document/.NET/Creating-the-new-PDFA2A-document/Program.cs" %}
 
 //Create a new document with PDF/A-2a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2A);
@@ -515,7 +515,7 @@ You can create a PDF/A-3a document by specifying the conformance level as ``Pdf_
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3A-document/.NET/Creating-the-new-PDFA3A-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3A-document/.NET/Creating-the-new-PDFA3A-document/Program.cs" %}
 
 //Create a new document with PDF/A-3a standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3A);
@@ -635,7 +635,7 @@ You can create a PDF/A-2u document by specifying the conformance level as ```Pdf
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2U-document/.NET/Creating-the-new-PDFA2U-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA2U-document/.NET/Creating-the-new-PDFA2U-document/Program.cs" %}
 
 //Create a new document with PDF/A-2u standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A2U);
@@ -725,7 +725,7 @@ You can create a PDF/A-3u document by specifying the conformance level as ``Pdf_
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3U-document/.NET/Creating-the-new-PDFA3U-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA3U-document/.NET/Creating-the-new-PDFA3U-document/Program.cs" %}
 
 //Create a new document with PDF/A-3u standard
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3U);
@@ -845,7 +845,7 @@ Create a PDF/A-4 document by specifying the conformance level as ``Pdf_A4`` thro
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA4-document/.NET/Creating-the-new-PDFA4-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA4-document/.NET/Creating-the-new-PDFA4-document/Program.cs" %}
 
 //Create a new document with the PDF/A-4 standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4); 
@@ -935,7 +935,7 @@ Create a PDF/A-4E document by specifying the conformance level as ``Pdf_A4E`` th
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA4E-document/.NET/Creating-the-new-PDFA4E-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-the-new-PDFA4E-document/.NET/Creating-the-new-PDFA4E-document/Program.cs" %}
 
 //Create a new document with the PDF/A-4 standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4); 
@@ -1025,7 +1025,7 @@ Create a PDF/A-4f document by specifying the conformance level as ``Pdf_A4F`` th
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-a-new-PDFA4F-document/.NET/Creating-a-new-PDFA4F-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-a-new-PDFA4F-document/.NET/Creating-a-new-PDFA4F-document/Program.cs" %}
 
 //Create a new document with the PDF/A-4F standard. 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4F); 
@@ -1200,7 +1200,7 @@ N> To convert the existing PDF to PDF/A conformance document in .NET Core, you n
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
 
 //Load an existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1260,7 +1260,7 @@ To convert an existing PDF document to the PDFA document in .NET Core, you need 
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
 
 static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
 {
@@ -1318,7 +1318,7 @@ You can find the conformance level of the existing PDF document using the [Confo
 
 {% tabs %} 
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-the-conformance-level-of-the-existing-PDF-document/.NET/Get-the-conformance-level-of-the-existing-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-the-conformance-level-of-the-existing-PDF-document/.NET/Get-the-conformance-level-of-the-existing-PDF-document/Program.cs" %}	
 
 //Load an existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1370,7 +1370,7 @@ The following code sample shows the delegate for handling PDF to PDF/A conversio
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
 
 //Load an existing PDF document. 
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1458,7 +1458,7 @@ An existing PDF/A conformance document can be converted to a PDF document using 
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Convert-PDFA-to-PDF-document/.NET/Convert-PDFA-to-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Convert-PDFA-to-PDF-document/.NET/Convert-PDFA-to-PDF-document/Program.cs" %}	
 
 //Load a PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

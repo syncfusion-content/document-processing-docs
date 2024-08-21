@@ -40,7 +40,7 @@ You can draw a rectangle on new PDF document with **CalGray** brush using [PdfCa
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-on-new-PDF-with-CalGray-brush/.NET/Draw-rectangle-on-new-PDF-with-CalGray-brush/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-on-new-PDF-with-CalGray-brush/.NET/Draw-rectangle-on-new-PDF-with-CalGray-brush/Program.cs" %}	
 
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -143,7 +143,7 @@ The following code example illustrates how to draw a rectangle with **CalGray** 
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-with-CalGray-brush-in-an-existing-PDF/.NET/Draw-rectangle-with-CalGray-brush-in-an-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-rectangle-with-CalGray-brush-in-an-existing-PDF/.NET/Draw-rectangle-with-CalGray-brush-in-an-existing-PDF/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -258,7 +258,7 @@ The following code example illustrates how to set the indexed ICC color space us
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Create-PDF-document-with-ICC-color-space/.NET/Create-PDF-document-with-ICC-color-space/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Create-PDF-document-with-ICC-color-space/.NET/Create-PDF-document-with-ICC-color-space/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -398,7 +398,7 @@ The following code example illustrates how to set the indexed ICC color space in
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Set-ICC-color-space-in-an-existing-PDF-document/.NET/Set-ICC-color-space-in-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Set-ICC-color-space-in-an-existing-PDF-document/.NET/Set-ICC-color-space-in-an-existing-PDF-document/Program.cs" %}
 
 //Load PDF document as stream.
 FileStream docStream = new FileStream(docPath, FileMode.Open, FileAccess.Read);
@@ -542,7 +542,7 @@ The following code example illustrates how to draw the graphics elements by usin
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-graphics-elements-by-using-Pantone-colors-in-a-PDF/.NET/Draw-graphics-elements-by-using-Pantone-colors-in-a-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Draw-graphics-elements-by-using-Pantone-colors-in-a-PDF/.NET/Draw-graphics-elements-by-using-Pantone-colors-in-a-PDF/Program.cs" %}
 
 //Creates a new document
 PdfDocument document = new PdfDocument();
@@ -657,7 +657,7 @@ The following code example illustrates how to draw the graphics elements by usin
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Add-graphics-elemets-by-Pantone-color-in-existing-PDF/.NET/Add-graphics-elemets-by-Pantone-color-in-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Add-graphics-elemets-by-Pantone-color-in-existing-PDF/.NET/Add-graphics-elemets-by-Pantone-color-in-existing-PDF/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -777,7 +777,7 @@ The following code illustrates how to use the color spaces in particular objects
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Use-color-space-in-particular-object-in-a-new-PDF/.NET/Use-color-space-in-particular-object-in-a-new-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Use-color-space-in-particular-object-in-a-new-PDF/.NET/Use-color-space-in-particular-object-in-a-new-PDF/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -904,7 +904,7 @@ The following code illustrates how to use the color spaces in particular objects
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Add-color-space-in-particular-object-in-an-existing-PDF/.NET/Add-color-space-in-particular-object-in-an-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ColorSpace/Add-color-space-in-particular-object-in-an-existing-PDF/.NET/Add-color-space-in-particular-object-in-an-existing-PDF/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);

@@ -15,7 +15,7 @@ The [PdfBookmarkBase](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-a-PDF-document/.NET/Adding-bookmarks-in-a-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-a-PDF-document/.NET/Adding-bookmarks-in-a-PDF-document/Program.cs" %}
 
 //Creates a new document.
 PdfDocument document = new PdfDocument();
@@ -93,7 +93,7 @@ To add bookmarks to an existing PDF document, use the following code example.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-an-existing-PDF-document/.NET/Adding-bookmarks-in-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-an-existing-PDF-document/.NET/Adding-bookmarks-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -166,7 +166,7 @@ You can add a child bookmark by using [Insert](https://help.syncfusion.com/cr/do
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-a-child-to-the-bookmarks-in-a-PDF/.NET/Adding-a-child-to-the-bookmarks-in-a-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-a-child-to-the-bookmarks-in-a-PDF/.NET/Adding-a-child-to-the-bookmarks-in-a-PDF/Program.cs" %}
 
 //Creates a new document.
 PdfDocument document = new PdfDocument();
@@ -261,7 +261,7 @@ Each loaded bookmark is represented by the [PdfLoadedBookmark](https://help.sync
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Inserting-bookmarks-in-an-existing-PDF/.NET/Inserting-bookmarks-in-an-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Inserting-bookmarks-in-an-existing-PDF/.NET/Inserting-bookmarks-in-an-existing-PDF/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -320,7 +320,7 @@ You can also remove bookmarks from the existing PDF document by using [Remove](h
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Remove-bookmarks-from-an-existing-PDF-document/.NET/Remove-bookmarks-from-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Remove-bookmarks-from-an-existing-PDF-document/.NET/Remove-bookmarks-from-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -391,7 +391,7 @@ The following code example shows how to modify the [Destination](https://help.sy
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Modify-the-bookmarks-in-an-existing-PDF-document/.NET/Modify-the-bookmarks-in-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Modify-the-bookmarks-in-an-existing-PDF-document/.NET/Modify-the-bookmarks-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -462,7 +462,7 @@ You can get bookmark page index from the existing PDF document using [PageIndex]
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Get-bookmark-page-index-from-the-existing-PDF-document/.NET/Get-bookmark-page-index-from-the-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Get-bookmark-page-index-from-the-existing-PDF-document/.NET/Get-bookmark-page-index-from-the-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);

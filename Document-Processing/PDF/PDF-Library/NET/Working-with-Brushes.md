@@ -21,7 +21,7 @@ The solid brush is used to fill an object with solid color. Essential PDF suppor
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Fill-an-object-with-solid-brush-in-a-PDF/.NET/Fill-an-object-with-solid-brush-in-a-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Fill-an-object-with-solid-brush-in-a-PDF/.NET/Fill-an-object-with-solid-brush-in-a-PDF/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -90,7 +90,7 @@ The gradient brush is used to fill an object with blend of two or more colors. E
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Fill-an-object-with-gradient-brush-in-a-PDF/.NET/Fill-an-object-with-gradient-brush-in-a-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Fill-an-object-with-gradient-brush-in-a-PDF/.NET/Fill-an-object-with-gradient-brush-in-a-PDF/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -161,7 +161,7 @@ The gradient brush is used to fill an object with blend of two or more colors. Y
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Draw-shapes-on-PDF-with-radial-gradient-brush/.NET/Draw-shapes-on-PDF-with-radial-gradient-brush/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Draw-shapes-on-PDF-with-radial-gradient-brush/.NET/Draw-shapes-on-PDF-with-radial-gradient-brush/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -230,7 +230,7 @@ The tiling brush is used to draw an object repeatedly. You can draw any shape on
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Draw-shape-on-PDF-with-tiling-brush/.NET/Draw-shape-on-PDF-with-tiling-brush/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Draw-shape-on-PDF-with-tiling-brush/.NET/Draw-shape-on-PDF-with-tiling-brush/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();

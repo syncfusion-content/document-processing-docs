@@ -17,7 +17,7 @@ The below code snippet explains how to draw the page numbers in footer using aut
 
 {% tabs %}  
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer/.NET/Adding-an-automatic-field-in-header-and-footer/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer/.NET/Adding-an-automatic-field-in-header-and-footer/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();

@@ -87,7 +87,7 @@ For ASP.NET Core and Xamarin applications
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Word-to-PDF/Converting-Word-to-PDF-document/.NET/Converting-Word-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Word-to-PDF/Converting-Word-to-PDF-document/.NET/Converting-Word-to-PDF-document/Program.cs" %}
 
 // Open the file as Stream.
 FileStream docStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read);
@@ -167,7 +167,7 @@ Essential DocIO allows you to customize the Word to PDF conversion using [DocToP
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support customizing the Word document C#.NET Cross platforms.
 
@@ -248,7 +248,7 @@ The following code illustrates how to convert a workbook to PDF Document using [
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Convert-workbook-to-PDF-document/.NET/Convert-workbook-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Convert-workbook-to-PDF-document/.NET/Convert-workbook-to-PDF-document/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -320,7 +320,7 @@ The following code shows how to convert a particular sheet to PDF Document using
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Converting-a-worksheet-to-PDF-document/.NET/Converting-a-worksheet-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Converting-a-worksheet-to-PDF-document/.NET/Converting-a-worksheet-to-PDF-document/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -397,7 +397,7 @@ The following code snippet shows how to create an individual PDF document for ea
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Creating-individual-PDF-document-for-each-worksheet/.NET/Creating-individual-PDF-document-for-each-worksheet/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Creating-individual-PDF-document-for-each-worksheet/.NET/Creating-individual-PDF-document-for-each-worksheet/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -478,7 +478,7 @@ To preserve the charts during Excel to PDF conversion, you should initialize the
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Converting-Excel-with-chart-to-PDF-document/.NET/Converting-Excel-with-chart-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Excel-to-PDF/Converting-Excel-with-chart-to-PDF-document/.NET/Converting-Excel-with-chart-to-PDF-document/Program.cs" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -638,7 +638,7 @@ For ASP.NET Core and Xamarin applications
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/RTF-to-PDF/Convert-RTF-to-PDF-document/.NET/Convert-RTF-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/RTF-to-PDF/Convert-RTF-to-PDF-document/.NET/Convert-RTF-to-PDF-document/Program.cs" %}
 
 //Open the file as Stream
 FileStream docStream = new FileStream(@"Input.rtf", FileMode.Open, FileAccess.Read);
@@ -711,7 +711,7 @@ Essential DocIO allows you to customize the RTF to PDF conversion using [DocToPD
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support customizing the RTF to PDF conversion C#.NET Cross platforms.
 
@@ -775,7 +775,7 @@ The code snippet to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/TIFF-to-PDF/Converting-multipage-TIFF-to-PDF-document/.NET/Converting-multipage-TIFF-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/TIFF-to-PDF/Converting-multipage-TIFF-to-PDF-document/.NET/Converting-multipage-TIFF-to-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -902,7 +902,7 @@ Refer the below code snippet to draw a single frame monochrome TIFF image with J
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support compressing monochrome images C#.NET Cross platforms.
 
@@ -964,7 +964,7 @@ The below code illustrates how to convert XPS to PDF.
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Converting-XPS-to-PDF-document/.NET/Converting-XPS-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/Converting-XPS-to-PDF-document/.NET/Converting-XPS-to-PDF-document/Program.cs" %}
 
 //Initialize XPS to PDF converter.
 XPSToPdfConverter converter = new XPSToPdfConverter();
@@ -1218,7 +1218,7 @@ N> The above mentioned NuGet packages are available in [nuget.org](https://www.n
 The following code snippet illustrates how to convert PDF page into image using Convert method in PdfToImageConverter.
 
 {% tabs %}
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -1277,7 +1277,7 @@ The [HTML to PDF converter library](https://www.syncfusion.com/document-processi
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //PDF doesn't support converting HTML to MHTML C#.NET Cross platforms.
 
@@ -1311,7 +1311,7 @@ The [HTML to PDF converter library](https://www.syncfusion.com/document-processi
 
 {% tabs %}
 
-{% highlight c# tabTitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
 
 //Initialize HTML to PDF converter
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
