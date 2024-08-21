@@ -231,7 +231,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to move and size a picture with cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Move%20and%20Size%20with%20cells/NET%20Standard/Move%20and%20Size%20with%20cells).  
+A complete working example to move and size a picture with cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Move%20and%20Size%20with%20cells/NET/Move%20and%20Size%20with%20cells).  
 
 ## Align picture
 
