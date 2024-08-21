@@ -20,7 +20,7 @@ You can add the JavaScript action to the PDF document by using [PdfJavaScriptAct
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-the-JavaScript-action-to-the-PDF-document/.NET/Add-the-JavaScript-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -95,7 +95,7 @@ The following code snippet illustrate this.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-JavaScript-action-to-the-form-fields-in-a-PDF/.NET/Add-JavaScript-action-to-the-form-fields-in-a-PDF/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -197,7 +197,7 @@ The 3D Annotations are used to represent 3D artworks in a PDF document. You can 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/JavaScript/Add-JavaScript-to-3D-annotation-in-a-PDF-document/.NET/Add-JavaScript-to-3D-annotation-in-a-PDF-document/Program.cs" %}
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -286,6 +286,8 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/JavaScript/Add-JavaScript-to-3D-annotation-in-a-PDF-document).
 
 ## Add/Modify JavaScript actions to the PDF
 

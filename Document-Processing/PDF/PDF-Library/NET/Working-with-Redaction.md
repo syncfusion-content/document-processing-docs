@@ -21,7 +21,7 @@ The following code example demonstrates the redaction of PDF documents from the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Removing-sensitive-content-from-the-PDF-document/.NET/Removing-sensitive-content-from-the-PDF-document/Program.cs" %}
 
 //Load the existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -93,7 +93,7 @@ The following code example explains how to add overlay text in the redacted area
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Display-text-on-the-redacted-area/.NET/Display-text-on-the-redacted-area/Program.cs" %}
 
 //Load the existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -177,7 +177,7 @@ The following code example explains how to redact the information from a page by
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Draw-image-on-the-redacted-area-in-PDF-document/.NET/Draw-image-on-the-redacted-area-in-PDF-document/Program.cs" %}	
 
 //Load the existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -258,7 +258,7 @@ The following code example explains how to redact the information from a page by
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Draw-pattern-on-the-redacted-area-in-PDF-document/.NET/Draw-pattern-on-the-redacted-area-in-PDF-document/Program.cs" %}	
 
 //Load the existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -407,7 +407,7 @@ The following code example explains how to redact the information from a page wi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Fill-color-on-the-redacted-area-in-a-PDF/.NET/Fill-color-on-the-redacted-area-in-a-PDF/Program.cs" %}
 
 //Load the existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -485,7 +485,7 @@ The following code snippet explains how to redact the information from a page wi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Redaction-without-fill-color-and-appearance/.NET/Redaction-without-fill-color-and-appearance/Program.cs" %}
 
 //Load the existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -558,7 +558,7 @@ The code snippet to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Get-the-redaction-progress-from-PDF-document/.NET/Get-the-redaction-progress-from-PDF-document/Program.cs" %}
 
 //Load an existing PDF document
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -640,13 +640,15 @@ MessageBox.Show(String.Format("Redaction Process " + arguments.Progress + " % co
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Get-the-redaction-progress-from-PDF-document).
+
 ## Redaction result 
 
 Using [PdfRedactionResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedactionResult.html) class, you can get the status of the redaction with other information. The result of the redaction operation can be obtained using Essential PDF and the below code example illustrates the same. 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Get-the-result-of-redaction-with-other-information/.NET/Get-the-result-of-redaction-with-other-information/Program.cs" %}
 
 //Load an existing PDF document. 
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -749,7 +751,7 @@ The code snippet to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Redact-text-content-alone-on-the-redated-area/.NET/Program.cs" %}
 
 //Load an existing PDF document
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -822,7 +824,7 @@ The following code snippet explains how to find text by regular expression patte
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Find-text-by-regular-expression-pattern-and-redact-it-from-PDF-document/.NET/Find_text_by_regular_expression/Program.cs" %}
 
     //Create stream from an existing PDF document.
     FileStream docStream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read);
@@ -960,4 +962,4 @@ The following code snippet explains how to find text by regular expression patte
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Find-text-by-regular-expression-pattern-and-redact-it-from-PDF-document/.NET-Standard).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Find-text-by-regular-expression-pattern-and-redact-it-from-PDF-document/).

@@ -24,7 +24,7 @@ The below code snippet illustrates how to add a textbox field to a new PDF docum
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-a-textbox-field-to-a-new-PDF-document/.NET/Add-a-textbox-field-to-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -97,7 +97,7 @@ The below code snippet illustrates how to add the textbox to an existing PDF doc
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-the-textbox-to-an-existing-PDF-document/.NET/Add-the-textbox-to-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -185,7 +185,7 @@ Please refer the below code snippet for adding the combo box in new PDF document
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-combo-box-in-the-new-PDF-document/.NET/Adding-combo-box-in-the-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -276,7 +276,7 @@ Please refer the below code snippet for adding the combo box in existing PDF doc
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-the-combo-box-in-existing-PDF-document/.NET/Adding-the-combo-box-in-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -382,7 +382,7 @@ Please refer the below code snippet for adding the radio button in new PDF docum
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-radio-button-in-new-PDF-document/.NET/Adding-radio-button-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -473,7 +473,7 @@ The below code snippet illustrates how to add the radio button in existing PDF d
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-radio-button-in-existing-PDF-document/.NET/Add-radio-button-in-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -579,7 +579,7 @@ The following code example illustrates how to get option values from acroform ra
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-option-value-from-acroform-radio-button/.NET/Get-option-value-from-acroform-radio-button/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -673,7 +673,7 @@ Please refer the below code snippet for adding the list box field in new PDF doc
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-listbox-field-in-new-PDF-document/.NET/Add-listbox-field-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -770,7 +770,7 @@ Please refer the below code snippet for adding the list box field in existing PD
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-listbox-field-in-an-existing-PDF-document/.NET/Add-listbox-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -882,7 +882,7 @@ Please refer the below code snippet for adding the check box field in new PDF do
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-checkbox-field-in-new-PDF-document/.NET/Add-checkbox-field-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -958,7 +958,7 @@ Please refer the below code snippet for adding the check box field in existing P
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-checkbox-field-in-an-existing-PDF-document/.NET/Adding-checkbox-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
@@ -1049,7 +1049,7 @@ Please refer the below code snippet for adding the signature field in new PDF do
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-signature-field-in-a-new-PDF-document/.NET/Add-signature-field-in-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1125,7 +1125,7 @@ Please refer the below code snippet for adding the signature field in existing P
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-the-signatre-field-in-existing-PDF-document/.NET/Adding-the-signatre-field-in-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1216,7 +1216,7 @@ The below code illustrates how to add the button field in new PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-the-button-field-in-a-new-PDF-document/.NET/Add-the-button-field-in-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1292,7 +1292,7 @@ Please refer the below code snippet for adding the button field in existing PDF 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-button-field-in-an-existing-PDF-document/.NET/Adding-button-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1380,7 +1380,7 @@ The following code snippet explains how to set appearance to the PDF form fields
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-appearance-to-the-PDF-form-fields/.NET/Set-appearance-to-the-PDF-form-fields/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1454,7 +1454,7 @@ The following code snippet explains how to modify an existing form field in a PD
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Modify-the-existing-form-field-in-PDF-document/.NET/Modify-the-existing-form-field-in-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1532,7 +1532,7 @@ You can retrieve/modify the fore and background color of existing form fields in
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields/.NET/Modifying-fore-and-backcolor-of-existing-form-fields/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1623,7 +1623,7 @@ You can fill a text box field using [Text](https://help.syncfusion.com/cr/docume
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Filling-the-textbox-field-in-an-existing-PDF-document/.NET/Filling-the-textbox-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1689,7 +1689,7 @@ You can fill a combo box field using [SelectedValue](https://help.syncfusion.com
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-combobox-field-in-an-existing-PDF-document/.NET/Fill-the-combobox-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1758,7 +1758,7 @@ You can fill a radio button field using [SelectedValue](https://help.syncfusion.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-radio-button-field-in-an-existing-PDF-document/.NET/Fill-radio-button-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1827,7 +1827,7 @@ The below code snippet illustrates how to fill the list box field in an existing
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-list-box-field-in-an-existing-PDF-document/.NET/Fill-list-box-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1896,7 +1896,7 @@ You can fill a check box field by enabling [Checked](https://help.syncfusion.com
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-checkbox-field-in-an-existing-PDF-document/.NET/Fill-the-checkbox-field-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -1971,7 +1971,7 @@ The below code snippet illustrates how to fill the signature field with certific
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-signature-field-in-an-existing-PDF/.NET/Fill-the-signature-field-in-an-existing-PDF/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2055,7 +2055,7 @@ The following code example illustrates this.
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enumarate-form-fields-in-a-PDF-document/.NET/Enumarate-form-fields-in-a-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2140,7 +2140,7 @@ The below code snippet explains how to get the field from collection using [TryG
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-the-field-from-collection-using-TryGetField/.NET/Get-the-field-from-collection-using-TryGetField/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2220,7 +2220,7 @@ Please refer the below code snippet to get the field value from collection using
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Get-the-field-from-collection-using-TryGetValue/.NET/Get-the-field-from-collection-using-TryGetValue/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2294,7 +2294,7 @@ The following code snippet illustrates how to fill XFA forms via Acroform API.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Fill-the-XFA-forms-fields-via-acroform-API/.NET/Fill-the-XFA-forms-fields-via-acroform-API/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2383,7 +2383,7 @@ Please refer the sample for flattening the form fields in new PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/Forms/Removing-editing-capability-of-form-fields/.NET/Removing-editing-capability-of-form-fields/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2461,7 +2461,7 @@ Please refer the sample for flattening the form fields in existing PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flattening-form-fields-in-an-existing-PDF-document/.NET/Flattening-form-fields-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2523,7 +2523,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document).
 
 N> The form fields will be flattened only after the PDF document is saved. 
 
@@ -2533,7 +2533,7 @@ Please refer the code sample to flatten the form fields before saving the PDF do
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flattening-form-fields-in-an-existing-PDF-document/.NET/Flattening-form-fields-in-an-existing-PDF-document/Program.cs" %}
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2593,7 +2593,7 @@ The below code snippet illustrates how to set the [ReadOnly](https://help.syncfu
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-readonly-property-to-a-new-PDF-document/.NET/Set-readonly-property-to-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2680,7 +2680,7 @@ The below code snippet illustrates how to set the [ReadOnly](https://help.syncfu
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-the-ReadOnly-property-to-an-existing-PDF-document/.NET/Set-the-ReadOnly-property-to-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2744,7 +2744,7 @@ The below code illustrates how to remove the form fields from the existing PDF d
 
 {% tabs %} 
 
-{% highlight c# tabtitle="ASP.NET Core" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document/.NET/Remove-the-form-fields-form-the-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2824,7 +2824,7 @@ The below code illustrates how to import FDF file to PDF.
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Importing-FDF-file-to-PDF-document/.NET/Importing-FDF-file-to-PDF-document/Program.cs" %}
 
 //Get stream from an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -2884,7 +2884,7 @@ The below code illustrates how to export FDF file from PDF document.
 
 {% tabs %} 
 
-{% highlight c# tabtitle="ASP.NET Core" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export-FDF-file-from-PDF-document/.NET/Export-FDF-file-from-PDF-document/Program.cs" %} 
 
 //Get stream from an existing PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -2937,7 +2937,7 @@ You can add a complex script language text in PDF AcroForm fields by using the [
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3047,7 +3047,7 @@ The following code example illustrates how to add complex script support for all
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3148,7 +3148,7 @@ You can also flatten the existing form fields with complex script layout by usin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}		
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flatten-the-existing-form-fields-with-complex-script/.NET/Flatten-the-existing-form-fields-with-complex-script/Program.cs" %}		
 
 //Load the existing PDF document.
 FileStream inputFileStream = new FileStream("Form.pdf", FileMode.Open, FileAccess.Read);
@@ -3221,7 +3221,7 @@ By default, the value is set to true. This is illustrated in the following code 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Auto-naming-of-form-fields-in-a-PDF-document/.NET/Auto-naming-of-form-fields-in-a-PDF-document/Program.cs" %}	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3343,7 +3343,7 @@ The following code illustrates how to set [AutoResizeText](https://help.syncfusi
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Auto-resize-the-text-of-textboxfield-in-a-PDF/.NET/Auto-resize-the-text-of-textboxfield-in-a-PDF/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -3419,7 +3419,7 @@ The below code illustrates how to enable the default appearance in new PDF docum
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}		
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-new-PDF-document/.NET/Enable-default-appearance-in-new-PDF-document/Program.cs" %}		
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3497,7 +3497,7 @@ The below code illustrates how to enable the default appearance in existing PDF 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-existing-PDF-document/.NET/Enable-default-appearance-in-existing-PDF-document/Program.cs" %}	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);

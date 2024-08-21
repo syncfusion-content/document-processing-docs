@@ -15,7 +15,7 @@ You can create a portfolio using [PdfPortfolioInformation](https://help.syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Portfolio/Create-a-portfolio-and-attach-variety-of-documents/.NET/Create-a-portfolio-and-attach-variety-of-documents/Program.cs" %}
 
 //Create a new instance of PdfDocument class
 PdfDocument document = new PdfDocument();
@@ -110,7 +110,7 @@ The Essential PDF provides support for extracting the files from the PDF Portfol
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Portfolio/Extracting-the-files-from-PDF-portfolio/.NET/Extracting-the-files-from-PDF-portfolio/Program.cs" %}
 
 //Load an existing PDF document
 FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);
@@ -189,7 +189,7 @@ The following code example illustrates how to remove files from an existing PDF 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Portfolio/Remove-the-files-from-PDF-portfolio/.NET/Remove-the-files-from-PDF-portfolio/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Sample.pdf", FileMode.Open, FileAccess.Read);

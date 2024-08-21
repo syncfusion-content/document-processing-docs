@@ -17,7 +17,7 @@ Please refer the below code snippet for navigating to the web page.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Navigate-to-specific-URL-from-a-PDF-document/.NET/Navigate-to-specific-URL-from-a-PDF-document/Program.cs" %} 	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -107,7 +107,7 @@ To add a web hyperlink to an existing document, please refer the below code snip
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Add-a-web-hyperlink-to-an-existing-PDF-document/.NET/Add-a-web-hyperlink-to-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -200,7 +200,7 @@ To allow the users to navigate to any other part of the same document, [PdfDocum
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Add-the-hyperlink-for-internal-document-navigation/.NET/Add-the-hyperlink-for-internal-document-navigation/Program.cs" %} 	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -314,7 +314,7 @@ To add a [PdfDocumentLinkAnnotation](https://help.syncfusion.com/cr/document-pro
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Hyperlinks/Internal-document-navigation-to-an-existing-PDF/.NET/Internal-document-navigation-to-an-existing-PDF/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream("fileName.pdf", FileMode.Open, FileAccess.Read);
@@ -415,7 +415,7 @@ Please refer the below code snippet for navigating to external documents.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Create the PDF document.
 PdfDocument document = new PdfDocument();
@@ -489,7 +489,7 @@ To open a file in relative path, the [PdfLaunchAction](https://help.syncfusion.c
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //PDF doesn't support external document navigation in C# .NET Cross platforms. 
 
