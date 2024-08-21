@@ -5,6 +5,10 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
+
+N>This WebKit approach is depreciated and use the latest CEF/Blink based HTML to PDF Converter. Please refer the HTML to PDF getting started documentation for more information.
+[https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/converting-html-to-pdf](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/converting-html-to-pdf)
+
 # Converting HTML to PDF
 
 The HTML to PDF converter is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses popular rendering engines such as Blink (Google Chrome) and is reliable and accurate. The result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
