@@ -167,7 +167,7 @@ Essential DocIO allows you to customize the Word to PDF conversion using [DocToP
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF doesn't support customizing the Word document C#.NET Cross platforms.
 
@@ -711,7 +711,7 @@ Essential DocIO allows you to customize the RTF to PDF conversion using [DocToPD
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF doesn't support customizing the RTF to PDF conversion C#.NET Cross platforms.
 
@@ -902,7 +902,7 @@ Refer the below code snippet to draw a single frame monochrome TIFF image with J
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF doesn't support compressing monochrome images C#.NET Cross platforms.
 
@@ -1218,7 +1218,7 @@ N> The above mentioned NuGet packages are available in [nuget.org](https://www.n
 The following code snippet illustrates how to convert PDF page into image using Convert method in PdfToImageConverter.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -1277,7 +1277,7 @@ The [HTML to PDF converter library](https://www.syncfusion.com/document-processi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF doesn't support converting HTML to MHTML C#.NET Cross platforms.
 
@@ -1311,7 +1311,7 @@ The [HTML to PDF converter library](https://www.syncfusion.com/document-processi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize HTML to PDF converter
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();

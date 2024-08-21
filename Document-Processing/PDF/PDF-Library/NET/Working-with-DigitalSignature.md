@@ -4073,7 +4073,7 @@ Effortlessly Integrate **signature and timestamp** certificates into the Documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Loads an existing document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");

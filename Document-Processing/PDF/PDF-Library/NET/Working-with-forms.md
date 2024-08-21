@@ -2937,7 +2937,7 @@ You can add a complex script language text in PDF AcroForm fields by using the [
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" %}	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3047,7 +3047,7 @@ The following code example illustrates how to add complex script support for all
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" %}	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();

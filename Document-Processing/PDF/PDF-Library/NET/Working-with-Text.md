@@ -627,7 +627,7 @@ N> To render a Unicode text in the PDF document the chosen font should have the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //PDF supports embedding fonts or displaying a Unicode text in the PDF document by default in ASP.NET Core platform. 
 
