@@ -2492,7 +2492,7 @@ worksheet.ImportHtmlTable("Sample.html", 1, 1, HtmlImportOptions.DetectFormulas)
 {% endhighlight %}
 {% endtabs %}
 
-## Xml Data to Excel
+## XML Data to Excel
 
 XlsIO supports importing XML data into Excel worksheets. The **ImportXml** method is used to load an XML file and import the data into the worksheet.
 
