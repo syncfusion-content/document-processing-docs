@@ -4058,7 +4058,7 @@ You can retrieve the annotation review history from the existing PDF document an
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations/.NET/Retrieve-review-status-from-the-existing-PDF-annotations/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations/.NET/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);

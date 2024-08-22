@@ -763,7 +763,7 @@ The code snippet to illustrate the same is given below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Remove-images-from-PDF-document/.NET%20Standard/Remove-images-from-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Remove-images-from-PDF-document/.NET/Remove-images-from-PDF-document/Program.cs" %} 
 
 //Load an existing PDF.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);

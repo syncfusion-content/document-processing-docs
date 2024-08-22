@@ -88,7 +88,7 @@ The following code snippet illustrates how to add text in the existing PDF docum
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/Text/Draw-text-in-an-existing-PDF-document/.NET/Draw-text-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-an-existing-PDF-document/.NET/Draw-text-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
