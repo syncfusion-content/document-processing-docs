@@ -4560,7 +4560,7 @@ ldoc.Close(True)
 
 ## Troubleshooting
 
-<th style="font-size:14px"><b>Annotations are sometimes missing in the acrobat and the other Pdf Viewer applications.
+<th style="font-size:14px"><b>Annotations are sometimes missing in the acrobat and the other PDF Viewer applications.
 </b></th>
 
 <table>
