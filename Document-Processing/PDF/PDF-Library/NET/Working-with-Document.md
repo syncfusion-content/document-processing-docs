@@ -654,7 +654,7 @@ To remove specific details from the existing document information, use the **Rem
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Remove-specific-keys-from-the-existing-document-information/.NET/Remove-specific-keys-from-the-existing-document-information/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Remove-specific-keys-from-the-existing-document-information/.NET/Program.cs" %}
 
 //Load an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

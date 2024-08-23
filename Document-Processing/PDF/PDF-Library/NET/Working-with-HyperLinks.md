@@ -415,7 +415,7 @@ Please refer the below code snippet for navigating to external documents.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %} 
 
 //Create the PDF document.
 PdfDocument document = new PdfDocument();

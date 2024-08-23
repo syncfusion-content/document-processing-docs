@@ -326,7 +326,7 @@ The following code example illustrates how to add digital signature in a PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/Digital%20Signature/Add-digital-signature-using-X509Certificate2/.NET/Add-digital-signature-using-X509Certificate2/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-digital-signature-using-X509Certificate2/.NET/Add-digital-signature-using-X509Certificate2/Program.cs" %} 	
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
