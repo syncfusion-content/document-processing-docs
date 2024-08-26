@@ -17,7 +17,7 @@ This property enables the complex script validation for the text present in Exce
 The following complete code snippet explains how to enable [AutoDetectComplexScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_AutoDetectComplexScript) property while converting an Excel document to PDF.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Complex%20Script%20to%20PDF/.NET/Complex%20Script%20to%20PDF/Complex%20Script%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -98,7 +98,7 @@ End Using
 {% endhighlight %}
 {% endtabs%}
 
-A complete working example to detect complex script in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Complex%20Script%20to%20PDF).
+A complete working example to detect complex script in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Complex%20Script%20to%20PDF/.NET/Complex%20Script%20to%20PDF).
 
 ## Custom Paper Size
 
@@ -107,7 +107,7 @@ This property helps to set the required paper size in inches. The default value 
 The following complete code snippet explains how to set [CustomPaperSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_CustomPaperSize) while converting Excel document to PDF.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Custom%20Paper%20Size/.NET/Custom%20Paper%20Size/Custom%20Paper%20Size/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -188,7 +188,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with custom paper size in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Custom%20Paper%20Size).
+A complete working example to convert Excel to PDF with custom paper size in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Custom%20Paper%20Size/.NET/Custom%20Paper%20Size).
 
 ## Display Gridlines
 
@@ -371,7 +371,7 @@ End Using
 Gridlines will be rendered in the output PDF document, when display style is selected as **Visible**. The following code snippet explains how to select **Visible** display style for gridlines.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Gridlines%20in%20PDF/.NET/Gridlines%20in%20PDF/Gridlines%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -452,7 +452,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to hide gridlines in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Gridlines%20in%20PDF).
+A complete working example to hide gridlines in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Gridlines%20in%20PDF/.NET/Gridlines%20in%20PDF).
 
 ## Embed Fonts
 
@@ -461,7 +461,7 @@ The Excel content will be rendered improperly when Arial Unicode MS Font is miss
 The following code snippet explains how to enable **EmbedFonts** property.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Embed%20Fonts%20in%20PDF/.NET/Embed%20Fonts%20in%20PDF/Embed%20Fonts%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -542,7 +542,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to embed fonts in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Embed%20Fonts%20in%20PDF).
+A complete working example to embed fonts in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Embed%20Fonts%20in%20PDF/.NET/Embed%20Fonts%20in%20PDF).
 
 ## Export Bookmarks
 
@@ -551,7 +551,7 @@ The default value of [ExportBookmarks](https://help.syncfusion.com/cr/document-p
 The following code snippet explains how to disable **ExportBookmarks** property.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Bookmarks%20in%20PDF/.NET/Bookmarks%20in%20PDF/Bookmarks%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -632,7 +632,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to export bookmarks in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Bookmarks%20in%20PDF).
+A complete working example to export bookmarks in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Bookmarks%20in%20PDF/.NET/Bookmarks%20in%20PDF).
 
 ## Export Document Properties
 
@@ -641,7 +641,7 @@ Excel document properties will be exported to PDF document by default, in Excel 
 The following complete code snippet explains how to disable **ExportDocumentProperties**.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Document%20Properties%20to%20PDF/.NET/Document%20Properties%20to%20PDF/Document%20Properties%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -722,7 +722,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to export document properties in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Document%20Properties%20to%20PDF).
+A complete working example to export document properties in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Document%20Properties%20to%20PDF/.NET/Document%20Properties%20to%20PDF).
 
 ## Export Quality Image
 
@@ -731,7 +731,7 @@ The default value of [ExportQualityImage](https://help.syncfusion.com/cr/documen
 The following complete code snippet explains how to enable **ExportQualityImage** property.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Quality%20Image%20in%20PDF/.NET/Quality%20Image%20in%20PDF/Quality%20Image%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -812,7 +812,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to export quality image in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Quality%20Image%20in%20PDF).
+A complete working example to export quality image in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Quality%20Image%20in%20PDF/.NET/Quality%20Image%20in%20PDF).
 
 ## Header Footer Option
 
@@ -909,7 +909,7 @@ End Using
 Document footer will be rendered to PDF document by default. This can be skipped by disabling the [ShowFooter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.HeaderFooterOption.html#Syncfusion_ExcelToPdfConverter_HeaderFooterOption_ShowFooter) property.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Show%20Header%20Footer%20in%20PDF/.NET/Show%20Header%20Footer%20In%20PDF/Show%20Header%20Footer%20In%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -990,7 +990,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to show or hide header and footer in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Show%20Header%20Footer%20in%20PDF).
+A complete working example to show or hide header and footer in Excel to PDF conversion in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Show%20Header%20Footer%20in%20PDF/.NET/Show%20Header%20Footer%20In%20PDF).
 
 ## Convert Blank Page
 
@@ -999,7 +999,7 @@ Blank pages in Excel document are rendered to PDF document by default, in Excel 
 The following code snippet explains this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Blank%20Page%20to%20PDF/.NET/Blank%20Page%20to%20PDF/Blank%20Page%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1080,7 +1080,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert blank page to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Blank%20Page%20to%20PDF).
+A complete working example to convert blank page to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Blank%20Page%20to%20PDF/.NET/Blank%20Page%20to%20PDF).
 
 ## Convert Blank Sheet
 
@@ -1089,7 +1089,7 @@ Blank worksheets in Excel document are rendered to PDF document by default, in E
 The following code snippet explains this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Blank%20Sheet%20to%20PDF/.NET/Blank%20Sheet%20to%20PDF/Blank%20Sheet%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1170,7 +1170,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert blank sheet to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Blank%20Sheet%20to%20PDF).
+A complete working example to convert blank sheet to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Blank%20Sheet%20to%20PDF/.NET/Blank%20Sheet%20to%20PDF).
 
 ## Layout Options
 
@@ -1181,7 +1181,7 @@ This property helps to select the layout option for the Excel document in Excel 
 Selecting **Automatic** under [LayoutOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_LayoutOptions) prints the worksheets at their actual size. It's default value is **NoScaling**. The following code snippet explains how to select the layout option as **Automatic**.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Automatic%20Layout/.NET/Automatic%20Layout/Automatic%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1262,14 +1262,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with automatic layout in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Automatic%20Layout).
+A complete working example to convert Excel to PDF with automatic layout in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Automatic%20Layout/.NET/Automatic%20Layout).
 
 ### Custom Scaling
 
 Selecting **CustomScaling** under [LayoutOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_LayoutOptions) prints the worksheets at specified scaling, i.e., zoom value set in under page setup. The following code snippet explains how to use this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Custom%20Scaling/.NET/Custom%20Scaling/Custom%20Scaling/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1350,14 +1350,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with custom scaling in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Custom%20Scaling).
+A complete working example to convert Excel to PDF with custom scaling in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Custom%20Scaling/.NET/Custom%20Scaling).
 
 ### Fit All Columns On One Page
 
 Selecting **FitAllColumnsOnOnePage** under [LayoutOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_LayoutOptions) renders all columns in Excel worksheet into single PDF page. The following code snippet explains how to select the layout option as **FitAllColumnsOnOnePage**.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fit%20All%20Columns%20On%20One%20Page/.NET/Fit%20All%20Columns%20On%20One%20Page/Fit%20All%20Columns%20On%20One%20Page/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1438,14 +1438,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with fit all columns on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fit%20All%20Columns%20On%20One%20Page).
+A complete working example to convert Excel to PDF with fit all columns on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fit%20All%20Columns%20On%20One%20Page/.NET/Fit%20All%20Columns%20On%20One%20Page).
 
 ### Fit All Rows On One Page
 
 Selecting **FitAllRowsOnOnePage** under [LayoutOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_LayoutOptions) renders all rows in Excel worksheet into single PDF page. The following code snippet explains how to select the layout option as **FitAllRowsOnOnePage**.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fit%20All%20Rows%20On%20One%20Page/.NET/Fit%20All%20Rows%20On%20One%20Page/Fit%20All%20Rows%20On%20One%20Page/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1526,14 +1526,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with fit all rows on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fit%20All%20Rows%20On%20One%20Page).
+A complete working example to convert Excel to PDF with fit all rows on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fit%20All%20Rows%20On%20One%20Page/.NET/Fit%20All%20Rows%20On%20One%20Page).
 
 ### Fit Sheet On One Page
 
 Selecting **FitSheetOnOnePage** under [LayoutOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_LayoutOptions) renders every single worksheet in Excel workbook into, single PDF page. The following code snippet explains how to select the layout option as **FitSheetOnOnePage**.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fit%20Sheet%20On%20One%20Page/.NET/Fit%20Sheet%20On%20One%20Page/Fit%20Sheet%20On%20One%20Page/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1614,14 +1614,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with fit sheet on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fit%20Sheet%20On%20One%20Page).
+A complete working example to convert Excel to PDF with fit sheet on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fit%20Sheet%20On%20One%20Page/.NET/Fit%20Sheet%20On%20One%20Page).
 
 ### No Scaling
 
 Selecting **NoScaling** under [LayoutOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_LayoutOptions) prints the worksheets at their actual size. The following code snippet explains how to select the layout option as **NoScaling**.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/No%20Scaling/.NET/No%20Scaling/No%20Scaling/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1702,7 +1702,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with no scaling in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/No%20Scaling).
+A complete working example to convert Excel to PDF with no scaling in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/No%20Scaling/.NET/No%20Scaling).
 
 ## PDF Conformance Level
 
@@ -1716,7 +1716,7 @@ N> 2. Pdf_X1A2001 is not supported for NETStandard.
 The following code illustrates  how to set the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_PdfConformanceLevel) while converting  Excel workbook to PDF.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/PDF%20Conformance/.NET/PDF%20Conformance/PDF%20Conformance/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1790,7 +1790,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to PDF with PDF conformance in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/PDF%20Conformance).
+A complete working example to convert Excel to PDF with PDF conformance in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/PDF%20Conformance/.NET/PDF%20Conformance).
 
 ## Template Document
 
@@ -1801,7 +1801,7 @@ A complete working example to convert Excel to PDF with PDF conformance in C# is
 The following complete code snippet explains how to convert two Excel documents into a single PDF document using [TemplateDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_TemplateDocument) property.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Multiple%20Excel%20to%20PDF/.NET/Multiple%20Excel%20to%20PDF/Multiple%20Excel%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1900,14 +1900,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert multiple workbooks to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Multiple%20Excel%20to%20PDF).
+A complete working example to convert multiple workbooks to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Multiple%20Excel%20to%20PDF/.NET/Multiple%20Excel%20to%20PDF).
 
 ### Convert selected worksheets into a single PDF document
 
 By using the [TemplateDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_TemplateDocument) property, multiple worksheets or selected worksheets can be converted into single PDF document. The following code snippet explains how to convert selected sheets into a single PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Selected%20Worksheets%20to%20PDF/.NET/Selected%20Worksheets%20to%20PDF/Selected%20Worksheets%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2034,7 +2034,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert selected worksheets to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Selected%20Worksheets%20to%20PDF).
+A complete working example to convert selected worksheets to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Selected%20Worksheets%20to%20PDF/.NET/Selected%20Worksheets%20to%20PDF).
 
 ## Throw When Excel File Is Empty
 
@@ -2043,7 +2043,7 @@ The default value of [ThrowWhenExcelFileIsEmpty](https://help.syncfusion.com/cr/
 The following code snippet explains this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Empty%20Excel%20to%20PDF/.NET/Empty%20Excel%20to%20PDF/Empty%20Excel%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2123,7 +2123,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to through exception when file is empty in Excel to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Empty%20Excel%20to%20PDF).
+A complete working example to through exception when file is empty in Excel to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Empty%20Excel%20to%20PDF/.NET/Empty%20Excel%20to%20PDF).
 
 ## Capture Warnings in Excel-to-PDF Conversion
 
@@ -2137,7 +2137,7 @@ In addition, a decision to continue the conversion process can be done here by s
 
 The following code snippet shows how to capture warnings during Excel-to-PDF conversion.
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Warnings/.NET/Warnings/Warnings/Program.cs,180" %}
 using Syncfusion.XlsIORenderer;
 using Syncfusion.Pdf;
 using Syncfusion.XlsIO;
@@ -2318,5 +2318,5 @@ End Namespace
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to skip warning in Excel to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Warnings).
+A complete working example to skip warning in Excel to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Warnings/.NET/Warnings).
 
