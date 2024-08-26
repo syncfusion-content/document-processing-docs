@@ -350,4 +350,4 @@ A complete working example to format unique and duplicate values in C# is presen
 
 By executing the program, you will get the Excel file as below
 
-![unique and duplicate conditional Formatting](../Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img3.jpg).
+![unique and duplicate conditional Formatting](../Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img3.png).

@@ -1,6 +1,6 @@
 ---
 title: Create Excel file in Console Application | Syncfusion
-description: Learn here how to create an Excel file in Console Application using Syncfusion Excel library.
+description: Learn here how to create an Excel file in Console Application using Syncfusion Excel(XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -407,7 +407,7 @@ End Using
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-A complete working example of how to create an Excel file in Console Application using .NET Core in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET%20Core/Create%20Excel).
+A complete working example of how to create an Excel file in Console Application using .NET Core in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET/Create%20Excel).
 
 By executing the program, you will get the Excel file as below.
 ![Output File](Console-Apps-images/Console-Apps-images_img4.png)
@@ -418,7 +418,7 @@ The below steps illustrates creating a simple Invoice formatted Excel document i
 
 Step 1: Create a new C# Console Application(.NET Framework) project.
 
-![Create console application(.NET Framework) in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
+![Create console application.NET Framework in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
 
 Step 2: Name the project.
 
@@ -428,7 +428,7 @@ Step 3: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.WinForms Nuget Package](Console-Apps-images/Console-Apps-images_img7.png)
 
-N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion Windows Forms GUI controls, so named with sufix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
+N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion Windows Forms GUI controls, so named with suffix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
 
 Step 4: Include the following namespaces in the program.cs file.
 {% capture codesnippet1 %}
