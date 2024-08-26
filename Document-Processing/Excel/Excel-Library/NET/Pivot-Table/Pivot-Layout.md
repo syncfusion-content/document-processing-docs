@@ -154,7 +154,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply a tabular layout to a pivot table in C# is present on [this GitHub page](https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Tabular%20Layout/.NET/Tabular%20Layout/Tabular%20Layout/Program.cs).
+A complete working example to apply a tabular layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Tabular%20Layout/.NET/Tabular%20Layout).
 
 By executing the program, you will get the Excel file as below
 
