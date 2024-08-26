@@ -146,7 +146,7 @@ chart.Series(1).SerieType = ExcelChartType.Bar_Clustered
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Series%20Lines/.NET/Series%20Lines/Series%20Lines/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -369,7 +369,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart data series in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Series%20Lines/NET/Series%20Lines).
+A complete working example for the chart data series in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Series%20Lines/.NET/Series%20Lines).
 
 ## Series Settings
 
@@ -427,7 +427,7 @@ XlsIO allows you to adjust the space between chart bars using [Overlap](https://
 The following code snippet illustrates how to add space between bars.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20Bars%20Spacing/.NET/Chart%20Bars%20Spacing/Chart%20Bars%20Spacing/Program.cs,180" %}
 //Adding space between bars of different series of single category.
 chart.Series[0].SerieFormat.CommonSerieOptions.Overlap = 60;
 
@@ -452,14 +452,14 @@ chart.Series(0).SerieFormat.CommonSerieOptions.GapWidth = 80
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for adding space between chart bars in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20Bars%20Spacing).
+A complete working example for adding space between chart bars in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20Bars%20Spacing/.NET/Chart%20Bars%20Spacing).
 
 ### Add High-Low Lines
 
 The following code snippet illustrates how to add high-low lines.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/High%20Low%20Lines/.NET/High%20Low%20Lines/High%20Low%20Lines/Program.cs,180" %}
 //Set HasHighLowLines property to true
 chart.Series[0].SerieFormat.CommonSerieOptions.HasHighLowLines = true;
 
@@ -490,14 +490,14 @@ chart.Series(0).SerieFormat.CommonSerieOptions.HighLowLines.LineWeight = ExcelCh
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to show high low lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/High%20Low%20Lines).
+A complete working example to show high low lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/High%20Low%20Lines/.NET/High%20Low%20Lines).
 
 ### Add Drop Lines
 
 The following code snippet illustrates how to add drop lines.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Drop%20Lines/.NET/Drop%20Lines/Drop%20Lines/Program.cs,180" %}
 //Set the HasDropLines property to true.
 chart.Series[0].SerieFormat.CommonSerieOptions.HasDropLines = true;
 
@@ -528,14 +528,14 @@ chart.Series(0).SerieFormat.CommonSerieOptions.DropLines.LineWeight = ExcelChart
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add drop lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Drop%20Lines).
+A complete working example to add drop lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Drop%20Lines/.NET/Drop%20Lines).
 
 ### Add Series Lines
 
 The following code snippet illustrates how to add series lines in chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Series%20Lines/.NET/Series%20Lines/Series%20Lines/Program.cs,180" %}
 //Set HasSeriesLines property to true
 chart.Series[0].SerieFormat.CommonSerieOptions.HasSeriesLines = true;
 
@@ -566,4 +566,4 @@ chart.Series(0).SerieFormat.CommonSerieOptions.PieSeriesLine.LineWeight = ExcelC
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add series lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Series%20Lines).
+A complete working example to add series lines of chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Series%20Lines/.NET/Series%20Lines).

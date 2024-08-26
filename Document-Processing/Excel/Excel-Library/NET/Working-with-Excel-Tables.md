@@ -21,7 +21,7 @@ N> In XlsIO, tables are supported only for Excel 2007 and later formats (*.xlsx 
 The following code sample explains the creation of a simple table by the range of data from an existing worksheet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Create%20Table/.NET/Create%20Table/Create%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -74,14 +74,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Create%20Table).
+A complete working example to create a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Create%20Table/.NET/Create%20Table).
 
 ## Accessing a table
 
 The existing tables in the worksheet can be accessed, as follows. 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Read%20Table/.NET/Read%20Table/Read%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -143,7 +143,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example for accessing a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Read%20Table).
+A complete working example for accessing a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Read%20Table/.NET/Read%20Table).
 
 ## Formatting a table
 
@@ -152,7 +152,7 @@ You can apply built-in styles to the table using XlsIO. You can also customize t
 The following code snippet illustrates how to apply built-in table style.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Format%20Table/.NET/Format%20Table/Format%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -214,7 +214,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example for formatting a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Format%20Table).
+A complete working example for formatting a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Format%20Table/.NET/Format%20Table).
 
 ### Apply Custom Table Style
 You can apply custom table style to the table using XlsIO. You can create custom table style in which you can specified border, font, back ground color and format. You can also customized table in with other table style options such as Header/total row, first/last column, banded rows to make a table easier to read.
@@ -222,7 +222,7 @@ You can apply custom table style to the table using XlsIO. You can create custom
 The below code example shows how to apply custom table style in XlsIO.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Apply%20Custom%20Style/.NET/Apply%20Custom%20Style/Apply%20Custom%20Style/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -509,7 +509,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply custom table style in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Apply%20Custom%20Style).
+A complete working example to apply custom table style in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Apply%20Custom%20Style/.NET/Apply%20Custom%20Style).
 
 The following screenshot represents generated Excel file with custom table styles in XlsIO.
 
@@ -522,7 +522,7 @@ N> The [Tablestyles](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsI
 [IListObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html) is a collection of columns, whereas a single column is represented by an instance of [IListObjectColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjectColumn.html). XlsIO supports to insert or remove columns from the table using worksheet, as follows.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Insert%20Column/.NET/Insert%20Column/Insert%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -593,9 +593,9 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to insert column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Insert%20Column). 
+A complete working example to insert column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Insert%20Column/.NET/Insert%20Column). 
 
-A complete working example to delete column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Remove%20Column). 
+A complete working example to delete column in a table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Remove%20Column/.NET/Remove%20Column). 
 
 N> Inserting rows or columns in a worksheet within the table range modifies table structure.
 
@@ -604,7 +604,7 @@ N> Inserting rows or columns in a worksheet within the table range modifies tabl
 The "Total Row" is added to a table by accessing the **Table** **Columns**. It is possible to set calculation function to be used to the total row cells by using the [ExcelTotalsCalculation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelTotalsCalculation.html) enumerator. These cells are updated after they are calculated.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Table/Add%20Total%20Row/.NET/Add%20Total%20Row/Add%20Total%20Row/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -675,7 +675,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to insert total row in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Add%20Total%20Row).   
+A complete working example to insert total row in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Add%20Total%20Row/.NET/Add%20Total%20Row).   
 
 ## Create a table from external connection 
 

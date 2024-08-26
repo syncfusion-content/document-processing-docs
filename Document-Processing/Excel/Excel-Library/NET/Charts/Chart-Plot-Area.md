@@ -125,7 +125,7 @@ chartPlotArea.Layout.Left = 5;
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Plot%20Area/.NET/Plot%20Area/Plot%20Area/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -224,4 +224,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart plot area in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Plot%20Area/NET/Plot%20Area).
+A complete working example for the chart plot area in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Plot%20Area/.NET/Plot%20Area).

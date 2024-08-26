@@ -17,7 +17,7 @@ Chart appearance refers to the customization of visual elements within charts in
 The following code example illustrates how to apply a solid color to the chart area, plot area, and data series of the chart.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Solid%20Fill/.NET/Solid%20Fill/Solid%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -136,14 +136,14 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply a solid fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Solid%20Fill/NET/Solid%20Fill).
+A complete working example to apply a solid fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Solid%20Fill/.NET/Solid%20Fill).
 
 ### Pattern Fill
 
 The following code example illustrates how to apply a pattern fill to the chart area, plot area, and data series of the chart.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Pattern%20Fill/.NET/Pattern%20Fill/Pattern%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -284,14 +284,14 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply a pattern fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Pattern%20Fill/NET/Pattern%20Fill).
+A complete working example to apply a pattern fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Pattern%20Fill/.NET/Pattern%20Fill).
 
 ### Gradient Fill
 
 The following code example illustrates how to apply a gradient fill to the chart area, plot area, and data series of the chart.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Gradient%20Fill/.NET/Gradient%20Fill/Gradient%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -450,13 +450,13 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply a gradient fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Gradient%20Fill/NET/Gradient%20Fill).
+A complete working example to apply a gradient fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Gradient%20Fill/.NET/Gradient%20Fill).
 
 ### Picture Fill
 The following code example illustrates how to apply a picture fill to the chart area, plot area, and data series of the chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Picture%20Fill/.NET/Picture%20Fill/Picture%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -552,14 +552,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply a picture fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Fill/NET/Picture%20Fill).
+A complete working example to apply a picture fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Fill/.NET/Picture%20Fill).
 
 ### No Fill
 
 The following code example illustrates how to apply a no fill to the chart area, plot area, and data series of the chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/No%20Fill/.NET/No%20Fill/No%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -652,7 +652,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply a no fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/No%20Fill/NET/No%20Fill).
+A complete working example to apply a no fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/No%20Fill/.NET/No%20Fill).
 
 ## Layout and Resizing Chart Elements
 
@@ -901,7 +901,7 @@ chart.Series(0).DataPoints(0).DataLabels.Layout.ManualLayout.Top = 0.01
 The following code example illustrates how to apply 3D settings such as rotation, side wall, back wall, and floor settings.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/3D%20Chart/.NET/3D%20Chart/3D%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1075,7 +1075,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply 3D chart formats in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/3D%20Chart).
+A complete working example to apply 3D chart formats in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/3D%20Chart/.NET/3D%20Chart).
 
 ## Explode a Pie Chart
 
@@ -1086,7 +1086,7 @@ You can either create a pie chart and then explode it or directly create an expl
 Refer the following complete code snippets.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Explode%20Pie%20Chart/.NET/Explode%20Pie%20Chart/Explode%20Pie%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1162,7 +1162,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to explode a pie chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Explode%20Pie%20Chart).
+A complete working example to explode a pie chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Explode%20Pie%20Chart/.NET/Explode%20Pie%20Chart).
 
 ## Add Picture to Chart and assign Hyperlink
 
@@ -1171,7 +1171,7 @@ Essential XlsIO supports assigning hyperlink to the picture added in a chart in 
 Refer to the following complete code snippets.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Picture%20Hyperlink%20in%20Chart/.NET/Picture%20Hyperlink%20in%20Chart/Picture%20Hyperlink%20in%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1251,7 +1251,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for picture hyperlink in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Hyperlink%20in%20Chart).  
+A complete working example for picture hyperlink in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Hyperlink%20in%20Chart/.NET/Picture%20Hyperlink%20in%20Chart).  
 
 N> XlsIO supports adding picture only to a chart in the workbook,but does not support adding picture to a chart in the worksheet.
 
@@ -1264,7 +1264,7 @@ Essential XlsIO supports adding data table using [HasDataTable](https://help.syn
 Refer the following complete code snippets.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/DataTable%20in%20Chart/.NET/DataTable%20in%20Chart/DataTable%20in%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1408,4 +1408,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add data table in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/DataTable%20in%20Chart).
+A complete working example to add data table in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/DataTable%20in%20Chart/.NET/DataTable%20in%20Chart).

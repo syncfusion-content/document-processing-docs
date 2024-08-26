@@ -81,7 +81,7 @@ chartArea.Fill.ForeColor = Color.White
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20Area/.NET/Chart%20Area/Chart%20Area/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;

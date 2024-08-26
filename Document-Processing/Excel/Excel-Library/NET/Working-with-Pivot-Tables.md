@@ -114,7 +114,7 @@ pivotTable.DataFields.Add(field, "Sum", PivotSubtotalTypes.Sum)
 The following code example illustrates how to create a pivot table with existing data in the worksheet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Create%20Pivot%20Table/.NET/Create%20Pivot%20Table/Create%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -203,7 +203,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to create a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Create%20Pivot%20Table).
+A complete working example to create a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Create%20Pivot%20Table/.NET/Create%20Pivot%20Table).
 
 ### Edit
 
@@ -212,7 +212,7 @@ To edit a pivot table, use the [Layout](https://help.syncfusion.com/cr/document-
 The following code example illustrates how to edit the pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Edit%20Pivot%20Table/.NET/Edit%20Pivot%20Table/Edit%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -284,7 +284,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to edit a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Edit%20Pivot%20Table/NET/Edit%20Pivot%20Table).
+A complete working example to edit a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Edit%20Pivot%20Table/.NET/Edit%20Pivot%20Table).
 
 ### Remove
 
@@ -313,7 +313,7 @@ worksheet.PivotTables.RemoveAt(0)
 The following code example illustrates how to remove the pivot table using Remove method.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Remove%20Pivot%20Table/.NET/Remove%20Pivot%20Table/Remove%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -370,7 +370,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to remove a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Remove%20Pivot%20Table/NET/Remove%20Pivot%20Table).
+A complete working example to remove a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Remove%20Pivot%20Table/.NET/Remove%20Pivot%20Table).
 
 ## Styles and Formatting
 
@@ -385,7 +385,7 @@ When you create pivot table in XlsIO, the pivot values are not set in the worksh
 The following code example illustrates how to layout the pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Layout/Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -437,7 +437,7 @@ End Using
 
 A complete working example to layout a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Layout). 
 
-To learn more about pivot table layout with the Syncfusion Excel library, [click here.](https://help.syncfusion.com/document-processing/excel/excel-library/net/pivot-table/pivot-layout)
+To learn more about pivot table layout with the Syncfusion Excel library, [click here.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Layout)
 
 N> Based on Excel behavior, when the **Layout** method is invoked, it automatically sets the IsRefreshOnLoad property to false. To ensure data refresh on load, it's recommended to set **IsRefreshOnLoad** to true after calling Layout.
 
@@ -453,7 +453,7 @@ The following code example illustrates how to dynamically refresh the data in a 
 * Dynamically refresh the data in the named range.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Dynamic%20Refresh/.NET/Dynamic%20Refresh/Dynamic%20Refresh/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -503,12 +503,12 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to refresh a pivot table dynamically in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Dynamic%20Refresh).  
+A complete working example to refresh a pivot table dynamically in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Dynamic%20Refresh/.NET/Dynamic%20Refresh).  
 
 The following code example illustrates how to refresh the pivot table after update the cell value in pivot data source.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Refresh%20Pivot%20Table/.NET/Refresh%20Pivot%20Table/Refresh%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -578,7 +578,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to refresh a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Refresh%20Pivot%20Table).
+A complete working example to refresh a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Refresh%20Pivot%20Table/.NET/Refresh%20Pivot%20Table).
 
 ## Sorting and Filtering
 

@@ -15,7 +15,7 @@ The [PivotTableRowLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion
 The following code example illustrates how to apply a compact layout to a pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Compact%20Layout/.NET/Compact%20Layout/Compact%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -79,7 +79,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply a compact layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Compact%20Layout/NET/Compact%20Layout).
+A complete working example to apply a compact layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Compact%20Layout/.NET/Compact%20Layout).
 
 By executing the program, you will get the Excel file as below
 
@@ -90,7 +90,7 @@ By executing the program, you will get the Excel file as below
 The following code example illustrates how to apply a tabular layout to a pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Tabular%20Layout/.NET/Tabular%20Layout/Tabular%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -154,7 +154,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply a tabular layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Tabular%20Layout/NET/Tabular%20Layout).
+A complete working example to apply a tabular layout to a pivot table in C# is present on [this GitHub page](https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Tabular%20Layout/.NET/Tabular%20Layout/Tabular%20Layout/Program.cs).
 
 By executing the program, you will get the Excel file as below
 
@@ -165,7 +165,7 @@ By executing the program, you will get the Excel file as below
 The following code example illustrates how to apply a outline layout to a pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Outline%20Layout/.NET/Outline%20Layout/Outline%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -229,7 +229,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply a outline layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Outline%20Layout/NET/Outline%20Layout).
+A complete working example to apply a outline layout to a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Outline%20Layout/.NET/Outline%20Layout).
 
 By executing the program, you will get the Excel file as below
 
@@ -242,7 +242,7 @@ For classic layout, you can set the [ShowGridDropZone](https://help.syncfusion.c
 The following code example illustrates how to apply a classic layout to a pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Classic%20Layout/.NET/Classic%20Layout/Classic%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -310,4 +310,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to layout a pivot table classically in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Classic%20Layout).
+A complete working example to layout a pivot table classically in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Classic%20Layout/.NET/Classic%20Layout).

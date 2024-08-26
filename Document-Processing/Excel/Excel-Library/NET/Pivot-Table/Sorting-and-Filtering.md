@@ -22,7 +22,7 @@ Top to Bottom sorting can sort the pivot table column field values based on the 
 The following code example illustrates how to apply Top to Bottom sorting to a pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Sort%20Top%20to%20Bottom/.NET/Sort%20Top%20to%20Bottom/Sort%20Top%20to%20Bottom/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -81,7 +81,7 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example for top to bottom sort in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Sort%20Top%20to%20Bottom). 
+A complete working example for top to bottom sort in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Sort%20Top%20to%20Bottom/.NET/Sort%20Top%20to%20Bottom). 
 
 ### Sort a Pivot Table Field Left to Right
 
@@ -90,7 +90,7 @@ Left to Right sorting can sort the pivot table row field values based on the sor
 The following code example illustrates how to apply Left to Right sorting to a pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Sort%20Left%20to%20Right/.NET/Sort%20Left%20to%20Right/Sort%20Left%20to%20Right/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -149,7 +149,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for left to right sort in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Sort%20Left%20to%20Right). 
+A complete working example for left to right sort in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Sort%20Left%20to%20Right/.NET/Sort%20Left%20to%20Right). 
 
 N> [IsRefreshOnLoad](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotCacheImpl_IsRefreshOnLoad) property of [PivotCacheImpl](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotCacheImpl.html) is set as true when applying [AutoSort](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) to pivot fields.
 
@@ -266,7 +266,7 @@ field.PivotFilters.Add(PivotFilterType. ValueLessThan, field, "1341", Nothing)
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Pivot%20Filter/.NET/Pivot%20Filter/Pivot%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -415,4 +415,4 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply pivot filter in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Pivot%20Filter). 
+A complete working example to apply pivot filter in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Pivot%20Filter/.NET/Pivot%20Filter). 

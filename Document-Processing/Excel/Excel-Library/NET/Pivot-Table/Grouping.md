@@ -197,7 +197,7 @@ XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncf
 The following code example illustrates how to expand or collapse rows in the pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Expand%20or%20Collapse%20Pivot%20Rows/.NET/Expand%20or%20Collapse%20Pivot%20Rows/Expand%20or%20Collapse%20Pivot%20Rows/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -303,4 +303,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to expand or collapse rows in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Expand%20or%20Collapse%20Pivot%20Rows).
+A complete working example to expand or collapse rows in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Expand%20or%20Collapse%20Pivot%20Rows/.NET/Expand%20or%20Collapse%20Pivot%20Rows).

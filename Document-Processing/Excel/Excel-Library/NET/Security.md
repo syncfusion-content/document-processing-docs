@@ -28,7 +28,7 @@ There are two different passwords to encrypt a document.
 The Following code snippets illustrate how to achieve the above options.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Encrypt-Excel/.NET/Encrypt-Excel/Encrypt-Excel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -93,6 +93,8 @@ End Using
 
 Now, the encrypted workbook can be saved. Refer [Save Excel file](https://help.syncfusion.com/document-processing/excel/excel-library/net/loading-and-saving-workbook#saving-a-excel-workbook-to-file-system). 
 
+A complete working example to encrypt a workbook in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Encrypt-Excel/.NET/Encrypt-Excel).
+
 **Opening** **an** **encrypted** **workbook**
 
 You can open an existing encrypted workbook (decrypting) from either the file system or the stream using the following overloads.
@@ -128,7 +130,7 @@ Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open(fileName, ExcelPars
 The following code illustrates how to remove a protection for an encrypted document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Decrypt-Excel/.NET/Decrypt-Excel/Decrypt-Excel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -174,6 +176,8 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
+A complete working example to decrypt a workbook in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Decrypt-Excel/.NET/Decrypt-Excel).
+
 N> By default, Microsoft Excel uses AES-128 encryption for versions Excel 2007 and above, and MD5 encryption for versions Excel97 to 2003 when providing the password for Excel documents. So, XlsIO uses the same encryptions for password protection based on the Excel versions.
 
 ### Protect workbook elements
@@ -181,7 +185,7 @@ N> By default, Microsoft Excel uses AES-128 encryption for versions Excel 2007 a
 XlsIO provides options to protect and unprotect workbook elements with password. The following code example illustrates how to protect a workbook with a password.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Protect-Workbook/.NET/Protect-Workbook/ProtectWorkbook/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -236,12 +240,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
+A complete working example to protect a workbook in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Protect-Workbook/.NET/Protect-Workbook).
+
 ### Unprotect Workbook elements
 
 You can unprotect or remove protection for a workbook as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/UnProtect-Workbook/.NET/UnProtect-Workbook/UnProtectWorkbook/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -287,12 +293,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
+A complete working example to unprotect a workbook in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/UnProtect-Workbook/.NET/UnProtect-Workbook).
+
 ## Protect Worksheet 
 
 XlsIO provides support for protecting and unprotecting elements in worksheets by using the [Protect](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Protect_System_String_) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html). The following code example illustrates how to protect a worksheet with a password. 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Protect-Worksheet/.NET/Protect-Worksheet/ProtectWorksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -339,6 +347,8 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}  
+
+A complete working example to protect a worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Protect-Worksheet/.NET/Protect-Worksheet).
 
 N> By using the [ExcelSheetProtection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelSheetProtection.html) enumerator, you can set protection to the workbook elements/operations.
 
@@ -401,7 +411,7 @@ End Using
 You can also unprotect the worksheet by using the [Unprotect](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Unprotect_System_String_) method of XlsIO. The following code example illustrates how to remove worksheet protection.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/UnProtect-Worksheet/.NET/UnProtect-Worksheet/UnProtectWorksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -449,6 +459,8 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}  
+
+A complete working example to unprotect a worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/UnProtect-Worksheet/.NET/UnProtect-Worksheet).
 
 **Removing** **protection** **of** **a** **Chart** **Sheet**
 
@@ -511,7 +523,7 @@ XlsIO supports locking and unlocking cells by using the cell's [Locked](https://
 N> By default, cells are locked. Lock or Unlock cell in an unprotected worksheet has no effect. 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Locked-Cells/.NET/Locked-Cells/LockedCells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -563,4 +575,4 @@ End Using
 
 N> Security features are now supported in .NET Standard 1.4 onwards.
 
-All complete working examples for above topics are present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect). 
+A complete working example to protect a cell in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Locked-Cells/.NET/Locked-Cellst).

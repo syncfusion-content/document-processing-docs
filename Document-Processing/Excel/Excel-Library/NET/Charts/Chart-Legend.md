@@ -204,7 +204,7 @@ chart.Legend.LegendEntries(0).IsDeleted = True
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Legend/.NET/Legend/Legend/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -345,4 +345,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart legend in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Legend/NET/Legend).
+A complete working example for the chart legend in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Legend/.NET/Legend).

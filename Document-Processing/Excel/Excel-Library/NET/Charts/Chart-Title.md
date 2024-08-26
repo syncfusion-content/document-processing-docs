@@ -111,7 +111,7 @@ chart.ChartTitleArea.Layout.Left = 20
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20Title/.NET/Chart%20Title/Chart%20Title/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -208,7 +208,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart title in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20Title/NET/Chart%20Title).
+A complete working example for the chart title in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20Title/.NET/Chart%20Title).
 
 ## Remove
 

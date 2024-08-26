@@ -28,7 +28,7 @@ The [ITextBoxShape](https://help.syncfusion.com/cr/document-processing/Syncfusio
 The following code example illustrates how to add and manipulate a text box control.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Text%20Box/.NET/Text%20Box/Text%20Box/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -124,7 +124,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to add a text box in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Text%20Box). 
+A complete working example to add a text box in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Text%20Box/.NET/Text%20Box). 
 
 **Text Box in Chart**
 
@@ -216,7 +216,7 @@ End Using
 [ICheckBoxShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICheckBoxShape.html) object represents a check box in a worksheet. The following code example illustrates how to insert and manipulate a check box control.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Check%20Box/.NET/Check%20Box/Check%20Box/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -309,14 +309,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add a check box in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Check%20Box). 
+A complete working example to add a check box in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Check%20Box/.NET/Check%20Box). 
 
 ### Combo Box
 
 [IComboBoxShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IComboBoxShape.html) object represents a combo box in a worksheet. The following code example illustrates how to insert and manipulate a combo box control.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Combo%20Box/.NET/Combo%20Box/Combo%20Box/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -442,7 +442,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add a combo box in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Combo%20Box). 
+A complete working example to add a combo box in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Combo%20Box/.NET/Combo%20Box). 
 
 ### Option Button
 
@@ -451,7 +451,7 @@ A complete working example to add a combo box in C# is present on [this GitHub p
 N> XlsIO provides Option button support only for XLSX format.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Option%20Button/.NET/Option%20Button/Option%20Button/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -562,14 +562,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add option button in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Option%20Button). 
+A complete working example to add option button in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Option%20Button/.NET/Option%20Button). 
 
 ## Comments
 
 [ICommentShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICommentShape.html) object represents a [comment](https://support.microsoft.com/en-gb/office/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8?redirectsourcepath=%252fen-us%252farticle%252fannotate-a-worksheet-by-using-comments-3b7065dd-531a-4ffe-8f18-8d047a6ccae7) in a worksheet. You can insert both **Regular** and **Rich** **Text** comments. The following code example illustrates how to insert and manipulate comments.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Comment/.NET/Comment/Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -650,12 +650,12 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Comment).
+A complete working example to add comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Comment/.NET/Comment).
 
 You can also fill the comments with various types of fills by using the [IFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html) interface. Following code example illustrates how to fill the comment shape with a TwoColor gradient.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Fill%20Comment/.NET/Fill%20Comment/Fill%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -733,14 +733,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fill comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Fill%20Comment).
+A complete working example to fill comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Fill%20Comment/.NET/Fill%20Comment).
 
 ### Show or Hide Excel Comments
 
 Comments in an Excel document can be shown or hidden using [IsVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IComment.html#Syncfusion_XlsIO_IComment_IsVisible) property. The following code example illustrates this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Show%20or%20Hide%20Comment/.NET/Show%20or%20Hide%20Comment/Show%20or%20Hide%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -818,12 +818,12 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to show or hide comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Show%20or%20Hide%20Comment).
+A complete working example to show or hide comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Show%20or%20Hide%20Comment/.NET/Show%20or%20Hide%20Comment).
 
 Following code snippets illustrates how to remove all the comments in existing worksheet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Remove%20Comments/.NET/Remove%20Comments/Remove%20Comments/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -872,7 +872,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to remove comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Remove%20Comments). 
+A complete working example to remove comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Remove%20Comments/.NET/Remove%20Comments). 
 
 ## Threaded Comments
 
@@ -883,7 +883,7 @@ Threaded comments are a way to add and organize annotations or discussions relat
 The following code explains how to create a threaded comment for a specific cell using [AddThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddThreadedComment_System_String_System_String_System_DateTime_) method.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Threaded%20Comments/Add%20Comment/.NET/Add%20Comment/Add%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -935,14 +935,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create a threaded comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Threaded%20Comments/Add%20Comment).
+A complete working example to create a threaded comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Threaded%20Comments/Add%20Comment/.NET/Add%20Comment).
 
 ### Reply
 
 The following code adds a replies to an existing threaded comment using the [AddReply](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_AddReply_System_String_System_String_System_DateTime_) method of [IThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html).
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Threaded%20Comments/Reply%20Comment/.NET/Reply%20Comment/Reply%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -997,7 +997,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add replies in a existing threaded comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Threaded%20Comments/Reply%20Comment).
+A complete working example to add replies in a existing threaded comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Threaded%20Comments/Reply%20Comment/.NET/Reply%20Comment).
 
 The following screenshot represents the output Excel file of threaded comments generated by the XlsIO.
 
@@ -1008,7 +1008,7 @@ The following screenshot represents the output Excel file of threaded comments g
 The threaded comment discussion can be marked as resolved by enabling the [IsResolved](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html#Syncfusion_XlsIO_IThreadedComment_IsResolved) property. By default, the value is set to **false**.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Threaded%20Comments/Resolve%20Comment/.NET/Resolve%20Comment/Resolve%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1069,7 +1069,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to mark a treaded comment as resolved in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Threaded%20Comments/Resolve%20Comment).
+A complete working example to mark a treaded comment as resolved in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Threaded%20Comments/Resolve%20Comment/.NET/Resolve%20Comment).
 
 ### Delete
 
@@ -1212,7 +1212,7 @@ To learn more about various AutoShape types supported in XlsIO, refer to the [Au
 The following code example illustrates how to insert and format AutoShapes.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/AutoShapes/.NET/AutoShapes/AutoShapes/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1308,7 +1308,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add AutoShapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/AutoShapes). 
+A complete working example to add AutoShapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/AutoShapes/.NET/AutoShapes). 
 
 ## Group Shapes
 
@@ -1322,7 +1322,7 @@ The shapes in the worksheet can be grouped into a single shape by creating group
 The following code example illustrates how to create a group shape.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Group%20Shapes/.NET/Group%20Shapes/Group%20Shapes/Program.cs,180" %}
 ExcelEngine excelEngine = new ExcelEngine();
 IApplication application = excelEngine.Excel;
 FileStream inputStream = new FileStream("GroupShape.xlsx", FileMode.Open, FileAccess.Read);
@@ -1383,7 +1383,7 @@ excelEngine.Dispose()
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to group shapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Group%20Shapes). 
+A complete working example to group shapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Group%20Shapes/.NET/Group%20Shapes). 
 
 ### Ungroup shapes
 
@@ -1392,7 +1392,7 @@ Group shape can be ungrouped, and its inner shapes are added to worksheet as an 
 The following code example illustrates how to ungroup the shape.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Ungroup%20Shapes/.NET/Ungroup%20Shapes/Ungroup%20Shapes/Program.cs,180" %}
 ExcelEngine excelEngine = new ExcelEngine();
 IApplication application = excelEngine.Excel;
 FileStream inputStream = new FileStream("GroupShape.xlsx", FileMode.Open, FileAccess.Read);
@@ -1444,7 +1444,7 @@ excelEngine.Dispose()
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to ungroup shapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Ungroup%20Shapes). 
+A complete working example to ungroup shapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Ungroup%20Shapes/.NET/Ungroup%20Shapes). 
 
 ### Ungroup all shapes
 
@@ -1454,7 +1454,7 @@ In [Ungroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO
 The following code example illustrates how to ungroup the group shape and its inner shapes.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Ungroup%20All%20Shapes/.NET/Ungroup%20All%20Shapes/Ungroup%20All%20Shapes/Program.cs,180" %}
 ExcelEngine excelEngine = new ExcelEngine();
 IApplication application = excelEngine.Excel;
 FileStream inputStream = new FileStream("GroupShape.xlsx", FileMode.Open, FileAccess.Read);
@@ -1506,7 +1506,7 @@ excelEngine.Dispose()
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to ungroup all shapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Ungroup%20All%20Shapes). 
+A complete working example to ungroup all shapes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Ungroup%20All%20Shapes/.NET/Ungroup%20All%20Shapes). 
 
 ## OLE Objects 
 
