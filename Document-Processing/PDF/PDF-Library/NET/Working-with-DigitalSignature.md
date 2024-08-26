@@ -1154,7 +1154,7 @@ The following code example shows how to create a PDF digital signature using the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_Windows_Certificate/.NET/Sign_PDF_Windows_Certificate/Program.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 //Initialize the Windows store.
 X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
