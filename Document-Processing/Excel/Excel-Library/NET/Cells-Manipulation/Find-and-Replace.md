@@ -23,7 +23,7 @@ Additionally, you can search for case-sensitive data and match the entire cell c
 The following code example illustrates how to find all occurrences of text in a worksheet with different find options.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Find/.NET/Find/Find/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -128,7 +128,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to find all occurrences of text in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Find/NET/Find).
+A complete working example to find all occurrences of text in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Find/.NET/Find).
 
 **Replace** 
 
@@ -139,7 +139,7 @@ To know more about replace overloads, please refer [Replace](https://help.syncfu
 The following code example illustrates how to replace all occurrences of given string with various data.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Replace/.NET/Replace/Replace/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -227,4 +227,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to replace all occurrences of given string in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Replace/NET/Replace).
+A complete working example to replace all occurrences of given string in a worksheet with different find options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Replace/.NET/Replace).

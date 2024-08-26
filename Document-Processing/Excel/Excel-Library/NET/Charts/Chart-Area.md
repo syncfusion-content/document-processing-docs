@@ -1,6 +1,6 @@
 ---
 title: Chart Area | Excel library | Syncfusion
-description: In this section, you can learn about chart area in an Excel document with XlsIO.
+description: In this section, you can learn about chart area in an Excel document using Syncfusion .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -81,7 +81,7 @@ chartArea.Fill.ForeColor = Color.White
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20Area/.NET/Chart%20Area/Chart%20Area/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -171,7 +171,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart area in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20Area/NET/Chart%20Area).
+A complete working example for the chart area in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20Area/.NET/Chart%20Area).
 
 ### Transparency
 

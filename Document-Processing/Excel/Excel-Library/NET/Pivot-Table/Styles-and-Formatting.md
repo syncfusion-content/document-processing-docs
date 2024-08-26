@@ -1,6 +1,6 @@
 ---
 title: Styles and Formatting of Pivot Tables | Excel library | Syncfusion
-description: In this section, you can learn how to style and format pivot table in Excel document using XlsIO
+description: In this section, you can learn how to style and format pivot table in Excel document using Syncfusion .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -15,7 +15,7 @@ XlsIO supports 85 built-in styles of Microsoft Excel used to create a table with
 The following code example illustrates how to apply built-in style to pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Format%20Pivot%20Table/.NET/Format%20Pivot%20Table/Format%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -75,7 +75,7 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to apply built-in style to pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Format%20Pivot%20Table).
+A complete working example to apply built-in style to pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Format%20Pivot%20Table/.NET/Format%20Pivot%20Table).
 
 ## Pivot Cell Formatting
 
@@ -84,7 +84,7 @@ When you apply the cell formatting to pivot table cells, Microsoft Excel maintai
 The following code example illustrates how to apply cell formatting to pivot table cells.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Format%20Pivot%20Cell/.NET/Format%20Pivot%20Cell/Format%20Pivot%20Cell/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -137,8 +137,8 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply cell formatting to pivot table cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Format%20Pivot%20Cell). 
+A complete working example to apply cell formatting to pivot table cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Format%20Pivot%20Cell/.NET/Format%20Pivot%20Cell). 
 
 By executing the program, you will get the Excel file as below
 
-![Pivot Tables inline format](Working-with-Pivot-Tables_images/Working-with-Pivot-Tables_img5.png)
+![Pivot Tables inline format](../Working-with-Pivot-Tables_images/Working-with-Pivot-Tables_img5.png)

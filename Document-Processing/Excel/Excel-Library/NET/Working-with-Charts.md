@@ -16,7 +16,7 @@ The [IChartShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 The following code example illustrates how to create a chart through the existing data in the worksheet.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Create%20Chart/.NET/Create%20Chart/Create%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -83,7 +83,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to create a chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Create%20Chart). 
+A complete working example to create a chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Create%20Chart/.NET/Create%20Chart). 
 
 ### Creating a Chart from directly entered Values
 
@@ -92,7 +92,7 @@ A chart in XlsIO can also be created from directly entered values.
 The following code example illustrate how to create a chart from directly entered values.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20from%20Scratch/.NET/Chart%20from%20Scratch/Chart%20from%20Scratch/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -164,7 +164,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to create a chart from directly entered values in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20from%20Scratch).
+A complete working example to create a chart from directly entered values in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20from%20Scratch/.NET/Chart%20from%20Scratch).
 
 ### Creating a Chart by adding Series
 
@@ -173,7 +173,7 @@ A chart can also be created by adding series one by one.
 The following code example illustrates how to create a chart through series.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20through%20Series/.NET/Chart%20through%20Series/Chart%20through%20Series/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -328,7 +328,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to create a chart through series in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20through%20Series).
+A complete working example to create a chart through series in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Chart%20through%20Series/.NET/Chart%20through%20Series).
 
 ### Sparkline chart
 
@@ -346,7 +346,7 @@ XlsIO provides support for creation, modification and removal of Sparklines.
 The following code example illustrates how to create Sparkline chart.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Create%20Sparkline/.NET/Create%20Sparkline/Create%20Sparkline/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -427,7 +427,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to create sparkline chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Create%20Sparkline).
+A complete working example to create sparkline chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Create%20Sparkline/.NET/Create%20Sparkline).
 
 #### Modifying an existing sparkline chart
 
@@ -436,7 +436,7 @@ XlsIO provides an option to edit the data of existing Sparklines.
 The following code example illustrates how to edit an existing sparkline chart.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Edit%20Sparkline/.NET/Edit%20Sparkline/Edit%20Sparkline/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -498,7 +498,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to edit an existing sparklines in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Edit%20Sparkline).
+A complete working example to edit an existing sparklines in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Edit%20Sparkline/.NET/Edit%20Sparkline).
 
 #### Removing Sparklines
 
@@ -507,7 +507,7 @@ XlsIO also provides an option to remove sparklines from a sparkline group and to
 The following code example illustrates how to remove sparklines.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Remove%20Sparklines/.NET/Remove%20Sparklines/Remove%20Sparklines/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -583,7 +583,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to remove sparklines in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Remove%20Sparklines).
+A complete working example to remove sparklines in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Remove%20Sparklines/.NET/Remove%20Sparklines).
 
 N> Sparklines are supported only from Excel 2007 onwards and are ignored in the earlier versions.
 
@@ -598,7 +598,7 @@ A [Funnel](https://support.microsoft.com/en-us/office/create-a-funnel-chart-ba21
 The following code example illustrates how to create a Funnel chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Funnel/.NET/Funnel/Funnel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -689,7 +689,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create funnel chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Funnel).
+A complete working example to create funnel chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Funnel/.NET/Funnel).
 
 By executing the program, you will get the Excel file as below
 
@@ -702,7 +702,7 @@ By executing the program, you will get the Excel file as below
 The following code example illustrates how to create Box and Whisker chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Box%20and%20Whisker/.NET/Box%20and%20Whisker/Box%20and%20Whisker/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -850,7 +850,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create box and whisker chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Box%20and%20Whisker).
+A complete working example to create box and whisker chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Box%20and%20Whisker/.NET/Box%20and%20Whisker).
 
 By executing the program, you will get the Excel file as below
 
@@ -863,7 +863,7 @@ By executing the program, you will get the Excel file as below
 The following code example illustrates how to create Waterfall chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Waterfall/.NET/Waterfall/Waterfall/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -975,7 +975,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create waterfall chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Waterfall).
+A complete working example to create waterfall chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Waterfall/.NET/Waterfall).
 
 By executing the program, you will get the Excel file as below
 
@@ -988,7 +988,7 @@ A [Histogram](https://support.microsoft.com/en-us/office/create-a-histogram-8568
 The following code example illustrates how to create Histogram chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Histogram/.NET/Histogram/Histogram/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1097,7 +1097,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create histogram chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Histogram).
+A complete working example to create histogram chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Histogram/.NET/Histogram).
 
 By executing the program, you will get the Excel file as below
 
@@ -1110,7 +1110,7 @@ By executing the program, you will get the Excel file as below
 The following code example illustrates how to create Pareto chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Pareto/.NET/Pareto/Pareto/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1222,21 +1222,21 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create pareto chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Pareto).
+A complete working example to create pareto chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Pareto/.NET/Pareto).
 
 By executing the program, you will get the Excel file as below
 
 ![pareto chart](Working-with-Charts_images/pareto.jpeg)
 
 
-#### Creation ofTreemap chart
+#### Creation of Treemap chart
 
 [Treemap](https://support.microsoft.com/en-us/office/create-a-treemap-chart-in-office-dfe86d28-a610-4ef5-9b30-362d5c624b68?ui=en-us&rs=en-us&ad=us) provides a hierarchical view of data as clustered rectangle with a specific weighted attribute determining the size of the rectangle. 
 
 The following code example illustrates how to create Treemap chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Treemap/.NET/Treemap/Treemap/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1330,7 +1330,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create treemap chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Treemap).
+A complete working example to create treemap chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Treemap/.NET/Treemap).
 
 By executing the program, you will get the Excel file as below
 
@@ -1343,7 +1343,7 @@ By executing the program, you will get the Excel file as below
 The following code example illustrates how to create Sunburst chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Sunburst/.NET/Sunburst/Sunburst/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1437,7 +1437,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create sunburst chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Sunburst).
+A complete working example to create sunburst chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Sunburst/.NET/Sunburst).
 
 By executing the program, you will get the Excel file as below
 
@@ -1491,7 +1491,7 @@ With the Syncfusion Excel Library, you can customize the chart data labels by ch
 
 With the Syncfusion Excel Library, you can customize the chart axes by changing the title, border, font, rotation angle and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-axis) for more details.
 
-## Chart Appearnace
+## Chart Appearance
  
 Chart appearance refers to the ability to customize the visual aspects of charts in your Excel documents. This includes modifying elements such as the chart area, plot area, series, legend etc. These customizations enhance the readability, aesthetics, and overall presentation of the charts. Beyond these standard elements, users can further refine the chart's appearance by utilizing Fill Settings, Adding Pictures in Chart, Positioning and Resizing, adding a Data Table to the chart, and applying 3D formats.
 
@@ -1502,7 +1502,7 @@ With the Syncfusion Excel Library, you can customize various aspects of chart ap
 The following code example illustrates how to remove the chart from the worksheet using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_Remove) method.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Remove%20Chart/.NET/Remove%20Chart/Remove%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -1554,7 +1554,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to remove chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Remove%20Chart).
+A complete working example to remove chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Remove%20Chart/.NET/Remove%20Chart).
 
 ## Supported Chart Types
 

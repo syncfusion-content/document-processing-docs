@@ -336,7 +336,7 @@ chart.SecondaryValueAxis.MajorTickMark = ExcelTickMark.TickMark_Outside
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Axis/.NET/Axis/Axis/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -576,4 +576,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for the chart axis in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Axis/NET/Axis).
+A complete working example for the chart axis in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Axis/.NET/Axis).

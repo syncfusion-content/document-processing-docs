@@ -1,12 +1,12 @@
 ---
 title: Pivot Table Options | Excel library | Syncfusion
-description: In this section, you can learn about various pivot table options in Excel document using XlsIO
+description: In this section, you can learn about various pivot table options in Excel document using Syncfusion .NET Excel library
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Pivot Table Options
+# Pivot Table Options in Excel
 
 ## Show or hide the field list
 
@@ -278,7 +278,7 @@ End Using
 The formula can also be set to the IPivotField property as follows.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Calculated%20Field/.NET/Calculated%20Field/Calculated%20Field/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -342,4 +342,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to add calculated field in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Calculated%20Field).
+A complete working example to add calculated field in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Calculated%20Field/.NET/Calculated%20Field).

@@ -1,12 +1,12 @@
 ---
-title: What If Analysis Scenario Manager in Excel | Excel library | Syncfusion
+title: What If Analysis in Excel | Excel library | Syncfusion.
 description: This section illustrates about Excel What If Analysis Scenario Manager and its various features in Syncfusion XlsIO (a .NET Excel library).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What-If Analysis
+# What-If Analysis in Excel
 
 What-If Analysis is the process of changing the values in cells to see how those changes will affect the outcome of formulas on the worksheet. XlsIO supports the What-If Analysis of Scenarios type.
 
@@ -18,7 +18,7 @@ Scenario Manager in Excel allows you to create and manage scenarios for differen
 The following code snippet explains how to create scenarios for different values in an Excel worksheet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Create%20Scenarios/.NET/Create%20Scenarios/Create%20Scenarios/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -114,7 +114,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create scenarios in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Create%20Scenarios).
+A complete working example to create scenarios in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Create%20Scenarios/.NET/Create%20Scenarios).
 
 By executing the program, you will get the Excel file as below.
 
@@ -433,7 +433,7 @@ End Using
 Update the scenario values in the worksheet and display it using the [Show](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Show) method.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Apply%20Scenario/.NET/Apply%20Scenario/Apply%20Scenario/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -497,7 +497,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to show scenario in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Apply%20Scenario).
+A complete working example to show scenario in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Apply%20Scenario/.NET/Apply%20Scenario).
 
 ### Set Name
 
@@ -569,7 +569,7 @@ End Using
 The scenario can be hidden by enabling the [Hidden](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Hidden) property of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html).
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Hide%20Scenario/.NET/Hide%20Scenario/Hide%20Scenario/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -630,14 +630,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to hide a scenario in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Hide%20Scenario).
+A complete working example to hide a scenario in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Hide%20Scenario/.NET/Hide%20Scenario).
 
 ### Protect Scenario
 
 The scenario can be locked or unlocked through [Locked](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html#Syncfusion_XlsIO_IScenario_Locked) property of [IScenario](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IScenario.html). A scenario is locked by default.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Protect%20Scenario/.NET/Protect%20Scenario/Protect%20Scenario/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -699,7 +699,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to unprotect a scenario in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Protect%20Scenario).
+A complete working example to unprotect a scenario in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/What-If%20Analysis/Protect%20Scenario/.NET/Protect%20Scenario).
 
 ### Add Comment
 

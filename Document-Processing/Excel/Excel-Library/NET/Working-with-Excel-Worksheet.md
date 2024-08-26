@@ -18,7 +18,7 @@ A new worksheet can be added into the workbook through [Create](https://help.syn
 The following code example illustrates how to create worksheets within a workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Create%20Worksheet/.NET/Create%20Worksheet/Create%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -72,7 +72,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for creating Excel worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Create%20Worksheet).
+A complete working example for creating Excel worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Create%20Worksheet/.NET/Create%20Worksheet).
 
 ## Access
 
@@ -84,7 +84,7 @@ A complete working example for creating Excel worksheets in C# is present on [th
 The following code example illustrates how to access a worksheet from its worksheets collection.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Access%20Worksheet/.NET/Access%20Worksheet/Access%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -138,7 +138,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for accessing Excel worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Access%20Worksheet).
+A complete working example for accessing Excel worksheets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Access%20Worksheet/.NET/Access%20Worksheet).
 
 T>If the workbook contains multiple worksheets, then the parsing of the workbook will consume time. **ParseWorksheetsOnDemand** of [ExcelParseOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelParseOptions.html) can be used in [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_Syncfusion_XlsIO_ExcelOpenType_Syncfusion_XlsIO_ExcelParseOptions_) method of [IWorkbooks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html) to parse the worksheet only when it is accessed. This option can be used in a scenario where workbook contains multiple worksheets but you are going to use only few worksheets among them.
 
@@ -161,7 +161,7 @@ Dim workbook As IWorkbook = application.Workbooks.Open(fileName, ExcelParseOptio
 The following code example illustrates how to remove a worksheet from Excel workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Remove%20Worksheet/.NET/Remove%20Worksheet/Remove%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -206,7 +206,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for removing an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Remove%20Worksheet).
+A complete working example for removing an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Remove%20Worksheet/.NET/Remove%20Worksheet).
 
 ## Set Worksheet Name
 
@@ -274,7 +274,7 @@ A particular worksheet tab can be highlighted to denote its importance. Tab colo
 The following code example illustrates how to highlight worksheet tabs.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Highlight%20Worksheet%20Tab/.NET/Highlight%20Worksheet%20Tab/Highlight%20Worksheet%20Tab/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -322,7 +322,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to highlight an Excel worksheet tab in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Highlight%20Worksheet%20Tab).
+A complete working example to highlight an Excel worksheet tab in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Highlight%20Worksheet%20Tab/.NET/Highlight%20Worksheet%20Tab).
 
 ## Worksheet Operations
 
