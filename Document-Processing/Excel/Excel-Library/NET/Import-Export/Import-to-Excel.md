@@ -15,7 +15,7 @@ The following code example illustrates on how to import a DataTable into an Exce
 N> XlsIO supports importing of data from data table to worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core (2.0 onwards) platforms alone.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/DataTable%20to%20Worksheet/.NET/DataTable%20to%20Worksheet/DataTable%20to%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -69,7 +69,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to import data from DataTable to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/DataTable%20to%20Worksheet).  
+A complete working example to import data from DataTable to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/DataTable%20to%20Worksheet/.NET/DataTable%20to%20Worksheet).  
 
 N> XlsIO imports the data from data table into Excel worksheet based on the data table column type. So, it is suggested to create the data tables with required column types such as number, text or date time before importing the data table to Excel worksheet.
 
@@ -80,7 +80,7 @@ The following code example illustrates how to import DataColumn into an Excel us
 N> XlsIO supports importing data column to worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core (2.0 onwards) platforms alone.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/DataColumn%20to%20Worksheet/.NET/DataColumn%20to%20Worksheet/DataColumn%20to%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -137,7 +137,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to import data from DataColumn to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/DataColumn%20to%20Worksheet).
+A complete working example to import data from DataColumn to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/DataColumn%20to%20Worksheet/.NET/DataColumn%20to%20Worksheet).
 
 ## DataView to Excel
 
@@ -146,7 +146,7 @@ The following code example illustrates how to import DataView into an Excel usin
 N> XlsIO supports importing data view to worksheet in Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core (2.0 onwards) platforms alone.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/DataView%20to%20Worksheet/.NET/DataView%20to%20Worksheet/DataView%20to%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -203,14 +203,14 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to import data from DataView to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/DataView%20to%20Worksheet).
+A complete working example to import data from DataView to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/DataView%20to%20Worksheet/.NET/DataView%20to%20Worksheet).
 
 ## Collection Objects to Excel
 
 XlsIO allows you to import data directly from Collection Objects as shown below.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/CollectionObjects%20to%20Worksheet/.NET/CollectionObjects%20to%20Worksheet/CollectionObjects%20to%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -385,7 +385,7 @@ End Class
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to import data from Collection Objects to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/CollectionObjects%20to%20Worksheet).
+A complete working example to import data from Collection Objects to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/CollectionObjects%20to%20Worksheet/.NET/CollectionObjects%20to%20Worksheet).
 
 **Data Options**
 
@@ -401,7 +401,7 @@ PreserveTypes - Indicates whether XlsIO should preserve column types from Data. 
 The following code example illustrates how to import collection objects into an Excel using **ImportData** method with **ExcelImportDataOptions** class.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Import%20Data%20Options/.NET/Import%20Data%20Options/Import%20Data%20Options/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -588,7 +588,7 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to import data to Excel with import data options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Import%20Data%20Options).
+A complete working example to import data to Excel with import data options in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Import%20Data%20Options/.NET/Import%20Data%20Options).
 
 ### Nested Collection Objects to Excel
 
@@ -616,7 +616,7 @@ This option adds the property value once per object for the corresponding record
 The following code example illustrates how to import data directly from nested collection objects with default layout option. The input XML file used in the code can be downloaded [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/ExportData831552872.zip).
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Layout%20Options/.NET/Layout%20Options/Layout%20Options/Program.cs,180" %}
 using Syncfusion.XlsIO;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -1222,7 +1222,7 @@ End Namespace
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to import data to Excel with layout option in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Layout%20Options).
+A complete working example to import data to Excel with layout option in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Layout%20Options/.NET/Layout%20Options).
 
 The following screenshot represents the output document with Default layout option.
 
@@ -1290,7 +1290,7 @@ In addition, [CollapseLevel](https://help.syncfusion.com/cr/document-processing/
 The following code example illustrates how to import data directly from nested collection objects with collapse group option.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Grouping%20Options/.NET/Grouping%20Options/Grouping%20Options/Program.cs,180" %}
 using Syncfusion.XlsIO;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -1914,7 +1914,7 @@ End Namespace
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to import data to Excel with grouping option in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Grouping%20Options).
+A complete working example to import data to Excel with grouping option in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Grouping%20Options/.NET/Grouping%20Options).
 
 The following screenshot represents the output document of Grouped data imported from nested collection and collapsed at level 2.
 
@@ -1925,7 +1925,7 @@ The following screenshot represents the output document of Grouped data imported
 XlsIO allows you to import images, data with URLs, and data with mail IDs as hyperlinks from various data sources binded in Collection Objects as shown below
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink=" https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Import%20with%20Hyperlink/.NET/Import%20with%20Hyperlink/Import%20with%20Hyperlink/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2152,14 +2152,14 @@ End Class
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to import data from collection objects with hyperlink to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Import%20with%20Hyperlink).
+A complete working example to import data from collection objects with hyperlink to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Import%20with%20Hyperlink/.NET/Import%20with%20Hyperlink).
 
 ## Array to Excel
 
 The following code example shows how to import array of data into an Excel using [ImportArray](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_ImportArray_System_DateTime___System_Int32_System_Int32_System_Boolean_) method.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Array%20to%20Worksheet/.NET/Array%20to%20Worksheet/Array%20to%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2213,7 +2213,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to import data from array to an Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Array%20to%20Worksheet).
+A complete working example to import data from array to an Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Array%20to%20Worksheet/.NET/Array%20to%20Worksheet).
 
 ## Microsoft Grid Controls to Excel
 
@@ -2383,7 +2383,7 @@ XlsIO supports importing HTML tables into Excel worksheets. The [ImportHtmlTable
 
 The following code example shows how to import HTML table into an Excel.
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/HTML%20Table%20to%20Worksheet/.NET/HTML%20Table%20to%20Worksheet/HTML%20Table%20to%20Worksheet/Program.cs,180" %}
 using Syncfusion.XlsIO;
 using System.IO;
 
@@ -2458,7 +2458,7 @@ End Module
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to import data from HTML table to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/HTML%20Table%20to%20Worksheet).
+A complete working example to import data from HTML table to Excel in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/HTML%20Table%20to%20Worksheet/.NET/HTML%20Table%20to%20Worksheet).
 
 The following screenshot represents the image of the input HTML file with a table.
 

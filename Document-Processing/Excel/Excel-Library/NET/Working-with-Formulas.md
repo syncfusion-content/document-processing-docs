@@ -71,7 +71,7 @@ sheet.DisableSheetCalculations()
 In a worksheet, formulas can be entered by using the [Formula](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Formula) property of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance. Following code example illustrates on how to write a formula.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Set%20Formula/.NET/Set%20Formula/Set%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -131,14 +131,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to insert formula in Excel cell in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Set%20Formula).
+A complete working example to insert formula in Excel cell in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Set%20Formula/.NET/Set%20Formula).
 
 ### Formula with Cross-sheet References
 
 XlsIO supports using formulas across worksheets. The following code shows how to apply formula with cross-sheet references.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Cross%20Sheet%20Formula/.NET/Cross%20Sheet%20Formula/Cross%20Sheet%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -186,7 +186,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to insert formula in Excel cell with cross sheet reference in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Cross%20Sheet%20Formula).
+A complete working example to insert formula in Excel cell with cross sheet reference in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Cross%20Sheet%20Formula/.NET/Cross%20Sheet%20Formula).
 
 ## Reading a Formula
 
@@ -218,7 +218,7 @@ To evaluate formula, it is must to [enable sheet calculation](https://help.syncf
 The following code shows how to access a calculated value.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Calculated%20Value/.NET/Calculated%20Value/Calculated%20Value/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -279,7 +279,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access calculated value of a formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Calculated%20Value).
+A complete working example to access calculated value of a formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Calculated%20Value/.NET/Calculated%20Value).
 
 Apart from **CalculatedValue** property, the evaluated values can also be accessed as **bool**, **DateTime** and **double** data types. To obtain the updated values of these types, **CalculatedValue** property must be called in prior.
 
@@ -288,7 +288,7 @@ To know more about evaluated values, please refer [IRange](https://help.syncfusi
 The following code shows how to access calculated values in different types.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Types%20of%20Calculated%20Value/.NET/Types%20of%20Calculated%20Value/Types%20of%20Calculated%20Value/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -421,7 +421,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access calculated value of a formula in different forms in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Types%20of%20Calculated%20Value).
+A complete working example to access calculated value of a formula in different forms in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Types%20of%20Calculated%20Value/.NET/Types%20of%20Calculated%20Value).
 
 N> Calculated value for external reference formulas can also be evaluated in XlsIO.
 
@@ -432,7 +432,7 @@ Formula separators vary for different cultures, and exceptions can be thrown in 
 Following code illustrates on how to change the formula separators.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Argument%20Separator/.NET/Argument%20Separator/Argument%20Separator/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -478,7 +478,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add argument separator in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Argument%20Separator).
+A complete working example to add argument separator in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Argument%20Separator/.NET/Argument%20Separator).
 
 ## Array of Formula
 
@@ -487,7 +487,7 @@ Array formula is a special type of formula in Excel. It works with an array or s
 Following code shows how an array of values from [Named Range](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#defined-names) is used for computation. 
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Formula%20Array/.NET/Formula%20Array/Formula%20Array/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -554,7 +554,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add formula array in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Argument%20Separator).
+A complete working example to add formula array in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Formula%20Array/.NET/Formula%20Array).
 
 ## Incremental Formula
 
@@ -563,7 +563,7 @@ The relative cell references in the formulas are automatically incremented by 1,
 The below code snippet shows how to increment the cell references by 1 in the formulas.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Incremental%20Formula/.NET/Incremental%20Formula/Incremental%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -623,7 +623,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add incremental formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Incremental%20Formula).
+A complete working example to add incremental formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Incremental%20Formula/.NET/Incremental%20Formula).
 
 ## External Formula
 
@@ -634,7 +634,7 @@ External formula is the one which refers to a cell or a range of cells or a defi
 Following code illustrates the insertion of a formula that refers to cell 'A1' in another workbook which is enclosed in a square bracket [One.xlsx].
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/External%20Formula/.NET/External%20Formula/External%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -682,7 +682,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add external formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/External%20Formula).
+A complete working example to add external formula in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/External%20Formula/.NET/External%20Formula).
 
 N> Links are updated automatically in Microsoft Excel to view the result for the preceding code.
 
@@ -695,7 +695,7 @@ Also, XlsIO supports [structured reference](https://support.microsoft.com/en-gb/
 The following code snippet illustrates how to create a calculated column.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Calculated%20Column/.NET/Calculated%20Column/Calculated%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -796,7 +796,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for calculated column in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Calculated%20Column).
+A complete working example for calculated column in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Calculated%20Column/.NET/Calculated%20Column).
 
 ## Supported Functions
 
@@ -2181,7 +2181,7 @@ name.RefersToRange = worksheet.Range("B1")
 Following code example illustrates how to create workbook-level named ranges and use it in formulas.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Named%20Range/.NET/Named%20Range/Named%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2253,14 +2253,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to use named ranges in formulas in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Named%20Range).
+A complete working example to use named ranges in formulas in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Named%20Range/.NET/Named%20Range).
 
 ### Deleting Named Ranges
 
 Named ranges defined in workbook and worksheet levels can be deleted in different ways. The following code shows the possibilities of deleting named ranges.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Delete%20Named%20Range/.NET/Delete%20Named%20Range/Delete%20Named%20Range/Program.cs,180" %}
 //Deleting named range object
 IName name = workbook.Names[0];
 name.Delete();
@@ -2294,7 +2294,7 @@ sheet.Names("SheetLevelName").Delete()
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example to delete named ranges in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Delete%20Named%20Range).
+A complete working example to delete named ranges in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Delete%20Named%20Range/.NET/Delete%20Named%20Range).
 
 ## Formula Auditing
 
@@ -2305,7 +2305,7 @@ In certain cases, these errors can be ignored so that the error will not appear 
 Following code illustrates on how to ignore or set error indicators.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Ignore%20Error/.NET/Ignore%20Error/Ignore%20Error/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2363,7 +2363,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to ignore error in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Ignore%20Error).
+A complete working example to ignore error in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Ignore%20Error/.NET/Ignore%20Error).
 
 ## Calculation Engine
 
@@ -2388,7 +2388,7 @@ There are various [calculation modes](https://docs.microsoft.com/en-us/office/tr
 Following code illustrates on how to set calculation mode in XlsIO.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Calculation%20Modes/.NET/Calculation%20Modes/Calculation%20Modes/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2436,7 +2436,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of calculation modes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Calculation%20Modes).
+A complete working example of calculation modes in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Calculation%20Modes/.NET/Calculation%20Modes).
 
 ### Recalculate Before Save
 
@@ -2474,7 +2474,7 @@ Iteration settings will control the maximum number of iteration and the amount o
 Following code snippet illustrates how to set the Iterations.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Iteration/.NET/Iteration/Iteration/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -2540,4 +2540,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example of iteration in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Iteration).
+A complete working example of iteration in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Formulas/Iteration/.NET/Iteration).

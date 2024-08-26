@@ -22,7 +22,7 @@ Using [AutoFilters](https://support.office.com/en-US/article/Filter-data-in-a-ra
 The following code example illustrates how to apply simple auto filters.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Filter/.NET/Filter/Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -101,14 +101,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Filter).
+A complete working example to apply filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Filter/.NET/Filter).
 
 ## Custom Filter
 
 The following code example illustrates how to apply custom filter, based on first and second condition.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Custom%20Filter/.NET/Custom%20Filter/Custom%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -190,7 +190,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply custom filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Custom%20Filter).
+A complete working example to apply custom filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Custom%20Filter/.NET/Custom%20Filter).
 
 ## Combination Filter
 
@@ -199,7 +199,7 @@ This filter contains both Text filter and DateTime filter. It filters the data b
 The following code example illustrates how to apply combination filter with multiple of Text filter and DateTime filter.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Combination%20Filter/.NET/Combination%20Filter/Combination%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -278,7 +278,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply combination filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Combination%20Filter).
+A complete working example to apply combination filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Combination%20Filter/.NET/Combination%20Filter).
 
 ## Dynamic Filter
 
@@ -287,7 +287,7 @@ Dynamic filter is a relative date filter, which filters data based on [DynamicFi
 The following code example illustrates how to apply Dynamic filter.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Dynamic%20Filter/.NET/Dynamic%20Filter/Dynamic%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -354,7 +354,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply dynamic filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Dynamic%20Filter).
+A complete working example to apply dynamic filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Dynamic%20Filter/.NET/Dynamic%20Filter).
 
 ## Color Filter
 
@@ -363,7 +363,7 @@ Color Filter can be used to filter data based on the color applied to the cell o
 The following code example illustrates how to apply color filter based on cell color (fill color applied to the cell).
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Cell%20Color%20Filter/.NET/Cell%20Color%20Filter/Cell%20Color%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -430,14 +430,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply color filter on Excel data based on cell color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Cell%20Color%20Filter).
+A complete working example to apply color filter on Excel data based on cell color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Cell%20Color%20Filter/.NET/Cell%20Color%20Filter).
 
 To filter cells based on font color of the text inside cells just change the [ExcelColorFilterType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelColorFilterType.html) to Font Color. 
 
 The following code example illustrates how to filter the cells based on font color.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Font%20Color%20Filter/.NET/Font%20Color%20Filter/Font%20Color%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -504,7 +504,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply color filter on Excel data based on font color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Font%20Color%20Filter).
+A complete working example to apply color filter on Excel data based on font color in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Font%20Color%20Filter/.NET/Font%20Color%20Filter).
 
 ## Icon Filter
 
@@ -513,7 +513,7 @@ Icon filter can be used to filter data that has conditional formatting with Icon
 The following code example illustrates how to apply icon filter.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Icon%20Filter/.NET/Icon%20Filter/Icon%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -580,7 +580,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply icon filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Icon%20Filter).
+A complete working example to apply icon filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Icon%20Filter/.NET/Icon%20Filter).
 
 ## Advanced Filter
 
@@ -599,7 +599,7 @@ Advanced Filter also provides an option to filter the unique records. This will 
 The following code example illustrates how to apply Advanced Filter in worksheet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Advanced%20Filter/.NET/Advanced%20Filter/Advanced%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -660,7 +660,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply advanced filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Advanced%20Filter).
+A complete working example to apply advanced filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Advanced%20Filter/.NET/Advanced%20Filter).
 
 ## Accessing Filter
 
@@ -669,7 +669,7 @@ A filter and its criteria can be accessed based on its column index.
 The following code example illustrates how to access different types of filters.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Accessing%20Filter/.NET/Accessing%20Filter/Accessing%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -833,4 +833,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to access filters from Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Accessing%20Filter).
+A complete working example to access filters from Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Accessing%20Filter/.NET/Accessing%20Filter).
