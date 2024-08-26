@@ -1,6 +1,6 @@
 ---
 title: Chart Appearance | Excel library | Syncfusion
-description: In this section, you can learn about the appearance of charts in an Excel document with XlsIO.
+description: In this section, you can learn about the appearance of charts in an Excel document using Syncfusion .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

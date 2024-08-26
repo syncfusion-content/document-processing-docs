@@ -1,6 +1,6 @@
 ---
 title: Styles and Formatting of Pivot Tables | Excel library | Syncfusion
-description: In this section, you can learn how to style and format pivot table in Excel document using XlsIO
+description: In this section, you can learn how to style and format pivot table in Excel document using Syncfusion .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
