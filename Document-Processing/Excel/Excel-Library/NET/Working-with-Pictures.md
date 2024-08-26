@@ -10,7 +10,7 @@ documentation: UG
 XlsIO allows to insert Pictures into a worksheet. Refer to the following code snippet. 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Add%20Picture/.NET/Add%20Picture/Add%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -59,14 +59,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to insert picture in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Add%20Picture).   
+A complete working example to insert picture in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Add%20Picture/.NET/Add%20Picture).   
 
 ## Positioning and Re-Sizing Pictures
 
 Pictures can be re-sized, positioned, and formatted using various properties of [IPictureShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictureShape.html) interface. Refer to the following code snippet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Position%20and%20Resize%20Picture/.NET/Position%20and%20Resize%20Picture/Position%20and%20Resize%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -139,7 +139,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to position and resize picture in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Position%20and%20Resize%20Picture).   
+A complete working example to position and resize picture in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Position%20and%20Resize%20Picture/.NET/Position%20and%20Resize%20Picture).   
 
 ## Move and Size with cells
 To move and size a picture along with cell modifications, we need to set the [IsMoveWithCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_IsMoveWithCell) and [IsSizeWithCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_IsSizeWithCell) properties to true.
@@ -147,7 +147,7 @@ To move and size a picture along with cell modifications, we need to set the [Is
 The following code example illustrates how to move and size a picture along with cells.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Move%20and%20Size%20with%20cells/.NET/Move%20and%20Size%20with%20cells/Move%20and%20Size%20with%20cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -231,7 +231,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to move and size a picture with cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Move%20and%20Size%20with%20cells/NET/Move%20and%20Size%20with%20cells).  
+A complete working example to move and size a picture with cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Move%20and%20Size%20with%20cells/.NET/Move%20and%20Size%20with%20cells).  
 
 ## Align picture
 
@@ -323,7 +323,7 @@ End Using
 The following code snippet explains how to add images into merged regions.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/ImageInMergedRegion/.NET/ImageInMergedRegion/ImageInMergedRegion/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -431,14 +431,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add picture into merged region in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/ImageInMergedRegion).   
+A complete working example to add picture into merged region in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/ImageInMergedRegion/.NET/ImageInMergedRegion).   
 
 ## Adding Images from External Link
 
 An image can be added to a worksheet as an external link without downloading the original image. The picture will be downloaded every time the spreadsheet is opened in Microsoft Excel. The image is not physically embedded into the Excel document, but points to a web resource. Refer to the following code snippet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/External%20Image/.NET/External%20Image/External%20Image/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -488,14 +488,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add picture from external link in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/External%20Image).   
+A complete working example to add picture from external link in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/External%20Image/.NET/External%20Image).   
 
 ## Adding SVG Images
 
 SVG images can be inserted in Excel documents for displaying images with accuracy when scaling or zooming page. Adding SVG images is now supported in XlsIO with SVG and its fallback raster image data as parameters as in the following code snippet.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Add%20SVG%20Picture/.NET/Add%20SVG%20Picture/Add%20SVG%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -554,5 +554,5 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add SVG images in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Add%20SVG%20Picture).
+A complete working example to add SVG images in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Add%20SVG%20Picture/.NET/Add%20SVG%20Picture).
 
