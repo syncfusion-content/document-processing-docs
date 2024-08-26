@@ -355,7 +355,7 @@ Let’s consider the input Excel document has the data as shown in the below scr
 
 ![Excel worksheet with data](../Working-with-Data_images/Working-with-Data_img5.png)
 
-The following code example illustrates how to export data from Exce to nested class objects with column headers mapping collection.
+The following code example illustrates how to export data from Excel to nested class objects with column headers mapping collection.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Worksheet%20to%20Nested%20Class/.NET/Worksheet%20to%20Nested%20Class/Worksheet%20to%20Nested%20Class/Program.cs,180" %}
