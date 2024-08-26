@@ -13,7 +13,7 @@ Color Scales let you create visual effects in your data to see how the value of 
 The following code example illustrates how to apply color scales using [IColorScale](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IColorScale.html) interface in XlsIO.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Color%20Scales/.NET/Color%20Scales/Color%20Scales/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Color%20Scales/.NET/Color%20Scales/Color%20Scales/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;

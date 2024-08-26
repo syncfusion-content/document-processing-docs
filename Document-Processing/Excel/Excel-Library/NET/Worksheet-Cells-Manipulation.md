@@ -20,7 +20,7 @@ The following code example illustrates the different ways of accessing a single 
 N> Here row and column indexes in the range are "one-based". 
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range/.NET/Access%20Cell%20or%20Range/Access%20Cell%20or%20Range/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range/.NET/Access%20Cell%20or%20Range/Access%20Cell%20or%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -125,7 +125,7 @@ The following code example illustrates how to access the range relatively to the
 N> Here row and column indexes in the range are "one-based".
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Relative%20Range/.NET/Access%20Relative%20Range/Access%20Relative%20Range/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Relative%20Range/.NET/Access%20Relative%20Range/Access%20Relative%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -222,7 +222,7 @@ It is possible to modify the contents or apply formatting to discontinuous range
 The following code example illustrates how to access discontinuous range.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Discontinuous%20Range/.NET/Access%20Discontinuous%20Range/Access%20Discontinuous%20Range/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Discontinuous%20Range/.NET/Access%20Discontinuous%20Range/Access%20Discontinuous%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -298,7 +298,7 @@ A complete working example to access discontinuous range in an Excel worksheet i
 The [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html) interface can also be used to access a single cell or group of cells and manipulate it.  It is recommended to prefer **IMigrantRange** instead of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) for writing large amount of data in an optimal way. 
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Migrant%20Range/.NET/Access%20Migrant%20Range/Access%20Migrant%20Range/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Migrant%20Range/.NET/Access%20Migrant%20Range/Access%20Migrant%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -387,7 +387,7 @@ Accessing list of precedent and dependent cells can be obtained:
 The following code example illustrates how to access the precedent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -450,7 +450,7 @@ End Using
 The following code example illustrates how to access the dependent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -517,7 +517,7 @@ End Using
 The following code example illustrates how to access the direct precedent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -580,7 +580,7 @@ End Using
 The following code example illustrates how to access the direct dependent cells from a worksheet and entire workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -671,7 +671,7 @@ With the Syncfusion Excel Library, you can perform hyperlink operations in an Ex
 Either entire cell content, or just formatting, contents, or comments can be removed from Excel cell. The following code example illustrates how to clear a range along with its formatting.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Clear%20Content/.NET/Clear%20Content/Clear%20Content/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Clear%20Content/.NET/Clear%20Content/Clear%20Content/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;

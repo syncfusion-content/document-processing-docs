@@ -18,7 +18,7 @@ A new worksheet can be added into the workbook through [Create](https://help.syn
 The following code example illustrates how to create worksheets within a workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Create%20Worksheet/.NET/Create%20Worksheet/Create%20Worksheet/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Create%20Worksheet/.NET/Create%20Worksheet/Create%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -84,7 +84,7 @@ A complete working example for creating Excel worksheets in C# is present on [th
 The following code example illustrates how to access a worksheet from its worksheets collection.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Access%20Worksheet/.NET/Access%20Worksheet/Access%20Worksheet/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Access%20Worksheet/.NET/Access%20Worksheet/Access%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -161,7 +161,7 @@ Dim workbook As IWorkbook = application.Workbooks.Open(fileName, ExcelParseOptio
 The following code example illustrates how to remove a worksheet from Excel workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Remove%20Worksheet/.NET/Remove%20Worksheet/Remove%20Worksheet/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Remove%20Worksheet/.NET/Remove%20Worksheet/Remove%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -213,7 +213,7 @@ A complete working example for removing an Excel worksheet in C# is present on [
 The following code example illustrates how to set the worksheet name.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -274,7 +274,7 @@ A particular worksheet tab can be highlighted to denote its importance. Tab colo
 The following code example illustrates how to highlight worksheet tabs.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Highlight%20Worksheet%20Tab/.NET/Highlight%20Worksheet%20Tab/Highlight%20Worksheet%20Tab/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Highlight%20Worksheet%20Tab/.NET/Highlight%20Worksheet%20Tab/Highlight%20Worksheet%20Tab/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;

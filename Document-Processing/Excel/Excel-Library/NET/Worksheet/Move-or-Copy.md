@@ -17,7 +17,7 @@ The **copy** operation in the Syncfusion Essential XlsIO library allows users to
 The following code example illustrates how to copy an entire workbook to another workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Workbook/.NET/Copy%20Workbook/Copy%20Workbook/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Workbook/.NET/Copy%20Workbook/Copy%20Workbook/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -81,7 +81,7 @@ A complete working example of copying an Excel workbook in C# is present on [thi
 The following code example illustrates how to copy a sheet, along with its entire contents, to another workbook.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Worksheet/.NET/Copy%20Worksheet/Copy%20Worksheet/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Worksheet/.NET/Copy%20Worksheet/Copy%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -143,7 +143,7 @@ Specific copy options can be chosen while copying a worksheet, which helps to ac
 The following code example illustrates how to copy a row from one worksheet to another.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Row/.NET/Copy%20Row/Copy%20Row/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Row/.NET/Copy%20Row/Copy%20Row/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -219,7 +219,7 @@ A complete working example of copying a row in C# is present on [this GitHub pag
 The following code example illustrates how to copy a column from one worksheet to another.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Column/.NET/Copy%20Column/Copy%20Column/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Column/.NET/Copy%20Column/Copy%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -295,7 +295,7 @@ A complete working example of copying a column in C# is present on [this GitHub 
 The following code example illustrates how to copy a cell range from one worksheet to another.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Cell%20Range/.NET/Copy%20Cell%20Range/Copy%20Cell%20Range/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Cell%20Range/.NET/Copy%20Cell%20Range/Copy%20Cell%20Range/Program.cs,180" %}
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -452,7 +452,7 @@ The **move** operation in the Syncfusion Essential XlsIO library allows users to
 The following code example illustrates how to move a sheet, along with its entire contents.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Worksheet/.NET/Move%20Worksheet/Move%20Worksheet/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Worksheet/.NET/Move%20Worksheet/Move%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -509,7 +509,7 @@ A complete working example for moving Excel worksheets in C# is present on [this
 The following code example illustrates how to move a row from one worksheet to another.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Row/.NET/Move%20Row/Move%20Row/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Row/.NET/Move%20Row/Move%20Row/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -585,7 +585,7 @@ A complete working example of moving a row in C# is available on [this GitHub pa
 The following code example illustrates how to move a column from one worksheet to another.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Column/.NET/Move%20Column/Move%20Column/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Column/.NET/Move%20Column/Move%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -661,7 +661,7 @@ A complete working example of moving a column in C# is present on [this GitHub p
 The following code example illustrates how to move a cell range from one worksheet to another.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Cell%20Range/.NET/Move%20Cell%20Range/Move%20Cell%20Range/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Move%20Cell%20Range/.NET/Move%20Cell%20Range/Move%20Cell%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;

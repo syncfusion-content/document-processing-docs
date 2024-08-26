@@ -94,7 +94,7 @@ condition1.IsItalic = True
 The following code example illustrates how to create and applies various different conditional formats for different ranges.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Create%20Conditional%20Format/.NET/Create%20Conditional%20Format/Create%20Conditional%20Format/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Create%20Conditional%20Format/.NET/Create%20Conditional%20Format/Create%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -279,7 +279,7 @@ XlsIO also reads conditional formats from an existing Excel workbook.
 The following code example illustrates how to read an existing conditional formatting.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Read%20Conditional%20Format/.NET/Read%20Conditional%20Format/Read%20Conditional%20Format/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Read%20Conditional%20Format/.NET/Read%20Conditional%20Format/Read%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -344,7 +344,7 @@ All the conditional formats for a specified range can be removed using the [Remo
 The following code example illustrates how to remove conditional formats.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20Conditional%20Format/.NET/Remove%20Conditional%20Format/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20Conditional%20Format/.NET/Remove%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -403,7 +403,7 @@ A particular conditional format at the specified range can be removed by using t
 The following code example illustrates how to remove conditional formats at specified index value.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20at%20Index/.NET/Remove%20at%20Index/Remove%20at%20Index/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20at%20Index/.NET/Remove%20at%20Index/Remove%20at%20Index/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -460,7 +460,7 @@ A complete working example to remove conditional formats at specified index in C
 The following code example illustrates how to remove conditional formats from entire sheet.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20all%20Conditional%20Formats/.NET/Remove%20all%20Conditional%20Formats/Remove%20all%20Conditional%20Formats/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20all%20Conditional%20Formats/.NET/Remove%20all%20Conditional%20Formats/Remove%20all%20Conditional%20Formats/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -519,7 +519,7 @@ XlsIO sets the formula for the conditional format in R1C1-style notation.
 The following code example illustrates how to use formula in Conditional Format.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Conditional%20Format%20with%20R1C1/.NET/Conditional%20Format%20with%20R1C1/Conditional%20Format%20with%20R1C1/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Conditional%20Format%20with%20R1C1/.NET/Conditional%20Format%20with%20R1C1/Conditional%20Format%20with%20R1C1/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;

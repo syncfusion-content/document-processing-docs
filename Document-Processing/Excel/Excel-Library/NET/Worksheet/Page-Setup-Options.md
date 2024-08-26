@@ -15,7 +15,7 @@ documentation: UG
 The following code example illustrates how to use FitToPagesTall.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesTall/.NET/FitToPagesTall/FitToPagesTall/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesTall/.NET/FitToPagesTall/FitToPagesTall/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -101,7 +101,7 @@ A complete working example to fit all rows on one page in C# is present on [this
 The following code example illustrates how to use FitToPagesWide.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesWide/.NET/FitToPagesWide/FitToPagesWide/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesWide/.NET/FitToPagesWide/FitToPagesWide/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -187,7 +187,7 @@ A complete working example to fit all columns on one page in C# is present on [t
 The following code example illustrates how to use IsFitToPage.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsFitToPage/.NET/IsFitToPage/IsFitToPage/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsFitToPage/.NET/IsFitToPage/IsFitToPage/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -270,7 +270,7 @@ To enable the [IsSummaryColumnRight](https://help.syncfusion.com/cr/document-pro
 The following code snippet shows how to use IsSummaryColumnRight.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryColumnRight/.NET/IsSummaryColumnRight/IsSummaryColumnRight/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryColumnRight/.NET/IsSummaryColumnRight/IsSummaryColumnRight/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -362,7 +362,7 @@ To enable the [IsSummaryRowBelow](https://help.syncfusion.com/cr/document-proces
 The following code snippet shows how to use IsSummaryRowBelow.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryRowBelow/.NET/IsSummaryRowBelow/IsSummaryRowBelow/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryRowBelow/.NET/IsSummaryRowBelow/IsSummaryRowBelow/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -455,7 +455,7 @@ The [PrintArea](https://help.syncfusion.com/cr/document-processing/Syncfusion.Xl
 The following code snippet shows how to use the PrintArea.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintArea/.NET/PrintArea/PrintArea/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintArea/.NET/PrintArea/PrintArea/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -538,7 +538,7 @@ The [PrintGridlines](https://help.syncfusion.com/cr/document-processing/Syncfusi
 The following code snippet shows how to use PrintGridlines.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintGridlines/.NET/PrintGridlines/PrintGridlines/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintGridlines/.NET/PrintGridlines/PrintGridlines/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -621,7 +621,7 @@ The [PrintHeadings](https://help.syncfusion.com/cr/document-processing/Syncfusio
 The following code snippet shows how to use PrintHeadings.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintHeadings/.NET/PrintHeadings/PrintHeadings/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintHeadings/.NET/PrintHeadings/PrintHeadings/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -704,7 +704,7 @@ The [PrintTitleColumns](https://help.syncfusion.com/cr/document-processing/Syncf
 The following code snippet shows how to use PrintTitleColumns.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleColumns/.NET/PrintTitleColumns/PrintTitleColumns/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleColumns/.NET/PrintTitleColumns/PrintTitleColumns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -788,7 +788,7 @@ The [PrintTitleRows](https://help.syncfusion.com/cr/document-processing/Syncfusi
 The following code snippet shows how to use PrintTitleRows.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleRows/.NET/PrintTitleRows/PrintTitleRows/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleRows/.NET/PrintTitleRows/PrintTitleRows/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -869,7 +869,7 @@ A complete working example to set the PrintTitleRows in C# is present on [this G
 The following code example illustrates how to add headers and footers in an Excel document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer/Header%20and%20Footer/Program.cs , 180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer/Header%20and%20Footer/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
