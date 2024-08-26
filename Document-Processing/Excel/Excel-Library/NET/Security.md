@@ -575,4 +575,4 @@ End Using
 
 N> Security features are now supported in .NET Standard 1.4 onwards.
 
-A complete working example to protect a cell in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Locked-Cells/.NET/Locked-Cellst).
+A complete working example to protect a cell in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Locked-Cells/.NET/Locked-Cells).

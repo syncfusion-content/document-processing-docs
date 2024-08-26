@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Pivot Table Layout
+# Pivot Table Layout in Excel
 
 The [PivotTableRowLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.PivotTableRowLayout.html) enumeration can be used to set the pivot table row layout to Compact, Tabular, or Outline.
 

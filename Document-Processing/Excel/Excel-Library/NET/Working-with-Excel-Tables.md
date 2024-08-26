@@ -515,7 +515,7 @@ The following screenshot represents generated Excel file with custom table style
 
 ![custom table style](Working-with-Pivot-Tables_images/Working-with-Tables_img1.jpg)
 
-N> The [Tablestyles](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITableStyles.html) API only retrieves custom table styles.
+N> The [TableStyles](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITableStyles.html) API only retrieves custom table styles.
 
 ## Insert or remove columns in a table
 

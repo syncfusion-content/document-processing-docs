@@ -1491,7 +1491,7 @@ With the Syncfusion Excel Library, you can customize the chart data labels by ch
 
 With the Syncfusion Excel Library, you can customize the chart axes by changing the title, border, font, rotation angle and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-axis) for more details.
 
-## Chart Appearnace
+## Chart Appearance
  
 Chart appearance refers to the ability to customize the visual aspects of charts in your Excel documents. This includes modifying elements such as the chart area, plot area, series, legend etc. These customizations enhance the readability, aesthetics, and overall presentation of the charts. Beyond these standard elements, users can further refine the chart's appearance by utilizing Fill Settings, Adding Pictures in Chart, Positioning and Resizing, adding a Data Table to the chart, and applying 3D formats.
 
