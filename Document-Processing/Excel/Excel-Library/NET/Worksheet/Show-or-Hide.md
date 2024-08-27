@@ -436,4 +436,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set zoom percentage in an Excel worksheet using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Set%20Zoom%20Level/.NET/Set%20Zoom%20Level).
+A complete working example to set zoom percentage in an Excel worksheet using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Set%20Zoom%20Level).
