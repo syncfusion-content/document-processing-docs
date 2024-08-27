@@ -4060,69 +4060,105 @@ You can retrieve the annotation review history from the existing PDF document an
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations/.NET/Program.cs" %}
 
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the review history collection for the annotation
-PdfLoadedPopupAnnotationCollection reviewCollection = loadedMarkup.ReviewHistory;
-//Get annotation state
-PdfAnnotationState state = reviewCollection[0].State;
-//Get annotation state model
-PdfAnnotationStateModel model = reviewCollection[0].StateModel;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Get the review history of the comment
-PdfLoadedPopupAnnotationCollection reviewCollection1 = commentsCollection[0].ReviewHistory;
-//Closes the document
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the review history collection for the annotation.
+PdfLoadedPopupAnnotationCollection reviewCollection = rectangleAnnotation.ReviewHistory;
+
+//Iterate through the review history collection.
+foreach (PdfLoadedPopupAnnotation review in reviewCollection)
+{
+    //Get the author of the annotation.
+    string author = review.Author;
+    //Get the state of the annotation.
+    PdfAnnotationState state = review.State;
+    //Get the state model of the annotation.
+    PdfAnnotationStateModel model = review.StateModel;
+
+    Console.WriteLine("Author of the reviewer: " + author + "\r\nState: " + state + "\r\nState Model: " + model);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
+
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the review history collection for the annotation
-PdfLoadedPopupAnnotationCollection reviewCollection = loadedMarkup.ReviewHistory;
-//Get annotation state
-PdfAnnotationState state = reviewCollection[0].State;
-//Get annotation state model
-PdfAnnotationStateModel model = reviewCollection[0].StateModel;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Get the review history of the comment
-PdfLoadedPopupAnnotationCollection reviewCollection1 = commentsCollection[0].ReviewHistory;
-//Close the PDF document
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the review history collection for the annotation.
+PdfLoadedPopupAnnotationCollection reviewCollection = rectangleAnnotation.ReviewHistory;
+
+//Iterate through the review history collection.
+foreach (PdfLoadedPopupAnnotation review in reviewCollection)
+{
+    //Get the author of the annotation.
+    string author = review.Author;
+    //Get the state of the annotation.
+    PdfAnnotationState state = review.State;
+    //Get the state model of the annotation.
+    PdfAnnotationStateModel model = review.StateModel;
+
+    Console.WriteLine("Author of the reviewer: " + author + "\r\nState: " + state + "\r\nState Model: " + model);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
-'Get the existing PDF page
+'Get stream from an existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument(docStream)
+
+'Get the existing PDF page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Get the annotation
-Dim loadedMarkup As PdfLoadedTextMarkupAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedTextMarkupAnnotation)
-'Get the review history collection for the annotation
-Dim reviewCollection As PdfLoadedPopupAnnotationCollection = loadedMarkup.ReviewHistory
-'Get annotation state
-Dim state As PdfAnnotationState = reviewCollection(0).State
-'Get annotation state model
-Dim model As PdfAnnotationStateModel = reviewCollection(0).StateModel
-'Get the comments of the annotation
-Dim commentsCollection As PdfLoadedPopupAnnotationCollection = loadedMarkup.Comments
-'Get the review history of the comment
-Dim reviewCollection1 As PdfLoadedPopupAnnotationCollection = commentsCollection(0).ReviewHistory
-'Close the PDF document
+
+'Get the annotation.
+Dim rectangleAnnotation As PdfLoadedRectangleAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedRectangleAnnotation)
+
+'Get the review history collection for the annotation.
+Dim reviewCollection As PdfLoadedPopupAnnotationCollection = rectangleAnnotation.ReviewHistory
+
+'Iterate through the review history collection.
+For Each review As PdfLoadedPopupAnnotation In reviewCollection
+    'Get the author of the annotation.
+    Dim author As String = review.Author
+    'Get the state of the annotation.
+    Dim state As PdfAnnotationState = review.State
+    'Get the state model of the annotation.
+    Dim model As PdfAnnotationStateModel = review.StateModel
+
+    Console.WriteLine("Author of the reviewer: " & author & vbCrLf & "State: " & state.ToString() & vbCrLf & "State Model: " & model.ToString())
+Next
+
+'Closes the document.
 loadedDocument.Close(True)
+
 
 {% endhighlight %}
 
@@ -4136,48 +4172,100 @@ The following code example explains how to retrieve the annotation comments from
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Retrieve-the-annotation-comments-from-the-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Program.cs" %}
 
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Closes the document
+//Get stream from the existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the comments of the annotation.
+PdfLoadedPopupAnnotationCollection commentsCollection = rectangleAnnotation.Comments;
+
+//Iterate through the comments collection.
+foreach (PdfLoadedPopupAnnotation comment in commentsCollection)
+{
+    //Get the author of the comment.
+    string author = comment.Author;
+    //Get the content
+    string content = comment.Text;
+
+    Console.WriteLine("Author of the comment: " + author + "\r\nContent: " + content);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Close the PDF document
+//Get stream from the existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the comments of the annotation.
+PdfLoadedPopupAnnotationCollection commentsCollection = rectangleAnnotation.Comments;
+
+//Iterate through the comments collection.
+foreach (PdfLoadedPopupAnnotation comment in commentsCollection)
+{
+    //Get the author of the comment.
+    string author = comment.Author;
+    //Get the content
+    string content = comment.Text;
+
+    Console.WriteLine("Author of the comment: " + author + "\r\nContent: " + content);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
-'Get the existing PDF page
+'Get stream from the existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument(docStream)
+
+'Get the existing PDF page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Get the annotation
-Dim loadedMarkup As PdfLoadedTextMarkupAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedTextMarkupAnnotation)
-'Get the comments of the annotation
-Dim commentsCollection As PdfLoadedPopupAnnotationCollection = loadedMarkup.Comments
-'Close the PDF document
+
+'Get the annotation.
+Dim rectangleAnnotation As PdfLoadedRectangleAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedRectangleAnnotation)
+
+'Get the comments of the annotation.
+Dim commentsCollection As PdfLoadedPopupAnnotationCollection = rectangleAnnotation.Comments
+
+'Iterate through the comments collection.
+For Each comment As PdfLoadedPopupAnnotation In commentsCollection
+    'Get the author of the comment.
+    Dim author As String = comment.Author
+    'Get the content
+    Dim content As String = comment.Text
+
+    Console.WriteLine("Author of the comment: " & author & vbCrLf & "Content: " & content)
+Next
+
+'Close the document.
 loadedDocument.Close(True)
 
 {% endhighlight %}
