@@ -1200,7 +1200,7 @@ N> To convert the existing PDF to PDF/A conformance document in .NET Core, you n
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Convert-PDF-to-PDFA-conformance-document/.NET/Convert-PDF-to-PDFA-conformance-document/Program.cs" %}
 
 //Load an existing PDF document
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1260,7 +1260,7 @@ To convert an existing PDF document to the PDFA document in .NET Core, you need 
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Convert-PDF-to-PDFA-conformance-document/.NET/Convert-PDF-to-PDFA-conformance-document/Program.cs" %}
 
 static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
 {
@@ -1372,35 +1372,32 @@ The following code sample shows the delegate for handling PDF to PDF/A conversio
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress/.NET/Get-PDF-to-PDFA-conversion-progress/Program.cs" %}
 
-//Load an existing PDF document. 
-FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+
+//Get stream from an existing PDF document.
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+ 
+//Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-
-//Set the conformance for PDF/A-1b conversion.
-loadedDocument.Conformance = PdfConformanceLevel.Pdf_A1B;
-loadedDocument.PdfAConversionProgress += pdfAConversion_TrackProgress;
-
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
-//If the position is not set to '0' then the PDF will be empty.
-loadedDocument.Position = 0;
-//Close the document.
+ 
+//Subscribe to the PdfAConversionProgress event to track the PDF to PDF/A conversion process
+loadedDocument.PdfAConversionProgress += new PdfLoadedDocument.PdfAConversionProgressEventHandler(pdfAConversion_TrackProgress);
+ 
+loadedDocument.ConvertToPDFA(PdfConformanceLevel.Pdf_A1B);
+ 
+//Save the document
+FileStream outputStream = new FileStream(Path.GetFullPath(@"Output.pdf"), FileMode.Create, FileAccess.Write);
+loadedDocument.Save(outputStream);
+ 
+//Close the document
 loadedDocument.Close(true);
-
-//Event handler for Track PDF to PDF/A conversion process.
+ 
+ 
+//Event handler for Track PDF to PDF/A conversion process
 void pdfAConversion_TrackProgress(object sender, PdfAConversionProgressEventArgs arguments)
 {
-MessageBox.Show(String.Format("PDF to PDF/A conversion Process " + arguments. ProgressValue + " % completed"));
+    Console.WriteLine(String.Format("PDF to PDF/A conversion process " + arguments.ProgressValue + "% completed"));
 }
-
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
+ 
 
 {% endhighlight %}
 
@@ -1422,7 +1419,7 @@ loadedDocument.Close(true);
 //Event handler for Track PDF to PDF/A conversion process
 void pdfAConversion_TrackProgress(object sender, PdfAConversionProgressEventArgs arguments)
 {
-MessageBox.Show(String.Format("PDF to PDF/A conversion Process " + arguments. ProgressValue + " % completed"));
+Console.WriteLine(String.Format("PDF to PDF/A conversion Process " + arguments. ProgressValue + " % completed"));
 }
 
 {% endhighlight %}
@@ -1444,7 +1441,7 @@ loadedDocument.Close(True)
 
 'Event handler for Track PDF to PDF/A conversion process.
 Private  Sub pdfAConversion_TrackProgress(ByVal sender As Object, ByVal arguments As PdfAConversionProgressEventArgs)
-MessageBox.Show(String.Format(PDF to PDF/A conversion Process " + arguments. ProgressValue + " % completed"))
+Console.WriteLine(String.Format(PDF to PDF/A conversion Process " + arguments. ProgressValue + " % completed"))
 
 {% endhighlight %}
 

@@ -19,7 +19,7 @@ You can merge the multiple PDF document using [Merge](https://help.syncfusion.co
 Refer to the following code example to merge multiple documents from disk.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Merge-multiple-documents-from-stream/.NET/Merge-multiple-documents-from-stream/Program.cs" %} 
 
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can merge multiple documents from stream using the following code snippet.
 //Creates a PDF document.
