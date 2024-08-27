@@ -4172,7 +4172,7 @@ The following code example explains how to retrieve the annotation comments from
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Retrieve-the-annotation-comments-from-the-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Program.cs" %}
 
 //Get stream from the existing PDF document. 
 FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
