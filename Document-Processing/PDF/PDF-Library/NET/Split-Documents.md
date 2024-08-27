@@ -83,7 +83,8 @@ The Syncfusion .NET PDF library allows splitting a certain range of pages into a
 Refer to the following code example to split a range of pages.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Split-a-Range-of-Pages/.NET/Split-a-Range-of-Pages/Program.cs" %} 
+
 {% raw %}
 
 //Load the existing PDF file.
@@ -142,7 +143,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}  
 
-Download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Split%20PDFs/Split-a-Range-of-Pages/.NET%20Framework).
+Download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Split%20PDFs/Split-a-Range-of-Pages).
 
 ## Split by a fixed number of pages into a PDF document
 
@@ -151,7 +152,7 @@ Refer to the following code example to split by a fixed number of pages.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Split%20PDFs/Split-by-FixedNumber/.NET/Split-by-FixedNumber/Program.cs" %} 
 
 //Load the existing PDF file.
 PdfLoadedDocument loadDocument = new PdfLoadedDocument(new FileStream("Input.pdf", FileMode.Open));
@@ -201,7 +202,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-Download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Split%20PDFs/Split-by-FixedNumber/.NET%20Framework).
+Download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Split%20PDFs/Split-by-FixedNumber).
 
 ## Split a PDF document based on PDF bookmarks
 
