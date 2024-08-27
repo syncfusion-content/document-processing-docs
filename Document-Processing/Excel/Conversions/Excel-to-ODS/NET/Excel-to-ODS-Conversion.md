@@ -15,7 +15,7 @@ The Open Document Format for Office Applications (ODF) is also known as OpenDocu
 The following code snippet illustrates the creation of an Excel file and exporting it to ODS format.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS/Excel%20to%20ODS/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -158,7 +158,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to ODS in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20ODS/Excel%20to%20ODS). 
+A complete working example to convert Excel to ODS in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS). 
 
 ## Supported and unsupported elements in ODS conversion
 
