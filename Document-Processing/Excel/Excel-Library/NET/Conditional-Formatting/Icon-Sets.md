@@ -13,7 +13,7 @@ Icon sets present data in three to five categories that are distinguished by a t
 The following code example illustrates how to apply Icon sets using [IconSet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IIconSet.html) interface in XlsIO.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Icon%20Sets/.NET/Icon%20Sets/Icon%20Sets/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -100,7 +100,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply Icon sets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Icon%20Sets/NET/Icon%20Sets).
+A complete working example to apply Icon sets in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Icon%20Sets/.NET/Icon%20Sets).
 
 ## Custom Icon Sets
 
