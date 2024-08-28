@@ -46,7 +46,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Add-bookmark-in-Word-document/.NET/Add-bookmark-in-Word-document/Program.cs" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a new section into the Word Document
@@ -106,7 +106,7 @@ The following code example shows how to retrieve an instance of bookmark from a 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Get-an-instance-of-bookmark/.NET/Get-an-instance-of-bookmark/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream(@"Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -153,7 +153,7 @@ The following code example shows how to remove a bookmark from Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Remove-bookmark-from-Word-document/.NET/Remove-bookmark-from-Word-document/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream(@"Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -207,7 +207,7 @@ The following code example shows how to retrieve the specified bookmark content 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Get-bookmark-content-as-body-part/.NET/Get-bookmark-content-as-body-part/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -269,7 +269,7 @@ The following code example shows how to retrieve the specified bookmark content 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Get-bookmark-content-as-document-part/.NET/Get-bookmark-content-as-document-part/Program.cs" %}
 //Loads the template document with bookmark "Northwind" whose start and end are preserved in different section.
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -347,7 +347,7 @@ The following code example shows how to retrieve the bookmark content of a speci
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Get-bookmark-content-within-table/.NET/Get-bookmark-content-within-table/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds a section and a paragraph in the document
@@ -576,7 +576,7 @@ The following code example shows how to insert a simple text by using [BookmarkN
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Insert-simple-text-into-bookmark/.NET/Insert-simple-text-into-bookmark/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream(@"Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -625,7 +625,7 @@ The following code example shows how to insert a paragraph item by using [Bookma
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Insert-paragraph-item-into-bookmark/.NET/Insert-paragraph-item-into-bookmark/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -684,7 +684,7 @@ The following code example shows how to insert a paragraph by using [BookmarkNav
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Insert-paragraph-into-bookmark/.NET/Insert-paragraph-into-bookmark/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -739,7 +739,7 @@ The following code example shows how to insert a table by using [BookmarkNavigat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Insert-table-into-bookmark/.NET/Insert-table-into-bookmark/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -824,7 +824,7 @@ The following code example shows how to insert a [TextBodyPart](https://help.syn
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Insert-text-body-part-into-bookmark/.NET/Insert-text-body-part-into-bookmark/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -907,7 +907,7 @@ The following code example shows how to remove the contents of a specified bookm
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Delete-bookmark-content/.NET/Delete-bookmark-content/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -974,7 +974,7 @@ The following code example shows how to replace a specified bookmark content by 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Replace-content-with-body-part/.NET/Replace-content-with-body-part/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Bookmarks.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1053,7 +1053,7 @@ The following code example shows how to replace a specified bookmark content by 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Replace-content-with-document-part/.NET/Replace-content-with-document-part/Program.cs" %}
 //Loads the template document with bookmark "Northwind" whose start and end are preserved in different section
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument templateDocument = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1135,7 +1135,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET-Standard).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET).
 
 ## Online Demo
 

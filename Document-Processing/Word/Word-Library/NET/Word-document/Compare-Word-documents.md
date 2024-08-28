@@ -35,7 +35,7 @@ The following code example illustrates how to compare two Word documents.
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Compare-Word-documents/Compare-two-Word-documents/.NET/Compare-Word-documents/Program.cs" %}
 
 //Load the original document.
 using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocument.docx", FileMode.Open, FileAccess.Read))
@@ -102,7 +102,7 @@ Compare the two Word documents by setting the author and date for revisions to i
 The following code example shows how to set the author and date for revision while comparing two Word documents.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Compare-Word-documents/Set-author-and-date/.NET/Program.cs" %}
 
 //Load the original document.
 using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocument.docx", FileMode.Open, FileAccess.Read))
@@ -174,7 +174,7 @@ The following code example illustrates how to compare two Word documents by igno
 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Compare-Word-documents/Ignore-format-changes/.NET/Ignore-format-changes/Program.cs" %}
 
 //Load the original document
 using (FileStream originalDocumentStreamPath = new FileStream("OriginalDocument.docx", FileMode.Open, FileAccess.Read))
