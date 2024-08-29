@@ -244,31 +244,23 @@ You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusio
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Extract-ZUGFeRD-invoice-from-PDF-document/.NET/Extract-ZUGFeRD-invoice-from-PDF-document/Program.cs" %} 	
 
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 
-//Iterates the attachments
+//Iterates the attachments.
 foreach (PdfAttachment attachment in loadedDocument.Attachments)
 {
-//Extracts the ZUGFeRD invoice attachment and saves it to the disk
-FileStream s = new FileStream(attachment.FileName, FileMode.Create);
-s.Write(attachment.Data, 0, attachment.Data.Length);
-s.Dispose();
+    //Extracts the ZUGFeRD invoice attachment and saves it to the disk.
+    FileStream s = new FileStream("Output/" + attachment.FileName, FileMode.Create, FileAccess.Write);
+    s.Write(attachment.Data, 0, attachment.Data.Length);
+    s.Dispose();
 }
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-stream.Position = 0;
-//Closes the document
+//Close the PDF document. 
 loadedDocument.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
