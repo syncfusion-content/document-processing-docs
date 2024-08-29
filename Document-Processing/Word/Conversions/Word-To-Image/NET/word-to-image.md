@@ -69,7 +69,7 @@ The following code example illustrates how to convert the entire Word document t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Image-conversion/Convert-Word-to-image/.NET/Convert-Word-to-image/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -146,7 +146,7 @@ You can convert a specific page of the Word document into an image and use it fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Image-conversion/First-page-of-Word-to-image/.NET/First-page-of-Word-to-image/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -209,7 +209,7 @@ Users can convert a specific range of pages in a Word document into images. The 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Image-conversion/Specific-range-of-pages-Word-to-image/.NET/Specific-range-of-pages-Word-to-image/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
