@@ -70,7 +70,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to show hidden row and column in an Excel worksheet using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Show%20Row%20and%20Column/NET/Show%20Row%20and%20Column)
+A complete working example to show hidden row and column in an Excel worksheet using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Show%20Row%20and%20Column/.NET/Show%20Row%20and%20Column)
 
 ## Hide Row and Column
 
