@@ -51,7 +51,7 @@ image.Save("Sample.png", ImageFormat.Png)
 The following code snippet shows how to save a sheet as stream.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20to%20Image/Worksheet%20to%20Image/.NET/Worksheet%20to%20Image/Worksheet%20to%20Image/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 // Initialize XlsIORenderer
 application.XlsIORenderer = new XlsIORenderer();
 
