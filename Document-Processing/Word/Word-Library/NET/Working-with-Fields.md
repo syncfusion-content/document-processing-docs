@@ -35,7 +35,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Add-field-in-Word-document/.NET/Add-field-in-Word-document/Program.cs" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a new section to the Word Document
@@ -102,7 +102,7 @@ The following code example explains how to format the field in Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Format-fields/.NET/Format-fields/Program.cs" %}
 //Creates an instance of a WordDocument 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -256,7 +256,7 @@ The following code example explains how to add an If field to a Word document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/IF-field/.NET/IF-field/Program.cs" %}
 //Creates an instance of a WordDocument
 WordDocument document = new WordDocument();
 //Adds a new section into the Word Document
@@ -345,7 +345,7 @@ The following code example explains how to add a DocVariable field to a Word doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Document-variables/.NET/Document-variables/Program.cs" %}
 //Creates an instance of a WordDocument
 WordDocument document = new WordDocument();
 //Adds a new section into the Word Document
@@ -427,7 +427,7 @@ The following code example explains how to append cross reference for bookmark i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Cross-reference/.NET/Cross-reference/Program.cs" %}
 //Creates an instance of a WordDocument
 WordDocument document = new WordDocument();
 //Adds a new section into the Word Document
@@ -604,7 +604,7 @@ The following code example shows how to apply the number format for sequence fie
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Apply-number-format-for-SEQ-field/.NET/Apply-number-format-for-SEQ-field/Program.cs" %}
 //Creates a new document
 WordDocument document = CreateDocument();
 //Accesses sequence field in the document
@@ -1469,7 +1469,7 @@ The following code example shows how to hide the field result of sequence field.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Hide-SEQ-field-result/.NET/Hide-SEQ-field-result/Program.cs" %}
 //Creates a Word document
 WordDocument document = CreateDocument();
 //Accesses sequence field in the document

@@ -130,7 +130,7 @@ chart.Series(0).SerieFormat.LineProperties.LineWeight = OfficeChartLineWeight.Ha
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Format-Series/.NET/Fomat-Series/Program.cs" %}
 
 //Creates a new instance of WordDocument (Empty Word Document).
  using (WordDocument document = new WordDocument())
@@ -389,7 +389,7 @@ chart.Series(0).SerieFormat.ShowConnectorLines = True
 The following code snippet illustrates how to add space between bars.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Chart-Bar-Spacing/.NET/Chart-Bar-Spacing/Program.cs" %}
 
  //Adding space between bars of different series of single category.
  chart.Series[0].SerieFormat.CommonSerieOptions.Overlap = -40;
@@ -425,7 +425,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code snippet illustrates how to add high-low lines.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Add-High-Low-Lines/.NET/Add-High-Low-Lines/Program.cs" %}
 
 //Set HasHighLowLines property to true.
 chart.Series[0].SerieFormat.CommonSerieOptions.HasHighLowLines = true;
@@ -467,7 +467,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code snippet illustrates how to add drop lines.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Add-Drop-Lines/.NET/Add-Drop-Lines/Program.cs" %}
 
 //Set the HasDropLines property to true.
 chart.Series[0].SerieFormat.CommonSerieOptions.HasDropLines = true;
@@ -509,7 +509,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code snippet illustrates how to add series lines in chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Add-Series-Lines/.NET/Add-Series-Lines/Program.cs" %}
 
 //Set HasSeriesLines property to true.
 chart.Series[0].SerieFormat.CommonSerieOptions.HasSeriesLines = true;
@@ -591,7 +591,7 @@ chart.Series(0).SerieFormat.MarkerForegroundColor = Color.Black
 The following code snippet illustrates how to explode a pie chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Explode-Pie-Chart/.NET/Explode-Pie-Chart/Program.cs" %}
 
 //Exploding the pie chart to 10%.
 chart.Series[0].SerieFormat.Percent = 10;

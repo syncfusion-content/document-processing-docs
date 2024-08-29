@@ -117,7 +117,7 @@ chart.ChartTitleArea.Layout.ManualLayout.Left = 0.26
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Format-Chart-Title/.NET/Format-Chart-Title/Program.cs" %}
 
 FileStream fileStreamPath = new FileStream("Data/Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Open an existing document from file system through constructor of WordDocument class.
@@ -206,7 +206,7 @@ The following code example illustrates how to remove the chart title from the Wo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Remove-chart-title/.NET/Remove-chart-title/Program.cs" %}
 //Creates a new instance of WordDocument.
 using (WordDocument document = new WordDocument())
 {
