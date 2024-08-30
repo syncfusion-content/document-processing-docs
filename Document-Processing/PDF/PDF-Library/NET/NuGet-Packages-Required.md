@@ -46,7 +46,7 @@ WPF
 ASP.NET
 </td>
 <td>
-{{'[Syncfusion.Pdf.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
+{{'[Syncfusion.Pdf.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4/)'| markdownify }} or {{'[Syncfusion.Pdf.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -88,7 +88,7 @@ Blazor
 ASP.NET Core (Targeting NET Framework)
 </td>
 <td>
-{{'[Syncfusion.Pdf.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
+{{'[Syncfusion.Pdf.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
