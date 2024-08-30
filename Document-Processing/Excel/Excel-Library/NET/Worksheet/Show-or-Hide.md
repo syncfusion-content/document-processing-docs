@@ -383,7 +383,7 @@ A complete working example to hide Excel worksheet tab in C# is present on [this
 The following code example illustrates how to set the zoom level by using [Zoom](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Zoom) property.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLin="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Set%20Zoom%20Level/.NET/Set%20Zoom%20Level/Set%20Zoom%20Level/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Set%20Zoom%20Level/.NET/Set%20Zoom%20Level/Set%20Zoom%20Level/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
