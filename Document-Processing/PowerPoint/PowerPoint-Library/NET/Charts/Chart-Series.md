@@ -128,7 +128,7 @@ chart.Series(0).SerieFormat.LineProperties.LineWeight = OfficeChartLineWeight.Ha
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Series/Format-Series/.NET/Format-Series/Program.cs" %}
 
  FileStream fileStreamPath = new FileStream("Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
  //Open an existing PowerPoint Presentation.

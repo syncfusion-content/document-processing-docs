@@ -23,7 +23,7 @@ The following code example illustrates how to find all occurrences of a particul
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-Replace-in-PowerPoint/.NET/Find-and-Replace-in-PowerPoint/Program.cs" %}
 //Opens an existing presentation.           
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 using (IPresentation pptxDoc = Presentation.Open(inputStream))
@@ -93,7 +93,7 @@ The following code example illustrates how to find all occurrences of a particul
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Match-case/.NET/Match-case/Program.cs" %}
 //Opens an existing presentation.           
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 using (IPresentation pptxDoc = Presentation.Open(inputStream))
@@ -169,7 +169,7 @@ The following code example illustrates how to find all occurrences of a particul
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Whole-word-only/.NET/Whole-word-only/Program.cs" %}
 //Opens an existing presentation.           
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 using (IPresentation pptxDoc = Presentation.Open(inputStream))
@@ -245,7 +245,7 @@ The following code example illustrates how to find the first occurrence of parti
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-first-occurance/.NET/Find-first-occurance/Program.cs" %}
 //Opens an existing presentation.           
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 using (IPresentation pptxDoc = Presentation.Open(inputStream))
@@ -307,7 +307,7 @@ The following code example illustrates how to find all the occurrences of a patt
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-Replace-in-Powerpoint-using-Regex/.NET/Find-and-Replace-in-PowerPoint-using-regex/Program.cs" %}
 
 //Load or open a PowerPoint Presentation.
 using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -384,7 +384,7 @@ The following code example illustrates how to find all occurrences of a particul
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-replace-in-slide/.NET/Find-and-replace-in-slide/Program.cs" %}
  //Opens an existing presentation.           
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 using (IPresentation pptxDoc = Presentation.Open(inputStream))
@@ -457,7 +457,7 @@ The following code example illustrates how to find all the occurrences of a part
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-highlight-in-PowerPoint/.NET/Find-and-highlight-in-PowerPoint/Program.cs" %}
 //Opens an existing presentation.           
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 using (IPresentation pptxDoc = Presentation.Open(inputStream))
@@ -532,7 +532,7 @@ The following code example illustrates how to find all the occurrences of a patt
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-highlight-in-Powerpoint-using-Regex/.NET/Find-and-highlight-in-Powerpoint-using-regex/Program.cs" %}
 
 //Load or open a PowerPoint Presentation.
 using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -613,7 +613,7 @@ The following code example illustrates how to find all the occurrences of a part
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Find-and-Replace/Find-and-highlight-in-slide/.NET/Find-and-highlight-in-slide/Program.cs" %}
 //Opens an existing presentation.           
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 using (IPresentation pptxDoc = Presentation.Open(inputStream))

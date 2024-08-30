@@ -13,7 +13,7 @@ Essential Presentation library facilitates adding or modifying the images in a P
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Add-image-into-PowerPoint-Slide/.NET/Add-image-into-PowerPoint-Slide/Program.cs" %}
 //Creates a instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide.
@@ -75,7 +75,7 @@ The following code example demonstrates how to replace an existing image in a sl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Replace-existing-image/.NET/Replace-existing-image/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -152,7 +152,7 @@ The following code example demonstrates how to add a new SVG image into a slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Add-SVG-image/.NET/Add-SVG-image/Program.cs" %}
 //Creates an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide
@@ -227,7 +227,7 @@ The following code example demonstrates how to replace an existing SVG image in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Replace-SVG-Image/.NET/Replace-SVG-Image/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -306,7 +306,7 @@ Crop the images in an existing presentation or insert the cropped picture while 
 The following code example demonstrates how to crop an image in a PowerPoint slide.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Crop_image/.NET/Crop_image/Program.cs" %}
 
 //Open an existing PowerPoint Presentation.
 using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
@@ -404,7 +404,7 @@ The following code example demonstrates how to remove an existing image in a Pow
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Remove-all-images/.NET/Remove-all-images/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
