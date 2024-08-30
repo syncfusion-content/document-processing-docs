@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Chart Plot Area
+# Chart Plot Area in PowerPoint
 
 The plot area refers to the region that represents the plotted data in a chart. Using Presentation, you can **customize the plot area in the chart**.
 

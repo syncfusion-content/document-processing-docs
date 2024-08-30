@@ -10,7 +10,7 @@ keywords:
 
 .NET PowerPoint library allows you to search for a particular text that you want to change and replace it with another text in the PowerPoint presentation.
 
-* You can replace either the first occurrence or all the occurrences of the text with another text in all PowerPoint slides and elements such as shape, textbox, table, smartart, etc.
+* You can replace either the first occurrence or all the occurrences of the text with another text in all PowerPoint slides and elements such as shape, textbox, table, SmartArt, etc.
 * You can replace the text in a specific slide, notes slide, master slide, or layout slide.
 * You can replace the text by matching the case, whole word, and all occurrences or the first occurrence alone.
 * You can also replace the content that spans across several lines.

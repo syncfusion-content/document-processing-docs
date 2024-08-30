@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Chart Legend
+# Chart Legend in PowerPoint
 
 Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using Presentation, you can **customize the legend in the chart**.
 
