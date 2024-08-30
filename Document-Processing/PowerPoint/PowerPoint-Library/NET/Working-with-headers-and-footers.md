@@ -17,7 +17,7 @@ The following code example demonstrates how to add a footer to the presentation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-footer-in-PowerPoint/.NET/Add-footer-in-PowerPoint/Program.cs" %}
 //Creates an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide
@@ -105,7 +105,7 @@ The following code example demonstrates how to add Date and Time to a slide of t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-date-and-time-in-PowerPoint-slide/.NET/Add-date-and-time-in-PowerPoint-slide/Program.cs" %}
 //Creates an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide
@@ -193,7 +193,7 @@ The following code example demonstrates how to add Slide number to a slide of th
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-slide-number-in-PowerPoint-slide/.NET/Add-slide-number-in-PowerPoint-slide/Program.cs" %}
 //Creates an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide
@@ -275,7 +275,7 @@ The following code example demonstrates how to add a Footers to the master and l
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-footer-in-master-and-layout-slides/.NET/Add-footer-in-master-and-layout-slides/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -394,7 +394,7 @@ The following code example demonstrates how to add a Headers and Footers to the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-headers-and-footers-in-Notes/.NET/Add-headers-and-footers-in-Notes/Program.cs" %}
 //Creates an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds new slide with blank slide layout type
@@ -490,7 +490,7 @@ The following code example demonstrates how to edit [Footer](https://help.syncfu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Edit-footer-text/.NET/Edit-footer-text/Program.cs" %}
 //Load or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -552,7 +552,7 @@ The following code example demonstrates how to edit the Headers for the Notes sl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Edit-header-text/.NET/Edit-header-text/Program.cs" %}
 //Open a PowerPoint presentation. 
 IPresentation pptxDoc = Presentation.Open("Header.pptx"); 
 //Get the notes slide from the presenatation. 
@@ -608,7 +608,7 @@ The following code example demonstrates how to modify Date and Time of an existi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-date-and-time-format/.NET/Modify-date-and-time-format/Program.cs" %}
 //Load or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -667,7 +667,7 @@ The following code example demonstrates how to edit font of the [Footer](https:/
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-footer-text-font/.NET/Modify-footer-text-font/Program.cs" %}
 //Load or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -754,7 +754,7 @@ The following code example demonstrates how to remove Footers from all the [Titl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Remove-footers-from-all-title-slides/.NET/Remove-footers-from-all-title-slides/Program.cs" %}
 //Load or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
