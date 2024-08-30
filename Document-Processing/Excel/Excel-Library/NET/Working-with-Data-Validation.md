@@ -21,7 +21,7 @@ Data Validation is a list of rules to the data that can be entered in a cell. Th
 The following code snippet illustrates how to set text length validation.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Text%20Length%20Validation/.NET/Text%20Length%20Validation/Text%20Length%20Validation/Program.cs,180" %}
 //Data validation for text length
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.TextLength;
@@ -55,14 +55,14 @@ validation.SecondFormula = "5"
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example for text length data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Text%20Length%20Validation).
+A complete working example for text length data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Text%20Length%20Validation/.NET/Text%20Length%20Validation).
 
 ## Time Validation
 
 The following code snippet illustrates how to set time validation.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Time%20Validation/.NET/Time%20Validation/Time%20Validation/Program.cs,180" %}
 //Data validation for time
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Time;
@@ -96,14 +96,14 @@ validation.SecondFormula = "12.00"
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example for time data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Time%20Validation).  
+A complete working example for time data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Time%20Validation/.NET/Time%20Validation).  
 
 ## List Validation
 
 The following code snippet illustrates how to set list validation.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/List%20Validation/.NET/List%20Validation/List%20Validation/Program.cs,180" %}
 //Data validation for list
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.ListOfValues = new string[] { "ListItem1", "ListItem2", "ListItem3" };
@@ -122,7 +122,7 @@ validation.ListOfValues = New String() {"ListItem1", "ListItem2", "ListItem3"}
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example for list data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/List%20Validation). 
+A complete working example for list data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/List%20Validation/.NET/List%20Validation). 
 
 N> The [ListOfValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html#Syncfusion_XlsIO_IDataValidation_ListOfValues) property should be used when the values in the Data Validation list are entered manually whose limit is only 255 characters including separators.
 
@@ -131,7 +131,7 @@ N> The [ListOfValues](https://help.syncfusion.com/cr/document-processing/Syncfus
 The following code snippet illustrates  how to set number validation.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Number%20Validation/.NET/Number%20Validation/Number%20Validation/Program.cs,180" %}
 //Data validation for number
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Integer;
@@ -165,14 +165,14 @@ validation.SecondFormula = "10"
 {% endhighlight %}
 {% endtabs %}   
 
-A complete working example for number data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Number%20Validation). 
+A complete working example for number data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Number%20Validation/.NET/Number%20Validation). 
 
 ## Date Validation
 
 The following code snippet illustrates how to set date validation.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Data%20Validation/Date%20Validation/.NET/Date%20Validation/Date%20Validation/Program.cs,180" %}
 //Data validation for date
 IDataValidation validation = sheet.Range["A3"].DataValidation;
 validation.AllowType = ExcelDataType.Date;
@@ -206,7 +206,7 @@ validation.SecondDateTime = New DateTime(2004, 5, 10)
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example for number data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Number%20Validation).   
+A complete working example for number data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Date%20Validation/.NET/Date%20Validation).   
 
 ## Custom Validation
 
