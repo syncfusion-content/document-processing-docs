@@ -85,10 +85,10 @@ Blazor
 </tr>
 <tr>
 <td>
-ASP.NET Core (Targeting NET Framework)
+ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.Pdf.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
+{{'[Syncfusion.Pdf.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
