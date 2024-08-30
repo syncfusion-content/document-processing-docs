@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Chart Legend
+# Customize Chart Legend
 
 Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using DocIO, you can **customize the legend in the chart**.
 

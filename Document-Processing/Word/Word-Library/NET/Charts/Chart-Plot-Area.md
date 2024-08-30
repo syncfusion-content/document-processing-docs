@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Chart Plot Area
+# Customize Chart Plot Area
 
 The plot area refers to the region that represents the plotted data in a chart. Using DocIO, you can **customize the plot area in the chart**.
 

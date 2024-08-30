@@ -91,7 +91,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-![Compare Word documents in C#](../WorkingwithWordDocument_images/Compare-Word-documents-without-author.png)
+![Compare Word documents](../WorkingwithWordDocument_images/Compare-Word-documents-without-author.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Compare-Word-documents/Compare-two-Word-documents/.NET).
 
@@ -158,7 +158,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-![Compare Word documents in C#](../WorkingwithWordDocument_images/Compare-Word-documents.png)
+![Compare Word documents](../WorkingwithWordDocument_images/Compare-Word-documents.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Compare-Word-documents/Set-author-and-date/.NET).
 

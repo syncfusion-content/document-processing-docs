@@ -1006,7 +1006,7 @@ To convert chart in Word document as an image, refer the below dependencies in y
 Platform(s)
 </th>
 <th width="40%">
-NuGets for Chart to Image
+NuGet for Chart to Image
 </th>
 <th width="40%">
 Assemblies for Chart to image

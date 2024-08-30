@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Chart Data Labels
+# Customize Chart Data Labels
 
 Data Labels on a chart make it easier to understand. They show important information about the lines or points on the chart. Using DocIO, you can **customize the data labels in the chart**.
 
