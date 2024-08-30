@@ -206,7 +206,7 @@ validation.SecondDateTime = New DateTime(2004, 5, 10)
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example for number data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Date%20Validation/.NET/Date%20Validation).   
+A complete working example for date data validation in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Date%20Validation/.NET/Date%20Validation).   
 
 ## Custom Validation
 
