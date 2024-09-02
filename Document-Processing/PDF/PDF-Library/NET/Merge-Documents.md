@@ -19,7 +19,7 @@ You can merge the multiple PDF document using [Merge](https://help.syncfusion.co
 Refer to the following code example to merge multiple documents from disk.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Merge-multiple-documents-from-stream/.NET/Merge-multiple-documents-from-stream/Program.cs" %} 
 
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can merge multiple documents from stream using the following code snippet.
 //Creates a PDF document.
@@ -79,7 +79,7 @@ finalDoc.Close(True)
 You can merge the PDF document streams by using the following code example.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Merge-multiple-documents-from-stream/.NET/Merge-multiple-documents-from-stream/Program.cs" %} 
 
 //Creates a PDF document.
 PdfDocument finalDoc = new PdfDocument();
@@ -149,7 +149,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Essential PDF provides support for importing the pages from one document to another document using [ImportPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPage_Syncfusion_Pdf_Parsing_PdfLoadedDocument_Syncfusion_Pdf_PdfPageBase_) method. The following code illustrates this. The imported page is added to the end of the original document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Importing-pages-from-one-document-another-document/.NET/Importing-pages-from-one-document-another-document/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
@@ -210,7 +210,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can import multiple pages from an existing document by using [ImportPageRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_) method. The following code example illustrates this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-multiple-pages-from-an-existing-PDF/.NET/Import-multiple-pages-from-an-existing-PDF/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
@@ -271,7 +271,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can also import pages from multiple documents and arrange the pages by using [ImportPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPage_Syncfusion_Pdf_Parsing_PdfLoadedDocument_Syncfusion_Pdf_PdfPageBase_) method. The following code example explains the same.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-pages-from-multiple-documents-and-arrange-pages/.NET/Import-pages-from-multiple-documents-and-arrange-pages/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
@@ -351,7 +351,7 @@ N> Note:  The parent PDF document has all the contents in run time memory. It re
 You can split a large PDF document into multiple documents using [Split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code snippet explains this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //PDF doesn't support splitting the document into multiple documents C#.NET Cross platforms.
 
@@ -386,7 +386,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code shows how to merge multiple PDF documents using [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_System_Object___) method.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Merge-multiple-documents-from-stream/.NET/Merge-multiple-documents-from-stream/Program.cs" %} 
 
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can merge multiple documents from stream using the following code snippet.
 
@@ -452,7 +452,7 @@ Essential PDF provides support to optimize the PDF resources when merging PDF do
 Refer to the following code example to optimize the PDF resources when merging PDF documents.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Optimize-the-PDF-resources-when-merging-PDF-documents/.NET/Optimize-the-PDF-resources-when-merging-PDF-documents/Program.cs" %} 
 
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from stream using the following code snippet.
 //Create a PDF document.
@@ -528,7 +528,7 @@ The [Syncfusion PDF library](https://www.syncfusion.com/document-processing/pdf-
 The following code sample illustrates this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Extend-the-margin-of-PDF-pages-while-merging-PDFs/.NET/Extend-the-margin-of-PDF-pages-while-merging-PDFs/Program.cs" %} 
  
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from a stream using the following code snippet.
 //Create a PDF document.
@@ -619,7 +619,7 @@ The Syncfusion PDF library enables users to merge PDF documents while maintainin
  Refer to the following code to merge PDF documents without losing accessibility tags. 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Merge-PDF-without-compromising-accessibility-tags/.NET/Merge-PDF-without-compromising-accessibility-tags/Program.cs" %} 
  
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from a stream using the following code snippet. 
 

@@ -26,7 +26,7 @@ The following code example shows how to add named destination in a new PDF docum
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Adding-named-destination-to-a-PDF-document/.NET/Adding-named-destination-to-a-PDF-document/Program.cs" %}	
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -109,7 +109,7 @@ The following code example shows how to add named destination in an existing PDF
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Adding-named-destination-to-an-existing-PDF-document/.NET/Adding-named-destination-to-an-existing-PDF-document/Program.cs" %}	
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -187,7 +187,7 @@ You can remove the named destination using [Remove](https://help.syncfusion.com/
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Remove-and-modify-the-named-destination-in-a-PDF/.NET/Remove-and-modify-the-named-destination-in-a-PDF/Program.cs" %}	
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Barcode.pdf", FileMode.Open, FileAccess.Read);
@@ -258,7 +258,7 @@ The following code example shows how to add named destination to the [Bookmarks]
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Named%20Destination/Adding-named-destination-to-the-bookmarks/.NET/Adding-named-destination-to-the-bookmarks/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();

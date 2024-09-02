@@ -13,7 +13,7 @@ Refer to the following code snippet to extract the images from a PDF page.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Image%20Extraction/Extract-images-from-a-PDF-pages/.NET/Extract-images-from-a-PDF-pages/Program.cs" %}
 
 //Load an existing PDF
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -70,7 +70,7 @@ Refer to the following code snippet to extract the image info from a PDF page.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/.NET/Extract-the-image-info-from-a-PDF-page/Program.cs" %}
 
 //Load an existing PDF
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -123,7 +123,7 @@ The following code example illustrates how to extract images from an entire PDF 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Image%20Extraction/Extract-images-from-PDF-documents/.NET/Extract-images-from-PDF-documents/Program.cs" %}
 
 //Get stream from an existing PDF document.
 FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
