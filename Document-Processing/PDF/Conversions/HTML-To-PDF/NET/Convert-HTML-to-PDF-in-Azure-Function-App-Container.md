@@ -1,5 +1,5 @@
 ---
-title: Convert HTML to PDF in Azure Function App container in Linux| Syncfusion
+title: HTML to PDF in Azure Function App container in Linux| Syncfusion
 description: Learn how to convert HTML to PDF in Azure Function App container in Linux with easy steps using Syncfusion .NET Core HTML to PDF converter library.
 platform: document-processing
 control: PDF
@@ -14,10 +14,10 @@ N> HTML to PDF converter is not supported with Azure App Service windows. We int
 
 ## Steps to convert HTML to PDF in Azure Function App container in Linux
 
-Step 1: Create the Azure function project using visual studio template.
+Step 1: Create the Azure function project using Visual Studio template.
 ![Convert HTMLToPDF Azure Functions Step1](Azure_images/Azure-function/AzureFunctions1.png)
 
-Step 2: Select the .NET version and tigger method.
+Step 2: Select the .NET version.
 ![Convert HTMLToPDF Azure Docker Step2](Azure_images/Azure-function/AzureFunctions5.png)
 
 Step 3: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
