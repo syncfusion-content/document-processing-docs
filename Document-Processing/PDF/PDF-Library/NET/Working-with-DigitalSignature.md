@@ -18,7 +18,7 @@ The following code example explains how to add a digital signature to the PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-the-PDF-document/.NET/Add-a-digital-signature-to-the-PDF-document/Program.cs" %}	
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -127,7 +127,7 @@ The following code example illustrates how to add a digital signature in the PDF
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-an-existing-document/.NET/Add-a-digital-signature-to-an-existing-document/Program.cs" %} 	
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -236,7 +236,7 @@ You can add a digital signature to an existing document as follows.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-a-digital-signature-to-an-existing-document/.NET/Add-a-digital-signature-to-an-existing-document/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -326,7 +326,7 @@ The following code example illustrates how to add digital signature in a PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-digital-signature-using-X509Certificate2/.NET/Add-digital-signature-using-X509Certificate2/Program.cs" %} 	
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -440,7 +440,7 @@ You can load the signature field from the existing PDF document using [PdfLoaded
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Signing-an-existing-PDF-document/.NET/Signing-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -520,7 +520,7 @@ You can load the signature field from an existing PDF document using [PdfLoadedS
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -609,7 +609,7 @@ The following code example shows how to sign the PDF document from an external s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Externally-sign-a-PDF-document/.NET/Externally-sign-a-PDF-document/Program.cs" %} 
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
@@ -721,7 +721,7 @@ The following code example shows how to sign the PDF document from external sign
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/.NET/Externally-sign-the-PDF-document/Program.cs" %} 	
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
@@ -915,7 +915,7 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Create-LTV-when-signing-PDF-documents-externally/.NET/Create-LTV-when-signing-PDF-documents-externally/Program.cs" %} 	
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
@@ -1024,7 +1024,7 @@ The following code example shows how to sign a PDF document with LTA using [Time
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign_PDF_with_LTA/.NET/Sign_PDF_with_LTA/Program.cs" %} 	
 
 //Load existing PDF document.
 FileStream documentStream1 = new FileStream("PDF_Succinctly.pdf", FileMode.Open, FileAccess.Read);
@@ -1154,7 +1154,7 @@ The following code example shows how to create a PDF digital signature using the
 
 {% tabs %}
 
-{% highlight c# tabtitle="ASP.NET Core" %}
+{% highlight c# tabtitle="C#" %}
 
 //Initialize the Windows store.
 X509Store store = new X509Store("MY", StoreLocation.CurrentUser);
@@ -1257,7 +1257,7 @@ Refer to the following code sample.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-signature-validation-appearance-in-a-PDF/.NET/Adding-a-signature-validation-appearance-in-a-PDF/Program.cs" %} 
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1371,7 +1371,7 @@ Essential PDF allows you to add timestamp in the digital signature of the PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-in-digital-signature-of-PDF/.NET/Adding-a-timestamp-in-digital-signature-of-PDF/Program.cs" %} 
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1489,7 +1489,7 @@ You can add timestamp to the PDF document using [TimeStampServer](https://help.s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-to-PDF-document/.NET/Adding-a-timestamp-to-PDF-document/Program.cs" %} 	
 
 //Create a new pdf document
 PdfDocument document = new PdfDocument();
@@ -1562,7 +1562,7 @@ You can add timestamp to the existing PDF document using [TimeStampServer](https
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-timestamp-to-an-existing-PDF/.NET/Adding-a-timestamp-to-an-existing-PDF/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1646,7 +1646,7 @@ You can get the above certificate details from an existing signed PDF document u
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-certificate-details-from-an-existing-PDF/.NET/Retrieve-certificate-details-from-an-existing-PDF/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1751,7 +1751,7 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Enable-LTV-PDF-signature/.NET/Enable-LTV-PDF-signature/Program.cs" %} 	
 
 //Creates a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1880,7 +1880,7 @@ The following code example explains how to add a digital signature with [cryptog
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-a-digital-signature-with-CAdES-format/.NET/Adding-a-digital-signature-with-CAdES-format/Program.cs" %} 
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2010,7 +2010,7 @@ The following code example explains how to add a digital signature with various 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Add-digital-signature-with-digest-algorithm/.NET/Add-digital-signature-with-digest-algorithm/Program.cs" %} 	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2143,117 +2143,189 @@ The following code example explains how to validate the digitally signed PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET/Validate-the-digitally-signed-PDF-signature/Program.cs" %} 	
 
-//Get the stream from the document
-FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load an existing signed PDF document
+//Get the stream from the document.
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load an existing signed PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
-//Get signature field
+
+//Get signature field.
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 
-//X509Certificate2Collection to check the signer's identity using root certificates
+//X509Certificate2Collection to check the signer's identity using root certificates.
 X509CertificateCollection collection = new X509CertificateCollection();
-//Creates a certificate instance from PFX file with private key
-FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read);
+
+//Creates a certificate instance from PFX file with private key.
+FileStream certificateStream = new FileStream(Path.GetFullPath(@"Data/PDF.pfx"), FileMode.Open, FileAccess.Read);
 byte[] data = new byte[certificateStream.Length];
 certificateStream.Read(data, 0, data.Length);
-//Create new X509Certificate2 with the root certificate
-X509Certificate2 certificate = new X509Certificate2(data, "password123");
-//Add the certificate to the collection
+
+//Create new X509Certificate2 with the root certificate.
+X509Certificate2 certificate = new X509Certificate2(data, "syncfusion");
+
+//Add the certificate to the collection.
 collection.Add(certificate);
 
-//Validate signature and get the validation result
+//Validate signature and get the validation result.
 PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
-//Checks whether the signature is valid or not
+
+//Checks whether the signature is valid or not.
 SignatureStatus status = result.SignatureStatus;
-//Checks whether the document is modified or not
+
+//Checks whether the document is modified or not.
 bool isModified = result.IsDocumentModified;
-//Signature details
+
+Console.WriteLine("Document modified: " + isModified);
+
+//Signature details.
 string issuerName = signatureField.Signature.Certificate.IssuerName;
 DateTime validFrom = signatureField.Signature.Certificate.ValidFrom;
 DateTime validTo = signatureField.Signature.Certificate.ValidTo;
 string signatureAlgorithm = result.SignatureAlgorithm;
 DigestAlgorithm digestAlgorithm = result.DigestAlgorithm;
-//Revocation validation details
+
+Console.WriteLine("Issuer Name: " + issuerName);
+Console.WriteLine("Valid From: " + validFrom);
+Console.WriteLine("Valid To: " + validTo);
+Console.WriteLine("Signature Algorithm: " + signatureAlgorithm);
+Console.WriteLine("Digest Algorithm: " + digestAlgorithm);
+
+//Revocation validation details.
 RevocationResult revocationDetails = result.RevocationResult;
 RevocationStatus revocationStatus = revocationDetails.OcspRevocationStatus;
 bool isRevokedCRL = revocationDetails.IsRevokedCRL;
 
-//Close the document
+Console.WriteLine("Revocation Status: " + revocationStatus);
+Console.WriteLine("Is Revoked CRL: " + isRevokedCRL);
+
+//Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load an existing signed PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Get signature field
+//Get the stream from the document.
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load an existing signed PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+
+//Get signature field.
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 
-//X509Certificate2Collection to check the signer's identity using root certificates
+//X509Certificate2Collection to check the signer's identity using root certificates.
 X509CertificateCollection collection = new X509CertificateCollection();
-//Create new X509Certificate2 with the root certificate
-X509Certificate2 certificate = new X509Certificate2("PDF.pfx", "password123");
-//Add the certificate to the collection
+
+//Creates a certificate instance from PFX file with private key.
+FileStream certificateStream = new FileStream(Path.GetFullPath(@"Data/PDF.pfx"), FileMode.Open, FileAccess.Read);
+byte[] data = new byte[certificateStream.Length];
+certificateStream.Read(data, 0, data.Length);
+
+//Create new X509Certificate2 with the root certificate.
+X509Certificate2 certificate = new X509Certificate2(data, "syncfusion");
+
+//Add the certificate to the collection.
 collection.Add(certificate);
 
-//Validate signature and get the validation result
+//Validate signature and get the validation result.
 PdfSignatureValidationResult result = signatureField.ValidateSignature(collection);
-//Checks whether the signature is valid or not
+
+//Checks whether the signature is valid or not.
 SignatureStatus status = result.SignatureStatus;
-//Checks whether the document is modified or not
+
+//Checks whether the document is modified or not.
 bool isModified = result.IsDocumentModified;
-//Signature details
+
+Console.WriteLine("Document modified: " + isModified);
+
+//Signature details.
 string issuerName = signatureField.Signature.Certificate.IssuerName;
 DateTime validFrom = signatureField.Signature.Certificate.ValidFrom;
 DateTime validTo = signatureField.Signature.Certificate.ValidTo;
 string signatureAlgorithm = result.SignatureAlgorithm;
 DigestAlgorithm digestAlgorithm = result.DigestAlgorithm;
-//Revocation validation details
+
+Console.WriteLine("Issuer Name: " + issuerName);
+Console.WriteLine("Valid From: " + validFrom);
+Console.WriteLine("Valid To: " + validTo);
+Console.WriteLine("Signature Algorithm: " + signatureAlgorithm);
+Console.WriteLine("Digest Algorithm: " + digestAlgorithm);
+
+//Revocation validation details.
 RevocationResult revocationDetails = result.RevocationResult;
 RevocationStatus revocationStatus = revocationDetails.OcspRevocationStatus;
 bool isRevokedCRL = revocationDetails.IsRevokedCRL;
 
-//Close the document
+Console.WriteLine("Revocation Status: " + revocationStatus);
+Console.WriteLine("Is Revoked CRL: " + isRevokedCRL);
+
+//Close the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load an existing signed PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-'Get signature field
+' Get the stream from the document.
+Dim documentStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+' Load an existing signed PDF document.
+Dim loadedDocument As New PdfLoadedDocument(documentStream)
+
+' Get signature field.
 Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
 
-'X509Certificate2Collection to check the signer's identity using root certificates
-Dim collection As X509CertificateCollection = New X509CertificateCollection()
-'Create new X509Certificate2 with the root certificate
-Dim certificate As X509Certificate2 = New X509Certificate2("PDF.pfx", "password123")
-'Add the certificate to the collection
+' X509Certificate2Collection to check the signer's identity using root certificates.
+Dim collection As New X509CertificateCollection()
+
+' Creates a certificate instance from PFX file with private key.
+Dim certificateStream As New FileStream(Path.GetFullPath("Data/PDF.pfx"), FileMode.Open, FileAccess.Read)
+Dim data(CInt(certificateStream.Length) - 1) As Byte
+certificateStream.Read(data, 0, data.Length)
+
+' Create new X509Certificate2 with the root certificate.
+Dim certificate As New X509Certificate2(data, "syncfusion")
+
+' Add the certificate to the collection.
 collection.Add(certificate)
 
-'Validate signature and get the validation result
+' Validate signature and get the validation result.
 Dim result As PdfSignatureValidationResult = signatureField.ValidateSignature(collection)
-'Checks whether the signature is valid or not
+
+' Checks whether the signature is valid or not.
 Dim status As SignatureStatus = result.SignatureStatus
-'Checks whether the document is modified or not
+
+' Checks whether the document is modified or not.
 Dim isModified As Boolean = result.IsDocumentModified
-'Signature details
+
+Console.WriteLine("Document modified: " & isModified)
+
+' Signature details.
 Dim issuerName As String = signatureField.Signature.Certificate.IssuerName
 Dim validFrom As DateTime = signatureField.Signature.Certificate.ValidFrom
 Dim validTo As DateTime = signatureField.Signature.Certificate.ValidTo
 Dim signatureAlgorithm As String = result.SignatureAlgorithm
 Dim digestAlgorithm As DigestAlgorithm = result.DigestAlgorithm
-'Revocation validation details
+
+Console.WriteLine("Issuer Name: " & issuerName)
+Console.WriteLine("Valid From: " & validFrom)
+Console.WriteLine("Valid To: " & validTo)
+Console.WriteLine("Signature Algorithm: " & signatureAlgorithm)
+Console.WriteLine("Digest Algorithm: " & digestAlgorithm)
+
+' Revocation validation details.
 Dim revocationDetails As RevocationResult = result.RevocationResult
 Dim revocationStatus As RevocationStatus = revocationDetails.OcspRevocationStatus
 Dim isRevokedCRL As Boolean = revocationDetails.IsRevokedCRL
 
-'Close the document
-loadedDocument.Close(true)
+Console.WriteLine("Revocation Status: " & revocationStatus)
+Console.WriteLine("Is Revoked CRL: " & isRevokedCRL)
+
+' Close the document.
+loadedDocument.Close(True)
 
 {% endhighlight %}
 
@@ -2271,7 +2343,7 @@ The following code example explains how to validate all the signatures in digita
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-all-signatures-in-digitally-signed-PDF/.NET/Validate-all-signatures-in-digitally-signed-PDF/Program.cs" %} 
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -2291,7 +2363,7 @@ collection.Add(certificate);
 //Validate all signatures in loaded PDF document and get the list of validation result
 List<PdfSignatureValidationResult> results;
 bool isValid = loadedDocument.Form.Fields.ValidateSignatures(collection, out results);
-
+Console.WriteLine("All signatures in the document are valid: " + isValid);
 //Close the document
 loadedDocument.Close(true);
 
@@ -2311,7 +2383,7 @@ collection.Add(certificate);
 //Validate all signatures in loaded PDF document and get the list of validation result
 List<PdfSignatureValidationResult> results;
 bool isValid = loadedDocument.Form.Fields.ValidateSignatures(collection, out results);
-
+Console.WriteLine("All signatures in the document are valid: " + isValid);
 //Close the document
 loadedDocument.Close(true);
 
@@ -2331,7 +2403,7 @@ collection.Add(certificate)
 'Validate all signatures in loaded PDF document and get the list of validation result
 Dim results As List(Of PdfSignatureValidationResult)
 Dim isValid As Boolean = loadedDocument.Form.Fields.ValidateSignatures(collection, results)
-
+Console.WriteLine("All signatures in the document are valid: " + isValid);
 'Close the document
 loadedDocument.Close(true)
 
@@ -2352,7 +2424,7 @@ Steps for deferred signing:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Get the stream from the document.
 FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
@@ -2702,7 +2774,7 @@ The following code sample shows how to add the estimated size of the signature i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Adding-the-estimated-size-of-the-signature/.NET/Adding-the-estimated-size-of-the-signature/Program.cs" %} 
 
 //Creating a new PDF Document. 
 PdfDocument document = new PdfDocument();
@@ -2794,7 +2866,7 @@ Steps for deferred signing:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" %} 	
 
 //Get the stream from a document.
 FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
@@ -3079,7 +3151,7 @@ The following code example illustrates how to draw text/images in a digital appe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Draw-text-or-images-in-the-signature-appearance/.NET/Draw-text-or-images-in-the-signature-appearance/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3189,74 +3261,108 @@ Added support for LTV validation and getting CRL and OCSP embedded details from 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-LTV-information/.NET/Get-LTV-information/Program.cs" %} 	
 
-//Gets the stream from the document.
-FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Loads an existing signed PDF document.
+//Gets the stream from the document
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Loads an existing signed PDF document
 PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
 
-//Gets the signature field.
+// Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
-//Validates signature and get validation result.
+
+// Validates signature and get validation result
 PdfSignatureValidationResult result = signatureField.ValidateSignature();
-//Gets the LTV verification Information.
+
+// Gets the LTV verification Information.
 LtvVerificationInfo ltvVerificationInfo = result.LtvVerificationInfo;
-//Checks whether the signature document LTV is enabled.
+
+// Checks whether the signature document LTV is enabled.
 bool isLtvEnabled = ltvVerificationInfo.IsLtvEnabled;
-//Checks whether the signature document has CRL embedded.
+
+// Checks whether the signature document has CRL embedded.
 bool isCrlEmbedded = ltvVerificationInfo.IsCrlEmbedded;
-//Checks whether the signature document has OCSP embedded.
+
+// Checks whether the signature document has OCSP embedded.
 bool isOcspEmbedded = ltvVerificationInfo.IsOcspEmbedded;
 
-//Close the document.
+Console.WriteLine("LTV enabled: " + isLtvEnabled);
+Console.WriteLine("CRL embedded: " + isCrlEmbedded);
+Console.WriteLine("OCSP embedded: " + isOcspEmbedded);
+
+// Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Loads an existing document.
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Gets the stream from the document
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
-//Gets the signature field.
+//Loads an existing signed PDF document
+PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+
+// Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
-//Validates signature and gets the validation result.
+
+// Validates signature and get validation result
 PdfSignatureValidationResult result = signatureField.ValidateSignature();
-//Gets the LTV Verification Information.
+
+// Gets the LTV verification Information.
 LtvVerificationInfo ltvVerificationInfo = result.LtvVerificationInfo;
-//Checks whether the signature document LTV is enabled.
+
+// Checks whether the signature document LTV is enabled.
 bool isLtvEnabled = ltvVerificationInfo.IsLtvEnabled;
-//Checks whether the signature document has CRL embedded.
+
+// Checks whether the signature document has CRL embedded.
 bool isCrlEmbedded = ltvVerificationInfo.IsCrlEmbedded;
-//Checks whether the signature document has OCSP embedded.
+
+// Checks whether the signature document has OCSP embedded.
 bool isOcspEmbedded = ltvVerificationInfo.IsOcspEmbedded;
 
-//Close the document.
+Console.WriteLine("LTV enabled: " + isLtvEnabled);
+Console.WriteLine("CRL embedded: " + isCrlEmbedded);
+Console.WriteLine("OCSP embedded: " + isOcspEmbedded);
+
+// Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Loads an existing document
-Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+' Gets the stream from the document
+Dim documentStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
 
-'Gets the signature field
+' Loads an existing signed PDF document
+Dim document As New PdfLoadedDocument(documentStream)
+
+' Gets the signature field
 Dim signatureField As PdfLoadedSignatureField = TryCast(document.Form.Fields(0), PdfLoadedSignatureField)
-'Validate signature and get validation result
+
+' Validates signature and get validation result
 Dim result As PdfSignatureValidationResult = signatureField.ValidateSignature()
-'Gets the LTV Verification Information
+
+' Gets the LTV verification Information.
 Dim ltvVerificationInfo As LtvVerificationInfo = result.LtvVerificationInfo
-'Checks whether the signature document LTV is enabled
+
+' Checks whether the signature document LTV is enabled.
 Dim isLtvEnabled As Boolean = ltvVerificationInfo.IsLtvEnabled
-'Checks whether the signature document has CRL embedded
+
+' Checks whether the signature document has CRL embedded.
 Dim isCrlEmbedded As Boolean = ltvVerificationInfo.IsCrlEmbedded
-'Checks whether the signature document has OCSP embedded
+
+' Checks whether the signature document has OCSP embedded.
 Dim isOcspEmbedded As Boolean = ltvVerificationInfo.IsOcspEmbedded
 
-'Close the document
-document.Close(true)
+Console.WriteLine("LTV enabled: " & isLtvEnabled)
+Console.WriteLine("CRL embedded: " & isCrlEmbedded)
+Console.WriteLine("OCSP embedded: " & isOcspEmbedded)
+
+' Closes the document
+document.Close(True)
 
 {% endhighlight %}
 
@@ -3270,62 +3376,105 @@ Added support to customize revocation validation using [PdfSignatureValidationOp
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}		
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customized-revocation-validation/.NET/Customized-revocation-validation/Program.cs" %} 		
 
 //Gets the stream from the document
-FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
 //Loads an existing signed PDF document
 PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
 
-//Gets the signature field
+// Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
-//Signature validation options
+
+// Signature validation options
 PdfSignatureValidationOptions options = new PdfSignatureValidationOptions();
-//Sets the revocation type
+
+// Sets the revocation type
 options.RevocationValidationType = RevocationValidationType.Crl;
-//Validate signature and get validation result
+
+// Validate signature and get validation result
 PdfSignatureValidationResult result = signatureField.ValidateSignature(options);
 
-//Close the document
+//Check whether the CRL is revoked
+if (result.RevocationResult.IsRevokedCRL)
+{
+    Console.WriteLine("CRL is revoked");
+}
+else
+{
+    Console.WriteLine("CRL is not revoked");
+}
+
+// Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Loads an existing document
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Gets the stream from the document
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
-//Gets the signature field
+//Loads an existing signed PDF document
+PdfLoadedDocument document = new PdfLoadedDocument(documentStream);
+
+// Gets the signature field
 PdfLoadedSignatureField signatureField = document.Form.Fields[0] as PdfLoadedSignatureField;
-//Signature validation options
+
+// Signature validation options
 PdfSignatureValidationOptions options = new PdfSignatureValidationOptions();
-//Sets the revocation type
+
+// Sets the revocation type
 options.RevocationValidationType = RevocationValidationType.Crl;
-//Validate signature and get validation result
+
+// Validate signature and get validation result
 PdfSignatureValidationResult result = signatureField.ValidateSignature(options);
 
-//Close the document
+//Check whether the CRL is revoked
+if (result.RevocationResult.IsRevokedCRL)
+{
+    Console.WriteLine("CRL is revoked");
+}
+else
+{
+    Console.WriteLine("CRL is not revoked");
+}
+
+// Closes the document
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Loads an existing document
-Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+' Gets the stream from the document
+Dim documentStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
 
-'Gets the signature field
+' Loads an existing signed PDF document
+Dim document As New PdfLoadedDocument(documentStream)
+
+' Gets the signature field
 Dim signatureField As PdfLoadedSignatureField = TryCast(document.Form.Fields(0), PdfLoadedSignatureField)
-'Signature validation options
-Dim options As PdfSignatureValidationOptions = New PdfSignatureValidationOptions()
-'Sets the revocation type
+
+' Signature validation options
+Dim options As New PdfSignatureValidationOptions()
+
+' Sets the revocation type
 options.RevocationValidationType = RevocationValidationType.Crl
-'Validates signature and gets the validation result
+
+' Validate signature and get validation result
 Dim result As PdfSignatureValidationResult = signatureField.ValidateSignature(options)
 
-'Close the document
-document.Close(true)
+' Check whether the CRL is revoked
+If result.RevocationResult.IsRevokedCRL Then
+    Console.WriteLine("CRL is revoked")
+Else
+    Console.WriteLine("CRL is not revoked")
+End If
+
+' Closes the document
+document.Close(True)
 
 {% endhighlight %}
 
@@ -3339,7 +3488,7 @@ The following code example illustrates how to remove existing digital signatures
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Remove_existing_digital_signature_from_PDF/.NET/Remove_existing_digital_signature_from_PDF/Program.cs" %} 
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3407,7 +3556,7 @@ The following code snippet illustrates how to sign a PDF document without showin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Sign-PDF-without-showing-digital-signature/.NET/Sign-PDF-without-showing-digital-signature/Program.cs" %} 
 
 //Get stream from an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3494,7 +3643,7 @@ The following code snippet illustrates how to retrieve digital signature informa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-digital-signature-information-from-PDF/.NET/Retrieve-digital-signature-information-from-PDF/Program.cs" %} 
 
 //Get stream from an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3570,7 +3719,7 @@ N> It is recommended to use licensed assemblies or registered license keys in yo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream("SignatureFields.pdf", FileMode.Open, FileAccess.Read);
@@ -3724,7 +3873,7 @@ The following code example illustrates how to retrieve revocation certificate in
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-revocation-certificate-information/.NET/Retrieve-revocation-certificate-information/Program.cs" %} 
 
 //Load an existing signed PDF document.
 FileStream documentStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3885,7 +4034,7 @@ The following code example illustrates how to retrieve signed revision informati
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-signed-revision-information/.NET/Retrieve-signed-revision-information/Program.cs" %} 
 
 //Load an existing PDF document.
 FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -3955,7 +4104,7 @@ The following code example illustrates how to retrieve revocation certificate in
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Retrieve-revocation-certificate-information-from-digital-signature-embed-timestamp/.NET/Program.cs" %} 
 
 //Load an existing PDF document.
 FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
@@ -4011,7 +4160,7 @@ Utilize the **GetImages** method within the [PdfLoadedSignatureField](https://he
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Get-images-from-the-existing-signed-signature-field/.NET/Get-images-from-the-existing-signed-signature-field/Program.cs" %} 
 
 //Load an existing PDF file.
 FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -4073,7 +4222,7 @@ Effortlessly Integrate **signature and timestamp** certificates into the Documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Loads an existing document
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");

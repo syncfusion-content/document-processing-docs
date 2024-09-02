@@ -18,7 +18,7 @@ The below code illustrates how to draw the text watermark in new PDF document us
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Adding-text-watermark-in-PDF-document/.NET/Adding-text-watermark-in-PDF-document/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -107,7 +107,7 @@ The below code illustrates how to draw the text watermark in an existing PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Add-text-watermark-in-an-existing-PDF-document/.NET/Add-text-watermark-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -201,7 +201,7 @@ The below code sample illustrates how to add image watermark in PDF document, us
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Adding-image-watermark-in-PDF-document/.NET/Adding-image-watermark-in-PDF-document/Program.cs" %} 	
 
 //Create a new PDF document.
 PdfDocument pdfDocument = new PdfDocument();
@@ -289,7 +289,7 @@ The below code illustrates how to draw the image watermark in existing PDF docum
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Draw-the-image-watermark-in-an-existing-PDF-document/.NET/Draw-the-image-watermark-in-an-existing-PDF-document/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -380,7 +380,7 @@ A watermark annotation is used to represent graphics that are expected to be pri
 The following code example explains how to add a watermark annotation in the PDF document
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Add-watermark-annotation-in-the-PDF-document/.NET/Add-watermark-annotation-in-the-PDF-document/Program.cs" %} 
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -458,7 +458,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can remove the Watermark annotation from the annotation collection, represented by the [PdfLoadedAnnotationCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html) of the loaded page. The following code illustrates this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Removing-watermark-annotation-in-PDF-document/.NET/Remove-watermark-annotation-in-the-PDF-document/Program.cs" %} 
 
     //Load the PDF document
     FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);

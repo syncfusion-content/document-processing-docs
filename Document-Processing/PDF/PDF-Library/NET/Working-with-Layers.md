@@ -18,7 +18,7 @@ Essential PDF allows the users to create a layer in a PDF page using [PdfPageLay
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Adding-layers-in-a-PDF-document/.NET/Adding-layers-in-a-PDF-document/Program.cs" %}
 
 //Create PDF document.
 PdfDocument document = new PdfDocument();
@@ -124,7 +124,7 @@ The below code illustrates how to add the multiple layers in an existing PDF doc
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-the-multiple-layers-in-an-existing-PDF-document/.NET/Add-the-multiple-layers-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -233,7 +233,7 @@ Essential PDF allows the users to add different types of [Annotation](https://he
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Adding-annotation-to-layer-in-the-PDF-document/.NET/Adding-annotation-to-layer-in-the-PDF-document/Program.cs" %}
 
 //Create new PDF document
 PdfDocument document = new PdfDocument();
@@ -336,7 +336,7 @@ The following code illustrates how to add annotation to the layers in an existin
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-annotation-to-the-layer-in-an-existing-PDF-document/.NET/Add-annotation-to-the-layer-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -442,7 +442,7 @@ Essential PDF allows users to add nested layers in the PDF document by adding ch
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-nested-layers-in-the-PDF-document/.NET/Add-nested-layers-in-the-PDF-document/Program.cs" %}
 
 //Create the PDF document
 PdfDocument document = new PdfDocument();
@@ -555,7 +555,7 @@ You can remove the layers using [RemoveAt](https://help.syncfusion.com/cr/docume
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Removing-layers-from-an-existing-PDF-document/.NET/Removing-layers-from-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -631,7 +631,7 @@ You can flatten a layer in a PDF document by removing it from the [PdfDocumentLa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Flattening-the-layers-in-an-existing-PDF-document/.NET/Flattening-the-layers-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the existing PDF document
 FileStream inputStream = new FileStream("Layers.pdf", FileMode.Open);
@@ -700,7 +700,7 @@ The below code illustrates how to toggle the visibility of layers in new PDF doc
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Toggle-the-visibility-of-layers-in-new-PDF-document/.NET/Toggle-the-visibility-of-layers-in-new-PDF-document/Program.cs" %}
 
 //Create the document
 PdfDocument document = new PdfDocument();
@@ -810,7 +810,7 @@ The following code illustrates how to toggle the visibility of layers in an exis
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Toggle-the-visibility-of-layers-in-an-existing-PDF/.NET/Toggle-the-visibility-of-layers-in-an-existing-PDF/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -882,7 +882,7 @@ The following code sample shows how to add a lock state to the layer in a new PD
  
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Layer/Add-a-lock-state-to-the-layer-in-a-new-PDF-document/.NET/Add-a-lock-state-to-the-layer-in-a-new-PDF-document/Program.cs" %}	
 
 //Creating a new PDF document. 
 PdfDocument document = new PdfDocument();

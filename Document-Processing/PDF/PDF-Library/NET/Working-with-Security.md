@@ -19,7 +19,7 @@ User password: Prevents people from opening or viewing a PDF document. Once the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-RC4-using-user-password/.NET/Encrypt-PDF-with-RC4-using-user-password/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -117,7 +117,7 @@ Owner password: Sets PDF document restrictions, which can include printing, cont
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-RC4-using-owner-password/.NET/Encrypt-PDF-with-RC4-using-owner-password/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -222,7 +222,7 @@ You can encrypt PDF document by specifying the [Algorithm](https://help.syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-AES-using-user-password/.NET/Encrypt-PDF-with-AES-using-user-password/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -316,7 +316,7 @@ You can protect the PDF document from printing, editing, copying with the [Owner
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-AES-using-owner-password/.NET/Encrypt-PDF-with-AES-using-owner-password/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -433,7 +433,7 @@ You can encrypt all the PDF content by specifying the [EncryptionOptions](https:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-all-contents-of-the-PDF-document/.NET/Encrypt-all-contents-of-the-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -539,7 +539,7 @@ N> Encrypt all contents except metadata  is only supported in AES algorithms wit
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-all-contents-except-metadata-of-the-PDF/.NET/Encrypt-all-contents-except-metadata-of-the-PDF/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -645,7 +645,7 @@ N> [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-only-attachment-in-the-PDF-document/.NET/Encrypt-only-attachment-in-the-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -779,20 +779,22 @@ The following code example explains how to load an encrypt-only-attachment docum
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Load-an-encrypt-only-attachment-document/.NET/Load-an-encrypt-only-attachment-document/Program.cs" %}
 
-//Load the PDF document.            
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
-PdfLoadedDocument document = new PdfLoadedDocument(docStream,"password");
+//Get the stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument(docStream, "password");
 
 //Accessing the attachments.
-foreach(PdfAttachment attachment in document.Attachments)
+foreach (PdfAttachment attachment in document.Attachments)
 {
-  FileStream  stream = new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}                      
-
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+    stream.Dispose();
+}
+    
 //Close the document.
 document.Close(true);
 
@@ -800,17 +802,20 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf","password");
-            
-//Accessing the attachments.
-foreach(PdfAttachment attachment in document.Attachments)
-{
-  FileStream stream = new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}         
+//Get the stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
+//Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument(docStream, "password");
+
+//Accessing the attachments.
+foreach (PdfAttachment attachment in document.Attachments)
+{
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+    stream.Dispose();
+}
+    
 //Close the document.
 document.Close(true);
 
@@ -818,18 +823,21 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the PDF document.
-Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf", "password")
-             
-'Accessing the attachments.
+' Get the stream from an existing PDF document. 
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+' Load the PDF document.
+Dim document As New PdfLoadedDocument(docStream, "password")
+
+' Accessing the attachments.
 For Each attachment As PdfAttachment In document.Attachments
-  Dim stream = New FileStream(attachment.FileName, FileMode.Create)
-  stream.Write(attachment.Data, 0, attachment.Data.Length)
-  stream.Dispose
+    Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
+    stream.Write(attachment.Data, 0, attachment.Data.Length)
+    stream.Dispose()
 Next
 
-'Close the document.
-document.Close(true)
+' Close the document.
+document.Close(True)
 
 {% endhighlight %}
 
@@ -843,76 +851,92 @@ The following code example illustrates how to provide the password when accessin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Set-user-password-when-accessing-the-attachment/.NET/Set-user-password-when-accessing-the-attachment/Program.cs" %}
+
+//Get stream from an existing PDF document.  
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
 PdfLoadedDocument document = new PdfLoadedDocument(docStream);
-document.OnPdfPassword += LDoc_OnPdfPassword;
+
+document.OnPdfPassword += Document_OnPdfPassword;
 
 //Accessing the attachments.
-foreach(PdfAttachment  attachment in document.Attachments)
+foreach (PdfAttachment attachment in document.Attachments)
 {
-  FileStream  stream= new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}                      
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+
+    stream.Dispose();
+}
 
 //Close the document.
 document.Close(true);
-	
-//Provide the user password in event.
-private static void LDoc_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
+
+//Provide the user password in event. 
+void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-  args.UserPassword = "syncfusion";
+    args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+//Get stream from an existing PDF document.  
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
 //Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
-document.OnPdfPassword += LDoc_OnPdfPassword;
+PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+
+document.OnPdfPassword += Document_OnPdfPassword;
 
 //Accessing the attachments.
-foreach(PdfAttachment attachment in document.Attachments)
+foreach (PdfAttachment attachment in document.Attachments)
 {
-  FileStream stream= new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}                      
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+
+    stream.Dispose();
+}
 
 //Close the document.
 document.Close(true);
-	
-//Provide the user password in event.
-private static void LDoc_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
+
+//Provide the user password in event. 
+void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-  args.UserPassword = "syncfusion";
+    args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the PDF document.         
-Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-AddHandler document.OnPdfPassword, AddressOf LDoc_OnPdfPassword
+' Get stream from an existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
 
-'Accessing the attachments.
+' Load the PDF document.
+Dim document As New PdfLoadedDocument(docStream)
+
+' Add the event handler for PDF password.
+AddHandler document.OnPdfPassword, AddressOf Document_OnPdfPassword
+
+' Accessing the attachments.
 For Each attachment As PdfAttachment In document.Attachments
-  Dim stream As FileStream = New FileStream(attachment.FileName, FileMode.Create)
-  stream.Write(attachment.Data, 0, attachment.Data.Length)
-  stream.Dispose()
+    Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
+    stream.Write(attachment.Data, 0, attachment.Data.Length)
+    stream.Dispose()
 Next
 
-'Close the document.
+' Close the document.
 document.Close(True)
 
-'Provide the user password in event.
-Private Sub LDoc_OnPdfPassword(ByVal sender As Object, ByVal args As OnPdfPasswordEventArgs)
-  args.UserPassword = "password"
+' Provide the user password in event.
+Private Sub Document_OnPdfPassword(sender As Object, args As OnPdfPasswordEventArgs)
+    args.UserPassword = "syncfusion"
 End Sub
 
 {% endhighlight %}
@@ -929,7 +953,7 @@ N> [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Protect-attachments-in-existing-PDF-document/.NET/Protect-attachments-in-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
@@ -1007,7 +1031,7 @@ You can protect an existing PDF document with both [UserPassword](https://help.s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Protect-an-existing-PDF-document/.NET/Protect-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1082,7 +1106,7 @@ You can change the [UserPassword](https://help.syncfusion.com/cr/document-proces
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Change-password-of-the-PDF-document/.NET/Change-password-of-the-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1136,7 +1160,7 @@ You can change the permission of the PDF document using the [Permissions](https:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Change-the-permission-of-the-PDF-document/.NET/Change-the-permission-of-the-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1188,7 +1212,7 @@ You can remove the [UserPassword](https://help.syncfusion.com/cr/document-proces
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Remove-password-from-user-password-PDF-document/.NET/Remove-password-from-user-password-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1242,7 +1266,7 @@ You can determine whether the existing PDF document is password protected or not
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Determine-whether-the-PDF-is-protected-or-not/.NET/Determine-whether-the-PDF-is-protected-or-not/Program.cs" %}
 
 try
 {

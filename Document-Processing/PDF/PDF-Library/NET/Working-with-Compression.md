@@ -37,7 +37,7 @@ The following example code snippet illustrates how to compress the images in exi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Compress-the-images-in-an-existing-PDF-document/.NET/Compress-the-images-in-an-existing-PDF-document/Program.cs" %} 	
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -127,7 +127,7 @@ The following example code snippet illustrates how to optimize embedded font in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Optimize-embedded-font-in-an-existing-PDF-document/.NET/Optimize-embedded-font-in-an-existing-PDF-document/Program.cs" %}	
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -213,7 +213,7 @@ The following example code snippet illustrates how to optimize page contents in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Optimize-page-contents-in-an-existing-PDF-document/.NET/Optimize-page-contents-in-an-existing-PDF-document/Program.cs" %}
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -297,7 +297,7 @@ The following example code snippet illustrates how to optimize page contents in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Reduce-PDF-file-size-by-removing-PDF-metadata/.NET/Reduce-PDF-file-size-by-removing-PDF-metadata/Program.cs" %}	
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -386,7 +386,7 @@ The following code snippet illustrates how to compress the content of the PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Compress-the-content-of-the-PDF-document/.NET/Compress-the-content-of-the-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();

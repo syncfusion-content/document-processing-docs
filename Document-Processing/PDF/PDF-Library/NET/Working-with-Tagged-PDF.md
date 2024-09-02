@@ -26,7 +26,7 @@ The following code sample explains you how to add tag for the text element in PD
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tag-for-the-text-element-in-PDF-document/.NET/Add-tag-for-the-text-element-in-PDF-document/Program.cs" %} 
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -146,7 +146,7 @@ The following code explains how to add tag for image element in PDF document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tag-for-image-element-in-PDF-document/.NET/Add-tag-for-image-element-in-PDF-document/Program.cs" %} 
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -256,7 +256,7 @@ The following code explains how to add tag for shape element in the PDF document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Adding-tag-to-shape-element-in-the-PDF-document/.NET/Adding-tag-to-shape-element-in-the-PDF-document/Program.cs" %} 
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -367,7 +367,7 @@ The following code explains how to add tag for the form fields in PDF document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Adding-tag-to-form-fields-in-the-PDF-document/.NET/Adding-tag-to-form-fields-in-the-PDF-document/Program.cs" %} 
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -478,7 +478,7 @@ The following code explains how to add tag for the annotations in PDF document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Adding-tag-to-annotation-in-the-PDF-document/.NET/Adding-tag-to-annotation-in-the-PDF-document/Program.cs" %} 
 
 //Creates new PDF document
 PdfDocument doc = new PdfDocument();
@@ -597,7 +597,7 @@ The following code example shows how to add tag for hyperlink in PDF document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tag-for-hyperlink-in-the-PDF-document/.NET/Add-tag-for-hyperlink-in-the-PDF-document/Program.cs" %} 
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -722,7 +722,7 @@ The following code sample explains how to add tag support for the template eleme
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tags-to-template-in-PDF-document/.NET/Add-tags-to-template-in-PDF-document/Program.cs" %} 
 
 //Creates a new PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -847,7 +847,7 @@ The following code snippet illustrates how to add tag for table element.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tags-to-table-in-the-PDF-document/.NET/Add-tags-to-table-in-the-PDF-document/Program.cs" %} 
 
 //Creates a new PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -1030,7 +1030,7 @@ The following code example illustrates how to add tag support for list element.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document/.NET/Add-the-tag-to-list-element-in-PDF-document/Program.cs" %} 	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1199,7 +1199,7 @@ The following code explains how to add tag for header and footers in the PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-tags-for-header-and-footer-in-the-PDF-document/.NET/Add-tags-for-header-and-footer-in-the-PDF-document/Program.cs" %} 
 
 //Creates new PDF document
 PdfDocument pdfDocument = new PdfDocument();
@@ -1363,7 +1363,7 @@ The following code example illustrates how to order the tagged elements in a PDF
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Order-the-tagged-elements-in-a-PDF-document/.NET/Order-the-tagged-elements-in-a-PDF-document/Program.cs" %} 
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1537,7 +1537,7 @@ N> Enabling the auto-tag feature will never add alternate texts/descriptions for
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Auto-tag-the-elements-in-a-PDF-document/.NET/Auto-tag-the-elements-in-a-PDF-document/Program.cs" %} 
 
 //Creates new PDF document
 PdfDocument document = new PdfDocument();
@@ -1666,7 +1666,7 @@ The following code sample shows how to preserve document structured tags in the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Converting-word-document-to-Tagged-PDF/.NET/Converting-word-document-to-Tagged-PDF/Program.cs" %} 
 
 //Open the file as Stream
 FileStream docStream = new FileStream(@"D:\Template.docx", FileMode.Open, FileAccess.Read);
@@ -1756,7 +1756,7 @@ You can extract the existing tag details by using the [StructureElement](https:/
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" %} 	
 
 //Get the stream from the document.
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1849,7 +1849,7 @@ You can also extract the accessibility tags page-wise with the help of the [Stru
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Get the stream from the document.
 FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

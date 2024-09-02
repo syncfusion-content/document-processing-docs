@@ -29,7 +29,7 @@ You can draw a polygon in PDF document by using the [DrawPolygon](https://help.s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-polygon-in-new-PDF-document/.NET/Draw-polygon-in-new-PDF-document/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -120,7 +120,7 @@ The following code snippet explains how to draw a polygon in an existing PDF doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-polygon-in-an-existing-PDF-document/.NET/Draw-a-polygon-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -213,7 +213,7 @@ You can draw a line in PDF document by using the [DrawLine](https://help.syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-line-in-new-PDF-document/.NET/Draw-a-line-in-new-PDF-document/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -286,7 +286,7 @@ The following code snippet explains how to draw a line in an existing PDF docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-line-in-an-existing-PDF-document/.NET/Draw-a-line-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -363,7 +363,7 @@ You can draw a curve in PDF document by using the [Draw](https://help.syncfusion
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-curve-in-new-PDF-document/.NET/Draw-a-curve-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -435,7 +435,7 @@ The following code snippet explains how to draw a curve in an existing PDF docum
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-curve-in-an-existing-PDF-document/.NET/Draw-a-curve-in-an-existing-PDF-document/Program.cs" %}	
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -510,7 +510,7 @@ You can draw a path in PDF document by using the [DrawPath](https://help.syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-path-in-a-new-PDF-document/.NET/Draw-path-in-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -591,7 +591,7 @@ The following code snippet explains how to draw path in an existing PDF document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-path-in-an-existing-PDF-document/.NET/Draw-path-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -679,7 +679,7 @@ You can draw a rectangle in PDF document by using the [DrawRectangle](https://he
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-rectangle-in-a-new-PDF-document/.NET/Draw-a-rectangle-in-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -751,7 +751,7 @@ The following code snippet explains how to draw a rectangle in an existing PDF d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-rectangle-in-an-existing-PDF-document/.NET/Draw-a-rectangle-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -826,7 +826,7 @@ You can draw a pie in PDF document by using the [DrawPie](https://help.syncfusio
 
 {% tabs %}
 
-{% highlight c# tabtitle="ASP.NET Core" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-pie-in-new-PDF-document/.NET/Draw-a-pie-in-new-PDF-document/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -904,7 +904,7 @@ The following code snippet explains how to draw a pie in an existing PDF documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-pie-in-an-existing-PDF-document/.NET/Draw-a-pie-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -985,7 +985,7 @@ You can draw an arc in PDF document by using the [DrawArc](https://help.syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-arc-in-new-PDF-document/.NET/Draw-an-arc-in-new-PDF-document/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1062,7 +1062,7 @@ The following code snippet explains how to draw an arc in an existing PDF docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-arc-in-an-existing-PDF-document/.NET/Draw-an-arc-in-an-existing-PDF-document/Program.cs" %}	
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -1143,7 +1143,7 @@ You can draw a bezier in PDF document by using the [DrawBezier](https://help.syn
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-bazier-in-new-PDF-document/.NET/Draw-a-bazier-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1209,7 +1209,7 @@ The following code snippet explains how to draw a bezier in an existing PDF docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-bazier-in-an-existing-PDF-document/.NET/Draw-a-bazier-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -1278,7 +1278,7 @@ You can draw an ellipse in PDF document by using the [DrawEllipse](https://help.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-ellipse-in-new-PDF-document/.NET/Draw-an-ellipse-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1344,7 +1344,7 @@ The following code snippet explains how to draw an ellipse in an existing PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-an-ellipse-in-an-existing-PDF-document/.NET/Draw-an-ellipse-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open);
@@ -1413,7 +1413,7 @@ You can also allow large shapes to paginate across pages by assigning ```Paginat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-large-shapes-across-multiple-pages/.NET/Draw-large-shapes-across-multiple-pages/Program.cs" %}	
 
 //Create Document
 PdfDocument doc = new PdfDocument();

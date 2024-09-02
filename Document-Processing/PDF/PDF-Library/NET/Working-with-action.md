@@ -15,7 +15,7 @@ The below code example illustrates how to add the action to the PDF document usi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-action-to-the-PDF-document/.NET/Add-action-to-the-PDF-document/Program.cs" %}	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -93,7 +93,7 @@ The [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-the-sound-action-to-PDF-document/.NET/Add-the-sound-action-to-PDF-document/Program.cs" %}	
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -182,7 +182,7 @@ The [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syn
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-JavaScript-action-to-the-PDF-document/.NET/Add-JavaScript-action-to-the-PDF-document/Program.cs" %}	
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -261,7 +261,7 @@ The [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-URI-action-to-the-PDF-document/.NET/Add-URI-action-to-the-PDF-document/Program.cs" %}		
 
 //Create a new document with PDF/A standard
 PdfDocument document = new PdfDocument();
@@ -331,7 +331,7 @@ The [PdfGoToAction](https://help.syncfusion.com/cr/document-processing/Syncfusio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-GoTo-action-to-the-PDF-document/.NET/Add-GoTo-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -419,7 +419,7 @@ The [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-lauch-action-to-PDF-document/.NET/Add-lauch-action-to-PDF-document/Program.cs" %}	
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -492,7 +492,7 @@ The [PdfNamedAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-named-action-to-PDF-document/.NET/Add-named-action-to-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -571,7 +571,7 @@ The [PdfSubmitAction](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-submit-action-to-the-PDF-document/.NET/Add-submit-action-to-the-PDF-document/Program.cs" %}
 
 //Create a PDF document
 PdfDocument document = new PdfDocument();
@@ -665,7 +665,7 @@ The [PdfResetAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Reset-form-fields-in-the-PDF-document/.NET/Reset-form-fields-in-the-PDF-document/Program.cs" %}
 
 //Create a PDF document
 PdfDocument document = new PdfDocument();
@@ -905,7 +905,7 @@ Essential PDF provides support to add various actions to the form fields. The fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-form-fields-in-PDF-document/.NET/Adding-an-action-to-the-form-fields-in-PDF-document/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1008,7 +1008,7 @@ Essential PDF provides support to add the various actions to the [Bookmarks](htt
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-bookmark-in-the-PDF-document/.NET/Adding-an-action-to-the-bookmark-in-the-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -1099,7 +1099,7 @@ To add actions to an existing PDF document, use the following code example.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-actions-to-the-existing-PDF-document/.NET/Add-actions-to-the-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read); PdfLoadedDocument document = new PdfLoadedDocument(docStream); 
