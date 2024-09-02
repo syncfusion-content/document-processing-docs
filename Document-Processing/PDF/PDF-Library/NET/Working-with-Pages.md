@@ -13,7 +13,7 @@ The following code sample explains you on how to add a [PdfPage](https://help.sy
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Add-a-new-page-to-the-PDF-document/.NET/Add-a-new-page-to-the-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -92,7 +92,7 @@ You can insert an empty page at any location in the existing PDF document using 
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Insert-pages-in-a-PDF-document/.NET/Insert-pages-in-a-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -143,7 +143,7 @@ You can add margin to all the PDF pages of the PDF document using the [PageSetti
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Add-margin-to-the-PDF-pages/.NET/Add-margin-to-the-PDF-pages/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -230,7 +230,7 @@ The following code snippet explains how to add more sections to a PDF document w
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Adding-sections-with-different-page-settings/.NET/Adding-sections-with-different-page-settings/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -446,7 +446,7 @@ You can get page count from the existing PDF document as shown in the following 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Get-number-of-pages-from-PDF-document/.NET/Get-number-of-pages-from-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -491,7 +491,7 @@ Essential PDF allows you to import a page or import a range of pages from one do
 
 {% tabs %}   
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Importing-pages-from-one-PDF-to-another-PDF/.NET/Importing-pages-from-one-PDF-to-another-PDF/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -564,7 +564,7 @@ N> Performance will be effective only in the large PDF document.
 
 {% tabs %}   
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Import-pages-from-PDF-without-bookmarks/.NET/Import-pages-from-PDF-without-bookmarks/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -637,7 +637,7 @@ You can rearrange the pages in an existing PDF document using [ReArrange](https:
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Rearrange-pages-in-an-existing-PDF-document/.NET/Rearrange-pages-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -688,7 +688,7 @@ You can alter the page label for the existing PDF document using [PdfPageLabel](
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Changing-page-numbers-in-a-PDF-document/.NET/Changing-page-numbers-in-a-PDF-document/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -759,7 +759,7 @@ You can remove the pages from the existing PDF document using [RemoveAt](https:/
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Remove-pages-from-the-existing-PDF-document/.NET/Remove-pages-from-the-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -812,7 +812,7 @@ You can rotate a particular PDF page in the PDF document using [PdfPageRotateAng
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Rotating-a-PDF-page/.NET/Rotating-a-PDF-page/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -902,7 +902,7 @@ You can also rotate a PDF page in the existing PDF document using [PdfPageRotate
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Rotate-an-existing-PDF-page/.NET/Rotate-an-existing-PDF-page/Program.cs" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -962,7 +962,7 @@ You can find the empty pages from the PDF document using the [IsBlank](https://h
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Detect-empty-pages-from-PDF/.NET/Detect-empty-pages-from-PDF/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -1022,7 +1022,7 @@ Essential PDF allows to split the pages of an existing PDF document into multipl
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Splitting-PDF-file-into-individual-pages/.NET/Splitting-PDF-file-into-individual-pages/Program.cs" %}
 
 //Due to platform limitations, Essential PDF supports splitting a PDF file into individual pages only in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms. However this can be achieved by using the following code snippet. 
 
@@ -1084,7 +1084,7 @@ The following code example illustrates the same.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Span-text-element-to-multiple-pages-in-a-PDF/.NET/Span-text-element-to-multiple-pages-in-a-PDF/Program.cs" %}
 
 //Create a PDF document instance.
 PdfDocument document = new PdfDocument();
@@ -1216,7 +1216,7 @@ Refer to the following code example for creating duplicate page in a PDF documen
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Inserting-duplicate-pages-in-the-existing-pdf/.NET/Inserting-duplicate-pages-in-the-existing-pdf/Program.cs" %}
 
 //Load the PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
@@ -1266,5 +1266,5 @@ loadedDocument.Close(True)
 
 {% endtabs %} 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Inserting-duplicate-pages-in-the-existing-pdf/.NET). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Inserting-duplicate-pages-in-the-existing-pdf). 
 
