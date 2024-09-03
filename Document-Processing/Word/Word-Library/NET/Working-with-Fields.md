@@ -211,7 +211,7 @@ The following code example explains how to update the fields present in Word doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Update-fields-in-document/.NET/Update-fields-in-document/Program.cs" %}
 //Loads an existing Word document into DocIO instance 
 FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -285,7 +285,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/IF-field/.NET/IF-field/Program.cs" %}
 //Creates an instance of a WordDocument 
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -519,7 +519,7 @@ The following code example shows how to unlink the fields in Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Unlink-fields/.NET/Unlink-fields/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 //Adds a new section into the Word Document
@@ -769,7 +769,7 @@ The following code example shows how to refer the bookmark in sequence field.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Refer-bookmark-in-SEQ-field/.NET/Refer-bookmark-in-SEQ-field/Program.cs" %}
 //Opens an existing document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic);
@@ -847,7 +847,7 @@ The following code example shows how to reset the numbering for sequence field.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Reset-numbering-for-SEQ-field/.NET/Reset-numbering-for-SEQ-field/Program.cs" %}
 //Creates a Word document
 WordDocument document = CreateDocument();
 //Accesses sequence field in the document
@@ -1229,7 +1229,7 @@ The following code example shows how to repeat the closest preceding sequence nu
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/Repeat-nearest-number-of-SEQ-field/.NET/Repeat-nearest-number-of-SEQ-field/Program.cs" %}
 //Creates a Word document
 WordDocument document = CreateDocument();
 //Accesses sequence field in the document
