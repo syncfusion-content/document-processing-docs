@@ -175,7 +175,7 @@ Step 12: Now, the published webpage will open in the **browser**.
 ![Browser will open after publish](Azure_images/Azure-app-service-Linux/WebView.png)
 
 Step 13: Select the PDF document and Click **Create PDF document** to generate the PDF document.You will get the output **PDF document** as follows.
-![Create PDF document in Azure App Service on Linux](Azure_images/Azure-app-service-Linux/Output_screenshot.png)
+![Create PDF document in Azure App Service on Linux](Azure_images/Azure-app-service-Linux/Output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 

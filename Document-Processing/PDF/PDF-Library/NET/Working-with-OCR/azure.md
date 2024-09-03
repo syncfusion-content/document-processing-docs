@@ -86,16 +86,27 @@ Step 1: Right-click the project and click Publish.
 
 Step 2: Create a new profile in the publish target window.
 ![Create new profile1](OCR-Images/azure_step6.png)   
-![Create new profile2](OCR-Images/azure_step7.png)     
 
-Step 3: Create an App Service using an Azure subscription and select a hosting plan based on the environment.
-![Create azure app service](OCR-Images/azure_step8.png)  
+Step 3: Select the Specific target as **Azure App Service (Windows)**.
+![Create new profile2](OCR-Images/azure_step7.png)  
 
-Step 4: Configure the Hosting plan.
-![Configure hosting plan](OCR-Images/azure_step9.png)  
+Step 4: To create a new app service, click **Create new** option.
+![Click create new option](OCR-Images/azure_step8.png)
 
-Step 5: After creating a profile, click Publish.
-![Click publish button](OCR-Images/azure_step10.png)  
+Step 5: Click the **Create** button to proceed with **App Service** creation.
+![Click the create button](OCR-Images/azure_step9.png)
+
+Step 6: Click the **Finish** button to finalize the **App Service** creation.
+![Click the finish button](OCR-Images/azure_step10.png)
+
+Step 7: Click **Close** button.
+![Create a ASP.NET Core Project](OCR-Images/azure_step11.png)
+
+Step 8: Click the **Publish** button.
+![Click the Publish button](OCR-Images/azure_step12.png)
+
+Step 9: Now, Publish has been succeeded.
+![Publish has been succeeded](OCR-Images/azure_step13.png)
 
 Now, the published webpage will open in the browser, then click the **Perform OCR** button then perform OCR on a PDF document.
 ![Published webpage](OCR-Images/azure_step11.png) 
