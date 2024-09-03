@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Chart Area
+# Chart Area in PowerPoint
 
 Chart area refers to the space that contains the chart or graph you've inserted into a document. It includes the entire chart and all its elements, such as data points, labels, axes, and the plot area. Using Presentation, you can **customize the chart area in the chart**.
 
@@ -84,7 +84,7 @@ chartArea.Fill.ForeColor = Color.White
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Chart-Area/.NET/Format-Chart-Area/Program.cs" %}
 
 FileStream fileStreamPath = new FileStream("Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 

@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Chart Plot Area
+# Chart Plot Area in PowerPoint
 
 The plot area refers to the region that represents the plotted data in a chart. Using Presentation, you can **customize the plot area in the chart**.
 
@@ -84,7 +84,7 @@ The following code snippet illustrates how to fill the color in plot area.
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Plot-Area/.NET/Format-Plot-Area/Program.cs" %}
 
 FileStream fileStreamPath = new FileStream("Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Open an existing PowerPoint Presentation.

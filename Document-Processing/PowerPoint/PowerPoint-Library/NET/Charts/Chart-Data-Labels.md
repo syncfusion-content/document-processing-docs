@@ -112,7 +112,7 @@ chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabe
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Data-Labels/.NET/Format-Data-Labels/Program.cs" %}
 
 FileStream fileStreamPath = new FileStream("Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 
@@ -255,7 +255,7 @@ The leader lines can be shown in a chart through [ShowLeaderLines](https://help.
 The following code illustrates how to enable the leader lines for all data labels in the chart.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Show-Leader-Lines/.NET/Show-Leader-Lines/Program.cs" %}
 
 // Enable the leader lines in Chart.
 chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.ShowLeaderLines = true;

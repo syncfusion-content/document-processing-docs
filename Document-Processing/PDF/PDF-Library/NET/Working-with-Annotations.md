@@ -2344,6 +2344,223 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-a-cloud-border-styled-polygon-annotation-in-the-PDF).
 
+### PdfCircleAnnotation
+
+Cloud border style can be added to the [PdfCircleAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCircleAnnotation.html) class by using the [PdfBorderEffect](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBorderEffect.html) class. The following code sample explains how to add cloud border styled Circle annotation in the PDF document.  
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+//Create a new circle annotation
+PdfCircleAnnotation annotation = new PdfCircleAnnotation(new RectangleF(0, 0, 200, 200), "Circle");
+//Assign the border width
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect to the annotation
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation
+annotation.SetAppearance(true);
+//Adds the annotation to the page
+page.Annotations.Add(annotation);
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the document 
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+//Create a new circle annotation
+PdfCircleAnnotation annotation = new PdfCircleAnnotation(new RectangleF(0, 0, 200, 200), "Circle");
+//Assign the border width
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class.
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect.
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation.
+annotation.SetAppearance(true);
+//Add the annotation to the page.
+page.Annotations.Add(annotation);
+//Save the document to disk.
+document.Save("Output.pdf");
+//Close the document to disk.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+Dim document As PdfDocument = New PdfDocument()
+'Add a new page	
+Dim page As PdfPage = document.Pages.Add()
+'Create a new circle annotation
+Dim annotation As PdfCircleAnnotation = New PdfCircleAnnotation(New RectangleF(0, 0, 200, 200), "Circle")
+'Assign the border width
+annotation.Border.BorderWidth = 1
+'Assign the color
+annotation.Color = Color.Red
+'Assign the InnerColor
+annotation.InnerColor = Color.Blue
+'Create a new PdfBorderEffect class.	
+Dim bordereffect As PdfBorderEffect = New PdfBorderEffect()
+'Assign the intensity value	
+bordereffect.Intensity = 2
+'Assign the cloud style	
+bordereffect.Style = PdfBorderEffectStyle.Cloudy
+'Assign the BorderEffect.		
+annotation.BorderEffect = bordereffect
+'Set appearance for the annotation.
+annotation.SetAppearance(True)
+'Add the annotation to the page.
+page.Annotations.Add(annotation)
+'Save the document to disk.	
+document.Save("Output.pdf")
+'close the document to disk.
+document.Close(True)
+		
+{% endhighlight %}		
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub]().
+
+### PdfEllipseAnnotation
+
+Cloud border style can be added to the [PdfEllipseAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfEllipseAnnotation.html) class by using the [PdfBorderEffect](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBorderEffect.html) class. The following code sample explains how to add cloud border styled Ellipse annotation in the PDF document.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+// create a new ellipse annotation
+PdfEllipseAnnotation annotation = new PdfEllipseAnnotation(new RectangleF(0, 0, 200,100), "Ellipse");
+//Assign the border width
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation.
+annotation.SetAppearance(true);
+// Adds the annotation to the page.
+page.Annotations.Add(annotation);
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the document 
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+//Create a new ellipse annotation
+PdfEllipseAnnotation annotation = new PdfEllipseAnnotation(new RectangleF(0, 0, 200, 100), "Ellipse");
+//Assign the borderWidth value
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation
+annotation.SetAppearance(true);
+//Add the annotation to the page.
+page.Annotations.Add(annotation);
+//Save the document to disk.
+document.Save("Output.pdf");
+//close the document to disk.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+Dim document As PdfDocument = New PdfDocument()
+'Add a new page.	
+Dim page As PdfPage = document.Pages.Add()
+'Create a new ellipse annotation
+Dim annotation As PdfEllipseAnnotation = New PdfEllipseAnnotation(New RectangleF(0, 0, 200, 100), "Ellipse")
+'Assign the borderWidth value
+annotation.Border.BorderWidth = 1
+'Assign the color
+annotation.Color = Color.Red
+'Assign the InnerColor
+annotation.InnerColor = Color.Blue
+'Create a new PdfBorderEffect class	
+Dim bordereffect As PdfBorderEffect = New PdfBorderEffect()
+'Assign the intensity value	
+bordereffect.Intensity = 2
+'Assign the cloud style	
+bordereffect.Style = PdfBorderEffectStyle.Cloudy
+'Assign the BorderEffect		
+annotation.BorderEffect = bordereffect
+'Set appearance for the annotation
+annotation.SetAppearance(True)
+'Add the annotation to the page
+page.Annotations.Add(annotation)
+'Save the document to disk	
+document.Save("Output.pdf");
+'close the document to disk.
+document.Close(True)
+		
+{% endhighlight %}		
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub]().
 
 ## Measurement Annotations
 

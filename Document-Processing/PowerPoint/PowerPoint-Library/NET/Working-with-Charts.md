@@ -16,7 +16,7 @@ An instance of [IOfficeChart](https://help.syncfusion.com/cr/document-processing
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-PowerPoint-chart/.NET/Create-PowerPoint-chart/Program.cs" %}
 //Creates a Presentation instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide to the Presentation
@@ -192,7 +192,7 @@ You can also create a chart with the data from an existing excel worksheet. The 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-chart-from-excel-sheet/.NET/Create-chart-from-excel-sheet/Program.cs" %}
 //Creates a Presentation instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide to the Presentation
@@ -252,7 +252,7 @@ The following code example demonstrates how to create custom charts.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-customized-chart/.NET/Create-customized-chart/Program.cs" %}
 //Creates an instance of the IPresentation 
 IPresentation pptxDoc = Presentation.Create();
 //Creates a new slide
@@ -443,7 +443,7 @@ The following code example demonstrates how to refresh the charts in PowerPoint 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Refresh-PowerPoint-chart/.NET/Refresh-PowerPoint-chart/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -503,7 +503,7 @@ You can change the data for an existing chart. The code example demonstrates how
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Edit-chart-data/.NET/Edit-chart-data/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -631,7 +631,7 @@ Essential Presentation allows you to modify side wall, back wall, and floor sett
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Apply-chart-3D-formats/.NET/Apply-chart-3D-formats/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -771,7 +771,7 @@ T> You can specify the quality of the converted charts by setting the scaling mo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Convert-chart-to-image/.NET/Convert-Chart-to-Image/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("../../../Data/Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -902,7 +902,7 @@ The following code example demonstrates removing a chart from a slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Remove-existing-chart/.NET/Remove-existing-chart/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -959,7 +959,7 @@ The following code example demonstrates creating a Scatter chart.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-scatter-chart/.NET/Create-scatter-chart/Program.cs" %}
 //Create an instance for PowerPoint  
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation  
@@ -1082,7 +1082,7 @@ Essential Presentation supports creating and manipulating new and modern chart t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-funnel-chart/.NET/Create-funnel-chart/Program.cs" %}
 //Creates a new instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide to Presentation
@@ -1206,7 +1206,7 @@ The following screenshot shows the output of previous code.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-Box-And-Whisker-chart/.NET/Create-Box-And-Whisker-chart/Program.cs" %}
 private static void TestBox_Whisker()
 {
     using(IPresentation pptxDoc = Presentation.Create())
@@ -1613,7 +1613,7 @@ The following screenshot shows the output of previous code.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-Waterfall-chart/.NET/Create-Waterfall-chart/Program.cs" %}
 //Creates a new instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add slide to the presentation
@@ -1761,7 +1761,7 @@ The following screenshot shows the output of previous code.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-Histogram-chart/.NET/Create-Histogram-chart/Program.cs" %}
 //Creates a new instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 ISlide slide1 = pptxDoc.Slides.Add(SlideLayoutType.Blank);
@@ -1893,7 +1893,7 @@ The following screenshot shows the output of previous code.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Create-Pareto-chart/.NET/Create-Pareto-chart/Program.cs" %}
 //Creates a new instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide to Presentation

@@ -429,7 +429,7 @@ chart.SecondaryCategoryAxis.TickLabelPosition = OfficeTickLabelPosition.TickLabe
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Axis/.NET/Format-Axis/Program.cs" %}
 
 FileStream fileStreamPath = new FileStream"Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 
