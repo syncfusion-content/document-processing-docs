@@ -101,7 +101,7 @@ The following table illustrates the supported overloads for Find and Replace fun
 <tr>
 <td>{{ '[Replace(string given, string replace, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with replace string, taking into consideration of case sensitive and whole word options.</td>
-<td>{{ '[Find and replace text with another text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-all/.NET-Standard)' | markdownify }}</td>
+<td>{{ '[Find and replace text with another text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-all)' | markdownify }}</td>
 </tr>
 <tr>
 <td>{{ '[Replace(Regex pattern, IWordDocument replaceDoc, bool saveFormatting)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_)' | markdownify }}</td>
