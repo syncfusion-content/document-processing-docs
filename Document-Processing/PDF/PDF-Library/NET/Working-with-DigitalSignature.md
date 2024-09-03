@@ -2424,7 +2424,7 @@ Steps for deferred signing:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Deferred-signing-in-PDF-document/.NET/Deferred-signing-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
 
 //Get the stream from the document.
 FileStream documentStream = new FileStream("PDF_Succinctly.pdf ", FileMode.Open, FileAccess.Read);
@@ -3719,7 +3719,7 @@ N> It is recommended to use licensed assemblies or registered license keys in yo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Multiple-digital-signature/.NET/Multiple-digital-signature/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream("SignatureFields.pdf", FileMode.Open, FileAccess.Read);
