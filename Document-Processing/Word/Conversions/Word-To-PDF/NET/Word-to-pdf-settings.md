@@ -1,6 +1,6 @@
 ---
-title: Customization settings for Word to PDF conversion in C# | DocIO | Syncfusion
-description: Learn how to customize Word to PDF conversion using the .NET Word (DocIO) library.
+title: Customizing Word to PDF Conversion in C# | DocIO | Syncfusion
+description: Learn about the customization settings for Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -79,7 +79,7 @@ The following code sample shows how to embed the TrueType fonts into the convert
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Embed-subset-fonts/.NET/Embed-subset-fonts/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -152,7 +152,7 @@ The following code sample shows how to embed the complete TrueType fonts into th
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Embed-complete-fonts/.NET/Embed-complete-fonts/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -225,7 +225,7 @@ The following code sample shows how to preserve document structured tags in the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-into-accessible-PDF/.NET/Convert-Word-into-accessible-PDF/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -290,7 +290,7 @@ The following code sample shows how to preserve Word document headings as bookma
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Export-Word-headings-into-PDF/.NET/Export-Word-headings-into-PDF/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -351,7 +351,7 @@ The following code sample shows how to preserve both Word document headings and 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Export-Word-bookmarks-into-PDF/.NET/Export-Word-bookmarks-into-PDF/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -416,7 +416,7 @@ The following code sample shows how to preserve Word document form field as PDF 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Create-fillable-PDF-from-Word/.NET/Create-fillable-PDF-from-Word/Program.cs" %}
 // Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -593,7 +593,7 @@ The following code sample shows how to reduce the Main Memory usage while conver
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Optimize-identical-images/.NET/Optimize-identical-images/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -668,7 +668,7 @@ The following code sample shows how to set the [PdfConformanceLevel](https://hel
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/PDF-conformance-level/.NET/PDF-conformance-level/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -741,7 +741,7 @@ The following code sample shows how to exclude the alternate chunk parts in Word
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Disable-alternate-chunks/.NET/Disable-alternate-chunks/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -814,7 +814,7 @@ The following code sample shows how to preserve the complex script text in the c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Preserve-complex-script-text-in-PDF/.NET/Preserve-complex-script-text-in-PDF/Program.cs" %}
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
 //Loads an existing Word document
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Docx);
@@ -883,7 +883,7 @@ The following code sample shows how to hyphenate text in a Word document while c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Hyphenation-in-Word-to-PDF/.NET/Hyphenation-in-Word-to-PDF/Program.cs" %}
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
 //Loads an existing Word document
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Docx);
@@ -956,7 +956,7 @@ The following code sample shows how to **preserve revision marks in a generated 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Track-changes-in-Word-to-PDF/.NET/Track-changes-in-Word-to-PDF/Program.cs" %}
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
 //Loads an existing Word document
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Docx);
@@ -1026,7 +1026,7 @@ You can customize how track changes markup appears in a generated PDF when conve
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Change-track-changes-color/.NET/Change-track-changes-color/Program.cs" %}
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
 //Loads an existing Word document
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Docx);
@@ -1120,7 +1120,7 @@ The default Word to PDF conversion renders the deletion and formatting changes i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Show-or-hide-revisions-in-balloons/.NET/Show-or-hide-revisions-in-balloons/Program.cs" %}
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
 //Loads an existing Word document
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Docx);
@@ -1195,7 +1195,7 @@ The following code sample shows how to **preserve comments balloon in a generate
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Preserve-comments-in-Word-to-PDF/.NET/Preserve-comments-in-Word-to-PDF/Program.cs" %}
 using (FileStream fileStream = new FileStream("Template.docx", FileMode.Open))
 {
     //Loads an existing Word document.
@@ -1331,7 +1331,7 @@ The below code example shows how to restrict Copying and Printing permission of 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Restrict-permission-in-PDF/.NET/Restrict-permission-in-PDF/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
