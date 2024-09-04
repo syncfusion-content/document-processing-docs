@@ -585,6 +585,17 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 No<br/><br/></td></tr>
+<tr>
+<td>
+XML Maps<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td></tr>
+<tr>
 </tbody>
 </table>
 
