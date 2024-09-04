@@ -2038,11 +2038,9 @@ A complete working example to convert selected worksheets to PDF in C# is presen
 
 ## Tagged PDF
 
-A tagged PDF is a type of PDF document that contains additional information about the document’s structure and content, such as text, tables, and images, to enhance accessibility and navigation.
+An accessible tagged PDF includes structured tags for elements like text, tables, and images, enhancing accessibility and navigation. These tags ensure that users who rely on assistive technologies can effectively read and interact with the PDF content, meeting the accessibility requirements outlined by Section 508 and PDF/UA.
 
-This tagging ensures compatibility with accessibility standards like PDF/UA (PDF Universal Accessibility) and makes the content more usable for individuals with disabilities.
-
-The following complete code snippet explains how to enable **AutoTag** property while converting an Excel document to PDF.
+The following complete code snippet explains how to preserve PDF document tags using **AutoTag** property while converting an Excel document to PDF.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
