@@ -2508,14 +2508,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Import Xml data into the worksheet
-  worksheet.ImportXml("../../../Data/XmlFile.xml", 1, 6);
+  FileStream inputStream = new FileStream("../../../Data/XmlFile.xml", FileMode.Open, FileAccess.Read);
+  worksheet.ImportXml(inputStream, 1, 6);
 
   //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(outputStream);
 
   //Dispose stream
-  stream.Dispose();
+  inputStream.Dispose();
+  outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2567,14 +2569,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Adding Xml maps to the workbook
-  workbook.XmlMaps.Add("../../../Data/XmlFile.xml");
+  FileStream inputStream = new FileStream("../../../Data/XmlFile.xml", FileMode.Open, FileAccess.Read);
+  workbook.XmlMaps.Add(inputStream);
 
   //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(outputStream);
 
   //Dispose stream
-  stream.Dispose();
+  inputStream.Dispose();
+  outputStream.Dispose();
 }
 {% endhighlight %}
 
