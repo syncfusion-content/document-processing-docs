@@ -564,7 +564,7 @@ The following code example shows how to add a barcode to the PDF document withou
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Add-a-barcode-to-the-PDF-document-without-displaying-text/.NET/Add-a-barcode-to-the-PDF-document-without-displaying-text/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Barcode/Add-a-barcode-to-the-PDF-document-without-displaying-text/.NET/Program.cs" %}
 
 //Creating new PDF document 
 PdfDocument doc = new PdfDocument();

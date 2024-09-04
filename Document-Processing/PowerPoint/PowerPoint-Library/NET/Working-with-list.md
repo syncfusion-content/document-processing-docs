@@ -21,7 +21,7 @@ The following code example illustrates how to create a numbered list:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Lists/Create-numbered-list/.NET/Create-numbered-list/Program.cs" %}
 //Creates a new Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide into the Presentation
@@ -187,7 +187,7 @@ The following code example demonstrates how to create a simple bulleted list.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Lists/Create-bulleted-list/.NET/Create-bulleted-list/Program.cs" %}
 //Creates a new Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
 //Adds the slide into the Presentation
@@ -365,7 +365,7 @@ The following code example demonstrates how to create a simple picture list.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Lists/Create-picture-list/.NET/Create-picture-list/Program.cs" %}
 //Creates a new Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
 //Adds the slide into the Presentation
@@ -489,7 +489,7 @@ The following code example demonstrates how to create a multilevel list.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Lists/Create-multilevel-list/.NET/Create-multilevel-list/Program.cs" %}
 //Creates a new Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
 //Adds the slide into the Presentation

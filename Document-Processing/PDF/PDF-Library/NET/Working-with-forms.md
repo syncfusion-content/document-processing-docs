@@ -2383,7 +2383,7 @@ Please refer the sample for flattening the form fields in new PDF document.
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/Forms/Removing-editing-capability-of-form-fields/.NET/Removing-editing-capability-of-form-fields/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Removing-editing-capability-of-form-fields/.NET/Removing-editing-capability-of-form-fields/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();

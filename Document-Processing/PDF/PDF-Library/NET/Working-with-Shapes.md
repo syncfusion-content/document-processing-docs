@@ -826,7 +826,7 @@ You can draw a pie in PDF document by using the [DrawPie](https://help.syncfusio
 
 {% tabs %}
 
-{% highlight c# tabtitle="ASP.NET Core" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Draw-a-pie-in-new-PDF-document/.NET/Draw-a-pie-in-new-PDF-document/Program.cs" %}	
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();

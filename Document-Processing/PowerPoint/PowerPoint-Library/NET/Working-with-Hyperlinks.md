@@ -20,7 +20,7 @@ You can navigate to any slide of the same PowerPoint document. The following cod
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-hyperlink-to-PowerPoint-shape/.NET/Add-hyperlink-to-PowerPoint-shape/Program.cs" %}
 //Creates the PowerPoint Presentation instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide of blank layout type
@@ -88,7 +88,7 @@ You can navigate to the specified URL from a PowerPoint slide. The following cod
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-hyperlink-to-PowerPoint-text/.NET/Add-hyperlink-to-PowerPoint-text/Program.cs" %}
 //Creates the PowerPoint Presentation instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide of blank layout type
@@ -157,7 +157,7 @@ You can add the email link to the shape or text on a PowerPoint slide. The follo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-hyperlink-to-PowerPoint-picture/.NET/Add-hyperlink-to-PowerPoint-picture/Program.cs" %}
 //Creates the PowerPoint Presentation instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide of blank layout type
@@ -217,7 +217,7 @@ You can open external documents like images, text files, PDF, etc. from the Powe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-file-hyperlink-to-picture/.NET/Add-file-hyperlink-to-picture/Program.cs" %}
 //Creates the PowerPoint Presentation instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide of blank layout type
@@ -284,7 +284,7 @@ The following code example demonstrates how to get the details about the hyperli
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-shape/.NET/Get-hyperlink-from-shape/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -361,7 +361,7 @@ The following code example demonstrates how to get the details about the hyperli
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-text/.NET/Get-hyperlink-from-text/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -454,7 +454,7 @@ The following code example demonstrates how to remove a hyperlink from the shape
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-shape/.NET/Remove-hyperlink-from-shape/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -507,7 +507,7 @@ The following code example demonstrates how to remove a hyperlink from the text 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-text/.NET/Remove-hyperlink-from-text/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

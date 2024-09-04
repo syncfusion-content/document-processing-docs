@@ -781,18 +781,20 @@ The following code example explains how to load an encrypt-only-attachment docum
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Load-an-encrypt-only-attachment-document/.NET/Load-an-encrypt-only-attachment-document/Program.cs" %}
 
-//Load the PDF document.            
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
-PdfLoadedDocument document = new PdfLoadedDocument(docStream,"password");
+//Get the stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument(docStream, "password");
 
 //Accessing the attachments.
-foreach(PdfAttachment attachment in document.Attachments)
+foreach (PdfAttachment attachment in document.Attachments)
 {
-  FileStream  stream = new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}                      
-
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+    stream.Dispose();
+}
+    
 //Close the document.
 document.Close(true);
 
@@ -800,17 +802,20 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf","password");
-            
-//Accessing the attachments.
-foreach(PdfAttachment attachment in document.Attachments)
-{
-  FileStream stream = new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}         
+//Get the stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 
+//Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument(docStream, "password");
+
+//Accessing the attachments.
+foreach (PdfAttachment attachment in document.Attachments)
+{
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+    stream.Dispose();
+}
+    
 //Close the document.
 document.Close(true);
 
@@ -818,18 +823,21 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the PDF document.
-Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf", "password")
-             
-'Accessing the attachments.
+' Get the stream from an existing PDF document. 
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+' Load the PDF document.
+Dim document As New PdfLoadedDocument(docStream, "password")
+
+' Accessing the attachments.
 For Each attachment As PdfAttachment In document.Attachments
-  Dim stream = New FileStream(attachment.FileName, FileMode.Create)
-  stream.Write(attachment.Data, 0, attachment.Data.Length)
-  stream.Dispose
+    Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
+    stream.Write(attachment.Data, 0, attachment.Data.Length)
+    stream.Dispose()
 Next
 
-'Close the document.
-document.Close(true)
+' Close the document.
+document.Close(True)
 
 {% endhighlight %}
 
@@ -845,74 +853,90 @@ The following code example illustrates how to provide the password when accessin
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Set-user-password-when-accessing-the-attachment/.NET/Set-user-password-when-accessing-the-attachment/Program.cs" %}
 
+//Get stream from an existing PDF document.  
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
 PdfLoadedDocument document = new PdfLoadedDocument(docStream);
-document.OnPdfPassword += LDoc_OnPdfPassword;
+
+document.OnPdfPassword += Document_OnPdfPassword;
 
 //Accessing the attachments.
-foreach(PdfAttachment  attachment in document.Attachments)
+foreach (PdfAttachment attachment in document.Attachments)
 {
-  FileStream  stream= new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}                      
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+
+    stream.Dispose();
+}
 
 //Close the document.
 document.Close(true);
-	
-//Provide the user password in event.
-private static void LDoc_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
+
+//Provide the user password in event. 
+void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-  args.UserPassword = "syncfusion";
+    args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+//Get stream from an existing PDF document.  
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
 //Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
-document.OnPdfPassword += LDoc_OnPdfPassword;
+PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+
+document.OnPdfPassword += Document_OnPdfPassword;
 
 //Accessing the attachments.
-foreach(PdfAttachment attachment in document.Attachments)
+foreach (PdfAttachment attachment in document.Attachments)
 {
-  FileStream stream= new FileStream(attachment.FileName, FileMode.Create);
-  stream.Write(attachment.Data, 0, attachment.Data.Length);
-  stream.Dispose();
-}                      
+    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+
+    stream.Write(attachment.Data, 0, attachment.Data.Length);
+
+    stream.Dispose();
+}
 
 //Close the document.
 document.Close(true);
-	
-//Provide the user password in event.
-private static void LDoc_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
+
+//Provide the user password in event. 
+void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-  args.UserPassword = "syncfusion";
+    args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the PDF document.         
-Dim document As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-AddHandler document.OnPdfPassword, AddressOf LDoc_OnPdfPassword
+' Get stream from an existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
 
-'Accessing the attachments.
+' Load the PDF document.
+Dim document As New PdfLoadedDocument(docStream)
+
+' Add the event handler for PDF password.
+AddHandler document.OnPdfPassword, AddressOf Document_OnPdfPassword
+
+' Accessing the attachments.
 For Each attachment As PdfAttachment In document.Attachments
-  Dim stream As FileStream = New FileStream(attachment.FileName, FileMode.Create)
-  stream.Write(attachment.Data, 0, attachment.Data.Length)
-  stream.Dispose()
+    Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
+    stream.Write(attachment.Data, 0, attachment.Data.Length)
+    stream.Dispose()
 Next
 
-'Close the document.
+' Close the document.
 document.Close(True)
 
-'Provide the user password in event.
-Private Sub LDoc_OnPdfPassword(ByVal sender As Object, ByVal args As OnPdfPasswordEventArgs)
-  args.UserPassword = "password"
+' Provide the user password in event.
+Private Sub Document_OnPdfPassword(sender As Object, args As OnPdfPasswordEventArgs)
+    args.UserPassword = "syncfusion"
 End Sub
 
 {% endhighlight %}

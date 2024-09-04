@@ -25,7 +25,7 @@ Animation effects can be added to shapes, images, tables, charts and SmartArt di
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Add-animation-effect-to-PowerPoint-shapes/.NET/Add-animation-effect-to-PowerPoint-shapes/Program.cs" %}
 //Create an instance for PowerPoint
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
@@ -84,7 +84,7 @@ Animations can be interactive when it depends on another slide element., for exa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Add-interactive-animation/.NET/Add-interactive-animation/Program.cs" %}
 //Create an instance for PowerPoint
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
@@ -150,7 +150,7 @@ Animation effects can be applied to text. The following code example demonstrate
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Add-animation-to-PowerPoint-text/.NET/Add-animation-to-PowerPoint-text/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -210,7 +210,7 @@ When you add common animation effects for both entrance and exit types, animatio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Add-exit-animation-effect/.NET/Add-exit-animation-effect/Program.cs" %}
 //Create an instance for PowerPoint
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
@@ -275,7 +275,7 @@ The Presentation library allows you to edit the animations in existing presentat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Modify-existing-animation-effect/.NET/Modify-existing-animation-effect/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -347,7 +347,7 @@ Presentation library allows you to edit the sub type of animations effects in ex
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Modify-animation-effect-sub-type/.NET/Modify-animation-effect-sub-type/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -413,7 +413,7 @@ Presentation library allows you to edit the animation timing in the existing pre
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Modify-animation-effect-timing/.NET/Modify-animation-effect-timing/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -479,7 +479,7 @@ Presentation library allows you to reorder the animation effects in existing pre
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Reordering-animation-effects/.NET/Reordering-animation-effects/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -559,7 +559,7 @@ Presentation library allows you to create and modify the custom animations in pr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Create-custom-path-animation-effect/.NET/Create-custom-path-animation-effect/Program.cs" %}
 //Creates an instance for PowerPoint
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide to Presentation
@@ -651,7 +651,7 @@ Presentation library allows you to remove the animation effects from a shape. Th
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Remove-animation-effect/.NET/Remove-animation-effect/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

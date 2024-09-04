@@ -3749,7 +3749,7 @@ You can add padding to the XFA form fields by using [padding](https://help.syncf
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/XFA/Add-the-padding-to-XFA-form-fields/.NET/Add-the-padding-to-XFA-form-fields/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-padding-to-XFA-form-fields/.NET/Add-the-padding-to-XFA-form-fields/Program.cs" %} 
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -4084,7 +4084,7 @@ You can fill the XFA combo box field by using [PdfLoadedXfaComboBoxField](https:
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/.NET/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Filling-the-XFA-combobox-field-in-an-existing-PDF-document/.NET/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4515,7 +4515,7 @@ You can fill the XFA radio button field by using [PdfLoadedXfaRadioButtonField](
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/.NET/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Fill-the-XFA-radiobutton-field-in-an-existing-PDF-document/.NET/Program.cs" %} 
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -4946,7 +4946,7 @@ The following sample illustrates how to clear the date time field in an existing
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/.NET/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Clear-XFA-datetime-field-value-in-an-existing-XFA-document/.NET/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);

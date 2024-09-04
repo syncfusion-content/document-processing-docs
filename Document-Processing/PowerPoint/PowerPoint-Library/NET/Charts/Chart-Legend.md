@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Chart Legend
+# Chart Legend in PowerPoint
 
 Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using Presentation, you can **customize the legend in the chart**.
 
@@ -306,7 +306,7 @@ chart.Legend.Layout.ManualLayout.Left = 0.68
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Legend/.NET/Format-Legend/Program.cs" %}
 
  FileStream fileStreamPath = new FileStream("Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
  //Open an existing PowerPoint Presentation.

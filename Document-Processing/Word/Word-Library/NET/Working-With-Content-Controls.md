@@ -30,7 +30,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Block-content-control/.NET/Block-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -119,7 +119,7 @@ You can add content control as a child to a paragraph using the inline content c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Inline-content-control/.NET/Inline-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -229,7 +229,7 @@ The following code sample illustrates the content control properties usage.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Content-control-properties/.NET/Content-control-properties/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -358,7 +358,7 @@ The following code sample shows how to protect the content control and its conte
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Protect-content-control/.NET/Protect-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -462,7 +462,7 @@ Form creation:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Create-form-in-Word-document/.NET/Create-form-in-Word-document/Program.cs" %}
 //Create a new document
 WordDocument document = new WordDocument();
 //Adding a new section to the document
@@ -1296,7 +1296,7 @@ Form filling:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Fill-form-in-Word-document/.NET/Fill-form-in-Word-document/Program.cs" %}
 //Open the created form document
 WordDocument document1 = new WordDocument(outputStream, FormatType.Automatic);
 IWSection sec = document1.LastSection;
@@ -1582,7 +1582,7 @@ Word allows you to store XML data, named *custom XML parts*, in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Xml-mapping/.NET/Xml-mapping/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -1701,7 +1701,7 @@ A rich text content control contains text or other items, such as tables, pictur
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Rich-text-content-control/.NET/Rich-text-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1793,7 +1793,7 @@ A plain text content control contains text and cannot contain other items, such 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Plain-text-content-control/.NET/Plain-text-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1865,7 +1865,7 @@ A check box content control provides a UI that represents a binary state: checke
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Check-box-content-control/.NET/Check-box-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1928,7 +1928,7 @@ A date picker content control provides a calendar UI for selecting a date. The c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Date-picker-content-control/.NET/Date-picker-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -2018,7 +2018,7 @@ A drop-down list content control and combo box content control displays a list o
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Drop-down-list-and-combo-box/.NET/Drop-down-list-and-combo-box/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -2205,7 +2205,7 @@ A picture content control displays an image. Refer to the following code to add 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Content-Controls/Picture-content-control/.NET/Picture-content-control/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document

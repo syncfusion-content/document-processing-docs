@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Chart Data Labels
+# Customize Chart Data Labels
 
 Data Labels on a chart make it easier to understand. They show important information about the lines or points on the chart. Using DocIO, you can **customize the data labels in the chart**.
 
@@ -114,7 +114,7 @@ chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabe
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Format-Data-Labels/.NET/Format-Data-Labels/Program.cs" %}
 
 FileStream fileStreamPath = new FileStream(Path.GetFullPath(@"../../../Data/Template.docx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
  //Open an existing document from file system through constructor of WordDocument class.

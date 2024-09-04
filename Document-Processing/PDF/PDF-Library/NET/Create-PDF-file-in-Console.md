@@ -27,7 +27,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 
 Step 4: Include the following namespaces in the *Program.cs* file.
 
-{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf;
@@ -37,7 +37,7 @@ using Syncfusion.Drawing;
 
 Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}	
  
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -57,7 +57,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET%20Core/Create_PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET/Create_PDF).
 
 By executing the program, you will get the PDF document as follows.
 ![Console output PDF document](GettingStarted_images/pdf-generation-output.png)
@@ -75,7 +75,7 @@ Step 2: Name the project.
 Step 3: Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
 ![NET Framework NuGet package](Console_images/Nuget_package_Framework.png)
 
-N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package is dependent package for Syncfusion Windows Forms GUI controls, so named with sufix "WinForms". It has a platform-independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of the PDF library and doesn't contain any Windows Forms-related references or code. Hence, we recommend this package for the .NET framework Console application.
+N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package is dependent package for Syncfusion Windows Forms GUI controls, so named with suffix "WinForms". It has a platform-independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of the PDF library and doesn't contain any Windows Forms-related references or code. Hence, we recommend this package for the .NET framework Console application.
 
 Step 4: Include the following namespaces in the *Program.cs*.
 

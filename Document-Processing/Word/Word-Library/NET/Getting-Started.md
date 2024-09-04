@@ -1058,7 +1058,7 @@ The following code example illustrates how to convert a Word document into PDF d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET/Convert-Word-document-to-PDF/Program.cs" %}
 FileStream fileStream = new FileStream(@"EmployeesTemplate.docx", FileMode.Open,FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Automatic);

@@ -2344,6 +2344,223 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-a-cloud-border-styled-polygon-annotation-in-the-PDF).
 
+### PdfCircleAnnotation
+
+Cloud border style can be added to the [PdfCircleAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCircleAnnotation.html) class by using the [PdfBorderEffect](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBorderEffect.html) class. The following code sample explains how to add cloud border styled Circle annotation in the PDF document.  
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+//Create a new circle annotation
+PdfCircleAnnotation annotation = new PdfCircleAnnotation(new RectangleF(0, 0, 200, 200), "Circle");
+//Assign the border width
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect to the annotation
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation
+annotation.SetAppearance(true);
+//Adds the annotation to the page
+page.Annotations.Add(annotation);
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the document 
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+//Create a new circle annotation
+PdfCircleAnnotation annotation = new PdfCircleAnnotation(new RectangleF(0, 0, 200, 200), "Circle");
+//Assign the border width
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class.
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect.
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation.
+annotation.SetAppearance(true);
+//Add the annotation to the page.
+page.Annotations.Add(annotation);
+//Save the document to disk.
+document.Save("Output.pdf");
+//Close the document to disk.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+Dim document As PdfDocument = New PdfDocument()
+'Add a new page	
+Dim page As PdfPage = document.Pages.Add()
+'Create a new circle annotation
+Dim annotation As PdfCircleAnnotation = New PdfCircleAnnotation(New RectangleF(0, 0, 200, 200), "Circle")
+'Assign the border width
+annotation.Border.BorderWidth = 1
+'Assign the color
+annotation.Color = Color.Red
+'Assign the InnerColor
+annotation.InnerColor = Color.Blue
+'Create a new PdfBorderEffect class.	
+Dim bordereffect As PdfBorderEffect = New PdfBorderEffect()
+'Assign the intensity value	
+bordereffect.Intensity = 2
+'Assign the cloud style	
+bordereffect.Style = PdfBorderEffectStyle.Cloudy
+'Assign the BorderEffect.		
+annotation.BorderEffect = bordereffect
+'Set appearance for the annotation.
+annotation.SetAppearance(True)
+'Add the annotation to the page.
+page.Annotations.Add(annotation)
+'Save the document to disk.	
+document.Save("Output.pdf")
+'close the document to disk.
+document.Close(True)
+		
+{% endhighlight %}		
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub]().
+
+### PdfEllipseAnnotation
+
+Cloud border style can be added to the [PdfEllipseAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfEllipseAnnotation.html) class by using the [PdfBorderEffect](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBorderEffect.html) class. The following code sample explains how to add cloud border styled Ellipse annotation in the PDF document.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+// create a new ellipse annotation
+PdfEllipseAnnotation annotation = new PdfEllipseAnnotation(new RectangleF(0, 0, 200,100), "Ellipse");
+//Assign the border width
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation.
+annotation.SetAppearance(true);
+// Adds the annotation to the page.
+page.Annotations.Add(annotation);
+//Save the document into stream 
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the document 
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a new page
+PdfPage page = document.Pages.Add();
+//Create a new ellipse annotation
+PdfEllipseAnnotation annotation = new PdfEllipseAnnotation(new RectangleF(0, 0, 200, 100), "Ellipse");
+//Assign the borderWidth value
+annotation.Border.BorderWidth = 1;
+//Assign the color
+annotation.Color = Color.Red;
+//Assign the InnerColor
+annotation.InnerColor = Color.Blue;
+//Create a new PdfBorderEffect class
+PdfBorderEffect bordereffect = new PdfBorderEffect();
+//Assign the intensity value
+bordereffect.Intensity = 2;
+//Assign the cloud style
+bordereffect.Style = PdfBorderEffectStyle.Cloudy;
+//Assign the BorderEffect
+annotation.BorderEffect = bordereffect;
+//Set appearance for the annotation
+annotation.SetAppearance(true);
+//Add the annotation to the page.
+page.Annotations.Add(annotation);
+//Save the document to disk.
+document.Save("Output.pdf");
+//close the document to disk.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+Dim document As PdfDocument = New PdfDocument()
+'Add a new page.	
+Dim page As PdfPage = document.Pages.Add()
+'Create a new ellipse annotation
+Dim annotation As PdfEllipseAnnotation = New PdfEllipseAnnotation(New RectangleF(0, 0, 200, 100), "Ellipse")
+'Assign the borderWidth value
+annotation.Border.BorderWidth = 1
+'Assign the color
+annotation.Color = Color.Red
+'Assign the InnerColor
+annotation.InnerColor = Color.Blue
+'Create a new PdfBorderEffect class	
+Dim bordereffect As PdfBorderEffect = New PdfBorderEffect()
+'Assign the intensity value	
+bordereffect.Intensity = 2
+'Assign the cloud style	
+bordereffect.Style = PdfBorderEffectStyle.Cloudy
+'Assign the BorderEffect		
+annotation.BorderEffect = bordereffect
+'Set appearance for the annotation
+annotation.SetAppearance(True)
+'Add the annotation to the page
+page.Annotations.Add(annotation)
+'Save the document to disk	
+document.Save("Output.pdf");
+'close the document to disk.
+document.Close(True)
+		
+{% endhighlight %}		
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub]().
 
 ## Measurement Annotations
 
@@ -4058,71 +4275,107 @@ You can retrieve the annotation review history from the existing PDF document an
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations/.NET/Retrieve-review-status-from-the-existing-PDF-annotations/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations/.NET/Program.cs" %}
 
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the review history collection for the annotation
-PdfLoadedPopupAnnotationCollection reviewCollection = loadedMarkup.ReviewHistory;
-//Get annotation state
-PdfAnnotationState state = reviewCollection[0].State;
-//Get annotation state model
-PdfAnnotationStateModel model = reviewCollection[0].StateModel;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Get the review history of the comment
-PdfLoadedPopupAnnotationCollection reviewCollection1 = commentsCollection[0].ReviewHistory;
-//Closes the document
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the review history collection for the annotation.
+PdfLoadedPopupAnnotationCollection reviewCollection = rectangleAnnotation.ReviewHistory;
+
+//Iterate through the review history collection.
+foreach (PdfLoadedPopupAnnotation review in reviewCollection)
+{
+    //Get the author of the annotation.
+    string author = review.Author;
+    //Get the state of the annotation.
+    PdfAnnotationState state = review.State;
+    //Get the state model of the annotation.
+    PdfAnnotationStateModel model = review.StateModel;
+
+    Console.WriteLine("Author of the reviewer: " + author + "\r\nState: " + state + "\r\nState Model: " + model);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
+
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the review history collection for the annotation
-PdfLoadedPopupAnnotationCollection reviewCollection = loadedMarkup.ReviewHistory;
-//Get annotation state
-PdfAnnotationState state = reviewCollection[0].State;
-//Get annotation state model
-PdfAnnotationStateModel model = reviewCollection[0].StateModel;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Get the review history of the comment
-PdfLoadedPopupAnnotationCollection reviewCollection1 = commentsCollection[0].ReviewHistory;
-//Close the PDF document
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the review history collection for the annotation.
+PdfLoadedPopupAnnotationCollection reviewCollection = rectangleAnnotation.ReviewHistory;
+
+//Iterate through the review history collection.
+foreach (PdfLoadedPopupAnnotation review in reviewCollection)
+{
+    //Get the author of the annotation.
+    string author = review.Author;
+    //Get the state of the annotation.
+    PdfAnnotationState state = review.State;
+    //Get the state model of the annotation.
+    PdfAnnotationStateModel model = review.StateModel;
+
+    Console.WriteLine("Author of the reviewer: " + author + "\r\nState: " + state + "\r\nState Model: " + model);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
-'Get the existing PDF page
+'Get stream from an existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument(docStream)
+
+'Get the existing PDF page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Get the annotation
-Dim loadedMarkup As PdfLoadedTextMarkupAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedTextMarkupAnnotation)
-'Get the review history collection for the annotation
-Dim reviewCollection As PdfLoadedPopupAnnotationCollection = loadedMarkup.ReviewHistory
-'Get annotation state
-Dim state As PdfAnnotationState = reviewCollection(0).State
-'Get annotation state model
-Dim model As PdfAnnotationStateModel = reviewCollection(0).StateModel
-'Get the comments of the annotation
-Dim commentsCollection As PdfLoadedPopupAnnotationCollection = loadedMarkup.Comments
-'Get the review history of the comment
-Dim reviewCollection1 As PdfLoadedPopupAnnotationCollection = commentsCollection(0).ReviewHistory
-'Close the PDF document
+
+'Get the annotation.
+Dim rectangleAnnotation As PdfLoadedRectangleAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedRectangleAnnotation)
+
+'Get the review history collection for the annotation.
+Dim reviewCollection As PdfLoadedPopupAnnotationCollection = rectangleAnnotation.ReviewHistory
+
+'Iterate through the review history collection.
+For Each review As PdfLoadedPopupAnnotation In reviewCollection
+    'Get the author of the annotation.
+    Dim author As String = review.Author
+    'Get the state of the annotation.
+    Dim state As PdfAnnotationState = review.State
+    'Get the state model of the annotation.
+    Dim model As PdfAnnotationStateModel = review.StateModel
+
+    Console.WriteLine("Author of the reviewer: " & author & vbCrLf & "State: " & state.ToString() & vbCrLf & "State Model: " & model.ToString())
+Next
+
+'Closes the document.
 loadedDocument.Close(True)
+
 
 {% endhighlight %}
 
@@ -4136,48 +4389,100 @@ The following code example explains how to retrieve the annotation comments from
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Retrieve-the-annotation-comments-from-the-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF/.NET/Program.cs" %}
 
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Closes the document
+//Get stream from the existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the comments of the annotation.
+PdfLoadedPopupAnnotationCollection commentsCollection = rectangleAnnotation.Comments;
+
+//Iterate through the comments collection.
+foreach (PdfLoadedPopupAnnotation comment in commentsCollection)
+{
+    //Get the author of the comment.
+    string author = comment.Author;
+    //Get the content
+    string content = comment.Text;
+
+    Console.WriteLine("Author of the comment: " + author + "\r\nContent: " + content);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get the existing PDF page
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage; 
-//Get the annotation
-PdfLoadedTextMarkupAnnotation loadedMarkup = loadedPage.Annotations[0] as PdfLoadedTextMarkupAnnotation;
-//Get the comments of the annotation
-PdfLoadedPopupAnnotationCollection commentsCollection = loadedMarkup.Comments;
-//Close the PDF document
+//Get stream from the existing PDF document. 
+FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Get the existing PDF page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+//Get the annotation.
+PdfLoadedRectangleAnnotation rectangleAnnotation = loadedPage.Annotations[0] as PdfLoadedRectangleAnnotation;
+
+//Get the comments of the annotation.
+PdfLoadedPopupAnnotationCollection commentsCollection = rectangleAnnotation.Comments;
+
+//Iterate through the comments collection.
+foreach (PdfLoadedPopupAnnotation comment in commentsCollection)
+{
+    //Get the author of the comment.
+    string author = comment.Author;
+    //Get the content
+    string content = comment.Text;
+
+    Console.WriteLine("Author of the comment: " + author + "\r\nContent: " + content);
+}
+
+//Closes the document.
 loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
-'Get the existing PDF page
+'Get stream from the existing PDF document.
+Dim docStream As New FileStream(Path.GetFullPath("Data/Input.pdf"), FileMode.Open, FileAccess.Read)
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument(docStream)
+
+'Get the existing PDF page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-'Get the annotation
-Dim loadedMarkup As PdfLoadedTextMarkupAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedTextMarkupAnnotation)
-'Get the comments of the annotation
-Dim commentsCollection As PdfLoadedPopupAnnotationCollection = loadedMarkup.Comments
-'Close the PDF document
+
+'Get the annotation.
+Dim rectangleAnnotation As PdfLoadedRectangleAnnotation = TryCast(loadedPage.Annotations(0), PdfLoadedRectangleAnnotation)
+
+'Get the comments of the annotation.
+Dim commentsCollection As PdfLoadedPopupAnnotationCollection = rectangleAnnotation.Comments
+
+'Iterate through the comments collection.
+For Each comment As PdfLoadedPopupAnnotation In commentsCollection
+    'Get the author of the comment.
+    Dim author As String = comment.Author
+    'Get the content
+    Dim content As String = comment.Text
+
+    Console.WriteLine("Author of the comment: " & author & vbCrLf & "Content: " & content)
+Next
+
+'Close the document.
 loadedDocument.Close(True)
 
 {% endhighlight %}
@@ -4560,7 +4865,7 @@ ldoc.Close(True)
 
 ## Troubleshooting
 
-<th style="font-size:14px"><b>Annotations are sometimes missing in the acrobat and the other Pdf Viewer applications.
+<th style="font-size:14px"><b>Annotations are sometimes missing in the acrobat and the other PDF Viewer applications.
 </b></th>
 
 <table>

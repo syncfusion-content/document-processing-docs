@@ -29,7 +29,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Create-chart-from-scratch/.NET/Create-chart-from-scratch/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -211,7 +211,7 @@ The following code example illustrates the chart data loaded from the excel file
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Create-chart-from-Excel-file/.NET/Create-chart-from-Excel-file/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -315,7 +315,7 @@ The following code example illustrates how to create custom charts.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Create-custom-chart/.NET/Create-custom-chart/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -641,7 +641,7 @@ The following code example illustrates how to refresh the chart.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Refresh-chart-data/.NET/Refresh-chart-data/Program.cs" %}
 FileStream fileStreamPath = new FileStream(@"Data/Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -700,7 +700,7 @@ The following code example illustrates how to modify an existing chart data.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Modify-an-existing-chart-data/.NET/Modify-an-existing-chart-data/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -931,7 +931,7 @@ The following code example illustrates how to remove the chart from the document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Remove-chart-from-Word-document/.NET/Remove-chart-from-Word-document/Program.cs" %}
 //Loads the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1006,7 +1006,7 @@ To convert chart in Word document as an image, refer the below dependencies in y
 Platform(s)
 </th>
 <th width="40%">
-NuGets for Chart to Image
+NuGet for Chart to Image
 </th>
 <th width="40%">
 Assemblies for Chart to image
@@ -1052,7 +1052,7 @@ The following code example shows how to convert chart in the Word document as im
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Convert-chart-to-image/.NET/Convert-chart-to-image/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("TemplateWithChart.docx", FileMode.Open))
 {
@@ -1234,7 +1234,7 @@ The following code example illustrates how to create a [Waterfall](https://help.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Create-waterfall-chart/.NET/Create-waterfall-chart/Program.cs" %}
 //Creates a new Word document.
 using (WordDocument document = new WordDocument())
 {

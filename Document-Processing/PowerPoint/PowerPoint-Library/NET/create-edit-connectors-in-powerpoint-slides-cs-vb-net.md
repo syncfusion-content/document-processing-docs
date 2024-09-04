@@ -15,7 +15,7 @@ The following code example demonstrates how to add a connector in PowerPoint sli
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Add-PowerPoint-connectors/.NET/Add-PowerPoint-connectors/Program.cs" %}
 using (IPresentation pptxDoc = Presentation.Create())
 {
     //Add a slide to the PowerPoint file
@@ -75,7 +75,7 @@ You can also add a connector to a source shape without any destination shapes. T
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Add-single-point-connector/.NET/Add-single-point-connector/Program.cs" %}
 //Create a new PowerPoint file
 using (IPresentation pptxDoc = Presentation.Create())
 {
@@ -157,7 +157,7 @@ The following code example demonstrates how to edit an existing connector in a P
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Modify-existing-connector/.NET/Modify-existing-connector/Program.cs" %}
 //Loads an PowerPoint file in stream
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 //Opens the loaded PowerPoint file
@@ -252,7 +252,7 @@ The following code example demonstrates how to update a connector’s position w
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Update-connector-position/.NET/Update-connector-position/Program.cs" %}
 //Loads an PowerPoint file in stream
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 //Opens the loaded PowerPoint file
@@ -324,7 +324,7 @@ The following code example demonstrates how to remove a connector from PowerPoin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Remove-connector-from-shapes/.NET/Remove-connector-from-shapes/Program.cs" %}
 //Loads an PowerPoint file in stream
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 //Opens the loaded PowerPoint file
