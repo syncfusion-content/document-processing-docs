@@ -109,7 +109,7 @@ Step 9: Now, Publish has been succeeded.
 ![Publish has been succeeded](OCR-Images/azure_step13.png)
 
 Now, the published webpage will open in the browser, then click the **Perform OCR** button then perform OCR on a PDF document.
-![Published webpage](OCR-Images/azure_step11.png) 
+![Published webpage](OCR-Images/Output-genrate-webpage.png) 
 ![OCR output document](OCR-Images/OCR-output-image.png) 
 
 A complete work sample for performing OCR on a PDF document in Azure App Service on Windows can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20App%20Services).
@@ -213,13 +213,29 @@ Step 1: Right-click the project and click Publish. Then, create a new profile in
 ![OCR Azure Functions publish2](OCR-Images/azure_step6.png)
 ![OCR Azure Functions publish3](OCR-Images/AzureFunctions7.png)
 
-Step 2: After creating the profile, click Publish.
-![Proceed for publish](OCR-Images/AzureFunctions8.png)
+Step 4: To create a new app service, click **Create new** option.
+![Click create new option](OCR-Images/AzureFunctions8.png)
 
-Step 3: Now, publish has been succeeded.
-![Proceed succeed](OCR-Images/AzureFunctions9.png)
+Step 5: Click the **Create** button to proceed with **App Service** creation.
+![Click the create button](OCR-Images/AzureFunctions9.png)
 
-Step 4: Now, go to the Azure portal and select the Functions Apps. After running the service, click Get function URL > Copy. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get a PDF document as follows.
+Step 6: Click the **Finish** button to finalize the **App Service** creation.
+![Click the finish button](OCR-Images/AzureFunctions10.png)
+
+Step 7: Click deployment type.
+![Create a Deployment type](OCR-Images/Deployment_type.png)
+
+Step 8: Click **Close** button.
+![Create a ASP.NET Core Project](OCR-Images/AzureFunctions11.png)
+
+Step 9: Click the **Publish** button.
+![Click the Publish button](OCR-Images/AzureFunctions12.png)
+
+Step 10: Now, Publish has been succeeded.
+![Publish has been succeeded](OCR-Images/AzureFunctions13.png)
+ 
+
+Step 11: Now, go to the Azure portal and select the Functions Apps. After running the service, click Get function URL > Copy. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get a PDF document as follows.
 ![Output PDF document](OCR-Images/OCR-output-image.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure/Azure%20Function).
