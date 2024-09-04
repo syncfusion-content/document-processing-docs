@@ -587,7 +587,7 @@ Yes<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
-XML Maps<br/><br/></td><td>
+XML map<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
