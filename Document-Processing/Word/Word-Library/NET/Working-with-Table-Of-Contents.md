@@ -71,7 +71,7 @@ The following code example shows how to add a table of contents (TOC) in Word do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Add-table-of-contents/.NET/Add-table-of-contents/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds the section into the Word document
@@ -234,7 +234,7 @@ The following code example shows how to update a TOC in an existing word documen
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Update-table-of-contents/.NET/Update-table-of-contents/Program.cs" %}
 //Opens an existing document from stream through constructor of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic);
@@ -284,7 +284,7 @@ The following code example shows how to create table of contents with user-defin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/TOC-with-user-defined-styles/.NET/TOC-with-user-defined-styles/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Creates a new custom styles
@@ -467,7 +467,7 @@ The following code example illustrates how to apply switches for the table of co
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Remove-table-of-contents/.NET/Remove-table-of-contents/Remove-table-of-contents/Program.cs" %}
 //Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -721,7 +721,7 @@ The following code example shows how to remove table of contents (TOC) in Word d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Remove-table-of-contents/.NET/Remove-table-of-contents/Remove-table-of-contents/Program.cs" %}
 using (WordDocument document = new WordDocument())
 {
     //Opens the Word template document.
@@ -773,7 +773,7 @@ The helper methods helps for removing table of contents (TOC) in Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Remove-table-of-contents/.NET/Remove-table-of-contents/Remove-table-of-contents/Program.cs" %}
 // Removes the table of contents from Word document.
 static void RemoveTableOfContents(TableOfContent toc)
 {
@@ -1089,7 +1089,7 @@ The following code example illustrates how to add a Table of Figures in a Word d
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Table_of_figures/.NET/Table_of_figures/Program.cs" %}
 
 using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -1369,7 +1369,7 @@ Include or exclude the caption's label and numbers while creating a Table of Con
 The following code example illustrates how to add a Table of Figures by excluding the caption's label and number in a Word document using the IncludeCaptionLabelsAndNumbers API.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Table-Of-Contents/Exclude_caption_label_numbers/.NET/Exclude_caption_label_numbers/Program.cs" %}
 
 using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
