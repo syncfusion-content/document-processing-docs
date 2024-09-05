@@ -50,7 +50,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-an-accent-mark-to-the-equation/.NET/Add-an-accent-mark-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -144,7 +144,7 @@ You can add a bar (which adds horizontal line on top or bottom) to the equation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-bar-to-the-equation/.NET/Add-bar-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -223,7 +223,7 @@ You can add a box to the equation. The following code example shows how to add a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-box-to-the-equation/.NET/Add-box-to-the-equation/Program.cs"%}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -353,7 +353,7 @@ You can add a box with the borders on four sides and strikethrough on horizontal
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-border-box-to-the-equation/.NET/Add-border-box-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -478,7 +478,7 @@ You can add a delimiter (parenthesis, square brackets and other characters) to t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-delimiter-to-the-equation/.NET/Add-delimiter-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -581,7 +581,7 @@ You can create a one dimensional array of equations in Word document. The follow
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-an-array-of-equations/.NET/Create-an-array-of-equations/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -702,7 +702,7 @@ You can create a fraction equation with a numerator and denominator in Word docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-fraction-equation/.NET/Create-fraction-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -799,7 +799,7 @@ You can create trigonometric functions in a Word document. The following code ex
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-trigonometric-function/.NET/Create-trigonometric-function/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -893,7 +893,7 @@ You can group mathematical equations by adding a grouping character at above or 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Equation-with-grouping-character/.NET/Equation-with-grouping-character/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -990,7 +990,7 @@ You can add upper limit or lower limit to the mathematical equation. The followi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-limit-equation/.NET/Create-limit-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1109,7 +1109,7 @@ You can create a matrix equation in a Word document. The following code example 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-matrix-equation/.NET/Create-matrix-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 ///Adds one section and one paragraph to the document
@@ -1312,7 +1312,7 @@ You can create an equation with common large operators such as summation, integr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-n-array-equation/.NET/Create-n-array-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1440,7 +1440,7 @@ You can create a radical equation in Word document. The following example shows 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-radical-equation/.NET/Create-radical-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1536,7 +1536,7 @@ You can create a phantom equation to add the spacing of the phantom without disp
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-phantom-equation/.NET/Create-phantom-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1661,7 +1661,7 @@ You can add a superscript or subscript equation in a Word document. The followin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-superscript-equation/.NET/Create-superscript-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1763,7 +1763,7 @@ You can add superscript and subscript on the left side of mathematical equation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Superscript-and-subscript-on-left/.NET/Superscript-and-subscript-on-left/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1868,7 +1868,7 @@ You can add superscript and subscript on the right side of mathematical equation
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Superscript-and-subscript-on-right/.NET/Superscript-and-subscript-on-right/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -1988,7 +1988,7 @@ The following code example shows how to modify an existing mathematical equation
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Modify-an-existing-equation/.NET/Modify-an-existing-equation/Program.cs" %}
 //Opens an existing Word document
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads the template document
