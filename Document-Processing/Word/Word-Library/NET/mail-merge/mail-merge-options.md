@@ -20,7 +20,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Mapping-field-names-with-column-names/.NET/Mapping-field-names-with-column-names/Program.cs" %}
 //Opens the template document. 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -89,7 +89,7 @@ The following code example shows how to retrieve the merge field names in the Wo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Retrieve-merge-field-names/.NET/Retrieve-merge-field-names/Program.cs" %}
 //Gets the merge field names from the document.
 string[] fieldNames = document.MailMerge.GetMergeFieldNames();
 {% endhighlight %}
@@ -110,7 +110,7 @@ The following code example shows how to retrieve the merge field group names in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Retrieve-merge-field-names/.NET/Retrieve-merge-field-names/Program.cs" %}
 //Gets the merge field group names from the document.
 string[] groupNames = document.MailMerge.GetMergeGroupNames();
 {% endhighlight %}
@@ -131,7 +131,7 @@ The following code example shows how to retrieve the merge field names for a spe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Retrieve-merge-field-names/.NET/Retrieve-merge-field-names/Program.cs" %}
 //Gets the fields from the specified groups. 
 string[] fieldNames = document.MailMerge.GetMergeFieldNames(groupName);
 {% endhighlight %}
@@ -158,7 +158,7 @@ The following code example shows how to remove the empty paragraphs during Mail 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Remove-empty-paragraphs/.NET/Remove-empty-paragraphs/Program.cs" %}
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -230,7 +230,7 @@ The following code example shows how to keep the unmerged merge fields in the ge
  
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Keep-unmerged-merge-fields/.NET/Keep-unmerged-merge-fields/Program.cs" %}
 //Opens the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -287,7 +287,7 @@ The following code example shows how to remove empty merge field group during ma
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Remove-empty-merge-field-groups/.NET/Remove-empty-merge-field-groups/Program.cs" %}
 //Opens the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -550,7 +550,7 @@ The following code example shows how to restart the list numbering in a Word doc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Restart-list-numbering-in-mail-merge/.NET/Restart-list-numbering-in-mail-merge/Program.cs" %}
 //Loads an existing Word document
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
 WordDocument document = new WordDocument(fileStream, FormatType.Docx);
@@ -707,7 +707,7 @@ The following code example shows how to insert each record as new row in single 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Insert-as-new-row/.NET/Insert-as-new-row/Program.cs" %}
 //Opens the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -819,7 +819,7 @@ The following code example shows how to skip merging particular image during mai
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Skip-to-merge-image/.NET/Skip-to-merge-image/Program.cs" %}
 //Opens the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -924,7 +924,7 @@ The following code example illustrates how to start a new page for each group of
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Start-at-new-page/.NET/Start-at-new-page/Program.cs" %}
 //Opens the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -2036,7 +2036,7 @@ The following code example shows how to remove the mail merge settings from the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Remove-mail-merge-settings/.NET/Remove-mail-merge-settings/Program.cs" %}
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -2085,7 +2085,7 @@ The following code example shows how to change the data source file path in the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Change-mail-merge-data-source-path/.NET/Change-mail-merge-data-source-path/Program.cs" %}
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);

@@ -19,7 +19,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Macros/Open-and-save-macro-enabled-document/.NET/Open-and-save-macro-enabled-document/Program.cs" %}
 using (FileStream fileStream = new FileStream("Template.dotm", FileMode.Open, FileAccess.ReadWrite))
 {
     //Opens the template document.
@@ -60,7 +60,7 @@ The following code example illustrates how to remove the macros present in the d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Macros/Remove-macros-in-document/.NET/Remove-macros-in-document/Program.cs" %}
 //Loads the document with macros
 FileStream fileStreamPath = new FileStream("Template.docm", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);

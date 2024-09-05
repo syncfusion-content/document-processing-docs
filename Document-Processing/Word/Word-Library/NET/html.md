@@ -27,7 +27,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Convert-HTML-to-Word/.NET/Convert-HTML-to-Word/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Input.html", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Html))
@@ -158,7 +158,7 @@ The following code example shows how to load image data based on image source pa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Customize-image-data/.NET/Customize-image-data/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Input.html", FileMode.Open, FileAccess.Read);
 //Creates a new instance of WordDocument
@@ -252,7 +252,7 @@ The following code example shows how to convert the Word document into HTML.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Convert-Word-to-HTML/.NET/Convert-Word-to-HTML/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -304,7 +304,7 @@ N> 2. [HtmlExportImagesFolder](https://help.syncfusion.com/cr/document-processin
 The following code sample illustrates how to customize Word to HTML conversion.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-Platform]" %}
+{% highlight c# tabtitle="C# [Cross-Platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Customize-Word-to-HTML-conversion/.NET/Customize-Word-to-HTML-conversion/Program.cs" %}
 
 //Load an existing Word document into DocIO instance.
 using (FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -387,7 +387,7 @@ DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-pro
 The following code example illustrates how to save image files during a Word to HTML conversion.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Customize-image-path-in-Word-to-html/.NET/Customize-image-path-in-Word-to-html/Program.cs" %}
 
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Data/Input.docx", FileMode.Open, FileAccess.Read))
@@ -487,7 +487,7 @@ The following code example illustrates how to export the HTML file with only the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-Platform]" %}
+{% highlight c# tabtitle="C# [Cross-Platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Export-HTML-with-body-content/.NET/Export-HTML-with-body-content/Program.cs" %}
 //Load an existing Word document.
 using (FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
