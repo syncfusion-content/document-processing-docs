@@ -18,7 +18,7 @@ The following code example illustrates how to create accent equation using LaTeX
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Accent/.NET/Accent/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -158,7 +158,7 @@ Add **bar** equation to a Word document using the LaTeX through [AppendMath](htt
 The following code example illustrates how to create bar equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Bar/.NET/Bar/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -238,7 +238,7 @@ Add **box** equation to a Word document using the LaTeX through [AppendMath](htt
 The following code example illustrates how to create box equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Box/.NET/Box/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -313,7 +313,7 @@ Add **border box** equation to a Word document using the LaTeX through [AppendMa
 The following code example illustrates how to create border box equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Border-Box/.NET/Border-Box/Program.cs" %}
 
 {% raw %}
 // Create a new Word document.
@@ -394,7 +394,7 @@ Add **delimiter** equation to a Word document using the LaTeX through [AppendMat
 The following code example illustrates how to create delimiter equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Delimiter/.NET/Delimiter/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -604,7 +604,7 @@ Add **equation array** to a Word document using the LaTeX through [AppendMath](h
 The following code example illustrates how to create an equation array using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Equation-array/.NET/Equation-array/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -678,7 +678,7 @@ Add **fraction** equation to a Word document using the LaTeX through [AppendMath
 The following code example illustrates how to create fraction equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Fraction/.NET/Fraction/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -769,7 +769,7 @@ Add **function** equation to a Word document using the LaTeX through [AppendMath
 The following code example illustrates how to create function equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Function/.NET/Function/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -989,7 +989,7 @@ Add **group character** equation to a Word document using the LaTeX through [App
 The following code example illustrates how to create group character equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Group-character/.NET/Group-character/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1069,7 +1069,7 @@ Add **limit** equation to a Word document using the LaTeX through [AppendMath](h
 The following code example illustrates how to create limit equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Limit/.NET/Limit/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1154,7 +1154,7 @@ Add **matrix** equation to a Word document using the LaTeX through [AppendMath](
 The following code example illustrates how to create matrix equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Matrix/.NET/Matrix/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1229,7 +1229,7 @@ Add **N-array** equation to a Word document using the LaTeX through [AppendMath]
 The following code example illustrates how to create N-array equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/N-array/.NET/N-array/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1354,7 +1354,7 @@ Add **radical** equation to a Word document using the LaTeX through [AppendMath]
 The following code example illustrates how to create radical equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Radical/.NET/Radical/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1434,7 +1434,7 @@ Add **SubSuperScript** equation to a Word document using the LaTeX through [Appe
 The following code example illustrates how to create SubSuperScript equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/SubSuperScript/.NET/SubSuperScript/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1514,7 +1514,7 @@ Add **Left SubSuperScript** equation to a Word document using the LaTeX through 
 The following code example illustrates how to create Left SubSuperScript equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLin="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Left-SubSuperScript/.NET/Left-SubSuperScript/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1589,7 +1589,7 @@ Add **Right SubSuperScript** equation to a Word document using the LaTeX through
 The following code example illustrates how to create Right SubSuperScript equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Right-SubSuperScript/.NET/Right-SubSuperScript/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
@@ -1688,7 +1688,7 @@ The following code example demonstrates how to apply styles to characters within
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Format%20Equation/Apply%20style%20to%20characters/.NET/Apply-style-to-characters/Program.cs" %}
 // Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -1785,7 +1785,7 @@ The following code examples show how to apply the scripts to equations in a Word
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Format%20Equation/Apply%20scripts%20to%20the%20equation/.NET/Apply-scripts-to-the-equation/Program.cs" %}
 // Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -1868,7 +1868,7 @@ The following code example shows how to preserve text as normal text, without an
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Format%20Equation/Preserve%20as%20normal%20text/.NET/Preserve-as-normal-text/Program.cs" %}
 // Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -1927,7 +1927,7 @@ The following code examples show how to apply the justification to equations in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Apply-math-justification/Apply-math-justification/Program.cs" %}
 {% raw %}
 // Create a new Word document.
 using (WordDocument document = new WordDocument())
@@ -1989,7 +1989,7 @@ The following code snippet shows how to modify the LaTeX equation in a Word docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Modify-equation-using-LaTeX/.NET/Modify-equation-using-LaTeX/Program.cs" %}
 // Open the FileStream for reading and writing the "Template.docx" file
 FileStream fileStream = new FileStream("Template.docx", FileMode.Open, FileAccess.ReadWrite);
 // Load the template Word document from the FileStream
