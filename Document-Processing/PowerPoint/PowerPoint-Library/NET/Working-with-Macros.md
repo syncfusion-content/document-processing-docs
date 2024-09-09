@@ -17,7 +17,7 @@ The following code illustrates how to load and save a macro enabled presentation
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Macros/Load-and-save-macro-PowerPoint/.NET/Load-and-save-macro-PowerPoint/Program.cs" %}
 //Opens an existing macro enabled PowerPoint presentation
 FileStream inputStream = new FileStream("Sample.PPTM",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -68,7 +68,7 @@ The following code example illustrates how to remove the macros present in the p
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Macros/Remove-macros/.NET/Remove-macros/Program.cs" %}
 //Opens an existing macro enabled PowerPoint presentation
 FileStream inputStream = new FileStream("Sample.PPTM",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
