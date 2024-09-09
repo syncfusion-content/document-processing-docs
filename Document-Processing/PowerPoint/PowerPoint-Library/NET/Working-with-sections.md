@@ -18,7 +18,7 @@ The following code example demonstrates how to add a blank slide to a section.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Add-new-slide-in-PowerPoint-section/.NET/Add-new-slide-in-PowerPoint-section/Program.cs" %}
 //Creates a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a section to the PowerPoint presentation
@@ -74,7 +74,7 @@ The following code example demonstrates how to add an existing slide to a sectio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Add-existing-slide-in-PowerPoint-section/.NET/Add-existing-slide-in-PowerPoint-section/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -119,7 +119,7 @@ The following code example demonstrates how to insert a section in a template Po
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Insert-section-in-PowerPoint/.NET/Insert-section-in-PowerPoint/Program.cs" %}
 //Load a PowerPoint presentation.
 IPresentation pptxDoc = Presentation.Open("PPTXWithSections.PPTX");
 //Create a new section to Insert.
@@ -175,7 +175,7 @@ You can move the sections within a PowerPoint presentation. The following code e
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Move-section-positions/.NET/Move-section-positions/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -214,7 +214,7 @@ The following code example demonstrates how to move a slide from one section to 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Move-slide-within-section/.NET/Move-slide-within-section/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -259,7 +259,7 @@ The following code example demonstrates how to clone the slide collection of a s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Clone-and-merge-section-slides/.NET/Clone-and-merge-section-slides/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -314,7 +314,7 @@ The following code example demonstrates how to create remove a particular sectio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Remove-section/.NET/Remove-section/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -353,7 +353,7 @@ The following code example demonstrates how to remove section collection from an
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Sections/Remove-all-sections/.NET/Remove-all-sections/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("PPTXWithSections.PPTX",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
