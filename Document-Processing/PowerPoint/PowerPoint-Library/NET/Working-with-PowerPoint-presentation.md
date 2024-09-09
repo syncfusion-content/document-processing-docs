@@ -13,7 +13,7 @@ Cloning a PowerPoint presentation creates a new copy of the PowerPoint presentat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Clone-PowerPoint-presentation/.NET/Clone-PowerPoint-presentation/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -280,7 +280,7 @@ The following code example demonstrates how to modify the existing built in docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Modify-built-in-document-properties/.NET/Modify-built-in-document-properties/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -332,7 +332,7 @@ The following code example demonstrates how to add new custom document property.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Add-custom-document-properties/.NET/Add-custom-document-properties/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -389,7 +389,7 @@ The following code example demonstrates how to access and modify an existing cus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Modify-custom-document-properties/.NET/Modify-custom-document-properties/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -440,7 +440,7 @@ Below code snippet demonstrates how to create a final non – editable presentat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Mark-as-final/.NET/Mark-as-final/Program.cs" %}
 //Create an instance for PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add slide to the presentation
@@ -491,7 +491,7 @@ Change the first slide number of the PowerPoint presentation using the **FirstSl
 The following code sample illustrates how to modify the first slide number in the PowerPoint presentation.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/First-slide-number/.NET/First-slide-number/Program.cs" %}
 
 //Open an existing PowerPoint Presentation.
 using (FileStream inputStream = new FileStream("Data/Input.pptx", FileMode.Open))
