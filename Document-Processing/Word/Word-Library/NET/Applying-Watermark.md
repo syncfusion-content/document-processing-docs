@@ -22,7 +22,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Watermark/Add-text-watermark/.NET/Add-text-watermark/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds a section and a paragraph in the document
@@ -107,7 +107,7 @@ The following code example illustrates how to add a picture watermark to the Wor
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Watermark/Add-picture-watermark/.NET/Add-picture-watermark/Program.cs" %}
 
 //Creates a new Word document
 WordDocument document = new WordDocument();

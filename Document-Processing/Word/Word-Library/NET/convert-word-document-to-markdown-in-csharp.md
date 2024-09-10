@@ -181,7 +181,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Code-block-in-Markdown/.NET/Code-block-in-Markdown/Program.cs" %}
 //Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -294,7 +294,7 @@ The following code example shows how to create block quotes in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Block-quote-in-Markdown/.NET/Block-quote-in-Markdown/Program.cs" %}
 //Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -370,7 +370,7 @@ The following code example illustrates how set the images folder to export the i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Export-images-to-folder/.NET/Export-images-to-folder/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -427,7 +427,7 @@ The following code example illustrates how to save Image files during a Word to 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Customize-image-path/.NET/Customize-image-path/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {

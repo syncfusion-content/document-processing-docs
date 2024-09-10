@@ -6,7 +6,7 @@ control: Presentation
 documentation: UG
 ---
 
-# Convert PowerPoint to Image using Syncfusion PowerPoint (Presentation) library
+# Convert PowerPoint to Image using Syncfusion PowerPoint library
 
 Syncfusion PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to Image within a few lines of code in .NET applications and also it does not require Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to Image.
 
@@ -63,7 +63,7 @@ The following code example demonstrates the conversion of an entire Presentation
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET/Convert-PowerPoint-presentation-to-Image/Program.cs" %}
 using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
 {
    //Open the existing PowerPoint presentation.
@@ -130,7 +130,7 @@ The following code example demonstrates how to convert a slide to image.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Convert-PowerPoint-slide-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Program.cs" %}
 //Namespaces to perform PPTX to Image conversion
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
@@ -283,7 +283,7 @@ The following code example shows how to convert PowerPoint slides to images base
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Based-on-Entrance-animation-effects/.NET/Based-on-Entrance-animation-effects/Program.cs" %}
 //Open a PowerPoint Presentation.
 IPresentation pptxDoc = Presentation.Open("Input.pptx");
 
