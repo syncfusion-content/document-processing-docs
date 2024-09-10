@@ -36,23 +36,23 @@ In this section, we will see about the changes which need to be considered while
 </tr>
 <tr>
 <td>
-{{'[PdfLoadedDocument(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_/)'| markdownify }}
+{{'[PdfLoadedDocument(String)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }}
 </td>
 <td> 
-You can open the document as stream from the system file using {{'[PdfLoadedDocument(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_/)'| markdownify }} API.  
+You can open the document as stream from the system file using {{'[PdfLoadedDocument(Stream)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }} API.  
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfLoadedDocument(String, String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_System_String_/)'| markdownify }}
+{{'[PdfLoadedDocument(String, String)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }}
 </td>
 <td> 
-You can open the encrypted document as stream or byte array with password from system file using {{'[PdfLoadedDocument(Stream, String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_System_String_/)'| markdownify }} or {{'[PdfLoadedDocument(Byte[], String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_/)'| markdownify }} API. 
+You can open the encrypted document as stream or byte array with password from system file using {{'[PdfLoadedDocument(Stream, String)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }} or {{'[PdfLoadedDocument(Byte[], String)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }} API. 
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfLoadedDocument(String, Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_System_Boolean_/)'| markdownify }}
+{{'[PdfLoadedDocument(String, Boolean)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }}
 </td>
 <td> 
 You can open the corrupted PDF document as stream or byte array with Boolean from system file using {{'[PdfLoadedDocument(Stream, Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_System_Boolean_)'| markdownify }} or {{'[PdfLoadedDocument(Byte[], Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_Boolean_)'| markdownify }} API. 
