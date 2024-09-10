@@ -3727,6 +3727,48 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding review status to the PDF annotation
 
+<table border="1">
+<th style="font-size:14px" width="100px">State model</th>
+<th style="font-size:14px">State</th>
+<th style="font-size:14px">Description</th>
+<tr>
+    <td>Marked</td>
+    <td>Marked</td>
+    <td>The annotation has been marked by the user.</td>
+</tr>
+<tr>
+    <td></td>
+    <td>Marked</td>
+    <td>The annotation has not been marked by the user (the default).</td>
+</tr>
+<tr>
+    <td>Review</td>
+    <td>Accepted</td>
+    <td>The user agrees with the change.</td>
+</tr>
+<tr>
+    <td></td>
+    <td>Rejected</td>
+    <td>The user disagrees with the change.</td>
+</tr>
+<tr>
+    <td></td>
+    <td>Cancelled</td>
+    <td>The change has been cancelled.</td>
+</tr>
+<tr>
+    <td></td>
+    <td>Completed</td>
+    <td>The changes has been completd.</td>
+</tr>
+<tr>
+    <td></td>
+    <td>None</td>
+    <td>The user has indicated nothing about the change (the default).</td>
+</tr>
+
+</table>
+
 You can add a review status in a newly created PDF annotation using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum as shown the following code snippet.
 {% tabs %}
 
