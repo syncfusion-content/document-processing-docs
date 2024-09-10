@@ -1,6 +1,6 @@
 ---
 title: Working with Hyperlinks in .NET Word library | Syncfusion
-description: Learn how to work with hyperlinks in a Word document using the .NET Word (DocIO) library.
+description: Learn how to work with hyperlinks in a Word document using the Syncfusion .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG

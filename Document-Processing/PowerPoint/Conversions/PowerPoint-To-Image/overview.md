@@ -1,12 +1,12 @@
 ---
-title: Convert PowerPoint Presentation to Image in PowerPoint Library | Presentation | Syncfusion
-description: Learn how to convert a PowerPoint Presentation document to Image using the Syncfusion PowerPoint (Presentation) library without Microsoft PowerPoint or interop dependencies.
+title: Convert PowerPoint to Image in PowerPoint Library | Syncfusion
+description: Learn how to convert a PowerPoint Presentation document to Image using the Syncfusion PowerPoint (Presentation) library.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 
-# Convert PowerPoint to Image using Syncfusion PowerPoint (Presentation) library
+# Convert PowerPoint to Image using Syncfusion PowerPoint library
 
 Syncfusion PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to Image within a few lines of code in .NET applications and also it does not require Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to Image.
 
