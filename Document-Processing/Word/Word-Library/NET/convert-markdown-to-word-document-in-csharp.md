@@ -27,7 +27,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Markdown-to-Word-conversion/Convert-Markdown-to-Word/.NET/Convert-Markdown-to-Word/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read))
 {
@@ -72,7 +72,7 @@ The following code example shows how to load image data based on the image sourc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Markdown-to-Word-conversion/Customize-image/.NET/Customize-image/Program.cs" %}
 //Create a Word document instance.
 using (WordDocument document = new WordDocument())
 {
@@ -437,7 +437,7 @@ N> Hook the event handler before opening a Word document as per the above code e
 <p>Image</p>
 </td>
 <td style="width: 26%;">
-<p>![Alternate text](URL path)</p>
+<p>![Alternate text] (URL path)</p>
 </td>
 <td style="width: 41.7072%;">
 <p>For image, enclose an alternative text within the brackets [], and then link of the image source within parentheses ().</p>

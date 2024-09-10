@@ -27,7 +27,7 @@ The following code example demonstrates how to set a transition effect to a Powe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Apply-PowerPoint-slide-transition/.NET/Apply-PowerPoint-slide-transition/Program.cs" %}
 //Create a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the presentation
@@ -89,7 +89,7 @@ You can edit the transition effects that already applied to the PowerPoint slide
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Modify-transition-effect/.NET/Modify-transition-effect/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -146,7 +146,7 @@ You can set the transition duration value up to 59 seconds. This specifies the l
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Set-transition-duration/.NET/Set-transition-duration/Program.cs" %}
 //Create a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the presentation
@@ -208,7 +208,7 @@ You can set the transition delay in seconds. This delays the next transactions t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Set-transition-delay/.NET/Set-transition-delay/Program.cs" %}
 //Create a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the presentation
@@ -281,7 +281,7 @@ Syncfusion PowerPoint library allows you to set both the previously given trigge
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Set-trigger-mode-for-transition/.NET/Set-trigger-mode-for-transition/Program.cs" %}
 //Create a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the presentation
@@ -348,7 +348,7 @@ The speed is the customized property provided by Syncfusion PowerPoint library t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Set-transition-speed/.NET/Set-transition-speed/Program.cs" %}
 //Create a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the presentation
