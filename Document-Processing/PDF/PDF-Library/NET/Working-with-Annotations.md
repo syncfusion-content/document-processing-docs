@@ -3738,7 +3738,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 <tr>
     <td></td>
-    <td>Marked</td>
+    <td>Unmarked</td>
     <td>The annotation has not been marked by the user (the default).</td>
 </tr>
 <tr>
@@ -3753,13 +3753,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 <tr>
     <td></td>
-    <td>Cancelled</td>
-    <td>The change has been cancelled.</td>
+    <td>Canceled</td>
+    <td>The change has been canceled.</td>
 </tr>
 <tr>
     <td></td>
     <td>Completed</td>
-    <td>The changes has been completd.</td>
+    <td>The changes has been completed.</td>
 </tr>
 <tr>
     <td></td>

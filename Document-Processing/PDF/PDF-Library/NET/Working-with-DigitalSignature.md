@@ -921,8 +921,6 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
-//Get the page of the existing PDF document.
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Gets the first signature field of the PDF document
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 PdfSignature signature = signatureField.Signature;
@@ -945,8 +943,6 @@ loadedDocument.Close(true);
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Get the page of the existing PDF document.
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Gets the first signature field of the PDF document
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 PdfSignature signature = signatureField.Signature;
@@ -965,8 +961,6 @@ loadedDocument.Close(true);
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-'Get the page of the existing PDF document.
-Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 'Get the first signature field of the PDF document
 Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
 Dim signature As PdfSignature = signatureField.Signature
@@ -1729,17 +1723,11 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
 FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
-//Get the page of the existing PDF document.
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Gets the first signature field of the PDF document
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 PdfSignature signature = signatureField.Signature;
 //Enable LTV on Signature.
 signature.EnableLtv = true;
-
-signature.ContactInfo = "johndoe@owned.us";
-signature.LocationInfo = "Honolulu, Hawaii";
-signature.Reason = "I am author of this document.";
 
 //Save the document into stream
 MemoryStream stream = new MemoryStream();
@@ -1755,17 +1743,11 @@ loadedDocument.Close(true);
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Get the page of the existing PDF document.
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 //Gets the first signature field of the PDF document
 PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
 PdfSignature signature = signatureField.Signature;
 //Enable LTV on Signature.
 signature.EnableLtv = true;
-
-signature.ContactInfo = "johndoe@owned.us";
-signature.LocationInfo = "Honolulu, Hawaii";
-signature.Reason = "I am author of this document.";
 
 //Save and close the document
 loadedDocument.Save("Output.pdf");
@@ -1777,18 +1759,11 @@ loadedDocument.Close(true);
 
 'Load an existing PDF document.
 Dim loadedDocument As PdfLoadedDocument = new PdfLoadedDocument("Input.pdf")
-'Get the page of the existing PDF document.
-Dim loadedPage As PdfLoadedPage = loadedDocument.Pages[0] as PdfLoadedPage
 'Gets the first signature field of the PDF document
 Dim signatureField As PdfLoadedSignatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField
 Dim signature As PdfSignature = signatureField.Signature
 'Enable LTV on Signature.
 signature.EnableLtv = True
-
-signature.ContactInfo = "johndoe@owned.us"
-signature.LocationInfo = "Honolulu, Hawaii"
-signature.Reason = "I am author of this document."
-
 
 'Save and close the document
 PdfLoadedDocument.Save("Output.pdf")
