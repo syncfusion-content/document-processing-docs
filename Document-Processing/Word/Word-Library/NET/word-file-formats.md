@@ -33,7 +33,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Create-Docx-format-Word-document/.NET/Create-Docx-format-Word-document/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -83,7 +83,7 @@ DOTX is a Word document template. The following code snippet shows how to create
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Create-Dotx-format-Word-document/.NET/Create-Dotx-format-Word-document/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -133,7 +133,7 @@ DOCM is a macro enabled Word document. It is same as DOCX document contains macr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Macros/Open-and-save-macro-enabled-document/.NET/Open-and-save-macro-enabled-document/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.dotm", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Dotm))
@@ -199,7 +199,7 @@ The following code example shows how to convert the Word document into Word Proc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Convert-Word-to-WordML/.NET/Convert-Word-to-WordML/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -238,7 +238,7 @@ The following code example shows how to convert the Word Processing XML document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Convert-WordML-to-Word/.NET/Convert-WordML-to-Word/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.xml", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.WordML))
@@ -340,7 +340,7 @@ The DocIO library supports importing or exporting of DOC format and refer to the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Create-Doc-format-Word-document/.NET/Create-Doc-format-Word-document/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -461,7 +461,7 @@ The following code shows, how to convert the DOC file into DOCX file format usin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Convert-Doc-to-Docx/.NET/Convert-Doc-to-Docx/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.doc", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Doc))
@@ -535,7 +535,7 @@ The following code shows, how to convert the DOCX file into DOC file format usin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Convert-Docx-to-Doc/.NET/Convert-Docx-to-Doc/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -644,7 +644,7 @@ The following code shows, how to save Word document with same word version compa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Save-Word-with-compatibility/.NET/Save-Word-with-compatibility/Program.cs" %}
 //Creates an empty WordDocument instance
 using (WordDocument document = new WordDocument())
 {
@@ -746,7 +746,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code shows, how to save Word document in old compatibility using DocIO.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Save-Word-in-old-compatibility/.NET/Save-Word-in-old-compatibility/Program.cs" %}
 
 //Create an instance of WordDocument.
 using (WordDocument document = new WordDocument())
@@ -941,7 +941,7 @@ The following code example shows how to preserve embedded Ole image as normal im
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-file-formats/Ole-image-as-normal-image/.NET/Ole-image-as-normal-image/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {

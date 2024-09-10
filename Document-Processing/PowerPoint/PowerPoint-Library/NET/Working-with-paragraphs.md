@@ -15,7 +15,8 @@ The following code example demonstrates how to add a paragraph in a slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Add-paragraph-to-PowerPoint-slide/.NET/Add-paragraph-to-PowerPoint-slide/Program.cs" %}
 //Creates PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds slide to the PowerPoint
@@ -83,7 +84,8 @@ Each paragraph in a slide can have its own formatting types such as alignment, i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Apply-paragraph-formatting/.NET/Apply-paragraph-formatting/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -162,7 +164,8 @@ With Essential Presentation, you can add or modify the text in a Presentation. W
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Add-text-with-different-formattings/.NET/Add-text-with-different-formattings/Program.cs" %}
 //Creates the PowerPoint Presentation instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds new slide to the presentation
@@ -284,7 +287,8 @@ You can modify a text by accessing the existing paragraphs in a Presentation. Th
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Modify-existing-text/.NET/Modify-existing-text/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -353,7 +357,8 @@ With Essential Presentation, you can modify the language of Presentation [TextPa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Modify-text-language/.NET/Modify-text-language/Program.cs" %}
 //Create a Microsoft PowerPoint instance
 IPresentation pptxDoc = Presentation.Create();
 //Add the slide for Presentation
@@ -473,7 +478,8 @@ The following code example demonstrates how to remove a paragraph from a slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Paragraphs/Remove-paragraph/.NET/Remove-paragraph/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

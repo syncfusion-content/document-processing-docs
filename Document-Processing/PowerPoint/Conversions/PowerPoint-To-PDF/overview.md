@@ -65,7 +65,8 @@ The following code example illustrates how to convert a PowerPoint document into
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]" %}
+{% highlight C# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET/Convert-PowerPoint-presentation-to-PDF/Program.cs" %}
 //Load the PowerPoint presentation into stream.
 using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
@@ -154,7 +155,8 @@ The following code example demonstrates how to cancel or continue the PowerPoint
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]" %}
+{% highlight C# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Show-warning-for-unsupported-elements/.NET/Show-warning-for-unsupported-elements/Program.cs" %}
 // Open the file as Stream
 using (FileStream pptStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
@@ -479,7 +481,8 @@ The following code sample shows how to preserve structured document tags in the 
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]" %}
+{% highlight C# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-into-accessible-PDF/.NET/Convert-PowerPoint-into-accessible-PDF/Program.cs" %}
 //Load the PowerPoint presentation into a stream.
 using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
 {
