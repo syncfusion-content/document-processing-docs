@@ -74,7 +74,7 @@ End Module
 
 ## See Also
 
-*[How to protect the zip files using Syncfusion.Compression.Base?](how-to-protect-the-zip-files-using-syncfusion-compression-base.md)
+* [How to protect the zip files using Syncfusion.Compression.Base?](how-to-protect-the-zip-files-using-syncfusion-compression-base.md)
 * [How to un-protect the zip files using Syncfusion.Compression.Base?](how-to-un-protect-the-zip-files-using-syncfusion-compression-base)
 * [How to zip files using the Syncfusion.Compression.Zip namespace?](how-to-zip-files-using-the-syncfusion-compression-zip-namespace)
 * [How to zip all the files in subfolders using Syncfusion Compression?](how-to-zip-all-the-files-in-subfolders-using-syncfusion-compression)
