@@ -15,7 +15,7 @@ The following code example demonstrates how to encrypt a PowerPoint Presentation
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Encrypt-PowerPoint-with-password/.NET/Encrypt-PowerPoint-with-password/Program.cs" %}
 using (IPresentation presentation = Presentation.Create())
 {
     //Adds slide to Presentation.
@@ -121,7 +121,7 @@ The following code example demonstrates removing the encryption from a PowerPoin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Remove-encryption/.NET/Remove-encryption/Program.cs" %}
  //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
 using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 {
@@ -176,7 +176,7 @@ The following code example shows how to set write protection for a PowerPoint Pr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Set-write-protection/.NET/Set-write-protection/Program.cs" %}
 //Create a new instance for PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add the blank slide to the presentation
@@ -246,7 +246,7 @@ The following code example shows how to remove restriction protection from the w
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Remove-write-protection/.NET/Remove-write-protection/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

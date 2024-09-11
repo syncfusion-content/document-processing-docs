@@ -15,7 +15,7 @@ The following code example demonstrates how to add an AutoShape and image to the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Add-PowerPoint-shape/.NET/Add-PowerPoint-shape/Program.cs" %}
 //Creates an instance for PowerPoint
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide to Presentation
@@ -83,7 +83,7 @@ You can iterate through the shapes in a PowerPoint slide. The following code exa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Iterate-through-shapes/.NET/Iterate-through-shapes/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -146,7 +146,7 @@ The shape properties can be used to format and modify the shapes in a slide. The
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Apply-shape-properties/.NET/Apply-shape-properties/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -245,7 +245,7 @@ The shapes can be removed from a slide by its instance or by its index position 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Remove-shape/.NET/Remove-shape/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -304,7 +304,7 @@ The shapes in a slide can be grouped into a single shape. The following code sni
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Create-PowerPoint-groupshape/.NET/Create-PowerPoint-groupshape/Program.cs" %}
 //Creates an instance for PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds a blank slide to presentation
@@ -378,7 +378,7 @@ You can iterate through the shape collection of a [GroupShape](https://help.sync
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Iterate-groupshape-and-modify-a-shape/.NET/Iterate-groupshape-and-modify-a-shape/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -460,7 +460,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Shapes/Remove-groupshape/.NET/Remove-groupshape/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

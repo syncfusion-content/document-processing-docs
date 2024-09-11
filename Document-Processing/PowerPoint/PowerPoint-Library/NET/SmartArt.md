@@ -9,7 +9,7 @@ documentation: UG
 
 A [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram is a visual representation of your information, to effectively communicate your ideas in presentations. You can add and modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams in PowerPoint presentations using Essential Presentation library.
 
-To quickly start creating a SmartArt in a PowerPoint Presentation using .NET PowerPoint libray, please check out this video:
+To quickly start creating a SmartArt in a PowerPoint Presentation using .NET PowerPoint library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=dQhN3i9s3Es" %}
 
 ## Adding SmartArt to a Slide
@@ -18,7 +18,7 @@ You can add any of the predefined [SmartArt](https://help.syncfusion.com/cr/docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Add-PowerPoint-SmartArt/.NET/Add-PowerPoint-SmartArt/Program.cs" %}
 // Create an instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the Presentation
@@ -68,7 +68,7 @@ You can add a new node to the [SmartArt](https://help.syncfusion.com/cr/document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Add-SmartArt-node/.NET/Add-SmartArt-node/Program.cs" %}
 // Create an instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the Presentation
@@ -129,7 +129,7 @@ In [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pres
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Adding-nested-level-nodes/.NET/Adding-nested-level-nodes/Program.cs" %}
 // Create an instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the Presentation
@@ -197,7 +197,7 @@ You can modify the [SmartArt](https://help.syncfusion.com/cr/document-processing
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Modify-SmartArt-appearance/.NET/Modify-SmartArt-appearance/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -278,7 +278,7 @@ You can iterate through the child nodes and access the properties of each node i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Iterate-child-nodes-of-existing-SmartArt/.NET/Iterate-child-nodes-of-existing-SmartArt/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -357,7 +357,7 @@ You can remove a node from the [SmartArt](https://help.syncfusion.com/cr/documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Remove-child-node-from-existing-SmartArt/.NET/Remove-child-node-from-existing-SmartArt/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
