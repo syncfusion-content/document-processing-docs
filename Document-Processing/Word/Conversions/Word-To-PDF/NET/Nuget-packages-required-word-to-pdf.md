@@ -89,7 +89,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc5
 Syncfusion.DocIORenderer.Net.Core.nupkg<br/>
 <br/>
 <i>Note:</i><br/>
-<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
+<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
 </td>
 <td>
 Install-Package Syncfusion.DocIORenderer.Net.Core
