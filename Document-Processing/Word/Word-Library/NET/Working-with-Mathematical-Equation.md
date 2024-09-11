@@ -50,7 +50,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-an-accent-mark-to-the-equation/.NET/Add-an-accent-mark-to-the-equation/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-an-accent-mark-to-the-equation/.NET/Add-an-accent-mark-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
