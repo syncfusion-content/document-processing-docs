@@ -48,7 +48,7 @@ Imports Syncfusion.Drawing
 Step 5: Include the below code snippet in program.cs to create an Excel file.
 {% capture codesnippet3 %}
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET/Create%20Excel/Create%20Excel/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Core/Create%20Excel/Create%20Excel/Program.cs,180"  %}
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -418,7 +418,7 @@ The below steps illustrates creating a simple Invoice formatted Excel document i
 
 Step 1: Create a new C# Console Application(.NET Framework) project.
 
-![Create console application .NET Framework in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
+![Create console application.NET Framework in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
 
 Step 2: Name the project.
 
@@ -428,12 +428,12 @@ Step 3: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.WinForms Nuget Package](Console-Apps-images/Console-Apps-images_img7.png)
 
-N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion Windows Forms GUI controls, so named with sufix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
+N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion Windows Forms GUI controls, so named with suffix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
 
 Step 4: Include the following namespaces in the program.cs file.
 {% capture codesnippet1 %}
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
 using System.IO;
 using System.Drawing;
@@ -451,7 +451,7 @@ Imports System.Drawing
 Step 5: Include the below code snippet in program.cs to create an Excel file.
 {% capture codesnippet3 %}
 {% tabs %}  
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Framework/Create%20Excel/Create%20Excel/Program.cs,180" %}
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {

@@ -15,7 +15,7 @@ documentation: UG
 The following code example illustrates how to use FitToPagesTall.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesTall/.NET/FitToPagesTall/FitToPagesTall/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -92,7 +92,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fit all rows on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesTall/NET/FitToPagesTall).
+A complete working example to fit all rows on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesTall/.NET/FitToPagesTall).
 
 ## Fit all columns on one page.
 
@@ -101,7 +101,7 @@ A complete working example to fit all rows on one page in C# is present on [this
 The following code example illustrates how to use FitToPagesWide.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesWide/.NET/FitToPagesWide/FitToPagesWide/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -178,7 +178,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fit all columns on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesWide/NET/FitToPagesWide).
+A complete working example to fit all columns on one page in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/FitToPagesWide/.NET/FitToPagesWide).
 
 ## Fit the page content.
 
@@ -187,7 +187,7 @@ A complete working example to fit all columns on one page in C# is present on [t
 The following code example illustrates how to use IsFitToPage.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsFitToPage/.NET/IsFitToPage/IsFitToPage/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -261,7 +261,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fit page content before printing in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsFitToPage/NET/IsFitToPage).
+A complete working example to fit page content before printing in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsFitToPage/.NET/IsFitToPage).
 
 ## Summary Column Right
 
@@ -270,7 +270,7 @@ To enable the [IsSummaryColumnRight](https://help.syncfusion.com/cr/document-pro
 The following code snippet shows how to use IsSummaryColumnRight.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryColumnRight/.NET/IsSummaryColumnRight/IsSummaryColumnRight/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -353,7 +353,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to enable IsSummaryColumnRight in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryColumnRight/NET/IsSummaryColumnRight).
+A complete working example to enable IsSummaryColumnRight in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryColumnRight/.NET/IsSummaryColumnRight).
 
 ## Summary Row Below.
 
@@ -362,7 +362,7 @@ To enable the [IsSummaryRowBelow](https://help.syncfusion.com/cr/document-proces
 The following code snippet shows how to use IsSummaryRowBelow.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryRowBelow/.NET/IsSummaryRowBelow/IsSummaryRowBelow/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -445,7 +445,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to enable IsSummaryRowBelow in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryRowBelow/NET/IsSummaryRowBelow).
+A complete working example to enable IsSummaryRowBelow in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/IsSummaryRowBelow/.NET/IsSummaryRowBelow).
 
 
 ## Print Area.
@@ -455,7 +455,7 @@ The [PrintArea](https://help.syncfusion.com/cr/document-processing/Syncfusion.Xl
 The following code snippet shows how to use the PrintArea.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintArea/.NET/PrintArea/PrintArea/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -529,7 +529,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the range to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintArea/NET/PrintArea).
+A complete working example to set the range to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintArea/.NET/PrintArea).
 
 ## Print Gridlines.
 
@@ -538,7 +538,7 @@ The [PrintGridlines](https://help.syncfusion.com/cr/document-processing/Syncfusi
 The following code snippet shows how to use PrintGridlines.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintGridlines/.NET/PrintGridlines/PrintGridlines/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -612,7 +612,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the gridlines to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintGridlines/NET/PrintGridlines).
+A complete working example to set the gridlines to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintGridlines/.NET/PrintGridlines).
 
 ## Print Headings.
 
@@ -621,7 +621,7 @@ The [PrintHeadings](https://help.syncfusion.com/cr/document-processing/Syncfusio
 The following code snippet shows how to use PrintHeadings.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintHeadings/.NET/PrintHeadings/PrintHeadings/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -695,7 +695,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the row and column headings to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintHeadings/NET/PrintHeadings).
+A complete working example to set the row and column headings to be printed in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintHeadings/.NET/PrintHeadings).
 
 ## Print TitleColumns.
 
@@ -704,7 +704,7 @@ The [PrintTitleColumns](https://help.syncfusion.com/cr/document-processing/Syncf
 The following code snippet shows how to use PrintTitleColumns.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleColumns/.NET/PrintTitleColumns/PrintTitleColumns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -778,7 +778,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the PrintTitleColumns in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleColumns/NET/PrintTitleColumns).
+A complete working example to set the PrintTitleColumns in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleColumns/.NET/PrintTitleColumns).
 
 
 ## Print TitleRows.
@@ -788,7 +788,7 @@ The [PrintTitleRows](https://help.syncfusion.com/cr/document-processing/Syncfusi
 The following code snippet shows how to use PrintTitleRows.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleRows/.NET/PrintTitleRows/PrintTitleRows/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -862,14 +862,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set the PrintTitleRows in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleRows/NET/PrintTitleRows).
+A complete working example to set the PrintTitleRows in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/PrintTitleRows/.NET/PrintTitleRows).
 
 ## Headers and Footers
 
 The following code example illustrates how to add headers and footers in an Excel document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer/Header%20and%20Footer/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -951,4 +951,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/NET/Header%20and%20Footer)
+A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer)

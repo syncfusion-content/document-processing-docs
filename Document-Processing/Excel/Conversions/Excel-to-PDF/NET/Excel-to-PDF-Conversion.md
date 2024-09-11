@@ -20,7 +20,7 @@ N> Worksheet To Image conversion can be performed by referring [Syncfusion.XlsIO
 The following code illustrates how to convert an entire Excel workbook to PDF.
 
 {% tabs %} 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Workbook%20to%20PDF/.NET/Workbook%20to%20PDF/Workbook%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
    IApplication application = excelEngine.Excel;
@@ -84,7 +84,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for converting entire Excel workbook to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Workbook%20to%20PDF).    
+A complete working example for converting entire Excel workbook to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Workbook%20to%20PDF/.NET/Workbook%20to%20PDF).    
 
 To learn more about different conversion settings in Excel To PDF conversion, refer the [Excel to PDF conversion settings](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings). 
 
@@ -93,7 +93,7 @@ To learn more about different conversion settings in Excel To PDF conversion, re
 The following code shows how to convert a particular worksheet to PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Worksheet%20to%20PDF/.NET/Worksheet%20to%20PDF/Worksheet%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -153,14 +153,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example for converting particular worksheet to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Worksheet%20to%20PDF). 
+A complete working example for converting particular worksheet to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Worksheet%20to%20PDF/.NET/Worksheet%20to%20PDF). 
 
 ### Creating individual PDF document for each worksheet
 
 The following code snippet shows how to create an individual PDF document for each worksheet in a workbook.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Each%20Worksheet%20to%20PDF/.NET/Each%20Worksheet%20to%20PDF/Each%20Worksheet%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -225,7 +225,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert each worksheet into individual PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Each%20Worksheet%20to%20PDF).
+A complete working example to convert each worksheet into individual PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Each%20Worksheet%20to%20PDF/.NET/Each%20Worksheet%20to%20PDF).
   
 ## Excel with chart to PDF
 
@@ -236,7 +236,7 @@ To preserve the charts during Excel To PDF conversion in .NET Framework, initial
 The following code illustrates how to convert an Excel with chart to PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Chart%20to%20PDF/.NET/Chart%20to%20PDF/Chart%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -299,7 +299,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to convert Excel chart to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Chart%20to%20PDF).
+A complete working example to convert Excel chart to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Chart%20to%20PDF/.NET/Chart%20to%20PDF).
 
 ## Excel with comments (notes) to PDF
 
@@ -313,7 +313,7 @@ XlsIO supports to convert a workbook or a worksheet with comments (notes) to PDF
 Comments (notes) will be rendered in the output PDF document as displayed in the Excel file, if the **PrintInPlace** option is selected. The following code illustrates this.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Comments%20in%20Place%20to%20PDF/.NET/Comments%20in%20Place%20to%20PDF/Comments%20in%20Place%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -387,7 +387,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel with comments to PDF and render comments in place in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Comments%20in%20Place%20to%20PDF).
+A complete working example to convert Excel with comments to PDF and render comments in place in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Comments%20in%20Place%20to%20PDF/.NET/Comments%20in%20Place%20to%20PDF).
 
 The following screenshot represents the input Excel file with notes
 
@@ -401,7 +401,7 @@ The following screenshot represents the output pdf file generated by the XlsIO u
 Comments (notes) will be rendered in the output PDF document at the end of the each sheet which contains the comments (notes), when the **PrintSheetEnd** option is selected. The following code illustrates this. 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Comments%20to%20PDF%20at%20End/.NET/Comments%20to%20PDF%20at%20End/Comments%20to%20PDF%20at%20End/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -474,7 +474,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel with comments to PDF and render comments at the end in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Comments%20to%20PDF%20at%20End).
+A complete working example to convert Excel with comments to PDF and render comments at the end in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Comments%20to%20PDF%20at%20End/.NET/Comments%20to%20PDF%20at%20End).
 
 The following screenshot represents the input Excel file with notes
 
@@ -489,7 +489,7 @@ The following screenshot represents the output pdf file generated by the XlsIO u
 Comments (notes) will not be displayed in the output PDF document, if the **PrintNoComments** option is selected. The following code illustrates this. 
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/No%20Comments%20in%20PDF/.NET/No%20Comments%20in%20PDF/No%20Comments%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -562,7 +562,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel with comments to PDF ignoring the comments in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/No%20Comments%20in%20PDF).
+A complete working example to convert Excel with comments to PDF ignoring the comments in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/No%20Comments%20in%20PDF/.NET/No%20Comments%20in%20PDF).
 
 The following screenshot represents the input Excel file with notes
 
@@ -858,7 +858,7 @@ End Namespace
 
 ## Excel to PDF conversion in Linux OS
 
-In Linux OS, the Excel to PDF conversion can be performed using .NET Core (Targeting .netcoreapp) application. Please refer [Excel to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#converting-excel-document-into-pdf) to know about the packages required to deploy .NET Core (Targeting .netcoreapp) application with Excel to PDF conversion capabilities.
+In Linux OS, the Excel to PDF conversion can be performed using .NET Core (Targeting .NET core app) application. Please refer [Excel to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#converting-excel-document-into-pdf) to know about the packages required to deploy .NET Core (Targeting .NET core app) application with Excel to PDF conversion capabilities.
 
 In addition to the previous NuGet packages, SkiaSharp.Linux helper NuGet package is required, that can be generated by the following steps: 
 
@@ -1156,7 +1156,7 @@ N> XlsIO internally uses user-initialized or specified fallback fonts for Unicod
 The following code example demonstrates how to initialize a default fallback fonts while converting an Excel document to PDF. The *InitializeDefault* API sets the default fallback fonts for specific script types like Arabic, Hebrew, Chinese, Japanese etc.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Initialize%20default%20fallback%20fonts/.NET/Initialize_default-fallback_fonts/Initialize_default-fallback_fonts/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -1228,14 +1228,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Initialize default fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Initialize%20default%20fallback%20fonts/NET/Initialize_default-fallback_fonts).
+A complete working example for Initialize default fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Initialize%20default%20fallback%20fonts/.NET/Initialize_default-fallback_fonts).
 
 ### Fallback fonts based on script type
 
 The following code example demonstrates how a user can add fallback fonts based on the script types, which XlsIO considers internally when converting an Excel document to PDF.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fallback%20fonts%20based%20on%20script%20type/.NET/Fallback_fonts_based_on_scripttype/Fallback_fonts_based_on_scripttype/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -1334,7 +1334,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Fallback fonts based on script type in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20based%20on%20script%20type/NET/Fallback_fonts_based_on_scripttype).
+A complete working example for Fallback fonts based on script type in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20based%20on%20script%20type/.NET/Fallback_fonts_based_on_scripttype).
 
 ### Fallback fonts for range of Unicode text
 
@@ -1343,7 +1343,7 @@ Users can set fallback fonts for specific Unicode range of text to be used in Ex
 The following code example demonstrates how users can add fallback fonts by using a specific Unicode range of text that XlsIO considers internally while converting an Excel document to PDF.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fallback%20fonts%20for%20unicode%20range/.NET/Fallback_fonts_for_unicode_range/Fallback_fonts_for_unicode_range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -1444,14 +1444,14 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Fallback fonts for range of Unicode text in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20for%20unicode%20range/NET/Fallback_fonts_for_unicode_range).
+A complete working example for Fallback fonts for range of Unicode text in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Fallback%20fonts%20for%20unicode%20range/.NET/Fallback_fonts_for_unicode_range).
 
 ### Modify the existing fallback fonts
 
 The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting an Excel document to PDF.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Modify%20the%20existing%20fallback%20fonts/.NET/Modify_the_existing_fallback_fonts/Modify_the_existing_fallback_fonts/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -1547,7 +1547,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for Modify the existing fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Modify%20the%20existing%20fallback%20fonts/NET/Modify_the_existing_fallback_fonts).
+A complete working example for Modify the existing fallback fonts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Modify%20the%20existing%20fallback%20fonts/.NET/Modify_the_existing_fallback_fonts).
 
 ### Supported script types
 

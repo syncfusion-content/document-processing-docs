@@ -43,14 +43,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.Pdf.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC4
 </td>
 <td>
@@ -81,14 +73,6 @@ Blazor
 </td>
 <td>
 {{'[Syncfusion.Pdf.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Core (Targeting NET Framework)
-</td>
-<td>
-{{'[Syncfusion.Pdf.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
 </td>
 </tr>
 <tr>
