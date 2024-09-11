@@ -79,7 +79,7 @@ The following XHTML validation types are supported in Essential DocIO while impo
 </thead>
 <tr>
 <td><b>XHTMLValidationType.None</b></td>
-<td>It does not perform any schema validation but the given HTML content should meet XHTML 1.0 format.</td>
+<td>It does not perform any schema validation.</td>
 </tr>
 <tr>
 <td><b>XHTMLValidationType.Transitional</b></td>
@@ -149,6 +149,7 @@ N> 1. Inserting XHTML string is not supported in Silverlight, Windows Phone, and
 N> 2. XHTML validation against XHTML 1.0 Strict and Transitional schema is not supported in Windows Store applications.
 N> 3. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Default validation while importing HTML file.
 N> 4. [XHTMLValidationType.None](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.XHTMLValidationType.html): Validates the HTML file against XHTML format and it doesn’t perform any schema validation.
+N> 5. From version 27.X.X, the .NET Word Library supports opening HTML even if it contains improper closing tags when validation is set to None.
 
 ### Customize image data
 
@@ -828,6 +829,16 @@ See Shading, for more details.<br/><br/></td>
 <br/><br/></td>
 <td>
 Spacing before and after<br/><br/></td>
+<td>
+Yes<br/><br/></td>
+<td>
+-<br/><br/></td>
+</tr>
+<tr>
+<td>
+<br/><br/></td>
+<td>
+RTL<br/><br/></td>
 <td>
 Yes<br/><br/></td>
 <td>
