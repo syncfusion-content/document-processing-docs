@@ -1,6 +1,6 @@
 ---
 title: NuGet Packages Required to Convert Word to PDF | Syncfusion
-description: Learn the NuGet packages required to Convert Word to PDF using the .NET Word (DocIO) library.
+description: Learn the NuGet packages required to Convert Word document to PDF using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
