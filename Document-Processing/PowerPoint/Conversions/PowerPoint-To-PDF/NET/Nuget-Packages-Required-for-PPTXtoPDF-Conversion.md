@@ -36,14 +36,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET Web
-</td>
-<td>
-{{'[Syncfusion.PresentationToPDFConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC4
 </td>
 <td>
@@ -110,14 +102,6 @@ WPF
 </td>
 <td>
 {{'[Syncfusion.OfficeChartToImageConverter.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.Wpf/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Web
-</td>
-<td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -202,19 +186,6 @@ WPF
 <td>
 * Uninstall-package Syncfusion.PresentationToPdfConverter.Wpf -RemoveDependencies <br/><br/>
 * Uninstall-package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies  
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Web
-</td>
-<td>
-* Install-package Syncfusion.PresentationToPdfConverter.AspNet<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.AspNet
-</td>
-<td>
-* Uninstall-package Syncfusion.PresentationToPdfConverter.AspNet -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet -RemoveDependencies  
 </td>
 </tr>
 <tr>
