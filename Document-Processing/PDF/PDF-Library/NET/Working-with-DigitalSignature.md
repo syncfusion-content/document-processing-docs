@@ -917,20 +917,16 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Create-LTV-when-signing-PDF-documents-externally/.NET/Create-LTV-when-signing-PDF-documents-externally/Program.cs" %} 	
 
-//Get the stream from the document
-FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
-//Load an existing PDF document
+//Get the stream from the document.
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+//Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
-//Get the page of the existing PDF document
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-
-//Create a new PDF signature without PdfCertificate instance
-PdfSignature signature = new PdfSignature(loadedDocument, loadedPage, null, "Signature1");
-//Hook up the ComputeHash event
-signature.ComputeHash += Signature_ComputeHash;
-//Create X509Certificate2 from your certificate to create a long-term validity
-X509Certificate2 x509 = new X509Certificate2("PDF.pfx", "password123");
-//Create LTV with your public certificates
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature signature = signatureField.Signature;
+////Create X509Certificate2 from your certificate to create a long-term validity.
+X509Certificate2 x509 = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
+//Create LTV with your public certificates.
 signature.CreateLongTermValidity(new List<X509Certificate2> { x509 });
 
 //Save the PDF document
@@ -940,12 +936,6 @@ loadedDocument.Save(stream);
 stream.Position = 0;
 //Close the document
 loadedDocument.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a File object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
@@ -953,16 +943,12 @@ return File(stream, contentType, fileName);
 
 //Load an existing PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Get the page of the existing PDF document
-PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
-
-//Create a new PDF signature without PdfCertificate instance
-PdfSignature signature = new PdfSignature(loadedDocument, loadedPage, null, "Signature1");
-//Hook up the ComputeHash event
-signature.ComputeHash += Signature_ComputeHash;
-//Create X509Certificate2 from your certificate to create a long-term validity
-X509Certificate2 x509 = new X509Certificate2("PDF.pfx", "password123");
-//Create LTV with your public certificates
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature signature = signatureField.Signature;
+////Create X509Certificate2 from your certificate to create a long-term validity.
+X509Certificate2 x509 = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
+//Create LTV with your public certificates.
 signature.CreateLongTermValidity(new List<X509Certificate2> { x509 });
 
 //Save and close the PDF document
@@ -975,38 +961,17 @@ loadedDocument.Close(true);
 
 'Load an existing PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-'Get the page of the existing PDF document
-Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
-
-'Create a new PDF signature without PdfCertificate instance
-Dim signature As PdfSignature = New PdfSignature(loadedDocument, loadedPage, Nothing, "Signature1")
-'Hook up the ComputeHash event
-AddHandler signature.ComputeHash, AddressOf Signature_ComputeHash
-'Create X509Certificate2 from your certificate to create a long-term validity
-Dim x509 As X509Certificate2 = New X509Certificate2("PDF.pfx", "password123")
-'Create LTV with your public certificates
-signature.CreateLongTermValidity(New List(Of X509Certificate2) From { x509 })
+'Get the first signature field of the PDF document
+Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
+Dim signature As PdfSignature = signatureField.Signature
+'Create X509Certificate2 from your certificate to create a long-term validity.
+Dim x509 As X509Certificate2 = New X509Certificate2(Path.GetFullPath("Data/PDF.pfx"), "syncfusion")
+'Create LTV with your public certificates.
+signature.CreateLongTermValidity(New List(Of X509Certificate2) From {x509})
 
 'Save and close the PDF document
 loadedDocument.Save("SignedDocument.pdf")
 loadedDocument.Close(True)
-
-Private Sub Signature_ComputeHash(ByVal sender As Object, ByVal arguments As PdfSignatureEventArgs)
-    'Get the document bytes
-    Dim documentBytes As Byte() = arguments.Data
-    Dim signedCms As SignedCms = New SignedCms(New ContentInfo(documentBytes), detached:=True)
-
-    'Compute the signature using the specified digital ID file and the password
-    Dim certificate As X509Certificate2 = New X509Certificate2("DigitalSignatureTest.pfx", "DigitalPass123")
-    Dim cmsSigner = New CmsSigner(certificate)
-
-    'Set the digest algorithm SHA256
-    cmsSigner.DigestAlgorithm = New Oid("2.16.840.1.101.3.4.2.1")
-    signedCms.ComputeSignature(cmsSigner)
-
-    'Embed the encoded digital signature to the PDF document
-    arguments.SignedData = signedCms.Encode()
-End Sub
 
 {% endhighlight %}
 
@@ -1753,114 +1718,56 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Enable-LTV-PDF-signature/.NET/Enable-LTV-PDF-signature/Program.cs" %} 	
 
-//Creates a new PDF document
-PdfDocument document = new PdfDocument();
-//Adds a new page
-PdfPageBase page = document.Pages.Add();
-//Create PDF graphics for the page
-PdfGraphics graphics = page.Graphics;
 
-//Creates a certificate instance from PFX file with private key
-FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read);
-PdfCertificate pdfCert = new PdfCertificate(certificateStream, "password123");
-//Creates a digital signature
-PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
-//Sets an image for signature field
-FileStream imageStream = new FileStream("syncfusion_logo.jpeg", FileMode.Open, FileAccess.Read);
-//Sets an image for signature field
-PdfBitmap image = new PdfBitmap(imageStream);
-//Adds time stamp by using the server URI and credentials
-signature.TimeStampServer = new TimeStampServer(new Uri("http://syncfusion.digistamp.com"), "user", "123456");
-//Enable LTV on Signature
+//Get the stream from the document.
+FileStream documentStream = new FileStream(Path.GetFullPath(@"Data/Input.pdf"), FileMode.Open, FileAccess.Read);
+//Load an existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature signature = signatureField.Signature;
+//Enable LTV on Signature.
 signature.EnableLtv = true;
-//Sets signature info
-signature.Bounds = new RectangleF(new PointF(0, 0), image.PhysicalDimension);
-signature.ContactInfo = "johndoe@owned.us";
-signature.LocationInfo = "Honolulu, Hawaii";
-signature.Reason = "I am author of this document.";
-//Draws the signature image
-signature.Appearance.Normal.Graphics.DrawImage(image, 0, 0);
 
 //Save the document into stream
 MemoryStream stream = new MemoryStream();
-document.Save(stream);
+loadedDocument.Save(stream);
 stream.Position = 0;
 //Close the document
-document.Close(true);
-//Defining the ContentType for pdf file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
+loadedDocument.Close(true);
+
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Creates a new PDF document
-PdfDocument document = new PdfDocument();
-//Adds a new page
-PdfPage page = document.Pages.Add();
-//Create PDF graphics for the page
-PdfGraphics graphics = page.Graphics;
-
-//Creates a certificate instance from PFX file with private key
-PdfCertificate pdfCert = new PdfCertificate(@"PDF.pfx", "password123");
-//Creates a digital signature
-PdfSignature signature = new PdfSignature(page, pdfCert, "Signature");
-signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
-signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256;
-//Sets an image for signature field
-PdfBitmap image = new PdfBitmap(@"syncfusion_logo.jpeg");
-//Adds time stamp by using the server URI and credentials
-signature.TimeStampServer = new TimeStampServer(new Uri("http://syncfusion.digistamp.com"), "user", "123456");
-//Enable LTV on Signature
+//Load an existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature signature = signatureField.Signature;
+//Enable LTV on Signature.
 signature.EnableLtv = true;
-//Sets signature info 
-signature.Bounds = new RectangleF(new PointF(0, 0), image.PhysicalDimension);
-signature.ContactInfo = "johndoe@owned.us";
-signature.LocationInfo = "Honolulu, Hawaii";
-signature.Reason = "I am author of this document.";
-//Draws the signature image
-signature.Appearance.Normal.Graphics.DrawImage(image, 0, 0);
 
 //Save and close the document
-document.Save("Output.pdf");
-document.Close(true);
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Creates a new PDF document
-Dim document As New PdfDocument()
-'Adds a new page
-Dim page As PdfPage = document.Pages.Add()
-'Create PDF graphics for the page
-Dim graphics As PdfGraphics = page.Graphics
-
-'Creates a certificate instance from PFX file with private key
-Dim pdfCert As New PdfCertificate("PDF.pfx", "password123")
-'Creates a digital signature
-Dim signature As New PdfSignature(page, pdfCert, "Signature")
-'Sets an image for signature field
-Dim image As New PdfBitmap("syncfusion_logo.jpeg")
-'Adds time stamp by using the server URI and credentials
-signature.TimeStampServer = New TimeStampServer(New Uri("http://syncfusion.digistamp.com"), "user", "123456")
-'Enable LTV on Signature
+'Load an existing PDF document.
+Dim loadedDocument As PdfLoadedDocument = new PdfLoadedDocument("Input.pdf")
+'Gets the first signature field of the PDF document
+Dim signatureField As PdfLoadedSignatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField
+Dim signature As PdfSignature = signatureField.Signature
+'Enable LTV on Signature.
 signature.EnableLtv = True
-'Sets signature info
-signature.Bounds = New RectangleF(New PointF(0, 0), image.PhysicalDimension)
-signature.ContactInfo = "johndoe@owned.us"
-signature.LocationInfo = "Honolulu, Hawaii"
-signature.Reason = "I am author of this document."
-'Draws the signature image
-signature.Appearance.Normal.Graphics.DrawImage(image, 0, 0)
 
 'Save and close the document
-document.Save("Output.pdf")
-document.Close(True)
+PdfLoadedDocument.Save("Output.pdf")
+PdfLoadedDocument.Close(True)
 
 {% endhighlight %}
 
