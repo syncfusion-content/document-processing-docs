@@ -1,6 +1,6 @@
 ---
 title: NuGet Packages Required to Convert Word to PDF | Syncfusion
-description: Learn the NuGet packages required to Convert Word to PDF using the .NET Word (DocIO) library.
+description: Learn the NuGet packages required to Convert Word document to PDF using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -61,17 +61,6 @@ Install-Package Syncfusion.DocToPdfConverter.ClientProfile
 </tr>
 <tr>
 <td>
-{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)'|  markdownify }}
-</td>
-<td>
-Syncfusion.DocToPdfConverter.AspNet.nupkg
-</td>
-<td>
-Install-Package Syncfusion.DocToPdfConverter.AspNet
-</td>
-</tr>
-<tr>
-<td>
 {{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc)'|  markdownify }}
 </td>
 <td>
@@ -100,7 +89,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc5
 Syncfusion.DocIORenderer.Net.Core.nupkg<br/>
 <br/>
 <i>Note:</i><br/>
-<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
+<i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'| markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
 </td>
 <td>
 Install-Package Syncfusion.DocIORenderer.Net.Core
@@ -174,17 +163,6 @@ Syncfusion.OfficeChartToImageConverter.Wpf.nupkg
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET 
-</td>
-<td>
-Syncfusion.OfficeChartToImageConverter.AspNet.nupkg
-</td>
-<td>
-Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 </td>
 </tr>
 <tr>
@@ -271,34 +249,6 @@ Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
 ~~~
 // Uninstall package
 Uninstall-Package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies 
-~~~
-
-### ASP.NET 
-
-**NuGet Package:** Syncfusion.DocToPdfConverter.AspNet
-
-The package contains the DocToPdfConverter .NET library that allows you to convert the Word documents to PDF.
-
-~~~
-// Install package
-Install-Package Syncfusion.DocToPdfConverter.AspNet
-~~~
-~~~
-// Uninstall package
-Uninstall-Package Syncfusion.DocToPdfConverter.AspNet -RemoveDependencies 
-~~~
-
-**NuGet Package:** Syncfusion.OfficeChartToImageConverter.AspNet
-
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
-
-~~~
-// Install package
-Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
-~~~
-~~~
-// Uninstall package
-Uninstall-Package Syncfusion.OfficeChartToImageConverter.AspNet -RemoveDependencies 
 ~~~
 
 ### ASP.NET MVC4
