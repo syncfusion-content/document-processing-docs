@@ -52,7 +52,7 @@ You can improve the quality of converted images by specifying the image resoluti
 
 In .NET Core or .NET targeting applications, metafile (*.wmf, *.emf) images have some limitations in PresentationRenderer. Internally, PresentationRenderer use SkiaSharp graphics library to layout the text and images in PDF/Image conversion. And SkiaSharp library doesn’t support the metafile (*.emf, *.wmf) images, so, it doesn’t preserve the images in the mentioned applications.
 
-Starting from version 27.x.x, the PowerPoint Presentation Conversion Library uses its own Metafile renderer to preserve EMF images during PPTX to PDF or image conversions. However, it does not support converting certain metafile formats, including WMF, EMF Plus, EMF Dual, and EMF Spool files. If a PowerPoint Presentation contains these types of images, Presentation Library doesn’t preserve these during the PPTX to PDF or image conversions.
+Starting from version 27.x.x, the .NET PowerPoint Library (Presentation) uses its own Metafile renderer to preserve EMF images during PPTX to PDF or image conversions. However, it does not support converting certain metafile formats, including WMF, EMF Plus, EMF Dual, and EMF Spool files. If a PowerPoint Presentation contains these types of images, Presentation doesn’t preserve these during the PPTX to PDF or image conversions.
 
 To preserve the expected images in the PDF/Image conversion, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform PPTX to PDF/Image conversion.
 
