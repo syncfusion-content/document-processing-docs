@@ -159,20 +159,23 @@ Step 6: Click the **Create** button to proceed with **App Service** creation.
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
 ![Click the Finish button](Azure_images/Azure-app-service-Linux/App_service_finish.png)
 
-Step 8: Click **Close** button.
+Step 8: Click deployment type.
+![Create a Deployment type](Azure_images/Azure-app-service-Linux/Deployment_type.png)
+
+Step 9: Click **Close** button.
 ![Create a ASP.NET Core Project](Azure_images/Azure-app-service-Linux/Publish_profile_creation_progress.png)
 
-Step 9: Click the **Publish** button.
+Step 10: Click the **Publish** button.
 ![Click the Publish button](Azure_images/Azure-app-service-Linux/Ready_to_publish_window.png)
 
-Step 10: Now, Publish has been succeeded.
+Step 11: Now, Publish has been succeeded.
 ![Publish has been succeeded](Azure_images/Azure-app-service-Linux/Successful_publish.png)
 
-Step 11: Now, the published webpage will open in the **browser**.
+Step 12: Now, the published webpage will open in the **browser**.
 ![Browser will open after publish](Azure_images/Azure-app-service-Linux/WebView.png)
 
-Step 12: Select the PDF document and Click **Create PDF document** to generate the PDF document.You will get the output **PDF document** as follows.
-![Create PDF document in Azure App Service on Linux](Azure_images/Azure-app-service-Linux/Output_screenshot.png)
+Step 13: Select the PDF document and Click **Create PDF document** to generate the PDF document.You will get the output **PDF document** as follows.
+![Create PDF document in Azure App Service on Linux](Azure_images/Azure-app-service-Linux/Output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 
