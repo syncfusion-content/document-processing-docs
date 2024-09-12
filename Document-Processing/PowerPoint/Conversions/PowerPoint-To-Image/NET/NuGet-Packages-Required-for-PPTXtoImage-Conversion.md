@@ -37,14 +37,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET Web Forms
-</td>
-<td>
-{{'[Syncfusion.Presentation.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC4
 </td>
 <td>
@@ -121,14 +113,6 @@ WPF
 </td>
 <td>
 {{'[Syncfusion.OfficeChartToImageConverter.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.Wpf/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Web
-</td>
-<td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -213,19 +197,6 @@ WPF
 <td>
 * Uninstall-package Syncfusion.Presentation.Wpf -RemoveDependencies <br/><br/>
 * Uninstall-package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies  
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Web
-</td>
-<td>
-* Install-package Syncfusion.Presentation.AspNet<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.AspNet
-</td>
-<td>
-* Uninstall-package Syncfusion.Presentation.AspNet -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet -RemoveDependencies  
 </td>
 </tr>
 <tr>
