@@ -15,17 +15,20 @@ N> HTML to PDF converter is not supported with Azure App Service windows. We int
 ## Steps to convert HTML to PDF in the Azure Functions using the Blink rendering engine
 
 Step 1: Create the Azure function project.
-![Convert HTMLToPDF Azure Functions Step1](htmlconversion_images/AzureFunctions1.png)
+![Convert HTMLToPDF Azure Functions Step1](Azure_images\Azure-function-linux\AzureFunctions1.png)
 
 Step 2: Select the Azure Functions type and .NET Core version.
-![Convert HTMLToPDF Azure Functions Step2](htmlconversion_images/AzureFunctions2.png)
+![Convert HTMLToPDF Azure Functions Step2](Azure_images\Azure-function-linux\AzureFunctions2.png)
 
-Step 3: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
-![Convert HTMLToPDF Azure Functions Step3](htmlconversion_images/AzureFunctions3.png)
+Step 3: Select the function worker as .NET 8.0 isolated (Long-term support), and the selected HTTP triggers as follows. 
+![Convert HTMLToPDF Azure Functions Step3](Azure_images\Azure-function-linux\AzureFunctions3.png)
+
+Step 4: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
+![Convert HTMLToPDF Azure Functions Step3](Azure_images\Azure-function-linux\Nuget-package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 4: Include the following namespaces in Function1.cs file.
+Step 5: Include the following namespaces in Function1.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -35,7 +38,7 @@ using System.Runtime.InteropServices;
 
 {% endhighlight %}
 
-Step 5: Add the following code example in the Function1 class to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. 
+Step 6: Add the following code example in the Function1 class to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. 
 {% highlight c# tabtitle="C#" %}
 
     [FunctionName("Function1")]
@@ -72,7 +75,7 @@ Step 5: Add the following code example in the Function1 class to convert HTML to
 
 {% endhighlight %}
 
-Step 6: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
+Step 7: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -123,7 +126,7 @@ Step 6: Add the following helper methods to copy and set permission to the Blink
     }
 {% endhighlight %}
 
-Step 7: Include the below enum in the Function1.cs file. 
+Step 8: Include the below enum in the Function1.cs file. 
 
 {% highlight c# tabtitle="C#" %}
 
@@ -145,14 +148,36 @@ internal enum FileAccessPermissions : uint
 
 **Publish to Azure Functions Linux**
 
-Step 1: Right-click the project and select Publish. Then, create a new profile in the Publish Window. The Blink rendering engine will work in consumption plan. So, you can create the Azure Function App service with a consumption plan.
-![Convert HTMLToPDF Azure Functions Step4](htmlconversion_images/AzureFunctions4.png)
+Step 1: Right-click the project and select Publish. Then, create a new profile in the Publish Window.
+![Create a new profile in the Publish Window](Azure_images\Azure-function-linux\Click_publish.png)
 
-Step 2: After creating the profile, click the Publish button.
-![Convert HTMLToPDF Azure Functions Step5](htmlconversion_images/AzureFunctions5.png)
+Step 2: Select the target as **Azure** and click **Next**.
+![Select the target as Azure](Azure_images\Azure-function-linux\Set_Azure_target.png)
 
-Step 3: Now, go to the Azure portal and select the App Services. After running the service, click Get function URL > Copy. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows.
-![Convert HTMLToPDF Azure Functions Step6](htmlconversion_images/htmltopdfoutput.png)
+Step 3: Right-click the project and select Publish. Then, create a new profile in the Publish Window. The Blink rendering engine will work in consumption plan. So, you can create the Azure Function App service with a consumption plan.
+![Convert HTMLToPDF Azure Functions Step4](Azure_images\Azure-function-linux\Select_function_app.png)
+
+Step 4: Select the **Create new**.
+![Configure Hosting Plan](Azure_images\Azure-function-linux\Select_create_new_button.png)
+
+Step 5: Click **Create**.
+![Browser will open after publish](Azure_images\Azure-function-linux\WebView.png)
+
+Step 6: After creating the function app service, click **Finish**. 
+![Creating app service](Azure_images\Azure-function-linux\Creating_app_function.png)
+
+Step 7: Click **Close** button.
+![Create a ASP.NET Core Project](Azure_images\Azure-function-linux\Publish_profile_creation_progress.png)
+
+Step 8: Click **Publish**.
+![Click the Publish button](Azure_images\Azure-function-linux\Publish_app_function.png)
+
+Step 9: Now, Publish has succeeded.
+![Publish has been succeeded](Azure_images\Azure-function-linux\Publish_link.png)
+
+
+Step 10: Now, go to the Azure portal and select the App Services. After running the service, click Get function URL > Copy. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows.
+![Convert HTMLToPDF Azure Functions Step6](Azure_images\Azure-function-linux\htmltopdfoutput.png)
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML_to_PDF_Azure_functions)
 
