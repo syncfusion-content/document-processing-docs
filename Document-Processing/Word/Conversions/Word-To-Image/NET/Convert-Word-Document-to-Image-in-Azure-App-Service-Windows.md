@@ -179,10 +179,10 @@ Step 7: Click the **Finish** button to finalize the **App Service** creation.
 ![Click the Finish button](Azure-Images/App-Service-Linux/App_Service_WordtoImage.png)
 
 Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure-Images/App-Service-Linux/Publish_Finish_WordtoImage.png)
+![Create a ASP.NET Core Project](Azure-Images/App-Service-Windows/Publish_Finish_WordtoImage.png)
 
 Step 9: Click the **Publish** button.
-![Click the Publish button](Azure-Images/App-Service-Linux/Before_Publish_WordtoPDF.png)
+![Click the Publish button](Azure-Images/App-Service-Windows/Before_Publish_WordtoPDF.png)
 
 Step 10: Now, Publish has been succeeded.
 ![Publish has been succeeded](Azure-Images/App-Service-Linux/After_Publish_WordtoImage.png)

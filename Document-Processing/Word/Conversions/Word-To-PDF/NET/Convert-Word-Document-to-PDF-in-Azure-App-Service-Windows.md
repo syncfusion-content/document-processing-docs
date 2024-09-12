@@ -192,10 +192,10 @@ Step 8: Click **Close** button.
 ![Create a ASP.NET Core Project](Azure-Images/App-Service-Linux/Publish_Finish_WordtoPDF.png)
 
 Step 9: Click the **Publish** button.
-![Click the Publish button](Azure-Images/App-Service-Linux/Before_Publish_WordtoPDF.png)
+![Click the Publish button](Azure-Images/App-Service-Windows/Before_Publish_WordtoPDF.png)
 
 Step 10: Now, Publish has been succeeded.
-![Publish has been succeeded](Azure-Images/App-Service-Linux/After_Publish_WordtoPDF.png)
+![Publish has been succeeded](Azure-Images/App-Service-Windows/After_Publish_WordtoPDF.png)
 
 Step 11: Now, the published webpage will open in the browser. 
 ![Browser will open after publish](Azure-Images/App-Service-Linux/Browser_WordtoPDF.png)
