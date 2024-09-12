@@ -251,19 +251,6 @@ Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
 Uninstall-Package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies 
 ~~~
 
-**NuGet Package:** Syncfusion.OfficeChartToImageConverter.AspNet
-
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
-
-~~~
-// Install package
-Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
-~~~
-~~~
-// Uninstall package
-Uninstall-Package Syncfusion.OfficeChartToImageConverter.AspNet -RemoveDependencies 
-~~~
-
 ### ASP.NET MVC4
 
 **NuGet Package:** Syncfusion.DocToPdfConverter.AspNet.Mvc4
