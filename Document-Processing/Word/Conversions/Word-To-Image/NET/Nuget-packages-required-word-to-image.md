@@ -1,6 +1,6 @@
 ---
 title: NuGet Packages Required to Convert Word to Image | Syncfusion
-description: Learn the NuGet packages required to Convert Word to image using the .NET Word (DocIO) library.
+description: Learn the NuGet packages required to Convert Word document to image using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -57,17 +57,6 @@ Syncfusion.DocIO.ClientProfile.nupkg
 </td>
 <td>
 Install-Package Syncfusion.DocIO.ClientProfile
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET
-</td>
-<td>
-Syncfusion.DocIO.AspNet.nupkg
-</td>
-<td>
-Install-Package Syncfusion.DocIO.AspNet
 </td>
 </tr>
 <tr>
@@ -172,17 +161,6 @@ Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
 </tr>
 <tr>
 <td>
-ASP.NET 
-</td>
-<td>
-Syncfusion.OfficeChartToImageConverter.AspNet.nupkg
-</td>
-<td>
-Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC4
 </td>
 <td>
@@ -243,21 +221,6 @@ Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
 ~~~
 // Uninstall package
 Uninstall-Package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies 
-~~~
-
-### ASP.NET 
-
-**NuGet Package:** Syncfusion.OfficeChartToImageConverter.AspNet
-
-The package contains OfficeChartToImageConverter .NET library for converting the chart present in word document to image.
-
-~~~
-// Install package
-Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
-~~~
-~~~
-// Uninstall package
-Uninstall-Package Syncfusion.OfficeChartToImageConverter.AspNet -RemoveDependencies 
 ~~~
 
 ### ASP.NET MVC4
