@@ -32,45 +32,66 @@ Step 5: Include the following namespaces in Function1.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.HtmlConverter;
-using Syncfusion.Pdf;
-using System.Runtime.InteropServices;
+    using Syncfusion.HtmlConverter;
+    using Syncfusion.Pdf;
+    using Syncfusion.Pdf.Graphics;
+    using System.Runtime.InteropServices;
 
 {% endhighlight %}
 
 Step 6: Add the following code example in the Function1 class to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. 
+
 {% highlight c# tabtitle="C#" %}
 
-    [FunctionName("Function1")]
-    public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, ExecutionContext executionContext)
+    [Function("Function1")]
+    public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, FunctionContext executionContext)
     {
         string blinkBinariesPath = string.Empty;
+        //Create a new PDF document.
+        PdfDocument document;
+        BlinkConverterSettings settings = new BlinkConverterSettings();
+        //Creating the stream object.
+        MemoryStream stream;
         try
         {
-            blinkBinariesPath = SetupBlinkBinaries(executionContext);
+            blinkBinariesPath = SetupBlinkBinaries();              
+                
+            //Initialize the HTML to PDF converter with the Blink rendering engine.
+            HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Blink);
+              
+            //Set command line arguments to run without sandbox.
+            settings.CommandLineArguments.Add("--no-sandbox");
+            settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+            settings.BlinkPath = blinkBinariesPath;
+            //Assign BlinkConverter settings to the HTML converter 
+            htmlConverter.ConverterSettings = settings;
+            //Convert URL to PDF
+            document = htmlConverter.Convert("http://www.syncfusion.com");
+            stream = new MemoryStream();
+            //Save and close the PDF document  
+            document.Save(stream);
         }
-        catch
+        catch(Exception ex)
         {
-            throw new Exception("BlinkBinaries initialization failed");
+            //Create a new PDF document.
+            document = new PdfDocument();
+            //Add a page to the document.
+            PdfPage page = document.Pages.Add();
+            //Create PDF graphics for the page.
+            PdfGraphics graphics = page.Graphics;
+
+            //Set the standard font.
+            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 8);
+            //Draw the text.
+            graphics.DrawString(ex.Message.ToString(), font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
+              
+            stream = new MemoryStream();
+            //Save the document into memory stream.
+            document.Save(stream);
         }
-        string url = req.Query["url"];
-        //Initialize the HTML to PDF converter with the Blink rendering engine.
-        HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Blink);
-        BlinkConverterSettings settings = new BlinkConverterSettings();
-        //Set command line arguments to run without sandbox.
-        settings.CommandLineArguments.Add("--no-sandbox");
-        settings.CommandLineArguments.Add("--disable-setuid-sandbox");
-        settings.BlinkPath = blinkBinariesPath;
-        //Assign BlinkConverter settings to the HTML converter 
-        htmlConverter.ConverterSettings = settings;
-        //Convert URL to PDF
-        PdfDocument document = htmlConverter.Convert(url);
-        MemoryStream ms = new MemoryStream();
-        //Save and close the PDF document  
-        document.Save(ms);
         document.Close();
-        ms.Position = 0;
-        return new FileStreamResult(ms, "application/pdf");
+        stream.Position = 0;
+        return new FileStreamResult(stream, "application/pdf");
     }
 
 {% endhighlight %}
@@ -79,9 +100,11 @@ Step 7: Add the following helper methods to copy and set permission to the Blink
 
 {% highlight c# tabtitle="C#" %}
 
-    private static string SetupBlinkBinaries(ExecutionContext executionContext)
+    private static string SetupBlinkBinaries( )
     {
-        string blinkAppDir = Path.Combine(executionContext.FunctionAppDirectory, "bin/runtimes/linux/native");
+        var fileInfo = new FileInfo(Assembly.GetExecutingAssembly().Location);
+        string path = fileInfo.Directory.Parent.FullName;
+        string blinkAppDir = Path.Combine(path, @"wwwroot");
         string tempBlinkDir = Path.GetTempPath();
         string chromePath = Path.Combine(tempBlinkDir, "chrome");
         if (!File.Exists(chromePath))
@@ -124,25 +147,26 @@ Step 7: Add the following helper methods to copy and set permission to the Blink
             }
         }
     }
+
 {% endhighlight %}
 
 Step 8: Include the below enum in the Function1.cs file. 
 
 {% highlight c# tabtitle="C#" %}
 
-[Flags]
-internal enum FileAccessPermissions : uint
-{
-    OtherExecute = 1,
-    OtherWrite = 2,
-    OtherRead = 4,
-    GroupExecute = 8,
-    GroupWrite = 16,
-    GroupRead = 32,
-    UserExecute = 64,
-    UserWrite = 128,
-    UserRead = 256
-}       
+    [Flags]
+    internal enum FileAccessPermissions : uint
+    {
+        OtherExecute = 1,
+        OtherWrite = 2,
+        OtherRead = 4,
+        GroupExecute = 8,
+        GroupWrite = 16,
+        GroupRead = 32,
+        UserExecute = 64,
+        UserWrite = 128,
+        UserRead = 256
+    }      
 
 {% endhighlight %}
 
