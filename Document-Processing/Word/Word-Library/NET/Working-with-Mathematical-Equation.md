@@ -50,7 +50,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-an-accent-mark-to-the-equation/.NET/Add-an-accent-mark-to-the-equation/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-an-accent-mark-to-the-equation/.NET/Add-an-accent-mark-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -223,7 +223,7 @@ You can add a box to the equation. The following code example shows how to add a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-box-to-the-equation/.NET/Add-box-to-the-equation/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-box-to-the-equation/.NET/Add-box-to-the-equation/Program.cs"%}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -353,7 +353,7 @@ You can add a box with the borders on four sides and strikethrough on horizontal
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-border-box-to-the-equation/.NET/Add-border-box-to-the-equation/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-border-box-to-the-equation/.NET/Add-border-box-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -478,7 +478,7 @@ You can add a delimiter (parenthesis, square brackets and other characters) to t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-delimiter-to-the-equation/.NET/Add-delimiter-to-the-equation/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-delimiter-to-the-equation/.NET/Add-delimiter-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -581,7 +581,7 @@ You can create a one dimensional array of equations in Word document. The follow
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-an-array-of-equations/.NET/Create-an-array-of-equations/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-an-array-of-equations/.NET/Create-an-array-of-equations/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
@@ -702,7 +702,7 @@ You can create a fraction equation with a numerator and denominator in Word docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink = "https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-fraction-equation/.NET/Create-fraction-equation/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Create-fraction-equation/.NET/Create-fraction-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
