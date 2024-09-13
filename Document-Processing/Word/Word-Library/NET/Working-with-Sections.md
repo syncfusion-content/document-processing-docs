@@ -14,7 +14,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-sections-in-Word-document/.NET/Add-sections-in-Word-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-sections-in-Word-document/.NET/Add-sections-in-Word-document/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -67,7 +67,7 @@ You can also add a new section that starts on a same page by specifying the [Bre
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-continuous-sections-in-Word/.NET/Add-continuous-sections-in-Word/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-continuous-sections-in-Word/.NET/Add-continuous-sections-in-Word/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -149,7 +149,7 @@ The following code example shows how to set the page setup properties
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Page-setup-properties/.NET/Page-setup-properties/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Page-setup-properties/.NET/Page-setup-properties/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -226,7 +226,7 @@ The following code example shows how to display contents in multiple columns.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink ="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Create-multi-column-document/.NET/Create-multi-column-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Create-multi-column-document/.NET/Create-multi-column-document/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds the section into Word document
@@ -343,7 +343,7 @@ You can prefer to have more sections in a Word document when you need to have di
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Document-with-different-page-settings/.NET/Document-with-different-page-settings/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Document-with-different-page-settings/.NET/Document-with-different-page-settings/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds the section into Word document
@@ -454,7 +454,7 @@ The following code example illustrates how to add simple header and footer into 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Simple-headers-and-footers/.NET/Simple-headers-and-footers/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Simple-headers-and-footers/.NET/Simple-headers-and-footers/Program.cs" %}
 //Creates a new document
 WordDocument document = new WordDocument();
 //Adds the first section to the document
@@ -551,7 +551,7 @@ You can have a specific header and footer contents for the first page in a Word 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Header-and-footers-for-first-page/.NET/Header-and-footers-for-first-page/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Header-and-footers-for-first-page/.NET/Header-and-footers-for-first-page/Program.cs" %}
 //Creates a new document
 WordDocument document = new WordDocument();
 //Adds the first section to the document
@@ -674,7 +674,7 @@ The following code example shows how to set different header and footer for the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Odd-and-even-page-header-footer/.NET/Odd-and-even-page-header-footer/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Odd-and-even-page-header-footer/.NET/Odd-and-even-page-header-footer/Program.cs" %}
 //Creates a new document
 WordDocument document = new WordDocument();
 //Adds the first section to the document
@@ -797,7 +797,7 @@ The following code example shows how to link the previous section header and foo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Link-previous-section/.NET/Link-previous-section/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Link-previous-section/.NET/Link-previous-section/Program.cs" %}
 //Creates a new document
 WordDocument document = new WordDocument();
 //Adds the first section to the document
@@ -926,7 +926,7 @@ You can remove the headers and footers from an existing Word document. The follo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Remove-headers-and-footers/.NET/Remove-headers-and-footers/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Remove-headers-and-footers/.NET/Remove-headers-and-footers/Program.cs" %}
 //Open an existing document.
 FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1010,7 +1010,7 @@ You can insert the current page number within the document contents. The followi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-page-number-in-footer/.NET/Add-page-number-in-footer/Program.cs "%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-page-number-in-footer/.NET/Add-page-number-in-footer/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds the section into Word document
@@ -1093,7 +1093,7 @@ The following code example illustrates how to add the current page number and to
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-page-number-in-footer/.NET/Add-page-number-in-footer/Program.cs " %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-page-number-in-footer/.NET/Add-page-number-in-footer/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds the section into Word document
@@ -1191,7 +1191,7 @@ The following code example shows how to adjust the height of header and footer.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-page-number-in-footer/.NET/Add-page-number-in-footer/Program.cs " %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-page-number-in-footer/.NET/Add-page-number-in-footer/Program.cs" %}
 //Creates a new document
 WordDocument document = new WordDocument();
 //Adds the first section to the document
@@ -1304,7 +1304,7 @@ The following code example illustrates how to apply page borders and format usin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Apply-page-borders/.NET/Apply-page-borders/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Apply-page-borders/.NET/Apply-page-borders/Program.cs" %}
 //Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -1396,7 +1396,7 @@ The following code example illustrates how to add line numbers in a Word documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-line-numbers/.NET/Add-line-numbers/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Add-line-numbers/.NET/Add-line-numbers/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -1473,7 +1473,7 @@ The following code example illustrates how to remove a particular section from t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Remove-section-from-document/.NET/Remove-section-from-document/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Sections/Remove-section-from-document/.NET/Remove-section-from-document/Program.cs" %}
 FileStream inputFileStream = new FileStream(inputFileName, FileMode.Open, FileAccess.ReadWrite);
 //Opens an input Word template
 WordDocument document = new WordDocument(inputFileStream, FormatType.Automatic);

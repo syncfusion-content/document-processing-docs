@@ -20,7 +20,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Encrypt-Word-document-with-password/.NET/Encrypt-Word-document-with-password/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Encrypt-Word-document-with-password/.NET/Encrypt-Word-document-with-password/Program.cs" %}
 //Opens an existing document from stream through constructor of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic);
@@ -63,7 +63,7 @@ The following code example shows how to open the encrypted Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Open-encrypted-Word-document/.NET/Open-encrypted-Word-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Open-encrypted-Word-document/.NET/Open-encrypted-Word-document/Program.cs" %}
 //Opens an existing document from stream through constructor of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an encrypted Word document
@@ -153,7 +153,7 @@ You can open the encrypted Word document and remove the encryption from the docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Remove-encryption-from-Word-document/.NET/Remove-encryption-from-Word-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Remove-encryption-from-Word-document/.NET/Remove-encryption-from-Word-document/Program.cs" %}
 //Opens an existing document from stream through constructor of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an encrypted Word document
@@ -235,7 +235,7 @@ The following code example shows how to restrict editing to modify only form fie
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Allow-editing-form-fields-only/.NET/Allow-editing-form-fields-only/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Allow-editing-form-fields-only/.NET/Allow-editing-form-fields-only/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
