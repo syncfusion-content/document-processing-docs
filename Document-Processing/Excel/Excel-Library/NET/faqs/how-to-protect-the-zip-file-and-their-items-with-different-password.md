@@ -6,11 +6,9 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to protect the zip files and their items with password?
+# How to protect zip file items with different passwords using C#?
 
-In Syncfusion, you can protect the entire zip file or assign individual passwords to specific items within the archive.
-
-Some items may not require a password, while others can have unique passwords for enhanced security, providing flexibility in selectively protecting files within the same zip archive.
+Syncfusion.Compression allows users to set a unique password for each item when creating a compressed Zip file. When the zip file is decompressed, the user can enter the password for each zip item and extract the zip items.
 
 The following complete code snippet explains how to protect a zip file and its items with passwords using the ZipCrypto encryption algorithm.
 
