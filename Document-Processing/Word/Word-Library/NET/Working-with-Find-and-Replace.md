@@ -9,6 +9,10 @@ documentation: UG
 
 You can search a particular text you like to change and replace it with another text or part of the document.
 
+To quickly get started with the Find and Replace options in a Word document, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=EJDihId35nI" %}
+
+
 The following table illustrates the supported overloads for Find and Replace functionality.
 
 <table>

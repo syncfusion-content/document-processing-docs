@@ -7,6 +7,9 @@ documentation: UG
 ---
 # Security in Presentation
 
+To quickly start protecting PowerPoint presentations, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=GnnVPtrP9rE" %}
+
 ## Encrypting with password 
 
 You can protect a PowerPoint Presentation by encrypting the document by using a password. This prevents unauthorized users to access or make changes in the Presentation. 
