@@ -28,8 +28,8 @@ class Program
         zipArchive.AddFile(@"../../Data/InputTemplate1.xlsx");
 
         //Add the file with password you want to zip
-        zipArchive.AddFile(@"../../Data/InputTemplate2.xlsx.cs", "password2");
-        zipArchive.AddFile(@"../../Data/InputTemplate3.xlsx.cs", "password3");
+        zipArchive.AddFile(@"../../Data/InputTemplate2.xlsx", "password2");
+        zipArchive.AddFile(@"../../Data/InputTemplate3.xlsx", "password3");
 
         //Protect the ZipArchive with password
         zipArchive.Protect("password", EncryptionAlgorithm.ZipCrypto);
