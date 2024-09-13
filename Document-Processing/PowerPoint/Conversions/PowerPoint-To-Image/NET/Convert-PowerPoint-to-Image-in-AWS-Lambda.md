@@ -94,8 +94,8 @@ Step 10: In the Advanced Function Details window, specify the **Role Name** as b
 Step 11: After deploying the application, you can see the published Lambda function in **AWS console**.
 ![After deploying the application](AWS_Images/Lambda_Images/Function-PowerPoint-Presentation-to-PDF.png)
 
-Step 12: Edit Memory size and Timeout as maximum in Basic settings of the AWS Lambda function.
-![AWS Lambda Function](AWS_Images/Lambda_Images/Basic-Settings-PowerPoint-Presentation-to-PDF.png)
+Step 12: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
+![AWS Lambda Function](AWS_Images/Lambda_Images/General-configuration-PowerPoint-Presentation-to-PDF.png)
 
 ## Steps to post the request to AWS Lambda
 
