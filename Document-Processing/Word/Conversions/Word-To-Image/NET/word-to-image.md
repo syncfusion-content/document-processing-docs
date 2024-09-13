@@ -367,3 +367,4 @@ During Word to Image conversions, if a glyph of the input text is unavailable in
 * [How to convert word to tiff using C#, VB.NET](https://support.syncfusion.com/kb/article/9541/how-to-convert-word-to-tiff-using-c-vb-net)
 * [How to convert Word to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12123/how-to-convert-word-to-image-in-blazor-webassembly-wasm)
 * [How to resolve font problems during Word to Image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
+* [How to convert Word document to images and combine it as single image using SkiaSharp library?](https://support.syncfusion.com/kb/article/17072/how-to-convert-entire-word-document-to-images-and-combine-it-as-single-image-using-c)

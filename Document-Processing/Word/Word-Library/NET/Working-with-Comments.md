@@ -451,3 +451,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to check if a comment is resolved or not in a Word document?](https://support.syncfusion.com/kb/article/14652/how-to-check-if-comment-is-resolved-or-not-in-word-document)
+* [How to find a text and add comments in Word document using C#?](https://support.syncfusion.com/kb/article/16894/how-to-find-a-text-and-add-comments-in-word-document-using-c)
+* [How to extract all comments from Word document using C#?](https://support.syncfusion.com/kb/article/16653/how-to-extract-comments-from-word-document-using-c-in-aspnet-core)
