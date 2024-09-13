@@ -112,7 +112,7 @@ The following code example demonstrates how to add a blank slide to a PowerPoint
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs" %}
 //Adds a slide to the PowerPoint Presentation
 ISlide firstSlide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 {% endhighlight %}
@@ -137,7 +137,7 @@ The following code example demonstrates how to add text into a presentation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs" %}
 //Adds a textbox in a slide by specifying its position and size
 IShape textShape = firstSlide.AddTextBox(100, 75, 756, 200);
 //Adds a paragraph into the textShape
@@ -185,7 +185,7 @@ Essential Presentation allows you to create simple and multi-level lists that ma
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs" %}
 //Adds a new paragraph with text.
 paragraph = textShape.TextBody.AddParagraph("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
 //Sets the list type as bullet
@@ -230,7 +230,7 @@ In PowerPoint Presentation, the multilevel lists are used for presenting the con
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs" %}
 //Adds a new paragraph  
 paragraph = textShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
 //Sets the list type as bullet
@@ -263,7 +263,7 @@ You can add images to the Presentation by adding them in the picture collection 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs" %}
 //Gets the image from file path
 FileStream imageStream = new FileStream(@"Image.png", FileMode.Open, FileAccess.Read);
 // Adds the image to the slide by specifying position and size
@@ -290,7 +290,7 @@ Finally, save the Presentation in file system and close its instance.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Getting-started/Create-PowerPoint-with-basic-elements/.NET/Create-PowerPoint-with-basic-elements/Program.cs" %}
 //Saving the PowerPoint Presentation as stream
 FileStream stream = new FileStream("Sample.pptx", FileMode.Create, FileAccess.ReadWrite);
 pptxDoc.Save(stream);

@@ -223,7 +223,7 @@ You can add a box to the equation. The following code example shows how to add a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-box-to-the-equation/.NET/Add-box-to-the-equation/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Add-box-to-the-equation/.NET/Add-box-to-the-equation/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document

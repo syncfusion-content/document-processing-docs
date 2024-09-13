@@ -199,7 +199,7 @@ secondTextRange.CharacterFormat.FontName = "Calibri"
 secondTextRange.CharacterFormat.FontSize = 11
 {% endhighlight %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Adds a new simple paragraph into the section
 IWParagraph firstParagraph = section.AddParagraph();
 //Sets the paragraph's horizontal alignment as justify
@@ -249,7 +249,7 @@ picture.Height = 100
 picture.Width = 100
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Adds another paragraph and aligns it as center
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center;
@@ -335,7 +335,7 @@ paragraph = secondCell.AddParagraph()
 textRange = paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
 {% endhighlight %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Adds a table into the Word document
 IWTable table = section.AddTable();
 //Creates the specified number of rows and columns
@@ -503,7 +503,7 @@ paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left
 section.AddParagraph()
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Writes default numbered list. 
 paragraph = section.AddParagraph();
 //Sets before spacing for paragraph.
@@ -587,7 +587,7 @@ document.Save(outputFileName, FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 MemoryStream stream = new MemoryStream();
 //Saves the Word document to  MemoryStream
 document.Save(stream, FormatType.Docx);
