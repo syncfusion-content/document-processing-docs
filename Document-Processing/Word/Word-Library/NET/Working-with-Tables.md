@@ -24,7 +24,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-simple-table/.NET/Create-simple-table/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-simple-table/.NET/Create-simple-table/Program.cs" %}
 //Creates an instance of WordDocument class 
 WordDocument document = new WordDocument();
 //Adds a section into Word document
@@ -174,7 +174,7 @@ The following code example illustrates how to create a simple table by dynamical
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Dynamic-table-by-adding-rows/.NET/Dynamic-table-by-adding-rows/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Dynamic-table-by-adding-rows/.NET/Dynamic-table-by-adding-rows/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -1571,7 +1571,7 @@ The following code example illustrates how to apply horizontal merge to specifie
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-horizontal-merge-to-cells/.NET/Apply-horizontal-merge-to-cells/Program.cs"%}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-horizontal-merge-to-cells/.NET/Apply-horizontal-merge-to-cells/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
