@@ -93,4 +93,4 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to save the edited changes in the same Excel document?](faqs/how-to-save-the-edited-chages-in-the-same-excel-document)
 * [How to get the frozen rows and columns in an Excel document?](faqs/how-to-get-the-frozen-rows-and-columns-in-an-excel-document)
 * [How to find duplicate values in the Excel document using formulas?](faqs/how-to-find-duplicate-values-in-the-Excel-document-using-formulas)
-* [How to protect zip file items with different passwords using C#?](faqs/how-to-protect-the-zip-file-and-their-items-with-different-password)
+* [How to protect zip file items with different passwords using C#?](faqs/how-to-protect-zip-file-items-with-different-passwords)
