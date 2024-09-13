@@ -22,7 +22,7 @@ XlsIO supports converting Excel file to CSV file by saving the workbook using th
 The following code example illustrates how to convert an Excel file to CSV.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20CSV/Excel%20to%20CSV/.NET/Excel%20to%20CSV/Excel%20to%20CSV/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -65,7 +65,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
  
-A complete working example to convert an Excel file to CSV in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20CSV/Excel%20to%20CSV/NET/Excel%20to%20CSV).
+A complete working example to convert an Excel file to CSV in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20CSV/Excel%20to%20CSV/.NET/Excel%20to%20CSV).
 
 **Maximum Rows and Columns for CSV**
 
@@ -143,7 +143,7 @@ TSV (Tab-Separated Values) files can be created by saving a workbook with the ta
 The following code example illustrates how to convert an Excel file to TSV.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20TSV/Excel%20to%20TSV/.NET/Excel%20to%20TSV/Excel%20to%20TSV/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -181,4 +181,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
  
-A complete working example to convert an Excel file to TSV in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20TSV/Excel%20to%20TSV/NET/Excel%20to%20TSV).
+A complete working example to convert an Excel file to TSV in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20TSV/Excel%20to%20TSV/.NET/Excel%20to%20TSV).

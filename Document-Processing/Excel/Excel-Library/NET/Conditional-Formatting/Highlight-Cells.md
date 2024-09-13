@@ -17,7 +17,7 @@ Format unique and duplicate values of an Excel range using conditional formattin
 The following code example illustrates how to format unique and duplicate values using conditional formatting.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Unique%20and%20Duplicate/.NET/Unique%20and%20Duplicate/Unique%20and%20Duplicate/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -346,8 +346,8 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to format unique and duplicate values in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Unique%20and%20Duplicate).
+A complete working example to format unique and duplicate values in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Unique%20and%20Duplicate/.NET/Unique%20and%20Duplicate).
 
 By executing the program, you will get the Excel file as below
 
-![unique and duplicate conditional Formatting](../Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img3.jpg).
+![unique and duplicate conditional Formatting](../Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img3.png).

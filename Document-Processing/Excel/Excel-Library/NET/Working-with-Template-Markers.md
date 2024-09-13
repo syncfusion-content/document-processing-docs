@@ -293,7 +293,7 @@ N> XlsIO supports binding data from data table using template markers in Windows
 The following code snippet illustrates how to detect data type and apply number format with template marker.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Import%20Data%20Table/.NET/Import%20Data%20Table/Import%20Data%20Table/Program.cs,180" %}
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -390,7 +390,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to bind data from data table to template marker in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20Data%20Table).
+A complete working example to bind data from data table to template marker in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20Data%20Table/.NET/Import%20Data%20Table).
 
 The following screenshot represents an Excel file in which the data type is detected and then number format is applied.
 
@@ -517,7 +517,7 @@ The import data group options are:
 The following code snippet illustrates how to import data from nested collection objects with template marker.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Import%20Nested%20Collection/.NET/Import%20Nested%20Collection/Import%20Nested%20Collection/Program.cs,180" %}
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -754,7 +754,7 @@ End Class
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to bind data from nested collections to template marker in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20Nested%20Collection).
+A complete working example to bind data from nested collections to template marker in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20Nested%20Collection/.NET/Import%20Nested%20Collection).
 
 The output of all the import data and group options with input templates are as follows.
 
@@ -819,7 +819,7 @@ The following screenshot represents the input template, which has a template mar
 The following code sample illustrates how to create or apply conditional format to the marker.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Conditional%20Formatting/.NET/Conditional%20Formatting/Conditional%20Formatting/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   FileStream fileStream = new FileStream("TemplateMarker.xlsx", FileMode.Open, FileAccess.Read);
@@ -1174,7 +1174,7 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to import data to template marker with conditional formatting in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Conditional%20Formatting).
+A complete working example to import data to template marker with conditional formatting in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Conditional%20Formatting/.NET/Conditional%20Formatting).
 
 The following screenshot represents generated Excel file in which the conditional format is applied.
 
@@ -1191,7 +1191,7 @@ The following screenshot represents the input template, which has a template mar
 The following code snippet illustrates how to detect data type and apply number format with template marker.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Import%20with%20Hyperlinks/.NET/Import%20with%20Hyperlinks/Import%20with%20Hyperlinks/Program.cs,180" %}
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -1431,7 +1431,7 @@ End Class
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to import data to template marker with hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20with%20Hyperlinks).
+A complete working example to import data to template marker with hyperlink in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20Data%20to%20Template/Import%20with%20Hyperlinks/.NET/Import%20with%20Hyperlinks).
 
 The following screenshot represents generated Excel file in which the hyperlink is added.
 

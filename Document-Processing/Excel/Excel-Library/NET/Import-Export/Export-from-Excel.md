@@ -17,7 +17,7 @@ N> XlsIO supports exporting of data from worksheet to data table in Windows Form
 The following code example illustrates on how to export data from Excel to Data grid using **DataTable**.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Worksheet%20to%20DataTable/.NET/Worksheet%20to%20DataTable/Worksheet%20to%20DataTable/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -78,7 +78,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to export data from Excel to DataTable in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Worksheet%20to%20DataTable).
+A complete working example to export data from Excel to DataTable in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Worksheet%20to%20DataTable/.NET/Worksheet%20to%20DataTable).
 
 ### Excel to Data Table with an Event
 
@@ -220,7 +220,7 @@ XlsIO allows to export the sheet data to a **Collection Objects** by using the [
 The following code example illustrates on how to export Excel data into Collection Objects using **ExportData&lt;T&gt;**.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Worksheet%20to%20CollectionObjects/.NET/Worksheet%20to%20CollectionObjects/Worksheet%20to%20CollectionObjects/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -345,7 +345,7 @@ End Class
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example to export data from Excel to collection objects in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Worksheet%20to%20CollectionObjects).
+A complete working example to export data from Excel to collection objects in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Worksheet%20to%20CollectionObjects/.NET/Worksheet%20to%20CollectionObjects).
 
 ### Excel to Nested Class Objects
 
@@ -355,10 +355,10 @@ Let’s consider the input Excel document has the data as shown in the below scr
 
 ![Excel worksheet with data](../Working-with-Data_images/Working-with-Data_img5.png)
 
-The following code example illustrates how to export data from Exce to nested class objects with column headers mapping collection.
+The following code example illustrates how to export data from Excel to nested class objects with column headers mapping collection.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Worksheet%20to%20Nested%20Class/.NET/Worksheet%20to%20Nested%20Class/Worksheet%20to%20Nested%20Class/Program.cs,180" %}
 using Syncfusion.XlsIO;
 using System.Collections.Generic;
 
@@ -550,4 +550,4 @@ End Namespace
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to export data from Excel to nested class in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Worksheet%20to%20Nested%20Class).
+A complete working example to export data from Excel to nested class in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Import%20and%20Export%20Data/Worksheet%20to%20Nested%20Class/.NET/Worksheet%20to%20Nested%20Class).

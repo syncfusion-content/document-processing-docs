@@ -80,7 +80,7 @@ End Using
 XlsIO also provides options to save a worksheet with the displayed text or value in the cell to HTML file. The following code example illustrates this.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20HTML/Excel%20to%20HTML/.NET/Excel%20to%20HTML/Excel%20to%20HTML/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   //Initialize excel engine and open workbook
@@ -143,5 +143,5 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to save an Excel worksheet as HTML file using [HtmlSaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.HtmlSaveOptions.html) in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20HTML/Excel%20to%20HTML/NET/Excel%20to%20HTML).
+A complete working example to save an Excel worksheet as HTML file using [HtmlSaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.HtmlSaveOptions.html) in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20HTML/Excel%20to%20HTML/.NET/Excel%20to%20HTML).
 

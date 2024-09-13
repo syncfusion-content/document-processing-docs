@@ -32,7 +32,7 @@ We have found metafile images (*.emf, *.wmf) that are not supported in Azure App
 
 **In .NET Core or .NET targeting applications**, metafile (*.wmf, *.emf) images have some limitations in DocIORenderer. Internally, DocIORenderer used the SkiaSharp graphics library to layout the text and images in PDF or image conversion. And SkiaSharp library does not support the metafile (".emf", ".wmf") images, so, it does not preserve the images in the mentioned applications.
 
-If the Word document contains metafile (*.wmf" or *.emf") images, internally, DocIO preserves those images as RedX images with the same size of the original images during the Word to PDF or image conversion to avoid pagination problems.
+Starting from version 27.x.x, the .NET Word Library (DocIO) uses its own Metafile renderer to preserve EMF images during Word to PDF or image conversions. However, it does not support converting certain metafile formats, including WMF, EMF Plus, EMF Dual, and EMF Spool files. If a Word document contains these types of images, DocIO preserves them as RedX images with the original image size during conversion to avoid pagination problems.
 
 To preserve the expected images in the PDF or image conversion, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform Word to PDF or image conversion.
 

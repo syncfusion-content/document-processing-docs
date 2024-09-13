@@ -96,7 +96,7 @@ The following code snippet shows how to set field buttons in a pivot chart.
 N> The PivotChart properties are supported exclusively from Excel 2010 onwards.
 
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Charts/Create%20Pivot%20Chart/.NET/Create%20Pivot%20Chart/Create%20Pivot%20Chart/Program.cs,180" %}
 //Adding PivotChart to the workbook
 IChart pivotChart = workbook.Charts.Add();
 
@@ -133,7 +133,7 @@ pivotChartSheet.ShowValueFieldButtons = False
 {% endhighlight %}
 {% endtabs %}  
   
-A complete working example to create pivot chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Charts/Create%20Pivot%20Chart). 
+A complete working example to create pivot chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Charts/Create%20Pivot%20Chart/.NET/Create%20Pivot%20Chart). 
 
 ## PivotChart Series
 
