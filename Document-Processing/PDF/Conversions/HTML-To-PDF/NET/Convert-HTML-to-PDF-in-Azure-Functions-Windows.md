@@ -133,12 +133,18 @@ Step 5: Click **Create**.
 Step 6: After creating the function app service, click **Finish**. 
 ![Creating app service](Azure_images/Azure-function/Creating_app_function.png)
 
-Step 7: Click **Publish**.
+Step 7: Click deployment type.
+![Create a Deployment type](Azure_images/Azure-function/Deployment_type.png)
+
+Step 8: Click **Close** button.
+![Create a ASP.NET Core Project](Azure_images/Azure-function/Publish_profile_creation_progress.png)
+
+Step 9: Click **Publish**.
 ![Click the Publish button](Azure_images/Azure-function/Publish_app_function.png)
 
-Step 8: Now, Publish has succeeded.
+Step 10: Now, Publish has succeeded.
 ![Publish has been succeeded](Azure_images/Azure-function/Publish_link.png)
 
-Step 9: Now, go to the Azure portal and select App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into a new browser tab. You will get a PDF document as follows. 
+Step 11: Now, go to the Azure portal and select App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into a new browser tab. You will get a PDF document as follows. 
 ![Output document](Azure_images/Azure-function/Output.png)
 
