@@ -374,7 +374,7 @@ End Using
 
 {% endtabs %}
 
-![Convert PowerPoint slides to images with animation sequence](PPTXtoImage_images/PowerPoint_Animations_to_Images_output.png)
+![Convert PowerPoint slides to images with animation sequence](PPTXtoImage_images/PowerPoint-Animations-to-Images-output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Based-on-Entrance-animation-effects/.NET).
 
