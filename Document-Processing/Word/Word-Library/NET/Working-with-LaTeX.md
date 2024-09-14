@@ -1514,7 +1514,7 @@ Add **Left SubSuperScript** equation to a Word document using the LaTeX through 
 The following code example illustrates how to create Left SubSuperScript equation using LaTeX in Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLin="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Left-SubSuperScript/.NET/Left-SubSuperScript/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/LaTeX-equations/Left-SubSuperScript/.NET/Left-SubSuperScript/Program.cs" %}
 
 // Create a new Word document.
 using WordDocument document = new WordDocument();
