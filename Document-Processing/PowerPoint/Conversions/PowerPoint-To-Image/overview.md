@@ -63,7 +63,7 @@ The following code example demonstrates the conversion of an entire Presentation
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform] playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET/Convert-PowerPoint-presentation-to-Image/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET/Convert-PowerPoint-presentation-to-Image/Program.cs" %}
 using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
 {
    //Open the existing PowerPoint presentation.
