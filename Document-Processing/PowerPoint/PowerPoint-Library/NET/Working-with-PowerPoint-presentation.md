@@ -9,6 +9,9 @@ documentation: UG
 
 ## Cloning a PowerPoint presentation
 
+To quickly get started with merging PowerPoint presentations, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=EziKdj3FUL8" %}
+
 Cloning a PowerPoint presentation creates a new copy of the PowerPoint presentation and the changes made in the cloned copy of the presentation do not affect the source PowerPoint presentation.
 
 {% tabs %}

@@ -2799,6 +2799,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [How to extract images from tables in a Word document?](https://support.syncfusion.com/kb/article/15812/how-to-extract-images-from-tables-in-a-word-document)
 * [How to replace all OLE objects with text in a Word document?](https://support.syncfusion.com/kb/article/15654/how-to-replace-all-ole-objects-with-text-in-a-word-document)
+* [How to change text to barcode by applying font in Word document using C#?](https://support.syncfusion.com/kb/article/16651/how-to-change-text-to-barcode-in-aspnet-word)
+* [How to remove all page breaks from a Word document using C#?](https://support.syncfusion.com/kb/article/16897/how-to-remove-all-page-breaks-from-a-word-document-using-c)
 
 ## Frequently Asked Questions
 

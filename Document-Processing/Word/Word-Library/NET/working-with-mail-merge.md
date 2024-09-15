@@ -76,6 +76,9 @@ The following data sources are supported by Essential DocIO for performing Mail 
 </tbody>
 </table>
 
+To quickly get started with performing a mail merge in a Word document, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=F1VvcPAtlrA" %}
+
 ## Assemblies and NuGet packages required
 
 Refer to the following links for assemblies and NuGet packages required based on platforms for performing mail merge using the .NET Word Library (DocIO).

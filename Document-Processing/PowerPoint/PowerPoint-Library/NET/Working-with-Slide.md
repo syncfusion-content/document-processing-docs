@@ -758,3 +758,7 @@ pptxDoc.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Change-PowerPoint-slide-background).
+
+## See Also
+
+* [How to set slide size for Presentation after cloning and merging a PowerPoint slide?](https://support.syncfusion.com/kb/article/17045/how-to-set-slide-size-for-powerpoint-after-cloning-and-merging-a-powerpoint-slide-in-c)
