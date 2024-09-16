@@ -1,6 +1,6 @@
 ---
-title: Protect the zip files and their items with password | Syncfusion
-description: This page demonstrates how to protect the zip files and their items with password using Syncfusion.Compression.Base.
+title: Protect zip file items with different password | Syncfusion
+description: This page demonstrates how to protect zip file items with different password using Syncfusion.Compression.Base.
 platform: document-processing
 control: XlsIO
 documentation: UG
