@@ -96,8 +96,8 @@ Step 12: In the Advanced Function Details window, specify the **Role Name** as b
 Step 13: After deploying the application, you can see the published Lambda function in **AWS console**.
 ![After deploying the application](AWS_Images/Lambda_Images/Function-WordtoPDF.png)
 
-Step 14: Edit Memory size and Timeout as maximum in Basic settings of the AWS Lambda function.
-![AWS Lambda Function](AWS_Images/Lambda_Images/Basic-Settings-WordtoPDF.png)
+Step 14: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
+![AWS Lambda Function](AWS_Images/Lambda_Images/General-configuration-WordtoPDF.png)
 
 ## Steps to post the request to AWS Lambda
 

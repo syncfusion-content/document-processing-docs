@@ -18,7 +18,7 @@ Step 1: Create a new Azure Functions project.
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure-Images/Functions-v1/Configuration-Create-Word-Document.png)
 
-Step 3: Select function worker as **.NET 6.0(Long-term support)**.
+Step 3: Select function worker as **.NET 8.0(Long Term Support)**.
 ![Select function worker](Azure-Images/Functions-v4/Additional-Information-WordtoPDF.png)
 
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
