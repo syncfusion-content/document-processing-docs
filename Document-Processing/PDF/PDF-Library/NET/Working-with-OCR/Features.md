@@ -1419,3 +1419,153 @@ We have support to improve the image quality while performing OCR for an image o
 N> Note: In this sample, we are using the SixLabors.ImageSharp library to improve the image quality. You can any image processing library as per your requirement.
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-ImageEnhancement).
+
+
+## OCR with multiple languages
+
+Syncfusion OCR processor does support multiple languages in C#. You can configure the OCR processor to recognize text in multiple languages by specifying the required language files.
+
+Here's a general outline of how to enable multiple languages in Syncfusion OCR processor:
+
+### Install Required Dependencies: 
+Ensure you have installed the necessary NuGet packages, including `Syncfusion.OCRProcessor` and `Tesseract`, for OCR functionalities.
+
+### Set Up OCR Processor:
+You need to download the language data files ([.traineddata](https://github.com/tesseract-ocr/tessdata)) for the languages you want to use. These files are required by the OCR engine to recognize different languages.
+
+### Load the Language Files:
+You can set up multiple languages by specifying the language codes (e.g., "eng" for English, "fra" for French) and ensuring that the trained data for those languages is available.
+
+Here is a basic example of using Syncfusion OCR processor with multiple languages in C#:
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Initialize the OCR processor within a using block to ensure resources are properly disposed
+    using (OCRProcessor ocrProcessor = new OCRProcessor())
+    {
+        // Set the Unicode font for the OCR processor using a TrueType font file
+        ocrProcessor.UnicodeFont = new Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
+            new FileStream("arialuni.ttf", FileMode.Open), // Path to the TrueType font file
+            12 // Font size
+        );
+
+        // Open the PDF file to be processed
+        FileStream fileStream = new FileStream("Input.pdf", FileMode.Open);
+
+        // Load the PDF document from the file stream
+        PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+
+        // Configure OCR settings
+        OCRSettings ocrSettings = new OCRSettings();
+
+        // Specify the languages to be used for OCR
+        ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
+
+        // Apply the OCR settings to the OCR processor
+        ocrProcessor.Settings = ocrSettings;
+
+        // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
+        ocrProcessor.PerformOCR(loadedDocument, "tessdata");
+
+        // Create a file stream to save the OCR-processed PDF
+        FileStream outputFileStream = new FileStream("OCR_Output.pdf", FileMode.Create);
+
+        // Save the OCR-processed document to the file stream
+        loadedDocument.Save(outputFileStream);
+
+        // Close the loaded document and commit changes
+        loadedDocument.Close(true);
+
+        // Close the file streams
+        outputFileStream.Close();
+        fileStream.Close();
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Initialize the OCR processor within a using block to ensure resources are properly disposed
+    using (OCRProcessor ocrProcessor = new OCRProcessor())
+    {
+        // Set the Unicode font for the OCR processor using a TrueType font file
+        ocrProcessor.UnicodeFont = new Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
+            new FileStream("arialuni.ttf", FileMode.Open), // Path to the TrueType font file
+            12 // Font size
+        );
+
+        // Open the PDF file to be processed
+        FileStream fileStream = new FileStream("Input.pdf", FileMode.Open);
+
+        // Load the PDF document from the file stream
+        PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+
+        // Configure OCR settings
+        OCRSettings ocrSettings = new OCRSettings();
+
+        // Specify the languages to be used for OCR
+        ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
+
+        // Apply the OCR settings to the OCR processor
+        ocrProcessor.Settings = ocrSettings;
+
+        // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
+        ocrProcessor.PerformOCR(loadedDocument, "tessdata");
+
+        // Save the OCR-processed document to the file save
+        loadedDocument.Save("OCR_Output.pdf");
+
+        // Close the loaded document and commit changes
+        loadedDocument.Close(true);
+        
+    }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Initialize the OCR processor within a Using block to ensure resources are properly disposed
+    Using ocrProcessor As New OCRProcessor()
+        ' Set the Unicode font for the OCR processor using a TrueType font file
+        ocrProcessor.UnicodeFont = New Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
+            New FileStream("arialuni.ttf", FileMode.Open), ' Path to the TrueType font file
+            12 ' Font size
+        )
+
+        ' Open the PDF file to be processed
+        Using fileStream As New FileStream("Input.pdf", FileMode.Open)
+            ' Load the PDF document from the file stream
+            Dim loadedDocument As New PdfLoadedDocument(fileStream)
+
+            ' Configure OCR settings
+            Dim ocrSettings As New OCRSettings()
+
+            ' Specify the languages to be used for OCR
+            ocrSettings.Language = "eng+deu+ara+ell+fra" ' English, German, Arabic, Greek, French
+
+            ' Apply the OCR settings to the OCR processor
+            ocrProcessor.Settings = ocrSettings
+
+            ' Perform OCR on the loaded PDF document, providing the path to the tessdata directory
+            ocrProcessor.PerformOCR(loadedDocument, "tessdata")
+
+            ' Save the OCR-processed document to the specified file
+            Using fileSaveStream As New FileStream("OCR_Output.pdf", FileMode.Create)
+                loadedDocument.Save(fileSaveStream)
+            End Using
+
+            ' Close the loaded document and commit changes
+            loadedDocument.Close(True)
+        End Using
+    End Using
+
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can find the `.traineddata` files for different languages on the [Tesseract GitHub page](https://github.com/tesseract-ocr/tessdata).
+
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/OCR-with-multiple-langauages).
