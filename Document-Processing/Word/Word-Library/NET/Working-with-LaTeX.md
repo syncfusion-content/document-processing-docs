@@ -1927,7 +1927,7 @@ The following code examples show how to apply the justification to equations in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Apply-math-justification/Apply-math-justification/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mathematical-Equation/Apply-math-justification/NET/Apply-math-justification/Program.cs" %}
 {% raw %}
 // Create a new Word document.
 using (WordDocument document = new WordDocument())

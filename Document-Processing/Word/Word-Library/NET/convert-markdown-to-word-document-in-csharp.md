@@ -72,7 +72,7 @@ The following code example shows how to load image data based on the image sourc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Markdown-to-Word-conversion/Customize-image/.NET/Customize-image/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Create a Word document instance.
 using (WordDocument document = new WordDocument())
 {
