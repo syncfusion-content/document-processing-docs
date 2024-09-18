@@ -19,7 +19,7 @@ Step 2: Create a project name and select the location.
 ![Create a project name](Azure-Images/Functions-v1/Configuration-Open-and-Save-Word-Document.png)
 
 Step 3: Select function worker as **.NET 8.0(Long Term Support)**.
-![Select function worker](Azure-Images/Functions-v1/Additional-Open-and-Save-Word-Document.png)
+![Select function worker](Azure-Images/Functions-v4/Additional-Information-WordtoPDF.png)
 
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.DocIO.Net.Core NuGet package](Azure-Images/Functions-v1/Nuget-Package-Open-and-Save-Word-Document.png)
