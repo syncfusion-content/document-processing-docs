@@ -370,7 +370,7 @@ The following code example illustrates how set the images folder to export the i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Export-images-to-folder/.NET/Export-images-to-folder/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
