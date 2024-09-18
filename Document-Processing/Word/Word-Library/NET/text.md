@@ -18,7 +18,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Text-file-conversion/Convert-Word-to-text-file/.NET/Convert-Word-to-text-file/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -59,7 +59,7 @@ The following code example shows how to convert a Text file into Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Text-file-conversion/Convert-text-file-to-Word/.NET/Convert-text-file-to-Word/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Txt))
@@ -98,7 +98,7 @@ The following code example shows how to retrieve the Word document contents as a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Text-file-conversion/Retrieve-Word-document-as-plain-text/.NET/Retrieve-Word-document-as-plain-text/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))

@@ -76,7 +76,7 @@ The following code example explains how to create a new Word document with few l
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-document/.NET/Create-Word-document/Program.cs" %}
 //Creates an instance of WordDocument Instance (Empty Word Document)
 WordDocument document = new WordDocument();
 //Add a section & a paragraph in the empty document
@@ -146,7 +146,7 @@ Dim section As IWSection = document.AddSection()
 section.PageSetup.Margins.All = 50.0F
 {% endhighlight %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Creates an instance of WordDocument Instance (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a new section into the Word document
@@ -199,7 +199,7 @@ secondTextRange.CharacterFormat.FontName = "Calibri"
 secondTextRange.CharacterFormat.FontSize = 11
 {% endhighlight %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Adds a new simple paragraph into the section
 IWParagraph firstParagraph = section.AddParagraph();
 //Sets the paragraph's horizontal alignment as justify
@@ -249,7 +249,7 @@ picture.Height = 100
 picture.Width = 100
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Adds another paragraph and aligns it as center
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center;
@@ -335,7 +335,7 @@ paragraph = secondCell.AddParagraph()
 textRange = paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
 {% endhighlight %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Adds a table into the Word document
 IWTable table = section.AddTable();
 //Creates the specified number of rows and columns
@@ -503,7 +503,7 @@ paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left
 section.AddParagraph()
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Writes default numbered list. 
 paragraph = section.AddParagraph();
 //Sets before spacing for paragraph.
@@ -587,7 +587,7 @@ document.Save(outputFileName, FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 MemoryStream stream = new MemoryStream();
 //Saves the Word document to  MemoryStream
 document.Save(stream, FormatType.Docx);
@@ -637,7 +637,7 @@ document.Save("Result.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-all/.NET/Find-and-replace-all/Program.cs" %}
 FileStream fileStream = new FileStream(@"Giant Panda.docx",FileMode.Open,FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
@@ -688,7 +688,7 @@ document.Save("Result.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-highlight-all/.NET/Find-and-highlight-all/Program.cs" %}
 FileStream fileStream = new FileStream(@"Test.docx",FileMode.Open,FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
@@ -764,7 +764,7 @@ document.Save("result.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Mail-merge-with-string-arrays/.NET/Mail-merge-with-string-arrays/Program.cs" %}
 FileStream fileStream = new FileStream(@"SimpleMailMergeTemplate.docx", FileMode.Open,FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
@@ -812,7 +812,7 @@ The following code example shows how to perform Mail merge with objects.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Mail-merge-with-.NET-objects/.NET/Mail-merge-with-.NET-objects/Program.cs" %}
 FileStream fileStream = new FileStream(@"EmployeesTemplate.docx", FileMode.Open,FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
@@ -1058,7 +1058,7 @@ The following code example illustrates how to convert a Word document into PDF d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET/Convert-Word-document-to-PDF/Program.cs" %}
 FileStream fileStream = new FileStream(@"EmployeesTemplate.docx", FileMode.Open,FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Automatic);

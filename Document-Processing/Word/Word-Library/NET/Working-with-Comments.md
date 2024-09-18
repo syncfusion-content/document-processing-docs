@@ -21,7 +21,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Add-comment-to-Word-document/.NET/Add-comment-to-Word-document/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds a section and a paragraph in the document
@@ -94,7 +94,7 @@ The following code illustrates how to modify the text of an existing comment in 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Modify-text-of-an-existing-comment/.NET/Modify-text-of-an-existing-comment/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Comment.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 //Iterates the comments in the Word document
@@ -148,7 +148,7 @@ You can insert comments into the Word document using the [AppendComment](https:/
 The following code example illustrates how to find all occurrences of a text pattern using Regex and insert comments to them.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Find-text-using-regex-and-add-comments/.NET/Find-text-using-regex-and-add-comments/Program.cs" %}
 
 using (FileStream fileStream = new FileStream("Input.docx", FileMode.Open, FileAccess.ReadWrite))
 {
@@ -274,7 +274,7 @@ The following code illustrates how to remove all the comments in Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Remove-all-comments-in-Word-document/.NET/Remove-all-comments-in-Word-document/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Comment.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 //Removes all the comments in a Word document
@@ -310,7 +310,7 @@ The following code illustrates how to remove a particular comment from Word docu
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Remove-particular-comment-from-Word/.NET/Remove-particular-comment-from-Word/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Comment.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 //Removes second comments from a document.
@@ -352,7 +352,7 @@ The following code examples show how to access the parent comment of a particula
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Access-parent-comment/.NET/Access-parent-comment/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Comment.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 // Get the Ancestor comment.
@@ -398,7 +398,7 @@ The following code example illustrates how to get the paragraph item where it ex
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Comments/Retrieve-commented-word/.NET/Retrieve-commented-word/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Comment.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
@@ -451,3 +451,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to check if a comment is resolved or not in a Word document?](https://support.syncfusion.com/kb/article/14652/how-to-check-if-comment-is-resolved-or-not-in-word-document)
+* [How to find a text and add comments in Word document using C#?](https://support.syncfusion.com/kb/article/16894/how-to-find-a-text-and-add-comments-in-word-document-using-c)
+* [How to extract all comments from Word document using C#?](https://support.syncfusion.com/kb/article/16653/how-to-extract-comments-from-word-document-using-c-in-aspnet-core)

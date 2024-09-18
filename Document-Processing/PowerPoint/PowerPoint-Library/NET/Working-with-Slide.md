@@ -15,7 +15,7 @@ The following code example demonstrates how to add a blank slide to the Presenta
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Add-PowerPoint-slide/.NET/Add-PowerPoint-slide/Program.cs" %}
 //Creates a PowerPoint instance
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide to the PowerPoint presentation
@@ -77,7 +77,7 @@ The following example demonstrates how to access a slide from the predefined bla
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Add-predefined-blank-slide-layout-type/.NET/Add-predefined-blank-slide-layout-type/Program.cs" %}
 //Create a new instance of PowerPoint Presentation file
 IPresentation pptxDoc = Presentation.Create();
 //Add a slide of blank layout type
@@ -121,7 +121,7 @@ The following code example demonstrates how to add a slide with all other predef
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Add-all-predefined-slide-layout-types/.NET/Add-all-predefined-slide-layout-types/Program.cs" %}
 //Create a new instance of PowerPoint Presentation file
 IPresentation pptxDoc = Presentation.Create();
 //Add a slide of Blank type
@@ -229,7 +229,7 @@ The following code example demonstrates how to create and use a customized slide
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Create-and-use-custom-layout-slide/.NET/Create-and-use-custom-layout-slide/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -298,7 +298,7 @@ The following code example demonstrates how to add a slide with an existing slid
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Add-slide-with-existing-slide-layout/.NET/Add-slide-with-existing-slide-layout/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -382,7 +382,7 @@ You can create a deep copy of a slide by cloning the slide. The cloned slide is 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Clone-PowerPoint-slide/.NET/Clone-PowerPoint-slide/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -458,7 +458,7 @@ The following code sample explains how to merge slide with the destination forma
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide/.NET/Merge-PowerPoint-slide/Program.cs" %}
 //Opens the source Presentation
 IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
 //Opens the destination Presentation
@@ -523,7 +523,7 @@ The following code sample explains how to merge slide with the source formatting
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide-with-Source-formatting/.NET/Merge-PowerPoint-slide-with-Source-formatting/Program.cs" %}
 //Opens the source Presentation
 IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
 //Opens the destination Presentation
@@ -587,7 +587,7 @@ The Essential Presentation provides the ability to delete a slide by its instanc
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Remove-PowerPoint-slide/.NET/Remove-PowerPoint-slide/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -688,7 +688,7 @@ The following code example demonstrates setting the background for a slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Change-PowerPoint-slide-background/.NET/Change-PowerPoint-slide-background/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -758,3 +758,7 @@ pptxDoc.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Change-PowerPoint-slide-background).
+
+## See Also
+
+* [How to set slide size for Presentation after cloning and merging a PowerPoint slide?](https://support.syncfusion.com/kb/article/17045/how-to-set-slide-size-for-powerpoint-after-cloning-and-merging-a-powerpoint-slide-in-c)

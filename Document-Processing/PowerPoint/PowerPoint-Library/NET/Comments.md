@@ -15,7 +15,7 @@ The following code example demonstrates how to add a comment in a slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Comments/Add-comments-in-PowerPoint/.NET/Add-comments-in-PowerPoint/Program.cs" %}
 //Create a PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add a slide to the Presentation
@@ -64,7 +64,7 @@ The following code example demonstrates how to reply to an existing comment in a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Comments/Add-reply-comment-in-PowerPoint/.NET/Add-reply-comment-in-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -120,7 +120,7 @@ The following code example demonstrates how to modify the content of a comment.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Comments/Modify-comment-content/.NET/Modify-comment-content/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -174,7 +174,7 @@ The following code example demonstrates how to modify the author name of a comme
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Comments/Modify-comment-author/.NET/Modify-comment-author/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -233,7 +233,7 @@ The following code example demonstrates how to delete a comment from a slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Comments/Delete-comment/.NET/Delete-comment/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -288,7 +288,7 @@ The following code example demonstrates how to delete a comment by specifying it
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Comments/Delete-comment-by-position/.NET/Delete-comment-by-position/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

@@ -17,7 +17,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Enable-track-changes-of-Word/.NET/Enable-track-changes-of-Word/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -94,7 +94,7 @@ The following code example shows how to accept all the tracked changes.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Accept-all-changes/.NET/Accept-all-changes/Program.cs" %}
 //Opens an existing Word document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -148,7 +148,7 @@ The following code example shows how to reject all the tracked changes.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Reject-all-changes/.NET/Reject-all-changes/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -201,7 +201,7 @@ The following code example shows how to accept the tracked changes made by the a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Accept-all-changes-made-by-author/.NET/Accept-all-changes-made-by-author/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -271,7 +271,7 @@ The following code example shows how to reject the tracked changes made by the a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Reject-all-changes-made-by-author/.NET/Reject-all-changes-made-by-author/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -341,7 +341,7 @@ The following code example shows how to get the details about the revision infor
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Get-revision-information/.NET/Get-revision-information/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);

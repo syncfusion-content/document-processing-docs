@@ -18,7 +18,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-image/.NET/Add-image/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -86,7 +86,7 @@ The following code example explains how to replace an existing image.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Replace-image/.NET/Replace-image/Program.cs" %}
 FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads the template document
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
@@ -176,7 +176,7 @@ The following code example explains how to remove the image from the paragraph i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Remove-image/.NET/Remove-image/Program.cs" %}
 FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads the template document 
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
@@ -259,7 +259,7 @@ The following code example explains how various picture formats can be applied t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Format-and-rotate-image/.NET/Format-and-rotate-image/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -384,7 +384,7 @@ The following code example explains how images can be iterated from the document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Find-an-image-by-title/.NET/Find-an-image-by-title/Program.cs" %}
 FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Docx);
@@ -489,7 +489,7 @@ The following code example shows how to add caption to an image.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-image-caption/.NET/Add-image-caption/Program.cs" %}
 //Creates a new document
 WordDocument document = new WordDocument();
 //Adds a new section to the document.
@@ -624,7 +624,7 @@ N> To preserve the SVG image in the Word document, pass both the SVG image data 
 The following code example shows how to add an SVG image in a Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-svg-image/.NET/Add-svg-image/Program.cs" %}
 
 ///Create a new Word document.
 using (WordDocument document = new WordDocument())

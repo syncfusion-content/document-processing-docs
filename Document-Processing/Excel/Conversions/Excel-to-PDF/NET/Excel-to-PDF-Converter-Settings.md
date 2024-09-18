@@ -2036,6 +2036,89 @@ End Using
 
 A complete working example to convert selected worksheets to PDF in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Selected%20Worksheets%20to%20PDF/.NET/Selected%20Worksheets%20to%20PDF).
 
+## Tagged PDF
+
+An accessible tagged PDF includes structured tags for elements like text, tables, and images, enhancing accessibility and navigation. These tags ensure that users who rely on assistive technologies can effectively read and interact with the PDF content, meeting the accessibility requirements outlined by Section 508 and PDF/UA.
+
+The following complete code snippet explains how to preserve PDF document tags using **AutoTag** property while converting an Excel document to PDF.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx",FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+  //Initialize XlsIORendererSettings
+  XlsIORendererSettings settings = new XlsIORendererSettings();
+   
+  //Set AutoTag to true to create a tagged PDF
+  settings.AutoTag = true;
+
+  //Initialize XlsIORenderer
+  XlsIORenderer renderer = new XlsIORenderer();
+
+  //Convert the Excel document to PDF with renderer settings
+  PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
+
+  //Save the PDF document
+  FileStream outputStream = new FileStream("Output.pdf",FileMode.Create, FileAccess.Write);
+  pdfDocument.Save(outputStream);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream("../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+  //Initialize ExcelToPdfConverterSettings
+  ExcelToPdfConverterSettings settings = new ExcelToPdfConverterSettings();
+
+  //Set AutoTag to true to create a tagged PDF
+  settings.AutoTag = true;
+
+  //Initialize ExcelToPdfConverter
+  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+
+  //Convert the Excel document to PDF with converter settings
+  PdfDocument pdfDocument = converter.Convert(settings);
+
+  //Save the PDF document
+  pdfDocument.Save("Output.pdf");    
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim inputStream As FileStream = New FileStream("../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read)
+  Dim workbook As IWorkbook = application.Workbooks.Open(inputStream)
+
+  'Initialize ExcelToPdfConverterSettings
+  Dim settings As ExcelToPdfConverterSettings = New ExcelToPdfConverterSettings()
+
+  'Set AutoTag to true to create a tagged PDF
+  settings.AutoTag = True
+
+  'Initialize ExcelToPdfConverter
+  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+
+  'Convert the Excel document to PDF with converter settings
+  Dim pdfDocument As PdfDocument = converter.Convert(settings)
+
+  'Save the PDF document
+  pdfDocument.Save("Output.pdf")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
 ## Throw When Excel File Is Empty
 
 The default value of [ThrowWhenExcelFileIsEmpty](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverterSettings_ThrowWhenExcelFileIsEmpty) property is FALSE, and hence the empty Excel document will be converted to PDF without any exception. Enabling this property throws **ExcelToPdfConverterException**, saying that the Excel document is Empty.

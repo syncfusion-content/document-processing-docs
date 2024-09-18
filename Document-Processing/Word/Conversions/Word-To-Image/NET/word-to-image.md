@@ -69,7 +69,7 @@ The following code example illustrates how to convert the entire Word document t
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Image-conversion/Convert-Word-to-image/.NET/Convert-Word-to-image/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -146,7 +146,7 @@ You can convert a specific page of the Word document into an image and use it fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Image-conversion/First-page-of-Word-to-image/.NET/First-page-of-Word-to-image/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -209,7 +209,7 @@ Users can convert a specific range of pages in a Word document into images. The 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Image-conversion/Specific-range-of-pages-Word-to-image/.NET/Specific-range-of-pages-Word-to-image/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -367,3 +367,4 @@ During Word to Image conversions, if a glyph of the input text is unavailable in
 * [How to convert word to tiff using C#, VB.NET](https://support.syncfusion.com/kb/article/9541/how-to-convert-word-to-tiff-using-c-vb-net)
 * [How to convert Word to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12123/how-to-convert-word-to-image-in-blazor-webassembly-wasm)
 * [How to resolve font problems during Word to Image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
+* [How to convert Word document to images and combine it as single image using SkiaSharp library?](https://support.syncfusion.com/kb/article/17072/how-to-convert-entire-word-document-to-images-and-combine-it-as-single-image-using-c)

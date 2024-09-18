@@ -31,7 +31,8 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-section/.NET/Split-by-section/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Load the template document as stream
 using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -102,7 +103,8 @@ The following code example illustrates how to split the Word document by using h
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-heading/.NET/Split-by-heading/Program.cs" %}
 using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
     //Load the template document as stream
@@ -369,7 +371,8 @@ The following code example illustrates how to split the Word document using book
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-bookmark/.NET/Split-by-bookmark/Program.cs" %}
 //Load an existing Word document.
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -451,7 +454,8 @@ The following code example illustrates how to split the Word document using the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-placeholder-text/.NET/Split-by-placeholder-text/Program.cs" %}
 //Load an existing Word document.
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))

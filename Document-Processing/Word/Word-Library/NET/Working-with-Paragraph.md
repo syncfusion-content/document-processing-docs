@@ -30,7 +30,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-paragraph/.NET/Add-paragraph/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -84,7 +84,7 @@ The following code example illustrates how to modify an existing paragraph.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Modify-an-existing-paragraph/.NET/Modify-an-existing-paragraph/Program.cs" %}
 FileStream fileStream = new FileStream(@"Test.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads the template document
 WordDocument document = new WordDocument(fileStream, FormatType.Docx);
@@ -168,7 +168,7 @@ N> The [FirstLineIndent](https://help.syncfusion.com/cr/document-processing/Sync
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Apply-paragraph-formatting/.NET/Apply-paragraph-formatting/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -272,7 +272,7 @@ The following code example explains how to use the predefined styles.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Apply-paragraph-style/.NET/Apply-paragraph-style/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -334,7 +334,7 @@ The following code example explains how to create a custom paragraph style and a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Create-custom-paragraph-style/.NET/Create-custom-paragraph-style/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -427,7 +427,7 @@ The following code example explains how to add tab stops to the paragraph.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-tab-stop/.NET/Add-tab-stop/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -498,7 +498,7 @@ You can set RTL (Right-to-left) direction to the paragraph in a Word document. T
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/RTL-paragraph/.NET/RTL-paragraph/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Loads or opens an existing Word document through Open method of WordDocument class
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -575,7 +575,7 @@ This following code example demonstrates how a style can be accessed and style p
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Access-styles-in-document/.NET/Access-styles-in-document/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an source document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Docx))
@@ -638,7 +638,7 @@ You can create a new paragraph style by using [WordDocument.AddParagraphStyle](h
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Create-new-paragraph-style/.NET/Create-new-paragraph-style/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an source document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Docx))
@@ -708,7 +708,7 @@ DocIO provides a set of predefined styles. You can apply those predefined styles
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Apply-built-in-style/.NET/Apply-built-in-style/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an source document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(sourceStreamPath, FormatType.Docx))
@@ -763,7 +763,7 @@ The following code example explains how to remove the style from the word docume
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Remove-particular-style-from-document/.NET/Remove-particular-style-from-document/Program.cs" %}
 //Opens an input Word template.
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -820,7 +820,7 @@ The following code example explains how to append text to the paragraph.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Append-text-to-paragraph/.NET/Append-text-to-paragraph/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -885,7 +885,7 @@ The following code example explains how to replace the text of a text range.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Replace-text-of-a-text-range/.NET/Replace-text-of-a-text-range/Program.cs" %}
 FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads the template document 
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
@@ -961,7 +961,7 @@ The following code example explains how to apply formatting to the text.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Apply-formatting-to-text/.NET/Apply-formatting-to-text/Program.cs" %}
 //Create a new Word document 
 WordDocument document = new WordDocument();
 //Add new section to the document
@@ -1179,7 +1179,7 @@ The following code example explains how to create a simple bulleted list.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Simple-bulleted-list/.NET/Simple-bulleted-list/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -1275,7 +1275,7 @@ The following code example explains how to create a simple numbered list.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Simple-numbered-list/.NET/Simple-numbered-list/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -1371,7 +1371,7 @@ The following code example explains how to create a multilevel bulleted list.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Multilevel-bulleted-list/.NET/Multilevel-bulleted-list/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -1479,7 +1479,7 @@ The following code example explains how to create multilevel numbered list.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Multilevel-numbered-list/.NET/Multilevel-numbered-list/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document     
@@ -1587,7 +1587,7 @@ The list levels can be incremented or decremented by using the [IncreaseIndentLe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Increase-or-decrease-list-indent/.NET/Increase-or-decrease-list-indent/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -1716,7 +1716,7 @@ The following code example explains how to create user defined list styles.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/User-defined-numbered-list/.NET/User-defined-numbered-list/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -1850,7 +1850,7 @@ N> The [NumberPrefix](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/List-with-prefix-from-previous-level/.NET/List-with-prefix-from-previous-level/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -2009,7 +2009,7 @@ The following code example illustrates how to create a user defined bulleted lis
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/User-defined-bulleted-list/.NET/User-defined-bulleted-list/Program.cs" %}
 //Create a new Word document.
 WordDocument document = new WordDocument();
 //Add a new section to the document.
@@ -2174,7 +2174,7 @@ The following example shows how to **get a string that represents the appearance
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Get-list-value/.NET/Get-list-value/Program.cs" %}
 //Loads an existing Word document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -2238,7 +2238,7 @@ The following code example explains how to add new symbol to the document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-symbols/.NET/Add-symbols/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -2293,7 +2293,7 @@ The following code example explains how to modify an existing symbol.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Modify-an-existing-symbol/.NET/Modify-an-existing-symbol/Program.cs" %}
 FileStream fileStream = new FileStream(@"Sample1.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads the template document
 WordDocument document = new WordDocument(fileStream, FormatType.Docx);
@@ -2393,7 +2393,7 @@ The following code example explains how various types of breaks can be appended 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Append-breaks/.NET/Append-breaks/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -2497,7 +2497,7 @@ The following code example illustrates how to insert a text wrapping break to mo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Text-wrapping-break/.NET/Text-wrapping-break/Program.cs" %}
 //Opens the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -2575,7 +2575,7 @@ The following code example explains how to add new text box to the paragraph.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-text-box/.NET/Add-text-box/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -2656,7 +2656,7 @@ The following code example explains how to apply formatting and rotation for tex
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Format-and-rotate-text-box/.NET/Format-and-rotate-text-box/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -2799,6 +2799,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [How to extract images from tables in a Word document?](https://support.syncfusion.com/kb/article/15812/how-to-extract-images-from-tables-in-a-word-document)
 * [How to replace all OLE objects with text in a Word document?](https://support.syncfusion.com/kb/article/15654/how-to-replace-all-ole-objects-with-text-in-a-word-document)
+* [How to change text to barcode by applying font in Word document using C#?](https://support.syncfusion.com/kb/article/16651/how-to-change-text-to-barcode-in-aspnet-word)
+* [How to remove all page breaks from a Word document using C#?](https://support.syncfusion.com/kb/article/16897/how-to-remove-all-page-breaks-from-a-word-document-using-c)
 
 ## Frequently Asked Questions
 

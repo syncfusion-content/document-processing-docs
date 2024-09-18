@@ -80,10 +80,11 @@ Step 7: Open the Dockerfile to see the default Docker commands that are shown be
 {% tabs %}
 {% highlight Dockerfile %}
 
-FROM mcr.microsoft.com/dotnet/runtime:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-buster-slim AS base
+RUN apt-get update -y && apt-get install fontconfig -y
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-buster-slim AS build
 WORKDIR /src
 COPY ["WordToPDFDockerSample.csproj", "."]
 RUN dotnet restore "./WordToPDFDockerSample.csproj"
@@ -124,12 +125,12 @@ You can use the below Dockerfile to convert a Word document to PDF in Alpine Lin
 {% tabs %}
 {% highlight Dockerfile %}
 
-FROM mcr.microsoft.com/dotnet/aspnet:3.1-alpine3.12 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
 RUN apk update && apk upgrade && apk add fontconfig
 RUN apk add --update ttf-dejavu fontconfig
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1-alpine3.12 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 WORKDIR /src
 COPY ["WordToPDFDockerSample.csproj", "."]
 RUN dotnet restore "./WordToPDFDockerSample.csproj"
@@ -157,14 +158,32 @@ You can use the below Dockerfile to convert a Word document to PDF in CentOS Lin
 {% tabs %}
 {% highlight Dockerfile %}
 
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+RUN apt-get update -y && apt-get install libfontconfig -y
+WORKDIR /src
+
+COPY ["WordToPDFDockerSample.csproj", "."]
+RUN dotnet restore "WordToPDFDockerSample.csproj"
+
+COPY . .
+RUN dotnet build "WordToPDFDockerSample.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "WordToPDFDockerSample.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
 FROM centos:8
 
-Run dnf install dotnet-sdk-3.1 -y
-RUN dnf install dotnet-runtime-3.1 -y
+RUN dnf install -y https://packages.microsoft.com/config/centos/8/prod.repo \
+    && dnf install -y dotnet-runtime-8.0 \
+    && dnf clean all
 
-RUN dnf install fontconfig -y
+RUN dnf install -y fontconfig
 
-ENTRYPOINT ["dotnet" "WordToPDFDockerSample.dll"]
+WORKDIR /app
+
+COPY --from=publish /app/publish .
+
+ENTRYPOINT ["dotnet", "WordToPDFDockerSample.dll"]
 
 {% endhighlight %}
 {% endtabs %}
@@ -178,11 +197,11 @@ You can use the below Dockerfile to convert a Word document to PDF in Debian Lin
 {% tabs %}
 {% highlight Dockerfile %}
 
-FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-buster-slim AS base
 RUN apt-get update -y && apt-get install fontconfig -y
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1-buster-slim AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-buster-slim AS build
 WORKDIR /src
 COPY ["WordToPDFDockerSample.csproj", "."]
 RUN dotnet restore "./WordToPDFDockerSample.csproj"
@@ -212,12 +231,22 @@ You can use the below Dockerfile to convert a Word document to PDF in Fedora Lin
 
 FROM fedora:latest
 
-Run dnf install dotnet-sdk-3.1 -y
-RUN dnf install dotnet-runtime-3.1 -y
+Run dnf install dotnet-sdk-8.0 -y
+RUN dnf install dotnet-runtime-8.0 -y
 
 RUN dnf install fontconfig -y
 
-ENTRYPOINT ["dotnet" "WordToPDFDockerSample.dll"]
+WORKDIR /app
+
+COPY ["WordToPDFDockerSample.csproj", "."]
+RUN dotnet restore "WordToPDFDockerSample.csproj"
+COPY . .
+
+RUN dotnet build "WordToPDFDockerSample.csproj" -c Release -o /app/build
+
+RUN dotnet publish "WordToPDFDockerSample.csproj" -c Release -o /app/publish
+
+ENTRYPOINT ["dotnet", "WordToPDFDockerSample.dll"]
 
 {% endhighlight %}
 {% endtabs %}
@@ -231,12 +260,13 @@ You can use the below Dockerfile to convert a Word document to PDF in RHEL Linux
 {% tabs %}
 {% highlight Dockerfile %}
 
-FROM registry.access.redhat.com/ubi8/dotnet-31-runtime AS base
+FROM registry.access.redhat.com/ubi8/dotnet-80-runtime AS base
 USER root
-RUN yum -y install fontconfig --disablerepo=epel
-WORKDIR /
+RUN microdnf install -y fontconfig \
+    && microdnf clean all
+WORKDIR /app
 
-FROM registry.access.redhat.com/ubi8/dotnet-31 AS build
+FROM registry.access.redhat.com/ubi8/dotnet-80 AS build
 WORKDIR /src
 COPY ["WordToPDFDockerSample.csproj", ""]
 RUN dotnet restore "./WordToPDFDockerSample.csproj"
@@ -264,13 +294,13 @@ You can use the below Dockerfile to convert a Word document to PDF in Ubuntu Lin
 {% tabs %}
 {% highlight Dockerfile %}
 
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1-bionic AS base
+FROM mcr.microsoft.com/dotnet/runtime:8.0-jammy AS base
 RUN apt-get update -y && apt-get install fontconfig -y
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
 WORKDIR /src
-COPY ["WordToPDFDockerSample.csproj", ""]
+COPY ["WordToPDFDockerSample.csproj", "."]
 RUN dotnet restore "./WordToPDFDockerSample.csproj"
 COPY . .
 WORKDIR "/src/."

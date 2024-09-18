@@ -24,7 +24,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-simple-table/.NET/Create-simple-table/Program.cs" %}
 //Creates an instance of WordDocument class 
 WordDocument document = new WordDocument();
 //Adds a section into Word document
@@ -174,7 +174,7 @@ The following code example illustrates how to create a simple table by dynamical
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Dynamic-table-by-adding-rows/.NET/Dynamic-table-by-adding-rows/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -405,7 +405,7 @@ You can create a nested table by adding a new table into a cell. The following c
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-nested-table/.NET/Create-nested-table/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -607,7 +607,7 @@ You can insert an image into the table cell by accessing the paragraph in that c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Insert-image-in-cell/.NET/Insert-image-in-cell/Program.cs" %}
 //Creates an instance of the WordDocument class.
 using (WordDocument document = new WordDocument())
 {
@@ -688,7 +688,7 @@ N> 4. As in the Microsoft Word, DocIO supports [RowFormat.Borders](https://help.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-table-formatting/.NET/Apply-table-formatting/Program.cs" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing Word document into DocIO instance
@@ -844,7 +844,7 @@ The following code example illustrates how to load an existing document and appl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-cell-formatting/.NET/Apply-cell-formatting/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1016,7 +1016,7 @@ The following code example shows how to resize the table in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Resize-table/.NET/Resize-table/Program.cs" %}
 //Loads an existing Word document into DocIO instance
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1103,7 +1103,7 @@ The following code example illustrates how to apply the built-in table styles to
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-built-in-table-style/.NET/Apply-built-in-table-style/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1154,7 +1154,7 @@ The following code example illustrates how to enable and disable the special tab
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Table-style-options/.NET/Table-style-options/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1239,7 +1239,7 @@ The following code example illustrates how to apply a custom table style to tabl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-custom-table-style/.NET/Apply-custom-table-style/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1350,7 +1350,7 @@ The following code example illustrates how to apply built-in and custom table st
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-base-style-for-table/.NET/Apply-base-style-for-table/Program.cs" %}
 //Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -1571,7 +1571,7 @@ The following code example illustrates how to apply horizontal merge to specifie
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-horizontal-merge-to-cells/.NET/Apply-horizontal-merge-to-cells/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -1623,7 +1623,7 @@ The following code example illustrates how to apply vertical merge to specified 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-vertical-merge-to-cells/.NET/Apply-vertical-merge-to-cells/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -1675,7 +1675,7 @@ The following code example illustrate how to create a table that contains horizo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-horizontal-merged-cells/.NET/Create-horizontal-merged-cells/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -1754,7 +1754,7 @@ The following code example illustrates how to create a table with vertical merge
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-vertical-merged-cells/.NET/Create-vertical-merged-cells/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -1842,7 +1842,7 @@ The following code example illustrates how to create a table with a single heade
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-table-with-header-row/.NET/Create-table-with-header-row/Program.cs" %}
 //Creates an instance of WordDocument class
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
@@ -1927,7 +1927,7 @@ The following code example illustrates how to disable all the table rows from sp
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Disable-row-to-break-across-pages/.NET/Disable-row-to-break-across-pages/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath);
@@ -1980,7 +1980,7 @@ The following code example illustrates how to iterate through the table and appl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Iterating-through-table-elements/.NET/Iterating-through-table-elements/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -2066,7 +2066,7 @@ You can remove a table from a text body by its instance or by its index position
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Remove-table/.NET/Remove-table/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -2123,7 +2123,7 @@ You can remove a particular table row from a table rows collection by its instan
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Remove-particular-row-from-table/.NET/Remove-particular-row-from-table/Program.cs" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);

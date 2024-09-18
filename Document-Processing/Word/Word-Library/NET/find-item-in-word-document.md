@@ -25,7 +25,7 @@ The following code example illustrates how to find the first item based on one p
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-item-in-word-document/Find-first-item-by-property/.NET/Find-first-item-by-property/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -93,7 +93,7 @@ The following code example illustrates how to find the first item in Word docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-item-in-word-document/Find-first-item-by-properties/.NET/Find-first-item-by-properties/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -181,7 +181,7 @@ The following code example illustrates how to find all the items in Word documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-item-in-word-document/Find-all-items-by-property/.NET/Find-all-items-by-property/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -280,7 +280,7 @@ The following code example illustrates how to find all the items in Word documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-item-in-word-document/Find-all-items-by-properties/.NET/Find-all-items-by-properties/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {

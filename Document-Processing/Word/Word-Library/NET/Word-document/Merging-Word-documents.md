@@ -24,7 +24,8 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight C# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-new-page/.NET/Merge-documents-in-new-page/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an source document from file system through constructor of WordDocument class
@@ -82,7 +83,8 @@ When your requirement is to append the contents from the same page instead of st
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-same-page/.NET/Merge-documents-in-same-page/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an source document from file system through constructor of WordDocument class
@@ -231,3 +233,4 @@ destinationDocument.Close()
 * [How to remove Section Break when merging documents using ImportContent API](https://support.syncfusion.com/kb/article/11441/how-to-remove-section-break-when-merging-documents-using-importcontent-api)
 * [How to merge Word documents without changing the page numbers?](https://support.syncfusion.com/kb/article/12390/how-to-merge-word-documents-without-changing-the-page-numbers)
 * [How to merge multiple documents with header and footer of destination document?](https://support.syncfusion.com/kb/article/12252/how-to-merge-multiple-documents-with-header-and-footer-of-destination-document)
+* [How to merge Word documents and generate TOC in C#?](https://support.syncfusion.com/kb/article/16895/how-to-merge-word-documents-and-generate-toc-in-c)

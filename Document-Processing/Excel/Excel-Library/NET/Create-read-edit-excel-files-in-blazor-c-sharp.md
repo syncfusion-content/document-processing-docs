@@ -752,9 +752,9 @@ An online sample link to [create an Excel document](https://blazor.syncfusion.co
 
 ## Convert Excel to Image in Blazor Client-Side application
 
-1. Create a new C# Blazor Client-Side project with target framework as .NET 6.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+1. Create a new C# Blazor Client-Side project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
-2. Install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
+2. Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
 
 3. Add below tag in your Blazor WASM csproj file.
 
@@ -812,9 +812,9 @@ A complete working example of how to convert an Excel worksheet to image in Blaz
 
 ## Convert Excel to PDF in Blazor Client-Side application
 
-1. Create a new C# Blazor Client-Side project with target framework as .NET 6.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+1. Create a new C# Blazor Client-Side project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
-2. Install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
+2. Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
 
 3. Add below tag in your Blazor WASM csproj file.
 

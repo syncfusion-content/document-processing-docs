@@ -17,7 +17,8 @@ The below code example demonstrates how to create a Notes in a PowerPoint Slide.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Add-notes-to-PowerPoint-slide/.NET/Add-notes-to-PowerPoint-slide/Program.cs" %}
 //Creates a Presentation without slides.
 IPresentation pptxDoc = Presentation.Create();
 //Adds new slide with blank slide layout type.
@@ -67,7 +68,8 @@ The following code example demonstrates how to add a text in a Notes.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Add-text-in-notes/.NET/Add-text-in-notes/Program.cs" %}
 //Creates a Presentation without slides.
 IPresentation pptxDoc = Presentation.Create();
 //Adds new slide with blank slide layout type.
@@ -144,7 +146,8 @@ The following code example demonstrates how to create simple numbered list as No
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Create-numbered-list-in-notes-slide/.NET/Create-numbered-list-in-notes-slide/Program.cs" %}
 //Creates a Presentation without slides.
 IPresentation pptxDoc = Presentation.Create();
 //Adds new slide with blank slide layout type.
@@ -308,7 +311,8 @@ The below code example demonstrates how to remove a Notes from a PowerPoint Slid
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"
+playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Remove-notes-from-slide/.NET/Remove-notes-from-slide/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

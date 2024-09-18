@@ -18,7 +18,7 @@ Essential Presentation supports creating and editing tables in PowerPoint slide
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Create-PowerPoint-table-with-rows/.NET/Create-PowerPoint-table-with-rows/Program.cs" %}
 //Create a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add slide to the presentation
@@ -105,7 +105,7 @@ The following code example demonstrates how to create a simple table in a PowerP
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Create-PowerPoint-table-with-columns/.NET/Create-PowerPoint-table-with-columns/Program.cs" %}
 //Create a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
 //Add slide to the presentation
@@ -192,7 +192,7 @@ You can append new rows at the end of an existing PowerPoint table. Refer to the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Add-new-row-to-the-table-end/.NET/Add-new-row-to-the-table-end/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -255,7 +255,7 @@ You can copy an existing row to the end of a table. Refer to the following code 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Copy-existing-row-to-the-table-end/.NET/Copy-existing-row-to-the-table-end/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -304,7 +304,7 @@ You can insert a row at the specified index position of a table. Refer to the fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Insert-row-in-table/.NET/Insert-row-in-table/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -355,7 +355,7 @@ You can append new column to a table. Refer to the following code example.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Add-new-column-to-the-table-end/.NET/Add-new-column-to-the-table-end/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -420,7 +420,7 @@ You can copy an existing column and append it to the end of table. Refer to the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Copy-existing-column-to-the-table-end/.NET/Copy-existing-column-to-the-table-end/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -471,7 +471,7 @@ You can insert a column at the specified index position of a table. Refer to the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Insert-column-in-table/.NET/Insert-column-in-table/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -524,7 +524,7 @@ The following code example demonstrates how to get the actual height of a PowerP
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Get-actual-table-height/.NET/Get-actual-table-height/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -587,7 +587,7 @@ You can format a table to change its appearance by customizing the table border,
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Apply-table-formatting/.NET/Apply-table-formatting/Program.cs" %}
 //Create an instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds slide to the Presentation
@@ -773,7 +773,7 @@ You can format a table by applying pre-defined table styles. The following code 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Apply-table-styles/.NET/Apply-table-styles/Program.cs" %}
 //Creates instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
 //Adds slide to the Presentation
@@ -916,7 +916,7 @@ The following code example demonstrates how to modify the table in existing Powe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Modify-existing-table/.NET/Modify-existing-table/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -985,7 +985,7 @@ The following code example shows how to merge cells in a table.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Merge-table-cells/.NET/Merge-table-cells/Program.cs" %}
 //Create an instance of PowerPoint Presentation.
 IPresentation pptxDoc = Presentation.Create();
 //Add slide to the Presentation.
@@ -1092,7 +1092,7 @@ You can remove a table from a slide by its instance or by its index position in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Remove-table/.NET/Remove-table/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);
@@ -1149,7 +1149,7 @@ The following code example demonstrates how to edit the content in a table.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Tables/Edit-table-contents/.NET/Edit-table-contents/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Table.pptx", FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

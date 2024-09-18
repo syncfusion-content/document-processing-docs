@@ -13,7 +13,7 @@ You can open an existing PowerPoint Presentation by using the file name and its 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET/Open-and-save-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 //Loads or open an PowerPoint Presentation
@@ -59,7 +59,7 @@ You can open an existing PowerPoint Presentation from stream by using the overlo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET/Open-and-save-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName, FileMode.Open);
 {% endhighlight %}
@@ -160,7 +160,7 @@ You can save the created or manipulated PowerPoint Presentation to file system b
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET/Open-and-save-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(fileName, FileMode.Open);
 //To-Do some manipulation
@@ -236,7 +236,7 @@ You can save the created or manipulated PowerPoint Presentation to stream by usi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET/Open-and-save-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName, FileMode.Open);
 //To-Do some manipulation
@@ -348,7 +348,7 @@ When you are done with the Presentation instance, you should close the instance 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET/Open-and-save-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
 IPresentation pptxDoc = Presentation.Open(inputStream);

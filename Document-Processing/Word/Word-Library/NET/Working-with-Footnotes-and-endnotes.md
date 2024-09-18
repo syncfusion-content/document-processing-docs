@@ -22,7 +22,7 @@ The following code example shows how to insert the footnotes into the Word docum
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Footnotes-and-Endnotes/Add-footnotes-in-Word-document/.NET/Add-footnotes-in-Word-document/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -116,7 +116,7 @@ The following code example shows how to insert the endnotes into the Word docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Footnotes-and-Endnotes/Add-endnotes-in-Word-document/.NET/Add-endnotes-in-Word-document/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -212,7 +212,7 @@ The following code example illustrates how to set positions for footnotes and en
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Footnotes-and-Endnotes/Position-for-footnote-and-endnote/.NET/Position-for-footnote-and-endnote/Program.cs" %}
 //Create a new Word document.
 using (WordDocument document = new WordDocument())
 {
@@ -381,7 +381,7 @@ The following code example shows how to change the default footnote separator.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Footnotes-and-Endnotes/Change-default-footnote-separator/.NET/Change-default-footnote-separator/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -482,7 +482,7 @@ The following code example shows how to change the default endnote separator.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Footnotes-and-Endnotes/Change-default-endnote-separator/.NET/Change-default-endnote-separator/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 using (WordDocument document = new WordDocument())
 {
@@ -586,7 +586,7 @@ The following code example shows how to modify the footnote and endnote content 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Footnotes-and-Endnotes/Modify-Footnote-and-Endnote-content/.NET/Modify-Footnote-and-Endnote-content/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream  = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -699,7 +699,7 @@ The following code example shows how to remove the footnotes/endnotes from the W
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Footnotes-and-Endnotes/Remove-footnotes-and-endnotes/.NET/Remove-footnotes-and-endnotes/Program.cs" %}
 FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Loads the template document as stream
 WordDocument document = new WordDocument(inputStream, FormatType.Docx);

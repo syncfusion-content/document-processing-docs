@@ -9,6 +9,10 @@ documentation: UG
 
 You can search a particular text you like to change and replace it with another text or part of the document.
 
+To quickly get started with the Find and Replace options in a Word document, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=EJDihId35nI" %}
+
+
 The following table illustrates the supported overloads for Find and Replace functionality.
 
 <table>
@@ -101,7 +105,7 @@ The following table illustrates the supported overloads for Find and Replace fun
 <tr>
 <td>{{ '[Replace(string given, string replace, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with replace string, taking into consideration of case sensitive and whole word options.</td>
-<td>{{ '[Find and replace text with another text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-all/.NET-Standard)' | markdownify }}</td>
+<td>{{ '[Find and replace text with another text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-all)' | markdownify }}</td>
 </tr>
 <tr>
 <td>{{ '[Replace(Regex pattern, IWordDocument replaceDoc, bool saveFormatting)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_)' | markdownify }}</td>
@@ -171,7 +175,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-find-next/.NET/Find-and-find-next/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -250,7 +254,7 @@ The following code example illustrates how to find all the occurrences of a part
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-highlight-all/.NET/Find-and-highlight-all/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -310,7 +314,7 @@ The following code example illustrates how to find a particular text extended to
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-find-next-paragraphs/.NET/Find-and-find-next-paragraphs/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -401,7 +405,7 @@ The following code example illustrates how to replace a particular text.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-text-with-body-part/.NET/Replace-text-with-body-part/Program.cs" %}
 //Loads a template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -456,7 +460,7 @@ The following code example illustrates how to replace the first occurrence of a 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-first-occurrence/.NET/Find-and-replace-first-occurrence/Program.cs" %}
 //Loads a template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -515,7 +519,7 @@ The following code example illustrates how to replace a particular text with a W
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-text-with-Word-document/.NET/Replace-text-with-Word-document/Program.cs" %}
 //Loads a template document
 FileStream fileStreamPath1 = new FileStream("SourceTemplate.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath1, FormatType.Docx);
@@ -565,7 +569,7 @@ The following code example illustrates how to replace the text extended to sever
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-paragraphs-with-text/.NET/Find-and-replace-paragraphs-with-text/Program.cs" %}
 //Loads a template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -609,7 +613,7 @@ The following code example illustrates how to replace the text extended to sever
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-next-and-replace-with-formatted-text/.NET/Find-next-and-replace-with-formatted-text/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -670,7 +674,7 @@ The following code example illustrates how to replace all occurrences of a missp
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-misspelled-word/.NET/Replace-misspelled-word/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -713,7 +717,7 @@ The following code example illustrates how to find and replace non-breaking spac
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-non-breaking-spaces/.NET/Find-and-replace-non-breaking-spaces/Program.cs" %}
 //Open the file as stream.
 using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
 {
@@ -761,7 +765,7 @@ The following code example illustrates how to find and replace text in a word do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-text-with-image/.NET/Find-and-replace-text-with-image/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -892,7 +896,7 @@ The following code example illustrates how to create a mail merge template by re
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-with-merge-field/.NET/Find-and-replace-with-merge-field/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -980,7 +984,7 @@ The following code example illustrates how to do this.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-text-with-table/.NET/Find-and-replace-text-with-table/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1362,7 +1366,7 @@ The following code example illustrates how to merge or combine Word documents by
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-with-Word-document/.NET/Find-and-replace-with-Word-document/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1426,7 +1430,7 @@ The following code example illustrates how to replace text that extends to sever
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-multiple-paragraphs/.NET/Find-and-replace-multiple-paragraphs/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1495,7 +1499,7 @@ The following code example illustrates how to find all occurrences of a length o
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-highlight-all/.NET/Find-and-highlight-all/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1553,7 +1557,7 @@ The following code example illustrates how to replace the pattern of text with n
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-pattern-text-with-normal-text/.NET/Replace-pattern-text-with-normal-text/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -1602,7 +1606,7 @@ The following code example illustrates how to replace a pattern of multiline tex
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-multiline-text-with-single-line/.NET/Replace-multiline-text-with-single-line/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -1651,7 +1655,7 @@ The following code example illustrates how to find and replace text with the for
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-text-with-formatted-text/.NET/Find-and-replace-text-with-formatted-text/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -1706,7 +1710,7 @@ The following code example illustrates how to find and replace the text extended
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-text-extended-to-several-paragraphs/.NET/Replace-text-extended-to-several-paragraphs/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
@@ -1761,7 +1765,7 @@ The following code example illustrates how to find the next occurrence of text e
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-next-multiline-text-and-replace-text/.NET/Find-next-multiline-text-and-replace-text/Program.cs" %}
 //Open the file as Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {

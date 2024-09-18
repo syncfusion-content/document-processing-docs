@@ -76,6 +76,9 @@ The following data sources are supported by Essential DocIO for performing Mail 
 </tbody>
 </table>
 
+To quickly get started with performing a mail merge in a Word document, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=F1VvcPAtlrA" %}
+
 ## Assemblies and NuGet packages required
 
 Refer to the following links for assemblies and NuGet packages required based on platforms for performing mail merge using the .NET Word Library (DocIO).
@@ -116,7 +119,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Create-merge-field/.NET/Create-merge-field/Program.cs" %}
 //Creates an instance of a WordDocument 
 WordDocument document = new WordDocument();
 //Adds a section and a paragraph in the document
@@ -164,7 +167,7 @@ The following code example shows how to perform mail merge in above Word documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Getting-started-mail-merge/.NET/Getting-started-mail-merge/Program.cs" %}
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -295,7 +298,7 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 
 * [How to mail merge Word document in Azure functions v1](https://support.syncfusion.com/kb/article/9196/how-to-mail-merge-word-document-in-azure-functions-v1)
 * [How to display mail merge result using format switch in the Word document](https://support.syncfusion.com/kb/article/11272/how-to-display-mail-merge-result-using-format-switch-in-the-word-document)
-* [Is this possible to Mail Merge using csv data source](https://support.syncfusion.com/kb/article/1294/is-this-possible-to-mail-merge-using-csv-data-source)
+* [Is this possible to mail merge using csv data source](https://support.syncfusion.com/kb/article/1294/is-this-possible-to-mail-merge-using-csv-data-source)
 * [How to mail merge Word document in Linux (Mono)](https://support.syncfusion.com/kb/article/9194/how-to-mail-merge-word-document-in-linux-mono-in-aspnet-core)
 * [How to replace merge field with HTML string using Mail merge](https://support.syncfusion.com/kb/article/10252/how-to-replace-merge-field-with-html-string-using-mail-merge)
 * [How to mail merge Word document in Docker](https://support.syncfusion.com/kb/article/9397/how-to-mail-merge-word-document-in-docker)

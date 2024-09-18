@@ -18,7 +18,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Add-shapes-in-Word/.NET/Add-shapes-in-Word/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -125,7 +125,7 @@ Shape can have formatting such as line color, fill color, positioning, wrap form
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Format-shapes/.NET/Format-shapes/Program.cs" %}
 //Create a new Word document 
 WordDocument document = new WordDocument();
 //Add a new section to the document.
@@ -263,7 +263,7 @@ You can rotate the shape and also apply flipping (horizontal and vertical) to it
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Rotate-shapes/.NET/Rotate-shapes/Program.cs" %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -357,7 +357,7 @@ The following code example illustrates how to create group shape in Word documen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Add-group-shape-in-Word/.NET/Add-group-shape-in-Word/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -562,7 +562,7 @@ The following code example illustrates how to add collection of shapes or images
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Collection-of-shapes-into-group-shape/.NET/Collection-of-shapes-into-group-shape/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -894,7 +894,7 @@ The following code example illustrates how to group the nested group shapes as a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Add-nested-group-shapes/.NET/Add-nested-group-shapes/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -1173,7 +1173,7 @@ The following code example illustrates how to ungroup the group shape in Word do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Ungroup-shapes/.NET/Ungroup-shapes/Program.cs" %}
 FileStream fileStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads the template document
 WordDocument document = new WordDocument(fileStream, FormatType.Docx);

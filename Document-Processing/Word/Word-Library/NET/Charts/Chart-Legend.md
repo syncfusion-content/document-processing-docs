@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Chart Legend
+# Customize Chart Legend
 
 Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using DocIO, you can **customize the legend in the chart**.
 
@@ -306,7 +306,7 @@ chart.Legend.Layout.ManualLayout.Left = 0.68
 The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Format-Legend/.NET/Format-Legend/Program.cs" %}
 
 FileStream fileStreamPath = new FileStream(Path.GetFullPath(@"../../../Data/Template.docx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Open an existing document from file system through constructor of WordDocument class.

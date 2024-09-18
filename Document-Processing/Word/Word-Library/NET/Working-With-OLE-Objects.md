@@ -1,6 +1,6 @@
 ---
 title: Working with OLE Objects in .NET Word library | Syncfusion
-description: Learn how to work with OLE Objects in a Word document using the .NET Word (DocIO) library.
+description: Learn how to work with OLE Objects in a Word document using the Syncfusion .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -22,7 +22,7 @@ The following code example explains how to add OLE objects to the document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Add-ole-object/.NET/Add-ole-object/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -94,7 +94,7 @@ The following code example explains how to extract OLE objects from the document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Extract-ole-object/.NET/Extract-ole-object/Program.cs" %}
 using (FileStream inputStream = new FileStream(@"Template.docx", FileMode.Open, FileAccess.Read))
 {
     using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
@@ -345,7 +345,7 @@ The following code example explains how to remove OLE objects from the document.
   
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Remove-ole-object/.NET/Remove-ole-object/Program.cs" %}
 FileStream inputStream = new FileStream(@"Input.docx", FileMode.Open, FileAccess.Read);
 WordDocument document = new WordDocument(inputStream, FormatType.Automatic);
 inputStream.Dispose();

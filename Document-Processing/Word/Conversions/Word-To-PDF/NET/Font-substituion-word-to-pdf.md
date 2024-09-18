@@ -20,7 +20,7 @@ The following code example shows how to use alternate font instead of "Microsoft
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Use-alternate-installed-font/.NET/Use-alternate-installed-font/Program.cs" %}
 //Open the file as Stream
 FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
 //Loads file stream into Word document
@@ -146,7 +146,7 @@ The following code example shows how to use the alternate fonts instead of "Micr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Use-alternate-font-without-installing/.NET/Use-alternate-font-without-installing/Program.cs" %}
 private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     //Sets the alternate font when a specified font is not installed in the production environment
