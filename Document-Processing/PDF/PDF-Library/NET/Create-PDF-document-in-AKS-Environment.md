@@ -279,7 +279,7 @@ If we head over to the Azure portal, select the AKS resource > Workloads > asp-d
 And that’s it, the containerised ASP.NET Core Web App is running on the AKS cluster.
 
 Select the PDF document and Click **Create PDF document** to generate the PDF document.You will get the output **PDF document** as follows.
-![Create PDF document in Azure App Service on Linux](AKS_images/Output_screenshot.png)
+![Create PDF document in Azure App Service on Linux](AKS_images/Output.png)
 
 ## Delete deployment
 If you want to clean up the cluster, you can run the following commands:
