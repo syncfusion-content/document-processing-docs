@@ -488,7 +488,7 @@ The following code example illustrates how to export the HTML file with only the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-Platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/HTML-conversions/Export-HTML-with-body-content/.NET/Export-HTML-with-body-content/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-Platform]" %}
 //Load an existing Word document.
 using (FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
