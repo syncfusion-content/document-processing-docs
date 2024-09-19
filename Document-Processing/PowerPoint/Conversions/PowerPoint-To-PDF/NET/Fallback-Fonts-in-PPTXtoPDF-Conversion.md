@@ -5,7 +5,7 @@ platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# Fallback fonts
+# Fallback fonts in PowerPoint to PDF conversion
 
 During PowerPoint to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
 
@@ -24,8 +24,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Initialize-default-fallback-fonts/.NET/Initialize-default-fallback-fonts/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" %}
 //Load the PowerPoint presentation into stream.
 using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
@@ -103,8 +102,7 @@ The following code example demonstrates how a user can add fallback fonts based 
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Fallback-fonts-based-on-scripttype/.NET/Fallback-fonts-based-on-scripttype/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" %}
 //Load the PowerPoint presentation into stream.
 using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
@@ -220,8 +218,7 @@ The following code example demonstrates how users can add fallback fonts by usin
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Fallback-fonts-for-Unicode-range/.NET/Fallback-fonts-for-Unicode-range/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" %}
 //Load the PowerPoint presentation into stream.
 using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
@@ -332,8 +329,7 @@ The following code example demonstrates how user can modify or customize the exi
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Modify-the-exiting-fallback-fonts/.NET/Modify-the-exiting-fallback-fonts/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" %}
 //Load the PowerPoint presentation into stream.
 using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
