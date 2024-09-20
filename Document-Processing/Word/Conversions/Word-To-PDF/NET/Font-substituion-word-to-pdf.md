@@ -91,7 +91,7 @@ pdfDocument.Close()
 
 {% endtabs %}
 
-##### Event Handler to use alternate installed font
+### Event Handler to use alternate installed font
 
 The following code example shows how to set the **alternate installed font** instead of "Microsoft Sans Serif" during Word to PDF conversion.
 
@@ -140,7 +140,7 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Use-alternate-installed-font).
 
-##### Event Handler to use alternate font without installing
+### Event Handler to use alternate font without installing
 
 The following code example shows how to use the alternate fonts instead of "Microsoft Sans Serif" **without installing the fonts** into production machine.
 
@@ -150,10 +150,21 @@ The following code example shows how to use the alternate fonts instead of "Micr
 private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     //Sets the alternate font when a specified font is not installed in the production environment
-    if (args.OrignalFontName == "Arial Unicode MS" && args.FontStyle == FontStyle.Regular)
-        args.AlternateFontStream = new FileStream("Arial.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-    else
-        args.AlternateFontName = "Times New Roman";
+    if (args.OrignalFontName == "Arial Unicode MS")
+    {
+        switch (args.FontStyle)
+        {
+            case FontStyle.Italic:
+                args.AlternateFontStream = new FileStream("Arial_italic.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                break;
+            case FontStyle.Bold:
+                args.AlternateFontStream = new FileStream("Arial_bold.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                break;
+            default:
+                args.AlternateFontStream = new FileStream("Arial.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                break;
+        }
+    }
 }
 {% endhighlight %}
 
@@ -161,20 +172,36 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     //Sets the alternate font when a specified font is not installed in the production environment
-    if (args.OrignalFontName == "Arial Unicode MS" && args.FontStyle == FontStyle.Regular)
-        args.AlternateFontStream =  new FileStream("Arial.TTF" ,FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-    else
-        args.AlternateFontName = "Times New Roman";
+    if (args.OrignalFontName == "Arial Unicode MS")
+    {
+        switch (args.FontStyle)
+        {
+            case FontStyle.Italic:
+                args.AlternateFontStream = new FileStream("Arial_italic.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                break;
+            case FontStyle.Bold:
+                args.AlternateFontStream = new FileStream("Arial_bold.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                break;
+            default:
+                args.AlternateFontStream = new FileStream("Arial.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                break;
+        }
+    }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
     'Sets the alternate font when a specified font is not installed in the production environment
-    If args.OrignalFontName = "Arial Unicode MS" && args.FontStyle == FontStyle.Regular Then
-        args.AlternateFontStream = New FileStream("Arial.TTF" ,FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-    Else
-        args.AlternateFontName = "Times New Roman"
+    If args.OrignalFontName = "Arial Unicode MS" Then
+        Select Case args.FontStyle
+           Case FontStyle.Italic
+               args.AlternateFontStream = New FileStream("Arial_italic.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+           Case FontStyle.Bold
+               args.AlternateFontStream = New FileStream("Arial_bold.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+           Case Else
+               args.AlternateFontStream = New FileStream("Arial.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+        End Select
     End If
 End Sub
 {% endhighlight %}
