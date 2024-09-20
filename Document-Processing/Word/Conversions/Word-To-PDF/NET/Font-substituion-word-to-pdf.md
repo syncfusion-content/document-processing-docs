@@ -152,6 +152,7 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
     //Sets the alternate font when a specified font is not installed in the production environment
     if (args.OrignalFontName == "Arial Unicode MS")
     {
+	    //Sets the alternate font based on the font style.
         switch (args.FontStyle)
         {
             case FontStyle.Italic:
@@ -176,6 +177,7 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
     {
         switch (args.FontStyle)
         {
+		    //Sets the alternate font based on the font style.
             case FontStyle.Italic:
                 args.AlternateFontStream = new FileStream("Arial_italic.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 break;
@@ -194,6 +196,7 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 Private Sub SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
     'Sets the alternate font when a specified font is not installed in the production environment
     If args.OrignalFontName = "Arial Unicode MS" Then
+	    'Sets the alternate font based on the font style.
         Select Case args.FontStyle
            Case FontStyle.Italic
                args.AlternateFontStream = New FileStream("Arial_italic.TTF", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
