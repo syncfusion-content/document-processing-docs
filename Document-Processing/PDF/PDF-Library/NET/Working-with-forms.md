@@ -577,7 +577,7 @@ You can choose default value for radio button field using [SelectedIndex](https:
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Forms/Default-value-for-radio-button-field/.NET/Default_Value_For_Radio_Button/Program.cs" %}
 
     // Create a new PDF document
     PdfDocument document = new PdfDocument();
@@ -704,7 +704,7 @@ You can choose default value for radio button field using [SelectedIndex](https:
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Default-value-for-radio-button-field/.NET).
 
 ### Adding the list box field
 
