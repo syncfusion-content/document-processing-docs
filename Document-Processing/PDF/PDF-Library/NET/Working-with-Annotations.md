@@ -2349,7 +2349,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Cloud border style can be added to the [PdfCircleAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCircleAnnotation.html) class by using the [PdfBorderEffect](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBorderEffect.html) class. The following code sample explains how to add cloud border styled Circle annotation in the PDF document.  
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Annotation/Add-cloud-border-styled-circle-annotation-in-the-PDF/.NET/Add-cloud-border-styled-circle-annotation-in-the-PDF/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2451,14 +2451,14 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-cloud-border-styled-circle-annotation-in-the-PDF/.NET).
 
 ### PdfEllipseAnnotation
 
 Cloud border style can be added to the [PdfEllipseAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfEllipseAnnotation.html) class by using the [PdfBorderEffect](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBorderEffect.html) class. The following code sample explains how to add cloud border styled Ellipse annotation in the PDF document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Annotation/Add-cloud-border-styled-ellipse-annotation-in-the-PDF/.NET/Add-cloud-border-styled-ellipse-annotation-in-the-PDF/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -2560,7 +2560,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-cloud-border-styled-ellipse-annotation-in-the-PDF/.NET).
 
 ## Measurement Annotations
 
