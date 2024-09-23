@@ -179,7 +179,7 @@ Step 5: Add the below code example to create a simple Presentation and **save in
     secondPara.FirstLineIndent = -35;
     
     //Gets a picture as stream.
-    FileStream pictureStream = new FileStream(Path.GetFullPath("Output/Image.jpg"), FileMode.Open);
+    FileStream pictureStream = new FileStream(Path.GetFullPath("Data/Image.jpg"), FileMode.Open);
     
     //Adds the picture to a slide by specifying its size and position.
     slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
