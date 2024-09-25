@@ -752,7 +752,7 @@ private static void SetHangingAndLeftindent(WParagraphFormat paragraphFormat, fl
 Private Sub SetHangingAndLeftindent(paragraphFormat As WParagraphFormat, hangingIndent As Single, leftIndent As Single)
     ' Set the FirstLineIndent to the specified hangingIndent value.
     paragraphFormat.FirstLineIndent = hangingIndent
-    ' If the FirstLineIndent is negative (indicating a hanging indent), adjust the LeftIndent by adding the absolute value of the FirstLineIndent to the leftIndent.
+    ' If the FirstLineIndent is negative (indicating a hanging indent),adjust the LeftIndent by adding the absolute value of the FirstLineIndent to the leftIndent.
     If paragraphFormat.FirstLineIndent < 0 Then
         paragraphFormat.LeftIndent = leftIndent + (-1 * paragraphFormat.FirstLineIndent)
         ' If the FirstLineIndent is not negative, just set LeftIndent to the provided leftIndent.
