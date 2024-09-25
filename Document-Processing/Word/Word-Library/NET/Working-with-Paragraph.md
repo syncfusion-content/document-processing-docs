@@ -561,7 +561,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Hanging Indent
 
-A hanging indent is a type of paragraph formatting where the first line of the paragraph starts at the left margin, and all subsequent lines are indented to the right. The purpose of a hanging indent is to create a visually distinct format that makes it easier to scan and read entries or items. 
+A hanging indent is a paragraph formatting where the first line of the paragraph starts at the left margin, and all subsequent lines are indented to the right.
+
+The following code example shows how to set hanging indent a paragraph in Word document.
 
 {% tabs %}
 
@@ -629,12 +631,14 @@ document.Close()
 
 ### Setting Hanging Indent Without Altering Left Indent
 
-When working with DocIO Library, you might encounter a scenario where setting a hanging indent (negative FirstLineIndent) also modifies the LeftIndent value. This behavior is due to the interrelated nature of these properties at the file level. As per behavior of the DocIo Library, if we set the hanging indent, we write the hanging indent and left indent as they are in the Word document at the file level. 
+When working with DocIO Library, you might encounter a scenario where setting a hanging indent (negative FirstLineIndent) also modifies the LeftIndent value. This behavior is due to the interrelated nature of these properties at the file level. As per behavior of the DocIO Library, if we set the hanging indent, we write the hanging indent and left indent as they are in the Word document at the file level. 
 
 This guide provides a solution to maintain the LeftIndent value while applying a hanging indent.
 
 * Left Indent: The distance between the left margin and the start of the paragraph.
 * First Line Indent: The distance between the left margin and the start of the first line. A negative value creates a hanging indent.
+
+The following code example shows how to setting hanging indent without altering left indent of a paragraph in Word document.
 
 {% tabs %}
 
