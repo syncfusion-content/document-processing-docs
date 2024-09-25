@@ -749,7 +749,6 @@ private static void SetHangingAndLeftindent(WParagraphFormat paragraphFormat, fl
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Custom method to set the hanging indentation without altering LeftIndent
 Private Sub SetHangingAndLeftindent(paragraphFormat As WParagraphFormat, hangingIndent As Single, leftIndent As Single)
     ' Set the FirstLineIndent to the specified hangingIndent value.
     paragraphFormat.FirstLineIndent = hangingIndent
@@ -758,7 +757,7 @@ Private Sub SetHangingAndLeftindent(paragraphFormat As WParagraphFormat, hanging
     ' adjust the LeftIndent by adding the absolute value of the FirstLineIndent to the leftIndent.
     If paragraphFormat.FirstLineIndent < 0 Then
         paragraphFormat.LeftIndent = leftIndent + (-1 * paragraphFormat.FirstLineIndent)
-    ' If the FirstLineIndent is not negative, just set LeftIndent to the provided leftIndent.
+        ' If the FirstLineIndent is not negative, just set LeftIndent to the provided leftIndent.
     Else
         paragraphFormat.LeftIndent = leftIndent
     End If
