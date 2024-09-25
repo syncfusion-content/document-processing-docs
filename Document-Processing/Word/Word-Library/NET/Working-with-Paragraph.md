@@ -577,7 +577,7 @@ WParagraph nextPara = document.LastSection.AddParagraph() as WParagraph;
 //Append text "World" to the newly added paragraph.
 nextPara.AppendText("World");
 //Set the hanging indent
-nextPara.ParagraphFormat.FirstLineIndent = -72f;
+document.LastParagraph.ParagraphFormat.FirstLineIndent = -18f;
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -597,7 +597,7 @@ WParagraph nextPara = document.LastSection.AddParagraph() as WParagraph;
 //Append text "World" to the newly added paragraph.
 nextPara.AppendText("World");
 //Set the hanging indent
-nextPara.ParagraphFormat.FirstLineIndent = -72f;
+document.LastParagraph.ParagraphFormat.FirstLineIndent = -18f;
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -606,22 +606,22 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Create a new instance of WordDocument.
+' Create a new instance of WordDocument.
 Dim document As New WordDocument()
-'Ensure there is at least one section with a paragraph in the document.
+' Ensure there is at least one section with a paragraph in the document.
 document.EnsureMinimal()
-'Append text "Hello" to the last paragraph in the document.
+' Append text "Hello" to the last paragraph in the document.
 document.LastParagraph.AppendText("Hello")
-'Add a new paragraph to the last section and cast it as WParagraph.
+' Add a new paragraph to the last section and cast it as WParagraph.
 Dim nextPara As WParagraph = TryCast(document.LastSection.AddParagraph(), WParagraph)
-'Append text "World" to the newly added paragraph.
+' Append text "World" to the newly added paragraph.
 nextPara.AppendText("World")
-'Set the hanging indent.
-nextPara.ParagraphFormat.FirstLineIndent = -72.0f
-'Saves the Word document to MemoryStream.
+' Set the hanging indent.
+document.LastParagraph.ParagraphFormat.FirstLineIndent = -18.0F
+' Saves the Word document to MemoryStream.
 Dim stream As New MemoryStream()
 document.Save(stream, FormatType.Docx)
-'Close the Word document to release resources.
+' Close the Word document to release resources
 document.Close()
 {% endhighlight %}
 
@@ -683,25 +683,25 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Create a new instance of WordDocument.
-Dim document As New WordDocument()
-'Ensure there is at least one section with a paragraph in the document.
-document.EnsureMinimal()
-'Append text "Hello" to the last paragraph in the document.
-document.LastParagraph.AppendText("Hello")
-'Add a new paragraph to the last section and cast it as WParagraph.
-Dim nextPara As WParagraph = TryCast(document.LastSection.AddParagraph(), WParagraph)
-'Append text "World" to the newly added paragraph.
-nextPara.AppendText("World")
-'Set the hanging and left indent for the paragraph.
-'Set the hanging indent (-10f in this case) and left indent (0f).
-'If left indent is not needed, set it to 0f.
-SetHangingAndLeftindent(nextPara.ParagraphFormat, -10.0f, 0.0f)
-'Saves the Word document to MemoryStream.
-Dim stream As New MemoryStream()
-document.Save(stream, FormatType.Docx)
-'Close the Word document to release resources.
-document.Close()
+ 'Create a new instance of WordDocument.
+ Dim document As New WordDocument()
+ 'Ensure there is at least one section with a paragraph in the document.
+ document.EnsureMinimal()
+ 'Append text "Hello" to the last paragraph in the document.
+ document.LastParagraph.AppendText("Hello")
+ 'Add a new paragraph to the last section and cast it as WParagraph.
+ Dim nextPara As WParagraph = TryCast(document.LastSection.AddParagraph(), WParagraph)
+ 'Append text "World" to the newly added paragraph.
+ nextPara.AppendText("World")
+ 'Set the hanging and left indent for the paragraph.
+ 'Set the hanging indent (-10f in this case) and left indent (0f).
+ 'If left indent is not needed, set it to 0f.
+ SetHangingAndLeftindent(nextPara.ParagraphFormat, -10.0F, 0.0F)
+ 'Saves the Word document to MemoryStream.
+ Dim stream As New MemoryStream()
+ document.Save(stream, FormatType.Docx)
+ 'Close the Word document to release resources.
+ document.Close()
 {% endhighlight %}
 
 The following code example provides supporting method for the above code.
@@ -750,7 +750,7 @@ private static void SetHangingAndLeftindent(WParagraphFormat paragraphFormat, fl
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Custom method to set the hanging indentation without altering LeftIndent
-Private Shared Sub SetHangingAndLeftindent(paragraphFormat As WParagraphFormat, hangingIndent As Single, leftIndent As Single)
+Private Sub SetHangingAndLeftindent(paragraphFormat As WParagraphFormat, hangingIndent As Single, leftIndent As Single)
     ' Set the FirstLineIndent to the specified hangingIndent value.
     paragraphFormat.FirstLineIndent = hangingIndent
 
