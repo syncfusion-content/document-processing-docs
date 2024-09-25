@@ -19,7 +19,7 @@ Step 1: Create a new **AWS Lambda project** as follows.
 Step 2: Select Blueprint as Empty Function and click **Finish**.
 ![Select Blueprint as Empty Function](GettingStarted_images/Blueprint_AWS.png)
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages?q=Syncfusion.Pdf.Imaging.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet package](GettingStarted_images/NuGetPackageAWSLambda.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from the trial setup or the NuGet feed, add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to register the Syncfusion license key in your application to use our components.
