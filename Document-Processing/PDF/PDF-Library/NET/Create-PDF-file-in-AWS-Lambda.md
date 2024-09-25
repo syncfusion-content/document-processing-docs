@@ -110,7 +110,7 @@ Follow these steps to submit a request to the AWS Lambda function.
 Step 1: Create a new console project.
 ![Create a console project](GettingStarted_images/Console-APP.png)
 
-step 2: Install the following Nuget packages in your application from [NuGet.org](https://www.nuget.org/).
+step 2: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
