@@ -629,7 +629,7 @@ document.Close()
 
 ### Setting Hanging Indent Without Altering Left Indent
 
-When working with DocIo Library, you might encounter a scenario where setting a hanging indent (negative FirstLineIndent) also modifies the LeftIndent value. This behavior is due to the interrelated nature of these properties at the file level. As per behavior of the DocIo Library, if we set the hanging indent, we write the hanging indent and left indent as they are in the Word document at the file level. 
+When working with DocIO Library, you might encounter a scenario where setting a hanging indent (negative FirstLineIndent) also modifies the LeftIndent value. This behavior is due to the interrelated nature of these properties at the file level. As per behavior of the DocIo Library, if we set the hanging indent, we write the hanging indent and left indent as they are in the Word document at the file level. 
 
 This guide provides a solution to maintain the LeftIndent value while applying a hanging indent.
 
