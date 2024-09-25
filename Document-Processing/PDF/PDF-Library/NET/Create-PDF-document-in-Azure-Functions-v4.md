@@ -125,7 +125,7 @@ Step 10: Click **Create** button.
 ![Select the plan type](Azure_Images/Azure-Functions-V4/Hosting_plan.png)
 
 Step 11: After creating app service then click **Finish** button. 
-![Creating app service](Azure_Images/Azure-Functions-V4/Creating%20app%20service.png)
+![Creating app service](Azure_Images/Azure-Functions-V4/Creating_app_service.png)
 
 Step 12: Click the **Close** button.
 ![Click close button](Azure_Images/Azure-Functions-V4/publish-profile-creation-progress.png)
