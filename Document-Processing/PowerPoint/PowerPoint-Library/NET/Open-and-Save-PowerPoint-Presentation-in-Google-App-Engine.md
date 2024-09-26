@@ -196,7 +196,7 @@ Step 2: Run the following command in **Cloud Shell Terminal** to navigate to the
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
 
-cd bin/Release/net6.0/publish/
+cd bin/Release/net8.0/publish/
 
 {% endhighlight %}
 {% endtabs %}
@@ -226,7 +226,7 @@ Step 2: Add the Docker file to the publish folder with the following contents.
 {% highlight c# tabtitle="CLI" %}
 
 cat <<EOT >> Dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 RUN apt-get update -y && apt-get install libfontconfig -y
 ADD / /app
 EXPOSE 8080
