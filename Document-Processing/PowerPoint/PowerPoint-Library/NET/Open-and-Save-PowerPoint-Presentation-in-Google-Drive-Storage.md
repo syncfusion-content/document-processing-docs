@@ -157,13 +157,13 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 
 //Add description content to the slide by adding a new TextBox.
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as thetrusted     partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
 
 //Add bullet points to the slide.
 IShape bulletPointsShape = slide.AddTextBox(53.22, 270, 437.90, 116.32);
 
 //Add a paragraph for a bullet point.
-IParagraph firstPara = bulletPointsShape.TextBody.AddParagraph("The company acquired the MCY corporation for 20 billion dollars and became the top revenue maker forthe     year 2015.");
+IParagraph firstPara = bulletPointsShape.TextBody.AddParagraph("The company acquired the MCY corporation for 20 billion dollars and became the top revenue maker for the year 2015.");
 
 //Format how the bullets should be displayed.
 firstPara.ListFormat.Type = ListType.Bulleted;
