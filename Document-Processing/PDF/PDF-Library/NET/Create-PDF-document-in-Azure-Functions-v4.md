@@ -18,7 +18,7 @@ Step 1: Create a new Azure Functions project.
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure_images/Azure-Functions-V4/Configuration_project.png)
 
-Step 3: Select function worker as **.NET 6.0(Long-term support)**. 
+Step 3: Select function worker as **.NET 8.0(Long-term support)**. 
 ![Select function worker](Azure_Images/Azure-Functions-V4/Additional_information.png)
 
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
@@ -125,7 +125,7 @@ Step 10: Click **Create** button.
 ![Select the plan type](Azure_Images/Azure-Functions-V4/Hosting_plan.png)
 
 Step 11: After creating app service then click **Finish** button. 
-![Creating app service](Azure_Images/Azure-Functions-V4/Creating%20app%20service.png)
+![Creating app service](Azure_Images/Azure-Functions-V4/Creating_app_service.png)
 
 Step 12: Click the **Close** button.
 ![Click close button](Azure_Images/Azure-Functions-V4/publish-profile-creation-progress.png)
@@ -134,7 +134,7 @@ Step 13: Click the **Publish** button.
 ![Click Publish button](Azure_Images/Azure-Functions-V4/successful_publish.png)
 
 Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 
-![Output document screenshot](Azure_Images/Azure-Functions-V4/Output_screenshot.png)
+![Output document](Azure_Images/Azure-Functions-V4/Final_output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20Function%20V4).
 
