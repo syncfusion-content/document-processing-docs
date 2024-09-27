@@ -157,7 +157,7 @@ Step 4: Run the following **command** to navigate which sample you want to run.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-cd Open-and-save-Word-document
+cd Web_Application
 
 {% endhighlight %}
 {% endtabs %}
@@ -207,7 +207,7 @@ Step 2: Run the following command in the **Cloud Shell Terminal** to navigate to
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-cd bin/Release/net6.0/publish/
+cd bin/Release/net8.0/publish/
 
 {% endhighlight %}
 {% endtabs %}
@@ -238,13 +238,13 @@ Step 2: Add the Docker file to the publish folder with the following contents.
 {% highlight c# tabtitle="C#" %}
 
 cat <<EOT >> Dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 RUN apt-get update -y && apt-get install libfontconfig -y
 ADD / /app
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 WORKDIR /app
-ENTRYPOINT [ "dotnet", "Open-and-save-Word-document.dll"]
+ENTRYPOINT [ "dotnet", "Web_Application.dll"]
 EOT
 
 {% endhighlight %}
@@ -269,6 +269,7 @@ gcloud app deploy --version v0
 {% endtabs %}
 
 ![Deploy](GettingStarted_images/Deploy.png)
+![Get URL](GettingStarted_images/Get_deploy_url.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
 
