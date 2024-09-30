@@ -18,7 +18,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Add-shapes-in-Word/.NET/Add-shapes-in-Word/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Add-shapes-in-Word/.NET/Add-shapes-in-Word/Program.cs"%}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -51,7 +51,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle= "C# [Windows-specific]" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -125,7 +125,7 @@ Shape can have formatting such as line color, fill color, positioning, wrap form
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Format-shapes/.NET/Format-shapes/Program.cs" %}
+{% highlight c# tabtile="C# [Cross-platform]" playgroundButtonnk="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Format-shapes/.NET/Format-shapes/Program.cs" %}
 //Create a new Word document 
 WordDocument document = new WordDocument();
 //Add a new section to the document.
@@ -169,7 +169,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific] %}
 //Create a new Word document 
 WordDocument document = new WordDocument();
 //Add a new section to the document
