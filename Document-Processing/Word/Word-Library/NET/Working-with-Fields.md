@@ -285,7 +285,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Fields/IF-field/.NET/IF-field/Program.cs" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an instance of a WordDocument 
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
