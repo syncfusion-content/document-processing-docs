@@ -94,9 +94,8 @@ Step 8: Create a new cs file with name as **PresentationService** under Data fol
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-@using Syncfusion.Presentation;
-@using Syncfusion.OfficeChart;
-@using System.IO;
+using Syncfusion.Presentation;
+using System.IO;
 {% endhighlight %}
 
 {% endtabs %}
