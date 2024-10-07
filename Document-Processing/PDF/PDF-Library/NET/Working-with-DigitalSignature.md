@@ -3821,7 +3821,7 @@ N> It is recommended to use licensed assemblies or registered license keys in yo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Digital%20Signature/Multiple-digital-signature/.NET/Multiple-digital-signature/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Digital%20Signature/Multiple-digital-signature/.NET/Multiple-digital-signature/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("SignatureFields.pdf", FileMode.Open, FileAccess.Read);
