@@ -3676,7 +3676,7 @@ The below code illustrates how to enable the default appearance in new PDF docum
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-new-PDF-document/.NET/Enable-default-appearance-in-new-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-new-PDF-document/.NET/Enable-default-appearance-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
