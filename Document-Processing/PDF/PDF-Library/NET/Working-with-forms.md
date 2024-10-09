@@ -2767,7 +2767,7 @@ document.Close(True)
 
 {% endtabs %} 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Implementing-PdfFormFieldVisibility-types).
+You can download a complete working sample from GitHub.
 
 ## Modifying the existing form field in PDF document 
 
