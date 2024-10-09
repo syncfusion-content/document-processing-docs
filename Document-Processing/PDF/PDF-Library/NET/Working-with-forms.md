@@ -2652,6 +2652,121 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-appearance-to-the-PDF-form-fields).
 
+## Implementing form field visibility types in PDF documents
+
+You can manage the visibility of form fields in various scenarios by using the PdfFormFieldVisibility enum in the PdfStyledField class.
+
+#### Configuring Visibility Status for PDF Form Fields
+
+<table border="1">
+<th style="font-size:14px">Name</th>
+<th style="font-size:14px">Description</th>
+<tr>
+    <td>Hidden</td>
+    <td>Hidden the visibility of the form field.</td>
+</tr>
+<tr>
+    <td>HiddenPrintable</td>
+    <td>Indicate hidden the visibility of the form field and not printable.</td>
+</tr>
+<tr>
+    <td>Visible</td>
+    <td>Indicate visibility of the form field.</td>
+</tr>
+<tr>
+    <td>VisibleNotPrintable</td>
+    <td>Indicate visibility of the form field and not printable.</td>
+</tr>
+
+</table>
+
+The following code snippet explains how to set form fields visiblity to the PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-appearance-to-the-PDF-form-fields/.NET/Implementing-PdfFormFieldVisibility-types/Implementing-PdfFormFieldVisibility-types/Program.cs" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Creates a new page and adds it as the last page of the document
+PdfPage page = document.Pages.Add();
+PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
+//Create a text box
+PdfTextBoxField firstNameTextBox = new PdfTextBoxField(page, "firstNameTextBox");
+firstNameTextBox.MaxLength = 8;
+firstNameTextBox.Bounds = new RectangleF(100, 20, 200, 20);
+firstNameTextBox.Font = font;
+firstNameTextBox.Text = "Text Box";
+//Set the visibility.
+firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
+page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
+//Add the textbox in document
+document.Form.Fields.Add(firstNameTextBox);
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Creates a new page and adds it as the last page of the document
+PdfPage page = document.Pages.Add();
+PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
+//Create a text box
+PdfTextBoxField firstNameTextBox = new PdfTextBoxField(page, "firstNameTextBox");
+firstNameTextBox.MaxLength = 8;
+firstNameTextBox.Bounds = new RectangleF(100, 20, 200, 20);
+firstNameTextBox.Font = font;
+firstNameTextBox.Text = "Text Box";
+//Set the visibility.
+firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
+page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
+//Add the textbox in document
+document.Form.Fields.Add(firstNameTextBox);
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+'Creates a new page and adds it as the last page of the document.
+Dim page As PdfPage = document.Pages.Add()
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Courier, 12F)
+'Create a text box
+Dim firstNameTextBox As New PdfTextBoxField(page, "firstNameTextBox")
+firstNameTextBox.MaxLength = 8
+firstNameTextBox.Bounds = New RectangleF(100, 20, 200, 20)
+firstNameTextBox.Font = font
+firstNameTextBox.Text = "Text Box"
+'Set the visibility.
+firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible
+page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55)
+'Add the textbox in document.
+document.Form.Fields.Add(firstNameTextBox)
+'Creating the stream object.
+Dim stream As New MemoryStream()
+'Save the document as stream.
+document.Save(stream)
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
 ## Modifying the existing form field in PDF document 
 
 You can modify an existing form field by getting the field from the [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html). You can retrieve a field from the field collection by index or by field name. 
