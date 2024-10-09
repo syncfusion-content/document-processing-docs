@@ -2654,7 +2654,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Implementing form field visibility types in PDF documents
 
-You can manage the visibility of form fields in various scenarios by using the PdfFormFieldVisibility enum in the PdfStyledField class.
+You can manage the visibility of form fields in various scenarios by using the [PdfFormFieldVisibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldVisibility.html) enum in the PdfStyledField class.
 
 #### Configuring Visibility Status for PDF Form Fields
 
@@ -2684,7 +2684,7 @@ The following code snippet explains how to set the visibility of form fields in 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Set-appearance-to-the-PDF-form-fields/.NET/Implementing-PdfFormFieldVisibility-types/Implementing-PdfFormFieldVisibility-types/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2766,8 +2766,6 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %} 
-
-You can download a complete working sample from GitHub.
 
 ## Modifying the existing form field in PDF document 
 
