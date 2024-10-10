@@ -94,3 +94,4 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to get the frozen rows and columns in an Excel document?](faqs/how-to-get-the-frozen-rows-and-columns-in-an-excel-document)
 * [How to find duplicate values in the Excel document using formulas?](faqs/how-to-find-duplicate-values-in-the-Excel-document-using-formulas)
 * [How to protect zip file items with different passwords using C#?](faqs/how-to-protect-zip-file-items-with-different-passwords)
+* [How to extract all images from the worksheet?](faqs/how-to-extract-all-images-from-the-worksheet)
