@@ -2667,7 +2667,7 @@ You can manage the visibility of form fields in various scenarios by using the [
 </tr>
 <tr>
     <td>HiddenPrintable</td>
-    <td>Indicate hidden the visibility of the form field and not printable.</td>
+    <td>Indicates form fields as hidden but printable.</td>
 </tr>
 <tr>
     <td>Visible</td>
