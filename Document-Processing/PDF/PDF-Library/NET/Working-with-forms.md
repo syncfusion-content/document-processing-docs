@@ -1419,7 +1419,7 @@ You can add a complex script language text in PDF AcroForm fields by using the [
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1529,7 +1529,7 @@ The following code example illustrates how to add complex script support for all
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -1630,7 +1630,7 @@ You can also flatten the existing form fields with complex script layout by usin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flatten-the-existing-form-fields-with-complex-script/.NET/Flatten-the-existing-form-fields-with-complex-script/Program.cs" %}		
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Flatten-the-existing-form-fields-with-complex-script/.NET/Flatten-the-existing-form-fields-with-complex-script/Program.cs" %}
 
 //Load the existing PDF document.
 FileStream inputFileStream = new FileStream("Form.pdf", FileMode.Open, FileAccess.Read);
@@ -1703,7 +1703,7 @@ By default, the value is set to true. This is illustrated in the following code 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Auto-naming-of-form-fields-in-a-PDF-document/.NET/Auto-naming-of-form-fields-in-a-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Auto-naming-of-form-fields-in-a-PDF-document/.NET/Auto-naming-of-form-fields-in-a-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2652,6 +2652,123 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-appearance-to-the-PDF-form-fields).
 
+## Managing form field visibility
+
+The [PdfFormFieldVisibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldVisibility.html) enum, available in the PdfStyledField class, allows you to control the visibility of form fields in different scenarios.
+
+Refer to the following details to explore the available field visibility options.
+
+<table border="1">
+<th style="font-size:14px">Name</th>
+<th style="font-size:14px">Description</th>
+<tr>
+    <td>Hidden</td>
+    <td>Hides the form field from view.</td>
+</tr>
+<tr>
+    <td>HiddenPrintable</td>
+    <td>Form field is hidden but will still appear when printed.</td>
+</tr>
+<tr>
+    <td>Visible</td>
+    <td>Form field is visible to users.</td>
+</tr>
+<tr>
+    <td>VisibleNotPrintable</td>
+    <td>Form field is visible but will not appear when printed.</td>
+</tr>
+
+</table>
+
+The following code snippet explains how to set the visibility of form fields in a PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Creates a new page of the document.
+PdfPage page = document.Pages.Add();
+PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
+//Create a text box.
+PdfTextBoxField firstNameTextBox = new PdfTextBoxField(page, "firstNameTextBox");
+firstNameTextBox.MaxLength = 8;
+firstNameTextBox.Bounds = new RectangleF(100, 20, 200, 20);
+firstNameTextBox.Font = font;
+firstNameTextBox.Text = "Text Box";
+//Set the visibility.
+firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
+page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
+//Add the textbox in document.
+document.Form.Fields.Add(firstNameTextBox);
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Creates a new page of the document.
+PdfPage page = document.Pages.Add();
+PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
+//Create a text box.
+PdfTextBoxField firstNameTextBox = new PdfTextBoxField(page, "firstNameTextBox");
+firstNameTextBox.MaxLength = 8;
+firstNameTextBox.Bounds = new RectangleF(100, 20, 200, 20);
+firstNameTextBox.Font = font;
+firstNameTextBox.Text = "Text Box";
+//Set the visibility.
+firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
+page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
+//Add the textbox in document.
+document.Form.Fields.Add(firstNameTextBox);
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the document as stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+'Creates a new page and adds it as the last page of the document.
+Dim page As PdfPage = document.Pages.Add()
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Courier, 12F)
+'Create a text box.
+Dim firstNameTextBox As New PdfTextBoxField(page, "firstNameTextBox")
+firstNameTextBox.MaxLength = 8
+firstNameTextBox.Bounds = New RectangleF(100, 20, 200, 20)
+firstNameTextBox.Font = font
+firstNameTextBox.Text = "Text Box"
+'Set the visibility.
+firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible
+page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55)
+'Add the textbox in document.
+document.Form.Fields.Add(firstNameTextBox)
+'Creating the stream object.
+Dim stream As New MemoryStream()
+'Save the document as stream.
+document.Save(stream)
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from GitHub.
+
 ## Modifying the existing form field in PDF document 
 
 You can modify an existing form field by getting the field from the [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html). You can retrieve a field from the field collection by index or by field name. 
@@ -3356,7 +3473,7 @@ The below code illustrates how to remove the form fields from the existing PDF d
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document/.NET/Remove-the-form-fields-form-the-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document/.NET/Remove-the-form-fields-form-the-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -3498,7 +3615,7 @@ The below code illustrates how to export FDF file from PDF document.
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export-FDF-file-from-PDF-document/.NET/Export-FDF-file-from-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Export-FDF-file-from-PDF-document/.NET/Export-FDF-file-from-PDF-document/Program.cs" %}
 
 //Get stream from an existing PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -3561,7 +3678,7 @@ The below code illustrates how to enable the default appearance in new PDF docum
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-new-PDF-document/.NET/Enable-default-appearance-in-new-PDF-document/Program.cs" %}		
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-new-PDF-document/.NET/Enable-default-appearance-in-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3639,7 +3756,7 @@ The below code illustrates how to enable the default appearance in existing PDF 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-existing-PDF-document/.NET/Enable-default-appearance-in-existing-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Enable-default-appearance-in-existing-PDF-document/.NET/Enable-default-appearance-in-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
