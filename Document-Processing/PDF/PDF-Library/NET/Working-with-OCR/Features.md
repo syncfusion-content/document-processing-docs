@@ -15,7 +15,7 @@ To perform OCR for an entire PDF document using [PerformOCR](https://help.syncfu
 
 {% tabs %}   
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-for-the-entire-PDF-document/Perform-OCR-for-the-entire-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-for-the-entire-PDF-document/Perform-OCR-for-the-entire-PDF-document/Program.cs, 300" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -73,7 +73,7 @@ To perform OCR on a particular region or several regions of a PDF page with the 
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-particular-region-of-PDF-document/Perform-OCR-on-particular-region-of-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-particular-region-of-PDF-document/Perform-OCR-on-particular-region-of-PDF-document/Program.cs, 300" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -165,7 +165,7 @@ The following code sample demonstrates the OCR processor with Tesseract version 
  
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -231,7 +231,7 @@ The following code sample explains the OCR processor with Tesseract version 4.0 
  
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -293,7 +293,7 @@ The below code example illustrates how to perform OCR on image file using [Perfo
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-image-file/Perform-OCR-on-image-file/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-image-file/Perform-OCR-on-image-file/Program.cs, 300" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -352,7 +352,7 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //By default, Unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
 
@@ -374,7 +374,7 @@ N> Memory optimization for performing OCR on large PDF documents is not supporte
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -431,7 +431,7 @@ You can get the OCRed text from the rotated page of PDF document using the [Page
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-the-rotated-page-of-the-PDF-document/Perform-OCR-on-the-rotated-page-of-the-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -495,7 +495,7 @@ You can get the OCRed text and its bounds from a scanned PDF document by using t
  
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Get-the-OCR'ed-text-and-its-bounds-from-an-input-PDF/Get-the-OCR'ed-text-and-its-bounds-from-an-input-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -584,7 +584,7 @@ The following code sample demonstrates the OCR processor with native call suppor
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -653,7 +653,7 @@ The following code sample demonstrates the OCR processor with native call suppor
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -723,7 +723,7 @@ While performing OCR on an existing scanned PDF document, the OCR Processor will
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Set-temp-folder-while-performing-OCR/Set-temp-folder-while-performing-OCR/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -787,7 +787,7 @@ N> The page segmentation mode is supported only in the Tesseract version 4.0 and
  
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -852,7 +852,7 @@ The [OCREngineMode](https://help.syncfusion.com/cr/document-processing/Syncfusio
  
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -919,7 +919,7 @@ The [WhiteList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OC
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -986,7 +986,7 @@ End Using
 The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_BlackList) property specifies the characters that exclude from the character set used for recognition and the OCR will not return any of the characters you are specified in the list. For more information, refer to the following code sample.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -1058,7 +1058,7 @@ The following code sample illustrates how to OCR an image to a PDF document:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/OCR_Image_to_PDF/OCR_Image_to_PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/OCR_Image_to_PDF/OCR_Image_to_PDF/Program.cs, 300" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -1125,7 +1125,7 @@ You can perform OCR on Images with Unicode characters. To preserve the Unicode c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Perform-OCR-an-image-and-convert-it-to-a-PDF-document/Program.cs, 300" %}
 
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -1153,7 +1153,7 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //By default unicode characters can be extracted from image file in .NET Framework applications like WF, WPF, ASP.NET and ASP.NET MVC.
 
@@ -1222,7 +1222,7 @@ N> You can get the TesseractBinaries or TessData files from the NuGet package ru
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the OCR processor by providing the path of the tesseract binaries (SyncfusionTesseract.dll and liblept168.dll)
 using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
@@ -1278,7 +1278,7 @@ To get the Image rotation angle, you can rotate the image with 4 angles (0,90,18
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Get-image-rotation-angle-from-OCR/Get-image-rotation-angle-from-OCR/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Get-image-rotation-angle-from-OCR/Get-image-rotation-angle-from-OCR/Program.cs, 300" %}
 
 //Initialize the OCR processor.@
 using (OCRProcessor processor = new OCRProcessor())
@@ -1358,7 +1358,7 @@ We have support to improve the image quality while performing OCR for an image o
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-ImageEnhancement/OCR_ImageEnhancement/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
     //Initialize the OCR processor. 
     using (OCRProcessor processor = new OCRProcessor()) 
