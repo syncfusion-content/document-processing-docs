@@ -14,7 +14,7 @@ To convert website URL or local HTML file to PDF document using [Convert](https:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-website-URL-to-PDF-document/.NET/Convert-website-URL-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-website-URL-to-PDF-document/.NET/Convert-website-URL-to-PDF-document/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -61,7 +61,7 @@ To convert the HTML string to PDF using [Convert](https://help.syncfusion.com/cr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-PDF-document/.NET/Convert-the-HTML-string-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-PDF-document/.NET/Convert-the-HTML-string-to-PDF-document/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -116,7 +116,7 @@ To convert website URL or local HTML file to Image using [ConvertToImage](https:
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-website-URL-to-image-file/.NET/Convert-website-URL-to-image-file/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-website-URL-to-image-file/.NET/Convert-website-URL-to-image-file/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -173,7 +173,7 @@ To convert the HTML string to Image using [ConvertToImage](https://help.syncfusi
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-image-file/.NET/Convert-the-HTML-string-to-image-file/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-image-file/.NET/Convert-the-HTML-string-to-image-file/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -245,7 +245,7 @@ The Blink HTML converter supports enabling or disabling the JavaScript using [En
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-JavaScript-when-convert-HTML-to-PDF/.NET/Disable-JavaScript-when-convert-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-JavaScript-when-convert-HTML-to-PDF/.NET/Disable-JavaScript-when-convert-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -296,7 +296,7 @@ Refer the following code example to set the [AdditionalDelay](https://help.syncf
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set-additional-delay-while-converting-HTML-to-PDF/.NET/Set-additional-delay-while-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set-additional-delay-while-converting-HTML-to-PDF/.NET/Set-additional-delay-while-converting-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -346,7 +346,7 @@ The Blink HTML converter support preserving URL links from HTML to PDF using [En
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-URL-links-while-converting-HTML-to-PDF/.NET/Disable-URL-links-while-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-URL-links-while-converting-HTML-to-PDF/.NET/Disable-URL-links-while-converting-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -399,7 +399,7 @@ Refer to the following code snippet.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Creating-bookmarks-while-converting-HTML-to-PDF/.NET/Creating-bookmarks-while-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Creating-bookmarks-while-converting-HTML-to-PDF/.NET/Creating-bookmarks-while-converting-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -494,7 +494,7 @@ Refer to the following code snippet.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Create-TOC-while-converting-HTML-to-PDF/.NET/Create-TOC-while-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Create-TOC-while-converting-HTML-to-PDF/.NET/Create-TOC-while-converting-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -588,7 +588,7 @@ Refer to the following code snippet.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Create-custom-style-TOC-when-converting-HTML-to-PDF/.NET/Create-custom-style-TOC-when-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Create-custom-style-TOC-when-converting-HTML-to-PDF/.NET/Create-custom-style-TOC-when-converting-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -694,7 +694,7 @@ The Blink HTML Converter allows selection of media type while converting HTML to
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Selection-of-media-type-while-converting-HTML-to-PDF/.NET/Selection-of-media-type-while-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Selection-of-media-type-while-converting-HTML-to-PDF/.NET/Selection-of-media-type-while-converting-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -745,7 +745,7 @@ Blink rendering engine provides support for converting HTML forms to PDF fillabl
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-HTML-form-to-PDF-fillable-form/.NET/Convert-HTML-form-to-PDF-fillable-form/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-HTML-form-to-PDF-fillable-form/.NET/Convert-HTML-form-to-PDF-fillable-form/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -794,7 +794,7 @@ The webpage you want to convert may protected with windows authentication. Blink
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-windows-authenticated-webpage-to-PDF-document/.NET/Convert-windows-authenticated-webpage-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-windows-authenticated-webpage-to-PDF-document/.NET/Convert-windows-authenticated-webpage-to-PDF-document/Program.cs, 300" %}
 
 // Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -843,7 +843,7 @@ The Blink HTML converter provides support for form authentication by using [Cook
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-form-authenticated-webpage-to-PDF-document/.NET/Convert-form-authenticated-webpage-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-form-authenticated-webpage-to-PDF-document/.NET/Convert-form-authenticated-webpage-to-PDF-document/Program.cs, 300" %}
 
 // Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -894,7 +894,7 @@ The Blink HTML converter supports token-based authentication by using the [HttpR
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-token-based-authenticated-webpage-to-PDF/.NET/Convert-token-based-authenticated-webpage-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-token-based-authenticated-webpage-to-PDF/.NET/Convert-token-based-authenticated-webpage-to-PDF/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter 
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -947,7 +947,7 @@ Refer to the following code snippet.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-HTML-to-PDF-in-offline-mode/.NET/Convert-HTML-to-PDF-in-offline-mode/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-HTML-to-PDF-in-offline-mode/.NET/Convert-HTML-to-PDF-in-offline-mode/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -997,7 +997,7 @@ Refer to the following code snippet to access a webpage using HTTP POST.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Access-a-webpage-using-HTTP-POST/.NET/Access-a-webpage-using-HTTP-POST/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Access-a-webpage-using-HTTP-POST/.NET/Access-a-webpage-using-HTTP-POST/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1046,7 +1046,7 @@ Use the following code snippet to access a webpage using HTTP GET.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Access-a-webpage-using-HTTP-GET/.NET/Access-a-webpage-using-HTTP-GET/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Access-a-webpage-using-HTTP-GET/.NET/Access-a-webpage-using-HTTP-GET/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1109,7 +1109,7 @@ You can specify the manual proxy settings for the conversion using the [ProxySet
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the HTML to PDF converter.
 
@@ -1164,7 +1164,7 @@ N> The HTML converter internally uses the viewport size in points.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Adjusting-the-HTML-content-size-in-PDF-document/.NET/Adjusting-the-HTML-content-size-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Adjusting-the-HTML-content-size-in-PDF-document/.NET/Adjusting-the-HTML-content-size-in-PDF-document/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1213,7 +1213,7 @@ The Blink rendering engine provides support for converting only the part of an H
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-partial-webpage-to-PDF-document/.NET/Convert-partial-webpage-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-partial-webpage-to-PDF-document/.NET/Convert-partial-webpage-to-PDF-document/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1277,7 +1277,7 @@ Refer to the following code snippet.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1324,7 +1324,7 @@ Getting height of the HTML content in PDF document is possible by using the [Pdf
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1373,7 +1373,7 @@ Refer to the following code snippet.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set-windows-status-while-converting-HTML-to-PDF/.NET/Set-windows-status-while-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set-windows-status-while-converting-HTML-to-PDF/.NET/Set-windows-status-while-converting-HTML-to-PDF/Program.cs, 300" %}
 
 // Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1442,7 +1442,7 @@ To set the page size when converting HTML to PDF, utilize the [PdfPageSize](http
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-page-size-customization/.NET/HTML-to-PDF-page-size-customization/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-page-size-customization/.NET/HTML-to-PDF-page-size-customization/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1494,7 +1494,7 @@ To set the margin when converting HTML to PDF, utilize the [Margin](https://help
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-margin-customization/.NET/HTML-to-PDF-margin-customization/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-margin-customization/.NET/HTML-to-PDF-margin-customization/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1546,7 +1546,7 @@ To set the header and footer when converting HTML to PDF, utilize the [PdfHeader
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Header-and-footer/.NET/HTML-to-PDF-Header-and-footer/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Header-and-footer/.NET/HTML-to-PDF-Header-and-footer/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1638,7 +1638,7 @@ To set the Orientation when converting HTML to PDF, utilize the [Orientation](ht
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-page-orientation-customization/.NET/HTML-to-PDF-page-orientation-customization/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-page-orientation-customization/.NET/HTML-to-PDF-page-orientation-customization/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1690,7 +1690,7 @@ To set the page rotation when converting HTML to PDF, utilize the [PageRotateAng
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-rotate-page/.NET/HTML-to-PDF-rotate-page/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-rotate-page/.NET/HTML-to-PDF-rotate-page/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1742,7 +1742,7 @@ When converting HTML to PDF, you can set an HTML file as header and footer. Use 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-Header-and-Footer/.NET/HTML-Header-and-Footer/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-Header-and-Footer/.NET/HTML-Header-and-Footer/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1813,7 +1813,7 @@ The Blink rendering engine supports the injection of custom CSS to be applied to
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Inject_custom_CSS_to_HTML/.NET/Inject_custom_CSS_to_HTML/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Inject_custom_CSS_to_HTML/.NET/Inject_custom_CSS_to_HTML/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1867,7 +1867,7 @@ The Blink rendering engine offers support for injecting custom JavaScript to be 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Inject_custom_JavaScript_to_HTML/.NET/Inject_custom_JavaScript_to_HTML/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Inject_custom_JavaScript_to_HTML/.NET/Inject_custom_JavaScript_to_HTML/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1921,7 +1921,7 @@ The Blink rendering engine provides support for reusing the browser process to o
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Optimize-HTML-to-PDF-performance/.NET/Optimize-HTML-to-PDF-performance/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Optimize-HTML-to-PDF-performance/.NET/Optimize-HTML-to-PDF-performance/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1994,7 +1994,7 @@ The temporary path can be changed by using the [TempPath](https://help.syncfusio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set-temporary-path-while-converting-HTML-to-PDF/.NET/Set-temporary-path-while-converting-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set-temporary-path-while-converting-HTML-to-PDF/.NET/Set-temporary-path-while-converting-HTML-to-PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -2045,7 +2045,7 @@ N> * The BlinkBinaries also available in NuGet package installed location if you
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set_blink_path_in_HTML_to_PDF/.NET/Set_blink_path_in_HTML_to_PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set_blink_path_in_HTML_to_PDF/.NET/Set_blink_path_in_HTML_to_PDF/Program.cs, 300" %}
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -2098,7 +2098,7 @@ Refer to the following code snippet to resize the page content size.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-scale-property/.NET/Scale_property_in_HTML_converter/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-scale-property/.NET/Scale_property_in_HTML_converter/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -2151,7 +2151,7 @@ Refer to the following code snippet to set the timeout for HTML to PDF conversio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Time-out-support-in-HTML-to-PDF/.NET/Time-out-support-in-HTML-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Time-out-support-in-HTML-to-PDF/.NET/Time-out-support-in-HTML-to-PDF/Program.cs, 300" %}
 
 	//Initialize the HTML to PDF converter.
 	HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -2205,7 +2205,7 @@ N> This support fully depends on the Chromium headless browser. Our converter pr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Accessible_PDF_In_HTML_to_PDF/.NET/Accessible%20PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
     //Initialize HTML to PDF converter.
     HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -2253,7 +2253,7 @@ The Blink HTML converter support adding the image background from HTML to Image 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF/.NET/Image_Background_In_HTML_to_PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF/.NET/Image_Background_In_HTML_to_PDF/Program.cs, 300" %}
 
     //Initialize HTML to PDF converter.
     HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
