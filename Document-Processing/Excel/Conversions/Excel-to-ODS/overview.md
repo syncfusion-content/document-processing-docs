@@ -18,49 +18,53 @@ The following code snippet illustrates the creation of an Excel file and exporti
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS/Excel%20to%20ODS/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  worksheet.Range["A1"].Text = "Month";
-  worksheet.Range["B1"].Text = "Sales";
-  worksheet.Range["A5"].Text = "Total";
-  worksheet.Range["A2"].Text = "January";
-  worksheet.Range["A3"].Text = "February";
+	worksheet.Range["A1"].Text = "Month";
+	worksheet.Range["B1"].Text = "Sales";
+	worksheet.Range["A5"].Text = "Total";
+	worksheet.Range["A2"].Text = "January";
+	worksheet.Range["A3"].Text = "February";
 
-  worksheet.AutofitColumn(1);
+	worksheet.AutofitColumn(1);
 
-  worksheet.Range["B2"].Number = 68878;
-  worksheet.Range["B3"].Number = 71550;
-  worksheet.Range["B5"].Formula = "SUM(B2:B4)";
+	worksheet.Range["B2"].Number = 68878;
+	worksheet.Range["B3"].Number = 71550;
+	worksheet.Range["B5"].Formula = "SUM(B2:B4)";
 
-  //Comments
-  IComment comment = worksheet.Range["B5"].AddComment();
-  comment.RichText.Text = "This cell has formula.";
+	//Comments
+	IComment comment = worksheet.Range["B5"].AddComment();
+	comment.RichText.Text = "This cell has formula.";
 
-  IRichTextString richText = comment.RichText;
+	IRichTextString richText = comment.RichText;
 
-  IFont blueFont = workbook.CreateFont();
-  blueFont.Color = ExcelKnownColors.Blue;
-  richText.SetFont(0, 13, blueFont);
+	IFont blueFont = workbook.CreateFont();
+	blueFont.Color = ExcelKnownColors.Blue;
+	richText.SetFont(0, 13, blueFont);
 
-  IFont redFont = workbook.CreateFont();
-  redFont.Color = ExcelKnownColors.Red;
-  richText.SetFont(14, 20, redFont);
+	IFont redFont = workbook.CreateFont();
+	redFont.Color = ExcelKnownColors.Red;
+	richText.SetFont(14, 20, redFont);
 
-  //Formatting
-  IStyle style = workbook.Styles.Add("Style1");
-  style.Color = Color.DarkBlue;
-  style.Font.Color = ExcelKnownColors.WhiteCustom;
+	//Formatting
+	IStyle style = workbook.Styles.Add("Style1");
+	style.Color = Syncfusion.Drawing.Color.DarkBlue;
+	style.Font.Color = ExcelKnownColors.WhiteCustom;
 
-  worksheet.Range["A1:B1"].CellStyleName = "Style1";
-  worksheet.Range["A5:B5"].CellStyleName = "Style1";
+	worksheet.Range["A1:B1"].CellStyleName = "Style1";
+	worksheet.Range["A5:B5"].CellStyleName = "Style1";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.ods", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream, ExcelSaveType.SaveAsODS);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExcelToODS.ods"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsODS);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 

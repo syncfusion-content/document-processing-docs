@@ -18,22 +18,25 @@ The following code example illustrates how to apply built-in style to pivot tabl
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Format%20Pivot%20Table/.NET/Format%20Pivot%20Table/Format%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[1];
-  IPivotTable pivotTable = worksheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = worksheet.PivotTables[0];
 
-  //Set BuiltInStyle
-  pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleDark12;
+	//Set BuiltInStyle
+	pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleDark12;
 
-  string fileName = "PivotTable_Style.xlsx";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotTable.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -87,21 +90,26 @@ The following code example illustrates how to apply cell formatting to pivot tab
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Format%20Pivot%20Cell/.NET/Format%20Pivot%20Cell/Format%20Pivot%20Cell/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[1];
 
-  IPivotTable pivotTable = worksheet.PivotTables[0];
-  //Get the cell format for "A1" pivot range.
-  IPivotCellFormat cellFormat = pivotTable.GetCellFormat("A3:C4");
-  cellFormat.BackColor = ExcelKnownColors.Green;
+	IPivotTable pivotTable = worksheet.PivotTables[0];
+	//Get the cell format for pivot range.
+	IPivotCellFormat cellFormat = pivotTable.GetCellFormat("A4:J5");
+	cellFormat.BackColor = ExcelKnownColors.Green;
 
-  string fileName = "PivotFormat.xlsx";
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotCellFormat.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

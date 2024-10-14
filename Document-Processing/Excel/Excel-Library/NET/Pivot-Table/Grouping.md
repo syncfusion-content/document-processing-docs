@@ -200,38 +200,44 @@ The following code example illustrates how to expand or collapse rows in the piv
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Expand%20or%20Collapse%20Pivot%20Rows/.NET/Expand%20or%20Collapse%20Pivot%20Rows/Expand%20or%20Collapse%20Pivot%20Rows/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IWorksheet pivotSheet = workbook.Worksheets[1];
 
-  //Create pivot cache with the given data range
-  IPivotCache cache = workbook.PivotCaches.Add(worksheet["A1:C13"]);
+	//Create pivot cache with the given data range
+	IPivotCache cache = workbook.PivotCaches.Add(worksheet["A1:H50"]);
 
-  //Create "PivotTable1" with the cache at the specified range
-  IPivotTable pivotTable = worksheet.PivotTables.Add("PivotTable1", worksheet["E1"], cache);
+	//Create "PivotTable1" with the cache at the specified range
+	IPivotTable pivotTable = pivotSheet.PivotTables.Add("PivotTable1", pivotSheet["A1"], cache);
 
-  //Add pivot table fields (Row and Column fields)
-  pivotTable.Fields[0].Axis = PivotAxisTypes.Row;
-  pivotTable.Fields[1].Axis = PivotAxisTypes.Row;
+	//Add pivot table fields (Row and Column fields)
+	pivotTable.Fields[0].Axis = PivotAxisTypes.Row;
+	pivotTable.Fields[1].Axis = PivotAxisTypes.Row;
 
-  //Add data field
-  IPivotField field = pivotTable.Fields[2];
-  pivotTable.DataFields.Add(field, "Sum", PivotSubtotalTypes.Sum);
+	//Add data field
+	IPivotField field = pivotTable.Fields[2];
+	pivotTable.DataFields.Add(field, "Sum", PivotSubtotalTypes.Sum);
 
-  //Initialize PivotItemOptions
-  PivotItemOptions options = new PivotItemOptions();
-  options.IsHiddenDetails = false;
+	//Initialize PivotItemOptions
+	PivotItemOptions options = new PivotItemOptions();
+	options.IsHiddenDetails = false;
 
-  //Collapsing the first and second items of the first pivot field using PivotItemOptions
-  (pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(0, options);
-  (pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(1, options);
+	//Collapsing the first and second items of the first pivot field using PivotItemOptions
+	(pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(0, options);
+	(pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(1, options);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExpandOrCollapse.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

@@ -20,24 +20,24 @@ The following code example illustrates how to copy an entire workbook to another
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Workbook/.NET/Copy%20Workbook/Copy%20Workbook/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream sourceStream = new FileStream("../../../Data/SourceWorkbookTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook sourceWorkbook = application.Workbooks.Open(sourceStream);
-    FileStream destinationStream = new FileStream("../../../Data/DestinationWorkbookTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook destinationWorkbook = application.Workbooks.Open(destinationStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream sourceStream = new FileStream(Path.GetFullPath(@"Data/SourceWorkbookTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook sourceWorkbook = application.Workbooks.Open(sourceStream);
+	FileStream destinationStream = new FileStream(Path.GetFullPath(@"Data/DestinationWorkbookTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook destinationWorkbook = application.Workbooks.Open(destinationStream);
 
-    //Clone the workbook
-    destinationWorkbook = sourceWorkbook.Clone();
+	//Clone the workbook
+	destinationWorkbook = sourceWorkbook.Clone();
    
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    destinationWorkbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	destinationWorkbook.SaveAs(outputStream);
 
-    //Dispose streams
-    outputStream.Dispose();
-    destinationStream.Dispose();
-    sourceStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	destinationStream.Dispose();
+	sourceStream.Dispose();
 }
 {% endhighlight %}
 
@@ -84,21 +84,31 @@ The following code example illustrates how to copy a sheet, along with its entir
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Worksheet/.NET/Copy%20Worksheet/Copy%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream sourceStream = new FileStream("SourceWorkbookTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook sourceWorkbook = application.Workbooks.Open(sourceStream);
-  FileStream destinationStream = new FileStream("DestinationWorkbookTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook destinationWorkbook = application.Workbooks.Open(destinationStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Copy first worksheet from the source workbook to the destination workbook
-  destinationWorkbook.Worksheets.AddCopy(sourceWorkbook.Worksheets[0]);
-  destinationWorkbook.ActiveSheetIndex = 1;
+	FileStream sourceStream = new FileStream(Path.GetFullPath(@"Data/SourceTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook sourceWorkbook = application.Workbooks.Open(sourceStream);
 
-  //Saving the workbook as stream
-  FileStream copiedStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  destinationWorkbook.SaveAs(copiedStream);
-  copiedStream.Dispose();
+	FileStream destinationStream = new FileStream(Path.GetFullPath(@"Data/DestinationTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook destinationWorkbook = application.Workbooks.Open(destinationStream);
+
+	#region Copy Worksheet
+	//Copy first worksheet from the source workbook to the destination workbook
+	destinationWorkbook.Worksheets.AddCopy(sourceWorkbook.Worksheets[0]);
+	destinationWorkbook.ActiveSheetIndex = 1;
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CopyWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
+	destinationWorkbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	destinationStream.Dispose();
+	sourceStream.Dispose();
 }
 {% endhighlight %}
 
@@ -146,27 +156,28 @@ The following code example illustrates how to copy a row from one worksheet to a
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Row/.NET/Copy%20Row/Copy%20Row/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IWorksheet sourceWorksheet = workbook.Worksheets[0];
-    IWorksheet destinationWorksheet = workbook.Worksheets[1];
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-    IRange sourceRow = sourceWorksheet.Range[1, 1];
-    IRange destinationRow = destinationWorksheet.Range[1, 1];
+	IWorksheet sourceWorksheet = workbook.Worksheets[0];
+	IWorksheet destinationWorksheet = workbook.Worksheets[1];
 
-    //Copy the entire row to the next sheet
-    sourceRow.EntireRow.CopyTo(destinationRow);
+	IRange sourceRow = sourceWorksheet.Range[1, 1];
+	IRange destinationRow = destinationWorksheet.Range[1, 1];
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	//Copy the entire row to the next sheet
+	sourceRow.EntireRow.CopyTo(destinationRow);
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -222,27 +233,28 @@ The following code example illustrates how to copy a column from one worksheet t
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Copy%20Column/.NET/Copy%20Column/Copy%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream= new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IWorksheet sourceWorksheet = workbook.Worksheets[0];
-    IWorksheet destinationWorksheet = workbook.Worksheets[1];
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-    IRange sourceColumn = sourceWorksheet.Range[1, 1];
-    IRange destinationColumn = destinationWorksheet.Range[1, 1];
+	IWorksheet sourceWorksheet = workbook.Worksheets[0];
+	IWorksheet destinationWorksheet = workbook.Worksheets[1];
 
-    //Copy the entire column to the next sheet
-    sourceColumn.EntireColumn.CopyTo(destinationColumn);
+	IRange sourceColumn = sourceWorksheet.Range[1, 1];
+	IRange destinationColumn = destinationWorksheet.Range[1, 1];
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	//Copy the entire column to the next sheet
+	sourceColumn.EntireColumn.CopyTo(destinationColumn);
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -299,27 +311,28 @@ The following code example illustrates how to copy a cell range from one workshe
 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IWorksheet sourceWorksheet = workbook.Worksheets[0];
-    IWorksheet destinationWorksheet = workbook.Worksheets[1];
+	FileStream sourceStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(sourceStream);
 
-    IRange source = sourceWorksheet.Range[1, 1, 4, 3];
-    IRange destination = destinationWorksheet.Range[1, 1, 4, 3];
+	IWorksheet sourceWorksheet = workbook.Worksheets[0];
+	IWorksheet destinationWorksheet = workbook.Worksheets[1];
 
-    //Copy the cell range to the next sheet
-    source.CopyTo(destination);
-    
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	IRange source = sourceWorksheet.Range[1, 1, 4, 3];
+	IRange destination = destinationWorksheet.Range[1, 1, 4, 3];
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Copy the cell range to the next sheet
+	source.CopyTo(destination);
+	
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+
+	//Dispose streams
+	outputStream.Dispose();
+	sourceStream.Dispose();
 }
 {% endhighlight %}
 
