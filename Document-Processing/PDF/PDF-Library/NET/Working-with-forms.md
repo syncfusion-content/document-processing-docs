@@ -2680,7 +2680,7 @@ You can manage the visibility of form fields in various scenarios by using the [
 
 </table>
 
-The following code snippet explains how to set the visibility of form fields in a PDF document..
+The following code snippet explains how to set the visibility of form fields in a PDF document.
 
 {% tabs %}  
 
@@ -2688,10 +2688,10 @@ The following code snippet explains how to set the visibility of form fields in 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
-//Creates a new page and adds it as the last page of the document
+//Creates a new page of the document.
 PdfPage page = document.Pages.Add();
 PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
-//Create a text box
+//Create a text box.
 PdfTextBoxField firstNameTextBox = new PdfTextBoxField(page, "firstNameTextBox");
 firstNameTextBox.MaxLength = 8;
 firstNameTextBox.Bounds = new RectangleF(100, 20, 200, 20);
@@ -2700,7 +2700,7 @@ firstNameTextBox.Text = "Text Box";
 //Set the visibility.
 firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
 page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
-//Add the textbox in document
+//Add the textbox in document.
 document.Form.Fields.Add(firstNameTextBox);
 //Creating the stream object.
 MemoryStream stream = new MemoryStream();
@@ -2715,10 +2715,10 @@ document.Close(true);
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
-//Creates a new page and adds it as the last page of the document
+//Creates a new page of the document.
 PdfPage page = document.Pages.Add();
 PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
-//Create a text box
+//Create a text box.
 PdfTextBoxField firstNameTextBox = new PdfTextBoxField(page, "firstNameTextBox");
 firstNameTextBox.MaxLength = 8;
 firstNameTextBox.Bounds = new RectangleF(100, 20, 200, 20);
@@ -2727,7 +2727,7 @@ firstNameTextBox.Text = "Text Box";
 //Set the visibility.
 firstNameTextBox.Visibility = PdfFormFieldVisibility.Visible;
 page.Graphics.DrawString("First Name", font, PdfBrushes.Black, 10, 55);
-//Add the textbox in document
+//Add the textbox in document.
 document.Form.Fields.Add(firstNameTextBox);
 //Creating the stream object.
 MemoryStream stream = new MemoryStream();
@@ -2745,7 +2745,7 @@ Dim document As New PdfDocument()
 'Creates a new page and adds it as the last page of the document.
 Dim page As PdfPage = document.Pages.Add()
 Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Courier, 12F)
-'Create a text box
+'Create a text box.
 Dim firstNameTextBox As New PdfTextBoxField(page, "firstNameTextBox")
 firstNameTextBox.MaxLength = 8
 firstNameTextBox.Bounds = New RectangleF(100, 20, 200, 20)
@@ -2766,6 +2766,8 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %} 
+
+You can download a complete working sample from GitHub.
 
 ## Modifying the existing form field in PDF document 
 
