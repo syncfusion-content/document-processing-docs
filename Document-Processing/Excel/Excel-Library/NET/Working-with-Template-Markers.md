@@ -91,30 +91,44 @@ Following code example illustrates how to bind the data from an array to a marke
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create Template Marker Processor
-  ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
+	//Create Template Marker Processor
+	ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
 
-  //Insert Array Horizontally
-  string[] names = new string[] { "Mickey", "Donald", "Tom", "Jerry" };
-  string[] descriptions = new string[] { "Mouse", "Duck", "Cat", "Mouse" };
+	//Create an instance for Data table
+	DataTable reports = new DataTable();
 
-  //Add collections to the marker variables where the name should match with input template
-  marker.AddVariable("Names", names);
-  marker.AddVariable("Descriptions", descriptions);
+	//Add value to data table
+	reports.Columns.Add("SalesPerson");
+	reports.Columns.Add("FromDate", typeof(DateTime));
+	reports.Columns.Add("ToDate", typeof(DateTime));
 
-  //Process the markers in the template
-  marker.ApplyMarkers();
+	reports.Rows.Add("Andy Bernard", new DateTime(2014, 09, 08), new DateTime(2014, 09, 11));
+	reports.Rows.Add("Jim Halpert", new DateTime(2014, 09, 11), new DateTime(2014, 09, 15));
+	reports.Rows.Add("Karen Fillippelli", new DateTime(2014, 09, 15), new DateTime(2014, 09, 20));
+	reports.Rows.Add("Phyllis Lapin", new DateTime(2014, 09, 21), new DateTime(2014, 09, 25));
+	reports.Rows.Add("Stanley Hudson", new DateTime(2014, 09, 26), new DateTime(2014, 09, 30));
 
-  //Saving the workbook as stream
-  workbook.Version = ExcelVersion.Excel2013;
-  FileStream stream = new FileStream("TemplateMarker.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Add collection to marker variable
+	marker.AddVariable("Reports", reports, VariableTypeAction.DetectNumberFormat);
+
+	//Process the markers in the template
+	marker.ApplyMarkers();
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportDataTable.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -521,23 +535,30 @@ The following code snippet illustrates how to import data from nested collection
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("TemplateMarker.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create Template Marker Processor
-  ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
+	//Create Template Marker Processor
+	ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
 
-  //Add collection to the marker variables where the name should match with input template
-  marker.AddVariable("Customer", GetSalesReports());
+	//Add collection to the marker variables where the name should match with input template
+	marker.AddVariable("Customer", GetSalesReports());
 
-  //Process the markers in the template
-  marker.ApplyMarkers();
+	//Process the markers in the template
+	marker.ApplyMarkers();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("TemplateMarkerNestedCollection.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImportNestedCollection.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -822,95 +843,122 @@ The following code sample illustrates how to create or apply conditional format 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20Data%20to%20Template/Conditional%20Formatting/.NET/Conditional%20Formatting/Conditional%20Formatting/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  FileStream fileStream = new FileStream("TemplateMarker.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = excelEngine.Excel.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create Template Marker Processor
-  ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
-  IConditionalFormats conditionalFormats = marker.CreateConditionalFormats(worksheet["C5"]);
+	//Create Template Marker Processor
+	ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
 
-  //Apply markers using Formula
-  IConditionalFormat condition = conditionalFormats.AddCondition();
+	IConditionalFormats conditionalFormats = marker.CreateConditionalFormats(worksheet["C5"]);
 
-  //Set Data bar and icon set for the same cell
-  //Set the format type
-  condition.FormatType = ExcelCFType.DataBar;
+	#region Data Bar
 
-  IDataBar dataBar = condition.DataBar;
+	//Apply markers using Formula
+	IConditionalFormat condition = conditionalFormats.AddCondition();
 
-  //Set the constraint
-  dataBar.MinPoint.Type = ConditionValueType.LowestValue;
-  dataBar.MinPoint.Value = "0";
-  dataBar.MaxPoint.Type = ConditionValueType.HighestValue;
-  dataBar.MaxPoint.Value = "0";
+	//Set Data bar and icon set for the same cell
+	//Set the format type
+	condition.FormatType = ExcelCFType.DataBar;
 
-  //Set color for Bar
-  dataBar.BarColor = Color.FromArgb(156, 208, 243);
+	IDataBar dataBar = condition.DataBar;
 
-  //Hide the value in data bar
-  dataBar.ShowValue = false;
+	//Set the constraint
+	dataBar.MinPoint.Type = ConditionValueType.LowestValue;
+	dataBar.MinPoint.Value = "0";
+	dataBar.MaxPoint.Type = ConditionValueType.HighestValue;
+	dataBar.MaxPoint.Value = "0";
 
-  condition = conditionalFormats.AddCondition();
-  condition.FormatType = ExcelCFType.IconSet;
+	//Set color for Bar
+	dataBar.BarColor = Color.FromArgb(156, 208, 243);
 
-  IIconSet iconSet = condition.IconSet;
-  iconSet.IconSet = ExcelIconSetType.FourRating;
+	//Hide the value in data bar
+	dataBar.ShowValue = false;
 
-  iconSet.IconCriteria[0].Type = ConditionValueType.LowestValue;
-  iconSet.IconCriteria[0].Value = "0";
+	#endregion
 
-  iconSet.IconCriteria[1].Type = ConditionValueType.HighestValue;
-  iconSet.IconCriteria[1].Value = "0";
+	#region IconSet
 
-  iconSet.ShowIconOnly = true;
+	//Declaring Icon set for the condition
+	condition = conditionalFormats.AddCondition();
+	condition.FormatType = ExcelCFType.IconSet;
 
-  conditionalFormats = marker.CreateConditionalFormats(worksheet["D5"]);
-  condition = conditionalFormats.AddCondition();
-  condition.FormatType = ExcelCFType.ColorScale;
-  IColorScale colorScale = condition.ColorScale;
+	IIconSet iconSet = condition.IconSet;
+	iconSet.IconSet = ExcelIconSetType.FourRating;
+	iconSet.IconCriteria[0].Type = ConditionValueType.LowestValue;
+	iconSet.IconCriteria[0].Value = "0";
+	iconSet.IconCriteria[1].Type = ConditionValueType.HighestValue;
+	iconSet.IconCriteria[1].Value = "0";
+	iconSet.ShowIconOnly = true;
 
-  //Sets 3 - color scale
-  colorScale.SetConditionCount(3);
+	#endregion
 
-  colorScale.Criteria[0].FormatColorRGB = Color.FromArgb(230, 197, 218);
-  colorScale.Criteria[0].Type = ConditionValueType.LowestValue;
-  colorScale.Criteria[0].Value = "0";
+	conditionalFormats = marker.CreateConditionalFormats(worksheet["D5"]);
 
-  colorScale.Criteria[1].FormatColorRGB = Color.FromArgb(244, 210, 178);
-  colorScale.Criteria[1].Type = ConditionValueType.Percentile;
-  colorScale.Criteria[1].Value = "50";
+	#region Color Scale
 
-  colorScale.Criteria[2].FormatColorRGB = Color.FromArgb(245, 247, 171);
-  colorScale.Criteria[2].Type = ConditionValueType.HighestValue;
-  colorScale.Criteria[2].Value = "0";
+	//Applying color for Conditional formatting
+	condition = conditionalFormats.AddCondition();
+	condition.FormatType = ExcelCFType.ColorScale;
 
-  conditionalFormats = marker.CreateConditionalFormats(worksheet["E5"]);
-  condition = conditionalFormats.AddCondition();
-  condition.FormatType = ExcelCFType.IconSet;
+	IColorScale colorScale = condition.ColorScale;
 
-  iconSet = condition.IconSet;
-  iconSet.IconSet = ExcelIconSetType.ThreeSymbols;
+	//Sets 3 - color scale
+	colorScale.SetConditionCount(3);
 
-  iconSet.IconCriteria[0].Type = ConditionValueType.LowestValue;
-  iconSet.IconCriteria[0].Value = "0";
+	colorScale.Criteria[0].FormatColorRGB = Color.FromArgb(230, 197, 218);
+	colorScale.Criteria[0].Type = ConditionValueType.LowestValue;
+	colorScale.Criteria[0].Value = "0";
 
-  iconSet.IconCriteria[1].Type = ConditionValueType.HighestValue;
-  iconSet.IconCriteria[1].Value = "0";
+	colorScale.Criteria[1].FormatColorRGB = Color.FromArgb(244, 210, 178);
+	colorScale.Criteria[1].Type = ConditionValueType.Percentile;
+	colorScale.Criteria[1].Value = "50";
 
-  iconSet.ShowIconOnly = false;
+	colorScale.Criteria[2].FormatColorRGB = Color.FromArgb(245, 247, 171);
+	colorScale.Criteria[2].Type = ConditionValueType.HighestValue;
+	colorScale.Criteria[2].Value = "0";
 
-  //Add collection to the marker variables where the name should match with input template
-  marker.AddVariable("Reports", GetSalesReports());
+	#endregion
 
-  //Process the markers in the template
-  marker.ApplyMarkers();
+	conditionalFormats = marker.CreateConditionalFormats(worksheet["E5"]);
 
-  //Saving the workbook as stream
-  workbook.Version = ExcelVersion.Excel2013;
-  FileStream stream = new FileStream("TemplateMarkerCF.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region IconSet
+
+	//Apply Icons for conditional formatting
+	condition = conditionalFormats.AddCondition();
+	condition.FormatType = ExcelCFType.IconSet;
+
+	iconSet = condition.IconSet;
+	iconSet.IconSet = ExcelIconSetType.ThreeSymbols;
+
+	iconSet.IconCriteria[0].Type = ConditionValueType.LowestValue;
+	iconSet.IconCriteria[0].Value = "0";
+
+	iconSet.IconCriteria[1].Type = ConditionValueType.HighestValue;
+	iconSet.IconCriteria[1].Value = "0";
+
+	iconSet.ShowIconOnly = false;
+
+	#endregion
+
+	//Add collection to the marker variables where the name should match with input template
+	marker.AddVariable("Reports", GetSalesReports());
+
+	//Process the markers in the template
+	marker.ApplyMarkers();
+
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ConditionalFormatting.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1195,24 +1243,30 @@ The following code snippet illustrates how to detect data type and apply number 
 //Binding data from data table is supported only from ASP.NET Core 2.0
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("TemplateMarker.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create Template Marker Processor
-    ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
+	//Create Template Marker Processor
+	ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
 
-  //Add collection to the marker variables where the name should match with input template
-  marker.AddVariable("Company", GetCompanyDetails());
+	//Add collection to the marker variables where the name should match with input template
+	marker.AddVariable("Company", GetCompanyDetails());
 
-  //Process the markers in the template
-  marker.ApplyMarkers();
+	//Process the markers in the template
+	marker.ApplyMarkers();
 
-  //Saving the workbook as stream
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HyperlinkWithMarker.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  FileStream stream = new FileStream("TemplateMarkerHyperlink.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

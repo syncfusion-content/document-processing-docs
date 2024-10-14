@@ -25,20 +25,21 @@ The following code example illustrates how to convert a CSV to an Excel file.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/CSV%20to%20Excel/CSV%20to%20Excel/.NET/CSV%20to%20Excel/CSV%20to%20Excel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.csv", FileMode.Open, FileAccess.Read);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.csv"), FileMode.Open, FileAccess.Read);
 
-  //Open the CSV file
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ",");
+	//Open the CSV file
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ",");
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -80,20 +81,20 @@ The following code example illustrates how to convert a TSV to an Excel file.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/TSV%20to%20Excel/TSV%20to%20Excel/.NET/TSV%20to%20Excel/TSV%20to%20Excel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Open the TSV file
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.tsv", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, "\t");
+	//Open the TSV file
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.tsv"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, "\t");
 
-  // Save the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+	//Save the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAs(outputStream);
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

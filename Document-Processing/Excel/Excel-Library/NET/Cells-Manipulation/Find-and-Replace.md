@@ -26,37 +26,37 @@ The following code example illustrates how to find all occurrences of text in a 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Find/.NET/Find/Find/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream fileStream = new FileStream(@"../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(fileStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Searches for the given string within the text of worksheet
-    IRange[] result1 = worksheet.FindAll("Gill", ExcelFindType.Text);
+	//Searches for the given string within the text of worksheet
+	IRange[] result1 = worksheet.FindAll("Gill", ExcelFindType.Text);
 
-    //Searches for the given string within the text of worksheet
-    IRange[] result2 = worksheet.FindAll(700, ExcelFindType.Number);
+	//Searches for the given string within the text of worksheet
+	IRange[] result2 = worksheet.FindAll(700, ExcelFindType.Number);
 
-    //Searches for the given string in formulas
-    IRange[] result3 = worksheet.FindAll("=SUM(F10:F11)", ExcelFindType.Formula);
+	//Searches for the given string in formulas
+	IRange[] result3 = worksheet.FindAll("=SUM(F10:F11)", ExcelFindType.Formula);
 
-    //Searches for the given string in calculated value, number and text
-    IRange[] result4 = worksheet.FindAll("41", ExcelFindType.Values);
+	//Searches for the given string in calculated value, number and text
+	IRange[] result4 = worksheet.FindAll("41", ExcelFindType.Values);
 
-    //Searches for the given string in comments
-    IRange[] result5 = worksheet.FindAll("Desk", ExcelFindType.Comments);
+	//Searches for the given string in comments
+	IRange[] result5 = worksheet.FindAll("Desk", ExcelFindType.Comments);
 
-    //Searches for the given string within the text of worksheet and case matched
-    IRange[] result6 = worksheet.FindAll("Pen Set", ExcelFindType.Text, ExcelFindOptions.MatchCase);
+	//Searches for the given string within the text of worksheet and case matched
+	IRange[] result6 = worksheet.FindAll("Pen Set", ExcelFindType.Text, ExcelFindOptions.MatchCase);
 
-    //Searches for the given string within the text of worksheet and the entire cell content matching to search text
-    IRange[] result7 = worksheet.FindAll("5", ExcelFindType.Text, ExcelFindOptions.MatchEntireCellContent);
+	//Searches for the given string within the text of worksheet and the entire cell content matching to search text
+	IRange[] result7 = worksheet.FindAll("5", ExcelFindType.Text, ExcelFindOptions.MatchEntireCellContent);
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Find.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+	//Saving the workbook as stream
+	FileStream stream = new FileStream(Path.GetFullPath(@"Output/Find.xlsx"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAs(stream);
+	stream.Dispose();
 }
 {% endhighlight %}
 
@@ -142,32 +142,32 @@ The following code example illustrates how to replace all occurrences of given s
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Replace/.NET/Replace/Replace/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream fileStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(fileStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Replaces the given string with another string
-    worksheet.Replace("Wilson", "William");
+	//Replaces the given string with another string
+	worksheet.Replace("Wilson", "William");
 
-    //Replaces the given string with another string on match case
-    worksheet.Replace("4.99", "4.90", ExcelFindOptions.MatchCase);
+	//Replaces the given string with another string on match case
+	worksheet.Replace("4.99", "4.90", ExcelFindOptions.MatchCase);
 
-    //Replaces the given string with another string matching entire cell content to the search word
-    worksheet.Replace("Pen Set", "Pen", ExcelFindOptions.MatchEntireCellContent);
+	//Replaces the given string with another string matching entire cell content to the search word
+	worksheet.Replace("Pen Set", "Pen", ExcelFindOptions.MatchEntireCellContent);
 
-    //Replaces the given string with DateTime value
-    worksheet.Replace("DateValue",DateTime.Now);
+	//Replaces the given string with DateTime value
+	worksheet.Replace("DateValue",DateTime.Now);
 
-    //Replaces the given string with Array
-    worksheet.Replace("Central", new string[] { "Central", "East" }, true);
+	//Replaces the given string with Array
+	worksheet.Replace("Central", new string[] { "Central", "East" }, true);
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Replace.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.Version = ExcelVersion.Xlsx;
-    workbook.SaveAs(stream);
-    stream.Dispose();
+	//Saving the workbook as stream
+	FileStream stream = new FileStream(Path.GetFullPath("Output/Replace.xlsx"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.Version = ExcelVersion.Xlsx;
+	workbook.SaveAs(stream);
+	stream.Dispose();
 }
 {% endhighlight %}
 
