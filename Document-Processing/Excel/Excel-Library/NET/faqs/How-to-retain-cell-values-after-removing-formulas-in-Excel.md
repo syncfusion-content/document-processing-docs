@@ -1,5 +1,5 @@
 ---
-title: How to retain cell values after removing formulas in Excel | Syncfusion
+title: How to retain cell values after removing formula in Excel | Syncfusion
 description: This page shows how to retain cell values after removing formulas in Excel using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
@@ -32,7 +32,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
         foreach (IRange cell in sheet.Range)
         {
             //If the cell contain formula, get the formula value, clear cell content, and then fill the formula value into the cell
-            if (!string.IsNullOrEmpty(cell.Formula))
+            if (cell.HasFormula)
             {
                 string value = cell.CalculatedValue;
                 cell.Clear(ExcelClearOptions.ClearContent);
@@ -66,7 +66,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
         foreach (IRange cell in sheet.Range)
         {
             //If the cell contain formula, get the formula value, clear cell content, and then fill the formula value into the cell
-            if (!string.IsNullOrEmpty(cell.Formula))
+            if (cell.HasFormula)
             {
                 string value = cell.CalculatedValue;
                 cell.Clear(ExcelClearOptions.ClearContent);
@@ -95,7 +95,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
         'Loop through cells
         For Each cell As IRange In sheet.Range
             'If the cell contains a formula, get the formula value, clear cell content, and then fill the formula value into the cell
-            If Not String.IsNullOrEmpty(cell.Formula) Then
+            If cell.HasFormula Then
                 Dim value As String = cell.CalculatedValue
                 cell.Clear(ExcelClearOptions.ClearContent)
                 cell.Value = value
