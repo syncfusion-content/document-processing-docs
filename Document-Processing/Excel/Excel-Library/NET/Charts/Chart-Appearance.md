@@ -479,8 +479,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set picture fill to chart area
   chart.ChartArea.Fill.UserPicture(image1, "Image");
 
+  //Setting offset to chart area Fill picture
+  Rectangle chartarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.ChartArea.Fill as ShapeFillImpl).FillRect = chartarea;
+
   //Set picture fill to plot area
   chart.PlotArea.Fill.UserPicture(image1, "Image");
+
+  //Setting offset to plot area Fill picture
+  Rectangle plotarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.PlotArea.Fill as ShapeFillImpl).FillRect = plotarea;
 
   //Set picture fill to series
   serie1.SerieFormat.Fill.UserPicture(image2, "Image");
@@ -514,8 +522,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set picture fill to chart area
   chart.ChartArea.Fill.UserPicture("Image1.png");
 
+  //Setting offset to chart area Fill picture
+  Rectangle chartarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.ChartArea.Fill as ShapeFillImpl).FillRect = chartarea;
+
   //Set picture fill to plot area
   chart.PlotArea.Fill.UserPicture("Image1.png");
+
+  //Setting offset to plot area Fill picture
+  Rectangle plotarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.PlotArea.Fill as ShapeFillImpl).FillRect = plotarea;
 
   //Set picture fill to series
   serie1.SerieFormat.Fill.UserPicture("Image2.png");
@@ -540,8 +556,16 @@ Using excelEngine As New ExcelEngine()
   'Set picture fill to chart area
   chart.ChartArea.Fill.UserPicture("Image1.png")
 
+  'Setting offset to chart area Fill picture
+  Dim chartarea As Rectangle = Rectangle.FromLTRB(5000, 6000, 7000, 8000)
+  DirectCast(chart.ChartArea.Fill, ShapeFillImpl).FillRect = chartarea
+
   'Set picture fill to plot area
   chart.PlotArea.Fill.UserPicture("Image1.png")
+
+  'Setting offset to plot area Fill picture
+  Dim plotarea As Rectangle = Rectangle.FromLTRB(5000, 6000, 7000, 8000)
+  DirectCast(chart.PlotArea.Fill, ShapeFillImpl).FillRect = plotarea
 
   'Set picture fill to series
   serie1.SerieFormat.Fill.UserPicture("Image2.png")
