@@ -1109,7 +1109,7 @@ You can specify the manual proxy settings for the conversion using the [ProxySet
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the HTML to PDF converter.
 
@@ -1277,7 +1277,7 @@ Refer to the following code snippet.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1324,7 +1324,7 @@ Getting height of the HTML content in PDF document is possible by using the [Pdf
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
