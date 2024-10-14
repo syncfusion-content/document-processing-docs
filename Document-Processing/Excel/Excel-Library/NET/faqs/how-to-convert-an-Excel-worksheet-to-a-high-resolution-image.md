@@ -1,5 +1,5 @@
 ---
-title: How to convert an Excel worksheet to a high-resolution image | Syncfusion
+title: How to convert an worksheet to a high-resolution image | Syncfusion
 description: This page shows how to convert an Excel worksheet to a high-resolution image using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
