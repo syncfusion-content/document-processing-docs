@@ -2652,30 +2652,30 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Set-appearance-to-the-PDF-form-fields).
 
-## Implementing form field visibility types in PDF documents
+## Managing form field visibility
 
-You can manage the visibility of form fields in various scenarios by using the [PdfFormFieldVisibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldVisibility.html) enum in the PdfStyledField class.
+The [PdfFormFieldVisibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldVisibility.html) enum, available in the PdfStyledField class, allows you to control the visibility of form fields in different scenarios.
 
-#### Configuring Visibility Status for PDF Form Fields
+Refer to the following details to explore the available field visibility options.
 
 <table border="1">
 <th style="font-size:14px">Name</th>
 <th style="font-size:14px">Description</th>
 <tr>
     <td>Hidden</td>
-    <td>Hidden the visibility of the form field.</td>
+    <td>Hides the form field from view.</td>
 </tr>
 <tr>
     <td>HiddenPrintable</td>
-    <td>Indicates form fields as hidden but printable.</td>
+    <td>Form field is hidden but will still appear when printed.</td>
 </tr>
 <tr>
     <td>Visible</td>
-    <td>Indicate visibility of the form field.</td>
+    <td>Form field is visible to users.</td>
 </tr>
 <tr>
     <td>VisibleNotPrintable</td>
-    <td>Indicate visibility of the form field and not printable.</td>
+    <td>Form field is visible but will not appear when printed.</td>
 </tr>
 
 </table>
