@@ -10,86 +10,133 @@ keywords: Assemblies
 
 The following assemblies need to be referenced in your application based on the platform.
 <table>
-<tr>
-<thead>
-<th>
-Platform(s)</th>
-<th>
-Assembly
-</th>
-</thead>
-</tr>
-<tr>
-<td>
-{{'[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)' | markdownify}}, {{'[ ASP. NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
-Syncfusion.Pdf.Base<br/>Syncfusion.Compression.Base<br/></td></tr>
-<tr>
-<td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)' | markdownify}}<br/></td><td>
-Syncfusion.Pdf.ClientProfile<br/>Syncfusion.Compression.Base<br/></td></tr>
-<tr>
-<td>
-{{'[Universal Windows Platform](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)' | markdownify}}<br/></td><td>
-Syncfusion.Pdf.UWP<br/></td></tr>
-<tr>
-<td>
-{{'[Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)' | markdownify}}<br/></td><td>
-Syncfusion.Pdf.Portable<br/>Syncfusion.Compression.Portable<br/></td></tr>
-<tr>
-<tr>
-<td>
-{{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)' | markdownify}}, {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)' | markdownify}} and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
-Syncfusion.Compression.Portable.dll<br/>
-Syncfusion.Pdf.Portable.dll
-	
-<br/></td></tr>
-<tr>
-<td>
-{{'[Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui)' | markdownify}}<br/>
-{{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)' | markdownify}}</td><td>
-Syncfusion.Pdf.NET.dll<br/>
-Syncfusion.Compression.NET.dll
-	
-<br/></td></tr>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>Assembly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf), 
+        [Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms), 
+        [ASP.NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms) and 
+        [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
+      </td>
+      <td>
+        Syncfusion.Pdf.Base<br/>
+        Syncfusion.Compression.Base
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms) and 
+        [WPF (Client Profile)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)
+      </td>
+      <td>
+        Syncfusion.Pdf.ClientProfile<br/>
+        Syncfusion.Compression.Base
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [Universal Windows Platform](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)
+      </td>
+      <td>
+        Syncfusion.Pdf.UWP
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)
+      </td>
+      <td>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.Compression.Portable
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor), 
+        [.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core), and 
+        [.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
+      </td>
+      <td>
+        Syncfusion.Compression.Portable.dll<br/>
+        Syncfusion.Pdf.Portable.dll
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui), 
+        [.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)
+      </td>
+      <td>
+        Syncfusion.Pdf.NET.dll<br/>
+        Syncfusion.Compression.NET.dll
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-## RETIRED PRODUCTS
+
+### RETIRED PRODUCTS
 
 <table>
-<tr>
-<thead>
-<th>
-Platform(s)</th>
-<th>
-Assembly
-</th>
-</thead>
-</tr>
-<tr>
-<td>
-WinRT (Windows Store applications)<br/></td><td>
-Syncfusion.Pdf.winrt</td></tr>
-<tr>
-<td>
-Windows Phone 8<br/></td><td>
-Syncfusion.Pdf.WP8<br/>Syncfusion.Compression.WP8<br/></td></tr>
-<tr>
-<td>
-Windows Phone 8.1 Silverlight<br/></td><td>
-Syncfusion.Pdf.WPSilverlight<br/>Syncfusion.Compression.WPSilverlight<br/></td></tr>
-<tr>
-<td>
-Windows Phone 8.1 WinRT<br/></td><td>
-Syncfusion.Pdf.WP<br/>Syncfusion.Compression.WP<br/></td></tr>
-<tr>
-<td>
-{{'[ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)' | markdownify}}<br/></td><td>
-Syncfusion.Pdf.Web<br/>Syncfusion.Compression.Base<br/></td></tr>
-<tr>
-<td>
-{{'[ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)' | markdownify}}<br/></td><td>
-Syncfusion.Pdf.MVC<br/>Syncfusion.Compression.Base<br/></td></tr>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>Assembly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WinRT (Windows Store applications)</td>
+      <td>Syncfusion.Pdf.winrt</td>
+    </tr>
+    <tr>
+      <td>Windows Phone 8</td>
+      <td>
+        Syncfusion.Pdf.WP8<br/>
+        Syncfusion.Compression.WP8
+      </td>
+    </tr>
+    <tr>
+      <td>Windows Phone 8.1 Silverlight</td>
+      <td>
+        Syncfusion.Pdf.WPSilverlight<br/>
+        Syncfusion.Compression.WPSilverlight
+      </td>
+    </tr>
+    <tr>
+      <td>Windows Phone 8.1 WinRT</td>
+      <td>
+        Syncfusion.Pdf.WP<br/>
+        Syncfusion.Compression.WP
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)
+      </td>
+      <td>
+        Syncfusion.Pdf.Web<br/>
+        Syncfusion.Compression.Base
+      </td>
+    </tr>
+    <tr>
+      <td>
+        [ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
+      </td>
+      <td>
+        Syncfusion.Pdf.MVC<br/>
+        Syncfusion.Compression.Base
+      </td>
+    </tr>
+  </tbody>
 </table>
+
 <br/><br/>
 N> The .NET Standard assemblies can be found in the following Essential Studio installation path
 {Installed directory}\Syncfusion\Essential Studio\{Product version}\precompiledassemblies\{Product version}\.NET Standard 1.2\
