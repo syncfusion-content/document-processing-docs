@@ -20,8 +20,7 @@ The following assemblies need to be referenced in your application based on the 
     <tr>
       <td>
         [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf), 
-        [Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms), 
-        [ASP.NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms) and 
+        [Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms) and 
         [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
       </td>
       <td>
@@ -322,7 +321,7 @@ Syncfusion.OfficeChart.Portable<br/>
 Syncfusion.Pdf.Portable<br/>
 Syncfusion.PresentationRenderer.Portable<br/>
 Syncfusion.SkiaSharpHelper.Portable<br/>
-Skiasharp
+SkiaSharp
 </td>
 </tr>
 <tr>
@@ -332,7 +331,7 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
-Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/> Syncfusion.SkiaSharpHelper.NET<br/>Skiasharp
+Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/> Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
 </td>
 </tr>
 </table>
