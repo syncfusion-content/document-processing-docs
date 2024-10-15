@@ -115,6 +115,15 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.Compression.WP
       </td>
     </tr>
+        <tr>
+      <td>
+        ASP.NET 
+      </td>
+      <td>
+         Syncfusion.Pdf.Base<br/>
+        Syncfusion.Compression.Base
+      </td>
+    </tr>
     <tr>
       <td>
         [ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)
@@ -138,7 +147,6 @@ The following assemblies need to be referenced in your application based on the 
 
 N> The .NET Standard assemblies can be found in the following Essential Studio installation path
 {Installed directory}\Syncfusion\Essential Studio\{Product version}\precompiledassemblies\{Product version}\.NET Standard 1.2\
-
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
 ## Converting HTML to PDF
@@ -197,26 +205,15 @@ Get the following required assemblies by downloading the HTML converter installe
   <tbody>
     <tr>
       <td>
-        ASP.NET (Classic)
+        ASP.NET
       </td>
       <td>
         <ul>
           <li>Syncfusion.Compression.Base.dll</li>
-          <li>Syncfusion.Pdf.Web.dll</li>
-          <li>Syncfusion.HtmlConverter.Web.dll</li>
+          <li>Syncfusion.Pdf.Base.dll</li>
+          <li>Syncfusion.HtmlConverter.Base.dll</li>
           <li>Newtonsoft.Json package (v13.0.1 or above)</li>
         </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        ASP.NET MVC (Classic)
-      </td>
-      <td>
-        <li>Syncfusion.Compression.Base.dll</li>
-          <li>Syncfusion.Pdf.MVC.dll</li>
-          <li>Syncfusion.HtmlConverter.MVC.dll</li>
-          <li>Newtonsoft.Json package (v13.0.1 or above)</li>
       </td>
     </tr>
   </tbody>
@@ -299,23 +296,12 @@ For converting a Word document to PDF, the following assemblies need to be refer
   <tbody>
     <tr>
       <td>
-        ASP.NET (Classic)
+        ASP.NET
       </td>
       <td>
-        Syncfusion.DocIO.Web<br/>
+        Syncfusion.DocIO.Base<br/>
         Syncfusion.Compression.Base<br/>
         Syncfusion.OfficeChart.Base<br/>
-        Syncfusion.Pdf.Base<br/>
-        Syncfusion.DocToPdfConverter.Base
-      </td>
-    </tr>
-    <tr>
-      <td>
-        ASP.NET MVC (Classic)
-      </td>
-      <td>
-       Syncfusion.DocIO.MVC<br/>
-        Syncfusion.Compression.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.DocToPdfConverter.Base
       </td>
@@ -325,9 +311,7 @@ For converting a Word document to PDF, the following assemblies need to be refer
 
 
 N> 1. Word to PDF conversion is supported in ASP.NET Core and Xamarin from 2018 Volume 1 release (v16.1.0.24) using SkiaSharp graphics library.
-
 N> 2. Word to PDF conversion is not supported in Silverlight, Windows Phone, WinRT, Universal applications.
-
 N> 3. Starting with v17.1.0.x, if you reference "Syncfusion.DocIORenderer", you also have to add "Syncfusion.SkiaSharpHelper" assembly reference in your projects to perform Word to PDF conversion.
 
 ## Converting Excel document to PDF
@@ -395,24 +379,13 @@ For converting an Excel document to PDF, the following assemblies need to be ref
   <tbody>
     <tr>
       <td>
-        ASP.NET (Classic)
+        ASP.NET
       </td>
       <td>
-        Syncfusion.XlsIO.Web<br/>
+        Syncfusion.XlsIO.Base<br/>
         Syncfusion.Compression.Base<br/>
         Syncfusion.Pdf.Base<br/>
-        Syncfusion.ExcelToPDFConverter.Web
-      </td>
-    </tr>
-    <tr>
-      <td>
-        ASP.NET MVC (Classic)
-      </td>
-      <td>
-        Syncfusion.XlsIO.MVC<br/>
-        Syncfusion.Compression.Base<br/>
-        Syncfusion.Pdf.Base<br/>
-        Syncfusion.ExcelToPDFConverter.MVC
+        Syncfusion.ExcelToPDFConverter.Base
       </td>
     </tr>
   </tbody>
@@ -503,23 +476,11 @@ The following assemblies are required to be referred in addition to the above me
         ASP.NET (Classic)
       </td>
       <td>
-        Syncfusion.Presentation.Web<br/>
+             Syncfusion.Presentation.Base<br/>
         Syncfusion.Compression.Base<br/>
         Syncfusion.OfficeChart.Base<br/>
-        Syncfusion.Pdf.Web<br/>
-        Syncfusion.PresentationToPDFConverter.Web
-      </td>
-    </tr>
-    <tr>
-      <td>
-        ASP.NET MVC (Classic)
-      </td>
-     <td>
-        Syncfusion.Presentation.MVC<br/>
-        Syncfusion.Compression.Base<br/>
-        Syncfusion.OfficeChart.Base<br/>
-        Syncfusion.Pdf.MVC<br/>
-        Syncfusion.PresentationToPDFConverter.MVC
+        Syncfusion.Pdf.Base<br/>
+        Syncfusion.PresentationToPDFConverter.Base
       </td>
     </tr>
   </tbody>
