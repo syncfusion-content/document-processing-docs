@@ -8,7 +8,10 @@ documentation: UG
 
 # How to set the background color for the chart?
 
-You can set the background color for a chart in XlsIO by applying the foreground color to the plot area using the [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_ForeColor) property of the [IFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html) interface. The following code example demonstrates how to set the background color of the chart to a specified color.
+You can set the background of a chart as either the plot area background or the chart area background. Essential XlsIO allows you to set the background color for both the PlotArea and ChartArea using the [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html#Syncfusion_XlsIO_IFill_ForeColor) property of the [IFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html) interface.
+
+
+The following code example illustrates how to set the background color of the chart to a specified color.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -23,9 +26,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Get the first chart in the worksheet
     IChartShape chart = worksheet.Charts[0];
 
-    //Set the background color of the chart
-    IChartFrameFormat chartPlotArea = chart.PlotArea;
-    chartPlotArea.Fill.ForeColor = Color.Pink;
+    //Applying background color for plot area
+    chart.PlotArea.Fill.ForeColor = Color.Yellow;
+
+    //Applying background color for chart area
+    chart.ChartArea.Fill.ForeColor = Color.LightGreen;
 
     //Saving the workbook as stream
     FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
@@ -48,9 +53,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Get the first chart in the worksheet
     IChartShape chart = worksheet.Charts[0];
 
-    //Set the background color of the chart
-    IChartFrameFormat chartPlotArea = chart.PlotArea;
-    chartPlotArea.Fill.ForeColor = Color.Pink;
+    //Applying background color for plot area
+    chart.PlotArea.Fill.ForeColor = Color.Yellow;
+
+    //Applying background color for chart area
+    chart.ChartArea.Fill.ForeColor = Color.LightGreen;
 
     //Saving the workbook
     workbook.SaveAs("Output.xlsx");
@@ -67,9 +74,11 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
     'Get the first chart in the worksheet
     Dim chart As IChartShape = worksheet.Charts(0)
 
-    'Set the background color of the chart
-    Dim chartPlotArea As IChartFrameFormat = chart.PlotArea
-    chartPlotArea.Fill.ForeColor = Color.Pink
+    'Applying background color for plot area
+    chart.PlotArea.Fill.ForeColor = Color.Yellow
+
+    'Applying background color for chart area
+    chart.ChartArea.Fill.ForeColor = Color.LightGreen
 
     'Save the workbook
     workbook.SaveAs("Output.xlsx")
