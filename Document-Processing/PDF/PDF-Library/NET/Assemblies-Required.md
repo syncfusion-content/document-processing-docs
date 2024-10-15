@@ -197,7 +197,7 @@ Get the following required assemblies by downloading the HTML converter installe
   <tbody>
     <tr>
       <td>
-        [ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)
+        ASP.NET (Classic)
       </td>
       <td>
         <ul>
@@ -210,7 +210,7 @@ Get the following required assemblies by downloading the HTML converter installe
     </tr>
     <tr>
       <td>
-        [ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
+        ASP.NET MVC (Classic)
       </td>
       <td>
         <li>Syncfusion.Compression.Base.dll</li>
