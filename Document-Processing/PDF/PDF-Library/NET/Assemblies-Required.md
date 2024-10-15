@@ -117,7 +117,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
         <tr>
       <td>
-        ASP.NET 
+        [ASP.NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms) 
       </td>
       <td>
          Syncfusion.Pdf.Base<br/>
@@ -473,10 +473,10 @@ The following assemblies are required to be referred in addition to the above me
   <tbody>
     <tr>
       <td>
-        ASP.NET (Classic)
+        ASP.NET
       </td>
       <td>
-             Syncfusion.Presentation.Base<br/>
+        Syncfusion.Presentation.Base<br/>
         Syncfusion.Compression.Base<br/>
         Syncfusion.OfficeChart.Base<br/>
         Syncfusion.Pdf.Base<br/>

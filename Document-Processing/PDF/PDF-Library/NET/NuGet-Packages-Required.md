@@ -100,7 +100,7 @@ Windows UI (WinUI) <br/>
   <thead>
     <tr>
       <th>Platform(s)</th>
-      <th>Assembly</th>
+      <th>NuGet Package</th>
     </tr>
   </thead>
   <tbody>
@@ -206,7 +206,7 @@ ASP.NET MVC
   <thead>
     <tr>
       <th>Platform(s)</th>
-      <th>Assembly</th>
+      <th>NuGet Package</th>
     </tr>
   </thead>
   <tbody>
@@ -285,7 +285,7 @@ Blazor
   <thead>
     <tr>
       <th>Platform(s)</th>
-      <th>Assembly</th>
+      <th>NuGet Package</th>
     </tr>
   </thead>
   <tbody>
@@ -378,7 +378,7 @@ Xamarin
   <thead>
     <tr>
       <th>Platform(s)</th>
-      <th>Assembly</th>
+      <th>NuGet Package</th>
     </tr>
   </thead>
   <tbody>
@@ -490,7 +490,7 @@ Blazor (Server-App)
   <thead>
     <tr>
       <th>Platform(s)</th>
-      <th>Assembly</th>
+      <th>NuGet Package</th>
     </tr>
   </thead>
   <tbody>
@@ -577,7 +577,7 @@ Xamarin
   <thead>
     <tr>
       <th>Platform(s)</th>
-      <th>Assembly</th>
+      <th>NuGet Package</th>
     </tr>
   </thead>
   <tbody>
@@ -630,17 +630,6 @@ Install-package Syncfusion.Pdf.Wpf
 </td>
 <td>
 Uninstall-package Syncfusion.Pdf.Wpf -RemoveDependencies 
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET
-</td>
-<td>
-Install-package Syncfusion.Pdf.AspNet 
-</td>
-<td>
-Uninstall-package Syncfusion.Pdf.AspNet -RemoveDependencies 
 </td>
 </tr>
 <tr>
