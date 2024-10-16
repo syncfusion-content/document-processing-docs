@@ -125,6 +125,38 @@ Install-Package Syncfusion.DocIO.NET
 </td>
 </tr>
 </table>
+
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net)' | markdownify}}<br/>
+</td>
+<td>
+Syncfusion.DocIO.AspNet.nupkg
+</td>
+<td>
+Install-Package Syncfusion.DocIO.AspNet
+</td>
+</tr>
+</table>
+
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 N> 2. Syncfusion components are available in [nuget.org](https://www.nuget.org/)
 N> 3. Starting with v17.3.0.x, Syncfusion provides support to .NET Core 3.0. You can use the above WPF or Windows Forms platform NuGet packages for .NET Core 3.0 targeting applications and use the same "C# tab" code examples for it.
@@ -236,6 +268,37 @@ Syncfusion.DocIORenderer.NET
 </td>
 <td>
 Install-Package Syncfusion.DocIORenderer.NET
+</td>
+</tr>
+</table>
+
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)' | markdownify}}<br/>
+</td>
+<td>
+Syncfusion.DocToPdfConverter.AspNet.nupkg
+</td>
+<td>
+Install-Package Syncfusion.DocToPdfConverter.AspNet
 </td>
 </tr>
 </table>
@@ -355,6 +418,37 @@ Install-Package Syncfusion.DocIORenderer.NET
 </tr>
 </table>
 
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net)' | markdownify}}<br/>
+</td>
+<td>
+Syncfusion.DocIO.AspNet.nupkg
+</td>
+<td>
+Install-Package Syncfusion.DocIO.AspNet
+</td>
+</tr>
+</table>
+
 ## Converting Charts
 
 The following NuGet package need to be installed additionally to preserve chart as image in Word to PDF, and Image conversions.
@@ -415,6 +509,37 @@ Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5.nupkg
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
+</td>
+</tr>
+</table>
+
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+ASP. NET<br/>
+</td>
+<td>
+Syncfusion.OfficeChartToImageConverter.AspNet
+</td>
+<td>
+Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 </td>
 </tr>
 </table>
