@@ -911,7 +911,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding Timestamps to a PDF Document Using External Signing
 
-We have implemented a solution that generates a timestamp response from a timestamp server URI using the BouncyCastle library.
+This project demonstrates how to add timestamps to a PDF document using an external signing process. It involves signing a document externally and embedding a timestamp from a trusted timestamp server. The process uses the BouncyCastle library to generate the timestamp request and handle responses in accordance with the RFC 3161 standard.
 
 This example demonstrates how to effectively add timestamps to a PDF document during the external signing process.
 
