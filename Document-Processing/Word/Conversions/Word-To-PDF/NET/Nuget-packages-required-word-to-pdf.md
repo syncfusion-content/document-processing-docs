@@ -119,6 +119,37 @@ Install-Package Syncfusion.DocIORenderer.NET
 </tr>
 </table>
 
+#### Retired Platforms
+
+The following packages need to be included in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)' | markdownify}}<br/>
+</td>
+<td>
+Syncfusion.DocToPdfConverter.AspNet.nupkg
+</td>
+<td>
+Install-Package Syncfusion.DocToPdfConverter.AspNet
+</td>
+</tr>
+</table>
+
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 N> 2. Syncfusion components are available in [nuget.org](https://www.nuget.org/)
 N> 3. Please refer the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
@@ -185,6 +216,37 @@ Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5.nupkg
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
+</td>
+</tr>
+</table>
+
+#### Retired Platforms
+
+The following packages need to be included in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+ASP. NET<br/>
+</td>
+<td>
+Syncfusion.OfficeChartToImageConverter.AspNet
+</td>
+<td>
+Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 </td>
 </tr>
 </table>

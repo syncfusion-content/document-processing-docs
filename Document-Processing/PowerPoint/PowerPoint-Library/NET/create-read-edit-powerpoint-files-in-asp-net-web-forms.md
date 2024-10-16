@@ -10,6 +10,8 @@ documentation: ug
 
 You can create or edit a PowerPoint file in ASP.NET with Syncfusion PowerPoint library. The below are the steps.
 
+N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the .NET Word library from .NET Framework to .NET Core, refer here.
+
 ## Create a PowerPoint file in ASP.NET
 
 Step 1: Create a new C# ASP.NET web application project.

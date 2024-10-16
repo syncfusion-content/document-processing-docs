@@ -23,7 +23,7 @@ Assembly
 </tr>
 <tr>
 <td>
-{{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
@@ -63,6 +63,29 @@ Syncfusion.SfChart.UWP<br/>
 </td>
 </tr>
 </table>
+
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th>
+Platform(s)<br/></th><th>
+Assembly<br/></th></tr></thead>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net)' | markdownify}}<br/></td><td>
+Syncfusion.Presentation.Base<br/>
+Syncfusion.Compression.Base<br/>
+Syncfusion.OfficeChart.Base<br/>
+Syncfusion.Pdf.Base<br/>
+Syncfusion.PresentationToPDFConverter.Base<br/>
+Syncfusion.OfficeChartToImageConverter.WPF<br/>
+Syncfusion.SfChart.WPF<br/></td></tr>
+</table>
+
 N> Starting with the v24.1.x, if you reference "Syncfusion.PresentationRenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform PowerPoint Presentation to PDF conversion.
 
 ## Converting Charts
@@ -80,7 +103,7 @@ Assembly
 </tr>
 <tr>
 <td>
-WPF, Windows Forms, ASP. NET and ASP.NET MVC<br/>
+WPF, Windows Forms and ASP.NET MVC<br/>
 </td>
 <td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>
@@ -88,4 +111,22 @@ Syncfusion.SfChart.WPF<br/>
 </td>
 </tr>
 </table>
+
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th>
+Platform(s)<br/></th><th>
+Assembly<br/></th></tr></thead>
+<tr>
+<td>
+ASP.NET <br/></td><td>
+Syncfusion.OfficeChartToImageConverter.WPF<br/>
+Syncfusion.SfChart.WPF<br/></td></tr>
+</table>
+
 N> The “Syncfusion.OfficeChartToImageConverter.WPF” assembly is supported from .NET Framework 4.0 onwards.

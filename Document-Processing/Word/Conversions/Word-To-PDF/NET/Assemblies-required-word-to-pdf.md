@@ -18,7 +18,7 @@ Platform(s)<br/></th><th>
 Assembly<br/></th></tr></thead>
 <tr>
 <td>
-{{'[WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms)' | markdownify}}, {{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)' | markdownify}}, {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms)' | markdownify}}, {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/>Syncfusion.Pdf.Base<br/>Syncfusion.DocToPdfConverter.Base<br/></td></tr>
 <tr>
 <td>
@@ -33,6 +33,22 @@ Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.Off
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui)' | markdownify}}<br/> {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui)' | markdownify}}<br/>
 </td><td>
 Syncfusion.DocIO.NET<br/>Syncfusion.Compression.NET<br/>Syncfusion.OfficeChart.NET<br/>Syncfusion.Pdf.NET<br/>Syncfusion.DocIORenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> SkiaSharp<br/>Syncfusion.SkiaSharpHelper.NET</td></tr>
+</table>
+
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th>
+Platform(s)<br/></th><th>
+Assembly<br/></th></tr></thead>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)' | markdownify}}<br/></td><td>
+Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/>Syncfusion.Pdf.Base<br/>Syncfusion.DocToPdfConverter.Base<br/></td></tr>
 </table>
 
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
@@ -55,5 +71,21 @@ Assembly<br/></th></tr></thead>
 <tr>
 <td>
 WPF, Windows Forms, ASP. NET, ASP.NET MVC<br/></td><td>
+Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
+</table>
+
+#### Retired Platforms
+
+The following assemblies need to be referenced in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th>
+Platform(s)<br/></th><th>
+Assembly<br/></th></tr></thead>
+<tr>
+<td>
+ASP. NET<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
