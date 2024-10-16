@@ -240,7 +240,7 @@ Package manager console command
 </thead>
 <tr>
 <td>
-ASP. NET<br/>
+ASP.NET<br/>
 </td>
 <td>
 Syncfusion.OfficeChartToImageConverter.AspNet
