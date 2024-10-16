@@ -915,6 +915,8 @@ We have implemented a solution that generates a timestamp response from a timest
 
 This example demonstrates how to effectively add timestamps to a PDF document during the external signing process.
 
+{% tabs %}
+
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Get the stream from the document
