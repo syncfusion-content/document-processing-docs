@@ -29,36 +29,40 @@ The following code example illustrates how to add and manipulate a text box cont
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Text%20Box/.NET/Text%20Box/Text%20Box/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+ using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Creates a new Text Box
-  ITextBoxShape textbox = sheet.TextBoxes.AddTextBox(2, 2, 30, 200);
-  textbox.Text = "Text Box 1";
-  textbox = sheet.TextBoxes.AddTextBox(6, 2, 30, 200);
-  textbox.Text = "Text Box 2";
+	//Creates a new Text Box
+	ITextBoxShape textbox = sheet.TextBoxes.AddTextBox(2, 2, 30, 200);
+	textbox.Text = "Text Box 1";
+	textbox = sheet.TextBoxes.AddTextBox(6, 2, 30, 200);
+	textbox.Text = "Text Box 2";
 
-  //Reads a Text Box
-  ITextBoxShape shape1 = sheet.TextBoxes[0];
-  shape1.Text = "TextBox";
+	//Reads a Text Box
+	ITextBoxShape shape1 = sheet.TextBoxes[0];
+	shape1.Text = "TextBox";
 
-  //Format the control
-  shape1.Fill.ForeColor = Color.Gold;
-  shape1.Fill.BackColor = Color.Black;
-  shape1.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
+	//Format the control
+	shape1.Fill.ForeColor = Color.Gold;
+	shape1.Fill.BackColor = Color.Black;
+	shape1.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
 
-  //Remove a Text Box
-  ITextBoxShape shape2 = sheet.TextBoxes[1];
-  shape2.Remove();
+	//Remove a Text Box
+	ITextBoxShape shape2 = sheet.TextBoxes[1];
+	shape2.Remove();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("TextBox.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/TextBox.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -219,33 +223,37 @@ End Using
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Check%20Box/.NET/Check%20Box/Check%20Box/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a check box with cell link
-  ICheckBoxShape checkBoxRed = sheet.CheckBoxes.AddCheckBox(2, 4, 20, 75);
-  checkBoxRed.Text = "Red";
-  checkBoxRed.CheckState = ExcelCheckState.Unchecked;
-  checkBoxRed.LinkedCell = sheet["B2"];
-  ICheckBoxShape checkBoxBlue = sheet.CheckBoxes.AddCheckBox(4, 4, 20, 75);
-  checkBoxBlue.Text = "Blue";
-  checkBoxBlue.CheckState = ExcelCheckState.Checked;
-  checkBoxBlue.LinkedCell = sheet["B4"];
+	//Create a check box with cell link
+	ICheckBoxShape checkBoxRed = sheet.CheckBoxes.AddCheckBox(2, 4, 20, 75);
+	checkBoxRed.Text = "Red";
+	checkBoxRed.CheckState = ExcelCheckState.Unchecked;
+	checkBoxRed.LinkedCell = sheet["B2"];
+	ICheckBoxShape checkBoxBlue = sheet.CheckBoxes.AddCheckBox(4, 4, 20, 75);
+	checkBoxBlue.Text = "Blue";
+	checkBoxBlue.CheckState = ExcelCheckState.Checked;
+	checkBoxBlue.LinkedCell = sheet["B4"];
 
-  //Read a check box
-  checkBoxRed = sheet.CheckBoxes[0];
-  checkBoxRed.CheckState = ExcelCheckState.Checked;
+	//Read a check box
+	checkBoxRed = sheet.CheckBoxes[0];
+	checkBoxRed.CheckState = ExcelCheckState.Checked;
 
-  //Remove a check box
-  checkBoxBlue = sheet.CheckBoxes[1];
-  checkBoxBlue.Remove();
+	//Remove a check box
+	checkBoxBlue = sheet.CheckBoxes[1];
+	checkBoxBlue.Remove();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("CheckBox.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CheckBox.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -319,44 +327,48 @@ A complete working example to add a check box in C# is present on [this GitHub p
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Combo%20Box/.NET/Combo%20Box/Combo%20Box/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Filling Values
-  sheet["A2"].Text = "RGB colors";
-  sheet["A3"].Text = "Red";
-  sheet["A4"].Text = "Green";
-  sheet["A5"].Text = "Blue";
-  sheet["B5"].Text = "Selected Index";
+	//Filling Values
+	sheet["A2"].Text = "RGB colors";
+	sheet["A3"].Text = "Red";
+	sheet["A4"].Text = "Green";
+	sheet["A5"].Text = "Blue";
+	sheet["B5"].Text = "Selected Index";
 
-  //Create a Combo Box
-  IComboBoxShape comboBox1 = sheet.ComboBoxes.AddComboBox(2, 3, 20, 100);
-  //Assign a value to the Combo Box
-  comboBox1.ListFillRange = sheet["A3:A5"];
-  comboBox1.LinkedCell = sheet["C5"];
-  comboBox1.SelectedIndex = 2;
+	//Create a Combo Box
+	IComboBoxShape comboBox1 = sheet.ComboBoxes.AddComboBox(2, 3, 20, 100);
+	//Assign a value to the Combo Box
+	comboBox1.ListFillRange = sheet["A3:A5"];
+	comboBox1.LinkedCell = sheet["C5"];
+	comboBox1.SelectedIndex = 2;
 
-  //Create a Combo Box
-  IComboBoxShape comboBox2 = sheet.ComboBoxes.AddComboBox(5, 3, 20, 100);
-  //Assign a value to the Combo Box
-  comboBox2.ListFillRange = sheet["A3:A5"];
-  comboBox2.LinkedCell = sheet["C5"];
-  comboBox2.SelectedIndex = 1;
+	//Create a Combo Box
+	IComboBoxShape comboBox2 = sheet.ComboBoxes.AddComboBox(5, 3, 20, 100);
+	//Assign a value to the Combo Box
+	comboBox2.ListFillRange = sheet["A3:A5"];
+	comboBox2.LinkedCell = sheet["C5"];
+	comboBox2.SelectedIndex = 1;
 
-  //Read a Combo Box
-  comboBox1 = sheet.ComboBoxes[0];
-  comboBox1.SelectedIndex = 1;
+	//Read a Combo Box
+	comboBox1 = sheet.ComboBoxes[0];
+	comboBox1.SelectedIndex = 1;
 
-  //Remove a Combo Box
-  comboBox2 = sheet.ComboBoxes[1];
-  comboBox2.Remove();
+	//Remove a Combo Box
+	comboBox2 = sheet.ComboBoxes[1];
+	comboBox2.Remove();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("ComboBox.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ComboBox.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -454,39 +466,43 @@ N> XlsIO provides Option button support only for XLSX format.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Option%20Button/.NET/Option%20Button/Option%20Button/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create an Option Button
-  IOptionButtonShape optionButton1 = sheet.OptionButtons.AddOptionButton(2, 3);
-  //Assign a value to the Option Button
-  optionButton1.Text = "Fed Ex";
+	//Create an Option Button
+	IOptionButtonShape optionButton1 = sheet.OptionButtons.AddOptionButton(2, 3);
+	//Assign a value to the Option Button
+	optionButton1.Text = "Fed Ex";
 
-  //Format the control
-  optionButton1.Fill.FillType = ExcelFillType.SolidColor;
-  optionButton1.Fill.ForeColor = Color.Yellow;
-  //Change the check state
-  optionButton1.CheckState = ExcelCheckState.Checked;
+	//Format the control
+	optionButton1.Fill.FillType = ExcelFillType.SolidColor;
+	optionButton1.Fill.ForeColor = Syncfusion.Drawing.Color.Yellow;
+	//Change the check state
+	optionButton1.CheckState = ExcelCheckState.Checked;
 
-  //Create an Option Button
-  IOptionButtonShape optionButton2 = sheet.OptionButtons.AddOptionButton(5, 3);
-  //Assign a value to the Option Button
-  optionButton2.Text = "DHL";
+	//Create an Option Button
+	IOptionButtonShape optionButton2 = sheet.OptionButtons.AddOptionButton(5, 3);
+	//Assign a value to the Option Button
+	optionButton2.Text = "DHL";
 
-  //Read an Option Button
-  optionButton1 = sheet.OptionButtons[0];
-  optionButton1.CheckState = ExcelCheckState.Unchecked;
+	//Read an Option Button
+	optionButton1 = sheet.OptionButtons[0];
+	optionButton1.CheckState = ExcelCheckState.Unchecked;
 
-  //Remove an Option Button
-  optionButton2 = sheet.OptionButtons[1];
-  optionButton2.Remove();
+	//Remove an Option Button
+	optionButton2 = sheet.OptionButtons[1];
+	optionButton2.Remove();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("OptionButton.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/OptionButton.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -572,29 +588,33 @@ A complete working example to add option button in C# is present on [this GitHub
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Comment/.NET/Comment/Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Adding comments to a cell
-  sheet.Range["A1"].AddComment().Text = "Comments";
+	//Adding comments to a cell
+	sheet.Range["A1"].AddComment().Text = "Comments";
 
-  //Add Rich Text Comments
-  IRange range = sheet.Range["A6"];
-  range.AddComment().RichText.Text = "RichText";
-  IRichTextString richText = range.Comment.RichText;
+	//Add Rich Text Comments
+	IRange range = sheet.Range["A6"];
+	range.AddComment().RichText.Text = "RichText";
+	IRichTextString richText = range.Comment.RichText;
 
-  //Formatting first 4 characters
-  IFont redFont = workbook.CreateFont();
-  redFont.Bold = true;
-  redFont.Color = ExcelKnownColors.Red;
-  richText.SetFont(0, 3, redFont);
+	//Formatting first 4 characters
+	IFont redFont = workbook.CreateFont();
+	redFont.Bold = true;
+	redFont.Color = ExcelKnownColors.Red;
+	richText.SetFont(0, 3, redFont);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Comments.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Comment.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -658,28 +678,32 @@ You can also fill the comments with various types of fills by using the [IFill](
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Fill%20Comment/.NET/Fill%20Comment/Fill%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Adding comments to a cell
-  sheet.Range["A1"].AddComment().Text = "Comments";
+	//Adding comments to a cell
+	sheet.Range["A1"].AddComment().Text = "Comments";
 
-  //Accessing existing comment
-  ICommentShape shape = sheet.Range["A1"].Comment;
+	//Accessing existing comment
+	ICommentShape shape = sheet.Range["A1"].Comment;
 
-  //Format the comment
-  shape.Fill.TwoColorGradient();
-  shape.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
-  shape.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-  shape.Fill.ForeColorIndex = ExcelKnownColors.Red;
-  shape.Fill.BackColorIndex = ExcelKnownColors.White;
+	//Format the comment
+	shape.Fill.TwoColorGradient();
+	shape.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+	shape.Fill.GradientColorType = ExcelGradientColor.TwoColor;
+	shape.Fill.ForeColorIndex = ExcelKnownColors.Red;
+	shape.Fill.BackColorIndex = ExcelKnownColors.White;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("FormatComments.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FillComment.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -741,30 +765,34 @@ Comments in an Excel document can be shown or hidden using [IsVisible](https://h
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Show%20or%20Hide%20Comment/.NET/Show%20or%20Hide%20Comment/Show%20or%20Hide%20Comment/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+ using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding comments in the worksheet
-  worksheet.Range["E5"].AddComment();
-  worksheet.Range["E15"].AddComment();
+	//Adding comments in the worksheet
+	worksheet.Range["E5"].AddComment();
+	worksheet.Range["E15"].AddComment();
 
-  //Adding text in comments
-  worksheet.Comments[0].Text = "Comment1";
-  worksheet.Comments[1].Text = "Comment2";
+	//Adding text in comments
+	worksheet.Comments[0].Text = "Comment1";
+	worksheet.Comments[1].Text = "Comment2";
 
-  //Show comment
-  worksheet.Comments[0].IsVisible = true;
-  //Hide comment
-  worksheet.Comments[1].IsVisible = false;
+	//Show comment
+	worksheet.Comments[0].IsVisible = true;
+	//Hide comment
+	worksheet.Comments[1].IsVisible = false;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ShowOrHideComment.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -826,19 +854,23 @@ Following code snippets illustrates how to remove all the comments in existing w
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Remove%20Comments/.NET/Remove%20Comments/Remove%20Comments/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Comments.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Remove all the comments in worksheet
-  worksheet.Comments.Clear();
+	//Remove all the comments in worksheet
+	worksheet.Comments.Clear();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("RemoveComments.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Excel2013;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveComments.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -886,19 +918,25 @@ The following code explains how to create a threaded comment for a specific cell
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Threaded%20Comments/Add%20Comment/.NET/Add%20Comment/Add%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("CommentsTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Add threaded comment
-  worksheet.Range["H16"].AddThreadedComment("What is the reason for the higher total amount of \"desk\"  in the west region?", "User1", DateTime.Now);
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	IWorksheet worksheet = workbook.Worksheets[0];
+
+	//Add Threaded Comment
+	IThreadedComment threadedComment = worksheet.Range["H16"].AddThreadedComment("What is the reason for the higher total amount of \"desk\"  in the west region?", "User1", DateTime.Now);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AddComment.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -945,20 +983,28 @@ The following code adds a replies to an existing threaded comment using the [Add
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Threaded%20Comments/Reply%20Comment/.NET/Reply%20Comment/Reply%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("CommentsTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Add replies to the threaded comement
-  worksheet.Range["H16"].ThreadedComment.AddReply("The unit cost of desk is higher compared to other items in the west region. As a result, the total amount is elevated.", "User2", DateTime.Now);
-  worksheet.Range["H16"].ThreadedComment.AddReply("Additionally, Wilson sold 31 desks in the west region, which is also a contributing factor to the increased total amount.", "User3", DateTime.Now);
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	IWorksheet worksheet = workbook.Worksheets[0];
+
+	//Access the collection of threaded comments in the worksheet
+	IThreadedComments threadedComments = worksheet.ThreadedComments;
+
+	//Add Reply to the Threaded Comment
+	threadedComments[0].AddReply("The unit cost of desk is higher compared to other items in the west region. As a result, the total amount is elevated.", "User2", DateTime.Now);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ReplyComment.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1011,22 +1057,28 @@ The threaded comment discussion can be marked as resolved by enabling the [IsRes
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Threaded%20Comments/Resolve%20Comment/.NET/Resolve%20Comment/Resolve%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("CommentsTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  
-  //Get the collection of threaded comments in the worksheet
-  IThreadedComments threadedComments = worksheet.ThreadedComments;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Resolve the thread
-  threadedComments[0].IsResolved = true;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	IWorksheet worksheet = workbook.Worksheets[0];
+
+	//Access the collection of threaded comments in the worksheet
+	IThreadedComments threadedComments = worksheet.ThreadedComments;
+
+	//Mark as Resolved
+	threadedComments[0].IsResolved = true;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ResolveComment.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1215,34 +1267,38 @@ The following code example illustrates how to insert and format AutoShapes.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/AutoShapes/.NET/AutoShapes/AutoShapes/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding an AutoShape
-  IShape shape1 = worksheet.Shapes.AddAutoShapes(AutoShapeType.RoundedRectangle, 2, 7, 60, 192);
-  IShape shape2 = worksheet.Shapes.AddAutoShapes(AutoShapeType.CircularArrow, 8, 7, 60, 192);
+	//Adding an AutoShape
+	IShape shape1 = worksheet.Shapes.AddAutoShapes(AutoShapeType.RoundedRectangle, 2, 7, 60, 192);
+	IShape shape2 = worksheet.Shapes.AddAutoShapes(AutoShapeType.CircularArrow, 8, 7, 60, 192);
 
-  //Set the value inside the shape
-  shape1.TextFrame.TextRange.Text = "AutoShape";
+	//Set the value inside the shape
+	shape1.TextFrame.TextRange.Text = "AutoShape";
 
-  //Format the shape
-  shape1.Fill.ForeColorIndex = ExcelKnownColors.Light_blue;
-  shape1.TextFrame.VerticalAlignment = ExcelVerticalAlignment.MiddleCentered;
+	//Format the shape
+	shape1.Fill.ForeColorIndex = ExcelKnownColors.Light_blue;
+	shape1.TextFrame.VerticalAlignment = ExcelVerticalAlignment.MiddleCentered;
 
-  //Read an AutoShape
-  shape1 = worksheet.Shapes[0];
-  shape1.TextFrame.TextRange.Text = "RoundedRectangle";
+	//Read an AutoShape
+	shape1 = worksheet.Shapes[0];
+	shape1.TextFrame.TextRange.Text = "RoundedRectangle";
 
-  //Remove an AutoShape
-  shape2 = worksheet.Shapes[1];
-  shape2.Remove();
+	//Remove an AutoShape
+	shape2 = worksheet.Shapes[1];
+	shape2.Remove();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("AutoShapes.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AutoShapes.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1323,25 +1379,41 @@ The following code example illustrates how to create a group shape.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Group%20Shapes/.NET/Group%20Shapes/Group%20Shapes/Program.cs,180" %}
-ExcelEngine excelEngine = new ExcelEngine();
-IApplication application = excelEngine.Excel;
-FileStream inputStream = new FileStream("GroupShape.xlsx", FileMode.Open, FileAccess.Read);
-IWorkbook workbook = application.Workbooks.Open(inputStream);
-IWorksheet worksheet = workbook.Worksheets[0];
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-IShapes shapes = worksheet.Shapes;
+	IShapes shapes = worksheet.Shapes;
 
-// Select the shapes you want to group
-IShape[] groupItems = new IShape[] { shapes[0], shapes[1] };
+	IShape[] groupItems;
+	for (int i = 0; i < shapes.Count; i++)
+	{
+		if (shapes[i].Name == "Development" || shapes[i].Name == "Production" || shapes[i].Name == "Sales")
+		{
+			groupItems = new IShape[] { shapes[i], shapes[i + 1], shapes[i + 2], shapes[i + 3], shapes[i + 4], shapes[i + 5] };
+			shapes.Group(groupItems);
+			i = -1;
+		}
+	}
 
-// Group the selected shapes
-IGroupShape GroupShape = shapes.Group(groupItems);
+	groupItems = new IShape[] { shapes[0], shapes[1], shapes[2], shapes[3], shapes[4], shapes[5], shapes[6] };
 
-FileStream file = new FileStream("GroupShape.xlsx", FileMode.Create, FileAccess.ReadWrite);
-workbook.SaveAs(file);
-file.Dispose();
-workbook.Close();
-excelEngine.Dispose();
+	// Group the selected shapes
+	shapes.Group(groupItems);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/GroupShapes.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -1393,22 +1465,28 @@ The following code example illustrates how to ungroup the shape.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Ungroup%20Shapes/.NET/Ungroup%20Shapes/Ungroup%20Shapes/Program.cs,180" %}
-ExcelEngine excelEngine = new ExcelEngine();
-IApplication application = excelEngine.Excel;
-FileStream inputStream = new FileStream("GroupShape.xlsx", FileMode.Open, FileAccess.Read);
-IWorkbook workbook = application.Workbooks.Open(inputStream);
-IWorksheet worksheet = workbook.Worksheets[0];
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-IShapes shapes = worksheet.Shapes;
+	IShapes shapes = worksheet.Shapes;
 
-// Ungroup the selected specified group shape
-shapes.Ungroup(shapes[0] as IGroupShape);
+	// Ungroup group shape.
+	shapes.Ungroup(shapes[0] as IGroupShape);
 
-FileStream file = new FileStream("GroupShape.xlsx", FileMode.Create, FileAccess.ReadWrite);
-workbook.SaveAs(file);
-file.Dispose();
-workbook.Close();
-excelEngine.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/UngroupShapes.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -1455,22 +1533,29 @@ The following code example illustrates how to ungroup the group shape and its in
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Ungroup%20All%20Shapes/.NET/Ungroup%20All%20Shapes/Ungroup%20All%20Shapes/Program.cs,180" %}
-ExcelEngine excelEngine = new ExcelEngine();
-IApplication application = excelEngine.Excel;
-FileStream inputStream = new FileStream("GroupShape.xlsx", FileMode.Open, FileAccess.Read);
-IWorkbook workbook = application.Workbooks.Open(inputStream);
-IWorksheet worksheet = workbook.Worksheets[0];
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
 
-IShapes shapes = worksheet.Shapes;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-// Ungroup the selected specified group shape and its inner shapes by specifying isAll property
-shapes.Ungroup(shapes[0] as IGroupShape, true);
+	IShapes shapes = worksheet.Shapes;
 
-FileStream file = new FileStream("GroupShape.xlsx", FileMode.Create, FileAccess.ReadWrite);
-workbook.SaveAs(file);
-file.Dispose();
-workbook.Close();
-excelEngine.Dispose();
+	// Ungroup group shape and its all the inner shapes.
+	shapes.Ungroup(shapes[0] as IGroupShape, true);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/UngroupAllShapes.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

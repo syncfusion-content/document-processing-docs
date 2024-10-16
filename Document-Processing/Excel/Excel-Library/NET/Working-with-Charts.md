@@ -19,25 +19,50 @@ The following code example illustrates how to create a chart through the existin
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Create%20Chart/.NET/Create%20Chart/Create%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a Chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a Chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set Chart Type
-  chart.ChartType = ExcelChartType.Column_Clustered;
+	//Set Chart Type
+	chart.ChartType = ExcelChartType.Column_Clustered;
 
-  //Set data range in the worksheet
-  chart.DataRange = sheet.Range["A1:E5"];
+	//Set data range in the worksheet
+	chart.DataRange = sheet.Range["A1:C6"];
+	chart.IsSeriesInRows = false;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Datalabels
+	IChartSerie serie1 = chart.Series[0];
+	IChartSerie serie2 = chart.Series[1];
+
+	serie1.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+	serie2.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+	serie1.DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Outside;
+	serie2.DataPoints.DefaultDataPoint.DataLabels.Position = ExcelDataLabelPosition.Outside;
+
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	//Positioning the chart in the worksheet
+	chart.TopRow = 8;
+	chart.LeftColumn = 1;
+	chart.BottomRow = 23;
+	chart.RightColumn = 8;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -95,26 +120,40 @@ The following code example illustrate how to create a chart from directly entere
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20from%20Scratch/.NET/Chart%20from%20Scratch/Chart%20from%20Scratch/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  object[] yValues = new object[] { 2000, 1000, 1000 };
-  object[] xValues = new object[] { "Total Income", "Expenses", "Profit" };
+	object[] yValues = new object[] { 2000, 1000, 1000 };
+	object[] xValues = new object[] { "Total Income", "Expenses", "Profit" };
 
-  //Adding series and values
-  IChartShape chart = sheet.Charts.Add();
-  IChartSerie serie = chart.Series.Add(ExcelChartType.Pie);
+	//Adding series and values
+	IChartShape chart = sheet.Charts.Add();
+	IChartSerie serie = chart.Series.Add(ExcelChartType.Pie);
 
-  //Enters the X and Y values directly
-  serie.EnteredDirectlyValues = yValues;
-  serie.EnteredDirectlyCategoryLabels = xValues;
+	//Enters the X and Y values directly
+	serie.EnteredDirectlyValues = yValues;
+	serie.EnteredDirectlyCategoryLabels = xValues;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	//Positioning the chart in the worksheet
+	chart.TopRow = 1;
+	chart.LeftColumn = 1;
+	chart.BottomRow = 16;
+	chart.RightColumn = 8;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -176,54 +215,68 @@ The following code example illustrates how to create a chart through series.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Chart%20through%20Series/.NET/Chart%20through%20Series/Chart%20through%20Series/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Inserts the sample data for the chart
-  sheet.Range["A1"].Text = "Month";
-  sheet.Range["B1"].Text = "Product A";
-  sheet.Range["C1"].Text = "Product B";
+	//Inserts the sample data for the chart
+	sheet.Range["A1"].Text = "Month";
+	sheet.Range["B1"].Text = "Product A";
+	sheet.Range["C1"].Text = "Product B";
 
-  //Months
-  sheet.Range["A2"].Text = "Jan";
-  sheet.Range["A3"].Text = "Feb";
-  sheet.Range["A4"].Text = "Mar";
-  sheet.Range["A5"].Text = "Apr";
-  sheet.Range["A6"].Text = "May";
+	//Months
+	sheet.Range["A2"].Text = "Jan";
+	sheet.Range["A3"].Text = "Feb";
+	sheet.Range["A4"].Text = "Mar";
+	sheet.Range["A5"].Text = "Apr";
+	sheet.Range["A6"].Text = "May";
 
-  //Create a random Data
-  Random r = new Random();
-  for (int i = 2; i <= 6; i++)
-  {
-	for (int j = 2; j <= 3; j++)
+	//Create a random Data
+	Random r = new Random();
+	for (int i = 2; i <= 6; i++)
 	{
-      sheet.Range[i, j].Number = r.Next(0, 500);
+		for (int j = 2; j <= 3; j++)
+		{
+			sheet.Range[i, j].Number = r.Next(0, 500);
+		}
 	}
-  }
-  IChartShape chart = sheet.Charts.Add();
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set chart type
-  chart.ChartType = ExcelChartType.Line;
+	//Set chart type
+	chart.ChartType = ExcelChartType.Line;
 
-  //Set Chart Title
-  chart.ChartTitle = "Product Sales comparison";
+	//Set Chart Title
+	chart.ChartTitle = "Product Sales comparison";
 
-  //Set first serie
-  IChartSerie productA = chart.Series.Add("ProductA");
-  productA.Values = sheet.Range["B2:B6"];
-  productA.CategoryLabels = sheet.Range["A2:A6"];
+	//Set first serie
+	IChartSerie productA = chart.Series.Add("ProductA");
+	productA.Values = sheet.Range["B2:B6"];
+	productA.CategoryLabels = sheet.Range["A2:A6"];
 
-  //Set second serie
-  IChartSerie productB = chart.Series.Add("ProductB");
-  productB.Values = sheet.Range["C2:C6"];
-  productB.CategoryLabels = sheet.Range["A2:A6"];
+	//Set second serie
+	IChartSerie productB = chart.Series.Add("ProductB");
+	productB.Values = sheet.Range["C2:C6"];
+	productB.CategoryLabels = sheet.Range["A2:A6"];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	//Positioning the chart in the worksheet
+	chart.TopRow = 8;
+	chart.LeftColumn = 1;
+	chart.BottomRow = 23;
+	chart.RightColumn = 8;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -349,29 +402,34 @@ The following code example illustrates how to create Sparkline chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Create%20Sparkline/.NET/Create%20Sparkline/Create%20Sparkline/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("spark.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Add SparklineGroups
-  ISparklineGroup sparklineGroup = sheet.SparklineGroups.Add();
+	//Add SparklineGroups
+	ISparklineGroup sparklineGroup = sheet.SparklineGroups.Add();
 
-  //Add SparkLineType
-  sparklineGroup.SparklineType = SparklineType.Line;
-  sparklineGroup.MarkersColor = Color.BlueViolet;
+	//Add SparkLineType
+	sparklineGroup.SparklineType = SparklineType.Line;
+	sparklineGroup.MarkersColor = Color.BlueViolet;
 
-  //Add sparklines
-  ISparklines sparklines = sparklineGroup.Add();
-  IRange dataRange = sheet.Range["B2:F4"];
-  IRange referenceRange = sheet.Range["G2:G4"];
-  sparklines.Add(dataRange, referenceRange);
+	//Add sparklines
+	ISparklines sparklines = sparklineGroup.Add();
+	IRange dataRange = sheet.Range["D6:G17"];
+	IRange referenceRange = sheet.Range["H6:H17"];
+	sparklines.Add(dataRange, referenceRange);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Sparkline.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Sparklines.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -439,24 +497,30 @@ The following code example illustrates how to edit an existing sparkline chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Edit%20Sparkline/.NET/Edit%20Sparkline/Edit%20Sparkline/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sparkline.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  ISparklineGroup sparklineGroup = sheet.SparklineGroups[0];
-  ISparklines sparklines = sparklineGroup[0];
-  IRange dataRange = sheet["A1:C4"];
-  IRange referenceRange = sheet["D1:D4"];
+	//Edit Sparklines
+	ISparklineGroup sparklineGroup = sheet.SparklineGroups[0];
+	ISparklines sparklines = sparklineGroup[0];
+	IRange dataRange = sheet["D6:F17"];
+	IRange referenceRange = sheet["H6:H17"];
 
-  //Edit the existing sparklines data
-  sparklines.RefreshRanges(dataRange, referenceRange);
+	//Edit the existing sparklines data
+	sparklines.RefreshRanges(dataRange, referenceRange);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EditSparklines.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -510,28 +574,33 @@ The following code example illustrates how to remove sparklines.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Remove%20Sparklines/.NET/Remove%20Sparklines/Remove%20Sparklines/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sparkline.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  ISparklineGroup sparklineGroup = sheet.SparklineGroups[0];
-  ISparklines sparklines = sparklineGroup[0];
+	ISparklineGroup sparklineGroup = sheet.SparklineGroups[0];
+	ISparklines sparklines = sparklineGroup[0];
 
-  //Remove sparkline specified by index from the sparklines
-  sparklines.Remove(sparklines[1]);
+	//Remove sparkline specified by index from the sparklines
+	sparklines.Remove(sparklines[1]);
 
-  //Remove sparklines from the sparkline group
-  sparklineGroup.Remove(sparklines);
+	//Remove sparklines from the sparkline group
+	sparklineGroup.Remove(sparklines);
 
-  //Remove sparkline group from the sheet
-  sheet.SparklineGroups.Remove(sparklineGroup);
+	//Remove sparkline group from the sheet
+	sheet.SparklineGroups.Remove(sparklineGroup);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveSparklines.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -601,33 +670,42 @@ The following code example illustrates how to create a Funnel chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Funnel/.NET/Funnel/Funnel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set chart type as Funnel
-  chart.ChartType = ExcelChartType.Funnel;
+	//Set chart type as Funnel
+	chart.ChartType = ExcelChartType.Funnel;
 
-  //Set data range in the worksheet
-  chart.DataRange = sheet.Range["A1:B6"];
+	//Set data range in the worksheet
+	chart.DataRange = sheet.Range["A1:B6"];
 
-  //Set the chart title
-  chart.ChartTitle = "Funnel";
+	//Set the chart title
+	chart.ChartTitle = "Funnel";
 
-  //Formatting the legend and data label option
-  chart.HasLegend = false;
-  chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
-  chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
+	//Formatting the legend and data label option
+	chart.HasLegend = false;
+	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Funnel.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Funnel.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -703,54 +781,63 @@ The following code example illustrates how to create Box and Whisker chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Box%20and%20Whisker/.NET/Box%20and%20Whisker/Box%20and%20Whisker/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+ using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set the chart title
-  chart.ChartTitle = "Test Scores";
+	//Set the chart title
+	chart.ChartTitle = "Test Scores";
 
-  //Set chart type as Box and Whisker
-  chart.ChartType = ExcelChartType.BoxAndWhisker;
+	//Set chart type as Box and Whisker
+	chart.ChartType = ExcelChartType.BoxAndWhisker;
 
-  //Set data range in the worksheet
-  chart.DataRange = sheet["A1:D16"];
+	//Set data range in the worksheet
+	chart.DataRange = sheet["A1:D16"];
 
-  //Box and Whisker settings on first series
-  IChartSerie seriesA = chart.Series[0];
-  seriesA.SerieFormat.ShowInnerPoints = false;
-  seriesA.SerieFormat.ShowOutlierPoints = true;
-  seriesA.SerieFormat.ShowMeanMarkers = true;
-  seriesA.SerieFormat.ShowMeanLine = false;
-  seriesA.SerieFormat.QuartileCalculationType = ExcelQuartileCalculation.ExclusiveMedian;
+	//Box and Whisker settings on first series
+	IChartSerie seriesA = chart.Series[0];
+	seriesA.SerieFormat.ShowInnerPoints = false;
+	seriesA.SerieFormat.ShowOutlierPoints = true;
+	seriesA.SerieFormat.ShowMeanMarkers = true;
+	seriesA.SerieFormat.ShowMeanLine = false;
+	seriesA.SerieFormat.QuartileCalculationType = ExcelQuartileCalculation.ExclusiveMedian;
 
-  //Box and Whisker settings on second series   
-  IChartSerie seriesB = chart.Series[1];
-  seriesB.SerieFormat.ShowInnerPoints = false;
-  seriesB.SerieFormat.ShowOutlierPoints = true;
-  seriesB.SerieFormat.ShowMeanMarkers = true;
-  seriesB.SerieFormat.ShowMeanLine = false;
-  seriesB.SerieFormat.QuartileCalculationType = ExcelQuartileCalculation.InclusiveMedian;
+	//Box and Whisker settings on second series   
+	IChartSerie seriesB = chart.Series[1];
+	seriesB.SerieFormat.ShowInnerPoints = false;
+	seriesB.SerieFormat.ShowOutlierPoints = true;
+	seriesB.SerieFormat.ShowMeanMarkers = true;
+	seriesB.SerieFormat.ShowMeanLine = false;
+	seriesB.SerieFormat.QuartileCalculationType = ExcelQuartileCalculation.InclusiveMedian;
 
-  //Box and Whisker settings on third series   
-  IChartSerie seriesC = chart.Series[2];
-  seriesC.SerieFormat.ShowInnerPoints = false;
-  seriesC.SerieFormat.ShowOutlierPoints = true;
-  seriesC.SerieFormat.ShowMeanMarkers = true;
-  seriesC.SerieFormat.ShowMeanLine = false;
-  seriesC.SerieFormat.QuartileCalculationType = ExcelQuartileCalculation.ExclusiveMedian;
+	//Box and Whisker settings on third series   
+	IChartSerie seriesC = chart.Series[2];
+	seriesC.SerieFormat.ShowInnerPoints = false;
+	seriesC.SerieFormat.ShowOutlierPoints = true;
+	seriesC.SerieFormat.ShowMeanMarkers = true;
+	seriesC.SerieFormat.ShowMeanLine = false;
+	seriesC.SerieFormat.QuartileCalculationType = ExcelQuartileCalculation.ExclusiveMedian;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Box and Whisker.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BoxandWhisker.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -866,40 +953,45 @@ The following code example illustrates how to create Waterfall chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Waterfall/.NET/Waterfall/Waterfall/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream,ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set chart type as Waterfall
-  chart.ChartType = ExcelChartType.WaterFall;
+	//Set chart type as Waterfall
+	chart.ChartType = ExcelChartType.WaterFall;
 
-  //Set data range in the worksheet
-  chart.DataRange = sheet["A2:B8"];
+	//Set data range in the worksheet
+	chart.DataRange = sheet["A2:B8"];
 
-  //Data point settings as total in chart
-  chart.Series[0].DataPoints[3].SetAsTotal = true;
-  chart.Series[0].DataPoints[6].SetAsTotal = true;
+	//Data point settings as total in chart
+	chart.Series[0].DataPoints[3].SetAsTotal = true;
+	chart.Series[0].DataPoints[6].SetAsTotal = true;
 
-  //Showing the connector lines between data points
-  chart.Series[0].SerieFormat.ShowConnectorLines = true;
+	//Showing the connector lines between data points
+	chart.Series[0].SerieFormat.ShowConnectorLines = true;
 
-  //Set the chart title
-  chart.ChartTitle = "Company Profit (in USD)";
+	//Set the chart title
+	chart.ChartTitle = "Company Profit (in USD)";
 
-  //Formatting data label and legend option
-  chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
-  chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
-  chart.Legend.Position = ExcelLegendPosition.Right;
+	//Formatting data label and legend option
+	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
+	chart.Legend.Position = ExcelLegendPosition.Right;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Waterfall.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Waterfall.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -991,39 +1083,44 @@ The following code example illustrates how to create Histogram chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Histogram/.NET/Histogram/Histogram/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set chart type as Histogram       
-  chart.ChartType = ExcelChartType.Histogram;
+	//Set chart type as Histogram       
+	chart.ChartType = ExcelChartType.Histogram;
 
-  //Set data range in the worksheet   
-  chart.DataRange = sheet["A1:A15"];
+	//Set data range in the worksheet   
+	chart.DataRange = sheet["A1:A15"];
 
-  //Category axis bin settings        
-  chart.PrimaryCategoryAxis.BinWidth = 8;
+	//Category axis bin settings        
+	chart.PrimaryCategoryAxis.BinWidth = 8;
 
-  //Gap width settings
-  chart.Series[0].SerieFormat.CommonSerieOptions.GapWidth = 6;
+	//Gap width settings
+	chart.Series[0].SerieFormat.CommonSerieOptions.GapWidth = 6;
 
-  //Set the chart title and axis title
-  chart.ChartTitle = "Height Data";
-  chart.PrimaryValueAxis.Title = "Number of students";
-  chart.PrimaryCategoryAxis.Title = "Height";
+	//Set the chart title and axis title
+	chart.ChartTitle = "Height Data";
+	chart.PrimaryValueAxis.Title = "Number of students";
+	chart.PrimaryCategoryAxis.Title = "Height";
 
-  //Hiding the legend
-  chart.HasLegend = false;
+	//Hiding the legend
+	chart.HasLegend = false;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Histogram.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Histogram.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1113,40 +1210,45 @@ The following code example illustrates how to create Pareto chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Pareto/.NET/Pareto/Pareto/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set chart type as Pareto
-  chart.ChartType = ExcelChartType.Pareto;
+	//Set chart type as Pareto
+	chart.ChartType = ExcelChartType.Pareto;
 
-  //Set data range in the worksheet   
-  chart.DataRange = sheet["A2:B8"];
+	//Set data range in the worksheet   
+	chart.DataRange = sheet["A2:B8"];
 
-  //Set category values as bin values   
-  chart.PrimaryCategoryAxis.IsBinningByCategory = true;
+	//Set category values as bin values   
+	chart.PrimaryCategoryAxis.IsBinningByCategory = true;
 
-  //Formatting Pareto line      
-  chart.Series[0].ParetoLineFormat.LineProperties.ColorIndex = ExcelKnownColors.Bright_green;
+	//Formatting Pareto line      
+	chart.Series[0].ParetoLineFormat.LineProperties.ColorIndex = ExcelKnownColors.Bright_green;
 
-  //Gap width settings
-  chart.Series[0].SerieFormat.CommonSerieOptions.GapWidth = 6;
+	//Gap width settings
+	chart.Series[0].SerieFormat.CommonSerieOptions.GapWidth = 6;
 
-  //Set the chart title
-  chart.ChartTitle = "Expenses";
+	//Set the chart title
+	chart.ChartTitle = "Expenses";
 
-  //Hiding the legend
-  chart.HasLegend = false;
+	//Hiding the legend
+	chart.HasLegend = false;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Pareto.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Pareto.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1239,34 +1341,39 @@ The following code example illustrates how to create Treemap chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Treemap/.NET/Treemap/Treemap/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set chart type as TreeMap
-  chart.ChartType = ExcelChartType.TreeMap;
+	//Set chart type as TreeMap
+	chart.ChartType = ExcelChartType.TreeMap;
 
-  //Set data range in the worksheet
-  chart.DataRange = sheet["A2:C11"];
+	//Set data range in the worksheet
+	chart.DataRange = sheet["A2:C11"];
 
-  //Set the chart title
-  chart.ChartTitle = "Area by countries";
+	//Set the chart title
+	chart.ChartTitle = "Area by countries";
 
-  //Set the Treemap label option
-  chart.Series[0].SerieFormat.TreeMapLabelOption = ExcelTreeMapLabelOption.Banner;
+	//Set the Treemap label option
+	chart.Series[0].SerieFormat.TreeMapLabelOption = ExcelTreeMapLabelOption.Banner;
 
-  //Formatting data labels      
-  chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
+	//Formatting data labels      
+	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Treemap.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Treemap.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1346,34 +1453,39 @@ The following code example illustrates how to create Sunburst chart.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Sunburst/.NET/Sunburst/Sunburst/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2016;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Create a chart
-  IChartShape chart = sheet.Charts.Add();
+	//Create a chart
+	IChartShape chart = sheet.Charts.Add();
 
-  //Set chart type as Sunburst
-  chart.ChartType = ExcelChartType.SunBurst;
+	//Set chart type as Sunburst
+	chart.ChartType = ExcelChartType.SunBurst;
 
-  //Set data range in the worksheet
-  chart.DataRange = sheet["A1:D16"];
+	//Set data range in the worksheet
+	chart.DataRange = sheet["A1:D16"];
 
-  //Set the chart title
-  chart.ChartTitle = "Sales by annual";
+	//Set the chart title
+	chart.ChartTitle = "Sales by annual";
 
-  //Formatting data labels      
-  chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
+	//Formatting data labels      
+	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
 
-  //Hiding the legend
-  chart.HasLegend = false;
+	//Hiding the legend
+	chart.HasLegend = false;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Sunburst.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Sunburst.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1505,20 +1617,25 @@ The following code example illustrates how to remove the chart from the workshee
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Remove%20Chart/.NET/Remove%20Chart/Remove%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
-  IChartShape chart = sheet.Charts[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
+	IChartShape chart = sheet.Charts[0];
 
-  //Remove the chart from the worksheet
-  chart.Remove();
+	//Remove the chart from the worksheet
+	chart.Remove();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

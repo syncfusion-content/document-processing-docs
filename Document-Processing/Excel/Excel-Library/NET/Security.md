@@ -31,23 +31,26 @@ The Following code snippets illustrate how to achieve the above options.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Encrypt-Excel/.NET/Encrypt-Excel/Encrypt-Excel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputExcel.xlsx"), FileMode.Open, FileAccess.ReadWrite);
 
-  //Encrypt the workbook with password
-  workbook.PasswordToOpen = "password";
+	//Open Excel
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Set the password to modify the workbook
-  workbook.SetWriteProtectionPassword("modify_password");
+	//Encrypt workbook with password
+	workbook.PasswordToOpen = "syncfusion";                
+	
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EncryptedWorkbook.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Set the workbook as read-only
-  workbook.ReadOnlyRecommended = true;
-
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Encrypt.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -133,18 +136,26 @@ The following code illustrates how to remove a protection for an encrypted docum
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Decrypt-Excel/.NET/Decrypt-Excel/Decrypt-Excel/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelParseOptions.Default, true, "password");
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/EncryptedWorkbook.xlsx"), FileMode.Open, FileAccess.ReadWrite);
+	
+	//Open encrypted Excel document with password
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelParseOptions.Default, false, "syncfusion");
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Removing a protection
-  workbook.PasswordToOpen = string.Empty;
+	//Decrypt workbook
+	workbook.PasswordToOpen = string.Empty;
+	
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/DecryptedWorkbook.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -188,21 +199,26 @@ XlsIO provides options to protect and unprotect workbook elements with password.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Protect-Workbook/.NET/Protect-Workbook/ProtectWorkbook/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream = new FileStream("ProtectWorkbook.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputWorkbook.xlsx"), FileMode.Open, FileAccess.ReadWrite);
 
-  bool isProtectWindow = true;
-  bool isProtectContent = true;
+	//Open Excel
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Protect Workbook
-  workbook.Protect(isProtectWindow, isProtectContent, "password");
+	//Protect workbook with password
+	workbook.Protect(true, true, "syncfusion");
+	
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ProtectedWorkbook.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -250,18 +266,26 @@ You can unprotect or remove protection for a workbook as shown below.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/UnProtect-Workbook/.NET/UnProtect-Workbook/UnProtectWorkbook/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream = new FileStream("ProtectedWorkbook.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputWorkbook.xlsx"), FileMode.Open, FileAccess.ReadWrite);
 
-  //Unprotect (unlock) Workbook using Password
-  workbook.Unprotect("password");
+	//Open Excel
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//UnProtect workbook with password
+	workbook.Unprotect("syncfusion");
+	
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/UnProtectedWorkbook.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -303,18 +327,26 @@ XlsIO provides support for protecting and unprotecting elements in worksheets by
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Protect-Worksheet/.NET/Protect-Worksheet/ProtectWorksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputData.xlsx"), FileMode.Open, FileAccess.ReadWrite);
 
-  //Protecting the Worksheet by using a Password
-  sheet.Protect("syncfusion", ExcelSheetProtection.All);
+	//Open Excel
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Protect worksheet with multiple options
+	worksheet.Protect("Protect", ExcelSheetProtection.FormattingCells | ExcelSheetProtection.LockedCells | ExcelSheetProtection.UnLockedCells);
+					
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ProtectedSheet.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -414,19 +446,26 @@ You can also unprotect the worksheet by using the [Unprotect](https://help.syncf
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/UnProtect-Worksheet/.NET/UnProtect-Worksheet/UnProtectWorksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/ProtectedWorksheet.xlsx"), FileMode.Open, FileAccess.ReadWrite);
 
-  //Unprotecting (unlocking) the Worksheet using the Password
-  worksheet.Unprotect("syncfusion");
+	//Open Excel
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//UnProtect worksheet with password
+	worksheet.Unprotect("syncfusion");
+	
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/UnProtectedSheet.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -526,19 +565,26 @@ N> By default, cells are locked. Lock or Unlock cell in an unprotected worksheet
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/XlsIO-Excel-Protect-UnProtect/Locked-Cells/.NET/Locked-Cells/LockedCells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputData.xlsx"), FileMode.Open, FileAccess.ReadWrite);
 
-  //Unlocking a cell to edit in worksheet protection mode
-  worksheet.Range["A1"].CellStyle.Locked = false;
+	//Open Excel
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Unlock cell
+	worksheet["A1"].CellStyle.Locked = false;
+	
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/LockedCells.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

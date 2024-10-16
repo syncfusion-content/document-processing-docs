@@ -74,22 +74,28 @@ In a worksheet, formulas can be entered by using the [Formula](https://help.sync
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Set%20Formula/.NET/Set%20Formula/Set%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Setting values to the cells
-  sheet.Range["A1"].Number = 10;
-  sheet.Range["B1"].Number = 10;
+	//Setting values to the cells
+	sheet.Range["A1"].Number = 10;
+	sheet.Range["B1"].Number = 10;
 
-  //Setting formula in the cell
-  sheet.Range["C1"].Formula = "=SUM(A1,B1)";
+	#region Set Formula
+	//Setting formula in the cell
+	sheet.Range["C1"].Formula = "=SUM(A1,B1)";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Formula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Formula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -141,18 +147,28 @@ XlsIO supports using formulas across worksheets. The following code shows how to
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Cross%20Sheet%20Formula/.NET/Cross%20Sheet%20Formula/Cross%20Sheet%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create();
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(2);
+	IWorksheet sheet1 = workbook.Worksheets[0];
+	IWorksheet sheet2 = workbook.Worksheets[1];
 
-  //Setting formula for the range with cross-sheet reference
-  sheet.Range["C2"].Formula = "=SUM(Sheet2!B2,Sheet1!A2)";
+	sheet1.Range["A2"].Value = "20";
+	sheet2.Range["B2"].Value = "10";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Formula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Cross Sheet Formula
+	//Setting formula for the range with cross-sheet reference
+	sheet1.Range["C2"].Formula = "=SUM(Sheet2!B2,Sheet1!A2)";
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Formula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -221,23 +237,36 @@ The following code shows how to access a calculated value.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Calculated%20Value/.NET/Calculated%20Value/Calculated%20Value/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  sheet.EnableSheetCalculations();
+	sheet.Range["A1"].Value = "10";
+	sheet.Range["B1"].Value = "20";
 
-  //Returns the calculated value of a formula using the most current inputs
-  string calculatedValue = sheet["C1"].CalculatedValue;
+	sheet.Range["C1"].Formula = "=A1+B1";
 
-  sheet.DisableSheetCalculations();
+	#region Calculated Value
+	sheet.EnableSheetCalculations();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Formula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Returns the calculated value of a formula using the most current inputs
+	string calculatedValue = sheet["C1"].CalculatedValue;
+	sheet.Range["C3"].Value = "Calculated Value of the formula in C1 calculated through XlsIO is : " + calculatedValue;
+	
+	sheet.DisableSheetCalculations();
+	#endregion
+
+	sheet.Range["C3"].AutofitColumns();
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Formula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -291,43 +320,37 @@ The following code shows how to access calculated values in different types.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Types%20of%20Calculated%20Value/.NET/Types%20of%20Calculated%20Value/Types%20of%20Calculated%20Value/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Previous Value '2'
-  sheet["E1"].Number = 3;
+	sheet.Range["A1"].Value = "10";
+	sheet.Range["B1"].Value = "20";
 
-  sheet.EnableSheetCalculations();
+	sheet.Range["C1"].Formula = "=A1+B1";
 
-  //It has formula 'ISEVEN(E1)'
-  //Returns the calculated value of a formula as Boolean
-  bool B1_PreviousValue = sheet["B1"].FormulaBoolValue;
-  string value = sheet.Range["B1"].CalculatedValue;
-  bool B1_LatestValue = sheet["B1"].FormulaBoolValue;
+	#region Calculated Value
+	sheet.EnableSheetCalculations();
 
-  //It has formula 'TODAY()'
-  //Returns the calculated value of a formula as DateTime
-  DateTime C1_PreviousValue = sheet["C1"].FormulaDateTime;
-  value = sheet.Range["C1"].CalculatedValue;
-  DateTime C1_LatestValue = sheet["C1"].FormulaDateTime;
+	//Returns the calculated value of a formula using the most current inputs
+	string calculatedValue = sheet["C1"].CalculatedValue;
+	sheet.Range["C3"].Value = "Calculated Value of the formula in C1 calculated through XlsIO is : " + calculatedValue;
+	
+	sheet.DisableSheetCalculations();
+	#endregion
 
-  //It has formula '=E1'
-  //Returns the calculated value of a formula as double
-  double D1_PreviousValue = sheet["D1"].FormulaNumberValue;
-  value = sheet.Range["D1"].CalculatedValue;
-  double D1_LatestValue = sheet["D1"].FormulaNumberValue;
+	sheet.Range["C3"].AutofitColumns();
 
-  sheet.DisableSheetCalculations();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Formula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Formula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
 }
-
 //Output
 
 //B1_PreviousValue - true                     	B1_LatestValue - false
@@ -435,17 +458,23 @@ Following code illustrates on how to change the formula separators.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Argument%20Separator/.NET/Argument%20Separator/Argument%20Separator/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
 
-  //Setting the argument separator
-  workbook.SetSeparators(';', ',');
+	#region Set Separators
+	//Setting the argument separator
+	workbook.SetSeparators(';', ',');
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Formula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Formula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -490,24 +519,30 @@ Following code shows how an array of values from [Named Range](https://help.sync
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Formula%20Array/.NET/Formula%20Array/Formula%20Array/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Assign array formula
-  sheet.Range["A1:D1"].FormulaArray = "{1,2,3,4}";
+	#region Formula Array
+	//Assign array formula
+	sheet.Range["A1:D1"].FormulaArray = "{1,2,3,4}";
 
-  //Adding a named range for the range A1 to D1
-  sheet.Names.Add("ArrayRange", sheet.Range["A1:D1"]);
+	//Adding a named range for the range A1 to D1
+	sheet.Names.Add("ArrayRange", sheet.Range["A1:D1"]);
 
-  //Assign formula array with named range
-  sheet.Range["A2:D2"].FormulaArray = "ArrayRange+100";
+	//Assign formula array with named range
+	sheet.Range["A2:D2"].FormulaArray = "ArrayRange+100";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("FormulaArray.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Formula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -566,22 +601,26 @@ The below code snippet shows how to increment the cell references by 1 in the fo
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Incremental%20Formula/.NET/Incremental%20Formula/Incremental%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Enables the incremental formula to updates the reference in cell
-  application.EnableIncrementalFormula = true;
+	//Enables the incremental formula to updates the reference in cell
+	application.EnableIncrementalFormula = true;
 
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Formula are automatically increments by one for the range of cells
-  sheet["A1:A5"].Formula = "=B1+C1";
+	//Formula are automatically increments by one for the range of cells
+	sheet["A1:A5"].Formula = "=B1+C1";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("IncrementalFormula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/IncrementalFormula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -637,18 +676,22 @@ Following code illustrates the insertion of a formula that refers to cell 'A1' i
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/External%20Formula/.NET/External%20Formula/External%20Formula/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Write an external formula value
-  sheet.Range["C1"].Formula = "[One.xlsx]Sheet1!$A$1*5";
+	//Write an external formula value
+	sheet.Range["C1"].Formula = "[C:/Syncfusion/One.xlsx]Sheet1!$A$1*5";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Formula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExternalFormula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -698,35 +741,39 @@ The following code snippet illustrates how to create a calculated column.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Calculated%20Column/.NET/Calculated%20Column/Calculated%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create Table with data in the given range
-  IListObject table = worksheet.ListObjects.Create("Table1", worksheet["A1:D3"]);
+	//Create Table with data in the given range
+	IListObject table = worksheet.ListObjects.Create("Table1", worksheet["A1:D3"]);
 
-  //Create data
-  worksheet[1, 1].Text = "Products";
-  worksheet[1, 2].Text = "Rate";
-  worksheet[1, 3].Text = "Quantity";
-  worksheet[1, 4].Text = "Total";
+	//Create data
+	worksheet[1, 1].Text = "Products";
+	worksheet[1, 2].Text = "Rate";
+	worksheet[1, 3].Text = "Quantity";
+	worksheet[1, 4].Text = "Total";
 
-  worksheet[2, 1].Text = "Item1";
-  worksheet[2, 2].Number = 200;
-  worksheet[2, 3].Number = 2;
+	worksheet[2, 1].Text = "Item1";
+	worksheet[2, 2].Number = 200;
+	worksheet[2, 3].Number = 2;
 
-  worksheet[3, 1].Text = "Item2";
-  worksheet[3, 2].Number = 200;
-  worksheet[3, 3].Number = 2;
+	worksheet[3, 1].Text = "Item2";
+	worksheet[3, 2].Number = 300;
+	worksheet[3, 3].Number = 3;
 
-  //Set table formula
-  table.Columns[3].CalculatedFormula = "SUM(20,[Rate]*[Quantity])";
+	//Set table formula
+	table.Columns[3].CalculatedFormula = "SUM(20,[Rate]*[Quantity])";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CalculatedColumn.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2184,26 +2231,32 @@ Following code example illustrates how to create workbook-level named ranges and
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Named%20Range/.NET/Named%20Range/Named%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
+	sheet.Range["A1"].Value = "10";
+	sheet.Range["B1"].Value = "20";
 
-  //Defining a name in workbook level for the cell A1
-  IName name1 = workbook.Names.Add("One");
-  name1.RefersToRange = sheet.Range["A1"];
+	//Defining a name in workbook level for the cell A1
+	IName name1 = workbook.Names.Add("One");
+	name1.RefersToRange = sheet.Range["A1"];
 
-  //Defining a name in workbook level for the cell B1
-  IName name2 = workbook.Names.Add("Two");
-  name2.RefersToRange = sheet.Range["B1"];
+	//Defining a name in workbook level for the cell B1
+	IName name2 = workbook.Names.Add("Two");
+	name2.RefersToRange = sheet.Range["B1"];
 
-  //Formula using defined names
-  sheet.Range["C1"].Formula = "=SUM(One,Two)";
+	//Formula using defined names
+	sheet.Range["C1"].Formula = "=SUM(One,Two)";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Formula.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Formula.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2308,22 +2361,23 @@ Following code illustrates on how to ignore or set error indicators.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Ignore%20Error/.NET/Ignore%20Error/Ignore%20Error/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Sets warning if number is entered as text.
-  sheet.Range["A2:D2"].IgnoreErrorOptions = ExcelIgnoreError.NumberAsText;
+	//Sets warning if number is entered as text.
+	sheet.Range["A2:D2"].IgnoreErrorOptions = ExcelIgnoreError.NumberAsText;
 
-  //Ignores all the error warnings.
-  sheet.Range["A3"].IgnoreErrorOptions = ExcelIgnoreError.None;
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FormulaAuditing.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("FormulaAuditing.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2391,18 +2445,22 @@ Following code illustrates on how to set calculation mode in XlsIO.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Calculation%20Modes/.NET/Calculation%20Modes/Calculation%20Modes/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Setting calculation mode for a workbook
-  workbook.CalculationOptions.CalculationMode = ExcelCalculationMode.Manual;
+	//Setting calculation mode for a workbook
+	workbook.CalculationOptions.CalculationMode = ExcelCalculationMode.Manual;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("CalculationMode.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CalculationMode.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2477,24 +2535,28 @@ Following code snippet illustrates how to set the Iterations.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Formulas/Iteration/.NET/Iteration/Iteration/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Setting iteration
-  workbook.CalculationOptions.IsIterationEnabled = true;
+	//Setting iteration
+	workbook.CalculationOptions.IsIterationEnabled = true;
 
-  //Number of times to recalculate
-  workbook.CalculationOptions.MaximumIteration = 99;
+	//Number of times to recalculate
+	workbook.CalculationOptions.MaximumIteration = 99;
 
-  //Number of acceptable changes
-  workbook.CalculationOptions.MaximumChange = 40;
+	//Number of acceptable changes
+	workbook.CalculationOptions.MaximumChange = 40;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Iteration.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Iteration.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
