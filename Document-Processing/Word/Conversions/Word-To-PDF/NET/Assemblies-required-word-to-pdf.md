@@ -86,6 +86,6 @@ Platform(s)<br/></th><th>
 Assembly<br/></th></tr></thead>
 <tr>
 <td>
-ASP. NET<br/></td><td>
+ASP.NET<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>

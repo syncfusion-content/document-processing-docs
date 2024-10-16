@@ -121,7 +121,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 
 #### Retired Platforms
 
-The following packages need to be included in your application based on the platform.
+The following NuGet packages need to be included in your application based on the platform.
 
 <table>
 <thead>
@@ -222,7 +222,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 
 #### Retired Platforms
 
-The following packages need to be included in your application based on the platform.
+The following NuGet packages need to be included in your application based on the platform.
 
 <table>
 <thead>
@@ -243,7 +243,7 @@ Package manager console command
 ASP.NET<br/>
 </td>
 <td>
-Syncfusion.OfficeChartToImageConverter.AspNet
+Syncfusion.OfficeChartToImageConverter.AspNet.nupkg
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet

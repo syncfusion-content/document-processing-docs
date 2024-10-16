@@ -84,7 +84,7 @@ To work with PowerPoint Presentations, install the following NuGet packages in y
 
 #### Retired Platforms
 
-The following Packages need to be included in your application based on the platform.
+The following NuGet packages need to be included in your application based on the platform.
 
 <table>
 <tr>
@@ -176,7 +176,7 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 
 #### Retired Platforms
 
-The following Packages need to be included in your application based on the platform.
+The following NuGet packages need to be included in your application based on the platform.
 
 <table>
 <tr>
@@ -277,7 +277,7 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 
 #### Retired Platforms
 
-The following Packages need to be included in your application based on the platform.
+The following NuGet packages need to be included in your application based on the platform.
 
 <table>
 <tr>
@@ -368,7 +368,7 @@ Xamarin
 
 #### Retired Platforms
 
-The following Packages need to be included in your application based on the platform.
+The following NuGet packages need to be included in your application based on the platform.
 
 <table>
 <tr>
@@ -379,7 +379,7 @@ The following Packages need to be included in your application based on the plat
 </tr>
 <tr>
 <td>
-ASP .NET<br/></td>
+ASP.NET<br/></td>
 <td>
 {{'[Syncfusion.OfficeChartToImageConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet)'|markdownify }}
 </td>
