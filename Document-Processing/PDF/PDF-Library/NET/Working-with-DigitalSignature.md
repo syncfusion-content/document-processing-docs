@@ -909,6 +909,283 @@ End Class
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/).
 
+## Adding Timestamps to a PDF Document Using External Signing
+
+We have implemented a solution that generates a timestamp response from a timestamp server URI using the BouncyCastle library.
+
+This example demonstrates how to effectively add timestamps to a PDF document during the external signing process.
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Get the stream from the document
+FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0], null, "Signature");
+//Sets the signature information.
+signature.Bounds = new RectangleF(new PointF(0, 0), new SizeF(100, 30));
+signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
+signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA1;
+
+//Create an external signer.
+IPdfExternalSigner externalSignature = new ExternalSigner("SHA1");
+
+//Add public certificates.
+List<X509Certificate2> certificates = new List<X509Certificate2>();
+certificates.Add(new X509Certificate2(Convert.FromBase64String(PublicCert)));
+signature.AddExternalSigner(externalSignature, certificates, null);
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+stream.Position = 0;
+//Close the document
+loadedDocument.Close(true);
+//Defining the ContentType for pdf file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
+
+//Create the external signer class and sign the document hash.
+class ExternalSigner : IPdfExternalSigner
+{
+    private string _hashAlgorithm;
+    public string HashAlgorithm
+    {
+        get { return _hashAlgorithm; }
+    }
+
+    public ExternalSigner(string hashAlgorithm)
+    {
+        _hashAlgorithm = hashAlgorithm;
+    }
+    public byte[] Sign(byte[] message, out byte[] timeStampResponse)
+    {
+        byte[] signedBytes = null;
+        X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
+        if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
+        {
+            System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
+            signedBytes = rsa.SignData(message, HashAlgorithm);
+        }
+        else if (digitalID.PrivateKey is RSACng)
+        {
+            RSACng rsa = (RSACng)digitalID.PrivateKey;
+            signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+        }
+        timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
+        return signedBytes;
+    }
+    public byte[] GetRFC3161TimeStampToken(byte[] bytes)
+    {
+        SHA1 sha1 = SHA1CryptoServiceProvider.Create();
+        byte[] hash = sha1.ComputeHash(bytes);
+        TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
+        reqGen.SetCertReq(true);
+        TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
+        byte[] tsData = tsReq.GetEncoded();
+        HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp Uri here
+        req.Method = "POST";
+        req.ContentType = "application/timestamp-query";
+        req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
+        req.ContentLength = tsData.Length;
+        Stream reqStream = req.GetRequestStream();
+        reqStream.Write(tsData, 0, tsData.Length);
+        reqStream.Close();
+        HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+        if (res != null)
+        {
+            Stream resStream = new BufferedStream(res.GetResponseStream());
+            TimeStampResponse tsRes = new TimeStampResponse(resStream);
+            return tsRes.TimeStampToken.GetEncoded();
+        }
+        return null;
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load an existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(loadedDocument, loadedDocument.Pages[0], null, "Signature");
+//Sets the signature information.
+signature.Bounds = new RectangleF(new PointF(0, 0), new SizeF(100, 30));
+signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
+signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA1;
+
+//Create an external signer.
+IPdfExternalSigner externalSignature = new ExternalSigner("SHA1");
+
+//Add public certificates.
+List<X509Certificate2> certificates = new List<X509Certificate2>();
+certificates.Add(new X509Certificate2(Convert.FromBase64String(PublicCert)));
+signature.AddExternalSigner(externalSignature, certificates, null);
+
+//Saves the document.
+loadedDocument.Save("Output.pdf");
+//Closes the document.
+loadedDocument.Close(true);
+
+//Create the external signer class and sign the document hash.
+class ExternalSigner : IPdfExternalSigner
+{
+    private string _hashAlgorithm;
+    public string HashAlgorithm
+    {
+        get { return _hashAlgorithm; }
+    }
+
+    public ExternalSigner(string hashAlgorithm)
+    {
+        _hashAlgorithm = hashAlgorithm;
+    }
+    public byte[] Sign(byte[] message, out byte[] timeStampResponse)
+    {
+        byte[] signedBytes = null;
+        X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
+        if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
+        {
+            System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
+            signedBytes = rsa.SignData(message, HashAlgorithm);
+        }
+        else if (digitalID.PrivateKey is RSACng)
+        {
+            RSACng rsa = (RSACng)digitalID.PrivateKey;
+            signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+        }
+        timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
+        return signedBytes;
+    }
+    public byte[] GetRFC3161TimeStampToken(byte[] bytes)
+    {
+        SHA1 sha1 = SHA1CryptoServiceProvider.Create();
+        byte[] hash = sha1.ComputeHash(bytes);
+        TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
+        reqGen.SetCertReq(true);
+        TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
+        byte[] tsData = tsReq.GetEncoded();
+        HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp Uri here
+        req.Method = "POST";
+        req.ContentType = "application/timestamp-query";
+        req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
+        req.ContentLength = tsData.Length;
+        Stream reqStream = req.GetRequestStream();
+        reqStream.Write(tsData, 0, tsData.Length);
+        reqStream.Close();
+        HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+        if (res != null)
+        {
+            Stream resStream = new BufferedStream(res.GetResponseStream());
+            TimeStampResponse tsRes = new TimeStampResponse(resStream);
+            return tsRes.TimeStampToken.GetEncoded();
+        }
+        return null;
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load an existing PDF document.
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+
+'Creates a digital signature. 
+Dim signature As PdfSignature = New PdfSignature(loadedDocument, loadedDocument.Pages(0), Nothing, "Signature")
+'Sets the signature information.
+signature.Bounds = New RectangleF(New PointF(0, 0), New SizeF(100, 30))
+signature.Settings.CryptographicStandard = CryptographicStandard.CADES
+signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA1
+
+'Create an external signer.
+Dim externalSignature As IPdfExternalSigner = New ExternalSigner("SHA1")
+Dim certificates As List(Of X509Certificate2) = New List(Of X509Certificate2)()
+certificates.Add(New X509Certificate2(Convert.FromBase64String(PublicCert)))
+signature.AddExternalSigner(externalSignature, certificates, Nothing)
+
+'Saves the document.
+loadedDocument.Save("Output.pdf")
+'Closes the document.
+loadedDocument.Close(True)
+
+Public Class ExternalSigner
+    Implements IPdfExternalSigner
+
+    Private _hashAlgorithm As String
+
+    Public ReadOnly Property HashAlgorithm() As String Implements IPdfExternalSigner.HashAlgorithm
+        Get
+            Return _hashAlgorithm
+        End Get
+    End Property
+
+    Public Sub New(hashAlgorithm As String)
+        _hashAlgorithm = hashAlgorithm
+    End Sub
+
+    Public Function Sign(message As Byte(), ByRef timeStampResponse As Byte()) As Byte() Implements IPdfExternalSigner.Sign
+        Dim signedBytes As Byte() = Nothing
+        Dim digitalID As New X509Certificate2(Path.GetFullPath("Data/PDF.pfx"), "password123")
+
+        If TypeOf digitalID.PrivateKey Is RSACryptoServiceProvider Then
+            Dim rsa As RSACryptoServiceProvider = CType(digitalID.PrivateKey, RSACryptoServiceProvider)
+            signedBytes = rsa.SignData(message, HashAlgorithm)
+        ElseIf TypeOf digitalID.PrivateKey Is RSACng Then
+            Dim rsa As RSACng = CType(digitalID.PrivateKey, RSACng)
+            signedBytes = rsa.SignData(message, HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1)
+        End If
+
+        timeStampResponse = GetRFC3161TimeStampToken(signedBytes)
+        Return signedBytes
+    End Function
+
+    Public Function GetRFC3161TimeStampToken(bytes As Byte()) As Byte()
+        Dim sha1 As SHA1 = SHA1CryptoServiceProvider.Create()
+        Dim hash As Byte() = sha1.ComputeHash(bytes)
+
+        Dim reqGen As New TimeStampRequestGenerator()
+        reqGen.SetCertReq(True)
+        Dim tsReq As TimeStampRequest = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100))
+
+        Dim tsData As Byte() = tsReq.GetEncoded()
+
+        Dim req As HttpWebRequest = CType(WebRequest.Create("https://rfc3161.ai.moda"), HttpWebRequest) ' Update your timestamp Uri here
+        req.Method = "POST"
+        req.ContentType = "application/timestamp-query"
+        req.Headers.Add("Authorization", "Basic " & Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")))
+        req.ContentLength = tsData.Length
+
+        Using reqStream As Stream = req.GetRequestStream()
+            reqStream.Write(tsData, 0, tsData.Length)
+        End Using
+
+        Dim res As HttpWebResponse = CType(req.GetResponse(), HttpWebResponse)
+
+        If res IsNot Nothing Then
+            Using resStream As Stream = New BufferedStream(res.GetResponseStream())
+                Dim tsRes As New TimeStampResponse(resStream)
+                Return tsRes.TimeStampToken.GetEncoded()
+            End Using
+        End If
+
+        Return Nothing
+    End Function
+End Class
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Create Long Term Validation (LTV) when signing PDF documents externally
 
 You can create a Long Term validation (LTV) when signing PDF documents externally using your private/public certificates.The following code example shows how to create an LTV when signing a PDF document from external signature using [CreateLongTermValidity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_CreateLongTermValidity_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__) method in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
