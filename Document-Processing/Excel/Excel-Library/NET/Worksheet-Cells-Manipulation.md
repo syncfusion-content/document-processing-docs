@@ -23,32 +23,38 @@ N> Here row and column indexes in the range are "one-based".
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range/.NET/Access%20Cell%20or%20Range/Access%20Cell%20or%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Access a range by specifying cell address
-  sheet.Range["A7"].Text = "Accessing a Range by specify cell address ";
+	#region Access Access Cell or Range
+	//Access a range by specifying cell address
+	sheet.Range["A7"].Text = "Accessing a Range by specify cell address ";
 
-  //Access a range by specifying cell row and column index
-  sheet.Range[9, 1].Text = "Accessing a Range by specify cell row and column index ";
+	//Access a range by specifying cell row and column index
+	sheet.Range[9, 1].Text = "Accessing a Range by specify cell row and column index ";
 
-  //Access a Range by specifying using defined name
-  IName name = workbook.Names.Add("Name");
-  name.RefersToRange = sheet.Range["A11"];
-  sheet.Range["Name"].Text = "Accessing a Range by specifying using defined name";
+	//Access a Range by specifying using defined name
+	IName name = workbook.Names.Add("Name");
+	name.RefersToRange = sheet.Range["A11"];
+	sheet.Range["Name"].Text = "Accessing a Range by specifying using defined name";
 
-  //Accessing a Range of cells by specifying cells address
-  sheet.Range["A13:C13"].Text = "Accessing a Range of Cells (Method 1)";
+	//Accessing a Range of cells by specifying cells address
+	sheet.Range["A13:C13"].Text = "Accessing a Range of Cells (Method 1)";
 
-  //Accessing a Range of cells specifying cell row and column index
-  sheet.Range[15, 1, 15, 3].Text = "Accessing a Range of Cells (Method 2)";
+	//Accessing a Range of cells specifying cell row and column index
+	sheet.Range[15, 1, 15, 3].Text = "Accessing a Range of Cells (Method 2)";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Range.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AccessCellorRange.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -128,32 +134,38 @@ N> Here row and column indexes in the range are "one-based".
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Relative%20Range/.NET/Access%20Relative%20Range/Access%20Relative%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Setting range index mode to relative
-  application.RangeIndexerMode = ExcelRangeIndexerMode.Relative;
+	//Setting range index mode to relative
+	application.RangeIndexerMode = ExcelRangeIndexerMode.Relative;
 
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Creating a range by specifying cells address
-  IRange range1 = sheet.Range["B3:D5"];
+	#region Access Reative Range
+	//Creating a range by specifying cells address
+	IRange range1 = sheet.Range["B3:D5"];
 
-  //Accessing a range relatively to the existing range by specifying cell row and column index
-  range1[2, 2].Text = "Returns C4 cell";
-  range1[0, 0].Text = "Returns A2 cell";
+	//Accessing a range relatively to the existing range by specifying cell row and column index
+	range1[2, 2].Text = "Returns C4 cell";
+	range1[0, 0].Text = "Returns A2 cell";
 
-  //Creating a Range of cells specifying cell row and column index
-  IRange range2 = sheet.Range[5, 1, 10, 3];
+	//Creating a range of cells specifying cell row and column index
+	IRange range2 = sheet.Range[5, 1, 10, 3];
 
-  //Accessing a range relatively to the existing range of cells by specifying cell row and column index
-  range2[2, 2, 3, 3].Text = "Returns range of cells B6 to C7";
+	//Accessing a range relatively to the existing range of cells by specifying cell row and column index
+	range2[2, 2, 3, 3].Text = "Returns range of cells B6 to C7";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Range.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AccessRelativeRange.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -225,25 +237,31 @@ The following code example illustrates how to access discontinuous range.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Discontinuous%20Range/.NET/Access%20Discontinuous%20Range/Access%20Discontinuous%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //range1 and range2 are discontinuous ranges
-  IRange range1 = sheet.Range["A1:A2"];
-  IRange range2 = sheet.Range["C1:C2"];
-  IRanges ranges = sheet.CreateRangesCollection();
+	#region Discontinuous Range
+	//range1 and range2 are discontinuous ranges
+	IRange range1 = sheet.Range["A1:A2"];
+	IRange range2 = sheet.Range["C1:C2"];
+	IRanges ranges = sheet.CreateRangesCollection();
 
-  //range1 and range2 are considered as a single range
-  ranges.Add(range1);
-  ranges.Add(range2);
-  ranges.Text = "Test";
+	//range1 and range2 are considered as a single range
+	ranges.Add(range1);
+	ranges.Add(range2);
+	ranges.Text = "Test";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Range.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/DiscontinuousRange.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -301,27 +319,35 @@ The [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusio
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Migrant%20Range/.NET/Access%20Migrant%20Range/Access%20Migrant%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
-  IMigrantRange migrantRange = sheet.MigrantRange;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Writing Data
-  for (int row = 1; row <= migrantRange.LastRow; row++)
-  {
-    for (int column = 1; column <= migrantRange.LastColumn; column++)
-    {
-      //Writing values
-      migrantRange.ResetRowColumn(row, column);
-      migrantRange.Text = "Test";
-    }
-  }
+	#region Access Migrant Range
+	//Getting migrant range of worksheet
+	IMigrantRange migrantRange = worksheet.MigrantRange;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Range.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Writing data into migrant range
+	for (int row = 1; row <= 5; row++)
+	{
+		for (int column = 1; column <= 5; column++)
+		{
+			//Writing values
+			migrantRange.ResetRowColumn(row, column);
+			migrantRange.Text = "Test";
+		}
+	}
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MigrantRange.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -390,22 +416,110 @@ The following code example illustrates how to access the precedent cells from a 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("FormulaExcel.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Getting precedent cells from the worksheet
-  IRange[] results1 = sheet["A1"].GetPrecedents();
+	#region Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] precedents_worksheet = worksheet["A1"].GetPrecedents();
 
-  //Getting precedent cells from the workbook
-  IRange[] results2 = sheet["A1"].GetPrecedents(true);
+	Console.WriteLine("Precedents of Sheet1!A1 in Worksheet are : " );
+	foreach(IRange range in precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Precedents.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+	#region Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] precedents_workbook = worksheet["A1"].GetPrecedents(true);
+
+	Console.WriteLine("Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] dependents_worksheet = worksheet["C1"].GetDependents();
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] dependents_workbook = worksheet["C1"].GetDependents(true);
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] direct_precedents_worksheet = worksheet["A1"].GetDirectPrecedents();
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Worksheet are : ");
+	foreach (IRange range in direct_precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] direct_precedents_workbook = worksheet["A1"].GetDirectPrecedents(true);
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in direct_precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] direct_dependents_worksheet = worksheet["C1"].GetDirectDependents();
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in direct_dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] direct_dependents_workbook = worksheet["C1"].GetDirectDependents(true);
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in direct_dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -453,22 +567,110 @@ The following code example illustrates how to access the dependent cells from a 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("FormulaExcel.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Getting dependent cells from the worksheet
-  IRange[] results1 = sheet["A1"].GetDependents();
+	#region Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] precedents_worksheet = worksheet["A1"].GetPrecedents();
 
-  //Getting dependent cells from the workbook
-  IRange[] results2 = sheet["A1"].GetDependents(true);
+	Console.WriteLine("Precedents of Sheet1!A1 in Worksheet are : " );
+	foreach(IRange range in precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Dependents.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+	#region Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] precedents_workbook = worksheet["A1"].GetPrecedents(true);
+
+	Console.WriteLine("Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] dependents_worksheet = worksheet["C1"].GetDependents();
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] dependents_workbook = worksheet["C1"].GetDependents(true);
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] direct_precedents_worksheet = worksheet["A1"].GetDirectPrecedents();
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Worksheet are : ");
+	foreach (IRange range in direct_precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] direct_precedents_workbook = worksheet["A1"].GetDirectPrecedents(true);
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in direct_precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] direct_dependents_worksheet = worksheet["C1"].GetDirectDependents();
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in direct_dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] direct_dependents_workbook = worksheet["C1"].GetDirectDependents(true);
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in direct_dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -520,22 +722,110 @@ The following code example illustrates how to access the direct precedent cells 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("FormulaExcel.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Getting precedent cells from the worksheet
-  IRange[] results1 = sheet["A1"].GetDirectPrecedents();
+	#region Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] precedents_worksheet = worksheet["A1"].GetPrecedents();
 
-  //Getting precedent cells from the workbook
-  IRange[] results2 = sheet["A1"].GetDirectPrecedents(true);
+	Console.WriteLine("Precedents of Sheet1!A1 in Worksheet are : " );
+	foreach(IRange range in precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("DirectPrecedents.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+	#region Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] precedents_workbook = worksheet["A1"].GetPrecedents(true);
+
+	Console.WriteLine("Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] dependents_worksheet = worksheet["C1"].GetDependents();
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] dependents_workbook = worksheet["C1"].GetDependents(true);
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] direct_precedents_worksheet = worksheet["A1"].GetDirectPrecedents();
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Worksheet are : ");
+	foreach (IRange range in direct_precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] direct_precedents_workbook = worksheet["A1"].GetDirectPrecedents(true);
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in direct_precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] direct_dependents_worksheet = worksheet["C1"].GetDirectDependents();
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in direct_dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] direct_dependents_workbook = worksheet["C1"].GetDirectDependents(true);
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in direct_dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -583,22 +873,110 @@ The following code example illustrates how to access the direct dependent cells 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Precedent%20and%20Dependent%20Cells/.NET/Precedent%20and%20Dependent%20Cells/Precedent%20and%20Dependent%20Cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("FormulaExcel.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Getting dependent cells from the worksheet
-  IRange[] results1 = sheet["A1"].GetDirectDependents();
+	#region Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] precedents_worksheet = worksheet["A1"].GetPrecedents();
 
-  //Getting dependent cells from the workbook
-  IRange[] results2 = sheet["A1"].GetDirectDependents(true);
+	Console.WriteLine("Precedents of Sheet1!A1 in Worksheet are : " );
+	foreach(IRange range in precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("DirectDependents.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+	#region Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] precedents_workbook = worksheet["A1"].GetPrecedents(true);
+
+	Console.WriteLine("Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] dependents_worksheet = worksheet["C1"].GetDependents();
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] dependents_workbook = worksheet["C1"].GetDependents(true);
+
+	Console.WriteLine("Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Worksheet
+	//Getting precedent cells from the worksheet
+	IRange[] direct_precedents_worksheet = worksheet["A1"].GetDirectPrecedents();
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Worksheet are : ");
+	foreach (IRange range in direct_precedents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Precedents in Workbook
+	//Getting precedent cells from the workbook
+	IRange[] direct_precedents_workbook = worksheet["A1"].GetDirectPrecedents(true);
+
+	Console.WriteLine("Direct Precedents of Sheet1!A1 in Workbook are : ");
+	foreach (IRange range in direct_precedents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Worksheet
+	//Getting dependent cells from the worksheet
+	IRange[] direct_dependents_worksheet = worksheet["C1"].GetDirectDependents();
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Worksheet are : ");
+	foreach (IRange range in direct_dependents_worksheet)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	#region Direct Dependents in Workbook
+	//Getting dependent cells from the workbook
+	IRange[] direct_dependents_workbook = worksheet["C1"].GetDirectDependents(true);
+
+	Console.WriteLine("Direct Dependents of Sheet1!C1 in Workbook are : ");
+	foreach (IRange range in direct_dependents_workbook)
+	{
+		Console.WriteLine(range.Address);
+	}
+	Console.WriteLine();
+	#endregion
+
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -674,20 +1052,27 @@ Either entire cell content, or just formatting, contents, or comments can be rem
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Clear%20Content/.NET/Clear%20Content/Clear%20Content/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Clearing a Range “A4” and its formatting
-  worksheet.Range["A4"].Clear(true);
+	#region Clear Content
+	//Clearing content and formatting in C3
+	worksheet.Range["C3"].Clear(true);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("ClearRange.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ClearContent.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

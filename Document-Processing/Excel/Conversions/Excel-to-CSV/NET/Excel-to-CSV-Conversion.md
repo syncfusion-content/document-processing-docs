@@ -25,18 +25,18 @@ The following code example illustrates how to convert an Excel file to CSV.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20CSV/Excel%20to%20CSV/.NET/Excel%20to%20CSV/Excel%20to%20CSV/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Saving the workbook as streams
-  FileStream outputStream = new FileStream("Sample.csv", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream, ",");
+	//Saving the workbook as streams
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Sample.csv"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAs(outputStream, ",");
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -146,14 +146,15 @@ The following code example illustrates how to convert an Excel file to TSV.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20TSV/Excel%20to%20TSV/.NET/Excel%20to%20TSV/Excel%20to%20TSV/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Save the workbook in CSV format with tab(\t) as delimiter
-  FileStream outputStream = new FileStream("Output.tsv", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream, "\t");
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+	//Save the workbook in CSV format with tab(\t) as delimiter
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.tsv"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAs(outputStream, "\t");
 }
 {% endhighlight %}
 
