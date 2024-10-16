@@ -909,9 +909,9 @@ End Class
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/).
 
-## Adding Timestamps to a PDF Document Using External Signing
+## Adding Timestamps to a PDF document using external signing
 
-This section explains how to add a timestamp to a PDF document during the external signing process. We have implemented a solution that generates a timestamp response from a timestamp server URI using the BouncyCastle library. The accepted timestamp token follows the RFC3161 standard.
+This section explains how to add a timestamp to a PDF document during the external signing process. We have implemented a solution that generates a timestamp response from a timestamp server URI using the [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. The accepted timestamp token follows the RFC3161 standard.
 
 N> In this example, we have used the open-source BouncyCastle library. Ensure you review its licensing before including it in your production environment. Alternatively, you can directly use the timestamp token provided by your service provider.
 
