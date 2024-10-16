@@ -24,22 +24,32 @@ The following code illustrates how to convert an Excel workbook to the JSON file
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Workbook%20to%20JSON%20with%20Schema/.NET/Workbook%20to%20JSON%20with%20Schema/Workbook%20to%20JSON%20with%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saves the workbook to a JSON filestream, as schema by default
-  FileStream stream = new FileStream("Excel-Workbook-To-JSON-as-schema-default.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream);
+	#region save as JSON
+	//Saves the workbook to a JSON filestream, as schema by default
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Workbook-To-JSON-as-schema-default.json"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAsJson(outputStream);
 
-  //Saves the workbook to a JSON filestream as schema
-  FileStream stream1 = new FileStream("Excel-Workbook-To-JSON-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream1, true);
+	//Saves the workbook to a JSON filestream as schema
+	FileStream stream1 = new FileStream("Output/Excel-Workbook-To-JSON-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAsJson(stream1, true);
+	#endregion
 
-  stream.Dispose();
-  stream1.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	stream1.Dispose();
+	inputStream.Dispose();
+
+	#region Open JSON 
+	//Open default JSON
+
+	//Open JSON with Schema
+	#endregion
 }
 {% endhighlight %}
 
@@ -166,17 +176,25 @@ The following code illustrates how to convert an Excel workbook to the JSON file
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Workbook%20to%20JSON%20without%20Schema/.NET/Workbook%20to%20JSON%20without%20Schema/Workbook%20to%20JSON%20without%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saves the workbook to a JSON filestream without schema
-  FileStream stream = new FileStream("Excel-Workbook-To-JSON-filestream-without-schema.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream, false);
+	#region save as JSON
+	//Saves the workbook to a JSON file without schema
+	FileStream outputStream = new FileStream("Output/Workbook-To-JSON-without-schema.json", FileMode.Create);
+	workbook.SaveAsJson(outputStream,false);
+	#endregion
 
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
+
+	#region Open JSON 
+	//Open default JSON
+	#endregion
 }
 {% endhighlight %}
 
@@ -288,22 +306,32 @@ The following code illustrates how to convert an Excel worksheet to the JSON fil
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Worksheet%20to%20JSON%20with%20Schema/.NET/Worksheet%20to%20JSON%20with%20Schema/Worksheet%20to%20JSON%20with%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saves the worksheet to a JSON filestream, as schema by default
-  FileStream stream = new FileStream("Excel-Worksheet-To-JSON-filestream-as-schema-default.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream, worksheet);
+	#region save as JSON
+	//Saves the workbook to a JSON filestream, as schema by default
+	FileStream outputStream = new FileStream("Output/Excel-Worksheet-To-JSON-filestream-as-schema-default.json", FileMode.Create);
+	workbook.SaveAsJson(outputStream, worksheet);
 
-  //Saves the worksheet to a JSON filestream as schema
-  FileStream stream1 = new FileStream("Excel-Worksheet-To-JSON-filestream-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream1, worksheet, true);
+	//Saves the workbook to a JSON filestream as schema
+	FileStream stream1 = new FileStream("Output/Excel-Worksheet-To-JSON-filestream-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAsJson(stream1, worksheet, true);
+	#endregion
 
-  stream.Dispose();
-  stream1.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	stream1.Dispose();
+	inputStream.Dispose();
+
+	#region Open JSON 
+	//Open default JSON
+
+	//Open JSON with Schema
+	#endregion
 }
 {% endhighlight %}
 
@@ -433,16 +461,25 @@ The following code illustrates how to convert an Excel worksheet to the JSON fil
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Worksheet%20to%20JSON%20without%20Schema/.NET/Worksheet%20to%20JSON%20without%20Schema/Worksheet%20to%20JSON%20without%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion =ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saves the worksheet to a JSON filestream without schema
-  FileStream stream = new FileStream("Excel-Worksheet-To-JSON-filestream-without-schema.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream, worksheet, false);
-  stream.Dispose();
+	#region save as JSON
+	//Saves the workbook to a JSON filestream, as schema by default
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Worksheet-To-JSON-filestream-without-schema.json"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAsJson(outputStream, worksheet,false);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
+
+	#region Open JSON 
+	//Open default JSON
+	#endregion
 }
 {% endhighlight %}
 
@@ -560,25 +597,35 @@ The following code illustrates how to convert an Excel Custom Range to the JSON 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Range%20to%20JSON%20with%20Schema/.NET/Range%20to%20JSON%20with%20Schema/Range%20to%20JSON%20with%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Custom range
-  IRange range = worksheet.Range["A2:A5"];
+	//Custom range
+	IRange range = worksheet.Range["A1:F100"];
 
-  //Saves the Range to a JSON filestream, as schema by default
-  FileStream stream = new FileStream("Excel-Range-To-JSON-as-schema-default.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream, range);
+	#region save as JSON
+	//Saves the workbook to a JSON filestream, as schema by default
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Range-To-JSON-as-schema-default.json"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAsJson(outputStream, range);
 
-  //Saves the Range to a JSON filestream as schema
-  FileStream stream = new FileStream("Excel-Range-To-JSON-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream, range, true);
+	//Saves the workbook to a JSON filestream as schema
+	FileStream stream1 = new FileStream("Output/Excel-Range-To-JSON-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAsJson(stream1, range, true);
+	#endregion
 
-  stream.Dispose();
-  stream1.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	stream1.Dispose();
+	inputStream.Dispose();
+
+	#region Open JSON 
+	//Open default JSON
+
+	//Open JSON with Schema
+	#endregion
 }
 {% endhighlight %}
 
@@ -717,19 +764,28 @@ The following code illustrates how to convert an Excel Custom Range to the JSON 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Range%20to%20JSON%20without%20Schema/.NET/Range%20to%20JSON%20without%20Schema/Range%20to%20JSON%20without%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Custom range
-  IRange range = worksheet.Range["A2:A5"];
+	//Custom range
+	IRange range = worksheet.Range["A1:F100"];
 
-  //Saves the Range to a JSON filestream without schema
-  FileStream stream = new FileStream("Excel-Range-To-JSON-filestream-without-schema.json", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAsJson(stream, range, false);
-  stream.Dispose();
+	#region save as JSON
+	//Saves the workbook to a JSON filestream, as schema by default
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Excel-Range-To-JSON-filestream-without-schema.json"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAsJson(outputStream, range, false);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
+
+	#region Open JSON 
+	//Open default JSON
+	#endregion
 }
 {% endhighlight %}
 

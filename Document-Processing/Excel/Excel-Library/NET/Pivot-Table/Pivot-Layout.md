@@ -18,26 +18,28 @@ The following code example illustrates how to apply a compact layout to a pivot 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Compact%20Layout/.NET/Compact%20Layout/Compact%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[1];
-    IPivotTable pivotTable = worksheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = worksheet.PivotTables[0];
 
-    //Set PivotTableRowLayout
-    pivotTable.Options.RowLayout = PivotTableRowLayout.Compact;
+	//Set PivotTableRowLayout
+	pivotTable.Options.RowLayout = PivotTableRowLayout.Compact;
 
-    //Set BuiltInStyle
-    pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium9;
+	//Set BuiltInStyle
+	pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium9;
 
-    //Saving the workbook
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -93,26 +95,28 @@ The following code example illustrates how to apply a tabular layout to a pivot 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Tabular%20Layout/.NET/Tabular%20Layout/Tabular%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[1];
-    IPivotTable pivotTable = worksheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = worksheet.PivotTables[0];
 
-    //Set PivotTableRowLayout
-    pivotTable.Options.RowLayout = PivotTableRowLayout.Tabular;
+	//Set PivotTableRowLayout
+	pivotTable.Options.RowLayout = PivotTableRowLayout.Tabular;
 
-    //Set BuiltInStyle
-    pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium9;
+	//Set BuiltInStyle
+	pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium9;
 
-    //Saving the workbook
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -168,26 +172,28 @@ The following code example illustrates how to apply a outline layout to a pivot 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Outline%20Layout/.NET/Outline%20Layout/Outline%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[1];
-    IPivotTable pivotTable = worksheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = worksheet.PivotTables[0];
 
-    //Set PivotTableRowLayout
-    pivotTable.Options.RowLayout = PivotTableRowLayout.Outline;
+	//Set PivotTableRowLayout
+	pivotTable.Options.RowLayout = PivotTableRowLayout.Outline;
 
-    //Set BuiltInStyle
-    pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium9;
+	//Set BuiltInStyle
+	pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium9;
 
-    //Saving the workbook
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -245,25 +251,25 @@ The following code example illustrates how to apply a classic layout to a pivot 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Classic%20Layout/.NET/Classic%20Layout/Classic%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[1];
-  IPivotTable pivotTable = worksheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = worksheet.PivotTables[0];
 
-  //Set PivotTableRowLayout
-  pivotTable.Options.RowLayout = PivotTableRowLayout.Tabular;
+	//Set classic layout
+	(pivotTable.Options as PivotTableOptions).ShowGridDropZone = true;
 
-  //Set classic layout
-  (pivotTable.Options as PivotTableOptions).ShowGridDropZone = true; 
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ClassicLayout.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  string fileName = "PivotTable_ClassicLayout.xlsx";
-
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

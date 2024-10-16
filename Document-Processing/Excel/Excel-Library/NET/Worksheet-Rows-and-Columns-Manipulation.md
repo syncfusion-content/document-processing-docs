@@ -18,21 +18,37 @@ The following code snippet illustrates how to insert rows and columns in a works
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Insert%20Rows%20and%20Columns/.NET/Insert%20Rows%20and%20Columns/Insert%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Insert a row
-  worksheet.InsertRow(3, 1, ExcelInsertOptions.FormatAsBefore);
-  //Inserting a column
-  worksheet.InsertColumn(2, 1, ExcelInsertOptions.FormatAsAfter);
+	#region Insert Rows
+	//Insert a row
+	worksheet.InsertRow(3, 1, ExcelInsertOptions.FormatAsBefore);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Insert multiple rows
+	worksheet.InsertRow(10, 3, ExcelInsertOptions.FormatAsAfter);
+	#endregion
+
+	#region Insert Columns
+	//Insert a column
+	worksheet.InsertColumn(2, 1, ExcelInsertOptions.FormatAsAfter);
+
+	//Insert multiple columns
+	worksheet.InsertColumn(9, 2, ExcelInsertOptions.FormatAsBefore);
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/InsertRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -84,21 +100,37 @@ The following code shows how to delete rows and columns.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Delete%20Rows%20and%20Columns/.NET/Delete%20Rows%20and%20Columns/Delete%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Delete a row
-  worksheet.DeleteRow(3);
-  //Delete a column
-  worksheet.DeleteColumn(2);
+	#region Delete Rows
+	//Delete a row
+	worksheet.DeleteRow(3);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Delete multiple rows
+	worksheet.DeleteRow(10, 3);
+	#endregion
+
+	#region Delete Columns
+	//Delete a column
+	worksheet.DeleteColumn(2);
+
+	//Delete multiple columns
+	worksheet.DeleteColumn(3, 2);
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/DeleteRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -162,21 +194,31 @@ In addition, cells can be deleted by shifting other cells in a row or column tow
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Move%20Rows%20and%20Columns/.NET/Move%20Rows%20and%20Columns/Move%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Shifts cells towards Left after deletion
-  worksheet.Range["A1:E1"].Clear(ExcelMoveDirection.MoveLeft);
-  //Shifts cells toward Up after deletion
-  worksheet.Range["A1:A6"].Clear(ExcelMoveDirection.MoveUp);
+	#region Move Rows
+	//Shifts cells toward Up after deletion
+	worksheet.Range["A4:A8"].Clear(ExcelMoveDirection.MoveUp);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Move Columns
+	//Shifts cells towards Left after deletion
+	worksheet.Range["B1:E1"].Clear(ExcelMoveDirection.MoveLeft);
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MoveRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -227,20 +269,27 @@ Visibility of rows and columns can be set by using the [ShowRow](https://help.sy
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Hide%20Rows%20and%20Columns/.NET/Hide%20Rows%20and%20Columns/Hide%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Hiding the first column and second row
-  worksheet.ShowColumn(1, false);
-  worksheet.ShowRow(2, false);
+	#region Hide Row and Column
+	//Hiding the first column and second row
+	worksheet.ShowColumn(1, false);
+	worksheet.ShowRow(2, false);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -286,27 +335,37 @@ The Essential XlsIO allows to set visibility for a specific range through [ShowR
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Hide%20Range/.NET/Hide%20Range/Hide%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IRange range = worksheet[1, 4];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Hiding the range ‘D1’
-  worksheet.ShowRange(range, false);
-  IRange firstRange = worksheet[1, 1, 3, 3];
-  IRange secondRange = worksheet[5, 5, 7, 7];
-  RangesCollection rangeCollection = new RangesCollection(application, worksheet);
-  rangeCollection.Add(firstRange);
-  rangeCollection.Add(secondRange);
+	IRange range = worksheet.Range["D4"];
 
-  //Hiding a collection of ranges
-  worksheet.ShowRange(rangeCollection, false);
+	#region Hide single cell
+	//Hiding the range ‘D4’
+	worksheet.ShowRange(range, false);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	IRange firstRange = worksheet.Range["F6:I9"];
+	IRange secondRange = worksheet.Range["C15:G20"];
+	RangesCollection rangeCollection = new RangesCollection(application, worksheet);
+	rangeCollection.Add(firstRange);
+	rangeCollection.Add(secondRange);
+
+	#region Hide multiple cells
+	//Hiding a collection of ranges
+	worksheet.ShowRange(rangeCollection, false);
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideRange.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -380,20 +439,37 @@ The following code snippet shows how to resize a single row and column.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Resize%20Rows%20and%20Columns/.NET/Resize%20Rows%20and%20Columns/Resize%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Modifying the row height
-  worksheet.SetRowHeight(2, 25);
-  //Modifying the column width
-  worksheet.SetColumnWidth(1, 20);
+	#region Resize rows
+	//Modifying the row height of one row
+	worksheet.SetRowHeight(2, 100);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Modifying the row height of multiple rows
+	worksheet.Range["A5:A10"].RowHeight = 40;
+	#endregion
+
+	#region Resize columns
+	//Modifying the column width of one column
+	worksheet.SetColumnWidth(2, 50);
+
+	//Modifying the column width of multiple columns
+	worksheet.Range["D1:G1"].ColumnWidth = 5;
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ResizeRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -439,20 +515,37 @@ Multiple rows or columns can be resized and accessed by using the [RowHeight](ht
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Resize%20Rows%20and%20Columns/.NET/Resize%20Rows%20and%20Columns/Resize%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Modifying the row height
-  worksheet.Range["A2:A6"].RowHeight = 25;
-  //Modifying the column width
-  worksheet.Range["A1:D1"].ColumnWidth = 20;
+	#region Resize rows
+	//Modifying the row height of one row
+	worksheet.SetRowHeight(2, 100);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Modifying the row height of multiple rows
+	worksheet.Range["A5:A10"].RowHeight = 40;
+	#endregion
+
+	#region Resize columns
+	//Modifying the column width of one column
+	worksheet.SetColumnWidth(2, 50);
+
+	//Modifying the column width of multiple columns
+	worksheet.Range["D1:G1"].ColumnWidth = 5;
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ResizeRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -507,25 +600,37 @@ The following code snippet shows how a row and a column is re-sized to its conte
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Autofit%20Rows%20and%20Columns/.NET/Autofit%20Rows%20and%20Columns/Autofit%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  worksheet.Range["A1"].Text = "This is a long text";
-  worksheet.Range["A1"].WrapText = true;
+	#region Autofit Rows
+	//Autofit applied to a single row
+	worksheet.AutofitRow(3);
 
-  //AutoFit applied to a single row
-  worksheet.AutofitRow(1);
-  worksheet.Range["A3"].Text = "This is a long text";
+	//Autofit applied to multiple rows
+	worksheet.Range["6:10"].AutofitRows();
+	#endregion
 
-  //AutoFit applied to a single column
-  worksheet.AutofitColumn(3);
+	#region Autofit Columns
+	//Autofit applied to a single column
+	worksheet.AutofitColumn(2);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Autofit applied to multiple columns
+	worksheet.Range["E:G"].AutofitColumns();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AutofitRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -611,27 +716,37 @@ Multiple rows or columns can be auto fitted based on the range specified. This i
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Autofit%20Rows%20and%20Columns/.NET/Autofit%20Rows%20and%20Columns/Autofit%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Assigning text to cells
-  worksheet.Range["A1:D1"].Text = "This is the Long Text";
-  worksheet.Range["A2:A5"].Text = "This is the Long Text using AutoFit Columns and Rows";
-  worksheet.Range["A2:A5"].WrapText = true;
+	#region Autofit Rows
+	//Autofit applied to a single row
+	worksheet.AutofitRow(3);
 
-  //Auto-Fit the range
-  worksheet.Range["A1:C1"].AutofitColumns();
-  worksheet.Range["A2:A5"].AutofitRows();
+	//Autofit applied to multiple rows
+	worksheet.Range["6:10"].AutofitRows();
+	#endregion
 
-  //Auto-fits all the columns used in the worksheet
-  worksheet.UsedRange.AutofitColumns();
+	#region Autofit Columns
+	//Autofit applied to a single column
+	worksheet.AutofitColumn(2);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Autofit applied to multiple columns
+	worksheet.Range["E:G"].AutofitColumns();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AutofitRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -697,28 +812,33 @@ Rows and columns can be grouped or ungrouped to summarize the data, which is giv
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Group%20Rows%20and%20Columns/.NET/Group%20Rows%20and%20Columns/Group%20Rows%20and%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate - ToGroup.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Group Rows
-  worksheet.Range["A1:A3"].Group(ExcelGroupBy.ByRows, true);
-  worksheet.Range["A4:A6"].Group(ExcelGroupBy.ByRows);
-  //Group Columns
-  worksheet.Range["A1:B1"].Group(ExcelGroupBy.ByColumns, false);
-  worksheet.Range["C1:F1"].Group(ExcelGroupBy.ByColumns);
+	#region Group Rows
+	//Group Rows
+	worksheet.Range["A3:A7"].Group(ExcelGroupBy.ByRows, true);
+	worksheet.Range["A11:A16"].Group(ExcelGroupBy.ByRows);
+	#endregion
 
-  //Ungroup Rows
-  worksheet.Range["A1:A3"].Ungroup(ExcelGroupBy.ByRows);
-  //Ungroup Columns
-  worksheet.Range["C1:F1"].Ungroup(ExcelGroupBy.ByColumns);
+	#region Group Columns
+	//Group Columns
+	worksheet.Range["C1:D1"].Group(ExcelGroupBy.ByColumns, false);
+	worksheet.Range["F1:G1"].Group(ExcelGroupBy.ByColumns);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/GroupRowsandColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -780,24 +900,85 @@ Groups can be expanded and collapsed using the [ExpandGroup](https://help.syncfu
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Expand%20or%20Collapse%20Groups/.NET/Expand%20or%20Collapse%20Groups/Expand%20or%20Collapse%20Groups/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using System.IO;
+using Syncfusion.XlsIO;
+namespace Expand_or_Collapse_Groups
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ExpandandCollapse obj = new ExpandandCollapse();
 
-  //Expand group with flag set to expand parent
-  worksheet.Range["A5:A15"].ExpandGroup(ExcelGroupBy.ByRows, ExpandCollapseFlags.ExpandParent);
+            obj.ExpandGroups();
+            obj.CollapseGroups();
+        }
+    }
+    public class ExpandandCollapse
+    {
+        public void ExpandGroups()
+        {
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+                FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate - To Expand.xlsx"), FileMode.Open, FileAccess.Read);
+                IWorkbook workbook = application.Workbooks.Open(inputStream);
+                IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Collapse group
-  worksheet.Range["A5:A15"].CollapseGroup(ExcelGroupBy.ByRows);
+                #region Expand Groups
+                //Expand row groups
+                worksheet.Range["A3:A7"].ExpandGroup(ExcelGroupBy.ByRows, ExpandCollapseFlags.ExpandParent);
+                worksheet.Range["A11:A16"].ExpandGroup(ExcelGroupBy.ByRows);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Book1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+                //Expand column groups
+                worksheet.Range["C1:D1"].ExpandGroup(ExcelGroupBy.ByColumns, ExpandCollapseFlags.ExpandParent);
+                worksheet.Range["F1:G1"].ExpandGroup(ExcelGroupBy.ByColumns);
+                #endregion
+
+                #region Save
+                //Saving the workbook
+                FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExpandGroups.xlsx"), FileMode.Create, FileAccess.Write);
+                workbook.SaveAs(outputStream);
+                #endregion
+
+                //Dispose streams
+                outputStream.Dispose();
+                inputStream.Dispose();
+            }
+        }
+        public void CollapseGroups()
+        {
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+                FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate - To Collapse.xlsx"), FileMode.Open, FileAccess.Read);
+                IWorkbook workbook = application.Workbooks.Open(inputStream);
+                IWorksheet worksheet = workbook.Worksheets[0];
+
+                #region Collapse Groups
+                //Collapse row groups
+                worksheet.Range["A3:A7"].CollapseGroup(ExcelGroupBy.ByRows);
+                worksheet.Range["A11:A16"].CollapseGroup(ExcelGroupBy.ByRows);
+
+                //Collapse column groups
+                worksheet.Range["C1:D1"].CollapseGroup(ExcelGroupBy.ByColumns);
+                worksheet.Range["F1:G1"].CollapseGroup(ExcelGroupBy.ByColumns);
+                #endregion
+
+                #region Save
+                //Saving the workbook
+                FileStream outputStream = new FileStream(Path.GetFullPath("Output/CollapseGroups.xlsx"), FileMode.Create, FileAccess.Write);
+                workbook.SaveAs(outputStream);
+                #endregion
+
+                //Dispose streams
+                outputStream.Dispose();
+                inputStream.Dispose();
+            }
+        }
+    }
 }
 {% endhighlight %}
 

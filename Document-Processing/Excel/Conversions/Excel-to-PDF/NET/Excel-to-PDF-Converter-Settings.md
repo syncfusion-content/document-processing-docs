@@ -20,33 +20,32 @@ The following complete code snippet explains how to enable [AutoDetectComplexScr
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Complex%20Script%20to%20PDF/.NET/Complex%20Script%20to%20PDF/Complex%20Script%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Enable AutoDetectComplexScript property
-  settings.AutoDetectComplexScript = true;
+	//Enable AutoDetectComplexScript property
+	settings.AutoDetectComplexScript = true;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ComplexScriptToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -110,33 +109,32 @@ The following complete code snippet explains how to set [CustomPaperSize](https:
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Custom%20Paper%20Size/.NET/Custom%20Paper%20Size/Custom%20Paper%20Size/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set CustomerPaperSize
-  settings.CustomPaperSize = new SizeF(10, 20);
+	//Set CustomerPaperSize
+	settings.CustomPaperSize = new SizeF(10, 20);
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CustomPaperSize.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -374,33 +372,32 @@ Gridlines will be rendered in the output PDF document, when display style is sel
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Gridlines%20in%20PDF/.NET/Gridlines%20in%20PDF/Gridlines%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set the gridlines display style as Visible
-  settings.DisplayGridLines = GridLinesDisplayStyle.Visible;
+	//Set the gridlines display style as Invisible. Available options are Auto, Visible, Invisible
+	settings.DisplayGridLines = GridLinesDisplayStyle.Visible;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Gridlines.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -464,33 +461,32 @@ The following code snippet explains how to enable **EmbedFonts** property.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Embed%20Fonts%20in%20PDF/.NET/Embed%20Fonts%20in%20PDF/Embed%20Fonts%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Enable EmbedFonts
-  settings.EmbedFonts = true;
+	//Enable EmbedFonts
+	settings.EmbedFonts = true;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EmbedFonts.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -554,33 +550,32 @@ The following code snippet explains how to disable **ExportBookmarks** property.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Bookmarks%20in%20PDF/.NET/Bookmarks%20in%20PDF/Bookmarks%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Disable ExportBookmarks
-  settings.ExportBookmarks = false;
+	//Disable ExportBookmarks
+	settings.ExportBookmarks = false;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BookmarksInPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -644,33 +639,32 @@ The following complete code snippet explains how to disable **ExportDocumentProp
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Document%20Properties%20to%20PDF/.NET/Document%20Properties%20to%20PDF/Document%20Properties%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Disable ExportDocumentProperties
-  settings.ExportDocumentProperties = false;
+	//Disable ExportDocumentProperties
+	settings.ExportDocumentProperties = false;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/DocumentProperties.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -734,33 +728,32 @@ The following complete code snippet explains how to enable **ExportQualityImage*
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Quality%20Image%20in%20PDF/.NET/Quality%20Image%20in%20PDF/Quality%20Image%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Enable ExportQualityImage
-  settings.ExportQualityImage = true;
+	//Enable ExportQualityImage
+	settings.ExportQualityImage = true;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/QualityImageInPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -912,33 +905,35 @@ Document footer will be rendered to PDF document by default. This can be skipped
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Show%20Header%20Footer%20in%20PDF/.NET/Show%20Header%20Footer%20In%20PDF/Show%20Header%20Footer%20In%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Disable ShowFooter
-  settings.HeaderFooterOption.ShowFooter = false;
+	//Disable ShowHeader
+	settings.HeaderFooterOption.ShowHeader = false;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Enable ShowFooter
+	settings.HeaderFooterOption.ShowFooter = true;
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Set the position as '0'
-  stream.Position = 0;
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HeaderFooterInPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1002,33 +997,32 @@ The following code snippet explains this.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Blank%20Page%20to%20PDF/.NET/Blank%20Page%20to%20PDF/Blank%20Page%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Disable IsConvertBlankPage
-  settings.IsConvertBlankPage = false;
+	//Disable IsConvertBlankPage
+	settings.IsConvertBlankPage = false;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BlankPageToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1092,33 +1086,32 @@ The following code snippet explains this.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Blank%20Sheet%20to%20PDF/.NET/Blank%20Sheet%20to%20PDF/Blank%20Sheet%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Disable IsConvertBlankSheet
-  settings.IsConvertBlankSheet = false;
+	//Disable IsConvertBlankSheet
+	settings.IsConvertBlankSheet = false;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/BlankSheetToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1184,33 +1177,32 @@ Selecting **Automatic** under [LayoutOptions](https://help.syncfusion.com/cr/doc
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Automatic%20Layout/.NET/Automatic%20Layout/Automatic%20Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set layout option as Automatic
-  settings.LayoutOptions = LayoutOptions.Automatic;
+	//Set layout option as Automatic
+	settings.LayoutOptions = LayoutOptions.Automatic;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Automatic.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1272,33 +1264,32 @@ Selecting **CustomScaling** under [LayoutOptions](https://help.syncfusion.com/cr
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Custom%20Scaling/.NET/Custom%20Scaling/Custom%20Scaling/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set layout option as CustomScaling
-  settings.LayoutOptions = LayoutOptions.CustomScaling;
+	//Set layout option as CustomScaling
+	settings.LayoutOptions = LayoutOptions.CustomScaling;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CustomScaling.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1360,33 +1351,32 @@ Selecting **FitAllColumnsOnOnePage** under [LayoutOptions](https://help.syncfusi
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fit%20All%20Columns%20On%20One%20Page/.NET/Fit%20All%20Columns%20On%20One%20Page/Fit%20All%20Columns%20On%20One%20Page/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set layout option as FitAllColumnsOnOnePage
-  settings.LayoutOptions = LayoutOptions.FitAllColumnsOnOnePage;
+	//Set layout option as FitAllColumnsOnOnePage
+	settings.LayoutOptions = LayoutOptions.FitAllColumnsOnOnePage;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitAllColumnsOnOnePage.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1448,33 +1438,32 @@ Selecting **FitAllRowsOnOnePage** under [LayoutOptions](https://help.syncfusion.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fit%20All%20Rows%20On%20One%20Page/.NET/Fit%20All%20Rows%20On%20One%20Page/Fit%20All%20Rows%20On%20One%20Page/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set layout option as FitAllRowsOnOnePage
-  settings.LayoutOptions = LayoutOptions.FitAllRowsOnOnePage;
+	//Set layout option as FitAllRowsOnOnePage
+	settings.LayoutOptions = LayoutOptions.FitAllRowsOnOnePage;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitAllRowsOnOnePage.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1536,33 +1525,32 @@ Selecting **FitSheetOnOnePage** under [LayoutOptions](https://help.syncfusion.co
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fit%20Sheet%20On%20One%20Page/.NET/Fit%20Sheet%20On%20One%20Page/Fit%20Sheet%20On%20One%20Page/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set layout option as FitSheetOnOnePage
-  settings.LayoutOptions = LayoutOptions.FitSheetOnOnePage;
+	//Set layout option as FitSheetOnOnePage
+	settings.LayoutOptions = LayoutOptions.FitSheetOnOnePage;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitSheetOnOnePage.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1624,33 +1612,32 @@ Selecting **NoScaling** under [LayoutOptions](https://help.syncfusion.com/cr/doc
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/No%20Scaling/.NET/No%20Scaling/No%20Scaling/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set layout option as NoScaling
-  settings.LayoutOptions = LayoutOptions.NoScaling;
+	//Set layout option as NoScaling
+	settings.LayoutOptions = LayoutOptions.NoScaling;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/NoScaling.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1719,26 +1706,32 @@ The following code illustrates  how to set the [PdfConformanceLevel](https://hel
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/PDF%20Conformance/.NET/PDF%20Conformance/PDF%20Conformance/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream = new FileStream("ExcelToPDF.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIO renderer.
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Initialize XlsIO renderer settings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIO renderer settings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  // Set the conformance for PDF/A-1b conversion
-  settings.PdfConformanceLevel = PdfConformanceLevel.Pdf_A1B;
+	// Set the conformance for PDF/A-1b conversion
+	settings.PdfConformanceLevel = PdfConformanceLevel.Pdf_A1B;
 
-  //Convert Excel document into PDF document 
-  PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  excelStream.Dispose();
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PDFConformance.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1804,39 +1797,39 @@ The following complete code snippet explains how to convert two Excel documents 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Multiple%20Excel%20to%20PDF/.NET/Multiple%20Excel%20to%20PDF/Multiple%20Excel%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream excelStream1 = new FileStream("Sample1.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook1 = application.Workbooks.Open(excelStream1);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream1 = new FileStream(Path.GetFullPath(@"Data/Template1.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook1 = application.Workbooks.Open(inputStream1);
 
-  FileStream excelStream2 = new FileStream("Sample2.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook2 = application.Workbooks.Open(excelStream2);
+	FileStream inputStream2 = new FileStream(Path.GetFullPath(@"Data/Template2.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook2 = application.Workbooks.Open(inputStream2);
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the first Excel document to PDF
-  PdfDocument document = renderer.ConvertToPDF(workbook1);
+	//Convert the first Excel document to PDF
+	PdfDocument document = renderer.ConvertToPDF(workbook1);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set the document as TemplateDocument
-  settings.TemplateDocument = document;
+	//Set the document as TemplateDocument
+	settings.TemplateDocument = document;
 
-  //Convert the second Excel document to PDF with renderer settings
-  PdfDocument newDocument = renderer.ConvertToPDF(workbook2, settings);
+	//Convert the second Excel document to PDF with renderer settings
+	PdfDocument newDocument = renderer.ConvertToPDF(workbook2, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  newDocument.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MultipleExcelToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	newDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream1.Dispose();
+	inputStream2.Dispose();
 }
 {% endhighlight %}
 
@@ -1910,45 +1903,43 @@ By using the [TemplateDocument](https://help.syncfusion.com/cr/document-processi
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Selected%20Worksheets%20to%20PDF/.NET/Selected%20Worksheets%20to%20PDF/Selected%20Worksheets%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Open an Excel document
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	//Open an Excel document
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Get the first worksheet
-  IWorksheet worksheet1 = workbook.Worksheets[0];
+	//Get the first worksheet
+	IWorksheet worksheet1 = workbook.Worksheets[0];
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Initailize PdfDocument and convert first worksheet to PDF
-  PdfDocument document = renderer.ConvertToPDF(worksheet1);
+	//Initailize PdfDocument and convert first worksheet to PDF
+	PdfDocument document = renderer.ConvertToPDF(worksheet1);
 
-  //Initailize ExcelToPdfConverterSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initailize ExcelToPdfConverterSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Set the PdfDocument to TemplateDocument in ExcelToPdfConverterSettings
-  settings.TemplateDocument = document;
+	//Set the PdfDocument to TemplateDocument in ExcelToPdfConverterSettings
+	settings.TemplateDocument = document;
 
-  //Get the third worksheet
-  IWorksheet worksheet3 = workbook.Worksheets[2];
+	//Get the third worksheet
+	IWorksheet worksheet3 = workbook.Worksheets[2];
 
-  //Initailize new PdfDocument and convert third worksheet to PDF with settings
-  PdfDocument newDocument = renderer.ConvertToPDF(worksheet3, settings);
+	//Initailize new PdfDocument and convert third worksheet to PDF with settings
+	PdfDocument newDocument = renderer.ConvertToPDF(worksheet3, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  newDocument.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SelectedSheetsToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	newDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2129,32 +2120,29 @@ The following code snippet explains this.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Empty%20Excel%20to%20PDF/.NET/Empty%20Excel%20to%20PDF/Empty%20Excel%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Create(1);
+	IApplication application = excelEngine.Excel;
+	IWorkbook workbook = application.Workbooks.Create(1);
 
-  //Initialize XlsIORendererSettings
-  XlsIORendererSettings settings = new XlsIORendererSettings();
+	//Initialize XlsIORendererSettings
+	XlsIORendererSettings settings = new XlsIORendererSettings();
 
-  //Enabling ThrowWhenExcelFileIsEmpty throws exception
-  settings.ThrowWhenExcelFileIsEmpty = true;
+	//Enabling ThrowWhenExcelFileIsEmpty throws exception
+	settings.ThrowWhenExcelFileIsEmpty = true;
 
-  //Initialize XlsIORenderer
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert the Excel document to PDF with renderer settings
-  PdfDocument document = renderer.ConvertToPDF(workbook, settings);
+	//Convert the Excel document to PDF with renderer settings
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
 
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();
-  document.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EmptyExcelToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-  //Set the position as '0'
-  stream.Position = 0;
-
-  //Download the PDF file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-  fileStreamResult.FileDownloadName = "Output.pdf";
-  return fileStreamResult;
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -2221,67 +2209,68 @@ In addition, a decision to continue the conversion process can be done here by s
 The following code snippet shows how to capture warnings during Excel-to-PDF conversion.
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Warnings/.NET/Warnings/Warnings/Program.cs,180" %}
+using System.IO;
+using Syncfusion.XlsIO;
 using Syncfusion.XlsIORenderer;
 using Syncfusion.Pdf;
-using Syncfusion.XlsIO;
 
-namespace CaptureWarnings
+namespace Warnings
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      using (ExcelEngine excelEngine = new ExcelEngine())
-      {
-        IApplication application = excelEngine.Excel;
-
-        //Open the Excel document to convert.
-        FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-        IWorkbook workbook = application.Workbooks.Open(excelStream);
-
-        //Initialize warning class to capture warnings during the conversion.
-        Warning warning = new Warning();
-
-        //Initialize XlsIO renderer.
-        XlsIORenderer renderer = new XlsIORenderer();
-
-        //Initialize XlsIO renderer settings.
-        XlsIORendererSettings settings = new XlsIORendererSettings();
-
-        //Set the warning class that is implemented.
-        settings.Warning = warning;
-
-        //Convert Excel document into PDF document.
-        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
-
-        //If conversion process canceled null returned.
-        if(pdfDocument != null)
+        static void Main(string[] args)
         {
-          //Save the PDF file.
-          Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-          pdfDocument.Save(stream);
-          stream.Dispose();
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+                //Open the Excel document to convert.
+                FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+                IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+                //Initialize warning class to capture warnings during the conversion.
+                Warning warning = new Warning();
+
+                //Initialize XlsIO renderer.
+                XlsIORenderer renderer = new XlsIORenderer();
+
+                //Initialize XlsIO renderer settings.
+                XlsIORendererSettings settings = new XlsIORendererSettings();
+
+                //Set the warning class that is implemented.
+                settings.Warning = warning;
+
+                //Convert Excel document into PDF document.
+                PdfDocument pdfDocument = renderer.ConvertToPDF(workbook, settings);
+
+                //If conversion process canceled null returned.
+                if (pdfDocument != null)
+                {
+                    #region Save
+                    //Saving the workbook
+                    FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExceltoPDF.pdf"), FileMode.Create, FileAccess.Write);
+                    pdfDocument.Save(outputStream);
+                    #endregion
+
+                    //Dispose streams
+                    outputStream.Dispose();
+                }
+                inputStream.Dispose();
+            }
         }
-        excelStream.Dispose();              
-      }
     }
-  }
-
-  /// <summary>
-  /// A supporting class that implements IWarning.
-  /// </summary>
-  public class Warning : IWarning
-  {
-    public void ShowWarning(WarningInfo warning)
+    public class Warning : IWarning
     {
-      //Cancel the converion process if the warning type is conditional formatting.
-      if (warning.Type == WarningType.ConditionalFormatting)
-        Cancel = true;
+        public void ShowWarning(WarningInfo warning)
+        {
+            //Cancel the converion process if the warning type is FillPattern.
+            if (warning.Type == WarningType.FillPattern)
+                Cancel = true;
 
-      //To view or log the warning, you can make use of warning.Description.
+            //To view or log the warning, you can make use of warning.Description.
+        }
+        public bool Cancel { get; set; }
     }
-    public bool Cancel { get; set; }
-  }
 }
 {% endhighlight %}
 

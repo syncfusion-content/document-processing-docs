@@ -23,22 +23,26 @@ The following code illustrates how to convert an entire Excel workbook to PDF.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Workbook%20to%20PDF/.NET/Workbook%20to%20PDF/Workbook%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-   IApplication application = excelEngine.Excel;
-   application.DefaultVersion = ExcelVersion.Xlsx;
-   FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-   IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-   //Initialize XlsIO renderer.
-   XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-   //Convert Excel document into PDF document 
-   PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-   Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-   pdfDocument.Save(stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/WorkbookToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
 
-   excelStream.Dispose();
-   stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -96,22 +100,27 @@ The following code shows how to convert a particular worksheet to PDF document.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Worksheet%20to%20PDF/.NET/Worksheet%20to%20PDF/Worksheet%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Initialize XlsIO renderer.
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert Excel document into PDF document 
-  PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
 
-  Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  excelStream.Dispose();
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/WorksheetToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -163,24 +172,36 @@ The following code snippet shows how to create an individual PDF document for ea
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Each%20Worksheet%20to%20PDF/.NET/Each%20Worksheet%20to%20PDF/Each%20Worksheet%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  applicatin.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Initialize XlsIO renderer.
-  XlsIORenderer renderer = new XlsIORenderer();
-  PdfDocument pdfDocument = new PdfDocument();   
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
+	PdfDocument pdfDocument = new PdfDocument();
 
-  foreach (IWorksheet sheet in workbook.Worksheets)
-  {
-    pdfDocument = renderer.ConvertToPDF(sheet);
-    //Save the PDF file
-    Stream stream = new FileStream(sheet.Name+".pdf", FileMode.Create, FileAccess.ReadWrite);
-    pdfDocument.Save(stream);
-    stream.Dispose();
-  }
-  excelStream.Dispose();
+	foreach (IWorksheet sheet in workbook.Worksheets)
+	{
+		pdfDocument = renderer.ConvertToPDF(sheet);
+
+		#region Save
+		//Saving the workbook
+		FileStream outputStream = new FileStream(sheet.Name +".pdf", FileMode.Create, FileAccess.Write);
+		pdfDocument.Save(outputStream);
+		#endregion
+
+		//Dispose streams
+		outputStream.Dispose();
+		inputStream.Dispose();
+
+		System.Diagnostics.Process process = new System.Diagnostics.Process();
+		process.StartInfo = new System.Diagnostics.ProcessStartInfo(sheet.Name + ".pdf")
+		{
+			UseShellExecute = true
+		};
+		process.Start();
+	}
 }
 {% endhighlight %}
 
@@ -239,21 +260,29 @@ The following code illustrates how to convert an Excel with chart to PDF documen
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Chart%20to%20PDF/.NET/Chart%20to%20PDF/Chart%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Initialize XlsIO renderer.
-  XlsIORenderer renderer = new XlsIORenderer();
+	IChart chart = worksheet.Charts[0];
 
-  FileStream excelStream = new FileStream("chart.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();                
 
-  //Convert Excel document with charts into PDF document 
-  PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
-  Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  excelStream.Dispose();
-  stream.Dispose();
+	//Convert Excel document with charts into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(chart);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ChartToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -316,25 +345,30 @@ Comments (notes) will be rendered in the output PDF document as displayed in the
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Comments%20in%20Place%20to%20PDF/.NET/Comments%20in%20Place%20to%20PDF/Comments%20in%20Place%20to%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Set print location to comments
-  worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintInPlace;
+	//Set print location to comments
+	worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintInPlace;
 
-  //Initialize XlsIO renderer.
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert Excel document into PDF document 
-  PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
 
-  Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  excelStream.Dispose();
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CommentsInPlaceToPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -404,24 +438,30 @@ Comments (notes) will be rendered in the output PDF document at the end of the e
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Comments%20to%20PDF%20at%20End/.NET/Comments%20to%20PDF%20at%20End/Comments%20to%20PDF%20at%20End/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Set print location to comments
-  worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintSheetEnd;
+	//Set print location to comments
+	worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintSheetEnd;
 
-  //Initialize XlsIO renderer.
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert Excel document into PDF document 
-  PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
-  Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  excelStream.Dispose();
-  stream.Dispose();
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CommentsToPDFAtEnd.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -492,24 +532,30 @@ Comments (notes) will not be displayed in the output PDF document, if the **Prin
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/No%20Comments%20in%20PDF/.NET/No%20Comments%20in%20PDF/No%20Comments%20in%20PDF/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream excelStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(excelStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Set print location to comments
-  worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintNoComments;
+	//Set print location to comments
+	worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintNoComments;
 
-  //Initialize XlsIO renderer.
-  XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-  //Convert Excel document into PDF document 
-  PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
-  Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-  pdfDocument.Save(stream);
-  excelStream.Dispose();
-  stream.Dispose();
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(worksheet);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/NoCommentsInPDF.pdf"), FileMode.Create, FileAccess.Write);
+	pdfDocument.Save(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1159,28 +1205,30 @@ The following code example demonstrates how to initialize a default fallback fon
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Initialize%20default%20fallback%20fonts/.NET/Initialize_default-fallback_fonts/Initialize_default-fallback_fonts/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
-    application.XlsIORenderer = new XlsIORenderer();
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(fileStream);
 
-    //Initialize fallBack font
-    application.FallbackFonts.InitializeDefault();
+	//Initialize XlsIORenderer
+	application.XlsIORenderer = new XlsIORenderer();
 
-    //Initialize XlsIO renderer.
-    XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize fallBack font
+	application.FallbackFonts.InitializeDefault();
 
-    //Convert Excel document into PDF document 
-    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-    //Save the converted PDF document to stream.
-    FileStream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-    pdfDocument.Save(stream);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-    //Close and Dispose
-    workbook.Close();
-    stream.Dispose();
+	//Save the converted PDF document to stream.
+	FileStream stream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite);
+	pdfDocument.Save(stream);
+
+	//Close and Dispose
+	workbook.Close();
+	stream.Dispose();
 }
 {% endhighlight %}
 
@@ -1238,37 +1286,39 @@ The following code example demonstrates how a user can add fallback fonts based 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fallback%20fonts%20based%20on%20script%20type/.NET/Fallback_fonts_based_on_scripttype/Fallback_fonts_based_on_scripttype/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
-    application.XlsIORenderer = new XlsIORenderer();
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(fileStream);
 
-    //Initialize fallBack font
-    application.FallbackFonts.InitializeDefault();
+	//Initialize XlsIORenderer
+	application.XlsIORenderer = new XlsIORenderer();
 
-    //Adds fallback font for "Arabic" script type.
-    application.FallbackFonts.Add(ScriptType.Arabic, "Arial, Times New Roman");
-    //Adds fallback font for "Hebrew" script type.
-    application.FallbackFonts.Add(ScriptType.Hebrew, "Arial, Courier New");
-    //Adds fallback font for "Thai" script type.
-    application.FallbackFonts.Add(ScriptType.Thai, "Tahoma, Microsoft Sans Serif");
-    //Adds fallback font for "Korean" script type.
-    application.FallbackFonts.Add(ScriptType.Korean, "Malgun Gothic, Batang");
+	//Initialize fallBack font
+	application.FallbackFonts.InitializeDefault();
 
-    //Initialize XlsIO renderer.
-    XlsIORenderer renderer = new XlsIORenderer();
+	//Adds fallback font for "Arabic" script type.
+	application.FallbackFonts.Add(ScriptType.Arabic, "Arial, Times New Roman");
+	//Adds fallback font for "Hebrew" script type.
+	application.FallbackFonts.Add(ScriptType.Hebrew, "Arial, Courier New");
+	//Adds fallback font for "Thai" script type.
+	application.FallbackFonts.Add(ScriptType.Thai, "Tahoma, Microsoft Sans Serif");
+	//Adds fallback font for "Korean" script type.
+	application.FallbackFonts.Add(ScriptType.Korean, "Malgun Gothic, Batang");
 
-    //Convert Excel document into PDF document 
-    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-    //Save the converted PDF document to stream.
-    FileStream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-    pdfDocument.Save(stream);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-    //Close and Dispose
-    workbook.Close();
-    stream.Dispose();
+	//Save the converted PDF document to stream.
+	FileStream stream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite);
+	pdfDocument.Save(stream);
+
+	//Close and Dispose
+	workbook.Close();
+	stream.Dispose();
 }
 {% endhighlight %}
 
@@ -1346,39 +1396,39 @@ The following code example demonstrates how users can add fallback fonts by usin
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Fallback%20fonts%20for%20unicode%20range/.NET/Fallback_fonts_for_unicode_range/Fallback_fonts_for_unicode_range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(fileStream);
 
-    //Initialize XlsIORenderer
-    application.XlsIORenderer = new XlsIORenderer();
+	//Initialize XlsIORenderer
+	application.XlsIORenderer = new XlsIORenderer();
 
-    //Initialize fallBack font
-    application.FallbackFonts.InitializeDefault();
+	//Initialize fallBack font
+	application.FallbackFonts.InitializeDefault();
 
-    //Adds fallback font for "Arabic" specific unicode range.
-    application.FallbackFonts.Add(new FallbackFont(0x0600,0x06ff,"Arial"));
-    //Adds fallback font for "Hebrew" specific unicode range.
-    application.FallbackFonts.Add(new FallbackFont(0x0590, 0x05ff, "Times New Roman"));
-    //Adds fallback font for "Thai" specific unicode range.
-    application.FallbackFonts.Add(new FallbackFont(0x0E00, 0x0E7F, "Tahoma"));
-    //Adds fallback font for "Korean" specific unicode range.
-    application.FallbackFonts.Add(new FallbackFont(0xAC00, 0xD7A3, "Malgun Gothic"));
+	//Adds fallback font for "Arabic" specific unicode range.
+	application.FallbackFonts.Add(new FallbackFont(0x0600,0x06ff,"Arial"));
+	//Adds fallback font for "Hebrew" specific unicode range.
+	application.FallbackFonts.Add(new FallbackFont(0x0590, 0x05ff, "Times New Roman"));
+	//Adds fallback font for "Thai" specific unicode range.
+	application.FallbackFonts.Add(new FallbackFont(0x0E00, 0x0E7F, "Tahoma"));
+	//Adds fallback font for "Korean" specific unicode range.
+	application.FallbackFonts.Add(new FallbackFont(0xAC00, 0xD7A3, "Malgun Gothic"));
 
-    //Initialize XlsIO renderer.
-    XlsIORenderer renderer = new XlsIORenderer();
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-    //Convert Excel document into PDF document 
-    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-    //Excel to PDF
-    Stream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-    pdfDocument.Save(stream);
+	//Excel to PDF
+	Stream stream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite);
+	pdfDocument.Save(stream);
 
-    //Close and Dispose
-    workbook.Close();
-    stream.Dispose();
+	//Close and Dispose
+	workbook.Close();
+	stream.Dispose();
 }
 {% endhighlight %}
 
@@ -1454,36 +1504,38 @@ The following code example demonstrates how user can modify or customize the exi
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Modify%20the%20existing%20fallback%20fonts/.NET/Modify_the_existing_fallback_fonts/Modify_the_existing_fallback_fonts/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(fileStream);
-    application.XlsIORenderer = new XlsIORenderer();
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(fileStream);
 
-    //Initialize fallBack font
-    application.FallbackFonts.InitializeDefault();
+	//Initialize XlsIORenderer
+	application.XlsIORenderer = new XlsIORenderer();
 
-    FallbackFonts fallbackFonts = application.FallbackFonts;
-    foreach(FallbackFont fallbackFont in fallbackFonts)
-    {
-        //Customize a default fallback font name as "David" for the Hebrew script.
-        if (fallbackFont.ScriptType == ScriptType.Hebrew)
-            fallbackFont.FontNames = "David";
-    }
+	//Initialize fallBack font
+	application.FallbackFonts.InitializeDefault();
 
-    //Initialize XlsIO renderer.
-    XlsIORenderer renderer = new XlsIORenderer();
+	FallbackFonts fallbackFonts = application.FallbackFonts;
+	foreach(FallbackFont fallbackFont in fallbackFonts)
+	{
+		//Customize a default fallback font name as "David" for the Hebrew script.
+		if (fallbackFont.ScriptType == ScriptType.Hebrew)
+			fallbackFont.FontNames = "David";
+	}
 
-    //Convert Excel document into PDF document 
-    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+	//Initialize XlsIO renderer.
+	XlsIORenderer renderer = new XlsIORenderer();
 
-    //Save the converted PDF document to stream
-    FileStream stream = new FileStream("ExcelToPDF.pdf", FileMode.Create, FileAccess.ReadWrite);
-    pdfDocument.Save(stream);
+	//Convert Excel document into PDF document 
+	PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-    //Close and Dispose
-    workbook.Close();
-    stream.Dispose();
+	//Save the PDF document to stream
+	FileStream stream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite);
+	pdfDocument.Save(stream);
+
+	//Close and Dispose
+	workbook.Close();
+	stream.Dispose();
 }
 {% endhighlight %}
 

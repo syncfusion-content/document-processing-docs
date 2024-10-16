@@ -50,28 +50,31 @@ The following code illustrate how to use Document module in Excel document.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Create%20Macro%20as%20Document/.NET/Create%20Macro%20as%20Document/Create%20Macro%20as%20Document/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  // Creating new workbook
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Creating Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Creating Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	// Accessing sheet module
+	IVbaModule vbaModule = vbaModules[sheet.CodeName];
 
-  // Accessing sheet module
-  IVbaModule vbaModule = vbaModules[sheet.CodeName];
+	//Adding vba code to the module
+	vbaModule.Code = "Sub Auto_Open\n MsgBox \" Workbook Opened \" \n End Sub";
 
-  //Adding vba code to the module
-  vbaModule.Code = "Sub Auto_Open\n MsgBox \" Workbook Opened \" \n End Sub";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MacroAsDocument.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -172,28 +175,31 @@ The following code illustrate how to create a macro using StdModule in Excel doc
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Create%20Macro%20as%20StdModule/.NET/Create%20Macro%20as%20StdModule/Create%20Macro%20as%20StdModule/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  // Creating new workbook
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Creating Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Creating Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Adding a vba module
+	IVbaModule vbaModule = vbaModules.Add("StdModule", VbaModuleType.StdModule);
 
-  //Adding a vba module
-  IVbaModule vbaModule = vbaModules.Add("StdModule", VbaModuleType.StdModule);
+	//Adding vba code to the module
+	vbaModule.Code = "Sub Auto_Open\n MsgBox \"Macro Added\" \n End Sub";
 
-  //Adding vba code to the module
-  vbaModule.Code = "Sub Auto_Open\n MsgBox \"Macro Added\" \n End Sub";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MacroAsStdModule.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -294,32 +300,35 @@ The following code illustrate how to use class module to run a macro with anothe
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Create%20Macro%20as%20Class/.NET/Create%20Macro%20as%20Class/Create%20Macro%20as%20Class/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  // Creating new workbook
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Creating Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Creating Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Adding a class module
+	IVbaModule clsModule = vbaModules.Add("Test", VbaModuleType.ClassModule);
+	clsModule.Code = "Public Sub Create()\n MsgBox \"Created a class module\" \n End Sub";
 
-  //Adding a class module
-  IVbaModule clsModule = vbaModules.Add("Test", VbaModuleType.ClassModule);
-  clsModule.Code = "Public Sub Create()\n MsgBox \"Created a class module\" \n End Sub";
+	//Adding a vba module
+	IVbaModule vbaModule = vbaModules.Add("Module1", VbaModuleType.StdModule);
 
-  //Adding a vba module
-  IVbaModule vbaModule = vbaModules.Add("Module1", VbaModuleType.StdModule);
+	//Using class in StdModule
+	vbaModule.Code = "Sub Auto_Open()\n Dim obj As New test \n obj.Create \n End Sub";
 
-  //Using class in StdModule
-  vbaModule.Code = "Sub Auto_Open()\n Dim obj As New test \n obj.Create \n End Sub";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MacroAsClass.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -425,40 +434,44 @@ The following code illustrate how to copy a form from another workbook to new wo
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Create%20Macro%20as%20MSForm/.NET/Create%20Macro%20as%20MSForm/Create%20Macro%20as%20MSForm/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  // Creating new workbook
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Creating Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Creating Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Opening form module existing workbook
+	FileStream input = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.ReadWrite);
+	IWorkbook newBook = application.Workbooks.Open(input);
 
-  //Opening form module existing workbook
-  FileStream input = new FileStream("Test.xls", FileMode.Open, FileAccess.ReadWrite);
-  IWorkbook newBook = application.Workbooks.Open(input);
+	IVbaProject newProject = newBook.VbaProject;
 
-  IVbaProject newProject = newBook.VbaProject;
+	//Accessing existing form module
+	IVbaModule form = newProject.Modules["UserForm1"];
 
-  //Accessing existing form module
-  IVbaModule form = newProject.Modules["UserForm1"];
+	//Adding a form module in new workbook
+	IVbaModule formModule = project.Modules.Add(form.Name, VbaModuleType.MsForm);
 
-  //Adding a form module in new workbook
-  IVbaModule formModule = project.Modules.Add(form.Name, VbaModuleType.MsForm);
+	//Copying the form code behind
+	formModule.Code = form.Code;
 
-  //Copying the form code behind
-  formModule.Code = form.Code;
+	//Copying the designer of the form
+	formModule.DesignerStorage = form.DesignerStorage;
 
-  //Copying the designer of the form
-  formModule.DesignerStorage = form.DesignerStorage;
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MacroAsMSForm.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
+	//Dispose streams
+	input.Dispose();
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -550,35 +563,38 @@ The following code illustrate how to assign macros to shapes in Excel document.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Shapes%20with%20Macro/.NET/Shapes%20with%20Macro/Shapes%20with%20Macro/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  // Creating new workbook
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Creating Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Creating Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Adding a vba module
+	IVbaModule vbaModule = vbaModules.Add("StdModule", VbaModuleType.StdModule);
 
-  //Adding a vba module
-  IVbaModule vbaModule = vbaModules.Add("StdModule", VbaModuleType.StdModule);
+	//Adding vba code to the module
+	vbaModule.Code = "Sub Invoke()\n MsgBox \"Macro Added\" \n End Sub";
 
-  //Adding vba code to the module
-  vbaModule.Code = "Sub Invoke()\n MsgBox \"Macro Added\" \n End Sub";
+	//Adding a auto shape
+	IShape shape = sheet.Shapes.AddAutoShapes(AutoShapeType.Rectangle, 1, 2, 60, 70);
+	shape.Name = "Shape1";
 
-  //Adding a auto shape
-  IShape shape = sheet.Shapes.AddAutoShapes(AutoShapeType.Rectangle, 1, 2, 60, 70);
-  shape.Name = "Shape1";
+	//Assigning a Macro to shape
+	shape.OnAction = "StdModule.Invoke";
 
-  //Assigning a Macro to shape
-  shape.OnAction = "StdModule.Invoke";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ShapesWithMacro.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -666,29 +682,31 @@ The following code illustrate how to save macro-enabled documents into stream.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Save%20as%20Stream/.NET/Save%20as%20Stream/Save%20as%20Stream/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  // Creating new workbook
-  IWorkbook workbook = application.Workbooks.Create(1);
-  workbook.Version = ExcelVersion.Excel2016;
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Creating Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Creating Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Adding a vba module
+	IVbaModule vbaModule = vbaModules.Add("StdModule", VbaModuleType.StdModule);
 
-  //Adding a vba module
-  IVbaModule vbaModule = vbaModules.Add("StdModule", VbaModuleType.StdModule);
+	//Adding vba code to the module
+	vbaModule.Code = "Sub Auto_Open\n MsgBox \"Macro Added\" \n End Sub";
 
-  //Adding vba code to the module
-  vbaModule.Code = "Sub Auto_Open\n MsgBox \"Macro Added\" \n End Sub";
+	#region Save
+	//Saving the workbook Macro in XLTM format
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SaveAsStream.xltm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacroTemplate);
+	#endregion
 
-  //Saving as Macro in XLTM format
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream, ExcelSaveType.SaveAsMacroTemplate);
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -759,33 +777,35 @@ The following code illustrate how to edit existing macro in Excel document.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Edit%20Macro/.NET/Edit%20Macro/Edit%20Macro/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Opening form module existing workbook
-  FileStream input = new FileStream("Test.xls", FileMode.Open, FileAccess.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(input);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Accessing Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Accessing Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Access a Vba Module
+	IVbaModule vbaModule = vbaModules["Module1"];
 
-  //Access a Vba Module
-  IVbaModule vbaModule = vbaModules["Module1"];
+	//Edit the macro
+	vbaModule.Name = "Module1";
 
-  //Edit the macro
-  vbaModule.Name = "CreateData";
-  vbaModule.Code = "Sub Auto_Open()\n MsgBox \"Macro is edited\" \n End Sub ";
+	vbaModule.Code = "Sub Auto_Open()\n MsgBox \"Macro is edited\" \n End Sub ";
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/EditMacro.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  input.Close();
-  output.Close();
+	//Dispose streams
+	inputStream.Dispose();
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -878,29 +898,30 @@ The following code illustrate how to remove a module using [Remove](https://help
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Remove%20Macro%20with%20Name/.NET/Remove%20Macro%20with%20Name/Remove%20Macro%20with%20Name/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Opening form module existing workbook
-  FileStream input = new FileStream("Test.xls", FileMode.Open, FileAccess.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(input);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Accessing Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Accessing Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Remove macro module
+	vbaModules.Remove("Module1");
 
-  //Remove macro module
-  vbaModules.Remove("Module1");
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveMacroWithName.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
-
-  input.Close();
-  output.Close();
+	//Dispose streams
+	inputStream.Dispose();
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -965,28 +986,30 @@ The following code illustrate how to remove a macro using module index.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Remove%20Macro%20with%20Index/.NET/Remove%20Macro%20with%20Index/Remove%20Macro%20with%20Index/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Opening form module existing workbook
-  FileStream input = new FileStream("Test.xls", FileMode.Open, FileAccess.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(input);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Accessing Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Accessing Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Remove macro module
+	vbaModules.RemoveAt(2);
 
-  //Remove macro module
-  vbaModules.RemoveAt(0);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveMacroWithIndex.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
-  input.Close();
-  output.Close();
+	//Dispose streams
+	inputStream.Dispose();
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1049,28 +1072,30 @@ The following code illustrate how to remove all macros using **Clear** method.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Clear%20All%20Macros/.NET/Clear%20All%20Macros/Clear%20All%20Macros/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Opening form module existing workbook
-  FileStream input = new FileStream("Test.xls", FileMode.Open, FileAccess.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(input);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Accessing Vba project
+	IVbaProject project = workbook.VbaProject;
 
-  //Accessing Vba project
-  IVbaProject project = workbook.VbaProject;
+	//Accessing vba modules collection
+	IVbaModules vbaModules = project.Modules;
 
-  //Accessing vba modules collection
-  IVbaModules vbaModules = project.Modules;
+	//Remove all macros
+	vbaModules.Clear();
 
-  //Remove all macros
-  vbaModules.Clear();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ClearAllMacro.xlsm"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsMacro);
+	#endregion
 
-  //Saving as macro document
-  FileStream output = new FileStream("Output.xlsm", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsMacro);
-  input.Close();
-  output.Close();
+	//Dispose streams
+	inputStream.Dispose();
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1134,22 +1159,24 @@ The following code illustrate how to save the macro-enabled document into normal
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Macros/Skip%20Macro%20and%20Save/.NET/Skip%20Macro%20and%20Save/Skip%20Macro%20and%20Save/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xls"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Opening form module existing workbook
-  FileStream input = new FileStream("Test.xls", FileMode.Open, FileAccess.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(input);
-  IWorksheet sheet = workbook.Worksheets[0];
+	//Skip Macros while saving
+	application.SkipOnSave = SkipExtRecords.Macros;
 
-  //Skip Macros while saving
-  application.SkipOnSave = SkipExtRecords.Macros;                
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SkipMacroAndSave.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream, ExcelSaveType.SaveAsXLS);
+	#endregion
 
-  //Saving as Excel without macro 
-  FileStream output = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(output, ExcelSaveType.SaveAsXLS);
-  input.Close();
-  output.Close();
+	//Dispose streams
+	inputStream.Dispose();
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
