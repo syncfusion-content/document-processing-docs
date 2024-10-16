@@ -70,7 +70,7 @@ Platform(s)<br/></th><th>
 Assembly<br/></th></tr></thead>
 <tr>
 <td>
-WPF, Windows Forms, ASP. NET, ASP.NET MVC<br/></td><td>
+WPF, Windows Forms, ASP.NET MVC<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
 
