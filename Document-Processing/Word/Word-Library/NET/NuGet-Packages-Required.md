@@ -128,7 +128,7 @@ Install-Package Syncfusion.DocIO.NET
 
 #### Retired Platforms
 
-The following assemblies need to be referenced in your application based on the platform.
+The following packages need to be included in your application based on the platform.
 
 <table>
 <thead>
@@ -274,7 +274,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 
 #### Retired Platforms
 
-The following assemblies need to be referenced in your application based on the platform.
+The following packages need to be included in your application based on the platform.
 
 <table>
 <thead>
@@ -420,7 +420,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 
 #### Retired Platforms
 
-The following assemblies need to be referenced in your application based on the platform.
+The following packages need to be included in your application based on the platform.
 
 <table>
 <thead>
@@ -515,7 +515,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 
 #### Retired Platforms
 
-The following assemblies need to be referenced in your application based on the platform.
+The following packages need to be included in your application based on the platform.
 
 <table>
 <thead>
