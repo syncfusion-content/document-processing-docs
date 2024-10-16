@@ -152,49 +152,6 @@ N> 1. Instance of [XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/
 N> 2. In .NET Standard, the Image format and quality can be specified using the **ExportImageOptions** class. By default the [ImageFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.ImageFormat.html) is set to PNG and [ScalingMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ScalingMode.html) is set to Best.
 N> 3. Worksheet to image conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
 
-## Convert and Save as EMF
-
-The following code shows how to convert the specified range of rows and columns in a worksheet to an Enhanced Metafile (EMF) image format.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//XlsIO supports worksheet to EMF conversion in Windows Forms, WPF, ASP.NET, and ASP.NET MVC platforms.
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-
-  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
-  IWorksheet worksheet = workbook.Worksheets[0];
-
-  //Convert the worksheet to EMF
-  Image image = worksheet.ConvertToImage(1, 1, 24, 10, ImageType.Metafile, null);
-
-  //Save the image
-  image.Save("Output.emf", ImageFormat.Emf);
-}
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
-  Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Xlsx
-
-  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
-  Dim worksheet As IWorksheet = workbook.Worksheets(0)
-
-  'Convert the worksheet to EMF
-  Dim image As Image = worksheet.ConvertToImage(1, 1, 24, 10, ImageType.Metafile, Nothing)
-
-  'Save the image
-  image.Save("Output.emf", ImageFormat.Emf)
-End Using
-{% endhighlight %}
-{% endtabs %} 
-
 **Non****-****Supported** **Features****:**
 
 * Subscript/Superscript
