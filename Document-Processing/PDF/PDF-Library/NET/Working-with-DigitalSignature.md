@@ -907,7 +907,7 @@ End Class
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/TimestampingPDFwithExternalSigning/).
 
 ## Adding Timestamps to a PDF document using external signing
 
@@ -919,7 +919,7 @@ The following example demonstrates the steps to add timestamps during external s
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/TimestampingPDFwithExternalSigning/.NET/TimestampingPDFwithExternalSigning/Program.cs" %}
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
@@ -1188,7 +1188,7 @@ End Class
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/TimestampingPDFwithExternalSigning/.NET/TimestampingPDFwithExternalSigning).
 
 ## Create Long Term Validation (LTV) when signing PDF documents externally
 
