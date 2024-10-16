@@ -24,22 +24,28 @@ The following code snippet illustrates on how to add a Custom XML part.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Custom%20XML%20Support/Add%20Custom%20XML/.NET/Add%20Custom%20XML/Add%20Custom%20XML/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding CustomXmlData to Workbook
-  ICustomXmlPart customXmlPart = workbook.CustomXmlparts.Add("SD10003");
+	//Adding CustomXmlData to Workbook
+	ICustomXmlPart customXmlPart = workbook.CustomXmlparts.Add("SD10003"); 
 
-  //Add XmlData to CustomXmlPart
-  byte[] xmlData = File.ReadAllBytes("Test.xml");
-  customXmlPart.Data = xmlData;
+	//Add XmlData to CustomXmlPart
+	byte[] xmlData = File.ReadAllBytes(Path.GetFullPath(@"Data/InputTemplate.xml"));
+	customXmlPart.Data = xmlData;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("CustomXml.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CreateCustomXML.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+
+	//Open default JSON
 }
 {% endhighlight %}
 
@@ -91,23 +97,29 @@ Reading Custom XML part from workbook is achieved by using the [GetById](https:/
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Custom%20XML%20Support/Read%20Custom%20XML/.NET/Read%20Custom%20XML/Read%20Custom%20XML/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream fileStream = new FileStream("CustomXml.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Access CustomXmlPart from Workbook
-  ICustomXmlPart customXmlPart = workbook.CustomXmlparts.GetById("SD10003");
+	//Access CustomXmlPart from Workbook
+	ICustomXmlPart customXmlPart = workbook.CustomXmlparts.GetById("SD10003");
 
-  //Access XmlData from CustomXmlPart
-  byte[] xmlData = customXmlPart.Data;
-  System.Text.Encoding.Default.GetString(xmlData);
+	//Access XmlData from CustomXmlPart
+	byte[] xmlData = customXmlPart.Data;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("CustomXml1.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	System.Text.Encoding.Default.GetString(xmlData);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ReadXml.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

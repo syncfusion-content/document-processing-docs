@@ -25,23 +25,26 @@ The following code example illustrates how to apply Top to Bottom sorting to a p
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Sort%20Top%20to%20Bottom/.NET/Sort%20Top%20to%20Bottom/Sort%20Top%20to%20Bottom/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet sheet = workbook.Worksheets[1];
-  IPivotTable pivotTable = sheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet sheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = sheet.PivotTables[0];
 
-  // Pivot Top to Bottom sorting.
-  IPivotField rowField = pivotTable.RowFields[0];
-  rowField.AutoSort(PivotFieldSortType.Ascending, 1);
+	// Pivot Top to Bottom sorting.
+	IPivotField rowField = pivotTable.RowFields[0];
+	rowField.AutoSort(PivotFieldSortType.Ascending, 1);
 
-  string fileName = "PivotFieldAutoSort.xlsx";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotSort.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -93,23 +96,26 @@ The following code example illustrates how to apply Left to Right sorting to a p
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Sort%20Left%20to%20Right/.NET/Sort%20Left%20to%20Right/Sort%20Left%20to%20Right/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet sheet = workbook.Worksheets[1];
-  IPivotTable pivotTable = sheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet sheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = sheet.PivotTables[0];
 
-  // Pivot table Left to Right sorting.
-  IPivotField columnField = pivotTable.ColumnFields[0];
-  columnField.AutoSort(PivotFieldSortType.Ascending, 1);
+	// Pivot table Left to Right sorting.
+	IPivotField columnField = pivotTable.ColumnFields[0];
+	columnField.AutoSort(PivotFieldSortType.Descending, 1);
 
-  string fileName = "PivotFieldAutoSort.xlsx";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotSort.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -269,51 +275,57 @@ The complete code snippet illustrating the above options is shown below.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Pivot%20Filter/.NET/Pivot%20Filter/Pivot%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("PivotData.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IWorksheet pivotSheet = workbook.Worksheets[1];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IWorksheet pivotSheet = workbook.Worksheets[1];
 
-  IPivotCache cache = workbook.PivotCaches.Add(worksheet["A1:H50"]);
-  IPivotTable pivotTable = pivotSheet.PivotTables.Add("PivotTable1", pivotSheet["A1"], cache);
-  pivotTable.Fields[4].Axis = PivotAxisTypes.Page;
-  pivotTable.Fields[2].Axis = PivotAxisTypes.Row;
-  pivotTable.Fields[6].Axis = PivotAxisTypes.Row;
-  pivotTable.Fields[3].Axis = PivotAxisTypes.Column;
+	IPivotCache cache = workbook.PivotCaches.Add(worksheet["A1:H50"]);
 
-  IPivotField dataField = pivotSheet.PivotTables[0].Fields[5];
-  pivotTable.DataFields.Add(dataField, "Sum of Units", PivotSubtotalTypes.Sum);
+	IPivotTable pivotTable = pivotSheet.PivotTables.Add("PivotTable1", pivotSheet["A1"], cache);
+	pivotTable.Fields[4].Axis = PivotAxisTypes.Page;
+	pivotTable.Fields[2].Axis = PivotAxisTypes.Row;
+	pivotTable.Fields[6].Axis = PivotAxisTypes.Row;
+	pivotTable.Fields[3].Axis = PivotAxisTypes.Column;
 
-  //Apply page filter
-  pivotTable.Fields[4].Axis = PivotAxisTypes.Page;
+	IPivotField dataField = pivotSheet.PivotTables[0].Fields[5];
+	pivotTable.DataFields.Add(dataField, "Sum of Units", PivotSubtotalTypes.Sum);
 
-  IPivotField pageField = pivotTable.Fields[4];
-  pageField.Items[1].Visible = false;
-  pageField.Items[2].Visible = false;
+	//Apply page filter
+	pivotTable.Fields[4].Axis = PivotAxisTypes.Page;
 
-  //Apply label filter
-  IPivotField rowField = pivotTable.Fields[2];
-  rowField.PivotFilters.Add(PivotFilterType.CaptionEqual, null, "East", null);
+	IPivotField pageField = pivotTable.Fields[4];
 
-  //Apply item filter
-  IPivotField colField = pivotTable.Fields[3];
-  colField.Items[0].Visible = false;
-  colField.Items[1].Visible = false;
+	pageField.Items[1].Visible = false;
+	pageField.Items[2].Visible = false;
 
-  //Apply value filter
-  IPivotField field = pivotTable.Fields[2];
-  field.PivotFilters.Add(PivotFilterType.ValueLessThan, field, "1341", null);
+	//Apply label filter
+	IPivotField rowField = pivotTable.Fields[2];
+	rowField.PivotFilters.Add(PivotFilterType.CaptionEqual, null, "East", null);
 
-  pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium2;
-  pivotSheet.Activate();
+	//Apply item filter
+	IPivotField colField = pivotTable.Fields[3];
+	colField.Items[0].Visible = false;
+	colField.Items[1].Visible = false;
 
-  string fileName = "PivotTable.xlsx";
+	//Apply value filter
+	IPivotField field = pivotTable.Fields[2];
+	field.PivotFilters.Add(PivotFilterType.ValueLessThan, field, "1341", null);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleMedium2;
+	pivotSheet.Activate();
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
