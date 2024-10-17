@@ -952,73 +952,6 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 //Close the document.
 loadedDocument.Close(true);
 
-To sign the document using the **X509Certificate2** API and generate an RFC3161-compliant timestamp token with the BouncyCastle library, add the following code:
-
-// Define the external signer class to sign the document hash.
-class ExternalSigner : IPdfExternalSigner
-{
-   private string _hashAlgorithm;
-   public string HashAlgorithm
-   {
-       get { return _hashAlgorithm; }
-   }
-
-   public ExternalSigner(string hashAlgorithm)
-   {
-       _hashAlgorithm = hashAlgorithm;
-   }
-
-   public byte[] Sign(byte[] message, out byte[] timeStampResponse)
-   {
-       byte[] signedBytes = null;
-       X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
-       if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
-       {
-           var rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
-           signedBytes = rsa.SignData(message, HashAlgorithm);
-       }
-       else if (digitalID.PrivateKey is RSACng)
-       {
-           var rsa = (RSACng)digitalID.PrivateKey;
-           signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
-       }
-
-       timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
-       return signedBytes;
-   }
-
-   public byte[] GetRFC3161TimeStampToken(byte[] signedBytes)
-   {
-       SHA1 sha1 = SHA1CryptoServiceProvider.Create();
-       byte[] hash = sha1.ComputeHash(signedBytes);
-
-       TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
-       reqGen.SetCertReq(true);
-       TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
-       byte[] tsData = tsReq.GetEncoded();
-
-       HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp URI here.
-       req.Method = "POST";
-       req.ContentType = "application/timestamp-query";
-       req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
-       req.ContentLength = tsData.Length;
-
-       using (Stream reqStream = req.GetRequestStream())
-       {
-           reqStream.Write(tsData, 0, tsData.Length);
-       }
-
-       using (HttpWebResponse res = (HttpWebResponse)req.GetResponse())
-       {
-           using (Stream resStream = new BufferedStream(res.GetResponseStream()))
-           {
-               TimeStampResponse tsRes = new TimeStampResponse(resStream);
-               return tsRes.TimeStampToken.GetEncoded();
-           }
-       }
-   }
-}
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -1046,63 +979,6 @@ loadedDocument.Save("Output.pdf");
 //Closes the document.
 loadedDocument.Close(true);
 
-//Create the external signer class and sign the document hash.
-class ExternalSigner : IPdfExternalSigner
-{
-    private string _hashAlgorithm;
-    public string HashAlgorithm
-    {
-        get { return _hashAlgorithm; }
-    }
-
-    public ExternalSigner(string hashAlgorithm)
-    {
-        _hashAlgorithm = hashAlgorithm;
-    }
-    public byte[] Sign(byte[] message, out byte[] timeStampResponse)
-    {
-        byte[] signedBytes = null;
-        X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
-        if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
-        {
-            System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
-            signedBytes = rsa.SignData(message, HashAlgorithm);
-        }
-        else if (digitalID.PrivateKey is RSACng)
-        {
-            RSACng rsa = (RSACng)digitalID.PrivateKey;
-            signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
-        }
-        timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
-        return signedBytes;
-    }
-    public byte[] GetRFC3161TimeStampToken(byte[] bytes)
-    {
-        SHA1 sha1 = SHA1CryptoServiceProvider.Create();
-        byte[] hash = sha1.ComputeHash(bytes);
-        TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
-        reqGen.SetCertReq(true);
-        TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
-        byte[] tsData = tsReq.GetEncoded();
-        HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp Uri here
-        req.Method = "POST";
-        req.ContentType = "application/timestamp-query";
-        req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
-        req.ContentLength = tsData.Length;
-        Stream reqStream = req.GetRequestStream();
-        reqStream.Write(tsData, 0, tsData.Length);
-        reqStream.Close();
-        HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-        if (res != null)
-        {
-            Stream resStream = new BufferedStream(res.GetResponseStream());
-            TimeStampResponse tsRes = new TimeStampResponse(resStream);
-            return tsRes.TimeStampToken.GetEncoded();
-        }
-        return null;
-    }
-}
-
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -1128,59 +1004,251 @@ loadedDocument.Save("Output.pdf")
 'Closes the document.
 loadedDocument.Close(True)
 
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+To sign the document using the **X509Certificate2** API and generate an RFC3161-compliant timestamp token with the BouncyCastle library, add the following code:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// External signer class that implements IPdfExternalSigner for signing the document hash.
+class ExternalSigner : IPdfExternalSigner
+{
+  private string _hashAlgorithm;
+
+  // Gets the hash algorithm used for signing.
+  public string HashAlgorithm
+  {
+      get { return _hashAlgorithm; }
+  }
+
+  // Constructor that sets the hash algorithm for the signer.
+  public ExternalSigner(string hashAlgorithm)
+  {
+      _hashAlgorithm = hashAlgorithm;
+  }
+
+  // Sign the document hash and return the timestamp response.
+  public byte[] Sign(byte[] message, out byte[] timeStampResponse)
+  {
+      byte[] signedBytes = null;
+      X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
+
+      // Use the appropriate signing algorithm based on the private key type.
+      if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
+      {
+          System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
+          signedBytes = rsa.SignData(message, HashAlgorithm);
+      }
+      else if (digitalID.PrivateKey is RSACng)
+      {
+          RSACng rsa = (RSACng)digitalID.PrivateKey;
+          signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+      }
+
+      // Generate an RFC3161 timestamp token for the signed data.
+      timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
+      return signedBytes;
+  }
+
+  // Generate the RFC3161 timestamp token using the provided signed data.
+  public byte[] GetRFC3161TimeStampToken(byte[] bytes)
+  {
+      SHA1 sha1 = SHA1CryptoServiceProvider.Create();
+      byte[] hash = sha1.ComputeHash(bytes);
+
+      // Create a timestamp request using the SHA1 hash.
+      TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
+      reqGen.SetCertReq(true);
+      TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
+      byte[] tsData = tsReq.GetEncoded();
+
+      // Send the timestamp request to the server.
+      HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp URI here
+      req.Method = "POST";
+      req.ContentType = "application/timestamp-query";
+      req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
+      req.ContentLength = tsData.Length;
+
+      // Write the request data to the stream.
+      Stream reqStream = req.GetRequestStream();
+      reqStream.Write(tsData, 0, tsData.Length);
+      reqStream.Close();
+
+      // Get the timestamp response from the server.
+      HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+      if (res != null)
+      {
+          Stream resStream = new BufferedStream(res.GetResponseStream());
+          TimeStampResponse tsRes = new TimeStampResponse(resStream);
+          return tsRes.TimeStampToken.GetEncoded();
+      }
+
+      return null;
+  }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// External signer class that implements IPdfExternalSigner for signing the document hash.
+class ExternalSigner : IPdfExternalSigner
+{
+  private string _hashAlgorithm;
+
+  // Gets the hash algorithm used for signing.
+  public string HashAlgorithm
+  {
+      get { return _hashAlgorithm; }
+  }
+
+  // Constructor that sets the hash algorithm for the signer.
+  public ExternalSigner(string hashAlgorithm)
+  {
+      _hashAlgorithm = hashAlgorithm;
+  }
+
+  // Sign the document hash and return the timestamp response.
+  public byte[] Sign(byte[] message, out byte[] timeStampResponse)
+  {
+      byte[] signedBytes = null;
+      X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
+
+      // Use the appropriate signing algorithm based on the private key type.
+      if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
+      {
+          System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
+          signedBytes = rsa.SignData(message, HashAlgorithm);
+      }
+      else if (digitalID.PrivateKey is RSACng)
+      {
+          RSACng rsa = (RSACng)digitalID.PrivateKey;
+          signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+      }
+
+      // Generate an RFC3161 timestamp token for the signed data.
+      timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
+      return signedBytes;
+  }
+
+  // Generate the RFC3161 timestamp token using the provided signed data.
+  public byte[] GetRFC3161TimeStampToken(byte[] bytes)
+  {
+      SHA1 sha1 = SHA1CryptoServiceProvider.Create();
+      byte[] hash = sha1.ComputeHash(bytes);
+
+      // Create a timestamp request using the SHA1 hash.
+      TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
+      reqGen.SetCertReq(true);
+      TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
+      byte[] tsData = tsReq.GetEncoded();
+
+      // Send the timestamp request to the server.
+      HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp URI here
+      req.Method = "POST";
+      req.ContentType = "application/timestamp-query";
+      req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
+      req.ContentLength = tsData.Length;
+
+      // Write the request data to the stream.
+      Stream reqStream = req.GetRequestStream();
+      reqStream.Write(tsData, 0, tsData.Length);
+      reqStream.Close();
+
+      // Get the timestamp response from the server.
+      HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+      if (res != null)
+      {
+          Stream resStream = new BufferedStream(res.GetResponseStream());
+          TimeStampResponse tsRes = new TimeStampResponse(resStream);
+          return tsRes.TimeStampToken.GetEncoded();
+      }
+
+      return null;
+  }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' External signer class that implements IPdfExternalSigner for signing the document hash.
 Public Class ExternalSigner
     Implements IPdfExternalSigner
 
     Private _hashAlgorithm As String
 
+    ' Gets the hash algorithm used for signing.
     Public ReadOnly Property HashAlgorithm() As String Implements IPdfExternalSigner.HashAlgorithm
         Get
             Return _hashAlgorithm
         End Get
     End Property
 
+    ' Constructor that sets the hash algorithm for the signer.
     Public Sub New(hashAlgorithm As String)
         _hashAlgorithm = hashAlgorithm
     End Sub
 
+    ' Sign the document hash and return the timestamp response.
     Public Function Sign(message As Byte(), ByRef timeStampResponse As Byte()) As Byte() Implements IPdfExternalSigner.Sign
         Dim signedBytes As Byte() = Nothing
+
+        ' Load the digital ID (certificate) from the file system.
         Dim digitalID As New X509Certificate2(Path.GetFullPath("Data/PDF.pfx"), "password123")
 
+        ' Use the appropriate signing algorithm based on the private key type.
         If TypeOf digitalID.PrivateKey Is RSACryptoServiceProvider Then
+            ' Use RSACryptoServiceProvider to sign the data.
             Dim rsa As RSACryptoServiceProvider = CType(digitalID.PrivateKey, RSACryptoServiceProvider)
             signedBytes = rsa.SignData(message, HashAlgorithm)
         ElseIf TypeOf digitalID.PrivateKey Is RSACng Then
+            ' Use RSACng to sign the data with SHA1 and PKCS1 padding.
             Dim rsa As RSACng = CType(digitalID.PrivateKey, RSACng)
             signedBytes = rsa.SignData(message, HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1)
         End If
 
+        ' Generate an RFC3161 timestamp token for the signed data.
         timeStampResponse = GetRFC3161TimeStampToken(signedBytes)
+
+        ' Return the signed bytes.
         Return signedBytes
     End Function
 
+    ' Generate the RFC3161 timestamp token using the provided signed data.
     Public Function GetRFC3161TimeStampToken(bytes As Byte()) As Byte()
+        ' Create a SHA1 hash of the provided signed data.
         Dim sha1 As SHA1 = SHA1CryptoServiceProvider.Create()
         Dim hash As Byte() = sha1.ComputeHash(bytes)
 
+        ' Create a timestamp request using the SHA1 hash.
         Dim reqGen As New TimeStampRequestGenerator()
         reqGen.SetCertReq(True)
         Dim tsReq As TimeStampRequest = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100))
-
         Dim tsData As Byte() = tsReq.GetEncoded()
 
-        Dim req As HttpWebRequest = CType(WebRequest.Create("https://rfc3161.ai.moda"), HttpWebRequest) ' Update your timestamp Uri here
+        ' Send the timestamp request to the server.
+        Dim req As HttpWebRequest = CType(WebRequest.Create("https://rfc3161.ai.moda"), HttpWebRequest) ' Update your timestamp URI here
         req.Method = "POST"
         req.ContentType = "application/timestamp-query"
         req.Headers.Add("Authorization", "Basic " & Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")))
         req.ContentLength = tsData.Length
 
+        ' Write the request data to the request stream.
         Using reqStream As Stream = req.GetRequestStream()
             reqStream.Write(tsData, 0, tsData.Length)
         End Using
 
+        ' Get the response from the timestamp server.
         Dim res As HttpWebResponse = CType(req.GetResponse(), HttpWebResponse)
 
+        ' If a response is received, read and return the timestamp token.
         If res IsNot Nothing Then
             Using resStream As Stream = New BufferedStream(res.GetResponseStream())
                 Dim tsRes As New TimeStampResponse(resStream)
@@ -1188,6 +1256,7 @@ Public Class ExternalSigner
             End Using
         End If
 
+        ' Return null if no valid response is received.
         Return Nothing
     End Function
 End Class
