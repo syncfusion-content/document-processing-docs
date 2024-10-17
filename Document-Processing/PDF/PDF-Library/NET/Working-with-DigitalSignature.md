@@ -911,15 +911,17 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding Timestamps to a PDF document using external signing
 
-This section explains how to add a timestamp to a PDF document during the external signing process. We have implemented a solution that generates a timestamp response from a timestamp server URI using the [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. The accepted timestamp token follows the RFC3161 standard.
+The Syncfusion Essential PDF is a comprehensive, high-performance[.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) that enables you to create, read, and edit PDF documents programmatically without relying on Adobe dependencies. With this library, you can add timestamps to a PDF document using external signing in C#.
 
-N> In this example, we have used the open-source BouncyCastle library. Ensure you review its licensing before including it in your production environment. Alternatively, you can directly use the timestamp token provided by your service provider.
+This section details the process of adding a timestamp during external signing. We provide a solution that generates a timestamp response from a timestamp server URI using the [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. The accepted timestamp token complies with the RFC3161 standard.
 
-The following example demonstrates the steps to add timestamps during external signing in a PDF document.
+N> In this example, we have used the open-source [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. Ensure you review its licensing before including it in your production environment. Alternatively, you can directly use the timestamp token provided by your service provider.
+
+The following example illustrates the process of adding timestamps to a PDF document during the external signing process.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/TimestampingPDFwithExternalSigning/.NET/TimestampingPDFwithExternalSigning/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Get the stream from the document
 FileStream documentStream = new FileStream("Input.pdf ", FileMode.Open, FileAccess.Read);
@@ -953,6 +955,8 @@ string contentType = "application/pdf";
 string fileName = "Output.pdf";
 //Creates a FileContentResult object by using the file contents, content type, and file name
 return File(stream, contentType, fileName);
+
+To sign the document using the **X509Certificate2** API and generate an RFC3161-compliant timestamp token with the BouncyCastle library, add the following code:
 
 //Create the external signer class and sign the document hash.
 class ExternalSigner : IPdfExternalSigner
