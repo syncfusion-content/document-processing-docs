@@ -43,14 +43,14 @@ Syncfusion.Pdf.Portable<br/>
 Syncfusion.Pdf.Imaging.Portable<br/>
 Syncfusion.PresentationRenderer.Portable<br/>
 Syncfusion.SkiaSharpHelper.Portable<br/>
-Skiasharp
+SkiaSharp
 </td>
 </tr>
 <tr>
 <td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-maui)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
-Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.Pdf.NET<br/>Syncfusion.SkiaSharpHelper.NET<br/>Skiasharp
+Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.Pdf.NET<br/>Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
 </td>
 </tr>
 <tr>
