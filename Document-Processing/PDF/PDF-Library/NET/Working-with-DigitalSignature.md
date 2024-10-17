@@ -1008,8 +1008,6 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-{% tabs %}
-
 To sign the document using the **X509Certificate2** API and generate an RFC3161-compliant timestamp token with the BouncyCastle library, add the following code:
 
 {% tabs %}
