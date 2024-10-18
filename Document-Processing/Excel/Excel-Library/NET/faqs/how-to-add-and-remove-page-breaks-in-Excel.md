@@ -10,7 +10,7 @@ documentation: UG
 
 Page breaks in Excel separate large datasets into different pages for better organization. You can add or remove horizontal page breaks using [HPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HPageBreaks) and vertical page breaks using [VPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VPageBreaks) with the IWorksheet interface.
 
-The following code example illsutrates how to add or remove page breaks in a worksheet.
+The following code example illustrates how to add or remove page breaks in a worksheet.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
