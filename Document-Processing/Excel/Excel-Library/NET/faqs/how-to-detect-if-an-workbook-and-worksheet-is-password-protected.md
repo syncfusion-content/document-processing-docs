@@ -1,12 +1,12 @@
 ---
-title: How to detect if an Excel workbook and worksheet is password protected | Syncfusion
+title: How to detect if an workbook and worksheet is password protected | Syncfusion
 description: This page shows how to detect if an Excel workbook and worksheet is password protected using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to detect if an Excel workbook and worksheet is password protected?
+# How to detect if an workbook and worksheet is password protected?
 
 When a protected workbook is opened using XlsIO, the [IsCellProtection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_IsCellProtection) property of the [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html) interface is enabled, allowing for the detection of workbook protection. To determine if a worksheet is protected, you can use the [IsPasswordProtected](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_IsPasswordProtected) property of the [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html) interface.
 
