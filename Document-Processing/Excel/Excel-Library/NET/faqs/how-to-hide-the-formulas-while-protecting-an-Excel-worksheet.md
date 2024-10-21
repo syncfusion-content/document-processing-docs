@@ -1,5 +1,5 @@
 ---
-title: How to hide the formulas while protecting an Excel worksheet | Syncfusion
+title: How to hide the formulas while protecting the worksheet | Syncfusion
 description: This page shows how to hide the formulas while protecting an Excel worksheet using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
@@ -10,7 +10,7 @@ documentation: UG
 
 Any important formulas in a worksheet can be hidden when protecting the worksheet. In XlsIO, formulas hiding can be achieved by setting the [FormulaHidden](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_FormulaHidden) property of the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface to true. Once this property is enabled and the worksheet is protected, the formulas in the specified cells will not be visible in the formula bar.
 
-The following code illustrates how to hide a formulas while protecting the worksheet.
+The following code illustrates how to hide the formulas while protecting an Excel worksheet.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
