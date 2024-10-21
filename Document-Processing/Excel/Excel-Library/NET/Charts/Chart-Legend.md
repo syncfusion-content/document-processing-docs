@@ -206,17 +206,17 @@ The following code snippet illustrates how to remove the legend.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Remove the legend
-chart.Legend.LegendEntries[0].IsDeleted = true;
+chart.Legend.LegendEntries[0].Delete();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Remove the legend
-chart.Legend.LegendEntries[0].IsDeleted = true;
+chart.Legend.LegendEntries[0].Delete();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Remove the legend
-chart.Legend.LegendEntries(0).IsDeleted = True
+chart.Legend.LegendEntries(0).Delete()
 {% endhighlight %}
 {% endtabs %}
 
@@ -262,7 +262,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     chart.Legend.TextArea.Strikethrough = false;
 
     //Remove the legend
-    chart.Legend.LegendEntries[0].IsDeleted = true;
+    chart.Legend.LegendEntries[0].Delete();
 
     //Set Legend without overlapping the chart
     chart.Legend.IncludeInLayout = true;
@@ -315,7 +315,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     chart.Legend.TextArea.Strikethrough = false;
 
     //Remove the legend
-    chart.Legend.LegendEntries[0].IsDeleted = true;
+    chart.Legend.LegendEntries[0].Delete();
 
     //Set Legend without overlapping the chart
     chart.Legend.IncludeInLayout = true;
@@ -362,7 +362,7 @@ Using excelEngine As New ExcelEngine()
     chart.Legend.TextArea.Strikethrough = False
 
     'Remove the legend
-    chart.Legend.LegendEntries(0).IsDeleted = True
+    chart.Legend.LegendEntries(0).Delete()
 
     'Set Legend without overlapping the chart
     chart.Legend.IncludeInLayout = True
