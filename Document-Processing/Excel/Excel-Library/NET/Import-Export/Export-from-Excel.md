@@ -20,19 +20,17 @@ The following code example illustrates on how to export data from Excel to Data 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Worksheet%20to%20DataTable/.NET/Worksheet%20to%20DataTable/Worksheet%20to%20DataTable/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Read data from the worksheet and Export to the DataTable
-  DataTable customersTable = worksheet.ExportDataTable(worksheet.UsedRange, ExcelExportDataTableOptions.ColumnNames | ExcelExportDataTableOptions.ComputedFormulaValues);
+	//Read data from the worksheet and Export to the DataTable
+	DataTable customersTable = worksheet.ExportDataTable(worksheet.UsedRange, ExcelExportDataTableOptions.ColumnNames | ExcelExportDataTableOptions.ComputedFormulaValues);                
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("ExportToDT.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	inputStream.Dispose();
 }
 
 //XlsIO supports binding of exported data table to data grid in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
@@ -223,19 +221,17 @@ The following code example illustrates on how to export Excel data into Collecti
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Worksheet%20to%20CollectionObjects/.NET/Worksheet%20to%20CollectionObjects/Worksheet%20to%20CollectionObjects/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Export worksheet data into Collection Objects
-  List<Report> collectionObjects = worksheet.ExportData<Report>(1, 1, 10, 3);
+	//Export worksheet data into Collection Objects
+	List<Report> collectionObjects = worksheet.ExportData<Report>(1, 1, 10, 3);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("CollectionObjects.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -359,72 +355,63 @@ The following code example illustrates how to export data from Excel to nested c
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/Worksheet%20to%20Nested%20Class/.NET/Worksheet%20to%20Nested%20Class/Worksheet%20to%20Nested%20Class/Program.cs,180" %}
-using Syncfusion.XlsIO;
 using System.Collections.Generic;
+using System.IO;
+using Syncfusion.XlsIO;
 
-namespace ImportFromNestedCollection
+namespace Worksheet_to_Nested_Class
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      ExportData();
+        static void Main(string[] args)
+        {
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+                FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+                IWorkbook workbook = application.Workbooks.Open(inputStream);
+                IWorksheet worksheet = workbook.Worksheets[0];
+
+                //Map column headers in worksheet with class properties. 
+                Dictionary<string, string> mappingProperties = new Dictionary<string, string>();
+                mappingProperties.Add("Customer ID", "CustId");
+                mappingProperties.Add("Customer Name", "CustName");
+                mappingProperties.Add("Customer Age", "CustAge");
+                mappingProperties.Add("Order ID", "CustOrder.Order_Id");
+                mappingProperties.Add("Order Price", "CustOrder.Price");
+
+                //Export worksheet data into nested class Objects.
+                List<Customer> nestedClassObjects = worksheet.ExportData<Customer>(1, 1, 10, 5, mappingProperties);
+
+                //Dispose streams
+                inputStream.Dispose();
+            }
+        }
+    }
+    //Customer details class
+    public partial class Customer
+    {
+        public int CustId { get; set; }
+        public string CustName { get; set; }
+        public int CustAge { get; set; }
+        public Order CustOrder { get; set; }
+        public Customer()
+        {
+
+        }
     }
 
-    //Main method to Export data from worksheet to nested class objects. 
-    private static void ExportData()
+    //Order details class
+    public partial class Order
     {
-      using (ExcelEngine excelEngine = new ExcelEngine())
-      {
-        IApplication application = excelEngine.Excel;
-        application.DefaultVersion = ExcelVersion.Excel2013;
-        FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-        IWorkbook workbook = application.Workbooks.Open(inputStream);
-        IWorksheet worksheet = workbook.Worksheets[0];
+        public string Order_Id { get; set; }
+        public double Price { get; set; }
+        public Order()
+        {
 
-        //Map column headers in worksheet with class properties. 
-        Dictionary<string, string> mappingProperties = new Dictionary<string, string>();
-        mappingProperties.Add("Customer ID", "CustId");
-        mappingProperties.Add("Customer Name", "CustName");
-        mappingProperties.Add("Customer Age", "CustAge");
-        mappingProperties.Add("Order ID", "CustOrder.Order_Id");
-        mappingProperties.Add("Order Price", "CustOrder.Price");
-
-        //Export worksheet data into nested class Objects.
-        List<Customer> nestedClassObjects = worksheet.ExportData<Customer>(1, 1, 10, 5, mappingProperties);
-
-        //Saving the workbook as stream
-        FileStream stream = new FileStream("NestedClassObjects.xlsx", FileMode.Create, FileAccess.ReadWrite);
-        workbook.SaveAs(stream);
-
-        stream.Dispose();
-      }   
+        }
     }
-  }
-
-  //Customer details class
-  public partial class Customer
-  {
-    public int CustId { get; set; }
-    public string CustName { get; set; }
-    public int CustAge { get; set; }
-    public Order CustOrder { get; set; }
-    public Customer()
-    {
-
-    }
-  }
-
-  //Order details class
-  public partial class Order
-  {
-    public int Order_Id { get; set; }
-    public double Price { get; set; }
-    public Order()
-    {
-
-    }
-  }
 }
 {% endhighlight %}
 

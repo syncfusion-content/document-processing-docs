@@ -117,32 +117,37 @@ The following code example illustrates how to create a pivot table with existing
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Create%20Pivot%20Table/.NET/Create%20Pivot%20Table/Create%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("PivotData.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IWorksheet pivotSheet = workbook.Worksheets[1];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/PivotData.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IWorksheet pivotSheet = workbook.Worksheets[1];
 
-  //Create Pivot cache with the given data range
-  IPivotCache cache = workbook.PivotCaches.Add(worksheet["A1:H50"]);
+	//Create Pivot cache with the given data range
+	IPivotCache cache = workbook.PivotCaches.Add(worksheet["A1:H50"]);
 
-  //Create "PivotTable1" with the cache at the specified range
-  IPivotTable pivotTable = pivotSheet.PivotTables.Add("PivotTable1", pivotSheet["A1"], cache);
+	//Create "PivotTable1" with the cache at the specified range
+	IPivotTable pivotTable = pivotSheet.PivotTables.Add("PivotTable1", pivotSheet["A1"], cache);
 
-  //Add Pivot table fields (Row and Column fields)
-  pivotTable.Fields[2].Axis = PivotAxisTypes.Row;
-  pivotTable.Fields[6].Axis = PivotAxisTypes.Row;
-  pivotTable.Fields[3].Axis = PivotAxisTypes.Column;
+	//Add Pivot table fields (Row and Column fields)
+	pivotTable.Fields[2].Axis = PivotAxisTypes.Row;
+	pivotTable.Fields[6].Axis = PivotAxisTypes.Row;
+	pivotTable.Fields[3].Axis = PivotAxisTypes.Column;
 
-  //Add data field
-  IPivotField field = pivotTable.Fields[5];
-  pivotTable.DataFields.Add(field, "Sum", PivotSubtotalTypes.Sum);
+	//Add data field
+	IPivotField field = pivotTable.Fields[5];
+	pivotTable.DataFields.Add(field, "Sum", PivotSubtotalTypes.Sum);
 
-  string fileName = "PivotTable.xlsx";
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotTable.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -215,28 +220,30 @@ The following code example illustrates how to edit the pivot table.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Edit%20Pivot%20Table/.NET/Edit%20Pivot%20Table/Edit%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[1];
-    
-  //Accessing the pivot table in the worksheet
-  IPivotTable pivotTable = worksheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[1];
 
-  //Layout the pivot table to set the values to the worksheet
-  pivotTable.Layout();
+	//Accessing the pivot table in the worksheet
+	IPivotTable pivotTable = worksheet.PivotTables[0];
 
-  //Set Text in cell B2
-  worksheet.Range["B2"].Text = "William";
+	//Layout the pivot table to set the values to the worksheet
+	pivotTable.Layout();
 
-  //Saving the workbook
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	//Set Text in cell B2
+	worksheet.Range["B2"].Text = "William";
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -316,23 +323,25 @@ The following code example illustrates how to remove the pivot table using Remov
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Remove%20Pivot%20Table/.NET/Remove%20Pivot%20Table/Remove%20Pivot%20Table/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IWorksheet pivotSheet = workbook.Worksheets[1];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IWorksheet pivotSheet = workbook.Worksheets[1];
 
-  //Remove the pivot table
-  pivotSheet.PivotTables.Remove("PivotTable1")
+	//Remove the pivot table
+	pivotSheet.PivotTables.Remove("PivotTable1");
 
-  //Saving the workbook
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -456,20 +465,24 @@ The following code example illustrates how to dynamically refresh the data in a 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Dynamic%20Refresh/.NET/Dynamic%20Refresh/Dynamic%20Refresh/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("PivotTable.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet pivotSheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet pivotSheet = workbook.Worksheets[0];
 
-  //Change the range values that the Pivot Tables range refers to
-  workbook.Names["PivotRange"].RefersToRange = pivotSheet.Range["A1:D27"];
+	//Change the range values that the Pivot Tables range refers to
+	workbook.Names["PivotRange"].RefersToRange = pivotSheet.Range["A1:H25"];
 
-  string fileName = "PivotTable_DynamicRange.xlsx";
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotTable.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -509,28 +522,33 @@ The following code example illustrates how to refresh the pivot table after upda
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Refresh%20Pivot%20Table/.NET/Refresh%20Pivot%20Table/Refresh%20Pivot%20Table/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+ using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Updating a new value in the pivot data
-  worksheet.Range["C2"].Value = "250";
+	//Updating a new value in the pivot data
+	worksheet.Range["C2"].Value = "250";
 
-  //Accessing the pivot table 
-  IPivotTable pivotTable = worksheet.PivotTables[0];
-  PivotTableImpl pivotTableImpl = pivotTable as PivotTableImpl;
+	//Accessing the pivot table 
+	IPivotTable pivotTable = workbook.Worksheets[1].PivotTables[0];
+	PivotTableImpl pivotTableImpl = pivotTable as PivotTableImpl;
 
-  //Refreshing pivot cache to update the pivot table
-  pivotTableImpl.Cache.IsRefreshOnLoad = true;
+	//Refreshing pivot cache to update the pivot table
+	pivotTableImpl.Cache.IsRefreshOnLoad = true;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RefreshPivotTable.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

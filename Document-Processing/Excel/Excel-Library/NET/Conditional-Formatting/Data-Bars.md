@@ -16,36 +16,38 @@ The following code example illustrates how to apply data bars using [IDataBar](h
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Data%20Bars/.NET/Data%20Bars/Data%20Bars/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Create data bars for the data in specified range
-    IConditionalFormats conditionalFormats = worksheet.Range["C7:C46"].ConditionalFormats;
-    IConditionalFormat conditionalFormat = conditionalFormats.AddCondition();
-    conditionalFormat.FormatType = ExcelCFType.DataBar;
-    IDataBar dataBar = conditionalFormat.DataBar;
+	//Create data bars for the data in specified range
+	IConditionalFormats conditionalFormats = worksheet.Range["C7:C46"].ConditionalFormats;
+	IConditionalFormat conditionalFormat = conditionalFormats.AddCondition();
+	conditionalFormat.FormatType = ExcelCFType.DataBar;
+	IDataBar dataBar = conditionalFormat.DataBar;
 
-    //Set the constraints
-    dataBar.MinPoint.Type = ConditionValueType.LowestValue;
-    dataBar.MaxPoint.Type = ConditionValueType.HighestValue;
+	//Set the constraints
+	dataBar.MinPoint.Type = ConditionValueType.LowestValue;
+	dataBar.MaxPoint.Type = ConditionValueType.HighestValue;
 
-    //Set color for Bar
-    dataBar.BarColor = Color.FromArgb(156, 208, 243);
+	//Set color for Bar
+	dataBar.BarColor = Color.FromArgb(156, 208, 243);
 
-    //Hide the values in data bar
-    dataBar.ShowValue = false;
-    dataBar.BarColor = Color.Aqua;
+	//Hide the values in data bar
+	dataBar.ShowValue = false;
+	dataBar.BarColor = Color.Aqua;
 
-    //Saving the workbook
-    FileStream outputStream = new FileStream("DataBar.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

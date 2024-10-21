@@ -24,25 +24,25 @@ The following code example illustrates how to freeze rows in the worksheet.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Freeze%20Rows/.NET/Freeze%20Rows/Freeze%20Rows/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream(@"../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(@Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Applying freeze rows to the sheet by specifying a cell
-    worksheet.Range["A3"].FreezePanes();
+	//Applying freeze rows to the sheet by specifying a cell
+	worksheet.Range["A3"].FreezePanes();
 
-    //Set first visible row in the bottom pane
-    worksheet.FirstVisibleRow = 3;
+	//Set first visible row in the bottom pane
+	worksheet.FirstVisibleRow = 3;
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -94,25 +94,25 @@ The following code example illustrates how to freeze columns in the worksheet.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Freeze%20Columns/.NET/Freeze%20Columns/Freeze%20Columns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream(@"../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(@Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Applying freeze columns to the sheet by specifying a cell
-    worksheet.Range["C1"].FreezePanes();
+	//Applying freeze columns to the sheet by specifying a cell
+	worksheet.Range["C1"].FreezePanes();
 
-    //Set first visible column in the right pane
-    worksheet.FirstVisibleColumn = 4;
+	//Set first visible column in the right pane
+	worksheet.FirstVisibleColumn = 4;
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -166,22 +166,22 @@ The following code example illustrates how to unfreeze panes in the worksheet.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/UnFreeze%20Panes/.NET/UnFreeze%20Panes/UnFreeze%20Panes/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Unfreeze panes in the worksheet
-    worksheet.RemovePanes();
+	//Unfreeze panes in the worksheet
+	worksheet.RemovePanes();
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAs(outputStream);
 
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -229,22 +229,29 @@ The following code example illustrates how to split the window through the [Hori
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Split%20Panes/.NET/Split%20Panes/Split%20Panes/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //split panes
-  sheet.FirstVisibleColumn = 5;
-  sheet.FirstVisibleRow = 11;
-  sheet.VerticalSplit = 1100;
-  sheet.HorizontalSplit = 1000;
-  sheet.ActivePane = 1;
+	#region Split Panes
+	//split panes
+	sheet.FirstVisibleColumn = 2;
+	sheet.FirstVisibleRow = 5;
+	sheet.VerticalSplit = 5000;
+	sheet.HorizontalSplit = 5000;
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	sheet.ActivePane = 1;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SplitPanes.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 

@@ -13,19 +13,24 @@ XlsIO allows to insert Pictures into a worksheet. Refer to the following code sn
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Add%20Picture/.NET/Add%20Picture/Add%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding a picture
-  FileStream imageStream = new FileStream("Image.png", FileMode.Open, FileAccess.Read);
-  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream);
+	//Adding a picture
+	FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/Image.png"), FileMode.Open, FileAccess.Read);
+	IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("AddingImage.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AddPicture.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	imageStream.Dispose();
 }
 {% endhighlight %}
 
@@ -69,27 +74,32 @@ Pictures can be re-sized, positioned, and formatted using various properties of 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Position%20and%20Resize%20Picture/.NET/Position%20and%20Resize%20Picture/Position%20and%20Resize%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding a picture
-  FileStream imageStream = new FileStream("Image.png", FileMode.Open, FileAccess.Read);
-  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream);
+	//Adding a picture
+	FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/Image.png"), FileMode.Open, FileAccess.Read);
+	IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream);
 
-  //Positioning a Picture
-  shape.Top = 100;
-  shape.Left = 100;
+	//Positioning a Picture
+	shape.Top = 100;
+	shape.Left = 100;
 
-  //Re-sizing a Picture
-  shape.Height = 100;
-  shape.Width = 100;
+	//Re-sizing a Picture
+	shape.Height = 100;
+	shape.Width = 100;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("AddingImage.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ResizePicture.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	imageStream.Dispose();
 }
 {% endhighlight %}
 
@@ -150,32 +160,32 @@ The following code example illustrates how to move and size a picture along with
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Move%20and%20Size%20with%20cells/.NET/Move%20and%20Size%20with%20cells/Move%20and%20Size%20with%20cells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding a picture
-  FileStream imageStream = new FileStream("../../../Data/Image.png", FileMode.Open, FileAccess.Read);
-  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, 5, 3, imageStream);
-  shape = worksheet.Pictures.AddPicture(1, 5, 5, 7, imageStream);
-    
-  //Set move picture with cell
-  shape.IsMoveWithCell = true;
+	//Adding a picture
+	FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/Image.png"), FileMode.Open, FileAccess.Read);
+	IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, 5, 3, imageStream);
+	shape = worksheet.Pictures.AddPicture(1, 5, 5, 7, imageStream);
+	
+	//Set move picture with cell
+	shape.IsMoveWithCell = true;
 
-  //Set size picture with cell
-  shape.IsSizeWithCell = true;
+	//Set size picture with cell
+	shape.IsSizeWithCell = true;
 
-  //Hide the column
-  worksheet.HideColumn(5);
+	//Hide the column
+	worksheet.HideColumn(5);
 
-  //Saving the workbook as stream
-  FileStream OutputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(OutputStream);
+	//Saving the workbook as stream
+	FileStream OutputStream = new FileStream(Path.GetFullPath(@"Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
+	workbook.SaveAs(OutputStream);
 
-  //Dispose streams
-  imageStream.Dispose();
-  OutputStream.Dispose();
+	//Dispose streams
+	imageStream.Dispose();
+	OutputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -326,40 +336,46 @@ The following code snippet explains how to add images into merged regions.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/ImageInMergedRegion/.NET/ImageInMergedRegion/ImageInMergedRegion/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Get the merged cells
-  IRange[] range = new IRange[3];
-  range[0] = worksheet.MergedCells[0];
-  range[1] = worksheet.MergedCells[1];
-  range[2] = worksheet.MergedCells[2];
+	//Get the merged cells
+	IRange[] range = new IRange[3];
+	range[0] = worksheet.MergedCells[0];
+	range[1] = worksheet.MergedCells[1];
+	range[2] = worksheet.MergedCells[2];
 
-  //Get the images
-  string[] image = new string[3];
-  image[0] = "Picture1.png";
-  image[1] = "Picture2.png";
-  image[2] = "Picture3.png";
+	//Get the images
+	string[] image = new string[3];
+	image[0] = Path.GetFullPath(@"Data/Picture1.png");
+	image[1] = Path.GetFullPath(@"Data/Picture2.png");
+	image[2] = Path.GetFullPath(@"Data/Picture3.png");
 
-  //Insert images
-  int count = 0;
-  foreach (IRange cell in range)
-  {
-    FileStream imageStream = new FileStream(image[count], FileMode.Open, FileAccess.Read);
-    IPictureShape shape = worksheet.Pictures.AddPicture(cell.Row, cell.Column, imageStream);
-    (shape as ShapeImpl).BottomRow = cell.MergeArea.LastRow;
-    (shape as ShapeImpl).RightColumn = cell.MergeArea.LastColumn;
-    count++;
-    imageStream.Dispose();
-  }
+	//Insert images
+	int i = 0;
+	foreach (IRange cell in range)
+	{
+		FileStream imageStream = new FileStream(image[i], FileMode.Open, FileAccess.Read);
+		IPictureShape shape = worksheet.Pictures.AddPicture(cell.Row, cell.Column, imageStream);
+		(shape as ShapeImpl).BottomRow = cell.MergeArea.LastRow;
+		(shape as ShapeImpl).RightColumn = cell.MergeArea.LastColumn;
+		i++;
+		imageStream.Dispose();
+	}
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ImageInMergedRegion.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
+
 }
 {% endhighlight %}
 
@@ -441,18 +457,22 @@ An image can be added to a worksheet as an external link without downloading the
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/External%20Image/.NET/External%20Image/External%20Image/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Add image from the specified url at the specified location in the worksheet
-  worksheet.Pictures.AddPictureAsLink(1, 1, 5, 7, "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png");
+	//Add image from the specified url at the specified location in the worksheet
+	worksheet.Pictures.AddPictureAsLink(1, 1, 5, 7, "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png");
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("ExternalImage.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExternalImage.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -498,21 +518,27 @@ SVG images can be inserted in Excel documents for displaying images with accurac
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Add%20SVG%20Picture/.NET/Add%20SVG%20Picture/Add%20SVG%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  FileStream svgStream = new FileStream("Sample.svg", FileMode.Open);
-  FileStream pngStream = new FileStream("Sample.png", FileMode.Open);
+	FileStream svgStream = new FileStream(Path.GetFullPath(@"Data/Image.svg"), FileMode.Open);
+	FileStream pngStream = new FileStream(Path.GetFullPath(@"Data/Image.png"), FileMode.Open);
 
-  //Add svg image with given svg and png streams
-  worksheet.Pictures.AddPicture(1, 1, svgStream, pngStream);
+	//Add svg image with given svg and png streams
+	worksheet.Pictures.AddPicture(1, 1, svgStream, pngStream);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Svg.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SVGImage.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	svgStream.Dispose();
+	pngStream.Dispose();
 }
 {% endhighlight %}
 

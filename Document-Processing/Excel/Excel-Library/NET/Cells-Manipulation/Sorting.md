@@ -24,31 +24,47 @@ The following code example illustrates how to sort a range of cells by values.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Values/.NET/Sort%20On%20Cell%20Values/Sort%20On%20Cell%20Values/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("SortingData.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creates the data sorter
-  IDataSort sorter = workbook.CreateDataSorter();
+	#region Sort On Cell Values
+	//Creates the data sorter
+	IDataSort sorter = workbook.CreateDataSorter();
 
-  //Range to sort
-  sorter.SortRange = worksheet.Range["D3:D16"];
+	//Range to sort
+	sorter.SortRange = worksheet.Range["A1:A11"];
 
-  //Adds the sort field with the column index, sort based on and order by attribute
-  ISortField sortField = sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
+	//Adds the sort field with the column index, sort based on and order by attribute
+	sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
 
-  //Adds another sort field
-  ISortField sortField2 = sorter.SortFields.Add(1, SortOn.Values, OrderBy.Ascending);
+	//Sort based on the sort Field attribute
+	sorter.Sort();
 
-  //Sort based on the sort Field attribute
-  sorter.Sort();
+	//Creates the data sorter
+	sorter = workbook.CreateDataSorter();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Sort.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Range to sort
+	sorter.SortRange = worksheet.Range["B1:B11"];
+
+	//Adds the sort field with the column index, sort based on and order by attribute
+	sorter.SortFields.Add(1, SortOn.Values, OrderBy.Descending);
+
+	//Sort based on the sort Field attribute
+	sorter.Sort();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SortOnValues.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -116,37 +132,53 @@ The following code example illustrates how to move a range of cells with the spe
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20on%20Font%20Color/.NET/Sort%20on%20Font%20Color/Sort%20on%20Font%20Color/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath("Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creates the data sorter
-  IDataSort sorter = workbook.CreateDataSorter();
+	#region Sort on Font Color
+	//Creates the data sorter
+	IDataSort sorter = workbook.CreateDataSorter();
 
-  //Range to sort
-  sorter.SortRange = worksheet.Range["A2:D16"];
+	//Range to sort
+	sorter.SortRange = worksheet.Range["A1:A11"];
 
-  //Creates the sort field with the column index, sort based on and order by attribute
-  ISortField sortField1 = sorter.SortFields.Add(2, SortOn.FontColor, OrderBy.OnTop);
+	//Creates the sort field with the column index, sort based on and order by attribute
+	ISortField sortField = sorter.SortFields.Add(0, SortOn.FontColor, OrderBy.OnTop);
 
-  //Specifies the color to sort the data
-  sortField1.Color = Color.Red;
+	//Specifies the color to sort the data
+	sortField.Color = Syncfusion.Drawing.Color.Red;
 
-  //Creates another sort field with the column index, sort based on and order by attribute
-  ISortField sortField2 = sorter.SortFields.Add(2, SortOn.FontColor, OrderBy.OnTop);
+	//Sort based on the sort Field attribute
+	sorter.Sort();
 
-  //Specifies the color to sort the data
-  sortField2.Color = Color.Green;
+	//Creates the data sorter
+	sorter = workbook.CreateDataSorter();
 
-  //Sort based on the sort Field attribute
-  sorter.Sort();
+	//Range to sort
+	sorter.SortRange = worksheet.Range["B1:B11"];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Sort.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Creates another sort field with the column index, sort based on and order by attribute
+	sortField = sorter.SortFields.Add(1, SortOn.FontColor, OrderBy.OnBottom);
+
+	//Specifies the color to sort the data
+	sortField.Color = Syncfusion.Drawing.Color.Red;
+
+	//Sort based on the sort Field attribute
+	sorter.Sort();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SortOnFontColor.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -226,37 +258,53 @@ The following code example illustrates how to move a range of cells with the spe
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sort%20On%20Cell%20Color/.NET/Sort%20On%20Cell%20Color/Sort%20On%20Cell%20Color/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creates the data sorter
-  IDataSort sorter = workbook.CreateDataSorter();
+	#region Sort on Cell Color
+	//Creates the data sorter
+	IDataSort sorter = workbook.CreateDataSorter();
 
-  //Range to sort
-  sorter.SortRange = worksheet.Range["A2:D16"];
+	//Range to sort
+	sorter.SortRange = worksheet.Range["A1:A11"];
 
-  //Creates the sort field with the column index, sort based on and order by attribute
-  ISortField sortField1 = sorter.SortFields.Add(2, SortOn.CellColor, OrderBy.OnTop);
+	//Creates the sort field with the column index, sort based on and order by attribute
+	ISortField sortField = sorter.SortFields.Add(0, SortOn.CellColor, OrderBy.OnTop);
 
-  //Specifies the color to sort the data
-  sortField1.Color = Color.Red;
+	//Specifies the color to sort the data
+	sortField.Color = Syncfusion.Drawing.Color.Yellow;
 
-  //Creates another sort field with the column index, sort based on and order by attribute
-  ISortField sortField2 = sorter.SortFields.Add(2, SortOn.CellColor, OrderBy.OnTop);
+	//Sort based on the sort Field attribute
+	sorter.Sort();
 
-  //Specifies the color to sort the data
-  sortField2.Color = Color.Green;
+	//Creates the data sorter
+	sorter = workbook.CreateDataSorter();
 
-  //Sort based on the sort Field attribute
-  sorter.Sort();
+	//Range to sort
+	sorter.SortRange = worksheet.Range["B1:B11"];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Sort.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Creates another sort field with the column index, sort based on and order by attribute
+	sortField = sorter.SortFields.Add(1, SortOn.CellColor, OrderBy.OnBottom);
+
+	//Specifies the color to sort the data
+	sortField.Color = Syncfusion.Drawing.Color.Yellow;
+
+	//Sort based on the sort Field attribute
+	sorter.Sort();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SortOnCellColor.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
