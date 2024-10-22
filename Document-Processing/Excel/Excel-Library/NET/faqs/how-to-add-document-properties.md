@@ -1,6 +1,6 @@
 ---
 title: How to add document properties | Syncfusion
-description: This page shows how to add document properties using the Syncfusion .NET Excel library (XlsIO).
+description: This page shows how to add built-in and custom document properties using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
