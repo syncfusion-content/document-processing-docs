@@ -1,24 +1,24 @@
 ---
-title: How to extract all images from the worksheet | Syncfusion
-description: This page explains how to extract all images from the worksheet using Syncfusion .NET Excel library (XlsIO).
+title: How to extract and save images from an Excel worksheet | Syncfusion
+description: This page explains how to extract and save images from an Excel worksheet using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to extract all images from the worksheet?
+# How to extract and save images from an Excel worksheet?
 
 You can extract all images from the worksheet using XlsIO. The following code example demonstrates how to retrieve images from a worksheet and save them to a specified directory.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Define the directory name
-string directoryname = "directory_name";
+string directoryname = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output"); ;
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open("../../Data/Sample.xlsx");
+    IWorkbook workbook = application.Workbooks.Open("../../Data/InputTemplate.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     // Get the count of pictures in the worksheet
@@ -35,7 +35,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
         string imagefile = Path.Combine(directoryname, name);
 
         // Save the image to a file
-        FileStream stream = new FileStream(imagefile, FileMode.Create);
+        FileStream stream = new FileStream(Path.GetFullPath(imagefile), FileMode.Create, FileAccess.Write);
         image.Save(stream, image.RawFormat);
 
         //Dispose stream
@@ -46,12 +46,12 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Define the directory name
-Dim directoryName As String = "directory_name"
+Dim directoryname As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output")
 
 Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
-    Dim workbook As IWorkbook = application.Workbooks.Open("../../Data/Sample.xlsx")
+    Dim workbook As IWorkbook = application.Workbooks.Open("../../Data/InputTemplate.xlsx")
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
     ' Get the count of pictures in the worksheet
@@ -62,16 +62,17 @@ Using excelEngine As New ExcelEngine()
     For i As Integer = 0 To count - 1
         ' Get the picture
         picture(i) = worksheet.Pictures(i)
-        Dim image As Syncfusion.Drawing.Image = picture(i).Picture
+        Dim image As Image = picture(i).Picture
         Dim name As String = picture(i).Name & ".jpg"
-        Dim imageFile As String = Path.Combine(directoryName, name)
+        Dim imagefile As String = Path.Combine(directoryname, name)
 
         ' Save the image to a file
-        Using stream As New FileStream(imageFile, FileMode.Create)
-            ' Save the image using Syncfusion.Drawing
-            image.Save(stream, Syncfusion.Drawing.ImageFormat.Jpeg) ' Save as JPEG
+        Using stream As New FileStream(Path.GetFullPath(imagefile), FileMode.Create, FileAccess.Write)
+            image.Save(stream, image.RawFormat)
         End Using
     Next
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
+
+A complete working example to extract and save images from an Excel worksheet in C# is present on [this GitHub page]().
