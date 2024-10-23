@@ -145,6 +145,18 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Setting back color to target range
 	condition3.BackColor = ExcelKnownColors.Light_green;
 
+    //Applying conditional formatting to "A7"
+    condition = worksheet.Range["A7"].ConditionalFormats;
+    IConditionalFormat condition4 = condition.AddCondition();
+  
+    //Set conditional format rule that the cell value is a date in the next week
+    condition4.FormatType = ExcelCFType.TimePeriod;
+    condition4.TimePeriodType = CFTimePeriods.NextWeek;
+    worksheet.Range["A7"].Text = "Enter a date of next week";
+  
+    //Setting back color to target range
+    condition4.BackColor = ExcelKnownColors.Light_blue;
+
 	#region Save
 	//Saving the workbook
 	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
@@ -207,6 +219,18 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Setting back color to target range
   condition3.BackColor = ExcelKnownColors.Light_green;
 
+  //Applying conditional formatting to "A7"
+  condition = worksheet.Range["A7"].ConditionalFormats;
+  IConditionalFormat condition4 = condition.AddCondition();
+  
+  //Set conditional format rule that the cell value is a date in the next week
+  condition4.FormatType = ExcelCFType.TimePeriod;
+  condition4.TimePeriodType = CFTimePeriods.NextWeek;
+  worksheet.Range["A7"].Text = "Enter a date of next week";
+  
+  //Setting back color to target range
+  condition4.BackColor = ExcelKnownColors.Light_blue;
+
   workbook.SaveAs("ConditionalFormatting.xlsx");
 }
 {% endhighlight %}
@@ -260,6 +284,18 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   'Setting back color to target range
   condition3.BackColor = ExcelKnownColors.Light_green
+
+  'Applying conditional formatting to "A7"
+  condition = worksheet.Range("A7").ConditionalFormats
+  Dim condition4 As IConditionalFormat = condition.AddCondition()
+  
+  'Set conditional format rule that the cell value is a date in the next week
+  condition4.FormatType = ExcelCFType.TimePeriod
+  condition4.TimePeriodType = CFTimePeriods.NextWeek
+  worksheet.Range("A7").Text = "Enter a date of next week"
+  
+  'Setting back color to target range
+  condition4.BackColor = ExcelKnownColors.Light_blue
 
   workbook.SaveAs("ConditionalFormatting.xlsx")
 End Using
