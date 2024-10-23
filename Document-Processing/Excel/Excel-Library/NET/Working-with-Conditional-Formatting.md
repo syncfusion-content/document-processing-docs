@@ -310,7 +310,7 @@ N> The conditional formats for a single range should be added in descending orde
 
 By executing the program, you will get the Excel file as below
 
-![working with conditional format](Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img1.jpeg)
+![working with conditional format](Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img1.png)
 
 ## Reading an Existing Conditional Format
 
