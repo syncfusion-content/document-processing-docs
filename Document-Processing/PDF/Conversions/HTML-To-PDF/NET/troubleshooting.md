@@ -1100,6 +1100,41 @@ We can resolve the reported issue by changing the deployment method to web deplo
 
 </table>
 
+## CEF Rendering Engine: To Disable DawnCache and CPUCache folders cache during HTML to PDF conversion using CEF rendering engine.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">CEF Rendering Engine: To Disable DawnCache and CPUCache folders cache during HTML to PDF conversion using CEF rendering engine.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+
+By disabling caching, you can reduce memory consumption, which may be beneficial in scenarios where memory usage is a concern.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+	
+You can add below Cef command-line arguments in your conversion code
+
+{% tabs %}
+{% highlight C# %}
+
+cefConverterSettings.CommandLineArguments.Add("disable-gpu");
+cefConverterSettings.CommandLineArguments.Add("disable-gpu-shader-disk-cache");
+cefConverterSettings.CommandLineArguments.Add("disable-gpu-program-cache");
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
 The problem is limited to Azure Functions with premium plans in Net 8.0 version. To fix this, we can either manually install the necessary Chromium dependencies in the SSH portal or include the runtimes folder (Blink binaries) in the project location.
