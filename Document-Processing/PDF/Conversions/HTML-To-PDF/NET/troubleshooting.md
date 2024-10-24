@@ -1100,6 +1100,41 @@ We can resolve the reported issue by changing the deployment method to web deplo
 
 </table>
 
+## CEF Rendering Engine: To Disable DawnCache and CPUCache folders cache during HTML to PDF conversion using CEF rendering engine.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">CEF Rendering Engine: To Disable DawnCache and CPUCache folders cache during HTML to PDF conversion using CEF rendering engine.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+
+By disabling caching, you can reduce memory consumption, which may be beneficial in scenarios where memory usage is a concern.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+	
+You can add below Cef command-line arguments in your conversion code
+
+{% tabs %}
+{% highlight C# %}
+
+cefConverterSettings.CommandLineArguments.Add("disable-gpu");
+cefConverterSettings.CommandLineArguments.Add("disable-gpu-shader-disk-cache");
+cefConverterSettings.CommandLineArguments.Add("disable-gpu-program-cache");
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
 ## Converting HTML to PDF using the Alpine Docker image, it crashes after the first conversion.
 
 <table>
