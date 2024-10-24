@@ -40,6 +40,8 @@ There are two ways to install the dependency packages to Azure server,
 
 apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
+N> By following the above steps 3.1, we need to install dependencies through SSH all the time after publishing the web application.
+
 {% endhighlight %}
 
 3.2. Running the commands from C#
@@ -156,6 +158,7 @@ private void InstallDependecies(string shellFilePath)
 
 {% endhighlight %}
 
+N>  By following the above steps 3.2, we can deploy application in Azure app service Linux and no need to install dependencies through SSH.
 **Steps to publish as Azure App Linux**
 
 Step 1: Right-click the project and select Publish.
