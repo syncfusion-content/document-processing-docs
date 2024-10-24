@@ -1100,6 +1100,38 @@ We can resolve the reported issue by changing the deployment method to web deplo
 
 </table>
 
+## Converting HTML to PDF using the Alpine Docker image, it crashes after the first conversion.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Converting HTML to PDF using the Alpine Docker image, it crashes after the first conversion.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+	
+The issue occurs within Chromium specifically for Alpine.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+We can resolve this issue by adding command-line arguments to the Blink converter settings. Please refer to the code snippet below.
+
+{% tabs %}
+{% highlight C# %}
+
+blinkConverterSettings.CommandLineArguments.Add("--disable-gpu");
+	
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
 The problem is limited to Azure Functions with premium plans in Net 8.0 version. To fix this, we can either manually install the necessary Chromium dependencies in the SSH portal or include the runtimes folder (Blink binaries) in the project location.
