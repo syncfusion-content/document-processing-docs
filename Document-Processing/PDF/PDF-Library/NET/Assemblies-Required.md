@@ -19,9 +19,8 @@ The following assemblies need to be referenced in your application based on the 
   <tbody>
     <tr>
       <td>
-        [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf), 
-        [Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms) and 
-        [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
+        {{'[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }},
+        {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}      
       </td>
       <td>
         Syncfusion.Pdf.Base<br/>
@@ -30,8 +29,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-        [Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms) and 
-        [WPF (Client Profile)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)
+      {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.ClientProfile<br/>
@@ -40,7 +38,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-        [Universal Windows Platform](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)
+        {{'[Universal Windows Platform](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.UWP
@@ -48,7 +46,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-        [Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)
+      {{'[Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.Portable<br/>
@@ -57,9 +55,9 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-        [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor), 
-        [.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core), and 
-        [.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
+      {{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)'| markdownify }},
+      {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)'| markdownify }}
+      and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.Portable.dll<br/>
@@ -68,8 +66,8 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-        [Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui), 
-        [.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)
+      {{'[Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui)'| markdownify }},
+      {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.NET.dll<br/>
@@ -117,7 +115,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
         <tr>
       <td>
-        [ASP.NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms) 
+      {{'[ASP.NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms) '| markdownify }}
       </td>
       <td>
          Syncfusion.Pdf.Base<br/>
@@ -126,7 +124,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-        [ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)
+      {{'[ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.Web<br/>
@@ -135,7 +133,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-        [ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)
+      {{'[ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.MVC<br/>
