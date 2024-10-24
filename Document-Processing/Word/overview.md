@@ -7,6 +7,8 @@ documentation: UG
 keywords: Word, SDK, Automation, API, create, view, edit, convert, read
 ---
 
+> With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and File-Formats Framework. Please plan upgrade to .Net 8.0 or higher.
+
 # Welcome to Syncfusion Word Document Processing Framework
 
 Syncfusion Word Document Processing Framework is a collection of Word document processing library, Word converters and Word Processor component that works without Microsoft Office dependencies. It eases the developers, as they can just integrate and achieve the required Word document processing functionalities and concentrate on core logics of their application.
