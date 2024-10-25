@@ -29,7 +29,7 @@ Step 2: Add the following environment variable in the **aws-lambda-tools-default
 {% endhighlight %}
 {% endtabs %}
 
-Step 3: Install the [SkiaSharp.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies) NuGet package as reference to your application from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies) NuGet package as reference to your application from [NuGet.org](https://www.nuget.org).
 
 The following code snippet illustrates how to resolve the LibSkiaSharp not found exception in AWS Lambda by ensuring the required native library is properly linked. Additionally, it generates a base64-encoded image using SkiaSharp by drawing basic shapes on a canvas.
 
