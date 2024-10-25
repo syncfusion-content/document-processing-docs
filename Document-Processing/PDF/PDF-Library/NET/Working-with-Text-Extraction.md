@@ -357,7 +357,7 @@ You can get the word bounds for each word in a line using the [TextLine](https:/
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
 int iPage = 0;
 
 // Get the page
