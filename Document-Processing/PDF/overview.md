@@ -1,6 +1,6 @@
 ---
 title: PDF Document Processing Framework | Syncfusion
-description: Syncfusion PDF Document Processing Framework offers a library for PDF processing, converters, and a viewer component, all without Adobe dependencies.
+description: Syncfusion PDF Framework offers a library for PDF processing, PDF converters, and PDF Viewer component that works without Adobe dependencies.
 platform: document-processing
 control: general
 documentation: UG
