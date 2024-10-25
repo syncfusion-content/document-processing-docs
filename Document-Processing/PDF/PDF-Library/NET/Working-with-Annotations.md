@@ -149,7 +149,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %} 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Creates a new PDF document.
 Dim document As New PdfLoadedDocument("input.pdf")
