@@ -350,8 +350,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 #### Get the word bounds for each word in a line
  
-You can get the word bounds for each word in a line using the [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) [WordCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html#Syncfusion_Pdf_TextLine_WordCollection
-) property.Refer to the following code sample.
+You can get the word bounds for each word in a line using the [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) [WordCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html#Syncfusion_Pdf_TextLine_WordCollection) property.Refer to the following code sample.
 
 {% tabs %}
 
