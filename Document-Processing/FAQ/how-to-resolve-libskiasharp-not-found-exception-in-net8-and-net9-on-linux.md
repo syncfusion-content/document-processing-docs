@@ -1,11 +1,11 @@
 ---
 title: Resolve LibSkiaSharp Not Found Exception | Syncfusion.
-description: This page explains how to Resolve LibSkiaSharp Not Found Exception in .NET 8 and .NET 9 on Linux Using SkiaSharp Version Up to v2.88.8.
+description: This page explains how to resolve libSkiaSharp not found exception in .NET 8 and .NET 9 on Linux using SkiaSharp version upto v2.88.8 on AWS.
 platform: document-processing
 documentation: UG
 ---
 
-# How to resolve LibSkiaSharp not found exception specifically while using SkiaSharp version upto v2.88.8 in .NET 8 and .NET 9 applications hosted on Linux?
+# How to resolve LibSkiaSharp not found exception specifically while using SkiaSharp version upto v2.88.8 in .NET 8 and .NET 9 applications hosted on AWS Linux?
 
 The LibSkiaSharp Not Found exception occurs in .NET 8 and .NET 9 applications hosted on Linux specifically when using SkiaSharp version up to v2.88.8. This exception indicates that the native SkiaSharp library is not found in the expected paths, preventing the application from functioning correctly.
 
