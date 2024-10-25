@@ -1135,6 +1135,45 @@ cefConverterSettings.CommandLineArguments.Add("disable-gpu-program-cache");
 
 </table>
 
+## Blink files are missing at /user/local/bin while performing HTML to PDF conversion with docker and docker compose file.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Blink files are missing at /user/local/bin while performing HTML to PDF conversion with docker and docker compose file.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+The exception may occur while performing HTML to PDF conversion with docker and docker compose file due to a permission-related issues.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To overcome the exception by making the root files as executable.  For making the root files as executable, you can find the code snippet below which will be added to your docker file.
+
+{% tabs %}
+{% highlight C# %}
+
+USER root
+RUN chmod +x /app/runtimes/linux/native/chrome && \
+chmod +x /app/runtimes/linux/native/chrome-wrapper
+
+{% endhighlight %}
+{% endtabs %}
+<br/><br/>
+Please refer to the below screenshot,
+<br/><br/>
+<img alt="Runtime folder" src="htmlconversion_images/dockercompress.jpg">
+<br/><br/>
+
+</td>
+</tr>
+
+</table>
+
 ## Converting HTML to PDF using the Alpine Docker image, it crashes after the first conversion.
 
 <table>
@@ -1166,6 +1205,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-gpu");
 </tr>
 
 </table>
+
 
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 

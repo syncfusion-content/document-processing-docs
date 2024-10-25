@@ -1,6 +1,6 @@
 ---
 title: Excel Document Processing Framework | Syncfusion
-description:  Syncfusion Excel Document Processing Framework provides Excel document processing library (through code), Excel converters and Spreadsheet component that works without Microsoft Office dependencies.
+description: Syncfusion Excel Document Processing Framework provides Excel document processing library, Excel converters and Spreadsheet component without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
