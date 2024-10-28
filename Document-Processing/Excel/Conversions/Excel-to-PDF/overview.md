@@ -1,6 +1,6 @@
 ---
 title: Overview of Syncfusion Excel to PDF(XlsIO) library | Syncfusion
-description: XlsIO is a .NET Excel library to create, read, edit & convert Excel file in WinForms, WPF, UWP, ASP.NET Core, ASP.NET MVC, Xamarin, Blazor, WinUI and .NET MAUI applications.
+description: XlsIO is a .NET Excel library to create, read, edit & convert Excel file in WinForms, WPF, UWP, ASP.NET Core, ASP.NET MVC, Xamarin, Blazor, WinUI and .NET MAUI.
 platform: document-processing
 control: XlsIO
 documentation: UG
