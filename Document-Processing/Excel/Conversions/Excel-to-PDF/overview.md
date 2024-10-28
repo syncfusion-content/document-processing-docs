@@ -11,6 +11,9 @@ The [Syncfusion .NET Excel (XlsIO) library](https://www.syncfusion.com/document-
 
 The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Xamarin, Blazor, WinUI and .NET MAUI applications.
 
+To quickly start converting an Excel document to a PDF, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=mMrGjypcSLw" %}
+
 **Key Features**
 
 * Ability to convert Excel [workbook to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-conversion#workbook-to-pdf).
