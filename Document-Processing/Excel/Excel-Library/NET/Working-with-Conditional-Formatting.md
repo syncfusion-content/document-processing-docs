@@ -97,58 +97,62 @@ The following code example illustrates how to create and applies various differe
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Create%20Conditional%20Format/.NET/Create%20Conditional%20Format/Create%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Applying conditional formatting to "A1"
-  IConditionalFormats condition = worksheet.Range["A1"].ConditionalFormats;
-  IConditionalFormat condition1 = condition.AddCondition();
+	//Applying conditional formatting to "A1"
+	IConditionalFormats condition = worksheet.Range["A1"].ConditionalFormats;
+	IConditionalFormat condition1 = condition.AddCondition();
 
-  //Represents conditional format rule that the value in target range should be between 10 and 20
-  condition1.FormatType = ExcelCFType.CellValue;
-  condition1.Operator = ExcelComparisonOperator.Between;
-  condition1.FirstFormula = "10";
-  condition1.SecondFormula = "20";
-  worksheet.Range["A1"].Text = "Enter a number between 10 and 20";
+	//Represents conditional format rule that the value in target range should be between 10 and 20
+	condition1.FormatType = ExcelCFType.CellValue;
+	condition1.Operator = ExcelComparisonOperator.Between;
+	condition1.FirstFormula = "10";
+	condition1.SecondFormula = "20";
+	worksheet.Range["A1"].Text = "Enter a number between 10 and 20";
 
-  //Setting back color and font style to be applied for target range
-  condition1.BackColor = ExcelKnownColors.Light_orange;
-  condition1.IsBold = true;
-  condition1.IsItalic = true;
+	//Setting back color and font style to be applied for target range
+	condition1.BackColor = ExcelKnownColors.Light_orange;
+	condition1.IsBold = true;
+	condition1.IsItalic = true;
 
-  //Applying conditional formatting to "A3"
-  condition = worksheet.Range["A3"].ConditionalFormats;
-  IConditionalFormat condition2 = condition.AddCondition();
+	//Applying conditional formatting to "A3"
+	condition = worksheet.Range["A3"].ConditionalFormats;
+	IConditionalFormat condition2 = condition.AddCondition();
 
-  //Represents conditional format rule that the cell value should be 1000
-  condition2.FormatType = ExcelCFType.CellValue;
-  condition2.Operator = ExcelComparisonOperator.Equal;
-  condition2.FirstFormula = "1000";
-  worksheet.Range["A3"].Text = "Enter the Number as 1000";
+	//Represents conditional format rule that the cell value should be 1000
+	condition2.FormatType = ExcelCFType.CellValue;
+	condition2.Operator = ExcelComparisonOperator.Equal;
+	condition2.FirstFormula = "1000";
+	worksheet.Range["A3"].Text = "Enter the Number as 1000";
 
-  //Setting fill pattern and back color to target range
-  condition2.FillPattern = ExcelPattern.LightUpwardDiagonal;
-  condition2.BackColor = ExcelKnownColors.Yellow;
+	//Setting fill pattern and back color to target range
+	condition2.FillPattern = ExcelPattern.LightUpwardDiagonal;
+	condition2.BackColor = ExcelKnownColors.Yellow;
 
-  //Applying conditional formatting to "A5"
-  condition = worksheet.Range["A5"].ConditionalFormats;
-  IConditionalFormat condition3 = condition.AddCondition();
+	//Applying conditional formatting to "A5"
+	condition = worksheet.Range["A5"].ConditionalFormats;
+	IConditionalFormat condition3 = condition.AddCondition();
 
-  //Setting conditional format rule that the cell value for target range should be less than or equal to 1000
-  condition3.FormatType = ExcelCFType.CellValue;
-  condition3.Operator = ExcelComparisonOperator.LessOrEqual;
-  condition3.FirstFormula = "1000";
-  worksheet.Range["A5"].Text = "Enter a Number which is less than or equal to 1000";
+	//Setting conditional format rule that the cell value for target range should be less than or equal to 1000
+	condition3.FormatType = ExcelCFType.CellValue;
+	condition3.Operator = ExcelComparisonOperator.LessOrEqual;
+	condition3.FirstFormula = "1000";
+	worksheet.Range["A5"].Text = "Enter a Number which is less than or equal to 1000";
 
-  //Setting back color to target range
-  condition3.BackColor = ExcelKnownColors.Light_green;
+	//Setting back color to target range
+	condition3.BackColor = ExcelKnownColors.Light_green;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("ConditionalFormatting.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -282,22 +286,18 @@ The following code example illustrates how to read an existing conditional forma
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Read%20Conditional%20Format/.NET/Read%20Conditional%20Format/Read%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Read conditional formatting settings 
-  string formatType = worksheet.Range["A1"].ConditionalFormats[0].FormatType.ToString();
-  string cfOperator = worksheet.Range["A1"].ConditionalFormats[0].Operator.ToString();
-  string backColor = worksheet.Range["A1"].ConditionalFormats[0].BackColor.ToString();
+	//Read conditional formatting settings 
+	string formatType = worksheet.Range["A1"].ConditionalFormats[0].FormatType.ToString();
+	string cfOperator = worksheet.Range["A1"].ConditionalFormats[0].Operator.ToString();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -347,20 +347,25 @@ The following code example illustrates how to remove conditional formats.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20Conditional%20Format/.NET/Remove%20Conditional%20Format/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Removing conditional format for a specified range 
-  worksheet.Range["E5"].ConditionalFormats.Remove();
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Removing conditional format for a specified range 
+	worksheet.Range["E5"].ConditionalFormats.Remove();
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -406,20 +411,24 @@ The following code example illustrates how to remove conditional formats at spec
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20at%20Index/.NET/Remove%20at%20Index/Remove%20at%20Index/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Removing first conditional Format at the specified Range
-  worksheet.Range["E5"].ConditionalFormats.RemoveAt(0);
+	//Removing first conditional Format at the specified Range
+	worksheet.UsedRange.ConditionalFormats.RemoveAt(0);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -463,20 +472,24 @@ The following code example illustrates how to remove conditional formats from en
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Remove%20all%20Conditional%20Formats/.NET/Remove%20all%20Conditional%20Formats/Remove%20all%20Conditional%20Formats/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	//Removing Conditional Formatting Settings From Entire Sheet
+	worksheet.UsedRange.Clear(ExcelClearOptions.ClearConditionalFormats);
 
-  //Removing Conditional Formatting Settings From Entire Sheet
-  worksheet.UsedRange.Clear(ExcelClearOptions.ClearConditionalFormats);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveAll.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -522,21 +535,25 @@ The following code example illustrates how to use formula in Conditional Format.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Conditional%20Format%20with%20R1C1/.NET/Conditional%20Format%20with%20R1C1/Conditional%20Format%20with%20R1C1/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Using FormulaR1C1 property in Conditional Formatting 
-  IConditionalFormats condition = worksheet.Range["E5:E18"].ConditionalFormats;
-  IConditionalFormat condition1 = condition.AddCondition();
-  condition1.FirstFormulaR1C1 = "=R[1]C[0]";
-  condition1.SecondFormulaR1C1 = "=R[1]C[1]";
+	//Using FormulaR1C1 property in Conditional Formatting 
+	IConditionalFormats condition = worksheet.Range["E5:E18"].ConditionalFormats;
+	IConditionalFormat condition1 = condition.AddCondition();
+	condition1.FirstFormulaR1C1 = "=R[1]C[0]";
+	condition1.SecondFormulaR1C1 = "=R[1]C[1]";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ConditionalFormat.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 

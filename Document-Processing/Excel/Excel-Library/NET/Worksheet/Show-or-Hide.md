@@ -16,23 +16,23 @@ The following code example illustrates how to show hidden row and column in an E
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Show%20Row%20and%20Column/.NET/Show%20Row%20and%20Column/Show%20Row%20and%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Show row and column
-  worksheet.ShowRow(2, true);
-  worksheet.ShowColumn(2, true);
+	//Show row and column
+	worksheet.ShowRow(2, true);
+	worksheet.ShowColumn(2, true);
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -80,23 +80,23 @@ The following code example illustrates how to hide row and column in an Excel wo
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Hide%20Row%20and%20Column/.NET/Hide%20Row%20and%20Column/Hide%20Row%20and%20Column/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Hide row and column
-  worksheet.HideRow(2);
-  worksheet.HideColumn(2);
+	//Hide row and column
+	worksheet.HideRow(2);
+	worksheet.HideColumn(2);
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -144,20 +144,26 @@ The following code example illustrates how to hide the worksheets using [Visibil
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Hide%20Worksheet/.NET/Hide%20Worksheet/Hide%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(2);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(2);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  sheet.Range["A1:M20"].Text = "visibility";
+	sheet.Range["A1:M20"].Text = "visibility";
 
-  //Set visibility
-  sheet.Visibility = WorksheetVisibility.Hidden;
+	#region Hide Worksheet
+	//Set visibility
+	sheet.Visibility = WorksheetVisibility.Hidden;
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -205,19 +211,25 @@ The following code example illustrates how to hide the grid lines using [IsGridL
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Hide%20Gridlines/.NET/Hide%20Gridlines/Hide%20Gridlines/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
-  sheet.Range["A1:M20"].Text = "Gridlines";
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
+	sheet.Range["A1:M20"].Text = "Gridlines";
 
-  //Hide grid line
-  sheet.IsGridLinesVisible = false;
+	#region Hide Gridlines
+	//Hide grid line
+	sheet.IsGridLinesVisible = false;
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideGridlines.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -263,20 +275,27 @@ The following code example illustrates how to hide the row and column headings u
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Hide%20Row%20and%20Column%20Headers/.NET/Hide%20Row%20and%20Column%20Headers/Hide%20Row%20and%20Column%20Headers/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+ using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  sheet.Range["A1:M20"].Text = "RowColumnHeader";
-  sheet.IsRowColumnHeadersVisible = false;
+	sheet.Range["A1:M20"].Text = "RowColumnHeader";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Hide Row and Column Headers
+	sheet.IsRowColumnHeadersVisible = false;
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideRowandColumnHeaders.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -320,21 +339,27 @@ The following code example illustrates how to hide the worksheet tabs using [Dis
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Hide%20Worksheet%20Tabs/.NET/Hide%20Worksheet%20Tabs/Hide%20Worksheet%20Tabs/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(3);
-  IWorksheet sheet = workbook.Worksheets[0];
-  sheet.Range["A1:M20"].Text = "Tabs";
-	
-  //Hide the tab
-  workbook.DisplayWorkbookTabs = false;
-  //set the display tab
-  workbook.DisplayedTab = 2;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(3);
+	IWorksheet sheet = workbook.Worksheets[0];
+	sheet.Range["A1:M20"].Text = "Tabs";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Hide Worksheet Tabs
+	//Hide the tab
+	workbook.DisplayWorkbookTabs = false;
+	//set the display tab
+	workbook.DisplayedTab = 2;
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideWorksheetTabs.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -386,19 +411,25 @@ The following code example illustrates how to set the zoom level by using [Zoom]
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Set%20Zoom%20Level/.NET/Set%20Zoom%20Level/Set%20Zoom%20Level/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
-  sheet.Range["A1:M20"].Text = "Zoom level";
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
+	sheet.Range["A1:M20"].Text = "Zoom level";
 
-  //set zoom percentage
-  sheet.Zoom = 70;
+	#region Set Zoom Level
+	//set zoom percentage
+	sheet.Zoom = 70;
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SetZoomLevel.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 

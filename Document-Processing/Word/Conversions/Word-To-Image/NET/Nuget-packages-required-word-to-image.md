@@ -119,6 +119,37 @@ Install-Package Syncfusion.DocIORenderer.NET
 </tr>
 </table>
 
+#### Retired Platforms
+
+The following NuGet packages need to be included in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net)' | markdownify}}<br/>
+</td>
+<td>
+Syncfusion.DocIO.AspNet.nupkg
+</td>
+<td>
+Install-Package Syncfusion.DocIO.AspNet
+</td>
+</tr>
+</table>
+
 ## Converting Charts
 
 The following NuGet package need to be installed additionally to preserve chart as image in Word to Image conversion.
@@ -179,6 +210,37 @@ Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5.nupkg
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
+</td>
+</tr>
+</table>
+
+#### Retired Platforms
+
+The following NuGet packages need to be included in your application based on the platform.
+
+<table>
+<thead>
+<tr>
+<th width="20%">
+Platform(s)
+</th>
+<th width="40%">
+Package name
+</th>
+<th width="40%">
+Package manager console command
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+ASP.NET<br/>
+</td>
+<td>
+Syncfusion.OfficeChartToImageConverter.AspNet.nupkg
+</td>
+<td>
+Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 </td>
 </tr>
 </table>

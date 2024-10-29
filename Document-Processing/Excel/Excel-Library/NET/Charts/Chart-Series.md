@@ -147,79 +147,51 @@ The complete code snippet illustrating the above options is shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Series%20Lines/.NET/Series%20Lines/Series%20Lines/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine engine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Create(1);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = engine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-    worksheet.Range["A1"].Text = "Items";
-    worksheet.Range["A2"].Text = "Beverages";
-    worksheet.Range["A3"].Text = "Condiments";
-    worksheet.Range["A4"].Text = "Confections";
-    worksheet.Range["A5"].Text = "Dairy Products";
-    worksheet.Range["A6"].Text = "Grains/Cereals";
+	//Create a Chart
+	IChartShape chart = sheet.Charts.Add();
 
-    worksheet.Range["B1"].Text = "Amount(in $)";
-    worksheet.Range["B2"].Number = 2776;
-    worksheet.Range["B3"].Number = 1077;
-    worksheet.Range["B4"].Number = 2287;
-    worksheet.Range["B5"].Number = 1368;
-    worksheet.Range["B6"].Number = 3325;
+	//Set Chart Type
+	chart.ChartType = ExcelChartType.Bar_Stacked;
 
-    worksheet.Range["C1"].Text = "Count";
-    worksheet.Range["C2"].Number = 925;
-    worksheet.Range["C3"].Number = 378;
-    worksheet.Range["C4"].Number = 880;
-    worksheet.Range["C5"].Number = 581;
-    worksheet.Range["C6"].Number = 189;
+	//Set data range in the worksheet
+	chart.DataRange = sheet.Range["A1:C6"];
+	chart.IsSeriesInRows = false;
 
-    IChartShape chart = worksheet.Charts.Add();
+	IChartSerie chartSerie = chart.Series[0];
 
-    //Set chart type
-    chart.ChartType = ExcelChartType.Column_Clustered;
+	//Set HasSeriesLines property to true.
+	chartSerie.SerieFormat.CommonSerieOptions.HasSeriesLines = true;
 
-    //Set chart title
-    chart.ChartTitle = "Product Sales";
+	//Apply formats to SeriesLines.
+	chartSerie.SerieFormat.CommonSerieOptions.PieSeriesLine.LineColor = Color.Green;
 
-    //Add first serie
-    IChartSerie serie1 = chart.Series.Add("Amount");
-    serie1.Values = worksheet.Range["B2:B6"];
-    serie1.CategoryLabels = worksheet.Range["A2:A6"];
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
 
-    //Add second serie
-    IChartSerie serie2 = chart.Series.Add("Count");
-    serie2.Values = worksheet.Range["C2:C6"];
-    serie2.CategoryLabels = worksheet.Range["A2:A6"];
+	//Positioning the chart in the worksheet
+	chart.TopRow = 8;
+	chart.LeftColumn = 1;
+	chart.BottomRow = 23;
+	chart.RightColumn = 8;
 
-    //Set the series type
-    chart.Series[0].SerieType = ExcelChartType.Line_Markers;
-    chart.Series[1].SerieType = ExcelChartType.Bar_Clustered;
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-    //Set the color
-    chart.Series[1].SerieFormat.Fill.FillType = ExcelFillType.Gradient;
-    chart.Series[1].SerieFormat.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-    chart.Series[1].SerieFormat.Fill.BackColor = Color.FromArgb(205, 217, 234);
-    chart.Series[1].SerieFormat.Fill.ForeColor = Color.Red;
-
-    //Set the border
-    chart.Series[1].SerieFormat.LineProperties.LineColor = Color.Red;
-    chart.Series[1].SerieFormat.LineProperties.LinePattern = ExcelChartLinePattern.Dot;
-    chart.Series[1].SerieFormat.LineProperties.LineWeight = ExcelChartLineWeight.Narrow;
-
-    //Positioning chart in a worksheet
-    chart.TopRow = 9;
-    chart.LeftColumn = 1;
-    chart.RightColumn = 10;
-    chart.BottomRow = 25;
-
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-
-    //Dispose streams
-    stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
