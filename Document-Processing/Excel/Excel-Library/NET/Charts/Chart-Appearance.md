@@ -478,16 +478,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set picture fill to chart area
 	chart.ChartArea.Fill.UserPicture(image1, "Image");
 
-    //Setting offset to chart area fill picture
-    Rectangle chartarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
-    (chart.ChartArea.Fill as ShapeFillImpl).FillRect = chartarea;
+  //Setting offset to chart area fill picture
+  Rectangle chartarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.ChartArea.Fill as ShapeFillImpl).FillRect = chartarea;
 
 	//Set picture fill to plot area
 	chart.PlotArea.Fill.UserPicture(image1, "Image");
 
-    //Setting offset to plot area fill picture
-    Rectangle plotarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
-    (chart.PlotArea.Fill as ShapeFillImpl).FillRect = plotarea;
+  //Setting offset to plot area fill picture
+  Rectangle plotarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.PlotArea.Fill as ShapeFillImpl).FillRect = plotarea;
 
 	//Set picture fill to series
 	serie1.SerieFormat.Fill.UserPicture(image2, "Image");
