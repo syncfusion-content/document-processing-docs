@@ -492,8 +492,158 @@ End Using
 
 A complete working example to resize rows and columns in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Format%20rows%20and%20columns/Resize%20Rows%20and%20Columns/.NET/Resize%20Rows%20and%20Columns).
 
+### Managing Row Height and Column Width in Pixels
+
+Managing the row height and column width in pixels allows precise control over the appearance and layout of cells in an Excel worksheet.
+
+#### Get Row Height and Column Width in Pixels
+
+A row height and column width can be get using the [GetRowHeightInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetRowHeightInPixels_System_Int32_) and [GetColumnWidthInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetColumnWidthInPixels_System_Int32_) methods of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html).
+
+The following code example illustrates how to get the row height and column width in pixels.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+
+  //Load an existing file
+  FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Get row height in pixels
+  int rowheight = worksheet.GetRowHeightInPixels(1);
+
+  //Get column width in pixels
+  int columnwidth = worksheet.GetColumnWidthInPixels(1);
+
+  Console.WriteLine($"Row Height: {rowheight}");
+  Console.WriteLine($"Column Width: {columnwidth}");
+
+  //Dispose stream
+  inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Get row height in pixels
+  int rowheight = worksheet.GetRowHeightInPixels(1);
+
+  //Get column width in pixels
+  int columnwidth = worksheet.GetColumnWidthInPixels(1);
+
+  Console.WriteLine($"Row Height: {rowheight}");
+  Console.WriteLine($"Column Width: {columnwidth}");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Get row height in pixels
+  Dim rowheight As Integer = worksheet.GetRowHeightInPixels(1)
+
+  'Get column width in pixels
+  Dim columnwidth As Integer = worksheet.GetColumnWidthInPixels(1)
+
+  Console.WriteLine($"Row Height: {rowheight}")
+  Console.WriteLine($"Column Width: {columnwidth}")
+End Using
+
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to get row height and column width in an Excel worksheet in C# is present on [this GitHub page]().
+
+#### Set Row Height and Column Width in Pixels
+
+A row height and column width can be set using the [SetRowHeightInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeightInPixels_System_Int32_System_Double_) and [SetColumnWidthInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetColumnWidthInPixels_System_Int32_System_Int32_) methods of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html).
+
+The following code example illustrates how to set the row height and column width in pixels.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+
+  //Load an existing file
+  FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Set row height in pixels
+  worksheet.SetRowHeightInPixels(2, 50);
+
+  //Set column width in pixels
+  worksheet.SetColumnWidthInPixels(3, 100);
+
+  //Save the workbook as stream
+  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+
+  //Dispose stream
+  inputStream.Dispose();
+  outputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Set row height in pixels
+  worksheet.SetRowHeightInPixels(2, 50);
+
+  //Set column width in pixels
+  worksheet.SetColumnWidthInPixels(3, 100);
+
+  //Save the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Set row height in pixels
+  worksheet.SetRowHeightInPixels(2, 50)
+
+  'Set column width in pixels
+  worksheet.SetColumnWidthInPixels(3, 100)
+
+  'Save the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to set row height and column width in an Excel worksheet in C# is present on [this GitHub page]().
+
 N> If a column width or a row height is 0, then the column or row is hidden.
-N> Column width and row height can also be set in pixels, by using the [SetColumnWidthInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetColumnWidthInPixels_System_Int32_System_Int32_) and [SetRowHeightInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeightInPixels_System_Int32_System_Double_) methods of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) respectively.
 
 ## Auto-Fit Rows and Columns
 
