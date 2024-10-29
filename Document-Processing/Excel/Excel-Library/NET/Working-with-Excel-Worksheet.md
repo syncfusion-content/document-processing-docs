@@ -21,20 +21,26 @@ The following code example illustrates how to create worksheets within a workboo
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Create%20Worksheet/.NET/Create%20Worksheet/Create%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //The new workbook will have 5 worksheets
-  IWorkbook workbook = application.Workbooks.Create(5);
-  //Creating a Sheet
-  IWorksheet sheet = workbook.Worksheets.Create();
-  //Creating a Sheet with name “Sample”
-  IWorksheet namedSheet = workbook.Worksheets.Create("Sample");
+	#region Create
+	//The new workbook is created with 5 worksheets
+	IWorkbook workbook = application.Workbooks.Create(5);
+	//Creating a new sheet
+	IWorksheet worksheet = workbook.Worksheets.Create();
+	//Creating a new sheet with name “Sample”
+	IWorksheet namedSheet = workbook.Worksheets.Create("Sample");
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CreateWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -87,20 +93,21 @@ The following code example illustrates how to access a worksheet from its worksh
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Access%20Worksheet/.NET/Access%20Worksheet/Access%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(2);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Accessing via index
-  IWorksheet sheet = workbook.Worksheets[0];
+	#region  Access
+	//Accessing via index
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Accessing via sheet Name
-  IWorksheet NamedSheet = workbook.Worksheets["Sample"];
+	//Accessing via sheet name
+	IWorksheet NamedSheet = workbook.Worksheets["Sample"];
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -164,17 +171,25 @@ The following code example illustrates how to remove a worksheet from Excel work
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Remove%20Worksheet/.NET/Remove%20Worksheet/Remove%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(2);
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-  //Removing the sheet
-  workbook.Worksheets[0].Remove();
+	#region Remove
+	//Removing the sheet
+	workbook.Worksheets[0].Remove();
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -277,18 +292,24 @@ The following code example illustrates how to highlight worksheet tabs.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Highlight%20Worksheet%20Tab/.NET/Highlight%20Worksheet%20Tab/Highlight%20Worksheet%20Tab/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Highlighting sheet tab
-  sheet.TabColor = ExcelKnownColors.Red;
+	#region Highlight Worksheet Tab
+	//Highlighting sheet tab
+	sheet.TabColor = ExcelKnownColors.Green;
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HighlightSheetTab.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 

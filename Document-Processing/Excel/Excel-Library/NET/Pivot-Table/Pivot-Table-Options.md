@@ -281,25 +281,28 @@ The formula can also be set to the IPivotField property as follows.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Calculated%20Field/.NET/Calculated%20Field/Calculated%20Field/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("PivotTable.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet sheet = workbook.Worksheets[1];
-  IPivotTable pivotTable = sheet.PivotTables[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet sheet = workbook.Worksheets[1];
+	IPivotTable pivotTable = sheet.PivotTables[0];
 
-  //Add calculated field to the first pivot table
-  IPivotField field = pivotTable.CalculatedFields.Add("Percent", "Sales/Total*100");
+	//Add calculated field to the first pivot table
+	IPivotField field = pivotTable.CalculatedFields.Add("Percent", "Units/3000*100");
 
-  //Set Field Formula
-  field.Formula = "Sales/Total*200";
+	//Set Field Formula
+	field.Formula = "Units/3000*200";
 
-  string fileName = "PivotTableCalculate.xlsx";
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CalculatedField.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

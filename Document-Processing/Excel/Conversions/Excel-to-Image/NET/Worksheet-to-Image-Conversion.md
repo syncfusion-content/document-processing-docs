@@ -78,21 +78,24 @@ The complete code snippet of the previous options is given below.
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open(File.OpenRead("Sample.xlsx"), ExcelOpenType.Automatic);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Initialize XlsIORenderer
-  application.XlsIORenderer = new XlsIORenderer();  
+	//Initialize XlsIORenderer
+	application.XlsIORenderer = new XlsIORenderer();
 
-  //Converts and save as stream
-  MemoryStream stream = new MemoryStream();
-  sheet.ConvertToImage(1, 1, 10, 20, stream);
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Image.png"), FileMode.Create, FileAccess.Write);
+	sheet.ConvertToImage(sheet.UsedRange, outputStream);
+	#endregion
 
-  //Close and Dispose
-  workbook.Close();
-  stream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

@@ -94,6 +94,27 @@ Windows UI (WinUI) <br/>
 </tr>
 </table>
 
+### RETIRED PRODUCTS
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET
+      </td>
+      <td>
+        {{'[Syncfusion.Pdf.AspNet.nupkg]( https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 N> 2. From the Essential Studio 2018 Volume 3 release(v16.3.0.21), Syncfusion has changed some of the NuGet package names to search and find the required Syncfusion NuGet packages in nuget.org easily based on the control and its platforms.
 
@@ -112,7 +133,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6) Windows
+(.NET Core, .NET 5, .NET 6 and .Net 8) Windows
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Windows.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/)'| markdownify }}
@@ -120,7 +141,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6) Linux
+(.NET Core, .NET 5, .NET 6 and .Net 8) Linux
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Linux.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/)'| markdownify }}
@@ -128,7 +149,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6) Mac
+(.NET Core, .NET 5, .NET 6 and .Net 8) Mac
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Mac.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac/)'| markdownify }}
@@ -136,7 +157,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6) Aws
+(.NET Core, .NET 5, .NET 6 and .Net 8) Aws
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Aws.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Aws/)'| markdownify }}
@@ -171,20 +192,33 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.HtmlToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.AspNet/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
+</table>
+
+### RETIRED PRODUCTS
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET
+      </td>
+      <td>
+    {{'[Syncfusion.HtmlToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 N> 1. HTML to PDF conversion is not supported in Silverlight, Windows Phone, WinRT, Universal, Xamarin and UWP applications.
@@ -220,14 +254,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.PDF.OCR.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.AspNet/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC4
 </td>
 <td>
@@ -251,6 +277,27 @@ Blazor
 {{'[Syncfusion.PDF.OCR.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core/)'| markdownify }}
 </td>
 </tr>
+</table>
+
+### RETIRED PRODUCTS
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET
+      </td>
+      <td>
+        {{'[Syncfusion.PDF.OCR.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ## Converting Word to PDF
@@ -291,14 +338,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.DocToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.AspNet/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC4
 </td>
 <td>
@@ -331,6 +370,27 @@ Xamarin
 {{'[Syncfusion.Xamarin.DocIORenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIORenderer/)'| markdownify }}
 </td>
 </tr>
+</table>
+
+### RETIRED PRODUCTS
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET
+      </td>
+      <td>
+        {{'[Syncfusion.DocToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 N> Install SkiaSharp package version 1.59.3 in addition to DocIORenderer package.  
@@ -369,15 +429,6 @@ WPF
 </td>
 <td>
 {{'[Syncfusion.ExcelToPdfConverter.ClientProfile.nupkg](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.ClientProfile/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Web Forms,<br/>
-ASP.NET Core (Targeting .NET Framework)
-</td>
-<td>
-{{'[Syncfusion.ExcelToPDFConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -424,6 +475,27 @@ Blazor (Server-App)
 </tr>
 </table>
 
+### RETIRED PRODUCTS
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET
+      </td>
+      <td>
+        {{'[Syncfusion.ExcelToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 N> Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
 
 ## Converting Presentation document to PDF
@@ -452,14 +524,6 @@ WPF
 </td>
 <td>
 {{'[Syncfusion.PresentationToPdfConverter.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.PresentationToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -496,6 +560,27 @@ Xamarin
 {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
 </td>
 </tr>
+</table>
+
+### RETIRED PRODUCTS
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET
+      </td>
+      <td>
+        Syncfusion.PresentationToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 N> PowerPoint Presentation to PDF conversion is supported from .NET Standard 1.4 onwards for ASP.NET Core and Xamarin.
@@ -536,17 +621,6 @@ Install-package Syncfusion.Pdf.Wpf
 </td>
 <td>
 Uninstall-package Syncfusion.Pdf.Wpf -RemoveDependencies 
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET
-</td>
-<td>
-Install-package Syncfusion.Pdf.AspNet 
-</td>
-<td>
-Uninstall-package Syncfusion.Pdf.AspNet -RemoveDependencies 
 </td>
 </tr>
 <tr>

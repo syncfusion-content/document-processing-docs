@@ -83,23 +83,26 @@ XlsIO also provides options to save a worksheet with the displayed text or value
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20HTML/Excel%20to%20HTML/.NET/Excel%20to%20HTML/Excel%20to%20HTML/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  //Initialize excel engine and open workbook
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	//Initialize excel engine and open workbook
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	worksheet.Range["A1:M20"].Text = "Html Document";
 
-  //Create stream to store HTML file.
-  Stream stream = new MemoryStream();
+	//Create the instant for SaveOptions
+	HtmlSaveOptions saveOptions = new HtmlSaveOptions();
+	saveOptions.TextMode = HtmlSaveOptions.GetText.DisplayText;
+	worksheet.UsedRange.AutofitColumns();
 
-  //Create the instant for SaveOptions
-  HtmlSaveOptions saveOptions = new HtmlSaveOptions();
-  saveOptions.TextMode = HtmlSaveOptions.GetText.DisplayText;
+	#region Save as HTML
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.html"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAsHtml(outputStream, saveOptions);
+	#endregion
 
-  //Save and Dispose
-  worksheet.SaveAsHtml(stream, saveOptions);
-  stream.Dispose();
-  workbook.Close();
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
