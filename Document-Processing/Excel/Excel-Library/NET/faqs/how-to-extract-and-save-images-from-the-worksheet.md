@@ -13,7 +13,7 @@ You can extract all images from the worksheet using XlsIO. The following code ex
 {% tabs %}  
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Define the directory name
-string directoryname = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output"); ;
+string directoryName = "directory_name";
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -32,10 +32,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
         picture[i] = worksheet.Pictures[i];
         Image image = picture[i].Picture;
         string name = picture[i].Name + ".jpg";
-        string imagefile = Path.Combine(directoryname, name);
+        string imagefile = Path.Combine(directoryName, name);
 
         // Save the image to a file
-        FileStream stream = new FileStream(Path.GetFullPath(imagefile), FileMode.Create, FileAccess.Write);
+        FileStream stream = new FileStream(imagefile, FileMode.Create, FileAccess.Write);
         image.Save(stream, image.RawFormat);
 
         //Dispose stream
@@ -46,8 +46,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Define the directory name
-Dim directoryname As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output")
-
+Dim directoryName As String = "directory_name"
 Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
@@ -64,15 +63,13 @@ Using excelEngine As New ExcelEngine()
         picture(i) = worksheet.Pictures(i)
         Dim image As Image = picture(i).Picture
         Dim name As String = picture(i).Name & ".jpg"
-        Dim imagefile As String = Path.Combine(directoryname, name)
+        Dim imageFile As String = Path.Combine(directoryName, name)
 
         ' Save the image to a file
-        Using stream As New FileStream(Path.GetFullPath(imagefile), FileMode.Create, FileAccess.Write)
+        Using stream As New FileStream(imageFile, FileMode.Create, FileAccess.Write)
             image.Save(stream, image.RawFormat)
         End Using
     Next
 End Using
 {% endhighlight %}
 {% endtabs %}
-
-A complete working example to extract and save images from an Excel worksheet in C# is present on [this GitHub page]().
