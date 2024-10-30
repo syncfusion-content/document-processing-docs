@@ -582,7 +582,11 @@ A complete working example to add option button in C# is present on [this GitHub
 
 ## Comments
 
-[ICommentShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICommentShape.html) object represents a [comment](https://support.microsoft.com/en-gb/office/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8?redirectsourcepath=%252fen-us%252farticle%252fannotate-a-worksheet-by-using-comments-3b7065dd-531a-4ffe-8f18-8d047a6ccae7) in a worksheet. You can insert both **Regular** and **Rich** **Text** comments. The following code example illustrates how to insert and manipulate comments.
+[ICommentShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICommentShape.html) object represents a [comment](https://support.microsoft.com/en-gb/office/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8?redirectsourcepath=%252fen-us%252farticle%252fannotate-a-worksheet-by-using-comments-3b7065dd-531a-4ffe-8f18-8d047a6ccae7) in a worksheet. You can insert both **Regular** and **Rich** **Text** comments. 
+
+### Add
+
+The following code example illustrates how to add a comment, a comment with an author, and a rich text comment
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Comment/.NET/Comment/Comment/Program.cs,180" %}
@@ -595,6 +599,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	//Adding comments to a cell
 	sheet.Range["A1"].AddComment().Text = "Comments";
+
+    //Adding comments with author to a cell
+    worksheet.Range["A3"].AddComment().Text = worksheet.Range["A3"].Comment.Author;
 
 	//Add Rich Text Comments
 	IRange range = sheet.Range["A6"];
@@ -629,6 +636,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Adding comments to a cell
   sheet.Range["A1"].AddComment().Text = "Comments";
 
+  //Adding comments with author to a cell
+  worksheet.Range["A3"].AddComment().Text = worksheet.Range["A3"].Comment.Author;
+
   //Add Rich Text Comments
   IRange range = sheet.Range["A6"];
   range.AddComment().RichText.Text = "RichText";
@@ -654,6 +664,9 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Adding comments to a cell
   sheet.Range("A1").AddComment().Text = "Comments"
 
+  'Adding comments with author to a cell
+  worksheet.Range("A3").AddComment().Text = worksheet.Range("A3").Comment.Author;
+
   'Add Rich Text Comments
   Dim range As IRange = sheet.Range("A6")
   range.AddComment().RichText.Text = "RichText"
@@ -672,38 +685,51 @@ End Using
 
 A complete working example to add comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Comment/.NET/Comment).
 
-You can also fill the comments with various types of fills by using the [IFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFill.html) interface. Following code example illustrates how to fill the comment shape with a TwoColor gradient.
+### Formatting
+
+A comment box can be resized, repositioned, and aligned according to user preferences, allowing control over its height, width, and text alignment. You can also enhance its appearance by applying various fill options, such as solid colors or gradients.
+
+The following code example illustrates how to set the size, position, alignment, and fill of a comment.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Fill%20Comment/.NET/Fill%20Comment/Fill%20Comment/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Formatting%20Comment/.NET/Formatting%20Comment/Formatting%20Comment/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-	IApplication application = excelEngine.Excel;
-	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Create(1);
-	IWorksheet sheet = workbook.Worksheets[0];
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-	//Adding comments to a cell
-	sheet.Range["A1"].AddComment().Text = "Comments";
+  //Adding comment in the worksheet with text
+  worksheet.Range["A1"].AddComment();
+  ICommentShape comment = worksheet.Comments[0];
+  comment.Text = "Comment1";
 
-	//Accessing existing comment
-	ICommentShape shape = sheet.Range["A1"].Comment;
+  //Set size for the comment
+  comment.Height = 150;
+  comment.Width = 100;
 
-	//Format the comment
-	shape.Fill.TwoColorGradient();
-	shape.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
-	shape.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-	shape.Fill.ForeColorIndex = ExcelKnownColors.Red;
-	shape.Fill.BackColorIndex = ExcelKnownColors.White;
+  //Set position for the comment
+  comment.Left = 200;
+  comment.Top = 100;
 
-	#region Save
-	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FillComment.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
-	#endregion
+  //Set alignment for the comment
+  comment.HAlignment = ExcelCommentHAlign.Right;
+  comment.VAlignment = ExcelCommentVAlign.Bottom;
 
-	//Dispose streams
-	outputStream.Dispose();
+  //Set fill for the comment
+  comment.Fill.TwoColorGradient();
+  comment.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+  comment.Fill.GradientColorType = ExcelGradientColor.TwoColor;
+  comment.Fill.ForeColorIndex = ExcelKnownColors.Red;
+  comment.Fill.BackColorIndex = ExcelKnownColors.White;
+
+  //Saving the workbook as stream
+  FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
+  workbook.SaveAs(outputStream);
+
+  //Dispose stream
+  outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -711,55 +737,79 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding comments to a cell
-  sheet.Range["A1"].AddComment().Text = "Comments";
+  //Adding comment in the worksheet with text
+  worksheet.Range["A1"].AddComment();
+  ICommentShape comment = worksheet.Comments[0];
+  comment.Text = "Comment1";
 
-  //Accessing existing comment
-  ICommentShape shape = sheet.Range["A1"].Comment;
+  //Set size for the comment
+  comment.Height = 150;
+  comment.Width = 100;
 
-  //Format the comment
-  shape.Fill.TwoColorGradient();
-  shape.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
-  shape.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-  shape.Fill.ForeColorIndex = ExcelKnownColors.Red;
-  shape.Fill.BackColorIndex = ExcelKnownColors.White;
+  //Set position for the comment
+  comment.Left = 200;
+  comment.Top = 100;
 
-  workbook.SaveAs("FormatComments.xlsx");
+  //Set alignment for the comment
+  comment.HAlignment = ExcelCommentHAlign.Right;
+  comment.VAlignment = ExcelCommentVAlign.Bottom;
+
+  //Set fill for the comment
+  comment.Fill.TwoColorGradient();
+  comment.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+  comment.Fill.GradientColorType = ExcelGradientColor.TwoColor;
+  comment.Fill.ForeColorIndex = ExcelKnownColors.Red;
+  comment.Fill.BackColorIndex = ExcelKnownColors.White;
+
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
+  application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
-  Dim sheet As IWorksheet = workbook.Worksheets(0)
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Adding comments to a cell
-  sheet.Range("A1").AddComment().Text = "Comments"
+  'Adding comment in the worksheet with text
+  worksheet.Range("A1").AddComment()
+  Dim comment As ICommentShape = worksheet.Comments(0)
+  comment.Text = "Comment1"
 
-  'Accessing existing comment
-  Dim shape As ICommentShape = sheet.Range("A1").Comment
+  'Set size for the comment
+  comment.Height = 150
+  comment.Width = 100
 
-  'Format the comment
-  shape.Fill.TwoColorGradient()
-  shape.Fill.GradientStyle = ExcelGradientStyle.Horizontal
-  shape.Fill.GradientColorType = ExcelGradientColor.TwoColor
-  shape.Fill.ForeColorIndex = ExcelKnownColors.Red
-  shape.Fill.BackColorIndex = ExcelKnownColors.White
+  'Set position for the comment
+  comment.Left = 200
+  comment.Top = 100
 
-  workbook.SaveAs("FormatComments.xlsx")
+  'Set alignment for the comment
+  comment.HAlignment = ExcelCommentHAlign.Right
+  comment.VAlignment = ExcelCommentVAlign.Bottom
+
+  'Set fill for the comment
+  comment.Fill.TwoColorGradient()
+  comment.Fill.GradientStyle = ExcelGradientStyle.Horizontal
+  comment.Fill.GradientColorType = ExcelGradientColor.TwoColor
+  comment.Fill.ForeColorIndex = ExcelKnownColors.Red
+  comment.Fill.BackColorIndex = ExcelKnownColors.White
+
+  'Saving the workbook
+  workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to fill comment in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Fill%20Comment/.NET/Fill%20Comment).
+A complete working example for formatting comments in C# is present on [this GitHub page]().
 
-### Show or Hide Excel Comments
+### Visibility
 
 Comments in an Excel document can be shown or hidden using [IsVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IComment.html#Syncfusion_XlsIO_IComment_IsVisible) property. The following code example illustrates this.
 
