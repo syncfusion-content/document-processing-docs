@@ -87,6 +87,25 @@ chart.Legend.TextArea.Color = ExcelKnownColors.Pink
 {% endhighlight %}
 {% endtabs %}
 
+The following code snippet illustrates how to format the background color of the legend.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Set the background color
+chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Set the background color
+chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Set the background color
+chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow;
+{% endhighlight %}
+{% endtabs %}
+
 ### Font
 
 The following code snippet illustrates how to format the font of the legend.
@@ -187,17 +206,17 @@ The following code snippet illustrates how to remove the legend.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Remove the legend
-chart.Legend.LegendEntries[0].IsDeleted = true;
+chart.Legend.LegendEntries[0].Delete();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Remove the legend
-chart.Legend.LegendEntries[0].IsDeleted = true;
+chart.Legend.LegendEntries[0].Delete();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Remove the legend
-chart.Legend.LegendEntries(0).IsDeleted = True
+chart.Legend.LegendEntries(0).Delete()
 {% endhighlight %}
 {% endtabs %}
 
@@ -281,6 +300,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Set the color
     chart.Legend.TextArea.Color = ExcelKnownColors.Pink;
 
+    //Set the background color
+    chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow;
+
     //Set the font
     chart.Legend.TextArea.Bold = true;
     chart.Legend.TextArea.FontName = "Times New Roman";
@@ -288,7 +310,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     chart.Legend.TextArea.Strikethrough = false;
 
     //Remove the legend
-    chart.Legend.LegendEntries[0].IsDeleted = true;
+    chart.Legend.LegendEntries[0].Delete();
 
     //Set Legend without overlapping the chart
     chart.Legend.IncludeInLayout = true;
@@ -325,6 +347,9 @@ Using excelEngine As New ExcelEngine()
     'Set the color
     chart.Legend.TextArea.Color = ExcelKnownColors.Pink
 
+    'Set the background color
+    chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow
+
     'Set the font
     chart.Legend.TextArea.Bold = True
     chart.Legend.TextArea.FontName = "Times New Roman"
@@ -332,7 +357,7 @@ Using excelEngine As New ExcelEngine()
     chart.Legend.TextArea.Strikethrough = False
 
     'Remove the legend
-    chart.Legend.LegendEntries(0).IsDeleted = True
+    chart.Legend.LegendEntries(0).Delete()
 
     'Set Legend without overlapping the chart
     chart.Legend.IncludeInLayout = True
