@@ -1,12 +1,12 @@
 ---
-title: How to remove AutoFilter in an Excel | Syncfusion
-description: This page shows how to remove AutoFilter in an Excel using the Syncfusion .NET Excel library (XlsIO).
+title: How to remove autofilter from an Excel worksheet | Syncfusion
+description: This page shows remove autofilter from an Excel worksheet Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to remove AutoFilter in an Excel?
+# How to remove autofilter from an Excel worksheet?
 
 You can remove the AutoFilter from a specified worksheet by setting the [FilterRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilters.html#Syncfusion_XlsIO_IAutoFilters_FilterRange) property to null.
 
