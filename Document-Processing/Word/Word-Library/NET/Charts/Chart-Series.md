@@ -621,19 +621,19 @@ The following code snippet illustrates how to set the fill pattern for a series 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Set-fill-pattern/.NET/Set-fill-pattern/Program.cs" %}
 
-//Exploding the pie chart to 10%.
+//Set the fill pattern to a diagonal brick pattern.
 chart.Series[0].SerieFormat.Fill.Pattern = OfficeGradientPattern.Pat_Diagonal_Brick;
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Exploding the pie chart to 10%.
+//Set the fill pattern to a diagonal brick pattern.
 chart.Series[0].SerieFormat.Fill.Pattern = OfficeGradientPattern.Pat_Diagonal_Brick;
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Exploding the pie chart to 10%.
+' Set the fill pattern to a diagonal brick pattern.
 chart.Series(0).SerieFormat.Fill.Pattern = OfficeGradientPattern.Pat_Diagonal_Brick;
 
 {% endhighlight %}
