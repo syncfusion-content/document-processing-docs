@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Frequently asked questions about mail merge in Word document
 
-The frequently asked questions about working with tables in Word documents using DocIO are listed below.
+The frequently asked questions about working with mail merge in Word documents using DocIO are listed below.
 
 ## Is it possible to format merge fields with image formats before performing a mail merge?
 
