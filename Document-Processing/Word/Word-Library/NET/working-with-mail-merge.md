@@ -305,3 +305,7 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 * [Is it possible to merge outer group fields placed within inner nested group using nested mail merge?](https://support.syncfusion.com/kb/article/12362/is-it-possible-to-merge-outer-group-fields-placed-within-inner-nested-group-using-nested)
 * [How to replace merge field with table using mail merge in Word document?](https://support.syncfusion.com/kb/article/15801/how-to-replace-merge-field-with-table-using-mail-merge-in-word-document)
 *  [How to use multiple documents as data sources for mail merge in a Word document?](https://support.syncfusion.com/kb/article/15775/how-to-use-multiple-documents-as-data-sources-for-mail-merge-in-a-word-document)
+* [How to Remove Empty Column After Mail Merge in Core Word document?](https://support.syncfusion.com/kb/article/17514/how-to-remove-empty-column-after-mail-merge-in-core-word-document)
+* [How to throw an exception if data for a merge field does not exist?](https://support.syncfusion.com/kb/article/17535/how-to-throw-an-exception-if-data-for-a-merge-field-does-not-exist)
+* [How to Modify the Font During a Mail Merge in Core Word Document?](https://support.syncfusion.com/kb/article/17567/how-to-modify-the-font-during-a-mail-merge-in-core-word-document)
+* [How to replace merge field with RTF using mail merge in Word document](https://support.syncfusion.com/kb/article/17816/how-to-replace-merge-field-with-rtf-using-mail-merge-in-word-document)
