@@ -1538,6 +1538,7 @@ N> * And also, it is not feasible to get the page-wise details from Word documen
 * [Is it possible to fetch page numbers in a Word document using .NET Core DocIO?](https://support.syncfusion.com/kb/article/15907/is-it-possible-to-fetch-page-numbers-in-a-word-document-using-net-core-docio?)
 * [How to remove header and footer for particular section in a Word document using C#?](https://support.syncfusion.com/kb/article/16652/how-to-remove-header-and-footer-in-aspnet-core-word-using-c)
 * [How to set different orientations for each page in Word document using C#?](https://support.syncfusion.com/kb/article/16615/how-to-set-different-orientations-for-pages-in-aspnet-core-word)
+* [How to Set an Image in First Page Header Only in Core Word Document?](https://support.syncfusion.com/kb/article/17516/how-to-set-an-image-in-first-page-header-only-in-core-word-document)
 
 ## Frequently Asked Questions
 
