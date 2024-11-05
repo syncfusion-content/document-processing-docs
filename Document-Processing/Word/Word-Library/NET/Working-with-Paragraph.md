@@ -2801,6 +2801,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to replace all OLE objects with text in a Word document?](https://support.syncfusion.com/kb/article/15654/how-to-replace-all-ole-objects-with-text-in-a-word-document)
 * [How to change text to barcode by applying font in Word document using C#?](https://support.syncfusion.com/kb/article/16651/how-to-change-text-to-barcode-in-aspnet-word)
 * [How to remove all page breaks from a Word document using C#?](https://support.syncfusion.com/kb/article/16897/how-to-remove-all-page-breaks-from-a-word-document-using-c)
+* [How to change font for all text in Word document?](https://support.syncfusion.com/kb/article/17487/how-to-change-font-for-all-text-in-word-document)
+* [How to add a line break after replacing text in a Word document](https://support.syncfusion.com/kb/article/17571/how-to-add-a-line-break-after-replacing-text-in-a-word-document)
+* [How to retrieve list values for a specific heading in a Word document](https://support.syncfusion.com/kb/article/17713/how-to-retrieve-list-values-for-a-specific-heading-in-a-word-document)
+* [How to change the font for specific content in a Word document](https://support.syncfusion.com/kb/article/17788/how-to-change-the-font-for-specific-content-in-a-word-document)
+* [How to apply a left indent to the imported content after the list paragraph in a Word document](https://support.syncfusion.com/kb/article/17544/how-to-apply-a-left-indent-to-the-imported-content-in-core-docio)
 
 ## Frequently Asked Questions
 
