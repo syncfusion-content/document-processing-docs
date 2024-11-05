@@ -1152,7 +1152,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to insert bookmark for particular text in paragraph in Word document?](https://support.syncfusion.com/kb/article/12229/how-to-insert-bookmark-for-particular-text-in-paragraph-in-word-document)
 * [How to get the section number of the particular bookmark in C#?](https://support.syncfusion.com/kb/article/12374/how-to-get-the-section-number-of-the-particular-bookmark-in-c)
 * [How to replace bookmark content in one Word document with all the content from another Word document?](https://support.syncfusion.com/kb/article/12340/how-to-replace-bookmark-content-in-one-word-document-with-all-the-content-from-another-word)
-* [How to Insert HTML Within Bookmark in a Core Word document?](https://support.syncfusion.com/kb/article/17603/how-to-insert-html-within-bookmark-in-a-core-word-document)
+* [How to insert HTML within bookmark in a Word document](https://support.syncfusion.com/kb/article/17603/how-to-insert-html-within-bookmark-in-a-core-word-document)
 * [How to maintain list format of the source document to destination document after replacing bookmark content](https://support.syncfusion.com/kb/article/17584/how-to-maintain-list-format-of-the-source-document-to-destination-document-after-replacing-bookmark-content)
 * [How to replace text between custom tags using bookmarks in a Word document](https://support.syncfusion.com/kb/article/17790/how-to-replace-text-between-custom-tags-using-bookmarks-in-a-word-document)
 * [How to clone and add a paragraph with bookmarks in the same Word document](https://support.syncfusion.com/kb/article/17804/how-to-clone-and-add-a-paragraph-with-bookmarks-in-the-same-word-document)
