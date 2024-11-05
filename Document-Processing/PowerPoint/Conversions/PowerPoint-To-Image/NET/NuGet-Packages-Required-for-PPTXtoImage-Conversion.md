@@ -86,6 +86,26 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </tbody>
 </table>
 
+#### Retired Platforms
+
+The following NuGet packages need to be included in your application based on the platform.
+
+<table>
+<tr>
+<thead>
+<th><b>Platform(s)</b></th>
+<th><b>NuGet Package</b></th>
+</thead>
+</tr>
+<tr>
+<td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net)' | markdownify}}<br/></td>
+<td>
+{{'[Syncfusion.Presentation.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet)'|markdownify }}
+</td>
+</tr>
+</table>
+
 N> PowerPoint Presentation to image conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards for ASP.NET Core and Xamarin.
 
 ## Converting charts in Presentation
@@ -153,6 +173,26 @@ Xamarin
 </td>
 <td>
 {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}<br/>
+</td>
+</tr>
+</table>
+
+#### Retired Platforms
+
+The following NuGet packages need to be included in your application based on the platform.
+
+<table>
+<tr>
+<thead>
+<th><b>Platform(s)</b></th>
+<th><b>NuGet Package</b></th>
+</thead>
+</tr>
+<tr>
+<td>
+ASP.NET<br/></td>
+<td>
+{{'[Syncfusion.OfficeChartToImageConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet)'|markdownify }}
 </td>
 </tr>
 </table>

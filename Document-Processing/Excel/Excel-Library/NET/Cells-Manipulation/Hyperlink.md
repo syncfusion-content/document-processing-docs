@@ -172,48 +172,54 @@ The complete code example illustrating the above options is shown below.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Hyperlinks/.NET/Hyperlinks/Hyperlinks/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Excel2013;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Creating a Hyperlink for a Website
-  IHyperLink hyperlink = sheet.HyperLinks.Add(sheet.Range["C5"]);
-  hyperlink.Type = ExcelHyperLinkType.Url;
-  hyperlink.Address = "http://www.syncfusion.com";
-  hyperlink.ScreenTip = "To know more about Syncfusion products, go through this link.";
+	#region Hyperlinks
+	//Creating a Hyperlink for a Website
+	IHyperLink hyperlink = sheet.HyperLinks.Add(sheet.Range["C5"]);
+	hyperlink.Type = ExcelHyperLinkType.Url;
+	hyperlink.Address = "http://www.syncfusion.com";
+	hyperlink.ScreenTip = "To know more about Syncfusion products, go through this link.";
 
-  //Creating a Hyperlink for e-mail
-  IHyperLink hyperlink1 = sheet.HyperLinks.Add(sheet.Range["C7"]);
-  hyperlink1.Type = ExcelHyperLinkType.Url;
-  hyperlink1.Address = "mailto:Username@syncfusion.com";
-  hyperlink1.ScreenTip = "Send Mail";
+	//Creating a Hyperlink for e-mail
+	IHyperLink hyperlink1 = sheet.HyperLinks.Add(sheet.Range["C7"]);
+	hyperlink1.Type = ExcelHyperLinkType.Url;
+	hyperlink1.Address = "mailto:Username@syncfusion.com";
+	hyperlink1.ScreenTip = "Send Mail";
 
-  //Creating a Hyperlink for Opening Files using type as File
-  IHyperLink hyperlink2 = sheet.HyperLinks.Add(sheet.Range["C9"]);
-  hyperlink2.Type = ExcelHyperLinkType.File;
-  hyperlink2.Address = "C:/Program files";
-  hyperlink2.ScreenTip = "File path";
-  hyperlink2.TextToDisplay = "Hyperlink for files using File as type";
+	//Creating a Hyperlink for Opening Files using type as File
+	IHyperLink hyperlink2 = sheet.HyperLinks.Add(sheet.Range["C9"]);
+	hyperlink2.Type = ExcelHyperLinkType.File;
+	hyperlink2.Address = "C:/Program files";
+	hyperlink2.ScreenTip = "File path";
+	hyperlink2.TextToDisplay = "Hyperlink for files using File as type";
 
-  //Creating a Hyperlink for Opening Files using type as Unc
-  IHyperLink hyperlink3 = sheet.HyperLinks.Add(sheet.Range["C11"]);
-  hyperlink3.Type = ExcelHyperLinkType.Unc;
-  hyperlink3.Address = "C:/Documents and Settings";
-  hyperlink3.ScreenTip = "Click here for files";
-  hyperlink3.TextToDisplay = "Hyperlink for files using Unc as type";
+	//Creating a Hyperlink for Opening Files using type as Unc
+	IHyperLink hyperlink3 = sheet.HyperLinks.Add(sheet.Range["C11"]);
+	hyperlink3.Type = ExcelHyperLinkType.Unc;
+	hyperlink3.Address = "C:/Documents and Settings";
+	hyperlink3.ScreenTip = "Click here for files";
+	hyperlink3.TextToDisplay = "Hyperlink for files using Unc as type";
 
-  //Creating a Hyperlink to another cell using type as Workbook
-  IHyperLink hyperlink4 = sheet.HyperLinks.Add(sheet.Range["C13"]);
-  hyperlink4.Type = ExcelHyperLinkType.Workbook;
-  hyperlink4.Address = "Sheet1!A15";
-  hyperlink4.ScreenTip = "Click here";
-  hyperlink4.TextToDisplay = "Hyperlink to cell A15";
+	//Creating a Hyperlink to another cell using type as Workbook
+	IHyperLink hyperlink4 = sheet.HyperLinks.Add(sheet.Range["C13"]);
+	hyperlink4.Type = ExcelHyperLinkType.Workbook;
+	hyperlink4.Address = "Sheet1!A15";
+	hyperlink4.ScreenTip = "Click here";
+	hyperlink4.TextToDisplay = "Hyperlink to cell A15";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Hyperlink.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Hyperlinks.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -317,20 +323,27 @@ The properties of existing hyperlink can be modified by accessing it through the
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Modify%20Hyperlink/.NET/Modify%20Hyperlink/Modify%20Hyperlink/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Modifying hyperlink’s text to display
-  IHyperLink hyperlink = worksheet.Range["C5"].Hyperlinks[0];
-  hyperlink.TextToDisplay = "Syncfusion";
+	#region Modify Hyperlink
+	//Modifying hyperlink’s text to display
+	IHyperLink hyperlink = worksheet.Range["C5"].Hyperlinks[0];
+	hyperlink.TextToDisplay = "Syncfusion";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Hyperlink.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ModifyHyperlink.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -376,19 +389,26 @@ Similarly, a hyperlink can also be removed from a range by accessing it through 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Remove%20Hyperlink/.NET/Remove%20Hyperlink/Remove%20Hyperlink/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Removing Hyperlink from Range "C7"
-  worksheet.Range["C7"].Hyperlinks.RemoveAt(0);
+	#region Remove Hyperlink
+	//Removing Hyperlink from Range "C7"
+	worksheet.Range["C7"].Hyperlinks.RemoveAt(0);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Hyperlink.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveHyperlink.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -440,31 +460,36 @@ The following code example illustrates how to insert hyperlinks to shapes.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Shape%20Hyperlink/.NET/Shape%20Hyperlink/Shape%20Hyperlink/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding hyperlink to TextBox 
-  ITextBox textBox = worksheet.TextBoxes.AddTextBox(1, 1, 100, 100);
-  IHyperLink hyperlink = worksheet.HyperLinks.Add((textBox as IShape), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here");
+	#region Shape Hyperlink
+	//Adding hyperlink to TextBox 
+	ITextBox textBox = worksheet.TextBoxes.AddTextBox(1, 1, 100, 100);
+	IHyperLink hyperlink = worksheet.HyperLinks.Add((textBox as IShape), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here");
 
-  //Adding hyperlink to AutoShape
-  IShape autoShape = worksheet.Shapes.AddAutoShapes(AutoShapeType.Cloud, 1, 1, 100, 100);
-  hyperlink = worksheet.HyperLinks.Add(autoShape, ExcelHyperLinkType.Url, "mailto:Username@syncfusion.com", "Send Mail");
+	//Adding hyperlink to AutoShape
+	IShape autoShape = worksheet.Shapes.AddAutoShapes(AutoShapeType.Cloud, 10, 1, 100, 100);
+	hyperlink = worksheet.HyperLinks.Add(autoShape, ExcelHyperLinkType.Url, "mailto:Username@syncfusion.com", "Send Mail");
 
-  //Adding hyperlink to picture
-  IPictureShape picture = worksheet.Pictures.AddPictureAsLink(5, 5, 10, 10, "Image.png");
-  hyperlink = worksheet.HyperLinks.Add(picture);
-  hyperlink.Type = ExcelHyperLinkType.Unc;
-  hyperlink.Address = "C:/Documents and Settings";
-  hyperlink.ScreenTip = "Click here for files";
+	//Adding hyperlink to picture
+	IPictureShape picture = worksheet.Pictures.AddPictureAsLink(5, 5, 10, 7, Path.GetFullPath(@"Data/Image.png"));
+	hyperlink = worksheet.HyperLinks.Add(picture);
+	hyperlink.Type = ExcelHyperLinkType.Unc;
+	hyperlink.Address = "C://Documents and Settings";
+	hyperlink.ScreenTip = "Click here for files";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Hyperlink.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ShapeHyperlink.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
  
@@ -536,24 +561,31 @@ Properties of existing hyperlink can be modified by accessing it through [IWorks
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Modify%20Shape%20Hyperlink/.NET/Modify%20Shape%20Hyperlink/Modify%20Shape%20Hyperlink/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Modifying hyperlink’s screen tip through IWorksheet instance
-  IHyperLink hyperlink = worksheet.HyperLinks[0];
-  hyperlink.ScreenTip = "Syncfusion";
+	#region Modify Shape Hyperlink
+	//Modifying hyperlink’s screen tip through IWorksheet instance
+	IHyperLink hyperlink = worksheet.HyperLinks[0];
+	hyperlink.ScreenTip = "Syncfusion";
 
-  //Modifying hyperlink’s screen tip through IShape instance
-  hyperlink = worksheet.Shapes[0].Hyperlink;
-  hyperlink.ScreenTip = "Syncfusion";
+	//Modifying hyperlink’s screen tip through IShape instance
+	hyperlink = worksheet.Shapes[1].Hyperlink;
+	hyperlink.ScreenTip = "Mail Syncfusion";
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Hyperlink.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ModifyShapeHyperlink.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -607,19 +639,24 @@ The following code snippet explains how to remove hyperlink of shape.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Remove%20Shape%20Hyperlink/.NET/Remove%20Shape%20Hyperlink/Remove%20Shape%20Hyperlink/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath("Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Removing hyperlink from sheet with Index
-  worksheet.HyperLinks.RemoveAt(0);
+	//Removing hyperlink from sheet with Index
+	worksheet.HyperLinks.RemoveAt(0);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Hyperlink.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveShapeHyperlink.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

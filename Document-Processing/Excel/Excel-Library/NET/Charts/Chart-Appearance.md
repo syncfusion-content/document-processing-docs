@@ -20,44 +20,43 @@ The following code example illustrates how to apply a solid color to the chart a
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Solid%20Fill/.NET/Solid%20Fill/Solid%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IChart chart = worksheet.Charts[0];
-    
-  //Get data series
-  IChartSerie serie1 = chart.Series[0];
-  IChartSerie serie2 = chart.Series[1];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IChart chart = worksheet.Charts[0];
+	
+	//Get data series
+	IChartSerie serie1 = chart.Series[0];
+	IChartSerie serie2 = chart.Series[1];
 
-  //Set solid fill to chart area
-  IChartFrameFormat chartArea = chart.ChartArea;
-  chartArea.Fill.FillType = ExcelFillType.SolidColor;
-  chartArea.Fill.ForeColor = Color.FromArgb(208,206,206);
+	//Set solid fill to chart area
+	IChartFrameFormat chartArea = chart.ChartArea;
+	chartArea.Fill.FillType = ExcelFillType.SolidColor;
+	chartArea.Fill.ForeColor = Color.FromArgb(208,206,206);
 
-  //Set solid fill to plot area
-  IChartFrameFormat plotArea = chart.PlotArea;
-  plotArea.Fill.FillType = ExcelFillType.SolidColor;
-  plotArea.Fill.ForeColor = Color.FromArgb(208, 206, 206);
+	//Set solid fill to plot area
+	IChartFrameFormat plotArea = chart.PlotArea;
+	plotArea.Fill.FillType = ExcelFillType.SolidColor;
+	plotArea.Fill.ForeColor = Color.FromArgb(208, 206, 206);
 
-  //Set solid fill to series
-  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
-  chartFillImpl1.FillType = ExcelFillType.SolidColor;
-  chartFillImpl1.ForeColor = Color.FromArgb(255, 192, 203);
-  //chartFillImpl1.ForeColor = Color.Beige;
+	//Set solid fill to series
+	ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+	chartFillImpl1.FillType = ExcelFillType.SolidColor;
+	chartFillImpl1.ForeColor = Color.FromArgb(255, 192, 203);
 
-  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
-  chartFillImpl2.FillType = ExcelFillType.SolidColor;
-  chartFillImpl2.ForeColor = Color.FromArgb(143, 170, 220);
+	ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+	chartFillImpl2.FillType = ExcelFillType.SolidColor;
+	chartFillImpl2.ForeColor = Color.FromArgb(143, 170, 220); ;
 
-  //Saving the workbook as streams
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	//Saving the workbook as streams
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -146,51 +145,51 @@ The following code example illustrates how to apply a pattern fill to the chart 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Pattern%20Fill/.NET/Pattern%20Fill/Pattern%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IChart chart = worksheet.Charts[0];
-    
-  //Get data series
-  IChartSerie serie1 = chart.Series[0];
-  IChartSerie serie2 = chart.Series[1];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IChart chart = worksheet.Charts[0];
 
-  //Set pattern fill to chart area
-  IChartFrameFormat chartArea = chart.ChartArea;
-  chartArea.Fill.FillType = ExcelFillType.Pattern;
-  chartArea.Fill.BackColor = Color.Pink;
-  chartArea.Fill.ForeColor = Color.White;
-  chartArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
+	//Get data series
+	IChartSerie serie1 = chart.Series[0];
+	IChartSerie serie2 = chart.Series[1];
 
-  //Set pattern fill to plot area
-  IChartFrameFormat plotArea = chart.PlotArea;
-  plotArea.Fill.FillType = ExcelFillType.Pattern;
-  plotArea.Fill.BackColor = Color.Pink;
-  plotArea.Fill.ForeColor = Color.White;
-  plotArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
+	//Set pattern fill to chart area
+	IChartFrameFormat chartArea = chart.ChartArea;
+	chartArea.Fill.FillType = ExcelFillType.Pattern;
+	chartArea.Fill.BackColor = Color.Pink;
+	chartArea.Fill.ForeColor = Color.White;
+	chartArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
 
-  //Set pattern fill to series
-  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
-  chartFillImpl1.FillType = ExcelFillType.Pattern;
-  chartFillImpl1.BackColor = Color.Pink;
-  chartFillImpl1.ForeColor = Color.White;
-  chartFillImpl1.Pattern = ExcelGradientPattern.Pat_5_Percent;
+	//Set pattern fill to plot area
+	IChartFrameFormat plotArea = chart.PlotArea;
+	plotArea.Fill.FillType = ExcelFillType.Pattern;
+	plotArea.Fill.BackColor = Color.Pink;
+	plotArea.Fill.ForeColor = Color.White;
+	plotArea.Fill.Pattern = ExcelGradientPattern.Pat_90_Percent;
 
-  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
-  chartFillImpl2.FillType = ExcelFillType.Pattern;
-  chartFillImpl2.BackColor = Color.Gray;
-  chartFillImpl2.ForeColor = Color.White;
-  chartFillImpl2.Pattern = ExcelGradientPattern.Pat_5_Percent;
+	//Set pattern fill to series
+	ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+	chartFillImpl1.FillType = ExcelFillType.Pattern;
+	chartFillImpl1.BackColor = Color.Pink;
+	chartFillImpl1.ForeColor = Color.White;
+	chartFillImpl1.Pattern = ExcelGradientPattern.Pat_5_Percent;
 
-  //Saving the workbook as streams
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+	chartFillImpl2.FillType = ExcelFillType.Pattern;
+	chartFillImpl2.BackColor = Color.Gray;
+	chartFillImpl2.ForeColor = Color.White;
+	chartFillImpl2.Pattern = ExcelGradientPattern.Pat_5_Percent;
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -294,57 +293,57 @@ The following code example illustrates how to apply a gradient fill to the chart
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Gradient%20Fill/.NET/Gradient%20Fill/Gradient%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IChart chart = worksheet.Charts[0];
-    
-  //Get data series
-  IChartSerie serie1 = chart.Series[0];
-  IChartSerie serie2 = chart.Series[1];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IChart chart = worksheet.Charts[0];
 
-  //Set gradient fill to chart area
-  IChartFrameFormat chartArea = chart.ChartArea;
-  chartArea.Fill.FillType = ExcelFillType.Gradient;                
-  chartArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
-  chartArea.Fill.ForeColor = Color.White;
+	//Get data serie
+	IChartSerie serie1 = chart.Series[0];
+	IChartSerie serie2 = chart.Series[1];
 
-  //Set gradient fill to plot area
-  IChartFrameFormat plotArea = chart.PlotArea;
-  plotArea.Fill.FillType = ExcelFillType.Gradient;
-  plotArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
-  plotArea.Fill.ForeColor = Color.White;
+	//Set gradient fill to chart area
+	IChartFrameFormat chartArea = chart.ChartArea;
+	chartArea.Fill.FillType = ExcelFillType.Gradient;                
+	chartArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
+	chartArea.Fill.ForeColor = Color.White;
 
-  //Set Gradient fill to series
-  ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
-  chartFillImpl1.FillType = ExcelFillType.Gradient;
-  chartFillImpl1.GradientColorType = ExcelGradientColor.MultiColor;
-  serie1.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
-  GradientStopImpl gradientStopImpl1 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 176, 240)), 50000, 100000);
-  GradientStopImpl gradientStopImpl2 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 112, 192)), 70000, 100000);
-  chartFillImpl1.GradientStops.GradientType = GradientType.Liniar;
-  chartFillImpl1.GradientStops.Add(gradientStopImpl1);
-  chartFillImpl1.GradientStops.Add(gradientStopImpl2);
+	//Set gradient fill to plot area
+	IChartFrameFormat plotArea = chart.PlotArea;
+	plotArea.Fill.FillType = ExcelFillType.Gradient;
+	plotArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
+	plotArea.Fill.ForeColor = Color.White;
 
-  ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
-  chartFillImpl2.FillType = ExcelFillType.Gradient;
-  chartFillImpl2.GradientColorType = ExcelGradientColor.MultiColor;
-  serie2.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
-  GradientStopImpl gradientStopImpl3 = new GradientStopImpl(new ColorObject(Color.FromArgb(244, 177, 131)), 40000, 100000);
-  GradientStopImpl gradientStopImpl4 = new GradientStopImpl(new ColorObject(Color.FromArgb(255, 102, 0)), 70000, 100000);
-  chartFillImpl2.GradientStops.GradientType = GradientType.Liniar;
-  chartFillImpl2.GradientStops.Add(gradientStopImpl3);
-  chartFillImpl2.GradientStops.Add(gradientStopImpl4);
+	//Set Gradient fill to series
+	ChartFillImpl chartFillImpl1 = serie1.SerieFormat.Fill as ChartFillImpl;
+	chartFillImpl1.FillType = ExcelFillType.Gradient;
+	chartFillImpl1.GradientColorType = ExcelGradientColor.MultiColor;
+	serie1.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+	GradientStopImpl gradientStopImpl1 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 176, 240)), 50000, 100000);
+	GradientStopImpl gradientStopImpl2 = new GradientStopImpl(new ColorObject(Color.FromArgb(0, 112, 192)), 70000, 100000);
+	chartFillImpl1.GradientStops.GradientType = GradientType.Liniar;
+	chartFillImpl1.GradientStops.Add(gradientStopImpl1);
+	chartFillImpl1.GradientStops.Add(gradientStopImpl2);
 
-  //Saving the workbook as streams
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
+	chartFillImpl2.FillType = ExcelFillType.Gradient;
+	chartFillImpl2.GradientColorType = ExcelGradientColor.MultiColor;
+	serie2.SerieFormat.Fill.GradientStyle = ExcelGradientStyle.Horizontal;
+	GradientStopImpl gradientStopImpl3 = new GradientStopImpl(new ColorObject(Color.FromArgb(244, 177, 131)), 40000, 100000);
+	GradientStopImpl gradientStopImpl4 = new GradientStopImpl(new ColorObject(Color.FromArgb(255, 102, 0)), 70000, 100000);
+	chartFillImpl2.GradientStops.GradientType = GradientType.Liniar;
+	chartFillImpl2.GradientStops.Add(gradientStopImpl3);
+	chartFillImpl2.GradientStops.Add(gradientStopImpl4);
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -459,42 +458,50 @@ The following code example illustrates how to apply a picture fill to the chart 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Picture%20Fill/.NET/Picture%20Fill/Picture%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IChart chart = worksheet.Charts[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IChart chart = worksheet.Charts[0];
 
-  //Get data series
-  IChartSerie serie1 = chart.Series[0];
-  IChartSerie serie2 = chart.Series[1];
+	//Get data series
+	IChartSerie serie1 = chart.Series[0];
+	IChartSerie serie2 = chart.Series[1];
 
-  //Getting an image from the stream
-  FileStream imageStream1 = new FileStream("../../../Data/Image1.jpg", FileMode.Open, FileAccess.Read);
-  Image image1 = Image.FromStream(imageStream1);
-  FileStream imageStream2 = new FileStream("../../../Data/Image2.jpg", FileMode.Open, FileAccess.Read);
-  Image image2 = Image.FromStream(imageStream2);
+	//Getting an image from the stream
+	FileStream imageStream1 = new FileStream(Path.GetFullPath(@"Data/Image1.jpg"), FileMode.Open, FileAccess.Read);
+	Image image1 = Image.FromStream(imageStream1);
+	FileStream imageStream2 = new FileStream(Path.GetFullPath(@"Data/Image2.jpg"), FileMode.Open, FileAccess.Read);
+	Image image2 = Image.FromStream(imageStream2);
 
-  //Set picture fill to chart area
-  chart.ChartArea.Fill.UserPicture(image1, "Image");
+	//Set picture fill to chart area
+	chart.ChartArea.Fill.UserPicture(image1, "Image");
 
-  //Set picture fill to plot area
-  chart.PlotArea.Fill.UserPicture(image1, "Image");
+  //Setting offset to chart area fill picture
+  Rectangle chartarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.ChartArea.Fill as ShapeFillImpl).FillRect = chartarea;
 
-  //Set picture fill to series
-  serie1.SerieFormat.Fill.UserPicture(image2, "Image");
-  serie2.SerieFormat.Fill.UserPicture(image2, "Image");
+	//Set picture fill to plot area
+	chart.PlotArea.Fill.UserPicture(image1, "Image");
 
-  //Saving the workbook
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
-       
-  //Dispose streams
-  outputStream.Dispose();
-  imageStream1.Dispose();
-  imageStream2.Dispose();
-  inputStream.Dispose();
+  //Setting offset to plot area fill picture
+  Rectangle plotarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.PlotArea.Fill as ShapeFillImpl).FillRect = plotarea;
+
+	//Set picture fill to series
+	serie1.SerieFormat.Fill.UserPicture(image2, "Image");
+	serie2.SerieFormat.Fill.UserPicture(image2, "Image");
+
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+
+	//Dispose streams
+	outputStream.Dispose();
+	imageStream1.Dispose();
+	imageStream2.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -514,8 +521,16 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Set picture fill to chart area
   chart.ChartArea.Fill.UserPicture("Image1.png");
 
+  //Setting offset to chart area Fill picture
+  Rectangle chartarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.ChartArea.Fill as ShapeFillImpl).FillRect = chartarea;
+
   //Set picture fill to plot area
   chart.PlotArea.Fill.UserPicture("Image1.png");
+
+  //Setting offset to plot area Fill picture
+  Rectangle plotarea = Rectangle.FromLTRB(5000, 6000, 7000, 8000);
+  (chart.PlotArea.Fill as ShapeFillImpl).FillRect = plotarea;
 
   //Set picture fill to series
   serie1.SerieFormat.Fill.UserPicture("Image2.png");
@@ -540,8 +555,16 @@ Using excelEngine As New ExcelEngine()
   'Set picture fill to chart area
   chart.ChartArea.Fill.UserPicture("Image1.png")
 
+  'Setting offset to chart area Fill picture
+  Dim chartarea As Rectangle = Rectangle.FromLTRB(5000, 6000, 7000, 8000)
+  DirectCast(chart.ChartArea.Fill, ShapeFillImpl).FillRect = chartarea
+
   'Set picture fill to plot area
   chart.PlotArea.Fill.UserPicture("Image1.png")
+
+  'Setting offset to plot area Fill picture
+  Dim plotarea As Rectangle = Rectangle.FromLTRB(5000, 6000, 7000, 8000)
+  DirectCast(chart.PlotArea.Fill, ShapeFillImpl).FillRect = plotarea
 
   'Set picture fill to series
   serie1.SerieFormat.Fill.UserPicture("Image2.png")
@@ -562,35 +585,35 @@ The following code example illustrates how to apply a no fill to the chart area,
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/No%20Fill/.NET/No%20Fill/No%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("../../../Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
-  IChart chart = worksheet.Charts[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	IWorksheet worksheet = workbook.Worksheets[0];
+	IChart chart = worksheet.Charts[0];
 
-  //Get data series
-  IChartSerie serie1 = chart.Series[0];
-  IChartSerie serie2 = chart.Series[1];
+	//Get data series
+	IChartSerie serie1 = chart.Series[0];
+	IChartSerie serie2 = chart.Series[1];
 
-  //Set no fill to chart area
-  IChartFrameFormat chartArea = chart.ChartArea;
-  chartArea.Fill.Visible = false;
+	//Set no fill to chart area
+	IChartFrameFormat chartArea = chart.ChartArea;
+	chartArea.Fill.Visible = false;
 
-  //Set no fill to plot area
-  IChartFrameFormat plotArea = chart.PlotArea;
-  plotArea.Fill.Visible = false;
+	//Set no fill to plot area
+	IChartFrameFormat plotArea = chart.PlotArea;
+	plotArea.Fill.Visible = false;
 
-  //Set no fill to series
-  serie1.SerieFormat.Fill.Visible = false;
+	//Set no fill to series
+	serie1.SerieFormat.Fill.Visible = false;
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	//Saving the workbook as stream
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
 
-  //Dispose streams
-  outputStream.Dispose();
-  inputStream.Dispose();
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -902,62 +925,66 @@ The following code example illustrates how to apply 3D settings such as rotation
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/3D%20Chart/.NET/3D%20Chart/3D%20Chart/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+ using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(2);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(2);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  //Insert the data in sheet-1
-  sheet.Range["B1"].Text = "Product-A";
-  sheet.Range["C1"].Text = "Product-B";
-  sheet.Range["D1"].Text = "Product-C";
-  sheet.Range["A2"].Text = "Jan";
-  sheet.Range["A3"].Text = "Feb";
-  sheet.Range["B2"].Number = 25;
-  sheet.Range["B3"].Number = 20;
-  sheet.Range["C2"].Number = 35;
-  sheet.Range["C3"].Number = 25;
-  sheet.Range["D2"].Number = 40;
-  sheet.Range["D3"].Number = 55;
+	//Insert the data in sheet-1
+	sheet.Range["B1"].Text = "Product-A";
+	sheet.Range["C1"].Text = "Product-B";
+	sheet.Range["D1"].Text = "Product-C";
+	sheet.Range["A2"].Text = "Jan";
+	sheet.Range["A3"].Text = "Feb";
+	sheet.Range["B2"].Number = 25;
+	sheet.Range["B3"].Number = 20;
+	sheet.Range["C2"].Number = 35;
+	sheet.Range["C3"].Number = 25;
+	sheet.Range["D2"].Number = 40;
+	sheet.Range["D3"].Number = 55;
 
-  IChartShape chart = sheet.Charts.Add();
-  chart.DataRange = sheet.Range["A1:D3"];
-  chart.ChartType = ExcelChartType.Column_Clustered_3D;
+	IChartShape chart = sheet.Charts.Add();
+	chart.DataRange = sheet.Range["A1:D3"];
+	chart.ChartType = ExcelChartType.Column_Clustered_3D;
 
-  //Set Rotation of the 3D chart view
-  chart.Rotation = 90;
+	//Set Rotation of the 3D chart view
+	chart.Rotation = 90;
 
-  //Set Back wall fill option
-  chart.BackWall.Fill.FillType = ExcelFillType.Gradient;
-  //Set Back wall thickness
-  chart.BackWall.Thickness = 10;
-  //Set Texture Type
-  chart.BackWall.Fill.GradientColorType = ExcelGradientColor.TwoColor;
-  chart.BackWall.Fill.GradientStyle = ExcelGradientStyle.Diagonl_Down;
-  chart.BackWall.Fill.ForeColor = Color.WhiteSmoke;
-  chart.BackWall.Fill.BackColor = Color.LightBlue;
+	//Set Back wall fill option
+	chart.BackWall.Fill.FillType = ExcelFillType.Gradient;
+	//Set Back wall thickness
+	chart.BackWall.Thickness = 10;
+	//Set Texture Type
+	chart.BackWall.Fill.GradientColorType = ExcelGradientColor.TwoColor;
+	chart.BackWall.Fill.GradientStyle = ExcelGradientStyle.Diagonl_Down;
+	chart.BackWall.Fill.ForeColor = Color.WhiteSmoke;
+	chart.BackWall.Fill.BackColor = Color.LightBlue;
 
-  //Set side wall fill option
-  chart.SideWall.Fill.FillType = ExcelFillType.SolidColor;
-  //Set side wall fore and back color
-  chart.SideWall.Fill.BackColor = Color.White;
-  chart.SideWall.Fill.ForeColor = Color.White;
+	//Set side wall fill option
+	chart.SideWall.Fill.FillType = ExcelFillType.SolidColor;
+	//Set side wall fore and back color
+	chart.SideWall.Fill.BackColor = Color.White;
+	chart.SideWall.Fill.ForeColor = Color.White;
 
-  //Set floor fill option
-  chart.Floor.Fill.FillType = ExcelFillType.Pattern;
-  chart.Floor.Fill.Pattern = ExcelGradientPattern.Pat_10_Percent.Pat_30_Percent;
-  //Set floor fore and Back color
-  chart.Floor.Fill.ForeColor = Color.Blue;
-  chart.Floor.Fill.BackColor = Color.White;
-  //Set floor thickness
-  chart.Floor.Thickness = 3;
+	//Set floor fill option
+	chart.Floor.Fill.FillType = ExcelFillType.Pattern;
+	chart.Floor.Fill.Pattern = ExcelGradientPattern.Pat_10_Percent;
+	//Set floor fore and Back color
+	chart.Floor.Fill.ForeColor = Color.Blue;
+	chart.Floor.Fill.BackColor = Color.White;
+	//Set floor thickness
+	chart.Floor.Thickness = 3;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1089,28 +1116,43 @@ Refer the following complete code snippets.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Explode%20Pie%20Chart/.NET/Explode%20Pie%20Chart/Explode%20Pie%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding pie chart in the worksheet
-  IChartShape chart = worksheet.Charts.Add();
-  chart.DataRange = worksheet.Range["A3:B7"];
-  chart.ChartType = ExcelChartType.Pie;
-  chart.IsSeriesInRows = false;
+	//Adding pie chart in the worksheet
+	IChartShape chart = worksheet.Charts.Add();
+	chart.DataRange = worksheet.Range["A3:B7"];
+	chart.ChartType = ExcelChartType.Pie;
+	chart.IsSeriesInRows = false;
 
-  //Showing the values of data points
-  chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+	//Showing the values of data points
+	chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
 
-  //Exploding the pie chart to 40%
-  chart.Series[0].SerieFormat.Percent = 40;
+	//Exploding the pie chart to 40%
+	chart.Series[0].SerieFormat.Percent = 40;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	//Positioning the chart in the worksheet
+	chart.TopRow = 9;
+	chart.LeftColumn = 1;
+	chart.BottomRow = 22;
+	chart.RightColumn = 8;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1174,32 +1216,42 @@ Refer to the following complete code snippets.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Picture%20Hyperlink%20in%20Chart/.NET/Picture%20Hyperlink%20in%20Chart/Picture%20Hyperlink%20in%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding chart in the workbook
-  IChart chart = workbook.Charts.Add();
-  chart.DataRange = worksheet.Range["A1:B6"];
-  chart.ChartType = ExcelChartType.Column_Clustered;
-  chart.IsSeriesInRows = false;
+	//Adding chart in the workbook
+	IChart chart = workbook.Charts.Add();
+	chart.DataRange = worksheet.Range["A1:C6"];
+	chart.ChartType = ExcelChartType.Column_Clustered;
+	chart.IsSeriesInRows = false;
 
-  //Getting an image from the stream
-  FileStream imageStream = new FileStream("Image.png", FileMode.Open, FileAccess.Read);
-  Image image = Image.FromStream(imageStream);
+	//Getting an image from the stream
+	FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/Image.png"), FileMode.Open, FileAccess.Read);
+	Image image = Image.FromStream(imageStream);
 
-  //Adding picture on the chart
-  chart.Pictures.AddPicture(1, 1, imageStream);
+	//Adding picture on the chart
+	chart.Pictures.AddPicture(1, 1, imageStream);
 
-  //Adding hyperlink to the picture on chart
-  worksheet.HyperLinks.Add((workbook.Charts[0].Pictures[0] as IShape), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here");
+	//Adding hyperlink to the picture on chart
+	worksheet.HyperLinks.Add(workbook.Charts[0].Pictures[0] as IShape, ExcelHyperLinkType.Url, "https://www.Syncfusion.com", "click here");
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
+	imageStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1267,50 +1319,64 @@ Refer the following complete code snippets.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/DataTable%20in%20Chart/.NET/DataTable%20in%20Chart/DataTable%20in%20Chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Assigning data in the worksheet
-  worksheet.Range["A1"].Text = "Items";
-  worksheet.Range["B1"].Text = "Amount(in $)";
-  worksheet.Range["C1"].Text = "Count";
+	//Assigning data in the worksheet
+	worksheet.Range["A1"].Text = "Items";
+	worksheet.Range["B1"].Text = "Amount(in $)";
+	worksheet.Range["C1"].Text = "Count";
 
-  worksheet.Range["A2"].Text = "Beverages";
-  worksheet.Range["A3"].Text = "Condiments";
-  worksheet.Range["A4"].Text = "Confections";
-  worksheet.Range["A5"].Text = "Dairy Products";
-  worksheet.Range["A6"].Text = "Grains / Cereals";
+	worksheet.Range["A2"].Text = "Beverages";
+	worksheet.Range["A3"].Text = "Condiments";
+	worksheet.Range["A4"].Text = "Confections";
+	worksheet.Range["A5"].Text = "Dairy Products";
+	worksheet.Range["A6"].Text = "Grains / Cereals";
 
-  worksheet.Range["B2"].Number = 2776;
-  worksheet.Range["B3"].Number = 1077;
-  worksheet.Range["B4"].Number = 2287;
-  worksheet.Range["B5"].Number = 1368;
-  worksheet.Range["B6"].Number = 3325;
+	worksheet.Range["B2"].Number = 2776;
+	worksheet.Range["B3"].Number = 1077;
+	worksheet.Range["B4"].Number = 2287;
+	worksheet.Range["B5"].Number = 1368;
+	worksheet.Range["B6"].Number = 3325;
 
-  worksheet.Range["C2"].Number = 925;
-  worksheet.Range["C3"].Number = 378;
-  worksheet.Range["C4"].Number = 880;
-  worksheet.Range["C5"].Number = 581;
-  worksheet.Range["C6"].Number = 189;
+	worksheet.Range["C2"].Number = 925;
+	worksheet.Range["C3"].Number = 378;
+	worksheet.Range["C4"].Number = 880;
+	worksheet.Range["C5"].Number = 581;
+	worksheet.Range["C6"].Number = 189;
 
-  //Adding a chart to the worksheet
-  IChartShape chart = worksheet.Charts.Add();
-  chart.DataRange = worksheet.Range["A1:C6"];
-  chart.ChartType = ExcelChartType.Column_Clustered;
-  chart.IsSeriesInRows = false;
+	//Adding a chart to the worksheet
+	IChartShape chart = worksheet.Charts.Add();
+	chart.DataRange = worksheet.Range["A1:C6"];
+	chart.ChartType = ExcelChartType.Column_Clustered;
+	chart.IsSeriesInRows = false;
 
-  //Adding title to the chart
-  chart.ChartTitle = "Chart with Data Table";
+	//Adding title to the chart
+	chart.ChartTitle = "Chart with Data Table";
 
-  //Adding data table to the chart
-  chart.HasDataTable = true;
+	//Adding data table to the chart
+	chart.HasDataTable = true;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Set Legend
+	chart.HasLegend = true;
+	chart.Legend.Position = ExcelLegendPosition.Bottom;
+
+	//Positioning the chart in the worksheet
+	chart.TopRow = 8;
+	chart.LeftColumn = 1;
+	chart.BottomRow = 23;
+	chart.RightColumn = 8;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 

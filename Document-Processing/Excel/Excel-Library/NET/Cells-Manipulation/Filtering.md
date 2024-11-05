@@ -25,29 +25,36 @@ The following code example illustrates how to apply simple auto filters.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Filter/.NET/Filter/Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range
-  worksheet.AutoFilters.FilterRange = worksheet.Range["A1:K180"];
+	#region Filter
+	//Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range
+	worksheet.AutoFilters.FilterRange = worksheet.Range["A1:A10"];
 
-  //Column index to which AutoFilter must be applied
-  IAutoFilter filter = worksheet.AutoFilters[0];
+	//Column index to which AutoFilter must be applied
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  //To apply Top10Number filter, IsTop and IsTop10 must be enabled
-  filter.IsTop = true;
-  filter.IsTop10 = true;
+	//To apply Top10Number filter, IsTop and IsTop10 must be enabled
+	filter.IsTop = true;
+	filter.IsTop10 = true;
 
-  //Setting Top10 filter with number of cell to be filtered from top
-  filter.Top10Number = 5;
+	//Setting Top10 filter with number of cell to be filtered from top
+	filter.Top10Number = 5;
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Filter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Filter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -111,30 +118,37 @@ The following code example illustrates how to apply custom filter, based on firs
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Custom%20Filter/.NET/Custom%20Filter/Custom%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range
-  sheet.AutoFilters.FilterRange = sheet.Range["A1:B323"];
-  IAutoFilter filter = sheet.AutoFilters[1];
+	#region Custom Filter
+	//Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range
+	worksheet.AutoFilters.FilterRange = worksheet.Range["A1:A11"];
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  //Specifying first condition
-  IAutoFilterCondition firstCondition = filter.FirstCondition;
-  firstCondition.ConditionOperator = ExcelFilterCondition.Greater;
-  firstCondition.Double = 100;
+	//Specifying first condition
+	IAutoFilterCondition firstCondition = filter.FirstCondition;
+	firstCondition.ConditionOperator = ExcelFilterCondition.Greater;
+	firstCondition.Double = 100;
 
-  //Specifying second condition
-  IAutoFilterCondition secondCondition = filter.SecondCondition;
-  secondCondition.ConditionOperator = ExcelFilterCondition.Less;
-  secondCondition.Double = 200;
+	//Specifying second condition
+	IAutoFilterCondition secondCondition = filter.SecondCondition;
+	secondCondition.ConditionOperator = ExcelFilterCondition.Less;
+	secondCondition.Double = 200;
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Filter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(file);
-  file.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CustomFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -202,29 +216,38 @@ The following code example illustrates how to apply combination filter with mult
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Combination%20Filter/.NET/Combination%20Filter/Combination%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range. 
-  worksheet.AutoFilters.FilterRange = worksheet.Range["A1:K180"];
+	#region Combination Filter
+	//Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range. 
+	worksheet.AutoFilters.FilterRange = worksheet.Range["A1:B22"];
 
-  //Column index to which AutoFilter must be applied.
-  IAutoFilter filter = worksheet.AutoFilters[2];
+	//Column index to which AutoFilter must be applied.
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  //Applying Text filter to filter multiple text to get filter.
-  filter.AddTextFilter(new string[] { "London", "Paris", "New York City" });
+	//Applying Text filter to filter multiple text to get filter.
+	filter.AddTextFilter(new string[] { "London", "Ireland", "Canada" });
 
-  //Applying DateTime filter to filter the date based on DateTimeGroupingType.
-  filter.AddDateFilter(new DateTime(2013, 1, 29, 0, 0, 0), DateTimeGroupingType.day);
-  filter.AddDateFilter(2014, 12, 2, 10, 30, 0, DateTimeGroupingType.minute);
+	//Column index to which AutoFilter must be applied.
+	filter = worksheet.AutoFilters[1];
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Filter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Applying DateTime filter to filter the date based on DateTimeGroupingType.
+	filter.AddDateFilter(2020, 11, 27, 0, 0, 0, DateTimeGroupingType.minute);
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CombinationFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -288,27 +311,34 @@ The following code example illustrates how to apply Dynamic filter.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Dynamic%20Filter/.NET/Dynamic%20Filter/Dynamic%20Filter/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+ using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
-  worksheet.AutoFilters.FilterRange = worksheet.Range["A1:K180"];
+	#region Dynamic Filter
+	//Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
+	worksheet.AutoFilters.FilterRange = worksheet.Range["A1:A13"];
 
-  //Column index to which AutoFilter must be applied.
-  IAutoFilter filter = worksheet.AutoFilters[3];
+	//Column index to which AutoFilter must be applied.
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  //Applying dynamic filter to filter the date based on DynamicFilterType.
-  filter.AddDynamicFilter(DynamicFilterType.NextQuarter);
+	//Applying dynamic filter to filter the date based on DynamicFilterType.
+	filter.AddDynamicFilter(DynamicFilterType.NextQuarter);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Filter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/DynamicFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -366,25 +396,32 @@ The following code example illustrates how to apply color filter based on cell c
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Cell%20Color%20Filter/.NET/Cell%20Color%20Filter/Cell%20Color%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
-  worksheet.AutoFilters.FilterRange = worksheet.Range["A1:K180"];
+	#region Cell Color Filter
+	//Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
+	worksheet.AutoFilters.FilterRange = worksheet.Range["A1:A11"];
 
-  //Column index to which AutoFilter must be applied.
-  IAutoFilter filter = worksheet.AutoFilters[3];
+	//Column index to which AutoFilter must be applied.
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  //Applying color filter to filter based on Cell Color.
-  filter.AddColorFilter(Color.Red, ExcelColorFilterType.CellColor);
+	//Applying color filter to filter based on Cell Color.
+	filter.AddColorFilter(Syncfusion.Drawing.Color.Red, ExcelColorFilterType.CellColor);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Filter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CellColorFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -440,25 +477,32 @@ The following code example illustrates how to filter the cells based on font col
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Font%20Color%20Filter/.NET/Font%20Color%20Filter/Font%20Color%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
-  worksheet.AutoFilters.FilterRange = worksheet.Range["A1:K180"];
+	#region Font Color Filter
+	//Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
+	worksheet.AutoFilters.FilterRange = worksheet.Range["A1:A11"];
 
-  //Column index to which AutoFilter must be applied.
-  IAutoFilter filter = worksheet.AutoFilters[3];
+	//Column index to which AutoFilter must be applied.
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  //Applying color filter to filter based on Cell Color.
-  filter.AddColorFilter(Color.Red, ExcelColorFilterType.FontColor);
+	//Applying color filter to filter based on Cell Color.
+	filter.AddColorFilter(Syncfusion.Drawing.Color.Red, ExcelColorFilterType.FontColor);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Filter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FontColorFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -516,25 +560,32 @@ The following code example illustrates how to apply icon filter.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Icon%20Filter/.NET/Icon%20Filter/Icon%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
-  worksheet.AutoFilters.FilterRange = worksheet.Range["A1:K180"];
+	#region Icon Filter
+	//Creating an AutoFilter in the first worksheet. Specifying the AutoFilter range.
+	worksheet.AutoFilters.FilterRange = worksheet.Range["A1:A8"];
 
-  //Column index to which AutoFilter must be applied.
-  IAutoFilter filter = worksheet.AutoFilters[3];
+	//Column index to which AutoFilter must be applied.
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  //Applying Icon filter to filter based on applied icon set.
-  filter.AddIconFilter(ExcelIconSetType.ThreeFlags, 2);
+	//Applying Icon filter to filter based on applied icon set.
+	filter.AddIconFilter(ExcelIconSetType.ThreeFlags, 2);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Filter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/IconFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -602,23 +653,30 @@ The following code example illustrates how to apply Advanced Filter in worksheet
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Advanced%20Filter/.NET/Advanced%20Filter/Advanced%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  FileStream fileStream = new FileStream("InputData.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  IRange filterRange = worksheet.Range["A1:C6"];
-  IRange criteriaRange = worksheet.Range["A10:C12"];
-  IRange copyToRange = worksheet.Range["K5:N5"];
+	#region Advanced Filter
+	IRange filterRange = worksheet.Range["A8:G51"];
+	IRange criteriaRange = worksheet.Range["A2:B5"];
+	IRange copyToRange = worksheet.Range["I8"];
 
-  //Apply the Advanced Filter with enable of unique value and copy to another place.
-  worksheet.AdvancedFilter(ExcelFilterAction.FilterCopy, filterRange, criteriaRange, copyToRange, true);
+	//Apply the Advanced Filter with enable of unique value and copy to another place.
+	worksheet.AdvancedFilter(ExcelFilterAction.FilterCopy, filterRange, criteriaRange, copyToRange, true);
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("AdvancedFilter.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.Version = ExcelVersion.Xlsx;
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AdvancedFilter.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -672,59 +730,59 @@ The following code example illustrates how to access different types of filters.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Accessing%20Filter/.NET/Accessing%20Filter/Accessing%20Filter/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //selecting the filter by column index
-  IAutoFilter filter = sheet.AutoFilters[0];
+	#region Accessing Filter
+	//selecting the filter by column index
+	IAutoFilter filter = worksheet.AutoFilters[0];
 
-  switch (filter.FilterType)
-  {
-    case ExcelFilterType.CombinationFilter:
-      CombinationFilter filterItems = (filter.FilteredItems as CombinationFilter);
-      for (int index = 0; index < filterItems.Count; index++)
-      {
-        if (filterItems[index].CombinationFilterType == ExcelCombinationFilterType.TextFilter)
-        {
-          string textValue = (filterItems[index] as TextFilter).Text;
-        }
-        else
-        {
-          DateTimeGroupingType groupType = (filterItems[index] as DateTimeFilter).GroupingType;
-        }
-      }
-      break;
+	switch (filter.FilterType)
+	{
+		case ExcelFilterType.CombinationFilter:
+			CombinationFilter filterItems = (filter.FilteredItems as CombinationFilter);
+			for (int index = 0; index < filterItems.Count; index++)
+			{
+				if (filterItems[index].CombinationFilterType == ExcelCombinationFilterType.TextFilter)
+				{
+					string textValue = (filterItems[index] as TextFilter).Text;
+				}
+				else
+				{
+					DateTimeGroupingType groupType = (filterItems[index] as DateTimeFilter).GroupingType;
+				}
+			}
+			break;
 
-    case ExcelFilterType.DynamicFilter:
-      DynamicFilter dateFilter = (filter.FilteredItems as DynamicFilter);
-      DynamicFilterType dynamicFilterType = dateFilter.DateFilterType;
-      break;
+		case ExcelFilterType.DynamicFilter:
+			DynamicFilter dateFilter = (filter.FilteredItems as DynamicFilter);
+			DynamicFilterType dynamicFilterType = dateFilter.DateFilterType;
+			break;
 
-    case ExcelFilterType.CustomFilter:
-      IAutoFilterCondition firstCondition = filter.FirstCondition;
-      ExcelFilterDataType types = firstCondition.DataType;
-      break;
+		case ExcelFilterType.CustomFilter:
+			IAutoFilterCondition firstCondition = filter.FirstCondition;
+			ExcelFilterDataType types = firstCondition.DataType;
+			break;
 
-    case ExcelFilterType.ColorFilter:
-      ColorFilter colorFilter = (filter.FilteredItems as ColorFilter);
-      Color color = colorFilter.Color;
-      ExcelColorFilterType filterType = colorFilter.ColorFilterType;
-      break;
+		case ExcelFilterType.ColorFilter:
+			ColorFilter colorFilter = (filter.FilteredItems as ColorFilter);
+			Syncfusion.Drawing.Color color = colorFilter.Color;
+			ExcelColorFilterType filterType = colorFilter.ColorFilterType;
+			break;
 
-    case ExcelFilterType.IconFilter:
-      IconFilter iconFilter = (filter.FilteredItems as IconFilter);
-      int iconId = iconFilter.IconId;
-      ExcelIconSetType iconSetType = iconFilter.IconSetType;
-      break;
-  }
+		case ExcelFilterType.IconFilter:
+			IconFilter iconFilter = (filter.FilteredItems as IconFilter);
+			int iconId = iconFilter.IconId;
+			ExcelIconSetType iconSetType = iconFilter.IconSetType;
+			break;
+	}
+	#endregion
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+	//Dispose streams
+	inputStream.Dispose();
 }
 {% endhighlight %}
 

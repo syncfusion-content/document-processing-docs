@@ -18,29 +18,34 @@ The following code example illustrates how to use FitToPagesTall.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesTall/.NET/FitToPagesTall/FitToPagesTall/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //Sets the fit to page tall
-  sheet.PageSetup.FitToPagesTall = 1;
-  sheet.PageSetup.FitToPagesWide = 0;
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//Sets the fit to page tall as true.
+	sheet.PageSetup.FitToPagesTall = 1;
+	sheet.PageSetup.FitToPagesWide = 0;
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitToPagesTall.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -104,29 +109,34 @@ The following code example illustrates how to use FitToPagesWide.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/FitToPagesWide/.NET/FitToPagesWide/FitToPagesWide/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //Sets the fit to page wide 
-  sheet.PageSetup.FitToPagesWide = 1;
-  sheet.PageSetup.FitToPagesTall = 0;
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//Sets the fit to page wide as true.
+	sheet.PageSetup.FitToPagesWide = 1;
+	sheet.PageSetup.FitToPagesTall = 0;
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/FitToPagesWide.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -190,28 +200,33 @@ The following code example illustrates how to use IsFitToPage.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsFitToPage/.NET/IsFitToPage/IsFitToPage/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Excel2013;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  // True to fit the content before printing
-  sheet.PageSetup.IsFitToPage = true;
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	// True to fit the content before printing
+	sheet.PageSetup.IsFitToPage = true;
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/IsFitToPage.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -273,31 +288,36 @@ The following code snippet shows how to use IsSummaryColumnRight.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryColumnRight/.NET/IsSummaryColumnRight/IsSummaryColumnRight/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //True to summary columns will appear right of the detail in outlines
-  sheet.PageSetup.IsSummaryColumnRight = true;
-  sheet.PageSetup.Orientation = ExcelPageOrientation.Portrait;  
-  sheet.PageSetup.FitToPagesTall = 0;
-  sheet.PageSetup.IsFitToPage = true;
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//True to summary columns will appear right of the detail in outlines
+	sheet.PageSetup.IsSummaryColumnRight = true;
+	sheet.PageSetup.Orientation = ExcelPageOrientation.Portrait;
+	sheet.PageSetup.FitToPagesTall = 0;
+	sheet.PageSetup.IsFitToPage = true;
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SummaryColumnRight.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -365,31 +385,36 @@ The following code snippet shows how to use IsSummaryRowBelow.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/IsSummaryRowBelow/.NET/IsSummaryRowBelow/IsSummaryRowBelow/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //True to summary rows will appear below detail in outlines
-  sheet.PageSetup.IsSummaryRowBelow = true; 
-  sheet.PageSetup.FitToPagesWide = 0; 
-  sheet.PageSetup.Orientation = ExcelPageOrientation.Portrait;
-  sheet.PageSetup.IsFitToPage = true;
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//True to summary rows will appear below detail in outlines
+	sheet.PageSetup.IsSummaryRowBelow = true;
+	sheet.PageSetup.FitToPagesWide = 0;
+	sheet.PageSetup.Orientation = ExcelPageOrientation.Portrait;
+	sheet.PageSetup.IsFitToPage = true;
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/SummaryRowBelow.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -458,28 +483,33 @@ The following code snippet shows how to use the PrintArea.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintArea/.NET/PrintArea/PrintArea/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //Sets the range to be printed
-  sheet.PageSetup.PrintArea = "A1:M20";
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//Sets the range to be printed
+	sheet.PageSetup.PrintArea = "A1:M20";
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PrintArea.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -541,28 +571,33 @@ The following code snippet shows how to use PrintGridlines.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintGridlines/.NET/PrintGridlines/PrintGridlines/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //True to cell gridlines are printed on the page
-  sheet.PageSetup.PrintGridlines = true;
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//True to cell gridlines are printed on the page
+	sheet.PageSetup.PrintGridlines = true;
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PrintGridlines.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -624,28 +659,33 @@ The following code snippet shows how to use PrintHeadings.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintHeadings/.NET/PrintHeadings/PrintHeadings/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //True to row and column headings are printed on page
-  sheet.PageSetup.PrintHeadings = true;
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//True to row and column headings are printed on page
+	sheet.PageSetup.PrintHeadings = true;
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PrintHeadings.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -707,28 +747,33 @@ The following code snippet shows how to use PrintTitleColumns.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleColumns/.NET/PrintTitleColumns/PrintTitleColumns/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //Sets the columns to be repeated on the left side of each page
-  sheet.PageSetup.PrintTitleColumns = "C1:C50";
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//Sets the columns to be repeated on the left side of each page
+	sheet.PageSetup.PrintTitleColumns = "C1:C50";
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PrintTitleColumns.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -791,28 +836,33 @@ The following code snippet shows how to use PrintTitleRows.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/PrintTitleRows/.NET/PrintTitleRows/PrintTitleRows/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet sheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet sheet = workbook.Worksheets[0];
 
-  for (int i = 1; i <= 50; i++)
-  {
-    for (int j = 1; j <= 50; j++)
-    {
-      sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
-    }
-  }
+	for (int i = 1; i <= 50; i++)
+	{
+		for (int j = 1; j <= 50; j++)
+		{
+			sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+		}
+	}
 
-  //Sets the rows to be repeated at the top of each page
-  sheet.PageSetup.PrintTitleRows = "A1:AX1";
-    
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(outputStream);
+	#region PageSetup Settings
+	//Sets the rows to be repeated at the top of each page
+	sheet.PageSetup.PrintTitleRows = "A1:AX1";
 
-  //Dispose streams
-  outputStream.Dispose();
+	#endregion
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PrintTitleRows.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -872,30 +922,30 @@ The following code example illustrates how to add headers and footers in an Exce
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer/Header%20and%20Footer/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
-  IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Excel2013;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding values in worksheet
-  worksheet.Range["A1:A600"].Text = "HelloWorld";
+	//Adding values in worksheet
+	worksheet.Range["A1:A600"].Text = "HelloWorld";
 
-  //Adding text with formatting to page headers 
-  worksheet.PageSetup.LeftHeader = "&KFF0000 Left Header";
-  worksheet.PageSetup.CenterHeader = "&KFF0000 Center Header";
-  worksheet.PageSetup.RightHeader = "&KFF0000 Right Header";
+	//Adding text with formatting to page headers 
+	worksheet.PageSetup.LeftHeader = "&KFF0000 Left Header";
+	worksheet.PageSetup.CenterHeader = "&KFF0000 Center Header";
+	worksheet.PageSetup.RightHeader = "&KFF0000 Right Header";
 
-  //Adding text with formatting and image to page footers
-  worksheet.PageSetup.LeftFooter = "&B &18 &K0000FF Left Footer";
-  FileStream imageStream = new FileStream("Image.jpg", FileMode.Open);
-  worksheet.PageSetup.CenterFooter = "&G";
-  worksheet.PageSetup.CenterFooterImage = Image.FromStream(imageStream);
-  worksheet.PageSetup.RightFooter = "&P &K0000FF Right Footer";
+	//Adding text with formatting and image to page footers
+	worksheet.PageSetup.LeftFooter = "&B &18 &K0000FF Left Footer";
+	FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/image.jpg"), FileMode.Open);
+	worksheet.PageSetup.CenterFooter = "&G";
+	worksheet.PageSetup.CenterFooterImage = Image.FromStream(imageStream);
+	worksheet.PageSetup.RightFooter = "&P &K0000FF Right Footer";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+	//Saving the workbook as stream
+	FileStream stream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create);
+	workbook.SaveAs(stream);
+	stream.Dispose();
 }
 {% endhighlight %}
 

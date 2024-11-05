@@ -21,34 +21,42 @@ The following code snippet explains how to create scenarios for different values
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Create%20Scenarios/.NET/Create%20Scenarios/Create%20Scenarios/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IScenarios scenarios = worksheet.Scenarios;
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	inputStream.Dispose();
 
-    //Initialize list objects with different values for scenarios
-    List<object> currentChangePercentage_Values = new List<object> { 0.23, 0.8, 1.1, 0.5, 0.35, 0.2};
-    List<object> increasedChangePercentage_Values = new List<object> { 0.45, 0.56, 0.9, 0.5, 0.58, 0.43};
-    List<object> decreasedChangePercentage_Values = new List<object> { 0.3, 0.2, 0.5, 0.3, 0.5, 0.23};
-    List<object> currentQuantity_Values = new List<object> { 1500, 3000, 5000, 4000, 500, 4000 };
-    List<object> increasedQuantity_Values = new List<object> { 1000, 5000, 4500, 3900, 10000, 8900 };
-    List<object> decreasedQuantity_Values = new List<object> { 1000, 2000, 3000, 3000, 300, 4000 };
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Add scenarios in the worksheet with different values for the same cells
-    scenarios.Add("Current % of Change", worksheet.Range["F5:F10"], currentChangePercentage_Values);
-    scenarios.Add("Increased % of Change", worksheet.Range["F5:F10"], increasedChangePercentage_Values);
-    scenarios.Add("Decreased % of Change", worksheet.Range["F5:F10"], decreasedChangePercentage_Values);
-    scenarios.Add("Current Quantity", worksheet.Range["D5:D10"], currentQuantity_Values);
-    scenarios.Add("Increased Quantity", worksheet.Range["D5:D10"], increasedQuantity_Values);
-    scenarios.Add("Decreased Quantity", worksheet.Range["D5:D10"], decreasedQuantity_Values);
+	// Access the collection of scenarios in the worksheet
+	IScenarios scenarios = worksheet.Scenarios;
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+	//Initialize list objects with different values for scenarios
+	List<object> currentChangePercentage_Values = new List<object> { 0.23, 0.8, 1.1, 0.5, 0.35, 0.2 };
+	List<object> increasedChangePercentage_Values = new List<object> { 0.45, 0.56, 0.9, 0.5, 0.58, 0.43 };
+	List<object> decreasedChangePercentage_Values = new List<object> { 0.3, 0.2, 0.5, 0.3, 0.5, 0.23 };
+	List<object> currentQuantity_Values = new List<object> { 1500, 3000, 5000, 4000, 500, 4000 };
+	List<object> increasedQuantity_Values = new List<object> { 1000, 5000, 4500, 3900, 10000, 8900 };
+	List<object> decreasedQuantity_Values = new List<object> { 1000, 2000, 3000, 3000, 300, 4000 };
+
+	//Add scenarios in the worksheet with different values for the same cells
+	scenarios.Add("Current % of Change", worksheet.Range["F5:F10"], currentChangePercentage_Values);
+	scenarios.Add("Increased % of Change", worksheet.Range["F5:F10"], increasedChangePercentage_Values);
+	scenarios.Add("Decreased % of Change", worksheet.Range["F5:F10"], decreasedChangePercentage_Values);
+	scenarios.Add("Current Quantity", worksheet.Range["D5:D10"], currentQuantity_Values);
+	scenarios.Add("Increased Quantity", worksheet.Range["D5:D10"], increasedQuantity_Values);
+	scenarios.Add("Decreased Quantity", worksheet.Range["D5:D10"], decreasedQuantity_Values);
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CreateScenarios.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -436,23 +444,39 @@ Update the scenario values in the worksheet and display it using the [Show](http
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Apply%20Scenario/.NET/Apply%20Scenario/Apply%20Scenario/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IScenarios scenarios = worksheet.Scenarios;
-    IScenario scenario1 = scenarios[0];
-    IScenario scenario2 = scenarios[1];
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	inputStream.Dispose();
 
-    //Show the scenario 
-    scenario2.Show();
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+	//Access the collection of scenarios in the worksheet
+	IScenarios scenarios = worksheet.Scenarios;
+
+	for (int pos = 0; pos < scenarios.Count; pos++)
+	{
+		//Apply scenarios
+		scenarios[pos].Show();
+
+		IWorkbook newBook = excelEngine.Excel.Workbooks.Create(0);
+
+		IWorksheet newSheet = newBook.Worksheets.AddCopy(worksheet);
+
+		newSheet.Name = scenarios[pos].Name;
+
+		//Saving the new workbook as a stream
+		using (FileStream stream = new FileStream(Path.GetFullPath(@"Output/" + scenarios[pos].Name + ".xlsx"), FileMode.Create, FileAccess.ReadWrite))
+		{
+			newBook.SaveAs(stream);
+		}
+
+		//To restore the cell values from the previous scenario results
+		scenarios["Current % of Change"].Show();
+		scenarios["Current Quantity"].Show();
+	}
 }
 {% endhighlight %}
 
@@ -572,22 +596,33 @@ The scenario can be hidden by enabling the [Hidden](https://help.syncfusion.com/
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Hide%20Scenario/.NET/Hide%20Scenario/Hide%20Scenario/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IScenarios scenarios = worksheet.Scenarios;
-    IScenario scenario = scenarios[0];
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	inputStream.Dispose();
 
-    //Hidden the scenario
-    scenario.Hidden = true;
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+	//Access the collection of scenarios in the worksheet
+	IScenarios scenarios = worksheet.Scenarios;
+
+	//Disable the protection for a specific scenario
+	scenarios["Increased % of Change"].Hidden = true;
+
+	//Enable worksheet protection
+	worksheet.Protect("Scenario");
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/HideScenario.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+
 }
 {% endhighlight %}
 
@@ -640,22 +675,33 @@ The scenario can be locked or unlocked through [Locked](https://help.syncfusion.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/What-If%20Analysis/Protect%20Scenario/.NET/Protect%20Scenario/Protect%20Scenario/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-    IWorksheet worksheet = workbook.Worksheets[0];
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IScenarios scenarios = worksheet.Scenarios;
-    IScenario scenario = scenarios[0];
+	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/WhatIfAnalysisTemplate.xlsx"), FileMode.Open, FileAccess.Read);
+	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+	inputStream.Dispose();
 
-    //Unlock a scenario
-    scenario.Locked = false;
+	IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Saving the workbook as stream
-    FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(stream);
-    stream.Dispose();
+	//Enable worksheet protection
+	worksheet.Protect("scenario");
+
+	// Access the collection of scenarios in the worksheet
+	IScenarios scenarios = worksheet.Scenarios;
+
+	//To make a scenario editable after protecting the sheet
+	scenarios[0].Locked = false;
+
+	#region Save
+	//Saving the workbook
+	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ProtectScenario.xlsx"), FileMode.Create, FileAccess.Write);
+	workbook.SaveAs(outputStream);
+	#endregion
+
+	//Dispose streams
+	outputStream.Dispose();
+
 }
 {% endhighlight %}
 
