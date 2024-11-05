@@ -37,17 +37,17 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     }
 
     //Checking worksheet protection for all worksheets in the workbook
-    for (int i = 1; i < workbook.Worksheets.Count; i++)
+    for (int sheetIndex = 1; sheetIndex < workbook.Worksheets.Count; sheetIndex++)
     {
-        if (workbook.Worksheets[i - 1].IsPasswordProtected)
+        if (workbook.Worksheets[sheetIndex - 1].IsPasswordProtected)
         {
-            worksheet.Range["B" + i.ToString()].Text = workbook.Worksheets[i - 1].Name + " is Protected";
-            worksheet.Range["B" + i.ToString()].CellStyle.Color = Color.LightGreen;
+            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Protected";
+            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.LightGreen;
         }
         else
         {
-            worksheet.Range["B" + i.ToString()].Text = workbook.Worksheets[i - 1].Name + " is Not Protected";
-            worksheet.Range["B" + i.ToString()].CellStyle.Color = Color.Orange;
+            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Not Protected";
+            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.Orange;
         }
     }
 
@@ -83,17 +83,17 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     }
 
     //Checking worksheet protection for all worksheets in the workbook
-    for (int i = 1; i < workbook.Worksheets.Count; i++)
+    for (int sheetIndex = 1; sheetIndex < workbook.Worksheets.Count; sheetIndex++)
     {
-        if (workbook.Worksheets[i - 1].IsPasswordProtected)
+        if (workbook.Worksheets[sheetIndex - 1].IsPasswordProtected)
         {
-            worksheet.Range["B" + i.ToString()].Text = workbook.Worksheets[i - 1].Name + " is Protected";
-            worksheet.Range["B" + i.ToString()].CellStyle.Color = Color.LightGreen;
+            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Protected";
+            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.LightGreen;
         }
         else
         {
-            worksheet.Range["B" + i.ToString()].Text = workbook.Worksheets[i - 1].Name + " is Not Protected";
-            worksheet.Range["B" + i.ToString()].CellStyle.Color = Color.Orange;
+            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Not Protected";
+            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.Orange;
         }
     }
 
@@ -124,13 +124,13 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
     End If
 
     'Checking worksheet protection for all worksheets in the workbook
-    For i As Integer = 1 To workbook.Worksheets.Count - 1
-        If workbook.Worksheets(i - 1).IsPasswordProtected Then
-            worksheet.Range("B" & (i).ToString()).Text = workbook.Worksheets(i - 1).Name & " is Protected"
-            worksheet.Range("B" & (i).ToString()).CellStyle.Color = Color.LightGreen
+    For sheetIndex As Integer = 1 To workbook.Worksheets.Count - sheetIndex
+        If workbook.Worksheets(sheetIndex - 1).IsPasswordProtected Then
+            worksheet.Range("B" & (sheetIndex).ToString()).Text = workbook.Worksheets(sheetIndex - 1).Name & " is Protected"
+            worksheet.Range("B" & (sheetIndex).ToString()).CellStyle.Color = Color.LightGreen
         Else
-            worksheet.Range("B" & (i).ToString()).Text = workbook.Worksheets(i - 1).Name & " is Not Protected"
-            worksheet.Range("B" & (i).ToString()).CellStyle.Color = Color.Orange
+            worksheet.Range("B" & (sheetIndex).ToString()).Text = workbook.Worksheets(sheetIndex - 1).Name & " is Not Protected"
+            worksheet.Range("B" & (sheetIndex).ToString()).CellStyle.Color = Color.Orange
         End If
     Next
 
