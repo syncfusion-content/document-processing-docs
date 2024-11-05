@@ -10,4 +10,4 @@ documentation: UG
 
 The frequently asked questions about converting Excel to PDF are listed below.
 
-* [Does XlsIO library support multithreading and thread-safe for converting Excel to PDF?](faqs/does-xlsio-support-multi-threading-for-converting-excel-to-pdf.md)
+* [Does XlsIO support multithreaded Excel to PDF conversion?](faqs/does-xlsio-support-multithreaded-excel-to-pdf-conversion)
