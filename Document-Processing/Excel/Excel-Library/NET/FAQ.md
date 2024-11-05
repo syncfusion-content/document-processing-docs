@@ -96,3 +96,8 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to protect zip file items with different passwords using C#?](faqs/how-to-protect-zip-file-items-with-different-passwords)
 * [How to extract and save images from an Excel worksheet](faqs/how-to-extract-and-save-images-from-the-worksheet)
 * [How to delete blank rows and blank columns in an Excel worksheet using C#?](faqs/how-to-delete-blank-rows-and-columns-in-a-worksheet)
+* [How to retain cell values after removing formulas in Excel?](faqs/How-to-retain-cell-values-after-removing-formulas-in-Excel)
+* [How to remove data validation from the specified range?](faqs/how-to-remove-data-validation-from-the-specified-range)
+* [How to remove autofilter from an Excel worksheet?](faqs/how-to-remove-autofilter-in-an-Excel)
+* [How to convert an Excel worksheet to a high-resolution image?](faqs/how-to-convert-an-Excel-worksheet-to-a-high-resolution-image)
+* [How to add and remove page breaks in a worksheet?](faqs/how-to-add-and-remove-page-breaks-in-Excel)
