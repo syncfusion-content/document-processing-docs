@@ -2190,6 +2190,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [How to extract images from tables in a Word document?](https://support.syncfusion.com/kb/article/15812/how-to-extract-images-from-tables-in-a-word-document)
 * [How to extract content from Excel and insert it into a Word document?](https://support.syncfusion.com/kb/article/15946/how-to-extract-content-from-excel-and-insert-it-into-a-word-document)
+* [How to change the font of table content in a Word document](https://support.syncfusion.com/kb/article/17677/how-to-change-the-font-of-table-content-in-a-word-document)
+* [How to find a table by title in a Word document and add a row](https://support.syncfusion.com/kb/article/17664/how-to-find-a-table-by-title-in-a-word-document-and-add-a-row)
+* [How to reduce the height of empty cells in Word document](https://support.syncfusion.com/kb/article/17577/how-to-reduce-the-height-of-empty-cells-in-word-document)
+* [How to replace the content in a table cell in a Word document](https://support.syncfusion.com/kb/article/17580/how-to-replace-the-content-in-a-table-cell-in-a-word-document)
+* [How to find and replace a single row with multiple rows in a Word document](https://support.syncfusion.com/kb/article/17662/how-to-find-and-replace-a-single-row-with-multiple-rows-in-a-word-document)
+* [How to remove content above a specific table in a Word document](https://support.syncfusion.com/kb/article/17582/how-to-remove-content-above-a-specific-table-in-a-word-document)
+* [How to convert a table to text in a Word document](https://support.syncfusion.com/kb/article/17745/how-to-convert-a-table-to-text-in-a-word-document)
+* [How to convert text to a table using comma as delimiter in a Word document](https://support.syncfusion.com/kb/article/17748/how-to-convert-text-to-a-table-using-comma-as-delimiter-in-a-word-document)
+* [How to split a table in a Word document using a bookmark between rows](https://support.syncfusion.com/kb/article/17785/how-to-split-a-table-in-a-word-document-using-a-bookmark-between-rows)
+* [How to split a table by columns in a Word document](https://support.syncfusion.com/kb/article/17714/how-to-split-a-table-by-columns-in-a-word-document)
 
 ## Frequently Asked Questions
 
