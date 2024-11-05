@@ -95,3 +95,4 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to find duplicate values in the Excel document using formulas?](faqs/how-to-find-duplicate-values-in-the-Excel-document-using-formulas)
 * [How to protect zip file items with different passwords using C#?](faqs/how-to-protect-zip-file-items-with-different-passwords)
 * [How to extract and save images from an Excel worksheet](faqs/how-to-extract-and-save-images-from-the-worksheet)
+* [How to delete blank rows and blank columns in an Excel worksheet using C#?](faqs/how-to-delete-blank-rows-and-columns-in-a-worksheet)
