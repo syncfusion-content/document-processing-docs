@@ -1,12 +1,12 @@
 ---
-title: How to delete blank rows and columns in a worksheet | Syncfusion
-description: This page explains how to delete blank rows and columns in a worksheet using Syncfusion .NET Excel library (XlsIO).
+title: How to delete blank rows and columns in an Excel | Syncfusion
+description: This page explains how to delete blank rows and columns in an Excel using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to delete blank rows and blank columns in an Excel worksheet using C#?
+# How to delete blank rows and blank columns in an Excel using C#?
 
 You can delete blank rows and columns in a worksheet by iterating through the used range and checking each row and column using the [IsBlank](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_IsBlank) property. If a row or column is blank, you can remove it using the [DeleteRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_DeleteRow_System_Int32_) or [DeleteColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_DeleteColumn_System_Int32_) methods of the [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface, respectively.
 
@@ -26,7 +26,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IRange usedRange = worksheet.Range[1, 1, worksheet.UsedRange.LastRow, worksheet.UsedRange.LastColumn];
 
     //Deleting blank rows from worksheet used range
-    for (int row = usedRange.LastRow - 1; i >= 0; i--)
+    for (int row = usedRange.LastRow - 1; row >= 0; row--)
     {
         if (usedRange.Rows[row].IsBlank)
         {
