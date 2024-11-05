@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO library support multithreading and thread-safe for Excel to PDF?
+# Does XlsIO support multithreading and thread-safe for Excel to PDF?
 
 Yes, the XlsIO library supports multithreading and is thread-safe. It allows you to create multiple workbook instances for tasks like creating, reading, editing, and converting Excel documents.
 
