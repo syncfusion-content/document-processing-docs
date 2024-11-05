@@ -37,18 +37,20 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     }
 
     //Checking worksheet protection for all worksheets in the workbook
+    int rowIndex = 1;
     for (int sheetIndex = 1; sheetIndex < workbook.Worksheets.Count; sheetIndex++)
-    {
+    {   
         if (workbook.Worksheets[sheetIndex - 1].IsPasswordProtected)
         {
-            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Protected";
-            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.LightGreen;
+            worksheet.Range["B" + rowIndex].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Protected";
+            worksheet.Range["B" + rowIndex].CellStyle.Color = Color.LightGreen;
         }
         else
         {
-            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Not Protected";
-            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.Orange;
+            worksheet.Range["B" + rowIndex].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Not Protected";
+            worksheet.Range["B" + rowIndex].CellStyle.Color = Color.Orange;
         }
+        rowIndex++;
     }
 
     //Autofit column
@@ -83,18 +85,20 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     }
 
     //Checking worksheet protection for all worksheets in the workbook
+    int rowIndex = 1;
     for (int sheetIndex = 1; sheetIndex < workbook.Worksheets.Count; sheetIndex++)
     {
         if (workbook.Worksheets[sheetIndex - 1].IsPasswordProtected)
         {
-            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Protected";
-            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.LightGreen;
+            worksheet.Range["B" + rowIndex].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Protected";
+            worksheet.Range["B" + rowIndex].CellStyle.Color = Color.LightGreen;
         }
         else
         {
-            worksheet.Range["B" + sheetIndex.ToString()].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Not Protected";
-            worksheet.Range["B" + sheetIndex.ToString()].CellStyle.Color = Color.Orange;
+            worksheet.Range["B" + rowIndex].Text = workbook.Worksheets[sheetIndex - 1].Name + " is Not Protected";
+            worksheet.Range["B" + rowIndex].CellStyle.Color = Color.Orange;
         }
+        rowIndex++;
     }
 
     //Autofit column
@@ -124,14 +128,16 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
     End If
 
     'Checking worksheet protection for all worksheets in the workbook
-    For sheetIndex As Integer = 1 To workbook.Worksheets.Count - sheetIndex
+    Dim rowIndex As Integer = 1
+    For sheetIndex As Integer = 1 To workbook.Worksheets.Count - 1
         If workbook.Worksheets(sheetIndex - 1).IsPasswordProtected Then
-            worksheet.Range("B" & (sheetIndex).ToString()).Text = workbook.Worksheets(sheetIndex - 1).Name & " is Protected"
-            worksheet.Range("B" & (sheetIndex).ToString()).CellStyle.Color = Color.LightGreen
+            worksheet.Range("B" & rowIndex.ToString()).Text = workbook.Worksheets(sheetIndex - 1).Name & " is Protected"
+            worksheet.Range("B" & rowIndex.ToString()).CellStyle.Color = Color.LightGreen
         Else
-            worksheet.Range("B" & (sheetIndex).ToString()).Text = workbook.Worksheets(sheetIndex - 1).Name & " is Not Protected"
-            worksheet.Range("B" & (sheetIndex).ToString()).CellStyle.Color = Color.Orange
+            worksheet.Range("B" & rowIndex.ToString()).Text = workbook.Worksheets(sheetIndex - 1).Name & " is Not Protected"
+            worksheet.Range("B" & rowIndex.ToString()).CellStyle.Color = Color.Orange
         End If
+        rowIndex += 1
     Next
 
     'Autofit column
