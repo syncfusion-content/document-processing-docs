@@ -116,7 +116,7 @@ catch (Exception ex)
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to load an Excel document from Azure Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Azure%20Blob%20Storage/Loading/Edit%20Excel).
+A complete working example of how to load an Excel document from Azure Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Azure/Azure%20Blob%20Storage/Loading/Edit%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
@@ -367,7 +367,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to save an Excel document to Azure Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Azure%20Blob%20Storage/Saving/Create%20Excel).
+A complete working example of how to save an Excel document to Azure Cloud Storage in ASP.NET Core is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Azure/Azure%20Blob%20Storage/Saving/Create%20Excel).
 
 By executing the program, you will get the **Excel document** as follows.
 
