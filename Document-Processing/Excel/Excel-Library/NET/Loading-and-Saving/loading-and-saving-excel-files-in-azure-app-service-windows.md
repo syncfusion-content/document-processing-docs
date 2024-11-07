@@ -1,6 +1,6 @@
 ---
-title: Loading and Saving an Excel files in Azure App Service on Windows | Syncfusion
-description: Explains how to load and save an Excel files in Azure App Service on Windows using Syncfusion XlsIO.
+title: Loading and Saving an Excel in Azure App Service on Windows | Syncfusion
+description: Explains how to load and save an Excel files in Azure App Service on Windows using Syncfusion Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG

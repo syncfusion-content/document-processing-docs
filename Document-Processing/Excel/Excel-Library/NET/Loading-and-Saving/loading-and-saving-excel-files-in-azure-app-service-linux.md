@@ -1,6 +1,6 @@
 ---
-title: Loading and Saving an Excel files in Azure App Service on Linux | Syncfusion
-description: Explains how to load and save an Excel files in Azure App Service on Linux using Syncfusion XlsIO.
+title: Loading and Saving an Excel in Azure App Service on Linux | Syncfusion
+description: Explains how to load and save an Excel files in Azure App Service on Linux using Syncfusion Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
