@@ -79,6 +79,15 @@ NuGet packages to install
 </thead>
 <tr>
 <td>
+From v27.2.2
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.8)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0.2)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
 From v23.1.40
 </td>
 <td>
