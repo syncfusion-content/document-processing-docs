@@ -1775,4 +1775,4 @@ The following chart types are supported in XlsIO.
 * [How to filter Excel chart series in C#, VB.NET?](https://support.syncfusion.com/kb/article/7509/how-to-filter-excel-chart-series-in-c-vb-net)
 * [How to change Excel chart series color in C#, VB.NET?](https://support.syncfusion.com/kb/article/2733/how-to-change-excel-chart-series-color-in-c-vbnet)
 * [How to set trendlines for Excel chart series in C#, VB.NET?](https://support.syncfusion.com/kb/article/7532/how-to-set-trendlines-for-excel-chart-series-in-c-vb-net)
-* [Blog: Excel Charts in C# and VB.NET](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library/charts)
+* [Blog: Easily Create Dynamic Charts in Excel Using C#](https://www.syncfusion.com/blogs/post/dynamic-charts-in-excel-using-csharp)
