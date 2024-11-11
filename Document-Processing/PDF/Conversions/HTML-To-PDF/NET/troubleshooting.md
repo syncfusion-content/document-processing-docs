@@ -962,18 +962,18 @@ KB: [https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-usi
 
 </table>
 
-## CEF Rendering Engine: To Disable DawnCache and CPUCache folders cache during HTML to PDF conversion using CEF rendering engine.
+## How to prevent the DawnCache and CPUCache folders creation during HTML to PDF conversion using CEF rendering engine.
 
 <table>
 <th style="font-size:14px" width="100px">Issue</th>
-<th style="font-size:14px">CEF Rendering Engine: To Disable DawnCache and CPUCache folders cache during HTML to PDF conversion using CEF rendering engine.
+<th style="font-size:14px">How to remove the DawnCache and CPUCache folders during HTML to PDF conversion using CEF rendering engine.
 </th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
 <td>	
 
-By disabling caching, you can reduce memory consumption, which may be beneficial in scenarios where memory usage is a concern.
+The DawnCache and CPUCache folders are created in project folder while performing HTML to PDF conversion using CEF rendering engine.
 
 </td>
 </tr>
@@ -981,7 +981,7 @@ By disabling caching, you can reduce memory consumption, which may be beneficial
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
 	
-You can add below Cef command-line arguments in your conversion code
+You can add below command-line arguments in Cef converter settings to prevent the DawnCache and CPUCache folders creation.
 
 {% tabs %}
 {% highlight C# %}

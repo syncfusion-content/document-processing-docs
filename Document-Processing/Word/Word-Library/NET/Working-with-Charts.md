@@ -1480,6 +1480,8 @@ The following chart types are supported in DocIO.
 * [How to set column space for column charts in Word document?](https://support.syncfusion.com/kb/article/12296/how-to-set-column-space-for-column-charts-in-word-document)
 * [How to set Y-axis interval for column charts in Word document?](https://support.syncfusion.com/kb/article/12294/how-to-set-y-axis-interval-for-column-charts-in-word-document)
 * [How to change chart title position in the Word document?](https://support.syncfusion.com/kb/article/12292/how-to-change-chart-title-position-in-the-word-document)
+* [How to align text to the right of the stacked bar chart in a Word document](https://support.syncfusion.com/kb/article/17588/how-to-align-text-to-the-right-of-the-stacked-bar-chart-in-a-word-document)
+* [How to set 2D array data values for a combination chart in a Word document](https://support.syncfusion.com/kb/article/17787/how-to-set-2d-array-data-values-for-a-combination-chart-in-a-word-document)
 
 ## Frequently Asked Questions
 
