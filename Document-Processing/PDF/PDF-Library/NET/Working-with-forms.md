@@ -2936,6 +2936,120 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields).
 
+## Retrieving the widget annotation in PDF document
+
+You can retrieve an existing widget annotation in a PDF document by using the [PdfLoadedWidgetAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedWidgetAnnotation.html) class.
+
+The following code snippet demonstrates how to retrieving an existing widget annotation in a PDF document.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document.
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+// Loop through each page in the loaded PDF document.
+foreach (PdfLoadedPage page in loadedDocument.Pages)
+{
+    // Initialize the widget count to zero.
+    int widgetCount = 0;
+    // Loop through each annotation on the current page.
+    foreach (PdfLoadedAnnotation annot in page.Annotations)
+    {
+        // Check if the annotation is a widget annotation.
+        if (annot is PdfLoadedWidgetAnnotation)
+        {
+            // Cast the annotation to a PdfLoadedWidgetAnnotation type.
+            PdfLoadedWidgetAnnotation widget = annot as PdfLoadedWidgetAnnotation;
+            // Retrieve the bounds of the widget annotation.
+            RectangleF bounds = widget.Bounds;
+            // Display the index and bounds value of the widget annotation.
+            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds);
+            // Increment the widget count.
+            widgetCount++;
+        }
+    }
+    // Display the total number of widget annotations.
+    Console.WriteLine("Total number of widgets: {0}", widgetCount);
+}
+
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Loop through each page in the loaded PDF document.
+foreach (PdfLoadedPage page in loadedDocument.Pages)
+{
+    // Initialize the widget count to zero.
+    int widgetCount = 0;
+    // Loop through each annotation on the current page.
+    foreach (PdfLoadedAnnotation annot in page.Annotations)
+    {
+        // Check if the annotation is a widget annotation.
+        if (annot is PdfLoadedWidgetAnnotation)
+        {
+            // Cast the annotation to a PdfLoadedWidgetAnnotation type.
+            PdfLoadedWidgetAnnotation widget = annot as PdfLoadedWidgetAnnotation;
+            // Retrieve the bounds of the widget annotation.
+            RectangleF bounds = widget.Bounds;
+            // Display the index and bounds value of the widget annotation.
+            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds);
+            // Increment the widget count.
+            widgetCount++;
+        }
+    }
+    // Display the total number of widget annotations.
+    Console.WriteLine("Total number of widgets: {0}", widgetCount);
+}
+
+//Close the document.
+loadedDocument.Close(true);
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Loop through each page in the loaded PDF document.
+For Each page As PdfLoadedPage In loadedDocument.Pages
+    ' Initialize the widget count to zero.
+    Dim widgetCount As Integer = 0
+    ' Loop through each annotation on the current page.
+    For Each annot As PdfLoadedAnnotation In page.Annotations
+        ' Check if the annotation is a widget annotation.
+        If TypeOf annot Is PdfLoadedWidgetAnnotation Then
+            ' Cast the annotation to a PdfLoadedWidgetAnnotation type.
+            Dim widget As PdfLoadedWidgetAnnotation = CType(annot, PdfLoadedWidgetAnnotation)
+            ' Retrieve the bounds of the widget annotation.
+            Dim bounds As RectangleF = widget.Bounds
+            ' Display the index and bounds value of the widget annotation.
+            Console.WriteLine("Index: {0}, Bounds Value: {1}", widgetCount, bounds)
+            ' Increment the widget count.
+            widgetCount += 1
+        End If
+    Next
+    ' Display the total number of widget annotations.
+    Console.WriteLine("Total number of widgets: {0}", widgetCount)
+Next
+
+' Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from GitHub.
+
+
 ## Auto resizing text box field text
 
 The Essential PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
