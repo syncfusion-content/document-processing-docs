@@ -3047,7 +3047,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modify-the-widget-annotation-in-PDF-document/.NET).
 
 
 ## Auto resizing text box field text
