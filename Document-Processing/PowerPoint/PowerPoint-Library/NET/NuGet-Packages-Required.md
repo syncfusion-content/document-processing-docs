@@ -98,7 +98,7 @@ The following NuGet packages need to be included in your application based on th
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms)' | markdownify}}<br/>
 </td>
 <td>
-{{'[Syncfusion.Presentation.NET.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet)'|markdownify }}
+{{'[Syncfusion.Presentation.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet)'|markdownify }}
 </td>
 </tr>
 </table>

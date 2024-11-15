@@ -1100,6 +1100,113 @@ We can resolve the reported issue by changing the deployment method to web deplo
 
 </table>
 
+## How to prevent the DawnCache and CPUCache folders creation during HTML to PDF conversion using CEF rendering engine.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">How to remove the DawnCache and CPUCache folders during HTML to PDF conversion using CEF rendering engine.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+
+The DawnCache and CPUCache folders are created in project folder while performing HTML to PDF conversion using CEF rendering engine.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+	
+You can add below command-line arguments in Cef converter settings to prevent the DawnCache and CPUCache folders creation.
+
+{% tabs %}
+{% highlight C# %}
+
+cefConverterSettings.CommandLineArguments.Add("disable-gpu");
+cefConverterSettings.CommandLineArguments.Add("disable-gpu-shader-disk-cache");
+cefConverterSettings.CommandLineArguments.Add("disable-gpu-program-cache");
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
+## Blink files are missing at /user/local/bin while performing HTML to PDF conversion with docker and docker compose file.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Blink files are missing at /user/local/bin while performing HTML to PDF conversion with docker and docker compose file.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+The exception may occur while performing HTML to PDF conversion with docker and docker compose file due to a permission-related issues.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To overcome the exception by making the root files as executable.  For making the root files as executable, you can find the code snippet below which will be added to your docker file.
+
+{% tabs %}
+{% highlight C# %}
+
+USER root
+RUN chmod +x /app/runtimes/linux/native/chrome && \
+chmod +x /app/runtimes/linux/native/chrome-wrapper
+
+{% endhighlight %}
+{% endtabs %}
+<br/><br/>
+Please refer to the below screenshot,
+<br/><br/>
+<img alt="Runtime folder" src="htmlconversion_images/dockercompress.jpg">
+<br/><br/>
+
+</td>
+</tr>
+
+</table>
+
+## Converting HTML to PDF using the Alpine Docker image, it crashes after the first conversion.
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Converting HTML to PDF using the Alpine Docker image, it crashes after the first conversion.
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+	
+The issue occurs within Chromium specifically for Alpine.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+We can resolve this issue by adding command-line arguments to the Blink converter settings. Please refer to the code snippet below.
+
+{% tabs %}
+{% highlight C# %}
+
+blinkConverterSettings.CommandLineArguments.Add("--disable-gpu");
+	
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
+
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
 The problem is limited to Azure Functions with premium plans in Net 8.0 version. To fix this, we can either manually install the necessary Chromium dependencies in the SSH portal or include the runtimes folder (Blink binaries) in the project location.

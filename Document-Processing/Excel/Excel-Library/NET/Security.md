@@ -10,6 +10,9 @@ documentation: UG
 
 You can protect an anonymous user from viewing, moving, editing or deleting important data from a worksheet or workbook by [protecting a worksheet or workbook](https://support.microsoft.com/en-gb/office/protect-a-workbook-7e365a4d-3e89-4616-84ca-1931257c1517?redirectSourcePath=%252fen-us%252farticle%252fPassword-protect-worksheet-or-workbook-elements-dbf706e0-ba22-4a08-84d8-552db16eef11#bmprotectelements), with or without a password.
 
+To quickly encrypt and decrypt an Excel document with the .NET Excel (XlsIO) Library, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=XzpA97zNubo" %}
+
 N> Encrypt and Decrypt can be performed by referring .NET Standard assemblies in UWP platform. 
 
 ## Protect Workbook

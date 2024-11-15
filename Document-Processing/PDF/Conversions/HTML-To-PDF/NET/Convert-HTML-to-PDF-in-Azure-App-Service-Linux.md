@@ -42,6 +42,8 @@ apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk
 
 {% endhighlight %}
 
+N> By following the above steps 3.1, we need to install dependencies through SSH all the time after publishing the web application.
+
 3.2. Running the commands from C#
 
 1. Create a shell file with the above commands in the project and name it as dependenciesInstall.sh. In this article, these steps have been followed to install dependencies packages. 
@@ -79,6 +81,8 @@ private void InstallDependecies(string shellFilePath)
 }
 
 {% endhighlight %}
+
+N>  By following the above steps 3.2, we can deploy application in Azure app service Linux and no need to install dependencies through SSH.
 
 Step 4: Add an Export to the PDF button in the index.cshtml.
 

@@ -2417,6 +2417,9 @@ excelEngine.Dispose()
 
 XlsIO supports importing HTML tables into Excel worksheets. The [ImportHtmlTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_ImportHtmlTable_System_IO_Stream_System_Int32_System_Int32_) method loads an HTML file and imports all the tables in the file to the worksheet.  This import operation includes the table formatting that is defined within the HTML file.
 
+To quickly export an HTML table to Excel with the .NET Excel (XlsIO) Library, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=8n9WdzA6rEQ" %}
+
 The following code example shows how to import HTML table into an Excel.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Import%20and%20Export%20Data/HTML%20Table%20to%20Worksheet/.NET/HTML%20Table%20to%20Worksheet/HTML%20Table%20to%20Worksheet/Program.cs,180" %}
