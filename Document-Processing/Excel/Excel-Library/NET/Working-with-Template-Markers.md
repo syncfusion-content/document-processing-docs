@@ -14,6 +14,9 @@ A template marker is a special marker symbol created in an Excel template that a
 * Nested collection objects
 * Arrays
 
+To quickly export data to a predefined Excel template with the .NET Excel (XlsIO) Library, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=TGE9Q_OPCvk" %}
+
 ## Template marker Syntax
 
 Each marker starts with a prefix character (by default it is “%” character). The marker is followed by the variable name and properties which are delimited by a character (by default it is semicolon “;”.)

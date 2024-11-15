@@ -105,6 +105,7 @@ Syncfusion.OfficeChart.Portable<br/>
 Syncfusion.Pdf.Portable<br/>
 Syncfusion.PresentationRenderer.Portable<br/>
 Syncfusion.Pdf.Imaging.Portable<br/>
+Syncfusion.MetafileRenderer.NET<br/>
 Syncfusion.SkiaSharpHelper.Portable<br/>
 SkiaSharp
 </td>
@@ -113,7 +114,7 @@ SkiaSharp
 <td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-maui)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
-Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
+Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/>Syncfusion.MetafileRenderer.NET<br/> Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
 </td>
 </tr>
 </table>
@@ -137,6 +138,9 @@ Syncfusion.OfficeChart.Base<br/>
 Syncfusion.Pdf.Base<br/>
 Syncfusion.PresentationToPDFConverter.Base<br/></td></tr>
 </table>
+
+N> 1. Starting with the v24.1.x, if you reference "Syncfusion.PresentationRenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform PowerPoint Presentation to PDF conversion.
+N> 2. Starting with the v27.1.x, if you reference "Syncfusion.PresentationRenderer", you have to add the "Syncfusion.MetafileRenderer" assembly reference in your projects to perform PowerPoint Presentation to PDF conversion.
 
 ## Converting PowerPoint Presentation to Image
 
@@ -171,6 +175,7 @@ Syncfusion.Compression.Portable<br/>
 Syncfusion.OfficeChart.Portable<br/>
 Syncfusion.Pdf.Portable<br/>
 Syncfusion.Pdf.Imaging.Portable<br/>
+Syncfusion.MetafileRenderer.NET<br/>
 Syncfusion.PresentationRenderer.Portable<br/>
 Syncfusion.SkiaSharpHelper.Portable<br/>
 SkiaSharp
@@ -180,7 +185,7 @@ SkiaSharp
 <td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-maui)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
-Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.Pdf.NET<br/>Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
+Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.Pdf.NET<br/>Syncfusion.MetafileRenderer.NET<br/>Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
 </td>
 </tr>
 <tr>
@@ -215,8 +220,6 @@ Syncfusion.PresentationToPDFConverter.Base<br/>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>
 Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
-
-N> Starting with the v24.1.x, if you reference "Syncfusion.PresentationRenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform PowerPoint Presentation to PDF conversion.
 
 ## Converting Charts
 

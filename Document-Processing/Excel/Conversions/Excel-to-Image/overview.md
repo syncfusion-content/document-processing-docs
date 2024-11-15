@@ -8,6 +8,9 @@ documentation: UG
 
 # Worksheet to Image conversion in Excel Library
 
+To quickly start converting an Excel document to a Image, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=WgugutAaxBk&t=3s" %}
+
 ## Assemblies Required
 
 Refer to the following links for assemblies/nuget packages required based on platforms to convert the worksheet to image.

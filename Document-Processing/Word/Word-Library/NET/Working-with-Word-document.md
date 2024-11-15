@@ -1086,6 +1086,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [Is it possible to fetch page numbers in a Word document using .NET Core DocIO?](https://support.syncfusion.com/kb/article/15907/is-it-possible-to-fetch-page-numbers-in-a-word-document-using-net-core-docio?)
 * [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/4241/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
+* [How to merge multiple Word documents into a same page in a Word document](https://support.syncfusion.com/kb/article/17563/how-to-merge-multiple-word-documents-into-a-same-page-in-a-word-document)
+* [How to add a new page at the end of the Word document](https://support.syncfusion.com/kb/article/17562/how-to-add-a-new-page-at-the-end-of-the-word-document)
+* [How to delete all content in a Word document](https://support.syncfusion.com/kb/article/17710/how-to-delete-all-content-in-a-word-document)
+* [How to delete a specific range of content in a Word document](https://support.syncfusion.com/kb/article/17708/how-to-delete-a-specific-range-of-content-in-a-word-document)
 
 ## Frequently Asked Questions
 

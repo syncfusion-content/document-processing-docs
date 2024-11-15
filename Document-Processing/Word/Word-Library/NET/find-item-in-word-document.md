@@ -431,3 +431,8 @@ End Using
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-item-in-word-document/Find-all-items-by-properties).
 
 T> Passing null for both the property names and property values in the above APIs, you can also find an item in a Word document without relying on any property.
+
+## See Also
+
+* [How to find and replace text in heading paragraphs in a Word document](https://support.syncfusion.com/kb/article/17658/how-to-find-and-replace-text-in-heading-paragraphs-in-a-word-document)
+* [How to replace a logo with text and another image with different text in a Word document](https://support.syncfusion.com/kb/article/17805/how-to-replace-a-logo-with-text-and-another-image-with-different-text-in-a-word-document)

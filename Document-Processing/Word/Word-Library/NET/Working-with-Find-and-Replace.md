@@ -1842,3 +1842,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to replace text in a Word document with HTML in ASP.NET Core?](https://support.syncfusion.com/kb/article/15520/how-to-replace-text-in-a-word-document-with-html-in-aspnet-core?)
 * [How to find and replace text with list paragraphs in Word document?](https://support.syncfusion.com/kb/article/15922/how-to-find-and-replace-with-multiple-list-paragraphs-in-word-document)
 * [How to find and replace a text with the Excel content in a Word document?](https://support.syncfusion.com/kb/article/15947/how-to-find-and-replace-a-text-with-the-excel-content-in-a-word-document)
+* [How to replace list paragraph text with multiple paragraphs from another Word document](https://support.syncfusion.com/kb/article/17814/how-to-replace-list-paragraph-text-with-multiple-paragraphs-from-another-word-document)
+* [How to replace the text with an HTML table in a Word document](https://support.syncfusion.com/kb/article/17712/how-to-replace-the-text-with-an-html-table-in-a-word-document)
