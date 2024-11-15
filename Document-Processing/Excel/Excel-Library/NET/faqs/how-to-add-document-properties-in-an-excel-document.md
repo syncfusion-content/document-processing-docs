@@ -1,12 +1,12 @@
 ---
-title: How to add document properties | Syncfusion
+title: How to add document properties in an Excel document | Syncfusion
 description: This page shows how to add built-in and custom document properties using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to add document properties using XlsIO?
+# How to add document properties in an Excel document?
 
 Document Properties are named values that provide metadata about a document, such as the date and time it was last saved, the user who last modified it, and other details. Document properties are classified into two types:
 
