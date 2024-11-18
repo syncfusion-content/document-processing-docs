@@ -390,8 +390,6 @@ For converting an Excel document to PDF, the following assemblies need to be ref
   </tbody>
 </table>
 
-N> Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
-
 ## Converting PowerPoint Presentation to PDF
 
 For converting a PowerPoint Presentation to PDF, the following assemblies needed to be referenced in your application
