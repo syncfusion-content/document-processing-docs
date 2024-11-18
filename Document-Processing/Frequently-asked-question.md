@@ -10,4 +10,4 @@ documentation: UG
 The frequently asked questions in document processing are listed below.
 
 * [How to Resolve LibSkiaSharp Not Found Exception in .NET 8 and .NET 9 on Linux?](faq/how-to-resolve-libskiasharp-not-found-exception-in-net8-and-net9-on-linux)
-* [How to resolve native reference linking issue in NET90 application when using Skiasharp in Blazor?](faq/how-to-resolve-native-reference-linking-issue-in-net90-application-when-using-skiasharp-in-blazor)
+* [How to resolve native reference linking issue in Blazor NET90 application?](faq/how-to-resolve-native-reference-linking-issue-in-blazor-net90-application)
