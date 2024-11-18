@@ -30,8 +30,7 @@ NuGet package name<br/></th></tr></thead>
 <td>
 {{'[AWS Lambda](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-aws-lambda)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.8)' | markdownify}} <br/>
-{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0.2)' | markdownify}}<br/> 
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8)' | markdownify}} <br/>
 </td></tr>
 <tr>
 <td>

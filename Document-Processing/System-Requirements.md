@@ -43,8 +43,8 @@ Syncfusion Document Processing libraries supports the following .NET Framework a
 
 * .NET Framework 4.6.2
 * .NET Standard 2.0
-* .NET 6.0
 * .NET 8.0
+* .NET 9.0
 
 You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Blazor, UWP, Xamarin, WinUI and .NET MAUI applications. 
 

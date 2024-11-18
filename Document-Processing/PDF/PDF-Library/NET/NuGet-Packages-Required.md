@@ -393,8 +393,6 @@ Xamarin
   </tbody>
 </table>
 
-N> Install SkiaSharp package version 1.59.3 in addition to DocIORenderer package.  
-
 ## Converting Excel document to PDF
 
 For converting Excel document into PDF, the following NuGet packages need to be installed in your application.
@@ -496,8 +494,6 @@ Blazor (Server-App)
   </tbody>
 </table>
 
-N> Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
-
 ## Converting Presentation document to PDF
 
 For converting PowerPoint Presentation to PDF, the following NuGet packages need to be installed in your application. 
@@ -582,8 +578,6 @@ Xamarin
     </tr>
   </tbody>
 </table>
-
-N> PowerPoint Presentation to PDF conversion is supported from .NET Standard 1.4 onwards for ASP.NET Core and Xamarin.
 
 ## NuGet Package Installation and Uninstallation
 
