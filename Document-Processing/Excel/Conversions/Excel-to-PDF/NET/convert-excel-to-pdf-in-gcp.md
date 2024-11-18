@@ -1,6 +1,6 @@
 ---
 title: Convert Excel to PDF in GCP | Syncfusion
-description: Learn how to convert an Excel document to PDF in Google Cloud Platform (GCP) using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+description: Learn how to convert an Excel document to PDF in Google Cloud Platform (GCP) using .NET Core Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -31,5 +31,5 @@ NuGet package name<br/></th></tr></thead>
 App Engine
 <br/></td><td>
 {{'[Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0)' |markdownify}} <br/></td></tr>
+{{'[SkiaSharp.NativeAssets.Linux v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.8)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0)' |markdownify}} <br/></td></tr>
 </table>
