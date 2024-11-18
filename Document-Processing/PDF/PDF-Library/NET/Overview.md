@@ -32,8 +32,5 @@ The following list shows the key features available in the Essential PDF.
 * Support to digitally [sign](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature) and [validate](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature) signature in PDF document. 
 * Support to [find the corrupted PDF document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document#find-corrupted-pdf-document). 
 * Support for .NET Standard 2.0 onwards.
-* PDF library is compatible with .NET Core 3.0 WPF and Windows Forms.
-* PDF library is supported in Blazor, Xamarin and Flutter platforms.
-* PDF library is compatible with .NET 5.0 applications.
 
 N> 1. Starting with v20.1.0.x, if you reference Syncfusion HTML converter or OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
