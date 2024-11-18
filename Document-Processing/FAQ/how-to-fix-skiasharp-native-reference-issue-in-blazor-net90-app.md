@@ -1,11 +1,11 @@
 ---
-title: Resolve Native reference linking issue | Syncfusion.
-description: This page explains how to resolve native reference linking issue in NET90 application when using Skiasharp in Blazor.
+title: Fix Skiasharp native reference issue | Syncfusion.
+description: This page explains how to fix Skiasharp native reference issue in Blazor NET90 app.
 platform: document-processing
 documentation: UG
 ---
 
-# How to resolve native reference linking issue in Blazor NET90 application?
+# How to fix Skiasharp native reference issue in Blazor NET90 app?
 
 If you encounter loading issues or errors when using SkiaSharp in Blazor WebAssembly or WebApp projects, particularly in setups involving Emscripten 3.1.56, a workaround involves modifying your project file. This issue arises from specific native linking configurations, which may cause conflicts or improper behavior during runtime.
 
