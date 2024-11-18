@@ -1,6 +1,6 @@
 ---
 title: Fix Skiasharp native reference issue | Syncfusion.
-description: This page explains how to fix Skiasharp native reference issue in Blazor NET90 app.
+description: This page explains how to resolve native reference linking issue in NET90 application when using Skiasharp in Blazor.
 platform: document-processing
 documentation: UG
 ---

@@ -1,6 +1,6 @@
 ---
 title: Convert Excel to Image in Google Cloud Platform (GCP) | Syncfusion
-description: Learn how to convert an Excel document to Image in Google Cloud Platform (GCP) using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+description: Learn how to convert an Excel document to Image in Google Cloud Platform (GCP) using .NET Core Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
