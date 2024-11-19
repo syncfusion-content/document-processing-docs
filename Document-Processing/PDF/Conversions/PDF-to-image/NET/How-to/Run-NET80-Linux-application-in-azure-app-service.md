@@ -6,7 +6,7 @@ control: PDF to image
 documentation: UG
 ---
 
-# Run .NET80/90 PdfToImageConverter Linux application in Azure app service 
+# Run .NET8/9 PdfToImageConverter Linux application in Azure app service 
 
 To run a .NET 8.0/9.0 Linux application with PdfToImageConverter on an Azure App Service, you need the libdl.so file to access the pdfium assembly. However, in Azure App Service, the file is named libdl.so.2 instead of libdl.so. Therefore, to ensure compatibility and functionality, you must manually move and rename libdl.so.2 to libdl.so in the Azure App Service environment for the .NET 8.0/9.0 applications. This adjustment allows your .NET 8.0/9.0 application to function properly with PdfToImage conversion capabilities.
 
