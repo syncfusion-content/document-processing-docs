@@ -781,7 +781,68 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Performing OCR with different Page Segmentation Mode
 
-The [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property is used to set the page segmentation mode. By default, OCR works with the "Auto" page segmentation mode. Kindly refer to the following code example to perform OCR with different page segmentation mode. 
+The [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property is used to set the page segmentation mode. By default, OCR works with the "Auto" page segmentation mode. Kindly refer to the following code example to perform OCR with different page segmentation mode.
+
+The following table explains page segmentation modes and their purposes.
+
+<table>
+<thead>
+<tr>
+<th>
+Page Segment Mode<br/><br/></th><th>
+Description<br/><br/></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+OsdOnly<br/><br/></td><td>
+Detects orientation and script of the page without performing OCR.<br/><br/></td></tr>
+<tr>
+<td>
+AutoOsd<br/><br/></td><td>
+Automatically performs OCR with orientation and script detection.<br/><br/></td></tr>
+<tr>
+<td>
+AutoOnly<br/><br/></td><td>
+Automatically detects the text layout but skips orientation and script detection.<br/><br/></td></tr>
+<tr>
+<td>
+Auto<br/><br/></td><td>
+Fully automatic page layout analysis for OCR.<br/><br/></td></tr>
+<tr>
+<td>
+SingleColumn<br/><br/></td><td>
+Processes the page as a single column of text.<br/><br/></td></tr>
+<tr>
+<td>
+SingleBlock<br/><br/></td><td>
+Treats the page as a single uniform block of text and graphics.<br/><br/></td></tr>
+<tr>
+<td>
+SingleLine<br/><br/></td><td>
+Processes a single line of text.<br/><br/></td></tr>
+<tr>
+<td>
+SingleWord<br/><br/></td><td>
+Recognizes a single word on the page.<br/><br/></td></tr>
+<tr>
+<td>
+CirclesWord<br/><br/></td><td>
+Detects a word inside a circle (used for specific OCR tasks).<br/><br/></td></tr>
+<tr>
+<td>
+SingleChar<br/><br/></td><td>
+Processes a single character from the page.<br/><br/></td></tr>
+<tr>
+<td>
+SparseText<br/><br/></td><td>
+Recognizes sparse text scattered across the page, suitable for partial text detection.<br/><br/></td></tr>
+<tr>
+<td>
+RawLine<br/><br/></td><td>
+Treats the page as a single line, avoiding text layout analysis and assuming uniform spacing.<br/><br/></td></tr>
+</tbody>
+</table>
 
 N> The page segmentation mode is supported only in the Tesseract version 4.0 and above.
  
