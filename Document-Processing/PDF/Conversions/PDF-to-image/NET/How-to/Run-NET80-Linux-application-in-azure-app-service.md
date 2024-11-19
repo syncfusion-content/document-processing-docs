@@ -1,21 +1,21 @@
 ---
-title: Run NET80 Linux application in azure app service| Syncfusion
-description: Learn about the steps to run the .NET80 linux application in Azure app service with the PdfToImageConverter control.
+title: Run NET80/90 Linux application in azure app service| Syncfusion
+description: Learn about the steps to run the .NET80/90 linux application in Azure app service with the PdfToImageConverter control.
 platform: document-processing
 control: PDF to image
 documentation: UG
 ---
 
-# Run .NET80 PdfToImageConverter Linux application in Azure app service 
+# Run .NET80/90 PdfToImageConverter Linux application in Azure app service 
 
-To run a .NET 8.0 Linux application with PdfToImageConverter on an Azure App Service, you need the libdl.so file to access the pdfium assembly. However, in Azure App Service, the file is named libdl.so.2 instead of libdl.so. Therefore, to ensure compatibility and functionality, you must manually move and rename libdl.so.2 to libdl.so in the Azure App Service environment for the .NET 8.0 applications. This adjustment allows your .NET 8.0 application to function properly with PdfToImage conversion capabilities.
+To run a .NET 8.0/9.0 Linux application with PdfToImageConverter on an Azure App Service, you need the libdl.so file to access the pdfium assembly. However, in Azure App Service, the file is named libdl.so.2 instead of libdl.so. Therefore, to ensure compatibility and functionality, you must manually move and rename libdl.so.2 to libdl.so in the Azure App Service environment for the .NET 8.0/9.0 applications. This adjustment allows your .NET 8.0/9.0 application to function properly with PdfToImage conversion capabilities.
 
-N> While running the .NET 8.0 PdfToImageConverter Linux application on a Azure app service, you will get the `TypeInitializationException: Type initializer for "Syncfusion.PdfToImageConverter.PdfiumNative" threw an exception`.
+N> While running the .NET 8.0/9.0 PdfToImageConverter Linux application on a Azure app service, you will get the `TypeInitializationException: Type initializer for "Syncfusion.PdfToImageConverter.PdfiumNative" threw an exception`.
 
-## Steps to run the .NET80 PdfToImageConverter Linux application in Azure app service
+## Steps to run the .NET80/90 PdfToImageConverter Linux application in Azure app service
 
 Step 1: Open the SSH command window which will be present under your Azure app service in [Azure portal](https://portal.azure.com/).
-![Open SSH command Window](Azure_Linux_Net80_Images/Azure_Linux_Step1.png)
+![Open SSH command Window](Azure_Linux_NET80_Images/Azure_Linux_Step1.png)
 
 Step 2: Now, navigate back to the home location and then navigate to the usr/lib/x86_64-linux-gnu location in the SSH.
 ![Navigation to the libdl assembly location](Azure_Linux_Net80_Images/Azure_Linux_Step2.png)
