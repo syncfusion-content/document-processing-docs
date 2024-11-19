@@ -12,17 +12,21 @@ Syncfusion Essential DocIO is a [.NET Word library](https://www.syncfusion.com/d
 
 ## Steps to create Word document programmatically:
 
-Step 1: Create a new ASP.NET MVC application project.
+Step 1: Create a new ASP.NET Web application project.
 
-![Create ASP.NET MVC application in Visual Studio](ASP-NET-MVC_images/CreateProject.png)
+![Create ASP.NET Web application in Visual Studio](ASP-NET-MVC_images/CreateProjectforConversion.png)
 
-Step 2: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet.Mvc5) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Select the MVC application.
+
+![Select MVC application in Visual Studio](ASP-NET-MVC_images/MVC.png)
+
+Step 3: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet.Mvc5) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install DocIO ASP.NET MVC NuGet package](ASP-NET-MVC_images/Install_Nuget.jpg)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 3: Include the following namespace in that HomeController.cs file.
+Step 4: Include the following namespace in that HomeController.cs file.
 
 {% tabs %}
 
@@ -37,9 +41,9 @@ using System.Drawing;
 
 {% endtabs %}
 
-Step 4: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 5: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 5: Add a new button in the Index.cshtml as shown below.
+Step 6: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
@@ -58,7 +62,7 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 6: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Word document** and download it.
+Step 7: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Word document** and download it.
 
 {% tabs %}
 

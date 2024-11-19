@@ -15,21 +15,17 @@ To quickly create a Word document in ASP.NET Core, please check out this video:
 
 ## Steps to create Word document programmatically:
 
-Step 1: Create a new ASP.NET Core Web application project.
+Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
 
-![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProject.png)
+![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Select Web Application pattern (Model-View-Controller) for the project.
-
-![Select Web Application pattern](ASP-NET-Core_images/SelectWebMVC.png)
-
-Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install DocIO .NET Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 4: Include the following namespaces in the HomeController.cs file.
+Step 3: Include the following namespaces in the HomeController.cs file.
 
 {% tabs %}
 
@@ -43,9 +39,9 @@ using System.IO;
 
 {% endtabs %}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
@@ -64,7 +60,7 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 7: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Word document** and download it.
+Step 6: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Word document** and download it.
 
 {% tabs %}
 
