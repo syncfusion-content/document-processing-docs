@@ -15,21 +15,17 @@ To quickly get started with creating a PowerPoint file in ASP.NET Core, check th
 
 ## Create a PowerPoint file in ASP.NET Core
 
-Step 1: Create a new C# ASP.NET Core web application project.
+Step 1: Create a new C# ASP.NET Core Web application project.
 
-![Create ASP.NET Core Web project for PowerPoint file](Workingwith-Core/CreateCore.png)
+![Create ASP.NET Core Web project for PowerPoint file](Workingwith-Core/Create-Project-Open-and-Save.png)
 
-Step 2: Select Web Application pattern (Model-View-Controller) for the project.
+Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
 
-![Select Web Application pattern for PowerPoint file](Workingwith-Core/MVC.png)
-
-Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
-
-![Install Presentation .Net Core Nuget](Workingwith-Core/install_nuget.png)
+![Install Presentation .Net Core Nuget](Workingwith-Core/Nuget-Package_Open_and_Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 4: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies were included in our project.
+Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies were included in our project.
 <ul>
 <li>Syncfusion.Compression.Net.Core</li>
 <li>Syncfusion.Licensing</li>
@@ -37,9 +33,7 @@ Step 4: After installing the **Syncfusion.Presentation.Net.Core** nuget package,
 <li>Syncfusion.Presentation.Portable</li>
 </ul>
 
-![Installed Assemblies in Presentation ASP.NET Core](Workingwith-Core/installed_assemblies.png)
-
-Step 5: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform.
+Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform.
 
 **Create Presentation instance:**
 

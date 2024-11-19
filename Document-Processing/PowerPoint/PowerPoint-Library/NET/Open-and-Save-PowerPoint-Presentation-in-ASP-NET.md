@@ -14,7 +14,7 @@ N> This ASP.NET Web Form platform is deprecated, you can use the same product fr
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
-Step 1: Create a new C# ASP.NET web application project.
+Step 1: Create a new C# ASP.NET Web application project.
 
 ![Create ASP.NET Web project](Workingwith-Web/Project-Open-and-Save.png)
 
