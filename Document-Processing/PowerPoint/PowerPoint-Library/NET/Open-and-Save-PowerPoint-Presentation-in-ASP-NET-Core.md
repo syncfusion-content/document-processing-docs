@@ -12,7 +12,7 @@ Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
-Step 1: Create a new C# ASP.NET Core web application project.
+Step 1: Create a new C# ASP.NET Core Web application project.
 
 ![Create ASP.NET Core Web project for PowerPoint file](Workingwith-Core/Create-Project-Open-and-Save.png)
 

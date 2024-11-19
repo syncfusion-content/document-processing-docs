@@ -14,17 +14,17 @@ N> This ASP.NET Web Form platform is deprecated, you can use the same product fr
 
 ## Create a PowerPoint file in ASP.NET
 
-Step 1: Create a new C# ASP.NET web application project.
+Step 1: Create a new C# ASP.NET Web application project.
 
-![Create ASP.NET Web project](Workingwith-Web/CreateProject.png)
+![Create ASP.NET Web project](Workingwith-Web/Project-Open-and-Save.png)
 
-Step 2: Select the **Web Forms** template to create the project.
+Step 2: Select the **Empty** template to create the project.
 
-![Select Web Forms template](Workingwith-Web/SelectWeb.png)
+![Select Web Forms template](Workingwith-Web/Empty-Open-and-Save.png))
 
 Step 3: Install the [Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Presentation Web Nuget](Workingwith-Web/InstallNuget.png)
+![Install Presentation Web Nuget](Workingwith-Web/Nuget-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 

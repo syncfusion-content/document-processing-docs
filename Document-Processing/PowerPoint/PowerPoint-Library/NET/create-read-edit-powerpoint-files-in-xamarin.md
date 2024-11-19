@@ -14,15 +14,15 @@ You can create or edit a PowerPoint file with the Syncfusion [Xamarin PowerPoint
 
 Step 1: Create a new C# **Xamarin.Forms** application project.
 
-![Create Xamarin project](Workingwith-Xamarin/CreateProject.png)
+![Create Xamarin project](Workingwith-Xamarin/Project-Open-and-Save.png)
 
 Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
-![Create Xamarin CodeSharing Option](Workingwith-Xamarin/CodeSharing.png)
+![Create Xamarin CodeSharing Option](Workingwith-Xamarin/Template-Project-Open-and-Save.png)
 
 Step 3: Install [Syncfusion.Xamarin.Presentation](https://www.nuget.org/packages/Syncfusion.Xamarin.Presentation/) NuGet package as a reference to the .NET Standard project in your Xamarin applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Xamarin Nuget](Workingwith-Xamarin/InstallNuget.png)
+![Install Xamarin Nuget](Workingwith-Xamarin/Nuget-Package-Project-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 

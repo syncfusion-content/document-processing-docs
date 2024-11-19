@@ -14,7 +14,7 @@ Syncfusion DocIO is a [.NET Word library](https://www.syncfusion.com/document-pr
 
 Step 1: Create a new WPF application project.
 
-![Create WPF application in Visual Studio](WPF_images/Create_Project.jpg)
+![Create WPF application in Visual Studio](WPF_images/Create-WPF-Project-WordtoPDF.png)
 
 Step 2: Install the [Syncfusion.DocIO.Wpf](https://www.nuget.org/packages/Syncfusion.DocIO.Wpf) NuGet package as a reference to your WPF application from [NuGet.org](https://www.nuget.org/).
 
