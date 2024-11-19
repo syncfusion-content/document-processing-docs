@@ -14,13 +14,13 @@ Syncfusion DocIO is a [Xamarin Word library](https://www.syncfusion.com/document
 
 Step 1: Create a new Xamarin.Forms application project.
 
-![Create Xamarin application in Visual Studio](Xamarin_images/create.png)
+![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
 Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
 N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
 
-![Create Xamarin CodeSharing Option](Xamarin_images/xamarin_cross.png)
+![Create Xamarin CodeSharing Option](Xamarin_images/Template_WordtoPDF.png)
 
 Step 3: Install [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/).
 
