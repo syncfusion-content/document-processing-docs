@@ -5,7 +5,7 @@ platform: document-processing
 documentation: UG
 ---
 
-# Fixing Namespace Conflicts in Syncfusion PDF Packages for .NET Framework
+# Fixing Namespace Conflicts in Syncfusion PDF Packages for .NET
 
 Namespace ambiguity errors often occur when multiple Syncfusion PDF-related packages, such as Syncfusion.Pdf.Net.Core and Syncfusion.PdfViewer, are included in the same project. These packages may have overlapping namespaces and types, causing conflicts during compilation.
 
