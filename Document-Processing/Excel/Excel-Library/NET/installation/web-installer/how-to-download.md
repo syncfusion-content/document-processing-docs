@@ -78,4 +78,4 @@ You should initiate an evaluation if you have already obtained our components th
 
    N> For Syncfusion trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion trial or licensed products will be installed via web installer.
 
-You can also refer to the [**Web installer**](https://help.syncfusion.com/document-processing/excel/excel-library/net/installation/web-installer/how-to-install) links for step-by-step installation guidelines.	
+You can also refer to the [**Web installer**](https://ej2.syncfusion.com/javascript/documentation/common/template#function-template) links for step-by-step installation guidelines.	
