@@ -825,14 +825,48 @@ Essential PDF provides support to render simple HTML string in a PDF document th
 1. The PdfHTMLTextElement class provides support for a basic set of HTML tags, to render HTML format text in the PDF document.
 
    Supported tags (Should be XHTML-compliant)
+<table border="1">
+<th style="font-size:14px" width="100px">Supported tags</th>
+<th style="font-size:14px">Windows-Specific</th>
+<th style="font-size:14px">cross-Platform</th>
+<tr>
+    <td>Font</td>
+    <td>Yes</td>
+    <td>Yes</td>
+</tr>
+<tr>
+    <td>Bold (B)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+</tr>
+<tr>
+    <td>Italic (I)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+</tr>
+<tr>
+    <td>Underline (U)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+</tr>
+<tr>
+    <td>Subscript (Sub) (U)</td>
+    <td>Yes</td>
+    <td>No</td>
+</tr>
+<tr>
+    <td>Superscript (Sup) (U)</td>
+    <td>Yes</td>
+    <td>No</td>
+</tr>
+<tr>
+    <td>Line Break (BR) (U)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+</tr>
 
-   * Font
-   * B
-   * I
-   * U
-   * Sub
-   * Sup
-   * BR
+</table>
+
    
 2. The [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class enables to break the HTML text into multiple pages.
 3. Complex HTML with CSS are not supported in this class. Please use [HTML to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) section for complex HTML with CSS and URL's
