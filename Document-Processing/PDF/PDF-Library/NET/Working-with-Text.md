@@ -13,7 +13,7 @@ You can add text in the new PDF document by using [DrawString](https://help.sync
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-in-a-new-PDF-document/.NET/Drawing-text-in-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-in-a-new-PDF-document/.NET/Drawing-text-in-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -88,7 +88,7 @@ The following code snippet illustrates how to add text in the existing PDF docum
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-an-existing-PDF-document/.NET/Draw-text-in-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-an-existing-PDF-document/.NET/Draw-text-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -176,7 +176,7 @@ You can add text using the standard PDF fonts, by initializing [PdfFont](https:/
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-PDF-document-using-standard-fonts/.NET/Draw-text-in-PDF-document-using-standard-fonts/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-PDF-document-using-standard-fonts/.NET/Draw-text-in-PDF-document-using-standard-fonts/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -299,7 +299,7 @@ You can add text using the font file from local file system by providing the pat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-a-PDF-using-TrueType-fonts/.NET/Draw-text-in-a-PDF-using-TrueType-fonts/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-a-PDF-using-TrueType-fonts/.NET/Draw-text-in-a-PDF-using-TrueType-fonts/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -375,7 +375,7 @@ You can add text using CJK fonts, initializing [PdfFont](https://help.syncfusion
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-a-PDF-using-CJK-fonts/.NET/Draw-text-in-a-PDF-using-CJK-fonts/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-in-a-PDF-using-CJK-fonts/.NET/Draw-text-in-a-PDF-using-CJK-fonts/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -450,7 +450,7 @@ The Essential PDF allows you to measure the size of a string which uses the ```P
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Measure-the-text-in-PDF-document/.NET/Measure-the-text-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Measure-the-text-in-PDF-document/.NET/Measure-the-text-in-PDF-document/Program.cs" %}
 
 //Create the new PDF document
 PdfDocument document = new PdfDocument();
@@ -537,7 +537,7 @@ Refer to the following code example for further information.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Measure-tilting-space-in-PDF/.NET/Measure-tilting-space-in-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Measure-tilting-space-in-PDF/.NET/Measure-tilting-space-in-PDF/Program.cs" %}
 
 PdfDocument document = new PdfDocument();
 //Add a page to the document 
@@ -627,7 +627,7 @@ N> To render a Unicode text in the PDF document the chosen font should have the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF supports embedding fonts or displaying a Unicode text in the PDF document by default in ASP.NET Core platform. 
 
@@ -693,7 +693,7 @@ The Essential PDF allows you to draw the right-to-left language text in a PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-Right-To-Left-text-in-a-PDF-document/.NET/Draw-Right-To-Left-text-in-a-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-Right-To-Left-text-in-a-PDF-document/.NET/Draw-Right-To-Left-text-in-a-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -875,7 +875,7 @@ The following code example illustrates how to render the HTML string in a PDF do
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-HTML-styled-text-to-PDF-document/.NET/Adding-HTML-styled-text-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-HTML-styled-text-to-PDF-document/.NET/Adding-HTML-styled-text-to-PDF-document/Program.cs" %}
 
 //create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -976,7 +976,7 @@ Essential PDF allows you to create multi-column text in PDF document by using [P
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Creating-a-multicolumn-PDF-document/.NET/Creating-a-multicolumn-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Creating-a-multicolumn-PDF-document/.NET/Creating-a-multicolumn-PDF-document/Program.cs" %}
 
 //Create a PDF document instance
 PdfDocument document = new PdfDocument();
@@ -1061,7 +1061,7 @@ The following code snippet illustrates how to add elements relatively and also a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-text-across-multiple-pages/.NET/Add-text-across-multiple-pages/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-text-across-multiple-pages/.NET/Add-text-across-multiple-pages/Program.cs" %}
 
 //Create a PDF document instance
 PdfDocument document = new PdfDocument();
@@ -1170,7 +1170,7 @@ The following code example illustrates how to insert RTF text in PDF document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF supports inserting rich text format contents only in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms.
 
@@ -1241,7 +1241,7 @@ Essential PDF allows you to create an ordered list in the document. Ordered List
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-an-ordered-list-to-PDF-document/.NET/Adding-an-ordered-list-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-an-ordered-list-to-PDF-document/.NET/Adding-an-ordered-list-to-PDF-document/Program.cs" %}
 
 //Create a new instance of PdfDocument class.
 PdfDocument document = new PdfDocument();
@@ -1365,7 +1365,7 @@ Essential PDF also provides support to create an unordered List that is represen
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-an-unordered-list-to-PDF-document/.NET/Adding-an-unordered-list-to-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Adding-an-unordered-list-to-PDF-document/.NET/Adding-an-unordered-list-to-PDF-document/Program.cs" %}
 
 //Create a new instance of PdfDocument class.
 PdfDocument document = new PdfDocument();
@@ -1501,7 +1501,7 @@ Essential PDF allows you to replace the fonts in an existing PDF document by usi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF supports Replace fonts in an existing document only in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms.
 
@@ -1583,7 +1583,7 @@ Essential PDF allows you to add complex script language text in the PDF document
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-complex-script-language-text-to-PDF/.NET/Drawing-complex-script-language-text-to-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-complex-script-language-text-to-PDF/.NET/Drawing-complex-script-language-text-to-PDF/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -1670,7 +1670,7 @@ You can add the complex script language text in an existing PDF document by usin
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-complex-script-to-an-existing-PDF-document/.NET/Add-complex-script-to-an-existing-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-complex-script-to-an-existing-PDF-document/.NET/Add-complex-script-to-an-existing-PDF-document/Program.cs" %}
 
 FileStream inputFileStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
 //Load a PDF document
@@ -1760,7 +1760,7 @@ Essential PDF supports drawing text on a PDF document with OpenType font using [
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-using-OpenTypeFont-in-PDF-document/.NET/Draw-text-using-OpenTypeFont-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Draw-text-using-OpenTypeFont-in-PDF-document/.NET/Draw-text-using-OpenTypeFont-in-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1850,7 +1850,7 @@ The Essential PDF allows you to draw text using a different type of fonts with d
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-with-baseline-alignment-in-a-PDF/.NET/Drawing-text-with-baseline-alignment-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-with-baseline-alignment-in-a-PDF/.NET/Drawing-text-with-baseline-alignment-in-a-PDF/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -1972,7 +1972,7 @@ The following code sample shows how to add a text encoding using the standard PD
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-text-encoding-using-standard-PDF-fonts/.NET/Add-text-encoding-using-standard-PDF-fonts/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Add-text-encoding-using-standard-PDF-fonts/.NET/Add-text-encoding-using-standard-PDF-fonts/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2053,7 +2053,7 @@ The code example provided below demonstrates the utilization of the [FindText](h
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %}
 
 //Load an existing PDF document. 
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -2103,7 +2103,7 @@ The following code example illustrates this.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Customizing-truetype-fonts-in-a-PDF/.NET/Customizing-truetype-fonts-in-a-PDF/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Customizing-truetype-fonts-in-a-PDF/.NET/Customizing-truetype-fonts-in-a-PDF/Program.cs" %}
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
