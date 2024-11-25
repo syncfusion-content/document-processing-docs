@@ -5,21 +5,13 @@ platform: document-processing
 documentation: UG
 ---
 
-# How to Fix Namespace Ambiguity Errors in .NET Applications
-### Q: What is the customer’s use case?
-Background service without a UI.
-Load a PDF, fill fields, and print.
-Application uses the .NET 4.8 framework.
-### Q: What issue did the customer face after adding the PdfViewer package?
-The customer encountered namespace ambiguity errors such as:
-* **PdfLoadedDocument** is ambiguous in the namespace **Syncfusion.Pdf.Parsing**.
-* **PdfDocument** is ambiguous in the namespace **Syncfusion.Pdf**.
-* **PdfField** is ambiguous in the namespace **Syncfusion.Pdf.Interactive**.
-### Q: What is the root cause of the issue?
-The namespace ambiguity occurs because both the **Syncfusion.Pdf.Net.Core** package and the **PdfViewer** package include overlapping namespaces and types, causing conflicts.
+# How to Fix Namespace Ambiguity Errors When Using Multiple Syncfusion PDF Packages in a .NET Framework Application
 
-### Q: What is the solution to resolve the issue?
-Remove the **Syncfusion.Pdf.Net.Core** package from the application to eliminate the namespace conflicts.
+Namespace ambiguity errors often occur when multiple Syncfusion PDF-related packages, such as Syncfusion.Pdf.Net.Core and Syncfusion.PdfViewer, are included in the same project. These packages may have overlapping namespaces and types, causing conflicts during compilation.
 
-### Q: Why is removing the Syncfusion.Pdf.Net.Core package the solution?
-The functionality required for PDF handling and printing is already available in the **PdfViewer** package, making the additional **Syncfusion.Pdf.Net.Core** package redundant.
+### To resolve this issue:
+
+Evaluate your application’s requirements to include only the necessary Syncfusion packages:
+* use **Syncfusion.Pdf.Net.Core** for basic PDF functionalities, and **Syncfusion.PdfViewer** for printing. 
+* Avoid using both **Syncfusion.Pdf.Net.Core** and **Syncfusion.PdfViewer** in the same project—remove **Syncfusion.Pdf.Net.Core** if **Syncfusion.PdfViewer** is used. 
+* Finally, clean and rebuild the solution to update references and resolve conflicts.
