@@ -37,7 +37,7 @@ Our 30-day trial can be downloaded in two ways.
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio Excel Mac trial installer which is available in DMG format.
+6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio&reg; Excel Mac trial installer which is available in DMG format.
 
    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-offline-installer.png)
 

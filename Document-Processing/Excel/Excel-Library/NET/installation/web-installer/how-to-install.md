@@ -12,14 +12,14 @@ documentation: ug
 
 ## Overview
 
-For the Essential Studio Excel product, Syncfusion offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio products you have chosen. You can get the most recent version of Essential Studio Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
+For the Essential Studio&reg; Excel product, Syncfusion offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio products you have chosen. You can get the most recent version of Essential Studio Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
 
  
 ## Installation
 
-The steps below show how to install Essential Studio Excel Web Installer.
+The steps below show how to install Essential Studio&reg; Excel Web Installer.
 
-1.  Open the Syncfusion Essential Studio Excel Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.  Open the Syncfusion Essential Studio&reg; Excel Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
@@ -102,7 +102,7 @@ The steps below show how to install Essential Studio Excel Web Installer.
 	
 	* To open the Syncfusion Control Panel, click **Launch Control Panel**.
 
-12. After installation, there will be two Syncfusion control panel entries, as shown below. The Essential Studio entry will manage all Syncfusion products installed in the same version, while the Product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion control panel entries, as shown below. The Essential Studio&reg; entry will manage all Syncfusion products installed in the same version, while the Product entry will only uninstall the specific product setup.
 
     ![Control Panel](images/Step-by-Step-Installation_img19.png)
 	
@@ -115,7 +115,7 @@ Syncfusion Excel installer can be uninstalled in two ways.
    * Uninstall the Excel using the Syncfusion Excel web installer
    * Uninstall the Excel from Windows Control Panel
 
-Follow either one of the option below to uninstall Syncfusion Essential Studio Excel installer.
+Follow either one of the option below to uninstall Syncfusion Essential Studio&reg; Excel installer.
   
 **Option 1: Uninstall the Excel using the Syncfusion Excel web installer**
 
@@ -126,11 +126,11 @@ Syncfusion provides the option to uninstall products of the same version directl
 	
 **Option 2: Uninstall the Excel from Windows Control Panel**  
 	
-You can uninstall all the installed products by selecting the **Syncfusion Essential Studio {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Excel alone by selecting the **Syncfusion Essential Studio for Excel {version}** entry (element 2 in the below screenshot) from the Windows control panel.
+You can uninstall all the installed products by selecting the **Syncfusion Essential Studio&reg; {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Excel alone by selecting the **Syncfusion Essential Studio&reg; for Excel {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 	
-N> If the **Syncfusion Essential Studio for Excel {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio Excel alone will be removed and the below default MSI uninstallation window will be displayed.	
+N> If the **Syncfusion Essential Studio&reg; for Excel {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio&reg; Excel alone will be removed and the below default MSI uninstallation window will be displayed.	
 
 1.  The Syncfusion Excel Web Installer's welcome wizard will be displayed. Click the Next button
 	
