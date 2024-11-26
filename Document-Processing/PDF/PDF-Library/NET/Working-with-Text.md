@@ -828,7 +828,7 @@ Essential PDF provides support to render simple HTML string in a PDF document th
 <table border="1">
 <th style="font-size:14px" width="100px">Supported tags</th>
 <th style="font-size:14px">Windows-Specific</th>
-<th style="font-size:14px">cross-Platform</th>
+<th style="font-size:14px">Cross-Platform</th>
 <tr>
     <td>Font</td>
     <td>Yes</td>
