@@ -1,6 +1,6 @@
 ---
 title: Loading and Saving Excel in Docker | Syncfusion
-description: Explains how to load and save an Excel files in Docker using Syncfusion Excel library.
+description: Explains how to load and save an Excel files in Docker using Syncfusion .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
