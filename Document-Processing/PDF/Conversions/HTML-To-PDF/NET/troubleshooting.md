@@ -1130,7 +1130,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-gpu");
 ## Failed to launch Base! chrome_crashpad_handler: --database is required while performing HTML to PDF conversion with Alpine Docker
 
 <table>
-<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px" width="100px">Exception</th>
 <th style="font-size:14px">Failed to launch Base! chrome_crashpad_handler: --database is required while performing HTML to PDF conversion with Alpine Docker
 </th>
 <tr>
