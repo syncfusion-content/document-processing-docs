@@ -193,7 +193,7 @@ processor.PerformOCR(lDoc);
 Download the language packages from the following link.
 [https://github.com/tesseract-ocr/tessdata](https://github.com/tesseract-ocr/tessdata)
 
-N> From 16.1.0.24 OCR is not a part of Essential Studio and is available as a separate package (OCR Processor) under the Add-On section in the following link.
+N> From 16.1.0.24 OCR is not a part of Essential Studio&reg; and is available as a separate package (OCR Processor) under the Add-On section in the following link.
 [https://www.syncfusion.com/downloads/latest-version](https://www.syncfusion.com/downloads/latest-version)
 
 ### Prerequisites for Linux 
