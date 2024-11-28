@@ -822,7 +822,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Essential PDF provides support to render simple HTML string in a PDF document that can flow through multiple pages. This can be done by using the [PdfHTMLTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html) class.
 
-1. The PdfHTMLTextElement class provides support for a basic set of HTML tags, to render HTML format text in the PDF document.
+Step 1: The PdfHTMLTextElement class provides support for a basic set of HTML tags, to render HTML format text in the PDF document.
 
    Supported tags (Should be XHTML-compliant)
 <table border="1">
@@ -868,8 +868,8 @@ Essential PDF provides support to render simple HTML string in a PDF document th
 </table>
 
    
-2. The [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class enables to break the HTML text into multiple pages.
-3. Complex HTML with CSS are not supported in this class. Please use [HTML to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) section for complex HTML with CSS and URL's
+Step 2: The [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class enables to break the HTML text into multiple pages.
+Step 3: Complex HTML with CSS are not supported in this class. Please use [HTML to PDF](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) section for complex HTML with CSS and URL's
 
 The following code example illustrates how to render the HTML string in a PDF document.   
 
