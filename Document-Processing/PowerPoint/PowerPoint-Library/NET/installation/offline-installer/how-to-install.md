@@ -13,7 +13,7 @@ documentation: ug
 
 ## Installing with UI   
 
-The steps below show how to install the Essential Studio PowerPoint installer.
+The steps below show how to install the Essential Studio&reg; PowerPoint installer.
 
 1.	Open the Syncfusion PowerPoint offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
@@ -94,11 +94,11 @@ The steps below show how to install the Essential Studio PowerPoint installer.
 6.  After installing, click the **Launch Control Panel** link to open the Syncfusion Control Panel.
 
 
-7.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio PowerPoint product.
+7.  Click the Finish button. Your system has been installed with the Syncfusion Essential Studio&reg; PowerPoint product.
 
 ## Installing in silent mode
 
-The Syncfusion Essential Studio PowerPoint Installer supports installation and uninstallation via the command line.
+The Syncfusion Essential Studio&reg; PowerPoint Installer supports installation and uninstallation via the command line.
 
 ### Command Line Installation
 
@@ -120,9 +120,9 @@ To install through the Command Line in Silent mode, follow the steps below.
     **Example:** “D:\Temp\syncfusionessentialpowerpoint_x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
 
 	
-7.  Essential Studio for PowerPoint is installed.
+7.  Essential Studio&reg; for PowerPoint is installed.
 
-    N> x.x.x.x should be replaced with the Essential Studio version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+    N> x.x.x.x should be replaced with the Essential Studio&reg; version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
    
 
 ### Command Line Uninstallation
@@ -141,6 +141,6 @@ Syncfusion Essential PowerPoint can be uninstalled silently using the Command Li
     **Example:** “D:\Temp\syncfusionessentialpowerpoint_x.x.x.x.exe" /uninstall silent
 
 
-7.  Essential Studio for PowerPoint is uninstalled.
+7.  Essential Studio&reg; for PowerPoint is uninstalled.
    
    
