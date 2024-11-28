@@ -77,7 +77,7 @@ Using document As WordDocument = New WordDocument("Template.docx")
     'Iterate each section from Word document
     For i As Integer = 0 To document.Sections.Count - 1
         'Create new Word document
-        Dim newDocument As New WordDocument()
+        Dim newDocument As WordDocument = New WordDocument()
         'Add cloned section into new Word document
         newDocument.Sections.Add(document.Sections(i).Clone())
         'Save and close the new Word document

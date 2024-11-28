@@ -76,17 +76,16 @@ using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, Fil
     //Load file stream into Word document.
     using (WordDocument wordDocument = new WordDocument(docStream, FormatType.Docx))
     {
-        //Create a new instance of DocIORenderer class.
+        //Create an instance of DocIORenderer.
         using (DocIORenderer render = new DocIORenderer())
         {
-            //Converts Word document to images.
+            //Convert the entire Word document to images.
             Stream[] imageStreams = wordDocument.RenderAsImages();
             for (int i = 0; i < imageStreams.Length; i++)
             {
-                //Creates the output image file stream.
+                 //Save the image stream as file.
                 using (FileStream fileStreamOutput = File.Create("WordToImage_" + i + ".jpeg"))
                 {
-                    //Copies the converted image stream into created output stream.
                     imageStreams[i].CopyTo(fileStreamOutput);
                 }
             }
@@ -108,7 +107,7 @@ using(WordDocument wordDocument = new WordDocument("Template.docx", FormatType.D
     for (int i = 0; i < images.Length; i++)
     {
         //Save the image as jpeg.
-        image.Save("WordToImage_" + i + ".jpeg", ImageFormat.Jpeg);
+        images[i].Save("WordToImage_" + i + ".jpeg", ImageFormat.Jpeg);
     }
 }
 {% endhighlight %}

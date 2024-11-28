@@ -66,7 +66,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates an instance of WordDocument class (Empty Word Document)
 Dim document As New WordDocument()
-'Add a New section And paragraph in the document. 
+'Add a new section and paragraph in the document.
 document.EnsureMinimal()
 'Get the last paragraph.
 Dim paragraph As IWParagraph = document.LastParagraph

@@ -64,24 +64,23 @@ The following code example demonstrates the conversion of an entire Presentation
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET/Convert-PowerPoint-presentation-to-Image/Program.cs" %}
+//Open the PowerPoint file stream.
 using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
 {
    //Open the existing PowerPoint presentation.
    using (IPresentation pptxDoc = Presentation.Open(fileStream))
    {
-       //Initialize the PresentationRenderer to perform image conversion.
+       //Initialize PresentationRenderer.
        pptxDoc.PresentationRenderer = new PresentationRenderer();
-       //Convert PowerPoint to image as stream.
+       //Convert the PowerPoint presentation as image streams.
        Stream[] images = pptxDoc.RenderAsImages(ExportImageFormat.Jpeg);
-       //Saves the images to file system
+       //Save the image streams to file.
        for (int i = 0; i < images.Length; i++)
        {
            using (Stream stream = images[i])
            {
-               //Create the output image file stream
                using (FileStream fileStreamOutput = File.Create("Output" + i + ".jpg")))
                {
-                   //Copy the converted image stream into created output stream
                    stream.CopyTo(fileStreamOutput);
                }
            }
@@ -99,10 +98,10 @@ pptxDoc.ChartToImageConverter = new ChartToImageConverter();
 pptxDoc.ChartToImageConverter.ScalingMode = Syncfusion.OfficeChart.ScalingMode.Best;
 //Converts entire Presentation to images
 Image[] images = pptxDoc.RenderAsImages(Syncfusion.Drawing.ImageType.Metafile);
-//Saves the image to file system
+//Save the image streams to file.
 for (int i = 0; i < images.Length; i++)
 { 
-    image.Save("Output" + i + ".png");
+    images[i].Save("Output" + i + ".png");
 }
 {% endhighlight %}
 
@@ -115,7 +114,7 @@ pptxDoc.ChartToImageConverter = New ChartToImageConverter()
 pptxDoc.ChartToImageConverter.ScalingMode = Syncfusion.OfficeChart.ScalingMode.Best
 'Converts entire Presentation to images
 Dim images As Image() = pptxDoc.RenderAsImages(Syncfusion.Drawing.ImageType.Metafile)
-'Saves the image to file system
+'Save the image streams to file.
 For i As Integer = 0 To images.Length - 1
     images(i).Save("ImageOutput" & i & ".png")
 Next
@@ -147,12 +146,9 @@ using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
     //Convert PowerPoint slide to image as stream.
     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        //Reset the stream position
-        stream.Position = 0;
-        //Create the output image file stream
+        //Save the image stream to a file.
         using (FileStream fileStreamOutput = File.Create("Output.jpg"))
         {
-            //Copy the converted image stream into created output stream
             stream.CopyTo(fileStreamOutput);
         }
     }

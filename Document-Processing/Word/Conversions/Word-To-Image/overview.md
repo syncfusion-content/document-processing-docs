@@ -76,22 +76,18 @@ using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, Fil
     //Load file stream into Word document.
     using (WordDocument wordDocument = new WordDocument(docStream, FormatType.Docx))
     {
-        //Create a new instance of DocIORenderer class.
+        //Create an instance of DocIORenderer.
         using (DocIORenderer render = new DocIORenderer())
         {
             //Convert the entire Word document to images.
-            Stream[] imageStreams = wordDocument.RenderAsImages(); 
-            int i = 0;
-            foreach (Stream stream in imageStreams)
+            Stream[] imageStreams = wordDocument.RenderAsImages();
+            for (int i = 0; i < imageStreams.Length; i++)
             {
-                //Reset the stream position.
-                stream.Position = 0;
-                //Save the stream as file.
+                 //Save the image stream as file.
                 using (FileStream fileStreamOutput = File.Create("WordToImage_" + i + ".jpeg"))
                 {
-                    stream.CopyTo(fileStreamOutput);
+                    imageStreams[i].CopyTo(fileStreamOutput);
                 }
-                i++;
             }
         }
     }
@@ -108,12 +104,10 @@ using(WordDocument wordDocument = new WordDocument("Template.docx", FormatType.D
     wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal;
     //Convert the entire Word document to images.
     Image[] images = wordDocument.RenderAsImages(ImageType.Bitmap);
-    int i = 0;
-    foreach (Image image in images)
+    for (int i = 0; i < images.Length; i++)
     {
         //Save the image as jpeg.
-        image.Save("WordToImage_" + i + ".jpeg", ImageFormat.Jpeg);
-        i++;
+        images[i].Save("WordToImage_" + i + ".jpeg", ImageFormat.Jpeg);
     }
 }
 {% endhighlight %}
@@ -127,11 +121,9 @@ Using wordDocument As WordDocument = New WordDocument("Template.docx", FormatTyp
     wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal
     'Convert the entire Word document to images.
     Dim images As Image() = wordDocument.RenderAsImages(ImageType.Bitmap)
-    Dim i = 0
-    For Each image As Image In images
+    For i As Integer = 0 To images.Length - 1
         'Save the image as jpeg.
-        image.Save("WordToImage_" & i & ".jpeg", ImageFormat.Jpeg)
-        i += 1
+        images(i).Save("WordToImage_" & i & ".jpeg", ImageFormat.Jpeg)
     Next
 End Using
 {% endhighlight %}

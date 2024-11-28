@@ -72,13 +72,13 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Create an instance of WordDocument class
 Dim document As New WordDocument()
-'Add a section and ensure it contains a paragraph
+'Add a section and a paragraph to the document.
 document.EnsureMinimal()
 'Add a new table to the Word document
 Dim table As IWTable = document.Sections(0).AddTable()
 'Specify the total number of rows and columns
 table.ResetCells(3, 2)
-'Add text to table cells
+'Access each table cell and append text.
 table(0, 0).AddParagraph().AppendText("Item")
 table(0, 1).AddParagraph().AppendText("Price($)")
 table(1, 0).AddParagraph().AppendText("Apple")
