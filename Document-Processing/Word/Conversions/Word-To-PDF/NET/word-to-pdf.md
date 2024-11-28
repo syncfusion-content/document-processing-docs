@@ -78,24 +78,26 @@ The following code example illustrates how to convert a Word document into PDF d
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET/Convert-Word-document-to-PDF/Program.cs" %}
-//Open the file as Stream
-FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
-//Loads file stream into Word document
-WordDocument wordDocument = new WordDocument(docStream, Syncfusion.DocIO.FormatType.Automatic);
-//Instantiation of DocIORenderer for Word to PDF conversion
-DocIORenderer render = new DocIORenderer();
-//Sets Chart rendering Options.
-render.Settings.ChartRenderingOptions.ImageFormat =  ExportImageFormat.Jpeg;
-//Converts Word document into PDF document
-PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
-//Releases all resources used by the Word document and DocIO Renderer objects
-render.Dispose();
-wordDocument.Dispose();
-//Saves the PDF file
-MemoryStream outputStream = new MemoryStream();
-pdfDocument.Save(outputStream);
-//Closes the instance of PDF document object
-pdfDocument.Close();
+using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
+{
+    //Loads an existing Word document.
+    using (WordDocument wordDocument = new WordDocument(inputStream, FormatType.Automatic))
+    {
+        //Creates an instance of DocIORenderer.
+        using (DocIORenderer renderer = new DocIORenderer())
+        {
+            //Converts Word document into PDF document.
+            using (PdfDocument pdfDocument = renderer.ConvertToPDF(wordDocument))
+            {
+                //Saves the PDF file to file system.    
+                using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+                {
+                    pdfDocument.Save(outputStream);
+                }
+            }
+        }
+    }
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

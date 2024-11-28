@@ -37,20 +37,18 @@ FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileA
 //Load the template document as stream
 using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
-    int fileId = 0;
     //Iterate each section from Word document
-    foreach (WSection section in document.Sections)
+    for (int i = 0; i < document.Sections.Count; i++)
     {
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
         newDocument.Sections.Add(section.Clone());
         //Saves the Word document to  MemoryStream
-        FileStream outputStream = new FileStream("Section" + fileId + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        FileStream outputStream = new FileStream("Section" + i + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
         newDocument.Save(outputStream, FormatType.Docx);
         //Closes the document
         newDocument.Close();
-        fileId++;
     }
 }
 {% endhighlight %}
@@ -59,18 +57,16 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 //Load the template document
 using (WordDocument document = new WordDocument(@"Template.docx"))
 {
-    int fileId = 0;
     //Iterate each section from Word document
-    foreach (WSection section in document.Sections)
+    for (int i = 0; i < document.Sections.Count; i++)
     {
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
         newDocument.Sections.Add(section.Clone());
         //Save and close the new Word documet
-        newDocument.Save("Section" + fileId + ".docx");
+        newDocument.Save("Section" + i + ".docx");
         newDocument.Close();
-        fileId++;
     }
 }
 {% endhighlight %}
@@ -78,17 +74,15 @@ using (WordDocument document = new WordDocument(@"Template.docx"))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load the template document
 Using document As WordDocument = New WordDocument("Template.docx")
-    Dim fileId As Integer = 0
     'Iterate each section from Word document
-    For Each section As WSection In document.Sections
+    For i As Integer = 0 To document.Sections.Count - 1
         'Create new Word document
-        Dim newDocument As WordDocument = New WordDocument()
+        Dim newDocument As New WordDocument()
         'Add cloned section into new Word document
-        newDocument.Sections.Add(section.Clone())
-        'Save and close the new Word documet
-        newDocument.Save("Section" & fileId & ".docx")
+        newDocument.Sections.Add(document.Sections(i).Clone())
+        'Save and close the new Word document
+        newDocument.Save("Section" & i & ".docx")
         newDocument.Close()
-        fileId += 1
     Next
 End Using
 {% endhighlight %}

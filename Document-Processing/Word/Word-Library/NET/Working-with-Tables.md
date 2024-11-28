@@ -27,44 +27,19 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-simple-table/.NET/Create-simple-table/Program.cs" %}
 //Creates an instance of WordDocument class 
 WordDocument document = new WordDocument();
-//Adds a section into Word document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWTextRange textRange = section.AddParagraph().AppendText("Price Details");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-section.AddParagraph();
-//Adds a new table into Word document
-IWTable table = section.AddTable();
-//Specifies the total number of rows & columns
+//Add a section and a paragraph to the document. 
+document.EnsureMinimal();
+//Add a new table to the Word document. 
+IWTable table = document.Sections[0].AddTable();
+//Specify the total number of rows and columns. 
 table.ResetCells(3, 2);
-//Accesses the instance of the cell (first row, first cell) and adds the content into cell
-textRange = table[0, 0].AddParagraph().AppendText("Item");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (first row, second cell) and adds the content into cell
-textRange = table[0, 1].AddParagraph().AppendText("Price($)");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (second row, first cell) and adds the content into cell
-textRange = table[1, 0].AddParagraph().AppendText("Apple");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (second row, second cell) and adds the content into cell
-textRange = table[1, 1].AddParagraph().AppendText("50");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, first cell) and adds the content into cell
-textRange = table[2, 0].AddParagraph().AppendText("Orange");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, second cell) and adds the content into cell
-textRange = table[2, 1].AddParagraph().AppendText("30");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
+//Access each table cell and append text. 
+table[0, 0].AddParagraph().AppendText("Item");
+table[0, 1].AddParagraph().AppendText("Price($)");
+table[1, 0].AddParagraph().AppendText("Apple");
+table[1, 1].AddParagraph().AppendText("50");
+table[2, 0].AddParagraph().AppendText("Orange");
+table[2, 1].AddParagraph().AppendText("30");
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -75,44 +50,19 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an instance of WordDocument class 
 WordDocument document = new WordDocument();
-//Adds a section into Word document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWTextRange textRange = section.AddParagraph().AppendText("Price Details");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-section.AddParagraph();
-//Adds a new table into Word document
-IWTable table = section.AddTable();
-//Specifies the total number of rows & columns
+//Add a section and a paragraph to the document. 
+document.EnsureMinimal();
+//Add a new table to the Word document. 
+IWTable table = document.Sections[0].AddTable();
+//Specify the total number of rows and columns. 
 table.ResetCells(3, 2);
-//Accesses the instance of the cell (first row, first cell) and adds the content into cell
-textRange = table[0, 0].AddParagraph().AppendText("Item");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (first row, second cell) and adds the content into cell
-textRange = table[0, 1].AddParagraph().AppendText("Price($)");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (second row, first cell) and adds the content into cell
-textRange = table[1, 0].AddParagraph().AppendText("Apple");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (second row, second cell) and adds the content into cell
-textRange = table[1, 1].AddParagraph().AppendText("50");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, first cell) and adds the content into cell
-textRange = table[2, 0].AddParagraph().AppendText("Orange");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, second cell) and adds the content into cell
-textRange = table[2, 1].AddParagraph().AppendText("30");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
+//Access each table cell and append text. 
+table[0, 0].AddParagraph().AppendText("Item");
+table[0, 1].AddParagraph().AppendText("Price($)");
+table[1, 0].AddParagraph().AppendText("Apple");
+table[1, 1].AddParagraph().AppendText("50");
+table[2, 0].AddParagraph().AppendText("Orange");
+table[2, 1].AddParagraph().AppendText("30");
 //Saves the document in the given name and format
 document.Save("Table.docx", FormatType.Docx);
 //Releases the resources occupied by WordDocument instance
@@ -120,49 +70,24 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates an instance of WordDocument class 
+'Create an instance of WordDocument class
 Dim document As New WordDocument()
-'Adds a section into Word document
-Dim section As IWSection = document.AddSection()
-'Adds a new paragraph into Word document and appends text into paragraph
-Dim textRange As IWTextRange = section.AddParagraph().AppendText("Price Details")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 12
-textRange.CharacterFormat.Bold = True
-section.AddParagraph()
-'Adds a new table into Word document
-Dim table As IWTable = section.AddTable()
-'Specifies the total number of rows and columns
+'Add a section and ensure it contains a paragraph
+document.EnsureMinimal()
+'Add a new table to the Word document
+Dim table As IWTable = document.Sections(0).AddTable()
+'Specify the total number of rows and columns
 table.ResetCells(3, 2)
-'Accesses the instance of the cell (first row, first cell) and adds the content into cell
-textRange = table(0, 0).AddParagraph().AppendText("Item")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 12
-textRange.CharacterFormat.Bold = True
-'Accesses the instance of the cell (first row, second cell) and adds the content into cell
-textRange = table(0, 1).AddParagraph().AppendText("Price($)")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 12
-textRange.CharacterFormat.Bold = True
-'Accesses the instance of the cell (second row, first cell) and adds the content into cell
-textRange = table(1, 0).AddParagraph().AppendText("Apple")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Accesses the instance of the cell (second row, second cell) and adds the content into cell
-textRange = table(1, 1).AddParagraph().AppendText("50")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Accesses the instance of the cell (third row, first cell) and adds the content into cell
-textRange = table(2, 0).AddParagraph().AppendText("Orange")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Accesses the instance of the cell (third row, second cell) and adds the content into cell
-textRange = table(2, 1).AddParagraph().AppendText("30")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Saves the document in the given name and format
+'Add text to table cells
+table(0, 0).AddParagraph().AppendText("Item")
+table(0, 1).AddParagraph().AppendText("Price($)")
+table(1, 0).AddParagraph().AppendText("Apple")
+table(1, 1).AddParagraph().AppendText("50")
+table(2, 0).AddParagraph().AppendText("Orange")
+table(2, 1).AddParagraph().AppendText("30")
+'Save the document in the given name and format
 document.Save("Table.docx", FormatType.Docx)
-'Releases the resources occupied by WordDocument instance
+'Release the resources occupied by WordDocument instance
 document.Close()
 {% endhighlight %}
 

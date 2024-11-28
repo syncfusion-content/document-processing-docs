@@ -73,21 +73,13 @@ using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Ope
     //Open the existing PowerPoint presentation with loaded stream.
     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
     {
-        //Create the MemoryStream to save the converted PDF.
-        using (MemoryStream pdfStream = new MemoryStream())
+        //Convert PowerPoint into PDF document. 
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Convert the PowerPoint document to PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+            //Save the PDF file to file system. 
+            using (FileStream outputStream = new FileStream("PPTXToPDF.pdf", FileMode.Create, FileAccess.ReadWrite))
             {
-                //Save the converted PDF document to MemoryStream.
-                pdfDocument.Save(pdfStream);
-                pdfStream.Position = 0;
-            }
-            //Create the output PDF file stream
-            using (FileStream fileStreamOutput = File.Create("Output.pdf"))
-            {
-                //Copy the converted PDF stream into created output PDF stream
-                pdfStream.CopyTo(fileStreamOutput);
+                pdfDocument.Save(outputStream);
             }
         }
     }

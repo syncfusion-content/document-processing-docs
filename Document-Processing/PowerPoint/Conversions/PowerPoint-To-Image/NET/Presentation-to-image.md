@@ -74,13 +74,16 @@ using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, File
        //Convert PowerPoint to image as stream.
        Stream[] images = pptxDoc.RenderAsImages(ExportImageFormat.Jpeg);
        //Saves the images to file system
-       foreach (Stream stream in images)
+       for (int i = 0; i < images.Length; i++)
        {
-           //Create the output image file stream
-           using (FileStream fileStreamOutput = File.Create("Output" + Guid.NewGuid().ToString() + ".jpg"))
+           using (Stream stream = images[i])
            {
-               //Copy the converted image stream into created output stream
-               stream.CopyTo(fileStreamOutput);
+               //Create the output image file stream
+               using (FileStream fileStreamOutput = File.Create("Output" + i + ".jpg")))
+               {
+                   //Copy the converted image stream into created output stream
+                   stream.CopyTo(fileStreamOutput);
+               }
            }
        }
    }
@@ -97,9 +100,9 @@ pptxDoc.ChartToImageConverter.ScalingMode = Syncfusion.OfficeChart.ScalingMode.B
 //Converts entire Presentation to images
 Image[] images = pptxDoc.RenderAsImages(Syncfusion.Drawing.ImageType.Metafile);
 //Saves the image to file system
-foreach (Image image in images)
+for (int i = 0; i < images.Length; i++)
 { 
-    image.Save("ImageOutput" + Guid.NewGuid().ToString()+ ".png");
+    image.Save("Output" + i + ".png");
 }
 {% endhighlight %}
 
@@ -113,8 +116,8 @@ pptxDoc.ChartToImageConverter.ScalingMode = Syncfusion.OfficeChart.ScalingMode.B
 'Converts entire Presentation to images
 Dim images As Image() = pptxDoc.RenderAsImages(Syncfusion.Drawing.ImageType.Metafile)
 'Saves the image to file system
-For Each image As Image In images
-    image.Save("ImageOutput" + Guid.NewGuid().ToString() + ".png")
+For i As Integer = 0 To images.Length - 1
+    images(i).Save("ImageOutput" & i & ".png")
 Next
 {% endhighlight %}
 

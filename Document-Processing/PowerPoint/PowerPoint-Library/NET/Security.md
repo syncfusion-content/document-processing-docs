@@ -28,7 +28,7 @@ using (IPresentation presentation = Presentation.Create())
     //Adds a paragraph with text content.
     IParagraph paragraph = shape.TextBody.AddParagraph("Password Protected.");
     //Protects the file with password.
-    presentation.Encrypt("PASSWORD!@1#$");
+    presentation.Encrypt("syncfusion");
     //Save the PowerPoint Presentation as stream.
     using (FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create))
     {
@@ -48,7 +48,7 @@ using (IPresentation presentation = Presentation.Create())
     //Adds a paragraph with text content.
     IParagraph paragraph = shape.TextBody.AddParagraph("Password Protected.");
     //Protects the file with password.
-    presentation.Encrypt("PASSWORD!@1#$");
+    presentation.Encrypt("syncfusion");
     //Saves the Presentation.
     presentation.Save("Sample.pptx");
 }
@@ -64,7 +64,7 @@ Using presentationDocument As IPresentation = Presentation.Create()
     'Adds a paragraph with text content.
     Dim paragraph As IParagraph = shape.TextBody.AddParagraph("Password Protected.")
     'Protects the file with password.
-    presentationDocument.Encrypt("PASSWORD!@1#$")
+    presentationDocument.Encrypt("syncfusion")
     'Saves the Presentation.
     presentationDocument.Save("Sample.pptx")
 End Using
@@ -129,7 +129,7 @@ The following code example demonstrates removing the encryption from a PowerPoin
 using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 {
     //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-    using (IPresentation presentation = Presentation.Open(inputStream, "PASSWORD!@1#$"))
+    using (IPresentation presentation = Presentation.Open(inputStream, "syncfusion"))
     {
         //Decrypts the document.
         presentation.RemoveEncryption();
@@ -144,7 +144,7 @@ using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-using (IPresentation presentation = Presentation.Open("Sample.pptx", "PASSWORD!@1#$"))
+using (IPresentation presentation = Presentation.Open("Sample.pptx", "syncfusion"))
 {
     //Decrypts the document.
     presentation.RemoveEncryption();
@@ -155,7 +155,7 @@ using (IPresentation presentation = Presentation.Open("Sample.pptx", "PASSWORD!@
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-Using presentationDocument As IPresentation = Presentation.Open("Sample.pptx", "PASSWORD!@1#$")
+Using presentationDocument As IPresentation = Presentation.Open("Sample.pptx", "syncfusion")
     'Decrypts the document.
     presentationDocument.RemoveEncryption()
     'Saves the Presentation.
