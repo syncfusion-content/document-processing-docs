@@ -6,9 +6,9 @@ control: XlsIO
 documentation: UG
 ---
 
-# Does Essential XlsIO provide support for Client Profile?
+# Does Essential&reg; XlsIO provide support for Client Profile?
 
-Yes, Essential XlsIO provides support for Client Profile. In order to use Essential XlsIO in an application (which targeted to Client Profile), the user should include the following assemblies.
+Yes, Essential&reg; XlsIO provides support for Client Profile. In order to use Essential&reg; XlsIO in an application (which targeted to Client Profile), the user should include the following assemblies.
 
 * Syncfusion.Compression.Base.dll
 * Syncfusion.XlsIO.ClientProfile.dll
