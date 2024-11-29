@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert an Excel document to PDF in Linux Docker
 
-Docker is an open platform for developing, shipping and running applications. You can use Essential XlsIO in Docker container to create, read, write and convert Microsoft Excel documents into various formats. From this page, you can learn how to **convert an Excel document to PDF in Linux Docker** using Syncfusion XlsIO library (Essential XlsIO).
+Docker is an open platform for developing, shipping and running applications. You can use Essential&reg; XlsIO in Docker container to create, read, write and convert Microsoft Excel documents into various formats. From this page, you can learn how to **convert an Excel document to PDF in Linux Docker** using Syncfusion&reg; XlsIO library (Essential&reg; XlsIO).
 
 ## Steps to convert an Excel document to PDF in Linux Docker
 
@@ -28,7 +28,7 @@ Step 3: Install the below NuGet packages as a reference to your project from [Nu
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Docker_Images/docker_images_img3.png)
 ![Install SkiaSharp.NativeAssets.Linux v2.80.2 NuGet Package](Docker_Images/docker_images_img4.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
 
 Step 4: Include the following namespaces in the **Program.cs** file.
 
@@ -243,6 +243,6 @@ ENTRYPOINT ["dotnet", "Convert-Excel-to-PDF.dll"]
 
 A complete working example of converting an Excel document to PDF in Ubuntu Linux Docker container is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Docker/Ubuntu/Convert%20Excel%20to%20PDF).
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetcore/Excel/ExcelToPDF#/material3) in ASP.NET Core.

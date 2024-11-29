@@ -8,7 +8,7 @@ documentation: UG
 
 # How to format text within a cell?
 
-In Essential XlsIO, You can use the rich text formatting option to format the text within a cell. The following code snippet illustrates this.
+In Essential&reg; XlsIO, You can use the rich text formatting option to format the text within a cell. The following code snippet illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

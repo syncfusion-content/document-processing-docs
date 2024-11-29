@@ -7,7 +7,7 @@ control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion Excel Mac installer
+# Installing Syncfusion&reg; Excel Mac installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
@@ -42,7 +42,7 @@ The steps below show how to install Essential Studio&reg; Excel Mac installer.
 
    ![License confirmation wizard](images/Mac_Installer3.png)
    
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion Essential Studio&reg; Flutter Mac installer can be used for development purposes without registering the Unlock key..
+   N> The Unlock key is not required to install the Mac installer. The Syncfusion&reg; Essential&reg; Studio&reg; Flutter Mac installer can be used for development purposes without registering the Unlock key..
 
 
 4. And paste it in “Applications” folder shortcut.

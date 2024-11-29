@@ -8,7 +8,7 @@ documentation: UG
 
 # How to apply rotation and transparency to background image?
 
-Syncfusion XlsIO do not have direct support to apply rotation and transparency to background image. But this can be achieved through below workaround.
+Syncfusion&reg; XlsIO do not have direct support to apply rotation and transparency to background image. But this can be achieved through below workaround.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

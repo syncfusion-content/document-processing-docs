@@ -12,7 +12,7 @@ Yes. XlsIO allows you to create, edit and convert Excel files in .NET 6.0
 ## See Also
 
 * [Does XlsIO support password protected macro in the Excel documents?](https://help.syncfusion.com/file-formats/xlsio/faqs/does-xlsio-support-password-protected-macro-in-the-excel-documents)
-* [Does Essential XlsIO provide support for Client Profile?](https://help.syncfusion.com/file-formats/xlsio/faqs/does-essential-xlsio-provide-support-for-client-profile)
+* [Does Essential&reg; XlsIO provide support for Client Profile?](https://help.syncfusion.com/file-formats/xlsio/faqs/does-essential-xlsio-provide-support-for-client-profile)
 * [How to create and open Excel Template files by using XlsIO?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-create-and-open-excel-template-files-by-using-xlsio)
 * [Does XlsIO support Excel files with macros that are digitally signed?](https://help.syncfusion.com/file-formats/xlsio/faqs/does-xlsio-support-excel-files-with-macros-that-are-digitally-signed)
 * [Does XlsIO support password protected macro in the Excel documents?](https://help.syncfusion.com/file-formats/xlsio/faqs/does-xlsio-support-password-protected-macro-in-the-excel-documents)

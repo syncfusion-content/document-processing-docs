@@ -65,29 +65,20 @@ The following code example illustrates how to convert a PowerPoint document into
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET/Convert-PowerPoint-presentation-to-PDF/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET/Convert-PowerPoint-presentation-to-PDF/Program.cs" %}
 //Load the PowerPoint presentation into stream.
 using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
     //Open the existing PowerPoint presentation with loaded stream.
     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
     {
-        //Create the MemoryStream to save the converted PDF.
-        using (MemoryStream pdfStream = new MemoryStream())
+        //Convert PowerPoint into PDF document. 
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Convert the PowerPoint document to PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+            //Save the PDF file to file system. 
+            using (FileStream outputStream = new FileStream("PPTXToPDF.pdf", FileMode.Create, FileAccess.ReadWrite))
             {
-                //Save the converted PDF document to MemoryStream.
-                pdfDocument.Save(pdfStream);
-                pdfStream.Position = 0;
-            }
-            //Create the output PDF file stream
-            using (FileStream fileStreamOutput = File.Create("Output.pdf"))
-            {
-                //Copy the converted PDF stream into created output PDF stream
-                pdfStream.CopyTo(fileStreamOutput);
+                pdfDocument.Save(outputStream);
             }
         }
     }
@@ -155,8 +146,7 @@ The following code example demonstrates how to cancel or continue the PowerPoint
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Show-warning-for-unsupported-elements/.NET/Show-warning-for-unsupported-elements/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Show-warning-for-unsupported-elements/.NET/Show-warning-for-unsupported-elements/Program.cs" %}
 // Open the file as Stream
 using (FileStream pptStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
@@ -481,8 +471,7 @@ The following code sample shows how to preserve structured document tags in the 
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-into-accessible-PDF/.NET/Convert-PowerPoint-into-accessible-PDF/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-into-accessible-PDF/.NET/Convert-PowerPoint-into-accessible-PDF/Program.cs" %}
 //Load the PowerPoint presentation into a stream.
 using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
 {

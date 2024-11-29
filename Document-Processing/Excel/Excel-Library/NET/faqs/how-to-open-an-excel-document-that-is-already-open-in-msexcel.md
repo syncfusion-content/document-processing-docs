@@ -8,7 +8,7 @@ documentation: UG
 
 # How to open an Excel document that is already open in MS-Excel?
 
-Syncfusion XlsIO do support opening an Excel document that is already open in Microsoft Excel. But the approaches are different in .NET Framework and .NET Standard.
+Syncfusion&reg; XlsIO do support opening an Excel document that is already open in Microsoft Excel. But the approaches are different in .NET Framework and .NET Standard.
 
 [OpenReadOnly](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_OpenReadOnly_System_String_) method can be used in .NET Framework whereas **FileShare.ReadWrite** overload should be used while loading the file into file stream in .NET Standard. The following code snippet explains this.
 
