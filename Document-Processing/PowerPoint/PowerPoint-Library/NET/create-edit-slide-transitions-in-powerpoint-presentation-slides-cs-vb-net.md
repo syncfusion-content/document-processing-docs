@@ -33,7 +33,7 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a shape to the slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
 //Set the transition effect type 
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 //Set the transition effect options
@@ -51,7 +51,7 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a shape to the slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
 //Set the transition effect type 
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 //Set the transition effect options
@@ -68,7 +68,7 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 'Add a blank slide to the presentation
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Add a shape to the slide
-Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
+Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300)
 'Set the transition effect type
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard
 'Set the transition effect option
