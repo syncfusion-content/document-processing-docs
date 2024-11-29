@@ -939,7 +939,7 @@ workbook.DetectDateTimeInValue = False
   
 ## Hide Cell Content by setting Number Format
 
-Essential XlsIO supports [hiding rows or columns](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-rows-and-columns) in a worksheet along with [hiding specific range](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-specific-range). You can also hide a particular cell content by setting a specific number format to that cell.
+Essential&reg; XlsIO supports [hiding rows or columns](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-rows-and-columns) in a worksheet along with [hiding specific range](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation#show-or-hide-specific-range). You can also hide a particular cell content by setting a specific number format to that cell.
 
 Refer to the following complete code snippets.
 

@@ -2421,11 +2421,11 @@ A complete working example to ignore error in C# is present on [this GitHub page
 
 ## Calculation Engine
 
-Essential Calculate is now (from v9.1.x.x) integrated with Essential XlsIO, and thus makes it possible to calculate formulas entered at runtime without any additional references or packages.
+Essential&reg; Calculate is now (from v9.1.x.x) integrated with Essential&reg; XlsIO, and thus makes it possible to calculate formulas entered at runtime without any additional references or packages.
 
 N> Do not add reference to Syncfusion.Calculate.Base. It will throw conflict errors as these are already integrated with XlsIO.
 
-N> Only the formulas that are supported by Calculate engine can be calculated at runtime using Essential XlsIO.
+N> Only the formulas that are supported by Calculate engine can be calculated at runtime using Essential&reg; XlsIO.
 
 ## Calculate Options
 

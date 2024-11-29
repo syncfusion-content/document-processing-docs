@@ -8,7 +8,7 @@ documentation: UG
 
 # Frequently Asked Questions Section  
 
-The frequently asked questions in Essential XlsIO are listed below.
+The frequently asked questions in Essential&reg; XlsIO are listed below.
 
 * [How to open an existing XLSX workbook and save it as XLS?](faqs/how-to-open-an-existing-xlsx-workbook-and-save-it-as-xls)
 * [How to open an Excel file from stream?](faqs/how-to-open-an-excel-file-from-stream)
@@ -36,10 +36,10 @@ The frequently asked questions in Essential XlsIO are listed below.
 * [How to sort two or more columns in a pivot table?](faqs/how-to-sort-two-or-more-columns-in-a-pivot-table)
 * [How to import data table with its data type using template markers?](faqs/how-to-import-data-table-with-its-data-type-using-template-markers)
 * [How to zip files using the Syncfusion.Compression.Zip namespace?](faqs/how-to-zip-files-using-the-syncfusion-compression-zip-namespace)
-* [How to zip all the files in subfolders using Syncfusion Compression?](faqs/how-to-zip-all-the-files-in-subfolders-using-syncfusion-compression)
+* [How to zip all the files in subfolders using Syncfusion&reg; Compression?](faqs/how-to-zip-all-the-files-in-subfolders-using-syncfusion-compression)
 * [How to protect the zip files using Syncfusion.Compression.Base?](faqs/how-to-protect-the-zip-files-using-syncfusion-compression-base)
 * [How to un-protect the zip files using Syncfusion.Compression.Base?](faqs/how-to-un-protect-the-zip-files-using-syncfusion-compression-base)
-* [Does Essential XlsIO provide support for Client Profile?](faqs/does-essential-xlsio-provide-support-for-client-profile)
+* [Does Essential&reg; XlsIO provide support for Client Profile?](faqs/does-essential-xlsio-provide-support-for-client-profile)
 * [How to resolve the File does not contain workbook stream error in Syncfusion.XlsIO.Base.dll?](faqs/how-to-resolve-the-file-does-not-contain-workbook-stream-error)
 * [How to resolve Excel cannot open the file filename.xlsx... error?](faqs/how-to-resolve-excel-cannot-open-the-file-because-the-file-format-for-the-file-extension-is-not-valid)
 * [How does Excel file with uninstalled fonts is converted to PDF/Image?](faqs/how-does-excel-file-with-uninstalled-fonts-is-converted-to-pdf-image)
