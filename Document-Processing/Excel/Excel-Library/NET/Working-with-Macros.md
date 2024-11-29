@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Macros in Syncfusion Excel library
+# Working with Macros in Syncfusion&reg; Excel library
 
 Macro is a set of process that can be run repeatedly in Excel document. 
 

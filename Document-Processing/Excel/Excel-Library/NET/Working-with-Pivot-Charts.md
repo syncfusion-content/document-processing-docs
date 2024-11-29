@@ -137,7 +137,7 @@ A complete working example to create pivot chart in C# is present on [this GitHu
 
 ## PivotChart Series
 
-When pivot chart is created with pivot table as data source, Syncfusion XlsIO cannot create the series because the range of the pivot table is different from normal worksheet range. This is the limitation of XlsIO. To use any chart series formatting, the series should be added manually.
+When pivot chart is created with pivot table as data source, Syncfusion&reg; XlsIO cannot create the series because the range of the pivot table is different from normal worksheet range. This is the limitation of XlsIO. To use any chart series formatting, the series should be added manually.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

@@ -23,14 +23,10 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
-//Adds a new section into the Word Document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWParagraph paragraph = section.AddParagraph();
-paragraph.AppendText("Northwind Database");
-paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center; 
-//Adds a paragraph into section
-paragraph = section.AddParagraph();
+//Add a new section and paragraph in the document. 
+document.EnsureMinimal();
+//Get the last paragraph. 
+IWParagraph paragraph = document.LastParagraph;
 //Adds a new bookmark start into paragraph with name "Northwind"
 paragraph.AppendBookmarkStart("Northwind");
 //Adds a text between the bookmark start and end into paragraph
@@ -49,14 +45,10 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Add-bookmark-in-Word-document/.NET/Add-bookmark-in-Word-document/Program.cs" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
-//Adds a new section into the Word Document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWParagraph paragraph = section.AddParagraph();
-paragraph.AppendText("Northwind Database");
-paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center; 
-//Adds a paragraph into section
-paragraph = section.AddParagraph();
+//Add a new section and paragraph in the document. 
+document.EnsureMinimal();
+//Get the last paragraph. 
+IWParagraph paragraph = document.LastParagraph;
 //Adds a new bookmark start into paragraph with name "Northwind"
 paragraph.AppendBookmarkStart("Northwind");
 //Adds a text between the bookmark start and end into paragraph
@@ -74,14 +66,10 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates an instance of WordDocument class (Empty Word Document)
 Dim document As New WordDocument()
-'Adds a new section into the Word Document
-Dim section As IWSection = document.AddSection()
-'Adds a new paragraph into Word document and appends text into paragraph
-Dim paragraph As IWParagraph = section.AddParagraph()
-paragraph.AppendText("Northwind Database")
-paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center
-'Adds a paragraph into section
-paragraph = section.AddParagraph()
+'Add a new section and paragraph in the document.
+document.EnsureMinimal()
+'Get the last paragraph.
+Dim paragraph As IWParagraph = document.LastParagraph
 'Adds a new bookmark start into paragraph with name "Northwind"
 paragraph.AppendBookmarkStart("Northwind")
 'Adds a text between the bookmark start and end into paragraph

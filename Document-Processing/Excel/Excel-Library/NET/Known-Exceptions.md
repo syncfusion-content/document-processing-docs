@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Known Exceptions Details in Excel Library
 
-The list of known exceptions thrown in Essential XlsIO is listed below.
+The list of known exceptions thrown in Essential&reg; XlsIO is listed below.
 
 ## ApplicationException
 

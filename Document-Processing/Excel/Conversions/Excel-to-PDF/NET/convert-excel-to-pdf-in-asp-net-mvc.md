@@ -8,13 +8,13 @@ documentation: UG
 
 # Convert an Excel document to PDF in ASP.NET MVC
 
-Syncfusion XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in ASP.NET MVC**.
+Syncfusion&reg; XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in ASP.NET MVC**.
 
 ## Steps to convert an Excel document to PDF in C#
 
 Step 1: Create a new ASP.NET Web Application Project.
 
-!["Create a ASP.NET Web App project in visual studio](ASP-NET-MVC_images\ASP-NET-MVC_images_img4.png)
+![Create a ASP.NET Web App project in visual studio](ASP-NET-MVC_images\ASP-NET-MVC_images_img4.png)
 
 Step 2: Name the project, choose the framework and click **Create** button.
 
@@ -28,7 +28,7 @@ Step 4: Install the [Syncfusion.ExcelToPdfConverter.AspNet.Mvc5](https://www.nug
 
 ![Install Syncfusion.ExcelToPdfConverter.AspNet.Mvc5 NuGet Package](ASP-NET-MVC_images\ASP-NET-MVC_images_img7.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  
@@ -91,6 +91,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output File](ASP-NET-MVC_images\ASP-NET-MVC_images_img8.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetmvc/Excel/ExcelToPDF#/material3) in ASP.NET MVC.
