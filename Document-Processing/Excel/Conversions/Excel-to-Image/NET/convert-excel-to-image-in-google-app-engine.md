@@ -261,11 +261,11 @@ gcloud app deploy --version v0
 {% endhighlight %}
 {% endtabs %}
 
-!["Add required files to publish folder](GCP_Images/Deploy_ExceltoImage.png)
+![Add required files to publish folder](GCP_Images/Deploy_ExceltoImage.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
 
-!["Add required files to publish folder](GCP_Images/Browse_ExceltoImage.png)
+![Add required files to publish folder](GCP_Images/Browse_ExceltoImage.png)
 
 A complete working example of how to convert an Excel document to Image in GCP is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Convert%20Excel%20to%20Image).
 

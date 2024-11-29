@@ -14,7 +14,7 @@ Syncfusion&reg; XlsIO is a [.NET Excel library](https://www.syncfusion.com/docum
 
 Step 1: Create a new ASP.NET Web Application Project.
 
-!["Create a ASP.NET Web App project in visual studio](ASP-NET-MVC_images\ASP-NET-MVC_images_img4.png)
+![Create a ASP.NET Web App project in visual studio](ASP-NET-MVC_images\ASP-NET-MVC_images_img4.png)
 
 Step 2: Name the project, choose the framework and click **Create** button.
 

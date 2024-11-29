@@ -87,7 +87,7 @@ Step 6: Right-click the project and select **Publish** option.
 
 Step 7: Select the publish target as **Azure**.
 
-![Add a Publish Profile"](Azure-Images/Functions-v1/Publish_Profile.png)
+![Add a Publish Profile](Azure-Images/Functions-v1/Publish_Profile.png)
 
 Step 8: Select the **Create new** button.
 
