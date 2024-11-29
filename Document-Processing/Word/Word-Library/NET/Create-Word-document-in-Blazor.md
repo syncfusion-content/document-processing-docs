@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Word document in Blazor
 
-Syncfusion&reg; Essential DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Blazor**.
+Syncfusion&reg; Essential&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Blazor**.
 
 To quickly get started with creating a Word document in Blazor, check this video:
 
@@ -63,8 +63,8 @@ Step 6: Add the following code in **DocIO.razor** file to create a new button.
 
 {% tabs %}
 {% highlight CSHTML %}
-<h2>Syncfusion DocIO library (Essential DocIO)</h2>
-<p>Syncfusion DocIO library (Essential DocIO) is a Blazor DocIO library used to create, read, edit, and convert Word files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion DocIO library (Essential&reg; DocIO)</h2>
+<p>Syncfusion DocIO library (Essential&reg; DocIO) is a Blazor DocIO library used to create, read, edit, and convert Word files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateWord">Create Word</button>
 {% endhighlight %}
 {% endtabs %}
@@ -294,8 +294,8 @@ Step 6: Add the following code to create a new button.
 
 {% highlight CSHTML %}
 
-<h2>Syncfusion DocIO library (Essential DocIO)</h2>
-<p>Syncfusion Blazor DocIO library (Essential DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion DocIO library (Essential&reg; DocIO)</h2>
+<p>Syncfusion Blazor DocIO library (Essential&reg; DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateWord">Create Word</button>
 
 {% endhighlight %}

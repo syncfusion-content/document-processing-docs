@@ -46,7 +46,7 @@ Only DOCX and WordML format documents are supported.
 Pagination
 </td>
 <td>
-The Essential DocIO makes sensible decision when layout the text, and its supported elements while generating the PDF documents. But however, there may not be guaranteed pagination with all the documents.
+The Essential&reg; DocIO makes sensible decision when layout the text, and its supported elements while generating the PDF documents. But however, there may not be guaranteed pagination with all the documents.
 </td>
 </tr>
 <tr>

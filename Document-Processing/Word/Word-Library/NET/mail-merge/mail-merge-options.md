@@ -211,7 +211,7 @@ N>If any white space or line break exists in the merge field's parent paragraph,
 
 ## Remove empty merge fields
 
-Essential DocIO removes or keeps the unmerged merge fields in the output document based on the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property on each mail merge execution.
+Essential&reg; DocIO removes or keeps the unmerged merge fields in the output document based on the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property on each mail merge execution.
 
 When a merge field is considered as unmerged during mail merge process?
 

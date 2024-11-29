@@ -20,7 +20,7 @@ N> You can use mathematical equation only in documents that are saved in the Ope
 
 ## Types of equation
 
-The following different structures of equation can be created by using the Essential DocIO.
+The following different structures of equation can be created by using the Essential&reg; DocIO.
 
 ![Different structures of equation in Microsoft Word application](WorkingwithMathematicalEquation_images/EquationStructures.png)
 

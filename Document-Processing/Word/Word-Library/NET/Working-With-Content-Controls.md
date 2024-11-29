@@ -1686,7 +1686,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Types of Content Controls
 
-The following types of content controls can be created by using the Essential DocIO.
+The following types of content controls can be created by using the Essential&reg; DocIO.
 
 * Rich Text
 * Plain Text

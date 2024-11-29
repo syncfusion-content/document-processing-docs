@@ -10,7 +10,7 @@ documentation: UG
 To quickly get started with the .NET Word (DOCIO) Library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
 
-In this page, you can see how to create a simple Word document by using Essential DocIO’s API. For creating and manipulating a Word document, the following assemblies are required to be referenced in your application.
+In this page, you can see how to create a simple Word document by using Essential&reg; DocIO’s API. For creating and manipulating a Word document, the following assemblies are required to be referenced in your application.
 
 <table>
 <thead>
@@ -371,7 +371,7 @@ textRange = paragraph.AppendText("AdventureWorks Cycles, the fictitious company 
 
 {% endtabs %}
 
-Essential DocIO allow you to create simple and multi-level lists. The following code snippet explains about how to create a numbered and bulleted list.
+Essential&reg; DocIO allow you to create simple and multi-level lists. The following code snippet explains about how to create a numbered and bulleted list.
 
 {% tabs %}
 
@@ -607,7 +607,7 @@ The resultant Word document looks as follows.
 
 ## Modifying an existing Word document
 
-Essential DocIO allows you to manipulate an existing Word document, RTF, WordML, HTML and Plain text files. You can modify the documents either by manipulating DocIO’s DOM or by using DocIO’s built-in functionalities such as Find and Replace, replacing bookmark contents etc.
+Essential&reg; DocIO allows you to manipulate an existing Word document, RTF, WordML, HTML and Plain text files. You can modify the documents either by manipulating DocIO’s DOM or by using DocIO’s built-in functionalities such as Find and Replace, replacing bookmark contents etc.
 
 Here, you can see how an existing Word document is loaded into DocIO’s DOM, replaces an existing content with another and finally saves the Word document.
 
@@ -713,9 +713,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Performing Mail merge
 
-Essential DocIO allows to generate documents by filling data in template document from data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.  
+Essential&reg; DocIO allows to generate documents by filling data in template document from data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.  
 
-The following data sources are supported by Essential DocIO for performing Mail merge.
+The following data sources are supported by Essential&reg; DocIO for performing Mail merge.
 
 * String Arrays
 * ADO.NET objects
@@ -1046,7 +1046,7 @@ The resultant document looks as follows.
 
 ## Converting Word document to PDF
 
-Essential DocIO allows you to convert a Word document into PDF document in a few lines of code. 
+Essential&reg; DocIO allows you to convert a Word document into PDF document in a few lines of code. 
 
 Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) to know about the assemblies required to perform Word to PDF conversion in your application.
 

@@ -198,6 +198,6 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Check-compatibility-mode).
 
-## Which units does Essential DocIO uses for measurement properties such as size, margins, etc, in a Word document?
+## Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?
 
-Essential DocIO library uses Points for measurement properties in a Word document.
+Essential&reg; DocIO library uses Points for measurement properties in a Word document.

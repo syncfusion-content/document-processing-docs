@@ -170,7 +170,7 @@ The following table illustrates the supported Markdown elements in Word to Markd
 
 ### Code blocks
 
-The Essential DocIO supports two types of code blocks in Word to Markdown conversion. 
+The Essential&reg; DocIO supports two types of code blocks in Word to Markdown conversion. 
 
 * Indented code block: Set the paragraph style as “IndentedCode.”
 * Fenced code block: Set the paragraph style as “FencedCode.”

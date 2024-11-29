@@ -8,14 +8,14 @@ documentation: UG
 
 # Convert Word document to PDF in C#
 
-The Word document files can be efficiently converted to PDF format using the .NET Word (DocIO) library. With just a few lines of code, you can seamlessly create a PDF document from scratch or convert an existing Word document. By leveraging the capabilities of Essential DocIO, the conversion process is executed flawlessly.
+The Word document files can be efficiently converted to PDF format using the .NET Word (DocIO) library. With just a few lines of code, you can seamlessly create a PDF document from scratch or convert an existing Word document. By leveraging the capabilities of Essential&reg; DocIO, the conversion process is executed flawlessly.
 
 Syncfusion&reg; Word to PDF converter is highly versatile, ensuring seamless performance across a range of platforms, including [Azure Cloud](), [Amazon Web Service (AWS)](),[Google Cloud Platform (GCP)](), [ASP.NET Core](), [ASP.NET MVC](), [ASP.NET](), [Blazor](), [Xamarin](), [Windows Forms](), [WPF](), [UWP](), [WinUI](), [.NET MAUI](), [Linux](), [Mac](). It guarantees compatibility with Windows, Linux, and macOS, making it a reliable choice for diverse operating environments.
 
 ## Key features for Word Converter
 
 * Customize the [embedding of TrueType fonts]() in two ways.
-* Essential DocIO supports [PDF documents for accessibility (508 compliance)]().
+* Essential&reg; DocIO supports [PDF documents for accessibility (508 compliance)]().
 * Restrict all permissions in a PDF document using [Pdf Permissions Flags]().
 * [Preserve comments balloons]() in a generated PDF when converting Word documents with comments.
 * [Preserve revision marks]() in a generated PDF when converting Word documents with tracked changes or revisions.
@@ -28,11 +28,11 @@ Syncfusion&reg; Word to PDF converter is highly versatile, ensuring seamless per
 
 ##  Key features for Word Converter
 * You can customize the [TrueType fonts embedding]() in two ways.
-* Essential DocIO allows [PDF document for accessibility (508 compliance)]() support.
+* Essential&reg; DocIO allows [PDF document for accessibility (508 compliance)]() support.
 * You can [restrict all the permission in a PDF document]() using Pdf Permissions Flags.
 * You can [preserve comments balloon]() in a generated PDF when converting Word documents with comments.
 * You can [preserve revision marks]() in a generated PDF when converting Word documents with tracked changes or revisions.
-* Essential DocIO allows [hyphenating text]() in a Word document while converting it to PDF format.
+* Essential&reg; DocIO allows [hyphenating text]() in a Word document while converting it to PDF format.
 * You can [preserve the complex script text]() in the converted PDF document.
 * You can set the [Pdf Conformance Level]() while converting Word to PDF.
 * You can [reduces the Main Memory usage]() in Word to PDF conversion.

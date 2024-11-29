@@ -127,7 +127,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 ### Command Line Uninstallation
 
-Syncfusion&reg; Essential Word can be uninstalled silently using the Command Line.
+Syncfusion&reg; Essential&reg; Word can be uninstalled silently using the Command Line.
 
 1.	Run the Syncfusion&reg; Word installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialword_(version).exe file will be extracted into the Temp directory.

@@ -6,9 +6,9 @@ control: DocIO
 documentation: UG
 ---
 
-# Essential DocIO in Docker
+# Essential&reg; DocIO in Docker
 
-Docker is an open platform for developing, shipping and running applications. You can use Essential DocIO in Docker container to create, read, write and convert Microsoft Word documents into various formats. From this page, you can learn how to convert Word document to PDF in Linux Docker using Syncfusion&reg; Word library (Essential DocIO). 
+Docker is an open platform for developing, shipping and running applications. You can use Essential&reg; DocIO in Docker container to create, read, write and convert Microsoft Word documents into various formats. From this page, you can learn how to convert Word document to PDF in Linux Docker using Syncfusion&reg; Word library (Essential&reg; DocIO). 
 
 ## Steps to convert a Word document to PDF in Linux Docker
 

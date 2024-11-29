@@ -170,7 +170,7 @@ In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeti
 
 ## Customization settings
 
-The Essential DocIO provides settings while performing Word to PDF conversion mentioned below, 
+The Essential&reg; DocIO provides settings while performing Word to PDF conversion mentioned below, 
 
 ### Fast rendering
 
@@ -221,7 +221,7 @@ This setting allows you to preserve the **complex script text** in the converted
 
 ### Hyphenation in Word-to-PDF conversion
 
-Essential DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion).
+Essential&reg; DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion).
 
 ### Track changes in Word-to-PDF conversion
 
@@ -241,9 +241,9 @@ You can restrict all the permission in a PDF document using [PdfPermissionsFlags
 
 ## Font Substitution
 
-When the necessary fonts used in the Word document has not been installed in the production machine, then Essential DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. 
+When the necessary fonts used in the Word document has not been installed in the production machine, then Essential&reg; DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. 
 
-To avoid this, the Essential DocIO library allows you to set an alternate font for the missing font used in the Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf).
+To avoid this, the Essential&reg; DocIO library allows you to set an alternate font for the missing font used in the Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf).
 
 ## Fallback fonts
 

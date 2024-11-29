@@ -8,7 +8,7 @@ documentation: UG
 
 # Converting Word document to EPUB
 
-The Word document files are converted as EPUB v2.0 file format with few lines of code by using the Essential DocIO.
+The Word document files are converted as EPUB v2.0 file format with few lines of code by using the Essential&reg; DocIO.
 
 ## Assemblies and NuGet packages required
 

@@ -25,7 +25,7 @@ The [.NET Word Library](https://www.syncfusion.com/document-processing/word-fram
 * Example: Image and PDF.
 
 
-Essential DocIO can convert various flow document as fixed document by using our layout engine. Following conversions are supported by Essential DocIO.
+Essential&reg; DocIO can convert various flow document as fixed document by using our layout engine. Following conversions are supported by Essential&reg; DocIO.
 
 * Microsoft Word file format Conversions.
 * [Word to PDF](https://www.syncfusion.com/document-processing/word-framework/net/word-to-pdf-conversion).

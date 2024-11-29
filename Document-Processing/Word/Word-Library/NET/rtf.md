@@ -20,7 +20,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [RTF conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [RTF conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
-The Essential DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
+The Essential&reg; DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 

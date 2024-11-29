@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to Image in AWS Elastic Beanstalk
 
-Syncfusion&reg; Essential DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Elastic Beanstalk**.
+Syncfusion&reg; Essential&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Elastic Beanstalk**.
 
 ## Steps to convert Word document to Image in AWS Elastic Beanstalk
 

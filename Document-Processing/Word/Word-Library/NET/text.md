@@ -8,7 +8,7 @@ documentation: UG
 
 # Text Conversions in Word Library
 
-The Essential DocIO converts the Word document into Text file and vice versa. 
+The Essential&reg; DocIO converts the Word document into Text file and vice versa. 
 
 ## Convert Word to Text
 
