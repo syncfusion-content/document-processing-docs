@@ -20,31 +20,39 @@ The following code example demonstrates how to encrypt a PowerPoint Presentation
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Encrypt-PowerPoint-with-password/.NET/Encrypt-PowerPoint-with-password/Program.cs" %}
 //Open an existing presentation.
-using FileStream inputStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read);
-using IPresentation presentation = Presentation.Open(inputStream);
-//Encrypt the presentation with a password.
-presentation.Encrypt("syncfusion");
-//Save the presentation.
-using FileStream outputStream = new ("Result.pptx", FileMode.Create, FileAccess.ReadWrite);
-presentation.Save(outputStream);
+using (FileStream inputStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
+{
+    using (IPresentation presentation = Presentation.Open(inputStream))
+	{
+		//Encrypt the presentation with a password.
+		presentation.Encrypt("syncfusion");
+		//Saves the Presentation.
+		using (FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create))
+		{
+			presentation.Save(outputStream);
+		}
+	}
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing presentation.
-IPresentation presentation = Presentation.Open("Template.pptx");
-//Encrypt the presentation with a password.
-presentation.Encrypt("syncfusion");
-//Save the presentation directly to the output file.
-presentation.Save("Result.pptx");
+using (IPresentation presentation = Presentation.Open("Template.pptx"))
+{
+    //Encrypt the presentation with a password.
+	presentation.Encrypt("syncfusion");
+    //Saves the Presentation.
+    presentation.Save("Sample.pptx");
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing presentation.
-Using presentation As IPresentation = Presentation.Open("Template.pptx")
+Using presentationDocument As IPresentation = Presentation.Open("Template.pptx")
     'Encrypt the presentation with a password.
-    presentation.Encrypt("syncfusion")   
-    'Save the presentation directly to the file.
-    presentation.Save("Result.pptx")
+    presentation.Encrypt("syncfusion")
+    'Saves the Presentation.
+    presentationDocument.Save("Sample.pptx")
 End Using
 {% endhighlight %}
 
@@ -103,14 +111,21 @@ The following code example demonstrates removing the encryption from a PowerPoin
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Remove-encryption/.NET/Remove-encryption/Program.cs" %}
-//Open an existing presentation. 
-using FileStream inputStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read); 
-using IPresentation presentation = Presentation.Open(inputStream, "syncfusion"); 
-//Decrypt the presentation. 
-presentation.RemoveEncryption(); 
-//Save the presentation. 
-using FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create, FileAccess.ReadWrite); 
-presentation.Save(outputStream);
+//Opens an existing Presentation from file system and it can be decrypted by using the provided password.
+using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
+{
+    //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
+    using (IPresentation presentation = Presentation.Open(inputStream, "syncfusion"))
+    {
+        //Decrypts the document.
+        presentation.RemoveEncryption();
+        //Save the PowerPoint Presentation as stream.
+        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create))
+        {
+            presentation.Save(outputStream);
+        }
+    }
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
