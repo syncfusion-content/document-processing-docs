@@ -1,5 +1,5 @@
 ---
-title: Split Word documents in C# | DocIO | Syncfusion
+title: Split Word documents in C# | DocIO | Syncfusion&reg;
 description: Learn how to split a large Word document into several smaller ones using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Split Word documents
 
-Syncfusion Word Library allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
+Syncfusion&reg; Word Library allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
 
 By using this feature, you can be able to split/extract the necessary parts from the original document for further processing.
 

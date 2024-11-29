@@ -1,5 +1,5 @@
 ---
-title: Unsupported elements in Word to PDF Conversion in C# | DocIO | Syncfusion
+title: Unsupported elements in Word to PDF Conversion in C# | DocIO | Syncfusion&reg;
 description: Learn about unsupported elements in Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

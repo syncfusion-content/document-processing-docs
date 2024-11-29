@@ -1,5 +1,5 @@
 ---
-title: Convert Word to PDF in ASP.NET Core | Syncfusion
+title: Convert Word to PDF in ASP.NET Core | Syncfusion&reg;
 description: Convert Word to PDF without Microsoft Word or interop dependencies in ASP.NET Core application using .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to PDF in ASP.NET Core
 
-Syncfusion Essential DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in ASP.NET Core**.
+Syncfusion&reg; Essential DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in ASP.NET Core**.
 
 ## Steps to convert word document to PDF in C#:
 
@@ -21,7 +21,7 @@ Step 2: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/pa
 ![Install DocIO .NET Core NuGet package](ASP-NET-Core_images/NugetPackage.png)
 
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -98,6 +98,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output PDF document in ASP.NET Core](WordToPDF_images/OutputImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/Word/WordToPDF#/material3) in ASP.NET Core.

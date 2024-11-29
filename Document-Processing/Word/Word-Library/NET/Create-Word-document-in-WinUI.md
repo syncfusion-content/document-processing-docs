@@ -1,6 +1,6 @@
 ---
-title: Create Word document in WinUI | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in WinUI application using Syncfusion WinUI Word (DocIO) library.
+title: Create Word document in WinUI | Syncfusion&reg;
+description: Create Word document without Microsoft Word or interop dependencies in WinUI application using Syncfusion&reg; WinUI Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Word document in WinUI
 
-Syncfusion Essential DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in WinUI**.
+Syncfusion&reg; Essential DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in WinUI**.
 
 **Prerequisites:**
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -32,7 +32,7 @@ Step 4: Install the Syncfusion.DocIO.NET NuGet package as a reference to your pr
 
 ![Install the DocIO .NET NuGet package](WinUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
 
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -302,7 +302,7 @@ By executing the program, you will get the **Word document** as follows.
 
 ![WinUI Desktop output Word document](WinUI_Images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core.
 
@@ -326,7 +326,7 @@ Step 4: Install the Syncfusion.DocIO.NET NuGet package as a reference to your pr
 
 ![Install the DocIO .NET NuGet package](WinUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
 
 Step 5: Add a new button in the **MainPage.xaml** as shown below.
 
@@ -649,6 +649,6 @@ async void Save(MemoryStream streams, string filename)
 
 {% endtabs %}
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core.

@@ -1,6 +1,6 @@
 ---
-title: Word document conversion in C# | DocIO | Syncfusion
-description: This section illustrates how to convert a Word document into other supported file formats using Syncfusion Word library (Essential DocIO)
+title: Word document conversion in C# | DocIO | Syncfusion&reg;
+description: This section illustrates how to convert a Word document into other supported file formats using Syncfusion&reg; Word library (Essential DocIO)
 platform: document-processing
 control: DocIO
 documentation: UG

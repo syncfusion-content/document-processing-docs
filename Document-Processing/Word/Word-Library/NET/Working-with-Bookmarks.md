@@ -1,5 +1,5 @@
 ---
-title: Working with Bookmarks in .NET Word library | Syncfusion
+title: Working with Bookmarks in .NET Word library | Syncfusion&reg;
 description: Learn how to add or remove bookmarks, replace, or delete the contents of bookmarks in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

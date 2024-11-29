@@ -1,5 +1,5 @@
 ---
-title: Overview of .NET Word (DocIO) library | Syncfusion
+title: Overview of .NET Word (DocIO) library | Syncfusion&reg;
 description: .NET Word (DocIO) library to create, read, edit, and convert Word documents in C#, VB.NET without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

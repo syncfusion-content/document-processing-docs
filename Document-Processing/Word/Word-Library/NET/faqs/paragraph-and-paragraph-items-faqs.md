@@ -1,5 +1,5 @@
 ---
-title: FAQ about Paragraph and Paragraph Items | DocIO | Syncfusion
+title: FAQ about Paragraph and Paragraph Items | DocIO | Syncfusion&reg;
 description: Learn about the frequently asked questions about paragraph and paragraph items in Word document in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

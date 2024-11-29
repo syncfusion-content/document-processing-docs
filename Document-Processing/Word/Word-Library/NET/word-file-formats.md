@@ -1,5 +1,5 @@
 ---
-title: Word file format conversions in C# | DocIO | Syncfusion
+title: Word file format conversions in C# | DocIO | Syncfusion&reg;
 description: Learn about the supported Word file format conversions such a Word open XML formats, Word processing XML, and Word binary in the .NET Word library.
 platform: document-processing
 control: DocIO
