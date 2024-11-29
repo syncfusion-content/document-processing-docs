@@ -40,7 +40,7 @@ using (FileStream inputStream = new FileStream("Template.pptx", FileMode.Open, F
 using (IPresentation presentation = Presentation.Open("Template.pptx"))
 {
     //Encrypt the presentation with a password.
-	presentation.Encrypt("syncfusion");
+    presentation.Encrypt("syncfusion");
     //Saves the Presentation.
     presentation.Save("Sample.pptx");
 }
