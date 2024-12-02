@@ -11,7 +11,7 @@ documentation: UG
 
 ### Add Footer to a Slide in PowerPoint
 
-Essential Presentation library facilitates adding [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) in a slide of the PowerPoint Presentation. Footers are useful in providing quick information about your document or data. 
+Essential&reg; Presentation library facilitates adding [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) in a slide of the PowerPoint Presentation. Footers are useful in providing quick information about your document or data. 
 
 The following code example demonstrates how to add a footer to the presentation.
 
@@ -99,7 +99,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Add Date and Time in PowerPoint Slide
 
-Essential Presentation library facilitates adding Date and Time to a slide of the PowerPoint Presentation. Date and Time comes with formatting options for date stamp as either it can be updated automatically using computer's clock or stay fixed until you change it.
+Essential&reg; Presentation library facilitates adding Date and Time to a slide of the PowerPoint Presentation. Date and Time comes with formatting options for date stamp as either it can be updated automatically using computer's clock or stay fixed until you change it.
 
 The following code example demonstrates how to add Date and Time to a slide of the presentation.
 
@@ -187,7 +187,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Add Slide Number to PowerPoint Slides
 
-Essential Presentation library facilitates adding Slide number to a slide of the PowerPoint Presentation. 
+Essential&reg; Presentation library facilitates adding Slide number to a slide of the PowerPoint Presentation. 
 
 The following code example demonstrates how to add Slide number to a slide of the presentation.
 
@@ -269,7 +269,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Add Footer to Master and Layout slides
 
-Essential Presentation library facilitates adding Footers to both master and layout slides of the PowerPoint Presentation. If you want to use a different format for the Footers, then a great way to apply the format to all the slides (existing and new slides) is using the Slide Master and Slide layout. Under Slide Master and Slide layout, you can control the styles for footer options and this way you can apply different styles to the slides, or re-locate the Footer shape to any other position based on your requirement
+Essential&reg; Presentation library facilitates adding Footers to both master and layout slides of the PowerPoint Presentation. If you want to use a different format for the Footers, then a great way to apply the format to all the slides (existing and new slides) is using the Slide Master and Slide layout. Under Slide Master and Slide layout, you can control the styles for footer options and this way you can apply different styles to the slides, or re-locate the Footer shape to any other position based on your requirement
 
 The following code example demonstrates how to add a Footers to the master and layout slides of the presentation.
 
@@ -385,9 +385,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Add Headers and Footers into Notes slide
 
-Essential Presentation library facilitates adding Headers and Footers to the Notes slide of the PowerPoint Presentation. 
+Essential&reg; Presentation library facilitates adding Headers and Footers to the Notes slide of the PowerPoint Presentation. 
 
-N> 1. As per Microsoft PowerPoint behavior, you can add Header only in Notes slide of the PowerPoint using our Essential Presentation Library.
+N> 1. As per Microsoft PowerPoint behavior, you can add Header only in Notes slide of the PowerPoint using our Essential&reg; Presentation Library.
 N> 2. Header added in Notes slide will be visible only in the Notes page of the PowerPoint viewer. 
 
 The following code example demonstrates how to add a Headers and Footers to the Notes slide of the presentation.
@@ -484,7 +484,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Edit Footer text of an existing Slide
 
-Essential Presentation library facilitates editing the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) text of an existing slide in the PowerPoint Presentation. 
+Essential&reg; Presentation library facilitates editing the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) text of an existing slide in the PowerPoint Presentation. 
 
 The following code example demonstrates how to edit [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) text of an existing slide in the presentation.
 
@@ -543,9 +543,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Edit Header text of an existing Notes slide
 
-Essential Presentation library facilitates editing of Headers for the Notes slide of the PowerPoint Presentation.
+Essential&reg; Presentation library facilitates editing of Headers for the Notes slide of the PowerPoint Presentation.
 
-N> 1. As per Microsoft PowerPoint behavior, you can edit Header only in Notes slide of the PowerPoint using our Essential Presentation Library.
+N> 1. As per Microsoft PowerPoint behavior, you can edit Header only in Notes slide of the PowerPoint using our Essential&reg; Presentation Library.
 N> 2. Header edited in Notes slide will be visible only in the Notes page of the PowerPoint viewer. 
 
 The following code example demonstrates how to edit the Headers for the Notes slide of the presentation.
@@ -602,7 +602,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modify Date and Time format of an existing Slide
 
-Essential Presentation library facilitates modifying the Date and Time of an existing slide in the PowerPoint Presentation. 
+Essential&reg; Presentation library facilitates modifying the Date and Time of an existing slide in the PowerPoint Presentation. 
 
 The following code example demonstrates how to modify Date and Time of an existing slide in the presentation.
 
@@ -661,7 +661,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modify font of the Footer text
 
-Essential Presentation library facilitates editing font of the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) content in slide of the PowerPoint Presentation. 
+Essential&reg; Presentation library facilitates editing font of the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) content in slide of the PowerPoint Presentation. 
 
 The following code example demonstrates how to edit font of the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) content in slide of the presentation.
 
@@ -748,7 +748,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Remove Headers and Footers from Title Slides
 
-Essential Presentation library facilitates removing Footers from all the [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SlideLayoutType.html) slides in the PowerPoint Presentation. 
+Essential&reg; Presentation library facilitates removing Footers from all the [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SlideLayoutType.html) slides in the PowerPoint Presentation. 
 
 The following code example demonstrates how to remove Footers from all the [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SlideLayoutType.html) slides in the presentation.
 

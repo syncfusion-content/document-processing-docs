@@ -62,7 +62,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Decrypting the PowerPoint Presentation
 
-Essential Presentation provides ability to remove the encryption from the PowerPoint Presentation. You can decrypt a PowerPoint Presentation by opening it with the password.
+Essential&reg; Presentation provides ability to remove the encryption from the PowerPoint Presentation. You can decrypt a PowerPoint Presentation by opening it with the password.
 
 **Opening** **the** **Encrypted** **PowerPoint** **Presentation**
 

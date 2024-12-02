@@ -1,6 +1,6 @@
 ---
 title: Required NuGet Packages for PowerPoint library |Syncfusion&reg;
-description: This section illustrates the NuGet packages required to use Syncfusion&reg; PowerPoint library (Essential Presentation) in various platforms and frameworks
+description: This section illustrates the NuGet packages required to use Syncfusion&reg; PowerPoint library (Essential&reg; Presentation) in various platforms and frameworks
 platform: document-processing
 control: PowerPoint
 documentation: UG

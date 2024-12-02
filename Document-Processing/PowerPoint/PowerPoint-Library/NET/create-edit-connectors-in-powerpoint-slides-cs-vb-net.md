@@ -9,7 +9,7 @@ keywords: PowerPoint, slide, connectors, pptx, shapes
 
 # Adding connectors in PowerPoint slides
 
-Essential Presentation library supports adding, editing, and removing the connectors in a PowerPoint file. The following code example demonstrates how to add a connector between two shapes.
+Essential&reg; Presentation library supports adding, editing, and removing the connectors in a PowerPoint file. The following code example demonstrates how to add a connector between two shapes.
 
 The following code example demonstrates how to add a connector in PowerPoint slide.
 

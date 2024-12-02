@@ -1,6 +1,6 @@
 ---
 title: Create and edit PowerPoint files in CSharp |Syncfusion&reg;|
-description: Essential Presentation is a .NET PowerPoint library to create, read, edit, & convert PowerPoint files in WinForms, WPF, UWP, ASP.NET Core & Xamarin applications
+description: Essential&reg; Presentation is a .NET PowerPoint library to create, read, edit, & convert PowerPoint files in WinForms, WPF, UWP, ASP.NET Core & Xamarin applications
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -38,8 +38,8 @@ It is a non-UI component that provides a full-fledged PowerPoint presentation in
 * Microsoft 365
 
 
-N> 1. The current version of Essential Presentation supports the .PPTX, .PPTM, .POTX, .POTM file formats only.
-N> 2. The current version of Essential Presentation does not support some features in Microsoft PowerPoint such as Word Art, creation and editing of Handouts, equations, create and edit audio and video content, built-in themes, and its variants.
+N> 1. The current version of Essential&reg; Presentation supports the .PPTX, .PPTM, .POTX, .POTM file formats only.
+N> 2. The current version of Essential&reg; Presentation does not support some features in Microsoft PowerPoint such as Word Art, creation and editing of Handouts, equations, create and edit audio and video content, built-in themes, and its variants.
 
 ## See Also
 

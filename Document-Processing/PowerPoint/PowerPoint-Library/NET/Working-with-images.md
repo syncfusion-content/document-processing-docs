@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding Images
 
-Essential Presentation library facilitates adding or modifying the images in a PowerPoint Presentation. The following code example demonstrates how to add a new image to the presentation.
+Essential&reg; Presentation library facilitates adding or modifying the images in a PowerPoint Presentation. The following code example demonstrates how to add a new image to the presentation.
 
 {% tabs %}
 
@@ -146,7 +146,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding SVG Images
 
-SVG images can be inserted in PowerPoint slide for displaying images with accuracy when scaling or zooming page. The Essential Presentation library allows you to insert and edit an SVG image along with its fallback image.
+SVG images can be inserted in PowerPoint slide for displaying images with accuracy when scaling or zooming page. The Essential&reg; Presentation library allows you to insert and edit an SVG image along with its fallback image.
 
 The following code example demonstrates how to add a new SVG image into a slide.
 

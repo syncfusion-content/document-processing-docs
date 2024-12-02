@@ -127,7 +127,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 ### Command Line Uninstallation
 
-Syncfusion&reg; Essential PowerPoint can be uninstalled silently using the Command Line.
+Syncfusion&reg; Essential&reg; PowerPoint can be uninstalled silently using the Command Line.
 
 1.	Run the Syncfusion&reg; PowerPoint installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialpowerpoint_(version).exe file will be extracted into the Temp directory.

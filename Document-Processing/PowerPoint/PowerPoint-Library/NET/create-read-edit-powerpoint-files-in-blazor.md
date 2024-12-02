@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PowerPoint document in Blazor
 
-Syncfusion&reg; Essential PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in Blazor**.
+Syncfusion&reg; Essential&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in Blazor**.
 
 **Prerequisites**
 
@@ -61,8 +61,8 @@ Step 6: Add the following code to create a new button.
 
 {% highlight CSHTML %}
 
-<h2>Syncfusion&reg; Presentation library (Essential Presentation)</h2>
-<p>Syncfusion&reg; Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion&reg; Presentation library (Essential&reg; Presentation)</h2>
+<p>Syncfusion&reg; Blazor Presentation library (Essential&reg; Presentation) used to create, read, edit, and convert Presentation files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreatePowerPoint">Create PowerPoint</button>
 
 {% endhighlight %}
@@ -254,8 +254,8 @@ Step 6: Add the following code to create a new button.
 
 {% highlight CSHTML %}
 
-<h2>Syncfusion Presentation library (Essential Presentation)</h2>
-<p>Syncfusion Blazor Presentation library (Essential Presentation) used to create, read, edit, and convert Presentation files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion Presentation library (Essential&reg; Presentation)</h2>
+<p>Syncfusion Blazor Presentation library (Essential&reg; Presentation) used to create, read, edit, and convert Presentation files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreatePowerPoint">Create PowerPoint</button>
 
 {% endhighlight %}
