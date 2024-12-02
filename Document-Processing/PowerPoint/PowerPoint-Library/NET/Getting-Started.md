@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Essential Presentation library | Syncfusion
+title: Getting Started with Essential Presentation library | Syncfusion&reg;
 description: Getting started with Essential Presentation library; Creating a PowerPoint Presentation; Modifying the existing PowerPoint presentation
 platform: document-processing
 control: Presentation
@@ -55,7 +55,7 @@ For creating and manipulating a PowerPoint Presentation, include the following a
     </tbody>
 </table>
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
 
 Include the following namespace in your .cs or .vb code as shown below
 

@@ -1,6 +1,6 @@
 ---
-title: Working with SmartArt in PowerPoint Presentation | Syncfusion
-description: Code examples to create, edit, and format PowerPoint smartArt in C# using Syncfusion PowerPoint library without Microsoft PowerPoint or interop dependencies.
+title: Working with SmartArt in PowerPoint Presentation | Syncfusion&reg;
+description: Code examples to create, edit, and format PowerPoint smartArt in C# using Syncfusion&reg; PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG

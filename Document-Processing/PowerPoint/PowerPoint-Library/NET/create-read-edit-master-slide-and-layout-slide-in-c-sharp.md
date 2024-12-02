@@ -1,6 +1,6 @@
 ---
-title: Create, read and edit Master and Layout slides in CSharp |Syncfusion|
-description: Create, read, and edit Master slides and Layout slides using Syncfusion PowerPoint library (Essential Presentation).
+title: Create, read and edit Master and Layout slides in CSharp |Syncfusion&reg;|
+description: Create, read, and edit Master slides and Layout slides using Syncfusion&reg; PowerPoint library (Essential Presentation).
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -126,7 +126,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create a custom LayoutSlide
 
-The real-world scenarios always require more predefined templates. The Syncfusion PowerPoint library lets you build your own custom layout designs and use them to create individual slides.
+The real-world scenarios always require more predefined templates. The Syncfusion&reg; PowerPoint library lets you build your own custom layout designs and use them to create individual slides.
 
 The following code example demonstrates how to create new custom layout slide and access layout slide in Presentation.
 

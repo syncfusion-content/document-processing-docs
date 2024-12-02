@@ -1,8 +1,8 @@
 ---
-title: Create, edit and format table in PowerPoint slide | Syncfusion |
+title: Create, edit and format table in PowerPoint slide | Syncfusion&reg; |
 description: Code examples to create, edit and format PowerPoint tables in .NET, C#, web, ASP.NET, UWP, MVC, Xamarin and .NET Core
 platform: document-processing
-control: Syncfusion PowerPoint presentation
+control: Syncfusion&reg; PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, table, format-table, rows, columns, pptx
 ---

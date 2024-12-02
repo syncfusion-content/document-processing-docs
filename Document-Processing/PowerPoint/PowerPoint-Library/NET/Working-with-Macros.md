@@ -1,6 +1,6 @@
 ---
-title: Create and edit macros in PowerPoint files | Syncfusion |
-description: Learn here all about working with macros in Syncfusion Essential PowerPoint Presentation Library and more.
+title: Create and edit macros in PowerPoint files | Syncfusion&reg; |
+description: Learn here all about working with macros in Syncfusion&reg; Essential PowerPoint Presentation Library and more.
 platform: document-processing
 control: Presentation
 documentation: UG

@@ -1,6 +1,6 @@
 ---
-title: Frequently Asked Questions for PowerPoint Presentations | Syncfusion
-description: This section illustrates about frequently asked questions in various options by using Essential Syncfusion Presentation library.
+title: Frequently Asked Questions for PowerPoint Presentations | Syncfusion&reg;
+description: This section illustrates about frequently asked questions in various options by using Essential Syncfusion&reg; Presentation library.
 platform: document-processing
 control: Presentation
 documentation: UG

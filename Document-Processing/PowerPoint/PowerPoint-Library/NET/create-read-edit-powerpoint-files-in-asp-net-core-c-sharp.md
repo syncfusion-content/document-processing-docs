@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in ASP.NET Core | Syncfusion
+title: Create and edit PowerPoint files in ASP.NET Core | Syncfusion&reg;
 description: A .NET Core PowerPoint library to create, read and edit PowerPoint files in .NET Core applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read and edit a PowerPoint file in ASP.NET Core
 
-You can create or edit a PowerPoint file with the Syncfusion [ASP.NET Core PowerPoint library](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp). The below are the steps.
+You can create or edit a PowerPoint file with the Syncfusion&reg; [ASP.NET Core PowerPoint library](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp). The below are the steps.
 
 To quickly get started with creating a PowerPoint file in ASP.NET Core, check this video:
 
@@ -23,7 +23,7 @@ Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 
 ![Install Presentation .Net Core Nuget](Workingwith-Core/Nuget-Package_Open_and_Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies were included in our project.
 <ul>
@@ -197,6 +197,6 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core. 

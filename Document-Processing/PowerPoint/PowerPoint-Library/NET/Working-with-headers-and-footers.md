@@ -1,5 +1,5 @@
 ---
-title: Add or Modify Headers and Footers in PowerPoint slides | Syncfusion
+title: Add or Modify Headers and Footers in PowerPoint slides | Syncfusion&reg;
 description: This section illustrates about adding, modifying and removing of Headers and Footers in PowerPoint slides without Microsoft PowerPoint or Office interop.
 platform: document-processing
 control: Presentation

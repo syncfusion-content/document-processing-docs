@@ -1,5 +1,5 @@
 ---
-title: Working with Hyperlinks | Syncfusion
+title: Working with Hyperlinks | Syncfusion&reg;
 description: This section explains how to add hyperlink in the PowerPoint slide using Essential Presentation library
 platform: document-processing
 control: Presentation

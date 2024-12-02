@@ -1,5 +1,5 @@
 ---
-title: Convert PPTX to Image in Azure App Service on Linux | Syncfusion
+title: Convert PPTX to Image in Azure App Service on Linux | Syncfusion&reg;
 description: Convert PPTX to image in Azure App Service on Linux using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint Presentation to Image in Azure App Service on Linux
 
-Syncfusion PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure App Service on Linux**.
+Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure App Service on Linux**.
 
 ## Steps to convert PowerPoint Presentation to Image in Azure App Service on Linux
 
@@ -33,7 +33,7 @@ Step 4: Install the following **Nuget packages** in your application from [Nuget
 
 ![Install HarfBuzzSharp.NativeAssets.Linux v7.3.0.2 Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz_PowerPoint_Presentation_to_PDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
@@ -197,6 +197,6 @@ Step 12: Select the **PowerPoint Presentation** and Click **Convert to Image** t
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Azure/Azure_App_Service).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core.
