@@ -12,25 +12,17 @@ Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncf
 
 ## Server app
 
-Step 1: Create a new C# Blazor Server app project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor Server app project. Select Blazor Server app from the template and click the Next button.
 
 ![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint presentation ](Workingwith-Blazor/Create_project.png)
 
-Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
-
-![Create a project name for your new project](Azure-Images/App-Service-Linux/Configure-PowerPoint-Presentation-to-PDF.png)
-
-Step 3: Choose **Blazor Server App** and click Create button to create a new Blazor Server app for .NET Core 3.0.0-preview9.
-
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Server.png)
-
-Step 4: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
-Step 5: Create a razor file with name as **Presentation** under **Pages** folder and include the following namespaces in the file.
+Step 3: Create a razor file with name as **Presentation** under **Pages** folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -44,7 +36,7 @@ Step 5: Create a razor file with name as **Presentation** under **Pages** folder
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code to create a new button.
+Step 4: Add the following code to create a new button.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -56,7 +48,7 @@ Step 6: Add the following code to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following code in **Presentation.razor** file to **convert PowerPoint to image** and download the **image file**.
+Step 5: Add the following code in **Presentation.razor** file to **convert PowerPoint to image** and download the **image file**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -76,7 +68,7 @@ Step 7: Add the following code in **Presentation.razor** file to **convert Power
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a new cs file with name as **PowerPointService** under Data folder and include the following namespaces in the file.
+Step 6: Create a new cs file with name as **PowerPointService** under Data folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -87,7 +79,7 @@ using Syncfusion.PresentationRenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a new MemoryStream method with name as **ConvertPPTXToImage** in **PowerPointService** class and include the following code snippet to **convert a PowerPoint to image in Blazor Server app**.
+Step 7: Create a new MemoryStream method with name as **ConvertPPTXToImage** in **PowerPointService** class and include the following code snippet to **convert a PowerPoint to image in Blazor Server app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -116,7 +108,7 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileM
 {% endhighlight %}
 {% endtabs %}
             
-Step 10: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 8: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -133,7 +125,7 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following JavaScript function in the **_Host.cshtml** in the Pages folder.
+Step 9: Add the following JavaScript function in the **_Host.cshtml** in the Pages folder.
 
 {% tabs %}
 {% highlight HTML %}
@@ -179,19 +171,11 @@ An online sample link to [convert PowerPoint Presentation to image](https://blaz
 
 ## WASM app
 
-Step 1: Create a new C# Blazor WASM app project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint presentation](Workingwith-Blazor/Create_project.png)
+![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint presentation](Workingwith-Blazor/Blazor_WASM.png)
 
-Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
-
-![Create a project name for your new project](Workingwith-Blazor/Configure_project.png)
-
-Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM app for .NET Core 3.0.0-preview9.
-
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Client.png)
-
-Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) 
 * [SkiaSharp.Views.Blazor v2.88.8](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/2.88.8)
@@ -229,7 +213,7 @@ N> 2. Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload 
 				  
 			 
 
-Step 5: Create a razor file with name as ``Presentation`` under ``Pages`` folder and add the following namespaces in the file.
+Step 3: Create a razor file with name as ``Presentation`` under ``Pages`` folder and add the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -244,7 +228,7 @@ Step 5: Create a razor file with name as ``Presentation`` under ``Pages`` folder
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code to create a new button.
+Step 4: Add the following code to create a new button.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -256,7 +240,7 @@ Step 6: Add the following code to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a new async method with name as ``PPTXToImage`` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM app**.
+Step 5: Create a new async method with name as ``PPTXToImage`` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -283,7 +267,7 @@ using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: To download the PowerPoint presentation in browser, create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 6: To download the PowerPoint presentation in browser, create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -300,7 +284,7 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the **Index.html** file present under ``wwwroot``.
+Step 7: Add the following JavaScript function in the **Index.html** file present under ``wwwroot``.
 
 {% tabs %}
 {% highlight HTML %}
