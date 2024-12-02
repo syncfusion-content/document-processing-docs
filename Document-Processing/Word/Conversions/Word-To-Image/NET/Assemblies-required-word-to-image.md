@@ -1,5 +1,5 @@
 ---
-title: Assemblies required to convert Word document to Image | Syncfusion
+title: Assemblies required to convert Word document to Image | Syncfusion&reg;
 description: Learn the assemblies required to convert Word document to image using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -85,6 +85,6 @@ ASP.NET<br/></td><td>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
 
-N> 1. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
-N> 2. Syncfusion components are available in [nuget.org](https://www.nuget.org/)
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 2. Syncfusion&reg; components are available in [nuget.org](https://www.nuget.org/)
 N> 3. Starting with v15.3.0.x, a new Visual Studio add-in "Syncfusion Reference Manager" for WPF, and Windows Forms platforms is included. Using this add-in, you can easily add the necessary reference assemblies to your projects in an automated way. Please refer to this [link](https://help.syncfusion.com/extension/syncfusion-reference-manager/overview) for more information.
