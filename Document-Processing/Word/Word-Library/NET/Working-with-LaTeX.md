@@ -1,5 +1,5 @@
 ---
-title: Working with LaTeX | DocIO | Syncfusion
+title: Working with LaTeX | DocIO | Syncfusion&reg;
 description: Learn how to create mathematical equations in a Word document using LaTeX with the .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO

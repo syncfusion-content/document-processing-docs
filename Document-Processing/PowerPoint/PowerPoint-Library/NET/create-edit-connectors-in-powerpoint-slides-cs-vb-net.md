@@ -1,15 +1,15 @@
 ---
-title: Add and edit connectors in PowerPoint slides | Syncfusion |
+title: Add and edit connectors in PowerPoint slides | Syncfusion&reg; |
 description: Code examples to create and edit PowerPoint connectors in .NET, C#, web, ASP.NET, UWP, MVC, Xamarin and .NET Core
 platform: document-processing
-control: Syncfusion PowerPoint presentation
+control: Syncfusion&reg; PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, connectors, pptx, shapes
 ---
 
 # Adding connectors in PowerPoint slides
 
-Essential Presentation library supports adding, editing, and removing the connectors in a PowerPoint file. The following code example demonstrates how to add a connector between two shapes.
+Essential&reg; Presentation library supports adding, editing, and removing the connectors in a PowerPoint file. The following code example demonstrates how to add a connector between two shapes.
 
 The following code example demonstrates how to add a connector in PowerPoint slide.
 

@@ -1,8 +1,8 @@
 ---
-title: Create, edit and format table in PowerPoint slide | Syncfusion |
+title: Create, edit and format table in PowerPoint slide | Syncfusion&reg; |
 description: Code examples to create, edit and format PowerPoint tables in .NET, C#, web, ASP.NET, UWP, MVC, Xamarin and .NET Core
 platform: document-processing
-control: Syncfusion PowerPoint presentation
+control: Syncfusion&reg; PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, table, format-table, rows, columns, pptx
 ---
@@ -10,11 +10,11 @@ keywords: PowerPoint, slide, table, format-table, rows, columns, pptx
 
 A [table](https://www.syncfusion.com/document-processing/powerpoint-framework/net/powerpoint-library/powerpoint-tables) in PowerPoint presentation is used to arrange document content in rows and columns. [ITable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITable.html) instance represents a table in PowerPoint presentation. A table must contain at least one row.
 
-N> Adding more than 75 rows/columns not supported in the PowerPoint presentation using Microsoft PowerPoint application. It shows alert when you attempt to insert a table with more than 75 rows/columns, which is one of the behaviors of Microsoft PowerPoint and Essential Presentation does the same.
+N> Adding more than 75 rows/columns not supported in the PowerPoint presentation using Microsoft PowerPoint application. It shows alert when you attempt to insert a table with more than 75 rows/columns, which is one of the behaviors of Microsoft PowerPoint and Essential&reg; Presentation does the same.
 
 ## Create a table by adding rows
 
-Essential Presentation supports creating and editing tables in PowerPoint slides by adding rows. Refer to the following code example.
+Essential&reg; Presentation supports creating and editing tables in PowerPoint slides by adding rows. Refer to the following code example.
 
 {% tabs %}
 
@@ -518,7 +518,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Get the actual height of the table
 
-The table height expands with the content added to it. The Essential Presentation library allows you to get this actual height or rendered height of the table. This property is a calculated value based on the content added to the table cells.
+The table height expands with the content added to it. The Essential&reg; Presentation library allows you to get this actual height or rendered height of the table. This property is a calculated value based on the content added to the table cells.
 
 The following code example demonstrates how to get the actual height of a PowerPoint table.
 

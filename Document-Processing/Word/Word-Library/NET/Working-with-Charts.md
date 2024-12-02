@@ -1,5 +1,5 @@
 ---
-title: Working with Charts in Word document | DocIO | Syncfusion
+title: Working with Charts in Word document | DocIO | Syncfusion&reg;
 description: Learn how to add, edit, and remove charts in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -799,7 +799,7 @@ Customize the **chart axes** by changing the title, border, font, rotation angle
 
 ## Applying 3D Formats
 
-Essential DocIO allows to modify the side wall, back wall, floor of the 3D chart. The following code snippet illustrates how to apply properties for side wall, floor and back wall of a 3D chart.
+Essential&reg; DocIO allows to modify the side wall, back wall, floor of the 3D chart. The following code snippet illustrates how to apply properties for side wall, floor and back wall of a 3D chart.
 
 {% tabs %}
 
@@ -1224,7 +1224,7 @@ N> 2. The ChartToImageConverter is supported from .NET Framework 4.0 onwards.
 
 ## Word 2016 Charts
 
-Essential DocIO supports creating and manipulating new and modern chart types such as waterfall, which is introduced in Microsoft Word 2016.
+Essential&reg; DocIO supports creating and manipulating new and modern chart types such as waterfall, which is introduced in Microsoft Word 2016.
 
 ### Waterfall
 

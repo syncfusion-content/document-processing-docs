@@ -1,5 +1,5 @@
 ---
-title: Merge Word documents in C# | DocIO | Syncfusion
+title: Merge Word documents in C# | DocIO | Syncfusion&reg;
 description: Learn how to merge multiple Word documents into one using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
