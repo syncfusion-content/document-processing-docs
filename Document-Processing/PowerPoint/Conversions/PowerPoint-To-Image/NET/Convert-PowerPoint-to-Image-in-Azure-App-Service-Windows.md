@@ -1,12 +1,12 @@
 ---
-title: Convert PPTX to Image in Azure App Service on Windows | Syncfusion&reg;
+title: Convert PPTX to Image in Azure App Service on Windows |Syncfusion&reg;
 description: Convert PPTX to image in Azure App Service on Windows using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint Presentation to Image in Azure App Service on Windows
+# Convert PPTX to Image in Azure App Service on Windows
 
 Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure App Service on Windows**.
 

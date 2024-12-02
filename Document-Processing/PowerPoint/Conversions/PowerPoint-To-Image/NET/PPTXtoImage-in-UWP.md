@@ -5,7 +5,7 @@ platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# UWP
+# Convert PowerPoint to Image in UWP
 
 PowerPoint slides can be converted to images in UWP by using Essential&reg; Presentation library. The following assemblies are required in the UWP application to convert the slides as images.
 
