@@ -50,7 +50,7 @@ class MultiThreading
                 {
                     using (FileStream outputFileStream = new FileStream("Output" + Guid.NewGuid().ToString() + ".pdf", FileMode.Create, FileAccess.Write))
                     {
-                        // Save the PDF document
+                        // Save the PDF document.
                         pdfDocument.Save(outputFileStream);
                     }
                 }
@@ -90,7 +90,7 @@ class MultiThreading
                 {
                     using (FileStream outputFileStream = new FileStream("Output" + Guid.NewGuid().ToString() + ".pdf", FileMode.Create, FileAccess.Write))
                     {
-                        // Save the PDF document
+                        // Save the PDF document.
                         pdfDocument.Save(outputFileStream);
                     }
                 }
@@ -123,7 +123,7 @@ Module MultiThreading
                 ' Convert PowerPoint document to PDF.
                 Using pdfDocument As PdfDocument = PresentationToPdfConverter.Convert(presendationDoc)
                     Using outputFileStream As New FileStream("Output" & Guid.NewGuid().ToString() & ".pdf", FileMode.Create, FileAccess.Write)
-                        ' Save the PDF document
+                        ' Save the PDF document.
                         pdfDocument.Save(outputFileStream)
                     End Using
                 End Using
@@ -172,7 +172,7 @@ class MultiThreading
                 {
                     using (FileStream outputFileStream = new FileStream("Output" + count + ".pdf", FileMode.Create, FileAccess.Write))
                     {
-                        // Save the PDF document
+                        // Save the PDF document.
                         pdfDocument.Save(outputFileStream);
                     }
                 }
@@ -211,7 +211,7 @@ class MultiThreading
                 {
                     using (FileStream outputFileStream = new FileStream("Output" + count + ".pdf", FileMode.Create, FileAccess.Write))
                     {
-                        // Save the PDF document
+                        // Save the PDF document.
                         pdfDocument.Save(outputFileStream);
                     }
                 }
@@ -245,7 +245,7 @@ Module MultiThreading
                 ' Convert PowerPoint document to PDF.
                 Using pdfDocument As PdfDocument = PresentationToPdfConverter.Convert(presendationDoc)
                     Using outputFileStream As New FileStream("Output" & count & ".pdf", FileMode.Create, FileAccess.Write)
-                        ' Save the PDF document
+                        ' Save the PDF document.
                         pdfDocument.Save(outputFileStream)
                     End Using
                 End Using

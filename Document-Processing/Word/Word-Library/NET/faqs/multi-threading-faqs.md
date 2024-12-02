@@ -41,10 +41,10 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Save the Word document in the desired format
+                // Save the Word document in the desired format.
                 using (FileStream outputFileStream = new FileStream("Output" + Guid.NewGuid().ToString() +".docx", FileMode.Create, FileAccess.Write))
                 {
                     document.Save(outputFileStream, FormatType.Docx);
@@ -77,10 +77,10 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Save the Word document in the desired format
+                // Save the Word document in the desired format.
                 using (FileStream outputFileStream = new FileStream("Output" + Guid.NewGuid().ToString() +".docx", FileMode.Create, FileAccess.Write))
                 {
                     document.Save(outputFileStream, FormatType.Docx);
@@ -152,7 +152,7 @@ class MultiThreading
         Parallel.For(0, limit, count =>
         {
             Console.WriteLine("Task {0} started", count);
-            //Create multiple presentations, one PPT on each thread.
+            //Create multiple word document, one document on each thread.
             OpenAndSaveWordDocument(count);
             Console.WriteLine("Task {0} is done", count);
         });
@@ -162,10 +162,10 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Save the Word document in the desired format
+                // Save the Word document in the desired format.
                 using (FileStream outputFileStream = new FileStream("Output" +count +".docx", FileMode.Create, FileAccess.Write))
                 {
                     document.Save(outputFileStream, FormatType.Docx);
@@ -187,7 +187,7 @@ class MultiThreading
         Parallel.For(0, limit, count =>
         {
             Console.WriteLine("Task {0} started", count);
-            //Create multiple presentations, one PPT on each thread.
+            //Create multiple word document, one document on each thread.
             OpenAndSaveWordDocument(count);
             Console.WriteLine("Task {0} is done", count);
         });
@@ -197,10 +197,10 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Save the Word document in the desired format
+                // Save the Word document in the desired format.
                 using (FileStream outputFileStream = new FileStream("Output" +count +".docx", FileMode.Create, FileAccess.Write))
                 {
                     document.Save(outputFileStream, FormatType.Docx);
@@ -221,7 +221,7 @@ Module MultiThreading
         ' Parallel For Loop
         Parallel.For(0, limit, Sub(count)
                                    Console.WriteLine("Task {0} started", count)
-                                   ' Create multiple presentations, one PPT on each thread.
+                                   ' Create multiple word document, one document on each thread.
                                    OpenAndSaveWordDocument(count)
                                    Console.WriteLine("Task {0} is done", count)
                                End Sub)

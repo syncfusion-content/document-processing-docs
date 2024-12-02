@@ -1,6 +1,6 @@
 ---
 title: FAQ about Multi threading | DocIO | Syncfusion&reg;
-description: Learn about the frequently asked questions about Multi threading in the .NET Word (DocIO) library.
+description: Learn about the frequently asked questions about support of Multi threading in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -41,20 +41,20 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Convert Word document to PDF
+                // Convert Word document to PDF.
                 using (DocIORenderer renderer = new DocIORenderer())
                 {
 
                     PdfDocument pdfDocument = renderer.ConvertToPDF(document);
-                    // Save the PDF document
+                    // Save the PDF document.
                     using (FileStream outputFileStream = new FileStream("Output" + Guid.NewGuid().ToString() +".pdf", FileMode.Create, FileAccess.Write))
                     {
                         pdfDocument.Save(outputFileStream);
                     }
-                    // Dispose renderer to free resources
+                    // Dispose renderer to free resources.
                     pdfDocument.Dispose();
                 }
             }
@@ -85,20 +85,20 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Convert Word document to PDF
+                // Convert Word document to PDF.
                 using (DocIORenderer renderer = new DocIORenderer())
                 {
 
                     PdfDocument pdfDocument = renderer.ConvertToPDF(document);
-                    // Save the PDF document
+                    // Save the PDF document.
                     using (FileStream outputFileStream = new FileStream("Output" + Guid.NewGuid().ToString() +".pdf", FileMode.Create, FileAccess.Write))
                     {
                         pdfDocument.Save(outputFileStream);
                     }
-                    // Dispose renderer to free resources
+                    // Dispose renderer to free resources.
                     pdfDocument.Dispose();
                 }
             }
@@ -129,17 +129,17 @@ Module MultiThreading
         Using inputStream As New FileStream(inputTemplatePath, FileMode.Open, FileAccess.Read, FileShare.Read)
             ' Load the Word document from the memory stream.
             Using document As New WordDocument(inputStream, FormatType.Docx)
-                ' Convert Word document to PDF
+                ' Convert Word document to PDF.
                 Using renderer As New DocIORenderer()
                     ' Convert Word document to PDF
                     Dim pdfDocument As PdfDocument = renderer.ConvertToPDF(document)
 
-                    ' Save the PDF document
+                    ' Save the PDF document.
                     Using outputFileStream As New FileStream("Output" & Guid.NewGuid().ToString() & ".pdf", FileMode.Create, FileAccess.Write)
                         pdfDocument.Save(outputFileStream)
                     End Using
 
-                    ' Dispose renderer to free resources
+                    ' Dispose renderer to free resources.
                     pdfDocument.Dispose()
                 End Using
             End Using
@@ -169,7 +169,7 @@ class MultiThreading
         Parallel.For(0, limit, count =>
         {
             Console.WriteLine("Task {0} started", count);
-            //Create multiple presentations, one PPT on each thread.
+            //Convert multiple Word document, one document on each thread.
             ConvertWordToPDF(count);
             Console.WriteLine("Task {0} is done", count);
         });
@@ -179,14 +179,14 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Convert Word document to PDF
+                // Convert Word document to PDF.
                 using (DocIORenderer renderer = new DocIORenderer())
                 {
                     PdfDocument pdfDocument = renderer.ConvertToPDF(document);
-                    // Save the PDF document
+                    // Save the PDF document.
                     using (FileStream outputFileStream = new FileStream("Output" +count +".pdf", FileMode.Create, FileAccess.Write))
                     {
                         pdfDocument.Save(outputFileStream);
@@ -211,7 +211,7 @@ class MultiThreading
         Parallel.For(0, limit, count =>
         {
             Console.WriteLine("Task {0} started", count);
-            //Create multiple presentations, one PPT on each thread.
+            //Convert multiple Word document, one document on each thread.
             ConvertWordToPDF(count);
             Console.WriteLine("Task {0} is done", count);
         });
@@ -221,14 +221,14 @@ class MultiThreading
     {
         using (FileStream inputStream = new FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read))
         {
-            // Load the Word document
+            // Load the Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                // Convert Word document to PDF
+                // Convert Word document to PDF.
                 using (DocIORenderer renderer = new DocIORenderer())
                 {
                     PdfDocument pdfDocument = renderer.ConvertToPDF(document);
-                    // Save the PDF document
+                    // Save the PDF document.
                     using (FileStream outputFileStream = new FileStream("Output" +count +".pdf", FileMode.Create, FileAccess.Write))
                     {
                         pdfDocument.Save(outputFileStream);
@@ -263,15 +263,15 @@ Module MultiThreading
         Using inputStream As New FileStream("InputTemplate.docx", FileMode.Open, FileAccess.Read)
             ' Load the Word document from the stream.
             Using document As New WordDocument(inputStream, FormatType.Docx)
-                ' Convert Word document to PDF
+                ' Convert Word document to PDF.
                 Using renderer As New DocIORenderer()
-                    ' Convert Word document to PDF
+                    ' Convert Word document to PDF.
                     Dim pdfDocument As PdfDocument = renderer.ConvertToPDF(document)
-                    ' Save the PDF document
+                    ' Save the PDF document.
                     Using outputFileStream As New FileStream("Output" & count & ".pdf", FileMode.Create, FileAccess.Write)
                         pdfDocument.Save(outputFileStream)
                     End Using
-                    ' Dispose renderer to free resources
+                    ' Dispose renderer to free resources.
                     pdfDocument.Dispose()
                 End Using
             End Using
