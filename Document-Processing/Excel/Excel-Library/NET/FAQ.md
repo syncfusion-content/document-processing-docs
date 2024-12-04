@@ -101,3 +101,4 @@ The frequently asked questions in Essential&reg; XlsIO are listed below.
 * [How to remove autofilter from an Excel worksheet?](faqs/how-to-remove-autofilter-in-an-Excel)
 * [How to convert an Excel worksheet to a high-resolution image?](faqs/how-to-convert-an-Excel-worksheet-to-a-high-resolution-image)
 * [How to add and remove page breaks in a worksheet?](faqs/how-to-add-and-remove-page-breaks-in-Excel)
+* [How to decrypt individual items with specific passwords?](faqs/how-to-decrypt-individual-items-with-specific-passwords-in-a-protected-zip-file)
