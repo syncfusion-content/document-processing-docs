@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Annotations
 
-Essential PDF provides support for interactive [annotations](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-annotation).
+Essential&reg; PDF provides support for interactive [annotations](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-annotation).
 
 You can add, delete and modify the annotation from the PDF documents.
 
@@ -606,7 +606,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### 3D Annotation
 
-3D Annotations are used to represent 3D artworks in a PDF document. Essential PDF provides support to embed 3D files (u3d) in PDF. 
+3D Annotations are used to represent 3D artworks in a PDF document. Essential&reg; PDF provides support to embed 3D files (u3d) in PDF. 
 
 You can add a 3D annotation in PDF document using [Pdf3DAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.Pdf3DAnnotation.html) class. The following example illustrates this.
 {% tabs %}
@@ -1816,7 +1816,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Redaction Annotation
 
-The essential PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
+The essential&reg; PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Removing-the-sensitive-text-and-images-from-PDF-document/.NET/Removing-the-sensitive-text-and-images-from-PDF-document/Program.cs" %}
@@ -2564,9 +2564,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Measurement Annotations
 
-Essential PDF supports interactive measurement annotations, which measures the distance, area, and angle of the line segments.
+Essential&reg; PDF supports interactive measurement annotations, which measures the distance, area, and angle of the line segments.
 
-The following measurement annotation types are supported in Essential PDF:
+The following measurement annotation types are supported in Essential&reg; PDF:
 
 ### Line measurement annotation
 
@@ -2950,7 +2950,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying the annotations
 
-Essential PDF allows you to modify the annotation of existing document. The following code illustrates this.
+Essential&reg; PDF allows you to modify the annotation of existing document. The following code illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modifying-annotation-of-existing-PDF-document/.NET/Modifying-annotation-of-existing-PDF-document/Program.cs" %}
@@ -3025,7 +3025,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modifying the redaction annotations   
 
-The redaction annotations from the existing document can be modified using the Essential PDF library. You can add, remove, or modify the [PdfLoadedRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRedactionAnnotation.html) class in the existing PDF documents. 
+The redaction annotations from the existing document can be modified using the Essential&reg; PDF library. You can add, remove, or modify the [PdfLoadedRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRedactionAnnotation.html) class in the existing PDF documents. 
 The following code sample explains this.
 
 {% tabs %}
@@ -3498,7 +3498,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
 
-The Essential PDF supports adding the annotation comments and review status to the PDF document annotations.
+The Essential&reg; PDF supports adding the annotation comments and review status to the PDF document annotations.
 
 ### Adding comments to the PDF annotation
 
@@ -3992,7 +3992,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing comments and review status from PDF annotation
 
-The Essential PDF supports removing comments and reviewing status from the PDF annotation.
+The Essential&reg; PDF supports removing comments and reviewing status from the PDF annotation.
 
 The following code example explains how to remove comments using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method from the existing PDF annotation.
 
@@ -4145,7 +4145,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying comments and review status 
 
-The Essential PDF supports modifying comments using [Comments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedRectangleAnnotation_Comments) property and reviewing status using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum in the PDF annotation.
+The Essential&reg; PDF supports modifying comments using [Comments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedRectangleAnnotation_Comments) property and reviewing status using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum in the PDF annotation.
 
 The following code example explains how to modify comments in the existing PDF annotation.
 
@@ -4309,7 +4309,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
 
-The Essential PDF supports retrieving the annotation comments and review history from the existing PDF document annotations.
+The Essential&reg; PDF supports retrieving the annotation comments and review history from the existing PDF document annotations.
 
 ### Retrieve review status from PDF annotation
 
@@ -4535,7 +4535,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Printing Annotations
 
-The Essential PDF supports printing the annotation in a PDF document by setting the annotation flag to ```Print``` using the [AnnotationFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedStyledAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedStyledAnnotation_AnnotationFlags) property.
+The Essential&reg; PDF supports printing the annotation in a PDF document by setting the annotation flag to ```Print``` using the [AnnotationFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedStyledAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedStyledAnnotation_AnnotationFlags) property.
 
 The following code example illustrates how to print annotation in the PDF document.
 
@@ -4666,7 +4666,7 @@ If set, inverts the interpretation of the NoView flat for certain events.<br/><b
 
 ## Add Custom Stamp using Rubber Stamp Annotation
 
-Essential PDF supports adding custom stamp in an existing PDF document by using the [PdfRubberStampAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRubberStampAnnotation.html) class along with different appearance settings through [PdfAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAppearance.html). This custom stamp is movable and resizable.
+Essential&reg; PDF supports adding custom stamp in an existing PDF document by using the [PdfRubberStampAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRubberStampAnnotation.html) class along with different appearance settings through [PdfAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAppearance.html). This custom stamp is movable and resizable.
 
 Rubber stamp annotation displays text or graphics intended to look like it is stamped on the page with a rubber stamp. When opened, it displays a pop-up window containing the text of the associated note. 
 

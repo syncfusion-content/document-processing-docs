@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Actions
 
-Essential PDF supports different actions that can be triggered by different events and user interactions.
+Essential&reg; PDF supports different actions that can be triggered by different events and user interactions.
 
 ## Adding an action to the PDF
 
@@ -76,7 +76,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Supported action types
 
-Essential PDF supports the following types of actions.
+Essential&reg; PDF supports the following types of actions.
 
 * [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAction.html) that plays the music file
 * [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) that executes PDF JavaScript code
@@ -901,7 +901,7 @@ You can download a complete working sample from [GitHub]
 
 ## Adding an action to the form field
 
-Essential PDF provides support to add various actions to the form fields. The following code example illustrates how to add actions to the form field in PDF document using [PdfFieldActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class. 
+Essential&reg; PDF provides support to add various actions to the form fields. The following code example illustrates how to add actions to the form field in PDF document using [PdfFieldActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldActions.html) class. 
 
 {% tabs %}
 
@@ -1004,7 +1004,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding an action to the bookmarks
 
-Essential PDF provides support to add the various actions to the [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks). The code snippet below shows how to add an URI action to bookmark.
+Essential&reg; PDF provides support to add the various actions to the [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks). The code snippet below shows how to add an URI action to bookmark.
 
 {% tabs %}
 
