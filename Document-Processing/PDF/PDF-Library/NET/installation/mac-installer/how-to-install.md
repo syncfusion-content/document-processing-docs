@@ -7,7 +7,7 @@ control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion PDF Mac installer
+# Installing Syncfusion&reg; PDF Mac installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
