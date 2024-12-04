@@ -8,13 +8,13 @@ documentation: ug
 
 ---
 
-# Installing Syncfusion PDF Linux installer
+# Installing Syncfusion&reg; PDF Linux installer
 
 ## Step-by-Step Installation
 
 The steps below show how to install PDF Linux installer.
 
-1. Extract the Syncfusion PDF Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion&reg; PDF Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    

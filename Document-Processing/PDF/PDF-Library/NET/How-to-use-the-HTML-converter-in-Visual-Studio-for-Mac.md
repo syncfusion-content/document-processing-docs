@@ -8,7 +8,7 @@ keywords: Assemblies
 ---
 # How to use the HTML converter in Visual Studio for Mac.
 
-In your ASP.NET Core application, add the following assemblies to use Essential HTML Converter:
+In your ASP.NET Core application, add the following assemblies to use Essential&reg; HTML Converter:
 
 * Syncfusion.Compression.Portable.dll
 * Syncfusion.Pdf.Portable.dll
