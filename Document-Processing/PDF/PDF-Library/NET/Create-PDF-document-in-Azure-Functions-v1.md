@@ -128,7 +128,7 @@ Step 12: Publish has been succeed.
 ![Publish succeeded](Azure_images/Azure-Functions-V1/Successful_publish.png)
 
 Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 
-![Output document screenshot](Azure_Images/Azure-Functions-V4/Output_screenshot.png)
+![Output document](Azure_Images/Azure-Functions-V4/Final_output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20Function%20V1).
 
