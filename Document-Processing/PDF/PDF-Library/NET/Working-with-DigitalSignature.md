@@ -12,7 +12,7 @@ To quickly get started with digitally signing a PDF document and validating sign
 
 ## Adding a digital signature
 
-The Essential PDF allows you to add a [digital signature](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/digital-signature-pdf) to the PDF document. To add a digital signature, you need a certificate with private keys. The Essential PDF provides support for digital signature by using the PFX files, Hardware Security Module (HSM), Online Certificate Status Protocol (OCSP), Certificate Revocation List (CRL), Windows Certificate Store, and supports signatures using the Elliptic Curve Digital Signature Algorithm (ECDSA).
+The Essential&reg; PDF allows you to add a [digital signature](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/digital-signature-pdf) to the PDF document. To add a digital signature, you need a certificate with private keys. The Essential&reg; PDF provides support for digital signature by using the PFX files, Hardware Security Module (HSM), Online Certificate Status Protocol (OCSP), Certificate Revocation List (CRL), Windows Certificate Store, and supports signatures using the Elliptic Curve Digital Signature Algorithm (ECDSA).
 
 The following code example explains how to add a digital signature to the PDF document by using [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
@@ -1809,7 +1809,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a timestamp in digital signature
 
-Essential PDF allows you to add timestamp in the digital signature of the PDF document using [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example explains the same.
+Essential&reg; PDF allows you to add timestamp in the digital signature of the PDF document using [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example explains the same.
 
 {% tabs %}
 
@@ -2075,7 +2075,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieve certificate details from an existing signed PDF document
 
-The Essential PDF provides support to get the certificate details from an existing signed PDF document such as,
+The Essential&reg; PDF provides support to get the certificate details from an existing signed PDF document such as,
 
 * [Signed date](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_SignedDate)
 * Expiry date
@@ -2185,7 +2185,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Enable Long Term Validation (LTV) PDF signature
 
-The Essential PDF supports creating long term signature validation when signing the PDF document. The LTV signature allows you to check the validity of a signature long after the document was signed. To achieve long term validation, all the required elements for signature validation must be embedded in the signed PDF.
+The Essential&reg; PDF supports creating long term signature validation when signing the PDF document. The LTV signature allows you to check the validity of a signature long after the document was signed. To achieve long term validation, all the required elements for signature validation must be embedded in the signed PDF.
 
 N> The resulted PDF document size will be large since all the necessary signature information, Certificate Revocation List (CRL), and Online Certificate Status Protocol (OCSP) are embedded.
 
@@ -4676,7 +4676,7 @@ N> This method retrieves the images when rendered on the signed signature field 
 
 ## Integrating signature and timestamp certificates into the Document Secure Store (DSS).
 
-Effortlessly Integrate **signature and timestamp** certificates into the Document Security Store (DSS) with the Essential PDF Library. This streamlined process enhances certificate management, ensuring robust validation for your PDF documents. Below is a code example demonstrating how to include certificates when creating Long-Term Validity (LTV) from an external signature, utilizing the [CreateLongTermValidity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_CreateLongTermValidity_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Boolean_) method in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
+Effortlessly Integrate **signature and timestamp** certificates into the Document Security Store (DSS) with the Essential&reg; PDF Library. This streamlined process enhances certificate management, ensuring robust validation for your PDF documents. Below is a code example demonstrating how to include certificates when creating Long-Term Validity (LTV) from an external signature, utilizing the [CreateLongTermValidity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_CreateLongTermValidity_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Boolean_) method in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 {% tabs %}
 
