@@ -8,7 +8,7 @@ documentation: UG
 
 # Working with JavaScript
 
-A JavaScript action allows execution of JavaScript code embedded in the PDF document. Essential PDF supports adding JavaScript action to the PDF document in the following:
+A JavaScript action allows execution of JavaScript code embedded in the PDF document. Essential&reg; PDF supports adding JavaScript action to the PDF document in the following:
 
 * Document level JavaScript action
 * JavaScript action to the form fields

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Shapes for Document-Processing Platform PDF Control
 
-Essential PDF has support for adding the below shapes.
+Essential&reg; PDF has support for adding the below shapes.
 
 * Line
 * Curve
@@ -21,7 +21,7 @@ Essential PDF has support for adding the below shapes.
 
 ## Adding Shapes to a PDF document
 
-Essential PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various [color spaces](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-colorspace) and transparency levels.
+Essential&reg; PDF supports adding shapes with different types of brushes like solid bush, gradient brush, tiling brush, and image brush along with various [color spaces](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-colorspace) and transparency levels.
 
 ### Polygon
 
