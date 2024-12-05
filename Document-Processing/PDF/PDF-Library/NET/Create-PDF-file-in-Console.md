@@ -37,7 +37,7 @@ using Syncfusion.Drawing;
 
 Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}
  
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
