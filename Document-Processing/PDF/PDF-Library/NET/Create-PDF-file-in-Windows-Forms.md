@@ -295,7 +295,7 @@ document.Close(true);
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Windows%20Forms/Create-PDF-with-basic-elements).
 
 The following screenshot shows the invoice PDF document created by using Essential&reg; PDF.
-![Invoice PDF document screenshot](GettingStarted_images/pdf-invoice.png)
+![Invoice PDF Output](GettingStarted_images/pdf-invoice.png)
 
 ## Filling forms
 
@@ -339,7 +339,7 @@ loadedDocument.Close(true);
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Windows%20Forms/Fill-a-form-in-an-existing-PDF-document).
 
 The filled form is shown in adobe reader application as follows.
-![Filled PDF document screenshot](GettingStarted_images/filled-form-in-pdf.jpeg)
+![Filled PDF Output](GettingStarted_images/filled-form-in-pdf.jpeg)
 
 ## Merge PDF Documents
 
