@@ -12,9 +12,9 @@ Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncf
 
 ## Server app
 
-Step 1: Create a new C# Blazor Server app project. Select Blazor Server app from the template and click the Next button.
+Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint presentation ](Workingwith-Blazor/Create_project.png)
+![Create Blazor Server application in Visual Studio for Blazor PowerPoint presentation ](Workingwith-Blazor/Create_project.png)
 
 Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
@@ -173,7 +173,7 @@ An online sample link to [convert PowerPoint Presentation to image](https://blaz
 
 Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint presentation](Workingwith-Blazor/Blazor_WASM.png)
+![Create Blazor WebAssembly application in Visual Studio for Blazor PowerPoint presentation](Workingwith-Blazor/Blazor_WASM.png)
 
 Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 

@@ -12,9 +12,9 @@ Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncf
 
 ## Server app
 
-Step 1: Create a new C# Blazor Server app project. Select Blazor Server app from the template and click the Next button.
+Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
+![Create Blazor Server application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
 
 Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
@@ -184,7 +184,7 @@ Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework
 
 Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Blazor_WASM.png)
+![Create Blazor WebAssembly application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Blazor_WASM.png)
 
 Step 2: To **create a PowerPoint document in WASM app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 

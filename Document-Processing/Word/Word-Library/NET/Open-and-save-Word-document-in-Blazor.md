@@ -19,7 +19,7 @@ Syncfusion&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/d
 
 Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio](Blazor_Images/Blazor_Create.png)
+![Create Blazor Server application in Visual Studio](Blazor_Images/Blazor_Create.png)
 
 Step 2: To **open and save a Word document in Blazor Server app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 
@@ -206,7 +206,7 @@ Click [here](https://www.syncfusion.com/document-processing/word-framework/blazo
 
 Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio](Blazor_Images/Blazor_WASM.png)
+![Create Blazor WebAssembly application in Visual Studio](Blazor_Images/Blazor_WASM.png)
 
 Step 2: To **open and save a Word document in client-side application**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 
