@@ -393,6 +393,10 @@ To avoid this, the Essential&reg; Presentation library allows you to set an alte
 
 During PowerPoint to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/fallback-fonts-in-pptxtoimage-conversion).
 
+## Online Demo
+
+* Explore how to convert the PowerPoint presentation to an image using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/pptxtoimage#/material3).
+
 ## See Also
 
 * [How to convert PPTX to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12122/how-to-convert-pptx-to-image-in-blazor-webassembly-wasm)

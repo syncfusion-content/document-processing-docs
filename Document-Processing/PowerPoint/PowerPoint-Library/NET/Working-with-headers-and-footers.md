@@ -833,3 +833,7 @@ By executing the program, you will get the PowerPoint slide as follows.
 ![Removed Footers from Title Slide](HeaderFooter_Images/TitleSlide.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Headers-and-Footers/Remove-footers-from-all-title-slides).
+
+## Online Demo
+
+* Explore how to insert headers and footers in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/headerandfooter#/material3).

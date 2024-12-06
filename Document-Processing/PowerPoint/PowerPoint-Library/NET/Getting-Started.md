@@ -490,3 +490,6 @@ N> * [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/
 
 N> You can refer to our [.NET PowerPoint framework](https://www.syncfusion.com/document-processing/powerpoint-framework/net) webpage to see the product’s groundbreaking features. You can also explore our [.NET PowerPoint framework demo](https://www.syncfusion.com/demos/fileformats/powerpoint-library) that shows how to create and modify PowerPoint files from C# with just five lines of code on different platforms.
 
+## Online Demo
+
+* Explore how to create slides with simple text in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/default#/material3).

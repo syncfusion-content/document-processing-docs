@@ -259,7 +259,8 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 
 ## Online Demo
 
-* Explore how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfua#/material3).
+* Explore how to convert a Word document to PDF using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdf#/material3).
+* See how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfua#/material3).
 * See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfa#/material3).
 
 ## See Also

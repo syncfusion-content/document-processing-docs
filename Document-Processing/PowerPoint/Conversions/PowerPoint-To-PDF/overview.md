@@ -683,6 +683,12 @@ pdfDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Optimize-image-quality-and-resolution).
 
+## Online Demo
+
+* Explore how to convert a PowerPoint presentation to PDF using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/pptxtopdf#/material3).
+* See how to convert a PowerPoint presentation to PDF/UA using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/pptxtopdfua#/material3).
+* See how to convert a PowerPoint presentation to PDF/A using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/pptxtopdfa#/material3).
+
 ## See Also
 
 * [How to convert PPTX to PDF in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12120/how-to-convert-pptx-to-pdf-in-blazor-webassembly-wasm)

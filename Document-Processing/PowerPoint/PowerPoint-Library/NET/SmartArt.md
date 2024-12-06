@@ -621,3 +621,7 @@ The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-proces
 132. Picture Accent Process
 133. Repeating Bending Process
 134. Vertical Process
+
+## Online Demo
+
+* Explore how to create a SmartArt diagram in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/smartart#/material3).

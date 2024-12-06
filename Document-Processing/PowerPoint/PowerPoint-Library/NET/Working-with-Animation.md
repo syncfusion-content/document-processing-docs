@@ -3787,3 +3787,9 @@ Yes
 </td>
 </tr>
 </table>
+
+## Online Demo
+
+* Explore how to add different animation effects for shapes in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/importdata#/material3).
+* See how to modify animation effects for shapes in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/modifyanimation#/material3).
+* See how to convert the PowerPoint slides to images based on the sequence of entrance animations using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/animationconverter#/material3).

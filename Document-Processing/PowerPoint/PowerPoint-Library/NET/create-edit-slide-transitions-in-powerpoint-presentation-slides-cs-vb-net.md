@@ -1124,3 +1124,7 @@ Zoom
 </td>
 </tr>
 </table>
+
+## Online Demo
+
+* Explore how to create slide transition effects in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/slidetransition#/material3).

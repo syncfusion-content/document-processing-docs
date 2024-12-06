@@ -2062,6 +2062,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Online Demo
 
 * Explore how to create a Word document with mathematical equations using LaTeX and the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/createusinglatex#/material3).
+* See how to modify a mathematical equation using LaTeX in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/editusinglatex#/material3).
 
 ## See Also
 
