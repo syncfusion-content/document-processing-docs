@@ -48,58 +48,50 @@ Step 6: Add the following code example in the **Run** method of the **Function1*
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    [FunctionName("Function1")]
-    public static async Task<HttpResponseMessage> Run(
-        [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
-        ILogger log)
-    {
-        MemoryStream ms = new MemoryStream();
-        try
+        [Function("Function1")]
+
+        public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
         {
-            //Initialize HTML to PDF converter.
-            HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Cef);
-            CefConverterSettings settings = new CefConverterSettings();
-            //Assign the CEF converter settings to the HTML to PDF converter.
-            htmlConverter.ConverterSettings = settings;
-            //Convert URL to PDF.
-            PdfDocument document = htmlConverter.Convert("https://www.google.com/");
-            //Save and close the PDF document.
-            document.Save(ms);
-            document.Close();
+            string blinkBinariesPath = string.Empty;
+            MemoryStream ms = null;
+            try
+            {
+
+                //Initialize the HTML to PDF converter with the Blink rendering engine.
+                HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Cef);
+                //Convert URL to PDF
+                PdfDocument document = htmlConverter.Convert("https://www.google.com/");
+
+                ms = new MemoryStream();
+                //Save and close the PDF document  
+                document.Save(ms);
+                document.Close();
+            }
+            catch (Exception ex)
+            {
+                //Create a new PDF document.
+                PdfDocument document = new PdfDocument();
+                //Add a page to the document.
+                PdfPage page = document.Pages.Add();
+
+                //Create PDF graphics for the page.
+                PdfGraphics graphics = page.Graphics;
+                //Set the standard font.
+                PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+                //Draw the text.
+                graphics.DrawString(ex.Message, font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
+
+                //Creating the stream object.
+                ms = new MemoryStream();
+                //Save the document into memory stream.
+                document.Save(ms);
+                //Close the document.
+                document.Close(true);
+
+            }
             ms.Position = 0;
+            return new FileStreamResult(ms, "application/pdf");
         }
-
-        catch (Exception ex)
-        {
-            //Create a new PDF document.
-            PdfDocument document = new PdfDocument();
-            //Add a page to the document.
-            PdfPage page = document.Pages.Add();
-            //Create PDF graphics for the page.
-            PdfGraphics graphics = page.Graphics;
-
-            //Set the standard font.
-            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 5);
-            //Draw the text.
-            graphics.DrawString(ex.ToString(), font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
-
-            //Creating the stream object.
-            ms = new MemoryStream();
-            //Save the document into memory stream.
-            document.Save(ms);
-            //Close the document.
-            document.Close(true);
-            ms.Position = 0;
-        }
-        HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
-        response.Content = new ByteArrayContent(ms.ToArray());
-        response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
-        {
-            FileName = "Sample.pdf"
-        };
-        response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
-        return response;
-    }
 
 {% endhighlight %}
 {% endtabs %}

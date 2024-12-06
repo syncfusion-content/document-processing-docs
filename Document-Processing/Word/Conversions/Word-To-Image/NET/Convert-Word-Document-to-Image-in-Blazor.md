@@ -16,17 +16,13 @@ Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from
 
 ![Create Blazor Server app](Blazor_Images/Create-server-project-WordToPDF.png)
 
-Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
-
-![Create a project name for your new project](Blazor_Images/Configuration-WordtoImage.png)
-
-Step 3: To **convert a Word document to image in server app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the Blazor project.
+Step 2: To **convert a Word document to image in server app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the Blazor project.
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Blazor_Images/Nuget-Package-WordtoImage.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
-Step 4: Create a razor file with name as **DocIO** under **Pages** folder and include the following namespaces in the file.
+Step 3: Create a razor file with name as **DocIO** under **Pages** folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -39,7 +35,7 @@ Step 4: Create a razor file with name as **DocIO** under **Pages** folder and in
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code in **DocIO.razor** file to create a new button.
+Step 4: Add the following code in **DocIO.razor** file to create a new button.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -51,7 +47,7 @@ Step 5: Add the following code in **DocIO.razor** file to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code in **DocIO.razor** file to create and download the **image**.
+Step 5: Add the following code in **DocIO.razor** file to create and download the **image**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -69,7 +65,7 @@ Step 6: Add the following code in **DocIO.razor** file to create and download th
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a new cs file with name as **WordService** under Data folder and include the following namespaces in the file.
+Step 6: Create a new cs file with name as **WordService** under Data folder and include the following namespaces in the file.
 
 {% tabs %}
 
@@ -83,7 +79,7 @@ using Syncfusion.DocIORenderer;
 
 {% endtabs %}
 
-Step 8: Create a new MemoryStream method with name as **ConvertWordtoImage** in **WordService** class and include the following code snippet to **convert the Word document to image** in Server app.
+Step 7: Create a new MemoryStream method with name as **ConvertWordtoImage** in **WordService** class and include the following code snippet to **convert the Word document to image** in Server app.
 
 {% tabs %}
 
@@ -110,7 +106,7 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Template.docx", Fi
 
 {% endtabs %}
 
-Step 9: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 8: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -128,7 +124,7 @@ public static class FileUtils
 
 {% endtabs %}
 
-Step 10: Add the following JavaScript function in the _Host.cshtml in the Pages folder.
+Step 9: Add the following JavaScript function in the _Host.cshtml in the Pages folder.
 
 {% tabs %}
 
@@ -161,7 +157,7 @@ Step 10: Add the following JavaScript function in the _Host.cshtml in the Pages 
 
 {% endtabs %}
 
-Step 11: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
+Step 10: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
 
 {% tabs %}
 
@@ -189,15 +185,11 @@ An online sample link to [convert Word document to image](https://blazor.syncfus
 
 ## Word to Image in Blazor WASM app
 
-Step 1: Create a new C# Blazor WASM app project. Select Blazor App from the template and click the **Next** button.
+Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the **Next** button.
 
 ![Create Blazor WebAssembly app ](Blazor_Images/Blazor_WASM.png)
 
-Step 2: Now, the project configuration window will popup. Click **Create** button to create a new project with the required project name.
-
-![Create a project name for your new project](Blazor_Images/Web_Assembly_WordtoImage.png)
-
-Step 3: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)
 * [SkiaSharp.Views.Blazor v2.88.8](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/2.88.8)
 
@@ -230,7 +222,7 @@ N> 2. Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload 
 				  
 			 
 
-Step 4: Create a razor file with name as ``DocIO`` under ``Pages`` folder and add the following namespaces in the file.
+Step 3: Create a razor file with name as ``DocIO`` under ``Pages`` folder and add the following namespaces in the file.
 
 {% tabs %}
 
@@ -245,7 +237,7 @@ Step 4: Create a razor file with name as ``DocIO`` under ``Pages`` folder and ad
 
 {% endtabs %}
 
-Step 5: Add the following code to create a new button.
+Step 4: Add the following code to create a new button.
 
 {% tabs %}
 
@@ -259,7 +251,7 @@ Step 5: Add the following code to create a new button.
 
 {% endtabs %}
 
-Step 6: Create a new async method with name as ``WordToImage`` and include the following code snippet to **convert a Word document to image in Blazor** WASM app.
+Step 5: Create a new async method with name as ``WordToImage`` and include the following code snippet to **convert a Word document to image in Blazor** WASM app.
 
 {% tabs %}
 
@@ -287,7 +279,7 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Template.docx", Fi
 
 {% endtabs %}
 
-Step 7: Create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 6: Create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -306,7 +298,7 @@ public static class FileUtils
 
 {% endtabs %}
 
-Step 8: Add the following JavaScript function in the Index.html file present under ``wwwroot``.
+Step 7: Add the following JavaScript function in the Index.html file present under ``wwwroot``.
 
 {% tabs %}
 
@@ -339,7 +331,7 @@ Step 8: Add the following JavaScript function in the Index.html file present und
 
 {% endtabs %}
 
-Step 9: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
+Step 8: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
 
 {% tabs %}
 

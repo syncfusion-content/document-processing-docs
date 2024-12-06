@@ -12,25 +12,17 @@ Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncf
 
 ## Server app
 
-Step 1: Create a new C# Blazor Server app project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
+![Create Blazor Server application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
 
-Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
-
-![Create a project name for your new project](Workingwith-Blazor/Configure_project.png)
-
-Step 3: Choose **Blazor Server App** and click Create button to create a new Blazor Server app for .NET Core 3.0.0-preview9.
-
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Server.png)
-
-Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Core/install_nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
-Step 5: Create a razor file with name as **Presentation** under **Pages** folder and include the following namespaces in the file.
+Step 3: Create a razor file with name as **Presentation** under **Pages** folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -44,7 +36,7 @@ Step 5: Create a razor file with name as **Presentation** under **Pages** folder
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code to create a new button.
+Step 4: Add the following code to create a new button.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -56,7 +48,7 @@ Step 6: Add the following code to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the following code in **Presentation.razor** file to create and download the **Presentation document**.
+Step 5: Add the following code in **Presentation.razor** file to create and download the **Presentation document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -76,7 +68,7 @@ Step 7: Add the following code in **Presentation.razor** file to create and down
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a new cs file with name as **PowerPointService** under Data folder and include the following namespaces in the file.
+Step 6: Create a new cs file with name as **PowerPointService** under Data folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -86,7 +78,7 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Create a new MemoryStream method with name as **OpenAndSavePresentation** in **PowerPointService** class and include the following code snippet to **open an existing PowerPoint Presentation in Blazor Server app**.
+Step 7: Create a new MemoryStream method with name as **OpenAndSavePresentation** in **PowerPointService** class and include the following code snippet to **open an existing PowerPoint Presentation in Blazor Server app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -98,7 +90,7 @@ using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath));
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+Step 8: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -114,7 +106,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add below code example to **save the PowerPoint Presentation in Blazor Server app**.
+Step 9: Add below code example to **save the PowerPoint Presentation in Blazor Server app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -129,7 +121,7 @@ return pptxStream;
 {% endhighlight %}
 {% endtabs %}
             
-Step 12: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 10: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -146,7 +138,7 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Step 13: Add the following JavaScript function in the _Host.cshtml in the Pages folder.
+Step 11: Add the following JavaScript function in the _Host.cshtml in the Pages folder.
 
 {% tabs %}
 {% highlight HTML %}
@@ -190,25 +182,17 @@ Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework
 
 ## WASM app
 
-Step 1: Create a new C# Blazor WASM app project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
-![Create ASP.NET Core Web application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Create_project.png)
+![Create Blazor WebAssembly application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Blazor_WASM.png)
 
-Step 2: Now, the project configuration window will popup. Click Create button to create a new project with the required project name.
-
-![Create a project name for your new project](Workingwith-Blazor/Configure_project.png)
-
-Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM app for .NET Core 3.0.0-preview9.
-
-![Select .NET Core, ASP.NET Core 3.0 and Blazor server_side.](Workingwith-Blazor/Core_application_Client.png)
-
-Step 4: To **create a PowerPoint document in WASM app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
+Step 2: To **create a PowerPoint document in WASM app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Blazor/NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
-Step 5: Create a razor file with name as ``Presentation`` under ``Pages`` folder and add the following namespaces in the file.
+Step 3: Create a razor file with name as ``Presentation`` under ``Pages`` folder and add the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -222,7 +206,7 @@ Step 5: Create a razor file with name as ``Presentation`` under ``Pages`` folder
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code to create a new button.
+Step 4: Add the following code to create a new button.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -234,7 +218,7 @@ Step 6: Add the following code to create a new button.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a new async method with name as ``OpenAndSavePresentation`` and include the following code snippet to **open an existing PowerPoint Presentation in Blazor WASM app**.
+Step 5: Create a new async method with name as ``OpenAndSavePresentation`` and include the following code snippet to **open an existing PowerPoint Presentation in Blazor WASM app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -246,7 +230,7 @@ using (IPresentation pptxDoc = Syncfusion.Presentation.Presentation.Open(inputSt
 {% endhighlight %}
 {% endtabs %}
       
-Step 8: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+Step 6: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -262,7 +246,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the PowerPoint Presentation in Blazor WASM app**.
+Step 7: Add below code example to **save the PowerPoint Presentation in Blazor WASM app**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -277,7 +261,7 @@ await JS.SaveAs("Sample.pptx", pptxStream.ToArray());
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: To download the PowerPoint document in browser, create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 8: To download the PowerPoint document in browser, create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -294,7 +278,7 @@ public static class FileUtils
 {% endhighlight %}
 {% endtabs %}
 
-Step 11: Add the following JavaScript function in the Index.html file present under ``wwwroot``.
+Step 9: Add the following JavaScript function in the Index.html file present under ``wwwroot``.
 
 {% tabs %}
 {% highlight HTML %}
