@@ -22,10 +22,10 @@ class Program
     {
         //Create the zip file with and without item password
         ZipArchive zipArchieve = new ZipArchive();
-        zipArchieve.AddFile("../../Data/Sample.xlsx");
-        zipArchieve.AddFile("../../Data/Sample1.xlsx", "Syncfusion1");
-        zipArchieve.AddFile("../../Data/Sample2.xlsx", "Syncfusion2");
-        zipArchieve.AddFile("../../Data/Sample3.xlsx", "Syncfusion3");
+        zipArchieve.AddFile("../../Data/FinancialReport.xlsx");
+        zipArchieve.AddFile("../../Data/EmployeeDetails.pdf", "Employee");
+        zipArchieve.AddFile("../../Data/ProjectDetails.docx", "Project");
+        zipArchieve.AddFile("../../Data/ProductImage.png", "Image");
 
         //Protect the ZipArchive with password
         zipArchieve.Protect("ZipCompression", EncryptionAlgorithm.ZipCrypto);
@@ -49,12 +49,12 @@ class Program
     // Event handler to provide passwords for individual items in the zip archive
     private static void ZipArchieve_OnZipArchiveItemPasswordNeeded(object sender, ZipArchiveItemPasswordEventArgs args)
     {
-        if (args.FileName == "Sample1.xlsx")
-            args.Password = "Syncfusion1";
-        else if (args.FileName == "Sample2.xlsx")
-            args.Password = "Syncfusion2";
-        else if (args.FileName == "Sample3.xlsx")
-            args.Password = "Syncfusion3";
+        if (args.FileName == "EmployeeDetails.pdf")
+            args.Password = "Employee";
+        else if (args.FileName == "ProjectDetails.docx")
+            args.Password = "Project";
+        else if (args.FileName == "ProductImage.png")
+            args.Password = "Image";
     }
 }
 {% endhighlight %}
@@ -66,10 +66,10 @@ Module Program
     Sub Main(args As String())
         ' Create the zip file with and without item password
         Dim zipArchive As New ZipArchive()
-        zipArchive.AddFile("../../Data/Sample.xlsx") ' No password for this file
-        zipArchive.AddFile("../../Data/Sample1.xlsx", "Syncfusion1") ' Item-specific password
-        zipArchive.AddFile("../../Data/Sample2.xlsx", "Syncfusion2") ' Item-specific password
-        zipArchive.AddFile("../../Data/Sample3.xlsx", "Syncfusion3") ' Item-specific password
+        zipArchive.AddFile("../../Data/FinancialReport.xlsx") ' No password for this file
+        zipArchive.AddFile("../../Data/EmployeeDetails.pdf", "Syncfusion1") ' Item-specific password
+        zipArchive.AddFile("../../Data/ProjectDetails.docx", "Syncfusion2") ' Item-specific password
+        zipArchive.AddFile("../../Data/ProductImage.png", "Syncfusion3") ' Item-specific password
 
         ' Protect the ZipArchive with a global password
         zipArchive.Protect("ZipCompression", EncryptionAlgorithm.ZipCrypto)
@@ -92,12 +92,12 @@ Module Program
 
     ' Event handler to provide passwords for individual items in the zip archive
     Private Sub ZipArchive_OnZipArchiveItemPasswordNeeded(sender As Object, args As ZipArchiveItemPasswordEventArgs)
-        If args.FileName = "Sample1.xlsx" Then
-            args.Password = "Syncfusion1"
-        ElseIf args.FileName = "Sample2.xlsx" Then
-            args.Password = "Syncfusion2"
-        ElseIf args.FileName = "Sample3.xlsx" Then
-            args.Password = "Syncfusion3"
+        If args.FileName = "EmployeeDetails.pdf" Then
+            args.Password = "Employee"
+        ElseIf args.FileName = "ProjectDetails.docx" Then
+            args.Password = "Project"
+        ElseIf args.FileName = "ProductImage.png" Then
+            args.Password = "Image"
         End If
     End Sub
 End Module
