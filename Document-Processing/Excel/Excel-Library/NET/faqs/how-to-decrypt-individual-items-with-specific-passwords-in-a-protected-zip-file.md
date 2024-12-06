@@ -66,12 +66,12 @@ Module Program
     Sub Main(args As String())
         ' Create the zip file with and without item password
         Dim zipArchive As New ZipArchive()
-        zipArchive.AddFile("../../Data/FinancialReport.xlsx") ' No password for this file
-        zipArchive.AddFile("../../Data/EmployeeDetails.pdf", "Syncfusion1") ' Item-specific password
-        zipArchive.AddFile("../../Data/ProjectDetails.docx", "Syncfusion2") ' Item-specific password
-        zipArchive.AddFile("../../Data/ProductImage.png", "Syncfusion3") ' Item-specific password
+        zipArchive.AddFile("../../Data/FinancialReport.xlsx")
+        zipArchive.AddFile("../../Data/EmployeeDetails.pdf", "Employee")
+        zipArchive.AddFile("../../Data/ProjectDetails.docx", "Project")
+        zipArchive.AddFile("../../Data/ProductImage.png", "Image")
 
-        ' Protect the ZipArchive with a global password
+        ' Protect the ZipArchive with a password
         zipArchive.Protect("ZipCompression", EncryptionAlgorithm.ZipCrypto)
 
         ' Save the zip file
