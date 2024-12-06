@@ -8,13 +8,13 @@ documentation: UG
 # Conversion using WebKit Rendering
 
 
-Syncfusion Essential PDF supports HTML to PDF conversion by using the advanced Qt WebKit rendering engine. This converter can be easily integrated into any application on .NET platforms such as Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core to convert URLs, HTML string, SVG and MHTML to PDF, and convert other formats like HTML to MHTML, HTML to SVG, and HTML to image.
+Syncfusion Essential&reg; PDF supports HTML to PDF conversion by using the advanced Qt WebKit rendering engine. This converter can be easily integrated into any application on .NET platforms such as Windows Forms, WPF, ASP.NET, ASP.NET MVC and ASP.NET Core to convert URLs, HTML string, SVG and MHTML to PDF, and convert other formats like HTML to MHTML, HTML to SVG, and HTML to image.
 
 Qt WebKit rendering is accurate, and the result preserves all the graphics, images, text, fonts, and the layout of the original HTML document/webpage.
 
 It does not require external dependencies like browsers, printer drivers, or viewers.
 
-N> Starting with v20.1.0.x, if you reference Syncfusion HTML converter assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v20.1.0.x, if you reference Syncfusion&reg; HTML converter assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 N> From version 20.1.0.XX, if you are using the WebKit rendering engine from NuGet packages, there is no need to manually copy the QtBinaries folder from the NuGet packages folder. There is also no need to set WebKitPath to the converter settings explicitly. It will copy the QtBinaries to the application bin folder and use the binaries from the bin folder automatically
 
@@ -881,10 +881,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -896,7 +896,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -1046,10 +1046,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -1061,7 +1061,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -3241,7 +3241,7 @@ Instead, the required assemblies can be added in the Windows system folder.
 </tr>
 </table>
 
-Syncfusion provides troubleshooting utility tool to find out the missing prerequisites. The tool is available in the HTML converter installed location: <span style="color:gray;font-size:14px"><i>($SystemDrive\Program Files (x86)\Syncfusion\HTMLConverter\xx.x.x.xx\WebKitUtility)</i></span>
+Syncfusion&reg; provides troubleshooting utility tool to find out the missing prerequisites. The tool is available in the HTML converter installed location: <span style="color:gray;font-size:14px"><i>($SystemDrive\Program Files (x86)\Syncfusion\HTMLConverter\xx.x.x.xx\WebKitUtility)</i></span>
 
 If the HTML converter installer is not installed in your machine, you can get the troubleshooting utility tool from the following link,
 
@@ -3264,7 +3264,7 @@ If the HTML converter installer is not installed in your machine, you can get th
 <li>Finally, the troubleshooting logs will be stored in a text file on an application folder location. You can check the logs with issues and solutions.</li>
 <img src="htmlconversion_images/TroubleShootingTool_Log.png" alt="TroubleShootingTool Log">
 </ol>
-If the provided solutions did not resolve the issue, please contact Syncfusion <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident">support</a> with troubleshooting logs and the screenshot.
+If the provided solutions did not resolve the issue, please contact Syncfusion&reg; <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident">support</a> with troubleshooting logs and the screenshot.
 
 Please follow the below instructions for manual troubleshooting.
 
@@ -3501,7 +3501,7 @@ N> If you are using web fonts in HTML file/URL, then there is no need to install
 <tr>
 <th style="font-size:14px">Solution
 </th>
-<td>Make sure to use the Syncfusion assemblies and QtBinaries from the same WebKit Installer since there will be some changes in the assemblies and QtBinaries for every release.The assemblies and QtBinaries for a specific version can be get by installing the WebKit HTML converter. 
+<td>Make sure to use the Syncfusion&reg; assemblies and QtBinaries from the same WebKit Installer since there will be some changes in the assemblies and QtBinaries for every release.The assemblies and QtBinaries for a specific version can be get by installing the WebKit HTML converter. 
 <br/><br/>
 <b>WebKit HTML converter:</b> <a href="https://www.syncfusion.com/downloads/version-history">https://www.syncfusion.com/downloads/version-history</a>
 </td>
@@ -3621,7 +3621,7 @@ webkitConverterSettings.TempFileName = "Syncfusion";
 <tr>
 <th style="font-size:14px">Solution
 </th>
-<td>Please contact Syncfusion <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident">support</a> with input HTML, code snippet, and environment details (OS, culture settings, bit version etc.,).
+<td>Please contact Syncfusion&reg; <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident">support</a> with input HTML, code snippet, and environment details (OS, culture settings, bit version etc.,).
 </td>
 </tr>
 
