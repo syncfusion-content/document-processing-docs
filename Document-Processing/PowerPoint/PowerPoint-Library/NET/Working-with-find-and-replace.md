@@ -1,5 +1,5 @@
 ---
-title: Presentation Working with Find and Replace | Syncfusion
+title: Presentation Working with Find and Replace | Syncfusion&reg;
 description: This section illustrates how to find a particular text and replace it with another text or part of the document
 platform: document-processing
 control: Presentation

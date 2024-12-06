@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion Word Mac installer - Syncfusion
-description: Learn here about how to install Syncfusion Word Mac installer after downloading from our Syncfusion website.
+title: Installing Syncfusion&reg; Word Mac installer - Syncfusion&reg;
+description: Learn here about how to install Syncfusion&reg; Word Mac installer after downloading from our Syncfusion&reg; website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion Word Mac installer
+# Installing Syncfusion&reg; Word Mac installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
@@ -42,7 +42,7 @@ The steps below show how to install Essential Studio&reg; Word Mac installer.
 
    ![License confirmation wizard](images/Mac_Installer3.png)
    
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion Essential Studio&reg; Flutter Mac installer can be used for development purposes without registering the Unlock key..
+   N> The Unlock key is not required to install the Mac installer. The Syncfusion&reg; Essential Studio&reg; Flutter Mac installer can be used for development purposes without registering the Unlock key..
 
 
 4. And paste it in “Applications” folder shortcut.
@@ -50,7 +50,7 @@ The steps below show how to install Essential Studio&reg; Word Mac installer.
    ![license wizard](images/Mac_Installer4.png)
 
 
-5. Now you can open the folder to explore the Syncfusion Essential Studio&reg; Mac installer.
+5. Now you can open the folder to explore the Syncfusion&reg; Essential Studio&reg; Mac installer.
 
    ![Installation type wizard](images/Mac_Installer5.png)
 

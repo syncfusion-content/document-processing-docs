@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Installing Syncfusion Word linux installer-Syncfusion
-description: Learn here about how to install Syncfusion Word linux installer after downloading from our Syncfusion website.
+title: Installing Syncfusion&reg; Word linux installer-Syncfusion&reg;
+description: Learn here about how to install Syncfusion&reg; Word linux installer after downloading from our Syncfusion&reg; website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion Word Linux installer
+# Installing Syncfusion&reg; Word Linux installer
 
 ## Step-by-Step Installation
 
 The steps below show how to install Word Linux installer.
 
-1. Extract the Syncfusion Word Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion&reg; Word Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    

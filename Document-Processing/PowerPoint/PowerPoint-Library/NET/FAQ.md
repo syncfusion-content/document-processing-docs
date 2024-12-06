@@ -1,13 +1,13 @@
 ---
-title: Frequently Asked Questions for PowerPoint Presentations | Syncfusion
-description: This section illustrates about frequently asked questions in various options by using Essential Syncfusion Presentation library.
+title: Frequently Asked Questions for PowerPoint Presentations | Syncfusion&reg;
+description: This section illustrates about frequently asked questions in various options by using Essential&reg; Syncfusion&reg; Presentation library.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 # FAQ’s for PowerPoint Presentations
 
-The frequently asked questions in Essential PowerPoint Presentations are listed below.
+The frequently asked questions in Essential&reg; PowerPoint Presentations are listed below.
 
 ## Why I get an exception when trying to load a PPT file?
 
@@ -19,15 +19,15 @@ Yes, you can print the PowerPoint presentations by using its ability to convert 
 
 ## Does adding audio and video to a Presentation is supported?
 
-At present, there is no support to add audio and video to Presentation by using Essential Presentation library.
+At present, there is no support to add audio and video to Presentation by using Essential&reg; Presentation library.
 
-## What measure does Essential Presentation use to add slide elements such as textbox, shape, picture and charts?
+## What measure does Essential&reg; Presentation use to add slide elements such as textbox, shape, picture and charts?
 
 We use Points to add any slide elements in a Presentation.
 
-## Does Essential Presentation supports cloning a slide in the Presentation?
+## Does Essential&reg; Presentation supports cloning a slide in the Presentation?
 
-Yes, Essential Presentation library supports cloning as follows:
+Yes, Essential&reg; Presentation library supports cloning as follows:
 
    * Slide in the Presentation can be cloned from one Presentation to another or within a same Presentation.
    * An entire Presentation can also be cloned as an independent copy of the original.
@@ -38,11 +38,11 @@ Yes, OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework
 
 ## Can chart data be refreshed?
 
-Yes, Essential Presentation supports refreshing the chart data. For more details, refer to [Working with charts](/document-processing/powerpoint/powerpoint-library/net/working-with-charts)
+Yes, Essential&reg; Presentation supports refreshing the chart data. For more details, refer to [Working with charts](/document-processing/powerpoint/powerpoint-library/net/working-with-charts)
 
 ## Is it possible to convert 3D charts to PDF or image?
 
-Current version of the Essential Presentation library does not provide support for converting 3D charts to PDF or image format.
+Current version of the Essential&reg; Presentation library does not provide support for converting 3D charts to PDF or image format.
 
 ## How to improve the image quality while converting the Presentation slides to image?
 

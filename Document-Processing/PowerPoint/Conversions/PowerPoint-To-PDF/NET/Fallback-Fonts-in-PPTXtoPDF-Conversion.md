@@ -1,5 +1,5 @@
 ---
-title: Fallback fonts in PowerPoint to PDF conversion| Syncfusion
+title: Fallback fonts in PowerPoint to PDF conversion| Syncfusion&reg;
 description: Learn about how to specify fallback fonts during PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Fallback fonts in PowerPoint to PDF conversion
 
-During PowerPoint to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
+During PowerPoint to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
 
 Users can configure fallback fonts in the following ways:
 * Initialize default fallback fonts.
