@@ -41,8 +41,8 @@ Step 4: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 
-<h2>Syncfusion PowerPoint library (Essential&reg; Presentation)</h2>
-<p>Syncfusion Blazor PowerPoint library (Essential&reg; Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion PowerPoint library (Essential Presentation)</h2>
+<p>Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@ConvertPPTXtoPDF">Convert PPTX to PDF</button>
 
 {% endhighlight %}
@@ -235,8 +235,8 @@ Step 4: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 
-<h2>Syncfusion PowerPoint library (Essential&reg; Presentation)</h2>
-<p>Syncfusion Blazor PowerPoint library (Essential&reg; Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion PowerPoint library (Essential Presentation)</h2>
+<p>Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@PPTXToPDF">Convert PPTX to PDF</button>
 
 {% endhighlight %}
