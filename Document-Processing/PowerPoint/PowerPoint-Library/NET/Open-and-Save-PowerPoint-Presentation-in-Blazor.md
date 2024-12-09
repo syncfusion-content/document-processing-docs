@@ -16,7 +16,7 @@ Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from
 
 ![Create Blazor Server application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
 
-Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Core/install_nuget.png)
 
@@ -41,8 +41,8 @@ Step 4: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 
-<h2>Syncfusion PowerPoint library (Essential&reg; Presentation)</h2>
-<p>Syncfusion Blazor PowerPoint library (Essential&reg; Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion PowerPoint library (Essential Presentation)</h2>
+<p>Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@OpenAndSavePresentation">Open and Save Presentation</button>
 
 {% endhighlight %}
@@ -211,8 +211,8 @@ Step 4: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 
-<h2>Syncfusion&reg; PowerPoint library (Essential&reg; Presentation)</h2>
-<p>Syncfusion&reg; Blazor PowerPoint library (Essential&reg; Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion PowerPoint library (Essential Presentation)</h2>
+<p>Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@OpenAndSavePresentation">Open and Save Presentation</button>
 
 {% endhighlight %}
