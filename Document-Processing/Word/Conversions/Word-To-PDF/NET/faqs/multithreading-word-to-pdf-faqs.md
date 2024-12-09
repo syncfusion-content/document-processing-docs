@@ -219,7 +219,7 @@ class MultiThreading
             //Load an existing Word document.
             using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
             {
-                //Create an instance of DocIORenderer.
+                //Create an instance of DocToPDFConverter.
                 using (DocToPDFConverter converter = new DocToPDFConverter())
                 {
                     //Convert Word document to PDF.

@@ -116,7 +116,7 @@ Module MultiThreading
             Using document As New WordDocument(inputStream, FormatType.Docx)
                 'Add text to the last paragraph.
                 document.LastParagraph.AppendText("Product Overview")
-                'Save the Word document in the desired format with a unique name.
+                'Save the Word document in the desired format.
                 Using outputFileStream As New FileStream("Output" & Guid.NewGuid().ToString() & ".docx", FileMode.Create, FileAccess.Write)
                     document.Save(outputFileStream, FormatType.Docx)
                 End Using
@@ -232,7 +232,7 @@ Module MultiThreading
             Using document As New WordDocument(inputStream, FormatType.Docx)
                 'Add text to the last paragraph.
                 document.LastParagraph.AppendText("Product Overview")
-                'Save the Word document in the desired format with a unique name.
+                'Save the Word document in the desired format.
                 Using outputFileStream As New FileStream("Output" & count & ".docx", FileMode.Create, FileAccess.Write)
                     document.Save(outputFileStream, FormatType.Docx)
                 End Using
