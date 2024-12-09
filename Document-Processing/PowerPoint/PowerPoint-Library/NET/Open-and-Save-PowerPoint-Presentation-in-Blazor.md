@@ -16,7 +16,7 @@ Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from
 
 ![Create Blazor Server application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
 
-Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Core/install_nuget.png)
 
