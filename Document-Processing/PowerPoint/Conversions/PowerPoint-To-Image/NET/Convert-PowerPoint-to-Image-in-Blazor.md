@@ -16,7 +16,7 @@ Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from
 
 ![Create Blazor Server application in Visual Studio for Blazor PowerPoint presentation ](Workingwith-Blazor/Create_project.png)
 
-Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
@@ -233,8 +233,8 @@ Step 4: Add the following code to create a new button.
 {% tabs %}
 {% highlight CSHTML %}
 
-<h2>Syncfusion PowerPoint library (Essential&reg; Presentation)</h2>
-<p>Syncfusion Blazor PowerPoint library (Essential&reg; Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion PowerPoint library (Essential Presentation)</h2>
+<p>Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@PPTXToImage">Convert PPTX to image</button>
 
 {% endhighlight %}

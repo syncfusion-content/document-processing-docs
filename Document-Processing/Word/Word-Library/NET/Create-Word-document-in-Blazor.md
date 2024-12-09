@@ -47,8 +47,8 @@ Step 4: Add the following code in **DocIO.razor** file to create a new button.
 
 {% tabs %}
 {% highlight CSHTML %}
-<h2>Syncfusion DocIO library (Essential&reg; DocIO)</h2>
-<p>Syncfusion DocIO library (Essential&reg; DocIO) is a Blazor DocIO library used to create, read, edit, and convert Word files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion DocIO library (Essential DocIO)</h2>
+<p>Syncfusion DocIO library (Essential DocIO) is a Blazor DocIO library used to create, read, edit, and convert Word files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateWord">Create Word</button>
 {% endhighlight %}
 {% endtabs %}
@@ -270,8 +270,8 @@ Step 4: Add the following code to create a new button.
 
 {% highlight CSHTML %}
 
-<h2>Syncfusion DocIO library (Essential&reg; DocIO)</h2>
-<p>Syncfusion Blazor DocIO library (Essential&reg; DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion DocIO library (Essential DocIO)</h2>
+<p>Syncfusion Blazor DocIO library (Essential DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateWord">Create Word</button>
 
 {% endhighlight %}
