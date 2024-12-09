@@ -243,8 +243,8 @@ Step 4: Add the following code to create a new button.
 
 {% highlight CSHTML %}
 
-<h2>Syncfusion&reg; DocIO library (Essential&reg; DocIO)</h2>
-<p>Syncfusion&reg; Blazor DocIO library (Essential&reg; DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
+<h2>Syncfusion DocIO library (Essential DocIO)</h2>
+<p>Syncfusion Blazor DocIO library (Essential DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@WordToImage">Convert Word to Image</button>
 
 {% endhighlight %}
