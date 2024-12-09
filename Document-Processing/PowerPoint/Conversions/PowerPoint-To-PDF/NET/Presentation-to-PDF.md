@@ -1,5 +1,5 @@
 ---
-title: .NET PowerPoint Framework - Convert PowerPoint to PDF | Syncfusion&reg;
+title: .NET PowerPoint Framework - Convert PowerPoint to PDF |Syncfusion&reg;
 description: This section illustrates how to convert PowerPoint Presentation document to PDF in .NET PowerPoint Framework.
 platform: document-processing
 control: PowerPoint
