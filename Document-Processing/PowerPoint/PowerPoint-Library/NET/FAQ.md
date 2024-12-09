@@ -139,3 +139,7 @@ Install the SkiaSharp.Linux NuGet package for the .NET Core application in Linux
 </td>
 </tr>
 </table>
+
+## Multithreading
+
+* [Does the PowerPoint library support multithreading and thread-safety?](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/multithreading-powerpoint-reading-faqs#does-the-powerpoint-library-support-multithreading-and-thread-safety)
