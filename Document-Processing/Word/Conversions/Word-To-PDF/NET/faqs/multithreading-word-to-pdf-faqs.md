@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about multithreading in Word to PDF conversion
+# Frequently asked questions about multithreading in Word to PDF
 
 The frequently asked questions regarding multithreading and thread-safety support in Word to PDF conversion are listed below.
 

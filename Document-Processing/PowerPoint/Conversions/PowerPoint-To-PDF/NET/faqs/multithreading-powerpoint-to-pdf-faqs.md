@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Frequently asked questions about multithreading in PowerPoint to PDF conversion
+# Frequently asked questions about multithreading in PowerPoint to PDF
 
 The frequently asked questions regarding multithreading and thread-safety support in PowerPoint to PDF conversion are listed below.
 

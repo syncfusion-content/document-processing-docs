@@ -19,4 +19,4 @@ The frequently asked questions about Word to PDF conversion in Essential&reg; Do
 
 ## Multithreading
 
-* [Does the Word library support multithreading and thread-safety for Word to PDF conversion?](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/faqs/multithreading-word-to-pdf-faqs#does-the-word-library-support-multithreading-and-thread-safety-for-word-to-pdf-conversion)
+* Does the Word library support multithreading and thread-safety for Word to PDF conversion?

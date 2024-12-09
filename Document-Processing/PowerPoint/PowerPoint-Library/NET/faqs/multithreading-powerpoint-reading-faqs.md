@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Frequently asked questions about multithreading in PowerPoint presentation
+# Frequently asked questions about multithreading in PowerPoint
 
 The frequently asked questions regarding multithreading and thread-safety support in opening, editing, and saving PowerPoint presentations are listed below.
 
