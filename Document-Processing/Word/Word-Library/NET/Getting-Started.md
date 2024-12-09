@@ -1,6 +1,6 @@
 ---
 title: Create a simple Word document in C#, VB.NET | Syncfusion&reg;
-description: Learn how to use .NET Word (DocIO) library to create Word documents from scratch with basic elements and perform mail merge without Microsoft Word.
+description: Learn how to use NET Word (DocIO) library to create Word documents from scratch with basic elements and perform mail merge without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
