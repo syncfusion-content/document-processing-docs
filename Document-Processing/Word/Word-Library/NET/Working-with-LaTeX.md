@@ -383,7 +383,7 @@ The following table demonstrates the LaTeX equivalent to professional format bor
 <tr>
 <td>1.</td>
 <td><img src="WorkingwithMathematicalEquation_images/BorderBox1.png" alt="Border Box equation"></td>
-<td>{% raw %}\boxed{{x}^{2}+{y}^{2}={z}^{2}}{% endraw %}</td>
+<td>\boxed{{x}^{2}+{y}^{2}={z}^{2}}</td>
 </tr>
 </table>
 
@@ -2062,6 +2062,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Online Demo
 
 * Explore how to create a Word document with mathematical equations using LaTeX and the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/createusinglatex#/material3).
+* See how to modify a mathematical equation using LaTeX in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/editusinglatex#/material3).
 
 ## See Also
 
