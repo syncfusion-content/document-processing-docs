@@ -1265,6 +1265,11 @@ Underline types and colors are ignored.
 </tr>
 </table>
 
+## Online Demo
+
+* Explore how to convert a Word document to HTML using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtohtml#/material3).
+* See how to convert HTML to a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/htmltoword#/material3).
+
 ## See Also
 
 * [How to get image from URL while opening HTML in ASP.NET Core](https://www.syncfusion.com/kb/13054/how-to-get-image-from-url-while-opening-html-in-asp-net-core)

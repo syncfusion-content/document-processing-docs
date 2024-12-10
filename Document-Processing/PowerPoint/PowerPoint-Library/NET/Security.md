@@ -295,3 +295,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N> 1. In Xamarin applications, Encryption, Decryption and Write Protection features are supported from the target framework .NET Standard 2.0 version onwards.
 N> 2. For ASP.NET Core, Encryption, Decryption and Write Protection features are supported from the .NET Core 2.0 version onwards.
 
+## Online Demo
+
+* Explore how to set write protection for a PowerPoint presentation with a password using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/writeprotection#/material3).
+* See how to encrypt and decrypt the PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/encryptanddecrypt#/material3).

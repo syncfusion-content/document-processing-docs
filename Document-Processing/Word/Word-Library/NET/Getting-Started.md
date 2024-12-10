@@ -1115,6 +1115,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N> 1. When the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) object is not initialized, then the charts in Word document gets skipped during Word to PDF conversion.
 N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards
 
+## Online Demo
+
+* Explore how to create a simple Word document with text, an image, and a table using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/helloworld#/material3).
+
 ## See Also
 
 * [Create Word document in ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-core)
