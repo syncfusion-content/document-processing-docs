@@ -65,3 +65,7 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [How to perform Word to PDF in Linux prior to v18.4 release?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)
 * [What are the NuGet packages to be installed to perform Word to PDF conversion in Linux OS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)
 * [What are the NuGet packages to be installed to perform Word to Image conversion in Linux OS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-image-conversion-in-linux-os)
+
+## Multithreading
+
+* Does the Word library support multithreading and thread-safety?
