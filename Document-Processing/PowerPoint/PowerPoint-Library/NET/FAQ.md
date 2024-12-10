@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions for PowerPoint Presentations | Syncfusion&reg;
+title: Frequently Asked Question for PowerPoint Presentation |Syncfusion&reg;
 description: This section illustrates about frequently asked questions in various options by using Essential&reg; Syncfusion&reg; Presentation library.
 platform: document-processing
 control: Presentation
@@ -139,3 +139,7 @@ Install the SkiaSharp.Linux NuGet package for the .NET Core application in Linux
 </td>
 </tr>
 </table>
+
+## Multithreading
+
+* Does the PowerPoint library support multithreading and thread-safety?
