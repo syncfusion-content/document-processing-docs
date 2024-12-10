@@ -353,6 +353,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 During Word to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/fallback-fonts-word-to-image).
 
+## Online Demo
+
+* Explore how to convert a Word document to an image using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtoimage#/material3).
+
 ## See Also
 
 * [Supported file formats](https://help.syncfusion.com/document-processing/word/word-library/net/support-file-formats)

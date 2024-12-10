@@ -1242,6 +1242,10 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Tables/Edit-table-contents).
 
+## Online Demo
+
+* Explore how to add tables in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/table#/material3).
+
 ## See Also
 * [How to set background image for a table cell?](https://support.syncfusion.com/kb/article/5731/how-to-set-background-image-for-a-table-cell-in-winforms-)
 * [How to add images to a table cell?](https://support.syncfusion.com/kb/article/6929/how-to-add-images-to-a-table-cell-using-essential-presentation-library)

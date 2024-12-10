@@ -638,3 +638,10 @@ End Using
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Split-by-placeholder-text).
+
+## Online Demo
+
+* Explore how to split a Word document by section using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbysection#/material3).
+* See how to split a Word document by heading using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbyheading#/material3).
+* See how to split a Word document by bookmark using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbybookmark#/material3).
+* See how to split a Word document by placeholder using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbybookmark#/material3).
