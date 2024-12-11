@@ -383,7 +383,7 @@ The following table demonstrates the LaTeX equivalent to professional format bor
 <tr>
 <td>1.</td>
 <td><img src="WorkingwithMathematicalEquation_images/BorderBox1.png" alt="Border Box equation"></td>
-<td>\boxed{{x}^{2}+{y}^{2}={z}^{2}}</td>
+<td><img src="WorkingwithMathematicalEquation_images/BorderBoxLaTeX.png" alt="Border Box LaTeX"></td>
 </tr>
 </table>
 
