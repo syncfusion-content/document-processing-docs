@@ -1127,6 +1127,113 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-gpu");
 
 </table>
 
+## Failed to launch Base! chrome_crashpad_handler: --database is required while performing HTML to PDF conversion with Alpine Docker
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Failed to launch Base! chrome_crashpad_handler: --database is required while performing HTML to PDF conversion with Alpine Docker
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+	
+The reported issue may occur due to missing of crashpad handler configuration in your docker file
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+You can try the below solution steps to overcome the reported issue  'Failed to launch Base! chrome_crashpad_handler: --database is required',
+ 
+Step 1: Kindly try the below docker file changes in your sample to resolve the chrome_crashpad_handler issue. 
+
+{% tabs %}
+{% highlight C# %}
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine
+LABEL pipelineName="PDFSearch" \
+      pipelineKey="ECUNZKAJ" \
+      offeringKey="LUSUYQTB"
+  
+RUN apk upgrade -U
+RUN apk add --no-cache tzdata
+RUN apk add --no-cache icu-libs
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache \
+        openssl
+RUN apk update && \
+   apk upgrade --available && \
+   apk add --update ca-certificates && \
+   apk add chromium --update-cache --repository  http://nl.alpinelinux.org/alpine/edge/community \
+   rm -rf /var/cache/apk/*
+COPY . /app
+WORKDIR /app
+ 
+RUN mkdir -p /crashpad && \
+    chown -R root:root /crashpad
+ 
+ENV XDG_CONFIG_HOME=/tmp/.chromium
+ENV XDG_CACHE_HOME=/tmp/.chromium
+
+ENV CHROME_CRASHPAD_DATABASE=/crashpad
+ 
+ARG dotnet_cli_home_dir=/tmp
+ 
+EXPOSE 5000 7000
+ENV ASPNETCORE_URLS=http://*:5000
+ENV DOTNET_CLI_HOME=$dotnet_cli_home_dir
+WORKDIR /app
+COPY . /app
+USER guest
+ENTRYPOINT ["dotnet", "Ops.PDFSearch.Web.dll"]
+	
+{% endhighlight %}
+{% endtabs %}
+
+We have attached the modified docker file for your reference [Docker file](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059).
+
+Step 2: From chromium version 128.x.x.x.x --database flag required for chrome Crashpad handler.  So, it may cause the issue on your end.  So kindly try the below steps and it may resolve the reported issue.
+ 
+Add below commands in Docker file
+
+{% tabs %}
+{% highlight C# %}
+
+RUN mkdir -p /var/www/.config/google-chrome/Crashpad
+RUN chown -R www-data:www-data /var/www/.config
+	
+{% endhighlight %}
+{% endtabs %}
+
+Add below command-line arguments in conversion code
+
+{% tabs %}
+{% highlight C# %}
+
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+{
+    strLogs.Append("\nPDF: BlinkConverterSettings  for Linux updated BlinkPath to chromium " + GetCurrentTime());
+    settings.BlinkPath = "/usr/lib/chromium";
+    settings.CommandLineArguments.Add("--no-sandbox");
+    settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+    settings.CommandLineArguments.Add("--disable-crash-reporter");
+    settings.CommandLineArguments.Add("--no-crashpad");
+    settings.CommandLineArguments.Add("--disable-dev-shm-usage");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Please refer the [Chromium forum link](https://github.com/chrome-php/chrome/issues/649) for more information about the reported issue
+
+</td>
+</tr>
+
+</table>
+
 
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
