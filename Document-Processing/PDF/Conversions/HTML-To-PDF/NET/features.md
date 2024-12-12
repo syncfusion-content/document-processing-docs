@@ -2254,8 +2254,6 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
-
 ## Accessible PDF
 
 The Blink HTML converter supports preserving tags from HTML to PDF using the EnableAccessibilityTags property in the BlinkConverterSettings class. Refer to the following code sample.
