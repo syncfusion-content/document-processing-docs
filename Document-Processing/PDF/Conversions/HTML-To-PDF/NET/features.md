@@ -2142,6 +2142,65 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-to-PDF-scale-property).
 
+## EnableAutoScaling
+
+The EnableAutoScaling property allows you to automatically scale the HTML content to fit the PDF dimensions during the conversion process. When set to true, the HTML content will be resized to fit the size of the generated PDF, ensuring that the content fits within the page without clipping or overflowing.
+
+N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML to PDF conversion process.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Initialize the HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    // Initialize BlinkConverterSettings to configure the Blink rendering engine.
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
+    // Enables automatic scaling to adjust the HTML content to fit the PDF's dimensions.
+    blinkConverterSettings.EnableAutoScaling = true;
+
+    // Assigns the Blink settings to the HTML to PDF converter.
+    htmlConverter.ConverterSettings = blinkConverterSettings;
+    // Converts the HTML file to a PDF document, using the path of the HTML file.
+    PdfDocument document = htmlConverter.Convert(Path.GetFullPath("../../../Input.html"));
+    // Save the generated PDF document to a specified output file.
+    using (FileStream fileStream = new FileStream("Output.pdf", FileMode.Create))
+    {
+        document.Save(fileStream);
+    }
+    // Close the document.
+    document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Initialize the HTML to PDF converter.
+    Dim htmlConverter As New HtmlToPdfConverter()
+    ' Initialize BlinkConverterSettings to configure the Blink rendering engine.
+    Dim blinkConverterSettings As New BlinkConverterSettings()
+
+    ' Enables automatic scaling to adjust the HTML content to fit the PDF's dimensions.
+    blinkConverterSettings.EnableAutoScaling = True
+
+    ' Assigns the Blink settings to the HTML to PDF converter.
+    htmlConverter.ConverterSettings = blinkConverterSettings
+    ' Converts the HTML file to a PDF document, using the path of the HTML file.
+    Dim document As PdfDocument = htmlConverter.Convert(Path.GetFullPath("../../../Input.html"))
+    ' Save the generated PDF document to a specified output file.
+    Using fileStream As New FileStream("Output.pdf", FileMode.Create)
+        document.Save(fileStream)
+    End Using
+    ' Close the document.
+    document.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 
 ## Timeout
 
