@@ -2197,6 +2197,63 @@ Refer to the following code snippet to set the timeout for HTML to PDF conversio
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Time-out-support-in-HTML-to-PDF).
 
+## Wait For External Fonts
+
+The [WaitForExternalFonts](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WaitForExternalFonts) property allows you to control whether the HTML to PDF conversion should wait for external fonts to load in the browser before rendering the PDF.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Initialize HTML to PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Initialize Blink converter settings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+// Set the converter to wait for external fonts to be loaded before converting
+blinkConverterSettings.WaitForExternalFonts = true;
+
+// Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Convert URL (or file path) to PDF
+PdfDocument document = htmlConverter.Convert(Path.GetFullPath("Input.html"));
+
+// Create a FileStream to save the PDF document to a file
+using (FileStream fileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    // Save the PDF document to the file stream
+    document.Save(fileStream);
+}
+// Close the document after saving
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize HTML to PDF converter
+Dim htmlConverter As New HtmlToPdfConverter()
+' Initialize Blink converter settings
+Dim blinkConverterSettings As New BlinkConverterSettings()
+' Set the converter to wait for external fonts to be loaded before converting
+blinkConverterSettings.WaitForExternalFonts = True
+
+' Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings
+' Convert URL (or file path) to PDF
+Dim document As PdfDocument = htmlConverter.Convert(Path.GetFullPath("Input.html"))
+
+' Create a FileStream to save the PDF document to a file
+Using fileStream As New FileStream("Output.pdf", FileMode.Create, FileAccess.Write)
+   ' Save the PDF document to the file stream
+   document.Save(fileStream)
+End Using
+' Close the document after saving
+document.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Accessible PDF
 
 The Blink HTML converter supports preserving tags from HTML to PDF using the EnableAccessibilityTags property in the BlinkConverterSettings class. Refer to the following code sample.
