@@ -2251,7 +2251,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 We can calculate and retrieve the dimensions (width and height) of the HTML content based on the current settings, such as viewport width and scale, using the GetHtmlBounds method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
-N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML to PDF conversion process.
+N> EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML to PDF conversion process.
 
 {% tabs %}
 
@@ -2294,8 +2294,6 @@ N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTM
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from GitHub.
 
 
 
