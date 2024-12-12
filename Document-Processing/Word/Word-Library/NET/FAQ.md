@@ -35,6 +35,10 @@ The frequently asked questions under each category in Essential DocIO are listed
 * [How to position a table in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-position-a-table-in-a-word-document)
 * [How to set the text direction to a table in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-the-text-direction-to-a-table-in-word-document)
 
+## Mail merge
+
+* [Is it possible to format merge fields with image formats before performing a mail merge?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#is-it-possible-to-format-merge-fields-with-image-formats-before-performing-a-mail-merge)
+
 ## Track Changes
 
 * [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
