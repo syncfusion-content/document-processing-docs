@@ -2199,7 +2199,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Wait For External Fonts
 
-The WaitForExternalFonts property allows you to control whether the HTML to PDF conversion should wait for external fonts to load in the browser before rendering the PDF.
+The [WaitForExternalFonts](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WaitForExternalFonts) property allows you to control whether the HTML to PDF conversion should wait for external fonts to load in the browser before rendering the PDF.
 
 {% tabs %}
 
