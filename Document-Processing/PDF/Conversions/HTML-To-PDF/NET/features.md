@@ -2247,6 +2247,58 @@ N> This support fully depends on the Chromium headless browser. Our converter pr
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Accessible_PDF_In_HTML_to_PDF).
 
+## GetHtmlBounds
+
+We can calculate and retrieve the dimensions (width and height) of the HTML content based on the current settings, such as viewport width and scale, using the GetHtmlBounds method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
+
+N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML to PDF conversion process.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Initialize HTML to PDF converter
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    // Initialize Blink converter settings
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
+    // Set the crop region for the HTML conversion based on the bounds of the HTML file
+    blinkConverterSettings.CropRegion = htmlConverter.GetHtmlBounds(Path.GetFullPath("Input.html"));
+
+    // Assign Blink converter settings to the HTML converter
+    htmlConverter.ConverterSettings = blinkConverterSettings;
+    // Convert the HTML file to an image
+    Image image = htmlConverter.ConvertToImage(Path.GetFullPath("Input.html"));
+    // Save the image as a PNG file
+    File.WriteAllBytes("Output.png", image.ImageData);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+   ' Initialize HTML to PDF converter
+   Dim htmlConverter As New HtmlToPdfConverter()
+    ' Initialize Blink converter settings
+    Dim blinkConverterSettings As New BlinkConverterSettings()
+
+    ' Set the crop region for the HTML conversion based on the bounds of the HTML file
+    blinkConverterSettings.CropRegion = htmlConverter.GetHtmlBounds(Path.GetFullPath("Input.html"))
+
+    ' Assign Blink converter settings to the HTML converter
+    htmlConverter.ConverterSettings = blinkConverterSettings
+    ' Convert the HTML file to an image
+    Dim image As Image = htmlConverter.ConvertToImage(Path.GetFullPath("Input.html"))
+    ' Save the image as a PNG file
+    File.WriteAllBytes("Output.png", image.ImageData)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
+
+
 ## Image Background
 
 The Blink HTML converter support adding the image background from HTML to Image using the ImageBackgroundColor property in BlinkConverterSettings class. Refer to the following code sample.
