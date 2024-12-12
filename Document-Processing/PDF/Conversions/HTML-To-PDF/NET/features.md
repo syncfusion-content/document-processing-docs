@@ -2197,7 +2197,7 @@ Refer to the following code snippet to set the timeout for HTML to PDF conversio
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Time-out-support-in-HTML-to-PDF).
 
-## WaitForExternalFonts
+## Wait For External Fonts
 
 The WaitForExternalFonts property allows you to control whether the HTML to PDF conversion should wait for external fonts to load in the browser before rendering the PDF.
 
