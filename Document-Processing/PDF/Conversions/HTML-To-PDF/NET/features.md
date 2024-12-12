@@ -2142,7 +2142,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-to-PDF-scale-property).
 
-## EnableAutoScaling
+## Enable Auto Scaling
 
 The EnableAutoScaling property allows you to automatically scale the HTML content to fit the PDF dimensions during the conversion process. When set to true, the HTML content will be resized to fit the size of the generated PDF, ensuring that the content fits within the page without clipping or overflowing.
 
