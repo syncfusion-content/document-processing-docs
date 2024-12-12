@@ -2199,8 +2199,6 @@ N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTM
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
-
 
 ## Timeout
 
