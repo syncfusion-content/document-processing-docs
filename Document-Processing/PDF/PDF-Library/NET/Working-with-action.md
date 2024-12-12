@@ -15,7 +15,7 @@ The below code example illustrates how to add the action to the PDF document usi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-action-to-the-PDF-document/.NET/Add-action-to-the-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-action-to-the-PDF-document/.NET/Add-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -93,7 +93,7 @@ The [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-the-sound-action-to-PDF-document/.NET/Add-the-sound-action-to-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-the-sound-action-to-PDF-document/.NET/Add-the-sound-action-to-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -182,7 +182,7 @@ The [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syn
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-JavaScript-action-to-the-PDF-document/.NET/Add-JavaScript-action-to-the-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-JavaScript-action-to-the-PDF-document/.NET/Add-JavaScript-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -261,7 +261,7 @@ The [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-URI-action-to-the-PDF-document/.NET/Add-URI-action-to-the-PDF-document/Program.cs" %}		
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-URI-action-to-the-PDF-document/.NET/Add-URI-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new document with PDF/A standard
 PdfDocument document = new PdfDocument();
@@ -419,7 +419,7 @@ The [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-lauch-action-to-PDF-document/.NET/Add-lauch-action-to-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-lauch-action-to-PDF-document/.NET/Add-lauch-action-to-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -905,7 +905,7 @@ Essential PDF provides support to add various actions to the form fields. The fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-form-fields-in-PDF-document/.NET/Adding-an-action-to-the-form-fields-in-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-form-fields-in-PDF-document/.NET/Adding-an-action-to-the-form-fields-in-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1141,7 +1141,7 @@ loadedDocument.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}      
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Create a new PDF document. 
 Dim document As New PdfLoadedDocument("input.pdf")
