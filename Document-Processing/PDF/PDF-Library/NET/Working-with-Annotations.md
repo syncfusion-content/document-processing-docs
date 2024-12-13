@@ -602,6 +602,83 @@ loadedDocument.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flattening-annotations-with-popups-in-PDF).
 
+## Flatten specific types of annotations
+
+To flatten specific types of annotations in a PDF document, use the [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method available in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) instance by providing an array of the desired annotation types. Refer to the following code example for more details.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Load the PDF document
+    using (FileStream docStream = new FileStream(@"input.pdf", FileMode.Open, FileAccess.Read))
+    {
+        using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream))
+        {
+            // Specify the annotation types to flatten
+            PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+            {
+                PdfLoadedAnnotationType.PolygonAnnotation
+            };
+
+            // Flatten the selected annotations
+            loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+            // Save the flattened document
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                loadedDocument.Save(memoryStream);
+                // MemoryStream can be used further as needed
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load the PDF document from a file path
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Specify the annotation types to flatten
+    PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+    {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    };
+
+    // Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+    // Save the flattened PDF document to a file path
+    loadedDocument.Save(@"C:\path\to\output.pdf");
+    // Close the document instance
+    loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Load the PDF document from a file path
+    Dim loadedDocument As New PdfLoadedDocument("C:\path\to\input.pdf")
+
+    ' Specify the annotation types to flatten
+    Dim pdfLoadedAnnotationTypes As PdfLoadedAnnotationType() = {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    }
+
+    ' Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes)
+
+    ' Save the flattened PDF document to a file path
+    loadedDocument.Save("C:\path\to\output.pdf")
+
+    ' Close the document instance
+    loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Supported annotation types
 
 ### 3D Annotation
@@ -3817,7 +3894,6 @@ pdfLoadedDocument.ExportAnnotations("Annotation.xfdf", AnnotationDataFormat.XFdf
 
 ' Close the loaded PDF document  
 pdfLoadedDocument.Close(True)
-
 
 {% endhighlight %}
 
