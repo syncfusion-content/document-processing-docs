@@ -32,7 +32,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Html)
 {
     //Saves the Word document to MemoryStream
     MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.docx);
+    document.Save(stream, FormatType.Docx);
     //Closes the Word document
     document.Close();
 }
