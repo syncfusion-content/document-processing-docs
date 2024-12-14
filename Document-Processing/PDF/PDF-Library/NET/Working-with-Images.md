@@ -250,7 +250,9 @@ doc.Close(True)
 {% endhighlight %}
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-image-in-an-existing-PDF-document/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-image-in-an-existing-PDF-document/).
+
+N>  The Syncfusion .NET Core PDF library supports drawing image formats other than JPEG and PNG into the PDF document using the PdfTiffImage API with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core platform.
 
 ## Inserting a vector image
 
@@ -823,4 +825,4 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document). 
 
-N> 1. Essential&reg; PDF supports remove image from the existing PDF document with [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core.
+N> 1. Essential PDF supports remove image from the existing PDF document with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core.
