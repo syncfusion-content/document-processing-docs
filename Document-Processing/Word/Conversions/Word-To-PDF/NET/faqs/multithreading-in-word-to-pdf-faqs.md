@@ -13,7 +13,7 @@ The frequently asked questions regarding multithreading and thread-safety suppor
 
 Yes, the Syncfusion&reg; Word library is thread-safe, and you can create multiple instances of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to load the same file as multiple copies or different Word files, then convert them to PDF using multithreading in C#.
 
-### Multithreaded Word to PDF using tasks
+### Multithreading Word to PDF using tasks
 
 The following code example illustrates how to use multithreading to convert multiple copies of a Word document to PDF by creating multiple tasks in C#.
 
@@ -142,9 +142,9 @@ End Module
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Multithreaded-using-tasks).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Multithreading-using-tasks).
 
-### Multithreaded Word to PDF using parallel process
+### Multithreading Word to PDF using parallel process
 
 The following code example illustrates how to use a parallel for loop to process multiple tasks concurrently, converting Word documents to PDF using multithreading in C#.
 
@@ -276,4 +276,4 @@ End Module
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Multithreaded-using-parallel-process).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Multithreading-using-parallel-process).
