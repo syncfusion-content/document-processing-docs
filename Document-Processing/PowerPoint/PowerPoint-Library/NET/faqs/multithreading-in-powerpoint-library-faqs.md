@@ -14,7 +14,7 @@ The frequently asked questions regarding multithreading and thread-safety suppor
 
 Yes, the Syncfusion&reg; PowerPoint library is thread-safe, allowing you to create multiple instances of the [Presentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.html) class to load the same file as multiple copies or different PowerPoint files and save them using multithreading in C#.
 
-### Multithreaded PowerPoint reading using tasks
+### Multithreading PowerPoint reading using tasks
 
 The following code example illustrates how to use multithreading to open, edit, and save multiple copies of a PowerPoint presentation by creating multiple tasks in C#.
 
@@ -130,9 +130,9 @@ End Module
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Multithreaded-using-tasks).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Multithreading-using-tasks).
 
-### Multithreaded PowerPoint reading using parallel process
+### Multithreading PowerPoint reading using parallel process
 
 The following code example illustrates how to use a parallel for loop to process multiple tasks concurrently, opening, editing, and saving PowerPoint presentations using multithreading in C#.
 
@@ -248,4 +248,4 @@ End Module
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Multithreaded-using-parallel-process).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Multithreading-using-parallel-process).
