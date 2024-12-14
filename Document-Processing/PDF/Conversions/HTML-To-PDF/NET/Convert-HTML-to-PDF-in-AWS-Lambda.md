@@ -1,7 +1,7 @@
 ---
 title: Convert HTML to PDF in AWS Lambda | Syncfusion
 description: Learn here about how to convert HTML to PDF in AWS Lambda using Syncfusion .NET HTML converter library.
-platform: document-processing
+platform: document-processing1
 control: PDF
 documentation: UG
 ---
