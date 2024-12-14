@@ -13,7 +13,7 @@ The frequently asked questions regarding multithreading and thread-safety suppor
 
 Yes, the Syncfusion&reg; Word library is thread-safe, allowing you to create multiple instances of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to load the same file as multiple copies or different Word files and save them using multithreading in C#.
 
-### Multithreaded Word document reading using tasks
+### Multithreading Word document reading using tasks
 
 The following code example illustrates how to use multithreading to open, edit, and save multiple copies of a Word document by creating multiple tasks in C#.
 
@@ -128,7 +128,7 @@ End Module
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Multithreaded-using-tasks).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Multithreading-using-tasks).
 
 ### Multithreaded Word document reading using parallel process
 
@@ -244,4 +244,4 @@ End Module
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Multithreaded-using-parallel-process).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Multithreading-using-parallel-process).
