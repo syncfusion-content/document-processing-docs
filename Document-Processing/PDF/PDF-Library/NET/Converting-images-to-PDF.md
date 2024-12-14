@@ -100,6 +100,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> The Syncfusion .NET Core PDF library supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) NuGet package in ASP.NET Core platform. 
 
+N>  The Syncfusion .NET Core PDF library supports drawing image formats other than JPEG and PNG into the PDF document using the PdfTiffImage API with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core platform.
 
 ## Converting vector image to PDF
 
