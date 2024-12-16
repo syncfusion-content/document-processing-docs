@@ -679,6 +679,8 @@ To flatten specific types of annotations in a PDF document, use the [FlattenAnno
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-specific-types-of-annotations/.NET).
+
 ## Supported annotation types
 
 ### 3D Annotation
@@ -3680,6 +3682,8 @@ pdfLoadedDocument.Close(True)
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-JSON-File/.NET).
+
 ## Exporting Newly Added Annotations to an FDF File
 
 To export newly added annotation data from a PDF document to an FDF (Forms Data Format) file, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
@@ -3788,6 +3792,8 @@ pdfLoadedDocument.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-FDF-File/.NET).
 
 ## Exporting Newly Added Annotations to an XFDF File
 
@@ -3898,6 +3904,8 @@ pdfLoadedDocument.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-XFDF-File/.NET).
 
 N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
 

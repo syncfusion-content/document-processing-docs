@@ -433,6 +433,8 @@ Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncf
 
 {% endtabs %}  
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET).
+
 ### Adding the radio button field
 
 To create the radio button in the PDF forms, you can use [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) class and you can create the radio button list items by using the [PdfRadioButtonListItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html) class.
@@ -1310,27 +1312,23 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Customize the signed date
 
-The signedDate parameter in the [PdfSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSignatureField.html) class allows you to specify a custom date when signing a PDF document. Refer to the following example for more details.
+The signedDate parameter in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class allows you to specify a custom date when signing a PDF document. Refer to the following example for more details.
 
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]"  %}
 
-//Create a new PDF document.
+//Creates a new PDF document.
 PdfDocument document = new PdfDocument();
-//Add a new page to PDF document.
+//Adds a new page.
 PdfPage page = document.Pages.Add();
-//Create PDF Signature field.
-PdfSignatureField signatureField = new PdfSignatureField(page, "Signature");
-//Set properties to the signature field.
-signatureField.Signature = new PdfSignature(page, "Signature", new DateTime(2019, 12, 24, 10, 50, 10));
-signatureField.Bounds = new RectangleF(0, 400, 90, 20);
-signatureField.ToolTip = "Signature";
-//Add the form field to the document.
-document.Form.Fields.Add(signatureField);
-//Creating the stream object.
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(page, "Signature", new DateTime(2020, 12, 24, 10, 50, 10));
+signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamp.digicert.com"));
+signature.SignedName = "Test";
+signature.Bounds = new RectangleF(new PointF(0, 0), new SizeF(200, 100));
+//Save the document into stream.
 MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
 document.Save(stream);
 //Close the document.
 document.Close(true);
@@ -1339,20 +1337,17 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Create a new PDF document.
+//Creates a new PDF document.
 PdfDocument document = new PdfDocument();
-//Add a new page to PDF document.
+//Adds a new page.
 PdfPage page = document.Pages.Add();
-//Create PDF Signature field.
-PdfSignatureField signatureField = new PdfSignatureField(page, "Signature");
-//Set properties to the signature field.
-signatureField.Signature = new PdfSignature(page, "Signature", new DateTime(2019, 12, 24, 10, 50, 10));
-signatureField.Bounds = new RectangleF(0, 400, 90, 20);
-signatureField.ToolTip = "Signature";
-//Add the form field to the document.
-document.Form.Fields.Add(signatureField);
-//Save the PDF document to stream.
-document.Save("Output.pdf");
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(page, "Signature", new DateTime(2020, 12, 24, 10, 50, 10));
+signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamp.digicert.com"));
+signature.SignedName = "Test";
+signature.Bounds = new RectangleF(new PointF(0, 0), new SizeF(200, 100));
+//Save the document.
+document.Save("Signature.pdf");
 //Close the document.
 document.Close(true);
 
@@ -1360,24 +1355,25 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
     
-' Add a new page to the PDF document.
+'Creates a new PDF document.
+Dim document As New PdfDocument()
+'Adds a new page.
 Dim page As PdfPage = document.Pages.Add()
-' Create a PDF Signature field.
-Dim signatureField As New PdfSignatureField(page, "Signature")
-' Set properties to the signature field.
-signatureField.Signature = New PdfSignature(page, "Signature", New DateTime(2019, 12, 24, 10, 50, 10))
-signatureField.Bounds = New RectangleF(0, 400, 90, 20)
-signatureField.ToolTip = "Signature"
-' Add the form field to the document.
-document.Form.Fields.Add(signatureField)
-' Save the PDF document to a file.
-document.Save("Output.pdf")
-' Close the document.
+'Creates a digital signature.
+Dim signature As New PdfSignature(page, "Signature", New DateTime(2020, 12, 24, 10, 50, 10))
+signature.TimeStampServer = New TimeStampServer(New Uri("http://timestamp.digicert.com"))
+signature.SignedName = "Test"
+signature.Bounds = New RectangleF(New PointF(0, 0), New SizeF(200, 100))
+'Save the document.
+document.Save("Signature.pdf")
+'Close the document.
 document.Close(True)
 
 {% endhighlight %}
 
 {% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Customize-the-signed-date/.NET).
 
 ### Adding the button field 
 
