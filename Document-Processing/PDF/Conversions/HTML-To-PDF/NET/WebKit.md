@@ -361,8 +361,7 @@ document.Close(true);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-website-URL-to-PDF-document).
-
+You can download a complete working sample from GitHub
 ## HTML string to PDF
 
 WebKit HTML converter provides support for converting HTML string to PDF. While converting HTML string to PDF, converter provides option to specify the base URL.
@@ -467,7 +466,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-HTML-string-to-PDF-document).
+You can download a complete working sample from GitHub.
 
 ## JavaScript
 
@@ -560,7 +559,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Enable-the-JavaScript-while-converting-HTML-to-PDF).
+You can download a complete working sample from GitHub.
 
 ## Additional delay
 
@@ -653,8 +652,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Add-additional-delay-while-converting-HTML-to-PDF).
-
+You can download a complete working sample from GitHub.
 ## Hyperlinks
 
 WebKit HTML converter provides support for preserving URL links from HTML to PDF.  WebKit HTML converter preserves hyperlinks as Web Link and Document Link annotations in PDF document. Please refer the below code snippet,
@@ -746,7 +744,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Disable-hyperlink-while-converting-HTML-to-PDF).
+You can download a complete working sample from GitHub.
 
 ## Bookmarks
 
@@ -911,7 +909,7 @@ padding-left: 5px;
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Create-bookmarks-while-converting-HTML-to-PDF).
+You can download a complete working sample from GitHub.
 
 ## Table of Contents
 
@@ -1076,7 +1074,7 @@ padding-left: 5px;
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Creating-TOC-while-converting-HTML-to-PDF).
+You can download a complete working sample from GitHub.
 
 ### Table of Contents with custom style
 
@@ -1235,7 +1233,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Customize-TOC-while-converting-HTML-to-PDF).
+You can download a complete working sample from GitHub.
 
 ## MediaType
 
@@ -1329,8 +1327,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Selection-of-media-type-while-converting-HTML-to-PDF).
-
+You can download a complete working sample from GitHub.
 ## HTML Form to PDF Form
 
 WebKit HTML converter provides support for converting HTML forms to PDF fillable forms. To convert HTML form to PDF form, please refer the below code snippet,
@@ -1447,7 +1444,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Converting-HTML-form-to-PDF-fillable-forms).
+You can download a complete working sample from GitHub.
 
 ## Windows Authentication
 
@@ -1543,7 +1540,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-windows-authenticated-webpage-to-PDF-document).
+You can download a complete working sample from GitHub.
 
 ## Form Authentication
 
@@ -1667,7 +1664,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Form-authentication-while-converting-HTML-to-PDF).
+You can download a complete working sample from GitHub.
 
 ## Token based authentication
 
@@ -1777,7 +1774,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-token-based-authenticate-webpage-to-PDF).
+You can download a complete working sample from GitHub.
 
 ## Offline conversion
 
@@ -1874,8 +1871,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Converting-HTML-to-PDF-in-offline-mode).
-
+You can download a complete working sample from GitHub.
 ## Table Header and Footer
 
 The WebKit HTML Converter supports repeating html table header and footer on every PDF page. This can be enabled by using [EnableRepeatTableHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.WebKitConverterSettings.html#Syncfusion_HtmlConverter_WebKitConverterSettings_EnableRepeatTableHeader) and [EnableRepeatTableFooter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.WebKitConverterSettings.html#Syncfusion_HtmlConverter_WebKitConverterSettings_EnableRepeatTableFooter) properties. Please refer the below code snippet,
@@ -2042,7 +2038,7 @@ for(count = 1; count <= 100; count++){
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Repeating-HTML-table-header-and-footer-in-each-page).
+You can download a complete working sample from GitHub.
 
 ## HTTP GET and POST
 
@@ -2168,7 +2164,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Access-webpage-using-HTTP-POST).
+You can download a complete working sample from GitHub.
 
 Use below code snippet to access a webpage using HTTP GET.
 
@@ -2278,7 +2274,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Access-a-webpage-using-HTTP-GET).
+You can download a complete working sample from GitHub.
 
 ## System proxy
 
@@ -2511,7 +2507,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Adjust-WebKit-viewport-in-HTML-to-PDF-Conversion).
+You can download a complete working sample from GitHub.
 
 ## Partial webpage to PDF
 
@@ -2600,7 +2596,7 @@ Hello world
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Converting-partial-webpage-to-PDF-document).
+You can download a complete working sample from GitHub.
 
 ## HTML to single PDF page
 
@@ -2888,7 +2884,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Set-windows-status-while-converting-HTML-to-PDF).
+You can download a complete working sample from GitHub.
 
 ## Temporary Path
 
@@ -2983,8 +2979,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Set-temporary-path-to-perform-conversion).
-
+You can download a complete working sample from GitHub.
 ## Split Text
 
 The WebKit HTML converter supports avoiding text split between the PDF pages when converting HTML to PDF. You can prevent the text split by disabling the ```SplitTextLines``` property available in the ```WebKitConverterSettings```.Refer to the following code snippet.
@@ -3074,8 +3069,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Avoiding-text-split-between-the-PDF-pages).
-
+You can download a complete working sample from GitHub.
 ## Split image
 
 The WebKit HTML converter supports avoiding image split between the PDF pages when converting HTML to PDF. You can prevent the image split by disabling the ```SplitImages``` property available in the ```WebKitConverterSettings```. Refer to the following code snippet.
@@ -3165,8 +3159,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Avoid-image-split-between-the-PDF-pages).
-
+You can download a complete working sample from GitHub.
 ## Troubleshooting
 
 <table>
