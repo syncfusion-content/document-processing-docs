@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with PDF Conformance in File Formats PDF
 
-The Essential PDF currently supports the following PDF conformances:
+The Essential&reg; PDF currently supports the following PDF conformances:
 
 * PDF/A-1a conformance
 * PDF/A-1b conformance
@@ -25,7 +25,7 @@ The Essential PDF currently supports the following PDF conformances:
 N> 1. To know more details about PDF/A standard refer [https://en.wikipedia.org/wiki/PDF/A#Description](https://en.wikipedia.org/wiki/PDF/A#Description )
 N> 2. To know more details about PDF/X standard refer [https://en.wikipedia.org/wiki/PDF/X](https://en.wikipedia.org/wiki/PDF/X)
 
-N> Essential PDF supports PDF conformances only in Windows Forms, WPF, ASP.NET Core, ASP.NET MVC and Xamarin platforms.
+N> Essential&reg; PDF supports PDF conformances only in Windows Forms, WPF, ASP.NET Core, ASP.NET MVC and Xamarin platforms.
 
 ## PDF/A-1b conformance
 
@@ -1310,7 +1310,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> 1. Converting PDF to PDF/X-1a conformance document is not supported.
 N> 2. CMYK color space images and symbolic fonts are not supported.
-N> 3. From the .NET Framework 3.5 version, the Essential PDF is compatible with the PDF to PDF/A conversion. 
+N> 3. From the .NET Framework 3.5 version, the Essential&reg; PDF is compatible with the PDF to PDF/A conversion. 
 
 ## Get PDF Conformance Level
 

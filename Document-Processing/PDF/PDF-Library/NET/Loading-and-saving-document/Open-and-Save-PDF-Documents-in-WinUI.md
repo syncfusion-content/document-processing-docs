@@ -9,7 +9,7 @@ keywords: winui os save pdf, winui os load pdf, c# save pdf, c# load pdf
 
 # Open and Save PDF document in WinUI
 
-The Syncfusion [WinUI PDF Library](https://www.syncfusion.com/document-processing/pdf-framework/winui/pdf-library) is used to create, read, and edit Word documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in WinUI**.
+The Syncfusion&reg; [WinUI PDF Library](https://www.syncfusion.com/document-processing/pdf-framework/winui/pdf-library) is used to create, read, and edit Word documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in WinUI**.
 
 **Prerequisites:**
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -31,7 +31,7 @@ Step 4: Install the [Syncfusion.Pdf.Net](https://www.nuget.org/packages/Syncfusi
 
 ![WinUI NuGet package](Images/NET_NuGet_Package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
 
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -142,4 +142,4 @@ A complete working sample can be downloaded from [Github](https://github.com/Syn
 By executing the program, you will get the **PDF document** as follows.
 ![WinUI output PDF document](Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/winui) to explore the rich set of Syncfusion PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/winui) to explore the rich set of Syncfusion&reg; PDF library features.

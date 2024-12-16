@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Hyperlinks
 
-In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential PDF provides support for all these types of hyperlink.
+In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential&reg; PDF provides support for all these types of hyperlink.
 
 ## Working with Web navigation
                                      

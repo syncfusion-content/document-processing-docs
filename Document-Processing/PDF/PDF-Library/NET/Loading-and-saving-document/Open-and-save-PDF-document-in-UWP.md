@@ -9,7 +9,7 @@ keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf
 
 # Open and Save PDF document in UWP
 
-The [Syncfusion UWP PDF library](https://www.syncfusion.com/document-processing/pdf-framework/uwp) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in UWP**. 
+The [Syncfusion&reg; UWP PDF library](https://www.syncfusion.com/document-processing/pdf-framework/uwp) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in UWP**. 
 
 ## Steps to open and save PDF document programatically:
 
@@ -19,7 +19,7 @@ Step 1: Create a new C# Blank App (Universal Windows) project.
 Step 2: Install the [Syncfusion.Pdf.UWP](https://www.nuget.org/packages/Syncfusion.Pdf.UWP/) NuGet package as reference to your UWP applications from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet package](Images/UWP_NuGet_package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: Create button in `MainPage.Xaml` page using below code example and create Button_Click event.
 
@@ -169,4 +169,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **Word document** as follows.
 ![UWP open and save output Word document](Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/uwp) to explore the rich set of Syncfusion PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/uwp) to explore the rich set of Syncfusion&reg; PDF library features.

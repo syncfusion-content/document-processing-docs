@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Watermarks
 
-The Essential PDF provides support to add watermark or stamp with text and images in the PDF document.
+The Essential&reg; PDF provides support to add watermark or stamp with text and images in the PDF document.
 
 To quickly get started, add Watermarks and Bookmarks to a PDF document in .NET using the PDF Library. Please, check this video:
 {% youtube " https://www.youtube.com/watch?v=C6nYz8fn0To" %}
