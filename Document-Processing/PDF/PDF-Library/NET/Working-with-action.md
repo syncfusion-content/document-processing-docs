@@ -1248,6 +1248,8 @@ document.Close(True)
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Adding-Document-Level%20JavaScript-Actions/.NET).
+
 ### Retrieve Document-Level JavaScript Actions
 
 The following example demonstrates how to retrieve document-level JavaScript actions using the [PdfDocumentJavaScriptCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentJavaScriptCollection.html) class.
@@ -1325,6 +1327,8 @@ document.Close(True)
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Retrieve-Document-Level-JavaScript-Actions/.NET).
+
 ### Remove Document-Level JavaScript Actions
 
 The following example demonstrates how to remove document-level JavaScript actions using the [PdfDocumentJavaScriptCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentJavaScriptCollection.html) class.
@@ -1390,3 +1394,5 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Remove-Document-Level-JavaScript-Actions/.NET).
