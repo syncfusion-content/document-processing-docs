@@ -2351,6 +2351,8 @@ N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTM
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Enable-Autoscaling/.NET).
+
 ## Wait For External Fonts
 
 The [WaitForExternalFonts](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WaitForExternalFonts) property allows you to control whether the HTML to PDF conversion should wait for external fonts to load in the browser before rendering the PDF.
@@ -2408,6 +2410,8 @@ document.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Wait-For-External-Fonts/.NET).
+
 ## Get Html Bounds
 
 We can calculate and retrieve the dimensions (width and height) of the HTML content based on the current settings, such as viewport width and scale, using the [GetHtmlBounds](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_GetHtmlBounds_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
@@ -2455,3 +2459,5 @@ N> EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Get-Bounds-in-HTML-file/.NET).

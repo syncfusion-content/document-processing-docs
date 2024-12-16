@@ -194,7 +194,7 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
 //Creates an attachment 
-FileStream invoiceStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
+FileStream invoiceStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
 PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
