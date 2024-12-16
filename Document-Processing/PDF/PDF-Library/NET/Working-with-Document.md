@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding the document settings
 
-Essential PDF supports various page setting options to control the page display, through [PageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_PageSettings) property of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html).
+Essential&reg; PDF supports various page setting options to control the page display, through [PageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_PageSettings) property of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html).
 
 You can choose the standard or custom page size when you add a page to the PDF document. This below sample illustrates how to create a PDF document with standard page size.
 
@@ -478,7 +478,7 @@ viewer.Dispose()
 
 ## Working with document properties
 
-Essential PDF allows you to set, read and modify the document information of a PDF like Author, CreationDate, Subject, Title, and Producer etc. The [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_DocumentInformation) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) or [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) provides access to this information.
+Essential&reg; PDF allows you to set, read and modify the document information of a PDF like Author, CreationDate, Subject, Title, and Producer etc. The [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_DocumentInformation) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) or [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) provides access to this information.
 
 The following code snippet illustrates how to set PDF document information.
 
@@ -729,7 +729,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Performing incremental update for PDF document
 
-The Essential PDF supports incremental update for PDF document. The content of a PDF file can be updated incrementally without rewriting the entire file. Changes are appended to the end of the file, leaving its original contents intact. The main benefit is small changes to a large PDF document can be saved quickly but the resultant document size gets increased compared with the original PDF document. Disabling the [IncrementalUpdate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfFileStructure.html#Syncfusion_Pdf_PdfFileStructure_IncrementalUpdate) of [PdfFileStructure](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfFileStructure.html) will rewrite the entire file, which results in a smaller PDF. This is illustrated in the following code sample.
+The Essential&reg; PDF supports incremental update for PDF document. The content of a PDF file can be updated incrementally without rewriting the entire file. Changes are appended to the end of the file, leaving its original contents intact. The main benefit is small changes to a large PDF document can be saved quickly but the resultant document size gets increased compared with the original PDF document. Disabling the [IncrementalUpdate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfFileStructure.html#Syncfusion_Pdf_PdfFileStructure_IncrementalUpdate) of [PdfFileStructure](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfFileStructure.html) will rewrite the entire file, which results in a smaller PDF. This is illustrated in the following code sample.
 
 {% tabs %}
 
@@ -793,7 +793,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Choosing the viewer preferences
 
-Essential PDF allows you to set various PDF viewer preferences to be used when the generated PDF document is displayed in a PDF reader application.
+Essential&reg; PDF allows you to set various PDF viewer preferences to be used when the generated PDF document is displayed in a PDF reader application.
 
 You can hide the menu bar and toolbar by enabling [HideMenubar](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html#Syncfusion_Pdf_PdfViewerPreferences_HideMenubar) and [HideToolbar](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html#Syncfusion_Pdf_PdfViewerPreferences_HideToolbar) properties of [PdfViewerPreferences](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfViewerPreferences.html) respectively. This is illustrated in the following code sample.
 
@@ -970,7 +970,7 @@ Please refer to the [actions](https://help.syncfusion.com/document-processing/pd
 
 ## Working in Multi-Threading Environment
 
-Essential PDF allows you to create or modify PDF documents simultaneously in multi-threading environment using [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class.
+Essential&reg; PDF allows you to create or modify PDF documents simultaneously in multi-threading environment using [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class.
 
 The following code sample illustrates how to create a PDF document in multi-threading environment.
 
@@ -1108,7 +1108,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Uniform Resource Naming in PDF document
 
-The Essential PDF allows you to create a PDF document with proper uniform resource naming by using the [EnableUniqueResourceNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableUniqueResourceNaming) property available in the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance. By default, the resource naming is added uniquely. Disabling the ```EnableUniqueResourceNaming``` property will create a PDF document with uniform resource names.
+The Essential&reg; PDF allows you to create a PDF document with proper uniform resource naming by using the [EnableUniqueResourceNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableUniqueResourceNaming) property available in the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance. By default, the resource naming is added uniquely. Disabling the ```EnableUniqueResourceNaming``` property will create a PDF document with uniform resource names.
 
 The following code snippet explains how to have uniform resource naming in a PDF document.
 
@@ -1215,7 +1215,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Memory Optimization
 
-Essential PDF provides support for optimization of memory using [EnableMemoryOptimization](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_EnableMemoryOptimization) property in [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance. Optimization will be effective only with merge, append and import functions. 
+Essential&reg; PDF provides support for optimization of memory using [EnableMemoryOptimization](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_EnableMemoryOptimization) property in [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance. Optimization will be effective only with merge, append and import functions. 
 
 Enabling this property will optimize the memory but difference in time occurs based on the document size. This is illustrated in the following code sample.
 
@@ -1410,7 +1410,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add or retrieve BaseUri in a PDF document
 
-The Essential PDF allows you to get or set the [BaseUri](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_BaseUri) in the PDF document. This is illustrated in the following code sample.
+The Essential&reg; PDF allows you to get or set the [BaseUri](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_BaseUri) in the PDF document. This is illustrated in the following code sample.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Add_BaseUri_in_the_PDF_document/.NET/Add_BaseUri_in_the_PDF_document/Program.cs" %}
@@ -1501,7 +1501,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Tracking save progress
 
-Essential PDF enables you to track the save progress through the [SaveProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_SaveProgress) event available in the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) instance.
+Essential&reg; PDF enables you to track the save progress through the [SaveProgress](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_SaveProgress) event available in the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) instance.
 
 {% tabs %}
 

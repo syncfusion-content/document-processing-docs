@@ -9,12 +9,12 @@ documentation: UG
 
 An interactive form, sometimes referred to as an AcroForm is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of that make a single, globally interactive form spanning the entire document.
 
-To quickly get started with creating, filling and flattening PDF form fields in .NET using the Syncfusion PDF library, refer to this video tutorial:
+To quickly get started with creating, filling and flattening PDF form fields in .NET using the Syncfusion&reg; PDF library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=_tCUghqKwCQ" %}
 
 ## Creating a new PDF form
 
-Essential PDF allows you to [create and manage the form](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-form-fields) (AcroForm) in PDF document by using [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class. The [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html) class represents the entire field collection of the form.
+Essential&reg; PDF allows you to [create and manage the form](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-form-fields) (AcroForm) in PDF document by using [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class. The [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html) class represents the entire field collection of the form.
 
 ### Adding the text box field 
 
@@ -1823,7 +1823,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Auto naming of form fields
 
-The Essential PDF supports auto naming of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
+The Essential&reg; PDF supports auto naming of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
 
 While enabling this property, the field names are auto naming. If the fields are created using same/common name, the created fields will act as individual. 
 
@@ -1943,7 +1943,7 @@ The following screenshot shows the enabling and disabling of form fields auto na
 
 ## Filling form fields in an existing PDF Document
 
-Essential PDF allows you to fill the form fields using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. 
+Essential&reg; PDF allows you to fill the form fields using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. 
 
 ### Filling the text box field
 
@@ -2615,7 +2615,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Retrieving option values from acroform radio button
 
-The Essential PDF supports retrieving option values from acroform radio button. The [OptionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonItem_OptionValue) property is used to get option values of [PdfLoadedRadioButtonItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html) instance.
+The Essential&reg; PDF supports retrieving option values from acroform radio button. The [OptionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonItem_OptionValue) property is used to get option values of [PdfLoadedRadioButtonItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html) instance.
 
 The following code example illustrates how to get option values from acroform radio button.
 
@@ -3182,7 +3182,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Auto resizing text box field text
 
-The Essential PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
+The Essential&reg; PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
 
 The following code illustrates how to set [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) in an existing PDF text box field. 
 
@@ -3261,7 +3261,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The static XFA document contains both the XFA and Acroform.
  
-The Essential PDF supports filling both the XFA and Acroform in a same instance (Fills the XFA form via Acroform instance) by enabling the [EnableXfaFormFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_EnableXfaFormFill) property available in the [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
+The Essential&reg; PDF supports filling both the XFA and Acroform in a same instance (Fills the XFA form via Acroform instance) by enabling the [EnableXfaFormFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_EnableXfaFormFill) property available in the [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
 
 The following code snippet illustrates how to fill XFA forms via Acroform API.
 
@@ -3350,7 +3350,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The form field editing or filling capabilities can be removed by either flattening the PDF document or by marking the form or field as read only.
 
-Essential PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
+Essential&reg; PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
 
 Please refer the sample for flattening the form fields in new PDF document.
 
@@ -3912,7 +3912,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Please refer to the [actions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-action#adding-an-action-to-the-form-field) section for more details.
 
-N> Essential PDF allows users to preserve the extended rights for form filling alone.
+N> Essential&reg; PDF allows users to preserve the extended rights for form filling alone.
 
 ## Troubleshooting
 

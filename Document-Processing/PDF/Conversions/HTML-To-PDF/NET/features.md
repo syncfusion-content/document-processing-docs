@@ -452,10 +452,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -467,7 +467,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -548,10 +548,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -563,7 +563,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -656,10 +656,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -671,7 +671,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters

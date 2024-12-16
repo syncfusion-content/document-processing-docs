@@ -8,9 +8,9 @@ documentation: UG
 
 # Working with Optical Character Recognition (OCR) in File Formats PDF
 
-Essential PDF provides support for Optical Character Recognition with the help of Google’s Tesseract Optical Character Recognition engine.
+Essential&reg; PDF provides support for Optical Character Recognition with the help of Google’s Tesseract Optical Character Recognition engine.
 
-N> Starting with v20.1.0.x, if you reference Syncfusion OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v20.1.0.x, if you reference Syncfusion&reg; OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 ## Prerequisites and setting up the Tesseract Engine
 
@@ -81,7 +81,7 @@ You can also download the language packages from below link
 
 [https://github.com/tesseract-ocr/tessdata](https://github.com/tesseract-ocr/tessdata )
 
-N> From 16.1.0.24 OCR is not a part of Essential Studio and is available as separate package (OCR Processor) under the Add-On section in the below link [https://www.syncfusion.com/downloads/latest-version](https://www.syncfusion.com/account/downloads).
+N> From 16.1.0.24 OCR is not a part of Essential&reg; Studio and is available as separate package (OCR Processor) under the Add-On section in the below link [https://www.syncfusion.com/downloads/latest-version](https://www.syncfusion.com/account/downloads).
 
 N> PDF supports OCR only in Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms.
 
@@ -167,7 +167,7 @@ N> The PerformOCR method returns only the text OCRed by OCRProcessor. Other exis
 
 You can perform OCR using the tesseract version 3.05. The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version between 3.02 and 3.05. By default, OCR works with tesseract version 3.02.
  
-You must use the pre built Syncfusion tesseract version 3.05 in the sample to run the OCR properly. The tesseract binaries are shipping with Syncfusion NuGet package, use the following link to download the NuGet package.
+You must use the pre built Syncfusion&reg; tesseract version 3.05 in the sample to run the OCR properly. The tesseract binaries are shipping with Syncfusion&reg; NuGet package, use the following link to download the NuGet package.
 
 [https://www.nuget.org/packages/Syncfusion.OCRProcessor.Base](https://www.nuget.org/packages/Syncfusion.OCRProcessor.Base)
 
@@ -246,7 +246,7 @@ End Using
 
 You can perform OCR using tesseract 4.0. The [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) property is used to switch the tesseract version. By default, OCR will be performed with tesseract version 3.02.
 
-You must use the pre-built Syncfusion tesseract 4.0 binaries in the project to run the OCR properly. The tesseract binaries are shipping with the Syncfusion NuGet package, use the following link to download the NuGet package.
+You must use the pre-built Syncfusion&reg; tesseract 4.0 binaries in the project to run the OCR properly. The tesseract binaries are shipping with the Syncfusion&reg; NuGet package, use the following link to download the NuGet package.
 
 
 [https://www.nuget.org/packages/Syncfusion.PDF.OCR.WinForms](https://www.nuget.org/packages/Syncfusion.PDF.OCR.WinForms/)
@@ -1511,7 +1511,7 @@ processor.PerformOCR(lDoc, "TessData/")
 
 **Issue:** OCR processor doesn’t process languages other than English.
 
-**Solution:** Essential PDF supports all the languages supported by Tesseract engine.
+**Solution:** Essential&reg; PDF supports all the languages supported by Tesseract engine.
 
 The dictionary packs for the languages can be downloaded from the following online location:
 

@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert HTML to PDF file in Linux
 
-The Syncfusion HTML to PDF converter is a .NET library that converts HTML or web pages to PDF document in Linux.
+The Syncfusion&reg; HTML to PDF converter is a .NET library that converts HTML or web pages to PDF document in Linux.
 ## Pre-requisites
 
 The following Linux dependencies should be installed where the conversion takes place. 
@@ -45,7 +45,7 @@ dotnet add package Syncfusion.HtmlToPdfConverter.Net.Linux -v xx.x.x.xx -s https
 
 ![Convert HTMLToPDF Linux Step2](htmlconversion_images/LinuxStep2.png)  
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: Include the following namespaces.
 
@@ -102,6 +102,6 @@ By executing the program, you will get the PDF document as follows. The output w
 
 A complete working sample can be downloaded from [Github.](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Linux)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion HTML to PDF converter library features. 
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion&reg; HTML to PDF converter library features. 
 
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core. 
