@@ -26,6 +26,8 @@ The following raster images are supported in Essential&reg; PDF.
 
 You can load image streams, files on disk, and use System.Drawing.Bitmap objects to draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
+N> For using image formats other than PNG and JPEG in ASP.NET Core, you need to include the Syncfusion.Pdf.Imaging.Net.Core package in your project. This package provides the necessary support for handling other raster image formats like BMP, GIF, TIFF, and ICO.
+
 The following code snippet shows how to add a file from disk to the PDF document.
 
 {% tabs %}  

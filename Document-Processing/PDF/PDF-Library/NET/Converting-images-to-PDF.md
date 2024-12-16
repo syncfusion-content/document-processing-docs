@@ -20,6 +20,8 @@ This includes a wide range of image formats for PDF conversion. These image form
 * EMF (Enhanced Metafile) 
 * ICO and ICON (Windows Icon)
 
+N> For using image formats other than PNG and JPEG in ASP.NET Core, you need to include the Syncfusion.Pdf.Imaging.Net.Core package in your project. This package provides the necessary support for handling other raster image formats like BMP, GIF, TIFF, and ICO.
+
 You can load images from various sources, including image streams and files on disk using [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. Once you have loaded an image, you can draw it on a PDF document using the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 The following code example shows how to convert image to PDF document. 
@@ -99,8 +101,6 @@ doc.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-image-in-a-new-PDF-document/). 
 
 N> The Syncfusion&reg; .NET Core PDF library supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) NuGet package in ASP.NET Core platform. 
-
-N>  The Syncfusion .NET Core PDF library supports drawing image formats other than JPEG and PNG into the PDF document using the PdfTiffImage API with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core platform.
 
 ## Converting vector image to PDF
 
