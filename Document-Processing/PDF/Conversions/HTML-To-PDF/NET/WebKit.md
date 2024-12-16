@@ -361,7 +361,7 @@ document.Close(true);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-website-URL-to-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-website-URL-to-PDF-document).
 
 ## HTML string to PDF
 
@@ -467,7 +467,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-HTML-string-to-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-HTML-string-to-PDF-document).
 
 ## JavaScript
 
@@ -560,7 +560,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Enable-the-JavaScript-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Enable-the-JavaScript-while-converting-HTML-to-PDF).
 
 ## Additional delay
 
@@ -653,7 +653,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Add-additional-delay-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Add-additional-delay-while-converting-HTML-to-PDF).
 
 ## Hyperlinks
 
@@ -746,7 +746,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Disable-hyperlink-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Disable-hyperlink-while-converting-HTML-to-PDF).
 
 ## Bookmarks
 
@@ -911,7 +911,7 @@ padding-left: 5px;
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Create-bookmarks-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-bookmarks-while-converting-HTML-to-PDF).
 
 ## Table of Contents
 
@@ -1076,7 +1076,7 @@ padding-left: 5px;
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Creating-TOC-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Creating-TOC-while-converting-HTML-to-PDF).
 
 ### Table of Contents with custom style
 
@@ -1235,7 +1235,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Customize-TOC-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Customize-TOC-while-converting-HTML-to-PDF).
 
 ## MediaType
 
@@ -1329,7 +1329,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Selection-of-media-type-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Selection-of-media-type-while-converting-HTML-to-PDF).
 
 ## HTML Form to PDF Form
 
@@ -1447,7 +1447,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Converting-HTML-form-to-PDF-fillable-forms).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Converting-HTML-form-to-PDF-fillable-forms).
 
 ## Windows Authentication
 
@@ -1543,7 +1543,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-windows-authenticated-webpage-to-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-windows-authenticated-webpage-to-PDF-document).
 
 ## Form Authentication
 
@@ -1667,7 +1667,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Form-authentication-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Form-authentication-while-converting-HTML-to-PDF).
 
 ## Token based authentication
 
@@ -1777,7 +1777,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Convert-token-based-authenticate-webpage-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-token-based-authenticate-webpage-to-PDF).
 
 ## Offline conversion
 
@@ -1874,7 +1874,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Converting-HTML-to-PDF-in-offline-mode).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Converting-HTML-to-PDF-in-offline-mode).
 
 ## Table Header and Footer
 
@@ -2042,7 +2042,7 @@ for(count = 1; count <= 100; count++){
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Repeating-HTML-table-header-and-footer-in-each-page).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Repeating-HTML-table-header-and-footer-in-each-page).
 
 ## HTTP GET and POST
 
@@ -2168,7 +2168,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Access-webpage-using-HTTP-POST).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Access-webpage-using-HTTP-POST).
 
 Use below code snippet to access a webpage using HTTP GET.
 
@@ -2278,7 +2278,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Access-a-webpage-using-HTTP-GET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Access-a-webpage-using-HTTP-GET).
 
 ## System proxy
 
@@ -2511,7 +2511,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Adjust-WebKit-viewport-in-HTML-to-PDF-Conversion).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Adjust-WebKit-viewport-in-HTML-to-PDF-Conversion).
 
 ## Partial webpage to PDF
 
@@ -2600,7 +2600,7 @@ Hello world
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Converting-partial-webpage-to-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Converting-partial-webpage-to-PDF-document).
 
 ## HTML to single PDF page
 
@@ -2888,7 +2888,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Set-windows-status-while-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Set-windows-status-while-converting-HTML-to-PDF).
 
 ## Temporary Path
 
@@ -2983,7 +2983,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Set-temporary-path-to-perform-conversion).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Set-temporary-path-to-perform-conversion).
 
 ## Split Text
 
@@ -3074,7 +3074,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Avoiding-text-split-between-the-PDF-pages).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Avoiding-text-split-between-the-PDF-pages).
 
 ## Split image
 
@@ -3165,7 +3165,7 @@ return File(stream, contentType, fileName);
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/WebKit/Avoid-image-split-between-the-PDF-pages).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Avoid-image-split-between-the-PDF-pages).
 
 ## Troubleshooting
 
