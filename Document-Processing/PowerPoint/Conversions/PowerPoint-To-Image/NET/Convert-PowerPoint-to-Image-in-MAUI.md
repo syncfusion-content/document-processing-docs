@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to Image in .NET MAUI | Syncfusion
+title: Convert PowerPoint to Image in .NET MAUI | Syncfusion&reg;
 description: Convert PowerPoint to image in .NET MAUI using .NET MAUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in .NET MAUI
 
-Syncfusion PowerPoint is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET MAUI**.
+Syncfusion&reg; PowerPoint is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET MAUI**.
 
 ## Prerequisites
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin).
@@ -27,7 +27,7 @@ Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/
 
 ![Install Syncfusion.PresentationRenderer.NET NuGet package](Workingwith-MAUI/Nuget_Package_PPTXtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -115,50 +115,50 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
   <td>
-    {{'[.NET MAUI Project](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image)'| markdownify }}
+    {{'[.NET MAUI Project](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image)'| markdownify }}
   </td>
   <td>
-    {{'[SaveService.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/SaveServices/SaveService.cs)'| markdownify }}
+    {{'[SaveService.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/SaveServices/SaveService.cs)'| markdownify }}
   </td>
   <td>Represent the base class for save operation.
   </td>
   </tr>
   <tr>
   <td>
-    {{'[Windows](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/Windows)'| markdownify }}
+    {{'[Windows](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/Windows)'| markdownify }}
   </td>
   <td>
-    {{'[SaveWindows.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/Windows/SaveWindows.cs)'| markdownify }}
+    {{'[SaveWindows.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/Windows/SaveWindows.cs)'| markdownify }}
   </td>
   <td>Save implementation for Windows.
   </td>
   </tr>
   <tr>
   <td>
-    {{'[Android](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/Windows/SaveWindows.cs)'| markdownify }}
+    {{'[Android](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/Windows/SaveWindows.cs)'| markdownify }}
   </td>
   <td>
-    {{'[SaveAndroid.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/Android/SaveAndroid.cs)'| markdownify }}
+    {{'[SaveAndroid.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/Android/SaveAndroid.cs)'| markdownify }}
   </td>
   <td>Save implementation for Android device.
   </td>
   </tr>
   <tr>
   <td>
-    {{'[Mac Catalyst](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/MacCatalyst)'| markdownify }}
+    {{'[Mac Catalyst](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/MacCatalyst)'| markdownify }}
   </td>
   <td>
-    {{'[SaveMac.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/MacCatalyst/SaveMac.cs)'| markdownify }}
+    {{'[SaveMac.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/MacCatalyst/SaveMac.cs)'| markdownify }}
   </td>
   <td>Save implementation for Mac Catalyst device.
   </td>
   </tr>
   <tr>
   <td rowspan="2">
-    {{'[iOS](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/iOS)'| markdownify }}
+    {{'[iOS](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/iOS)'| markdownify }}
   </td>
   <td>
-    {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/iOS/SaveIOS.cs)'| markdownify }}
+    {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/iOS/SaveIOS.cs)'| markdownify }}
   </td>
   <td>
     Save implementation for iOS device
@@ -166,7 +166,7 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
   <td>
-    {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-Presentation-to-Image/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
+    {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI/Convert-PowerPoint-to-Image/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
     Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
@@ -174,6 +174,6 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
 </table>
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core. 

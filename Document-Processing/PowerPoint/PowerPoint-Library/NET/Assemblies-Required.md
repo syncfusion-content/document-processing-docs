@@ -1,5 +1,5 @@
 ---
-title: Assemblies Required for PowerPoint Presentation | Syncfusion
+title: Assemblies Required for PowerPoint Presentation | Syncfusion&reg;
 description: This section explains about how to assemblies required to convert powerpoint presentation to PDF for various platforms and frameworks.
 platform: document-processing
 control: Presentation
@@ -66,7 +66,7 @@ Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/></td></tr>
 </table>
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
 
 ## Converting PowerPoint Presentation to PDF
 

@@ -25,7 +25,7 @@ Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Console-Apps-images/Console-Apps-images_img3.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
 
 Step 4: Include the following namespaces in the Program.cs file.
 {% capture codesnippet1 %}
@@ -428,7 +428,7 @@ Step 3: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.WinForms Nuget Package](Console-Apps-images/Console-Apps-images_img7.png)
 
-N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion Windows Forms GUI controls, so named with suffix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
+N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion&reg; Windows Forms GUI controls, so named with suffix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
 
 Step 4: Include the following namespaces in the program.cs file.
 {% capture codesnippet1 %}
@@ -813,6 +813,6 @@ A complete working example of how to create an Excel file in Console Application
 By executing the program, you will get the Excel file as below.
 ![Output File](Console-Apps-images/Console-Apps-images_img4.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.

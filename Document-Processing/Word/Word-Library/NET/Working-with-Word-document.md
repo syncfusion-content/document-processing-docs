@@ -1,5 +1,5 @@
 ---
-title: Working with Word document in C# | DocIO | Syncfusion
+title: Working with Word document in C# | DocIO | Syncfusion&reg;
 description: Learn to merge, split, and print Word documents with ease, as well as iterate through DOM elements using .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -740,7 +740,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Setting the Background for a Word document
 
-Essential DocIO allows to apply background such as color, gradient and picture to the Word document. A background of a Word document is represented by [Background](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Background) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class. 
+Essential&reg; DocIO allows to apply background such as color, gradient and picture to the Word document. A background of a Word document is represented by [Background](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Background) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class. 
 
 The following code illustrates how to apply gradient as background to the document.
 
@@ -1095,4 +1095,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * [How to attach a Template to a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-attach-a-template-to-a-word-document)
 * [How to check the compatibility mode of the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-check-the-compatibility-mode-of-the-word-document)
-* [Which units does Essential DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
+* [Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)

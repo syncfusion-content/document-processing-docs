@@ -8,7 +8,7 @@ documentation: UG
 
 # Loading and Saving an Excel document in Azure Platform 
 
-Syncfusion XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **Load and Save an Excel document in Azure services** within a few lines of code.
+Syncfusion&reg; XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **Load and Save an Excel document in Azure services** within a few lines of code.
 
 N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains Load and Save an Excel document in C# using the Excel library (XlsIO) in Azure. 
 

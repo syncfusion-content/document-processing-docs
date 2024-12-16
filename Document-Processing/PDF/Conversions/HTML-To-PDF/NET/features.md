@@ -2247,6 +2247,7 @@ N> This support fully depends on the Chromium headless browser. Our converter pr
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Accessible_PDF_In_HTML_to_PDF).
 
+
 ## Image Background
 
 The Blink HTML converter support adding the image background from HTML to Image using the ImageBackgroundColor property in BlinkConverterSettings class. Refer to the following code sample.
@@ -2292,3 +2293,165 @@ The Blink HTML converter support adding the image background from HTML to Image 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF).
+
+## Enable Auto Scaling
+
+The [EnableAutoScaling](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableAutoScaling) property allows you to automatically scale the HTML content to fit the PDF dimensions during the conversion process. When set to true, the HTML content will be resized to fit the size of the generated PDF, ensuring that the content fits within the page without clipping or overflowing.
+
+N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML to PDF conversion process.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Initialize the HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    // Initialize BlinkConverterSettings to configure the Blink rendering engine.
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
+    // Enables automatic scaling to adjust the HTML content to fit the PDF's dimensions.
+    blinkConverterSettings.EnableAutoScaling = true;
+
+    // Assigns the Blink settings to the HTML to PDF converter.
+    htmlConverter.ConverterSettings = blinkConverterSettings;
+    // Converts the HTML file to a PDF document, using the path of the HTML file.
+    PdfDocument document = htmlConverter.Convert(Path.GetFullPath("../../../Input.html"));
+    // Save the generated PDF document to a specified output file.
+    using (FileStream fileStream = new FileStream("Output.pdf", FileMode.Create))
+    {
+        document.Save(fileStream);
+    }
+    // Close the document.
+    document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Initialize the HTML to PDF converter.
+    Dim htmlConverter As New HtmlToPdfConverter()
+    ' Initialize BlinkConverterSettings to configure the Blink rendering engine.
+    Dim blinkConverterSettings As New BlinkConverterSettings()
+
+    ' Enables automatic scaling to adjust the HTML content to fit the PDF's dimensions.
+    blinkConverterSettings.EnableAutoScaling = True
+
+    ' Assigns the Blink settings to the HTML to PDF converter.
+    htmlConverter.ConverterSettings = blinkConverterSettings
+    ' Converts the HTML file to a PDF document, using the path of the HTML file.
+    Dim document As PdfDocument = htmlConverter.Convert(Path.GetFullPath("../../../Input.html"))
+    ' Save the generated PDF document to a specified output file.
+    Using fileStream As New FileStream("Output.pdf", FileMode.Create)
+        document.Save(fileStream)
+    End Using
+    ' Close the document.
+    document.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Wait For External Fonts
+
+The [WaitForExternalFonts](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WaitForExternalFonts) property allows you to control whether the HTML to PDF conversion should wait for external fonts to load in the browser before rendering the PDF.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Initialize HTML to PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Initialize Blink converter settings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+// Set the converter to wait for external fonts to be loaded before converting
+blinkConverterSettings.WaitForExternalFonts = true;
+
+// Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Convert URL (or file path) to PDF
+PdfDocument document = htmlConverter.Convert(Path.GetFullPath("Input.html"));
+
+// Create a FileStream to save the PDF document to a file
+using (FileStream fileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    // Save the PDF document to the file stream
+    document.Save(fileStream);
+}
+// Close the document after saving
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize HTML to PDF converter
+Dim htmlConverter As New HtmlToPdfConverter()
+' Initialize Blink converter settings
+Dim blinkConverterSettings As New BlinkConverterSettings()
+' Set the converter to wait for external fonts to be loaded before converting
+blinkConverterSettings.WaitForExternalFonts = True
+
+' Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings
+' Convert URL (or file path) to PDF
+Dim document As PdfDocument = htmlConverter.Convert(Path.GetFullPath("Input.html"))
+
+' Create a FileStream to save the PDF document to a file
+Using fileStream As New FileStream("Output.pdf", FileMode.Create, FileAccess.Write)
+   ' Save the PDF document to the file stream
+   document.Save(fileStream)
+End Using
+' Close the document after saving
+document.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Get Html Bounds
+
+We can calculate and retrieve the dimensions (width and height) of the HTML content based on the current settings, such as viewport width and scale, using the [GetHtmlBounds](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_GetHtmlBounds_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
+
+N> EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML to PDF conversion process.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Initialize HTML to PDF converter
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    // Initialize Blink converter settings
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
+    // Set the crop region for the HTML conversion based on the bounds of the HTML file
+    blinkConverterSettings.CropRegion = htmlConverter.GetHtmlBounds(Path.GetFullPath("Input.html"));
+
+    // Assign Blink converter settings to the HTML converter
+    htmlConverter.ConverterSettings = blinkConverterSettings;
+    // Convert the HTML file to an image
+    Image image = htmlConverter.ConvertToImage(Path.GetFullPath("Input.html"));
+    // Save the image as a PNG file
+    File.WriteAllBytes("Output.png", image.ImageData);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+   ' Initialize HTML to PDF converter
+   Dim htmlConverter As New HtmlToPdfConverter()
+    ' Initialize Blink converter settings
+    Dim blinkConverterSettings As New BlinkConverterSettings()
+
+    ' Set the crop region for the HTML conversion based on the bounds of the HTML file
+    blinkConverterSettings.CropRegion = htmlConverter.GetHtmlBounds(Path.GetFullPath("Input.html"))
+
+    ' Assign Blink converter settings to the HTML converter
+    htmlConverter.ConverterSettings = blinkConverterSettings
+    ' Convert the HTML file to an image
+    Dim image As Image = htmlConverter.ConvertToImage(Path.GetFullPath("Input.html"))
+    ' Save the image as a PNG file
+    File.WriteAllBytes("Output.png", image.ImageData)
+
+{% endhighlight %}
+
+{% endtabs %}

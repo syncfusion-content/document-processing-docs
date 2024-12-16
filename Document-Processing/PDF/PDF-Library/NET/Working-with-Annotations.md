@@ -149,7 +149,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}   
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Creates a new PDF document.
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -219,7 +219,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %} 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -294,7 +294,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}   
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -537,7 +537,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}     
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -586,7 +586,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}  
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -601,6 +601,83 @@ loadedDocument.Close(true)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flattening-annotations-with-popups-in-PDF).
+
+## Flatten specific types of annotations
+
+To flatten specific types of annotations in a PDF document, use the [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method available in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) instance by providing an array of the desired annotation types. Refer to the following code example for more details.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Load the PDF document
+    using (FileStream docStream = new FileStream(@"input.pdf", FileMode.Open, FileAccess.Read))
+    {
+        using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream))
+        {
+            // Specify the annotation types to flatten
+            PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+            {
+                PdfLoadedAnnotationType.PolygonAnnotation
+            };
+
+            // Flatten the selected annotations
+            loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+            // Save the flattened document
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                loadedDocument.Save(memoryStream);
+                // MemoryStream can be used further as needed
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load the PDF document from a file path
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Specify the annotation types to flatten
+    PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+    {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    };
+
+    // Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+    // Save the flattened PDF document to a file path
+    loadedDocument.Save(@"C:\path\to\output.pdf");
+    // Close the document instance
+    loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Load the PDF document from a file path
+    Dim loadedDocument As New PdfLoadedDocument("C:\path\to\input.pdf")
+
+    ' Specify the annotation types to flatten
+    Dim pdfLoadedAnnotationTypes As PdfLoadedAnnotationType() = {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    }
+
+    ' Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes)
+
+    ' Save the flattened PDF document to a file path
+    loadedDocument.Save("C:\path\to\output.pdf")
+
+    ' Close the document instance
+    loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Supported annotation types
 
@@ -3493,6 +3570,336 @@ lDoc.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-annotations-to-JSON-file-from-PDF-document).
+
+## Exporting Newly Added Annotations to a JSON File
+
+To export newly added annotation data from a PDF document to a JSON file, use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method within the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document from a file stream 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Create a memory stream to hold the exported annotations in JSON format 
+Stream jsonStream = new MemoryStream(); 
+// Export annotations to the JSON format
+pdfLoadedDocument.ExportAnnotations(jsonStream, AnnotationDataFormat.Json);
+
+// Close the loaded PDF document 
+pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+jsonStream.Dispose(); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document from a file stream 
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Export annotations to the JSON format 
+pdfLoadedDocument.ExportAnnotations(“Annotation.json”, AnnotationDataFormat.Json); 
+
+// Close the loaded PDF document
+pdfLoadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from a file stream 
+Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
+' Create a PDF free text annotation 
+Dim freeText As New PdfFreeTextAnnotation(New RectangleF(10, 0, 50, 50)) 
+
+' Set properties for the annotation 
+' Text displayed as markup 
+freeText.MarkupText = "Free Text with Callout" 
+' Set the text markup color 
+freeText.TextMarkupColor = New PdfColor(Color.Black) 
+' Set font and size 
+freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 7.0F) 
+' Set background color 
+freeText.Color = New PdfColor(Color.Yellow) 
+' Set border color 
+freeText.BorderColor = New PdfColor(Color.Red) 
+' Set border thickness 
+freeText.Border = New PdfAnnotationBorder(0.5F)
+
+' Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages(0).Annotations.Add(freeText) 
+
+' Export annotations to the JSON format 
+pdfLoadedDocument.ExportAnnotations("Annotation.json", AnnotationDataFormat.Json) 
+
+' Close the loaded PDF document  
+pdfLoadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Exporting Newly Added Annotations to an FDF File
+
+To export newly added annotation data from a PDF document to an FDF (Forms Data Format) file, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document from a file stream 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Create a memory stream to hold the exported annotations in FDF format 
+Stream fdfStream = new MemoryStream(); 
+// Export annotations to the FDF format
+pdfLoadedDocument.ExportAnnotations(fdfStream, AnnotationDataFormat.Fdf); 
+
+// Close the loaded PDF document 
+pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+fdfStream.Dispose(); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document from a file stream 
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Export annotations to the FDF format 
+pdfLoadedDocument.ExportAnnotations(“Annotation.fdf”, AnnotationDataFormat.Fdf); 
+
+// Close the loaded PDF document
+pdfLoadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from a file stream 
+Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
+' Create a PDF free text annotation 
+Dim freeText As New PdfFreeTextAnnotation(New RectangleF(10, 0, 50, 50)) 
+
+' Set properties for the annotation 
+' Text displayed as markup 
+freeText.MarkupText = "Free Text with Callout" 
+' Set the text markup color 
+freeText.TextMarkupColor = New PdfColor(Color.Black) 
+' Set font and size 
+freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 7.0F) 
+' Set background color 
+freeText.Color = New PdfColor(Color.Yellow) 
+' Set border color 
+freeText.BorderColor = New PdfColor(Color.Red) 
+' Set border thickness 
+freeText.Border = New PdfAnnotationBorder(0.5F)
+
+' Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages(0).Annotations.Add(freeText) 
+
+' Export annotations to the FDF format 
+pdfLoadedDocument.ExportAnnotations("Annotation.fdf", AnnotationDataFormat.Fdf) 
+
+' Close the loaded PDF document  
+pdfLoadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Exporting Newly Added Annotations to an XFDF File
+
+To export newly added annotation data from a PDF document to an XFDF (XML Forms Data Format) file, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document from a file stream 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Create a memory stream to hold the exported annotations in JSON format 
+Stream xfdfStream = new MemoryStream(); 
+// Export annotations to the XFDF format
+pdfLoadedDocument.ExportAnnotations(xfdfStream, AnnotationDataFormat.XFdf); 
+
+// Close the loaded PDF document 
+pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+xfdfStream.Dispose(); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document from a file stream 
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Export annotations to the XFDF format 
+pdfLoadedDocument.ExportAnnotations(“Annotation.xfdf”, AnnotationDataFormat.XFdf); 
+
+// Close the loaded PDF document
+pdfLoadedDocument.Close(true); 
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from a file stream 
+Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
+' Create a PDF free text annotation 
+Dim freeText As New PdfFreeTextAnnotation(New RectangleF(10, 0, 50, 50)) 
+
+' Set properties for the annotation 
+' Text displayed as markup 
+freeText.MarkupText = "Free Text with Callout" 
+' Set the text markup color 
+freeText.TextMarkupColor = New PdfColor(Color.Black) 
+' Set font and size 
+freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 7.0F) 
+' Set background color 
+freeText.Color = New PdfColor(Color.Yellow) 
+' Set border color 
+freeText.BorderColor = New PdfColor(Color.Red) 
+' Set border thickness 
+freeText.Border = New PdfAnnotationBorder(0.5F)
+
+' Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages(0).Annotations.Add(freeText) 
+
+' Export annotations to the XFDF format 
+pdfLoadedDocument.ExportAnnotations("Annotation.xfdf", AnnotationDataFormat.XFdf) 
+
+' Close the loaded PDF document  
+pdfLoadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
 
 ## Adding comments and review status to the PDF annotation
 

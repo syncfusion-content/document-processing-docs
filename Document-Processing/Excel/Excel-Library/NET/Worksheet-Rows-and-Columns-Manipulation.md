@@ -8,7 +8,7 @@ documentation: UG
 
 # Worksheet Rows and Columns Manipulation
 
-The Essential XlsIO provides rows and columns manipulation options equivalent to Excel such as insertion, deletion, hiding, adjusting dimensions, grouping, sub-totaling and more through [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
+The Essential&reg; XlsIO provides rows and columns manipulation options equivalent to Excel such as insertion, deletion, hiding, adjusting dimensions, grouping, sub-totaling and more through [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
 
 ## Insert Rows and Columns 
 
@@ -329,7 +329,7 @@ A complete working example to hide rows and columns in an Excel worksheet in C# 
 
 ## Show or Hide Specific Range
 
-The Essential XlsIO allows to set visibility for a specific range through [ShowRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRange_Syncfusion_XlsIO_IRange___System_Boolean_). The following code snippet shows how to set the visibility of a range.
+The Essential&reg; XlsIO allows to set visibility for a specific range through [ShowRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ShowRange_Syncfusion_XlsIO_IRange___System_Boolean_). The following code snippet shows how to set the visibility of a range.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Format%20rows%20and%20columns/Hide%20Range/.NET/Hide%20Range/Hide%20Range/Program.cs,180" %}

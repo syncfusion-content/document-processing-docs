@@ -1,5 +1,5 @@
 ---
-title: Word file format conversions in C# | DocIO | Syncfusion
+title: Word file format conversions in C# | DocIO | Syncfusion&reg;
 description: Learn about the supported Word file format conversions such a Word open XML formats, Word processing XML, and Word binary in the .NET Word library.
 platform: document-processing
 control: DocIO
@@ -7,9 +7,9 @@ documentation: UG
 ---
 
 
-# Word File Formats in Essential DocIO
+# Word File Formats in Essential&reg; DocIO
 
-The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native file formats are DOC, DOCX, RTF, DOT, DOTX, DOCM, and DOTM. The Essential DocIO supports the following major native file formats.
+The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native file formats are DOC, DOCX, RTF, DOT, DOTX, DOCM, and DOTM. The Essential&reg; DocIO supports the following major native file formats.
 
 1. Word Open XML formats (2007 & later)
 2. Word Processing XML (.xml)
@@ -189,7 +189,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Word Processing XML (.xml)
 
 The XML format introduced in Microsoft Word 2003 was a simple, XML-based format called WordprocessingML or WordML.
-The Essential DocIO supports converting the Word document into Word Processing XML document and vice versa.
+The Essential&reg; DocIO supports converting the Word document into Word Processing XML document and vice versa.
 
 N> 1. Importing and exporting the Word Processing 2007 XML documents is supported.
 N> 2. Exporting the Word Processing 2003 XML document is not supported. Whereas you can import the Word Processing 2003 XML documents and export it to other supported file formats.
@@ -796,7 +796,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Open a Word (*.doc) document containing incremental save information
 
-Essential DocIO process the content that are preserved in the last complete save operation alone from a Word (.doc) document and it doesn't process the incremental save information. Hence it throws "Complex format is not supported" exception when attempting to open a Word (.doc) document containing incremental save information.
+Essential&reg; DocIO process the content that are preserved in the last complete save operation alone from a Word (.doc) document and it doesn't process the incremental save information. Hence it throws "Complex format is not supported" exception when attempting to open a Word (.doc) document containing incremental save information.
 
 You can open the Word (*.doc) documents containing incremental save information without exception by setting [SkipIncrementalSaveValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_SkipIncrementalSaveValidation) property of Settings class as true. Whereas the recent changes saved as incremental save information using older Microsoft Word application can't be preserved.
 
@@ -931,7 +931,7 @@ async void Save(MemoryStream streams, string filename)
 
 ### Preserve embedded Ole image as normal image
 
-Essential DocIO keeps the entire document contents (paragraphs, images, tables and all other supported items along with the formatting) in main memory. So, there is a chance for "Out of memory exception" when the memory utilization exceeds the maximum level. For further information, please refer [here](https://support.syncfusion.com/kb/article/3998/why-does-out-of-memory-exception-arise-on-processing-large-size-documents-in-essential).
+Essential&reg; DocIO keeps the entire document contents (paragraphs, images, tables and all other supported items along with the formatting) in main memory. So, there is a chance for "Out of memory exception" when the memory utilization exceeds the maximum level. For further information, please refer [here](https://support.syncfusion.com/kb/article/3998/why-does-out-of-memory-exception-arise-on-processing-large-size-documents-in-essential).
 
 You can reduce the memory usage in DocIO DOM when the Word document has embedded Ole image of large file size. You can preserve these embedded Ole images as normal images by setting [PreserveOleImageAsImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_PreserveOleImageAsImage) property of Settings class as true, before opening the Word document.
 

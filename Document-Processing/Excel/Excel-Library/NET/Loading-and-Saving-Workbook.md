@@ -8,7 +8,7 @@ documentation: UG
 
 # Loading and Saving Workbook
 
-There are various types of load and save operations in Syncfusion XlsIO. Please specific operations are documented under below re-directions.
+There are various types of load and save operations in Syncfusion&reg; XlsIO. Please specific operations are documented under below re-directions.
 
 * [ASP.NET Core](loading-and-saving/loading-and-saving-excel-files-in-asp-net-core-c-sharp)
 * [ASP.NET MVC](loading-and-saving/loading-and-saving-excel-files-in-asp-net-mvc-c-sharp)

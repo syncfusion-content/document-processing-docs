@@ -1,5 +1,5 @@
 ---
-title: Supported LaTeX | DocIO | Syncfusion
+title: Supported LaTeX | DocIO | Syncfusion&reg;
 description: Learn the list of LaTeX supported by .NET Word Library (DocIO) while creating equation in Word document.
 platform: document-processing
 control: DocIO

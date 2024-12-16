@@ -28,7 +28,7 @@ Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Add XlsIO reference to the project](ASP-NET-Core_images/ASP-NET-Core_images_img3.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
 
 Step 4: A default controller with named HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in the HomeController.cs file.
 {% capture codesnippet1 %}
@@ -509,6 +509,6 @@ A complete working example of how to read and edit an Excel file in ASP.NET Core
 
 N> _hostingEnvironment is the base path for input files of type IHostingEnvironment.
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.

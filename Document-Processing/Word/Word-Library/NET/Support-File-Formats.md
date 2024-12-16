@@ -1,5 +1,5 @@
 ---
-title: Supported file formats in .NET Word (DocIO) Library | Syncfusion
+title: Supported file formats in .NET Word (DocIO) Library | Syncfusion&reg;
 description: Learn more about the supported file formats in .NET Word (DocIO) Library.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Supported File Formats in .NET Word Library  
 
-Syncfusion .NET Word Library (DocIO) supports all major native file formats of Microsoft Word, such as DOC, DOCX, RTF, DOT, DOTX, DOCM, and more. It also supports conversion for major native file formats to HTML, Markdown, PDF and image. 
+Syncfusion&reg; .NET Word Library (DocIO) supports all major native file formats of Microsoft Word, such as DOC, DOCX, RTF, DOT, DOTX, DOCM, and more. It also supports conversion for major native file formats to HTML, Markdown, PDF and image. 
 
 The following table describes the supported file formats and their conversions in DocIO. 
 

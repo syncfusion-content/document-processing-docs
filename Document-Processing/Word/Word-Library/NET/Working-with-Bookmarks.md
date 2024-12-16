@@ -1,5 +1,5 @@
 ---
-title: Working with Bookmarks in .NET Word library | Syncfusion
+title: Working with Bookmarks in .NET Word library | Syncfusion&reg;
 description: Learn how to add or remove bookmarks, replace, or delete the contents of bookmarks in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -9,7 +9,7 @@ documentation: UG
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 
-In Essential DocIO, bookmark is represented by [Bookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html) instance that is a pair of [BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html).
+In Essential&reg; DocIO, bookmark is represented by [Bookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Bookmark.html) instance that is a pair of [BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html).
 [BookmarkStart](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkStart.html) represents start point of a bookmark and [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the [Bookmarks](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Bookmarks) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class.
 
 ## Adding a bookmark
@@ -23,14 +23,10 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
-//Adds a new section into the Word Document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWParagraph paragraph = section.AddParagraph();
-paragraph.AppendText("Northwind Database");
-paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center; 
-//Adds a paragraph into section
-paragraph = section.AddParagraph();
+//Add a new section and paragraph in the document. 
+document.EnsureMinimal();
+//Get the last paragraph. 
+IWParagraph paragraph = document.LastParagraph;
 //Adds a new bookmark start into paragraph with name "Northwind"
 paragraph.AppendBookmarkStart("Northwind");
 //Adds a text between the bookmark start and end into paragraph
@@ -49,14 +45,10 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Add-bookmark-in-Word-document/.NET/Add-bookmark-in-Word-document/Program.cs" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
-//Adds a new section into the Word Document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWParagraph paragraph = section.AddParagraph();
-paragraph.AppendText("Northwind Database");
-paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center; 
-//Adds a paragraph into section
-paragraph = section.AddParagraph();
+//Add a new section and paragraph in the document. 
+document.EnsureMinimal();
+//Get the last paragraph. 
+IWParagraph paragraph = document.LastParagraph;
 //Adds a new bookmark start into paragraph with name "Northwind"
 paragraph.AppendBookmarkStart("Northwind");
 //Adds a text between the bookmark start and end into paragraph
@@ -74,14 +66,10 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Creates an instance of WordDocument class (Empty Word Document)
 Dim document As New WordDocument()
-'Adds a new section into the Word Document
-Dim section As IWSection = document.AddSection()
-'Adds a new paragraph into Word document and appends text into paragraph
-Dim paragraph As IWParagraph = section.AddParagraph()
-paragraph.AppendText("Northwind Database")
-paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center
-'Adds a paragraph into section
-paragraph = section.AddParagraph()
+'Add a new section and paragraph in the document.
+document.EnsureMinimal()
+'Get the last paragraph.
+Dim paragraph As IWParagraph = document.LastParagraph
 'Adds a new bookmark start into paragraph with name "Northwind"
 paragraph.AppendBookmarkStart("Northwind")
 'Adds a text between the bookmark start and end into paragraph

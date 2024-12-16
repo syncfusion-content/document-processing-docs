@@ -1,8 +1,8 @@
 ---
-title: Working with Animations in PowerPoint presentation | Syncfusion
-description: Learn here all about working with animations of Syncfusion PowerPoint Presentation Library and more.
+title: Working with Animations in PowerPoint presentation | Syncfusion&reg;
+description: Learn here all about working with animations of Syncfusion&reg; PowerPoint Presentation Library and more.
 platform: document-processing
-control: Essential Presentation
+control: Essential&reg; Presentation
 documentation: UG
 keywords: PowerPoint animation, slide animation, shape animation, pptx animation
 ---
@@ -17,7 +17,7 @@ keywords: PowerPoint animation, slide animation, shape animation, pptx animation
 
 Entrance effects can be set to enter the objects with animations during slide show. Emphasis effects animate the objects on the spot. Exit effects allow objects to leave the slide show with animations. Motion Paths allow objects to move around the slide show. Each effect contains variables such as start (On click, with previous and after previous), delay, speed, repeat, and trigger. This makes animations more flexible and interactive. 
 
-Syncfusion Presentation library allows you to animate the text, pictures, shapes, tables, SmartArt graphics, and charts in PowerPoint presentation.
+Syncfusion&reg; Presentation library allows you to animate the text, pictures, shapes, tables, SmartArt graphics, and charts in PowerPoint presentation.
 
 ## Adding animation effect to shapes
 
@@ -724,7 +724,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Supported animation effects type
 
-Syncfusion Presentation library supports the following predefined animation effects with the sub types like Microsoft PowerPoint.
+Syncfusion&reg; Presentation library supports the following predefined animation effects with the sub types like Microsoft PowerPoint.
 
 <table>
 <tr>
@@ -3787,3 +3787,8 @@ Yes
 </td>
 </tr>
 </table>
+
+## Online Demo
+
+* Explore how to add different animation effects for shapes in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/importdata#/material3).
+* See how to modify animation effects for shapes in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/modifyanimation#/material3).
