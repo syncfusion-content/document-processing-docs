@@ -15,7 +15,7 @@ The below code example illustrates how to add the action to the PDF document usi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-action-to-the-PDF-document/.NET/Add-action-to-the-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-action-to-the-PDF-document/.NET/Add-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -93,7 +93,7 @@ The [PdfSoundAction](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-the-sound-action-to-PDF-document/.NET/Add-the-sound-action-to-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-the-sound-action-to-PDF-document/.NET/Add-the-sound-action-to-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -182,7 +182,7 @@ The [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syn
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-JavaScript-action-to-the-PDF-document/.NET/Add-JavaScript-action-to-the-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-JavaScript-action-to-the-PDF-document/.NET/Add-JavaScript-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new document
 PdfDocument document = new PdfDocument();
@@ -261,7 +261,7 @@ The [PdfUriAction](https://help.syncfusion.com/cr/document-processing/Syncfusion
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-URI-action-to-the-PDF-document/.NET/Add-URI-action-to-the-PDF-document/Program.cs" %}		
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-URI-action-to-the-PDF-document/.NET/Add-URI-action-to-the-PDF-document/Program.cs" %}
 
 //Create a new document with PDF/A standard
 PdfDocument document = new PdfDocument();
@@ -419,7 +419,7 @@ The [PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-lauch-action-to-PDF-document/.NET/Add-lauch-action-to-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-lauch-action-to-PDF-document/.NET/Add-lauch-action-to-PDF-document/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -905,7 +905,7 @@ Essential PDF provides support to add various actions to the form fields. The fo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-form-fields-in-PDF-document/.NET/Adding-an-action-to-the-form-fields-in-PDF-document/Program.cs" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-an-action-to-the-form-fields-in-PDF-document/.NET/Adding-an-action-to-the-form-fields-in-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1141,7 +1141,7 @@ loadedDocument.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}      
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Create a new PDF document. 
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -1163,3 +1163,230 @@ document.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Add-actions-to-the-existing-PDF-document).
 
 N> The action assigned to the bookmark works only when destination of bookmark is not set.
+
+## Document-Level JavaScript Actions
+
+Document-level JavaScript actions allow you to embed interactivity into your PDF documents. Using the Essential&reg; PDF Library, you can easily add these actions to execute scripts when the document is opened.
+
+### Adding Document-Level JavaScript Actions
+
+The following example demonstrates how to add document-level JavaScript actions to a PDF document using the [PdfDocumentJavaScriptCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentJavaScriptCollection.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Create a new PDF document instance.
+PdfDocument document = new PdfDocument();
+// Retrieve the JavaScript collection from the document.
+PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
+
+// Define a new JavaScript action that displays an alert with the message "Hello World!!!".
+PdfJavaScriptAction javaScriptAction = new PdfJavaScriptAction("app.alert(\"Hello World!!!\")");
+
+// Set the name of the JavaScript action.
+javaScriptAction.Name = "Test";
+// Add the JavaScript action to the document's JavaScript collection.
+javaScriptCollection.Add(javaScriptAction);
+
+//Save the document into stream
+using(MemoryStream stream = new MemoryStream())
+{
+    document.Save(stream);
+}
+
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document instance.
+PdfDocument document = new PdfDocument();
+// Retrieve the JavaScript collection from the document.
+PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
+
+// Define a new JavaScript action that displays an alert with the message "Hello World!!!".
+PdfJavaScriptAction javaScriptAction = new PdfJavaScriptAction("app.alert(\"Hello World!!!\")");
+
+// Set the name of the JavaScript action.
+javaScriptAction.Name = "Test";
+// Add the JavaScript action to the document's JavaScript collection.
+javaScriptCollection.Add(javaScriptAction);
+
+// Save the PDF document to a file named "Output.pdf".
+document.Save("Output.pdf");
+
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document instance.
+Dim document As New PdfDocument()
+' Retrieve the JavaScript collection from the document.
+Dim javaScriptCollection As PdfDocumentJavaScriptCollection = document.DocumentJavaScripts
+
+' Define a new JavaScript action that displays an alert with the message "Hello World!!!".
+Dim javaScriptAction As New PdfJavaScriptAction("app.alert(""Hello World!!!"")")
+
+' Set the name of the JavaScript action.
+javaScriptAction.Name = "Test"
+' Add the JavaScript action to the document's JavaScript collection.
+javaScriptCollection.Add(javaScriptAction)
+
+' Save the PDF document to a file named "Output.pdf".
+document.Save("Output.pdf")
+
+' Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Retrieve Document-Level JavaScript Actions
+
+The following example demonstrates how to retrieve document-level JavaScript actions using the [PdfDocumentJavaScriptCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentJavaScriptCollection.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load an existing PDF document.
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+
+// Retrieve the JavaScript collection from the loaded document.
+PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
+
+// Iterate through the JavaScript actions in the collection.
+foreach (PdfJavaScriptAction action in javaScriptCollection)
+{
+    // Display the name of the JavaScript action.
+    Console.WriteLine($"Action Name: {action.Name}");
+
+    // Display the JavaScript code associated with the action.
+    Console.WriteLine($"JavaScript Code: {action.JavaScript}");
+}
+
+// Close the document and release all associated resources.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load an existing PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+// Retrieve the JavaScript collection from the loaded document.
+PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
+
+// Iterate through the JavaScript actions in the collection.
+foreach (PdfJavaScriptAction action in javaScriptCollection)
+{
+    // Display the name of the JavaScript action.
+    Console.WriteLine($"Action Name: {action.Name}");
+
+    // Display the JavaScript code associated with the action.
+    Console.WriteLine($"JavaScript Code: {action.JavaScript}");
+}
+
+// Close the document and release all associated resources.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load an existing PDF document.
+Dim document As New PdfLoadedDocument("Input.pdf")
+
+' Retrieve the JavaScript collection from the loaded document.
+Dim javaScriptCollection As PdfDocumentJavaScriptCollection = document.DocumentJavaScripts
+
+' Iterate through the JavaScript actions in the collection.
+For Each action As PdfJavaScriptAction In javaScriptCollection
+    ' Display the name of the JavaScript action.
+    Console.WriteLine($"Action Name: {action.Name}")
+
+    ' Display the JavaScript code associated with the action.
+    Console.WriteLine($"JavaScript Code: {action.JavaScript}")
+Next
+
+' Close the document and release all associated resources.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Remove Document-Level JavaScript Actions
+
+The following example demonstrates how to remove document-level JavaScript actions using the [PdfDocumentJavaScriptCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentJavaScriptCollection.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load an existing PDF document.
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+
+// Retrieve the JavaScript collection from the document.
+PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
+
+// Access the first JavaScript action in the collection.
+PdfJavaScriptAction javaScriptAction = javaScriptCollection[0];
+
+// Remove the selected JavaScript action from the collection.
+javaScriptCollection.Remove(javaScriptAction);
+
+// Close the document and release all associated resources.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load an existing PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+// Retrieve the JavaScript collection from the document.
+PdfDocumentJavaScriptCollection javaScriptCollection = document.DocumentJavaScripts;
+
+// Access the first JavaScript action in the collection.
+PdfJavaScriptAction javaScriptAction = javaScriptCollection[0];
+
+// Remove the selected JavaScript action from the collection.
+javaScriptCollection.Remove(javaScriptAction);
+
+// Close the document and release all associated resources.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load an existing PDF document.
+Dim document As New PdfLoadedDocument("Input.pdf")
+
+' Retrieve the JavaScript collection from the document.
+Dim javaScriptCollection As PdfDocumentJavaScriptCollection = document.DocumentJavaScripts
+
+' Access the first JavaScript action from the collection.
+Dim javaScriptAction As PdfJavaScriptAction = javaScriptCollection(0)
+
+' Remove the selected JavaScript action from the collection.
+javaScriptCollection.Remove(javaScriptAction)
+
+' Close the document and release all associated resources.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}

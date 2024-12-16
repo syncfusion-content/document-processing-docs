@@ -374,6 +374,65 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-the-combo-box-in-existing-PDF-document).
 
+### Set text alignment in a Combo Box field
+
+Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedComboBoxField_TextAlignment) property of the [PdfLoadedComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html) to customize the text alignment in a combo box field. Refer to the following example for more details.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Load an existing document from a file stream.
+    using (FileStream fileStream = new FileStream("SourceForm.pdf", FileMode.Open, FileAccess.Read))
+    {
+        PdfLoadedDocument doc = new PdfLoadedDocument(fileStream);
+        // Load an existing combo box field by its name.
+        PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
+        // Set text alignment to center for the combo box field.
+        comboField.TextAlignment = PdfTextAlignment.Center;
+
+        // Save the updated document to a file stream.
+        using (FileStream outputStream = new FileStream("Form.pdf", FileMode.Create, FileAccess.Write))
+        {
+            doc.Save(outputStream);
+        }
+
+        // Close the document.
+        doc.Close(true);
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load an existing document.
+    PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
+    // Load an existing combo box field by its name.
+    PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
+    // Set text alignment to center for the combo box field.
+    comboField.TextAlignment = PdfTextAlignment.Center;
+    // Save the updated document.
+    doc.Save("Form.pdf");
+    doc.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+   
+    ' Load an existing document.
+    Dim doc As New PdfLoadedDocument("SourceForm.pdf")
+    ' Load an existing combo box field by its name.
+    Dim comboField As PdfLoadedComboBoxField = TryCast(doc.Form.Fields("EmployeeCombo"), PdfLoadedComboBoxField)
+    ' Set text alignment to center for the combo box field.
+    comboField.TextAlignment = PdfTextAlignment.Center
+    ' Save the updated document.
+    doc.Save("Form.pdf")
+    doc.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
 ### Adding the radio button field
 
 To create the radio button in the PDF forms, you can use [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) class and you can create the radio button list items by using the [PdfRadioButtonListItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html) class.
@@ -1248,6 +1307,77 @@ loadedDocument.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-the-signatre-field-in-existing-PDF-document).
+
+### Customize the signed date
+
+The signedDate parameter in the [PdfSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSignatureField.html) class allows you to specify a custom date when signing a PDF document. Refer to the following example for more details.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]"  %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+//Create PDF Signature field.
+PdfSignatureField signatureField = new PdfSignatureField(page, "Signature");
+//Set properties to the signature field.
+signatureField.Signature = new PdfSignature(page, "Signature", new DateTime(2019, 12, 24, 10, 50, 10));
+signatureField.Bounds = new RectangleF(0, 400, 90, 20);
+signatureField.ToolTip = "Signature";
+//Add the form field to the document.
+document.Form.Fields.Add(signatureField);
+//Creating the stream object.
+MemoryStream stream = new MemoryStream();
+//Save the PDF document to stream.
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+//Create PDF Signature field.
+PdfSignatureField signatureField = new PdfSignatureField(page, "Signature");
+//Set properties to the signature field.
+signatureField.Signature = new PdfSignature(page, "Signature", new DateTime(2019, 12, 24, 10, 50, 10));
+signatureField.Bounds = new RectangleF(0, 400, 90, 20);
+signatureField.ToolTip = "Signature";
+//Add the form field to the document.
+document.Form.Fields.Add(signatureField);
+//Save the PDF document to stream.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+    
+' Add a new page to the PDF document.
+Dim page As PdfPage = document.Pages.Add()
+' Create a PDF Signature field.
+Dim signatureField As New PdfSignatureField(page, "Signature")
+' Set properties to the signature field.
+signatureField.Signature = New PdfSignature(page, "Signature", New DateTime(2019, 12, 24, 10, 50, 10))
+signatureField.Bounds = New RectangleF(0, 400, 90, 20)
+signatureField.ToolTip = "Signature"
+' Add the form field to the document.
+document.Form.Fields.Add(signatureField)
+' Save the PDF document to a file.
+document.Save("Output.pdf")
+' Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
 
 ### Adding the button field 
 
