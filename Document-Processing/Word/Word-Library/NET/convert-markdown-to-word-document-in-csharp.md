@@ -461,3 +461,7 @@ N> Hook the event handler before opening a Word document as per the above code e
 ## Online Demo
 
 * Explore how to convert the Markdown file to Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/markdowntoword#/material3).
+
+## See Also
+
+* [How to change the image size during Markdown to Word conversion](https://support.syncfusion.com/kb/article/17707/how-to-change-the-image-size-during-markdown-to-word-conversion)
