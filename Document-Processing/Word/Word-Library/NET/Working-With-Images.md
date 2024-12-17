@@ -702,6 +702,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to extract Images from Word document in C# and VB?](https://support.syncfusion.com/kb/article/11829/how-to-extract-images-from-word-document-in-c-and-vb)
+* [How to replace an image with same size in a Word document](https://support.syncfusion.com/kb/article/17796/how-to-replace-an-image-with-same-size-in-a-word-document)
 
 ## Frequently Asked Questions
 

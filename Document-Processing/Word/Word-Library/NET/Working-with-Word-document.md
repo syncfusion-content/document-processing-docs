@@ -1090,6 +1090,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add a new page at the end of the Word document](https://support.syncfusion.com/kb/article/17562/how-to-add-a-new-page-at-the-end-of-the-word-document)
 * [How to delete all content in a Word document](https://support.syncfusion.com/kb/article/17710/how-to-delete-all-content-in-a-word-document)
 * [How to delete a specific range of content in a Word document](https://support.syncfusion.com/kb/article/17708/how-to-delete-a-specific-range-of-content-in-a-word-document)
+* [How to change the text color of existing styles in a Word document](https://support.syncfusion.com/kb/article/17789/how-to-change-the-text-color-of-existing-styles-in-a-word-document)
+* [How to copy style between Word documents](https://support.syncfusion.com/kb/article/17738/how-to-copy-style-between-word-documents)
 
 ## Frequently Asked Questions
 

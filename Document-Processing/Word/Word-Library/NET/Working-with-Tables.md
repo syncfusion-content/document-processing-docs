@@ -2125,6 +2125,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to convert text to a table using comma as delimiter in a Word document](https://support.syncfusion.com/kb/article/17748/how-to-convert-text-to-a-table-using-comma-as-delimiter-in-a-word-document)
 * [How to split a table in a Word document using a bookmark between rows](https://support.syncfusion.com/kb/article/17785/how-to-split-a-table-in-a-word-document-using-a-bookmark-between-rows)
 * [How to split a table by columns in a Word document](https://support.syncfusion.com/kb/article/17714/how-to-split-a-table-by-columns-in-a-word-document)
+* [How to add rows with dynamic data into an existing table in Word document](https://support.syncfusion.com/kb/article/17819/how-to-add-rows-with-dynamic-data-into-an-existing-table-in-word-document)
 
 ## Frequently Asked Questions
 
