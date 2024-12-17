@@ -2607,3 +2607,4 @@ N> In the above-mentioned code samples, for Xamarin platforms the document is sa
 
 * [How to remove the placeholder text if the meta property is empty in a Word document?](https://www.syncfusion.com/kb/13982/how-to-remove-the-placeholder-text-if-the-meta-property-is-empty-in-a-word-document)
 * [How to remove content control without deleting content in Word document](https://support.syncfusion.com/kb/article/17599/how-to-remove-content-control-without-deleting-content-in-word-document)
+* [How to add a checkbox content control with a tick mark in a Word document](https://support.syncfusion.com/kb/article/17809/how-to-add-a-checkbox-content-control-with-a-tick-mark-in-a-word-document)
