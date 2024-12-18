@@ -26,6 +26,8 @@ The following raster images are supported in Essential&reg; PDF.
 
 You can load image streams, files on disk, and use System.Drawing.Bitmap objects to draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
+N> For using image formats other than PNG and JPEG in ASP.NET Core, you need to include the Syncfusion.Pdf.Imaging.Net.Core package in your project. This package provides the necessary support for handling other raster image formats like BMP, GIF, TIFF, and ICO.
+
 The following code snippet shows how to add a file from disk to the PDF document.
 
 {% tabs %}  
@@ -250,7 +252,8 @@ doc.Close(True)
 {% endhighlight %}
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-image-in-an-existing-PDF-document/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-image-in-an-existing-PDF-document/).
+
 
 ## Inserting a vector image
 
@@ -415,10 +418,9 @@ doc.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-a-mask-to-TIFF-image/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-a-mask-to-TIFF-image/).
 
-N> 1. Essential&reg; PDF supports image masking with [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core.
-
+N> 1. Essential PDF supports image masking with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference in ASP.NET Core.
 
 ## Replacing Images in an existing PDF document
 
@@ -751,9 +753,9 @@ pdfDocument.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Converting-multi-page-TIFF-to-PDF). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Converting-multi-page-TIFF-to-PDF).
 
-N> 1. Essential&reg; PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core.
+N> 1. Essential PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference in ASP.NET Core.
 
 ## Remove Images
 
@@ -823,4 +825,4 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document). 
 
-N> 1. Essential&reg; PDF supports remove image from the existing PDF document with [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core.
+N> 1. Essential PDF supports remove image from the existing PDF document with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference in ASP.NET Core.
