@@ -1,6 +1,6 @@
 ---
-title: Working with Images in .NET Word library | Syncfusion
-description: Learn how to work with images in a Microsoft Word document using the Syncfusion .NET Word (DocIO) library.
+title: Working with Images in .NET Word library | Syncfusion&reg;
+description: Learn how to work with images in a Microsoft Word document using the Syncfusion&reg; .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -617,7 +617,7 @@ By executing the above code example, it generates output Word document as follow
 
 ## Add SVG image
 
-To add an SVG image to a paragraph in a Word document using Syncfusion DocIO, you can use the [AppendPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWParagraph.html#Syncfusion_DocIO_DLS_IWParagraph_AppendPicture_System_Byte___System_Byte___) API.
+To add an SVG image to a paragraph in a Word document using Syncfusion&reg; DocIO, you can use the [AppendPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWParagraph.html#Syncfusion_DocIO_DLS_IWParagraph_AppendPicture_System_Byte___System_Byte___) API.
 
 N> To preserve the SVG image in the Word document, pass both the SVG image data and the equivalent bitmap image bytes to DocIO.
 
@@ -702,6 +702,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to extract Images from Word document in C# and VB?](https://support.syncfusion.com/kb/article/11829/how-to-extract-images-from-word-document-in-c-and-vb)
+* [How to replace an image with same size in a Word document](https://support.syncfusion.com/kb/article/17796/how-to-replace-an-image-with-same-size-in-a-word-document)
 
 ## Frequently Asked Questions
 

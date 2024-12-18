@@ -8,7 +8,7 @@ documentation: UG
 
 # Supported Features by Document Processing
 
-The list of supported and non-supported Excel Document Processing features in *Essential XlsIO* is given in the following table. *XLS* represents Excel 97 to 2003 format and *XLSX* represents Excel 2007 and above formats.
+The list of supported and non-supported Excel Document Processing features in *Essential&reg; XlsIO* is given in the following table. *XLS* represents Excel 97 to 2003 format and *XLSX* represents Excel 2007 and above formats.
 
 <table>
 <tr>

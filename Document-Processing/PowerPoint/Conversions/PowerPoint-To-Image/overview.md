@@ -1,16 +1,16 @@
 ---
-title: Convert PowerPoint to Image in PowerPoint Library | Syncfusion
-description: Learn how to convert a PowerPoint Presentation document to Image using the Syncfusion PowerPoint (Presentation) library.
+title: Convert PowerPoint to Image in PowerPoint Library | Syncfusion&reg;
+description: Learn how to convert a PowerPoint Presentation document to Image using the Syncfusion&reg; PowerPoint (Presentation) library.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 
-# Convert PowerPoint to Image using Syncfusion PowerPoint library
+# Convert PowerPoint to Image using Syncfusion&reg; PowerPoint library
 
-Syncfusion PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to Image within a few lines of code in .NET applications and also it does not require Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to Image.
+Syncfusion&reg; PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to Image within a few lines of code in .NET applications and also it does not require Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to Image.
 
-The Syncfusion PowerPoint to Image converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-azure), [AWS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-linux), and [macOS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-mac). 
+The Syncfusion&reg; PowerPoint to Image converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-azure), [AWS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-linux), and [macOS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-mac). 
 
 ## Key Features
 
@@ -64,23 +64,25 @@ The following code example demonstrates the conversion of an entire Presentation
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET/Convert-PowerPoint-presentation-to-Image/Program.cs" %}
+//Open the PowerPoint file stream.
 using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
 {
    //Open the existing PowerPoint presentation.
    using (IPresentation pptxDoc = Presentation.Open(fileStream))
    {
-       //Initialize the PresentationRenderer to perform image conversion.
+       //Initialize PresentationRenderer.
        pptxDoc.PresentationRenderer = new PresentationRenderer();
-       //Convert PowerPoint to image as stream.
+       //Convert the PowerPoint presentation as image streams.
        Stream[] images = pptxDoc.RenderAsImages(ExportImageFormat.Jpeg);
-       //Saves the images to file system
-       foreach (Stream stream in images)
+       //Save the image streams to file.
+       for (int i = 0; i < images.Length; i++)
        {
-           //Create the output image file stream
-           using (FileStream fileStreamOutput = File.Create("Output" + Guid.NewGuid().ToString() + ".jpg"))
+           using (Stream stream = images[i])
            {
-               //Copy the converted image stream into created output stream
-               stream.CopyTo(fileStreamOutput);
+               using (FileStream fileStreamOutput = File.Create("Output" + i + ".jpg")))
+               {
+                   stream.CopyTo(fileStreamOutput);
+               }
            }
        }
    }
@@ -96,10 +98,10 @@ pptxDoc.ChartToImageConverter = new ChartToImageConverter();
 pptxDoc.ChartToImageConverter.ScalingMode = Syncfusion.OfficeChart.ScalingMode.Best;
 //Converts entire Presentation to images
 Image[] images = pptxDoc.RenderAsImages(Syncfusion.Drawing.ImageType.Metafile);
-//Saves the image to file system
-foreach (Image image in images)
+//Save the image streams to file.
+for (int i = 0; i < images.Length; i++)
 { 
-    image.Save("ImageOutput" + Guid.NewGuid().ToString()+ ".png");
+    images[i].Save("Output" + i + ".png");
 }
 {% endhighlight %}
 
@@ -112,9 +114,9 @@ pptxDoc.ChartToImageConverter = New ChartToImageConverter()
 pptxDoc.ChartToImageConverter.ScalingMode = Syncfusion.OfficeChart.ScalingMode.Best
 'Converts entire Presentation to images
 Dim images As Image() = pptxDoc.RenderAsImages(Syncfusion.Drawing.ImageType.Metafile)
-'Saves the image to file system
-For Each image As Image In images
-    image.Save("ImageOutput" + Guid.NewGuid().ToString() + ".png")
+'Save the image streams to file.
+For i As Integer = 0 To images.Length - 1
+    images(i).Save("ImageOutput" & i & ".png")
 Next
 {% endhighlight %}
 
@@ -139,17 +141,14 @@ using System.IO;
 //Open the existing PowerPoint presentation with stream.
 using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
 {
-    //Initialize the PresentationRenderer to perform image conversion.
+    //Initialize PresentationRenderer.
     pptxDoc.PresentationRenderer = new PresentationRenderer();
-    //Convert PowerPoint slide to image as stream.
+    //Convert the PowerPoint slide as an image stream.
     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        //Reset the stream position
-        stream.Position = 0;
-        //Create the output image file stream
+        //Save the image stream to a file.
         using (FileStream fileStreamOutput = File.Create("Output.jpg"))
         {
-            //Copy the converted image stream into created output stream
             stream.CopyTo(fileStreamOutput);
         }
     }
@@ -382,17 +381,21 @@ T> With this, you can showcase the converted images as a slideshow in your [cust
 
 ## UWP
 
-PowerPoint slides can be converted to images in UWP platform by using Essential Presentation library. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/pptxtoimage-in-uwp).
+PowerPoint slides can be converted to images in UWP platform by using Essential&reg; Presentation library. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/pptxtoimage-in-uwp).
 
 ## Font Substitution
 
 When a font used in a PowerPoint presentation is unavailable in the environment where it is converted to image, then the library substitutes the ‘Microsoft Sans Serif’ as a default font for text rendering. This leads to a difference in text layouts of PowerPoint presentation and the converted image. 
 
-To avoid this, the Essential Presentation library allows you to set an alternate font for the missing font used in the PowerPoint presentation. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/font-substitution-in-pptxtoimage-conversion).
+To avoid this, the Essential&reg; Presentation library allows you to set an alternate font for the missing font used in the PowerPoint presentation. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/font-substitution-in-pptxtoimage-conversion).
 
 ## Fallback fonts
 
-During PowerPoint to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/fallback-fonts-in-pptxtoimage-conversion).
+During PowerPoint to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/fallback-fonts-in-pptxtoimage-conversion).
+
+## Online Demo
+
+* Explore how to convert the PowerPoint presentation to an image using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/pptxtoimage#/material3).
 
 ## See Also
 

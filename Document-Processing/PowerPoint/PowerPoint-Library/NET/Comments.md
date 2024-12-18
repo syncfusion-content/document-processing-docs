@@ -1,7 +1,7 @@
 ---
 
-title: Working with comments in PowerPoint presentation | Syncfusion
-description: Learn here all about Working with comments feature of Syncfusion PowerPoint Presentation Library and more.
+title: Working with comments in PowerPoint presentation | Syncfusion&reg;
+description: Learn here all about Working with comments feature of Syncfusion&reg; PowerPoint Presentation Library and more.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -334,3 +334,7 @@ pptxDoc.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Comments/Delete-comment-by-position).
 
 N> [Modern comments](https://support.microsoft.com/en-us/office/modern-comments-in-powerpoint-c0aa37bb-82cb-414c-872d-178946ff60ec) are not supported in .NET PowerPoint library.
+
+## Online Demo
+
+* Explore how to add comments to a PowerPoint presentation slide using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/comment#/material3).

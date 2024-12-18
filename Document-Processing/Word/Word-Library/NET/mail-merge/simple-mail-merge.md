@@ -1,5 +1,5 @@
 ---
-title: Simple Mail merge in C# | DocIO | Syncfusion
+title: Simple Mail merge in C# | DocIO | Syncfusion&reg;
 description: Learn how to Mail merge - replace all merge fields with data, by repeating whole document for each record in data source using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

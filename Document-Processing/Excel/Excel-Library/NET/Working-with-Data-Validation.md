@@ -16,6 +16,9 @@ Data Validation is a list of rules to the data that can be entered in a cell. Th
 * **Date** **Validation**
 * **Custom** **Validation**
 
+To quickly get started on creating data validation in an Excel document, please check out this video:
+{% youtube "https://youtu.be/VFOBAiXM03o?si=vsIhBrVwIQ80FPKm" %}
+
 ## Text Length Validation
 
 The following code snippet illustrates how to set text length validation.
@@ -216,21 +219,21 @@ Custom validation can be set to a cell with its [AllowType](https://help.syncfus
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Data validation for custom data
 IDataValidation validation = sheet.Range["A3"].DataValidation;
-validation.AllowType = ExcelDataType.User;
+validation.AllowType = ExcelDataType.Formula;
 validation.FirstFormula = "=A1>10";
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Data validation for custom data
 IDataValidation validation = sheet.Range["A3"].DataValidation;
-validation.AllowType = ExcelDataType.User;
+validation.AllowType = ExcelDataType.Formula;
 validation.FirstFormula = "=A1>10";
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Data validation for custom data
 Dim validation As IDataValidation = sheet.Range("A3").DataValidation
-validation.AllowType = ExcelDataType.User
+validation.AllowType = ExcelDataType.Formula
 validation.FirstFormula = "=A1>10"
 {% endhighlight %}
 {% endtabs %}   
@@ -262,7 +265,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   txtLengthValidation.PromptBoxText = "Data validation for text length";
   txtLengthValidation.ShowPromptBox = true;
 
-  //Data Validation for Time
+  //Data Validation for the Time
   IDataValidation timeValidation = worksheet.Range["B3"].DataValidation;
   worksheet.Range["B1"].Text = "Enter the time between 10:00 and 12:00 'o Clock in B3";
   worksheet.Range["B1"].AutofitColumns();
@@ -278,7 +281,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   timeValidation.PromptBoxText = "Data validation for time";
   timeValidation.ShowPromptBox = true;
 
-  //Data Validation for List
+  //Data Validation for the List
   IDataValidation listValidation = worksheet.Range["C3"].DataValidation;
   worksheet.Range["C1"].Text = "Data Validation List in C3";
   worksheet.Range["C1"].AutofitColumns();
@@ -302,7 +305,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   numberValidation.ShowErrorBox = true;
-  numberValidation.ErrorBoxText = "Enter Value between 0 to 10";
+  numberValidation.ErrorBoxText = "Enter a value between 0 to 10";
   numberValidation.ErrorBoxTitle = "ERROR";
   numberValidation.PromptBoxText = "Data validation for numbers";
   numberValidation.ShowPromptBox = true;
@@ -318,18 +321,18 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   dateValidation.ShowErrorBox = true;
-  dateValidation.ErrorBoxText = "Enter Value between 10/5/2003 to 10/5/2004";
+  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 to 10/5/2004";
   dateValidation.ErrorBoxTitle = "ERROR";
   dateValidation.PromptBoxText = "Data validation for date";
   dateValidation.ShowPromptBox = true;
 
   //Data validation for custom data
   IDataValidation validation = worksheet.Range["A3"].DataValidation;
-  validation.AllowType = ExcelDataType.User;
+  validation.AllowType = ExcelDataType.Formula;
   validation.FirstFormula = "=A1>10";
 
   //Shows the error message
-  validation.ErrorBoxText = "Enter value in A1 greater than 10";
+  validation.ErrorBoxText = "Enter a value greater than 10 in A1";
   validation.ErrorBoxTitle = "ERROR";
   validation.PromptBoxText = "Custom DataValidation";
   validation.ShowPromptBox = true;
@@ -364,7 +367,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   txtLengthValidation.PromptBoxText = "Data validation for text length";
   txtLengthValidation.ShowPromptBox = true;
 
-  //Data Validation for Time
+  //Data Validation for the Time
   IDataValidation timeValidation = worksheet.Range["B3"].DataValidation;
   worksheet.Range["B1"].Text = "Enter the time between 10:00 and 12:00 'o Clock in B3";
   worksheet.Range["B1"].AutofitColumns();
@@ -380,7 +383,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   timeValidation.PromptBoxText = "Data validation for time";
   timeValidation.ShowPromptBox = true;
 
-  //Data Validation for List
+  //Data Validation for the List
   IDataValidation listValidation = worksheet.Range["C3"].DataValidation;
   worksheet.Range["C1"].Text = "Data Validation List in C3";
   worksheet.Range["C1"].AutofitColumns();
@@ -404,7 +407,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   numberValidation.ShowErrorBox = true;
-  numberValidation.ErrorBoxText = "Enter Value between 0 to 10";
+  numberValidation.ErrorBoxText = "Enter a value between 0 to 10";
   numberValidation.ErrorBoxTitle = "ERROR";
   numberValidation.PromptBoxText = "Data validation for numbers";
   numberValidation.ShowPromptBox = true;
@@ -420,18 +423,18 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Shows the error message
   dateValidation.ShowErrorBox = true;
-  dateValidation.ErrorBoxText = "Enter Value between 10/5/2003 to 10/5/2004";
+  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 to 10/5/2004";
   dateValidation.ErrorBoxTitle = "ERROR";
   dateValidation.PromptBoxText = "Data validation for date";
   dateValidation.ShowPromptBox = true;
 
   //Data validation for custom data
   IDataValidation validation = worksheet.Range["A3"].DataValidation;
-  validation.AllowType = ExcelDataType.User;
+  validation.AllowType = ExcelDataType.Formula;
   validation.FirstFormula = "=A1>10";
 
   //Shows the error message
-  validation.ErrorBoxText = "Enter value in A1 greater than 10";
+  validation.ErrorBoxText = "Enter a value greater than 10 in A1";
   validation.ErrorBoxTitle = "ERROR";
   validation.PromptBoxText = "Custom DataValidation";
   validation.ShowPromptBox = true;
@@ -463,7 +466,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   txtLengthValidation.PromptBoxText = "Data validation for text length"
   txtLengthValidation.ShowPromptBox = True
 
-  'Data Validation for Time
+  'Data Validation for the Time
   Dim timeValidation As IDataValidation = worksheet.Range("B3").DataValidation
   worksheet.Range("B1").Text = "Enter the time between 10:00 and 12:00 'o Clock in B3"
   worksheet.Range("B1").AutofitColumns()
@@ -479,7 +482,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   timeValidation.PromptBoxText = "Data validation for time"
   timeValidation.ShowPromptBox = True
 
-  'Data Validation for List
+  'Data Validation for the List
   Dim listValidation As IDataValidation = worksheet.Range("C3").DataValidation
   worksheet.Range("C1").Text = "Data Validation List in C3"
   worksheet.Range("C1").AutofitColumns()
@@ -503,7 +506,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   'Shows the error message
   numberValidation.ShowErrorBox = True
-  numberValidation.ErrorBoxText = "Enter Value between 0 to 10"
+  numberValidation.ErrorBoxText = "Enter a value between 0 to 10"
   numberValidation.ErrorBoxTitle = "ERROR"
   numberValidation.PromptBoxText = "Data validation for numbers"
   numberValidation.ShowPromptBox = True
@@ -519,18 +522,18 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   'Shows the error message
   dateValidation.ShowErrorBox = True
-  dateValidation.ErrorBoxText = "Enter Value between 10/5/2003 to 10/5/2004"
+  dateValidation.ErrorBoxText = "Enter a value between 10/5/2003 to 10/5/2004"
   dateValidation.ErrorBoxTitle = "ERROR"
   dateValidation.PromptBoxText = "Data validation for date"
   dateValidation.ShowPromptBox = True
 
   'Data validation for custom data
   Dim validation As IDataValidation = worksheet.Range("A3").DataValidation
-  validation.AllowType = ExcelDataType.User
+  validation.AllowType = ExcelDataType.Formula
   validation.FirstFormula = "=A1>10"
 
   'Shows the error message
-  validation.ErrorBoxText = "Enter value in A1 greater than 10"
+  validation.ErrorBoxText = "Enter a value greater than 10 in A1"
   validation.ErrorBoxTitle = "ERROR"
   validation.PromptBoxText = "Custom DataValidation"
   validation.ShowPromptBox = True

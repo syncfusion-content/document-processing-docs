@@ -1,20 +1,20 @@
 ---
-title: FAQ Section | DocIO | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of Word document using Syncfusion .NET Word (DocIO) library.
+title: FAQ Section | DocIO | Syncfusion&reg;
+description: In this section, you can know about the various questions asked about manipulation of Word document using Syncfusion&reg; .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 # Frequently Asked Questions
 
-The frequently asked questions under each category in Essential DocIO are listed below.
+The frequently asked questions under each category in Essential&reg; DocIO are listed below.
 
 ## Word Document
 
 * [How to open a document from stream using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-open-a-document-from-stream-using-docio)
 * [How to attach a Template to a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-attach-a-template-to-a-word-document)
 * [How to check the compatibility mode of the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-check-the-compatibility-mode-of-the-word-document)
-* [Which units does Essential DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
+* [Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
 
 ## Sections
 
@@ -65,3 +65,7 @@ The frequently asked questions under each category in Essential DocIO are listed
 * [How to perform Word to PDF in Linux prior to v18.4 release?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)
 * [What are the NuGet packages to be installed to perform Word to PDF conversion in Linux OS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)
 * [What are the NuGet packages to be installed to perform Word to Image conversion in Linux OS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-image-conversion-in-linux-os)
+
+## Multithreading
+
+* [Does the Word library support multithreading and thread-safety?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/multithreading-word-document-reading-faqs#does-the-word-library-support-multithreading-and-thread-safety)  

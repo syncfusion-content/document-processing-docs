@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in ASP.NET | Syncfusion
+title: Open and save Presentation in ASP.NET | Syncfusion&reg;
 description: Open and save Presentation in ASP.NET using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,13 +8,13 @@ documentation: UG
 
 # Open and save Presentation in ASP.NET
 
-Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in ASP.NET**.
+Syncfusion&reg; PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in ASP.NET**.
 
 N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the .NET Word library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core).
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
-Step 1: Create a new C# ASP.NET web application project.
+Step 1: Create a new C# ASP.NET Web application project.
 
 ![Create ASP.NET Web project](Workingwith-Web/Project-Open-and-Save.png)
 
@@ -26,7 +26,7 @@ Step 3: Install the [Syncfusion.Presentation.AspNet](https://www.nuget.org/packa
 
 ![Install Syncfusion.Presentation.AspNet Nuget package](Workingwith-Web/Nuget-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 4: Include the following namespaces in **MainPage.aspx.cs**.
 
@@ -107,4 +107,4 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![ASP.Net output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features.
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features.

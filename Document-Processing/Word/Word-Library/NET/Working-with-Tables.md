@@ -1,5 +1,5 @@
 ---
-title: Working with Tables in .NET Word (DocIO) library | Syncfusion
+title: Working with Tables in .NET Word (DocIO) library | Syncfusion&reg;
 description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -12,7 +12,7 @@ A table in Word document is used to arrange document content in rows and columns
 1. A row is a collection of cells and it is represented by an instance of [WTableRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html). Each row must contain at least one cell.
 2. A cell can contain one or more paragraphs and tables. An instance of [WTableCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableCell.html) represents a table cell. Each table cell must contain at least one paragraph.
 
-N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential DocIO does the same.
+N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential&reg; DocIO does the same.
 
 The following image illustrates how a table in Word document is organized in EssentialDocIO’s DOM:
 
@@ -27,44 +27,19 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Create-simple-table/.NET/Create-simple-table/Program.cs" %}
 //Creates an instance of WordDocument class 
 WordDocument document = new WordDocument();
-//Adds a section into Word document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWTextRange textRange = section.AddParagraph().AppendText("Price Details");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-section.AddParagraph();
-//Adds a new table into Word document
-IWTable table = section.AddTable();
-//Specifies the total number of rows & columns
+//Add a section and a paragraph to the document. 
+document.EnsureMinimal();
+//Add a new table to the Word document. 
+IWTable table = document.Sections[0].AddTable();
+//Specify the total number of rows and columns. 
 table.ResetCells(3, 2);
-//Accesses the instance of the cell (first row, first cell) and adds the content into cell
-textRange = table[0, 0].AddParagraph().AppendText("Item");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (first row, second cell) and adds the content into cell
-textRange = table[0, 1].AddParagraph().AppendText("Price($)");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (second row, first cell) and adds the content into cell
-textRange = table[1, 0].AddParagraph().AppendText("Apple");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (second row, second cell) and adds the content into cell
-textRange = table[1, 1].AddParagraph().AppendText("50");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, first cell) and adds the content into cell
-textRange = table[2, 0].AddParagraph().AppendText("Orange");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, second cell) and adds the content into cell
-textRange = table[2, 1].AddParagraph().AppendText("30");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
+//Access each table cell and append text. 
+table[0, 0].AddParagraph().AppendText("Item");
+table[0, 1].AddParagraph().AppendText("Price($)");
+table[1, 0].AddParagraph().AppendText("Apple");
+table[1, 1].AddParagraph().AppendText("50");
+table[2, 0].AddParagraph().AppendText("Orange");
+table[2, 1].AddParagraph().AppendText("30");
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -75,44 +50,19 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates an instance of WordDocument class 
 WordDocument document = new WordDocument();
-//Adds a section into Word document
-IWSection section = document.AddSection();
-//Adds a new paragraph into Word document and appends text into paragraph
-IWTextRange textRange = section.AddParagraph().AppendText("Price Details");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-section.AddParagraph();
-//Adds a new table into Word document
-IWTable table = section.AddTable();
-//Specifies the total number of rows & columns
+//Add a section and a paragraph to the document. 
+document.EnsureMinimal();
+//Add a new table to the Word document. 
+IWTable table = document.Sections[0].AddTable();
+//Specify the total number of rows and columns. 
 table.ResetCells(3, 2);
-//Accesses the instance of the cell (first row, first cell) and adds the content into cell
-textRange = table[0, 0].AddParagraph().AppendText("Item");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (first row, second cell) and adds the content into cell
-textRange = table[0, 1].AddParagraph().AppendText("Price($)");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 12;
-textRange.CharacterFormat.Bold = true;
-//Accesses the instance of the cell (second row, first cell) and adds the content into cell
-textRange = table[1, 0].AddParagraph().AppendText("Apple");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (second row, second cell) and adds the content into cell
-textRange = table[1, 1].AddParagraph().AppendText("50");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, first cell) and adds the content into cell
-textRange = table[2, 0].AddParagraph().AppendText("Orange");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
-//Accesses the instance of the cell (third row, second cell) and adds the content into cell
-textRange = table[2, 1].AddParagraph().AppendText("30");
-textRange.CharacterFormat.FontName = "Arial";
-textRange.CharacterFormat.FontSize = 10;
+//Access each table cell and append text. 
+table[0, 0].AddParagraph().AppendText("Item");
+table[0, 1].AddParagraph().AppendText("Price($)");
+table[1, 0].AddParagraph().AppendText("Apple");
+table[1, 1].AddParagraph().AppendText("50");
+table[2, 0].AddParagraph().AppendText("Orange");
+table[2, 1].AddParagraph().AppendText("30");
 //Saves the document in the given name and format
 document.Save("Table.docx", FormatType.Docx);
 //Releases the resources occupied by WordDocument instance
@@ -120,49 +70,24 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates an instance of WordDocument class 
+'Create an instance of WordDocument class
 Dim document As New WordDocument()
-'Adds a section into Word document
-Dim section As IWSection = document.AddSection()
-'Adds a new paragraph into Word document and appends text into paragraph
-Dim textRange As IWTextRange = section.AddParagraph().AppendText("Price Details")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 12
-textRange.CharacterFormat.Bold = True
-section.AddParagraph()
-'Adds a new table into Word document
-Dim table As IWTable = section.AddTable()
-'Specifies the total number of rows and columns
+'Add a section and a paragraph to the document.
+document.EnsureMinimal()
+'Add a new table to the Word document
+Dim table As IWTable = document.Sections(0).AddTable()
+'Specify the total number of rows and columns
 table.ResetCells(3, 2)
-'Accesses the instance of the cell (first row, first cell) and adds the content into cell
-textRange = table(0, 0).AddParagraph().AppendText("Item")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 12
-textRange.CharacterFormat.Bold = True
-'Accesses the instance of the cell (first row, second cell) and adds the content into cell
-textRange = table(0, 1).AddParagraph().AppendText("Price($)")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 12
-textRange.CharacterFormat.Bold = True
-'Accesses the instance of the cell (second row, first cell) and adds the content into cell
-textRange = table(1, 0).AddParagraph().AppendText("Apple")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Accesses the instance of the cell (second row, second cell) and adds the content into cell
-textRange = table(1, 1).AddParagraph().AppendText("50")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Accesses the instance of the cell (third row, first cell) and adds the content into cell
-textRange = table(2, 0).AddParagraph().AppendText("Orange")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Accesses the instance of the cell (third row, second cell) and adds the content into cell
-textRange = table(2, 1).AddParagraph().AppendText("30")
-textRange.CharacterFormat.FontName = "Arial"
-textRange.CharacterFormat.FontSize = 10
-'Saves the document in the given name and format
+'Access each table cell and append text.
+table(0, 0).AddParagraph().AppendText("Item")
+table(0, 1).AddParagraph().AppendText("Price($)")
+table(1, 0).AddParagraph().AppendText("Apple")
+table(1, 1).AddParagraph().AppendText("50")
+table(2, 0).AddParagraph().AppendText("Orange")
+table(2, 1).AddParagraph().AppendText("30")
+'Save the document in the given name and format
 document.Save("Table.docx", FormatType.Docx)
-'Releases the resources occupied by WordDocument instance
+'Release the resources occupied by WordDocument instance
 document.Close()
 {% endhighlight %}
 
@@ -1097,7 +1022,7 @@ N> In ASP.NET Core, UWP, and Xamarin platforms, to apply autofit for table in a 
 
 A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. [WTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableStyle.html) instance represents table style in a Word document.
 
-N>  Essential DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
+N>  Essential&reg; DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
 
 The following code example illustrates how to apply the built-in table styles to the table.
 
@@ -2200,6 +2125,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to convert text to a table using comma as delimiter in a Word document](https://support.syncfusion.com/kb/article/17748/how-to-convert-text-to-a-table-using-comma-as-delimiter-in-a-word-document)
 * [How to split a table in a Word document using a bookmark between rows](https://support.syncfusion.com/kb/article/17785/how-to-split-a-table-in-a-word-document-using-a-bookmark-between-rows)
 * [How to split a table by columns in a Word document](https://support.syncfusion.com/kb/article/17714/how-to-split-a-table-by-columns-in-a-word-document)
+* [How to add rows with dynamic data into an existing table in Word document](https://support.syncfusion.com/kb/article/17819/how-to-add-rows-with-dynamic-data-into-an-existing-table-in-word-document)
 
 ## Frequently Asked Questions
 

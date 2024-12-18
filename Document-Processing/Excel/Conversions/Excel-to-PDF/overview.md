@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Convert Excel to PDF using Syncfusion Excel (XlsIO) library
+# Convert Excel to PDF using Syncfusion&reg; Excel (XlsIO) library
 
 The [Syncfusion .NET Excel (XlsIO) library](https://www.syncfusion.com/document-processing/excel-framework/net) provides the easiest way for converting Excel documents to PDF in C#/VB.NET with the PDF conformance level PDF/A1B using just a few lines of code. This process is fast, reliable, and supported in hosting environments such as AWS, Google Cloud App, and Microsoft Azure web services.
 

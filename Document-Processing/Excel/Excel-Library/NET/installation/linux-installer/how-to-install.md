@@ -8,13 +8,13 @@ documentation: ug
 
 ---
 
-# Installing Syncfusion Excel Linux installer
+# Installing Syncfusion&reg; Excel Linux installer
 
 ## Step-by-Step Installation
 
 The steps below show how to install Excel Linux installer.
 
-1. Extract the Syncfusion Excel Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion&reg; Excel Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    
@@ -35,7 +35,7 @@ The steps below show how to install Excel Linux installer.
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio Excel linux installer, please refer to this.
+After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential&reg; Studio&reg; Excel linux installer, please refer to this.
 
 * Register the license key in the [Program.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-60) file if you created the ASP.NET Core web application with Visual Studio 2022 and .NET 6.0.
 * Register the license key in Configure method of [Startup.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-50-or-net-31)

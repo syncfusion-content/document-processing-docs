@@ -8,7 +8,7 @@ documentation: UG
 
 # How to convert an Excel worksheet to a high-resolution image?
 
-Essential XlsIO allows you to convert an Excel worksheet to a high-resolution image. This can be achieved by converting the worksheet to a Metafile and then resetting the resolution using a custom ResetResolution method.
+Essential&reg; XlsIO allows you to convert an Excel worksheet to a high-resolution image. This can be achieved by converting the worksheet to a Metafile and then resetting the resolution using a custom ResetResolution method.
 
 The following code example illustrates how to convert an Excel worksheet to a high-resolution image.
 

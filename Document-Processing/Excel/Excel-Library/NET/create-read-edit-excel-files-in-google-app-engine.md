@@ -8,7 +8,7 @@ documentation: UG
 
 # Create, read, and edit Excel files in Google App Engine
 
-Syncfusion XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This library supports manipulating Excel documents in Google App Engine.
+Syncfusion&reg; XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This library supports manipulating Excel documents in Google App Engine.
 
 ## Steps to create Excel document in Google App Engine
 
@@ -56,7 +56,7 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet package](GCP_Images/Install_Nuget_Create_Excel.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 5: Include the following namespaces in the **HomeController.cs** file.
 
@@ -473,6 +473,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to read and edit an Excel file in GCP is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Edit%20Excel).
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.

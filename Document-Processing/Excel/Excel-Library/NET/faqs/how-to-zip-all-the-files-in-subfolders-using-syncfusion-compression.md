@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to zip all the files in subfolders using Syncfusion's Compression?
+# How to zip all the files in subfolders using Syncfusion&reg;'s Compression?
 
 You can compress and decompress the files with our Compression library. The following code example illustrates this. Additionally, it shows how to delete the source files from the given path after compression.
 

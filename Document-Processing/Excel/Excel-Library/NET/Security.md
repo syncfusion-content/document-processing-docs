@@ -389,7 +389,7 @@ N> By using the [ExcelSheetProtection](https://help.syncfusion.com/cr/document-p
 
 **Chart** **Sheet** **Protection**
 
-Essential XlsIO can also provide support to protect or unprotect a chart sheet.
+Essential&reg; XlsIO can also provide support to protect or unprotect a chart sheet.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

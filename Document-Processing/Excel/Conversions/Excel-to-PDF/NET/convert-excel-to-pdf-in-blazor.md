@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert an Excel document to PDF in Blazor
 
-Syncfusion XlsIO is a [Blazor Excel library](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Blazor**.
+Syncfusion&reg; XlsIO is a [Blazor Excel library](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Blazor**.
 
 ## Excel to PDF in Blazor Server App
 
@@ -28,7 +28,7 @@ Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/pa
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Server_App_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components
 
 Step 5: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
 {% tabs %}
@@ -166,7 +166,7 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output File in Blazor Server App](Blazor_images\Blazor_images_Server_and_Client_App_Output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
 
@@ -191,7 +191,7 @@ Step 4: Install the following **Nuget packages** in your application from [NuGet
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Client_Nuget1.png)
 ![Install SkiaSharp.NativeAssets.WebAssembly NuGet Package](Blazor_images\Blazor_images_Client_Nuget2.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 5: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
 {% tabs %}
@@ -330,6 +330,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 N> To convert Excel to PDF, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM application. Therefore, we recommend using a Server app, even though Excel to PDF conversion works in a WASM app.
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.

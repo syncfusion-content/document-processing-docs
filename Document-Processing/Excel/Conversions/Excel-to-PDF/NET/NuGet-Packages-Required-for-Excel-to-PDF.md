@@ -150,13 +150,13 @@ Install-Package Syncfusion.ExcelToPdfConverter.AspNet
 
 N> 1. Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
 
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
 
-N> 3. Syncfusion components are available in nuget.org
+N> 3. Syncfusion&reg; components are available in nuget.org
 
-N> 4. From the Essential Studio 2018 Volume 3 release(v16.3.0.21), Syncfusion has changed some of the NuGet package names to search and find the required Syncfusion NuGet packages in nuget.org easily based on the control and its platforms.
+N> 4. From the Essential Studio&reg; 2018 Volume 3 release(v16.3.0.21), Syncfusion&reg; has changed some of the NuGet package names to search and find the required Syncfusion&reg; NuGet packages in nuget.org easily based on the control and its platforms.
 
-N> 5. Starting with v17.3.0.x, Syncfusion provides support to .NET Core 3.0. You can use the above WPF or Windows Forms platform NuGet packages for .NET Core 3.0 targeting applications and use the same “C# tab” code examples for it.
+N> 5. Starting with v17.3.0.x, Syncfusion&reg; provides support to .NET Core 3.0. You can use the above WPF or Windows Forms platform NuGet packages for .NET Core 3.0 targeting applications and use the same “C# tab” code examples for it.
 
 ## NuGet Package Installation and Uninstallation
 

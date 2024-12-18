@@ -1,6 +1,6 @@
 ---
-title: Open and save Word document in AWS S3 Cloud Storage | Syncfusion
-description: Open and save Word document in AWS S3 Cloud Storage using Syncfusion .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in AWS S3 Cloud Storage | Syncfusion&reg;
+description: Open and save Word document in AWS S3 Cloud Storage using Syncfusion&reg; .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG

@@ -10,7 +10,7 @@ documentation: UG
 
 Slicers are UI filters that help to display only specific data based on the selection criteria. They provide easy and simple UI options to enable or disable the filters in a table.
 
-Syncfusion XlsIO supports below features.
+Syncfusion&reg; XlsIO supports below features.
 
 * Create slicers and filter table data.
 * Format slicers with built-in styles. 
