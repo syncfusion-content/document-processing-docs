@@ -641,7 +641,7 @@ End Using
 
 ### Tesseract 3.05
 
-Tesseract 3.05 supports the native call for both x86 and x64 architectures. By default, the x86 tesseract binaries are available with Syncfusion NuGet package or the tesseract installer. 
+Tesseract 3.05 supports the native call for both x86 and x64 architectures. By default, the x86 tesseract binaries are available with Syncfusion&reg; NuGet package or the tesseract installer. 
 
 You can download the x64 supporting tesseract binaries from the following link.
 [Tesseract 64-bit binaries](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Tesseract3.05_x641904984914)
@@ -781,7 +781,68 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Performing OCR with different Page Segmentation Mode
 
-The [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property is used to set the page segmentation mode. By default, OCR works with the "Auto" page segmentation mode. Kindly refer to the following code example to perform OCR with different page segmentation mode. 
+The [PageSegment](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_PageSegment) property is used to set the page segmentation mode. By default, OCR works with the "Auto" page segmentation mode. Kindly refer to the following code example to perform OCR with different page segmentation mode.
+
+The following table explains page segmentation modes and their purposes.
+
+<table>
+<thead>
+<tr>
+<th>
+Page Segment Mode<br/><br/></th><th>
+Description<br/><br/></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+OsdOnly<br/><br/></td><td>
+Detects orientation and script of the page without performing OCR.<br/><br/></td></tr>
+<tr>
+<td>
+AutoOsd<br/><br/></td><td>
+Automatically performs OCR with orientation and script detection.<br/><br/></td></tr>
+<tr>
+<td>
+AutoOnly<br/><br/></td><td>
+Automatically detects the text layout but skips orientation and script detection.<br/><br/></td></tr>
+<tr>
+<td>
+Auto<br/><br/></td><td>
+Fully automatic page layout analysis for OCR.<br/><br/></td></tr>
+<tr>
+<td>
+SingleColumn<br/><br/></td><td>
+Processes the page as a single column of text.<br/><br/></td></tr>
+<tr>
+<td>
+SingleBlock<br/><br/></td><td>
+Treats the page as a single uniform block of text and graphics.<br/><br/></td></tr>
+<tr>
+<td>
+SingleLine<br/><br/></td><td>
+Processes a single line of text.<br/><br/></td></tr>
+<tr>
+<td>
+SingleWord<br/><br/></td><td>
+Recognizes a single word on the page.<br/><br/></td></tr>
+<tr>
+<td>
+CirclesWord<br/><br/></td><td>
+Detects a word inside a circle (used for specific OCR tasks).<br/><br/></td></tr>
+<tr>
+<td>
+SingleChar<br/><br/></td><td>
+Processes a single character from the page.<br/><br/></td></tr>
+<tr>
+<td>
+SparseText<br/><br/></td><td>
+Recognizes sparse text scattered across the page, suitable for partial text detection.<br/><br/></td></tr>
+<tr>
+<td>
+RawLine<br/><br/></td><td>
+Treats the page as a single line, avoiding text layout analysis and assuming uniform spacing.<br/><br/></td></tr>
+</tbody>
+</table>
 
 N> The page segmentation mode is supported only in the Tesseract version 4.0 and above.
  
@@ -1423,9 +1484,9 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## OCR with multiple languages
 
-Syncfusion OCR processor does support multiple languages in C#. You can configure the OCR processor to recognize text in multiple languages by specifying the required language files.
+Syncfusion&reg; OCR processor does support multiple languages in C#. You can configure the OCR processor to recognize text in multiple languages by specifying the required language files.
 
-Here's a general outline of how to enable multiple languages in Syncfusion OCR processor:
+Here's a general outline of how to enable multiple languages in Syncfusion&reg; OCR processor:
 
 ### Install Required Dependencies: 
 Ensure you have installed the necessary NuGet packages, including `Syncfusion.OCRProcessor` and `Tesseract`, for OCR functionalities.
@@ -1436,7 +1497,7 @@ You need to download the language data files ([.traineddata](https://github.com/
 ### Load the Language Files:
 You can set up multiple languages by specifying the language codes (e.g., "eng" for English, "fra" for French) and ensuring that the trained data for those languages is available.
 
-Here is a basic example of using Syncfusion OCR processor with multiple languages in C#:
+Here is a basic example of using Syncfusion&reg; OCR processor with multiple languages in C#:
 
 {% tabs %}  
 

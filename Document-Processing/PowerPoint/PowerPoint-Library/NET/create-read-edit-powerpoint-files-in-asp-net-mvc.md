@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in ASP.NET MVC |Syncfusion|
+title: Create and edit PowerPoint files in ASP.NET MVC |Syncfusion&reg;|
 description: ASP.NET MVC PowerPoint library to create, read, edit and convert PowerPoint files in ASP.NET MVC applications.
 platform: document-processing
 control: PowerPoint
@@ -8,23 +8,23 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in ASP.NET MVC
 
-You can create or edit a PowerPoint file in ASP.NET MVC with Syncfusion PowerPoint library. The below are the steps.
+You can create or edit a PowerPoint file in ASP.NET MVC with Syncfusion&reg; PowerPoint library. The below are the steps.
 
 ## Create a PowerPoint file in ASP.NET MVC
 
 Step 1: Create a new C# ASP.NET MVC application project.
 
-![Create ASP.NET MVC project](Workingwith-MVC/CreateMVC.png)
+![Create ASP.NET MVC project](Workingwith-MVC/Project-Open-and-Save.png)
 
 Step 2: Select the **MVC** template to create the project.
 
-![Select MVC template](Workingwith-MVC/Select_template.png)
+![Select MVC template](Workingwith-MVC/MVC-Open-and-Save.png)
 
 Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install ASP.NET MVC Nuget](Workingwith-MVC/Install_Nuget.png)
+![Install ASP.NET MVC Nuget](Workingwith-MVC/Nuget-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 4: After installing the **Syncfusion.Presentation.AspNet.Mvc5** nuget package, the following assemblies were included in our project.
 <ul>
@@ -193,6 +193,6 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-MVC/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetmvc/PowerPoint/HelloWorld#/material3) in ASP.NET MVC.

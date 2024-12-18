@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in AWS | Syncfusion
+title: Convert Word to Image in AWS | Syncfusion&reg;
 description: Learn how to convert a Word document to image in Amazon Web Services (AWS) using Syncfusion .NET Core Word (DocIO) library in C#.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word to Image in Amazon Web Services (AWS)
 
-Syncfusion DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, **convert a Word document to image in Amazon Web Services (AWS)** within a few lines of code. 
+Syncfusion&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, **convert a Word document to image in Amazon Web Services (AWS)** within a few lines of code. 
 
 N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to convert Word documents to image in C# using the .NET Core Word (DocIO) library in AWS. 
 
@@ -30,8 +30,7 @@ NuGet package name<br/></th></tr></thead>
 <td>
 {{'[AWS Lambda](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-aws-lambda)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.8)' | markdownify}} <br/>
-{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0.2)' | markdownify}}<br/> 
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8)' | markdownify}} <br/>
 </td></tr>
 <tr>
 <td>

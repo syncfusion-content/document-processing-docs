@@ -7,11 +7,11 @@ control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion Excel Mac installer
+# Installing Syncfusion&reg; Excel Mac installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
-   While running Essential Studio Excel Mac Installers on Catalina MacOS or later, the below alert will be displayed.
+   While running Essential Studio&reg; Excel Mac Installers on Catalina MacOS or later, the below alert will be displayed.
 
    ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)  
      
@@ -26,7 +26,7 @@ documentation: ug
 
 ## Step-by-Step Installation
 
-The steps below show how to install Essential Studio Excel Mac installer.
+The steps below show how to install Essential Studio&reg; Excel Mac installer.
 
 1. Locate the downloaded dmg file and open the file by double click on it.
 
@@ -42,7 +42,7 @@ The steps below show how to install Essential Studio Excel Mac installer.
 
    ![License confirmation wizard](images/Mac_Installer3.png)
    
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion Essential Studio Flutter Mac installer can be used for development purposes without registering the Unlock key..
+   N> The Unlock key is not required to install the Mac installer. The Syncfusion&reg; Essential&reg; Studio&reg; Flutter Mac installer can be used for development purposes without registering the Unlock key..
 
 
 4. And paste it in “Applications” folder shortcut.
@@ -50,7 +50,7 @@ The steps below show how to install Essential Studio Excel Mac installer.
    ![license wizard](images/Mac_Installer4.png)
 
 
-5. Now you can open the folder to explore the Syncfusion Essential Studio Mac installer.
+5. Now you can open the folder to explore the Syncfusion Essential Studio&reg; Mac installer.
 
    ![Installation type wizard](images/Mac_Installer5.png)
 
@@ -61,7 +61,7 @@ The steps below show how to install Essential Studio Excel Mac installer.
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio Excel Mac installer, please refer to this.
+After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio&reg; Excel Mac installer, please refer to this.
 
 * Register the license key in the [Program.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-60) file if you created the ASP.NET Core web application with Visual Studio 2022 and .NET 6.0.
 * Register the license key in Configure method of [Startup.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-50-or-net-31)

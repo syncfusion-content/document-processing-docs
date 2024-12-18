@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in WPF |Syncfusion|
+title: Create and edit PowerPoint files in WPF |Syncfusion&reg;|
 description: WPF PowerPoint library to create, read, edit and convert PowerPoint files in WPF applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -8,19 +8,19 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in WPF
 
-You can create or edit a PowerPoint file in WPF with Syncfusion PowerPoint library. The below are the steps.
+You can create or edit a PowerPoint file in WPF with Syncfusion&reg; PowerPoint library. The below are the steps.
 
 ## Create a PowerPoint file in WPF
 
 Step 1: Create a new C# WPF application project.
 
-![Create WPF project](Workingwith-WPF/CreateWPF.png)
+![Create WPF project](Workingwith-WPF/Project-Open-and-Save.png)
 
 Step 2: Install the [Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Presentation WPF Nuget](Workingwith-WPF/Install_Nuget.png)
+![Install Presentation WPF Nuget](Workingwith-WPF/Nuget-Package-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: After installing the **Syncfusion.Presentation.Wpf** nuget package, the following assemblies were included in our project.
 <ul>
@@ -223,6 +223,6 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WPF/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core. 

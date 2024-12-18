@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert HTML to PDF file in Windows Forms
 
-The [Syncfusion HTML to PDF converter](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) is a .NET library used to convert HTML or web pages to PDF document in Windows Forms application.
+The [Syncfusion&reg; HTML to PDF converter](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) is a .NET library used to convert HTML or web pages to PDF document in Windows Forms application.
 
 To include the .NET HTML to PDF converter library into your Windows Forms application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/overview#nuget-packages-required-recommended) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/overview#assemblies-required) documentation.
 

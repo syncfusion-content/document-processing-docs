@@ -1,5 +1,5 @@
 ---
-title: Convert Word to HTML and vice versa in C# | Syncfusion
+title: Convert Word to HTML and vice versa in C# | Syncfusion&reg;
 description: Learn how to convert Word document to HTML file and vice versa  using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Word to HTML and HTML to Word Conversions
 
-The Essential DocIO converts the HTML file into Word document and vice versa. You can also convert the Word document (DOC, DOCX, RTF, DOT, DOTX, DOCM, and DOTM) into HTML format. 
+The Essential&reg; DocIO converts the HTML file into Word document and vice versa. You can also convert the Word document (DOC, DOCX, RTF, DOT, DOTX, DOCM, and DOTM) into HTML format. 
 
 ## Assemblies and NuGet packages required
 
@@ -32,7 +32,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Html)
 {
     //Saves the Word document to MemoryStream
     MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.docx);
+    document.Save(stream, FormatType.Docx);
     //Closes the Word document
     document.Close();
 }
@@ -66,7 +66,7 @@ Every HTML content is validated against a Document Type Declaration (DTD) which 
 
 #### XHTML validation types
 
-The following XHTML validation types are supported in Essential DocIO while importing an HTML content.
+The following XHTML validation types are supported in Essential&reg; DocIO while importing an HTML content.
 
 <table>
 <thead>
@@ -91,7 +91,7 @@ The following XHTML validation types are supported in Essential DocIO while impo
 
 ### Customizing the HTML to Word conversion
 
-The Essential DocIO provides settings while performing HTML to Word conversion as mentioned as follows: 
+The Essential&reg; DocIO provides settings while performing HTML to Word conversion as mentioned as follows: 
 
 * Validate the HTML string against XHTML 1.0 Strict and Transitional schema.
 * Insert the HTML string at the specified position of the document body contents.
@@ -151,7 +151,7 @@ N> 5. From version 27.X.X, the .NET Word Library supports opening HTML even if i
 
 ### Customize image data
 
-The Essential DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event, which is used to customize image data while importing and exporting HTML files. You can implement logic to customize the image data by using this [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event.
+The Essential&reg; DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event, which is used to customize image data while importing and exporting HTML files. You can implement logic to customize the image data by using this [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.HTMLImportSettings.html#Syncfusion_DocIO_DLS_HTMLImportSettings_ImageNodeVisited) event.
 
 The following code example shows how to load image data based on image source path when importing the HTML files.
 
@@ -1264,6 +1264,11 @@ Underline types and colors are ignored.
 </td>
 </tr>
 </table>
+
+## Online Demo
+
+* Explore how to convert a Word document to HTML using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtohtml#/material3).
+* See how to convert HTML to a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/htmltoword#/material3).
 
 ## See Also
 

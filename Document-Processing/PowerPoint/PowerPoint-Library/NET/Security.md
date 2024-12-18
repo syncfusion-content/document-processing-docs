@@ -1,5 +1,5 @@
 ---
-title: Encrypting & Decrypting the PowerPoint Presentation | Syncfusion
+title: Encrypting & Decrypting the PowerPoint Presentation | Syncfusion&reg;
 description: This section explains on Encrypting, Decrypting and providing protection for the PowerPoint Presentation.
 platform: document-processing
 control: Presentation
@@ -19,52 +19,38 @@ The following code example demonstrates how to encrypt a PowerPoint Presentation
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Encrypt-PowerPoint-with-password/.NET/Encrypt-PowerPoint-with-password/Program.cs" %}
-using (IPresentation presentation = Presentation.Create())
+//Open an existing presentation.
+using (FileStream inputStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
 {
-    //Adds slide to Presentation.
-    ISlide slide = presentation.Slides.Add(SlideLayoutType.Blank);
-    //Adds textbox to slide.
-    IShape shape = slide.Shapes.AddTextBox(100, 30, 200, 300);
-    //Adds a paragraph with text content.
-    IParagraph paragraph = shape.TextBody.AddParagraph("Password Protected.");
-    //Protects the file with password.
-    presentation.Encrypt("PASSWORD!@1#$");
-    //Save the PowerPoint Presentation as stream.
-    using (FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create))
-    {
-        presentation.Save(outputStream);
-    }
+    using (IPresentation presentation = Presentation.Open(inputStream))
+	{
+		//Encrypt the presentation with a password.
+		presentation.Encrypt("syncfusion");
+		//Saves the Presentation.
+		using (FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create))
+		{
+			presentation.Save(outputStream);
+		}
+	}
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates an instance for Presentation.
-using (IPresentation presentation = Presentation.Create())
+//Open an existing presentation.
+using (IPresentation presentation = Presentation.Open("Template.pptx"))
 {
-    //Adds slide to Presentation.
-    ISlide slide = presentation.Slides.Add(SlideLayoutType.Blank);
-    //Adds textbox to slide.
-    IShape shape = slide.Shapes.AddTextBox(100, 30, 200, 300);
-    //Adds a paragraph with text content.
-    IParagraph paragraph = shape.TextBody.AddParagraph("Password Protected.");
-    //Protects the file with password.
-    presentation.Encrypt("PASSWORD!@1#$");
+    //Encrypt the presentation with a password.
+    presentation.Encrypt("syncfusion");
     //Saves the Presentation.
     presentation.Save("Sample.pptx");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates an instance for Presentation.
-Using presentationDocument As IPresentation = Presentation.Create()
-    'Adds slide to Presentation.
-    Dim slide As ISlide = presentationDocument.Slides.Add(SlideLayoutType.Blank)
-    'Adds textbox to slide.
-    Dim shape As IShape = slide.Shapes.AddTextBox(100, 30, 200, 300)
-    'Adds a paragraph with text content.
-    Dim paragraph As IParagraph = shape.TextBody.AddParagraph("Password Protected.")
-    'Protects the file with password.
-    presentationDocument.Encrypt("PASSWORD!@1#$")
+'Open an existing presentation.
+Using presentationDocument As IPresentation = Presentation.Open("Template.pptx")
+    'Encrypt the presentation with a password.
+    presentation.Encrypt("syncfusion")
     'Saves the Presentation.
     presentationDocument.Save("Sample.pptx")
 End Using
@@ -76,7 +62,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Decrypting the PowerPoint Presentation
 
-Essential Presentation provides ability to remove the encryption from the PowerPoint Presentation. You can decrypt a PowerPoint Presentation by opening it with the password.
+Essential&reg; Presentation provides ability to remove the encryption from the PowerPoint Presentation. You can decrypt a PowerPoint Presentation by opening it with the password.
 
 **Opening** **the** **Encrypted** **PowerPoint** **Presentation**
 
@@ -125,11 +111,11 @@ The following code example demonstrates removing the encryption from a PowerPoin
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Security/Remove-encryption/.NET/Remove-encryption/Program.cs" %}
- //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
+//Opens an existing Presentation from file system and it can be decrypted by using the provided password.
 using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 {
     //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-    using (IPresentation presentation = Presentation.Open(inputStream, "PASSWORD!@1#$"))
+    using (IPresentation presentation = Presentation.Open(inputStream, "syncfusion"))
     {
         //Decrypts the document.
         presentation.RemoveEncryption();
@@ -144,7 +130,7 @@ using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open))
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-using (IPresentation presentation = Presentation.Open("Sample.pptx", "PASSWORD!@1#$"))
+using (IPresentation presentation = Presentation.Open("Sample.pptx", "syncfusion"))
 {
     //Decrypts the document.
     presentation.RemoveEncryption();
@@ -155,7 +141,7 @@ using (IPresentation presentation = Presentation.Open("Sample.pptx", "PASSWORD!@
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing Presentation from file system and it can be decrypted by using the provided password.
-Using presentationDocument As IPresentation = Presentation.Open("Sample.pptx", "PASSWORD!@1#$")
+Using presentationDocument As IPresentation = Presentation.Open("Sample.pptx", "syncfusion")
     'Decrypts the document.
     presentationDocument.RemoveEncryption()
     'Saves the Presentation.
@@ -309,3 +295,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N> 1. In Xamarin applications, Encryption, Decryption and Write Protection features are supported from the target framework .NET Standard 2.0 version onwards.
 N> 2. For ASP.NET Core, Encryption, Decryption and Write Protection features are supported from the .NET Core 2.0 version onwards.
 
+## Online Demo
+
+* Explore how to set write protection for a PowerPoint presentation with a password using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/writeprotection#/material3).
+* See how to encrypt and decrypt the PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/encryptanddecrypt#/material3).

@@ -1,5 +1,5 @@
 ---
-title: Presentation Working with Find and Replace | Syncfusion
+title: Presentation Working with Find and Replace | Syncfusion&reg;
 description: This section illustrates how to find a particular text and replace it with another text or part of the document
 platform: document-processing
 control: Presentation
@@ -682,6 +682,11 @@ End Using
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Find-and-Replace/Find-and-highlight-in-slide).
+
+## Online Demo
+
+* Explore how to replace a specific text or text pattern in a PowerPoint presentation with another text using the find and replace functionality of the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/findandreplace#/material3).
+* See how to find specific text and highlight it in an existing PowerPoint presentation using the find functionality of the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/findandhighlight#/material3).
 
 ## See Also
 * [How to replace the hyperlink within a SmartArt in PowerPoint Presentation?](https://support.syncfusion.com/kb/article/15293/how-to-replace-the-hyperlink-within-a-smartart-in-powerpoint-presentation)

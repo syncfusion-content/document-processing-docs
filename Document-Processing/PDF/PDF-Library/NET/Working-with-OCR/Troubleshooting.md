@@ -129,7 +129,7 @@ To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/e
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-The essential PDF supports all the languages the Tesseract engine supports in the OCR processor.
+The essential&reg; PDF supports all the languages the Tesseract engine supports in the OCR processor.
 The dictionary packs for the languages can be downloaded from the following online location:<br/>
 <a href="https://code.google.com/p/tesseract-ocr/downloads/list">https://code.google.com/p/tesseract-ocr/downloads/list</a>
 <br/><br/>
@@ -411,8 +411,8 @@ EXPOSE 8081
 </table>
 
 
-## Default path reference for Syncfusion OCR packages
-When installing the Syncfusion OCR NuGet packages, the tessdata and tesseract path binaries are copied into the runtimes folder. The default binaries path references are added in the package itself, so there is no need to set the manual path.
+## Default path reference for Syncfusion&reg; OCR packages
+When installing the Syncfusion&reg; OCR NuGet packages, the tessdata and tesseract path binaries are copied into the runtimes folder. The default binaries path references are added in the package itself, so there is no need to set the manual path.
 
 If you are facing any issues with default reference path in your project. Kindly manually set the Tesseract and Tessdata path using the TessdataPath and TesseractPath in OCRProcessor class. You can find the binaries in the below project in your project location.
 

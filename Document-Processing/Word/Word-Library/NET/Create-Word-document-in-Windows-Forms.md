@@ -1,6 +1,6 @@
 ---
-title: Create Word document in Windows Forms | Syncfusion 
-description: Create Word document without Microsoft Word or interop dependencies in Windows Forms application using Syncfusion .NET Word (DocIO) library.
+title: Create Word document in Windows Forms | Syncfusion&reg; 
+description: Create Word document without Microsoft Word or interop dependencies in Windows Forms application using Syncfusion&reg; .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,19 +8,19 @@ documentation: UG
 
 # Create Word document in Windows Forms
 
-Syncfusion Essential DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, and edit **Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Windows Forms**.
+Syncfusion&reg; Essential&reg; DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, and edit **Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Windows Forms**.
 
 ## Steps to create Word document programmatically:
 
 Step 1: Create a new Windows Forms application project.
 
-![Create Windows Forms application in Visual Studio](Windows-Forms_images/Create_Project.jpg)
+![Create Windows Forms application in Visual Studio](Windows-Forms_images/Create-Project-WordtoPDF.png)
 
 Step 2: Install [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
 
 ![Install DocIO Windows Forms NuGet package](Windows-Forms_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: Include the following namespaces in the **Form1.Designer.cs** file.
 
@@ -299,6 +299,6 @@ By executing the program, you will get the **Word document** as follows.
 
 ![Windows Forms output Word document](Windows-Forms_images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion Word library (DocIO) features.
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion&reg; Word library (DocIO) features.
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core.

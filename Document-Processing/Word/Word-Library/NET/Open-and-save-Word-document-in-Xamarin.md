@@ -1,6 +1,6 @@
 ---
-title: Open and save Word document in Xamarin | Syncfusion
-description: Open and save Word document in Xamarin application using Syncfusion Xamarin Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in Xamarin | Syncfusion&reg;
+description: Open and save Word document in Xamarin application using Syncfusion&reg; Xamarin Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,25 +8,25 @@ documentation: UG
 
 # Open and Save Word document in Xamarin
 
-Syncfusion DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **open and save a Word document in Xamarin**.
+Syncfusion&reg; DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **open and save a Word document in Xamarin**.
 
 ## Steps to open and save Word document programmatically:
 
 Step 1: Create a new Xamarin.Forms application project.
 
-![Create Xamarin application in Visual Studio](Xamarin_images/create.png)
+![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
 Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
 N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
 
-![Create Xamarin CodeSharing Option](Xamarin_images/xamarin_cross.png)
+![Create Xamarin CodeSharing Option](Xamarin_images/Template_WordtoPDF.png)
 
 Step 3: Install [Syncfusion.Xamarin.DocIO](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIO) NuGet package as a reference to the .NET Standard project in your application from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Xamarin.DocIO NuGet package](Xamarin_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 4: Add new Forms XAML page in **portable project**. If there is no XAML page defined in the App class. Otherwise proceed to the next step.
 <ul>
@@ -225,4 +225,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![Xamarin open and save output Word document](Xamarin_images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/xamarin) to explore the rich set of Syncfusion Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/xamarin) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 

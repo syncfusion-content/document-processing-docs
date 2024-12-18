@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Excel document to Image in Google App Engine
 
-Syncfusion XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Google App Engine**.
+Syncfusion&reg; XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Google App Engine**.
 
 ## Set up App Engine
 
@@ -53,14 +53,14 @@ Step 3: Click the **Create** button.
 Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.XLsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux v2.88.6](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.6)
+* [SkiaSharp.NativeAssets.Linux v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.8)
 * [HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core Nuget Package](GCP_Images/Install_Nuget_Syncfusion.png)
 ![Install SkiaSharp.NativeAssets.Linux Nuget Package](GCP_Images/Install_Nuget_SkiaSharp.png)
 ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](GCP_Images/Install_Nuget_HarfBuzzSharp.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 5: Include the following namespaces in the **HomeController.cs** file.
 
@@ -261,11 +261,11 @@ gcloud app deploy --version v0
 {% endhighlight %}
 {% endtabs %}
 
-!["Add required files to publish folder](GCP_Images/Deploy_ExceltoImage.png)
+![Add required files to publish folder](GCP_Images/Deploy_ExceltoImage.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
 
-!["Add required files to publish folder](GCP_Images/Browse_ExceltoImage.png)
+![Add required files to publish folder](GCP_Images/Browse_ExceltoImage.png)
 
 A complete working example of how to convert an Excel document to Image in GCP is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Convert%20Excel%20to%20Image).
 
@@ -273,6 +273,6 @@ By executing the program, you will get the **image** as follows. The output will
 
 ![Excel to Image in Google App Engine](GCP_Images/Output_ExceltoImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.

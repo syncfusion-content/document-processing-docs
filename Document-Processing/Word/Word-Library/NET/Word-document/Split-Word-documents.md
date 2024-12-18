@@ -1,5 +1,5 @@
 ---
-title: Split Word documents in C# | DocIO | Syncfusion
+title: Split Word documents in C# | DocIO | Syncfusion&reg;
 description: Learn how to split a large Word document into several smaller ones using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Split Word documents
 
-Syncfusion Word Library allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
+Syncfusion&reg; Word Library allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
 
 By using this feature, you can be able to split/extract the necessary parts from the original document for further processing.
 
@@ -31,26 +31,23 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-section/.NET/Split-by-section/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-section/.NET/Split-by-section/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Load the template document as stream
 using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
-    int fileId = 0;
     //Iterate each section from Word document
-    foreach (WSection section in document.Sections)
+    for (int i = 0; i < document.Sections.Count; i++)
     {
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
         newDocument.Sections.Add(section.Clone());
         //Saves the Word document to  MemoryStream
-        FileStream outputStream = new FileStream("Section" + fileId + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        FileStream outputStream = new FileStream("Section" + i + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
         newDocument.Save(outputStream, FormatType.Docx);
         //Closes the document
         newDocument.Close();
-        fileId++;
     }
 }
 {% endhighlight %}
@@ -59,18 +56,16 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 //Load the template document
 using (WordDocument document = new WordDocument(@"Template.docx"))
 {
-    int fileId = 0;
     //Iterate each section from Word document
-    foreach (WSection section in document.Sections)
+    for (int i = 0; i < document.Sections.Count; i++)
     {
         //Create new Word document
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
         newDocument.Sections.Add(section.Clone());
         //Save and close the new Word documet
-        newDocument.Save("Section" + fileId + ".docx");
+        newDocument.Save("Section" + i + ".docx");
         newDocument.Close();
-        fileId++;
     }
 }
 {% endhighlight %}
@@ -78,17 +73,15 @@ using (WordDocument document = new WordDocument(@"Template.docx"))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load the template document
 Using document As WordDocument = New WordDocument("Template.docx")
-    Dim fileId As Integer = 0
     'Iterate each section from Word document
-    For Each section As WSection In document.Sections
+    For i As Integer = 0 To document.Sections.Count - 1
         'Create new Word document
         Dim newDocument As WordDocument = New WordDocument()
         'Add cloned section into new Word document
-        newDocument.Sections.Add(section.Clone())
-        'Save and close the new Word documet
-        newDocument.Save("Section" & fileId & ".docx")
+        newDocument.Sections.Add(document.Sections(i).Clone())
+        'Save and close the new Word document
+        newDocument.Save("Section" & i & ".docx")
         newDocument.Close()
-        fileId += 1
     Next
 End Using
 {% endhighlight %}
@@ -103,8 +96,7 @@ The following code example illustrates how to split the Word document by using h
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-heading/.NET/Split-by-heading/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-heading/.NET/Split-by-heading/Program.cs" %}
 using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
     //Load the template document as stream
@@ -371,8 +363,7 @@ The following code example illustrates how to split the Word document using book
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-bookmark/.NET/Split-by-bookmark/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-bookmark/.NET/Split-by-bookmark/Program.cs" %}
 //Load an existing Word document.
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -454,8 +445,7 @@ The following code example illustrates how to split the Word document using the 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-placeholder-text/.NET/Split-by-placeholder-text/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-placeholder-text/.NET/Split-by-placeholder-text/Program.cs" %}
 //Load an existing Word document.
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
@@ -648,3 +638,10 @@ End Using
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Split-by-placeholder-text).
+
+## Online Demo
+
+* Explore how to split a Word document by section using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbysection#/material3).
+* See how to split a Word document by heading using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbyheading#/material3).
+* See how to split a Word document by bookmark using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbybookmark#/material3).
+* See how to split a Word document by placeholder using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbybookmark#/material3).

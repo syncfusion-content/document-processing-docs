@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Excel document to Image in Azure Functions v1
 
-Syncfusion XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Azure Functions v1**.
+Syncfusion&reg; XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Azure Functions v1**.
 
 ## Steps to convert an Excel document to Image in Azure Functions v1
 
@@ -28,7 +28,7 @@ Step 4: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.WinForms NuGet package](Azure-Images/Functions-v1/Install_NuGet_Image.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
 
 Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
@@ -87,7 +87,7 @@ Step 6: Right-click the project and select **Publish** option.
 
 Step 7: Select the publish target as **Azure**.
 
-![Add a Publish Profile"](Azure-Images/Functions-v1/Publish_Profile.png)
+![Add a Publish Profile](Azure-Images/Functions-v1/Publish_Profile.png)
 
 Step 8: Select the **Create new** button.
 
@@ -170,6 +170,6 @@ catch (Exception ex)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Azure%20V1%20Function/Convert%20Excel%20to%20Image). 
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.

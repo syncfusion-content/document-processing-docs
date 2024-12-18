@@ -1,5 +1,5 @@
 ---
-title: Working with Word document Protection | DocIO | Syncfusion
+title: Working with Word document Protection | DocIO | Syncfusion&reg;
 description: Learn how to encrypt, decrypt, and control changes by protecting the Word document using the .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -25,7 +25,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic);
 //Encrypts the Word document with a password
-document.EncryptDocument("password");
+document.EncryptDocument("syncfusion");
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -37,7 +37,7 @@ document.Close();
 //Opens an input Word document
 WordDocument document = new WordDocument("Template.docx");
 //Encrypts the Word document with a password
-document.EncryptDocument("password");
+document.EncryptDocument("syncfusion");
 //Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx);
 document.Close();
@@ -47,7 +47,7 @@ document.Close();
 'Opens an input Word document
 Dim document As New WordDocument("Template.docx")
 'Encrypts the Word document with a password
-document.EncryptDocument("password")
+document.EncryptDocument("syncfusion")
 ‘Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
@@ -157,7 +157,7 @@ You can open the encrypted Word document and remove the encryption from the docu
 //Opens an existing document from stream through constructor of WordDocument class
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an encrypted Word document
-WordDocument document = new WordDocument(fileStreamPath, "password");
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx, "syncfusion");
 //Removes encryption in Word document
 document.RemoveEncryption();
 //Saves the Word document to MemoryStream
@@ -169,7 +169,7 @@ document.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens an encrypted Word document
-WordDocument document = new WordDocument("Template.docx", "password");
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx, "syncfusion");
 //Removes encryption in Word document
 document.RemoveEncryption();
 //Saves and closes the Word document instance
@@ -179,7 +179,7 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens an encrypted Word document
-Dim document As New WordDocument("Template.docx", "password")
+Dim document As New WordDocument("Template.docx", FormatType.Docx, "syncfusion")
 'Removes encryption in Word document
 document.RemoveEncryption()
 ‘Saves and closes the Word document instance

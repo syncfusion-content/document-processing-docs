@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Markdown in C# | DocIO | Syncfusion
+title: Convert Word to Markdown in C# | DocIO | Syncfusion&reg;
 description: Learn how to convert a Word document to Markdown using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -170,7 +170,7 @@ The following table illustrates the supported Markdown elements in Word to Markd
 
 ### Code blocks
 
-The Essential DocIO supports two types of code blocks in Word to Markdown conversion. 
+The Essential&reg; DocIO supports two types of code blocks in Word to Markdown conversion. 
 
 * Indented code block: Set the paragraph style as “IndentedCode.”
 * Fenced code block: Set the paragraph style as “FencedCode.”

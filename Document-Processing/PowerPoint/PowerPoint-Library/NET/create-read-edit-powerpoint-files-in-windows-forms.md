@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in Windows Forms |Syncfusion|
+title: Create and edit PowerPoint files in Windows Forms |Syncfusion&reg;|
 description: Windows Forms PowerPoint library to create, read, edit and convert PowerPoint files in Windows Forms applications.
 platform: document-processing
 control: PowerPoint
@@ -8,19 +8,19 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in Windows Forms
 
-You can create or edit a PowerPoint file in Windows Forms with Syncfusion PowerPoint library. The below are the steps.
+You can create or edit a PowerPoint file in Windows Forms with Syncfusion&reg; PowerPoint library. The below are the steps.
 
 ## Create a PowerPoint file in Windows Forms
 
 Step 1: Create a new C# Windows Forms application project.
 
-![Create Windows Forms project](Workingwith-Windows/Create_Windows.png)
+![Create Windows Forms project](Workingwith-Windows/Project-Open-and-Save.png)
 
 Step 2: Install the [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-![Install Presentation Winforms Nuget](Workingwith-Windows/Install_Nuget.png)
+![Install Presentation Winforms Nuget](Workingwith-Windows/Nuget-Package-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: After installing the **Syncfusion.Presentation.WinForms** nuget package, the following assemblies were included in our project.
 <ul>
@@ -189,7 +189,7 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Windows%20Forms/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core. 
 

@@ -1,13 +1,13 @@
 ---
-title: Working with SmartArt in PowerPoint Presentation | Syncfusion
-description: Code examples to create, edit, and format PowerPoint smartArt in C# using Syncfusion PowerPoint library without Microsoft PowerPoint or interop dependencies.
+title: Working with SmartArt in PowerPoint Presentation | Syncfusion&reg;
+description: Learn how to create, edit, and format PowerPoint smartArt in C# using Syncfusion&reg; PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 # Working with PowerPoint SmartArt
 
-A [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram is a visual representation of your information, to effectively communicate your ideas in presentations. You can add and modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams in PowerPoint presentations using Essential Presentation library.
+A [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram is a visual representation of your information, to effectively communicate your ideas in presentations. You can add and modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams in PowerPoint presentations using Essential&reg; Presentation library.
 
 To quickly start creating a SmartArt in a PowerPoint Presentation using .NET PowerPoint library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=dQhN3i9s3Es" %}
@@ -483,7 +483,7 @@ pptxDoc.Close()
 
 ## Limitations
 
-The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) (like add/remove nodes, modify position and size of nodes etc., which involve [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) layout changes) done by Essential Presentation will not reflected in Image and PDF conversion. Whereas layout changes will be reflected properly in the generated PPTX file when opened using Microsoft PowerPoint.
+The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) (like add/remove nodes, modify position and size of nodes etc., which involve [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) layout changes) done by Essential&reg; Presentation will not reflected in Image and PDF conversion. Whereas layout changes will be reflected properly in the generated PPTX file when opened using Microsoft PowerPoint.
 
 ## Supported SmartArt layout types
 
@@ -621,3 +621,7 @@ The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-proces
 132. Picture Accent Process
 133. Repeating Bending Process
 134. Vertical Process
+
+## Online Demo
+
+* Explore how to create a SmartArt diagram in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/smartart#/material3).

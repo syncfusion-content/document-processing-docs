@@ -1,5 +1,5 @@
 ---
-title: Customizing Word to PDF Conversion in C# | DocIO | Syncfusion
+title: Customizing Word to PDF Conversion in C# | DocIO | Syncfusion&reg;
 description: Learn about the customization settings for Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Customization settings for Word to PDF conversion
 
-The Essential DocIO provides settings while performing Word to PDF conversion mentioned below, 
+The Essential&reg; DocIO provides settings while performing Word to PDF conversion mentioned below, 
 
 ## Fast rendering
 
@@ -875,7 +875,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Hyphenation in Word-to-PDF conversion
 
-Essential DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. These dictionaries prescribe where words of a specific language can be hyphenated. Use the dictionary files as OpenOffice format dictionary.
+Essential&reg; DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. These dictionaries prescribe where words of a specific language can be hyphenated. Use the dictionary files as OpenOffice format dictionary.
 
 N> If automatic hyphenation is not enabled in the Word document, you can enable it by using [WordDocument.Properties.Hyphenation.AutoHyphenation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenation.html#Syncfusion_DocIO_DLS_Hyphenation_AutoHyphenation) of DocIO.
 

@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to Image in Windows Forms | Syncfusion
+title: Convert PowerPoint to Image in Windows Forms | Syncfusion&reg;
 description: Convert PowerPoint to image in Windows Forms using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Windows Forms
 
-Syncfusion PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in Windows Forms**.
+Syncfusion&reg; PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in Windows Forms**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -20,7 +20,7 @@ Step 2: Install the [Syncfusion.Presentation.WinForms](https://www.nuget.org/pac
 
 ![Install Syncfusion.Presentation.WinForms Nuget Package](Workingwith-Windows/Nuget-Package-PPTXtoImage.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 3: Include the following namespaces in the **Form1.cs** file.
 
@@ -88,6 +88,6 @@ By executing the program, you will get the **Image** as follows.
 
 ![PowerPoint to Image in Windows Forms](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core. 

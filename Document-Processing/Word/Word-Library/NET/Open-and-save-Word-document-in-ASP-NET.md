@@ -1,6 +1,6 @@
 ---
-title: Open and save Word document in ASP.NET | Syncfusion
-description: Open and save Word document in ASP.NET application using Syncfusion .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in ASP.NET | Syncfusion&reg;
+description: Open and save Word document in ASP.NET application using Syncfusion&reg; .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and Save Word document in ASP.NET
 
-Syncfusion DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in ASP.NET Web Forms**.
+Syncfusion&reg; DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in ASP.NET Web Forms**.
 
 N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the .NET Word library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core).
 
@@ -16,17 +16,21 @@ N> This ASP.NET Web Form platform is deprecated, you can use the same product fr
 
 Step 1: Create a new ASP.NET Web application project.
 
-![Create ASP.NET Web application in Visual Studio](ASP-NET_images/CreateProject.png)
+![Create ASP.NET Web application in Visual Studio](ASP-NET_images/CreateProjectforConversion.png)
 
-Step 2: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Select the Empty project.
+
+![Select Empty project in Visual Studio](ASP-NET_images/ASPNET.png)
+
+Step 3: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.DocIO.AspNet NuGet package](ASP-NET_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
-Step 3: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a Web Form from the list. Name it as MainPage.
+Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a Web Form from the list. Name it as MainPage.
 
-Step 4: Add a new button in the **MainPage.aspx** as shown below.
+Step 5: Add a new button in the **MainPage.aspx** as shown below.
 
 {% tabs %}
 
@@ -49,7 +53,7 @@ Step 4: Add a new button in the **MainPage.aspx** as shown below.
 
 {% endtabs %}
 
-Step 5. Include the following namespace in your **MainPage.aspx.cs** file.
+Step 6. Include the following namespace in your **MainPage.aspx.cs** file.
 
 {% tabs %}
 
@@ -62,7 +66,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 6: Include the below code snippets in the click event of the button in **MainPage.aspx.cs**, to **open an existing Word document in ASP.NET**.
+Step 7: Include the below code snippets in the click event of the button in **MainPage.aspx.cs**, to **open an existing Word document in ASP.NET**.
 
 {% tabs %}
 
@@ -73,7 +77,7 @@ WordDocument document = new WordDocument("Input.docx");
 
 {% endtabs %}
 
-Step 7: Add below code example to add a paragraph in the Word document.
+Step 8: Add below code example to add a paragraph in the Word document.
 
 {% tabs %}
 
@@ -90,7 +94,7 @@ text.CharacterFormat.FontSize = 12f;
 
 {% endtabs %}
 
-Step 8: Add below code example to **save the Word document in ASP.NET**.
+Step 9: Add below code example to **save the Word document in ASP.NET**.
 
 {% tabs %}
 
@@ -107,4 +111,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![ASP.Net Web Open and save output Word document](ASP-NET_images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 

@@ -7,11 +7,12 @@ documentation: UG
 keywords: Excel, SDK, Automation, API, create, view, edit, convert, read
 ---
 
-> With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan upgrade to .Net 8.0 or higher.
+> With the 2024 Volume 4 release, we will discontinue support for .NET Framework 4.0 in WinForms, WPF, ASP.NET MVC, and Document Processing Libraries. Please plan to upgrade to .NET Framework 4.6.2 or higher.<br>
+With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .Net 8.0 or higher.
 
-# Welcome to Syncfusion Excel Document Processing Framework
+# Welcome to Syncfusion&reg; Excel Document Processing Framework
 
-Syncfusion Excel Document Processing Framework is a collection of Excel document processing library (through code), Excel converters and Spreadsheet component that works without Microsoft Office or interop dependencies. It eases the developers, as they can just integrate and achieve the required Excel document processing functionalities and concentrate on core logics of their application.
+Syncfusion&reg; Excel Document Processing Framework is a collection of Excel document processing library (through code), Excel converters and Spreadsheet component that works without Microsoft Office or interop dependencies. It eases the developers, as they can just integrate and achieve the required Excel document processing functionalities and concentrate on core logics of their application.
 
 
 ## List of Excel Document Processing Products:

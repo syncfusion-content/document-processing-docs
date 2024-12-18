@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert an Excel document to PDF in WinUI
 
-Syncfusion XlsIO is a [WinUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/winui/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in WinUI**.
+Syncfusion&reg; XlsIO is a [WinUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/winui/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in WinUI**.
 
 ## Prerequisites
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -27,7 +27,7 @@ Step 3: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/package
 
 ![Install Syncfusion.XlsIORenderer.Net NuGet Package](WinUI_images\WinUI_images_img8.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
 
 Step 4: Add a new button in **MainWindow.xaml** as shown below.
 {% tabs %}
@@ -159,6 +159,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output File](WinUI_images\WinUI_images_img9.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/winui) to explore the rich set of Syncfusion Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/winui) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetcore/Excel/ExcelToPDF#/material3) in ASP.NET Core.
