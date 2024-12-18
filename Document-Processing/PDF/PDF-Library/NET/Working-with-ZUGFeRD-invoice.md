@@ -11,7 +11,7 @@ The ZUGFeRD invoice is one of the uniformed data format for electronic invoices 
 
 ## Generating ZUGFeRD invoice 
 
-The Syncfusion .NET PDF library has support to create PDF document with PDF/A-3b conformance, which allow to add external file to the PDF document as attachment. The ZUGFeRD has two versions, ZugferdVersion 1.0 and ZugferdVersion 2.0. The Zugferd 2.0 is an updated version of Zugferd 1.0.
+The Syncfusion&reg; .NET PDF library has support to create PDF document with PDF/A-3b conformance, which allow to add external file to the PDF document as attachment. The ZUGFeRD has two versions, ZugferdVersion 1.0 and ZugferdVersion 2.0. The Zugferd 2.0 is an updated version of Zugferd 1.0.
 
 The ZUGFeRD has five conformance levels,
 * Basic: Represents the structured data for simple invoices. Additional information can be included as free text.
@@ -194,7 +194,7 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
 //Creates an attachment 
-FileStream invoiceStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
+FileStream invoiceStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
 PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;

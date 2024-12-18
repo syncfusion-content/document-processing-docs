@@ -1,6 +1,6 @@
 ---
-title: Working with PowerPoint presentation | Syncfusion
-description: Working with PowerPoint presentation. Cloning the Presentation. Printing the Presentation. Essential Presentation use Points to add slide elements.
+title: Working with PowerPoint presentation | Syncfusion&reg;
+description: Working with PowerPoint presentation. Cloning the Presentation. Printing the Presentation. Essential&reg; Presentation use Points to add slide elements.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -247,7 +247,7 @@ Document properties, also known as meta data, are details about a file that desc
 
 **Built****-****in** **Document** **Properties**
 
-You can access and modify the built in document properties of a PowerPoint presentation with Essential Presentation library. The Built-in document properties of a PowerPoint presentation is represented by [IBuiltInDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IBuiltInDocumentProperties.html) type.
+You can access and modify the built in document properties of a PowerPoint presentation with Essential&reg; Presentation library. The Built-in document properties of a PowerPoint presentation is represented by [IBuiltInDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IBuiltInDocumentProperties.html) type.
 
 **Accessing** **and** **Modifying** **Built****-****in** **Document** **Properties**
 
@@ -327,7 +327,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Custom Document properties
 
-You can create and modify the custom document properties of a PowerPoint presentation with Essential Presentation library. The collection of custom document properties in a PowerPoint presentation is represented by [ICustomDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ICustomDocumentProperties.html) object. 
+You can create and modify the custom document properties of a PowerPoint presentation with Essential&reg; Presentation library. The collection of custom document properties in a PowerPoint presentation is represented by [ICustomDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ICustomDocumentProperties.html) object. 
 
 ### Adding Custom Document properties
 

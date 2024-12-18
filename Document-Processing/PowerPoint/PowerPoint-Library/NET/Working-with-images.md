@@ -1,6 +1,6 @@
 ---
-title: Add and edit images in PowerPoint slides |C# PowerPoint| |Syncfusion|
-description: Learn how to add, edit, and remove the images in C# using Syncfusion .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+title: Add and edit images in PowerPoint slides|C# PowerPoint|Syncfusion&reg;
+description: Learn how to add, edit, and remove the images in C# using Syncfusion&reg; .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding Images
 
-Essential Presentation library facilitates adding or modifying the images in a PowerPoint Presentation. The following code example demonstrates how to add a new image to the presentation.
+Essential&reg; Presentation library facilitates adding or modifying the images in a PowerPoint Presentation. The following code example demonstrates how to add a new image to the presentation.
 
 {% tabs %}
 
@@ -146,7 +146,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding SVG Images
 
-SVG images can be inserted in PowerPoint slide for displaying images with accuracy when scaling or zooming page. The Essential Presentation library allows you to insert and edit an SVG image along with its fallback image.
+SVG images can be inserted in PowerPoint slide for displaying images with accuracy when scaling or zooming page. The Essential&reg; Presentation library allows you to insert and edit an SVG image along with its fallback image.
 
 The following code example demonstrates how to add a new SVG image into a slide.
 
@@ -462,6 +462,10 @@ pptxDoc.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Images/Remove-all-images).
+
+## Online Demo
+
+* Explore how to add and format images in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/powerpoint/image#/material3).
 
 ## See Also
 * [How to crop an image in a Presentation using C#?](https://support.syncfusion.com/kb/article/15431/how-to-crop-an-image-in-a-presentation-using-c)

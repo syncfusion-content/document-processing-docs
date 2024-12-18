@@ -7,9 +7,9 @@ documentation: UG
 ---
 # Conversion using Blink Rendering
 
-The Syncfusion Essential HTML converter supports HTML to PDF conversion by using the advanced Blink rendering engine. This converter can be easily integrated into any application on .NET platforms such as Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core to convert URLs, HTML string, SVG, MHTML to PDF, and HTML to image.
+The Syncfusion Essential&reg; HTML converter supports HTML to PDF conversion by using the advanced Blink rendering engine. This converter can be easily integrated into any application on .NET platforms such as Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core to convert URLs, HTML string, SVG, MHTML to PDF, and HTML to image.
 
-N> Starting with v20.1.0.x, if you reference Syncfusion HTML converter assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v20.1.0.x, if you reference Syncfusion&reg; HTML converter assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 
 N> From version 20.1.0.XX, if you are using the Blink rendering engine from NuGet packages, there is no need to manually copy the BlinkBinaries folder from the NuGet packages folder. There is also no need to set BlinkPath to the converter settings explicitly. It will copy the BlinkBinaries to the application bin folder and use the binaries from the bin folder automatically.
@@ -25,7 +25,7 @@ N> From version 20.1.0.55, if you are using the Blink rendering engine in Linux 
 
 * Supports conversion from .NET Framework 4.5 and .NET Core 2.0.
 
-* Latest version of Essential HTML converter can be downloaded from the following link.
+* Latest version of Essential&reg; HTML converter can be downloaded from the following link.
 
     [https://www.syncfusion.com/downloads](https://www.syncfusion.com/downloads)
 
@@ -183,7 +183,7 @@ N> The previously mentioned NuGet packages are available in [nuget.org](https://
 
 * If you are using the HTML to PDF converter from installer or assemblies, then you must set the BlinkBinaries folder path to BlinkPath property of BlinkConverterSettings.  
 
-* You can get the BlinkBinaries folder from HTML converter installed location <span style="color:gray;font-size:14px"><i> (ex,$SystemDrive\Program Files (x86)\Syncfusion\HTMLConverter\xx.x.x.xx\BlinkBinaries)</i></span>. You can include this folder in your project and set the physical path of the folder to the BlinkPath property.  
+* You can get the BlinkBinaries folder from HTML converter installed location <span style="color:gray;font-size:14px"><i> (ex,$SystemDrive\Program Files (x86)\Syncfusion&reg;\HTMLConverter\xx.x.x.xx\BlinkBinaries)</i></span>. You can include this folder in your project and set the physical path of the folder to the BlinkPath property.  
 
 Please refer below code snippet to set BlinkPath to the BlinkConverterSettings,
 
@@ -920,10 +920,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -935,7 +935,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -1061,10 +1061,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -1076,7 +1076,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -1242,10 +1242,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion</h1>
+<h1>Syncfusion&reg;</h1>
 
 <h2>Introduction</h2>
-	Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -1257,7 +1257,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters

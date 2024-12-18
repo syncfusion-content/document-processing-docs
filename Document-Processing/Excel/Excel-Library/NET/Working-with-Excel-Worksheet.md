@@ -353,25 +353,25 @@ Worksheet operations encompass a wide range of actions and manipulations that ca
 
 Moving or copying in Excel refers to the actions of relocating or duplicating cells, rows, columns, or entire sheets within the same workbook or to another workbook.
 
-With the Syncfusion Excel Library, you can move or copy cells, rows, columns, or entire worksheets within an Excel workbook using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/move-or-copy) for more details.
+With the Syncfusion&reg; Excel Library, you can move or copy cells, rows, columns, or entire worksheets within an Excel workbook using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/move-or-copy) for more details.
 
 ### Freeze Panes
 
 Freezing panes in Excel allows you to lock specific rows or columns so that they remain visible while scrolling through the rest of the worksheet.
 
-With the Syncfusion Excel Library, you can freeze panes in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/freeze-panes) for more details.
+With the Syncfusion&reg; Excel Library, you can freeze panes in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/freeze-panes) for more details.
 
 ### Page Setup Options
 
 Page setup options in Excel include settings related to printing, such as adjusting margins, setting paper size and orientation, adding headers and footers, and scaling the worksheet to fit on a specified number of pages.
 
-With the Syncfusion Excel Library, you can manage page setup options in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/page-setup-options) for more details.
+With the Syncfusion&reg; Excel Library, you can manage page setup options in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/page-setup-options) for more details.
 
 ### Show or Hide
 
 Showing or hiding in Excel refers to making rows, columns, or specific elements visible or invisible within the worksheet.
 
-With the Syncfusion Excel Library, you can show or hide rows, columns, or specific elements within an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/show-or-hide) for more details.
+With the Syncfusion&reg; Excel Library, you can show or hide rows, columns, or specific elements within an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/show-or-hide) for more details.
 
 ## See Also
 

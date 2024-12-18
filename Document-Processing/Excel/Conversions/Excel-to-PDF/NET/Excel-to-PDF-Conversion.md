@@ -1188,7 +1188,7 @@ N> Printing is supported only in Windows Forms and WPF platforms.
 
 ## Fallback fonts
 
-During Excel to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Excel (XlsIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
+During Excel to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; Excel (XlsIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
 
 Users can configure fallback fonts in the following ways:
 * Initialize default fallback fonts.

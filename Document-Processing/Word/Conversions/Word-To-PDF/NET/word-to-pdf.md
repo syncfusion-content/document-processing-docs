@@ -1,16 +1,16 @@
 ---
-title: Convert Word to PDF in C# | DocIO | Syncfusion
+title: Convert Word to PDF in C# | DocIO | Syncfusion&reg;
 description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word  to PDF using Syncfusion Word (DocIO) library 
+# Convert Word  to PDF using Syncfusion&reg; Word (DocIO) library 
 
-Syncfusion Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
+Syncfusion&reg; Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
 
-The Syncfusion Word to PDF converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms), [WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-azure), [AWS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux), [Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker), and [macOS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-mac). 
+The Syncfusion&reg; Word to PDF converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms), [WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-azure), [AWS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux), [Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker), and [macOS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-mac). 
 
 ## Key Features  
 
@@ -78,24 +78,27 @@ The following code example illustrates how to convert a Word document into PDF d
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET/Convert-Word-document-to-PDF/Program.cs" %}
-//Open the file as Stream
-FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read);
-//Loads file stream into Word document
-WordDocument wordDocument = new WordDocument(docStream, Syncfusion.DocIO.FormatType.Automatic);
-//Instantiation of DocIORenderer for Word to PDF conversion
-DocIORenderer render = new DocIORenderer();
-//Sets Chart rendering Options.
-render.Settings.ChartRenderingOptions.ImageFormat =  ExportImageFormat.Jpeg;
-//Converts Word document into PDF document
-PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
-//Releases all resources used by the Word document and DocIO Renderer objects
-render.Dispose();
-wordDocument.Dispose();
-//Saves the PDF file
-MemoryStream outputStream = new MemoryStream();
-pdfDocument.Save(outputStream);
-//Closes the instance of PDF document object
-pdfDocument.Close();
+//Open the Word document file stream.
+using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
+{
+    //Loads an existing Word document.
+    using (WordDocument wordDocument = new WordDocument(inputStream, FormatType.Automatic))
+    {
+        //Creates an instance of DocIORenderer.
+        using (DocIORenderer renderer = new DocIORenderer())
+        {
+            //Converts Word document into PDF document.
+            using (PdfDocument pdfDocument = renderer.ConvertToPDF(wordDocument))
+            {
+                //Saves the PDF file to file system.    
+                using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+                {
+                    pdfDocument.Save(outputStream);
+                }
+            }
+        }
+    }
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -167,7 +170,7 @@ In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeti
 
 ## Customization settings
 
-The Essential DocIO provides settings while performing Word to PDF conversion mentioned below, 
+The Essential&reg; DocIO provides settings while performing Word to PDF conversion mentioned below, 
 
 ### Fast rendering
 
@@ -218,7 +221,7 @@ This setting allows you to preserve the **complex script text** in the converted
 
 ### Hyphenation in Word-to-PDF conversion
 
-Essential DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion).
+Essential&reg; DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion).
 
 ### Track changes in Word-to-PDF conversion
 
@@ -238,13 +241,13 @@ You can restrict all the permission in a PDF document using [PdfPermissionsFlags
 
 ## Font Substitution
 
-When the necessary fonts used in the Word document has not been installed in the production machine, then Essential DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. 
+When the necessary fonts used in the Word document has not been installed in the production machine, then Essential&reg; DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. 
 
-To avoid this, the Essential DocIO library allows you to set an alternate font for the missing font used in the Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf).
+To avoid this, the Essential&reg; DocIO library allows you to set an alternate font for the missing font used in the Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf).
 
 ## Fallback fonts
 
-During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf).
+During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf).
 
 ## Unsupported elements in Word to PDF conversion
 
@@ -256,14 +259,15 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 
 ## Online Demo
 
-* Explore how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfua#/material3).
+* Explore how to convert a Word document to PDF using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdf#/material3).
+* See how to convert a Word document to PDF/UA using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfua#/material3).
 * See how to convert a Word document to PDF/A using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdfa#/material3).
 
 ## See Also
 
 * [Supported file formats](https://help.syncfusion.com/document-processing/word/word-library/net/support-file-formats)
-* [How to perform font substitution in Word to PDF conversion](https://support.syncfusion.com/kb/article/7499/how-to-perform-font-substitution-in-word-to-pdf-conversion)
-* [What happens when the Word document used fonts for a text is not installed in production machine during Word to PDF or Image conversion](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production)
+* [How to perform font substitution in Word to PDF conversion](https://support.syncfusion.com/kb/article/7499/how-to-perform-font-substitution-in-winforms-word-to-pdf-conversion)
+* [What happens when the Word document used fonts for a text is not installed in production machine during Word to PDF or Image conversion](https://support.syncfusion.com/kb/article/6821/check-whether-fonts-in-word-document-are-available-in-machine-for-pdf-or-image-conversion)
 * [How to resolve font problems during Word to PDF or image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
 * [How to convert multiple Word documents to multiple PDFs and zip the PDFs in C#?](https://support.syncfusion.com/kb/article/13837/how-to-convert-multiple-word-documents-to-multiple-pdfs-and-zip-the-pdfs-in-c)
 * [How to convert and replace EMF image in word document to PNG with same size](https://support.syncfusion.com/kb/article/11331/how-to-convert-and-replace-emf-image-in-word-document-to-png-with-same-size)

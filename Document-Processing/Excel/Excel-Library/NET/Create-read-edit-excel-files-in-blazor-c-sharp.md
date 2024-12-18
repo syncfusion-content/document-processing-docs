@@ -29,7 +29,7 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Blazor_images/Blazor_images_NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
 
 Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder and include the following namespaces in the file.
 {% capture codesnippet1 %}
@@ -418,7 +418,7 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Blazor_images/Blazor_images_NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
 
 Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder and add the following namespaces in the file.
 {% capture codesnippet8 %}
@@ -746,7 +746,7 @@ A complete working example of how to read and edit an Excel file in Blazor Clien
 
 N> It is recommended to use Blazor Server-Side application to reduce the pay back load which is high in Blazor Client-Side.
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion Excel library (Excel) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion&reg; Excel library (Excel) features.
 
 An online sample link to [create an Excel document](https://blazor.syncfusion.com/demos/excel/create-excel?theme=fluent) in Blazor.
 
@@ -872,7 +872,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to convert an Excel file to PDF in Blazor Client-Side application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF).
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components. You can also explore our [Blazor Excel library demo](https://blazor.syncfusion.com/demos/excel/create-excel?theme=bootstrap5) that shows how to create and modify Excel files from C# with just five lines of code.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. You can also explore our [Blazor Excel library demo](https://blazor.syncfusion.com/demos/excel/create-excel?theme=bootstrap5) that shows how to create and modify Excel files from C# with just five lines of code.
 
 ## Create a simple Excel report in Blazor Server-Side Web application
 
@@ -894,7 +894,7 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Blazor_images/Blazor_images_NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
 
 Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder, which is located inside the ``Components`` folder and include the following namespaces in the file.
 

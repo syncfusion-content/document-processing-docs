@@ -1,5 +1,5 @@
 ---
-title: Convert Word to PDF in ASP.NET MVC | Syncfusion
+title: Convert Word to PDF in ASP.NET MVC | Syncfusion&reg;
 description: Convert Word to PDF in ASP.NET MVC using .NET Word (DocIO) library library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to PDF in ASP.NET MVC
 
-Syncfusion Essential DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in ASP.NET MVC**.
+Syncfusion&reg; Essential&reg; DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in ASP.NET MVC**.
 
 ## Steps to convert Word document to PDF in C#
 
@@ -24,7 +24,7 @@ Step 3: Install the [Syncfusion.DocToPdfConverter.AspNet.Mvc5](https://www.nuget
 
 ![Install DocIO ASP.NET MVC NuGet package](ASP-NET-MVC_images/NugetPackage.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 4: Include the following namespace in that HomeController.cs file.
 
@@ -102,6 +102,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Word to PDF in ASP.NET MVC](WordToPDF_images/OutputImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetmvc/Word/DOCtoPDF#/material3) in ASP.NET MVC 

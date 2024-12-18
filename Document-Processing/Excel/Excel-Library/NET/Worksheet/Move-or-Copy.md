@@ -10,7 +10,7 @@ documentation: UG
 
 ## Copy
 
-The **copy** operation in the Syncfusion Essential XlsIO library allows users to duplicate various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks.
+The **copy** operation in the Syncfusion Essential&reg; XlsIO library allows users to duplicate various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks.
 
 ### Copy Workbook
 
@@ -458,7 +458,7 @@ End Using
 
 ## Move
 
-The **move** operation in the Syncfusion Essential XlsIO library allows users to transfer various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks, from one location to another within the workbook or across different workbooks.
+The **move** operation in the Syncfusion Essential&reg; XlsIO library allows users to transfer various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks, from one location to another within the workbook or across different workbooks.
 
 ### Move Worksheet
 
