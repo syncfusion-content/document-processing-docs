@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Annotations
 
-Essential PDF provides support for interactive [annotations](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-annotation).
+Essential&reg; PDF provides support for interactive [annotations](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-annotation).
 
 You can add, delete and modify the annotation from the PDF documents.
 
@@ -149,7 +149,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}   
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Creates a new PDF document.
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -219,7 +219,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %} 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -294,7 +294,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}   
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -537,7 +537,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}     
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -586,7 +586,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}  
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedDocument("input.pdf")
@@ -602,11 +602,90 @@ loadedDocument.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flattening-annotations-with-popups-in-PDF).
 
+## Flatten specific types of annotations
+
+To flatten specific types of annotations in a PDF document, use the [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method available in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) instance by providing an array of the desired annotation types. Refer to the following code example for more details.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Load the PDF document
+    using (FileStream docStream = new FileStream(@"input.pdf", FileMode.Open, FileAccess.Read))
+    {
+        using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream))
+        {
+            // Specify the annotation types to flatten
+            PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+            {
+                PdfLoadedAnnotationType.PolygonAnnotation
+            };
+
+            // Flatten the selected annotations
+            loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+            // Save the flattened document
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                loadedDocument.Save(memoryStream);
+                // MemoryStream can be used further as needed
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load the PDF document from a file path
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Specify the annotation types to flatten
+    PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+    {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    };
+
+    // Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+    // Save the flattened PDF document to a file path
+    loadedDocument.Save(@"C:\path\to\output.pdf");
+    // Close the document instance
+    loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Load the PDF document from a file path
+    Dim loadedDocument As New PdfLoadedDocument("C:\path\to\input.pdf")
+
+    ' Specify the annotation types to flatten
+    Dim pdfLoadedAnnotationTypes As PdfLoadedAnnotationType() = {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    }
+
+    ' Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes)
+
+    ' Save the flattened PDF document to a file path
+    loadedDocument.Save("C:\path\to\output.pdf")
+
+    ' Close the document instance
+    loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-specific-types-of-annotations/.NET).
+
 ## Supported annotation types
 
 ### 3D Annotation
 
-3D Annotations are used to represent 3D artworks in a PDF document. Essential PDF provides support to embed 3D files (u3d) in PDF. 
+3D Annotations are used to represent 3D artworks in a PDF document. Essential&reg; PDF provides support to embed 3D files (u3d) in PDF. 
 
 You can add a 3D annotation in PDF document using [Pdf3DAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.Pdf3DAnnotation.html) class. The following example illustrates this.
 {% tabs %}
@@ -1816,7 +1895,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Redaction Annotation
 
-The essential PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
+The essential&reg; PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Removing-the-sensitive-text-and-images-from-PDF-document/.NET/Removing-the-sensitive-text-and-images-from-PDF-document/Program.cs" %}
@@ -2564,9 +2643,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Measurement Annotations
 
-Essential PDF supports interactive measurement annotations, which measures the distance, area, and angle of the line segments.
+Essential&reg; PDF supports interactive measurement annotations, which measures the distance, area, and angle of the line segments.
 
-The following measurement annotation types are supported in Essential PDF:
+The following measurement annotation types are supported in Essential&reg; PDF:
 
 ### Line measurement annotation
 
@@ -2950,7 +3029,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying the annotations
 
-Essential PDF allows you to modify the annotation of existing document. The following code illustrates this.
+Essential&reg; PDF allows you to modify the annotation of existing document. The following code illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modifying-annotation-of-existing-PDF-document/.NET/Modifying-annotation-of-existing-PDF-document/Program.cs" %}
@@ -3025,7 +3104,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modifying the redaction annotations   
 
-The redaction annotations from the existing document can be modified using the Essential PDF library. You can add, remove, or modify the [PdfLoadedRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRedactionAnnotation.html) class in the existing PDF documents. 
+The redaction annotations from the existing document can be modified using the Essential&reg; PDF library. You can add, remove, or modify the [PdfLoadedRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRedactionAnnotation.html) class in the existing PDF documents. 
 The following code sample explains this.
 
 {% tabs %}
@@ -3494,11 +3573,347 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-annotations-to-JSON-file-from-PDF-document).
 
+## Exporting Newly Added Annotations to a JSON File
+
+To export newly added annotation data from a PDF document to a JSON file, use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method within the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document from a file stream 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Create a memory stream to hold the exported annotations in JSON format 
+Stream jsonStream = new MemoryStream(); 
+// Export annotations to the JSON format
+pdfLoadedDocument.ExportAnnotations(jsonStream, AnnotationDataFormat.Json);
+
+// Close the loaded PDF document 
+pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+jsonStream.Dispose(); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document from a file stream 
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Export annotations to the JSON format 
+pdfLoadedDocument.ExportAnnotations(“Annotation.json”, AnnotationDataFormat.Json); 
+
+// Close the loaded PDF document
+pdfLoadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from a file stream 
+Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
+' Create a PDF free text annotation 
+Dim freeText As New PdfFreeTextAnnotation(New RectangleF(10, 0, 50, 50)) 
+
+' Set properties for the annotation 
+' Text displayed as markup 
+freeText.MarkupText = "Free Text with Callout" 
+' Set the text markup color 
+freeText.TextMarkupColor = New PdfColor(Color.Black) 
+' Set font and size 
+freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 7.0F) 
+' Set background color 
+freeText.Color = New PdfColor(Color.Yellow) 
+' Set border color 
+freeText.BorderColor = New PdfColor(Color.Red) 
+' Set border thickness 
+freeText.Border = New PdfAnnotationBorder(0.5F)
+
+' Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages(0).Annotations.Add(freeText) 
+
+' Export annotations to the JSON format 
+pdfLoadedDocument.ExportAnnotations("Annotation.json", AnnotationDataFormat.Json) 
+
+' Close the loaded PDF document  
+pdfLoadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-JSON-File/.NET).
+
+## Exporting Newly Added Annotations to an FDF File
+
+To export newly added annotation data from a PDF document to an FDF (Forms Data Format) file, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document from a file stream 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Create a memory stream to hold the exported annotations in FDF format 
+Stream fdfStream = new MemoryStream(); 
+// Export annotations to the FDF format
+pdfLoadedDocument.ExportAnnotations(fdfStream, AnnotationDataFormat.Fdf); 
+
+// Close the loaded PDF document 
+pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+fdfStream.Dispose(); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document from a file stream 
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Export annotations to the FDF format 
+pdfLoadedDocument.ExportAnnotations(“Annotation.fdf”, AnnotationDataFormat.Fdf); 
+
+// Close the loaded PDF document
+pdfLoadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from a file stream 
+Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
+' Create a PDF free text annotation 
+Dim freeText As New PdfFreeTextAnnotation(New RectangleF(10, 0, 50, 50)) 
+
+' Set properties for the annotation 
+' Text displayed as markup 
+freeText.MarkupText = "Free Text with Callout" 
+' Set the text markup color 
+freeText.TextMarkupColor = New PdfColor(Color.Black) 
+' Set font and size 
+freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 7.0F) 
+' Set background color 
+freeText.Color = New PdfColor(Color.Yellow) 
+' Set border color 
+freeText.BorderColor = New PdfColor(Color.Red) 
+' Set border thickness 
+freeText.Border = New PdfAnnotationBorder(0.5F)
+
+' Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages(0).Annotations.Add(freeText) 
+
+' Export annotations to the FDF format 
+pdfLoadedDocument.ExportAnnotations("Annotation.fdf", AnnotationDataFormat.Fdf) 
+
+' Close the loaded PDF document  
+pdfLoadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-FDF-File/.NET).
+
+## Exporting Newly Added Annotations to an XFDF File
+
+To export newly added annotation data from a PDF document to an XFDF (XML Forms Data Format) file, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document from a file stream 
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(docStream);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Create a memory stream to hold the exported annotations in JSON format 
+Stream xfdfStream = new MemoryStream(); 
+// Export annotations to the XFDF format
+pdfLoadedDocument.ExportAnnotations(xfdfStream, AnnotationDataFormat.XFdf); 
+
+// Close the loaded PDF document 
+pdfLoadedDocument.Close(true); 
+// Dispose of the memory stream 
+xfdfStream.Dispose(); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document from a file stream 
+PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(“Input.pdf”);
+// Create a PDF free text annotation 
+PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(new RectangleF(10, 0, 50, 50)); 
+
+// Set properties for the annotation 
+// Text displayed as markup
+freeText.MarkupText = "Free Text with Callout"; 
+// Set the text markup color
+freeText.TextMarkupColor = new PdfColor(Color.Black); 
+// Set font and size
+freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 7f); 
+// Set background color
+freeText.Color = new PdfColor(Color.Yellow); 
+// Set border color
+freeText.BorderColor = new PdfColor(Color.Red); 
+// Set border thickness
+freeText.Border = new PdfAnnotationBorder(.5f); 
+
+// Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages[0].Annotations.Add(freeText);
+
+// Export annotations to the XFDF format 
+pdfLoadedDocument.ExportAnnotations(“Annotation.xfdf”, AnnotationDataFormat.XFdf); 
+
+// Close the loaded PDF document
+pdfLoadedDocument.Close(true); 
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from a file stream 
+Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf") 
+' Create a PDF free text annotation 
+Dim freeText As New PdfFreeTextAnnotation(New RectangleF(10, 0, 50, 50)) 
+
+' Set properties for the annotation 
+' Text displayed as markup 
+freeText.MarkupText = "Free Text with Callout" 
+' Set the text markup color 
+freeText.TextMarkupColor = New PdfColor(Color.Black) 
+' Set font and size 
+freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 7.0F) 
+' Set background color 
+freeText.Color = New PdfColor(Color.Yellow) 
+' Set border color 
+freeText.BorderColor = New PdfColor(Color.Red) 
+' Set border thickness 
+freeText.Border = New PdfAnnotationBorder(0.5F)
+
+' Add the annotation to the first page of the PDF 
+pdfLoadedDocument.Pages(0).Annotations.Add(freeText) 
+
+' Export annotations to the XFDF format 
+pdfLoadedDocument.ExportAnnotations("Annotation.xfdf", AnnotationDataFormat.XFdf) 
+
+' Close the loaded PDF document  
+pdfLoadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-XFDF-File/.NET).
+
+N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
+
 ## Adding comments and review status to the PDF annotation
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
 
-The Essential PDF supports adding the annotation comments and review status to the PDF document annotations.
+The Essential&reg; PDF supports adding the annotation comments and review status to the PDF document annotations.
 
 ### Adding comments to the PDF annotation
 
@@ -3992,7 +4407,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing comments and review status from PDF annotation
 
-The Essential PDF supports removing comments and reviewing status from the PDF annotation.
+The Essential&reg; PDF supports removing comments and reviewing status from the PDF annotation.
 
 The following code example explains how to remove comments using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method from the existing PDF annotation.
 
@@ -4145,7 +4560,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying comments and review status 
 
-The Essential PDF supports modifying comments using [Comments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedRectangleAnnotation_Comments) property and reviewing status using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum in the PDF annotation.
+The Essential&reg; PDF supports modifying comments using [Comments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedRectangleAnnotation_Comments) property and reviewing status using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum in the PDF annotation.
 
 The following code example explains how to modify comments in the existing PDF annotation.
 
@@ -4309,7 +4724,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
 
-The Essential PDF supports retrieving the annotation comments and review history from the existing PDF document annotations.
+The Essential&reg; PDF supports retrieving the annotation comments and review history from the existing PDF document annotations.
 
 ### Retrieve review status from PDF annotation
 
@@ -4535,7 +4950,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Printing Annotations
 
-The Essential PDF supports printing the annotation in a PDF document by setting the annotation flag to ```Print``` using the [AnnotationFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedStyledAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedStyledAnnotation_AnnotationFlags) property.
+The Essential&reg; PDF supports printing the annotation in a PDF document by setting the annotation flag to ```Print``` using the [AnnotationFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedStyledAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedStyledAnnotation_AnnotationFlags) property.
 
 The following code example illustrates how to print annotation in the PDF document.
 
@@ -4666,7 +5081,7 @@ If set, inverts the interpretation of the NoView flat for certain events.<br/><b
 
 ## Add Custom Stamp using Rubber Stamp Annotation
 
-Essential PDF supports adding custom stamp in an existing PDF document by using the [PdfRubberStampAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRubberStampAnnotation.html) class along with different appearance settings through [PdfAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAppearance.html). This custom stamp is movable and resizable.
+Essential&reg; PDF supports adding custom stamp in an existing PDF document by using the [PdfRubberStampAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRubberStampAnnotation.html) class along with different appearance settings through [PdfAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAppearance.html). This custom stamp is movable and resizable.
 
 Rubber stamp annotation displays text or graphics intended to look like it is stamped on the page with a rubber stamp. When opened, it displays a pop-up window containing the text of the associated note. 
 

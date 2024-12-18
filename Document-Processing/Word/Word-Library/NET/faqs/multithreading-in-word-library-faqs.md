@@ -130,7 +130,7 @@ End Module
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Multithreading-using-tasks).
 
-### Multithreaded Word document reading using parallel process
+### Multithreading Word document reading using parallel process
 
 The following code example illustrates how to use a parallel for loop to process multiple tasks concurrently, opening, editing, and saving Word documents using multithreading in C#.
 

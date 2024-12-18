@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert HTML to PDF file in AWS Elastic Beanstalk
 
-The Syncfusion [HTML to PDF converter](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. Using this library, **convert HTML to PDF document using Blink in AWS Elastic Beanstalk**.
+The Syncfusion&reg; [HTML to PDF converter](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. Using this library, **convert HTML to PDF document using Blink in AWS Elastic Beanstalk**.
 
 ## Steps to convert HTML to PDF using Blink in AWS Elastic Beanstalk
 
@@ -115,6 +115,6 @@ By executing the program, you will get a PDF document as follows.
 
 A complete working sample for converting an HTML to PDF using Linux docker in AWS Elastic Beanstalk can be downloaded from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/AWS/AWSElasticBeanstalkSample).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion HTML to PDF converter library features. 
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion&reg; HTML to PDF converter library features. 
 
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core.

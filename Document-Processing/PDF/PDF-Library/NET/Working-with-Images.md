@@ -8,13 +8,13 @@ documentation: UG
 
 # Working with images using various options
 
-Essential PDF supports both raster and vector images.
+Essential&reg; PDF supports both raster and vector images.
 
 Images are supported through the [PdfImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html) class, which is an abstract base class that provides the common functionality for [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) and [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html) classes.
 
 ## Inserting an image in a new document
 
-The following raster images are supported in Essential PDF.
+The following raster images are supported in Essential&reg; PDF.
 
 * BMP
 * JPEG
@@ -257,7 +257,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Inserting a vector image
 
-Essential PDF supports adding Metafile vector image. During the insertion, Metafile graphics will be transformed to native PDF graphics that supports text selection and searching. The following types of Metafiles are supported in Essential PDF.
+Essential&reg; PDF supports adding Metafile vector image. During the insertion, Metafile graphics will be transformed to native PDF graphics that supports text selection and searching. The following types of Metafiles are supported in Essential&reg; PDF.
 
 * EMF only 
 * EMF plus
@@ -334,7 +334,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with image masking
 
-Essential PDF supports image masking through the [PdfImageMask](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImageMask.html) class.
+Essential&reg; PDF supports image masking through the [PdfImageMask](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImageMask.html) class.
 
 The following code illustrate shows how to add a mask to TIFF image.
 
@@ -418,14 +418,13 @@ doc.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-a-mask-to-TIFF-image/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Add-a-mask-to-TIFF-image/).
 
 N> 1. Essential PDF supports image masking with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference in ASP.NET Core.
 
-
 ## Replacing Images in an existing PDF document
 
-Essential PDF allows you to replace images in an existing document. The [ReplaceImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_) method of the PdfLoadedPage allows you to replace an image.
+Essential&reg; PDF allows you to replace images in an existing document. The [ReplaceImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_) method of the PdfLoadedPage allows you to replace an image.
 
 {% tabs %} 
 
@@ -754,13 +753,13 @@ pdfDocument.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Converting-multi-page-TIFF-to-PDF). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Converting-multi-page-TIFF-to-PDF).
 
 N> 1. Essential PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference in ASP.NET Core.
 
 ## Remove Images
 
-The [RemoveImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_) method of the page collection allows you to remove an image. You can remove images from an existing document using Essential PDF.
+The [RemoveImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_) method of the page collection allows you to remove an image. You can remove images from an existing document using Essential&reg; PDF.
 
 The code snippet to illustrate the same is given below.
 
