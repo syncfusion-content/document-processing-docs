@@ -1234,6 +1234,46 @@ Please refer the [Chromium forum link](https://github.com/chrome-php/chrome/issu
 
 </table>
 
+## HTML to PDF Conversion Does Not Work in Azure App Service (Windows) Using Blink Rendering Engine
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">HTML to PDF Conversion Does Not Work in Azure App Service (Windows) Using Blink Rendering Engine
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+The Blink rendering engine is not supported for HTML to PDF conversion in <b>Azure App Service (Windows)</b> due to the GDI limitations and restrictions inherent in the Azure App Service environment.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+
+### Use Blink Rendering Engine in Azure App Service Linux or Azure Functions Linux
+
+To perform HTML to PDF conversion using the Blink rendering engine, you can use the following alternatives:
+
+* [Azure App Service (Linux)](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux): The Blink rendering engine is compatible with Azure App Service running on Linux.
+* [Azure Functions (Linux)](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux): Linux-based Azure Functions can also utilize the Blink rendering engine for successful conversions.
+* [Azure App Service (Linux Docker)](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux-with-docker): Deploying the application in a Linux-based Docker container offers another way to use Blink.
+
+### Use CEF Rendering Engine in Azure App Service Windows
+
+If you must use Azure App Service on Windows, the <b>CEF rendering engine</b> is a suitable alternative for HTML to PDF conversion.
+Refer to the following documentation for more details:
+
+* [Azure App Service (Windows)](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows)
+* [Azure Function (Windows)](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows)
+
+
+</td>
+</tr>
+
+</table>
+
 
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
