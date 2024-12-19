@@ -2302,7 +2302,7 @@ N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTM
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Enable-Autoscaling/.NET/HTML-to-PDF-Enable-Autoscaling/Program.cs" %}
 
     // Initialize the HTML to PDF converter.
     HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
