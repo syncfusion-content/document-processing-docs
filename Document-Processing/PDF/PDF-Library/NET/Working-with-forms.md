@@ -380,7 +380,7 @@ Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncf
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET/Set-text-alignment-in-a-Combo-Box-field/Program.cs" %}
 
     // Load an existing document from a file stream.
     using (FileStream fileStream = new FileStream("SourceForm.pdf", FileMode.Open, FileAccess.Read))
@@ -1316,7 +1316,7 @@ The signedDate parameter in the [PdfSignature](https://help.syncfusion.com/cr/do
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]"  %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customize-the-signed-date/.NET/Customize-the-signed-date/Program.cs" %}
 
 //Creates a new PDF document.
 PdfDocument document = new PdfDocument();
