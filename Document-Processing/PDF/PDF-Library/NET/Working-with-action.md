@@ -1174,7 +1174,7 @@ The following example demonstrates how to add document-level JavaScript actions 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Adding-Document-Level%20JavaScript-Actions/.NET/Adding-Document-Level%20JavaScript-Actions/Program.cs" %}
 
 // Create a new PDF document instance.
 PdfDocument document = new PdfDocument();
@@ -1256,7 +1256,7 @@ The following example demonstrates how to retrieve document-level JavaScript act
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Retrieve-Document-Level-JavaScript-Actions/.NET/Retrieve-Document-Level-JavaScript-Actions/Program.cs" %}
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
@@ -1335,7 +1335,7 @@ The following example demonstrates how to remove document-level JavaScript actio
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Remove-Document-Level-JavaScript-Actions/.NET/Remove-Document-Level-JavaScript-Actions/Program.cs" %}
 
 //Load an existing PDF document.
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);

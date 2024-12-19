@@ -608,7 +608,7 @@ To flatten specific types of annotations in a PDF document, use the [FlattenAnno
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-specific-types-of-annotations/.NET/Flatten-specific-types-of-annotations/Program.cs" %}
 
     // Load the PDF document
     using (FileStream docStream = new FileStream(@"input.pdf", FileMode.Open, FileAccess.Read))
@@ -3579,7 +3579,7 @@ To export newly added annotation data from a PDF document to a JSON file, use th
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-JSON-File/.NET/Exporting-Newly-Added-Annotations-JSON-File/Program.cs" %}
 
 // Load the PDF document from a file stream 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3690,7 +3690,7 @@ To export newly added annotation data from a PDF document to an FDF (Forms Data 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-FDF-File/.NET/Exporting-Newly-Added-Annotations-FDF-File/Program.cs" %}
 
 // Load the PDF document from a file stream 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3801,7 +3801,7 @@ To export newly added annotation data from a PDF document to an XFDF (XML Forms 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-XFDF-File/.NET/Exporting-Newly-Added-Annotations-XFDF-File/Program.cs" %}
 
 // Load the PDF document from a file stream 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
