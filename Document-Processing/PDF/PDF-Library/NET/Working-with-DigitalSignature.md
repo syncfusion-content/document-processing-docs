@@ -7,8 +7,8 @@ documentation: UG
 ---
 # Working with Digital Signature
 
-To quickly get started with digitally signing a PDF document and validating signatures using the Blazor PDF Library, check this video:
-{% youtube "https://www.youtube.com/watch?v=NNIFh1Ckdzw&t=672s" %}
+To quickly get started with digitally signing a PDF document and validating signatures using the .NET PDF Library, check this video:
+{% youtube "https://youtu.be/zuQRsrzdWgA?si=82fYF4DMsX5sDRxX" %}
 
 ## Adding a digital signature
 
