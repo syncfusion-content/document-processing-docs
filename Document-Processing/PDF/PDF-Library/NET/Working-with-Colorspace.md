@@ -556,6 +556,7 @@ numberArray[0] = 0f;
 numberArray[1] = 0.44f;
 numberArray[2] = 0.87f;
 numberArray[3] = 0.10f;
+
 function.C1 = numberArray;
 
 //Creates SeparationColorSpace
