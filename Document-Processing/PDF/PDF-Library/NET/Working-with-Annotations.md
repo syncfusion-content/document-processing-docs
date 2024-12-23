@@ -184,8 +184,9 @@ The following code example explains how to get annotation type of the annotation
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    // Load the PDF document with annotations
-    PdfLoadedDocument document = new PdfLoadedDocument(@"Annotation.pdf");
+    // Load the PDF document.
+    FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+    PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
     // Load the page collection from the PDF document
     PdfLoadedPageCollection loadedPages = document.Pages;
 
@@ -242,8 +243,7 @@ The following code example explains how to get annotation type of the annotation
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
     // Load the PDF document.
-    FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-    PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
     // Load the page collection from the PDF document
     PdfLoadedPageCollection loadedPages = document.Pages;
 
@@ -354,7 +354,7 @@ You can download a complete working sample from GitHub.
 The following code example explains how to get creation date of annotation from existing pdf.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document/.NET/Flatten-the-annotations-in-an-existing-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Load the PDF document
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
