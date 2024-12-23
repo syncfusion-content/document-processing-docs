@@ -8,7 +8,10 @@ documentation: UG
 
 # Working with .NET PDF Tables using the PdfGrid model 
 
-The [Syncfusion&reg; .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables or grids](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from the data sources or by direct data binding in a tabular format. It is designed for high performance with advanced customization, styling, and formatting. Here you will see the creation of a PDF table using the ``PdfGrid`` model.  
+The [Syncfusion&reg; .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables or grids](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from the data sources or by direct data binding in a tabular format. It is designed for high performance with advanced customization, styling, and formatting. Here you will see the creation of a PDF table using the ``PdfGrid`` model.
+
+Check the following video for a quick guide on creating a table in a PDF document using the PDF Library.
+{% youtube "https://youtu.be/BIRbIOFUdak?si=nVg6U56SCHNmybUA" %}
 
 ## Creating a simple table  
 

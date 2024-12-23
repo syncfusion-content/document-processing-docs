@@ -10,6 +10,9 @@ documentation: UG
 
 The Syncfusion&reg; .NET PDF library provides comprehensive support for converting both raster and vector images to PDF documents. The [PdfImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html) class is an abstract base class that provides common functionality for converting images to PDF documents. It is used as the base class for two concrete image classes in the Syncfusion.Pdf.Graphics namespace: [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) and [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html).
 
+Check the following video for a quick guide on converting an image to a PDF document using the PDF Library.
+{% youtube "https://youtu.be/_uE324Y0hwI?si=usx8KrUUvHcT0-X8" %}
+
 This includes a wide range of image formats for PDF conversion. These image formats includes:
 * JPEG (Joint Photographic Experts Group) 
 * JPEG with Exif standard
