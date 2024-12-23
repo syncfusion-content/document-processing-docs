@@ -10,6 +10,9 @@ documentation: UG
 
 The Syncfusion&reg; [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, form, and secure PDF files.
 
+To quickly get started with .NET PDF Library. Please, check this video:
+{% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
+
 ## Create a simple PDF document using .NET Core
 
 The following steps illustrate creating a simple Hello World PDF document in a console application using .NET Core.
