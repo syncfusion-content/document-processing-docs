@@ -5,16 +5,16 @@ platform: document-processing
 documentation: UG
 ---
 
-# Resolving Namespace Ambiguity Errors in Syncfusion PDF Packages for .NET
+# Resolving Namespace Ambiguity Errors in Syncfusion&reg; PDF Packages for .NET
 
-Namespace ambiguity errors occur when multiple Syncfusion PDF-related packages, such as **Syncfusion.Pdf.Net.Core** and **Syncfusion.PdfViewer**, are included in the same project. These packages may share overlapping namespaces and types, causing conflicts during compilation.
+Namespace ambiguity errors arise when multiple Syncfusion&reg; PDF-related packages, such as **Syncfusion.Pdf.Net.Core** and **Syncfusion.PdfViewer.Windows** or **Syncfusion.PdfViewer.WPF**, are included in the same project. These packages often share overlapping namespaces and types, leading to conflicts during compilation. This issue occurs because the **Syncfusion.PdfViewer.Windows** or **Syncfusion.PdfViewer.WPF** packages depend on **Syncfusion.Pdf.WinForms** or **Syncfusion.Pdf.WPF** packages, respectively. Both **Syncfusion.Pdf.Net.Core** and **Syncfusion.Pdf.WinForms** use the same namespaces, such as **Syncfusion.Pdf**, which causes these conflicts.
 
-## Example Error Message:
+## Error Message:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-CS0104: 'PdfDocument' is an ambiguous reference between 'Syncfusion.Pdf.Parsing.PdfDocument' and 'Syncfusion.Windows.PdfViewer.PdfDocument'
+The type 'PdfDocument' exists in both 'Syncfusion.Pdf.Base, Version=28.1462.35.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89' and 'Syncfusion.Pdf.Portable, Version=28.1.35.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89'
 
 {% endhighlight %}
 
@@ -22,17 +22,12 @@ CS0104: 'PdfDocument' is an ambiguous reference between 'Syncfusion.Pdf.Parsing.
 
 ## Steps to Resolve the Issue:
 
-### Evaluate Your Requirements:
+We have to explain both our **Syncfusion.Pdf.WinForms** and **Syncfusion.Pdf.Net.Core** packages like.
 
-* Use **Syncfusion.Pdf.Net.Core** for basic PDF functionalities like creating, editing, or extracting PDF content.
-* Use **Syncfusion.PdfViewer** if the project requires PDF viewing or printing capabilities.
+### Avoid Mixing Conflicting Packages
 
-### Avoid Using Both Packages Together:
+* **Syncfusion.Pdf.Net.Core** is designed for .NET Core/Standard platforms and is usually used in non-UI-based applications.
 
-If your project needs viewing or printing functionality, remove the **Syncfusion.Pdf.Net.Core** package and retain only **Syncfusion.PdfViewer**.
+* **Syncfusion.Pdf.WinForms** and **Syncfusion.Pdf.WPF** are platform-specific and used for Windows Forms or WPF applications.
 
-### Clean and Rebuild the Solution:
-
-After making changes, clean the project and rebuild the solution to update references and eliminate conflicts.
-
-By following these steps, you can resolve namespace conflicts effectively when working with Syncfusion PDF packages in .NET.
+* Use the appropriate package based on your application's target platform to avoid unnecessary overlaps.
