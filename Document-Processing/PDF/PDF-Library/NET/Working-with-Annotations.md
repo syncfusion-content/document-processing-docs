@@ -175,6 +175,449 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-a-popup-annotation-to-an-existing-PDF-document).
 
+## Getting annotation type and creation date from existing pdf
+
+Essential&reg; PDF provides support for getting annotation type of the annotation in the existing pdf document. [PdfLoadedAnnotationTypes](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotationTypes.html) class has been used to find the annotation type in the existing pdf document.
+
+The following code example explains how to get annotation type of the annotation in the existing pdf.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Load the PDF document with annotations
+    PdfLoadedDocument document = new PdfLoadedDocument(@"Annotation.pdf");
+    // Load the page collection from the PDF document
+    PdfLoadedPageCollection loadedPages = document.Pages;
+
+    // Iterate through all pages in the document
+    for (int i = 0; i < loadedPages.Count; i++)
+    {
+        // Access each page
+        PdfLoadedPage loadedPage = loadedPages[i] as PdfLoadedPage;
+
+        // Check if the page contains annotations
+        if (loadedPage.Annotations.Count > 0)
+        {
+            // Iterate through each annotation on the page
+            foreach (PdfLoadedAnnotation annot in loadedPage.Annotations)
+            {
+                // Identify the type of the annotation
+                PdfLoadedAnnotationTypes annotationType = FindType(annot);
+                    
+                // Print the annotation type to the console
+                Console.WriteLine(annotationType);
+            }
+        }
+    }
+    // Close the document and release resources
+    document.Close(true);
+
+    // Method to find the type of a given annotation
+    public PdfLoadedAnnotationTypes FindType(PdfLoadedAnnotation annotation)
+    {
+        if (annotation is PdfLoadedCircleAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.CircleAnnotation;
+        }
+        else if (annotation is PdfLoadedTextMarkupAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.TextMarkupAnnotation;
+        }
+        else if (annotation is PdfLoadedTextWebLinkAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.TextWebLinkAnnotation;
+        }
+        else if (annotation is PdfLoadedPopupAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.PopupAnnotation;
+        }
+        else
+        {
+            return PdfLoadedAnnotationTypes.Null;
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load the PDF document.
+    FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+    PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+    // Load the page collection from the PDF document
+    PdfLoadedPageCollection loadedPages = document.Pages;
+
+    // Iterate through all pages in the document
+    for (int i = 0; i < loadedPages.Count; i++)
+    {
+        // Access each page
+        PdfLoadedPage loadedPage = loadedPages[i] as PdfLoadedPage;
+
+        // Check if the page contains annotations
+        if (loadedPage.Annotations.Count > 0)
+        {
+            // Iterate through each annotation on the page
+            foreach (PdfLoadedAnnotation annot in loadedPage.Annotations)
+            {
+                // Identify the type of the annotation
+                PdfLoadedAnnotationTypes annotationType = FindType(annot);
+                    
+                // Print the annotation type to the console
+                Console.WriteLine(annotationType);
+            }
+        }
+    }
+    // Close the document and release resources
+    document.Close(true);
+
+    // Method to find the type of a given annotation
+    public PdfLoadedAnnotationTypes FindType(PdfLoadedAnnotation annotation)
+    {
+        if (annotation is PdfLoadedCircleAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.CircleAnnotation;
+        }
+        else if (annotation is PdfLoadedTextMarkupAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.TextMarkupAnnotation;
+        }
+        else if (annotation is PdfLoadedTextWebLinkAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.TextWebLinkAnnotation;
+        }
+        else if (annotation is PdfLoadedPopupAnnotation)
+        {
+            return PdfLoadedAnnotationTypes.PopupAnnotation;
+        }
+        else
+        {
+            return PdfLoadedAnnotationTypes.Null;
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Load the PDF document with annotations
+    Dim document As New PdfLoadedDocument("Annotation.pdf")
+
+    ' Load the page collection from the PDF document
+    Dim loadedPages As PdfLoadedPageCollection = document.Pages
+
+    ' Iterate through all pages in the document
+    For i As Integer = 0 To loadedPages.Count - 1
+        ' Access each page
+        Dim loadedPage As PdfLoadedPage = TryCast(loadedPages(i), PdfLoadedPage)
+
+        ' Check if the page contains annotations
+        If loadedPage.Annotations.Count > 0 Then
+            ' Iterate through each annotation on the page
+            For Each annot As PdfLoadedAnnotation In loadedPage.Annotations
+            ' Identify the type of the annotation
+            Dim annotationType As PdfLoadedAnnotationTypes = FindType(annot)
+
+            ' Print the annotation type to the console
+            Console.WriteLine(annotationType)
+            Next
+        End If
+    Next
+
+    ' Save the modified document into a memory stream
+    document.Save("Output.pdf")
+    ' Close the document and release resources
+    document.Close(True)
+
+    ' Method to find the type of a given annotation
+    Public Function FindType(annotation As PdfLoadedAnnotation) As PdfLoadedAnnotationTypes
+        If TypeOf annotation Is PdfLoadedCircleAnnotation Then
+            Return PdfLoadedAnnotationTypes.CircleAnnotation
+        ElseIf TypeOf annotation Is PdfLoadedTextMarkupAnnotation Then
+            Return PdfLoadedAnnotationTypes.TextMarkupAnnotation
+        ElseIf TypeOf annotation Is PdfLoadedTextWebLinkAnnotation Then
+            Return PdfLoadedAnnotationTypes.TextWebLinkAnnotation
+        ElseIf TypeOf annotation Is PdfLoadedPopupAnnotation Then
+            Return PdfLoadedAnnotationTypes.PopupAnnotation
+        Else
+            Return PdfLoadedAnnotationTypes.Null
+        End If
+    End Function
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> In the above code example, we have implemented functionality to identify few annotations type. We recommend including all annotation types to achieve more accurate and comprehensive results.
+
+You can download a complete working sample from GitHub.
+
+The following code example explains how to get creation date of annotation from existing pdf.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document/.NET/Flatten-the-annotations-in-an-existing-PDF-document/Program.cs" %}
+
+// Load the PDF document
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+// Load the collection of pages in the PDF document
+PdfLoadedPageCollection loadedPages = document.Pages;
+
+// Iterate through all the pages in the document
+for (int i = 0; i < loadedPages.Count; i++)
+{
+    // Access the current page
+    PdfLoadedPage loadedPage = loadedPages[i] as PdfLoadedPage;
+    // Access the annotation collection on the current page
+    PdfLoadedAnnotationCollection annotations = loadedPage.Annotations;
+    // Get the total number of annotations on the current page
+    int numAnnotations = annotations.Count;
+    // Iterate through all annotations on the current page
+    for (int j = 0; j < numAnnotations; j++)
+    {
+        // Identify the type of the annotation and process accordingly
+        switch (annotations[j].GetType().ToString())
+        {
+            case "Syncfusion.Pdf.Interactive.PdfLoadedFreeTextAnnotation":
+                // Handle FreeText annotation
+                PdfLoadedFreeTextAnnotation freeTextAnnot = annotations[j] as PdfLoadedFreeTextAnnotation;
+                DateTime creationDate0 = freeTextAnnot.CreationDate;
+                Console.WriteLine(creationDate0);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedEllipseAnnotation":
+                // Handle Ellipse annotation
+                PdfLoadedEllipseAnnotation ellipseAnnot = annotations[j] as PdfLoadedEllipseAnnotation;
+                DateTime creationDate1 = ellipseAnnot.CreationDate;
+                Console.WriteLine(creationDate1);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation":
+                // Handle Rectangle annotation
+                PdfLoadedRectangleAnnotation rectangleAnnot = annotations[j] as PdfLoadedRectangleAnnotation;
+                DateTime creationDate2 = rectangleAnnot.CreationDate;
+                Console.WriteLine(creationDate2);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedSquareAnnotation":
+                // Handle Square annotation
+                PdfLoadedSquareAnnotation squareAnnot = annotations[j] as PdfLoadedSquareAnnotation;
+                DateTime creationDate3 = squareAnnot.CreationDate;
+                Console.WriteLine(creationDate3);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedCircleAnnotation":
+                // Handle Circle annotation
+                PdfLoadedCircleAnnotation circleAnnot = annotations[j] as PdfLoadedCircleAnnotation;
+                DateTime creationDate4 = circleAnnot.CreationDate;
+                Console.WriteLine(creationDate4);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedLineAnnotation":
+                // Handle Line annotation
+                PdfLoadedLineAnnotation lineAnnot = annotations[j] as PdfLoadedLineAnnotation;
+                DateTime creationDate5 = lineAnnot.CreationDate;
+                Console.WriteLine(creationDate5);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedInkAnnotation":
+                // Handle Ink annotation
+                PdfLoadedInkAnnotation inkAnnot = annotations[j] as PdfLoadedInkAnnotation;
+                DateTime creationDate6 = inkAnnot.CreationDate;
+                Console.WriteLine(creationDate6);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedRubberStampAnnotation":
+                // Handle Rubber Stamp annotation
+                PdfLoadedRubberStampAnnotation stampAnnot = annotations[j] as PdfLoadedRubberStampAnnotation;
+                DateTime creationDate7 = stampAnnot.CreationDate;
+                Console.WriteLine(creationDate7);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedTextMarkupAnnotation":
+                // Handle Text Markup annotation
+                PdfLoadedTextMarkupAnnotation textAnnot = annotations[j] as PdfLoadedTextMarkupAnnotation;
+                DateTime creationDate8 = textAnnot.CreationDate;
+                Console.WriteLine(creationDate8);
+                break;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document with annotations
+PdfLoadedDocument document = new PdfLoadedDocument(@"Input.pdf");
+// Load the collection of pages in the PDF document
+PdfLoadedPageCollection loadedPages = document.Pages;
+
+// Iterate through all the pages in the document
+for (int i = 0; i < loadedPages.Count; i++)
+{
+    // Access the current page
+    PdfLoadedPage loadedPage = loadedPages[i] as PdfLoadedPage;
+    // Access the annotation collection on the current page
+    PdfLoadedAnnotationCollection annotations = loadedPage.Annotations;
+    // Get the total number of annotations on the current page
+    int numAnnotations = annotations.Count;
+    // Iterate through all annotations on the current page
+    for (int j = 0; j < numAnnotations; j++)
+    {
+        // Identify the type of the annotation and process accordingly
+        switch (annotations[j].GetType().ToString())
+        {
+            case "Syncfusion.Pdf.Interactive.PdfLoadedFreeTextAnnotation":
+                // Handle FreeText annotation
+                PdfLoadedFreeTextAnnotation freeTextAnnot = annotations[j] as PdfLoadedFreeTextAnnotation;
+                DateTime creationDate0 = freeTextAnnot.CreationDate;
+                Console.WriteLine(creationDate0);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedEllipseAnnotation":
+                // Handle Ellipse annotation
+                PdfLoadedEllipseAnnotation ellipseAnnot = annotations[j] as PdfLoadedEllipseAnnotation;
+                DateTime creationDate1 = ellipseAnnot.CreationDate;
+                Console.WriteLine(creationDate1);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation":
+                // Handle Rectangle annotation
+                PdfLoadedRectangleAnnotation rectangleAnnot = annotations[j] as PdfLoadedRectangleAnnotation;
+                DateTime creationDate2 = rectangleAnnot.CreationDate;
+                Console.WriteLine(creationDate2);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedSquareAnnotation":
+                // Handle Square annotation
+                PdfLoadedSquareAnnotation squareAnnot = annotations[j] as PdfLoadedSquareAnnotation;
+                DateTime creationDate3 = squareAnnot.CreationDate;
+                Console.WriteLine(creationDate3);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedCircleAnnotation":
+                // Handle Circle annotation
+                PdfLoadedCircleAnnotation circleAnnot = annotations[j] as PdfLoadedCircleAnnotation;
+                DateTime creationDate4 = circleAnnot.CreationDate;
+                Console.WriteLine(creationDate4);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedLineAnnotation":
+                // Handle Line annotation
+                PdfLoadedLineAnnotation lineAnnot = annotations[j] as PdfLoadedLineAnnotation;
+                DateTime creationDate5 = lineAnnot.CreationDate;
+                Console.WriteLine(creationDate5);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedInkAnnotation":
+                // Handle Ink annotation
+                PdfLoadedInkAnnotation inkAnnot = annotations[j] as PdfLoadedInkAnnotation;
+                DateTime creationDate6 = inkAnnot.CreationDate;
+                Console.WriteLine(creationDate6);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedRubberStampAnnotation":
+                // Handle Rubber Stamp annotation
+                PdfLoadedRubberStampAnnotation stampAnnot = annotations[j] as PdfLoadedRubberStampAnnotation;
+                DateTime creationDate7 = stampAnnot.CreationDate;
+                Console.WriteLine(creationDate7);
+                break;
+
+            case "Syncfusion.Pdf.Interactive.PdfLoadedTextMarkupAnnotation":
+                // Handle Text Markup annotation
+                PdfLoadedTextMarkupAnnotation textAnnot = annotations[j] as PdfLoadedTextMarkupAnnotation;
+                DateTime creationDate8 = textAnnot.CreationDate;
+                Console.WriteLine(creationDate8);
+                break;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document with annotations
+Dim document As New PdfLoadedDocument("../../../Annotation.pdf", True)
+' Load the collection of pages in the PDF document
+Dim loadedPages As PdfLoadedPageCollection = document.Pages
+
+' Iterate through all the pages in the document
+For i As Integer = 0 To loadedPages.Count - 1
+    ' Access the current page
+    Dim loadedPage As PdfLoadedPage = TryCast(loadedPages(i), PdfLoadedPage)
+    ' Access the annotation collection on the current page
+    Dim annotations As PdfLoadedAnnotationCollection = loadedPage.Annotations
+    ' Get the total number of annotations on the current page
+    Dim numAnnotations As Integer = annotations.Count
+    ' Iterate through all annotations on the current page
+    For j As Integer = 0 To numAnnotations - 1
+        ' Identify the type of the annotation and process accordingly
+        Select Case annotations(j).GetType().ToString()
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedFreeTextAnnotation"
+                ' Handle FreeText annotation
+                Dim freeTextAnnot As PdfLoadedFreeTextAnnotation = TryCast(annotations(j), PdfLoadedFreeTextAnnotation)
+                Dim creationDate0 As DateTime = freeTextAnnot.CreationDate
+                Console.WriteLine(creationDate0)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedEllipseAnnotation"
+                ' Handle Ellipse annotation
+                Dim ellipseAnnot As PdfLoadedEllipseAnnotation = TryCast(annotations(j), PdfLoadedEllipseAnnotation)
+                Dim creationDate1 As DateTime = ellipseAnnot.CreationDate
+                Console.WriteLine(creationDate1)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation"
+                ' Handle Rectangle annotation
+                Dim rectangleAnnot As PdfLoadedRectangleAnnotation = TryCast(annotations(j), PdfLoadedRectangleAnnotation)
+                Dim creationDate2 As DateTime = rectangleAnnot.CreationDate
+                Console.WriteLine(creationDate2)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedSquareAnnotation"
+                ' Handle Square annotation
+                Dim squareAnnot As PdfLoadedSquareAnnotation = TryCast(annotations(j), PdfLoadedSquareAnnotation)
+                Dim creationDate3 As DateTime = squareAnnot.CreationDate
+                Console.WriteLine(creationDate3)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedCircleAnnotation"
+                ' Handle Circle annotation
+                Dim circleAnnot As PdfLoadedCircleAnnotation = TryCast(annotations(j), PdfLoadedCircleAnnotation)
+                Dim creationDate4 As DateTime = circleAnnot.CreationDate
+                Console.WriteLine(creationDate4)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedLineAnnotation"
+                ' Handle Line annotation
+                Dim lineAnnot As PdfLoadedLineAnnotation = TryCast(annotations(j), PdfLoadedLineAnnotation)
+                Dim creationDate5 As DateTime = lineAnnot.CreationDate
+                Console.WriteLine(creationDate5)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedInkAnnotation"
+                ' Handle Ink annotation
+                Dim inkAnnot As PdfLoadedInkAnnotation = TryCast(annotations(j), PdfLoadedInkAnnotation)
+                Dim creationDate6 As DateTime = inkAnnot.CreationDate
+                Console.WriteLine(creationDate6)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedRubberStampAnnotation"
+                ' Handle Rubber Stamp annotation
+                Dim stampAnnot As PdfLoadedRubberStampAnnotation = TryCast(annotations(j), PdfLoadedRubberStampAnnotation)
+                Dim creationDate7 As DateTime = stampAnnot.CreationDate
+                Console.WriteLine(creationDate7)
+
+            Case "Syncfusion.Pdf.Interactive.PdfLoadedTextMarkupAnnotation"
+                ' Handle Text Markup annotation
+                Dim textAnnot As PdfLoadedTextMarkupAnnotation = TryCast(annotations(j), PdfLoadedTextMarkupAnnotation)
+                Dim creationDate8 As DateTime = textAnnot.CreationDate
+                Console.WriteLine(creationDate8)
+        End Select
+    Next
+Next
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Flatten annotation
 
 Annotations can be flattened by removing the existing annotation and replacing it with graphics objects that would resemble the annotation and cannot be edited.
