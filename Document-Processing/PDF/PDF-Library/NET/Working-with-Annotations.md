@@ -175,6 +175,158 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-a-popup-annotation-to-an-existing-PDF-document).
 
+## Retrieve annotation types from an existing PDF
+
+To identify annotation types in an existing PDF, the [PdfLoadedAnnotationTypes](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotationTypes.html) class can be used. This class facilitates recognizing the annotation types within the document.
+
+The following code example demonstrates how to retrieve the annotation type from an existing PDF document.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-type-from-pdf/.NET/Get-annotation-type-from-pdf/Program.cs" %}
+
+// Load the PDF document using a file stream
+using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    using (PdfLoadedDocument document = new PdfLoadedDocument(inputStream))
+    {
+        //Get the pages of the PDF file
+        for (int i = 0; i < document.PageCount; i++)
+        {
+            Console.WriteLine("Page Number: " + i);
+            PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
+
+            //Get the annotation type.
+            foreach (PdfLoadedAnnotation annotation in page.Annotations)
+            {
+                Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+     
+    //Load the PDF document
+    using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
+    {
+        //Get the pages of the PDF file
+        for (int i = 0; i < document.PageCount; i++)
+        {
+            Console.WriteLine("Page Number: " + i);
+            PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
+
+            //Get the annotation type.
+            foreach (PdfLoadedAnnotation annotation in page.Annotations)
+            {
+                Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Using document As New PdfLoadedDocument("Input.pdf")
+    ' Iterate through the pages of the PDF file
+    For i As Integer = 0 To document.Pages.Count - 1
+        Console.WriteLine("Page Number: " & (i + 1))
+        Dim page As PdfLoadedPage = TryCast(document.Pages(i), PdfLoadedPage)
+
+        ' Check if the page contains annotations
+        If page.Annotations IsNot Nothing Then
+            ' Iterate through each annotation on the page
+            For Each annotation As PdfLoadedAnnotation In page.Annotations
+                ' Output the annotation type
+                Console.WriteLine("Annotation Type: " & annotation.AnnotationType.ToString())
+            Next
+        End If
+    Next
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-annotation-type-from-pdf/.NET).
+
+## Retrieve annotation creation date from an existing PDF
+
+The [CreationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_CreationDate) property is used to retrieve the creation date of an annotation from an existing PDF file. The following code example demonstrates how to access the creation date of an annotation.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-creation-date-from-PDF/.NET/Get-annotation-creation-date-from-pdf/Program.cs" %}
+
+// Load the PDF document
+using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    using (PdfLoadedDocument document = new PdfLoadedDocument(inputStream))
+    {
+        //Get the first page from the document
+        PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
+
+        //Get the annotation on that page
+        PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
+
+        //Get the annotation creation date.
+        DateTime creationDate = annotation.CreationDate;
+
+        Console.WriteLine("Annotation Creation Date: " + creationDate);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
+    {
+        //Get the first page from the document
+        PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
+
+        //Get the annotation on that page
+        PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
+
+        //Get the annotation creation date.
+        DateTime creationDate = annotation.CreationDate;
+
+        Console.WriteLine("Annotation Creation Date: " + creationDate);
+    }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document
+Using document As New PdfLoadedDocument("Input.pdf")
+    ' Get the first page from the document
+    Dim firstPage As PdfLoadedPage = TryCast(document.Pages(0), PdfLoadedPage)
+
+    ' Check if the page contains annotations
+    If firstPage.Annotations IsNot Nothing AndAlso firstPage.Annotations.Count > 0 Then
+        ' Get the first annotation on that page
+        Dim annotation As PdfLoadedAnnotation = TryCast(firstPage.Annotations(0), PdfLoadedAnnotation)
+
+        ' Check if the annotation is not null
+        If annotation IsNot Nothing Then
+            ' Get the annotation creation date
+            Dim creationDate As DateTime = annotation.CreationDate
+
+            ' Output the annotation creation date
+            Console.WriteLine("Annotation Creation Date: " & creationDate.ToString())
+        End If
+    End If
+End Using
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-annotation-creation-date-from-PDF/.NET).
+
 ## Flatten annotation
 
 Annotations can be flattened by removing the existing annotation and replacing it with graphics objects that would resemble the annotation and cannot be edited.
