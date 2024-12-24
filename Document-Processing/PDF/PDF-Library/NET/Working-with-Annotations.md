@@ -177,9 +177,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieve annotation types from an existing PDF
 
-To retrieving annotation types from an existing PDF. The [PdfLoadedAnnotationTypes](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotationTypes.html) class helps identify the annotation types in the document.
+To identify annotation types in an existing PDF, the [PdfLoadedAnnotationTypes](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotationTypes.html) class can be used. This class facilitates recognizing the annotation types within the document.
 
-The following code example explains how to retrieve annotation type of the annotation in the existing pdf.
+The following code example demonstrates how to retrieve the annotation type from an existing PDF document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-type-from-pdf/.NET/Get-annotation-type-from-pdf/Program.cs" %}
@@ -254,7 +254,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieve annotation creation date from an existing PDF
 
-To retrieving annotation creation date from an existing PDF.The following code example explains how to retrieving creation date of annotation from existing pdf.
+The [CreationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_CreationDate) property is used to retrieve the creation date of an annotation from an existing PDF file. The following code example demonstrates how to access the creation date of an annotation.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-creation-date-from-PDF/.NET/Get-annotation-creation-date-from-pdf/Program.cs" %}
