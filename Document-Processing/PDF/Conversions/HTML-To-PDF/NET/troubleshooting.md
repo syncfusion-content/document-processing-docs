@@ -339,9 +339,6 @@ Check the HTML file or URL is rendered properly in Chrome browser's print previe
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-COPY . /app
-WORKDIR /app
-
 RUN chmod +x /app/runtimes/linux/native/chrome && \
     chmod +x /app/runtimes/linux/native/chrome-wrapper
 
