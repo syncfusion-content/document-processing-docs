@@ -1971,7 +1971,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code sample shows how to add a text encoding using the standard PDF fonts by initializing [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class.
 
 N>To enable this functionality in .NET Core, ensure that the following encoding registration is added at the beginning of your code.
-System.Text.Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+`System.Text.Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);`
 
 {% tabs %}
 
