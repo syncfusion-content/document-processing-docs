@@ -1137,6 +1137,12 @@ You can create a PDF/X-1a document by specifying the conformance level as ```Pdf
 
 {% tabs %}  
 
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+//Creating PDF/X-conformance documents is not supported on C#.NET cross-platform environments.
+
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Create a new document with PDF/x standard.
