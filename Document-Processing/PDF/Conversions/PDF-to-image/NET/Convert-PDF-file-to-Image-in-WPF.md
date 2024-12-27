@@ -1,6 +1,6 @@
 ---
-title: Convert PDF file to Image in WPF application | Syncfusion
-description: Learn how to convert a PDF to an image in WPF easily using the System.Drawing library with simple and clear steps.
+title: Convert PDF document to Image in WPF application | Syncfusion&reg;
+description: Learn how to convert a PDF document to Image file in WPF with easy steps using System Drawing library.
 platform: document-processing
 control: PDF to image
 documentation: UG
