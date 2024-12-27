@@ -1,6 +1,6 @@
 ---
 title: Converting PDF pages into images| Syncfusion&reg;
-description: Learn about Converting PDF pages into images using Syncfusion&reg; PdfToImageConverter.
+description: Learn about Converting PDF pages into images using Syncfusion&reg; Essential Studio&reg; PdfToImageConverter Library.
 platform: document-processing
 control: PDF to image
 documentation: UG
