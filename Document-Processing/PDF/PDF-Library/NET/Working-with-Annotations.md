@@ -2718,7 +2718,9 @@ N> To modify the redaction annotation from PDF document in ASP.NET Core, you nee
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Modify-the-redaction-annotation-in-PDF-document).
 
-## Retrieve annotation types from an existing PDF
+## Retrieve annotation
+
+### Retrieve annotation types from an existing PDF
 
 To identify annotation types in an existing PDF, the [PdfLoadedAnnotationTypes](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotationTypes.html) class can be used. This class facilitates recognizing the annotation types within the document.
 
@@ -2795,7 +2797,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-annotation-type-from-pdf/.NET).
 
-## Retrieve annotation creation date from an existing PDF
+### Retrieve annotation creation date from an existing PDF
 
 The [CreationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_CreationDate) property is used to retrieve the creation date of an annotation from an existing PDF file. The following code example demonstrates how to access the creation date of an annotation.
 
