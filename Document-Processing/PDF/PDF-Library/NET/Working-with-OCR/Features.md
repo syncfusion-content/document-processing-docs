@@ -1488,13 +1488,13 @@ Syncfusion&reg; OCR processor does support multiple languages in C#. You can con
 
 Here's a general outline of how to enable multiple languages in Syncfusion&reg; OCR processor:
 
-### Install Required Dependencies: 
+<b> Install Required Dependencies: </b> 
 Ensure you have installed the necessary NuGet packages, including `Syncfusion.OCRProcessor` and `Tesseract`, for OCR functionalities.
 
-### Set Up OCR Processor:
+<b> Set Up OCR Processor: </b>
 You need to download the language data files ([.traineddata](https://github.com/tesseract-ocr/tessdata)) for the languages you want to use. These files are required by the OCR engine to recognize different languages.
 
-### Load the Language Files:
+<b> Load the Language Files:</b>
 You can set up multiple languages by specifying the language codes (e.g., "eng" for English, "fra" for French) and ensuring that the trained data for those languages is available.
 
 Here is a basic example of using Syncfusion&reg; OCR processor with multiple languages in C#:
