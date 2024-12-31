@@ -19,9 +19,19 @@ TThe following assemblies need to be referenced in your application based on the
 </tr>
 <tr>
 <td>
-ASP.NET Core, Blazor
+Windows Forms, WPF and ASP.NET MVC5
 </td>
 <td>
+Syncfusion.PdfToImageConverter.Base
+</td>
+</tr>
+<tr>
+<tr>
+<td>
+ASP.NET Core and Blazor
+</td>
+<td>
+Syncfusion.PdfToImageConverter.Portable<br/>
 SkiaSharp<br/>
 Syncfusion.SkiaSharpHelper.Net.Core
 </td>
