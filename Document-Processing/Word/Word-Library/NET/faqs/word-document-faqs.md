@@ -201,3 +201,77 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?
 
 Essential&reg; DocIO library uses Points for measurement properties in a Word document.
+
+## How to convert Units (cm, mm, or inches) to Points for DocIO?
+
+Syncfusion® .NET Word Library (DocIO) uses points as the default unit for various measurements, such as margins, indentation, and spacing. If you have measurements in centimeters (cm), millimeters (mm), or inches, you'll need to convert them to points before using them in DocIO code.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+// Assuming you have a margin value in centimeters
+float marginInCentimeter = 2f;
+// Convert cm to points
+float marginInPoints = marginInCentimeter * 28.3465f;
+
+// Assuming you have a margin value in millimeters
+float marginInMillimeter = 20f;
+// Convert cm to points
+float marginInPoints = marginInMillimeter * 2.83465f;
+
+// Assuming you have a margin value in inches
+float marginInInches = 1f;
+// Convert cm to points
+float marginInPoints = marginInInches * 72f;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Assuming you have a margin value in centimeters
+Dim marginInCentimeter As Single = 2.0F
+' Convert cm to points
+Dim marginInPointsFromCentimeter As Single = marginInCentimeter * 28.3465F
+
+' Assuming you have a margin value in millimeters
+Dim marginInMillimeter As Single = 20.0F
+' Convert mm to points
+Dim marginInPointsFromMillimeter As Single = marginInMillimeter * 2.83465F
+
+' Assuming you have a margin value in inches
+Dim marginInInches As Single = 1.0F
+' Convert inches to points
+Dim marginInPointsFromInches As Single = marginInInches * 72.0F
+{% endhighlight %}
+
+{% endtabs %}
+
+## Why does the 'File Not Supported' exception occur in Syncfusion® DocIO? 
+
+This issue may occur if the input Word document is in a pre-97 Word format (complex format document) created using Microsoft Word versions prior to Word 97. Syncfusion® DocIO does not support these older complex format documents.
+
+To resolve this, resave the input document using a more recent version of Microsoft Word. DocIO supports documents created in Microsoft Word versions from 97-2003 and later.
+
+For more information on compatibility, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/overview).
+
+## Why do documents remain locked after use?
+
+This issue often occurs because the [FileStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-7.0) class used to open the document is not closed properly. To ensure proper closure of the file stream, it is recommended to use the <mark style="background-color: lightgrey;">*using*</mark> statement. This guarantees that the [FileStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-7.0) is disposed of correctly, even if an error occurs.
+
+The following code demonstrates how to use a *using* block to handle file streams:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+{
+    // Use the file stream here (e.g., read data, write data)
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+Using stream As New FileStream(filePath, FileMode.Open, FileAccess.Read)
+    ' Use the file stream here (e.g., read data, write data)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
