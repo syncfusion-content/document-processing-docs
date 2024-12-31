@@ -70,3 +70,9 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-EPUB-conversion/Set-title-for-EPUB).
+
+## How to set title when converting Word document to EPUB?
+
+If the input HTML contains carriage return line feed (CRLF) inside the <p> tag, each CRLF is treated as a new line when converting the HTML to Word using Microsoft Word. DocIO follows the same behavior.
+
+This is not an issue but rather the expected behavior during HTML to Word conversion.

@@ -437,3 +437,37 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Can the chart data be refreshed?
 
 Yes, Essential&reg; DocIO supports refreshing the chart data. For more details, refer [Working with charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts).
+
+## How to detect the shape type in a Word document?
+
+To detect the type of a shape in a Word document, you can use the [AutoShapeType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html#Syncfusion_DocIO_DLS_Shape_AutoShapeType) property from the [Shape](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html) class, which specifies the [type](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.AutoShapeType.html) of the shape. Here's a code snippet to detect the shape type:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+// Get the last paragraph from the document
+WParagraph paragraph = document.LastParagraph;
+// Access the shape from the paragraph's child entities
+Shape shape = paragraph.ChildEntities[i] as Shape;
+// Get the type of the shape
+AutoShapeType shapeType = shape.AutoShapeType;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Get the last paragraph from the document
+Dim paragraph As WParagraph = document.LastParagraph
+' Access the shape from the paragraph's child entities
+Dim shape As Shape = TryCast(paragraph.ChildEntities(i), Shape)
+' Get the type of the shape
+Dim shapeType As AutoShapeType = shape.AutoShapeType
+{% endhighlight %}
+
+{% endtabs %}
+
+## Is it possible to change the DATE  field value in a Word document using DocIO? 
+
+No, DocIO does not allow directly changing the value of a DATE field in a Word document. This is because DATE fields are auto-update fields, and their values are refreshed automatically when the document is opened in Microsoft Word.
+
+When a Word document with a DATE field is opened in Microsoft Word, the field value updates automatically, even in read-only mode. DocIO follows the same behavior as Microsoft Word to ensure compatibility and consistency.
+
+In conclusion, this behavior is not a limitation or issue, but rather aligns with Microsoft Word's standard functionality.
