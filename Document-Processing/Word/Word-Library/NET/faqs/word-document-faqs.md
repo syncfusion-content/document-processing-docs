@@ -206,6 +206,12 @@ Essential&reg; DocIO library uses Points for measurement properties in a Word do
 
 Syncfusion® .NET Word Library (DocIO) uses points as the default unit for various measurements, such as margins, indentation, and spacing. If you have measurements in centimeters (cm), millimeters (mm), or inches, you'll need to convert them to points before using them in DocIO code.
 
+### Conversion Formulas for Units to Points
+
+- **Centimeters (cm) to Points**: Multiply the cm value by **28.3465**.
+- **Millimeters (mm) to Points**: Multiply the mm value by **2.83465**.
+- **Inches to Points**: Multiply the inch value by **72**.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
