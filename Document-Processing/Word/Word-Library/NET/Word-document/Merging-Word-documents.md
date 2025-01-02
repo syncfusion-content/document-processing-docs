@@ -16,6 +16,9 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [Merge Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Merge Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+To quickly start merging Word documents, please check out this video:
+{% youtube " https://www.youtube.com/watch?v=atOSwzidmdw" %}
+
 ## Merge document in new page
 
 The following code example illustrates how to import the contents from source document into destination document where the contents are appended. 
