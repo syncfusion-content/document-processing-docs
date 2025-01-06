@@ -440,7 +440,7 @@ Yes, Essential&reg; DocIO supports refreshing the chart data. For more details, 
 
 ## How to detect the shape type in a Word document?
 
-To detect the type of a shape in a Word document, you can use the [AutoShapeType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html#Syncfusion_DocIO_DLS_Shape_AutoShapeType) property from the [Shape](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html) class, which specifies the [type](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.AutoShapeType.html) of the shape. Here's a code snippet to detect the shape type:
+To detect the type of a shape in a Word document, you can use the [AutoShapeType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html#Syncfusion_DocIO_DLS_Shape_AutoShapeType) property from the [Shape](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html) class, which specifies the type of the shape. Here's a code snippet to detect the shape type:
 
 {% tabs %}
 
