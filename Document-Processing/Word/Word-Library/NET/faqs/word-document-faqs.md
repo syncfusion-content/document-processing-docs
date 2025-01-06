@@ -280,3 +280,11 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+## Can DocIO perform line-by-line comparisons for Word documents?
+
+A Word document is a flow document, meaning its content is not preserved page by page but sequentially, section by section. Each section can span multiple pages depending on its content, such as tables, text, images, etc.
+
+When a Word document is opened in a viewer or editor, the content is dynamically rendered page by page for viewing or editing. However, as per the Word file format specification, this page-by-page and line-by-line rendered information is not preserved at the document level.
+
+DocIO is a non-UI component that provides a comprehensive document object model for manipulating Word document content. However, it is not feasible to extract line-by-line information from a Word document using DocIO. Due to this limitation, line-by-line comparisons are not possible with DocIO.
