@@ -11,6 +11,9 @@ It is used to keep track of the changes made to a Word document. It helps to mai
 
 N> With this support, the changes made in the Word document by DocIO library cannot be tracked.
 
+To quickly start to handle Tracked Changes in Word document, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=Md-Ft4QFHYk" %}
+
 The following code example illustrates how to enable track changes of the document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.

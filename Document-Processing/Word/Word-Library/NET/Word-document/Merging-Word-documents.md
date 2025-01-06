@@ -17,7 +17,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [Merge Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
 To quickly start merging Word documents, please check out this video:
-{% youtube " https://www.youtube.com/watch?v=atOSwzidmdw" %}
+{% youtube "https://www.youtube.com/watch?v=atOSwzidmdw" %}
 
 ## Merge document in new page
 
