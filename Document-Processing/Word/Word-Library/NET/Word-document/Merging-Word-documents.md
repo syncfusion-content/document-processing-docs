@@ -16,6 +16,9 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [Merge Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Merge Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+To quickly start merging Word documents, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=atOSwzidmdw" %}
+
 ## Merge document in new page
 
 The following code example illustrates how to import the contents from source document into destination document where the contents are appended. 
@@ -24,7 +27,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
+{% highlight C# tabtitle="C# [Cross-platform]" %}
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-new-page/.NET/Merge-documents-in-new-page/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -83,7 +86,7 @@ When your requirement is to append the contents from the same page instead of st
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-same-page/.NET/Merge-documents-in-same-page/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);

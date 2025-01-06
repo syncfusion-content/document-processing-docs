@@ -352,19 +352,19 @@ The following code demonstrates how to get the row height and height type from a
 {% highlight c# tabtitle="C#" %}
 // Access the instance of the first row in the table
 WTableRow row = table.Rows[0];
-// Set the row height
-row.Height = 20;
-// Set the row height type
-row.HeightType = TableRowHeightType.AtLeast;
+// Get the row height 
+float rowHeight = row.Height;
+// Get the row height type
+TableRowHeightType rowHeightType = row.HeightType;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 ' Access the instance of the first row in the table
 Dim row As WTableRow = table.Rows(0)
-' Set the row height
-row.Height = 20
-' Set the row height type
-row.HeightType = TableRowHeightType.AtLeast
+' Get the row height 
+Dim rowHeight As Single = row.Height
+' Get the row height type
+Dim rowHeightType As TableRowHeightType = row.HeightType
 {% endhighlight %}
 
 {% endtabs %}
