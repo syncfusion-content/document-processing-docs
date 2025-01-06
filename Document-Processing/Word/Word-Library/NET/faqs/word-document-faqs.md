@@ -260,7 +260,7 @@ For more information on compatibility, refer [here](https://help.syncfusion.com/
 
 ## Why do documents remain locked after use?
 
-This issue often occurs because the [FileStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-7.0) class used to open the document is not closed properly. To ensure proper closure of the file stream, it is recommended to use the *using* statement. This guarantees that the [FileStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-7.0) is disposed of correctly, even if an error occurs.
+This issue often occurs because the [FileStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-7.0) class used to open the document is not closed properly. To ensure proper closure of the file stream, it is recommended to use the `using` statement. This guarantees that the [FileStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-7.0) is disposed of correctly, even if an error occurs.
 
 The following code demonstrates how to use a *using* block to handle file streams:
 
