@@ -288,3 +288,11 @@ A Word document is a flow document, meaning its content is not preserved page by
 When a Word document is opened in a viewer or editor, the content is dynamically rendered page by page for viewing or editing. However, as per the Word file format specification, this page-by-page and line-by-line rendered information is not preserved at the document level.
 
 DocIO is a non-UI component that provides a comprehensive document object model for manipulating Word document content. However, it is not feasible to extract line-by-line information from a Word document using DocIO. Due to this limitation, line-by-line comparisons are not possible with DocIO.
+
+## Why is the hyperlink preserved as blue color in the Table of Contents (TOC) after merging with source formatting?
+
+When you use the ImportContent method and set it to keep the source formatting, the colors and styles from the original document are carried over. In the original document, the TOC hyperlinks have a specific blue color because of the "Hyperlink" style. So, when you import the content, that blue color comes along too.
+
+This is similar to copying and pasting from one Word document to another, where the original formatting (like color) might come along with the text.
+
+In Word, hyperlinks in the TOC don't show the Hyperlink style but show the color directly in the text. So, even though the color comes from the style, it may appear as expected, based on how the TOC is displayed. This is expected behavior and not an issue.
