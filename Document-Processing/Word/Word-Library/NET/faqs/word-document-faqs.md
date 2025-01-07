@@ -288,3 +288,13 @@ A Word document is a flow document, meaning its content is not preserved page by
 When a Word document is opened in a viewer or editor, the content is dynamically rendered page by page for viewing or editing. However, as per the Word file format specification, this page-by-page and line-by-line rendered information is not preserved at the document level.
 
 DocIO is a non-UI component that provides a comprehensive document object model for manipulating Word document content. However, it is not feasible to extract line-by-line information from a Word document using DocIO. Due to this limitation, line-by-line comparisons are not possible with DocIO.
+
+##  Is it possible to split word document by pages using DocIO?
+
+A Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more.
+
+The Word viewer/editor renders the contents of the document page by page dynamically when opened for viewing or editing. However, this page-wise rendered information is not preserved at the document level, as per the Word file format specification.
+
+Essential DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence, it is not feasible to split the Word document by pages.
+
+You can, however, split the Word document by sections, headings, bookmarks, or placeholders. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents) for more details.
