@@ -481,3 +481,7 @@ You can apply custom fonts and sizes to specific parts of the equation, such as 
 Using DocIO, you can programmatically set fonts and sizes for specific text elements inside the equation, such as variables and letters. However, symbols like parentheses, brackets, and other special characters are treated as dynamic equation symbols in Word. Their size and appearance are adjusted automatically, and their font properties cannot be changed directly.
 
 This limitation is due to how Microsoft Word handles equations and symbols internally, not a limitation of DocIO. For further details on working with mathematical equations, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mathematical-equation).
+
+## Are strip lines on charts supported in DocIO?
+
+Microsoft Office does not have specific settings for StripLines in charts, which are used to display horizontal or vertical lines across chart areas for highlighting certain values or ranges. As a result, DocIO also does not support this feature for charts.

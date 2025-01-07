@@ -372,3 +372,64 @@ Dim rowHeightType As TableRowHeightType = row.HeightType
 ## Why does setting the top or bottom padding for one cell in a Word document apply the same padding to all cells in the row?
 
 This behavior is due to the way Microsoft Word handles cell padding within a row. When a cell in a row has a maximum top or bottom padding, Word applies that maximum padding value to all cells in the same row. This is a default behavior of Microsoft Word to ensure uniformity in the appearance of rows.
+
+## Is it possible to insert a page break inside a table using DocIO?
+
+In Microsoft Word, it is not possible to insert a page break directly into a paragraph within a table cell. If a page break is added to a cell in a row, the entire row is moved to the next page, splitting the table into two separate parts with a new paragraph containing the page break inserted before the table.
+
+DocIO also follows the same limitation and does not allow inserting a page break inside a table cell. To achieve a similar result, you can follow these steps:
+
+- When a page break is needed, create a new paragraph after the table.
+- Insert the page break into the newly created paragraph.
+- Add a new table after the paragraph containing the page break.
+- Insert the desired row into the newly created table.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+// Clone the row to be added to the newly created table.
+WTableRow clonedRow = templateRow.Clone();
+// Get the table that contains the template row.
+WTable currentTable = templateRow.Owner as WTable;
+// Get the body of the document that owns the current table.
+WTextBody documentBody = currentTable.OwnerTextBody;
+// Determine the index of the current table in the document body.
+int currentTableIndex = documentBody.ChildEntities.IndexOf(currentTable) + 1;
+// Create a new paragraph to hold the page break.
+WParagraph pageBreakParagraph = new WParagraph(wordDocument);
+// Append a page break to the new paragraph.
+pageBreakParagraph.AppendBreak(BreakType.PageBreak);
+// Insert the page break paragraph after the current table.
+documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph);
+// Create a new table after the page break.
+WTable newTable = new WTable(wordDocument);
+// Insert the new table into the document body.
+documentBody.ChildEntities.Insert(currentTableIndex + 1, newTable);
+// Add the cloned row to the newly created table.
+newTable.ChildEntities.Add(clonedRow);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Clone the row to be added to the newly created table.
+Dim clonedRow As WTableRow = CType(templateRow.Clone(), WTableRow)
+' Get the table that contains the template row.
+Dim currentTable As WTable = TryCast(templateRow.Owner, WTable)
+' Get the body of the document that owns the current table.
+Dim documentBody As WTextBody = currentTable.OwnerTextBody
+' Determine the index of the current table in the document body.
+Dim currentTableIndex As Integer = documentBody.ChildEntities.IndexOf(currentTable) + 1
+' Create a new paragraph to hold the page break.
+Dim pageBreakParagraph As New WParagraph(wordDocument)
+' Append a page break to the new paragraph.
+pageBreakParagraph.AppendBreak(BreakType.PageBreak)
+' Insert the page break paragraph after the current table.
+documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph)
+' Create a new table after the page break.
+Dim newTable As New WTable(wordDocument)
+' Insert the new table into the document body.
+documentBody.ChildEntities.Insert(currentTableIndex + 1, newTable)
+' Add the cloned row to the newly created table.
+newTable.ChildEntities.Add(clonedRow)
+{% endhighlight %}
+
+{% endtabs %}
