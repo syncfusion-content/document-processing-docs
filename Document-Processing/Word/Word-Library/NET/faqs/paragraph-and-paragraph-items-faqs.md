@@ -471,3 +471,13 @@ No, DocIO does not allow directly changing the value of a DATE field in a Word d
 When a Word document with a DATE field is opened in Microsoft Word, the field value updates automatically, even in read-only mode. DocIO follows the same behavior as Microsoft Word to ensure compatibility and consistency.
 
 In conclusion, this behavior is not a limitation or issue, but rather aligns with Microsoft Word's standard functionality.
+
+## How can I apply custom fonts and sizes to mathematical equations in a Word document using DocIO?
+ 
+In Microsoft Word, applying custom fonts and sizes to all parts of a mathematical equation might not work as expected. When you select the entire equation and try to apply font changes, the settings might not apply to all parts of the equation. This happens because selecting the whole equation applies properties to the equation container rather than individual text components.
+
+You can apply custom fonts and sizes to specific parts of the equation, such as variables (e.g., "A"). However, symbols like parentheses or other special characters may not adhere to these settings. This is because these symbols are dynamic and adjust automatically based on the content of the equation. Word treats them differently, and thus, their font properties cannot be directly modified.
+
+Using DocIO, you can programmatically set fonts and sizes for specific text elements inside the equation, such as variables and letters. However, symbols like parentheses, brackets, and other special characters are treated as dynamic equation symbols in Word. Their size and appearance are adjusted automatically, and their font properties cannot be changed directly.
+
+This limitation is due to how Microsoft Word handles equations and symbols internally, not a limitation of DocIO. For further details on working with mathematical equations, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mathematical-equation).
