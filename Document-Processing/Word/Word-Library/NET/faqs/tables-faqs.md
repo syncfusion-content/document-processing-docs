@@ -341,7 +341,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How can I obtain the height of a cell or row in a Word document using the DocIO library?
 
-In Syncfusion® .NET Word Library (DocIO), you can get or set the height of a table row using the [Height](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html#Syncfusion_DocIO_DLS_WTableRow_Height) property and define its behavior with the [HeightType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html#Syncfusion_DocIO_DLS_WTableRow_HeightType) property, such as `AtLeast` or `Exactly`. The row height applies uniformly across all cells in the row and automatically adjusts based on the content.
+In Syncfusion<sup>®</sup> .NET Word Library (DocIO), you can get or set the height of a table row using the [Height](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html#Syncfusion_DocIO_DLS_WTableRow_Height) property and define its behavior with the [HeightType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html#Syncfusion_DocIO_DLS_WTableRow_HeightType) property, such as `AtLeast` or `Exactly`. The row height applies uniformly across all cells in the row and automatically adjusts based on the content.
 
 This behavior aligns with Microsoft Word's functionality, where row height is managed at the row level rather than for individual cells, ensuring consistent formatting across the table.
 
