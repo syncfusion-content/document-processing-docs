@@ -1,5 +1,5 @@
 ---
-title: Font Substitution in Word to PDF Conversion in C# | DocIO | Syncfusion&reg;
+title: Font Substitution in Word to PDF Conversion in C# | DocIO | Syncfusion<sup>®</sup>
 description: Learn about how to substitute font during Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -8,9 +8,9 @@ documentation: UG
 
 # Font Substitution in Word to PDF Conversion
 
-When the necessary fonts used in the Word document has not been installed in the production machine, then Essential&reg; DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. To learn more about the default font substitution, click [here](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production).
+When the necessary fonts used in the Word document has not been installed in the production machine, then Essential<sup>®</sup> DocIO uses the ”Microsoft Sans Serif” as default font for rendering the text. This leads to preservation difference in generated PDF as each font has different glyphs for characters. To learn more about the default font substitution, click [here](https://support.syncfusion.com/kb/article/6821/what-happens-when-the-word-document-used-fonts-for-a-text-is-not-installed-in-production).
 
-To avoid this, the Essential&reg; DocIO library allows you to set an alternate font for the missing font used in the Word document.
+To avoid this, the Essential<sup>®</sup> DocIO library allows you to set an alternate font for the missing font used in the Word document.
 
 ## Use alternate font from installed fonts
 

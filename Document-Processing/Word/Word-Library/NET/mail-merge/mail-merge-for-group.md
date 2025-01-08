@@ -1,5 +1,5 @@
 ---
-title: Group Mail merge in C# | DocIO | Syncfusion&reg;
+title: Group Mail merge in C# | DocIO | Syncfusion<sup>®</sup>
 description: Learn how to Mail merge for a group - replace merge fields in a region of document with data, by repeating the region for each record without Microsoft Word.
 platform: document-processing
 control: DocIO

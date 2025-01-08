@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in WinUI | Syncfusion&reg;
+title: Convert Word to Image in WinUI | Syncfusion<sup>®</sup>
 description: Convert Word to image in WinUI using WinUI Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to Image in WinUI
 
-Syncfusion&reg; DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert Word document to image in WinUI**.
+Syncfusion<sup>®</sup> DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert Word document to image in WinUI**.
 
 ## Prerequisites
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -27,7 +27,7 @@ Step 3: Install [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Sy
 
 ![Install Syncfusion.DocIORenderer.NET NuGet package](WinUI_Images/Nuget-Package-WordtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>®</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -193,6 +193,6 @@ By executing the program, you will get the **image** as follows.
 
 ![Word to Image in WinUI](WordToPDF_images/Output-WordtoImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion<sup>®</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetcore/Word/WordToImage#/material3) in ASP.NET Core. 

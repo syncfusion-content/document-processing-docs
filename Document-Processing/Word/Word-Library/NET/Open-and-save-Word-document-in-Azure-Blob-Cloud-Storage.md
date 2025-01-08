@@ -1,6 +1,6 @@
 ---
-title: Open and save Word document in Azure Blob Cloud Storage | Syncfusion&reg;
-description: Open and save Word document in Azure Blob Cloud Storage using Syncfusion&reg; .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in Azure Blob Cloud Storage | Syncfusion<sup>®</sup>
+description: Open and save Word document in Azure Blob Cloud Storage using Syncfusion<sup>®</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG

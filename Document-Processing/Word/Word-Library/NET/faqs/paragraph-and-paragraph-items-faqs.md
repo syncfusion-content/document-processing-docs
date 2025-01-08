@@ -1,5 +1,5 @@
 ---
-title: FAQ about Paragraph and Paragraph Items | DocIO | Syncfusion&reg;
+title: FAQ about Paragraph and Paragraph Items | DocIO | Syncfusion<sup>®</sup>
 description: Learn about the frequently asked questions about paragraph and paragraph items in Word document in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -436,7 +436,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Can the chart data be refreshed?
 
-Yes, Essential&reg; DocIO supports refreshing the chart data. For more details, refer [Working with charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts).
+Yes, Essential<sup>®</sup> DocIO supports refreshing the chart data. For more details, refer [Working with charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts).
 
 ## How to detect the shape type in a Word document?
 

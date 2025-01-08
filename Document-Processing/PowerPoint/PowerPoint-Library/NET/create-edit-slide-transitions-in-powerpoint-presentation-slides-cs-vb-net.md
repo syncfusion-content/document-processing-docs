@@ -1,8 +1,8 @@
 ---
-title: Add and edit transitions in PowerPoint slides | Syncfusion&reg; |
+title: Add and edit transitions in PowerPoint slides | Syncfusion<sup>®</sup> |
 description: Code examples to create and edit PowerPoint slide transitions in .NET, C#, web, ASP.NET, UWP, MVC, Xamarin and .NET Core
 platform: document-processing
-control: Syncfusion&reg; PowerPoint presentation
+control: Syncfusion<sup>®</sup> PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, format-table, pptx, transitions
 ---
@@ -277,7 +277,7 @@ The next slide transition can be triggered by the following two ways:
 1. Mouse clicks - Brings the next slide to the view.
 2. Setting a time - Brings the next slide after that specified time without any interactions.
 
-Syncfusion&reg; PowerPoint library allows you to set both the previously given trigger modes while using PowerPoint slide transitions. Refer to the following code example.
+Syncfusion<sup>®</sup> PowerPoint library allows you to set both the previously given trigger modes while using PowerPoint slide transitions. Refer to the following code example.
 
 {% tabs %}
 
@@ -339,7 +339,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set the speed for transition effect
 
-The speed is the customized property provided by Syncfusion&reg; PowerPoint library to set the transition duration mentioned [above](/document-processing/powerpoint/powerpoint-library/net/create-edit-slide-transitions-in-powerpoint-presentation-slides-cs-vb-net#set-the-transition-duration) (in this page) to a customized enumeration values. By default, each transition will happen for 2 seconds. You can change the following enumeration values to change the duration of a slide transition:
+The speed is the customized property provided by Syncfusion<sup>®</sup> PowerPoint library to set the transition duration mentioned [above](/document-processing/powerpoint/powerpoint-library/net/create-edit-slide-transitions-in-powerpoint-presentation-slides-cs-vb-net#set-the-transition-duration) (in this page) to a customized enumeration values. By default, each transition will happen for 2 seconds. You can change the following enumeration values to change the duration of a slide transition:
 
 1. Default       - 2 seconds
 2. [Fast](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.TransitionSpeed.html)          - 0.5 seconds

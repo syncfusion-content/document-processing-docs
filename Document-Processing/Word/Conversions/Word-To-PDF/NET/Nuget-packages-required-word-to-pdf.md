@@ -1,5 +1,5 @@
 ---
-title: NuGet Packages Required to Convert Word to PDF | Syncfusion&reg;
+title: NuGet Packages Required to Convert Word to PDF | Syncfusion<sup>®</sup>
 description: Learn the NuGet packages required to Convert Word document to PDF using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -150,8 +150,8 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet
 </tr>
 </table>
 
-N> 1. Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
-N> 2. Syncfusion&reg; components are available in [nuget.org](https://www.nuget.org/)
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>®</sup> license key in your application to use our components.
+N> 2. Syncfusion<sup>®</sup> components are available in [nuget.org](https://www.nuget.org/)
 N> 3. Please refer the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
 N> 4. From v27.2.2, the dependent package SkiaSharp is upgraded from 2.88.6 to 2.88.8 version and it is mandatory to use SkiaSharp.NativeAssets.Linux v2.88.8 and HarfBuzzSharp.NativeAssets.Linux v7.3.0.2 packages for converting Word documents into PDF in Linux environment.
 N> 5. "DocIO supports Word to PDF conversion in UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
@@ -253,7 +253,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 
 ## NuGet Package Installation and Uninstallation
 
-To use Syncfusion&reg; NuGet packages in your project, please refer the NuGet Package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
+To use Syncfusion<sup>®</sup> NuGet packages in your project, please refer the NuGet Package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
 
 DocIO NuGet packages can be installed and uninstalled using Package Manager Console. In Visual Studio, select Tools > NuGet Package Manager > Package Manager Console and execute the following commands.
 

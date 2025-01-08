@@ -1,5 +1,5 @@
 ---
-title: Mail merge a Word document in C# | DocIO | Syncfusion&reg;
+title: Mail merge a Word document in C# | DocIO | Syncfusion<sup>®</sup>
 description: Learn how to mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -9,7 +9,7 @@ documentation: UG
 
 Mail merge is a process of merging data from data source to a Word template document. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) class provides support to bind template document and data source. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) instance is replaced with the actual data retrieved from data source for the given merge field name in a template document.
 
-The following data sources are supported by Essential&reg; DocIO for performing Mail merge:
+The following data sources are supported by Essential<sup>®</sup> DocIO for performing Mail merge:
 
 <table>
 <tr>
@@ -111,7 +111,7 @@ You need to add a prefix (“Image:”) to the merge field name for merging an i
 
 **For example:** The merge field name should be like “Image:Photo” (<<Image:MergeFieldName>>)
 
-You can **create Word document template programmatically** by adding merge fields to the Word document using Essential&reg; DocIO.
+You can **create Word document template programmatically** by adding merge fields to the Word document using Essential<sup>®</sup> DocIO.
 
 The following code example shows how to create a merge field in the Word document.
 
@@ -228,7 +228,7 @@ You can perform nested Mail merge with relational or hierarchical data source an
 
 ## Performing Mail merge with dynamic objects
 
-Essential&reg; DocIO allows you to perform Mail merge with the dynamic objects. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-for-nested-groups#mail-merge-with-dynamic-objects).
+Essential<sup>®</sup> DocIO allows you to perform Mail merge with the dynamic objects. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-for-nested-groups#mail-merge-with-dynamic-objects).
 
 ## Performing Mail merge with business objects
 
@@ -236,11 +236,11 @@ You can perform Mail merge with business objects in a template document. For fur
 
 ## Performing Nested Mail merge with relational data objects
 
-Essential&reg; DocIO supports performing nested Mail merge with implicit relational data objects without any explicit relational commands by using the [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_) overload method. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-for-nested-groups#mail-merge-with-implicit-relational-data).
+Essential<sup>®</sup> DocIO supports performing nested Mail merge with implicit relational data objects without any explicit relational commands by using the [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_) overload method. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-for-nested-groups#mail-merge-with-implicit-relational-data).
 
 ## Event support for mail merge
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential&reg; DocIO in Mail merge process:
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential<sup>®</sup> DocIO in Mail merge process:
 
 * [MergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html): Occurs when a **Mail merge field** except image Mail merge field is encountered.
 

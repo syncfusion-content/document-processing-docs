@@ -1,5 +1,5 @@
 ---
-title: Create, read and edit PowerPoint slides in CSharp |Syncfusion&reg;|
+title: Create, read and edit PowerPoint slides in CSharp |Syncfusion<sup>®</sup>|
 description: Create, read and edit PowerPoint slides in CSharp; Adding and modifying the slides in PowerPoint presentation
 platform: document-processing
 control: PowerPoint
@@ -57,7 +57,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create a slide with predefined LayoutSlide
 
-The Syncfusion&reg; PowerPoint library supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
+The Syncfusion<sup>®</sup> PowerPoint library supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
 
 <ul>
 <li>Blank</li>
@@ -449,7 +449,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Merging slide
 
-The Essential&reg; Presentation provides ability to clone slides from one Presentation to another Presentation. With this ability, you can split a large Presentation into small ones and also merge multiple presentations to one Presentation. You can choose the theme for the cloned slide by using the enum [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html).
+The Essential<sup>®</sup> Presentation provides ability to clone slides from one Presentation to another Presentation. With this ability, you can split a large Presentation into small ones and also merge multiple presentations to one Presentation. You can choose the theme for the cloned slide by using the enum [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html).
 
 ### Destination formatting
 This [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html) preserves the merged slide with formatting from the destination file during merging. 
@@ -583,7 +583,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing slide
 
-The Essential&reg; Presentation provides the ability to delete a slide by its instance or by its index position in slide collection. The following code demonstrates how to delete a slide from a presentation. 
+The Essential<sup>®</sup> Presentation provides the ability to delete a slide by its instance or by its index position in slide collection. The following code demonstrates how to delete a slide from a presentation. 
 
 {% tabs %}
 
@@ -642,7 +642,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Converting to image
 
-You can convert a presentation slide to image with Essential&reg; Presentation. The following code example converts the first slide of a PowerPoint presentation into image and saves the image to a file.
+You can convert a presentation slide to image with Essential<sup>®</sup> Presentation. The following code example converts the first slide of a PowerPoint presentation into image and saves the image to a file.
 
 {% tabs %}
 

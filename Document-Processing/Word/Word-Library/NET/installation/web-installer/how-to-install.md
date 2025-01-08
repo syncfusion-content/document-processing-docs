@@ -1,32 +1,32 @@
 ---
 layout: post
-title: Installing Syncfusion&reg; Word web installer - Syncfusion&reg;
-description: Learn here about how to install Syncfusion&reg; Word web installer after downloading from our Syncfusion&reg; website.
+title: Installing Syncfusion<sup>®</sup> Word web installer - Syncfusion<sup>®</sup>
+description: Learn here about how to install Syncfusion<sup>®</sup> Word web installer after downloading from our Syncfusion<sup>®</sup> website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion&reg; Word web installer
+# Installing Syncfusion<sup>®</sup> Word web installer
 
 
 ## Overview
 
-For the Essential Studio&reg; Word product, Syncfusion&reg; offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio&reg; products you have chosen. You can get the most recent version of Essential Studio&reg; Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
+For the Essential Studio<sup>®</sup> Word product, Syncfusion<sup>®</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>®</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>®</sup> Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
 
  
 ## Installation
 
-The steps below show how to install Essential Studio&reg; Word Web Installer.
+The steps below show how to install Essential Studio<sup>®</sup> Word Web Installer.
 
-1.  Open the Syncfusion&reg; Essential Studio&reg; Word Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.  Open the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> Word Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
     
     N> The installer wizard extracts the syncfusionessentialwordwebinstaller_{version}.exe dialog, which displays the package's unzip operation.
     
-2. 	The Syncfusion&reg; Word Web Installer's welcome wizard will be displayed. Click the Next button.
+2. 	The Syncfusion<sup>®</sup> Word Web Installer's welcome wizard will be displayed. Click the Next button.
 
     ![Welcome wizard](images/Step-by-Step-Installation_img2.png)
 
@@ -54,7 +54,7 @@ The steps below show how to install Essential Studio&reg; Word Web Installer.
 
 	![Existing Version for install](images/Step-by-Step-Installation_img20.png)
 	
-	N> From the 2021 Volume 1 release, Syncfusion&reg; has provided option to uninstall the previous versions from 18.1 while installing the new version.
+	N> From the 2021 Volume 1 release, Syncfusion<sup>®</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
 	
 	
 5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
@@ -75,22 +75,22 @@ The steps below show how to install Essential Studio&reg; Word Web Installer.
 	
 	**Additional settings**
 	
-    * Select the **Install Demos** check box to install Syncfusion&reg; samples, or leave the check box unchecked, if you do not want to install Syncfusion&reg; samples
-	* Select the **Register Syncfusion&reg; Assemblies in GAC** check box to install the latest Syncfusion&reg; assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
-    * Select the **Configure Syncfusion&reg; controls in Visual Studio** check box to configure the Syncfusion&reg; controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion&reg; controls in the Visual Studio toolbox during installation. Note that you must also select the Register Syncfusion&reg; assemblies in GAC check box when you select this check box.
-    * Select the **Configure Syncfusion&reg; Extensions controls in Visual Studio** checkbox to configure the Syncfusion&reg; Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion&reg; Extensions in Visual Studio.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion&reg; Control Panel
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion&reg; Control Panel
+    * Select the **Install Demos** check box to install Syncfusion<sup>®</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>®</sup> samples
+	* Select the **Register Syncfusion<sup>®</sup> Assemblies in GAC** check box to install the latest Syncfusion<sup>®</sup> assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
+    * Select the **Configure Syncfusion<sup>®</sup> controls in Visual Studio** check box to configure the Syncfusion<sup>®</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion<sup>®</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the Register Syncfusion<sup>®</sup> assemblies in GAC check box when you select this check box.
+    * Select the **Configure Syncfusion<sup>®</sup> Extensions controls in Visual Studio** checkbox to configure the Syncfusion<sup>®</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion<sup>®</sup> Extensions in Visual Studio.
+    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup>®</sup> Control Panel
+    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>®</sup> Control Panel
 
 
 
 8.  After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-9.  The login wizard will appear. You must enter your Syncfusion&reg; email address and password. If you do not already have a Syncfusion&reg; account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button. 
+9.  The login wizard will appear. You must enter your Syncfusion<sup>®</sup> email address and password. If you do not already have a Syncfusion<sup>®</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button. 
 
     ![Login wizard install](images/Step-by-Step-Installation_img9.png)
 	
-	I> The products you have chosen will be installed based on your Syncfusion&reg; License (Trial or Licensed).
+	I> The products you have chosen will be installed based on your Syncfusion<sup>®</sup> License (Trial or Licensed).
 
 10. The download and installation\uninstallation progress will be displayed as shown below.
 
@@ -100,9 +100,9 @@ The steps below show how to install Essential Studio&reg; Word Web Installer.
 
     ![Installation Summary](images/Step-by-Step-Installation_img11.png)
 	
-	* To open the Syncfusion&reg; Control Panel, click **Launch Control Panel**.
+	* To open the Syncfusion<sup>®</sup> Control Panel, click **Launch Control Panel**.
 
-12. After installation, there will be two Syncfusion&reg; control panel entries, as shown below. The Essential Studio&reg; entry will manage all Syncfusion&reg; products installed in the same version, while the Product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion<sup>®</sup> control panel entries, as shown below. The Essential Studio<sup>®</sup> entry will manage all Syncfusion<sup>®</sup> products installed in the same version, while the Product entry will only uninstall the specific product setup.
 
     ![Control Panel](images/Step-by-Step-Installation_img19.png)
 	
@@ -110,29 +110,29 @@ The steps below show how to install Essential Studio&reg; Word Web Installer.
 	
 ## Uninstallation
 
-Syncfusion&reg; Word installer can be uninstalled in two ways.
+Syncfusion<sup>®</sup> Word installer can be uninstalled in two ways.
 
-   * Uninstall the Word using the Syncfusion&reg; Word web installer
+   * Uninstall the Word using the Syncfusion<sup>®</sup> Word web installer
    * Uninstall the Word from Windows Control Panel
 
-Follow either one of the option below to uninstall Syncfusion&reg; Essential Studio&reg; Word installer.
+Follow either one of the option below to uninstall Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> Word installer.
   
-**Option 1: Uninstall the Word using the Syncfusion&reg; Word web installer**
+**Option 1: Uninstall the Word using the Syncfusion<sup>®</sup> Word web installer**
 
-Syncfusion&reg; provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
+Syncfusion<sup>®</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
 	
 **Option 2: Uninstall the Word from Windows Control Panel**  
 	
-You can uninstall all the installed products by selecting the **Syncfusion&reg; Essential Studio&reg; {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Word alone by selecting the **Syncfusion&reg; Essential Studio&reg; for Word {version}** entry (element 2 in the below screenshot) from the Windows control panel.
+You can uninstall all the installed products by selecting the **Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Word alone by selecting the **Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for Word {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 	
-N> If the **Syncfusion&reg; Essential Studio&reg; for Word {version}** entry is selected from the Windows control panel, the Syncfusion&reg; Essential Studio&reg; Word alone will be removed and the below default MSI uninstallation window will be displayed.	
+N> If the **Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for Word {version}** entry is selected from the Windows control panel, the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> Word alone will be removed and the below default MSI uninstallation window will be displayed.	
 
-1.  The Syncfusion&reg; Word Web Installer's welcome wizard will be displayed. Click the Next button
+1.  The Syncfusion<sup>®</sup> Word Web Installer's welcome wizard will be displayed. Click the Next button
 	
     ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 	
@@ -168,11 +168,11 @@ N> If the **Syncfusion&reg; Essential Studio&reg; for Word {version}** entry is 
 	
 7.	After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-8.	The login wizard will appear. You must enter your Syncfusion&reg; email address and password. If you do not already have a Syncfusion&reg; account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
+8.	The login wizard will appear. You must enter your Syncfusion<sup>®</sup> email address and password. If you do not already have a Syncfusion<sup>®</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
     ![Login wizard install/uninstall](images/Step-by-Step-Installation_img9.png)
 	
-	I> The products you have chosen will be installed based on your Syncfusion&reg; License (Trial or Licensed).
+	I> The products you have chosen will be installed based on your Syncfusion<sup>®</sup> License (Trial or Licensed).
 
 9.	The download, installation, and uninstallation progresses will be shown.
 
@@ -182,4 +182,4 @@ N> If the **Syncfusion&reg; Essential Studio&reg; for Word {version}** entry is 
 
     ![Summary install/uninstall](images/Step-by-Step-Installation_img18.png)
 	
-	* To open the Syncfusion&reg; Control Panel, click **Launch Control Panel**.
+	* To open the Syncfusion<sup>®</sup> Control Panel, click **Launch Control Panel**.

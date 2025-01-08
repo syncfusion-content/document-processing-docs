@@ -1,6 +1,6 @@
 ---
-title: Working with shapes in PowerPoint Presentation | Syncfusion&reg; |
-description: Code examples to create, edit, and format PowerPoint shapes in C# using Syncfusion&reg; .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+title: Working with shapes in PowerPoint Presentation | Syncfusion<sup>®</sup> |
+description: Code examples to create, edit, and format PowerPoint shapes in C# using Syncfusion<sup>®</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG

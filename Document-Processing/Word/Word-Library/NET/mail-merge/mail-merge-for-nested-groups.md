@@ -1,5 +1,5 @@
 ---
-title: Mail merge for nested groups in C# | DocIO | Syncfusion&reg;
+title: Mail merge for nested groups in C# | DocIO | Syncfusion<sup>®</sup>
 description: Learn how to Mail merge for nested groups - replace merge fields in nested regions of document with relational data using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -168,7 +168,7 @@ The resultant document looks as follows.
 
 ## Mail merge with dynamic objects
 
-Essential&reg; DocIO allows you to perform Mail merge with the dynamic objects. The [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0) is like a collection of key and value pairs, which means IDictionary<string, object>. So, you can also use IDictionary<string, object> collection instead of [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0) to execute mail merge.
+Essential<sup>®</sup> DocIO allows you to perform Mail merge with the dynamic objects. The [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0) is like a collection of key and value pairs, which means IDictionary<string, object>. So, you can also use IDictionary<string, object> collection instead of [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0) to execute mail merge.
 
 The following code snippet shows how to perform the Mail merge with dynamic objects ([ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0)).
 

@@ -1,5 +1,5 @@
 ---
-title: Convert Word Document to PDF in Xamarin | Syncfusion&reg;
+title: Convert Word Document to PDF in Xamarin | Syncfusion<sup>®</sup>
 description: Convert Word to PDF in Xamarin using Xamarin Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word Document to PDF in Xamarin
 
-Syncfusion&reg; DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to PDF in Xamarin**.
+Syncfusion<sup>®</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to PDF in Xamarin**.
 
 ## Steps to convert Word document to PDF in Xamarin
 
@@ -26,7 +26,7 @@ Step 3: Install [Syncfusion.Xamarin.DocIORenderer ](https://www.nuget.org/packag
 
 ![Install Syncfusion.Xamarin.DocIORenderer NuGet package](Xamarin_images/Nuget-Package-WordtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>®</sup> license key in your application to use our components.
 
 Step 4: Add new Forms XAML page in **portable project**. If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
 <ul>
@@ -187,6 +187,6 @@ By executing the program, you will get the PDF document as follows.
 
 ![Word to PDF in Xamarin](WordToPDF_images/OutputImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/xamarin) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/xamarin) to explore the rich set of Syncfusion<sup>®</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/Word/WordToPDF#/material3) in ASP.NET Core. 

@@ -1,5 +1,5 @@
 ---
-title: Working with Tables in .NET Word (DocIO) library | Syncfusion&reg;
+title: Working with Tables in .NET Word (DocIO) library | Syncfusion<sup>®</sup>
 description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -12,7 +12,7 @@ A table in Word document is used to arrange document content in rows and columns
 1. A row is a collection of cells and it is represented by an instance of [WTableRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html). Each row must contain at least one cell.
 2. A cell can contain one or more paragraphs and tables. An instance of [WTableCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableCell.html) represents a table cell. Each table cell must contain at least one paragraph.
 
-N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential&reg; DocIO does the same.
+N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential<sup>®</sup> DocIO does the same.
 
 The following image illustrates how a table in Word document is organized in EssentialDocIO’s DOM:
 
@@ -1022,7 +1022,7 @@ N> In ASP.NET Core, UWP, and Xamarin platforms, to apply autofit for table in a 
 
 A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. [WTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableStyle.html) instance represents table style in a Word document.
 
-N>  Essential&reg; DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
+N>  Essential<sup>®</sup> DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
 
 The following code example illustrates how to apply the built-in table styles to the table.
 

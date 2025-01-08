@@ -1,20 +1,20 @@
 ---
-title: FAQ Section | DocIO | Syncfusion&reg;
-description: In this section, you can know about the various questions asked about manipulation of Word document using Syncfusion&reg; .NET Word (DocIO) library.
+title: FAQ Section | DocIO | Syncfusion<sup>®</sup>
+description: In this section, you can know about the various questions asked about manipulation of Word document using Syncfusion<sup>®</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 # Frequently Asked Questions
 
-The frequently asked questions under each category in Essential&reg; DocIO are listed below.
+The frequently asked questions under each category in Essential<sup>®</sup> DocIO are listed below.
 
 ## Word Document
 
 * [How to open a document from stream using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-open-a-document-from-stream-using-docio)
 * [How to attach a Template to a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-attach-a-template-to-a-word-document)
 * [How to check the compatibility mode of the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-check-the-compatibility-mode-of-the-word-document)
-* [Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
+* [Which units does Essential<sup>®</sup> DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
 * [How to convert Units (cm, mm, or inches) to Points for DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-convert-units-cm-mm-or-inches-to-points-for-docio)
 * [Why does the ‘File Not Supported’ exception occur in Syncfusion® DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-file-not-supported-exception-occur-in-syncfusion-docio)
 * [Why do documents remain locked after use?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-do-documents-remain-locked-after-use)

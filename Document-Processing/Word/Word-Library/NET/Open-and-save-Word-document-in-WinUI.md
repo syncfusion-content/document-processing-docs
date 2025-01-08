@@ -1,6 +1,6 @@
 ---
-title: Open and save Word document in WinUI | Syncfusion&reg;
-description: Open and save Word document in WinUI application using Syncfusion&reg; .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in WinUI | Syncfusion<sup>®</sup>
+description: Open and save Word document in WinUI application using Syncfusion<sup>®</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and Save Word document in WinUI
 
-Syncfusion&reg; DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in WinUI**.
+Syncfusion<sup>®</sup> DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in WinUI**.
 
 **Prerequisites:**
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -32,7 +32,7 @@ Step 4: Install the [Syncfusion.DocIO.NET](https://www.nuget.org/packages/Syncfu
 
 ![Install Syncfusion.DocIO.NET NuGet package](WinUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>®</sup> license key in your application to use our components.
 
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -122,7 +122,7 @@ By executing the program, you will get the **Word document** as follows.
 
 ![WinUI Desktop open and save output Word document](WinUI_Images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion<sup>®</sup> Word library (DocIO) features. 
 
 ## WinUI UWP app
 
@@ -144,7 +144,7 @@ Step 4: Install the [Syncfusion.DocIO.NET](https://www.nuget.org/packages/Syncfu
 
 ![Install Syncfusion.DocIO.NET NuGet package](WinUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion license key in your application to use our components.
 
 Step 5: Add a new button in the **MainPage.xaml** as shown below.
 
@@ -282,4 +282,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![WinUI UWP open and save output Word document](WinUI_Images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion<sup>®</sup> Word library (DocIO) features. 

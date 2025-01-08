@@ -1,6 +1,6 @@
 ---
-title: Open and save Word document in UWP | Syncfusion&reg;
-description: Open and save Word document in UWP application using Syncfusion&reg; UWP Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in UWP | Syncfusion<sup>®</sup>
+description: Open and save Word document in UWP application using Syncfusion<sup>®</sup> UWP Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and Save Word document in UWP
 
-Syncfusion&reg; DocIO is a [UWP Word library](https://www.syncfusion.com/document-processing/word-framework/uwp/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in UWP**.
+Syncfusion<sup>®</sup> DocIO is a [UWP Word library](https://www.syncfusion.com/document-processing/word-framework/uwp/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in UWP**.
 
 ## Steps to open and save Word document programmatically in UWP:
 
@@ -20,7 +20,7 @@ Step 2: Install the [Syncfusion.DocIO.UWP](https://www.nuget.org/packages/Syncfu
 
 ![Install Syncfusion.DocIO.UWP NuGet package](UWP_images/Install_NuGet.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>®</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the MainPage.xaml.cs file.
 
@@ -157,4 +157,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![UWP open and save output Word document](UWP_images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/uwp) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/uwp) to explore the rich set of Syncfusion<sup>®</sup> Word library (DocIO) features. 

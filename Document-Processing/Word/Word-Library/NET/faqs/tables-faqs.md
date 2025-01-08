@@ -1,5 +1,5 @@
 ---
-title: FAQ about Tables | DocIO | Syncfusion&reg;
+title: FAQ about Tables | DocIO | Syncfusion<sup>®</sup>
 description: Learn about the frequently asked questions about tables in Word document in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

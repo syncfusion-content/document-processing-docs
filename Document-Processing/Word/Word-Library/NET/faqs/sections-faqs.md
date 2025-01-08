@@ -1,5 +1,5 @@
 ---
-title: FAQ about Sections | DocIO | Syncfusion&reg;
+title: FAQ about Sections | DocIO | Syncfusion<sup>®</sup>
 description: Learn about the frequently asked questions about sections in Word document in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

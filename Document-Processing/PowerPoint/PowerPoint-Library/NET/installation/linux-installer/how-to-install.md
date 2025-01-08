@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Installing Syncfusion&reg; PowerPoint linux installer-Syncfusion&reg;
-description: Learn here about how to install Syncfusion&reg; PowerPoint linux installer after downloading from our Syncfusion&reg; website.
+title: Installing Syncfusion<sup>®</sup> PowerPoint linux installer-Syncfusion<sup>®</sup>
+description: Learn here about how to install Syncfusion<sup>®</sup> PowerPoint linux installer after downloading from our Syncfusion<sup>®</sup> website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion&reg; PowerPoint Linux installer
+# Installing Syncfusion<sup>®</sup> PowerPoint Linux installer
 
 ## Step-by-Step Installation
 
 The steps below show how to install PowerPoint Linux installer.
 
-1. Extract the Syncfusion&reg; PowerPoint Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion<sup>®</sup> PowerPoint Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    
@@ -35,7 +35,7 @@ The steps below show how to install PowerPoint Linux installer.
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio&reg; PowerPoint linux installer, please refer to this.
+After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio<sup>®</sup> PowerPoint linux installer, please refer to this.
 
 * Register the license key in the [Program.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-60) file if you created the ASP.NET Core web application with Visual Studio 2022 and .NET 6.0.
 * Register the license key in Configure method of [Startup.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-50-or-net-31)

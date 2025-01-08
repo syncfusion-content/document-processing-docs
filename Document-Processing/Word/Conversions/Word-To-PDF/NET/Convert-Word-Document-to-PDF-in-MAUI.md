@@ -1,5 +1,5 @@
 ---
-title: Convert Word document to PDF in .NET MAUI | Syncfusion&reg;
+title: Convert Word document to PDF in .NET MAUI | Syncfusion<sup>®</sup>
 description: Convert Word to PDF in .NET MAUI using .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to PDF in .NET MAUI
 
-Syncfusion&reg; DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET MAUI**.
+Syncfusion<sup>®</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET MAUI**.
 
 ## Prerequisites
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
@@ -27,7 +27,7 @@ Step 3: Install the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/package
 
 ![Install Syncfusion.DocIORenderer.NET NuGet package](MAUI_Images/Nuget-Package-WordtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>®</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -181,6 +181,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Word to PDF in .NET MAUI](WordToPDF_images/OutputImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion<sup>®</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/Word/WordToPDF#/material3) in ASP.NET Core.

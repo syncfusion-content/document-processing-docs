@@ -1,5 +1,5 @@
 ---
-title: Working with Content Controls | DocIO | Syncfusion&reg;
+title: Working with Content Controls | DocIO | Syncfusion<sup>®</sup>
 description: Learn how to work with content controls, such as rich text, date picker, checkbox, and drop-down, in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -1686,7 +1686,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Types of Content Controls
 
-The following types of content controls can be created by using the Essential&reg; DocIO.
+The following types of content controls can be created by using the Essential<sup>®</sup> DocIO.
 
 * Rich Text
 * Plain Text

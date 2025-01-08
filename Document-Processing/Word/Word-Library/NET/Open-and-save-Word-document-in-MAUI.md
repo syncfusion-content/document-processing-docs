@@ -1,6 +1,6 @@
 ---
-title: Open and save Word document in .NET MAUI | Syncfusion&reg;
-description: Open and save Word document in .NET MAUI application using Syncfusion&reg; .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in .NET MAUI | Syncfusion<sup>®</sup>
+description: Open and save Word document in .NET MAUI application using Syncfusion<sup>®</sup> .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and Save Word document in .NET MAUI
 
-Syncfusion&reg; DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in .NET MAUI**.
+Syncfusion<sup>®</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in .NET MAUI**.
 
 **Prerequisites:**
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
@@ -27,7 +27,7 @@ Step 3: Install the [Syncfusion.DocIO.NET](https://www.nuget.org/packages/Syncfu
 
 ![Install Syncfusion.DocIO.NET NuGet package](MAUI_Images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>®</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -198,4 +198,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![MAUI open and save output Word document](MAUI_Images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion<sup>®</sup> Word library (DocIO) features. 

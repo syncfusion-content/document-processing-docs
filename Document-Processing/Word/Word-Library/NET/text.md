@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Text document and vice versa in C# |Syncfusion&reg;
+title: Convert Word to Text document and vice versa in C# |Syncfusion<sup>®</sup>
 description: Learn how to convert Word document to text file and vice versa  using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Text Conversions in Word Library
 
-The Essential&reg; DocIO converts the Word document into Text file and vice versa. 
+The Essential<sup>®</sup> DocIO converts the Word document into Text file and vice versa. 
 
 ## Convert Word to Text
 

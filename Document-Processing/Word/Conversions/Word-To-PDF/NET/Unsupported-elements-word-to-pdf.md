@@ -1,5 +1,5 @@
 ---
-title: Unsupported elements in Word to PDF Conversion in C# | DocIO | Syncfusion&reg;
+title: Unsupported elements in Word to PDF Conversion in C# | DocIO | Syncfusion<sup>®</sup>
 description: Learn about unsupported elements in Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -46,7 +46,7 @@ Only DOCX and WordML format documents are supported.
 Pagination
 </td>
 <td>
-The Essential&reg; DocIO makes sensible decision when layout the text, and its supported elements while generating the PDF documents. But however, there may not be guaranteed pagination with all the documents.
+The Essential<sup>®</sup> DocIO makes sensible decision when layout the text, and its supported elements while generating the PDF documents. But however, there may not be guaranteed pagination with all the documents.
 </td>
 </tr>
 <tr>
