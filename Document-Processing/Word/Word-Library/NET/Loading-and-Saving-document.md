@@ -754,3 +754,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Frequently Asked Questions
 
 * [How to open a document from stream using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-open-a-document-from-stream-using-docio)
+* [How to open the Word document in DocIO if already opened in Word application?](https://help.syncfusion.com/document-processing/word/word-library/net/loading-and-saving-document#opening-the-read-only-word-document)
