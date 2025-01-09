@@ -471,3 +471,9 @@ No, DocIO does not allow directly changing the value of a DATE field in a Word d
 When a Word document with a DATE field is opened in Microsoft Word, the field value updates automatically, even in read-only mode. DocIO follows the same behavior as Microsoft Word to ensure compatibility and consistency.
 
 In conclusion, this behavior is not a limitation or issue, but rather aligns with Microsoft Word's standard functionality.
+
+## Can the auto-scale option be set for 2D charts in a Word document?
+
+No, the auto-scale option is not available for 2D charts. This is because auto-scaling is specifically designed for 3D charts to maintain accurate proportions when rotated or resized.
+
+This behavior aligns with Microsoft Word's standards, and the DocIO library adheres to the same limitation. Even when the X and Y rotations of a 3D chart are set to 0 degrees to mimic the appearance of a 2D chart, the auto-scale option remains exclusive to true 3D chart types.
