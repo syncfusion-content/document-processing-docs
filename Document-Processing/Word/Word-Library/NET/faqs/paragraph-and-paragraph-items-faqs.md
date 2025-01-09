@@ -477,3 +477,13 @@ In conclusion, this behavior is not a limitation or issue, but rather aligns wit
 No, the auto-scale option is not available for 2D charts. This is because auto-scaling is specifically designed for 3D charts to maintain accurate proportions when rotated or resized.
 
 This behavior aligns with Microsoft Word's standards, and the DocIO library adheres to the same limitation. Even when the X and Y rotations of a 3D chart are set to 0 degrees to mimic the appearance of a 2D chart, the auto-scale option remains exclusive to true 3D chart types.
+
+## Does importing content using Keep Source Formatting copy the format from the style to the destination document?
+
+Yes, when you use **Keep Source Formatting**, it copies both the style and inline formatting. For example, if the text is red and bold in the source document(which applied through the style), the destination document will keep the same red color and bold effect.
+
+However, if part of the text has inline formatting (like a blue color), it will override the style only for that part of the text. So, the destination document will show the blue part, but the rest of the text will stay red and bold.
+
+In short, **inline formatting** takes priority over the style for specific parts of the text, while "Keep Source Formatting" ensures that most formatting is preserved.
+
+This behavior follows the Microsoft Word when using "Keep Source Formatting". Similarly, DocIO also follows this behavior when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields).
