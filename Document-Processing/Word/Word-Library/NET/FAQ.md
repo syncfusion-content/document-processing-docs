@@ -16,7 +16,7 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [How to check the compatibility mode of the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-check-the-compatibility-mode-of-the-word-document)
 * [Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
 * [How to convert Units (cm, mm, or inches) to Points for DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-convert-units-cm-mm-or-inches-to-points-for-docio)
-* [Why does the ‘File Not Supported’ exception occur in Syncfusion® DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-file-not-supported-exception-occur-in-syncfusion-docio)
+* [Why does the ‘File Not Supported’ exception occur in Syncfusion<sup>®</sup> DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-file-not-supported-exception-occur-in-syncfusion-docio)
 * [Why do documents remain locked after use?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-do-documents-remain-locked-after-use)
 * [Can DocIO perform line-by-line comparisons for Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-perform-line-by-line-comparisons-for-word-documents)
 
@@ -63,7 +63,7 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [Which one is better Azure App Service or Cloud Service for Word to PDF or image using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#which-one-is-better-azure-app-service-or-cloud-service-for-word-to-pdf-or-image-using-docio)
 * [Why images are preserved as RedX images in Word to PDF or image conversion?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-images-are-preserved-as-redx-images-in-word-to-pdf-or-image-conversion)
 * [Why are content controls not preserved as editable form fields in the converted PDF document even when PreserveFormFields is enabled?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-are-content-controls-not-preserved-as-editable-form-fields-in-the-converted-pdf-document-even-when-preserveformfields-is-enabled)
-* [Why are some fonts missing when converting a Word document to PDF in the Syncfusion® demo application?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-are-some-fonts-missing-when-converting-a-word-document-to-pdf-in-the-syncfusion-demo-application)
+* [Why are some fonts missing when converting a Word document to PDF in the Syncfusion<sup>®</sup> demo application?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-are-some-fonts-missing-when-converting-a-word-document-to-pdf-in-the-syncfusion-demo-application)
 
 ## HTML and EPUB conversions
 

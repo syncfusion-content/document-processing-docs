@@ -204,7 +204,7 @@ Essential&reg; DocIO library uses Points for measurement properties in a Word do
 
 ## How to convert Units (cm, mm, or inches) to Points for DocIO?
 
-Syncfusion® .NET Word Library (DocIO) uses points as the default unit for various measurements, such as margins, indentation, and spacing. If you have measurements in centimeters (cm), millimeters (mm), or inches, you'll need to convert them to points before using them in DocIO code.
+Syncfusion<sup>®</sup> .NET Word Library (DocIO) uses points as the default unit for various measurements, such as margins, indentation, and spacing. If you have measurements in centimeters (cm), millimeters (mm), or inches, you'll need to convert them to points before using them in DocIO code.
 
 ### Conversion Formulas for Units to Points
 
@@ -250,9 +250,9 @@ Dim marginInPointsFromInches As Single = marginInInches * 72.0F
 
 {% endtabs %}
 
-## Why does the 'File Not Supported' exception occur in Syncfusion® DocIO? 
+## Why does the 'File Not Supported' exception occur in Syncfusion<sup>®</sup> DocIO? 
 
-This issue may occur if the input Word document is in a pre-97 Word format (complex format document) created using Microsoft Word versions prior to Word 97. Syncfusion® DocIO does not support these older complex format documents.
+This issue may occur if the input Word document is in a pre-97 Word format (complex format document) created using Microsoft Word versions prior to Word 97. Syncfusion<sup>®</sup> DocIO does not support these older complex format documents.
 
 To resolve this, resave the input document using a more recent version of Microsoft Word. DocIO supports documents created in Microsoft Word versions from 97-2003 and later.
 
@@ -298,3 +298,4 @@ The Word viewer/editor renders the contents of the document page by page dynamic
 Essential DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence, it is not feasible to split the Word document by pages.
 
 You can, however, split the Word document by sections, headings, bookmarks, or placeholders. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents) for more details.
+
