@@ -55,6 +55,12 @@ The Syncfusion<sup>®</sup> [online demo](https://ej2aspnetcore.azurewebsites.ne
 
 To ensure the fonts appear exactly as they do in the Word document during PDF conversion in our [online demo](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdf#/material3), we recommend embedding the missing fonts directly into the Word document before performing the conversion. For detailed guidance on embedding fonts in a Word document using Microsoft Word, refer [here](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion#suggestion-3:-embed-fonts-in-docx).
 
+## How to edit a Word document in Microsoft Word and convert it to PDF/image simultaneously using the DocIO library?
+
+To preserve editable content while converting a Word document to a PDF or image without closing Microsoft Word, open and edit the document in Word, save the changes, and use the [OpenReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_) method to load the document in read-only mode for conversion. Changes that are not saved in the Word document using Microsoft Word will not appear in the converted PDF or image.
+
+For more details about open Word document in read only mode, refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/loading-and-saving-document#opening-the-read-only-word-document).
+
 ## Experiencing font access problems in IIS during Word to PDF/Image, but not locally?
 
 This issue occurs when fonts are installed using the basic *Install* option. Fonts installed this way are not shared system-wide, so IIS cannot access them.
