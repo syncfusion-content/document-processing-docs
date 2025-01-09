@@ -85,3 +85,31 @@ T> 1. [Open(string fileName, FormatType formatType, XHTMLValidationType validati
 T> 2. [Open(string fileName, FormatType formatType, XHTMLValidationType validationType, string baseUrl)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWordDocument.html#Syncfusion_DocIO_DLS_IWordDocument_Open_System_String_Syncfusion_DocIO_FormatType_Syncfusion_DocIO_DLS_XHTMLValidationType_System_String_)  
 T> 3. [OpenReadOnly(string fileName, FormatType formatType, XHTMLValidationType validationType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWordDocument.html#Syncfusion_DocIO_DLS_IWordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_Syncfusion_DocIO_DLS_XHTMLValidationType_)  
 T> 4. [OpenReadOnly(string fileName, FormatType formatType, XHTMLValidationType validationType, string baseUrl)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWordDocument.html#Syncfusion_DocIO_DLS_IWordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_Syncfusion_DocIO_DLS_XHTMLValidationType_System_String_)  
+
+## How should measurement values be defined in HTML for proper processing with DocIO?
+
+When importing an HTML file into a Word document using DocIO, it is essential to specify measurement values correctly to ensure accurate processing.
+
+**Incorrect Example:**
+
+{% tabs %}
+
+{% highlight html tabtitle="HTML" %}
+<p style="line-height: 1.5;”> Hello world</p>
+{% endhighlight %}
+
+{% endtabs %}
+
+In this example, the values lack measurement units (e.g., pt), which can lead to inconsistent formatting in the resulting Word document.
+
+**Correct Example:**
+
+{% tabs %}
+
+{% highlight html tabtitle="HTML" %}
+<p style="line-height: 1.5pt;">Hello world</p>
+{% endhighlight %}
+
+{% endtabs %}
+
+By including pt as the measurement unit, the spacing and styling are accurately interpreted and applied during the conversion process.
