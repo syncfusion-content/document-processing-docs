@@ -6,9 +6,9 @@ control: XlsIO
 documentation: UG
 ---
 
-# Overview of Syncfusion&reg; Excel (XlsIO) library
+# Overview of Syncfusion<sup>&reg;</sup> Excel (XlsIO) library
 
-[**Essential&reg; XlsIO**](https://www.syncfusion.com/document-processing/excel-framework/net) is a native **.****NET** class library that can be used to create and modify **Microsoft** **Excel** files by using C#, VB.NET and managed C++ code. It is a non-UI component that provides a full-fledged object model that facilitates accessing & manipulating the spreadsheets without any dependency of Microsoft Office COM libraries & Microsoft Office.
+[**Essential<sup>&reg;</sup> XlsIO**](https://www.syncfusion.com/document-processing/excel-framework/net) is a native **.****NET** class library that can be used to create and modify **Microsoft** **Excel** files by using C#, VB.NET and managed C++ code. It is a non-UI component that provides a full-fledged object model that facilitates accessing & manipulating the spreadsheets without any dependency of Microsoft Office COM libraries & Microsoft Office.
 
 The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Xamarin, Blazor, WinUI and .NET MAUI applications.
 

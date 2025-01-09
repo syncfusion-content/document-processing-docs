@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Excel document to Image in AWS Lambda
 
-Syncfusion&reg; XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert a Excel document to Image in AWS Lambda**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert a Excel document to Image in AWS Lambda**.
 
 ## Steps to convert Excel document to Image in AWS Lambda
 
@@ -34,7 +34,7 @@ Step 4: Install the following **NuGet packages** in your application from [Nuget
 ![Install SkiaSharp.NativeAssets.Linux NuGet package](AWS_Images/Lambda_Images/SkiaSharp_NuGet_Image.png)
 ![Install HarfBuzzSharp.NativeAssets.Linux NuGet package](AWS_Images/Lambda_Images/HarfBuzz_NuGet_Image.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Create a folder and copy the required data files and include the files to the project.
 
@@ -168,6 +168,6 @@ By executing the program, you will get the **Image** as follows.
 
 ![Output File](AWS_Images/Lambda_Images/ExcelToImage_AWS_Lambda.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.
