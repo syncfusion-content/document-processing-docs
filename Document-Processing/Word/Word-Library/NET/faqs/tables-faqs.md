@@ -381,7 +381,7 @@ DocIO also follows the same limitation and does not allow inserting a page break
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# %}
+{% highlight c# tabtitle="C#" %}
 // Load the Word document from the specified file path.
 using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Template.docx"), FileMode.Open, FileAccess.Read))
 {
