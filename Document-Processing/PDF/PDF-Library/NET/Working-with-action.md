@@ -1394,5 +1394,3 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Actions/Remove-Document-Level-JavaScript-Actions/.NET).
