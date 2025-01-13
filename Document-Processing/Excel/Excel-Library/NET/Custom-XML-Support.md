@@ -5,11 +5,11 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Custom XML Support in Syncfusion&reg; Excel Library
+# Custom XML Support in Syncfusion<sup>&reg;</sup> Excel Library
 
 When you embed XML data in a document, the data is named as custom XML part, which is used to store arbitrary XML data in the workbook. 
 
-Essential&reg; XlsIO supports the following functionalities with Custom XML:
+Essential<sup>&reg;</sup> XlsIO supports the following functionalities with Custom XML:
 
 * Adding CustomXmlPart to workbook
 * Reading CustomXmlPart from workbook 
