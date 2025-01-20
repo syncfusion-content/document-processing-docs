@@ -1,6 +1,5 @@
 ---
-title: Assemblies Required for PowerPoint Presentation | 
-Syncfusion<sup>&reg;</sup>
+title: Assemblies Required for PowerPoint Presentation | Syncfusion<sup>&reg;</sup>
 description: This section explains about how to assemblies required to convert powerpoint presentation to PDF for various platforms and frameworks.
 platform: document-processing
 control: Presentation
@@ -24,7 +23,7 @@ Assembly
 </tr>
 <tr>
 <td>
-{{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
+{{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf) ' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
