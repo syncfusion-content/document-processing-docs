@@ -491,3 +491,17 @@ This behavior follows the Microsoft Word when using "Keep Source Formatting". Si
 ## Are strip lines on charts supported in DocIO?
 
 No, strip lines in charts are not supported in DocIO. Microsoft Word application does not provide specific settings for strip lines, which are used to highlight values or ranges with horizontal or vertical lines across chart areas. DocIO follows the same and does not support strip lines in charts.
+
+## Why do paragraphs have spacing when appending HTML into Word document using AppendHTML() API?
+
+When converting HTML to Word documents using the Microsoft Word application, the tags automatically include default spacing (before and after). This behavior occurs because Word applies default paragraph spacing during the conversion process.
+
+Similarly, the .NET Word Library (DocIO) also follows this behavior when appending HTML content using the AppendHTML(String) method.
+
+As a result, you may notice extra spacing in the paragraphs, even if the input HTML doesn’t specify spacing values in the tags.
+
+To adjust this extra spacing in DocIO, you can iterate through the paragraphs inserted by the AppendHTML method and modify their paragraph formatting. For example, you can set the spacing before and after each paragraph to zero or adjust it as needed. Here’s a simple code snippet that demonstrates how to do this:
+
+
+
+You can download a complete working sample from GitHub.
