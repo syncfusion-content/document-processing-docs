@@ -8,7 +8,7 @@ documentation: UG
 
 # Excel to CSV Conversion
 
-XlsIO supports converting Excel file to CSV file by saving the workbook using the [SaveAs](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SaveAs_System_IO_Stream_System_String_) method. When saving as CSV, users can specify various delimiters to structure the data appropriately. By default, Syncfusion&reg; XlsIO uses a comma (,) as the delimiter.
+XlsIO supports converting Excel file to CSV file by saving the workbook using the [SaveAs](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SaveAs_System_IO_Stream_System_String_) method. When saving as CSV, users can specify various delimiters to structure the data appropriately. By default, Syncfusion<sup>&reg;</sup> XlsIO uses a comma (,) as the delimiter.
 
 **Delimiters Used in CSV files**
 

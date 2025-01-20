@@ -33,13 +33,13 @@ This assembly is used to package the Workbook contents.<br/></td></tr>
 <tr>
 <td>
 Syncfusion.Licensing<br/></td><td>
-Syncfusion&reg; licensing is a .NET library for validating the registered Syncfusion&reg; license in an application at runtime.<br/></td></tr>
+Syncfusion<sup>&reg;</sup> licensing is a .NET library for validating the registered Syncfusion<sup>&reg;</sup> license in an application at runtime.<br/></td></tr>
 </tbody>
 </table>
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-N> Syncfusion&reg; components are available in [nuget.org](https://www.nuget.org/).
+N> Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/).
 
 Include the following namespaces in your .cs or .vb file as shown as follows.
 

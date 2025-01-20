@@ -1024,25 +1024,25 @@ A complete working example to access the precedent and dependent cells in an Exc
 
 Find and replace operations across worksheet text, formulas, values, and comments allow users to seamlessly update and manage data within Excel workbooks.
 
-With the Syncfusion&reg; Excel Library, you can perform find and replace operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/find-and-replace) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform find and replace operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/find-and-replace) for more details.
 
 ## Sorting
 
 Sorting is the process of arranging data in a specific order, typically in ascending or descending sequence.
 
-With the Syncfusion&reg; Excel Library, you can perform sorting operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/sorting) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform sorting operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/sorting) for more details.
 
 ## Filtering
 
 Filtering is the process of selectively displaying data in a worksheet based on specified criteria.
 
-With the Syncfusion&reg; Excel Library, you can perform filtering operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/filtering) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform filtering operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/filtering) for more details.
 
 ## Hyperlink
 
 Hyperlink is a reference or navigation element in a document that allows users to access another location, such as specific cells within the same worksheet, other worksheets, external files, websites, or email addresses.
 
-With the Syncfusion&reg; Excel Library, you can perform hyperlink operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/hyperlink) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform hyperlink operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/hyperlink) for more details.
 
 ## Clear
 
@@ -1112,4 +1112,4 @@ A complete working example to clear cell content in an Excel worksheet in C# is 
 
 The [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface offers a robust collection of properties for in-depth manipulation and management of Excel worksheet ranges.
 
-With the Syncfusion&reg; Excel Library, you can perform various operations under IRange in an Excel worksheet using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/list-of-apis-under-irange) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform various operations under IRange in an Excel worksheet using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/list-of-apis-under-irange) for more details.
