@@ -480,7 +480,7 @@ This behavior aligns with Microsoft Word's standards, and the DocIO library adhe
 
 ## Does importing content using keep source formatting option copy the format from the style to the destination document?
 
-Yes, when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields) while importing content using [ImportContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS..... ... ..) API, it copies both the style and inline formatting. For example, if the text is red and bold in the source document(which applied through the style), the destination document will keep the same red color and bold effect.
+Yes, when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields) while importing content using [ImportContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html) API, it copies both the style and inline formatting. For example, if the text is red and bold in the source document(which applied through the style), the destination document will keep the same red color and bold effect.
 
 However, if part of the text has inline formatting (like a blue color), it will override the style only for that part of the text. So, the destination document will show the blue part, but the rest of the text will stay red and bold.
 
