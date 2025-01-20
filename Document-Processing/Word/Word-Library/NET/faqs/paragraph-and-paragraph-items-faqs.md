@@ -487,3 +487,7 @@ However, if part of the text has inline formatting (like a blue color), it will 
 In short, **inline formatting** takes priority over the style for specific parts of the text, while "Keep Source Formatting" ensures that most formatting is preserved.
 
 This behavior follows the Microsoft Word when using "Keep Source Formatting". Similarly, DocIO also follows this behavior when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields).
+
+## Are strip lines on charts supported in DocIO?
+
+No, strip lines in charts are not supported in DocIO. Microsoft Word application does not provide specific settings for strip lines, which are used to highlight values or ranges with horizontal or vertical lines across chart areas. DocIO follows the same and does not support strip lines in charts.
