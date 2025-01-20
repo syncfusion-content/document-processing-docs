@@ -32,6 +32,7 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [Can the chart data be refreshed?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#can-the-chart-data-be-refreshed)
 * [How to detect the shape type in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-detect-the-shape-type-in-a-word-document)
 * [Is it possible to change the DATE field value in a Word document using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#is-it-possible-to-change-the-date--field-value-in-a-word-document-using-docio)
+* [How to set the date format on the horizontal axis of a chart in a Word document?](https://support.syncfusion.com/kb/article/11456/how-to-set-date-format-in-x-axis-of-chart-in-winforms-docio?isInternalRefresh=False)
 
 ## Mail merge
 
