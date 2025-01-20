@@ -2420,7 +2420,7 @@ The below code snippet illustrates how to add the circle field to an existing PD
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/PDF-Examples/blob/master/XFA/Add-circle-field-to-an-existing-PDF-document/.NET/Add-circle-field-to-an-existing-PDF-document/Program.cs" %} 	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-circle-field-to-an-existing-PDF-document/.NET/Add-circle-field-to-an-existing-PDF-document/Program.cs" %} 	
 
 //Load the PDF document.
 FileStream docStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
