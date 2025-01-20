@@ -295,7 +295,7 @@ If you encounter a **Wrong signature** exception while attempting to open an XML
 
 For more information on Word Processing XML, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml).
 
-##  Is it possible to split word document by pages using DocIO?
+##  Is it possible to split Word document by pages using DocIO?
 
 A Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more.
 
