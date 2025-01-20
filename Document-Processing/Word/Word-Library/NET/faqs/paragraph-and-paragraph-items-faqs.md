@@ -471,3 +471,35 @@ No, DocIO does not allow directly changing the value of a DATE field in a Word d
 When a Word document with a DATE field is opened in Microsoft Word, the field value updates automatically, even in read-only mode. DocIO follows the same behavior as Microsoft Word to ensure compatibility and consistency.
 
 In conclusion, this behavior is not a limitation or issue, but rather aligns with Microsoft Word's standard functionality.
+
+## How to enable the "Don't add space between paragraphs of the same style" option for paragraphs in a Word document?
+
+In DocIO, you can enable the **Don't add space between paragraphs of the same style** option by setting the [ContextualSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraphFormat.html#Syncfusion_DocIO_DLS_WParagraphFormat_ContextualSpacing) property to true. This ensures that no additional spacing is applied between consecutive paragraphs that use the same style.
+ 
+
+The following code illustrates how to enable the "Don't add space between paragraphs of the same style" option.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+ // Find the "Normal" paragraph style in the document's styles collection
+ WParagraphStyle normalStyle = document.Styles.FindByName("Normal") as WParagraphStyle;
+// Check if the "Normal" style is found, and if so, enable contextual spacing
+if (normalStyle != null)
+{
+    // Enable contextual spacing to avoid adding extra space between paragraphs with the same style
+    normalStyle.ParagraphFormat.ContextualSpacing = true;
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Find the "Normal" paragraph style in the document's styles collection
+Dim normalStyle As WParagraphStyle = TryCast(document.Styles.FindByName("Normal"), WParagraphStyle)
+' Check if the "Normal" style is found, and if so, enable contextual spacing
+If normalStyle IsNot Nothing Then
+    ' Enable contextual spacing to avoid adding extra space between paragraphs with the same style
+    normalStyle.ParagraphFormat.ContextualSpacing = True
+End If
+{% endhighlight %}
+
+{% endtabs %}

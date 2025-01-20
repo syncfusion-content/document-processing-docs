@@ -220,3 +220,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## What happens when Word documents with track changes are used for comparing? 
 
 The .NET Word library (DocIO) accepts all the changes in input documents and then performs a comparison between two Word documents.
+
+## How to change the colors for track changes in Word document?
+
+Colors for inserted and deleted text can be customized by adjusting the track changes color settings in Microsoft Word. Open the Advanced Track Changes Options dialog box via the Review tab by selecting Track Changes, then Options, and finally the Advanced tab. In the Insertions and Deletions section, choose the desired color from the dropdowns. Colors for moved text, table cells, and other elements can also be modified. 
+
+Additional settings, such as width, margin, and formatting, can be adjusted as needed. Save the changes by clicking OK. To learn more, check out the official Microsoft support guide on [changing the track changes color](https://support.microsoft.com/en-us/office/change-the-track-changes-color-48c80bb3-458c-4abb-8e21-25f9bac47484).

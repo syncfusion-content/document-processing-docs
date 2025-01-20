@@ -289,8 +289,9 @@ When a Word document is opened in a viewer or editor, the content is dynamically
 
 DocIO is a non-UI component that provides a comprehensive document object model for manipulating Word document content. However, it is not feasible to extract line-by-line information from a Word document using DocIO. Due to this limitation, line-by-line comparisons are not possible with DocIO.
 
-## Why "Wrong signature" exception thrown while trying to opening a .xml file using DocIO library?
+## How to view Word documents in my .NET MAUI application using DocIO?
 
-If you encounter a **Wrong signature** exception while attempting to open an XML file using DocIO, it likely indicates that the XML file is not in the supported Word Processing 2007 or 2003 format. DocIO specifically supports these XML formats. To resolve this issue, please verify that the input XML file adheres to the Word Processing 2007 or 2003 format.
+Currently, DocIO does not have dedicated viewer control for Word documents in .NET MAUI. However, we can achieve this by converting the Word document to PDF and then displaying the PDF using a PDF viewer control.
 
-For more information on Word Processing XML, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml).
+To convert a Word document to PDF using DocIO, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf).
+
