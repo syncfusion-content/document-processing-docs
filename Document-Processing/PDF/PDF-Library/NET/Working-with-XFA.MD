@@ -7,14 +7,14 @@ documentation: UG
 ---
 # Working with XFA Forms
 
-XFA stands for XML Forms Architecture, dynamic forms are based on a XML specification. Essential&reg; PDF supports both the dynamic and static XFA forms.
+XFA stands for XML Forms Architecture, dynamic forms are based on a XML specification. Essential<sup>&reg;</sup> PDF supports both the dynamic and static XFA forms.
 
 * In a static form the form's appearance and layout is fixed, regardless of the field content.
 * Dynamic forms can change in appearance in several ways in response to changes in the data.
 
 ## Creating a new XFA form
 
-Essential&reg; PDF allows you to create and manipulate the XFA form in PDF document by using [PdfXfaDocument](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaDocument.html) and [PdfXfaForm](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaForm.html) classes. The [PdfXfaFieldCollection](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaFieldCollection.html) class represents the entire field collection of the XFA form.
+Essential<sup>&reg;</sup> PDF allows you to create and manipulate the XFA form in PDF document by using [PdfXfaDocument](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaDocument.html) and [PdfXfaForm](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaForm.html) classes. The [PdfXfaFieldCollection](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaFieldCollection.html) class represents the entire field collection of the XFA form.
 
 ### Adding a new page to the XFA document
 
@@ -102,7 +102,7 @@ N> PDF supports XFA forms only in Windows Forms, WPF, ASP.NET, ASP.NET MVC, UWP 
 
 ### Adding the XFA document settings
 
-Essential&reg; PDF supports various XFA page setting options through [PdfXfaPageSettings](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaPageSettings.html) class, to control the page display.
+Essential<sup>&reg;</sup> PDF supports various XFA page setting options through [PdfXfaPageSettings](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaPageSettings.html) class, to control the page display.
 
 The below sample illustrates how to create a new PDF document with XFA page size.
 
@@ -3934,7 +3934,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Filling form fields in an existing XFA document
 
-Essential&reg; PDF allows you to fill the XFA form fields using [PdfLoadedXfaform](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaForm.html) class.
+Essential<sup>&reg;</sup> PDF allows you to fill the XFA form fields using [PdfLoadedXfaform](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaForm.html) class.
 
 ### Filling the XFA text box field
 
@@ -4744,7 +4744,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Flattening XFA Form fields
 
 The form field editing or filling capabilities can be removed by flattening the PDF document.
-The Essential&reg; PDF flattens a form field by removing the existing form field and replacing it with graphical objects that will resemble the form field and cannot be edited. This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDocument_Flatten) property of [PdfLoadedXfaDocument](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html).
+The Essential<sup>&reg;</sup> PDF flattens a form field by removing the existing form field and replacing it with graphical objects that will resemble the form field and cannot be edited. This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDocument_Flatten) property of [PdfLoadedXfaDocument](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html).
 The following code snippet illustrates how to flatten the XFA form field.
 
 {% tabs %} 
@@ -4940,7 +4940,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Clear XFA date time field value
 
-The Essential&reg; PDF supports clearing XFA form date time fields values, you can clear the date time values by using the [ClearValue](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDateTimeField_ClearValue) method available in the [PdfLoadedXfaDateTimeField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html).
+The Essential<sup>&reg;</sup> PDF supports clearing XFA form date time fields values, you can clear the date time values by using the [ClearValue](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDateTimeField_ClearValue) method available in the [PdfLoadedXfaDateTimeField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html).
 
 The following sample illustrates how to clear the date time field in an existing XFA document.
 

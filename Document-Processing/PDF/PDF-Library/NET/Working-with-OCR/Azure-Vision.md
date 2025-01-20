@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Perform OCR with Azure Vision 
 
-The [Syncfusion&reg; .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) supports external engines (Azure Computer Vision) to process the OCR on images and PDF documents.
+The [Syncfusion<sup><sup>&reg;</sup></sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) supports external engines (Azure Computer Vision) to process the OCR on images and PDF documents.
 
 ## Steps to perform OCR with Azure Computer Vision 
 Step 1: Create a new .NET Console application project. 
@@ -23,7 +23,7 @@ Step 2: Install [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusi
 ![NuGet package installation](OCR-Images/NET-sample-Azure-step4.png)
 
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup><sup>&reg;</sup></sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup><sup>&reg;</sup></sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the Program.cs file. 
 
@@ -188,5 +188,5 @@ By executing the program, you will get a PDF document as follows.
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Azure%20Vision).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion&reg; PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup><sup>&reg;</sup></sup> PDF library features.
 

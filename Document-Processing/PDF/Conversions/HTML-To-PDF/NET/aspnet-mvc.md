@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert HTML to PDF file in ASP.NET MVC
 
-The Syncfusion&reg; HTML to PDF converter is a .NET library used to convert HTML or web pages to PDF document in ASP.NET MVC application.  
+The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library used to convert HTML or web pages to PDF document in ASP.NET MVC application.  
 
 ## Steps to convert HTML to PDF document in ASP.NET MVC
 
@@ -23,7 +23,7 @@ Step 2: In the project configuration windows, name your project and select Creat
 Step 3: Install [Syncfusion.HtmlToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.AspNet.Mvc5)  NuGet package as reference to your .NET applications from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](htmlconversion_images/aspnetmvc4.png)  
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 
@@ -76,6 +76,6 @@ By executing the program, you will get the PDF document as follows.
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/ASP.NET%20MVC).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) to explore the rich set of Syncfusion&reg; HTML to PDF converter library features. 
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
 
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetmvc/PDF/HelloWorld#/material3) in ASP.NET MVC. 
