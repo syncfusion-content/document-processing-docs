@@ -1,5 +1,5 @@
 ---
-title: Font substitution in PowerPoint to Image conversion| Syncfusion<sup>&reg;</sup>
+title: Font substitution in PowerPoint to Image conversion| Syncfusion<sup>&reg;</sup>
 description: Learn about how to substitute font during PowerPoint to Image conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint

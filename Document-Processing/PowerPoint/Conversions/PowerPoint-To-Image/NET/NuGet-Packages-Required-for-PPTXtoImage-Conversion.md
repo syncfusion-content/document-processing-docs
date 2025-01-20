@@ -1,5 +1,5 @@
 ---
-title: Required NuGet Packages for PPTX to Image Conversion |Syncfusion<sup>&reg;</sup>
+title: Required NuGet Packages for PPTX to Image Conversion | Syncfusion<sup>&reg;</sup>
 description: Learn about the NuGet packages required to convert PowerPoint to Image using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint

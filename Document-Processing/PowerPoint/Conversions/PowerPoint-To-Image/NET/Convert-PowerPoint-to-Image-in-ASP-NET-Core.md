@@ -1,6 +1,5 @@
 ---
-title: Convert PowerPoint to Image in ASP.NET Core | 
-Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to Image in ASP.NET Core | Syncfusion<sup>&reg;</sup>
 description: Convert PowerPoint to image in ASP.NET Core using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

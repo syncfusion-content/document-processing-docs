@@ -1,6 +1,5 @@
 ---
-title: Convert PowerPoint to Image in .NET MAUI | 
-Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to Image in .NET MAUI | Syncfusion<sup>&reg;</sup>
 description: Convert PowerPoint to image in .NET MAUI using .NET MAUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
