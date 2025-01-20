@@ -614,3 +614,32 @@ chart.Series(0).SerieFormat.Percent = 10
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Fomat-Series/Explode-Pie-Chart/.NET).
 
+## Set Fill Pattern
+
+The following code snippet illustrates how to set the fill pattern for a series in a chart.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Fomat-Series/Set-fill-pattern/.NET/Set-fill-pattern/Program.cs" %}
+
+//Set the fill pattern to a diagonal brick pattern.
+chart.Series[0].SerieFormat.Fill.Pattern = OfficeGradientPattern.Pat_Diagonal_Brick;
+
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Set the fill pattern to a diagonal brick pattern.
+chart.Series[0].SerieFormat.Fill.Pattern = OfficeGradientPattern.Pat_Diagonal_Brick;
+
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Set the fill pattern to a diagonal brick pattern.
+chart.Series(0).SerieFormat.Fill.Pattern = OfficeGradientPattern.Pat_Diagonal_Brick;
+
+{% endhighlight %}
+{% endtabs %}
+
+
+
+
+

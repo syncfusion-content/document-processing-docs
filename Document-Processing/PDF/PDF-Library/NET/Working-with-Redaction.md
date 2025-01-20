@@ -644,7 +644,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Redaction result 
 
-Using [PdfRedactionResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedactionResult.html) class, you can get the status of the redaction with other information. The result of the redaction operation can be obtained using Essential&reg; PDF and the below code example illustrates the same. 
+Using [PdfRedactionResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedactionResult.html) class, you can get the status of the redaction with other information. The result of the redaction operation can be obtained using Essential<sup>&reg;</sup> PDF and the below code example illustrates the same. 
 
 {% tabs %}
 

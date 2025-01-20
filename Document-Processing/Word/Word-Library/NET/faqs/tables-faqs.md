@@ -338,3 +338,37 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Set-text-direction-to-table).
+
+## How can I obtain the height of a cell or row in a Word document using the DocIO library?
+
+In Syncfusion<sup>®</sup> .NET Word Library (DocIO), you can get or set the height of a table row using the [Height](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html#Syncfusion_DocIO_DLS_WTableRow_Height) property and define its behavior with the [HeightType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html#Syncfusion_DocIO_DLS_WTableRow_HeightType) property, such as `AtLeast` or `Exactly`. The row height applies uniformly across all cells in the row and automatically adjusts based on the content.
+
+This behavior aligns with Microsoft Word's functionality, where row height is managed at the row level rather than for individual cells, ensuring consistent formatting across the table.
+
+The following code demonstrates how to get the row height and height type from an existing Word document:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+// Access the instance of the first row in the table
+WTableRow row = table.Rows[0];
+// Get the row height 
+float rowHeight = row.Height;
+// Get the row height type
+TableRowHeightType rowHeightType = row.HeightType;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Access the instance of the first row in the table
+Dim row As WTableRow = table.Rows(0)
+' Get the row height 
+Dim rowHeight As Single = row.Height
+' Get the row height type
+Dim rowHeightType As TableRowHeightType = row.HeightType
+{% endhighlight %}
+
+{% endtabs %}
+
+## Why does setting the top or bottom padding for one cell in a Word document apply the same padding to all cells in the row?
+
+This behavior is due to the way Microsoft Word handles cell padding within a row. When a cell in a row has a maximum top or bottom padding, Word applies that maximum padding value to all cells in the same row. This is a default behavior of Microsoft Word to ensure uniformity in the appearance of rows.

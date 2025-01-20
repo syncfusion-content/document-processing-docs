@@ -452,10 +452,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion&reg;</h1>
+<h1>Syncfusion<sup>&reg;</sup></h1>
 
 <h2>Introduction</h2>
-	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -467,7 +467,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -548,10 +548,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion&reg;</h1>
+<h1>Syncfusion<sup>&reg;</sup></h1>
 
 <h2>Introduction</h2>
-	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -563,7 +563,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -656,10 +656,10 @@ padding-left: 5px;
 </head>
 <body>
 
-<h1>Syncfusion&reg;</h1>
+<h1>Syncfusion<sup>&reg;</sup></h1>
 
 <h2>Introduction</h2>
-	Syncfusion&reg; is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
 	<h4>WEB</h4>
 		The most comprehensive suite for enterprise web development.
@@ -671,7 +671,7 @@ padding-left: 5px;
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
 	<h4>About us</h4>
-		Syncfusion&reg; has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion&reg; has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
 	<h4>contact us</h4>
 		Morrisville Office
 		Company Headquarters
@@ -2462,3 +2462,49 @@ N> EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Get-Bounds-in-HTML-file/.NET).
+
+## Image Background
+
+The Blink HTML converter support adding the image background from HTML to Image using the ImageBackgroundColor property in BlinkConverterSettings class. Refer to the following code sample.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF/.NET/Image_Background_In_HTML_to_PDF/Program.cs, 300" %}
+
+    //Initialize HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    //Initialize the BlinkConverterSettings.
+    BlinkConverterSettings settings = new BlinkConverterSettings();
+    //Set the Image Background color.
+    settings.ImageBackgroundColor = Color.Transparent;
+    //Assign the BlinkConverterSettings to the ConverterSettings property of HtmlToPdfConverter.
+    htmlConverter.ConverterSettings = settings;
+    //Convert HTML to Image.
+    Image image = htmlConverter.ConvertToImage("Input.html");
+    //Save the Image.
+    byte[] imageByte = image.ImageData;
+    File.WriteAllBytes("Output.png", imageByte);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Initialize HTML to PDF converter.
+    Dim htmlConverter As New HtmlToPdfConverter()
+    ' Initialize the BlinkConverterSettings.
+    Dim settings As New BlinkConverterSettings()
+    ' Set the Image Background color.
+    settings.ImageBackgroundColor = Color.Transparent
+    ' Assign the BlinkConverterSettings to the ConverterSettings property of HtmlToPdfConverter.
+    htmlConverter.ConverterSettings = settings
+    ' Convert HTML to Image.
+    Dim image As Image = htmlConverter.ConvertToImage("Input.html")
+    ' Save the Image.
+    Dim imageByte As Byte() = image.ImageData
+    File.WriteAllBytes("Output.png", imageByte)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF).

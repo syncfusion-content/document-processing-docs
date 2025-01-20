@@ -8,7 +8,7 @@ documentation: UG
 
 # Supported Features by Platforms
 
-The list of various supported and non-supported Excel features of Essential&reg; XlsIO in different platforms is given in this section.
+The list of various supported and non-supported Excel features of Essential<sup>&reg;</sup> XlsIO in different platforms is given in this section.
 
 ## Supported Features by .NET Framework and .NET Standard
 

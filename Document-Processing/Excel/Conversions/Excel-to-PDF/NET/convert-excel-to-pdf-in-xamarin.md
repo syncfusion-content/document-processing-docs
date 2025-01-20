@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Excel Document to PDF in Xamarin
 
-Syncfusion&reg; XlsIO is a [Xamarin Excel library](https://www.syncfusion.com/document-processing/excel-framework/xamarin/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Xamarin**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [Xamarin Excel library](https://www.syncfusion.com/document-processing/excel-framework/xamarin/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Xamarin**.
 
 ## Steps to convert Excel document to PDF in Xamarin
 
@@ -30,7 +30,7 @@ Step 4: Install the [Syncfusion.Xamarin.XlsIORenderer](https://www.nuget.org/pac
 
 ![Install Syncfusion.Xamarin.XlsIORenderer NuGet Package](XAMARIN_images\XAMARIN_images_img8.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Add new Forms XAML page in **portable project**. If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
 <ul>
@@ -184,6 +184,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output File](XAMARIN_images\XAMARIN_images_img9.png)
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/xamarin) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/xamarin) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetcore/Excel/ExcelToPDF#/material3) in ASP.NET Core.

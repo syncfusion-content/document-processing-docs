@@ -132,7 +132,7 @@ A complete working example to add a text box in C# is present on [this GitHub pa
 
 **Text Box in Chart**
 
-Syncfusion&reg; XlsIO supports creating and reading text box within Excel chart. The following code example illustrates this.
+Syncfusion<sup>&reg;</sup> XlsIO supports creating and reading text box within Excel chart. The following code example illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

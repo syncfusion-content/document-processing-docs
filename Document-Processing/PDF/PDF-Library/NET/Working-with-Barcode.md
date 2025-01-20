@@ -7,7 +7,7 @@ documentation:
 ---
 # Working with Barcode
 
-Essential&reg; PDF provides support to add barcodes to the PDF document. The following barcode types are supported.
+Essential<sup>&reg;</sup> PDF provides support to add barcodes to the PDF document. The following barcode types are supported.
 
 * 10 one-dimensional barcodes including Code 39 and Code 32 barcodes.
 * 2 two-dimensional barcodes such as QR, DataMatrix and PDF417 barcodes.
@@ -658,7 +658,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Export Barcode as Image
 
-Essential&reg; PDF supports converting one dimensional barcodes such as Code 39, Code 39 Extended, Code 11, Codabar, Code 32, Code 93, Code 93 Extended, Code 128A, Code 128B, UPC bar code, and Code 128C barcodes to image using the [ToImage()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage) method of [PdfUnidimensionalBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html) instance. 
+Essential<sup>&reg;</sup> PDF supports converting one dimensional barcodes such as Code 39, Code 39 Extended, Code 11, Codabar, Code 32, Code 93, Code 93 Extended, Code 128A, Code 128B, UPC bar code, and Code 128C barcodes to image using the [ToImage()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage) method of [PdfUnidimensionalBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html) instance. 
 
 N> To export barcode as image in .NET Core, the following assembly should be referenced in your application [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core/) .
 
@@ -722,7 +722,7 @@ barcodeImage.Save("Image.png", ImageFormat.Png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Export-one-dimensional-barcode-as-image/).
 
-Essential&reg; PDF supports converting two-dimensional barcodes such as QR Code and Data Matrix barcode to image. The following code snippet explains how to convert a QR code to image using the [ToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfQRBarcode.html#Syncfusion_Pdf_Barcode_PdfQRBarcode_ToImage) method of [PdfQRBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfQRBarcode.html) instance.
+Essential<sup>&reg;</sup> PDF supports converting two-dimensional barcodes such as QR Code and Data Matrix barcode to image. The following code snippet explains how to convert a QR code to image using the [ToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfQRBarcode.html#Syncfusion_Pdf_Barcode_PdfQRBarcode_ToImage) method of [PdfQRBarcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfQRBarcode.html) instance.
 
 {% tabs %}
 
