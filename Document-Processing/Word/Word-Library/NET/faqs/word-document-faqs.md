@@ -294,3 +294,14 @@ DocIO is a non-UI component that provides a comprehensive document object model 
 If you encounter a **Wrong signature** exception while attempting to open an XML file using DocIO, it likely indicates that the XML file is not in the supported Word Processing 2007 or 2003 format. DocIO specifically supports these XML formats. To resolve this issue, please verify that the input XML file adheres to the Word Processing 2007 or 2003 format.
 
 For more information on Word Processing XML, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml).
+
+##  Is it possible to split Word document by pages using DocIO?
+
+A Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more.
+
+The Word viewer/editor renders the contents of the document page by page dynamically when opened for viewing or editing. However, this page-wise rendered information is not preserved at the document level, as per the Word file format specification.
+
+DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence, it is not feasible to split the Word document by pages.
+
+You can, however, split the Word document by sections, headings, bookmarks, or placeholders. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents) for more details.
+
