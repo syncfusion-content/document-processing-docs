@@ -345,3 +345,8 @@ DocIO is a non-UI component that provides a full-fledged document object model t
 
 You can, however, split the Word document by sections, headings, bookmarks, or placeholders. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents) for more details.
 
+## Why are *.otf fonts not embedded in Microsoft Office documents?
+
+If you try to embed fonts with the *.otf extension in a Microsoft Office document, the fonts will not be embedded. This is because Microsoft Office only supports embedding fonts with the *.ttf extension.
+
+To ensure the fonts are embedded in Office documents, use fonts with the *.ttf extension instead of *.otf fonts. Replace an *.otf fonts in your document with *.ttf alternatives to avoid embedding issues. This ensures your document maintains consistent formatting and appearance when shared. For more details, refer to the [official Microsoft documentation](https://learn.microsoft.com/en-us/office/troubleshoot/office-suite-issues/fails-embedding-adobe-opentype-font).
