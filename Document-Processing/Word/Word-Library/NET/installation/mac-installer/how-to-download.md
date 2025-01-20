@@ -1,27 +1,20 @@
 ---
 layout: post
-title: Downloading 
-Syncfusion<sup>&reg;</sup> Word Mac installer - 
-Syncfusion<sup>&reg;</sup>
-description: Learn here about the how to download 
-Syncfusion<sup>&reg;</sup> Word Mac installer from our 
-Syncfusion<sup>&reg;</sup> website with license.
+title: Downloading Syncfusion<sup>&reg;</sup> Word Mac installer - Syncfusion<sup>&reg;</sup>
+description: Learn here about the how to download Syncfusion<sup>&reg;</sup> Word Mac installer from our Syncfusion<sup>&reg;</sup> website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 --- 
 
-# Downloading 
-Syncfusion<sup>&reg;</sup> Word Mac Installer
+# Downloading Syncfusion<sup>&reg;</sup> Word Mac Installer
 
-The 
-Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
+The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 
    -	Trial Installer
    -	Licensed Installer
 
-You can download the 
-Syncfusion<sup>&reg;</sup> installer from [Syncfusion.com](https://www.syncfusion.com/) website 
+You can download the Syncfusion<sup>&reg;</sup> installer from [Syncfusion.com](https://www.syncfusion.com/) website 
 
 ## Download the Trial Version
 
@@ -34,14 +27,12 @@ Our 30-day trial can be downloaded in two ways.
 ### Download Free Trial Setup
 
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the product
-2. After completing the required form or logging in with your registered 
-Syncfusion<sup>&reg;</sup> account, you can download the trial installer from the confirmation page. (as shown in below screenshot.)
+2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the trial installer from the confirmation page. (as shown in below screenshot.)
 
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
-4. Unlock key is not required to install the 
-Syncfusion<sup>&reg;</sup> Word Mac trial installer.
+4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> Word Mac trial installer.
 5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
@@ -60,10 +51,8 @@ You should initiate an evaluation if you have already obtained our components th
 	
     ![Trial and downloads of Syncfusion Essential Studio](images/start-trial-download.png)
    
-2. To access this page, you must sign up\log in with your 
-Syncfusion<sup>&reg;</sup> account.
-3. Begin your trial by selecting the 
-Syncfusion<sup>&reg;</sup> product. 
+2. To access this page, you must sign up\log in with your Syncfusion<sup>&reg;</sup> account.
+3. Begin your trial by selecting the Syncfusion<sup>&reg;</sup> product. 
 
    N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
@@ -76,16 +65,13 @@ Syncfusion<sup>&reg;</sup> product.
 
 ## Download the License Version
 
-1. 
-Syncfusion<sup>&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered 
-Syncfusion<sup>&reg;</sup> account.
+1. Syncfusion<sup>&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup>&reg;</sup> account.
 2. You can view all the licenses (both active and expired) associated with your account.
 3. You can download Word Mac licensed installer by going to More Downloads Options (element 3 in the screenshot below).
 
    ![License and downloads of Syncfusion Essential Studio](images/license-download.png)
    
-4. Unlock key is not required to install the 
-Syncfusion<sup>&reg;</sup> Word Mac trial installer.   
+4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> Word Mac trial installer.   
 5. For Mac OS, DMG formats is available for download.
    
    ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.PNG)

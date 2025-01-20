@@ -1,8 +1,6 @@
 ---
-title: Working with Silverlight using 
-Syncfusion<sup>&reg;</sup> Word library
-description: Creating a Silverlight application, load the Word document and save the document with 
-Syncfusion<sup>&reg;</sup> Word library
+title: Working with Silverlight using Syncfusion<sup>&reg;</sup> Word library
+description: Creating a Silverlight application, load the Word document and save the document with Syncfusion<sup>&reg;</sup> Word library
 platform: document-processing
 control: DocIO
 documentation: UG

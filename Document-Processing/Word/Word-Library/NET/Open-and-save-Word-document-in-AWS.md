@@ -1,15 +1,12 @@
 ---
-title: Open and save Word document in AWS | 
-Syncfusion<sup>&reg;</sup>
-description: Learn how to open and save Word document in Amazon Web Services (AWS) using 
-Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library in C#.
+title: Open and save Word document in AWS | Syncfusion<sup>&reg;</sup>
+description: Learn how to open and save Word document in Amazon Web Services (AWS) using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library in C#.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
 # Open and save Word document in Amazon Web Services (AWS)
-
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, **open and save a Word document in Amazon Web Services (AWS)** within a few lines of code. 
 

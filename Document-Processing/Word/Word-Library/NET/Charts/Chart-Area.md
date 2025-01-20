@@ -1,8 +1,6 @@
 ---
-title: Modify the Appearance of Chart Area | 
-Syncfusion<sup>&reg;</sup>
-description: Learn how to modify the appearance of chart area in a chart in a Word document using 
-Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Chart Area | Syncfusion<sup>&reg;</sup>
+description: Learn how to modify the appearance of chart area in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG

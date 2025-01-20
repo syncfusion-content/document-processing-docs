@@ -1,6 +1,5 @@
 ---
-title: RTF conversions in C# | DocIO | 
-Syncfusion<sup>&reg;</sup>
+title: RTF conversions in C# | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn how to convert Word document to RTF and vice versa using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

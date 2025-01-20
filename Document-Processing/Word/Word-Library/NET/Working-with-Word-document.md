@@ -1,6 +1,5 @@
 ---
-title: Working with Word document in C# | DocIO | 
-Syncfusion<sup>&reg;</sup>
+title: Working with Word document in C# | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn to merge, split, and print Word documents with ease, as well as iterate through DOM elements using .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO

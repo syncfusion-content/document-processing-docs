@@ -1,6 +1,5 @@
 ---
-title: Create, read and edit PowerPoint slides in CSharp |
-Syncfusion<sup>&reg;</sup>|
+title: Create, read and edit PowerPoint slides in CSharp |Syncfusion<sup>&reg;</sup>|
 description: Create, read and edit PowerPoint slides in CSharp; Adding and modifying the slides in PowerPoint presentation
 platform: document-processing
 control: PowerPoint
@@ -58,8 +57,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create a slide with predefined LayoutSlide
 
-The 
-Syncfusion<sup>&reg;</sup> PowerPoint library supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
+The Syncfusion<sup>&reg;</sup> PowerPoint library supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
 
 <ul>
 <li>Blank</li>

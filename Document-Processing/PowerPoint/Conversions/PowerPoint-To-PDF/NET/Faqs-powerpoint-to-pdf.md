@@ -1,6 +1,5 @@
 ---
-title: PowerPoint to PDF conversion FAQs | Presentation | 
-Syncfusion<sup>&reg;</sup>
+title: PowerPoint to PDF conversion FAQs | Presentation | Syncfusion<sup>&reg;</sup>
 description: Learn about the frequently asked questions of PowerPoint to PDF conversion in the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint

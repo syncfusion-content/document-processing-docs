@@ -1,6 +1,5 @@
 ---
-title: Encrypting & Decrypting the PowerPoint Presentation | 
-Syncfusion<sup>&reg;</sup>
+title: Encrypting & Decrypting the PowerPoint Presentation | Syncfusion<sup>&reg;</sup>
 description: This section explains on Encrypting, Decrypting and providing protection for the PowerPoint Presentation.
 platform: document-processing
 control: Presentation

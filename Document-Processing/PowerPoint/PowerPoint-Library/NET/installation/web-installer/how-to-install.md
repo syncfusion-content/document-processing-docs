@@ -1,40 +1,32 @@
 ---
 layout: post
-title: Installing 
-Syncfusion<sup>&reg;</sup> PowerPoint web installer - 
-Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install 
-Syncfusion<sup>&reg;</sup> PowerPoint web installer after downloading from our 
-Syncfusion<sup>&reg;</sup> website.
+title: Installing Syncfusion<sup>&reg;</sup> PowerPoint web installer - Syncfusion<sup>&reg;</sup>
+description: Learn here about how to install Syncfusion<sup>&reg;</sup> PowerPoint web installer after downloading from our Syncfusion<sup>&reg;</sup> website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing 
-Syncfusion<sup>&reg;</sup> PowerPoint web installer
+# Installing Syncfusion<sup>&reg;</sup> PowerPoint web installer
 
 
 ## Overview
 
-For the Essential Studio<sup>&reg;</sup> PowerPoint product, 
-Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
+For the Essential Studio<sup>&reg;</sup> PowerPoint product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
 
  
 ## Installation
 
 The steps below show how to install Essential Studio<sup>&reg;</sup> PowerPoint Web Installer.
 
-1.  Open the 
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.  Open the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
     
     N> The installer wizard extracts the syncfusionessentialpowerpointwebinstaller_{version}.exe dialog, which displays the package's unzip operation.
     
-2. 	The 
-Syncfusion<sup>&reg;</sup> PowerPoint Web Installer's welcome wizard will be displayed. Click the Next button.
+2. 	The Syncfusion<sup>&reg;</sup> PowerPoint Web Installer's welcome wizard will be displayed. Click the Next button.
 
     ![Welcome wizard](images/Step-by-Step-Installation_img2.png)
 
@@ -62,8 +54,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint Web Installer's welcome wizard will be dis
 
 	![Existing Version for install](images/Step-by-Step-Installation_img20.png)
 	
-	N> From the 2021 Volume 1 release, 
-Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
+	N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
 	
 	
 5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
@@ -84,38 +75,22 @@ Syncfusion<sup>&reg;</sup> has provided option to uninstall the previous version
 	
 	**Additional settings**
 	
-    * Select the **Install Demos** check box to install 
-Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked, if you do not want to install 
-Syncfusion<sup>&reg;</sup> samples
-	* Select the **Register 
-Syncfusion<sup>&reg;</sup> Assemblies in GAC** check box to install the latest 
-Syncfusion<sup>&reg;</sup> assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
-    * Select the **Configure 
-Syncfusion<sup>&reg;</sup> controls in Visual Studio** check box to configure the 
-Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the 
-Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the Register 
-Syncfusion<sup>&reg;</sup> assemblies in GAC check box when you select this check box.
-    * Select the **Configure 
-Syncfusion<sup>&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the 
-Syncfusion<sup>&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the 
-Syncfusion<sup>&reg;</sup> Extensions in Visual Studio.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for 
-Syncfusion<sup>&reg;</sup> Control Panel
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for 
-Syncfusion<sup>&reg;</sup> Control Panel
+    * Select the **Install Demos** check box to install Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>&reg;</sup> samples
+	* Select the **Register Syncfusion<sup>&reg;</sup> Assemblies in GAC** check box to install the latest Syncfusion<sup>&reg;</sup> assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
+    * Select the **Configure Syncfusion<sup>&reg;</sup> controls in Visual Studio** check box to configure the Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the Register Syncfusion<sup>&reg;</sup> assemblies in GAC check box when you select this check box.
+    * Select the **Configure Syncfusion<sup>&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the Syncfusion<sup>&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion<sup>&reg;</sup> Extensions in Visual Studio.
+    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup>&reg;</sup> Control Panel
+    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>&reg;</sup> Control Panel
 
 
 
 8.  After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-9.  The login wizard will appear. You must enter your 
-Syncfusion<sup>&reg;</sup> email address and password. If you do not already have a 
-Syncfusion<sup>&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button. 
+9.  The login wizard will appear. You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you do not already have a Syncfusion<sup>&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button. 
 
     ![Login wizard install](images/Step-by-Step-Installation_img9.png)
 	
-	I> The products you have chosen will be installed based on your 
-Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
+	I> The products you have chosen will be installed based on your Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
 
 10. The download and installation\uninstallation progress will be displayed as shown below.
 
@@ -125,12 +100,9 @@ Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
 
     ![Installation Summary](images/Step-by-Step-Installation_img11.png)
 	
-	* To open the 
-Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.
+	* To open the Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.
 
-12. After installation, there will be two 
-Syncfusion<sup>&reg;</sup> control panel entries, as shown below. The Essential Studio<sup>&reg;</sup> entry will manage all 
-Syncfusion<sup>&reg;</sup> products installed in the same version, while the Product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion<sup>&reg;</sup> control panel entries, as shown below. The Essential Studio<sup>&reg;</sup> entry will manage all Syncfusion<sup>&reg;</sup> products installed in the same version, while the Product entry will only uninstall the specific product setup.
 
     ![Control Panel](images/Step-by-Step-Installation_img19.png)
 	
@@ -138,39 +110,29 @@ Syncfusion<sup>&reg;</sup> products installed in the same version, while the Pro
 	
 ## Uninstallation
 
+Syncfusion<sup>&reg;</sup> PowerPoint installer can be uninstalled in two ways.
 
-Syncfusion<sup>&reg;</sup> PowerPoint installer can be uninstalled in two ways.
-
-   * Uninstall the PowerPoint using the 
-Syncfusion<sup>&reg;</sup> PowerPoint web installer
+   * Uninstall the PowerPoint using the Syncfusion<sup>&reg;</sup> PowerPoint web installer
    * Uninstall the PowerPoint from Windows Control Panel
 
-Follow either one of the option below to uninstall 
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint installer.
+Follow either one of the option below to uninstall Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint installer.
   
-**Option 1: Uninstall the PowerPoint using the 
-Syncfusion<sup>&reg;</sup> PowerPoint web installer**
+**Option 1: Uninstall the PowerPoint using the Syncfusion<sup>&reg;</sup> PowerPoint web installer**
 
-
-Syncfusion<sup>&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
+Syncfusion<sup>&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
 	
 **Option 2: Uninstall the PowerPoint from Windows Control Panel**  
 	
-You can uninstall all the installed products by selecting the **
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall PowerPoint alone by selecting the **
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> for PowerPoint {version}** entry (element 2 in the below screenshot) from the Windows control panel.
+You can uninstall all the installed products by selecting the **Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall PowerPoint alone by selecting the **Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> for PowerPoint {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 	
-N> If the **
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> for PowerPoint {version}** entry is selected from the Windows control panel, the 
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint alone will be removed and the below default MSI uninstallation window will be displayed.	
+N> If the **Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> for PowerPoint {version}** entry is selected from the Windows control panel, the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint alone will be removed and the below default MSI uninstallation window will be displayed.	
 
-1.  The 
-Syncfusion<sup>&reg;</sup> PowerPoint Web Installer's welcome wizard will be displayed. Click the Next button
+1.  The Syncfusion<sup>&reg;</sup> PowerPoint Web Installer's welcome wizard will be displayed. Click the Next button
 	
     ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 	
@@ -206,14 +168,11 @@ Syncfusion<sup>&reg;</sup> PowerPoint Web Installer's welcome wizard will be dis
 	
 7.	After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-8.	The login wizard will appear. You must enter your 
-Syncfusion<sup>&reg;</sup> email address and password. If you do not already have a 
-Syncfusion<sup>&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
+8.	The login wizard will appear. You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you do not already have a Syncfusion<sup>&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
     ![Login wizard install/uninstall](images/Step-by-Step-Installation_img9.png)
 	
-	I> The products you have chosen will be installed based on your 
-Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
+	I> The products you have chosen will be installed based on your Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
 
 9.	The download, installation, and uninstallation progresses will be shown.
 
@@ -223,5 +182,4 @@ Syncfusion<sup>&reg;</sup> License (Trial or Licensed).
 
     ![Summary install/uninstall](images/Step-by-Step-Installation_img18.png)
 	
-	* To open the 
-Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.
+	* To open the Syncfusion<sup>&reg;</sup> Control Panel, click **Launch Control Panel**.

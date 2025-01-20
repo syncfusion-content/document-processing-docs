@@ -1,15 +1,12 @@
 ---
-title: Open and save Word document on Mac OS | 
-Syncfusion<sup>&reg;</sup>
-description: Open and save Word document in .NET Core application on macOS using 
-Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library.
+title: Open and save Word document on Mac OS | Syncfusion<sup>&reg;</sup>
+description: Open and save Word document in .NET Core application on macOS using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
 # Open and Save Word document on Mac OS
-
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in .NET Core application on Mac OS**.
 
@@ -28,9 +25,7 @@ Step 3: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 ![Install Syncfusion.DocIO.Net.Core NuGet package](Mac-images/Install_Nuget1.png)
 ![Install Syncfusion.DocIO.Net.Core NuGet package](Mac-images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following Namespaces in the Program.cs file.
 
@@ -94,5 +89,4 @@ By executing the program, you will get the **Word document** as follows. The out
 
 ![.Net Core open and save output Word document](Mac-images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 

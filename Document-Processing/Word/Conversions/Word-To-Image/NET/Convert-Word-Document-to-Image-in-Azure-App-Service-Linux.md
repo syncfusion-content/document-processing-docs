@@ -1,6 +1,5 @@
 ---
-title: Convert Word to Image in Azure App Service on Linux | 
-Syncfusion<sup>&reg;</sup>
+title: Convert Word to Image in Azure App Service on Linux | Syncfusion<sup>&reg;</sup>
 description: Convert Word to image in Azure App Service on Linux using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +7,6 @@ documentation: UG
 ---
 
 # Convert Word to Image in Azure App Service on Linux
-
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Azure App Service on Linux**.
 
@@ -33,9 +31,7 @@ Step 4: Install the following **Nuget packages** in your application from [Nuget
  ![Install SkiaSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
  ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz-Nuget-WordtoImage.png)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
@@ -205,7 +201,6 @@ Step 12: Select the Word document and Click **Convert to Image** to convert the 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Azure/Azure_App_Service).
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetcore/Word/WordToImage#/material3) in ASP.NET Core. 

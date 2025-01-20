@@ -1,34 +1,27 @@
 ---
 layout: post
-title: Installing 
-Syncfusion<sup>&reg;</sup> Word offline installer-
-Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install 
-Syncfusion<sup>&reg;</sup> Word offline installer after downloading from our 
-Syncfusion<sup>&reg;</sup> website.
+title: Installing Syncfusion<sup>&reg;</sup> Word offline installer-Syncfusion<sup>&reg;</sup>
+description: Learn here about how to install Syncfusion<sup>&reg;</sup> Word offline installer after downloading from our Syncfusion<sup>&reg;</sup> website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing 
-Syncfusion<sup>&reg;</sup> Word offline installer
+# Installing Syncfusion<sup>&reg;</sup> Word offline installer
 
 
 ## Installing with UI   
 
 The steps below show how to install the Essential Studio<sup>&reg;</sup> Word installer.
 
-1.	Open the 
-Syncfusion<sup>&reg;</sup> Word offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Open the Syncfusion<sup>&reg;</sup> Word offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
     N> The Installer wizard extracts the syncfusionessentialword_(version).exe dialog, which displays the package's unzip operation.
 
-2.	To unlock the 
-Syncfusion<sup>&reg;</sup> offline installer, you have two options:
+2.	To unlock the Syncfusion<sup>&reg;</sup> offline installer, you have two options:
 
    
     * *Login To Install*
@@ -39,20 +32,14 @@ Syncfusion<sup>&reg;</sup> offline installer, you have two options:
    
     **Login To Install**
    
-    You must enter your 
-Syncfusion<sup>&reg;</sup> email address and password. If you don't already have a 
-Syncfusion<sup>&reg;</sup> account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click on **"Forgot Password"** to create a new one. Once you've entered your 
-Syncfusion<sup>&reg;</sup> email and password, click Next.
+    You must enter your Syncfusion<sup>&reg;</sup> email address and password. If you don't already have a Syncfusion<sup>&reg;</sup> account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click on **"Forgot Password"** to create a new one. Once you've entered your Syncfusion<sup>&reg;</sup> email and password, click Next.
 
     ![Login credentials](images/Step-by-Step-Installation_img2.png)   
 
 
     **Use Unlock Key**
    
-    Unlock keys are used to unlock the 
-Syncfusion<sup>&reg;</sup> offline installer, and they are platform and version specific. You should use either 
-Syncfusion<sup>&reg;</sup> licensed or trial Unlock key to unlock 
-Syncfusion<sup>&reg;</sup> Word installer.
+    Unlock keys are used to unlock the Syncfusion<sup>&reg;</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup>&reg;</sup> licensed or trial Unlock key to unlock Syncfusion<sup>&reg;</sup> Word installer.
    
     The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key. 
    
@@ -71,25 +58,12 @@ Syncfusion<sup>&reg;</sup> Word installer.
 
     **Additional Settings**
     
-	* Select the **Install Demos** check box to install 
-Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked, if you do not want to install 
-Syncfusion<sup>&reg;</sup> samples
-	* Select the **Register 
-Syncfusion<sup>&reg;</sup> Assemblies in GAC** check box to install the latest 
-Syncfusion<sup>&reg;</sup> assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
-    * Select the **Configure 
-Syncfusion<sup>&reg;</sup> controls in Visual Studio** check box to configure the 
-Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the 
-Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the Register 
-Syncfusion<sup>&reg;</sup> assemblies in GAC check box when you select this check box.
-    * Select the **Configure 
-Syncfusion<sup>&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the 
-Syncfusion<sup>&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the 
-Syncfusion<sup>&reg;</sup> Extensions in Visual Studio.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for 
-Syncfusion<sup>&reg;</sup> Control Panel
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for 
-Syncfusion<sup>&reg;</sup> Control Panel
+	* Select the **Install Demos** check box to install Syncfusion<sup>&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>&reg;</sup> samples
+	* Select the **Register Syncfusion<sup>&reg;</sup> Assemblies in GAC** check box to install the latest Syncfusion<sup>&reg;</sup> assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
+    * Select the **Configure Syncfusion<sup>&reg;</sup> controls in Visual Studio** check box to configure the Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion<sup>&reg;</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the Register Syncfusion<sup>&reg;</sup> assemblies in GAC check box when you select this check box.
+    * Select the **Configure Syncfusion<sup>&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the Syncfusion<sup>&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion<sup>&reg;</sup> Extensions in Visual Studio.
+    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup>&reg;</sup> Control Panel
+    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>&reg;</sup> Control Panel
 
 
 
@@ -100,8 +74,7 @@ Syncfusion<sup>&reg;</sup> Control Panel
     ![Advanced options](images/Step-by-Step-Installation_img8.png)
 	
 	
-	N> From the 2021 Volume 1 release, 
-Syncfusion<sup>&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
+	N> From the 2021 Volume 1 release, Syncfusion<sup>&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version.
 	
 	
 	N> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
@@ -118,24 +91,20 @@ Syncfusion<sup>&reg;</sup> has added the option to uninstall previous versions f
 	
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
 	
-6.  After installing, click the **Launch Control Panel** link to open the 
-Syncfusion<sup>&reg;</sup> Control Panel.
+6.  After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>&reg;</sup> Control Panel.
 
 
-7.  Click the Finish button. Your system has been installed with the 
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word product.
+7.  Click the Finish button. Your system has been installed with the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word product.
 
 ## Installing in silent mode
 
-The 
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word Installer supports installation and uninstallation via the command line.
+The Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word Installer supports installation and uninstallation via the command line.
 
 ### Command Line Installation
 
 To install through the Command Line in Silent mode, follow the steps below.
 
-1.	Run the 
-Syncfusion<sup>&reg;</sup> Word installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Run the Syncfusion<sup>&reg;</sup> Word installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialword_(version).exe file will be extracted into the Temp directory.
 3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialword_(version).exe file will be located in one of the folders.
 4.	Copy the extracted syncfusionessentialword_(version).exe file in local drive.
@@ -158,11 +127,9 @@ Syncfusion<sup>&reg;</sup> Word installer by double-clicking it. The Installer W
 
 ### Command Line Uninstallation
 
-
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Word can be uninstalled silently using the Command Line.
 
-1.	Run the 
-Syncfusion<sup>&reg;</sup> Word installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.	Run the Syncfusion<sup>&reg;</sup> Word installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialword_(version).exe file will be extracted into the Temp directory.
 3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialword_(version).exe file will be located in one of the folders.
 4.	Copy the extracted syncfusionessentialword_(version).exe file in local drive.

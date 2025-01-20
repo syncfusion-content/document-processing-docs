@@ -1,6 +1,5 @@
 ---
-title: Mail merge a Word document in C# | DocIO | 
-Syncfusion<sup>&reg;</sup>
+title: Mail merge a Word document in C# | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn how to mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

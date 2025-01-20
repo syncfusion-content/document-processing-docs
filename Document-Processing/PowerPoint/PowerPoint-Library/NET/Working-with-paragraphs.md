@@ -1,8 +1,6 @@
 ---
-title: Working with Paragraph in PowerPoint Presentation | 
-Syncfusion<sup>&reg;</sup>
-description: This section illustrates how to work with Paragraphs and texts in 
-Syncfusion<sup>&reg;</sup> PowerPoint Presentation
+title: Working with Paragraph in PowerPoint Presentation | Syncfusion<sup>&reg;</sup>
+description: This section illustrates how to work with Paragraphs and texts in Syncfusion<sup>&reg;</sup> PowerPoint Presentation
 platform: document-processing
 control: Presentation
 documentation: UG

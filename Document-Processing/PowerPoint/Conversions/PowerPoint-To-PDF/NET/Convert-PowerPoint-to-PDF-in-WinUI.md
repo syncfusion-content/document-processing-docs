@@ -1,6 +1,5 @@
 ---
-title: Convert PowerPoint to PDF in WinUI | 
-Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to PDF in WinUI | Syncfusion<sup>&reg;</sup>
 description: Convert PowerPoint to PDF in WinUI using WinUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -9,8 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in WinUI
 
-
-Syncfusion<sup>&reg;</sup> PowerPoint is a [WinUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/winui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in WinUI**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [WinUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/winui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in WinUI**.
 
 ## Prerequisites
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -29,9 +27,7 @@ Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/
 
 ![Install Syncfusion.PresentationRenderer.NET NuGet package](Workingwith-MAUI/Nuget_Package_PPTXtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -163,7 +159,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Converted PDF from PowerPoint in WinUI Desktop](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToPDF#/material3) in ASP.NET Core.  

@@ -1,8 +1,6 @@
 ---
-title: Word document to PDF Conversion in Linux Docker | DocIO | 
-Syncfusion<sup>&reg;</sup>
-description: This section illustrates how to convert Word document to PDF using 
-Syncfusion<sup>&reg;</sup> Word library (Essential DocIO) in Linux Docker
+title: Word document to PDF Conversion in Linux Docker | DocIO | Syncfusion<sup>&reg;</sup>
+description: This section illustrates how to convert Word document to PDF using Syncfusion<sup>&reg;</sup> Word library (Essential DocIO) in Linux Docker
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -10,8 +8,7 @@ documentation: UG
 
 # Essential<sup>&reg;</sup> DocIO in Docker
 
-Docker is an open platform for developing, shipping and running applications. You can use Essential<sup>&reg;</sup> DocIO in Docker container to create, read, write and convert Microsoft Word documents into various formats. From this page, you can learn how to convert Word document to PDF in Linux Docker using 
-Syncfusion<sup>&reg;</sup> Word library (Essential<sup>&reg;</sup> DocIO). 
+Docker is an open platform for developing, shipping and running applications. You can use Essential<sup>&reg;</sup> DocIO in Docker container to create, read, write and convert Microsoft Word documents into various formats. From this page, you can learn how to convert Word document to PDF in Linux Docker using Syncfusion<sup>&reg;</sup> Word library (Essential<sup>&reg;</sup> DocIO). 
 
 ## Steps to convert a Word document to PDF in Linux Docker
 
@@ -29,10 +26,7 @@ Step 2: Install the below NuGet packages as a reference to your project from [Nu
 ![Install DocIO Renderer NuGet package](linuxdockerimages/install-renderer-nuget-in-file-formats-word.png)
 ![Install Skiasharp NuGet package](linuxdockerimages/install-skia-sharp-nuget-in-file-formats-word.png)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about 
-Syncfusion<sup>&reg;</sup> 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about Syncfusion<sup>&reg;</sup> Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the Program.cs file.
 
@@ -325,7 +319,6 @@ ENTRYPOINT ["dotnet", "WordToPDFDockerSample.dll"]
 
 A complete working example of converting Word document to PDF in Ubuntu Linux Docker container can be downloaded from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Docker/Ubuntu/WordToPDFDockerSample).
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/Word/WordToPDF#/material3) in ASP.NET Core.

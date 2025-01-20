@@ -1,6 +1,5 @@
 ---
-title: Convert Word to PDF in WinUI | 
-Syncfusion<sup>&reg;</sup>
+title: Convert Word to PDF in WinUI | Syncfusion<sup>&reg;</sup>
 description: Convert Word to PDF in WinUI using WinUI Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +7,6 @@ documentation: UG
 ---
 
 # Convert Word document to PDF in WinUI
-
 
 Syncfusion<sup>&reg;</sup> DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert Word document to PDF in WinUI**.
 
@@ -29,9 +27,7 @@ Step 3: Install [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Sy
 
 ![Syncfusion.DocIORenderer.NET NuGet package](WinUI_Images/Nuget-Package-WordtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -171,7 +167,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Word to PDF in WinUI Desktop](WordToPDF_images/OutputImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/Word/WordToPDF#/material3) in ASP.NET Core. 

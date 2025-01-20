@@ -1,26 +1,20 @@
 ---
 layout: post
-title: Installing 
-Syncfusion<sup>&reg;</sup> PowerPoint linux installer-
-Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install 
-Syncfusion<sup>&reg;</sup> PowerPoint linux installer after downloading from our 
-Syncfusion<sup>&reg;</sup> website.
+title: Installing Syncfusion<sup>&reg;</sup> PowerPoint linux installer-Syncfusion<sup>&reg;</sup>
+description: Learn here about how to install Syncfusion<sup>&reg;</sup> PowerPoint linux installer after downloading from our Syncfusion<sup>&reg;</sup> website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing 
-Syncfusion<sup>&reg;</sup> PowerPoint Linux installer
+# Installing Syncfusion<sup>&reg;</sup> PowerPoint Linux installer
 
 ## Step-by-Step Installation
 
 The steps below show how to install PowerPoint Linux installer.
 
-1. Extract the 
-Syncfusion<sup>&reg;</sup> PowerPoint Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion<sup>&reg;</sup> PowerPoint Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    

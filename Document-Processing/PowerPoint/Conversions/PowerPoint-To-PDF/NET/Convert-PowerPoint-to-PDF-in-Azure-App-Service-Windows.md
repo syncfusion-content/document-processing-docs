@@ -1,6 +1,5 @@
 ---
-title: Convert PPTX to PDF in Azure App Service on Windows | 
-Syncfusion<sup>&reg;</sup>
+title: Convert PPTX to PDF in Azure App Service on Windows | Syncfusion<sup>&reg;</sup>
 description: Convert PPTX to PDF in Azure App Service on Windows using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -9,8 +8,7 @@ documentation: UG
 
 # Convert PowerPoint Presentation to PDF in Azure App Service on Windows
 
-
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Azure App Service on Windows**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Azure App Service on Windows**.
 
 ## Steps to convert PowerPoint Presentation to PDF in Azure App Service on Windows
 
@@ -27,9 +25,7 @@ Step 4: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
@@ -198,7 +194,6 @@ Step 12: Select the **PowerPoint Presentation** and Click **Convert to PDF** to 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/Azure/Azure_App_Service).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToPDF#/material3) in ASP.NET Core. 

@@ -1,8 +1,6 @@
 ---
-title: Find item in Word document in .NET Word library | 
-Syncfusion<sup>&reg;</sup>
-description: Find an item in the Word document in C# using 
-Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies
+title: Find item in Word document in .NET Word library | Syncfusion<sup>&reg;</sup>
+description: Find an item in the Word document in C# using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO
 documentation: UG

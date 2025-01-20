@@ -1,15 +1,12 @@
 ---
-title: Open and save Word document in ASP.NET | 
-Syncfusion<sup>&reg;</sup>
-description: Open and save Word document in ASP.NET application using 
-Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in ASP.NET | Syncfusion<sup>&reg;</sup>
+description: Open and save Word document in ASP.NET application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
 # Open and Save Word document in ASP.NET
-
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in ASP.NET Web Forms**.
 
@@ -29,9 +26,7 @@ Step 3: Install the [Syncfusion.DocIO.AspNet](https://www.nuget.org/packages/Syn
 
 ![Install Syncfusion.DocIO.AspNet NuGet package](ASP-NET_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new Web Form in your project. Right click on the project and select **Add > New Item** and add a Web Form from the list. Name it as MainPage.
 
@@ -116,5 +111,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![ASP.Net Web Open and save output Word document](ASP-NET_images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 

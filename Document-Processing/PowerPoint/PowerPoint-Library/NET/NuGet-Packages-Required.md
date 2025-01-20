@@ -1,8 +1,6 @@
 ---
-title: Required NuGet Packages for PowerPoint library |
-Syncfusion<sup>&reg;</sup>
-description: This section illustrates the NuGet packages required to use 
-Syncfusion<sup>&reg;</sup> PowerPoint library (Essential<sup>&reg;</sup> Presentation) in various platforms and frameworks
+title: Required NuGet Packages for PowerPoint library |Syncfusion<sup>&reg;</sup>
+description: This section illustrates the NuGet packages required to use Syncfusion<sup>&reg;</sup> PowerPoint library (Essential<sup>&reg;</sup> Presentation) in various platforms and frameworks
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -105,12 +103,8 @@ The following NuGet packages need to be included in your application based on th
 </tr>
 </table>
 
-N> 1. Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering 
-Syncfusion<sup>&reg;</sup> license key in your applications to use the components.
-N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release(v16.3.0.21), 
-Syncfusion<sup>&reg;</sup> has changed some of the NuGet package names to search and find the required 
-Syncfusion<sup>&reg;</sup> NuGet packages in nuget.org easily based on the control and its platforms.
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your applications to use the components.
+N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release(v16.3.0.21), Syncfusion<sup>&reg;</sup> has changed some of the NuGet package names to search and find the required Syncfusion<sup>&reg;</sup> NuGet packages in nuget.org easily based on the control and its platforms.
 
 ## Converting PowerPoint Presentation into PDF
 
@@ -398,8 +392,7 @@ To use NuGet package in your project, refer to the NuGet package [Installation](
 
 The PowerPoint Presentation NuGet packages can be installed and uninstalled using the Package Manager Console. In Visual Studio, select **Tools > NuGet Package Manager > Package Manager Console** and execute the following commands in respective platforms.
 
-N> The 
-Syncfusion<sup>&reg;</sup> components are available in nuget.org
+N> The Syncfusion<sup>&reg;</sup> components are available in nuget.org
 
 <table>
 <tr>

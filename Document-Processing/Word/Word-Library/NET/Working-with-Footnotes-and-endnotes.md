@@ -1,6 +1,5 @@
 ---
-title: Working with Footnotes and endnotes | DocIO | 
-Syncfusion<sup>&reg;</sup>
+title: Working with Footnotes and endnotes | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn how to add, modify, and remove footnotes and endnotes in a Word document using the .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO

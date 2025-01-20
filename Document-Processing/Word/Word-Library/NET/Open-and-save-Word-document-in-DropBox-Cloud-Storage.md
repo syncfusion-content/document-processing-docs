@@ -1,8 +1,6 @@
 ---
-title: Open and save Word document in DropBox Cloud Storage | 
-Syncfusion<sup>&reg;</sup>
-description: Open and save Word document in DropBox Cloud Storage using 
-Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in DropBox Cloud Storage | Syncfusion<sup>&reg;</sup>
+description: Open and save Word document in DropBox Cloud Storage using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG

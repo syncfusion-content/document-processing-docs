@@ -1,6 +1,5 @@
 ---
-title: Open and save Presentation in ASP.NET MVC | 
-Syncfusion<sup>&reg;</sup>
+title: Open and save Presentation in ASP.NET MVC | Syncfusion<sup>&reg;</sup>
 description: Open and save Presentation in ASP.NET MVC using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -9,8 +8,7 @@ documentation: UG
 
 # Open and save Presentation in ASP.NET MVC
 
-
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in ASP.NET MVC**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in ASP.NET MVC**.
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
@@ -26,9 +24,7 @@ Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/
 
 ![Install Syncfusion.Presentation.AspNet.Mvc5 Nuget Package](Workingwith-MVC/Nuget-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following namespace in that **HomeController.cs** file.
 
@@ -110,5 +106,4 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![ASP.Net MVC output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of 
-Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.

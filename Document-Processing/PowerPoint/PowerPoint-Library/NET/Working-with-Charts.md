@@ -1,6 +1,5 @@
 ---
-title: Create and edit Charts in PowerPoint files | 
-Syncfusion<sup>&reg;</sup>
+title: Create and edit Charts in PowerPoint files | Syncfusion<sup>&reg;</sup>
 description: Working with Charts in PowerPoint Presentation. Essential<sup>&reg;</sup> Presentation facilitates you to create and edit charts in PowerPoint files.
 platform: document-processing
 control: Presentation

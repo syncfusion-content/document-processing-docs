@@ -1,15 +1,12 @@
 ---
-title: Convert Word document to PDF in Microsoft Azure | 
-Syncfusion<sup>&reg;</sup>
-description: Learn how to convert a Word document to a PDF in Azure services using 
-Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library in C#.
+title: Convert Word document to PDF in Microsoft Azure | Syncfusion<sup>&reg;</sup>
+description: Learn how to convert a Word document to a PDF in Azure services using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library in C#.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
 # Convert Word to PDF in Azure Platform 
-
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, **convert a Word document to a PDF in Azure services** within a few lines of code. 
 

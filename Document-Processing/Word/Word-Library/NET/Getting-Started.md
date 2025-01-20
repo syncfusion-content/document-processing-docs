@@ -1,6 +1,5 @@
 ---
-title: Create a simple Word document in C#, VB.NET | 
-Syncfusion<sup>&reg;</sup>
+title: Create a simple Word document in C#, VB.NET | Syncfusion<sup>&reg;</sup>
 description: Learn how to use .NET Word (DocIO) library to create Word documents from scratch with basic elements and perform mail merge without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -36,9 +35,7 @@ This assembly contains the Office Chart Object model and core features needed fo
 </tbody>
 </table>
 
-N> 1. Starting with v16.2.0.x, if you reference 
-Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
-Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 N> 2. Syncfusion components are available in [nuget.org](https://www.nuget.org/)
 
 

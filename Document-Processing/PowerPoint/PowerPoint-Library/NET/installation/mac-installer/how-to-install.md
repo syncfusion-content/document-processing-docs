@@ -1,18 +1,13 @@
 ---
 layout: post
-title: Installing 
-Syncfusion<sup>&reg;</sup> PowerPoint Mac installer - 
-Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install 
-Syncfusion<sup>&reg;</sup> PowerPoint Mac installer after downloading from our 
-Syncfusion<sup>&reg;</sup> website.
+title: Installing Syncfusion<sup>&reg;</sup> PowerPoint Mac installer - Syncfusion<sup>&reg;</sup>
+description: Learn here about how to install Syncfusion<sup>&reg;</sup> PowerPoint Mac installer after downloading from our Syncfusion<sup>&reg;</sup> website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing 
-Syncfusion<sup>&reg;</sup> PowerPoint Mac installer
+# Installing Syncfusion<sup>&reg;</sup> PowerPoint Mac installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
@@ -47,8 +42,7 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> PowerPoint 
 
    ![License confirmation wizard](images/Mac_Installer3.png)
    
-   N> The Unlock key is not required to install the Mac installer. The 
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Flutter Mac installer can be used for development purposes without registering the Unlock key..
+   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Flutter Mac installer can be used for development purposes without registering the Unlock key..
 
 
 4. And paste it in “Applications” folder shortcut.
@@ -56,8 +50,7 @@ Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Flutter Mac installe
    ![license wizard](images/Mac_Installer4.png)
 
 
-5. Now you can open the folder to explore the 
-Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Mac installer.
+5. Now you can open the folder to explore the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Mac installer.
 
    ![Installation type wizard](images/Mac_Installer5.png)
 

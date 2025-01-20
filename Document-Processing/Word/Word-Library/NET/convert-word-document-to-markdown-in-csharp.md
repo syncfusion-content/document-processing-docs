@@ -1,6 +1,5 @@
 ---
-title: Convert Word to Markdown in C# | DocIO | 
-Syncfusion<sup>&reg;</sup>
+title: Convert Word to Markdown in C# | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn how to convert a Word document to Markdown using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
