@@ -295,6 +295,46 @@ If you encounter a **Wrong signature** exception while attempting to open an XML
 
 For more information on Word Processing XML, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml).
 
+## How to set the current culture while running the .NET application?
+
+If you notice that certain content in a Word document, such as dates or other culture-sensitive fields, is displayed in the wrong language or format, it could be due to the culture settings of your application. To ensure that the application displays content according to a specific culture, you can set the current culture programmatically.
+
+For example, if you want to set the culture to French to display date and time in French, you can follow these steps:
+
+The following code illustrates how to get the current culture.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+CultureInfo currentCulture = CultureInfo.CurrentCulture;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+Dim currentCulture As CultureInfo = CultureInfo.CurrentCulture
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code illustrates how to set the culture.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+CultureInfo culture = new CultureInfo("fr-CA");
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+Dim culture As New CultureInfo("fr-CA")
+CultureInfo.DefaultThreadCurrentCulture = culture
+CultureInfo.DefaultThreadCurrentUICulture = culture
+{% endhighlight %}
+
+{% endtabs %}
+
+After setting the culture, you can load documents and process them according to the new culture, ensuring correct formatting throughout your application.
+
 ##  Is it possible to split Word document by pages using DocIO?
 
 A Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more.
