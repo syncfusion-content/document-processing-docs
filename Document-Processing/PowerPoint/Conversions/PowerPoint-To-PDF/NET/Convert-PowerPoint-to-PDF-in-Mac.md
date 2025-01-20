@@ -1,5 +1,6 @@
 ---
-title: Convert PowerPoint to PDF on macOS | Syncfusion&reg;
+title: Convert PowerPoint to PDF on macOS | 
+Syncfusion<sup>&reg;</sup>
 description: Convert PowerPoint to PDF in .NET Core application on macOS using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +9,8 @@ documentation: UG
 
 # Convert PowerPoint to PDF on macOS
 
-Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in .NET Core application on macOS**.
+
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in .NET Core application on macOS**.
 
 ## Steps to convert PowerPoint to PDF programmatically
 
@@ -23,7 +25,9 @@ Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget
 ![Install Nuget from Manage Nuget Package](Workingwith-Mac/Install_Nuget1.png)
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Workingwith-Mac/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following Namespaces in the **Program.cs** file.
 
@@ -73,6 +77,7 @@ By executing the program, you will get the **PDF** as follows.
 
 ![Converted PDF from PowerPoint on macOS](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToPDF#/material3) in ASP.NET Core. 

@@ -1,5 +1,6 @@
 ---
-title: Compare Word Documents in C# | DocIO | Syncfusion&reg;
+title: Compare Word Documents in C# | DocIO | 
+Syncfusion<sup>&reg;</sup>
 description: Learn how to compare two Word documents in C# using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

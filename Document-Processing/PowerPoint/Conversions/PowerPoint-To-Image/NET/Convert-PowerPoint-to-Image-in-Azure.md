@@ -1,5 +1,6 @@
 ---
-title: Convert PPTX to Image in Microsoft Azure | Syncfusion&reg;
+title: Convert PPTX to Image in Microsoft Azure | 
+Syncfusion<sup>&reg;</sup>
 description: Learn how to convert a PPTX to image in Azure services using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +9,8 @@ documentation: UG
 
 # Convert PowerPoint Presentation to Image in Azure Platform 
 
-Syncfusion&reg; PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure Platform** within a few lines of code.
+
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure Platform** within a few lines of code.
 
 N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains how to convert PowerPoint Presentation to image in C# using the PowerPoint library (Presentation) in Azure. 
 

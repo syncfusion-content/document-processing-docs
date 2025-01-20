@@ -1,5 +1,6 @@
 ---
-title: Required NuGet Packages for PowerPoint to PDF Conversion |Syncfusion&reg;
+title: Required NuGet Packages for PowerPoint to PDF Conversion |
+Syncfusion<sup>&reg;</sup>
 description: Learn about the NuGet packages required to convert PowerPoint to PDF using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
@@ -192,7 +193,8 @@ To use NuGet package in your project, refer to the NuGet package [Installation](
 
 The PowerPoint Presentation NuGet packages can be installed and uninstalled using the Package Manager Console. In Visual Studio, select **Tools > NuGet Package Manager > Package Manager Console** and execute the following commands in respective platforms.
 
-N> The Syncfusion&reg; components are available in nuget.org
+N> The 
+Syncfusion<sup>&reg;</sup> components are available in nuget.org
 
 <table>
 <tr>

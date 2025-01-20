@@ -1,5 +1,6 @@
 ---
-title: Create Word document in GCP | Syncfusion&reg;
+title: Create Word document in GCP | 
+Syncfusion<sup>&reg;</sup>
 description: Create Word document in Google App Engine using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +9,8 @@ documentation: UG
 
 # Create Word document in Google App Engine
 
-Syncfusion&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) that allows you to create, read, edit, and convert Word documents programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **create Word document in Google App Engine**.
+
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) that allows you to create, read, edit, and convert Word documents programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **create Word document in Google App Engine**.
 
 ## Set up App Engine
 
@@ -48,7 +50,9 @@ Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Include the following namespaces in the **HomeController.cs** file.
 
@@ -456,6 +460,7 @@ By executing the program, you will get the **Word document** as follows. The out
 
 ![Create Word document in Google App Engine](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core.  

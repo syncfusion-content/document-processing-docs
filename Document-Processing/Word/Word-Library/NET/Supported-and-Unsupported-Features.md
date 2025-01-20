@@ -1,5 +1,6 @@
 ---
-title: Supported and Unsupported Features | DocIO | Syncfusion&reg;
+title: Supported and Unsupported Features | DocIO | 
+Syncfusion<sup>&reg;</sup>
 description: Learn about the supported and unsupported features in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

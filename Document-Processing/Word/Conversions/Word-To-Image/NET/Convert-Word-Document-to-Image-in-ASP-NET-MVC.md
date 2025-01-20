@@ -1,5 +1,6 @@
 ---
-title: Convert Word to Image in ASP.NET MVC | Syncfusion&reg;
+title: Convert Word to Image in ASP.NET MVC | 
+Syncfusion<sup>&reg;</sup>
 description: Convert Word to image in ASP.NET MVC using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +9,8 @@ documentation: UG
 
 # Convert Word document to Image in ASP.NET MVC
 
-Syncfusion&reg; Essential&reg; DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in ASP.NET MVC**.
+
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in ASP.NET MVC**.
 
 ## Steps to convert Word document to Image in C#
 
@@ -24,7 +26,9 @@ Step 3: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/package
 
 ![Install Syncfusion.DocIO.AspNet.Mvc5 NuGet package](ASP-NET-MVC_images/Nuget_Package_Word_to_Image.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following namespace in that **HomeController.cs** file.
 
@@ -104,6 +108,7 @@ By executing the program, you will get the **image** as follows.
 
 ![Word to Image in ASP.NET MVC](WordToPDF_images/Output-WordtoImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetmvc/Word/WordtoImage#/material3) in ASP.NET MVC.

@@ -1,5 +1,6 @@
 ---
-title: Open and save Presentation in ASP.NET Core | Syncfusion&reg;
+title: Open and save Presentation in ASP.NET Core | 
+Syncfusion<sup>&reg;</sup>
 description: Open and save Presentation in ASP.NET Core using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +9,8 @@ documentation: UG
 
 # Open and save Presentation in ASP.NET Core
 
-Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in ASP.NET Core**.
+
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in ASP.NET Core**.
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
@@ -20,7 +22,9 @@ Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Core/Nuget-Package_Open_and_Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 Step 3: Include the following namespaces in **HomeController.cs**.
 
 {% tabs %}
@@ -100,4 +104,5 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![ASP.Net Core output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 

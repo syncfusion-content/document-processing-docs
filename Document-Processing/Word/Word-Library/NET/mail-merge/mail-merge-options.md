@@ -1,5 +1,6 @@
 ---
-title: Mail merge options in .NET Word (DocIO) library | Syncfusion&reg;
+title: Mail merge options in .NET Word (DocIO) library | 
+Syncfusion<sup>&reg;</sup>
 description: Learn how to use mail merge options to map the merge fields, remove unmerged fields, unmerged region, empty paragraphs and more in Word document.
 platform: document-processing
 control: DocIO
@@ -211,7 +212,7 @@ N>If any white space or line break exists in the merge field's parent paragraph,
 
 ## Remove empty merge fields
 
-Essential&reg; DocIO removes or keeps the unmerged merge fields in the output document based on the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property on each mail merge execution.
+Essential<sup>&reg;</sup> DocIO removes or keeps the unmerged merge fields in the output document based on the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property on each mail merge execution.
 
 When a merge field is considered as unmerged during mail merge process?
 
@@ -2026,7 +2027,8 @@ N> This [StartAtNewPage](https://help.syncfusion.com/cr/document-processing/Sync
 
 ## Remove mail merge settings
 
-To **restore a Word mail merge main document to a normal Word document** using Microsoft Word application, you have to process the steps suggested in this [article](https://support.microsoft.com/en-us/topic/how-to-restore-a-mail-merge-main-document-to-a-normal-word-document-in-word-8c956d1d-3457-b728-adc1-0cc94da819fe) manually. You can achieve this programmatically in just 2 lines of code using Syncfusion&reg; Word library.
+To **restore a Word mail merge main document to a normal Word document** using Microsoft Word application, you have to process the steps suggested in this [article](https://support.microsoft.com/en-us/topic/how-to-restore-a-mail-merge-main-document-to-a-normal-word-document-in-word-8c956d1d-3457-b728-adc1-0cc94da819fe) manually. You can achieve this programmatically in just 2 lines of code using 
+Syncfusion<sup>&reg;</sup> Word library.
 
 For example, consider that you have a template Word document linked with the data source for mail merge process. When opening the document using Microsoft Word application, it prompts a window as shown. You can remove the mail merge settings (unlink the data source) to open it as a normal Word document without this pop-up.
 

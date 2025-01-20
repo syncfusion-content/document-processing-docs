@@ -1,5 +1,6 @@
 ---
-title: Convert Word document to EPUB in C# | DocIO | Syncfusion&reg;
+title: Convert Word document to EPUB in C# | DocIO | 
+Syncfusion<sup>&reg;</sup>
 description: Learn how to convert Word document to EPUB  using the .NET Word (DocIO) library without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO
@@ -8,7 +9,7 @@ documentation: UG
 
 # Converting Word document to EPUB
 
-The Word document files are converted as EPUB v2.0 file format with few lines of code by using the Essential&reg; DocIO.
+The Word document files are converted as EPUB v2.0 file format with few lines of code by using the Essential<sup>&reg;</sup> DocIO.
 
 ## Assemblies and NuGet packages required
 

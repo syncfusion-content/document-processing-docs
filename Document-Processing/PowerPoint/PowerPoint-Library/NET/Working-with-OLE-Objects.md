@@ -1,5 +1,6 @@
 ---
-title: Create and edit OLE Objects in PowerPoint files |Syncfusion&reg;|
+title: Create and edit OLE Objects in PowerPoint files |
+Syncfusion<sup>&reg;</sup>|
 description: Create and edit OLE Objects in PowerPoint files; Insert and extract an embedded OLE object in PowerPoint Presentation
 platform: document-processing
 control: Presentation

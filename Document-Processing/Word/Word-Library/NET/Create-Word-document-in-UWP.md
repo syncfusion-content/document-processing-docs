@@ -1,6 +1,8 @@
 ---
-title: Create Word document in UWP | Syncfusion&reg;
-description: Create Word document without Microsoft Word or interop dependencies in UWP application using Syncfusion&reg; UWP Word (DocIO) library.
+title: Create Word document in UWP | 
+Syncfusion<sup>&reg;</sup>
+description: Create Word document without Microsoft Word or interop dependencies in UWP application using 
+Syncfusion<sup>&reg;</sup> UWP Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +10,8 @@ documentation: UG
 
 # Create Word document in UWP
 
-Syncfusion&reg; Essential&reg; DocIO is a [UWP Word library](https://www.syncfusion.com/document-processing/word-framework/uwp/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in UWP**.
+
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [UWP Word library](https://www.syncfusion.com/document-processing/word-framework/uwp/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in UWP**.
 
 ## Steps to create Word document programmatically in UWP:
 
@@ -20,7 +23,9 @@ Step 2: Install the [Syncfusion.DocIO.UWP](https://www.nuget.org/packages/Syncfu
 
 ![Install DocIO UWP NuGet package](UWP_images/Install_NuGet.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Add a new button in the MainPage.xaml as shown below.
 
@@ -340,6 +345,7 @@ By executing the program, you will get the Word document as follows.
 
 ![UWP output Word document](UWP_images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/uwp) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/uwp) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core. 

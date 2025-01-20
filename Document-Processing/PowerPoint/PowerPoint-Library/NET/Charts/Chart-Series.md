@@ -1,5 +1,6 @@
 ---
-title: Modify the Appearance of Series | Syncfusion&reg;
+title: Modify the Appearance of Series | 
+Syncfusion<sup>&reg;</sup>
 description: Learn how to modify the appearance of series in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint

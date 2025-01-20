@@ -1,5 +1,6 @@
 ---
-title: Working with Mathematical Equation | DocIO | Syncfusion&reg;
+title: Working with Mathematical Equation | DocIO | 
+Syncfusion<sup>&reg;</sup>
 description: Learn how to add, modify, and remove mathematical equations in a Word document using the .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -20,7 +21,7 @@ N> You can use mathematical equation only in documents that are saved in the Ope
 
 ## Types of equation
 
-The following different structures of equation can be created by using the Essential&reg; DocIO.
+The following different structures of equation can be created by using the Essential<sup>&reg;</sup> DocIO.
 
 ![Different structures of equation in Microsoft Word application](WorkingwithMathematicalEquation_images/EquationStructures.png)
 

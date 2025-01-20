@@ -1,13 +1,16 @@
 ---
-title: Create and edit PowerPoint files on Mac OS | Syncfusion&reg;
-description: Create, read and edit PowerPoint files in .NET Core application on Mac OS using Syncfusion&reg; .NET Core PowerPoint library (Presentation) without Microsoft Office
+title: Create and edit PowerPoint files on Mac OS | 
+Syncfusion<sup>&reg;</sup>
+description: Create, read and edit PowerPoint files in .NET Core application on Mac OS using 
+Syncfusion<sup>&reg;</sup> .NET Core PowerPoint library (Presentation) without Microsoft Office
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 # Create, read and edit a PowerPoint file on Mac OS
 
-You can create or edit a PowerPoint file in .NET Core on Mac OS using Syncfusion&reg; PowerPoint library. The below are the steps.
+You can create or edit a PowerPoint file in .NET Core on Mac OS using 
+Syncfusion<sup>&reg;</sup> PowerPoint library. The below are the steps.
 
 ## Create a PowerPoint file in .NET Core Console application project on Mac OS
 
@@ -24,7 +27,9 @@ Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 ![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget1.png)
 ![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following Namespaces in the Program.cs file.
 
@@ -122,6 +127,7 @@ pptxDoc.Close();
 
 {% endtabs %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core.

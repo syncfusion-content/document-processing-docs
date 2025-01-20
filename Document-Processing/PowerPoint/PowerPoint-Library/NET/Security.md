@@ -1,5 +1,6 @@
 ---
-title: Encrypting & Decrypting the PowerPoint Presentation | Syncfusion&reg;
+title: Encrypting & Decrypting the PowerPoint Presentation | 
+Syncfusion<sup>&reg;</sup>
 description: This section explains on Encrypting, Decrypting and providing protection for the PowerPoint Presentation.
 platform: document-processing
 control: Presentation
@@ -62,7 +63,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Decrypting the PowerPoint Presentation
 
-Essential&reg; Presentation provides ability to remove the encryption from the PowerPoint Presentation. You can decrypt a PowerPoint Presentation by opening it with the password.
+Essential<sup>&reg;</sup> Presentation provides ability to remove the encryption from the PowerPoint Presentation. You can decrypt a PowerPoint Presentation by opening it with the password.
 
 **Opening** **the** **Encrypted** **PowerPoint** **Presentation**
 

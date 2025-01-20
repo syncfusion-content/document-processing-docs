@@ -1,5 +1,6 @@
 ---
-title: Assemblies required for PowerPoint to PDF conversion | Syncfusion&reg;
+title: Assemblies required for PowerPoint to PDF conversion | 
+Syncfusion<sup>&reg;</sup>
 description: Learn about the assemblies required to convert PowerPoint to PDF using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: Presentation

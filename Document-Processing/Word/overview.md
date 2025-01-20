@@ -1,6 +1,8 @@
 ---
-title: Word Document Processing Framework | Syncfusion&reg;
-description: Syncfusion&reg; Word Document Processing Framework provides Word document processing library, Word converters and Document Editor component without Microsoft Office.
+title: Word Document Processing Framework | 
+Syncfusion<sup>&reg;</sup>
+description: 
+Syncfusion<sup>&reg;</sup> Word Document Processing Framework provides Word document processing library, Word converters and Document Editor component without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
@@ -10,9 +12,11 @@ keywords: Word, SDK, Automation, API, create, view, edit, convert, read
 > With the 2024 Volume 4 release, we will discontinue support for .NET Framework 4.0 in WinForms, WPF, ASP.NET MVC, and Document Processing Libraries. Please plan to upgrade to .NET Framework 4.6.2 or higher.<br>
 With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .Net 8.0 or higher.
 
-# Welcome to Syncfusion&reg; Word Document Processing Framework
+# Welcome to 
+Syncfusion<sup>&reg;</sup> Word Document Processing Framework
 
-Syncfusion&reg; Word Document Processing Framework is a collection of Word document processing library, Word converters and Word Processor component that works without Microsoft Office dependencies. It eases the developers, as they can just integrate and achieve the required Word document processing functionalities and concentrate on core logics of their application.
+
+Syncfusion<sup>&reg;</sup> Word Document Processing Framework is a collection of Word document processing library, Word converters and Word Processor component that works without Microsoft Office dependencies. It eases the developers, as they can just integrate and achieve the required Word document processing functionalities and concentrate on core logics of their application.
 
 
 ## List of Word Document Processing Products:

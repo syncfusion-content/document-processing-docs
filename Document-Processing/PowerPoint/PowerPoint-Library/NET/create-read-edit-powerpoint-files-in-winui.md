@@ -1,5 +1,6 @@
 ---
-title: Create and edit PowerPoint files in WinUI |Syncfusion&reg;|
+title: Create and edit PowerPoint files in WinUI |
+Syncfusion<sup>&reg;</sup>|
 description: A .NET Core PowerPoint library to create, read and edit PowerPoint files in WinUI applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -7,7 +8,8 @@ documentation: UG
 ---
 # Create, read and edit a PowerPoint file in WinUI
 
-Syncfusion&reg; Essential&reg; Presentation is a [WinUI PowerPoint library](https://www.syncfusion.com/powerpoint-framework/winui/powerpoint-library) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in WinUI**.
+
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Presentation is a [WinUI PowerPoint library](https://www.syncfusion.com/powerpoint-framework/winui/powerpoint-library) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in WinUI**.
 
 **Prerequisites:**
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment).
@@ -32,7 +34,9 @@ Step 4: Install the Syncfusion.Presentation.NET NuGet package as a reference to 
 
 ![Install the Presentation .NET Nuget](Workingwith-WinUI/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
@@ -148,7 +152,8 @@ pptxDoc.Save(outputStream);
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core.
 
@@ -174,7 +179,9 @@ Step 4: Install the Syncfusion.Presentation.NET NuGet package as a reference to 
 
 ![Install the Presentation .NET Nuget](Workingwith-WinUI/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -350,6 +357,7 @@ async void Save(MemoryStream stream)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WinUI/WinUI-UWP-app/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core. 

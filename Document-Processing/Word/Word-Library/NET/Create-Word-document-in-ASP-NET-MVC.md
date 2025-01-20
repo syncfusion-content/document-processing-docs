@@ -1,6 +1,8 @@
 ---
-title: Create Word document in ASP.NET MVC | Syncfusion&reg;
-description: Create Word document without Microsoft Word or interop dependencies in ASP.NET MVC application using Syncfusion&reg; .NET Word (DocIO) library.
+title: Create Word document in ASP.NET MVC | 
+Syncfusion<sup>&reg;</sup>
+description: Create Word document without Microsoft Word or interop dependencies in ASP.NET MVC application using 
+Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +10,8 @@ documentation: UG
 
 # Create Word document in ASP.NET MVC
 
-Syncfusion&reg; Essential&reg; DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET MVC**.
+
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET MVC**.
 
 ## Steps to create Word document programmatically:
 
@@ -24,7 +27,9 @@ Step 3: Install the [Syncfusion.DocIO.AspNet.Mvc5](https://www.nuget.org/package
 
 ![Install DocIO ASP.NET MVC NuGet package](ASP-NET-MVC_images/Install_Nuget.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following namespace in that HomeController.cs file.
 
@@ -290,6 +295,7 @@ By executing the program, you will get the Word document as follows.
 
 ![ASP.Net MVC output Word document](ASP-NET-MVC_images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetmvc/Word/HelloWorld#/material3) in ASP.NET MVC. 

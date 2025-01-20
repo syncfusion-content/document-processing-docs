@@ -1,5 +1,6 @@
 ---
-title: Word to PDF conversion FAQs | DocIO | Syncfusion&reg;
+title: Word to PDF conversion FAQs | DocIO | 
+Syncfusion<sup>&reg;</sup>
 description: Learn about the frequently asked questions of Word to PDF conversion in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -8,7 +9,7 @@ documentation: UG
 
 # Frequently Asked Questions
 
-The frequently asked questions about Word to PDF conversion in Essential&reg; DocIO are listed below.
+The frequently asked questions about Word to PDF conversion in Essential<sup>&reg;</sup> DocIO are listed below.
 
 ## Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework? 
 

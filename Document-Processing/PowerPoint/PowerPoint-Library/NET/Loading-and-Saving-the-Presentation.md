@@ -1,6 +1,8 @@
 ---
-title: Loading and saving the PowerPoint Presentation | Syncfusion&reg;
-description: Learn here all about loading, saving,and modifying the Presentation of Syncfusion&reg; PowerPoint Library and more.
+title: Loading and saving the PowerPoint Presentation | 
+Syncfusion<sup>&reg;</sup>
+description: Learn here all about loading, saving,and modifying the Presentation of 
+Syncfusion<sup>&reg;</sup> PowerPoint Library and more.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -344,7 +346,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Closing a PowerPoint Presentation
 
-When you are done with the Presentation instance, you should close the instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) in order to release the memory consumed by Essential&reg; Presentation library. The following code example illustrates how to close an [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) instance.
+When you are done with the Presentation instance, you should close the instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) in order to release the memory consumed by Essential<sup>&reg;</sup> Presentation library. The following code example illustrates how to close an [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) instance.
 
 {% tabs %}
 

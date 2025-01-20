@@ -1,5 +1,6 @@
 ---
-title: Open and save Word document in AWS Elastic Beanstalk | Syncfusion&reg;
+title: Open and save Word document in AWS Elastic Beanstalk | 
+Syncfusion<sup>&reg;</sup>
 description: Open and save Word document without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -8,7 +9,8 @@ documentation: UG
 
 # Open and save Word document in AWS Elastic Beanstalk
 
-Syncfusion&reg; Essential&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in AWS Elastic Beanstalk**.
+
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in AWS Elastic Beanstalk**.
 
 ## Steps to open and save Word document in AWS Elastic Beanstalk
 
@@ -20,7 +22,9 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the **HomeController.cs** file.
 
@@ -135,4 +139,5 @@ By executing the program, you will get the **Word document** as follows.
 
 ![Open and Save in AWS Elastic Beanstalk](ASP-NET-Core_images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion&reg; Word library (DocIO) features.
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> Word library (DocIO) features.

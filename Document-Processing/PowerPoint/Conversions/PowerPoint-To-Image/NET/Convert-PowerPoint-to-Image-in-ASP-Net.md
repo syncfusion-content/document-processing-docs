@@ -1,5 +1,6 @@
 ---
-title: Convert PowerPoint to Image in ASP.NET | Syncfusion&reg;
+title: Convert PowerPoint to Image in ASP.NET | 
+Syncfusion<sup>&reg;</sup>
 description: Convert PowerPoint to image in ASP.NET using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +9,8 @@ documentation: UG
 
 # Convert PowerPoint to Image in ASP.NET
 
-Syncfusion&reg; PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET**.
+
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET**.
 
 N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the .NET Word library from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core).
 
@@ -26,7 +28,9 @@ Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference 
+Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering 
+Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following namespaces in **MainPage.aspx.cs**.
 
@@ -95,6 +99,7 @@ By executing the program, you will get the **image** as follows.
 
 ![PowerPoint to Image in ASP.NET](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of 
+Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core. 

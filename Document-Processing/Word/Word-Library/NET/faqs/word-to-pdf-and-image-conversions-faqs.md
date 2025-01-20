@@ -1,5 +1,6 @@
 ---
-title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion&reg;
+title: FAQ about Word to PDF and image Conversions | DocIO | 
+Syncfusion<sup>&reg;</sup>
 description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -26,7 +27,7 @@ Yes, you can specify the PDF conformance level in Word to PDF conversion. For mo
 
 When the Word document contains metafile images (*.emf or *.wmf), we recommend using Azure Cloud Service.
 
-We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential&reg; DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
+We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential<sup>&reg;</sup> DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
 
 ## Why images are preserved as RedX images in Word to PDF or image conversion?
 
