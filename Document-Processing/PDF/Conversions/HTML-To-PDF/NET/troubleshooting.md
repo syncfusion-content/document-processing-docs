@@ -1271,6 +1271,72 @@ Refer to the following documentation for more details:
 
 </table>
 
+## Failed to launch chromium: Missing required dependent packages issue occurs in Azure App Service (Linux)
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Failed to launch chromium: Missing required dependent packages issue occurs in Azure App Service (Linux)
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+This issue may occur due to one of the following reasons:
+1. Missing required Linux dependencies
+2. Missing Chromium dependency files
+3. Lack of access permissions for the chrome and chrome-wrapper files
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To resolve the issue and ensure successful HTML to PDF conversion in Azure App Service (Linux), follow these steps:
+
+1: <b>Grant File Access Permissions</b>
+
+Provide read, write, and execute permissions for the chrome and chrome-wrapper files located in the runtimes/linux/native directory. Use the following commands:
+
+{% tabs %}
+{% highlight C# %}
+
+chmod +rwx   chrome-wrapper
+chmod +rwx  chrome
+	
+{% endhighlight %}
+{% endtabs %}
+
+2: <b>Verify Chrome Dependency Packages</b>
+
+Check if the necessary dependencies for Chromium are installed by running the following command in the runtimes/linux/native directory:
+
+{% tabs %}
+{% highlight C# %}
+
+ldd chrome
+	
+{% endhighlight %}
+{% endtabs %}
+
+3: <b>Install Required Dependencies</b>
+
+We can also perform HTML to PDF conversion in Azure App Service (Linux) by installing the required dependencies directly through SSH terminal. Use the following command:
+
+{% tabs %}
+{% highlight C# %}
+
+apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
+	
+{% endhighlight %}
+{% endtabs %}
+
+For more details to install the dependencies through SSH terminal window, refer to the documentation:
+<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Convert HTML to PDF in Azure App Service on Linux| Syncfusion</a>
+
+</td>
+</tr>
+
+</table>
 
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
