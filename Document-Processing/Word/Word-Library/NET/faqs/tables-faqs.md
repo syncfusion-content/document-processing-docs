@@ -382,113 +382,100 @@ DocIO also follows the same limitation and does not allow inserting a page break
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-// Load the Word document from the specified file path.
-using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Template.docx"), FileMode.Open, FileAccess.Read))
+//Loads an existing Word document into DocIO instance
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+// Access the table from the specified index in the document's body.
+WTable table = document.Sections[0].Body.ChildEntities[4] as WTable;
+// Check if the table contains 2 or more rows.
+if (table != null && table.Rows.Count >= 2)
 {
-    using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
-    {
-        // Access the table from the specified index in the document's body.
-        WTable table = document.Sections[0].Body.ChildEntities[4] as WTable;
-            // Check if the table contains 2 or more rows.
-            if (table != null && table.Rows.Count >= 2)
-            {
-                // Clone and remove the first row of the table.
-                WTableRow clonedRow = table.Rows[0].Clone();
-                table.Rows.RemoveAt(0);
-                // Get the text body of the table.
-                WTextBody documentBody = table.OwnerTextBody;
-                // Determine the index of the current table in the document body.
-                int currentTableIndex = documentBody.ChildEntities.IndexOf(table);
-                // Create a new paragraph and add a page break.
-                WParagraph pageBreakParagraph = new WParagraph(document);
-                pageBreakParagraph.AppendBreak(BreakType.PageBreak);
-                // Insert the new paragraph (with page break) before the current table.
-                documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph);
-                // Create a new table and insert it before the page break paragraph.
-                WTable newTable = new WTable(document);
-                documentBody.ChildEntities.Insert(currentTableIndex, newTable);
-                // Add the cloned row to the newly created table.
-                newTable.Rows.Add(clonedRow);
-            }
-        // Save the modified document to the specified file path.
-        using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/Result.docx"), FileMode.Create, FileAccess.Write))
-        {
-            document.Save(outputStream, FormatType.Docx);
-        }
-    }
+    // Clone and remove the first row of the table.
+    WTableRow clonedRow = table.Rows[0].Clone();
+    table.Rows.RemoveAt(0);
+    // Get the text body of the table.
+    WTextBody documentBody = table.OwnerTextBody;
+    // Determine the index of the current table in the document body.
+    int currentTableIndex = documentBody.ChildEntities.IndexOf(table);
+    // Create a new paragraph and add a page break.
+    WParagraph pageBreakParagraph = new WParagraph(document);
+    pageBreakParagraph.AppendBreak(BreakType.PageBreak);
+    // Insert the new paragraph (with page break) before the current table.
+    documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph);
+    // Create a new table and insert it before the page break paragraph.
+    WTable newTable = new WTable(document);
+    documentBody.ChildEntities.Insert(currentTableIndex, newTable);
+    // Add the cloned row to the newly created table.
+    newTable.Rows.Add(clonedRow);
 }
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-// Load the Word document from the specified file path.
-using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Template.docx"), FileMode.Open, FileAccess.Read))
+//Creates an instance of WordDocument class
+WordDocument document = new WordDocument();
+document.Open("Template.docx", FormatType.Docx);
+// Access the table from the specified index in the document's body.
+WTable table = document.Sections[0].Body.ChildEntities[4] as WTable;
+// Check if the table contains 2 or more rows.
+if (table != null && table.Rows.Count >= 2)
 {
-    using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
-    {
-        // Access the table from the specified index in the document's body.
-        WTable table = document.Sections[0].Body.ChildEntities[4] as WTable;
-            // Check if the table contains 2 or more rows.
-            if (table != null && table.Rows.Count >= 2)
-            {
-                // Clone and remove the first row of the table.
-                WTableRow clonedRow = table.Rows[0].Clone();
-                table.Rows.RemoveAt(0);
-                // Get the text body of the table.
-                WTextBody documentBody = table.OwnerTextBody;
-                // Determine the index of the current table in the document body.
-                int currentTableIndex = documentBody.ChildEntities.IndexOf(table);
-                // Create a new paragraph and add a page break.
-                WParagraph pageBreakParagraph = new WParagraph(document);
-                pageBreakParagraph.AppendBreak(BreakType.PageBreak);
-                // Insert the new paragraph (with page break) before the current table.
-                documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph);
-                // Create a new table and insert it before the page break paragraph.
-                WTable newTable = new WTable(document);
-                documentBody.ChildEntities.Insert(currentTableIndex, newTable);
-                // Add the cloned row to the newly created table.
-                newTable.Rows.Add(clonedRow);
-            }
-        // Save the modified document to the specified file path.
-        using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/Result.docx"), FileMode.Create, FileAccess.Write))
-        {
-            document.Save(outputStream, FormatType.Docx);
-        }
-    }
+    // Clone and remove the first row of the table.
+    WTableRow clonedRow = table.Rows[0].Clone();
+    table.Rows.RemoveAt(0);
+    // Get the text body of the table.
+    WTextBody documentBody = table.OwnerTextBody;
+    // Determine the index of the current table in the document body.
+    int currentTableIndex = documentBody.ChildEntities.IndexOf(table);
+    // Create a new paragraph and add a page break.
+    WParagraph pageBreakParagraph = new WParagraph(document);
+    pageBreakParagraph.AppendBreak(BreakType.PageBreak);
+    // Insert the new paragraph (with page break) before the current table.
+    documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph);
+    // Create a new table and insert it before the page break paragraph.
+    WTable newTable = new WTable(document);
+    documentBody.ChildEntities.Insert(currentTableIndex, newTable);
+    // Add the cloned row to the newly created table.
+    newTable.Rows.Add(clonedRow);
 }
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-' Load the Word document from the specified file path.
-Using inputStream As New FileStream(Path.GetFullPath("Data/Template.docx"), FileMode.Open, FileAccess.Read)
-    Using document As New WordDocument(inputStream, FormatType.Docx)
-        ' Access the table from the specified index in the document's body.
-        Dim table As WTable = TryCast(document.Sections(0).Body.ChildEntities(4), WTable)
-        ' Check if the table contains 2 or more rows.
-        If table IsNot Nothing AndAlso table.Rows.Count >= 2 Then
-            ' Clone and remove the first row of the table.
-            Dim clonedRow As WTableRow = table.Rows(0).Clone()
-            table.Rows.RemoveAt(0)
-            ' Get the text body of the table.
-            Dim documentBody As WTextBody = table.OwnerTextBody
-            ' Determine the index of the current table in the document body.
-            Dim currentTableIndex As Integer = documentBody.ChildEntities.IndexOf(table)
-            ' Create a new paragraph and add a page break.
-            Dim pageBreakParagraph As New WParagraph(document)
-            pageBreakParagraph.AppendBreak(BreakType.PageBreak)
-            ' Insert the new paragraph (with page break) before the current table.
-            documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph)
-            ' Create a new table and insert it before the page break paragraph.
-            Dim newTable As New WTable(document)
-            documentBody.ChildEntities.Insert(currentTableIndex, newTable)
-            ' Add the cloned row to the newly created table.
-            newTable.Rows.Add(clonedRow)
-        End If
-        ' Save the modified document to the specified file path.
-        Using outputStream As New FileStream(Path.GetFullPath("Output/Result.docx"), FileMode.Create, FileAccess.Write)
-            document.Save(outputStream, FormatType.Docx)
-        End Using
-    End Using
-End Using
+'Creates an instance of WordDocument class
+Dim document As New WordDocument()
+document.Open("Template.docx", FormatType.Docx)
+' Access the table from the specified index in the document's body.
+Dim table As WTable = TryCast(document.Sections(0).Body.ChildEntities(4), WTable)
+' Check if the table contains 2 or more rows.
+If table IsNot Nothing AndAlso table.Rows.Count >= 2 Then
+    ' Clone and remove the first row of the table.
+    Dim clonedRow As WTableRow = CType(table.Rows(0).Clone(), WTableRow)
+    table.Rows.RemoveAt(0)
+    ' Get the text body of the table.
+    Dim documentBody As WTextBody = table.OwnerTextBody
+    ' Determine the index of the current table in the document body.
+    Dim currentTableIndex As Integer = documentBody.ChildEntities.IndexOf(table)
+    ' Create a new paragraph and add a page break.
+    Dim pageBreakParagraph As New WParagraph(document)
+    pageBreakParagraph.AppendBreak(BreakType.PageBreak)
+    ' Insert the new paragraph (with page break) before the current table.
+    documentBody.ChildEntities.Insert(currentTableIndex, pageBreakParagraph)
+    ' Create a new table and insert it before the page break paragraph.
+    Dim newTable As New WTable(document)
+    documentBody.ChildEntities.Insert(currentTableIndex, newTable)
+    ' Add the cloned row to the newly created table.
+    newTable.Rows.Add(clonedRow)
+End If
+'Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
