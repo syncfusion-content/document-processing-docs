@@ -10,11 +10,11 @@ documentation: UG
 
 Layers, also known as Option Content refers to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers. This capability is useful in items such as CAD drawings, layered artwork, maps, and multi-language documents.
 
-Essential&reg; PDF provides support to create, add and merge the layers into PDF document.
+Essential<sup>&reg;</sup> PDF provides support to create, add and merge the layers into PDF document.
 
 ## Adding Layers in a PDF document
 
-Essential&reg; PDF allows the users to create a layer in a PDF page using [PdfPageLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayer.html) class. The below code example illustrates how to add the multiple layers in a new PDF document.
+Essential<sup>&reg;</sup> PDF allows the users to create a layer in a PDF page using [PdfPageLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayer.html) class. The below code example illustrates how to add the multiple layers in a new PDF document.
 
 {% tabs %} 
 
@@ -229,7 +229,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding annotation to layer
 
-Essential&reg; PDF allows the users to add different types of [Annotation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations) to layers in the PDF document using [Layer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Layer) property in [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) class. The following code example illustrates the same. 
+Essential<sup>&reg;</sup> PDF allows the users to add different types of [Annotation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations) to layers in the PDF document using [Layer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Layer) property in [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) class. The following code example illustrates the same. 
 
 {% tabs %}  
 
@@ -438,7 +438,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Nested Layers
 
-Essential&reg; PDF allows users to add nested layers in the PDF document by adding child layer to parent layer using [Layers](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Layers) property of [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class. Refer to the following code example. 
+Essential<sup>&reg;</sup> PDF allows users to add nested layers in the PDF document by adding child layer to parent layer using [Layers](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html#Syncfusion_Pdf_PdfLayer_Layers) property of [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class. Refer to the following code example. 
 
 {% tabs %} 
 
@@ -971,7 +971,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing the layer with its graphical content
 
-The Syncfusion&reg; PDF library allows users to remove layers from PDF documents, and we can also remove the graphical content of layers upto n layer recursively.
+The Syncfusion<sup>&reg;</sup> PDF library allows users to remove layers from PDF documents, and we can also remove the graphical content of layers upto n layer recursively.
 We can remove  layers from the layer collection, represented by the ['PdfPageLayerCollection'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html) of the loaded page by mentioning only the index ['RemoveAt(0)'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_Remove_System_String_). We can also remove the graphic content of the layer by using ['RemoveAt(0, true)'](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentLayerCollection.html#Syncfusion_Pdf_PdfDocumentLayerCollection_RemoveAt_System_Int32_System_Boolean_) method from the layer collection by mentioning the index and enabling the removeGraphicalContent parameter.
 
 This is illustrated in the following code sample.

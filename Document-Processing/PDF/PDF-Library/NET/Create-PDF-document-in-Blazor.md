@@ -8,9 +8,9 @@ documentation: UG
 
 # Create or Generate PDF file in Blazor
 
-The Syncfusion&reg; [Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
 
-To include the Syncfusion&reg; Blazor PDF library into your Blazor application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
+To include the Syncfusion<sup>&reg;</sup> Blazor PDF library into your Blazor application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
@@ -29,7 +29,7 @@ Step 3: Choose Blazor Server App from the dashboard and click Create button to c
 Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Create a new cs file named  ``ExportService`` under ``Data`` folder and include the following namespaces in the file.
 
@@ -217,7 +217,7 @@ Click the Export to PDF button, and you will get the PDF document with the follo
 
 N> It is recommended to use Blazor Server-Side application to reduce the pay back load which is high in Blazor Client-Side.
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion&reg; PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
 
@@ -235,7 +235,7 @@ Step 3: Blazor WebAssembly App from the dashboard and click Create button to cre
 Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file.
 
@@ -374,7 +374,7 @@ By executing the program, you will get the following output in the browser.
 Click the Export to PDF button and you will get the PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion&reg; PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
 
@@ -841,4 +841,4 @@ By running the program, you will see the output in the browser when you click th
 Click the `Export to PDF` button to get the PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)    
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion&reg; PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

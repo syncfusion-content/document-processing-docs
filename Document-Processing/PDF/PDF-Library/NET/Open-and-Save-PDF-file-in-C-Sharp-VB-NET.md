@@ -8,7 +8,7 @@ documentation: UG
 # Open and save PDF file in C# and VB.NET
 
 ## Namespace required 
-The following namespaces of Essential&reg; PDF need to be included in your application to load and save the PDF document. 
+The following namespaces of Essential<sup><sup>&reg;</sup></sup> PDF need to be included in your application to load and save the PDF document. 
 
 {% tabs %}
 
