@@ -2462,3 +2462,49 @@ N> EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTML
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Get-Bounds-in-HTML-file/.NET).
+
+## Image Background
+
+The Blink HTML converter support adding the image background from HTML to Image using the ImageBackgroundColor property in BlinkConverterSettings class. Refer to the following code sample.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF/.NET/Image_Background_In_HTML_to_PDF/Program.cs, 300" %}
+
+    //Initialize HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    //Initialize the BlinkConverterSettings.
+    BlinkConverterSettings settings = new BlinkConverterSettings();
+    //Set the Image Background color.
+    settings.ImageBackgroundColor = Color.Transparent;
+    //Assign the BlinkConverterSettings to the ConverterSettings property of HtmlToPdfConverter.
+    htmlConverter.ConverterSettings = settings;
+    //Convert HTML to Image.
+    Image image = htmlConverter.ConvertToImage("Input.html");
+    //Save the Image.
+    byte[] imageByte = image.ImageData;
+    File.WriteAllBytes("Output.png", imageByte);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Initialize HTML to PDF converter.
+    Dim htmlConverter As New HtmlToPdfConverter()
+    ' Initialize the BlinkConverterSettings.
+    Dim settings As New BlinkConverterSettings()
+    ' Set the Image Background color.
+    settings.ImageBackgroundColor = Color.Transparent
+    ' Assign the BlinkConverterSettings to the ConverterSettings property of HtmlToPdfConverter.
+    htmlConverter.ConverterSettings = settings
+    ' Convert HTML to Image.
+    Dim image As Image = htmlConverter.ConvertToImage("Input.html")
+    ' Save the Image.
+    Dim imageByte As Byte() = image.ImageData
+    File.WriteAllBytes("Output.png", imageByte)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF).
