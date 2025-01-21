@@ -87,7 +87,7 @@ Install the VC++ 2015 redistributable files in your machine to overcome an excep
 <br/>
 <b>Refer to the following screenshot:</b>
 <br/>
-<img src="OCR-Images/Redistributable-file.png" alt="Visual C++ 2015 Redistributable file">
+<img src="OCR-Images/net-pdf-redistributable-file.png" alt="Visual C++ 2015 redistributable file in .NET PDF.">
 <br/><br/>
 Please find the download link Visual C++ 2015 Redistributable file,<br>
 <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">Visual C++ 2015 Redistributable file</a> 
@@ -269,7 +269,7 @@ sudo apt-get install libleptonica-dev
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img src="OCR-Images/Install-leptonica.png">
+<img src="OCR-Images/net-pdf-install-leptonica.png" alt="Install leptonice in .NET PDF.">
 <br><br>
 2.Install the tesseract.
 <br>
@@ -281,7 +281,7 @@ sudo apt-get install tesseract-ocr-eng
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img src="OCR-Images/Install-tesseract.png">
+<img src="OCR-Images/net-pdf-install-tesseract.png" alt="Install tesseract in .NET PDF.">
 <br><br>
 3. Copy the binaries (liblept.so and libtesseract.so) to the missing files exception folder in the project location.
 <br>
