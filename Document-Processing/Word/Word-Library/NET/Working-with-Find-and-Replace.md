@@ -352,7 +352,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-whole-words-only).
 
-###  Find next occurrence
+### Find next occurrence
 
 The following code example illustrates how to find the next occurrence in the document.
 
