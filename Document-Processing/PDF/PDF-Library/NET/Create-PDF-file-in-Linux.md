@@ -9,7 +9,7 @@ Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
 
 # Create PDF document on Linux
 
-The Syncfusion&reg; [.NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core/pdf-library?_gl=1*hkw2o1*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY4NjIwMzM2Ny4xOTkuMS4xNjg2MjA3OTA2LjM4LjAuMA..&_ga=2.247303364.1146118023.1685935856-97077949.1681102104) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **create a PDF document in ASP.NET Core application on Linux**.
+The Syncfusion<sup>&reg;</sup> [.NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core/pdf-library?_gl=1*hkw2o1*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY4NjIwMzM2Ny4xOTkuMS4xNjg2MjA3OTA2LjM4LjAuMA..&_ga=2.247303364.1146118023.1685935856-97077949.1681102104) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **create a PDF document in ASP.NET Core application on Linux**.
 
 ## Steps to create PDF document programmatically
 
@@ -29,7 +29,7 @@ dotnet add package Syncfusion.Pdf.Net.Core -v xx.x.x.xx -s https://www.nuget.org
 
 {% endhighlight %}
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following Namespaces in the *Program.cs* file.
 
@@ -131,4 +131,4 @@ A complete working sample can be downloaded from [Github](https://github.com/Syn
 By executing the program, you will get the **PDF document** as follows. The output will be saved in parallel to program.cs file.
 ![Linux output PDF document](GettingStarted_images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion&reg; PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

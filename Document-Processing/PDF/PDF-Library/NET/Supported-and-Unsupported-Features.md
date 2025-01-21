@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Supported and Unsupported Features 
 
-The following table shows the various features available in the Essential&reg; PDF and their availability in different platforms.
+The following table shows the various features available in the Essential<sup>&reg;</sup> PDF and their availability in different platforms.
 
 <table>
 <thead>

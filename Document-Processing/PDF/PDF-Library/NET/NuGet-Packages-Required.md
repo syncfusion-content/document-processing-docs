@@ -115,8 +115,8 @@ Windows UI (WinUI) <br/>
   </tbody>
 </table>
 
-N> 1. Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
-N> 2. From the Essential Studio&reg; 2018 Volume 3 release(v16.3.0.21), Syncfusion&reg; has changed some of the NuGet package names to search and find the required Syncfusion&reg; NuGet packages in nuget.org easily based on the control and its platforms.
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release(v16.3.0.21), Syncfusion<sup>&reg;</sup> has changed some of the NuGet package names to search and find the required Syncfusion<sup>&reg;</sup> NuGet packages in nuget.org easily based on the control and its platforms.
 
 ## Converting HTML to PDF
 
@@ -222,7 +222,7 @@ ASP.NET MVC
 </table>
 
 N> 1. HTML to PDF conversion is not supported in Silverlight, Windows Phone, WinRT, Universal, Xamarin and UWP applications.
-N> 2. Starting with v21.1.XX, The package structure is changed if you reference Syncfusion&reg; HTML to the PDF library from the NuGet feed. The Blink binaries paths are automatically added and do not need to add it manually. However, if you need to refer the blink binaries paths in your application manually, please use the BlinkPath in BlinkConverterSettings. Get the BlinkBinaries from the NuGet package runtime folder or get the binaries by installing the HTML converter installer.
+N> 2. Starting with v21.1.XX, The package structure is changed if you reference Syncfusion<sup>&reg;</sup> HTML to the PDF library from the NuGet feed. The Blink binaries paths are automatically added and do not need to add it manually. However, if you need to refer the blink binaries paths in your application manually, please use the BlinkPath in BlinkConverterSettings. Get the BlinkBinaries from the NuGet package runtime folder or get the binaries by installing the HTML converter installer.
 
 ## PDF OCR
 
@@ -573,7 +573,7 @@ Xamarin
         ASP.NET
       </td>
       <td>
-        Syncfusion.PresentationToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet/)'| markdownify }}
+        {{'[Syncfusion.PresentationToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet/)'| markdownify }}
       </td>
     </tr>
   </tbody>
@@ -585,7 +585,7 @@ To use NuGet package in your project, please refer the NuGet Package [Installati
 
 PDF NuGet packages can be installed and uninstalled using Package Manager Console. In Visual Studio, select **Tools > NuGet Package Manager > Package Manager Console** and execute the below commands in respective platforms.
 
-N> Syncfusion&reg; components are available in [nuget.org](https://www.nuget.org/)
+N> Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/)
 
 <table>
 <tr>

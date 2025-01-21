@@ -8,9 +8,9 @@ documentation: ug
 
 ---
 
-# Downloading Syncfusion&reg; PDF web Installer
+# Downloading Syncfusion<sup>&reg;</sup> PDF web Installer
 
-[PDF](https://www.syncfusion.com/pdf-framework/net) controls will be included in the Syncfusion&reg; PDF installer. You can either download the licensed installer or try our trial installer depending on your license. 
+[PDF](https://www.syncfusion.com/pdf-framework/net) controls will be included in the Syncfusion<sup>&reg;</sup> PDF installer. You can either download the licensed installer or try our trial installer depending on your license. 
 
    -	Trial Installer
    -	Licensed Installer
@@ -26,14 +26,14 @@ Our 30-day trial can be downloaded in two ways.
 ### Download Free Trial Setup
 
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the PDF platform.
-2. After completing the required form or logging in with your registered Syncfusion&reg; account, you can download the PDF trial installer from the confirmation page. (as shown in below screenshot.) 
+2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the PDF trial installer from the confirmation page. (as shown in below screenshot.) 
    
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
-4. After downloading, the Syncfusion&reg; PDF trial installer can be unlocked using either the trial unlock key or the Syncfusion&reg; registered login credential. More information on generating an unlock key can be found in [this](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article.
+4. After downloading, the Syncfusion<sup>&reg;</sup> PDF trial installer can be unlocked using either the trial unlock key or the Syncfusion<sup>&reg;</sup> registered login credential. More information on generating an unlock key can be found in [this](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article.
 5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
-6. Click the Download (element 1 in the screenshot below) button to get the Syncfusion Essential Studio&reg; PDF web installer.
+6. Click the Download (element 1 in the screenshot below) button to get the Syncfusion Essential Studio<sup>&reg;</sup> PDF web installer.
  
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
 
@@ -47,7 +47,7 @@ You should initiate an evaluation if you have already obtained our components th
    
    ![Trial and downloads of Syncfusion Essential Studio](images/start-trial-download.png)
    
-2. To access this page, you must sign up\log in with your Syncfusion&reg; account.
+2. To access this page, you must sign up\log in with your Syncfusion<sup>&reg;</sup> account.
 3. Begin your trial by selecting the PDF product. 
 
    N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
@@ -61,7 +61,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 ## Download the License Version
 
-1. Syncfusion&reg; licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion&reg; account.
+1. Syncfusion<sup>&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup>&reg;</sup> account.
 2. You can view all the licenses (both active and expired) associated with your account.
 3. Click the Download (element 1 in the screenshot below) button to download the respective product’s installer.
 4. The most recent version of the installer will be downloaded from this page.
@@ -74,8 +74,8 @@ You should initiate an evaluation if you have already obtained our components th
    
    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-web-installer.png)
    
-8. After downloading, the Syncfusion&reg; PDF web installer can be unlocked using Syncfusion&reg; registered login credential.
+8. After downloading, the Syncfusion<sup>&reg;</sup> PDF web installer can be unlocked using Syncfusion<sup>&reg;</sup> registered login credential.
 
-   N> For Syncfusion&reg; trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion&reg; trial or licensed products will be installed via web installer.
+   N> For Syncfusion<sup>&reg;</sup> trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion<sup>&reg;</sup> trial or licensed products will be installed via web installer.
 
 You can also refer to the [**Web installer**](https://help.syncfusion.com/PDF/installation/web-installer/how-to-install) links for step-by-step installation guidelines.	

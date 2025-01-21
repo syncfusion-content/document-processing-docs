@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read, and edit Excel files in WinUI
 
-Syncfusion&reg; Excel library for WinUI platform can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+Syncfusion<sup>&reg;</sup> Excel library for WinUI platform can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 
 ## Create a simple Excel report
 
@@ -29,7 +29,7 @@ Step 4: Install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfu
 
 ![Install Syncfusion.XlsIO.NET Nuget Package](WinUI_images/WinUI_images_img4.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 {% capture codesnippet1 %}
@@ -340,6 +340,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 A complete working example of how to read and edit an Excel file in WinUI in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/WinUI/Edit%20Excel).
 
-Click [here](https://www.syncfusion.com/document-processing/excel-framework/winui) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.

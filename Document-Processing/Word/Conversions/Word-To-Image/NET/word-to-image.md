@@ -195,7 +195,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/First-page-of-Word-to-image).
 
-## Convert a specific range of pages in Word to images
+### Convert a specific range of pages in Word to images
 
 Users can convert a specific range of pages in a Word document into images. The following code example illustrates how to convert a specific range of pages in a Word document into images.
 

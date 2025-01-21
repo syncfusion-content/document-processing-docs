@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Color Spaces in File Formats PDF library
 
-[Syncfusion&reg; .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) allows you to set color spaces in different ways.
+[Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) allows you to set color spaces in different ways.
 
 * Document Color Space
 * Graphics Color Space
@@ -552,8 +552,10 @@ PdfPage page = document.Pages.Add();
 //Creates exponential interpolation function
 PdfExponentialInterpolationFunction function = new PdfExponentialInterpolationFunction(true);
 float[] numberArray = new float[4];
-numberArray[0] = 0.38f;
-numberArray[1] = 0.88f;
+numberArray[0] = 0f;
+numberArray[1] = 0.44f;
+numberArray[2] = 0.87f;
+numberArray[3] = 0.10f;
 function.C1 = numberArray;
 
 //Creates SeparationColorSpace

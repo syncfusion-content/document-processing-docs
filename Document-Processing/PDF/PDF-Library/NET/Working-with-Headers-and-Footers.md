@@ -7,11 +7,11 @@ documentation: UG
 ---
 # Working with Headers and Footers 
 
-Essential&reg; PDF supports to draw the header and footer in PDF document using [PdfPageTemplateElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageTemplateElement.html) class. The header and footer can contain any types of element including dynamic fields.
+Essential<sup>&reg;</sup> PDF supports to draw the header and footer in PDF document using [PdfPageTemplateElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageTemplateElement.html) class. The header and footer can contain any types of element including dynamic fields.
 
 ## Adding an automatic field in header and footer
 
-Essential&reg; PDF supports to add page count, page numbers, date and time using dynamic fields such as [PdfPageCountField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageCountField.html), [PdfPageNumberField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageNumberField.html) etc.
+Essential<sup>&reg;</sup> PDF supports to add page count, page numbers, date and time using dynamic fields such as [PdfPageCountField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageCountField.html), [PdfPageNumberField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageNumberField.html) etc.
 
 The below code snippet explains how to draw the page numbers in footer using automatic fields.
 
