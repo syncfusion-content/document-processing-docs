@@ -74,9 +74,9 @@ Refer to the image below for guidance on selecting the Install for all users opt
 
 To use fonts for Word to PDF or image conversion in Docker, ensure that the fonts used in the Word document are available within the Docker environment. By default, the Docker container may not have all the necessary fonts, which could lead to issues such as missing or unpreserved fonts during the conversion process.
 
-To resolve this, place the required font files in a Fonts folder within the Docker container. Typically, fonts are stored in the /usr/share/fonts directory, but for your setup, you should copy the necessary fonts to /usr/local/share/fonts/ before performing the conversion.
+To resolve this, place the required font files in a **Fonts folder** which parallel to the sln file in Docker container. Typically, the fonts present in the Docker container location “/usr/local/share/fonts/” is used for the conversion. By default, there will be limited number of fonts available in the container. You should copy necessary fonts to this location “/usr/local/share/fonts/” before conversion.
 
-Refer to the image below to place the necessary fonts in “Fonts folder” in Docker sample.
+Refer to the image below to understand where to place the Fonts folder in the Docker sample:
 ![Install for all users](../FAQ_images/Install-for-all-users.png)
 
 To make the process easier, refer to the [GitHub repository](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Copy-fonts-to-linux-containers) that provides a sample Dockerfile with code and steps to copy fonts into the Docker container. You can follow the [sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Docker/Debian/WordToPDFDockerSample) to perform Word to PDF conversion in a Linux-based Docker container. Additionally, consult the [article](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion) on how to resolve font-related issues during Word to PDF or image conversion for further guidance.
