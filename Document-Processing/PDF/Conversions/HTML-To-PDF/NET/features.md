@@ -2362,7 +2362,7 @@ Refer to the following code sample to enable local file access
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Initialize HTML to PDF converter with a using statement to ensure disposal
 using (HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter())
