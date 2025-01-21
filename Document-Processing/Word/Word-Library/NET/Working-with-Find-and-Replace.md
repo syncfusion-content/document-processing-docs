@@ -234,8 +234,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The following code example illustrates how to find a particular text by matching case in the document.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-match-case/.NET/Find-match-case/Program.cs" %}
@@ -297,8 +295,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The following code example illustrates how to find a whole word in the document.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-whole-words-only/.NET/Find-whole-words-only/Program.cs" %}
@@ -355,6 +351,85 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-whole-words-only).
+
+###  Find next occurrence
+
+The following code example illustrates how to find the next occurrence in the document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-next/.NET/Find-next/Program.cs" %}
+//Loads the template document
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("as graphical contents", false, true);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Finds the next occurrence of a particular text from the previous paragraph
+textSelection = document.FindNext(textRange.OwnerParagraph, "paragraph", true, false);
+//Gets the found text as single text range
+WTextRange range = textSelection.GetAsOneRange();
+//Sets bold formatting
+range.CharacterFormat.Bold = true;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("as graphical contents", false, true);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Finds the next occurrence of a particular text from the previous paragraph
+textSelection = document.FindNext(textRange.OwnerParagraph, "paragraph", true, false);
+//Gets the found text as single text range
+WTextRange range = textSelection.GetAsOneRange();
+//Sets bold formatting
+range.CharacterFormat.Bold = true;
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx", FormatType.Docx)
+'Find the first occurrence of a particular text in the document
+Dim textSelection As TextSelection = document.Find("as graphical contents", False, True)
+'Gets the found text as single text range
+Dim textRange As WTextRange = textSelection.GetAsOneRange()
+'Modifies the text
+textRange.Text = "Replaced text"
+'Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow
+'Finds the next occurrence of a particular text from the previous paragraph
+textSelection = document.FindNext(textRange.OwnerParagraph, "paragraph", True, False)
+'Gets the found text as single text range
+Dim range As WTextRange = textSelection.GetAsOneRange()
+'Sets bold formatting
+range.CharacterFormat.Bold = True
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next).
 
 ## Replacing the Search results
 
@@ -1734,7 +1809,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Find and format text
 
-### Find text in a Word document and format 
+You can able to find and format the text in Word document using DocIO.
+
+### Find and highlight all in Word document
 
 You can find text in a Word document and format or highlight it .You can find the first occurrence of text using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
 
