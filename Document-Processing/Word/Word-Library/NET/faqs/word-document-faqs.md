@@ -369,17 +369,14 @@ using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocu
             {
                 // Configure comparison options to ignore formatting changes.
                 ComparisonOptions compareOptions = new ComparisonOptions();
-                compareOptions.DetectFormatChanges = false;
-	            
+                compareOptions.DetectFormatChanges = false;            
                 // Compare the documents.
-                originalDocument.Compare(revisedDocument);
-	            
+                originalDocument.Compare(revisedDocument);	            
                 // Check if there are content differences.
                 if (originalDocument.HasChanges)
                     Console.WriteLine("Differences detected in the document content.");
                 else
-                    Console.WriteLine("The documents have the same content.");
-	            
+                    Console.WriteLine("The documents have the same content."); 
                 Console.ReadLine();
             }
         }                 
@@ -397,16 +394,13 @@ using (WordDocument originalDocument = new WordDocument("Data/OriginalDocument.d
         // Configure comparison options to ignore formatting changes.
         ComparisonOptions compareOptions = new ComparisonOptions();
         compareOptions.DetectFormatChanges = false;
-
         // Compare the documents.
         originalDocument.Compare(revisedDocument);
-
         // Check if there are content differences.
         if (originalDocument.HasChanges)
             Console.WriteLine("Differences detected in the document content.");
         else
             Console.WriteLine("The documents have the same content.");
-
         Console.ReadLine();        
     }
 }
@@ -420,17 +414,14 @@ Using originalDocument As New WordDocument("Data/OriginalDocument.docx", FormatT
         ' Configure comparison options to ignore formatting changes.
         Dim compareOptions As New ComparisonOptions()
         compareOptions.DetectFormatChanges = False
-
         ' Compare the documents.
         originalDocument.Compare(revisedDocument)
-
         ' Check if there are content differences.
         If originalDocument.HasChanges Then
             Console.WriteLine("Differences detected in the document content.")
         Else
             Console.WriteLine("The documents have the same content.")
         End If
-
         Console.ReadLine()
     End Using
 End Using
