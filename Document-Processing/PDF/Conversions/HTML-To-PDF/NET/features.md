@@ -2354,11 +2354,14 @@ N>  EnableAutoScaling and GetHtmlBounds cannot be used simultaneously in the HTM
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Enable-Autoscaling/.NET).
 
-## Enable local file access
+## Restrict External Resource Access for Local HTML Content
 
 The Blink HTML converter allows controlling access to local files during the HTML-to-PDF conversion process using the [EnableLocalFileAccess](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableLocalFileAccess) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
+The [EnableLocalFileAccess](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableLocalFileAccess) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class controls whether the Blink HTML converter can access local files, such as external CSS, images, and other resources, during the HTML-to-PDF conversion process.
 
-Refer to the following code sample to enable local file access
+Disabling this property enhances security by restricting access to local file paths, preventing potentially unsafe or unauthorized file inclusion.
+
+Refer to the following code sample to Disabling local file access
 
 {% tabs %}
 
@@ -2372,7 +2375,7 @@ using (HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter())
     // Set Blink viewport size
     blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
 
-    // EnableLocalFileAccess=false restricts external CSS and images in local HTML content
+    // Restricts external CSS and images in local HTML content
     blinkConverterSettings.EnableLocalFileAccess = false;
 
     // Assign Blink converter settings to HTML converter
@@ -2402,7 +2405,7 @@ Using htmlConverter As New HtmlToPdfConverter()
     ' Set Blink viewport size
     blinkConverterSettings.ViewPortSize = New Syncfusion.Drawing.Size(1280, 0)
 
-    ' EnableLocalFileAccess=False restricts external CSS and images in local HTML content
+    ' Restricts external CSS and images in local HTML content
     blinkConverterSettings.EnableLocalFileAccess = False
 
     ' Assign Blink converter settings to HTML converter
