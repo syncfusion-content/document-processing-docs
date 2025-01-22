@@ -61,7 +61,7 @@ To preserve editable content while converting a Word document to a PDF or image 
 
 For more details about open Word document in read only mode, refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/loading-and-saving-document#opening-the-read-only-word-document).
 
-## Experiencing font access problems in IIS during Word to PDF/Image, but not locally?
+## Are you experiencing font access problems in IIS during Word to PDF/Image, but not locally?
 
 This issue occurs when fonts are installed using the basic *Install* option. Fonts installed this way are not shared system-wide, so IIS cannot access them.
 
