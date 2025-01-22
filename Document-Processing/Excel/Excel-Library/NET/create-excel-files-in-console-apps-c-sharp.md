@@ -48,7 +48,7 @@ Imports Syncfusion.Drawing
 Step 5: Include the below code snippet in program.cs to create an Excel file.
 {% capture codesnippet3 %}
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Core/Create%20Excel/Create%20Excel/Program.cs,180"  %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/refs/heads/master/Getting Started/Console/.NET/Create Excel/Create Excel/Program.cs,180"  %}
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -451,7 +451,7 @@ Imports System.Drawing
 Step 5: Include the below code snippet in program.cs to create an Excel file.
 {% capture codesnippet3 %}
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Getting%20Started/Console/.NET%20Framework/Create%20Excel/Create%20Excel/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
