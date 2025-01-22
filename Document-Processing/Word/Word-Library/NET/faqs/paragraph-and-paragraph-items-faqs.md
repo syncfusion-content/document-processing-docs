@@ -491,3 +491,34 @@ This behavior follows the Microsoft Word when using "Keep Source Formatting". Si
 ## Are strip lines on charts supported in DocIO?
 
 No, strip lines in charts are not supported in DocIO. Microsoft Word application does not provide specific settings for strip lines, which are used to highlight values or ranges with horizontal or vertical lines across chart areas. DocIO follows the same and does not support strip lines in charts.
+
+## How to enable the "Don't add space between paragraphs of the same style" option for paragraphs in a Word document?
+
+In DocIO, you can enable the **Don't add space between paragraphs of the same style** option by setting the [ContextualSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraphFormat.html#Syncfusion_DocIO_DLS_WParagraphFormat_ContextualSpacing) property to true. This ensures that no additional spacing is applied between consecutive paragraphs that use the same style.
+
+The following code illustrates how to enable the "Don't add space between paragraphs of the same style" option.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+ // Find the "Normal" paragraph style in the document's styles collection
+ WParagraphStyle normalStyle = document.Styles.FindByName("Normal") as WParagraphStyle;
+// Check if the "Normal" style is found, and if so, enable contextual spacing
+if (normalStyle != null)
+{
+    // Enable contextual spacing to avoid adding extra space between paragraphs with the same style
+    normalStyle.ParagraphFormat.ContextualSpacing = true;
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Find the "Normal" paragraph style in the document's styles collection
+Dim normalStyle As WParagraphStyle = TryCast(document.Styles.FindByName("Normal"), WParagraphStyle)
+' Check if the "Normal" style is found, and if so, enable contextual spacing
+If normalStyle IsNot Nothing Then
+    ' Enable contextual spacing to avoid adding extra space between paragraphs with the same style
+    normalStyle.ParagraphFormat.ContextualSpacing = True
+End If
+{% endhighlight %}
+
+{% endtabs %}
