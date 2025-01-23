@@ -394,7 +394,7 @@ When you create pivot table in XlsIO, the pivot values are not set in the worksh
 The following code example illustrates how to layout the pivot table.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Layout/Layout/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/refs/heads/master/Pivot%20Table/Layout/.NET/Layout/Layout/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
