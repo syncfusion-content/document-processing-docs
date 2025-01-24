@@ -12,18 +12,21 @@ Syncfusion&reg; Essential&reg; PowerPoint is a [.NET Core PowerPoint library](ht
 
 **Prerequisites**
 
-**Prerequisites:**
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 * Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* 
 {% endtabcontent %}
+
 {% tabcontent Visual Studio Code %}
+
 * Visual Studio Code
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+
 {% endtabcontent %}
  
 {% endtabcontents %}
@@ -33,6 +36,7 @@ Syncfusion&reg; Essential&reg; PowerPoint is a [.NET Core PowerPoint library](ht
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template and click the Next button.
 
 ![Create Blazor Server application in Visual Studio for Blazor PowerPoint document ](Workingwith-Blazor/Create_project.png)
@@ -40,10 +44,11 @@ Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from
 Step 2: To **create a PowerPoint document in Server app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 
 ![Install .NET Core Nuget Package](Workingwith-Blazor/NuGet.png)
-{% endtabcontent %}
- 
+
+{% endtabcontent %} 
 
 {% tabcontent Visual Studio Code %}
+
 Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template. For detailed guidance, visit the [Microsoft Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
 Step 2: Run the following command in terminal to create a new Blazor Server project.
@@ -65,7 +70,6 @@ dotnet add package Syncfusion.Presentation.Net.Core
 {% endtabcontent %}
  
 {% endtabcontents %}
-
 
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
@@ -263,15 +267,20 @@ Step 12: Build the project.
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
 {% endtabcontent %}
  
 
 {% tabcontent Visual Studio Code %}
+
 Run the following command in terminal to build the project.
+
 ```
 dotnet build
 ```
+
 {% endtabcontent %}
  
 {% endtabcontents %}
@@ -281,12 +290,15 @@ Step 13: Run the project.
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 Click the Start button (green arrow) or press F5 to run the app.
+
 {% endtabcontent %}
- 
 
 {% tabcontent Visual Studio Code %}
+
 Run the following command in terminal to build the project.
+
 ```
 dotnet run
 ```
@@ -309,6 +321,7 @@ An online sample link to [create a PowerPoint Presentation](https://blazor.syncf
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
 ![Create Blazor WebAssembly application in Visual Studio for Blazor PowerPoint document](Workingwith-Blazor/Blazor_WASM.png)
@@ -316,10 +329,12 @@ Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App f
 Step 2: To **create a PowerPoint document in WASM app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 
 ![Install .NET Core Nuget Package](Workingwith-Blazor/NuGet.png)
+
 {% endtabcontent %}
  
 
 {% tabcontent Visual Studio Code %}
+
 Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template. For detailed guidance, visit the [Microsoft Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
 Step 2: Run the following command in terminal to create a new Blazor WASM project.
@@ -495,15 +510,20 @@ Step 9: Build the project.
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
 {% endtabcontent %}
  
 
 {% tabcontent Visual Studio Code %}
+
 Run the following command in terminal to build the project.
+
 ```
 dotnet build
 ```
+
 {% endtabcontent %}
  
 {% endtabcontents %}
@@ -513,12 +533,16 @@ Step 10: Run the project.
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 Click the Start button (green arrow) or press F5 to run the app.
+
 {% endtabcontent %}
  
 
 {% tabcontent Visual Studio Code %}
+
 Run the following command in terminal to build the project.
+
 ```
 dotnet run
 ```
