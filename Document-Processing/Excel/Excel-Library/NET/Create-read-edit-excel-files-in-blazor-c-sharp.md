@@ -13,6 +13,9 @@ documentation: UG
 
 The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server-Side application.
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 Step 1: Create a new C# Blazor Server-Side application project. Select Blazor App from the template and click the Next button.
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_App.png)
@@ -31,6 +34,29 @@ Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/S
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
+{% endtabcontent %}
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio Code %}
+Step 1: Create a new C# Blazor Server-Side application project using Create.Net Project option. Select Blazor App from the templates.
+
+![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_App_VSCode.png)
+
+Step 2: Select the folder where you want to create the project.
+
+Step 3: Now, provide the required project name. And click create project.
+
+![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Server_ProjectName_VSCode.png)
+
+Step 4: Open the terminal in Visual Studio Code. Run the following command to install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your Blazor application.
+
+![Install Syncfusion.XlsIO.Net.Core Nuget Package](Blazor_images/Blazor_images_NuGet_VSCode.png)
+
+{% endtabcontent %}
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+
 Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder and include the following namespaces in the file.
 {% capture codesnippet1 %}
 {% tabs %}
@@ -38,7 +64,7 @@ Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder and in
 @page "/Excel"
 @using System.IO;
 @using ServerSideApplication;
-@inject ServerSideApplication.Data.ExcelService service
+@inject Create_Excel.Data.CreateExcel service
 @inject Microsoft.JSInterop.IJSRuntime JS
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +77,7 @@ Step 6: Add the following code to create a new button.
 {% highlight CSHTML %}
 <h2>Syncfusion Excel library (Essential XlsIO)</h2>
 <p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
-<button class="btn btn-primary" @onclick="@CreateDocument">Create Document</button>
+<button class="btn btn-primary" @onclick="@CreateExcel">Create Excel</button>
 {% endhighlight %}
 {% endtabs %}
 {% endcapture %}
@@ -67,10 +93,10 @@ Step 7: Add the following code in ``Excel.razor`` file to create and download th
     /// <summary>
     /// Create and download the Excel document
     /// </summary>
-    protected async void CreateDocument()
+    protected async void CreateExcel()
     {
-        excelStream = service.CreateExcel();
-        await JS.SaveAs("Sample.xlsx", excelStream.ToArray());
+        excelStream = service.CreateDocument();
+        await JS.SaveAs("CreateExcel.xlsx", excelStream.ToArray());
     }
 }
 {% endhighlight %}
@@ -78,7 +104,7 @@ Step 7: Add the following code in ``Excel.razor`` file to create and download th
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new cs file with name as ``ExcelService`` under ``Data`` folder and include the following namespaces in the file.
+Step 8: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder and include the following namespaces in the file.
 {% capture codesnippet4 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -90,7 +116,7 @@ Step 8: Create a new cs file with name as ``ExcelService`` under ``Data`` folder
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as ``CreateExcel`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server-Side application.
+Step 9: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server-Side application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
