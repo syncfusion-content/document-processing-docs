@@ -57,7 +57,7 @@ Step 2: To **create a Word document in Blazor Server app**, install [Syncfusion.
 
 Step 1: Create a new C# Blazor Serevr app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
-Alternatively, create a Server application using the following command in the terminal(Ctrl+`).
+Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new blazorserver -o Create-Word-document
@@ -360,7 +360,7 @@ Step 2: To **create a Word document in WASM app**, install [Syncfusion.DocIO.Net
 
 Step 1: Create a new C# Blazor WASM app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
-Alternatively, create a Server application using the following command in the terminal(Ctrl+`).
+Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new blazorserver -o Create-Word-document
