@@ -1,12 +1,12 @@
 ---
-title: Fix the ArgumentOutOfRangeException when accessing a large number of rows and columns.
+title: Fix ArgumentOutOfRangeException in Excel Rows & Columns | Syncfusion®
 description: This page helps how to fix the ArgumentOutOfRangeException when accessing a large number of rows and columns in Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to fix the ArgumentOutOfRangeException when accessing a large number of rows and columns?
+# How to Fix ArgumentOutOfRangeException When Accessing Cells in Excel
 
 By default, when creating a new workbook, it is set to Excel97to2003 version which supports only 65536 rows and 256 columns. When the row and column index exceeds this limit, an ArgumentOutOfRange exception is thrown. To fix this, the [DefaultVersion](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_DefaultVersion) needs to be set as [Xlsx](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelVersion.html). This version supports 1048576 rows and 16384 columns.
 
