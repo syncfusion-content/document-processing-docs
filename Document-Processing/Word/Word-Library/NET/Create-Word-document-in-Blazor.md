@@ -67,7 +67,7 @@ dotnet new blazorserver -o Create-Word-document
 cd Create-Word-document
 ```
 
-Step 3: To **create a Word document in Blazor Server app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To **create a Word document in Blazor Server app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 
 ```
 dotnet add package Syncfusion.DocIO.Net.Core
@@ -370,7 +370,7 @@ dotnet new blazorserver -o Create-Word-document
 cd Create-Word-document
 ```
 
-Step 3: To **create a Word document in Blazor WASM app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To **create a Word document in Blazor WASM app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 
 ```
 dotnet add package Syncfusion.DocIO.Net.Core
