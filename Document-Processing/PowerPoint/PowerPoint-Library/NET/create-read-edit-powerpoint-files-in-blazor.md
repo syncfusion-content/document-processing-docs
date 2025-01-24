@@ -49,9 +49,9 @@ Step 2: To **create a PowerPoint document in Server app**, install [Syncfusion.P
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template. For detailed guidance, visit the [Microsoft Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+Step 1: Create a new C# Blazor Server app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
-Step 2: Run the following command in terminal to create a new Blazor Server project.
+Alternatively, create a Server application using the following command in the terminal(Ctrl+`).
 
 ```
 dotnet new blazorserver -o Create-PowerPoint-document
@@ -61,7 +61,7 @@ dotnet new blazorserver -o Create-PowerPoint-document
 cd Create-PowerPoint-document
 ```
 
-Step 3: To **create a PowerPoint document in Blazor Server app**,run the following command to  install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
+Step 2: To **create a PowerPoint document in Blazor Server app**,run the following command to  install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 
 ```
 dotnet add package Syncfusion.Presentation.Net.Core
@@ -335,9 +335,9 @@ Step 2: To **create a PowerPoint document in WASM app**, install [Syncfusion.Pre
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template. For detailed guidance, visit the [Microsoft Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+Step 1: Create a new C# Blazor WASM app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
-Step 2: Run the following command in terminal to create a new Blazor WASM project.
+Alternatively, create a Server application using the following command in the terminal(Ctrl+`).
 
 ```
 dotnet new blazorserver -o Create-PowerPoint-document
@@ -347,7 +347,7 @@ dotnet new blazorserver -o Create-PowerPoint-document
 cd Create-PowerPoint-document
 ```
 
-Step 3: To **create a PowerPoint document in Blazor WASM app**,run the following command to  install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
+Step 2: To **create a PowerPoint document in Blazor WASM app**,run the following command to  install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
 
 ```
 dotnet add package Syncfusion.Presentation.Net.Core
