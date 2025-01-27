@@ -319,11 +319,11 @@ Step 1: Create a new C# Blazor WASM app project using Visual Studio Code via [Mi
 Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new blazorserver -o Convert-Word-document-to-PDF
+dotnet new blazorserver -o Convert-PowerPoint-presentation-to-PDF
 ```
 
 ```
-cd Convert-Word-document-to-PDF
+cd Convert-PowerPoint-presentation-to-PDF
 ```
 
 Step 2: To **convert a PowerPoint to PDF in Blazor WASM app**,run the following command to  install  the following **Nuget packages** in your application.
