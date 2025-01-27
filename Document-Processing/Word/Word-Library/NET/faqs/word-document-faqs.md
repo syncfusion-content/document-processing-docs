@@ -361,7 +361,7 @@ FieldName: LastName = Fuller
 
 **Nested group:**
 FieldName: FirstName = null
-If the FirstName field in the nested group has a null value, DocIO will automatically assign the FirstName value from the parent group (John) to the nested group field.
+If the FirstName field in the nested group has a null value, DocIO will automatically assign the FirstName value from the parent group (Andrew) to the nested group field.
 
 **Suggestions to modify this behavior:**
 To prevent the nested group's field from inheriting the value of the parent group, you can use one of the following solutions:
