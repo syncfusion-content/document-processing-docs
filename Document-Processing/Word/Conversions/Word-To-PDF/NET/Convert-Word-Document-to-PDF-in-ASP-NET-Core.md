@@ -10,20 +10,23 @@ documentation: UG
 
 Syncfusion&reg; Essential&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in ASP.NET Core**.
 
-## Steps to convert word document to PDF in C#:
-
 **Prerequisites:**
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 * Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+  
 {% endtabcontent %}
+
 {% tabcontent Visual Studio Code %}
+
 * Visual Studio Code
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+  
 {% endtabcontent %}
 
 {% endtabcontents %}
@@ -31,6 +34,8 @@ Syncfusion&reg; Essential&reg; DocIO is a [.NET Core Word library](https://www.s
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Steps to convert word document to PDF in C#:
 
 Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
 
@@ -42,7 +47,6 @@ Step 2: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/pa
 
 {% endtabcontent %}
  
-
 {% tabcontent Visual Studio Code %}
 
 Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
@@ -61,7 +65,7 @@ Alternatively, use command palette
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the .NET MAUI project.
+Step 2: Run the following command to install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the .NET MAUI project.
 
 ```
 dotnet add package Syncfusion.DocIORenderer.Net.Core
