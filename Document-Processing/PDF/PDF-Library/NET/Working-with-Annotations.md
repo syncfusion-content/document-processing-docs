@@ -3597,15 +3597,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Preserving the annotation appearance while importing the annotation data into the PDF document.
 
-N> The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the `SetAppearance` parameter to `true` when calling the `ImportAnnotations` method.
+The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the `SetAppearance` parameter to `true` when calling the `ImportAnnotations` method.
 
 Please refer to the below code snippet to achieve this on your end.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document/.NET/Importing-annotations-from-JSON-file-to-PDF-document/Program.cs" %}
 
-//Load the PDF document 
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read); 
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream); 
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 //Import annotation data from XFDF stream
 FileStream xfdfStream = new FileStream("Annotations.xfdf", FileMode.Open, FileAccess.Read);
 lDoc.ImportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
@@ -3626,7 +3626,7 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Ou
     //Save the PDF document to file stream.
     loadedDocument.Save(outputFileStream);
 }
-//Closes the document 
+//Closes the document
 lDoc.Close(true);
 loadedDocument.Close(true);
 
@@ -3634,10 +3634,10 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Loads the document 
-PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf"); 
-//Import the annotation data from the JSON file 
-lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf); 
+//Loads the document
+PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
+//Import the annotation data from the JSON file
+lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf);
 //Save the document into stream
 MemoryStream stream = new MemoryStream();
 lDoc.Save(stream);
@@ -3647,8 +3647,8 @@ foreach (PdfLoadedPage pages in loadedDocument.Pages)
 foreach (PdfLoadedAnnotation annot in pages.Annotations)
 annot.SetAppearance(true);
 }
-//Saves the document 
-loadedDocument.Save("Annotation.pdf"); 
+//Saves the document
+loadedDocument.Save("Annotation.pdf");
 lDoc.Close(true);
 loadedDocument.Close(true);
 
@@ -3660,14 +3660,14 @@ loadedDocument.Close(true);
 Dim lDoc As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
 
 ' Import annotations from a JSON file
-lDoc.ImportAnnotations("Annotations.Json", AnnotationDataFormat.Json)
+lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFDF)
 
 ' Create a memory stream to save the document
 Dim stream As MemoryStream = New MemoryStream()
 
 ' Save the document to the memory stream
 lDoc.Save(stream)
-  
+
 'Load the PDF document
 Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream)
 
