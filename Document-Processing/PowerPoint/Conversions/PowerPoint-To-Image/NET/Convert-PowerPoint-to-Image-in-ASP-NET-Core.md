@@ -66,10 +66,10 @@ Alternatively, use command palette
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the .NET MAUI project.
+Step 2: Run the following command to install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the .NET MAUI project.
 
 ```
-dotnet add package Syncfusion.DocIORenderer.Net.Core
+dotnet add package Syncfusion.PresentationRenderer.Net.Core
 ```
 
 {% endtabcontent %}
