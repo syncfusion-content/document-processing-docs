@@ -15,7 +15,7 @@ Syncfusion&reg; DocIO is a [Blazor Word library](https://www.syncfusion.com/docu
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
-* Visual Studio 2019 Preview
+* Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
