@@ -47,11 +47,11 @@ Step 1: Create a new C# Blazor Server app project using Visual Studio Code via [
 Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new blazorserver -o Create-PowerPoint-document
+dotnet new blazorserver -o Convert-Word-to-image
 ```
 
 ```
-cd Create-PowerPoint-document
+cd Convert-Word-to-image
 ```
 
 Step 2: To **convert a Word document to image in server app**, run the following command to  install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the Blazor project.
@@ -312,11 +312,11 @@ Step 1: Create a new C# Blazor WASM app project using Visual Studio Code via [Mi
 Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new blazorserver -o Create-Word-document
+dotnet new blazorserver -o Convert-Word-to-image
 ```
 
 ```
-cd Create-Word-document
+cd Convert-Word-to-image
 ```
 
 Step 2: To **convert a Word document to Image in Blazor WASM app**,run the following command to  install  the following **Nuget packages** in your application.
