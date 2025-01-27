@@ -46,8 +46,6 @@ dotnet new blazorserver -o CreateExcel
 cd CreateExcel
 ```
 
-![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Server_ProjectName_VSCode.png)
-
 * To **create a Excel document in Blazor Server app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
 
 ```
