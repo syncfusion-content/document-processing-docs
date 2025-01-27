@@ -18,7 +18,7 @@ Syncfusion&reg; Essential&reg; PowerPoint is a [.NET Core PowerPoint library](ht
 
 * Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
-* 
+  
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -268,7 +268,7 @@ Step 12: Build the project.
 
 {% tabcontent Visual Studio %}
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
 
 {% endtabcontent %}
  
@@ -511,7 +511,7 @@ Step 9: Build the project.
 
 {% tabcontent Visual Studio %}
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
 
 {% endtabcontent %}
  
