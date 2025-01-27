@@ -64,10 +64,10 @@ cd Create-Word-document
 ```
 
 Alternatively, use command palette
-1. Open the command palette by pressing Ctrl+Shift+P and type .NET:New Project and enter.
-2. Choose the ASP.NET Core Web App( Model-View-Controller) MVC template.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
 3. Select the project location, type the project name and press enter.
-4. Then choose Create project
+4. Then choose **Create project**.
 
 Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the .NET MAUI project.
 
