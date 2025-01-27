@@ -3599,6 +3599,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the `SetAppearance` parameter to `true` when calling the `ImportAnnotations` method.
 
 Please refer to the below code snippet to achieve this on your end.
+{% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document/.NET/Importing-annotations-from-JSON-file-to-PDF-document/Program.cs" %}
 
