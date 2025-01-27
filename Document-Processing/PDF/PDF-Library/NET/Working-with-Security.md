@@ -222,7 +222,7 @@ You can encrypt PDF document by specifying the [Algorithm](https://help.syncfusi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionKeySize.html" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Encrypt-PDF-with-AES-using-user-password/.NET/Encrypt-PDF-with-AES-using-user-password/Program.cs" %}
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
