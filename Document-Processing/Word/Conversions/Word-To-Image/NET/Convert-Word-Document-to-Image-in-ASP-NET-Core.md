@@ -15,13 +15,18 @@ Syncfusion&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/d
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 * Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+  
 {% endtabcontent %}
+
 {% tabcontent Visual Studio Code %}
+
 * Visual Studio Code
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+  
 {% endtabcontent %}
 
 {% endtabcontents %}
@@ -61,7 +66,7 @@ Alternatively, use command palette
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the .NET MAUI project.
+Step 2: Run the following command to install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the .NET MAUI project.
 
 ```
 dotnet add package Syncfusion.DocIORenderer.Net.Core
