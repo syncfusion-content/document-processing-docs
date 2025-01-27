@@ -147,6 +147,11 @@ using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStr
 {% endhighlight %}
 {% endtabs %}
 
+Step 7: Run the Application.
+
+1. Select the target framework, device or emulator.
+2. Press F5 to run the application.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI).
 
 By executing the program, you will get the **PDF document** as follows.
