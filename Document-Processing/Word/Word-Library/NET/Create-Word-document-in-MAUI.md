@@ -24,7 +24,9 @@ To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versi
 {% tabcontent Visual Studio Code %}
 * Install the latest .NET SDK and Visual Studio Code.
 * Open Visual Studio Code and install the [.NET MAUI for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) from the Extensions Marketplace.
-* Follow the step-by-step setup guide refer [Set Up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) and the [steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
+* Follow the step-by-step setup guide:
+  [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+  [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
 
 {% endtabcontent %}
  
