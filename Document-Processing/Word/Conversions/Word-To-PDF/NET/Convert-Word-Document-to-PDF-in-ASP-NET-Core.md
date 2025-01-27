@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9432ebd8-7f12-4845-9698-902c39b88265)![image](https://github.com/user-attachments/assets/aa628f29-65d5-4f89-98d7-64afa956788b)---
+---
 title: Convert Word to PDF in ASP.NET Core | Syncfusion&reg;
 description: Convert Word to PDF without Microsoft Word or interop dependencies in ASP.NET Core application using .NET Core Word (DocIO) library.
 platform: document-processing
@@ -56,10 +56,10 @@ cd Convert-Word-document-to-PDF
 ```
 
 Alternatively, use command palette
-1. Open the command palette by pressing Ctrl+Shift+P and type .NET:New Project and enter.
-2. Choose the ASP.NET Core Web App( Model-View-Controller) MVC template.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
 3. Select the project location, type the project name and press enter.
-4. Then choose Create project
+4. Then choose **Create project**.
 
 Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the .NET MAUI project.
 
@@ -148,7 +148,7 @@ Step 6: Build the project.
 
 {% tabcontent Visual Studio %}
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
 
 {% endtabcontent %}
  
