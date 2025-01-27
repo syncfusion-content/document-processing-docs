@@ -41,6 +41,13 @@ Step 1: Create a new C# Blazor Server-Side application project using Create.Net 
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_App_VSCode.png)
 
+Alternatively, create a Server application using the following command in the terminal.
+
+```
+dotnet new blazorserver -o Create-Excel
+cd Create-Excel
+```
+
 Step 2: Select the folder where you want to create the project.
 
 Step 3: Now, provide the required project name. And click create project.
@@ -48,6 +55,10 @@ Step 3: Now, provide the required project name. And click create project.
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Server_ProjectName_VSCode.png)
 
 Step 4: Open the terminal in Visual Studio Code. Run the following command to install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your Blazor application.
+
+```
+dotnet add package Syncfusion.XlsIO.Net.Core
+```
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Blazor_images/Blazor_images_NuGet_VSCode.png)
 
