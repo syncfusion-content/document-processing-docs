@@ -18,13 +18,18 @@ To quickly create a Word document in ASP.NET Core, please check out this video:
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 * Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+  
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
+
 * Visual Studio Code
+  
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+
 {% endtabcontent %}
 
 {% endtabcontents %}
@@ -57,6 +62,12 @@ dotnet new webapp -n Create-Word-document
 ```
 cd Create-Word-document
 ```
+
+Alternatively, use command palette
+1. Open the command palette by pressing Ctrl+Shift+P and type .NET:New Project and enter.
+2. Choose the ASP.NET Core Web App( Model-View-Controller) MVC template.
+3. Select the project location, type the project name and press enter.
+4. Then choose Create project
 
 Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the .NET MAUI project.
 
