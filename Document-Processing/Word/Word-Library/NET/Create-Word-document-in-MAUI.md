@@ -65,6 +65,12 @@ dotnet new maui -n Create-Word-document
 cd Create-Word-document
 ```
 
+Alternatively, use command palette
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
 Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the .NET MAUI project.
 
 ```
@@ -350,7 +356,10 @@ saveService.SaveAndView("Sample.docx", "application/msword", ms);
 
 {% endtabs %}
 
+Step 7: Run the Application.
 
+1. Select the target framework, device or emulator.
+2. Press F5 to run the application.
 
 ## Helper files for .NET MAUI
 
