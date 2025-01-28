@@ -82,6 +82,99 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/). 
 
+## The Importance of Saving and Restoring Graphics State in PDF Content Rendering
+Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. 
+
+Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-in-a-new-PDF-document/.NET/Drawing-text-in-a-new-PDF-document/Program.cs" %}
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    PdfPage page = pdfDocument.Pages.Add();
+    // Create PDF graphics
+    PdfGraphics graphics = page.Graphics;
+    // Save the current graphics state and apply transformations
+    graphics.Save();
+    graphics.TranslateTransform(100, 50);
+    graphics.RotateTransform(45);
+    // Define the font for drawing text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 16);
+    // Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, new PointF(0, 0));
+    // Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore();
+    // Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
+    // Creating the stream object
+    MemoryStream stream = new MemoryStream();
+    // Save the document into memory stream
+    pdfDocument.Save(stream);
+    // Close the document
+    document.Close(true);
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    PdfPage page = pdfDocument.Pages.Add();
+    // Create PDF graphics
+    PdfGraphics graphics = page.Graphics;
+    // Save the current graphics state and apply transformations
+    graphics.Save();
+    graphics.TranslateTransform(100, 50);
+    graphics.RotateTransform(45);
+    // Define the font for drawing text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 16);
+    // Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, new PointF(0, 0));
+    // Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore();
+    // Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
+    // Save the document to a file
+    pdfDocument.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Using pdfDocument As New PdfDocument()
+    Dim page As PdfPage = pdfDocument.Pages.Add()
+    ' Create PDF graphics
+    Dim graphics As PdfGraphics = page.Graphics
+    ' Save the current graphics state and apply transformations
+    graphics.Save()
+    graphics.TranslateTransform(100, 50)
+    graphics.RotateTransform(45)
+    ' Define the font for drawing text
+    Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 16)
+    ' Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, New PointF(0, 0))
+    ' Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore()
+    ' Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, New PointF(0, 100))
+    ' Save the document to a file
+    pdfDocument.Save("Output.pdf")
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/). 
+
+
+
 ## Drawing text in an existing document
 
 The following code snippet illustrates how to add text in the existing PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method.
