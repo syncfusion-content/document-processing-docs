@@ -1,6 +1,6 @@
 ---
-title: Document Object Model of .NET Word library | Syncfusion&reg;
-description: Learn here all about the Document Object Model (DOM) representation of Word documents and their elements in the Syncfusion&reg; .NET Word (DocIO) library.
+title: Document Object Model of .NET Word library | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the Document Object Model (DOM) representation of Word documents and their elements in the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG

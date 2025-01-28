@@ -1,5 +1,5 @@
 ---
-title: FAQ about Track Changes | DocIO | Syncfusion&reg;
+title: FAQ about Track Changes | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn about the frequently asked questions about track changes in Word document in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

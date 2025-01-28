@@ -1,6 +1,6 @@
 ---
-title: Working with Word document with WinRT using Syncfusion&reg; Word library
-description: Create a WinRT application , load the Word document and save the Word document with Syncfusion&reg; Word library
+title: Working with Word document with WinRT using Syncfusion<sup>&reg;</sup> Word library
+description: Create a WinRT application , load the Word document and save the Word document with Syncfusion<sup>&reg;</sup> Word library
 platform: document-processing
 control: DocIO
 documentation: UG
