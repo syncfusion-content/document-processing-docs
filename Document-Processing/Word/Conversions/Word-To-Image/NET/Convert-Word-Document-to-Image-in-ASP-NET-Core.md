@@ -53,7 +53,7 @@ Step 2: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/pa
 Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new webapp -n Convert-Word-to-image
+dotnet new mvc -n Convert-Word-to-image
 ```
 
 ```
