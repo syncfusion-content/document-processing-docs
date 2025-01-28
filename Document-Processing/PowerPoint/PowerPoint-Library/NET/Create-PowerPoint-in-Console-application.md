@@ -68,7 +68,7 @@ Alternatively, use command palette
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/ to the console project.
+Step 2: Run the following command to install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) to the console project.
 
 ```
 dotnet add package Syncfusion.Presentation.NET.Core
