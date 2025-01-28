@@ -9,7 +9,7 @@ documentation: UG
 
 ## Drawing text in a new document
 
-You can add text in the new PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class as shown in the following code sample.
+You can add text in the new PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics][def] class as shown in the following code sample.
 
 {% tabs %}
 
@@ -83,7 +83,7 @@ document.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/). 
 
 ## The Importance of Saving and Restoring Graphics State in PDF Content Rendering
-Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. 
+Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics][https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html] class.
 
 Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
 
@@ -109,12 +109,12 @@ using (PdfDocument pdfDocument = new PdfDocument())
     graphics.Restore();
     // Draw text that is not influenced by transformations
     graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
-    // Creating the stream object
-    MemoryStream stream = new MemoryStream();
-    // Save the document into memory stream
-    pdfDocument.Save(stream);
-    // Close the document
-    document.Close(true);
+      using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+   {
+       //Save the PDF document to file stream.
+       pdfDocument.Save(outputFileStream);
+   }
+    
 }
 
 
@@ -147,8 +147,9 @@ using (PdfDocument pdfDocument = new PdfDocument())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Using pdfDocument As New PdfDocument()
+    ' Create a PDF document
+    Using pdfDocument As New PdfDocument()
+    ' Add Pages to the document
     Dim page As PdfPage = pdfDocument.Pages.Add()
     ' Create PDF graphics
     Dim graphics As PdfGraphics = page.Graphics
@@ -2419,3 +2420,6 @@ The following code example illustrates this.
 </table>
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Line-limit-in-PDF/.NET).
+
+
+[def]: https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html
