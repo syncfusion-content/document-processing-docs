@@ -20,13 +20,18 @@ To quickly get started with creating a Word document in Blazor, check this video
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
-* Visual Studio 2019 Preview
+
+* Visual Studio 2019 Preview or later
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* 
 {% endtabcontent %}
+
 {% tabcontent Visual Studio Code %}
+
 * Visual Studio Code
 * Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+* 
 {% endtabcontent %}
  
 {% endtabcontents %}
@@ -37,6 +42,7 @@ To quickly get started with creating a Word document in Blazor, check this video
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template and click the Next button.
 
 ![Create Blazor Server application in Visual Studio](Blazor_Images/Blazor_Create.png)
@@ -46,21 +52,27 @@ Step 2: To **create a Word document in Blazor Server app**, install [Syncfusion.
 ![Install DocIO.NET Core NuGet Package](Blazor_Images/Install_Nuget.png)
 
 {% endtabcontent %}
-{% tabcontent Visual Studio Code %}
-Step 1: Create a new C# Blazor Server app project. Open the terminal in Visual Studio Code.
 
-Step 2: Run the following command in terminal to create a new Blazor Server project.
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# Blazor Serevr app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+
+Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new blazorserver -o Create-Word-document
+```
+
+```
 cd Create-Word-document
 ```
 
-Step 3: To **create a Word document in Blazor Server app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To **create a Word document in Blazor Server app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 
 ```
 dotnet add package Syncfusion.DocIO.Net.Core
 ```
+
 {% endtabcontent %}
  
 {% endtabcontents %}
@@ -197,7 +209,18 @@ public MemoryStream CreateWord()
 
 {% endtabs %}
 
-Step 8: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 8: Add the following line to the Program.cs file to register the WordService as a scoped service in your Blazor application. 
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+builder.Services.AddSingleton<WordService>();
+
+{% endhighlight %}
+{% endtabs %}
+
+
+Step 9: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -215,7 +238,7 @@ public static class FileUtils
 
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the _Host.cshtml in the Pages folder.
+Step 10: Add the following JavaScript function in the _Host.cshtml in the Pages folder.
 
 {% tabs %}
 
@@ -248,7 +271,7 @@ Step 9: Add the following JavaScript function in the _Host.cshtml in the Pages f
 
 {% endtabs %}
 
-Step 10: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
+Step 11: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
 
 {% tabs %}
 
@@ -263,6 +286,49 @@ Step 10: Add the following code snippet in the razor file of Navigation menu in 
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 12: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 13: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Server-side-application).
 
@@ -279,6 +345,7 @@ An online sample link to [create a Word document](https://blazor.syncfusion.com/
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
 Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
 ![Create Blazor WebAssembly application in Visual Studio](Blazor_Images/Blazor_WASM.png)
@@ -290,16 +357,20 @@ Step 2: To **create a Word document in WASM app**, install [Syncfusion.DocIO.Net
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
-Step 1: Create a new C# Blazor WASM app project. Open the terminal in Visual Studio Code.
 
-Step 2: Run the following command in terminal to create a new Blazor WASM project.
+Step 1: Create a new C# Blazor WASM app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+
+Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new blazorserver -o Create-Word-document
+```
+
+```
 cd Create-Word-document
 ```
 
-Step 3: To **create a Word document in Blazor WASM app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To **create a Word document in Blazor WASM app**,run the following command to  install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 
 ```
 dotnet add package Syncfusion.DocIO.Net.Core
@@ -487,6 +558,51 @@ Step 8: Add the following code snippet in the razor file of Navigation menu in t
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 9: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 10: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+```
+dotnet run
+```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Client-side-application).
 

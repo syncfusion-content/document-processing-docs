@@ -11,11 +11,11 @@ keywords: Assemblies
 
 Optical character recognition (OCR) is a technology used to convert scanned paper documents in the form of PDF files or images into searchable and editable data.  
 
-The [Syncfusion OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google’s [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.  
+The [Syncfusion<sup>&reg;</sup> OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google’s [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.  
 
-The Syncfusion OCR processor library works seamlessly in various platforms: Azure App Services, Azure Functions, AWS Textract, Docker, WinForms, WPF, Blazor, ASP.NET MVC, ASP.NET Core with Windows, MacOS and Linux. 
+The Syncfusion<sup>&reg;</sup> OCR processor library works seamlessly in various platforms: Azure App Services, Azure Functions, AWS Textract, Docker, WinForms, WPF, Blazor, ASP.NET MVC, ASP.NET Core with Windows, MacOS and Linux. 
 
-N> Starting with v20.1.0.x, if you reference Syncfusion OCR processor assemblies from the trial setup or the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn more about registering the Syncfusion license key in your application to use its components.
+N> Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> OCR processor assemblies from the trial setup or the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn more about registering the Syncfusion<sup>&reg;</sup> license key in your application to use its components.
 
 ## Key features 
 
@@ -45,7 +45,7 @@ Include the OCR library in your project using two approaches.
 * NuGet Package Required (Recommended)
 * Assemblies Required 
 
-N> Starting with v21.1.x, If you reference the Syncfusion OCR processor library from the NuGet feed, the package structure has been changed. The TesseractBinaries and Tesseract language data paths has been automatically added and do not need to add it manually.
+N> Starting with v21.1.x, If you reference the Syncfusion<sup>&reg;</sup> OCR processor library from the NuGet feed, the package structure has been changed. The TesseractBinaries and Tesseract language data paths has been automatically added and do not need to add it manually.
 
 ### NuGet Package Required (Recommended)
 
@@ -120,7 +120,7 @@ ASP.NET Core (.NET 5, .NET 6 and .NET 7) Windows, Linux and Mac
 
 Get the following required assemblies by downloading the OCR library installer. Download and install the OCR library for Windows, Linux, and Mac respectively. Please refer to the advanced installation steps for more details.
 
-#### Syncfusion assemblies
+#### Syncfusion<sup>&reg;</sup> assemblies
 
 <table>
 <tr>
@@ -173,7 +173,7 @@ Windows Forms, WPF, ASP.NET, and ASP.NET MVC
 
 ## Prerequisites
 
-The Syncfusion OCR processor internally uses Tesseract libraries to perform OCR, so please copy the necessary Tessdata and TesseractBinaries folders from the NuGet package folder to the project folder to use the OCR feature.
+The Syncfusion<sup>&reg;</sup> OCR processor internally uses Tesseract libraries to perform OCR, so please copy the necessary Tessdata and TesseractBinaries folders from the NuGet package folder to the project folder to use the OCR feature.
 
 ### Prerequisites for Windows
 Please refer to the following code sample for windows.
@@ -193,7 +193,7 @@ processor.PerformOCR(lDoc);
 Download the language packages from the following link.
 [https://github.com/tesseract-ocr/tessdata](https://github.com/tesseract-ocr/tessdata)
 
-N> From 16.1.0.24 OCR is not a part of Essential Studio and is available as a separate package (OCR Processor) under the Add-On section in the following link.
+N> From 16.1.0.24 OCR is not a part of Essential Studio<sup>&reg;</sup> and is available as a separate package (OCR Processor) under the Add-On section in the following link.
 [https://www.syncfusion.com/downloads/latest-version](https://www.syncfusion.com/downloads/latest-version)
 
 ### Prerequisites for Linux 
@@ -254,7 +254,7 @@ Download the language packages from the following link.
 
 ## Get Started with OCR 
 
-To quickly get started with extracting text from scanned PDF documents in .NET using the Syncfusion OCR processor Library, refer to this video tutorial:
+To quickly get started with extracting text from scanned PDF documents in .NET using the Syncfusion<sup>&reg;</sup> OCR processor Library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=VhN7ETn0vyA" %}
 
 ### Perform OCR using C# 
@@ -318,40 +318,40 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### Perform OCR in Linux 
 
-The Syncfusion .NET OCR library supports performing OCR in Linux. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/linux) section for more information about performing OCR on an entire PDF document in Linux.  
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Linux. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/linux) section for more information about performing OCR on an entire PDF document in Linux.  
 
 ### Perform OCR in Docker 
 
-The Syncfusion .NET OCR library supports performing OCR in Docker. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/docker) section for more information about performing OCR on an entire PDF document in Docker.  
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Docker. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/docker) section for more information about performing OCR on an entire PDF document in Docker.  
 
 ### Perform OCR in Mac
 
 <<<<<<< HEAD
-The Syncfusion .NET OCR library supports performing OCR on Mac. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/mac) section for more information about performing OCR on an entire PDF document on Mac. 
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR on Mac. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/mac) section for more information about performing OCR on an entire PDF document on Mac. 
 =======
 
 ### Perform OCR in ASP.NET Core 
 
-The Syncfusion .NET OCR library supports performing OCR in ASP.NET Core. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/net-core) section for more information about performing OCR on an entire PDF document in ASP.NET Core.  
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in ASP.NET Core. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/net-core) section for more information about performing OCR on an entire PDF document in ASP.NET Core.  
 
 ### Perform OCR in ASP.NET MVC
 
-The Syncfusion .NET OCR library supports performing OCR in ASP.NET MVC. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/aspnet-mvc) section for more information about performing OCR on an entire PDF document in ASP.NET MVC. 
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in ASP.NET MVC. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/aspnet-mvc) section for more information about performing OCR on an entire PDF document in ASP.NET MVC. 
 
 ### Perform OCR in Blazor
 
-The Syncfusion .NET OCR library supports performing OCR in Blazor. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/blazor) section for more information about performing OCR on an entire PDF document in Blazor.  
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Blazor. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/blazor) section for more information about performing OCR on an entire PDF document in Blazor.  
 
 ### Perform OCR in Azure
 
-The Syncfusion .NET OCR library supports performing OCR in Azure. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/azure) section for more information about performing OCR on an entire PDF document in Azure.  
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR in Azure. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/azure) section for more information about performing OCR on an entire PDF document in Azure.  
 
 ### Perform OCR in Azure Vision
-The Syncfusion .NET OCR library supports performing OCR with Azure Vision (external engine). Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/azure-vision) section for more information about performing OCR on an entire PDF document. 
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR with Azure Vision (external engine). Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/azure-vision) section for more information about performing OCR on an entire PDF document. 
 
 ### Perform OCR in AWS Textract
 
-The Syncfusion .NET OCR library supports performing OCR with AWS Textract. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/aws-textract) section for more information about performing OCR on an entire PDF document in AWS.  
+The Syncfusion<sup>&reg;</sup> .NET OCR library supports performing OCR with AWS Textract. Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/aws-textract) section for more information about performing OCR on an entire PDF document in AWS.  
 
 ## Features 
 

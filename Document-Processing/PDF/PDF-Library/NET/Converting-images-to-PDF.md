@@ -8,7 +8,10 @@ documentation: UG
 
 # Converting images to PDF 
 
-The Syncfusion .NET PDF library provides comprehensive support for converting both raster and vector images to PDF documents. The [PdfImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html) class is an abstract base class that provides common functionality for converting images to PDF documents. It is used as the base class for two concrete image classes in the Syncfusion.Pdf.Graphics namespace: [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) and [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html).
+The Syncfusion<sup>&reg;</sup> .NET PDF library provides comprehensive support for converting both raster and vector images to PDF documents. The [PdfImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html) class is an abstract base class that provides common functionality for converting images to PDF documents. It is used as the base class for two concrete image classes in the Syncfusion.Pdf.Graphics namespace: [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) and [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html).
+
+Check the following video for a quick guide on converting an image to a PDF document using the PDF Library.
+{% youtube "https://youtu.be/_uE324Y0hwI?si=usx8KrUUvHcT0-X8" %}
 
 This includes a wide range of image formats for PDF conversion. These image formats includes:
 * JPEG (Joint Photographic Experts Group) 
@@ -20,13 +23,15 @@ This includes a wide range of image formats for PDF conversion. These image form
 * EMF (Enhanced Metafile) 
 * ICO and ICON (Windows Icon)
 
+N> For using image formats other than PNG and JPEG in ASP.NET Core, you need to include the Syncfusion.Pdf.Imaging.Net.Core package in your project. This package provides the necessary support for handling other raster image formats like BMP, GIF, TIFF, and ICO.
+
 You can load images from various sources, including image streams and files on disk using [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. Once you have loaded an image, you can draw it on a PDF document using the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
 
 The following code example shows how to convert image to PDF document. 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-a-new-PDF-document/.NET/Insert-image-in-a-new-PDF-document/Program.cs" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-a-new-PDF-document/.NET/Insert-image-in-a-new-PDF-document/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
@@ -98,12 +103,11 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-image-in-a-new-PDF-document/). 
 
-N> The Syncfusion .NET Core PDF library supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) NuGet package in ASP.NET Core platform. 
-
+N> The Syncfusion<sup>&reg;</sup> .NET Core PDF library supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) NuGet package in ASP.NET Core platform. 
 
 ## Converting vector image to PDF
 
-The Syncfusion .NET PDF library supports adding vector images in the Metafile format to PDF documents.During the conversion, Metafile graphics will be transformed to native PDF graphics that supports text selection and searching. The following types of Metafiles are supported in Essential PDF.
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports adding vector images in the Metafile format to PDF documents.During the conversion, Metafile graphics will be transformed to native PDF graphics that supports text selection and searching. The following types of Metafiles are supported in Essential<sup>&reg;</sup> PDF.
 * EMF only
 * EMF plus
 * EMF plus dual

@@ -15,6 +15,10 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [How to attach a Template to a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-attach-a-template-to-a-word-document)
 * [How to check the compatibility mode of the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-check-the-compatibility-mode-of-the-word-document)
 * [Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
+* [How to convert Units (cm, mm, or inches) to Points for DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-convert-units-cm-mm-or-inches-to-points-for-docio)
+* [Why does the ‘File Not Supported’ exception occur in Syncfusion<sup>®</sup> DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-file-not-supported-exception-occur-in-syncfusion-docio)
+* [Why do documents remain locked after use?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-do-documents-remain-locked-after-use)
+* [Can DocIO perform line-by-line comparisons for Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-perform-line-by-line-comparisons-for-word-documents)
 
 ## Sections
 
@@ -26,6 +30,13 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [How to set OpenType Font Features?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-opentype-font-features)
 * [How to extract the images in the document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-extract-the-images-in-the-document)
 * [Can the chart data be refreshed?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#can-the-chart-data-be-refreshed)
+* [How to detect the shape type in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-detect-the-shape-type-in-a-word-document)
+* [Is it possible to change the DATE field value in a Word document using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#is-it-possible-to-change-the-date--field-value-in-a-word-document-using-docio)
+* [How to set the date format on the horizontal axis of a chart in a Word document?](https://support.syncfusion.com/kb/article/11456/how-to-set-date-format-in-x-axis-of-chart-in-winforms-docio?isInternalRefresh=False)
+
+## Mail merge
+
+* [Is it possible to format merge fields with image formats before performing a mail merge?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs)
 
 ## Tables
 
@@ -34,6 +45,8 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [How to set table cell width?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-table-cell-width)
 * [How to position a table in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-position-a-table-in-a-word-document)
 * [How to set the text direction to a table in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-the-text-direction-to-a-table-in-word-document)
+* [How can I obtain the height of a cell or row in a Word document using the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-can-i-obtain-the-height-of-a-cell-or-row-in-a-word-document-using-the-docio-library)
+* [Why does setting the top or bottom padding for one cell in a Word document apply the same padding to all cells in the row?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#why-does-setting-the-top-or-bottom-padding-for-one-cell-in-a-word-document-apply-the-same-padding-to-all-cells-in-the-row)
 
 ## Track Changes
 
@@ -50,10 +63,13 @@ The frequently asked questions under each category in Essential&reg; DocIO are l
 * [Which one is better Azure App Service or Cloud Service for Word to PDF or image using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#which-one-is-better-azure-app-service-or-cloud-service-for-word-to-pdf-or-image-using-docio)
 * [Why images are preserved as RedX images in Word to PDF or image conversion?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-images-are-preserved-as-redx-images-in-word-to-pdf-or-image-conversion)
 * [Why are content controls not preserved as editable form fields in the converted PDF document even when PreserveFormFields is enabled?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-are-content-controls-not-preserved-as-editable-form-fields-in-the-converted-pdf-document-even-when-preserveformfields-is-enabled)
+* [Why are some fonts missing when converting a Word document to PDF in the Syncfusion<sup>®</sup> demo application?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-are-some-fonts-missing-when-converting-a-word-document-to-pdf-in-the-syncfusion-demo-application)
 
 ## HTML and EPUB conversions
 
 * [How to set title when converting Word document to EPUB?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-to-set-title-when-converting-word-document-to-epub)
+* [Why are there blank spaces or empty paragraphs when converting HTML to Word?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#why-are-there-blank-spaces-or-empty-paragraphs-when-converting-html-to-word)
+* [How DocIO handles HTML validation while importing HTML?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-docio-handles-html-validation-while-importing-html)
 
 ## Linux
 

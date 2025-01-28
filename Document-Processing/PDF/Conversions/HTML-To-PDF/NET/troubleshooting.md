@@ -339,9 +339,6 @@ Check the HTML file or URL is rendered properly in Chrome browser's print previe
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
-COPY . /app
-WORKDIR /app
-
 RUN chmod +x /app/runtimes/linux/native/chrome && \
     chmod +x /app/runtimes/linux/native/chrome-wrapper
 
@@ -703,7 +700,7 @@ To resolve this issue, we can add inline styles in element. However, we have att
 
 {% endtabs %}
 
-You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-Footer-Background-Colour/.NET).
+You can downloaded a complete working sample from <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-Footer-Background-Colour/.NET">GitHub</a>.
 
 </td>
 </tr>
@@ -1006,7 +1003,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 <td>We are internally using the Blink rendering engine to convert HTML to PDF document. Due to the sandbox GDI limitation on Azure App services and Function, custom fonts are not rendered (system-installed font is used instead) because of sandbox GDI API limitations that present even in VM-based Azure Apps plans. So, that the converter will automatically renders with default font.
 
 Refer below link for more information. This is a limitation of Azure cloud environment.
-[https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox)
+<a href="https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox">https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox</a>
 
 </td>
 </tr>
@@ -1015,7 +1012,7 @@ Refer below link for more information. This is a limitation of Azure cloud envir
 <td>
 we can overcome this issue by using Azure cloud service which has the elevated access permissions. If it is possible to use Azure cloud service API for converting HTML to PDF. Please refer below link for converting HTML to PDF in Azure cloud service. The custom font may work in Azure cloud service/Azure VM, we ensured this by creating simple sample in Azure VM and the font is working properly. If possible, kindly use the Azure cloud service with VM to resolve the reported issue. 
 
-KB: [https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink](https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink)
+KB: <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink">https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink</a>
 </td>
 </tr>
 
@@ -1193,7 +1190,7 @@ ENTRYPOINT ["dotnet", "Ops.PDFSearch.Web.dll"]
 {% endhighlight %}
 {% endtabs %}
 
-We have attached the modified docker file for your reference [Docker file](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059).
+We have attached the modified docker file for your reference <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059">Docker file</a>.
 
 Step 2: From chromium version 128.x.x.x.x --database flag required for chrome Crashpad handler.  So, it may cause the issue on your end.  So kindly try the below steps and it may resolve the reported issue.
  
@@ -1227,13 +1224,119 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
 {% endhighlight %}
 {% endtabs %}
 
-Please refer the [Chromium forum link](https://github.com/chrome-php/chrome/issues/649) for more information about the reported issue
+Please refer the <a href="https://github.com/chrome-php/chrome/issues/649">Chromium forum link</a>. for more information about the reported issue
 
 </td>
 </tr>
 
 </table>
 
+## HTML to PDF Conversion Does Not Work in Azure App Service (Windows) Using Blink Rendering Engine
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">HTML to PDF Conversion Does Not Work in Azure App Service (Windows) Using Blink Rendering Engine
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+The Blink rendering engine is not supported for HTML to PDF conversion in <b>Azure App Service (Windows)</b> due to the GDI limitations and restrictions inherent in the Azure App Service environment.
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+
+<b>Use Blink Rendering Engine in Azure App Service Linux or Azure Functions Linux</b>
+
+To perform HTML to PDF conversion using the Blink rendering engine, you can use the following alternatives:
+
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Azure App Service (Linux)</a>: The Blink rendering engine is compatible with Azure App Service running on Linux.
+
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux">Azure Functions (Linux)</a>: Linux-based Azure Functions can also utilize the Blink rendering engine for successful conversions.
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux-with-docker">Azure App Service (Linux Docker)</a>: Deploying the application in a Linux-based Docker container offers another way to use Blink.
+
+<b>Use CEF Rendering Engine in Azure App Service Windows</b>
+
+If you must use Azure App Service on Windows, the <b>CEF rendering engine</b> is a suitable alternative for HTML to PDF conversion.
+Refer to the following documentation for more details:
+
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-windows">Azure App Service (Windows)</a>
+* <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-windows">Azure Function (Windows)</a>
+
+</td>
+</tr>
+
+</table>
+
+## Failed to launch chromium: Missing required dependent packages issue occurs in Azure App Service (Linux)
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Failed to launch chromium: Missing required dependent packages issue occurs in Azure App Service (Linux)
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+This issue may occur due to one of the following reasons:
+1. Missing required Linux dependencies
+2. Missing Chromium dependency files
+3. Lack of access permissions for the chrome and chrome-wrapper files
+
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To resolve the issue and ensure successful HTML to PDF conversion in Azure App Service (Linux), follow these steps:
+
+1: <b>Grant File Access Permissions</b>
+
+Provide read, write, and execute permissions for the chrome and chrome-wrapper files located in the runtimes/linux/native directory. Use the following commands:
+
+{% tabs %}
+{% highlight C# %}
+
+chmod +rwx   chrome-wrapper
+chmod +rwx  chrome
+	
+{% endhighlight %}
+{% endtabs %}
+
+2: <b>Verify Chrome Dependency Packages</b>
+
+Check if the necessary dependencies for Chromium are installed by running the following command in the runtimes/linux/native directory:
+
+{% tabs %}
+{% highlight C# %}
+
+ldd chrome
+	
+{% endhighlight %}
+{% endtabs %}
+
+3: <b>Install Required Dependencies</b>
+
+We can also perform HTML to PDF conversion in Azure App Service (Linux) by installing the required dependencies directly through SSH terminal. Use the following command:
+
+{% tabs %}
+{% highlight C# %}
+
+apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
+	
+{% endhighlight %}
+{% endtabs %}
+
+For more details to install the dependencies through SSH terminal window, refer to the documentation:
+<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Convert HTML to PDF in Azure App Service on Linux| Syncfusion</a>
+
+</td>
+</tr>
+
+</table>
 
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 

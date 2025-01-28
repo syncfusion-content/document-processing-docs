@@ -8,7 +8,7 @@ documentation: UG
 
 # Migrate PDF library from .NET Framework to .NET Core 
 
-In this section, we will see about the changes which need to be considered while migrating Syncfusion .NET PDF library from .NET Framework to .NET Core.  
+In this section, we will see about the changes which need to be considered while migrating Syncfusion<sup>&reg;</sup> .NET PDF library from .NET Framework to .NET Core.  
 
 ## NuGet packages 
 

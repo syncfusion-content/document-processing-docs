@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Bookmarks
 
-Essential PDF provides support to insert, remove and modify the bookmarks in the PDF Document.
+Essential<sup>&reg;</sup> PDF provides support to insert, remove and modify the bookmarks in the PDF Document.
 
 ## Adding Bookmarks in a PDF
 
@@ -255,7 +255,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Inserting Bookmarks in an existing PDF
 
-When loading an existing document, the Essential PDF loads all bookmarks of the document.  
+When loading an existing document, the Essential<sup>&reg;</sup> PDF loads all bookmarks of the document.  
 
 Each loaded bookmark is represented by the [PdfLoadedBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedBookmark.html) object. The following code example illustrates how to insert new bookmarks in the existing PDF document.
 
@@ -380,7 +380,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying the Bookmarks
 
-Essential PDF allows you to modify the bookmarks in the existing PDF document. The following modifications can be done to bookmarks in an existing document. 
+Essential<sup>&reg;</sup> PDF allows you to modify the bookmarks in the existing PDF document. The following modifications can be done to bookmarks in an existing document. 
 
 * Modify the bookmark style, color, title, and destination.
 * Add or insert new bookmarks into the root collection.

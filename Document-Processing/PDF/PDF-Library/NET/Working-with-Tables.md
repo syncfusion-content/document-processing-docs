@@ -8,7 +8,7 @@ documentation: UG
 
 # Working with .NET PDF Tables 
 
-The Syncfusion .NET PDF library provides support for two types of [PDF table](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables) models, both having a different levels of customization, which is explained as follows. The two types of table models are:
+The Syncfusion<sup>&reg;</sup> .NET PDF library provides support for two types of [PDF table](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables) models, both having a different levels of customization, which is explained as follows. The two types of table models are:
 
 1. [PdfGrid* (Recommended)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html)
 2. [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html)

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Merge PDF Documents using .NET PDF Library
 
-Essential PDF supports [merging multiple PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/merge-pdf) documents from disk and stream.
+Essential<sup>&reg;</sup> PDF supports [merging multiple PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/merge-pdf) documents from disk and stream.
 
 Check the following video to quickly get started with merge PDF document in .NET using the PDF Library.
 {% youtube "https://www.youtube.com/watch?v=IHOgJnFyj6A" %}
@@ -146,7 +146,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Importing pages from multiple documents
 
-Essential PDF provides support for importing the pages from one document to another document using [ImportPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPage_Syncfusion_Pdf_Parsing_PdfLoadedDocument_Syncfusion_Pdf_PdfPageBase_) method. The following code illustrates this. The imported page is added to the end of the original document.
+Essential<sup>&reg;</sup> PDF provides support for importing the pages from one document to another document using [ImportPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPage_Syncfusion_Pdf_Parsing_PdfLoadedDocument_Syncfusion_Pdf_PdfPageBase_) method. The following code illustrates this. The imported page is added to the end of the original document.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Importing-pages-from-one-document-another-document/.NET/Importing-pages-from-one-document-another-document/Program.cs" %} 
@@ -447,7 +447,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Optimizing PDF resources when merging PDF documents
 
-Essential PDF provides support to optimize the PDF resources when merging PDF documents. You can optimize the resources by enabling the [OptimizeResources](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html#Syncfusion_Pdf_PdfMergeOptions_OptimizeResources) property available in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class.
+Essential<sup>&reg;</sup> PDF provides support to optimize the PDF resources when merging PDF documents. You can optimize the resources by enabling the [OptimizeResources](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html#Syncfusion_Pdf_PdfMergeOptions_OptimizeResources) property available in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class.
 
 Refer to the following code example to optimize the PDF resources when merging PDF documents.
 
@@ -523,7 +523,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extend the margin of the PDF pages while merging PDF document
 
-The [Syncfusion PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) provides support for extending the margins of the pdf pages by using the [ExtendMargin](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html#Syncfusion_Pdf_PdfMergeOptions_ExtendMargin) property available from the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class. When ExtendMargin is set to true, then a specified margin is considered while merging the existing documents. 
+The [Syncfusion<sup>&reg;</sup> PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) provides support for extending the margins of the pdf pages by using the [ExtendMargin](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html#Syncfusion_Pdf_PdfMergeOptions_ExtendMargin) property available from the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class. When ExtendMargin is set to true, then a specified margin is considered while merging the existing documents. 
 
 The following code sample illustrates this.
 
@@ -614,7 +614,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ##  Merge PDF document without compromising accessibility tags 
 
-The Syncfusion PDF library enables users to merge PDF documents while maintaining their accessibility standards, which are essential for users relying on screen readers and other assistive technologies. By enabling the `MergeAccessibilityTags` property in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class, the tagged structure of the documents is preserved in the final merged PDF. The default value for this property is false. 
+The Syncfusion<sup>&reg;</sup> PDF library enables users to merge PDF documents while maintaining their accessibility standards, which are essential for users relying on screen readers and other assistive technologies. By enabling the `MergeAccessibilityTags` property in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class, the tagged structure of the documents is preserved in the final merged PDF. The default value for this property is false. 
 
  Refer to the following code to merge PDF documents without losing accessibility tags. 
 

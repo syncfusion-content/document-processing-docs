@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Attachments
 
-Essential PDF provides support for file attachments in PDF documents.
+Essential<sup>&reg;</sup> PDF provides support for file attachments in PDF documents.
 
 Attachments can contain any kind of file with detailed information.
 
@@ -78,7 +78,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Attachment/Adding-attachment-to-a-PDF-document/).
 
-Essential PDF also provides support for adding the attachments to existing PDF documents by using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. The following code example illustrates the same.
+Essential<sup>&reg;</sup> PDF also provides support for adding the attachments to existing PDF documents by using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. The following code example illustrates the same.
 
 {% tabs %}
 
@@ -154,7 +154,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing attachment from an existing PDF 
 
-Essential PDF allows you to remove the attachments from the existing document by using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_Remove_Syncfusion_Pdf_Interactive_PdfAttachment_) and [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_RemoveAt_System_Int32_) method in [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. The following code example explains the same.
+Essential<sup>&reg;</sup> PDF allows you to remove the attachments from the existing document by using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_Remove_Syncfusion_Pdf_Interactive_PdfAttachment_) and [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachmentCollection.html#Syncfusion_Pdf_Interactive_PdfAttachmentCollection_RemoveAt_System_Int32_) method in [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. The following code example explains the same.
 
 {% tabs %}
 
@@ -212,7 +212,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extracting and saving an attachment to the disk.
 
-Essential PDF provides support for extracting the attachments and saving them to the disk. The following code example explains how to extract and save an attachment using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class.
+Essential<sup>&reg;</sup> PDF provides support for extracting the attachments and saving them to the disk. The following code example explains how to extract and save an attachment using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class.
 
 {% tabs %}
 

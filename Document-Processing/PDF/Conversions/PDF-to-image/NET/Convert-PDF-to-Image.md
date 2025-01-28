@@ -1,6 +1,6 @@
 ---
-title: Convert PDF to Image| Syncfusion
-description: Learn about how to convert a PDF page to Image with easy steps using the PDFToImageConverter library.
+title: Convert PDF to Image| Syncfusion&reg;
+description: Learn how to convert a PDF document to Image file with easy steps using Syncfusion&reg; PDFToImageConverter library.
 platform: document-processing
 control: PDF to image
 documentation: UG
@@ -14,51 +14,6 @@ This PDF to image converter library allows converting PDF documents to images wi
 Watch the following video to quickly get started with converting PDF to image in .NET using a PDF to Image Converter Library.
 {% youtube "https://www.youtube.com/watch?v=Grjtyh5gBr8" %}
 
-<b>NuGet</b>
-
-<table>
-<tr>
-<thead>
-<th><b>Platform(s)</b></th>
-<th><b>NuGet Package</b></th>
-</thead>
-</tr>
-<tr>
-<td>
-Windows Forms
-</td>
-<td>
-{{'[Syncfusion.PdfToImageConverter.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WinForms/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-WPF
-</td>
-<td>
-{{'[Syncfusion.PdfToImageConverter.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.WPF/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Core Windows
-</td>
-<td>
-{{'[Syncfusion.PdfToImageConverter.Net.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC Windows
-</td>
-<td>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc4/)'| markdownify }}<br/>
-{{'[Syncfusion.PdfToImageConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.AspNet.Mvc5/)'| markdownify }}
-</td>
-</tr>
-</table>
-
-N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
 
 The following code snippet illustrates how to convert PDF page into image using Convert method in PdfToImageConverter.
 

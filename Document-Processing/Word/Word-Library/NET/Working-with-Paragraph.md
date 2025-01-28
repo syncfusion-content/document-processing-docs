@@ -2806,6 +2806,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to retrieve list values for a specific heading in a Word document](https://support.syncfusion.com/kb/article/17713/how-to-retrieve-list-values-for-a-specific-heading-in-a-word-document)
 * [How to change the font for specific content in a Word document](https://support.syncfusion.com/kb/article/17788/how-to-change-the-font-for-specific-content-in-a-word-document)
 * [How to apply a left indent to the imported content after the list paragraph in a Word document](https://support.syncfusion.com/kb/article/17544/how-to-apply-a-left-indent-to-the-imported-content-in-core-docio)
+* [How to expand and collapse content based on headings in a Word document](https://support.syncfusion.com/kb/article/17837/how-to-expand-and-collapse-content-based-on-headings-in-a-word-document) 
+* [How to apply continuous list numbering when merging two documents with different list styles](https://support.syncfusion.com/kb/article/17848/how-to-apply-continuous-list-numbering-when-merging-two-documents-with-different-list-styles)
+* [How to copy the format of the text from an RTF string and apply it to text in DOCX format document?](https://support.syncfusion.com/kb/article/17903/how-to-copy-the-format-of-the-text-from-an-rtf-string-and-apply-it-to-text-in-docx-format-document)
 
 ## Frequently Asked Questions
 

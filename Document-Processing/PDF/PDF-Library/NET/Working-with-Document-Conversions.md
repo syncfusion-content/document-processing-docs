@@ -9,7 +9,7 @@ documentation: UG
 
 ## Converting Word documents to PDF
 
-Essential PDF allows you to convert a Word document into PDF. For converting a Word document to PDF, the following assemblies need to be referenced in your application.
+Essential<sup>&reg;</sup> PDF allows you to convert a Word document into PDF. For converting a Word document to PDF, the following assemblies need to be referenced in your application.
 
 <table>
 <thead>
@@ -159,7 +159,7 @@ Note:
 
 ### Customizing the Word document to PDF conversion
 
-Essential DocIO allows you to customize the Word to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
+Essential<sup>&reg;</sup> DocIO allows you to customize the Word to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
 
 * Allows to determine the quality of the charts in the converted PDF.
 * Allows to determine the quality of the JPEG images in the converted PDF.
@@ -235,7 +235,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Converting Excel documents to PDF
 
-[ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.ExcelToPDFConverter.Base~Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) is responsible for converting an Excel document into PDF. Essential PDF allows you to convert an entire workbook or a single worksheet into PDF document. Refer to the following links for assemblies/nuget packages required based on platforms to convert Excel document into PDF. 
+[ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.ExcelToPDFConverter.Base~Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) is responsible for converting an Excel document into PDF. Essential<sup>&reg;</sup> PDF allows you to convert an entire workbook or a single worksheet into PDF document. Refer to the following links for assemblies/nuget packages required based on platforms to convert Excel document into PDF. 
 
 * [Assemblies Information](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required#converting-excel-document-to-pdf)
 * [NuGet Information](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required#converting-excel-document-to-pdf)
@@ -591,7 +591,7 @@ The following list contains unsupported elements that presently will not be pres
 
 ## Converting RTF documents to PDF
 
-Essential PDF allows you to convert a RTF to PDF document. For converting a RTF to PDF, the following assemblies need to be referenced in your application.
+Essential<sup>&reg;</sup> PDF allows you to convert a RTF to PDF document. For converting a RTF to PDF, the following assemblies need to be referenced in your application.
 
 <table>
 <thead>
@@ -704,7 +704,7 @@ N> Total number of pages may vary  based on unsupported elements in the converte
 
 ### Customizing the RTF to PDF conversion
 
-Essential DocIO allows you to customize the RTF to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
+Essential<sup>&reg;</sup> DocIO allows you to customize the RTF to PDF conversion using [DocToPDFConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class with the below options:
 
 * Allows to determine the quality of the JPEG images in the converted PDF.
 * Allows to reduce the Main Memory usage in RTF to PDF conversion by reusing the identical images.
@@ -892,11 +892,11 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/TIFF-to-PDF/Converting-multipage-TIFF-to-PDF-document).
 
-N> 1. Essential PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core.
+N> 1. Essential<sup>&reg;</sup> PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Portable](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) assembly reference in ASP.NET Core.
 
 ### Compression in monochrome images
 
-Essential PDF supports JBIG2 compression for best compression of monochrome images.
+Essential<sup>&reg;</sup> PDF supports JBIG2 compression for best compression of monochrome images.
 
 Refer the below code snippet to draw a single frame monochrome TIFF image with JBIG2 compression using [EncodingType](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Graphics.EncodingType.html) Enum.
 
@@ -958,7 +958,7 @@ N> 2. By default, all monochrome images will be compressed in CITTT4 compression
 
 The XPS (XML Paper Specification) document format is a fixed document format which consists of structured XML markup that defines the layout of a document and the visual appearance of each page, along with rendering rules for distributing, archiving, rendering, processing and printing the documents.
 
-Essential PDF provides support for converting XPS to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Base~Syncfusion.XPS.XPSToPdfConverter.html) class.
+Essential<sup>&reg;</sup> PDF provides support for converting XPS to PDF using [XPSToPdfConverter](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Base~Syncfusion.XPS.XPSToPdfConverter.html) class.
 
 The below code illustrates how to convert XPS to PDF.
 
@@ -1012,7 +1012,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Converting-XPS-to-PDF-document).
 
-N> Essential PDF supports converting XPS to PDF with [Syncfusion.XpsToPdfConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core) package reference in .NET Core application.
+N> Essential<sup>&reg;</sup> PDF supports converting XPS to PDF with [Syncfusion.XpsToPdfConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core) package reference in .NET Core application.
 
 ### Supported Elements
 

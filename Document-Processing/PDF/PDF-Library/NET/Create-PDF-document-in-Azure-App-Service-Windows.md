@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF document in Azure App Service on Windows
 
-The [Syncfusion .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Windows**.
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Windows**.
 
 ## Steps to create PDF document in Azure App Service on Windows
 
@@ -24,7 +24,7 @@ Step 3: Click **Create** button.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](Azure_images/Azure-app-service-windows/NuGet_package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
 
@@ -139,10 +139,10 @@ public IActionResult CreatePDFDocument()
 ## Steps to publish as Azure App Service on Windows 
 
 Step 1: Right-click the project and select **Publish** option.
-![Right-click the project and select the publish option](Azure_images/Azure-app-service-windows/Publish_button_screenshot.png)
+![Publish option Image](Azure_images/Azure-app-service-windows/Publish_button_screenshot.png)
 
 Step 2: Click the **Add a Publish Profile** button.
-![Click the Add a publish profile](Azure_images/Azure-app-service-windows/Publish_profile_screenshot.png)
+![Add a publish profile](Azure_images/Azure-app-service-windows/Publish_profile_screenshot.png)
 
 Step 3: Select the publish target as **Azure**.
 ![Select the publish target as Azure](Azure_images/Azure-app-service-windows/Select_target.png)
@@ -172,10 +172,10 @@ Step 11: Now, the published webpage will open in the browser.
 ![Browser will open after publish](Azure_images/Azure-app-service-windows/WebView.png)
 
 Step 12: Select the PDF document and Click **Create PDF document** to create a PDF document.You will get the output PDF document as follows.
-![Create PDF document in Azure App Service on Windows](Azure_images/Azure-app-service-windows/Output_screenshot.png)
+![Azure App Service on Windows](Azure_images/Azure-app-service-windows/Output_screenshot.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion PDF library features. 
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
 
 An online sample link to [create PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/material3) in ASP.NET Core. 

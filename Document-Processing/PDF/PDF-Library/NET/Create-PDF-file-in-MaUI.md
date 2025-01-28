@@ -8,26 +8,71 @@ documentation: UG
 
 # Create PDF file in .NET MAUI
 
-The Syncfusion [.NET MAUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/maui/pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, forms, and securing PDF files and more. Using this library, you can **create a PDF document in the .NET MAUI application.**
+The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/maui/pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, forms, and securing PDF files and more. Using this library, you can **create a PDF document in the .NET MAUI application.**
 
 **Prerequisites:**
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+To create .NET Multi-platform App UI (.NET MAUI) apps using Visual Studio Code, you need the latest versions of the .NET 6 SDK and additional tools configured for .NET MAUI development. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&viewFallbackFrom=net-maui-7.0&tabs=visual-studio).
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 
 ## Steps to create PDF document programmatically in .NET MAUI
 
-N> Our PDF library is currently supported in .NET MAUI applications on the Android, iOS, and Windows platform. Currently, the PDF library is not supported in the Mac Catalyst platform. 
+N> Our PDF library is currently supported in .NET MAUI applications on the Android, iOS, and Windows platform. Currently, the PDF library is not supported in the Mac Catalyst platform.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new project in VS2022, select the .NET MAUI App (Preview) template, and click the **Next** button.
 ![.NET MAUI sample creation step1](MAUI_images/Create_Project.png)
 
-Step 2: Enter the project name and click **Create**.
+Step 1.1: Enter the project name and click **Create**.
 ![.NET MAUI sample configure project](MAUI_images/Configure_project.png)
 
-Step 3: Install the [Syncfusion.Pdf.Net](https://www.nuget.org/packages/Syncfusion.Pdf.NET/) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
+Step 1.2: Install the [Syncfusion.Pdf.Net](https://www.nuget.org/packages/Syncfusion.Pdf.NET/) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 ![.NET MAUI NuGet package reference](MAUI_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# .NET MAUI App (Preview) template using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-9.0&viewFallbackFrom=net-maui-8.0&tabs=vswin&pivots=devices-android).
+
+Alternatively, create a .NET MAUI application by executing the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in a .NET MAUI app**, run the following command to  install [Syncfusion.Pdf.Net](https://www.nuget.org/packages/Syncfusion.Pdf.NET/) package.
+
+```
+dotnet add package Syncfusion.PDF.Net
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the *MainWindow.xaml* as shown below.
 
@@ -386,6 +431,49 @@ Step 6: Add a new action method *createPdf_Click* in *MainWindow.xaml.cs* and in
 {% endcapture %}
 {{ codesnippet3 | OrderList_Indent_Level_1 }}
 
+Step 7: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 8: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 A complete working example of creating a PDF document in the .NET MAUI Desktop app can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfSampleMaUI-1356433164887362210.zip).
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/MAUI/CreatePdfDemoSample).
@@ -478,6 +566,6 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   </tr>
 </table>
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/maui) to explore the rich set of Syncfusion PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample link to [create PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/bootstrap5) in ASP.NET Core. 
