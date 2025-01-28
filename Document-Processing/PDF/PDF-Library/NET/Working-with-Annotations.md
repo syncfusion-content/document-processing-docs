@@ -3596,9 +3596,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Preserving the annotation appearance while importing the annotation data into the PDF document.
 
-The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the `SetAppearance` parameter to `true` when calling the `ImportAnnotations` method.
+The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the [SetAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_SetAppearance_System_Boolean_) method to `true` when calling the [ImportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method.
 
-Please refer to the below code snippet to achieve this on your end.
+Please refer to the below code example to achieve this on your end.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document/.NET/Importing-annotations-from-JSON-file-to-PDF-document/Program.cs" %}
