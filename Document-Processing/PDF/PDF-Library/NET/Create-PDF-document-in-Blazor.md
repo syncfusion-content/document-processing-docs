@@ -531,7 +531,7 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
 
-## .NET MAUI Blazor Application
+## .NET MAUI Blazor app
 
 {% tabcontents %}
 
