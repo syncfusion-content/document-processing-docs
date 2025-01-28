@@ -45,9 +45,9 @@ Alternatively, create a .NET MAUI application using the following command in the
 dotnet new maui -o CreateExcel
 cd CreateExcel  
 
-Step 2: Install the Syncfusion.XlsIO.Net.Core NuGet package as a reference to your .NET MAUI project:
+Step 2: Install the Syncfusion.XlsIO.NET NuGet package as a reference to your .NET MAUI project:
 
-dotnet add package Syncfusion.XlsIO.Net.Core  
+dotnet add package Syncfusion.XlsIO.NET
 
 Step 3: After installing the package, open the project in Visual Studio Code and add the necessary code to create and manipulate Excel documents using Syncfusion XlsIO.
 
