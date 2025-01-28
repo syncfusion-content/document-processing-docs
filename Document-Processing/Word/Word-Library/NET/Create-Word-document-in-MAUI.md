@@ -25,7 +25,9 @@ To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versi
 * Install the latest .NET SDK and Visual Studio Code.
 * Open Visual Studio Code and install the [.NET MAUI for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) from the Extensions Marketplace.
 * Follow the step-by-step setup guide:
+
   [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+  
   [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
 
 {% endtabcontent %}
@@ -64,6 +66,12 @@ dotnet new maui -n Create-Word-document
 ```
 cd Create-Word-document
 ```
+
+Alternatively, use command palette
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
 
 Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the .NET MAUI project.
 
@@ -350,7 +358,10 @@ saveService.SaveAndView("Sample.docx", "application/msword", ms);
 
 {% endtabs %}
 
+Step 7: Run the Application.
 
+1. Select the target framework, device or emulator.
+2. Press F5 to run the application.
 
 ## Helper files for .NET MAUI
 

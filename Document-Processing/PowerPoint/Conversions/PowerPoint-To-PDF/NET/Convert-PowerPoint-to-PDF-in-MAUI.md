@@ -10,10 +10,35 @@ documentation: UG
 
 Syncfusion&reg; PowerPoint is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in .NET MAUI**.
 
-## Prerequisites
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin).
+**Prerequisites:**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+* Install the latest .NET SDK and Visual Studio Code.
+* Open Visual Studio Code and install the [.NET MAUI for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) from the Extensions Marketplace.
+* Follow the step-by-step setup guide:
+
+  [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+  
+  [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 ## Steps to convert PowerPoint to PDF programmatically
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
 
@@ -26,6 +51,37 @@ Step 2: Enter the project name and click **Create**.
 Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.NET NuGet package](Workingwith-MAUI/Nuget_Package_PPTXtoPDF.png)
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# .NET MAUI app project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -n Convert-PowerPoint-presentation-to-PDF
+```
+
+```
+cd Convert-PowerPoint-presentation-to-PDF
+```
+
+Alternatively, use command palette
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Step 2: Run the following command to install [Syncfusion.PresentationRenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET.Core) to the .NET MAUI project.
+
+```
+dotnet add package Syncfusion.PresentationRenderer.NET.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
@@ -92,6 +148,11 @@ using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStr
 
 {% endhighlight %}
 {% endtabs %}
+
+Step 7: Run the Application.
+
+1. Select the target framework, device or emulator.
+2. Press F5 to run the application.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI).
 
