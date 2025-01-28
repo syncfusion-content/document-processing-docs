@@ -89,7 +89,7 @@ Please refer to the below code example to understand how to save and restore the
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-in-a-new-PDF-document/.NET/Drawing-text-in-a-new-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs" %}
 
 // Create a new PDF document
 using (PdfDocument pdfDocument = new PdfDocument())
