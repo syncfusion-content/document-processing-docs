@@ -22,6 +22,40 @@ Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget
 
 ![Install Nuget from Manage Nuget Package](Workingwith-Mac/Install_Nuget1.png)
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new .NET Core console application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new console -n Convert-PowerPoint-presentation-to-Image
+```
+
+```
+cd Convert-PowerPoint-presentation-to-Image
+```
+
+Alternatively, use command palette
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **Console App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Step 2: Run the following command to install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the console project.
+
+```
+dotnet add package Syncfusion.PresentationRenderer.NET.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
 Step 4: Include the following Namespaces in the **Program.cs** file.
@@ -65,6 +99,50 @@ Step 5: Add the following code snippet in **Program.cs** file to **convert a Pow
 
 {% endhighlight %}
 {% endtabs %}
+
+
+Step 6: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 7: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/MAC).
 
