@@ -56,7 +56,7 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new webapp -n Create-Word-document
+dotnet new mvc -n Create-Word-document
 ```
 
 ```
