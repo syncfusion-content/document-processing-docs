@@ -35,7 +35,7 @@ To quickly get started with creating a PDF document in Blazor, check this video:
  
 {% endtabcontents %}
 
-## Server app
+## Steps to create PDF document in Blazor Server-Side application
 
 {% tabcontents %}
 
@@ -43,6 +43,12 @@ To quickly get started with creating a PDF document in Blazor, check this video:
 
 Step 1: Create a new C# Blazor server-side application project. Select Blazor App from the template and click the Next button.
 ![Blazor sample creation](Create-PDF-Blazor/Blazor_project_creation.png)
+
+Step 1.1: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
+![Blazor project configuration window](Create-PDF-Blazor/Blazor_configuration_window.png)
+
+Step 1.2: Choose Blazor Server App from the dashboard and click Create button to create a new Blazor server-side application.
+![Blazor Server side application](Create-PDF-Blazor/Select_server_app.png)
 
 Step 2: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
@@ -306,14 +312,20 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor.
 
-## WASM app
+## Steps to create PDF document in Blazor client-side application:
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor WASM application project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor client-side application project. Select Blazor App from the template and click the Next button.
 ![Blazor client project creation step1](Create-PDF-Blazor/Blazor_project_creation.png)
+
+Step 1.1: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
+![Blazor client configuration window](Create-PDF-Blazor/Blazor_configuration_window.png)
+
+Step 1.2: Blazor WebAssembly App from the dashboard and click Create button to create a new Blazor client-side application. 
+![Select Blazor WASM app](Create-PDF-Blazor/Blazor_Client_Template.png)
 
 Step 2: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
@@ -322,9 +334,9 @@ Step 2: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syn
  
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor WASM app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+Step 1: Create a new C# Blazor client-side app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
-Alternatively, create a WASM application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a client-side application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new blazorwasm -o Create-PDF-document
@@ -531,13 +543,16 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
 
-## .NET MAUI Blazor app
+## Steps to create PDF documents in .NET MAUI Blazor application
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid App` template in Visual Studio.![Blazor client project creation step1](Create-PDF-Blazor/Blazor_Maui_project_creation.png)
+
+Step 1.1: Now, the project configuration window appears. Set the project name and location, then select  `Create` button to create a new project with the default project configuration.
+![Blazor client configuration window](Create-PDF-Blazor/Maui_Blazor_configuration_window.png)
 
 Step 2: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet_Net.png)
