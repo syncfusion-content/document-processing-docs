@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in AWS Elastic Beanstalk | Syncfusion&reg;
+title: Convert Word to Image in AWS Elastic Beanstalk | Syncfusion<sup>&reg;</sup>
 description: Convert Word to image without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to Image in AWS Elastic Beanstalk
 
-Syncfusion&reg; Essential&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Elastic Beanstalk**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in AWS Elastic Beanstalk**.
 
 ## Steps to convert Word document to Image in AWS Elastic Beanstalk
 
@@ -24,7 +24,7 @@ Step 2: Install the following **Nuget packages** in your application from [Nuget
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Blazor_Images/Nuget-Package-WordtoImage.png)
 ![Install SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1 NuGet Package](AWS_Images/Elastic_Beanstalk_Images/Nuget-Convert-WordtoImage.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the **HomeController.cs** file.
 
@@ -136,6 +136,6 @@ By executing the program, you will get the **image** as follows.
 
 ![Word to Image in AWS Elastic Beanstalk](WordToPDF_images/Output-WordtoImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetcore/Word/WordToImage#/material3) in ASP.NET Core.
