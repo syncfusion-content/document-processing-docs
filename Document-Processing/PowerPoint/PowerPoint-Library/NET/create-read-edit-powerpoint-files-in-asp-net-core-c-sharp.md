@@ -56,7 +56,7 @@ Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new webapp -n Read-and-edit-PowerPoint-presentation
+dotnet new mvc -n Read-and-edit-PowerPoint-presentation
 ```
 
 ```
