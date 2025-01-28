@@ -10,7 +10,32 @@ documentation: UG
 
 Syncfusion&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in ASP.NET Core**.
 
+**Prerequisites:**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+* Visual Studio 2019 Preview or later
+* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+  
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+* Visual Studio Code
+* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+  
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 ## Steps to convert Word document to Image in C#
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
 
@@ -19,6 +44,37 @@ Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) projec
 Step 2: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet package](ASP-NET-Core_images/NugetPackage.png)
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new mvc -n Convert-Word-to-image
+```
+
+```
+cd Convert-Word-to-image
+```
+
+Alternatively, use command palette
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Step 2: Run the following command to install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the .NET MAUI project.
+
+```
+dotnet add package Syncfusion.DocIORenderer.Net.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
 
@@ -86,6 +142,49 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Input.docx")
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 8: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 9: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/ASP.NET-Core).
 
