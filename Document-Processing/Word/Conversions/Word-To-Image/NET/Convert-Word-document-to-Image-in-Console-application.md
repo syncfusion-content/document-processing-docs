@@ -18,15 +18,15 @@ Syncfusion&reg; DocIO is a [.NET Word library](https://www.syncfusion.com/docume
 
 {% tabcontent Visual Studio %}
 
-* Visual Studio 2019 Preview or later
-* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* Visual Studio 2019 Preview or later.
+* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Visual Studio Code
-* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* Visual Studio Code.
+* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 {% endtabcontent %}
