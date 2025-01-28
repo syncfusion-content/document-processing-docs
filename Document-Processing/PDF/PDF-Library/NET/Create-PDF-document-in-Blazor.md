@@ -15,23 +15,73 @@ To include the Syncfusion<sup>&reg;</sup> Blazor PDF library into your Blazor ap
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
 
+**Prerequisites:**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+* Visual Studio 2022 Preview or later
+* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+* Visual Studio Code
+* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+* 
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 ## Steps to create PDF document in Blazor Server-Side application
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new C# Blazor server-side application project. Select Blazor App from the template and click the Next button.
 ![Blazor sample creation](Create-PDF-Blazor/Blazor_project_creation.png)
 
-Step 2: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
+Step 1.1: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
 ![Blazor project configuration window](Create-PDF-Blazor/Blazor_configuration_window.png)
 
-Step 3: Choose Blazor Server App from the dashboard and click Create button to create a new Blazor server-side application.
+Step 1.2: Choose Blazor Server App from the dashboard and click Create button to create a new Blazor server-side application.
 ![Blazor Server side application](Create-PDF-Blazor/Select_server_app.png)
 
-Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# Blazor Serevr app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+
+Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new blazorserver -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in Blazor Server app**,run the following command to  install [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) to the Blazor project.
+
+```
+dotnet add package Syncfusion.PDF.Net.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Create a new cs file named  ``ExportService`` under ``Data`` folder and include the following namespaces in the file.
+Step 3: Create a new cs file named  ``ExportService`` under ``Data`` folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -44,7 +94,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
+Step 4: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
 Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
@@ -118,7 +168,7 @@ public void ConfigureServices(IServiceCollection services)
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Inject ``ExportService`` in-to ``FetchData.razor`` using the following code.
+Step 5: Inject ``ExportService`` in-to ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -155,7 +205,7 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 6: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -174,7 +224,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 8: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
+Step 7: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
 
 {% tabs %}
 
@@ -207,6 +257,49 @@ Step 8: Add the following JavaScript function in the  ``_Host.cshtml`` available
 
 {% endtabs %}
 
+Step 8: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 9: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ServerSideApplication).
 
 By executing the program, you will get the following output in the browser.
@@ -219,25 +312,54 @@ N> It is recommended to use Blazor Server-Side application to reduce the pay bac
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
+An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor.
 
 ## Steps to create PDF document in Blazor client-side application:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new C# Blazor client-side application project. Select Blazor App from the template and click the Next button.
 ![Blazor client project creation step1](Create-PDF-Blazor/Blazor_project_creation.png)
 
-Step 2: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
+Step 1.1: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
 ![Blazor client configuration window](Create-PDF-Blazor/Blazor_configuration_window.png)
 
-Step 3: Blazor WebAssembly App from the dashboard and click Create button to create a new Blazor client-side application. 
+Step 1.2: Blazor WebAssembly App from the dashboard and click Create button to create a new Blazor client-side application. 
 ![Select Blazor WASM app](Create-PDF-Blazor/Blazor_Client_Template.png)
 
-Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# Blazor client-side app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+
+Alternatively, create a client-side application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new blazorwasm -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in Blazor WASM app**,run the following command to  install [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) to the Blazor project.
+
+```
+dotnet add package Syncfusion.PDF.Net.Core
+```
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file.
+Step 3: Next, include the following namespaces in that  ``FetchData.razor`` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -252,7 +374,7 @@ Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Create a button in the ``FetchData.razor`` using the following code.
+Step 4: Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -260,7 +382,7 @@ Step 6: Create a button in the ``FetchData.razor`` using the following code.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
+Step 5: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
  
@@ -314,7 +436,7 @@ JS.SaveAs("Sample.pdf", memoryStream.ToArray());
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 6: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -333,7 +455,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 8: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
+Step 7: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
 
 {% tabs %}
 
@@ -366,6 +488,51 @@ Step 8: Add the following JavaScript function in the ``index.html`` available un
 
 {% endtabs %}
 
+Step 8: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 9: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+```
+dotnet run
+```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ClientSideApplication).
 
 By executing the program, you will get the following output in the browser.
@@ -380,16 +547,44 @@ An online sample link to [create PDF document](https://blazor.syncfusion.com/dem
 
 ## Steps to create PDF documents in .NET MAUI Blazor application
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid App` template in Visual Studio.![Blazor client project creation step1](Create-PDF-Blazor/Blazor_Maui_project_creation.png)
 
-Step 2: Now, the project configuration window appears. Set the project name and location, then select  `Create` button to create a new project with the default project configuration.
+Step 1.1: Now, the project configuration window appears. Set the project name and location, then select  `Create` button to create a new project with the default project configuration.
 ![Blazor client configuration window](Create-PDF-Blazor/Maui_Blazor_configuration_window.png)
 
-
-Step 3: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet_Net.png)
 
-Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# .NET MAUI Blazor app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+
+Alternatively, you can create a .NET MAUI Blazor application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui-blazor -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in a .NET MAUI Blazor app**,run the following command to  install [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) to the Blazor project.
+
+```
+dotnet add package Syncfusion.PDF.Net
+```
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 3: Next, include the following namespaces in the ``_Imports.razor`` file.
 
 {% tabs %}
 
@@ -405,7 +600,7 @@ Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
 
 {% endtabs %}
 
-Step 5: Create a button in the ``Weather.razor`` using the following code.
+Step 4: Create a button in the ``Weather.razor`` using the following code.
 
 {% tabs %}
 
@@ -417,7 +612,7 @@ Step 5: Create a button in the ``Weather.razor`` using the following code.
 
 {% endtabs %}
 
-Step 6: Define the ``@ExportToPdf`` click function on ``Weather.razor`` file.
+Step 5: Define the ``@ExportToPdf`` click function on ``Weather.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data source.
 
@@ -832,6 +1027,49 @@ Create a new class file named `SaveWindows.cs` within the Windows folder and inc
 {% endtabs %}
 
 The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page. You can refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page for more details.
+
+Step 6: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 7: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+```
+dotnet run
+```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
 
