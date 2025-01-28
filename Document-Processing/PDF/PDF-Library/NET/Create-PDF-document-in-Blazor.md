@@ -53,6 +53,8 @@ Step 1.2: Choose Blazor Server App from the dashboard and click Create button to
 Step 2: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
+{% endtabcontent %}
+
 {% tabcontent Visual Studio Code %}
 
 Step 1: Create a new C# Blazor Serevr app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
