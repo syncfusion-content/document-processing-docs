@@ -15,20 +15,69 @@ To include the .NET Core PDF library into your ASP.NET Core application, please 
 
 N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency on the System.Drawing.Common package from our Syncfusion.Pdf.Imaging.Net.Core package. Instead, we have introduced SkiaSharp as the alternative library.
 
+**Prerequisites:**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+* Visual Studio 2022 Preview or later
+* Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (or the latest version of .NET SDK)
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+* Visual Studio Code
+* Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (or the latest version of .NET SDK)
+* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+
 ## Steps to create PDF document in ASP.NET Core
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 Step 1: Create a new C# ASP.NET Core Web Application project.
 ![Create ASP.NET Core Web application in Visual Studio](Asp.Net.Core_images/Creation1.png)
 
-Step 2: Select Web Application pattern (Model-View-Controller) for the project.
+Step 1.1: Select Web Application pattern (Model-View-Controller) for the project.
 ![Select Web Application pattern](Asp.Net.Core_images/Creation2.png)
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) [NuGet package](https://help.syncfusion.com/document-processing/nuget-packages) as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) [NuGet package](https://help.syncfusion.com/document-processing/nuget-packages) as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).
 ![Install PDF .NET Core NuGet package](Asp.Net.Core_images/Creation3.png)
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new ASP.NET Core Web App template using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio-code).
+
+Alternatively, create a ASP.NET Core application by executing the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new webapp -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in the ASP.NET Core app**, run the following command to install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package.
+
+```
+dotnet add package Syncfusion.Pdf.Net.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
+Step 3: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -39,7 +88,7 @@ using System.IO;
 
 {% endhighlight %}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
+Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -54,7 +103,7 @@ Step 5: A default action method named Index will be present in HomeController.cs
 
 {% endhighlight %}
 
-Step 6: Add a new action method named ``CreatePDFDocument`` in HomeController.cs file and include the below code example to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
+Step 5: Add a new action method named ``CreatePDFDocument`` in HomeController.cs file and include the below code example to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -79,6 +128,49 @@ fileStreamResult.FileDownloadName = "Sample.pdf";
 return fileStreamResult;
 
 {% endhighlight %}
+
+Step 6: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 7: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Create-new-PDF-document).
 
