@@ -14,6 +14,9 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.sync
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
 ## Steps to convert Excel document to PDF in .NET MAUI
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new C# .NET MAUI application project.
 
@@ -23,9 +26,30 @@ Step 2: Name the project and click **Create** button.
 
 ![Name the project](MAUI_images\MAUI_images_img6.png)
 
-Step 3: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.XlsIORenderer.NET](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.XlsIORenderer.Net NuGet Package](MAUI_images\MAUI_images_img7.png)
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+ 
+Step 1: Create a new .NET MAUI app project in Visual Studio Code using [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0) via the terminal.
+ 
+Alternatively, create a .NET MAUI application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+ 
+dotnet new maui -o ConvertExcelToPdf
+cd ConvertExcelToPdf
+ 
+Step 2: Install the [Syncfusion.XlsIORenderer.NET](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your .NET MAUI project:
+ 
+dotnet add package Syncfusion.XlsIORenderer.NET
+ 
+Step 3: After installing the package, open the project in Visual Studio Code and add the necessary code to convert Excel documents to PDF using Syncfusion XlsIO Renderer.
+ 
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -178,7 +202,7 @@ A complete working example of how to convert an Excel document to PDF in .NET MA
 
 By executing the program, you will get the **PDF document** as follows.
 
-![Output File](MAUI_images\MAUI_images_img8.png)
+![Output File](MAUI_images\MAUI_images_img8.jpg)
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
