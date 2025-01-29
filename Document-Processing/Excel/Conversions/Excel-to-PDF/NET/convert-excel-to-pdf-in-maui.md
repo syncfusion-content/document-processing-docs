@@ -26,7 +26,7 @@ Step 2: Name the project and click **Create** button.
 
 ![Name the project](MAUI_images\MAUI_images_img6.png)
 
-Step 3: Install the [Syncfusion.XlsIORenderer.Net](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.XlsIORenderer.NET](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.XlsIORenderer.Net NuGet Package](MAUI_images\MAUI_images_img7.png)
 
@@ -41,9 +41,9 @@ Alternatively, create a .NET MAUI application using the following command in the
 dotnet new maui -o ConvertExcelToPdf
 cd ConvertExcelToPdf
  
-Step 2: Install the Syncfusion.XlsIORenderer.Net NuGet package as a reference to your .NET MAUI project:
+Step 2: Install the [Syncfusion.XlsIORenderer.NET](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) NuGet package as a reference to your .NET MAUI project:
  
-dotnet add package Syncfusion.XlsIORenderer.Net
+dotnet add package Syncfusion.XlsIORenderer.NET
  
 Step 3: After installing the package, open the project in Visual Studio Code and add the necessary code to convert Excel documents to PDF using Syncfusion XlsIO Renderer.
  
