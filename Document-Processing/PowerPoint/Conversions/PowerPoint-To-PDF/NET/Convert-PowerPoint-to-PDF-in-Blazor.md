@@ -53,6 +53,8 @@ Alternatively, create a Server application using the following command in the te
 dotnet new blazorserver -o Convert-PowerPoint-presentation-to-PDF
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Convert-PowerPoint-presentation-to-PDF
 ```
@@ -321,6 +323,8 @@ Alternatively, create a Server application using the following command in the te
 ```
 dotnet new blazorserver -o Convert-PowerPoint-presentation-to-PDF
 ```
+
+Run the following command to navigate to the project directory.
 
 ```
 cd Convert-PowerPoint-presentation-to-PDF

@@ -50,6 +50,8 @@ Alternatively, create a Server application using the following command in the te
 dotnet new blazorserver -o Convert-Word-document-to-PDF
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Convert-Word-document-to-PDF
 ```
@@ -311,6 +313,8 @@ Alternatively, create a Server application using the following command in the te
 ```
 dotnet new blazorserver -o Convert-Word-document-to-PDF
 ```
+
+Run the following command to navigate to the project directory.
 
 ```
 cd Convert-Word-document-to-PDF

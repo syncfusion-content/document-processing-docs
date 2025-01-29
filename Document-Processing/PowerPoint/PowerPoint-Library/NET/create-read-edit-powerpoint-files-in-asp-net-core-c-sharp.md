@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in ASP.NET Core | Syncfusion<sup>&reg;</sup>
+title: Create and edit PowerPoint files in ASP.NET Core | Syncfusion
 description: A .NET Core PowerPoint library to create, read and edit PowerPoint files in .NET Core applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -53,21 +53,23 @@ Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Step 1: Create a new ASP.NET Core Web application project using the command palette.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new mvc -n Read-and-edit-PowerPoint-presentation
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Read-and-edit-PowerPoint-presentation
 ```
-
-Alternatively, use command palette
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
 
 Step 2: Run the following command to install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the .NET MAUI project.
 
