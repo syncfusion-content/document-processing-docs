@@ -13,7 +13,7 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 **Prerequisites:**
 
 * Visual Studio 2019 Preview
-* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 ## Server app
 
