@@ -57,6 +57,8 @@ Alternatively, create a Server application using the following command in the te
 dotnet new blazorserver -o Create-PowerPoint-document
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Create-PowerPoint-document
 ```
@@ -342,6 +344,8 @@ Alternatively, create a Server application using the following command in the te
 ```
 dotnet new blazorserver -o Create-PowerPoint-document
 ```
+
+Run the following command to navigate to the project directory.
 
 ```
 cd Create-PowerPoint-document

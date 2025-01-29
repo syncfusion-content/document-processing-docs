@@ -52,21 +52,23 @@ Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new .NET Core console application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Step 1: Create a new .NET Core console application project using the command palette.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **Console App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new console -n Convert-PowerPoint-presentation-to-Image
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Convert-PowerPoint-presentation-to-Image
 ```
-
-Alternatively, use command palette
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **Console App** template.
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
 
 Step 2: Run the following command to install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the console project.
 

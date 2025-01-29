@@ -50,6 +50,8 @@ Alternatively, create a Server application using the following command in the te
 dotnet new blazorserver -o Convert-Word-to-image
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Convert-Word-to-image
 ```
@@ -314,6 +316,8 @@ Alternatively, create a Server application using the following command in the te
 ```
 dotnet new blazorserver -o Convert-Word-to-image
 ```
+
+Run the following command to navigate to the project directory.
 
 ```
 cd Convert-Word-to-image

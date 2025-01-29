@@ -55,13 +55,15 @@ Step 2: To **create a Word document in Blazor Server app**, install [Syncfusion.
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor Serevr app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+Step 1: Create a new C# Blazor Server app project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
 Alternatively, create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new blazorserver -o Create-Word-document
 ```
+
+Run the following command to navigate to the project directory.
 
 ```
 cd Create-Word-document
@@ -365,6 +367,8 @@ Alternatively, create a Server application using the following command in the te
 ```
 dotnet new blazorserver -o Create-Word-document
 ```
+
+Run the following command to navigate to the project directory.
 
 ```
 cd Create-Word-document

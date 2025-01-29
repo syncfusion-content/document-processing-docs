@@ -53,21 +53,23 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Step 1: Create a new ASP.NET Core Web application project using the command palette.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new mvc -n Create-Word-document
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Create-Word-document
 ```
-
-Alternatively, use command palette
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
 
 Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the .NET MAUI project.
 
