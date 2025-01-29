@@ -16,21 +16,47 @@ To quickly get started on creating an Excel document in ASP.NET Core, please che
 
 The below steps illustrates creating a simple Invoice formatted Excel document in ASP.NET Core.
 
-Step 1: Create a new C# ASP.NET Core Web Application project.
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+* Create a new C# ASP.NET Core Web Application project.
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/ASP-NET-Core_images_img1.png)
 
-Step 2: Select Web Application pattern (Model-View-Controller) for the project.
+* Select the framework for the project
 
-![Select Web application pattern](ASP-NET-Core_images/ASP-NET-Core_images_img2.png)
+![Select the framework](ASP-NET-Core_images/ASP-NET-Core_images_img2.png)
 
-Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
 
 ![Add XlsIO reference to the project](ASP-NET-Core_images/ASP-NET-Core_images_img3.png)
 
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+* Create a new C# ASP.NET Core Web Application project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+
+Alternatively, create a ASP.NET Core Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new mvc -n CreateExcel
+cd CreateExcel
+```
+
+* To **create a Excel document in ASP.NET Core Web app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
+
+```
+dotnet add package Syncfusion.XlsIO.Net.Core
+```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: A default controller with named HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in the HomeController.cs file.
+* A default controller with named HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in the HomeController.cs file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -48,9 +74,9 @@ Imports Syncfusion.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml.
+* A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+* Add a new button in the Index.cshtml as shown below.
 {% capture codesnippet2 %}
 {% tabs %}  
 {% highlight CSHTML %}
@@ -67,7 +93,7 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 7: Add a new action method CreateDocument in HomeController.cs and include the below code snippet to create an Excel file and download it.
+* Add a new action method CreateDocument in HomeController.cs and include the below code snippet to create an Excel file and download it.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
