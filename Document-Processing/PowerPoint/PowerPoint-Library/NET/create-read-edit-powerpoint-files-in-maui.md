@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in .NET MAUI |Syncfusion<sup>&reg;</sup>|
+title: Create and edit PowerPoint files in .NET MAUI |Syncfusion|
 description: A .NET MAUI PowerPoint library to create, read and edit PowerPoint files in .NET MAUI applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -56,23 +56,25 @@ Step 3: Install the Syncfusion.Presentation.NET NuGet package as a reference to 
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# .NET MAUI app project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-```
-dotnet new maui -n Read-and-edit-presentation
-```
-
-```
-cd Read-and-edit-presentation
-```
-
-Alternatively, use command palette
+Step 1: Create a new C# .NET MAUI app project using the command palette.
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.Presentation.NET.Core](https://www.nuget.org/packages/Syncfusion.Presentation.NET.Core) to the .NET MAUI project.
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -n Read-and-edit-presentation
+```
+
+Step 2: Run the following command to navigate to the project directory.
+
+```
+cd Read-and-edit-presentation
+```
+
+Step 3: Run the following command to install [Syncfusion.Presentation.NET.Core](https://www.nuget.org/packages/Syncfusion.Presentation.NET.Core) to the .NET MAUI project.
 
 ```
 dotnet add package Syncfusion.Presentation.NET.Core
