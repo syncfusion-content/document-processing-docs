@@ -2356,10 +2356,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Restrict External Resource Access for Local HTML Content
 
-The Blink HTML converter allows controlling access to local files during the HTML-to-PDF conversion process using the [EnableLocalFileAccess](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableLocalFileAccess) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
-The [EnableLocalFileAccess](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableLocalFileAccess) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class controls whether the Blink HTML converter can access local files, such as external CSS, images, and other resources, during the HTML-to-PDF conversion process.
-
-Disabling this property enhances security by restricting access to local file paths, preventing potentially unsafe or unauthorized file inclusion.
+The Blink HTML converter allows controlling access to local files during the HTML-to-PDF conversion process using the [EnableLocalFileAccess](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableLocalFileAccess) property in the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.Disabling this property enhances security by restricting access to local file paths, preventing potentially unsafe or unauthorized file inclusion.
 
 Refer to the following code sample to Disabling local file access
 
