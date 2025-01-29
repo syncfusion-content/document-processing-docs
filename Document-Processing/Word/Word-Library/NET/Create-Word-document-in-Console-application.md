@@ -70,7 +70,7 @@ Run the following command to navigate to the project directory.
 cd Create-Word-document
 ```
 
-Step 2: Run the following command to install [[Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the console project.
+Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the console project.
 
 ```
 dotnet add package Syncfusion.DocIO.Net.Core
