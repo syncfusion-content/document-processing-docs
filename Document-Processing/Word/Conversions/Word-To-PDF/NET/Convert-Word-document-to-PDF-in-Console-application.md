@@ -1,5 +1,5 @@
 ---
-title: Convert Word to PDF in Console Application | Syncfusion<sup>&reg;</sup> 
+title: Convert Word to PDF in Console Application | Syncfusion
 description: Convert Word to PDF in Console application using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

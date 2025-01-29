@@ -1,5 +1,5 @@
 ---
-title: Create a PowerPoint in Console application | Syncfusion<sup>&reg;</sup>
+title: Create a PowerPoint in Console application | Syncfusion
 description: Create a PowerPoint in Console application using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
