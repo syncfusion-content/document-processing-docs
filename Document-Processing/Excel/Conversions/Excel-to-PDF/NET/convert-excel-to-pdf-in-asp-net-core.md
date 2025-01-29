@@ -37,7 +37,7 @@ Step 1.3: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
-* Create a new C# ASP.NET Core Web Application project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+* Create a new C# ASP.NET Core Web Application project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio-code).
 
 Alternatively, create a ASP.NET Core Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 

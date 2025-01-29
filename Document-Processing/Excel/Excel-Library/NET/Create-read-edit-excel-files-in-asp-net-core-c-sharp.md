@@ -35,7 +35,7 @@ The below steps illustrates creating a simple Invoice formatted Excel document i
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
-* Create a new C# ASP.NET Core Web Application project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
+* Create a new C# ASP.NET Core Web Application project using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio-code).
 
 Alternatively, create a ASP.NET Core Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -44,7 +44,7 @@ dotnet new webapp -n CreateExcel
 cd CreateExcel
 ```
 
-* To **create a Excel document in ASP.NET Core Web app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) to the Blazor project.
+* To **create a Excel document in ASP.NET Core Web app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) package.
 
 ```
 dotnet add package Syncfusion.XlsIO.Net.Core
