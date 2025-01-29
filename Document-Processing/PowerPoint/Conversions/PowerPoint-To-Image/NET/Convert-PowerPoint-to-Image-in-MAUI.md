@@ -57,23 +57,25 @@ Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# .NET MAUI app project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-```
-dotnet new maui -n Convert-PowerPoint-presentation-to-Image
-```
-
-```
-cd Convert-PowerPoint-presentation-to-Image
-```
-
-Alternatively, use command palette
+Step 1: Create a new C# .NET MAUI app project using the command palette.
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.PresentationRenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET.Core) to the .NET MAUI project.
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -n Convert-PowerPoint-presentation-to-Image
+```
+
+Step 2: Run the following command to navigate to the project directory.
+
+```
+cd Convert-PowerPoint-presentation-to-Image
+```
+
+Step 3: Run the following command to install [Syncfusion.PresentationRenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET.Core) to the .NET MAUI project.
 
 ```
 dotnet add package Syncfusion.PresentationRenderer.NET.Core
