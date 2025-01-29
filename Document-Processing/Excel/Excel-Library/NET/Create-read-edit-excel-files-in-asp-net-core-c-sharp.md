@@ -40,7 +40,7 @@ The below steps illustrates creating a simple Invoice formatted Excel document i
 Alternatively, create a ASP.NET Core Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new mvc -n CreateExcel
+dotnet new webapp -n CreateExcel
 cd CreateExcel
 ```
 
