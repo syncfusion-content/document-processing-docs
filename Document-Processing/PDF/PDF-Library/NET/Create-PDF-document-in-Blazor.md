@@ -22,13 +22,13 @@ To quickly get started with creating a PDF document in Blazor, check this video:
 {% tabcontent Visual Studio %}
 
 * Visual Studio 2022 Preview or later
-* Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (or the latest version of .NET SDK)
+* Install the [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
 * Visual Studio Code
-* Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (or the latest version of .NET SDK)
+* Install the [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 {% endtabcontent %}
  
