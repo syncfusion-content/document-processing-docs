@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in Google App Engine | Syncfusion<sup>&reg;</sup>
+title: Convert Word to Image in Google App Engine | Syncfusion
 description: Convert Word to image in Google App Engine using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

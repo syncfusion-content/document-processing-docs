@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in AWS Elastic Beanstalk | Syncfusion<sup>&reg;</sup>
+title: Convert Word to Image in AWS Elastic Beanstalk | Syncfusion
 description: Convert Word to image without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO

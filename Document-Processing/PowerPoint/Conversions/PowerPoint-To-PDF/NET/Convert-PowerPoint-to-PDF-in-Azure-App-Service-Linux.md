@@ -1,5 +1,5 @@
 ---
-title: Convert PPTX to PDF in Azure App Service on Linux | Syncfusion<sup>&reg;</sup>
+title: Convert PPTX to PDF in Azure App Service on Linux | Syncfusion
 description: Convert PPTX to PDF in Azure App Service on Linux using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

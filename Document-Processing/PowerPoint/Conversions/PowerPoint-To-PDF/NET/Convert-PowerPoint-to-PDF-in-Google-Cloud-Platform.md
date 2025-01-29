@@ -1,5 +1,5 @@
 --- 
-title: Convert PPTX to PDF in Google Cloud Platform (GCP) | Syncfusion<sup>&reg;</sup> 
+title: Convert PPTX to PDF in Google Cloud Platform (GCP) | Syncfusion
 description: Learn how to convert a PPTX to PDF in Google Cloud Platform (GCP) using .NET PowerPoint library (Presentation) in C#. 
 platform: document-processing
 control: PowerPoint 

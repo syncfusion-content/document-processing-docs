@@ -1,5 +1,5 @@
 ---
-title: Convert PPTX to Image in Google App Engine | Syncfusion<sup>&reg;</sup>
+title: Convert PPTX to Image in Google App Engine | Syncfusion
 description: Convert PPTX to image in Google App Engine using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

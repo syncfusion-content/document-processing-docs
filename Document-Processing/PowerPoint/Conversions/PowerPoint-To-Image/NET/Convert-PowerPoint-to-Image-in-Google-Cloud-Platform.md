@@ -1,5 +1,5 @@
 --- 
-title: Convert PPTX to Image in Google Cloud Platform (GCP) | Syncfusion<sup>&reg;</sup> 
+title: Convert PPTX to Image in Google Cloud Platform (GCP) | Syncfusion
 description: Learn how to convert a PPTX to image in Google Cloud Platform (GCP) using .NET Core PowerPoint library (Presentation) in C#. 
 platform: document-processing
 control: PowerPoint 

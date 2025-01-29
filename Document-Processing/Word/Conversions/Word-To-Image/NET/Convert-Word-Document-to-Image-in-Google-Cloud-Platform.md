@@ -1,5 +1,5 @@
 --- 
-title: Convert Word to Image in Google Cloud Platform (GCP) | Syncfusion<sup>&reg;</sup> 
+title: Convert Word to Image in Google Cloud Platform (GCP) | Syncfusion
 description: Learn how to convert a Word document to image in Google Cloud Platform (GCP) using .NET Core Word (DocIO) library in C#. 
 platform: document-processing
 control: DocIO 
