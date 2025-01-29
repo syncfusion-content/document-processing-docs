@@ -21,7 +21,7 @@ N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency 
 
 {% tabcontent Visual Studio %}
 
-* Visual Studio 2022 Preview or later
+* Visual Studio 2022 or later
 * Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (or the latest version of .NET SDK)
 {% endtabcontent %}
 
