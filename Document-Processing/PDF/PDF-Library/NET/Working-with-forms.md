@@ -439,7 +439,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Setting the [Editable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html#Syncfusion_Pdf_Interactive_PdfComboBoxField_Editable) property of a combo box field to true allows users to type custom input in the combo box within the PDF document.
 
-The following code snippet demonstrates how to enable this feature:
+The following code example demonstrates how to enable this feature:
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-radio-button-in-new-PDF-document/.NET/Adding-radio-button-in-new-PDF-document/Program.cs" %}
