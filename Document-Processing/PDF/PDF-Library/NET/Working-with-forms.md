@@ -435,6 +435,121 @@ Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncf
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET).
 
+### Editing the Combo Box Fields in a PDF Document
+
+Setting the [Editable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html#Syncfusion_Pdf_Interactive_PdfComboBoxField_Editable) property of a combo box field to true allows users to type custom input in the combo box within the PDF document.
+
+The following code snippet demonstrates how to enable this feature:
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-radio-button-in-new-PDF-document/.NET/Adding-radio-button-in-new-PDF-document/Program.cs" %}
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument(); 
+
+// Create a new page and add it to the document
+PdfPage page = document.Pages.Add(); 
+
+PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f); 
+
+PdfComboBoxField positionComboBox = new PdfComboBoxField(page, "positionComboBox"); 
+// Set the combo box field as editable
+positionComboBox.Editable = true; 
+positionComboBox.Bounds = new RectangleF(100, 115, 200, 20); 
+
+positionComboBox.Font = font; 
+
+document.Form.Fields.Add(positionComboBox); 
+
+using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+{
+  // Save the PDF document to file stream
+    document.Save(outputFileStream); 
+}
+// Close the docu/ment
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+
+// Create a new page and add it to the document
+PdfPage page = document.Pages.Add();
+
+// Define a font for the combo box text
+PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
+
+// Create a combo box field
+PdfComboBoxField positionComboBox = new PdfComboBoxField(page, "positionComboBox");
+
+// Set the combo box field as editable
+positionComboBox.Editable = true;
+
+// Define the position and size of the combo box
+positionComboBox.Bounds = new RectangleF(100, 115, 200, 20);
+
+// Assign the font to the combo box field
+positionComboBox.Font = font;
+
+// Add the combo box field to the document form fields
+document.Form.Fields.Add(positionComboBox);
+
+// Save the document
+document.Save("Form.pdf");
+
+// Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+   
+' Import necessary libraries
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Forms
+Imports System.Drawing
+
+' Create a new PDF document
+Dim document As New PdfDocument()
+
+' Create a new page and add it to the document
+Dim page As PdfPage = document.Pages.Add()
+
+' Define a font for the combo box text
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Courier, 12F)
+
+' Create a combo box field
+Dim positionComboBox As New PdfComboBoxField(page, "positionComboBox")
+
+' Set the combo box field as editable
+positionComboBox.Editable = True
+
+' Define the position and size of the combo box
+positionComboBox.Bounds = New RectangleF(100, 115, 200, 20)
+
+' Assign the font to the combo box field
+positionComboBox.Font = font
+
+' Add the combo box field to the document form fields
+document.Form.Fields.Add(positionComboBox)
+
+' Save the document
+document.Save("Form.pdf")
+
+' Close the document
+document.Close(True)
+
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-radio-button-in-new-PDF-document).
+
 ### Adding the radio button field
 
 To create the radio button in the PDF forms, you can use [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) class and you can create the radio button list items by using the [PdfRadioButtonListItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html) class.
