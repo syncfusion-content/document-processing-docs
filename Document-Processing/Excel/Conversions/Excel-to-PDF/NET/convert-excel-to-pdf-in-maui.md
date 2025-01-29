@@ -202,7 +202,7 @@ A complete working example of how to convert an Excel document to PDF in .NET MA
 
 By executing the program, you will get the **PDF document** as follows.
 
-![Output File](MAUI_images\MAUI_images_img8.png)
+![Output File](MAUI_images\MAUI_images_img8.jpg)
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
