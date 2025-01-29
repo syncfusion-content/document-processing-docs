@@ -1,6 +1,6 @@
 ---
 title: Create Word document on Mac OS | Syncfusion<sup>&reg;</sup>
-description: Create Word document in ASP.NET Core application on macOS using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Create Word document in ASP.NET Core application on macOS using Syncfusion<sup>&reg;</sup> .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
