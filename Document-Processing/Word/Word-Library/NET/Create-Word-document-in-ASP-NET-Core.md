@@ -1,6 +1,6 @@
 ---
-title: Create Word document in ASP.NET Core | Syncfusion&reg;
-description: Create Word document without Microsoft Word or interop dependencies in ASP.NET Core application using Syncfusion&reg; .NET Core Word (DocIO) library.
+title: Create Word document in ASP.NET Core | Syncfusion<sup>&reg;</sup>
+description: Create Word document without Microsoft Word or interop dependencies in ASP.NET Core application using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Word document in ASP.NET Core
 
-Syncfusion&reg; Essential&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Core**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Core**.
 
 To quickly create a Word document in ASP.NET Core, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
@@ -53,21 +53,23 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new ASP.NET Core Web application project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Step 1: Create a new ASP.NET Core Web application project using the command palette.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new mvc -n Create-Word-document
 ```
 
+Run the following command to navigate to the project directory.
+
 ```
 cd Create-Word-document
 ```
-
-Alternatively, use command palette
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
 
 Step 2: Run the following command to install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the .NET MAUI project.
 
@@ -79,7 +81,7 @@ dotnet add package Syncfusion.DocIO.Net.Core
  
 {% endtabcontents %}
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -396,6 +398,6 @@ By executing the program, you will get the **Word document** as follows.
 
 ![ASP.Net Core output Word document](ASP-NET-Core_images/GettingStartedOutput.jpg)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core.  

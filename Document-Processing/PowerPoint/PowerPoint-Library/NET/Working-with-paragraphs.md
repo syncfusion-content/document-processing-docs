@@ -1,6 +1,6 @@
 ---
-title: Working with Paragraph in PowerPoint Presentation | Syncfusion&reg;
-description: This section illustrates how to work with Paragraphs and texts in Syncfusion&reg; PowerPoint Presentation
+title: Working with Paragraph in PowerPoint Presentation | Syncfusion<sup>&reg;</sup>
+description: This section illustrates how to work with Paragraphs and texts in Syncfusion<sup>&reg;</sup> PowerPoint Presentation
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -160,7 +160,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with text
 
-With Essential&reg; Presentation, you can add or modify the text in a Presentation. Within the paragraph, textual contents are grouped into one or more child elements as [TextParts](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextParts.html). Each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html) represents a region of text with a common set of formatted text. The following code example demonstrates how to add text with different formatting into a single paragraph.
+With Essential<sup>&reg;</sup> Presentation, you can add or modify the text in a Presentation. Within the paragraph, textual contents are grouped into one or more child elements as [TextParts](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextParts.html). Each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html) represents a region of text with a common set of formatted text. The following code example demonstrates how to add text with different formatting into a single paragraph.
 
 {% tabs %}
 
@@ -353,7 +353,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Edit a language of TextPart
 
-With Essential&reg; Presentation, you can modify the language of Presentation [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html). This allows viewer application to check spelling and grammar according to the language of each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html). The following code example demonstrates how to modify a language of Presentation [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html).
+With Essential<sup>&reg;</sup> Presentation, you can modify the language of Presentation [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html). This allows viewer application to check spelling and grammar according to the language of each [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html). The following code example demonstrates how to modify a language of Presentation [TextPart](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html).
 
 {% tabs %}
 

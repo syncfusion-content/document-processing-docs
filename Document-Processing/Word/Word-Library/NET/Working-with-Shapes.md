@@ -1,5 +1,5 @@
 ---
-title: Working with Shapes in .NET Word (DocIO) library | Syncfusion&reg;
+title: Working with Shapes in .NET Word (DocIO) library | Syncfusion<sup>&reg;</sup>
 description: Learn how to add, modify, and remove shapes as well as group shapes in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
