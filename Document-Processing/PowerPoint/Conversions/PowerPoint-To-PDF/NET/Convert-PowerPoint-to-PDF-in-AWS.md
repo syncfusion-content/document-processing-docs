@@ -1,5 +1,5 @@
 ---
-title: Convert PPTX to PDF in AWS | Syncfusion&reg;
+title: Convert PPTX to PDF in AWS | Syncfusion<sup>&reg;</sup>
 description: Learn how to convert a PPTX to PDF in Amazon Web Services (AWS) using .NET Core PowerPoint library (Presentation) in C#.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint Presentation to PDF in Amazon Web Services (AWS)
 
-Syncfusion&reg; PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Amazon Web Services (AWS)** within a few lines of code. 
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Amazon Web Services (AWS)** within a few lines of code. 
 
 N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to convert PowerPoint Presentation to PDF in C# using the .NET Core PowerPoint library (Presentation) in AWS. 
 

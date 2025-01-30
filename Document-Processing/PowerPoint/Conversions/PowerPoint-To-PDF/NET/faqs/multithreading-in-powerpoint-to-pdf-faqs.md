@@ -1,5 +1,5 @@
 ---
-title: FAQ about multithreading in PowerPoint to PDF | Syncfusion&reg;
+title: FAQ about multithreading in PowerPoint to PDF | Syncfusion<sup>&reg;</sup>
 description: Learn about the FAQs regarding the support of multithreading in PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
@@ -12,7 +12,7 @@ The frequently asked questions regarding multithreading and thread-safety suppor
 
 ## Does the PowerPoint library support multithreading and thread-safety for PowerPoint to PDF conversion?
 
-Yes, the Syncfusion&reg; PowerPoint library is thread-safe, and you can create multiple instances of the [Presentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.html) class to load the same file as multiple copies or different PowerPoint files, then convert them to PDF using multithreading in C#.
+Yes, the Syncfusion<sup>&reg;</sup> PowerPoint library is thread-safe, and you can create multiple instances of the [Presentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.html) class to load the same file as multiple copies or different PowerPoint files, then convert them to PDF using multithreading in C#.
 
 ### Multithreading PowerPoint to PDF using tasks
 

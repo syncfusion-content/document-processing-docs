@@ -1,6 +1,6 @@
 ---
-title: Modify the Appearance of Axes in Chart | Syncfusion&reg;
-description: Learn how to modify the appearance of axes in a chart in a Word document using the Syncfusion&reg; .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Axes in Chart | Syncfusion<sup>&reg;</sup>
+description: Learn how to modify the appearance of axes in a chart in a Word document using the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
