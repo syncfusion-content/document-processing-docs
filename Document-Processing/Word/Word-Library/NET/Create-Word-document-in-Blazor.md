@@ -247,10 +247,6 @@ Step 12: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-{% endtabcontent %}
- 
-{% endtabcontents %}
-
 Step 13: Run the project.
 
 Click the Start button (green arrow) or press F5 to run the app.

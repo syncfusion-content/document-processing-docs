@@ -13,16 +13,16 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word 
 To quickly create a Word document in ASP.NET Core, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
 
+## Steps to create Word document programmatically:
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 **Prerequisites:**
 
-* Visual Studio 2019 Preview or later
-* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
-
-## Steps to create Word document programmatically:
+* Visual Studio 2022.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
 
@@ -305,11 +305,7 @@ Click on Build → Build Solution or press Ctrl + Shift + B to build the project
 
 Step 8: Run the project.
 
-Run the following command in terminal to build the project.
-
-```
-dotnet run
-```
+Click the Start button (green arrow) or press F5 to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/ASP.NET-Core).
 
@@ -324,11 +320,9 @@ By executing the program, you will get the **Word document** as follows.
 
 **Prerequisites:**
 
-* Visual Studio Code
-* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* Visual Studio Code.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
-
-## Steps to create Word document programmatically:
 
 Step 1: Create a new ASP.NET Core Web application project.
 1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.

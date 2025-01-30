@@ -10,6 +10,8 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in .NET MAUI**.
 
+## Steps to create Word document programmatically in .NET MAUI
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -20,7 +22,6 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET MAUI Word 
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * For more details installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
-## Steps to create Word document programmatically in .NET MAUI
 
 Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
 
@@ -408,8 +409,6 @@ By executing the program, you will get the **Word document** as follows.
 * Follow the step-by-step setup guide:
   - [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
   - [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
-  
-## Steps to create Word document programmatically in .NET MAUI
 
 Step 1: Create a new C# .NET MAUI app project.
 1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
