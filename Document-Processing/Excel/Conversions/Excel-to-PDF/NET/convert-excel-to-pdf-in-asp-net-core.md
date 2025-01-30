@@ -103,7 +103,7 @@ Step 2: Name the project and create the project.
 Alternatively, create a ASP.NET Core Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new webapp -n Convert-Excel-to-PDF
+dotnet new webapp -o Convert-Excel-to-PDF
 ```
 
 Step 3: To **convert an Excel document to PDF in ASP.NET Core**,run the following command to  install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) package.

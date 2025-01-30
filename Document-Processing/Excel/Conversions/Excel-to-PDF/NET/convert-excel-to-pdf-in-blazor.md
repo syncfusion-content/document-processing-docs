@@ -22,7 +22,7 @@ Step 1: Create a new C# Blazor Server app project.
 
 Step 2: Name the project.
 
-![Name the project](Blazor_images\Blazor_VSimages_ProjectName.png)
+![Name the project](Blazor_images\Blazor_images_Server_App_ProjectName.png)
 
 Step 3: Select the framework and click **Create** button.
 
@@ -174,12 +174,12 @@ Step 1: Create a new C# Blazor Server app project using Create .NET Project opti
 
 Step 2: Name the project and create the project.
 
-![Name the project](Blazor_images\Blazor_VSimages_Server_App_ProjectName.png)
+![Name the project](Blazor_images\Blazor_VSimages_ProjectName.png)
 
 Alternatively, create a Blazor Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new blazorserver -n Convert-Excel-to-PDF
+dotnet new blazorserver -o Convert-Excel-to-PDF
 cd Convert-Excel-to-PDF
 ```
 
@@ -343,6 +343,160 @@ An online sample link to [convert an Excel document to PDF](https://blazor.syncf
 {% tabcontent Visual Studio %}
 Step 1: Create a new C# Blazor WASM app project.
 
+![Create a Blazor Wasm App project in visual studio](Blazor_images\Blazor_images_Client_App.png)
+
+Step 2: Name the project.
+
+![Name the project](Blazor_images\Blazor_images_Client_ProjectName.png)
+
+Step 3: Select the framework and click **Create** button.
+
+![Framework version](Blazor_images\Blazor_images_Client_Framework.png)
+
+Step 4: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+* [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor)
+
+![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Client_Nuget1.png)
+![Install SkiaSharp.NativeAssets.WebAssembly NuGet Package](Blazor_images\Blazor_images_Client_Nuget2.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 5: Add the following ItemGroup tag in the **Blazor WASM csproj** file.
+{% tabs %}
+{% highlight XAML  %}
+<ItemGroup>
+    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
+</ItemGroup>
+{% endhighlight %}
+{% endtabs %}
+
+N> Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
+
+Step 6: Enable the following property in the Blazor WASM csproj file.
+
+{% tabs %}
+{% highlight XAML %}
+<PropertyGroup>
+    <WasmNativeStrip>true</WasmNativeStrip>
+</PropertyGroup>
+{% endhighlight %}
+{% endtabs %}
+
+Step 7: Create a razor file with name as **XlsIO** under **Pages** folder and include the following namespaces in the file.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+@page "/xlsio"
+@using Syncfusion.XlsIO
+@using Syncfusion.Pdf
+@using Syncfusion.XlsIORenderer
+@inject Microsoft.JSInterop.IJSRuntime JS
+@inject HttpClient client
+{% endhighlight %}
+{% endtabs %}
+
+Step 8: Add the following code to create a new button.
+{% tabs %}
+{% highlight CSHTML %}
+<h2>Syncfusion XlsIO library</h2>
+<p>Syncfusion Blazor XlsIO library used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
+<button class="btn btn-primary" @onclick="@ExcelToPDF">Convert Excel to PDF</button>
+{% endhighlight %}
+{% endtabs %}
+
+Step 9: Create a new async method with name as **ExcelToPDF** and include the following code snippet to **create an Excel document in Blazor** WASM app.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    //Load an existing file
+    using (Stream inputStream = await client.GetStreamAsync("Data/InputTemplate.xlsx"))
+    {
+        // Open the workbook.
+        IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+        // Instantiate the Excel to PDF renderer.
+        XlsIORenderer renderer = new XlsIORenderer();
+
+        //Convert Excel document into PDF document
+        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+
+        //Create the MemoryStream to save the converted PDF.
+        MemoryStream pdfStream = new MemoryStream();
+
+        //Save the converted PDF document to MemoryStream.
+        pdfDocument.Save(pdfStream);
+        pdfStream.Position = 0;
+
+        //Download PDF file in the browser.
+        await JS.SaveAs("Output.pdf", pdfStream.ToArray());
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+Step 10: Create a class file with **FileUtils** name and add the following code to invoke the JavaScript action to download the file in the browser.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+public static class FileUtils
+{
+    public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
+       => js.InvokeAsync<object>(
+            "saveAsFile",
+            filename,
+            Convert.ToBase64String(data));
+}
+{% endhighlight %}
+{% endtabs %}
+
+Step 11: Add the following JavaScript function in the **Index.html** file present under **wwwroot**.
+{% tabs %}
+{% highlight HTML %}
+<script type="text/javascript">
+    function saveAsFile(filename, bytesBase64) {
+        if (navigator.msSaveBlob) {
+            //Download document in Edge browser
+            var data = window.atob(bytesBase64);
+            var bytes = new Uint8Array(data.length);
+            for (var i = 0; i < data.length; i++) {
+                bytes[i] = data.charCodeAt(i);
+            }
+            var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+            navigator.msSaveBlob(blob, filename);
+        }
+        else {
+            var link = document.createElement('a');
+            link.download = filename;
+            link.href = "data:application/octet-stream;base64," + bytesBase64;
+            document.body.appendChild(link); // Needed for Firefox
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+Step 12: Add the following code snippet in the **NavMenu.razor** in the Shared folder
+{% tabs %}
+{% highlight CSHTML %}
+<li class="nav-item px-3">
+    <NavLink class="nav-link" href="xlsio">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Convert Excel to PDF
+    </NavLink>
+</li>
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# Blazor WASM app project.
+
 ![Create a Blazor Wasm App project in visual studio](Blazor_images\Blazor_VSimages_Client_App.png)
 
 Step 2: Name the project and create the project.
@@ -364,10 +518,6 @@ Step 3. To **convert an Excel document to PDF in Blazor**,run the following comm
 dotnet add package SkiaSharp.Views.Blazor
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -499,6 +649,10 @@ Step 11: Add the following code snippet in the **NavMenu.razor** in the Shared f
 </li>
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 A complete working example of how to convert an Excel document to PDF in Blazor WASM App is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/Convert%20Excel%20to%20PDF).
 

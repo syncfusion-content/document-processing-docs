@@ -465,7 +465,7 @@ Step 2: Enter the project name and create the project.
 Alternatively, create a ASP.NET Core Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
-dotnet new webapp -n CreateExcel
+dotnet new webapp -o CreateExcel
 cd CreateExcel
 ```
 
