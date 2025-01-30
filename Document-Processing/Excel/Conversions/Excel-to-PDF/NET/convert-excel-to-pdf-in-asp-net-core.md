@@ -92,11 +92,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
+Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller) using Create .NET Project option.
 
 ![Create a ASP.NET Core Web App project in visual studio](ASP-NET-Core_images/ASP-NET-Core_VSimages_img1.png)
 
-Step 2: Name the project.
+Step 2: Name the project and create the project.
 
 ![Name the project](ASP-NET-Core_images\ASP-NET-Core_VSimages_img2.png)
 
