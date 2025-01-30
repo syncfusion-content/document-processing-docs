@@ -1,5 +1,5 @@
 ---
-title: FAQ about Word Document | DocIO | Syncfusion&reg;
+title: FAQ about Word Document | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn about the frequently asked questions about Word documents and their manipulations in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -198,9 +198,9 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Check-compatibility-mode).
 
-## Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?
+## Which units does Essential<sup>&reg;</sup> DocIO uses for measurement properties such as size, margins, etc, in a Word document?
 
-Essential&reg; DocIO library uses Points for measurement properties in a Word document.
+Essential<sup>&reg;</sup> DocIO library uses Points for measurement properties in a Word document.
 
 ## How to convert Units (cm, mm, or inches) to Points for DocIO?
 
@@ -430,3 +430,4 @@ End Using
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Compare-Word-documents/Check-document-has-diff-after-compare).
+

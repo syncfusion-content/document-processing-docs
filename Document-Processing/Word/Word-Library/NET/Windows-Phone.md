@@ -1,6 +1,6 @@
 ---
-title: Working with Windows phone using Syncfusion&reg; Word library
-description: Create a Windows phone application, load the word document and save the word document with Syncfusion&reg; Word library
+title: Working with Windows phone using Syncfusion<sup>&reg;</sup> Word library
+description: Create a Windows phone application, load the word document and save the word document with Syncfusion<sup>&reg;</sup> Word library
 platform: document-processing
 control: DocIO
 documentation: UG

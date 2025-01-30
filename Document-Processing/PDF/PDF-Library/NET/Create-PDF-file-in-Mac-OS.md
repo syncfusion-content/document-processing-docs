@@ -11,19 +11,68 @@ keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
 
 The [Syncfusion .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **Create PDF document on Mac OS**. 
 
+**Prerequisites:**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+* Visual Studio 2022 for Mac or later
+* Install the [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+* Visual Studio Code
+* Install the [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
+* Open Visual Studio Code and install the [C# extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 ## Steps to Create PDF document programmatically in .NET Core application on MacOS
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new .NET Core console application project.
 ![Mac OS console application](GettingStarted_images/Mac_OS_Console.png)
 
-Step 2: Select the project version.
+Step 1.1: Select the project version.
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Mac OS NuGet path](GettingStarted_images/Mac_OS_NuGet_path.png)
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new .NET Core App template using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code).
+
+Alternatively, create a .NET Core application by executing the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new console -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in the .NET Core app**, run the following command to install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package.
+
+```
+dotnet add package Syncfusion.Pdf.Net.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following Namespaces in the Program.cs file.
+Step 3: Include the following Namespaces in the Program.cs file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -37,7 +86,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 5: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
+Step 4: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
 
 {% tabs %}
 
@@ -97,6 +146,49 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 5: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 6: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Mac).
 
