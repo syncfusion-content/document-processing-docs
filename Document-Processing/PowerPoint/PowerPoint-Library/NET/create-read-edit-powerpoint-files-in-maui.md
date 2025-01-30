@@ -252,7 +252,7 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
 Step 7: Run the Application.
 
 1. Select the target framework, device or emulator.
-2. Press F5 to run the application.
+2. Press <kbd>F5</kbd> to run the application.
 
 {% endtabcontent %}
  
@@ -285,7 +285,7 @@ Step 2: To **create a PowerPoint document in .NET MAUI app**, install [Syncfusio
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add a new button to the **MainPage.xaml** as shown below.
+Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
 
@@ -313,7 +313,7 @@ Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
 {% endtabs %}
 
-Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
+Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% tabs %}
 
@@ -325,7 +325,7 @@ using System.Reflection;
 
 {% endtabs %}
 
-Step 6: Add a new action method **CreatePresentation** in MainPage.xaml.cs and include the below code snippet to **create a PowerPoint file**.
+Step 5: Add a new action method **CreatePresentation** in MainPage.xaml.cs and include the below code snippet to **create a PowerPoint file**.
 
 {% tabs %}
 
@@ -499,10 +499,10 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   </tr>
 </table>
 
-Step 7: Run the Application.
+Step 6: Run the Application.
 
 1. Select the target framework, device or emulator.
-2. Press F5 to run the application.
+2. Press <kbd>F5</kbd> to run the application.
 
 {% endtabcontent %}
  

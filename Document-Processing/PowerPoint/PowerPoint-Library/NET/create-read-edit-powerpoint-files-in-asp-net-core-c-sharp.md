@@ -204,7 +204,7 @@ pptxDoc.Close();
 
 Step 5: Build the project.
 
-Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build → Build Solution or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 
 Step 6: Run the project.
