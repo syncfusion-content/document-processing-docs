@@ -458,7 +458,7 @@ Step 1: Create a new C# ASP.NET Core Web Application project using Create .NET P
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/ASP-NET-Core_VSimages_img1.png)
 
-Step 2: Enter the project name.
+Step 2: Enter the project name and create the project.
 
 ![Select the framework](ASP-NET-Core_images/ASP-NET-Core_VSimages_img2.png)
 
@@ -466,12 +466,12 @@ Alternatively, create a ASP.NET Core Web application using the following command
 
 ```
 dotnet new webapp -n CreateExcel
+cd CreateExcel
 ```
 
 Step 3: To **create a Excel document in ASP.NET Core Web app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) package.
 
 ```
-cd CreateExcel
 dotnet add package Syncfusion.XlsIO.Net.Core
 ```
 
