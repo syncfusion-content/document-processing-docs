@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in UWP |Syncfusion&reg;|
+title: Create and edit PowerPoint files in UWP |Syncfusion<sup>&reg;</sup>|
 description: A UWP PowerPoint library to create, read and edit PowerPoint files in UWP applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in UWP
 
-You can create or edit a PowerPoint file with the Syncfusion&reg; [UWP PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/powerpoint-library). The below are the steps.
+You can create or edit a PowerPoint file with the Syncfusion<sup>&reg;</sup> [UWP PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/powerpoint-library). The below are the steps.
 
 ## Create a PowerPoint file in UWP
 
@@ -20,7 +20,7 @@ Step 2: Install the [Syncfusion.Presentation.UWP](https://www.nuget.org/packages
 
 ![Install UWP Nuget](Workingwith-UWP/Nuget-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Add a new button in the MainPage.xaml as shown below.
 
@@ -233,6 +233,6 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/UWP/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core. 

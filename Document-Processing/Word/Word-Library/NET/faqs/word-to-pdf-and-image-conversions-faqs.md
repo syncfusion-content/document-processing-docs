@@ -1,5 +1,5 @@
 ---
-title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion&reg;
+title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -26,7 +26,7 @@ Yes, you can specify the PDF conformance level in Word to PDF conversion. For mo
 
 When the Word document contains metafile images (*.emf or *.wmf), we recommend using Azure Cloud Service.
 
-We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential&reg; DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
+We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential<sup>&reg;</sup> DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
 
 ## Why images are preserved as RedX images in Word to PDF or image conversion?
 
@@ -69,6 +69,17 @@ To resolve this, uninstall the fonts and reinstall them by right-clicking the fo
 
 Refer to the image below for guidance on selecting the Install for all users option:
 ![Install for all users](../FAQ_images/Install-for-all-users.png)
+
+## How to resolve the "SKImageInfo" exception during Word to PDF or image conversion in Linux OS?
+
+If you encounter the exception *The type initializer for 'SkiaSharp.SKImageInfo' threw an exception*, it may be due to installing incompatible versions of the following NuGet packages:
+
+- [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux)
+- [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux)
+
+To resolve this, reinstall the correct versions of these NuGet packages as specified in the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os), along with the required [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf).
+
+If using Docker, ensure you install the libfontconfig package within your Docker container, as mentioned in the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-resolve-libskiasharp-not-found-exception).
 
 ## How to use fonts for Word to PDF/Image conversion in docker?
 

@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in .NET MAUI | Syncfusion&reg;
+title: Convert Word to Image in .NET MAUI | Syncfusion<sup>&reg;</sup>
 description: Convert Word to image in .NET MAUI using .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,13 +8,37 @@ documentation: UG
 
 # Convert Word document to Image in .NET MAUI
 
-Syncfusion&reg; DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET MAUI**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET MAUI**.
 
-## Prerequisites
+**Prerequisites:**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+* Install the latest .NET SDK and Visual Studio Code.
+* Open Visual Studio Code and install the [.NET MAUI for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) from the Extensions Marketplace.
+* Follow the step-by-step setup guide:
+
+  [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+  
+  [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 ## Steps to convert Word document to Image in .NET MAUI
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App** from the template and click the **Next** button.
 
@@ -28,7 +52,41 @@ Step 3: Install the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/package
 
 ![Install Syncfusion.DocIORenderer.NET NuGet package](MAUI_Images/Nuget-Package-WordtoPDF.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# .NET MAUI app project using the command palette.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -n Convert-Word-to-image
+```
+
+Step 2: Run the following command to navigate to the project directory.
+
+```
+cd Convert-Word-to-image
+```
+
+Step 3: Run the following command to install [Syncfusion.DocIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET.Core) to the .NET MAUI project.
+
+```
+dotnet add package Syncfusion.DocIORenderer.NET.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -98,6 +156,11 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 7: Run the Application.
+
+1. Select the target framework, device or emulator.
+2. Press F5 to run the application.
 
 ## Helper files for .NET MAUI
 
@@ -182,6 +245,6 @@ By executing the program, you will get the **image** as follows.
 
 ![Word to Image in .NET MAUI](WordToPDF_images/Output-WordtoImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetcore/Word/WordToImage#/material3) in ASP.NET Core. 

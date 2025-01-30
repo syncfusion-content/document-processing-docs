@@ -468,3 +468,26 @@ NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoD
 </tr>
 </table>
 
+## OCR not working on Azure App Service Linux Docker Container: Exception has been thrown by the target of an invocation
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Syncfusion.Pdf.PdfException: Exception has been thrown by the target of an invocation while deploying ASP .NET Core applications in Azure App Service Linux Docker Container</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>when publishing the ASP.NET Core application to the Azure App Service Linux Docker container, only the .so, .dly, and .dll files are copied from the runtimes folder to the publish folder. Files in other formats are not copied to the publish folder.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To resolve this problem, the tessdata folder path must be explicitly set relative to the project directory under runtimes/tessdata. The publish folder can be located in your project directory at this path: obj\Docker\publish.
+<br/><br/>
+Please refer to the screenshot below:
+<br/><br/>
+<img alt="OCR folder image" src="OCR-Images/TessdataRemove.jpeg">
+<br/><br/>
+</td>
+</tr>
+</table>
+

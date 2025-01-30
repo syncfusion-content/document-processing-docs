@@ -1,5 +1,5 @@
 ---
-title: NuGet Packages Required to Convert Word to Image | Syncfusion&reg;
+title: NuGet Packages Required to Convert Word to Image | Syncfusion<sup>&reg;</sup>
 description: Learn the NuGet packages required to Convert Word document to image using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -245,13 +245,13 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 </tr>
 </table>
 
-N> 1. Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
-N> 2. Syncfusion&reg; components are available in [nuget.org](https://www.nuget.org/)
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 2. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/)
 
 
 ## NuGet Package Installation and Uninstallation
 
-To use Syncfusion&reg; NuGet packages in your project, please refer the NuGet Package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
+To use Syncfusion<sup>&reg;</sup> NuGet packages in your project, please refer the NuGet Package [Installation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages) and [Uninstallation](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#) sections.
 
 DocIO NuGet packages can be installed and uninstalled using Package Manager Console. In Visual Studio, select Tools > NuGet Package Manager > Package Manager Console and execute the following commands.
 

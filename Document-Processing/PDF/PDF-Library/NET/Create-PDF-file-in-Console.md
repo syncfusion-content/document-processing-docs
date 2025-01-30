@@ -13,22 +13,71 @@ The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/doc
 To quickly get started with .NET PDF Library. Please, check this video:
 {% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
 
+**Prerequisites:**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+* Visual Studio 2022 or later
+* Install the [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+* Visual Studio Code
+* Install the [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
+* Open Visual Studio Code and install the [C# extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 ## Create a simple PDF document using .NET Core
 
 The following steps illustrate creating a simple Hello World PDF document in a console application using .NET Core.
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 Step 1: Create a new C# Console Application project.
 ![Console sample creation](Console_images/console-sample-creation.png)
 
-Step 2: Name the project.
+Step 1.1: Name the project.
 ![Name the application](Console_images/Name_project_core.png)
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
 ![NET Core NuGet package](Console_images/Nuget_package_Core.png)
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# Console App template using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code).
+
+Alternatively, create a console application by executing the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new console -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in the console app**, run the following command to install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package.
+
+```
+dotnet add package Syncfusion.Pdf.Net.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the *Program.cs* file.
+Step 3: Include the following namespaces in the *Program.cs* file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -38,7 +87,7 @@ using Syncfusion.Drawing;
 
 {% endhighlight %}
 
-Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
+Step 4: Include the below code snippet in *Program.cs* to create an PDF file.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}
  
@@ -60,6 +109,49 @@ document.Close(true);
 
 {% endhighlight %}
 
+Step 5: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 6: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET/Create_PDF).
 
 By executing the program, you will get the PDF document as follows.
@@ -69,18 +161,48 @@ By executing the program, you will get the PDF document as follows.
 
 The following steps illustrates creating a simple Hello world PDF document in console application using .NET Framework.
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 Step 1: Create a new C# Console Application (.NET Framework) project.
 ![Console Application creation](Console_images/console-app-sample-creation.png)
 
-Step 2: Name the project.
+Step 1.1: Name the project.
 ![Name the application](Console_images/Name_project_Framework.png)
 
-Step 3: Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
 ![NET Framework NuGet package](Console_images/Nuget_package_Framework.png)
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# Console App (.NET Framework) template using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code).
+
+Alternatively, create a console application (.NET Framework) by executing the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new console -o Create-PDF-document
+```
+
+```
+cd Create-PDF-document
+```
+
+Step 2: To **create a PDF document in the console app (.NET Framework)**, run the following command to install the [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) package.
+
+```
+dotnet add package Syncfusion.Pdf.WinForms
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/) NuGet package is dependent package for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls, so named with suffix "WinForms". It has a platform-independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of the PDF library and doesn't contain any Windows Forms-related references or code. Hence, we recommend this package for the .NET framework Console application.
 
-Step 4: Include the following namespaces in the *Program.cs*.
+Step 3: Include the following namespaces in the *Program.cs*.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -90,7 +212,7 @@ using System.Drawing;
 
 {% endhighlight %}
 
-Step 5: Include the following code sample in *Program.cs* to create a PDF file.
+Step 4: Include the following code sample in *Program.cs* to create a PDF file.
 
 {% highlight c# tabtitle="C#" %}
  
@@ -109,6 +231,49 @@ using (PdfDocument document = new PdfDocument()) {
 }
 
 {% endhighlight %}
+
+Step 5: Build the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet build
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Step 6: Run the project.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Click the Start button (green arrow) or press F5 to run the app.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command in terminal to build the project.
+
+```
+dotnet run
+```
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/Create%20PDF).
 

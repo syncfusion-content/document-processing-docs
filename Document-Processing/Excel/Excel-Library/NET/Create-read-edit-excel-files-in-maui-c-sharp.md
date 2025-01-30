@@ -17,17 +17,43 @@ To use the MAUI project templates, install the Mobile development with .NET exte
 
 The below steps illustrates creating a simple Invoice formatted Excel document in .NET MAUI.
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 Step 1: Create a new project in VS2022, select the .NET MAUI App (Preview) template, and click the **Next** button.
-
+ 
 ![Create .NET MAUI application in Visual Studio](MAUI_images/MAUI_images_img1.png)
-
+ 
 Step 2: Enter the project name and click **Create**.
-
+ 
 ![Name the project](MAUI_images/MAUI_images_img2.png)
-
+ 
 Step 3: Install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET/) NuGet package as reference to your .NET MAUI application from [NuGet.org](https://www.nuget.org).
-
+ 
 ![Install Syncfusion.XlsIO.NET Nuget Package](MAUI_images/MAUI_images_img3.png)
+
+
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new .NET MAUI app project in Visual Studio Code using [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0) via the terminal.
+
+Alternatively, create a .NET MAUI application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+dotnet new maui -o CreateExcel
+cd CreateExcel  
+
+Step 2: Install the Syncfusion.XlsIO.NET NuGet package as a reference to your .NET MAUI project:
+
+dotnet add package Syncfusion.XlsIO.NET
+
+Step 3: After installing the package, open the project in Visual Studio Code and add the necessary code to create and manipulate Excel documents using Syncfusion XlsIO.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
