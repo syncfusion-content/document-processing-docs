@@ -80,14 +80,3 @@ If you encounter the exception *The type initializer for 'SkiaSharp.SKImageInfo'
 To resolve this, reinstall the correct versions of these NuGet packages as specified in the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os), along with the required [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf).
 
 If using Docker, ensure you install the libfontconfig package within your Docker container, as mentioned in the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-resolve-libskiasharp-not-found-exception).
-
-## How to use fonts for Word to PDF/Image conversion in docker?
-
-To use fonts for Word to PDF or image conversion in Docker, ensure that the fonts used in the Word document are available within the Docker environment. By default, the Docker container may not have all the necessary fonts, which could lead to issues such as missing or unpreserved fonts during the conversion process.
-
-To resolve this, place the required font files in a **Fonts folder** which parallel to the sln file in Docker container. Typically, the fonts present in the Docker container location “/usr/local/share/fonts/” is used for the conversion. By default, there will be limited number of fonts available in the container. You should copy necessary fonts to this location “/usr/local/share/fonts/” before conversion. To make the process easier, refer to the [GitHub repository](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Copy-fonts-to-linux-containers) that provides a sample Dockerfile with code and steps to copy fonts into the Docker container.
-
-Refer to the image below to understand where to place the Fonts folder in the Docker sample:
-![Fonts-folder-path](../FAQ_images/Fonts-folder-path.png)
-
-You can refer to the [sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/Docker/Debian/WordToPDFDockerSample) for performing Word to PDF conversion in a Linux-based Docker container. For further help, check the [article](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion) to address font-related issues during Word to PDF or image conversion.
