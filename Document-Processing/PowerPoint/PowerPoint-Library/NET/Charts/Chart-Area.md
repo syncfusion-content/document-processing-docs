@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Chart Area | Syncfusion&reg;
+title: Modify the Appearance of Chart Area | Syncfusion<sup>&reg;</sup>
 description: Learn how to modify the appearance of chart area in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint

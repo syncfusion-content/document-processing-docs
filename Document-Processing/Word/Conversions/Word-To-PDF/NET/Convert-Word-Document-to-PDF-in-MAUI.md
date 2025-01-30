@@ -1,5 +1,5 @@
 ---
-title: Convert Word document to PDF in .NET MAUI | Syncfusion&reg;
+title: Convert Word document to PDF in .NET MAUI | Syncfusion<sup>&reg;</sup>
 description: Convert Word to PDF in .NET MAUI using .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word document to PDF in .NET MAUI
 
-Syncfusion&reg; DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET MAUI**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET MAUI**.
 
 **Prerequisites:**
 
@@ -57,23 +57,25 @@ Step 3: Install the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/package
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# .NET MAUI app project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-```
-dotnet new maui -n Convert-Word-document-to-PDF
-```
-
-```
-cd Convert-Word-document-to-PDF
-```
-
-Alternatively, use command palette
+Step 1: Create a new C# .NET MAUI app project using the command palette.
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.DocIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET.Core) to the .NET MAUI project.
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -n Convert-Word-document-to-PDF
+```
+
+Step 2: Run the following command to navigate to the project directory.
+
+```
+cd Convert-Word-document-to-PDF
+```
+
+Step 3: Run the following command to install [Syncfusion.DocIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET.Core) to the .NET MAUI project.
 
 ```
 dotnet add package Syncfusion.DocIORenderer.NET.Core
@@ -83,7 +85,7 @@ dotnet add package Syncfusion.DocIORenderer.NET.Core
  
 {% endtabcontents %}
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -242,6 +244,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Word to PDF in .NET MAUI](WordToPDF_images/OutputImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion&reg; Word library (DocIO) features. 
+Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
 An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/Word/WordToPDF#/material3) in ASP.NET Core.

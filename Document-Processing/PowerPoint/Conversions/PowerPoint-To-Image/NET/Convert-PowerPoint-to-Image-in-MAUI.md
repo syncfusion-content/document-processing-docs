@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to Image in .NET MAUI | Syncfusion&reg;
+title: Convert PowerPoint to Image in .NET MAUI | Syncfusion<sup>&reg;</sup>
 description: Convert PowerPoint to image in .NET MAUI using .NET MAUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in .NET MAUI
 
-Syncfusion&reg; PowerPoint is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET MAUI**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET MAUI**.
 
 **Prerequisites:**
 
@@ -57,23 +57,25 @@ Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# .NET MAUI app project using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-```
-dotnet new maui -n Convert-PowerPoint-presentation-to-Image
-```
-
-```
-cd Convert-PowerPoint-presentation-to-Image
-```
-
-Alternatively, use command palette
+Step 1: Create a new C# .NET MAUI app project using the command palette.
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Step 2: Run the following command to install [Syncfusion.PresentationRenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET.Core) to the .NET MAUI project.
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -n Convert-PowerPoint-presentation-to-Image
+```
+
+Step 2: Run the following command to navigate to the project directory.
+
+```
+cd Convert-PowerPoint-presentation-to-Image
+```
+
+Step 3: Run the following command to install [Syncfusion.PresentationRenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET.Core) to the .NET MAUI project.
 
 ```
 dotnet add package Syncfusion.PresentationRenderer.NET.Core
@@ -83,7 +85,7 @@ dotnet add package Syncfusion.PresentationRenderer.NET.Core
  
 {% endtabcontents %}
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -235,6 +237,6 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
 </table>
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core. 

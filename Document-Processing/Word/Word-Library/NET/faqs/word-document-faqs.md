@@ -1,5 +1,5 @@
 ---
-title: FAQ about Word Document | DocIO | Syncfusion&reg;
+title: FAQ about Word Document | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn about the frequently asked questions about Word documents and their manipulations in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -198,9 +198,9 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/FAQs/Check-compatibility-mode).
 
-## Which units does Essential&reg; DocIO uses for measurement properties such as size, margins, etc, in a Word document?
+## Which units does Essential<sup>&reg;</sup> DocIO uses for measurement properties such as size, margins, etc, in a Word document?
 
-Essential&reg; DocIO library uses Points for measurement properties in a Word document.
+Essential<sup>&reg;</sup> DocIO library uses Points for measurement properties in a Word document.
 
 ## How to convert Units (cm, mm, or inches) to Points for DocIO?
 
@@ -344,3 +344,90 @@ The Word viewer/editor renders the contents of the document page by page dynamic
 DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence, it is not feasible to split the Word document by pages.
 
 You can, however, split the Word document by sections, headings, bookmarks, or placeholders. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents) for more details.
+
+## How to check if two Word documents have the same content while ignoring formatting changes?
+
+By default, DocIO checks both content and formatting in Word files. To focus only on content, you can use the [DetectFormatChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ComparisonOptions.html#Syncfusion_DocIO_DLS_ComparisonOptions_DetectFormatChanges) API to skip formatting checks.
+
+To check if the compared Word document has changes, you can use the [HasChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_HasChanges) property in DocIO to identify content differences when comparing two Word documents.
+
+The following code snippet demonstrates how to compares two Word documents while ignoring formatting changes and saves the result and print the result if there are any changes between the original and revised documents.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Load the original and revised Word documents.
+//Load the original document.
+using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocument.docx", FileMode.Open, FileAccess.Read))
+{
+    using (WordDocument originalDocument = new WordDocument(originalDocumentStreamPath, FormatType.Docx))
+    {
+        //Load the revised document.
+        using (FileStream revisedDocumentStreamPath = new FileStream("Data/RevisedDocument.docx", FileMode.Open, FileAccess.Read))
+        {
+            using (WordDocument revisedDocument = new WordDocument(revisedDocumentStreamPath, FormatType.Docx))
+            {
+                // Configure comparison options to ignore formatting changes.
+                ComparisonOptions compareOptions = new ComparisonOptions();
+                compareOptions.DetectFormatChanges = false;            
+                // Compare the documents.
+                originalDocument.Compare(revisedDocument);	            
+                // Check if there are content differences.
+                if (originalDocument.HasChanges)
+                    Console.WriteLine("Differences detected in the document content.");
+                else
+                    Console.WriteLine("The documents have the same content."); 
+                Console.ReadLine();
+            }
+        }                 
+    }                           
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Load the original document.
+using (WordDocument originalDocument = new WordDocument("Data/OriginalDocument.docx", FormatType.Docx))
+{
+    //Load the revised document.
+    using (WordDocument revisedDocument = new WordDocument("Data/RevisedDocument.docx", FormatType.Docx))
+   {
+        // Configure comparison options to ignore formatting changes.
+        ComparisonOptions compareOptions = new ComparisonOptions();
+        compareOptions.DetectFormatChanges = false;
+        // Compare the documents.
+        originalDocument.Compare(revisedDocument);
+        // Check if there are content differences.
+        if (originalDocument.HasChanges)
+            Console.WriteLine("Differences detected in the document content.");
+        else
+            Console.WriteLine("The documents have the same content.");
+        Console.ReadLine();        
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Load the original document.
+Using originalDocument As New WordDocument("Data/OriginalDocument.docx", FormatType.Docx)
+    ' Load the revised document.
+    Using revisedDocument As New WordDocument("Data/RevisedDocument.docx", FormatType.Docx)
+        ' Configure comparison options to ignore formatting changes.
+        Dim compareOptions As New ComparisonOptions()
+        compareOptions.DetectFormatChanges = False
+        ' Compare the documents.
+        originalDocument.Compare(revisedDocument)
+        ' Check if there are content differences.
+        If originalDocument.HasChanges Then
+            Console.WriteLine("Differences detected in the document content.")
+        Else
+            Console.WriteLine("The documents have the same content.")
+        End If
+        Console.ReadLine()
+    End Using
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Compare-Word-documents/Check-document-has-diff-after-compare).
+
