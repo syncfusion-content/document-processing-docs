@@ -855,12 +855,12 @@ Step 1: The PdfHTMLTextElement class provides support for a basic set of HTML ta
     <td>No</td>
 </tr>
 <tr>
-    <td>Superscript (Sup) (U)</td>
+    <td>Line Break (BR) (U)</td>
     <td>Yes</td>
-    <td>No</td>
+    <td>Yes</td>
 </tr>
 <tr>
-    <td>Line Break (BR) (U)</td>
+    <td>Empty (p)</td>
     <td>Yes</td>
     <td>Yes</td>
 </tr>
