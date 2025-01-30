@@ -527,6 +527,8 @@ End If
 
 When converting HTML to Word documents using the Microsoft Word application, the tags automatically include default spacing (before and after). This behavior occurs because Word applies default paragraph spacing during the conversion process.
 
+![Paragraph spacing when append HTML in DOCX](../FAQ_images/Paragraph-spacing-when-append-HTML-in-DOCX.png)
+
 Similarly, the .NET Word Library (DocIO) also follows this behavior when appending HTML content using the AppendHTML(String) method.
 
 As a result, you may notice extra spacing in the paragraphs, even if the input HTML doesn’t specify spacing values in the tags.
