@@ -1,5 +1,5 @@
 ---
-title: Create PDF file in Console Application using Visual Studio | Syncfusion
+title: Create PDF file in Console App using Visual Studio| Syncfusion
 description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
 platform: document-processing
 control: PDF

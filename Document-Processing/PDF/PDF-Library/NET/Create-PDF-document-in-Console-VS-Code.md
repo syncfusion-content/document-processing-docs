@@ -1,5 +1,5 @@
 ---
-title: Create PDF file in Console Application using VS code | Syncfusion
+title: Create PDF file in Console App using VS code| Syncfusion
 description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
 platform: document-processing
 control: PDF

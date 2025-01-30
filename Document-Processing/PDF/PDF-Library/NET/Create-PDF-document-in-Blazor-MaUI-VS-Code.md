@@ -1,6 +1,6 @@
 ---
-title: Create or Generate PDF file in Blazor MaUI app using Visual Studio code | Syncfusion
-description: Learn to create and generate PDF files in Blazor using the Syncfusion .NET Core PDF library. Follow simple steps to do this without Adobe, using Visual Studio Code.
+title: Create or Generate PDF in MaUI app using VS code| Syncfusion
+description: Learn to create and generate PDF files in  using the Syncfusion .NET Core PDF library. Follow simple steps to do this without Adobe.
 platform: document-processing
 control: PDF
 documentation: UG

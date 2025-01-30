@@ -1,6 +1,6 @@
 ---
-title: Create or Generate PDF file in Blazor WASM app using Visual Studio | Syncfusion
-description: Learn to create and generate PDF files in Blazor using the Syncfusion .NET Core PDF library. Follow simple steps to do this without Adobe, using Visual Studio.
+title: Create or Generate PDF in Blazor WASM app using VS| Syncfusion
+description: Learn to create and generate PDF files in Blazor using the Syncfusion .NET Core PDF library. Follow simple steps to do this without Adobe.
 platform: document-processing
 control: PDF
 documentation: UG

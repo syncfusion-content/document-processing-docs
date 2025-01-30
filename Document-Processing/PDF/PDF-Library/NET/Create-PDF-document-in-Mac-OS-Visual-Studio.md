@@ -1,5 +1,5 @@
 ---
-title: Create PDF document on Mac OS using Visual Studio| Syncfusion
+title: Create PDF document on Mac OS using VS| Syncfusion
 description: Create PDF document in ASP.NET Core application on Mac OS using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
 platform: document-processing
 control: PDF
