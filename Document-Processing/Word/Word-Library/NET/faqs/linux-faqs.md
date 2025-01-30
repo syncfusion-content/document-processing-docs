@@ -1,6 +1,6 @@
 ---
 title: FAQ about using DocIO in Linux | DocIO | Syncfusion<sup>&reg;</sup>
-description: Learn about the frequently asked questions about using the .NET Word (DocIO) library in Linux.
+description: Learn about the frequently asked questions about using the .NET Word (DocIO) library in Linux environment.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -13,7 +13,10 @@ The frequently asked questions about using DocIO in Linux environment are listed
 
 The fonts present in the location (in Docker container) "/usr/local/share/fonts/" is used for conversion. By default, there will be limited number of fonts available in the container.
 
-You should copy necessary fonts to this location "/usr/local/share/fonts/" before conversion.
+You should copy necessary fonts to this location "/usr/local/share/fonts/" before conversion. Refer to the below steps to copy fonts.
+Step 1: Create a “Fonts” folder parallel to the *.sln file.
+Step 2: Place the required font files in that folder.
+Step 3: Add the following code to the Dockerfile to copy the fonts to the container:.
 
 Use the following code example to copy fonts to containers.
 
@@ -74,6 +77,8 @@ RUN echo "deb http://httpredir.debian.org/debian buster main contrib non-free" >
 {% endhighlight %}
 
 {% endtabs %}
+
+If you are still facing font preservation issues after trying the above solution, you can try moving the necessary font files to a docker Linux container. Refer here [https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-copy-necessary-fonts-to-linux-containers] to learn how to do it.
 
 ## How to set culture/locale in Docker containers (Windows and Linux containers)?
  
