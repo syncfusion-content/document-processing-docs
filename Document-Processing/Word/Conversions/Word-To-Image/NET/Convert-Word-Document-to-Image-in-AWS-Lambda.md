@@ -21,7 +21,7 @@ Step 2: Select Blueprint as Empty Function and click **Finish**.
 Step 3: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux.NoDependencies v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8)
+* [SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)
 
 ![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](ASP-NET-Core_images/NugetPackage.png)
 ![Install SkiaSharp.NativeAssets.Linux.NoDependencies Nuget Package](AWS_Images/Lambda_Images/SkiaSharp-Nuget-Package-WordtoPDF.png)

@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Question for PowerPoint Presentation |Syncfusion<sup>&reg;</sup>
+title: Frequently Asked Question for PowerPoint Presentation |Syncfusion
 description: This section illustrates about frequently asked questions in various options by using Essential<sup>&reg;</sup> Syncfusion<sup>&reg;</sup> Presentation library.
 platform: document-processing
 control: Presentation
@@ -77,6 +77,15 @@ NuGet packages to install
 </th>
 </tr>
 </thead>
+<tr>
+<td>
+From v28.2.3
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)'| markdownify }}
+</td>
+</tr>
 <tr>
 <td>
 From v27.2.2

@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in Azure App Service on Linux | Syncfusion<sup>&reg;</sup>
+title: Convert Word to Image in Azure App Service on Linux | Syncfusion
 description: Convert Word to image in Azure App Service on Linux using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -24,8 +24,8 @@ Step 3: Click **Create** button.
 Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.8)
-* [HarfBuzzSharp.NativeAssets.Linux v7.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0.2)
+* [SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)
+* [HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)
 
  ![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
  ![Install SkiaSharp.NativeAssets.Linux Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
