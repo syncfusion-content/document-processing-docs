@@ -1,5 +1,5 @@
 ---
-title: Why Microsoft Office doesn’t support embedding *.otf fonts | Syncfusion.
+title: Why Microsoft office fails to embed OTF fonts | Syncfusion.
 description:  Learn why Office supports only *.ttf fonts and how to replace *.otf fonts for consistent document formatting.
 platform: document-processing
 documentation: UG
