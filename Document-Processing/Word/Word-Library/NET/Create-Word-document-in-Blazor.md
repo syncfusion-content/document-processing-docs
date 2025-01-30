@@ -273,7 +273,7 @@ By executing the program, you will get the **Word document** as follows.
 
 
 Step 1: Create a new C# Blazor app project.
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 2. Choose the **Blazor Server App** template.
 
 ![Choose Blazor Server app from template](Blazor_Images/Blazor-server-app-template.png)
@@ -750,7 +750,7 @@ N> Even though Word library works in WASM, it is recommended to use server  depl
 {% tabcontent Visual Studio Code %}
 
 Step 1: Create a new C# Blazor WASM app project.
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 2. Choose the **Blazor WebAssembly App** template.
 
 ![Choose Blazor Web app from template](Blazor_Images/Blazor-Web-app-template.png)

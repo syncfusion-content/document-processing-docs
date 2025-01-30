@@ -58,7 +58,7 @@ Step 3: Install the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/package
 {% tabcontent Visual Studio Code %}
 
 Step 1: Create a new C# .NET MAUI app project using the command palette.
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
