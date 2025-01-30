@@ -245,7 +245,7 @@ Step 11: Add the following code snippet in the razor file of Navigation menu in 
 
 Step 12: Build the project.
 
-Click on Build > Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 {% endtabcontent %}
  
@@ -535,6 +535,11 @@ An online sample link to [create a Word document](https://blazor.syncfusion.com/
 
 {% tabcontent Visual Studio %}
 
+**Prerequisites:**
+
+* Visual Studio 2022.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+
 Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App from the template and click the Next button.
 
 ![Create Blazor WebAssembly application in Visual Studio](Blazor_Images/Blazor_WASM.png)
@@ -724,48 +729,12 @@ Step 8: Add the following code snippet in the razor file of Navigation menu in t
 
 Step 9: Build the project.
 
-{% tabcontents %}
+Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
 
-{% tabcontent Visual Studio %}
-
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
-
-{% endtabcontent %}
- 
-
-{% tabcontent Visual Studio Code %}
-
-Run the following command in terminal to build the project.
-
-```
-dotnet build
-```
-
-{% endtabcontent %}
- 
-{% endtabcontents %}
 
 Step 10: Run the project.
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
 Click the Start button (green arrow) or press F5 to run the app.
-
-{% endtabcontent %}
- 
-
-{% tabcontent Visual Studio Code %}
-
-Run the following command in terminal to build the project.
-```
-dotnet run
-```
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Client-side-application).
 
@@ -795,7 +764,6 @@ Step 2: To **create a Word document in Blazor WASM app**, install [Syncfusion.Do
 3. Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package.png)
-
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
