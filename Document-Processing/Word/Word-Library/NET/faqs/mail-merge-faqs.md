@@ -127,3 +127,30 @@ End Sub
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Event-for-image-mail-merge-field).
+
+## Why does DocIO use merge field values from the parent group when the nested group data does not contain a value?
+
+If the data source for nested group mail merge has the same field name in both the nested and parent groups, this behavior occurs.
+
+**Explanation:**
+In DocIO, if a merge field in a nested group has a null value, the mail merge process automatically checks the parent group for a field with the same name. If the field exists in the parent group, its value is assigned to the field in the nested group. This is the default behavior in DocIO.
+
+**Example:**
+Consider the following data source structure:
+
+**Parent group:**
+FieldName: FirstName = Andrew
+FieldName: LastName = Fuller
+
+**Nested group:**
+FieldName: FirstName = null
+If the FirstName field in the nested group has a null value, DocIO will automatically assign the FirstName value from the parent group (Andrew) to the nested group field.
+
+**Suggestions to modify this behavior:**
+To prevent the nested group's field from inheriting the value of the parent group, you can use one of the following solutions:
+
+**Solution 1:** Set empty strings for empty fields
+Assign an empty string to the merge field in the nested group instead of null. This ensures that the field remains empty and does not inherit values from the parent group.
+
+**Solution 2:** Use unique field names
+Rename fields in the parent and nested groups to have distinct names. This avoids any conflict and ensures the parent group’s values are not applied to the nested group.

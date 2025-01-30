@@ -1,5 +1,5 @@
 ---
-title: FAQ about multithreading in Word document | DocIO | Syncfusion&reg;
+title: FAQ about multithreading in Word document | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn about the FAQs on multithreading support for opening, editing, and saving Word documents using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -11,7 +11,7 @@ The frequently asked questions regarding multithreading and thread-safety suppor
 
 ## Does the Word library support multithreading and thread-safety?
 
-Yes, the Syncfusion&reg; Word library is thread-safe, allowing you to create multiple instances of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to load the same file as multiple copies or different Word files and save them using multithreading in C#.
+Yes, the Syncfusion<sup>&reg;</sup> Word library is thread-safe, allowing you to create multiple instances of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to load the same file as multiple copies or different Word files and save them using multithreading in C#.
 
 ### Multithreading Word document reading using tasks
 

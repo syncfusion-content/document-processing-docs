@@ -1,5 +1,5 @@
 ---
-title: Fallback fonts in Word to PDF Conversion in C# | DocIO | Syncfusion&reg;
+title: Fallback fonts in Word to PDF Conversion in C# | DocIO | Syncfusion<sup>&reg;</sup>
 description: Learn about how to specify fallback fonts during Word to PDF conversion using the .NET Word (DocIO) library..
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Fallback fonts in Word to PDF Conversion
 
-During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
+During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion<sup>&reg;</sup> Word (DocIO) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
 
 Users can configure fallback fonts in the following ways:
 * Initialize default fallback fonts.

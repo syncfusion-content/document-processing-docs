@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in .NET MAUI |Syncfusion&reg;|
+title: Create and edit PowerPoint files in .NET MAUI |Syncfusion|
 description: A .NET MAUI PowerPoint library to create, read and edit PowerPoint files in .NET MAUI applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -7,12 +7,37 @@ documentation: UG
 ---
 # Create, read and edit a PowerPoint file in .NET MAUI 
 
-Syncfusion&reg; Essential&reg; Presentation is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/powerpoint-framework/maui/powerpoint-library) used to create, read, and edit PowerPoint documents programmatically without Microsoft PowerPoint or interop dependencies. Using this library, you can create a PowerPoint document in .NET MAUI.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Presentation is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/powerpoint-framework/maui/powerpoint-library) used to create, read, and edit PowerPoint documents programmatically without Microsoft PowerPoint or interop dependencies. Using this library, you can create a PowerPoint document in .NET MAUI.
 
 **Prerequisites:**
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://docs.microsoft.com/en-us/dotnet/maui/get-started/installation).
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+* Install the latest .NET SDK and Visual Studio Code.
+* Open Visual Studio Code and install the [.NET MAUI for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) from the Extensions Marketplace.
+* Follow the step-by-step setup guide:
+
+  [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+  
+  [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 ## Steps to create PowerPoint file in .NET MAUI
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
 
@@ -26,7 +51,40 @@ Step 3: Install the Syncfusion.Presentation.NET NuGet package as a reference to 
 
 ![Install the Presentation .NET NuGet package](Workingwith-MAUI/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+{% endtabcontent %}
+ 
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# .NET MAUI app project using the command palette.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui -n Read-and-edit-presentation
+```
+
+Step 2: Run the following command to navigate to the project directory.
+
+```
+cd Read-and-edit-presentation
+```
+
+Step 3: Run the following command to install [Syncfusion.Presentation.NET.Core](https://www.nuget.org/packages/Syncfusion.Presentation.NET.Core) to the .NET MAUI project.
+
+```
+dotnet add package Syncfusion.Presentation.NET.Core
+```
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -242,6 +300,11 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   </tr>
 </table>
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Step 7: Run the Application.
+
+1. Select the target framework, device or emulator.
+2. Press F5 to run the application.
+
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [create a PowerPoint Presentation](https://ej2.syncfusion.com/aspnetcore/PowerPoint/Default#/material3) in ASP.NET Core. 
