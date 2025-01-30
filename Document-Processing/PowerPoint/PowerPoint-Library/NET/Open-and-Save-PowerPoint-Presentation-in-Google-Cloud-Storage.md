@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in Google Cloud Storage | Syncfusion&reg;
+title: Open and save Presentation in Google Cloud Storage | Syncfusion<sup>&reg;</sup>
 description: Open and save Presentation in Google Cloud Storage using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
