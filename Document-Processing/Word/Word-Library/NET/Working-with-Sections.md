@@ -1,5 +1,5 @@
 ---
-title: Working with Sections in .NET Word (DocIO) library | Syncfusion&reg;
+title: Working with Sections in .NET Word (DocIO) library | Syncfusion<sup>&reg;</sup>
 description: Learn how to work with sections, headers, footers, and page settings in a Word document using the .NET Word (DocIO) library, without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -1515,7 +1515,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> * The Word document is a flow document in which contents will not be preserved page by page; instead the contents will be preserved sequentially section by section. Each section may extend to various pages based on its contents like table, text, images etc.
 N> * Word viewer/editor renders the contents of the Word document page by page dynamically when opened for viewing or editing and this page wise rendered information will not be preserved in the document level as per the Word file format specification.
-N> * Whereas Essential&reg; DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence it is not feasible to set different page margins or page settings to each page instead we can do the same for each section.
+N> * Whereas Essential<sup>&reg;</sup> DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents. Hence it is not feasible to set different page margins or page settings to each page instead we can do the same for each section.
 N> * And also, it is not feasible to get the page-wise details from Word document and split the Word document in page by page. 
 
 ## Online Demo

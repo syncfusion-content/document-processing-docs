@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in Xamarin | Syncfusion&reg;
+title: Open and save Presentation in Xamarin | Syncfusion<sup>&reg;</sup>
 description: Open and save Presentation in Xamarin using Xamarin PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save Presentation in Xamarin
 
-Syncfusion&reg; PowerPoint is a [Xamarin PowerPoint library](https://www.syncfusion.com/powerpoint-framework/xamarin/powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in Xamarin**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [Xamarin PowerPoint library](https://www.syncfusion.com/powerpoint-framework/xamarin/powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in Xamarin**.
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
@@ -24,7 +24,7 @@ Step 3: Install [Syncfusion.Xamarin.Presentation](https://www.nuget.org/packages
 
 ![Install Syncfusion.Xamarin.Presentation Nuget Package](Workingwith-Xamarin/Nuget-Package-Project-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add new Forms XAML page in portable project If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
 <ul>
@@ -191,5 +191,5 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Xamarin output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)      
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of Syncfusion&reg; PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
