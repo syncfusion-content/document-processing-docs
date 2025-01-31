@@ -8,7 +8,7 @@ keywords: OLE Object in PowerPoint presentation
 ---
 # Working with OLE Objects
 
-The OLE Object enables sharing of application objects written in different file formats. In PowerPoint presentation the application data can be inserted into a PowerPoint slide using the [programmatic identifier](https://msdn.microsoft.com/en-us/library/aa171170(v=office.11).aspx#) of each file format.
+The OLE Object enables sharing of application objects written in different file formats. In PowerPoint presentation the application data can be inserted into a PowerPoint slide using the [programmatic identifier](https://learn.microsoft.com/en-us/previous-versions/office/developer/office-2003/aa171170(v=office.11)?redirectedfrom=MSDN) of each file format.
 
 ## Inserting OLE Object to a Slide
 
