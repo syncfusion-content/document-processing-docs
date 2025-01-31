@@ -11,6 +11,9 @@ Essential<sup>&reg;</sup> PDF provides support for interactive [annotations](htt
 
 You can add, delete and modify the annotation from the PDF documents.
 
+Check the following video to learn how to work with annotations in PDF documents using the .NET PDF Library.
+{% youtube "https://youtu.be/0KnFyXd-KpM?si=qCVcijc5XxcbgaZ-" %}
+
 ## Adding annotations to a PDF document
 
 You can add a popup annotation to the page using [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html) class. The following code example explains this.
