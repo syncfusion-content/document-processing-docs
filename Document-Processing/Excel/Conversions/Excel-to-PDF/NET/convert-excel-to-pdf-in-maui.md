@@ -11,9 +11,28 @@ documentation: UG
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/maui/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in .NET MAUI**.
 
 ## Prerequisites
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+To create .NET Multi-platform App UI (.NET MAUI) apps using Visual Studio Code, you need the latest versions of the .NET 6 SDK and additional tools configured for .NET MAUI development. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 ## Steps to convert Excel document to PDF in .NET MAUI
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Step 1: Create a new C# .NET MAUI application project.
 
@@ -96,6 +115,107 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 }
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# .NET MAUI application project using Create .NET Project option.
+
+![Create a .NET MAUI application in visual studio](MAUI_images\MAUI_VS_images_img1.png)
+
+Step 2: Name the project and create the project.
+
+![Name the project](MAUI_images\MAUI_VS_images_img2.png)
+
+Alternatively, create a .NET MAUI application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+
+```
+dotnet new maui -o Convert-Excel-to-PDF
+cd Convert-Excel-to-PDF
+```
+
+Step 3:  To **convert an Excel document to PDF in .NET MAUI app**,run the following command to  install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) package.
+
+```
+dotnet add package Syncfusion.XlsIORenderer.Net.Core
+```
+
+![Install Syncfusion.XlsIORenderer.Net NuGet Package](MAUI_images\MAUI_VS_images_img3.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 4: Add a new button to the **MainPage.xaml** as shown below.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Convert_Excel_to_PDF.MainPage">
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
+            Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+            <Button 
+                Text="Convert Excel to PDF"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                SemanticProperties.Hint="Convert Excel to PDF"
+                Clicked="ConvertExceltoPDF"
+                HorizontalOptions="Center" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.XlsIO;
+using Syncfusion.Pdf;
+using Syncfusion.XlsIORenderer;
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: Add a new action method **ConvertExceltoPDF** in MainPage.xaml.cs and include the below code snippet to **convert an Excel document to PDF**.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    Assembly executingAssembly = typeof(App).GetTypeInfo().Assembly;
+    using (Stream inputStream = executingAssembly.GetManifestResourceStream("Convert_Excel_to_PDF.InputTemplate.xlsx"))
+    {
+        // Open the workbook.
+        IWorkbook workbook = application.Workbooks.Open(inputStream);
+
+        // Instantiate the Excel to PDF renderer.
+        XlsIORenderer renderer = new XlsIORenderer();
+
+        //Convert Excel document into PDF document 
+        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+
+        //Create the MemoryStream to save the converted PDF.      
+        MemoryStream pdfStream = new MemoryStream();
+
+        //Save the converted PDF document to MemoryStream.
+        pdfDocument.Save(pdfStream);
+        pdfStream.Position = 0;
+
+        //save and Launch the PDF document
+        SaveService saveService = new();
+        saveService.SaveAndView("Sample.pdf", "application/pdf", pdfStream);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Helper files for .NET MAUI
 
