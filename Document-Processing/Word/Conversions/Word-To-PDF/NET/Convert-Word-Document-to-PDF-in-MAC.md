@@ -98,7 +98,7 @@ By executing the program, you will get the **PDF document** as follows. The outp
 
 {% tabcontent Visual Studio Code %}
 
-Prerequisites:**
+**Prerequisites:**
 
 * Visual Studio Code.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.

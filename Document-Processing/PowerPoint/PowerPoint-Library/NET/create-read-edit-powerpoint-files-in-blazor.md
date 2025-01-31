@@ -226,7 +226,7 @@ Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd
 
 Step 13: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Server-side-application).
 
@@ -658,7 +658,7 @@ dotnet build
 
 Step 10: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Client-side-application).
 

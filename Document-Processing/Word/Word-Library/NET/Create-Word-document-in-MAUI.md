@@ -20,7 +20,7 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET MAUI Word 
 
 * Visual Studio 2022.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-* For more details installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+* For more details about installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
 
 Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
@@ -312,7 +312,7 @@ saveService.SaveAndView("Sample.docx", "application/msword", ms);
 Step 7: Run the Application.
 
 1. Select the target framework, device or emulator.
-2. Press F5 to run the application.
+2. Press <kbd>F5</kbd> to run the application.
 
 ## Helper files for .NET MAUI
 
@@ -703,7 +703,7 @@ saveService.SaveAndView("Sample.docx", "application/msword", ms);
 Step 6: Run the Application.
 
 1. Select the target framework, device or emulator.
-2. Press F5 to run the application.
+2. Press <kbd>F5</kbd> to run the application.
 
 ## Helper files for .NET MAUI
 
