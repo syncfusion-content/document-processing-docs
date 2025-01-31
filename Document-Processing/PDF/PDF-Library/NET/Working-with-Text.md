@@ -860,7 +860,7 @@ Step 1: The PdfHTMLTextElement class provides support for a basic set of HTML ta
     <td>Yes</td>
 </tr>
 <tr>
-    <td>Empty (p)</td>
+    <td>paragraph (p)</td>
     <td>Yes</td>
     <td>Yes</td>
 </tr>
