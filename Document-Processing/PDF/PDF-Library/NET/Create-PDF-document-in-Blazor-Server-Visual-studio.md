@@ -1,5 +1,5 @@
 ---
-title: Create or Generate PDF file in Blazor Server app using Visual Studio | Syncfusion
+title: Create or Generate PDF in Blazor Server app using VS| Syncfusion
 description: Learn to create and generate PDF files in Blazor using the Syncfusion .NET Core PDF library. Follow simple steps to do this without Adobe, using Visual Studio.
 platform: document-processing
 control: PDF
