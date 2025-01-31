@@ -45,7 +45,7 @@ Step 2: Select the project version.
 
 Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
-{% tabcontents %}
+{% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
