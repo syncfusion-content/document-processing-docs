@@ -10,35 +10,17 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET MAUI Word library](https://www.syncfusion.com/document-processing/word-framework/maui/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in .NET MAUI**.
 
-**Prerequisites:**
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
-
-{% endtabcontent %}
- 
-
-{% tabcontent Visual Studio Code %}
-* Install the latest .NET SDK and Visual Studio Code.
-* Open Visual Studio Code and install the [.NET MAUI for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) from the Extensions Marketplace.
-* Follow the step-by-step setup guide:
-
-  [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
-  
-  [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
-
-{% endtabcontent %}
- 
-{% endtabcontents %}
-
 ## Steps to convert Word document to PDF in .NET MAUI
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+**Prerequisites:**
+
+* Visual Studio 2022.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+* For more details installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
 Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App** from the template and click the **Next** button.
 
@@ -52,42 +34,9 @@ Step 3: Install the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/package
 
 ![Install Syncfusion.DocIORenderer.NET NuGet package](MAUI_Images/Nuget-Package-WordtoPDF.png)
 
-{% endtabcontent %}
- 
-
-{% tabcontent Visual Studio Code %}
-
-Step 1: Create a new C# .NET MAUI app project using the command palette.
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
-
-Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-```
-dotnet new maui -n Convert-Word-document-to-PDF
-```
-
-Step 2: Run the following command to navigate to the project directory.
-
-```
-cd Convert-Word-document-to-PDF
-```
-
-Step 3: Run the following command to install [Syncfusion.DocIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET.Core) to the .NET MAUI project.
-
-```
-dotnet add package Syncfusion.DocIORenderer.NET.Core
-```
-
-{% endtabcontent %}
- 
-{% endtabcontents %}
-
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add a new button to the **MainPage.xaml** as shown below.
+Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
 
@@ -112,7 +61,7 @@ Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
 {% endtabs %}
 
-Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
+Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% tabs %}
 
@@ -125,7 +74,7 @@ using Syncfusion.Pdf;
 
 {% endtabs %}
 
-Step 6: Add a new action method **ConvertWordtoPDF** in MainPage.xaml.cs and include the below code snippet to **convert a Word document to PDF**.
+Step 5: Add a new action method **ConvertWordtoPDF** in MainPage.xaml.cs and include the below code snippet to **convert a Word document to PDF**.
 
 {% tabs %}
 
@@ -156,7 +105,7 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
 
 {% endtabs %}
 
-Step 7: Run the Application.
+Step 6: Run the Application.
 
 1. Select the target framework, device or emulator.
 2. Press F5 to run the application.
@@ -243,6 +192,201 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **PDF document** as follows.
 
 ![Word to PDF in .NET MAUI](WordToPDF_images/OutputImage.png)
+
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+
+**Prerequisites:**
+
+* Install the latest .NET SDK and Visual Studio Code.
+* Open Visual Studio Code and install the [.NET MAUI for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) from the Extensions Marketplace.
+* Follow the step-by-step setup guide:
+  - [Set up .NET MAUI with VS Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
+  - [Steps for each platform](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) 
+
+Step 1: Create a new C# .NET MAUI app project.
+1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+
+![Choose .NET MAUI app from template](MAUI_Images/MAUI-app-template.png)
+
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Step 2: To **convert a Word document to PDF in .NET MAUI app**, install [Syncfusion.DocIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET.Core) to the MAUI project.
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.DocIORenderer.NET.Core` to install the NuGet package.
+
+![Add Syncfusion.DocIORenderer.NET.Core NuGet package](MAUI_Images/Command-to-add-NuGet-package-MAUI.png)
+
+```
+dotnet add package Syncfusion.DocIORenderer.NET.Core
+```
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 3: Add a new button to the **MainPage.xaml** as shown below.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Convert_Word_Document_to_PDF.MainPage">
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
+            Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+            <Button 
+                Text="Convert Word Document to PDF"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                SemanticProperties.Hint="Convert Word Document to PDF"
+                Clicked="ConvertWordtoPDF"
+                HorizontalOptions="Center" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIORenderer;
+using Syncfusion.Pdf;
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 5: Add a new action method **ConvertWordtoPDF** in MainPage.xaml.cs and include the below code snippet to **convert a Word document to PDF**.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+//Loading an existing Word document
+Assembly assembly = typeof(App).GetTypeInfo().Assembly;      
+using (WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Convert_Word_Document_to_PDF.Assets.Input.docx"), FormatType.Docx))
+{
+    //Instantiation of DocIORenderer for Word to PDF conversion
+    using (DocIORenderer render = new DocIORenderer())
+    {
+        //Converts Word document into PDF document
+        using (PdfDocument pdfDocument = render.ConvertToPDF(document))
+        {
+            //Saves the PDF document to MemoryStream.
+            MemoryStream stream = new MemoryStream();
+            pdfDocument.Save(stream);
+
+            //save and Launch the PDF document
+            SaveService saveService = new();                 
+            saveService.SaveAndView("Sample.pdf", "application/pdf", stream);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 6: Run the Application.
+
+1. Select the target framework, device or emulator.
+2. Press F5 to run the application.
+
+## Helper files for .NET MAUI
+
+Refer the below helper files and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
+
+<table>
+  <tr>
+  <td>
+    <b>Folder Name</b>
+  </td>
+  <td>
+    <b>File Name</b>
+  </td>
+  <td>
+    <b>Summary</b>
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[.NET MAUI Project](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveService.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/SaveServices/SaveService.cs)'| markdownify }}
+  </td>
+  <td>Represent the base class for save operation.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[Windows](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/Windows)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveWindows.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/Windows/SaveWindows.cs)'| markdownify }}
+  </td>
+  <td>Save implementation for Windows.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[Android](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/Android)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveAndroid.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/Android/SaveAndroid.cs)'| markdownify }}
+  </td>
+  <td>Save implementation for Android device.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[Mac Catalyst](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/MacCatalyst)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveMac.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/MacCatalyst/SaveMac.cs)'| markdownify }}
+  </td>
+  <td>Save implementation for Mac Catalyst device.
+  </td>
+  </tr>
+  <tr>
+  <td rowspan="2">
+    {{'[iOS](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/iOS)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/iOS/SaveIOS.cs)'| markdownify }}
+  </td>
+  <td>
+    Save implementation for iOS device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI/Convert-Word-Document-to-PDF/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
+  </td>
+  <td>
+    Helper classes for viewing the <b>Word document</b> in iOS device
+  </td>
+  </tr>
+</table>
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI).
+
+By executing the program, you will get the **PDF document** as follows.
+
+![Word to PDF in .NET MAUI](WordToPDF_images/OutputImage.png)
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
