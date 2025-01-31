@@ -531,7 +531,7 @@ CreateBooklet(PdfLoadedDocument, SizeF, Boolean)
 </tr>
 <tr>
 <td>
-{{'[Save(String)](https://help.syncfusion.com/document-processing/introduction'| markdownify }}
+{{'[Save(String)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }}
 </td>
 <td> 
 You can save the document as stream to the file system using {{'[Save(Stream)](https://help.syncfusion.com/document-processing/introduction)'| markdownify }} API.  
