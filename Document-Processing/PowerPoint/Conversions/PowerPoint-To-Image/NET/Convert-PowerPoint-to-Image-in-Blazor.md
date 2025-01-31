@@ -576,11 +576,11 @@ Step 8: Add the following code snippet in the razor file of Navigation menu in t
 
 Step 9: Build the project.
 
-Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 10: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Blazor/WASM-app).
 
