@@ -895,6 +895,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Syncfusion .NET PDF library supports users to create a customizable PDF table like [CellSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html#Syncfusion_Pdf_Grid_PdfGridStyle_CellSpacing), [CellPadding](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html#Syncfusion_Pdf_Grid_PdfGridStyle_CellPadding), [HorizontalOverflow](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html#Syncfusion_Pdf_Grid_PdfGridStyle_AllowHorizontalOverflow), etc. using [PdfGridStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html) class.
 
+Check the following video on creating a custom table in a PDF using the .NET PDF Library.
+{% youtube "https://youtu.be/BT-fRY4ZpO0?si=R3rAD_aqFYRBCGwh" %}
+
 The following code snippet illustrates how to customize the table using [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html). 
 
 {% tabs %}
