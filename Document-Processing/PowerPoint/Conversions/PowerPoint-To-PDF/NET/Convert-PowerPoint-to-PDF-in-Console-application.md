@@ -12,29 +12,14 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www
 
 ## Convert PowerPoint to PDF using .NET Core and Latest
 
-
-**Prerequisites:**
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-* Visual Studio 2019 Preview or later.
-* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
+**Prerequisites:**
 
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-* Visual Studio Code.
-* Install the [.NET Core SDK 3.1 Preview or Greater](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
-* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
-
-{% endtabcontent %}
-
-{% endtabcontents %}
-
-The below steps illustrates **convert PowerPoint to PDF** in console application using **.NET Core**.
+* Visual Studio 2022.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new **.NET Core console application** project.
 ![Create a .NET Core Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
@@ -43,41 +28,85 @@ Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-{% tabcontents %}
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-{% tabcontent Visual Studio %}
+Step 3: Include the following namespaces in **Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Presentation;
+using Syncfusion.PresentationRenderer;
+using Syncfusion.Pdf;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 4: Include the below code snippet in **Program.cs** to **convert PowerPoint to PDF**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+//Open the file as Stream.
+using (FileStream fileStream = new FileStream(Path.GetFullPath("Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+{
+    //Open the existing PowerPoint presentation with loaded stream.
+    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    {
+        //Convert the PowerPoint presentation to PDF document.
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        {
+            //Save the converted PDF.      
+            using(FileStream pdfStream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.Write))
+            {
+                pdfDocument.Save(pdfStream);
+            }           
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: Build the project.
+
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 7: Run the project.
+
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET).
+
+By executing the program, you will get the **PDF** as follows.
+
+![Output PDF in .NET Core console application](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
+
 {% endtabcontent %}
  
-
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new .NET Core console application project using the command palette
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+**Prerequisites:**
+
+* Visual Studio Code.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+
+Step 1: Create a new .NET Core console application project.
+1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 2. Choose the **Console App** template.
+
+![Choose Console app from template](Console-Images/NET/Console-app-template.png)
+
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project**.
 
-Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Step 2: To **convert a PowerPoint document to PDF in console app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the project.
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.PresentationRenderer.NET.Core` to install the NuGet package.
 
-```
-dotnet new console -n Convert-PowerPoint-presentation-to-PDF
-```
-
-Run the following command to navigate to the project directory.
-
-```
-cd Convert-PowerPoint-presentation-to-PDF
-```
-
-Step 2: Run the following command to install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the console project.
-
-```
-dotnet add package Syncfusion.PresentationRenderer.NET.Core
-```
-
-{% endtabcontent %}
- 
-{% endtabcontents %}
+![Add Syncfusion.PresentationRenderer.NET.Core NuGet package](Console-Images/NET/Command-to-add-NuGet-package-console.png) 
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -121,52 +150,29 @@ using (FileStream fileStream = new FileStream(Path.GetFullPath("Data/Input.pptx"
 
 Step 5: Build the project.
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
-
-{% endtabcontent %}
- 
-{% tabcontent Visual Studio Code %}
-
 Run the following command in terminal to build the project.
 
 ```
 dotnet build
 ```
 
-{% endtabcontent %}
- 
-{% endtabcontents %}
-
 Step 6: Run the project.
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-Click the Start button (green arrow) or press F5 to run the app.
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
 
 Run the following command in terminal to build the project.
 
 ```
 dotnet run
 ```
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET).
 
 By executing the program, you will get the **PDF** as follows.
 
 ![Output PDF in .NET Core console application](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
 ## Convert PowerPoint to PDF in .NET Framework
 
