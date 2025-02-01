@@ -10,32 +10,16 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET Core application on macOS**.
 
-**Prerequisites:**
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-* Visual Studio 2019 Preview or later.
-* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-* Visual Studio Code.
-* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
-
-{% endtabcontent %}
-
-{% endtabcontents %}
-
 ## Steps to convert PowerPoint to Image programmatically
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+**Prerequisites:**
+
+* Visual Studio 2022.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new C# .NET Core console application.
 ![Create .NET Core console project](Workingwith-Mac/CreateProject.png)
@@ -44,38 +28,6 @@ Step 2: Select the project version.
 ![Select project version](Workingwith-Mac/selectprojectverion.png)
 
 Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-Step 1: Create a new .NET Core console application project using the command palette.
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **Console App** template.
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
-
-Alternatively, use the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-```
-dotnet new console -n Convert-PowerPoint-presentation-to-Image
-```
-
-Step 2: Run the following command to navigate to the project directory.
-
-```
-cd Convert-PowerPoint-presentation-to-Image
-```
-
-Step 3: Run the following command to install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the console project.
-
-```
-dotnet add package Syncfusion.PresentationRenderer.NET.Core
-```
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 ![Install Nuget from Manage Nuget Package](Workingwith-Mac/Install_Nuget1.png)
 
@@ -125,15 +77,89 @@ Step 5: Add the following code snippet in **Program.cs** file to **convert a Pow
 
 Step 6: Build the project.
 
-{% tabcontents %}
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-{% tabcontent Visual Studio %}
+Step 7: Run the project.
 
-Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/MAC).
+
+By executing the program, you will get the **image** as follows.
+
+![PowerPoint to Image on macOS](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+**Prerequisites:**
+
+* Visual Studio Code.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
+
+Step 1: Create a new .NET Core console application project.
+1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+2. Choose the **Console App** template.
+
+![Choose Console app from template](Workingwith-Mac/Console-app-template.png)
+
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project**.
+
+Step 2: To **convert a PowerPoint document to image in console app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the project.
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.PresentationRenderer.NET.Core` to install the NuGet package.
+
+![Add Syncfusion.PresentationRenderer.NET.Core NuGet package](Workingwith-Mac/Command-to-add-NuGet-package-console.png) 
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 3: Include the following Namespaces in the **Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Presentation;
+using Syncfusion.PresentationRenderer;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 4: Add the following code snippet in **Program.cs** file to **convert a PowerPoint to image in .NET Core application on macOS**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+ //Open the file as Stream.
+ using (FileStream fileStreamInput = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+ {
+     //Open the existing PowerPoint presentation with loaded stream.
+     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+     {
+         //Initialize the PresentationRenderer to perform image conversion.
+         pptxDoc.PresentationRenderer = new PresentationRenderer();
+         //Convert PowerPoint slide to image as stream.
+         using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+         {
+             //Reset the stream position.
+             stream.Position = 0;
+             //Create FileStream to save the image file.
+             using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+             {
+                 //Save the image file.
+                 stream.CopyTo(outputStream);
+             }
+         }
+     }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Build the project.
 
 Run the following command in terminal to build the project.
 
@@ -141,36 +167,23 @@ Run the following command in terminal to build the project.
 dotnet build
 ```
 
-{% endtabcontent %}
+Step 6: Run the project.
 
-{% endtabcontents %}
-
-Step 7: Run the project.
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-Click the Start button (green arrow) or press F5 to run the app.
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run
 ```
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/MAC).
 
 By executing the program, you will get the **image** as follows.
 
 ![PowerPoint to Image on macOS](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 

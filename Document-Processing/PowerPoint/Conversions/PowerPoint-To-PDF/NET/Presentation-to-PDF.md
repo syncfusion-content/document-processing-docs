@@ -1,5 +1,5 @@
 ---
-title: .NET PowerPoint Framework - Convert PowerPoint to PDF |Syncfusion<sup>&reg;</sup>
+title: .NET PowerPoint Framework - Convert PowerPoint to PDF |Syncfusion
 description: This section illustrates how to convert PowerPoint Presentation document to PDF in .NET PowerPoint Framework.
 platform: document-processing
 control: PowerPoint
@@ -218,11 +218,11 @@ public class DocumentWarning : IWarning
 {% endhighlight %}
 
 {% highlight C# tabtitle="C# [Windows-specific]" %}
-//Essential Presentation library supports Show warning for unsupported elements feature in C# [Cross-platform], Blazor server-side application and Xamarin platforms alone.
+//Essential Presentation library supports Show warning for unsupported elements feature in C# [Cross-platform], Blazor Server app application and Xamarin platforms alone.
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-//Essential Presentation supports library Show warning for unsupported elements feature in C# [Cross-platform], Blazor server-side application and Xamarin platforms alone.
+//Essential Presentation supports library Show warning for unsupported elements feature in C# [Cross-platform], Blazor Server app application and Xamarin platforms alone.
 {% endhighlight %}
 
 {% endtabs %}
