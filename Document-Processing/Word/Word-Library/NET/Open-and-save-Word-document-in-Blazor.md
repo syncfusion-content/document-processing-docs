@@ -208,7 +208,7 @@ Step 1: Create a new C# Blazor WASM app project. Select Blazor WebAssembly App f
 
 ![Create Blazor WebAssembly application in Visual Studio](Blazor_Images/Blazor_WASM.png)
 
-Step 2: To **open and save a Word document in client-side application**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
+Step 2: To **open and save a Word document in Blazor WASM app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the Blazor project.
 
 ![Install Syncfusion.DocIO.Net.Core NuGet Package](Blazor_Images/Install_Nuget.png)
 
