@@ -21,8 +21,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" 
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Remove-paragraph-with-style/.NET/Remove-paragraph-with-style/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Remove-paragraph-with-style/.NET/Remove-paragraph-with-style/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic))
@@ -261,8 +260,7 @@ The following code example shows how to iterate throughout the paragraph and mod
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Iterate-document-elements/.NET/Iterate-document-elements/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Iterate-document-elements/.NET/Iterate-document-elements/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic))
