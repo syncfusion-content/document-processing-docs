@@ -1564,7 +1564,6 @@ A complete working example of how to convert an Excel worksheet to image in Blaz
 Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
 Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
-{% endtabcontent %}
 
 Step 3: Add below tag in your Blazor WASM csproj file.
 
@@ -1622,9 +1621,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontent %}
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
+{% tabcontent Visual Studio Code%}
 
 Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
@@ -1634,10 +1631,6 @@ Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/Skia
 dotnet add package SkiaSharp.Views.Blazor
 dotnet add package Syncfusion.XlsIORenderer.Net.Core
 ```
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 Step 3: Add below tag in your Blazor WASM csproj file.
 
@@ -2405,6 +2398,10 @@ Step 12: Add the service in the ``Program.cs`` file.
 builder.Services.AddScoped <Create_Excel.Components.Data.ExcelService>();
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 A complete working example of how to create an Excel file in Blazor Server web application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor%20Web%20App/Server%20Side/Create_Excel).
 
