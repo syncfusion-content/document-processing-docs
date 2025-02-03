@@ -9,15 +9,15 @@ documentation: UG
 
 [Syncfusion Excel library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 
-## Create a simple Excel report in Blazor Server-Side application
+## Create a simple Excel report in Blazor Server application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server-Side application.
+The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server application.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor Server-Side application project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor Server application project. Select Blazor App from the template and click the Next button.
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_App.png)
 
@@ -25,7 +25,7 @@ Step 2: Now, the project configuration window will popup. Click Create button to
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Server_ProjectName.png)
 
-Step 3: Choose Blazor Server App and click Create button to create a new Blazor Server-Side application for .NET Core 3.0.0-preview9.
+Step 3: Choose Blazor Server App and click Create button to create a new Blazor Server application for .NET Core 3.0.0-preview9.
 
 ![Create Blazor Server Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_Server_App.png)
 
@@ -94,7 +94,7 @@ Step 8: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder 
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server-Side application.
+Step 9: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -444,7 +444,7 @@ Step 7: Create a new cs file with name as ``CreateExcel`` under ``Data`` folder 
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server-Side application.
+Step 8: Create a new MemoryStream method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -709,14 +709,14 @@ services.AddSingleton<ExcelService>();
 
 {% endtabcontents %}
 
-A complete working example of how to create an Excel file in Blazor Server-Side application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/Create%20Excel).
+A complete working example of how to create an Excel file in Blazor Server application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/Create%20Excel).
 
 By executing the program, you will get the Excel file as below.
 ![Output File](Blazor_images/Blazor_images_Server_Output.png)
 
-## Read and Edit Excel file in Blazor Server-Side application
+## Read and Edit Excel file in Blazor Server application
 
-The below code snippet illustrates how to read and edit an Excel file in Blazor Server-Side application.
+The below code snippet illustrates how to read and edit an Excel file in Blazor Server application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -754,17 +754,17 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to read and edit an Excel file in Blazor Server-Side application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/Edit%20Excel).
+A complete working example of how to read and edit an Excel file in Blazor Server application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/Edit%20Excel).
 
-## Create a simple Excel report in Blazor Client-Side application
+## Create a simple Excel report in Blazor WASM application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Client-Side application.
+The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor WASM application.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor Client-Side application project. Select Blazor App from the template and click the Next button.
+Step 1: Create a new C# Blazor WASM application project. Select Blazor App from the template and click the Next button.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_images_Blazor_App.png)
 
@@ -772,7 +772,7 @@ Step 2: Now, the project configuration window will popup. Click Create button to
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_image_Client_ProjectName.png)
 
-Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor Client-Side application for .NET Core 3.0.0-preview9.
+Step 3: Choose Blazor WebAssembly App and click Create button to create a new Blazor WASM application for .NET Core 3.0.0-preview9.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_image_Blazor_Client_App.png)
 
@@ -808,7 +808,7 @@ Step 6: Add the following code to create a new button.
 {% endcapture %}
 {{ codesnippet9 | OrderList_Indent_Level_1 }}
 
-Step 7: Create a new async method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Client-Side application.
+Step 7: Create a new async method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor WASM application.
 {% capture codesnippet10 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1062,7 +1062,7 @@ Step 10: Add the following code under ``NavMenu.razor`` file present under ``Sha
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor Client-Side application project using Create .NET Project option.
+Step 1: Create a new C# Blazor WASM application project using Create .NET Project option.
 
 ![Create Blazor Client Side application in Visual Studio](Blazor_images/Blazor_VSimages_Blazor_Client_App.png)
 
@@ -1113,7 +1113,7 @@ Step 6: Add the following code to create a new button.
 {% endcapture %}
 {{ codesnippet9 | OrderList_Indent_Level_1 }}
 
-Step 7: Create a new async method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Client-Side application.
+Step 7: Create a new async method with name as ``CreateDocument`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor WASM application.
 {% capture codesnippet10 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1368,14 +1368,14 @@ Step 10: Add the following code under ``NavMenu.razor`` file present under ``Sha
 {% endtabcontents %}
 
 
-A complete working example of how to create an Excel file in Blazor Client-Side Application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/Create%20Excel).
+A complete working example of how to create an Excel file in Blazor WASM Application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/Create%20Excel).
 
 By executing the program, you will get the Excel file as below.
 ![Output File](Blazor_images/Blazor_images_Client_Output.png)
 
-## Read and Edit Excel file in Blazor Client-Side application
+## Read and Edit Excel file in Blazor WASM application
 
-The below code snippet illustrates how to read and edit an Excel file in Blazor Client-Side application.
+The below code snippet illustrates how to read and edit an Excel file in Blazor WASM application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -1414,21 +1414,21 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to read and edit an Excel file in Blazor Client-Side application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/EditExcel).
+A complete working example of how to read and edit an Excel file in Blazor WASM application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/EditExcel).
 
-N> It is recommended to use Blazor Server-Side application to reduce the pay back load which is high in Blazor Client-Side.
+N> It is recommended to use Blazor Server application to reduce the pay back load which is high in Blazor WASM.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (Excel) features.
 
 An online sample link to [create an Excel document](https://blazor.syncfusion.com/demos/excel/create-excel?theme=fluent) in Blazor.
 
-## Convert Excel to Image in Blazor Client-Side application
+## Convert Excel to Image in Blazor WASM application
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor Client-Side project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
 Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
 
@@ -1488,7 +1488,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Blazor Client-Side project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
 Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
 
@@ -1553,15 +1553,15 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel worksheet to image in Blazor Client-Side application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToImage).
+A complete working example of how to convert an Excel worksheet to image in Blazor WASM application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToImage).
 
-## Convert Excel to PDF in Blazor Client-Side application
+## Convert Excel to PDF in Blazor WASM application
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor Client-Side project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
 Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) from nuget.org.
 {% endtabcontent %}
@@ -1626,7 +1626,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Blazor Client-Side project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
+Step 1: Create a new C# Blazor WASM project with target framework as .NET 8.0 by referring [link](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp#create-a-simple-excel-report-in-blazor-client-side-application)
 
 Step 2: Install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.views.Blazor) along with [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
 
@@ -1697,13 +1697,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel file to PDF in Blazor Client-Side application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF).
+A complete working example of how to convert an Excel file to PDF in Blazor WASM application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPDF).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. You can also explore our [Blazor Excel library demo](https://blazor.syncfusion.com/demos/excel/create-excel?theme=bootstrap5) that shows how to create and modify Excel files from C# with just five lines of code.
 
-## Create a simple Excel report in Blazor Server-Side Web application
+## Create a simple Excel report in Blazor Server Web application
 
-The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server-Side web application.
+The below steps illustrates the creation of a simple Invoice formatted Excel document in Blazor Server web application.
 
 {% tabcontents %}
 
@@ -1790,7 +1790,7 @@ using System.IO;
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as ``CreateExcel`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server-Side web application.
+Step 9: Create a new MemoryStream method with name as ``CreateExcel`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server web application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2064,7 +2064,7 @@ Step 2: Name the project and create the project.
 
 ![Name the Blazor Web Server Side application in Visual Studio](Blazor_images/Blazor_VSimages_Server_ProjectName.png)
 
-Alternatively, create a Server-Side Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a Server Web application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 ```
 dotnet new blazor -o CreateExcel
@@ -2144,7 +2144,7 @@ using System.IO;
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 8: Create a new MemoryStream method with name as ``CreateExcel`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server-Side web application.
+Step 8: Create a new MemoryStream method with name as ``CreateExcel`` and include the following code snippet to create a simple Invoice formatted Excel document in Blazor Server web application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2406,14 +2406,14 @@ builder.Services.AddScoped <Create_Excel.Components.Data.ExcelService>();
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to create an Excel file in Blazor Server-Side web application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor%20Web%20App/Server%20Side/Create_Excel).
+A complete working example of how to create an Excel file in Blazor Server web application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor%20Web%20App/Server%20Side/Create_Excel).
 
 By executing the program, you will get the Excel file as below.
 ![Output File](Blazor_images/Blazor_images_Server_Output.png)
 
-## Read and Edit Excel file in Blazor Server-Side web application
+## Read and Edit Excel file in Blazor Server web application
 
-The below code snippet illustrates how to read and edit an Excel file in Blazor Server-Side web application.
+The below code snippet illustrates how to read and edit an Excel file in Blazor Server web application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -2451,4 +2451,4 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to read and edit an Excel file in Blazor Server-Side web application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor%20Web%20App/Server%20Side/Edit_Excel).
+A complete working example of how to read and edit an Excel file in Blazor Server web application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor%20Web%20App/Server%20Side/Edit_Excel).
