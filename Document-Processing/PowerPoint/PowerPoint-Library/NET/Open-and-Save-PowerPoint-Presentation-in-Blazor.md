@@ -172,7 +172,7 @@ Step 11: Add the following JavaScript function in the _Host.cshtml in the Pages 
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/Server-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/Blazor-Server-app).
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
@@ -309,7 +309,7 @@ Step 9: Add the following JavaScript function in the Index.html file present und
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **PowerPoint document** as follows.
 

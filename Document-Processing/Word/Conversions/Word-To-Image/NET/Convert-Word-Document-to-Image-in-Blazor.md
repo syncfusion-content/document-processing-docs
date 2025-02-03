@@ -582,7 +582,7 @@ Step 13: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **image** as follows.
 
@@ -768,7 +768,7 @@ Run the following command in terminal to run the project.
 dotnet run
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **image** as follows.
 
