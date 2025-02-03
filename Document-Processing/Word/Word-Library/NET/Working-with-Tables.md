@@ -2127,6 +2127,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to split a table by columns in a Word document](https://support.syncfusion.com/kb/article/17714/how-to-split-a-table-by-columns-in-a-word-document)
 * [How to add rows with dynamic data into an existing table in Word document](https://support.syncfusion.com/kb/article/17819/how-to-add-rows-with-dynamic-data-into-an-existing-table-in-word-document)
 * [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
+* [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
 
 ## Frequently Asked Questions
 

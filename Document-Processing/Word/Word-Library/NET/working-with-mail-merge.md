@@ -311,3 +311,4 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 * [How to replace merge field with RTF using mail merge in Word document](https://support.syncfusion.com/kb/article/17816/how-to-replace-merge-field-with-rtf-using-mail-merge-in-word-document)
 * [How to skip a range of records during mail merge in a Word document](https://support.syncfusion.com/kb/article/17718/how-to-skip-a-range-of-records-during-mail-merge-in-a-word-document?isInternalRefresh=False)
 * [How to replace a merge field with an image from an HTML string in a Word document](https://support.syncfusion.com/kb/article/17810/how-to-replace-a-merge-field-with-an-image-from-an-html-string-in-a-word-document)
+* [How to use conditional fields to add checkboxes during mail merge in a Word document?](https://support.syncfusion.com/kb/article/17847/how-to-use-conditional-fields-to-add-checkboxes-during-mail-merge-in-a-word-document)

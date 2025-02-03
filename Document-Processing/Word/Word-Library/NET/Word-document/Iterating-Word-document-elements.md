@@ -639,3 +639,7 @@ End Sub
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Iterate-document-elements).
 
 T> If you wish to find an item in a Word document rather than iterating through each element one by one, you can use [finding the item functionality](https://help.syncfusion.com/document-processing/word/word-library/net/find-item-in-word-document) to achieve it.
+
+## See Also
+
+* [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)

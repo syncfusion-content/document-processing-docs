@@ -1540,6 +1540,7 @@ N> * And also, it is not feasible to get the page-wise details from Word documen
 * [How to set different orientations for each page in Word document using C#?](https://support.syncfusion.com/kb/article/16615/how-to-set-different-orientations-for-pages-in-aspnet-core-word)
 * [How to set an image in first page header only in Word document](https://support.syncfusion.com/kb/article/17516/how-to-set-an-image-in-first-page-header-only-in-core-word-document)
 * [How to copy first section header/footer to other sections and remove first section in a Word document](https://support.syncfusion.com/kb/article/17597/how-to-copy-first-section-headerfooter-and-remove-in-core-word)
+* [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 
 ## Frequently Asked Questions
 

@@ -1845,3 +1845,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to replace list paragraph text with multiple paragraphs from another Word document](https://support.syncfusion.com/kb/article/17814/how-to-replace-list-paragraph-text-with-multiple-paragraphs-from-another-word-document)
 * [How to replace the text with an HTML table in a Word document](https://support.syncfusion.com/kb/article/17712/how-to-replace-the-text-with-an-html-table-in-a-word-document)
 * [How to find and apply bold formatting to a specific word in replaced content](https://support.syncfusion.com/kb/article/17700/how-to-find-and-apply-bold-formatting-to-a-specific-word-in-replaced-content)
+* [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document) 
+* [How to apply bold formatting to the content between placeholders in a Word document?](https://support.syncfusion.com/kb/article/17778/how-to-apply-bold-formatting-to-the-content-between-placeholders-in-a-word-document)
