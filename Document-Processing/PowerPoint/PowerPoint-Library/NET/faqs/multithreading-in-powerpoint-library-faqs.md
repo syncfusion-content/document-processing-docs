@@ -1,5 +1,5 @@
 ---
-title: FAQ about multithreading in PowerPoint presentation | Syncfusion<sup>&reg;</sup>
+title: FAQ about multithreading in PowerPoint presentation | Syncfusion
 description: Learn about the FAQs on multithreading support for opening, editing, and saving PowerPoint presentations using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint

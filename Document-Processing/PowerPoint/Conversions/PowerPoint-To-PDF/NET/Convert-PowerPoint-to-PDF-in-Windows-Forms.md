@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to PDF in Windows Forms | Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to PDF in Windows Forms | Syncfusion
 description: Convert PowerPoint to PDF in Windows Forms using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

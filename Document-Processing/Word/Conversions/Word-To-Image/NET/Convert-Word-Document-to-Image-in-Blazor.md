@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in Blazor | DocIO | Syncfusion<sup>&reg;</sup> 
+title: Convert Word to Image in Blazor | DocIO | Syncfusion 
 description: Convert Word to image in Blazor using Blazor Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -218,18 +218,18 @@ By executing the program, you will get the **image** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new C# Blazor Server app project.
-1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-2. Choose the **Blazor Server App** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Choose the **Blazor Server App** template.
 
 ![Choose Blazor Server app from template](Blazor_Images/Blazor-server-app-template.png)
 
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
+* Select the project location, type the project name and press enter.
+* Then choose **Create project**.
 
 Step 2: To **convert a Word document to image in server app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) to the Blazor project.
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` to install the NuGet package.
+* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+* Ensure you're in the project root directory where your .csproj file is located.
+* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-Server.png)
 
@@ -582,7 +582,7 @@ Step 13: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **image** as follows.
 
@@ -601,18 +601,18 @@ N> To convert Word to image, it is necessary to access the font stream internall
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new C# Blazor WASM app project.
-1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-2. Choose the **Blazor WebAssembly App** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Choose the **Blazor WebAssembly App** template.
 
 ![Choose Blazor Web app from template](Blazor_Images/Blazor-WASM-app-template.png)
 
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
+* Select the project location, type the project name and press enter.
+* Then choose **Create project**.
 
 Step 2: To **convert a Word document to Image in Blazor WASM app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.116.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.116.1) to the Blazor project.
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 3.116.1` to install the NuGet package.
+* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+* Ensure you're in the project root directory where your .csproj file is located.
+* Run the command `dotnet add package Syncfusion.DocIORenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 3.116.1` to install the NuGet package.
 
 ![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-WASM.png)
 
@@ -768,7 +768,7 @@ Run the following command in terminal to run the project.
 dotnet run
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **image** as follows.
 

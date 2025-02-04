@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to PDF in ASP.NET Core | Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to PDF in ASP.NET Core | Syncfusion
 description: Convert PowerPoint to PDF in ASP.NET Core using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -115,18 +115,18 @@ By executing the program, you will get the **PDF document** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new ASP.NET Core Web application project.
-1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
 
 ![Choose ASP.NET Core Web app from template](Workingwith-Core/AspNetCore-app-template.png)
 
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
+* Select the project location, type the project name and press enter.
+* Then choose **Create project**.
 
 Step 2: To **convert a PowerPoint document to PDF in ASP.NET Core Web app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the ASP.NET Core project.
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.PresentationRenderer.Net.Core` to install the NuGet package.
+* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+* Ensure you're in the project root directory where your .csproj file is located.
+* Run the command `dotnet add package Syncfusion.PresentationRenderer.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Core/Command-to-add-NuGet-package-AspNetCore.png)
 

@@ -1,5 +1,5 @@
 ---
-title: Create Word document in AWS | Syncfusion<sup>&reg;</sup>
+title: Create Word document in AWS | Syncfusion
 description: Learn how to create a Word document in Amazon Web Services (AWS) using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library in C#.
 platform: document-processing
 control: DocIO
