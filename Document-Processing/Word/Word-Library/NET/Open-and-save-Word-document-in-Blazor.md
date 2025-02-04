@@ -1,5 +1,5 @@
 ---
-title: Open and save Word document in Blazor | DocIO | Syncfusion<sup>&reg;</sup> 
+title: Open and save Word document in Blazor | DocIO | Syncfusion
 description: Open and save Word document in Blazor application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -194,7 +194,7 @@ Step 12: Add the following code snippet in the razor file of Navigation menu in 
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Blazor/Server-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Blazor/Blazor-Server-app).
 
 By executing the program, you will get the **Word document** as follows.
 
@@ -357,7 +357,7 @@ Step 10: Add the following code snippet in the razor file of Navigation menu in 
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **Word document** as follows.
 

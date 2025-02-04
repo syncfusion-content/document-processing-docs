@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Chart Title | Syncfusion<sup>&reg;</sup>
+title: Modify the Appearance of Chart Title | Syncfusion
 description: Learn how to modify the appearance of chart title in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO

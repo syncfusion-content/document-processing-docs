@@ -1,5 +1,5 @@
 ---
-title: FAQ about Word Document | DocIO | Syncfusion<sup>&reg;</sup>
+title: FAQ about Word Document | DocIO | Syncfusion
 description: Learn about the frequently asked questions about Word documents and their manipulations in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

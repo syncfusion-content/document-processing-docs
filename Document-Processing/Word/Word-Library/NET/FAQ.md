@@ -1,5 +1,5 @@
 ---
-title: FAQ Section | DocIO | Syncfusion<sup>&reg;</sup>
+title: FAQ Section | DocIO | Syncfusion
 description: In this section, you can know about the various questions asked about manipulation of Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -19,6 +19,7 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why does the ‘File Not Supported’ exception occur in Syncfusion<sup>®</sup> DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-file-not-supported-exception-occur-in-syncfusion-docio)
 * [Why do documents remain locked after use?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-do-documents-remain-locked-after-use)
 * [Can DocIO perform line-by-line comparisons for Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-perform-line-by-line-comparisons-for-word-documents)
+* [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 
 ## Sections
 

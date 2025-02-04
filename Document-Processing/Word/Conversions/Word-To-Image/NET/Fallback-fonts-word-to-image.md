@@ -1,5 +1,5 @@
 ---
-title: Fallback fonts in Word to Image conversion in C# | DocIO | Syncfusion<sup>&reg;</sup>
+title: Fallback fonts in Word to Image conversion in C# | DocIO | Syncfusion
 description: Learn about how to specify fallback fonts during Word to image conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

@@ -1,5 +1,5 @@
 ---
-title: PowerPoint Presentation Processing Library | Syncfusion<sup>&reg;</sup>
+title: PowerPoint Presentation Processing Library | Syncfusion
 description:  Syncfusion<sup>&reg;</sup> PowerPoint Presentation processing library allows you create, read and write PowerPoint presentations through code in .NET applications without Microsoft Office dependencies.
 platform: document-processing
 control: general

@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in ASP.NET MVC | Syncfusion<sup>&reg;</sup>
+title: Convert Word to Image in ASP.NET MVC | Syncfusion
 description: Convert Word to image in ASP.NET MVC using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

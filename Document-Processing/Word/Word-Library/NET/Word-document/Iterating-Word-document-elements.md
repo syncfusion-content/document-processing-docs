@@ -1,5 +1,5 @@
 ---
-title: Iterating Word document elements in C# | DocIO | Syncfusion<sup>&reg;</sup>
+title: Iterating Word document elements in C# | DocIO | Syncfusion
 description: Learn how to modify an existing Word document and iterate through the elements without Microsoft Word using .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -21,8 +21,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" 
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Remove-paragraph-with-style/.NET/Remove-paragraph-with-style/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Remove-paragraph-with-style/.NET/Remove-paragraph-with-style/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic))
@@ -261,8 +260,7 @@ The following code example shows how to iterate throughout the paragraph and mod
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Iterate-document-elements/.NET/Iterate-document-elements/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Iterate-document-elements/.NET/Iterate-document-elements/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an existing document from file system through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic))
@@ -639,3 +637,7 @@ End Sub
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Iterate-document-elements).
 
 T> If you wish to find an item in a Word document rather than iterating through each element one by one, you can use [finding the item functionality](https://help.syncfusion.com/document-processing/word/word-library/net/find-item-in-word-document) to achieve it.
+
+## See Also
+
+* [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)

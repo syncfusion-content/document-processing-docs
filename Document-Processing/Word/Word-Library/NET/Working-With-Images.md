@@ -1,5 +1,5 @@
 ---
-title: Working with Images in .NET Word library | Syncfusion<sup>&reg;</sup>
+title: Working with Images in .NET Word library | Syncfusion
 description: Learn how to work with images in a Microsoft Word document using the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -703,6 +703,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * [How to extract Images from Word document in C# and VB?](https://support.syncfusion.com/kb/article/11829/how-to-extract-images-from-word-document-in-c-and-vb)
 * [How to replace an image with same size in a Word document](https://support.syncfusion.com/kb/article/17796/how-to-replace-an-image-with-same-size-in-a-word-document)
+* [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document)
 
 ## Frequently Asked Questions
 

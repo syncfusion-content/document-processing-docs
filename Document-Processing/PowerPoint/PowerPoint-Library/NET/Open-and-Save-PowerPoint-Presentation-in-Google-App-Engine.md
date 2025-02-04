@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in Google App Engine | Syncfusion<sup>&reg;</sup>
+title: Open and save Presentation in Google App Engine | Syncfusion
 description: Open and save Presentation in Google App Engine using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

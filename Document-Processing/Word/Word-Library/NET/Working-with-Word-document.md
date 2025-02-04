@@ -1,5 +1,5 @@
 ---
-title: Working with Word document in C# | DocIO | Syncfusion<sup>&reg;</sup>
+title: Working with Word document in C# | DocIO | Syncfusion
 description: Learn to merge, split, and print Word documents with ease, as well as iterate through DOM elements using .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -1092,6 +1092,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to delete a specific range of content in a Word document](https://support.syncfusion.com/kb/article/17708/how-to-delete-a-specific-range-of-content-in-a-word-document)
 * [How to change the text color of existing styles in a Word document](https://support.syncfusion.com/kb/article/17789/how-to-change-the-text-color-of-existing-styles-in-a-word-document)
 * [How to copy style between Word documents](https://support.syncfusion.com/kb/article/17738/how-to-copy-style-between-word-documents)
+* [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 
 ## Frequently Asked Questions
 

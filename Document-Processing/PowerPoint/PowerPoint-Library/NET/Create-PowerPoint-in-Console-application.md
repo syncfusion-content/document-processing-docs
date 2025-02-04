@@ -116,20 +116,20 @@ By executing the program, you will get the **PowerPoint** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new .NET Core console application project.
-1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-2. Choose the **Console App** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Choose the **Console App** template.
 
-![Choose Console app from template](Mac-images/Console-app-template.png)
+![Choose Console app from template](Console-Images/NET/Console-app-template.png)
 
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
+* Select the project location, type the project name and press enter.
+* Then choose **Create project**.
 
 Step 2: To **create a Word document in console app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) to the project.
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Presentation.NET.Core` to install the NuGet package.
+* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+* Ensure you're in the project root directory where your .csproj file is located.
+* Run the command `dotnet add package Syncfusion.Presentation.NET.Core` to install the NuGet package.
 
-![Add Syncfusion.Presentation.NET.Core NuGet package](Mac-images/Command-to-add-NuGet-package-console.png) 
+![Add Syncfusion.Presentation.NET.Core NuGet package](Console-Images/NET/Command-to-add-NuGet-package-console.png) 
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 

@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to PDF in WinUI | Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to PDF in WinUI | Syncfusion
 description: Convert PowerPoint to PDF in WinUI using WinUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

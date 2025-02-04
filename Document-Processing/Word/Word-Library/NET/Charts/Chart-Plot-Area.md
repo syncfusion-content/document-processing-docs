@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Plot Area | Syncfusion<sup>&reg;</sup>
+title: Modify the Appearance of Plot Area | Syncfusion
 description: Learn how to modify the appearance of plot area in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO

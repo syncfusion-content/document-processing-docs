@@ -1,5 +1,5 @@
 ---
-title: Merge Word documents in C# | DocIO | Syncfusion<sup>&reg;</sup>
+title: Merge Word documents in C# | DocIO | Syncfusion
 description: Learn how to merge multiple Word documents into one using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -235,3 +235,4 @@ destinationDocument.Close()
 * [How to merge Word documents without changing the page numbers?](https://support.syncfusion.com/kb/article/12390/how-to-merge-word-documents-without-changing-the-page-numbers)
 * [How to merge multiple documents with header and footer of destination document?](https://support.syncfusion.com/kb/article/12252/how-to-merge-multiple-documents-with-header-and-footer-of-destination-document)
 * [How to merge Word documents and generate TOC in C#?](https://support.syncfusion.com/kb/article/16895/how-to-merge-word-documents-and-generate-toc-in-c)
+* [Why aren't merged documents added to a new page when merging Word documents using DocIO?](https://support.syncfusion.com/kb/article/18903/why-arent-merged-documents-added-to-a-new-page-when-merging-word-documents-using-docio)

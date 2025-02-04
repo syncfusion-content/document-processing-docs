@@ -1,5 +1,5 @@
 --- 
-title: Open and save Presentation in GCP | Syncfusion<sup>&reg;</sup> 
+title: Open and save Presentation in GCP | Syncfusion 
 description: Learn how to open and save Presentation in Google Cloud Platform (GCP) using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies. 
 platform: document-processing
 control: PowerPoint 

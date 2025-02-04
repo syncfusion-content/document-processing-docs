@@ -1,5 +1,5 @@
 ---
-title: Create Word document in Azure Functions v4 | Syncfusion<sup>&reg;</sup>
+title: Create Word document in Azure Functions v4 | Syncfusion
 description: Create Word document in Azure Functions v4 using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

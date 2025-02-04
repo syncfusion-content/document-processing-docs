@@ -1,5 +1,5 @@
 ---
-title: Create PowerPoint document in Microsoft Azure | Syncfusion<sup>&reg;</sup>
+title: Create PowerPoint document in Microsoft Azure | Syncfusion
 description: Learn how to create PowerPoint document in Azure services using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
