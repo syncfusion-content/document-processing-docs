@@ -1,5 +1,5 @@
 ---
-title: Working with Fields in .NET Word (DocIO) library | Syncfusion<sup>&reg;</sup>
+title: Working with Fields in .NET Word (DocIO) library | Syncfusion
 description: Learn how to add dynamic information such as title, time, page number, etc. to a Word document as a field using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -1767,3 +1767,4 @@ document.Close()
 * [How to insert Merge field inside an IF field in a Word document?](https://support.syncfusion.com/kb/article/15255/how-to-insert-merge-field-inside-an-if-field-in-a-word-document-using-net-core-word-library?isInternalRefresh=False)
 * [How to add DocVariable field inside DISPLAYBARCODE field in Word document](https://support.syncfusion.com/kb/article/17561/how-to-add-docvariable-inside-displaybarcode-field-in-core-word)
 * [How to retrieve the URL from an INCLUDEPICTURE field in a Word document](https://support.syncfusion.com/kb/article/17786/how-to-retrieve-the-url-from-an-includepicture-field-in-a-word-document)
+* [How to use conditional fields to add checkboxes during mail merge in a Word document?](https://support.syncfusion.com/kb/article/17847/how-to-use-conditional-fields-to-add-checkboxes-during-mail-merge-in-a-word-document)

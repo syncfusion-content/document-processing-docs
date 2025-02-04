@@ -777,8 +777,6 @@ dotnet build
 
 Step 10: Run the project.
 
-{% tabcontents %}
-
 Run the following command in terminal to run the project.
 
 ```
