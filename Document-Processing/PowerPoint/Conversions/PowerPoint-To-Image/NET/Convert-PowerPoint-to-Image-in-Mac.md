@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to Image on macOS | Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to Image on macOS | Syncfusion
 description: Convert PPTX to image in .NET Core application on macOS using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

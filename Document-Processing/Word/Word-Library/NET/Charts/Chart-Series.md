@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Series | Syncfusion<sup>&reg;</sup>
+title: Modify the Appearance of Series | Syncfusion
 description: Learn how to modify the appearance of series in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO

@@ -1,5 +1,5 @@
 ---
-title: Working with Content Controls | DocIO | Syncfusion<sup>&reg;</sup>
+title: Working with Content Controls | DocIO | Syncfusion
 description: Learn how to work with content controls, such as rich text, date picker, checkbox, and drop-down, in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

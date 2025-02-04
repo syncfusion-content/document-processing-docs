@@ -1,5 +1,5 @@
 ---
-title: Working with Macros in Word document | DocIO | Syncfusion<sup>&reg;</sup>
+title: Working with Macros in Word document | DocIO | Syncfusion
 description: Learn how to load and save a macro enabled Word documents and remove macros from Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

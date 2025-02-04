@@ -1,5 +1,5 @@
 ---
-title: Create Word document in Blazor | DocIO | Syncfusion<sup>&reg;</sup> 
+title: Create Word document in Blazor | DocIO | Syncfusion 
 description: Create Word document without Microsoft Word or interop dependencies in Blazor application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

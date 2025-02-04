@@ -1,5 +1,5 @@
 ---
-title: Create Word document on Mac OS | Syncfusion<sup>&reg;</sup>
+title: Create Word document on Mac OS | Syncfusion
 description: Create Word document in ASP.NET Core application on macOS using Syncfusion .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

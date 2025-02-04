@@ -1,5 +1,5 @@
 --- 
-title: Create PowerPoint document in GCP | Syncfusion<sup>&reg;</sup> 
+title: Create PowerPoint document in GCP | Syncfusion 
 description: Learn how to create PowerPoint document in Google Cloud Platform (GCP) using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies. 
 platform: document-processing
 control: PowerPoint 

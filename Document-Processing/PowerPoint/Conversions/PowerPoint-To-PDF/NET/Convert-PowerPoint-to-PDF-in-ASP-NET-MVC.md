@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to PDF in ASP.NET MVC | Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to PDF in ASP.NET MVC | Syncfusion
 description: Convert PowerPoint to PDF in ASP.NET MVC using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

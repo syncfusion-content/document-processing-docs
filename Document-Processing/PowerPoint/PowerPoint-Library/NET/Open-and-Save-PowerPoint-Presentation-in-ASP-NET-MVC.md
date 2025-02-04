@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in ASP.NET MVC | Syncfusion<sup>&reg;</sup>
+title: Open and save Presentation in ASP.NET MVC | Syncfusion
 description: Open and save Presentation in ASP.NET MVC using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

@@ -1,5 +1,5 @@
 ---
-title: Required NuGet Packages for PowerPoint to PDF Conversion |Syncfusion<sup>&reg;</sup>
+title: Required NuGet Packages for PowerPoint to PDF Conversion | Syncfusion
 description: Learn about the NuGet packages required to convert PowerPoint to PDF using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint

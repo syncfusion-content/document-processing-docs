@@ -1,5 +1,5 @@
 ---
-title: Open and save Word document in Windows Forms | Syncfusion<sup>&reg;</sup> 
+title: Open and save Word document in Windows Forms | Syncfusion 
 description: Open and save Word document in Windows Forms application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
