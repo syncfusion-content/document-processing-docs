@@ -1,5 +1,5 @@
 ---
-title: FAQ about using DocIO in Linux | DocIO | Syncfusion<sup>&reg;</sup>
+title: FAQ about using DocIO in Linux | DocIO | Syncfusion
 description: Learn about the frequently asked questions about using the .NET Word (DocIO) library in Linux environment.
 platform: document-processing
 control: DocIO

@@ -1,5 +1,5 @@
 ---
-title: Create Word document in .NET MAUI | Syncfusion<sup>&reg;</sup>
+title: Create Word document in .NET MAUI | Syncfusion
 description: Create Word document without Microsoft Word or interop dependencies in .NET MAUI application using Syncfusion<sup>&reg;</sup> .NET MAUI Word (DocIO) library.
 platform: document-processing
 control: DocIO

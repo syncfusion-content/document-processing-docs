@@ -1,5 +1,5 @@
 ---
-title: Convert PPTX to PDF in AWS Lambda | Syncfusion<sup>&reg;</sup>
+title: Convert PPTX to PDF in AWS Lambda | Syncfusion
 description: Convert PPTX to PDF in AWS Lambda using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

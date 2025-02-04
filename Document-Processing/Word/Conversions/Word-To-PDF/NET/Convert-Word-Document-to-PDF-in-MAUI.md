@@ -1,5 +1,5 @@
 ---
-title: Convert Word document to PDF in .NET MAUI | Syncfusion<sup>&reg;</sup>
+title: Convert Word document to PDF in .NET MAUI | Syncfusion
 description: Convert Word to PDF in .NET MAUI using .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

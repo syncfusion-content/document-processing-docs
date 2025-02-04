@@ -1,5 +1,5 @@
 ---
-title: Create Word document in ASP.NET MVC | Syncfusion<sup>&reg;</sup>
+title: Create Word document in ASP.NET MVC | Syncfusion
 description: Create Word document without Microsoft Word or interop dependencies in ASP.NET MVC application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

@@ -1,5 +1,5 @@
 ---
-title: Assemblies required to convert Word to PDF | Syncfusion<sup>&reg;</sup>
+title: Assemblies required to convert Word to PDF | Syncfusion
 description: Learn about the assemblies required to convert Word document to PDF using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

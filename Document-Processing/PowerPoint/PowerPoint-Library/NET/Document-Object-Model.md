@@ -1,5 +1,5 @@
 ---
-title: Document Object Model of the Essential<sup>&reg;</sup> Presentation library|Syncfusion<sup>&reg;</sup>
+title: Document Object Model of the Essential<sup>&reg;</sup> Presentation library| Syncfusion
 description: Learn here about the document object model of the Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint Presentation library and more.
 platform: document-processing
 control: Presentation

@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in .NET MAUI | Syncfusion<sup>&reg;</sup>
+title: Open and save Presentation in .NET MAUI | Syncfusion
 description: Open and save Presentation in .NET MAUI using .NET MAUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
