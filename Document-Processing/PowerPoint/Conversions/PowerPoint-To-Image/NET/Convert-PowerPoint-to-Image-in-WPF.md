@@ -1,5 +1,5 @@
 ---
-title: Convert PowerPoint to Image in WPF | Syncfusion<sup>&reg;</sup>
+title: Convert PowerPoint to Image in WPF | Syncfusion
 description: Convert PowerPoint to image in WPF using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

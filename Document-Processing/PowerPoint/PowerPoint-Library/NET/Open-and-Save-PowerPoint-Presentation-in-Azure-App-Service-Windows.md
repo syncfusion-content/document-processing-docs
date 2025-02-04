@@ -1,5 +1,5 @@
 ---
-title: Open and save PowerPoint in Azure App Service on Windows | Syncfusion<sup>&reg;</sup>
+title: Open and save PowerPoint in Azure App Service on Windows | Syncfusion
 description: Open and save PowerPoint in Azure App Service on Windows using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

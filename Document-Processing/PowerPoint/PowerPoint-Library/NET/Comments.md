@@ -1,6 +1,6 @@
 ---
 
-title: Working with comments in PowerPoint presentation | Syncfusion<sup>&reg;</sup>
+title: Working with comments in PowerPoint presentation | Syncfusion
 description: Learn here all about Working with comments feature of Syncfusion<sup>&reg;</sup> PowerPoint Presentation Library and more.
 platform: document-processing
 control: Presentation

@@ -1,5 +1,5 @@
 ---
-title: FAQ about multithreading in Word to PDF | DocIO | Syncfusion<sup>&reg;</sup>
+title: FAQ about multithreading in Word to PDF | DocIO | Syncfusion
 description: Learn about the FAQs regarding the support of multithreading in Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

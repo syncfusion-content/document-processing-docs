@@ -1,5 +1,5 @@
 ---
-title: Working with Mathematical Equation | DocIO | Syncfusion<sup>&reg;</sup>
+title: Working with Mathematical Equation | DocIO | Syncfusion
 description: Learn how to add, modify, and remove mathematical equations in a Word document using the .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO

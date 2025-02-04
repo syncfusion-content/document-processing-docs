@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in AWS Elastic Beanstalk | Syncfusion<sup>&reg;</sup>
+title: Open and save Presentation in AWS Elastic Beanstalk | Syncfusion
 description: Open and save Presentation in AWS Elastic Beanstalk using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
