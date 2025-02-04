@@ -228,7 +228,7 @@ Step 13: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Server-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Blazor-Server-app).
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
@@ -246,18 +246,18 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 
 Step 1: Create a new C# Blazor Server app project.
-1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-2. Choose the **Blazor Server App** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Choose the **Blazor Server App** template.
 
 ![Choose Blazor Server app from template](Workingwith-Blazor/Blazor-server-app-template.png)
 
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
+* Select the project location, type the project name and press enter.
+* Then choose **Create project**.
 
 Step 2: To **create a PowerPoint document in Blazor Server app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the NuGet package.
+* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+* Ensure you're in the project root directory where your .csproj file is located.
+* Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/Command-to-add-NuGet-package-for-Server.png)
 
@@ -468,7 +468,7 @@ Run the following command in terminal to run the project.
 dotnet run
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Server-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Blazor-Server-app).
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
@@ -660,7 +660,7 @@ Step 10: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **PowerPoint document** as follows.
 
@@ -678,18 +678,18 @@ By executing the program, you will get the **PowerPoint document** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new C# Blazor WASM app project.
-1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-2. Choose the **Blazor WebAssembly App** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Choose the **Blazor WebAssembly App** template.
 
 ![Choose Blazor Web app from template](Workingwith-Blazor/Blazor-WASM-app-template.png)
 
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
+* Select the project location, type the project name and press enter.
+* Then choose **Create project**.
 
 Step 2: To **create a PowerPoint document in Blazor WASM app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the NuGet package.
+* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+* Ensure you're in the project root directory where your .csproj file is located.
+* Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/Command-to-add-NuGet-package-for-WASM.png)
 
@@ -856,7 +856,7 @@ Run the following command in terminal to run the project.
 dotnet run
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Client-side-application).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/Blazor/Blazor-WASM-app).
 
 By executing the program, you will get the **PowerPoint document** as follows.
 

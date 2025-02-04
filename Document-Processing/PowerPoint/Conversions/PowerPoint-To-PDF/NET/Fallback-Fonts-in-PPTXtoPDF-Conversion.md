@@ -1,5 +1,5 @@
 ---
-title: Fallback fonts in PowerPoint to PDF conversion| Syncfusion<sup>&reg;</sup>
+title: Fallback fonts in PowerPoint to PDF conversion| Syncfusion
 description: Learn about how to specify fallback fonts during PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint

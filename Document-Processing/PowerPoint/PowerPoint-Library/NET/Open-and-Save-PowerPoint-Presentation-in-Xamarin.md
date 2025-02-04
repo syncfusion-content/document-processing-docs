@@ -1,5 +1,5 @@
 ---
-title: Open and save Presentation in Xamarin | Syncfusion<sup>&reg;</sup>
+title: Open and save Presentation in Xamarin | Syncfusion
 description: Open and save Presentation in Xamarin using Xamarin PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint

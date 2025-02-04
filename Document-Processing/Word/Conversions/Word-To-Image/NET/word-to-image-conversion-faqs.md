@@ -1,5 +1,5 @@
 ---
-title: Word to image conversion FAQs | DocIO | Syncfusion<sup>&reg;</sup>
+title: Word to image conversion FAQs | DocIO | Syncfusion
 description: Learn about the frequently asked questions of Word to image conversion in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

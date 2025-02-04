@@ -1,5 +1,5 @@
 ---
-title: Create Word document in ASP.NET Core | Syncfusion<sup>&reg;</sup>
+title: Create Word document in ASP.NET Core | Syncfusion
 description: Create Word document without Microsoft Word or interop dependencies in ASP.NET Core application using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -324,18 +324,18 @@ By executing the program, you will get the **Word document** as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new ASP.NET Core Web application project.
-1. Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-2. Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
 
 ![Choose ASP.NET Core Web app from template](ASP-NET-Core_images/AspNetCore-app-template.png)
 
-3. Select the project location, type the project name and press enter.
-4. Then choose **Create project**.
+* Select the project location, type the project name and press enter.
+* Then choose **Create project**.
 
 Step 2: To **create a Word document in ASP.NET Core Web app**, install [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) to the ASP.NET Core project.
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
+* Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+* Ensure you're in the project root directory where your .csproj file is located.
+* Run the command `dotnet add package Syncfusion.DocIO.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Command-to-add-NuGet-package-AspNetCore.png)
 

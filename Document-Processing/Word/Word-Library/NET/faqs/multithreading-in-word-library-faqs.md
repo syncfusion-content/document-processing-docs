@@ -1,5 +1,5 @@
 ---
-title: FAQ about multithreading in Word document | DocIO | Syncfusion<sup>&reg;</sup>
+title: FAQ about multithreading in Word document | DocIO | Syncfusion
 description: Learn about the FAQs on multithreading support for opening, editing, and saving Word documents using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
