@@ -1,5 +1,5 @@
 ---
-title: Create Word document in WPF | Syncfusion<sup>&reg;</sup> 
+title: Create Word document in WPF | Syncfusion 
 description: Create Word document without Microsoft Word or interop dependencies in WPF application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

@@ -1,5 +1,5 @@
 ---
-title: Convert Word to Image in AWS Lambda | Syncfusion<sup>&reg;</sup>
+title: Convert Word to Image in AWS Lambda | Syncfusion
 description: Convert Word to image in AWS Lambda using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

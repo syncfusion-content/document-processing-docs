@@ -1,5 +1,5 @@
 ---
-title: Open and save Word document in ASP.NET Core | Syncfusion<sup>&reg;</sup>
+title: Open and save Word document in ASP.NET Core | Syncfusion
 description: Open and save Word document in ASP.NET Core application using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO

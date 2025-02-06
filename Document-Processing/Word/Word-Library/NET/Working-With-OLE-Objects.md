@@ -1,5 +1,5 @@
 ---
-title: Working with OLE Objects in .NET Word library | Syncfusion<sup>&reg;</sup>
+title: Working with OLE Objects in .NET Word library | Syncfusion
 description: Learn how to work with OLE Objects in a Word document using the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO

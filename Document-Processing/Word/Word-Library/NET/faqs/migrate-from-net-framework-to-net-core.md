@@ -1,5 +1,5 @@
 ---
-title: Migrate from .NET Framework to .NET core | DocIO | Syncfusion<sup>&reg;</sup>
+title: Migrate from .NET Framework to .NET core | DocIO | Syncfusion
 description: This section illustrates migrating Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library from .NET Framework to .NET core.
 platform: document-processing
 control: DocIO

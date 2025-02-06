@@ -1,5 +1,5 @@
 ---
-title: PowerPoint Presentation Conversion Library | Syncfusion<sup>&reg;</sup>
+title: PowerPoint Presentation Conversion Library | Syncfusion
 description:  Syncfusion<sup>&reg;</sup> PowerPoint Presentation Conversion Library converts PowerPoint presentations to PDF, and image without Microsoft Office dependencies.
 platform: document-processing
 control: general

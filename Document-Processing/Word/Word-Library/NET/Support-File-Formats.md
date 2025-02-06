@@ -1,5 +1,5 @@
 ---
-title: Supported file formats in .NET Word (DocIO) Library | Syncfusion<sup>&reg;</sup>
+title: Supported file formats in .NET Word (DocIO) Library | Syncfusion
 description: Learn more about the supported file formats in .NET Word (DocIO) Library.
 platform: document-processing
 control: DocIO

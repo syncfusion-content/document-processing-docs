@@ -1,5 +1,5 @@
 ---
-title: Create Word document in Azure App Service on Windows | Syncfusion<sup>&reg;</sup>
+title: Create Word document in Azure App Service on Windows | Syncfusion
 description: Create Word document in Azure App Service on Windows using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO

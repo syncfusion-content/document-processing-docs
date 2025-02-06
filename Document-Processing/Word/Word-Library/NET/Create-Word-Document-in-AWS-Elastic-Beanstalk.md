@@ -1,5 +1,5 @@
 ---
-title: Create Word document in AWS Elastic Beanstalk | Syncfusion<sup>&reg;</sup>
+title: Create Word document in AWS Elastic Beanstalk | Syncfusion
 description: Create Word document without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
 platform: document-processing
 control: DocIO

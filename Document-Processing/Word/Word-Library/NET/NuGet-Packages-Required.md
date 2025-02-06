@@ -1,5 +1,5 @@
 ---
-title: NuGet Packages for .NET Word (DocIO) library | Syncfusion<sup>&reg;</sup>
+title: NuGet Packages for .NET Word (DocIO) library | Syncfusion
 description: Learn the NuGet packages required to use .NET Word (DocIO) library in various platforms and frameworks without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
