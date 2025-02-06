@@ -244,6 +244,7 @@ To convert SVG URL or local file to PDF document using Convert method in HtmlToP
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-JavaScript-when-convert-HTML-to-PDF/.NET/Disable-JavaScript-when-convert-HTML-to-PDF/Program.cs, 300" %}
 
+//Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 string url = Path.GetFullPath("Input.svg");
 //Convert a SVG file to PDF 
@@ -253,6 +254,7 @@ FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, Fi
 document.Save(fileStream);
 document.Close(true);
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from GitHub.
 
