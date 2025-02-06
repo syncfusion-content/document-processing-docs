@@ -11,3 +11,4 @@ documentation: UG
 The frequently asked questions about converting Excel to PDF are listed below.
 
 * [Does XlsIO support multithreaded Excel to PDF conversion?](faqs/does-xlsio-support-multithreaded-excel-to-pdf-conversion)
+* [Does XlsIO library support watermark and background image in Excel to Pdf conversion?](faqs/does-xlsio-support-background-image-preserved-in-excel-to-pdf-conversion)
