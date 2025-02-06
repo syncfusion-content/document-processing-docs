@@ -102,3 +102,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to convert an Excel worksheet to a high-resolution image?](faqs/how-to-convert-an-Excel-worksheet-to-a-high-resolution-image)
 * [How to add and remove page breaks in a worksheet?](faqs/how-to-add-and-remove-page-breaks-in-Excel)
 * [How to decrypt individual items with specific passwords?](faqs/how-to-decrypt-individual-items-with-specific-passwords-in-a-protected-zip-file)
+* [Why out of memory exception is thrown when handling large documents which is having size more than 2GB?](faqs/why-out-of-memory-exception-is-thrown-when-handling-large-documents)
