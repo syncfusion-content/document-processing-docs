@@ -241,7 +241,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## SVG to PDF
 
-To convert SVG URL or local file to PDF document using Convert method in HtmlToPdfConverter class. refer to the following code example.
+To convert SVG URL or local file to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/html_to_pdf_conversion/blob/main/SVG_to_PDF/SVG_to_PDF/Program.cs, 300" %}
 
@@ -274,7 +274,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## SVG to Image
 
-To convert SVG URL or local file to Image using ConvertToImage method in HtmlToPdfConverter class. refer to the following code example.
+To convert SVG URL or local file to Image using [ConvertToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/html_to_pdf_conversion/blob/main/SVG_to_Image/SVG_to_Image/Program.cs, 300" %}
