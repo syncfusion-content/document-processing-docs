@@ -242,7 +242,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## SVG to PDF
 
 To convert SVG URL or local file to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
+
 {% tabs %}
+
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/html_to_pdf_conversion/blob/main/SVG_to_PDF/SVG_to_PDF/Program.cs, 300" %}
 
 //Initialize the HTML to PDF converter.
@@ -254,9 +256,11 @@ FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, Fi
 //Save and close the PDF document.
 document.Save(fileStream);
 document.Close(true);
+
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
 'Initialize the HTML to PDF converter.
 Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
 Dim url As String = Path.GetFullPath("Input.svg")
@@ -268,6 +272,7 @@ document.Save(fileStream)
 document.Close(True)
 
 {% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/SVG_to_PDF).
@@ -277,8 +282,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 To convert SVG URL or local file to Image using [ConvertToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
 
 {% tabs %}
+
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/html_to_pdf_conversion/blob/main/SVG_to_Image/SVG_to_Image/Program.cs, 300" %}
 
+//Initialize the HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 string svgFilePath = Path.GetFullPath("Input.svg");
 //Convert the SVG file to Image
@@ -290,6 +297,7 @@ File.WriteAllBytes("Output.jpg", imageByte);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
 'Initialize the HTML to PDF converter.
 Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
 Dim svgFilePath As String = Path.GetFullPath("Input.svg")
@@ -300,6 +308,7 @@ Dim imageByte As Byte() = image.ImageData
 File.WriteAllBytes("Output.jpg", imageByte)
 
 {% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/SVG_to_Image).
