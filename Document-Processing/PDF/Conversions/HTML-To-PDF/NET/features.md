@@ -239,6 +239,23 @@ image[0].Dispose(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-image-file).
 
+## SVG to PDF
+To convert SVG URL or local file to PDF document using Convert method in HtmlToPdfConverter class. refer to the following code example.
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-JavaScript-when-convert-HTML-to-PDF/.NET/Disable-JavaScript-when-convert-HTML-to-PDF/Program.cs, 300" %}
+
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+string url = Path.GetFullPath("Input.svg");
+//Convert a SVG file to PDF 
+PdfDocument document = htmlConverter.Convert(url);
+FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
+//Save and close the PDF document.
+document.Save(fileStream);
+document.Close(true);
+{% endhighlight %}
+
+You can download a complete working sample from GitHub.
+
 ## JavaScript
 
 The Blink HTML converter supports enabling or disabling the JavaScript using [EnableJavaScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableJavaScript) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. while converting HTML to PDF. Refer to the following code example.
