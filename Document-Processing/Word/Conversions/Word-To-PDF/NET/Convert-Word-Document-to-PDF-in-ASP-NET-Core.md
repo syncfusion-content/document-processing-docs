@@ -208,25 +208,11 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.doc
 
 Step 6: Build the project.
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-Click on Build → Build Solution or press Ctrl + Shift + B to build the project.
-
-{% endtabcontent %}
- 
-{% tabcontent Visual Studio Code %}
-
 Run the following command in terminal to build the project.
 
 ```
 dotnet build
 ```
-
-{% endtabcontent %}
- 
-{% endtabcontents %}
 
 Step 7: Run the project.
 

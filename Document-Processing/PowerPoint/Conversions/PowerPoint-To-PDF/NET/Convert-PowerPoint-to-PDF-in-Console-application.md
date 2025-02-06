@@ -158,7 +158,7 @@ dotnet build
 
 Step 6: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run
