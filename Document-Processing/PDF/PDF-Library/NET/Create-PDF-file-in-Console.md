@@ -34,13 +34,6 @@ The following steps illustrates creating a simple Hello world PDF document in co
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
----
-title: Create PDF in Console App(Framework) using VS| Syncfusion
-description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
-platform: document-processing
-control: PDF
-documentation: UG
---- 
 
 **Prerequires**:
 
@@ -102,13 +95,6 @@ Click the Start button (green arrow) or press F5 to run the app.
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
----
-title: Create PDF file in Console App(Framework) using VS code| Syncfusion
-description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
-platform: document-processing
-control: PDF
-documentation: UG
---- 
 
 **Prerequires**:
 
