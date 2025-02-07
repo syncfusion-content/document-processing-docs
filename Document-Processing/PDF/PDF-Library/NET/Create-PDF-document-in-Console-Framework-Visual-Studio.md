@@ -1,5 +1,5 @@
 ---
-title: Create PDF in Console App(Framework) using VS| Syncfusion
+title: Create PDF in Console App Framework using VS| Syncfusion
 description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
 platform: document-processing
 control: PDF
@@ -28,6 +28,7 @@ N> The [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.W
 
 Step 4: Include the following namespaces in the *Program.cs*.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf.Graphics;
@@ -35,9 +36,11 @@ using Syncfusion.Pdf;
 using System.Drawing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following code sample in *Program.cs* to create a PDF file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document. 
@@ -55,6 +58,7 @@ using (PdfDocument document = new PdfDocument()) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Build the project.
 

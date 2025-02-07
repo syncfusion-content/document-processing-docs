@@ -34,7 +34,7 @@ The following steps illustrates creating a simple Hello world PDF document in co
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative Create-PDF-document-in-Console(Framework)-Visual-Studio.md %}
+{% include_relative Create-PDF-document-in-Console-Framework-Visual-Studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
