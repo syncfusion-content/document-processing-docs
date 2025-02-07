@@ -239,81 +239,6 @@ image[0].Dispose(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-image-file).
 
-## SVG to PDF
-
-To convert SVG URL or local file to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/html_to_pdf_conversion/blob/main/SVG_to_PDF/SVG_to_PDF/Program.cs, 300" %}
-
-//Initialize the HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-string url = Path.GetFullPath("Input.svg");
-//Convert a SVG file to PDF 
-PdfDocument document = htmlConverter.Convert(url);
-FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
-//Save and close the PDF document.
-document.Save(fileStream);
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Initialize the HTML to PDF converter.
-Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
-Dim url As String = Path.GetFullPath("Input.svg")
-'Convert SVG to PDF
-Dim document As PdfDocument = htmlConverter.Convert(url)
-Dim fileStream As FileStream = New FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite)
-'Save and close the PDF document
-document.Save(fileStream)
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/SVG_to_PDF).
-
-## SVG to Image
-
-To convert SVG URL or local file to Image using [ConvertToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. refer to the following code example.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://github.com/SyncfusionExamples/html_to_pdf_conversion/blob/main/SVG_to_Image/SVG_to_Image/Program.cs, 300" %}
-
-//Initialize the HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-string svgFilePath = Path.GetFullPath("Input.svg");
-//Convert the SVG file to Image
-Image image = htmlConverter.ConvertToImage(svgFilePath);
-byte[] imageByte = image.ImageData;
-//Save the image
-File.WriteAllBytes("Output.jpg", imageByte);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Initialize the HTML to PDF converter.
-Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
-Dim svgFilePath As String = Path.GetFullPath("Input.svg")
-'Convert SVG to Image
-Dim image As Image = htmlConverter.ConvertToImage(svgFilePath)
-'Save the image file
-Dim imageByte As Byte() = image.ImageData
-File.WriteAllBytes("Output.jpg", imageByte)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/SVG_to_Image).
-
-
 ## JavaScript
 
 The Blink HTML converter supports enabling or disabling the JavaScript using [EnableJavaScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_EnableJavaScript) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. while converting HTML to PDF. Refer to the following code example.
@@ -530,26 +455,26 @@ padding-left: 5px;
 <h1>Syncfusion<sup>&reg;</sup></h1>
 
 <h2>Introduction</h2>
-	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+    Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
-	<h4>WEB</h4>
-		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
-		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
-		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
+    <h4>WEB</h4>
+        The most comprehensive suite for enterprise web development.
+    <h4>Desktop</h4>
+        Comprehensive suite of over 115 components including the fastest chart and grid components.
+    <h4>Mobile</h4>
+        Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
 <h2>Consulting</h2>
-	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
+    We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
-	<h4>About us</h4>
-		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
-		Morrisville Office
-		Company Headquarters
-		2501 Aerial Center Parkway
-		Suite 200
-		Morrisville, NC 27560
-		USA
+    <h4>About us</h4>
+        Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+    <h4>contact us</h4>
+        Morrisville Office
+        Company Headquarters
+        2501 Aerial Center Parkway
+        Suite 200
+        Morrisville, NC 27560
+        USA
 </body>
 </html>
 
@@ -626,26 +551,26 @@ padding-left: 5px;
 <h1>Syncfusion<sup>&reg;</sup></h1>
 
 <h2>Introduction</h2>
-	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+    Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
-	<h4>WEB</h4>
-		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
-		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
-		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
+    <h4>WEB</h4>
+        The most comprehensive suite for enterprise web development.
+    <h4>Desktop</h4>
+        Comprehensive suite of over 115 components including the fastest chart and grid components.
+    <h4>Mobile</h4>
+        Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
 <h2>Consulting</h2>
-	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
+    We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
-	<h4>About us</h4>
-		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
-		Morrisville Office
-		Company Headquarters
-		2501 Aerial Center Parkway
-		Suite 200
-		Morrisville, NC 27560
-		USA
+    <h4>About us</h4>
+        Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+    <h4>contact us</h4>
+        Morrisville Office
+        Company Headquarters
+        2501 Aerial Center Parkway
+        Suite 200
+        Morrisville, NC 27560
+        USA
 </body>
 </html>
 
@@ -734,26 +659,26 @@ padding-left: 5px;
 <h1>Syncfusion<sup>&reg;</sup></h1>
 
 <h2>Introduction</h2>
-	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
+    Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
-	<h4>WEB</h4>
-		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
-		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
-		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
+    <h4>WEB</h4>
+        The most comprehensive suite for enterprise web development.
+    <h4>Desktop</h4>
+        Comprehensive suite of over 115 components including the fastest chart and grid components.
+    <h4>Mobile</h4>
+        Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
 <h2>Consulting</h2>
-	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
+    We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
-	<h4>About us</h4>
-		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
-		Morrisville Office
-		Company Headquarters
-		2501 Aerial Center Parkway
-		Suite 200
-		Morrisville, NC 27560
-		USA
+    <h4>About us</h4>
+        Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
+    <h4>contact us</h4>
+        Morrisville Office
+        Company Headquarters
+        2501 Aerial Center Parkway
+        Suite 200
+        Morrisville, NC 27560
+        USA
 </body>
 </html>
 
@@ -1322,13 +1247,13 @@ document.Close(True)
 </head>
 <body>
 Hello world
-	<div id="pic">
-		<img src=" syncfusion_logo.gif" alt="Smiley face" width="42" height="42"><br>
-		This is a Syncfusion Logo
-	</div>
-	<div>
-		Hello world
-	</div>
+    <div id="pic">
+        <img src=" syncfusion_logo.gif" alt="Smiley face" width="42" height="42"><br>
+        This is a Syncfusion Logo
+    </div>
+    <div>
+        Hello world
+    </div>
 </body>
 </html>
 
@@ -1342,8 +1267,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By using this [SinglePageLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_SinglePageLayout) property, you can render the whole HTML content into a single PDF page. The PDF page size is limited to 14400 points. There are two options to enable this feature since this is disabled by default.
 
-	1. FitWidth
-	2. FitHeight
+    1. FitWidth
+    2. FitHeight
 
 <b>Fit width option:</b> Using this option, the HTML converter adjusts the PDF page height based on the HTML content height. PDF page width remains constant for this option. 
 <b>Fit height option:</b> Using this option, the HTML converter scale the HTML content and PDF page width to render the whole HTML content within the height. PDF page height remains constant for this option. 
@@ -2285,43 +2210,43 @@ Refer to the following code snippet to set the timeout for HTML to PDF conversio
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Time-out-support-in-HTML-to-PDF/.NET/Time-out-support-in-HTML-to-PDF/Program.cs, 300" %}
 
-	//Initialize the HTML to PDF converter.
-	HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-	//Initialize the blink converter settings.
-	BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
-	// Set the conversion timeout to 5000 milliseconds 
-	blinkConverterSettings.ConversionTimeout = 5000;
-	//Assign Blink converter settings to HTML converter
-	htmlConverter.ConverterSettings = blinkConverterSettings;
-	//Convert URL to PDF
-	PdfDocument document = htmlConverter.Convert("https://www.google.com");
-	//Create a file stream.
-	FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
-	//Save and close the PDF document.
-	document.Save(fileStream);
-	//Close the document.
-	document.Close(true);
+    //Initialize the HTML to PDF converter.
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    //Initialize the blink converter settings.
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+    // Set the conversion timeout to 5000 milliseconds 
+    blinkConverterSettings.ConversionTimeout = 5000;
+    //Assign Blink converter settings to HTML converter
+    htmlConverter.ConverterSettings = blinkConverterSettings;
+    //Convert URL to PDF
+    PdfDocument document = htmlConverter.Convert("https://www.google.com");
+    //Create a file stream.
+    FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
+    //Save and close the PDF document.
+    document.Save(fileStream);
+    //Close the document.
+    document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-	'Initialize the HTML to PDF converter.
-	Dim htmlConverter As New HtmlToPdfConverter()
-	'Initialize the blink converter settings.
-	Dim blinkConverterSettings As New BlinkConverterSettings()
-	'Set the conversion timeout to 5000 milliseconds 
-	blinkConverterSettings.ConversionTimeout = 5000
-	'Assign Blink converter settings to HTML converter
-	htmlConverter.ConverterSettings = blinkConverterSettings
-	'Convert URL to PDF
-	Dim document As PdfDocument = htmlConverter.Convert("https://www.google.com")
-	'Create a file stream.
-	Dim fileStream As New FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite)
-	'Save and close the PDF document.
-	document.Save(fileStream)
-	'Close the document.
-	document.Close(True)
+    'Initialize the HTML to PDF converter.
+    Dim htmlConverter As New HtmlToPdfConverter()
+    'Initialize the blink converter settings.
+    Dim blinkConverterSettings As New BlinkConverterSettings()
+    'Set the conversion timeout to 5000 milliseconds 
+    blinkConverterSettings.ConversionTimeout = 5000
+    'Assign Blink converter settings to HTML converter
+    htmlConverter.ConverterSettings = blinkConverterSettings
+    'Convert URL to PDF
+    Dim document As PdfDocument = htmlConverter.Convert("https://www.google.com")
+    'Create a file stream.
+    Dim fileStream As New FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite)
+    'Save and close the PDF document.
+    document.Save(fileStream)
+    'Close the document.
+    document.Close(True)
 
 {% endhighlight %}
 
