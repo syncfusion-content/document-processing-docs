@@ -93,6 +93,7 @@ Step 5: Include the below code snippet in **Program.cs** to get the input files 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 private static async Task<List<string>> ListFilesAsync(string inputFolderName, string bucketName)
 {
     List<string> files = new List<string>();
@@ -104,7 +105,6 @@ private static async Task<List<string>> ListFilesAsync(string inputFolderName, s
             Prefix = $"{inputFolderName}/",
             Delimiter = "/"
         };
-
         ListObjectsV2Response response;
         do
         {
@@ -134,6 +134,7 @@ private static async Task<List<string>> ListFilesAsync(string inputFolderName, s
         return null;
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,6 +142,7 @@ Step 6: Include the below code snippet in **Program.cs** to converts the PPTX to
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 static async Task ConvertPptxToImage(string inputFileName, string inputFolderName, string bucketName, string outputFolderName)
 {
     try
@@ -185,6 +187,7 @@ static async Task ConvertPptxToImage(string inputFileName, string inputFolderNam
         Console.WriteLine($"Unknown error encountered. Message:'{e.Message}'");
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,40 +195,41 @@ Step 6: Include the below code snippet in **Program.cs** to upload images to S3 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
- public static async Task UploadImageAsync(Stream imageStream, string outputFileName, string bucketName, string outputFolderName)
- {
-     try
-     {
-         var key = $"{outputFolderName}/{outputFileName}"; // e.g., "images/your-image.png"
 
-         var request = new PutObjectRequest
-         {
-             BucketName = bucketName,
-             Key = key,
-             InputStream = imageStream,
-             ContentType = "image/png" // Adjust based on your image type
-         };
+public static async Task UploadImageAsync(Stream imageStream, string outputFileName, string bucketName, string outputFolderName)
+{
+    try
+    {
+        var key = $"{outputFolderName}/{outputFileName}"; // e.g., "images/your-image.png"
 
-         var response = await s3Client.PutObjectAsync(request);
+        var request = new PutObjectRequest
+        {
+            BucketName = bucketName,
+            Key = key,
+            InputStream = imageStream,
+            ContentType = "image/png" // Adjust based on your image type
+        };
+        var response = await s3Client.PutObjectAsync(request);
 
-         if (response.HttpStatusCode == System.Net.HttpStatusCode.OK)
-         {
-             Console.WriteLine("Image uploaded successfully.");
-         }
-         else
-         {
-             Console.WriteLine($"Failed to upload image. HTTP Status Code: {response.HttpStatusCode}");
-         }
-     }
-     catch (AmazonS3Exception ex)
-     {
-         Console.WriteLine($"Error encountered on server. Message:'{ex.Message}'");
-     }
-     catch (Exception ex)
-     {
-         Console.WriteLine($"Unknown error encountered. Message:'{ex.Message}'");
-     }
- }
+        if (response.HttpStatusCode == System.Net.HttpStatusCode.OK)
+        {
+            Console.WriteLine("Image uploaded successfully.");
+        }
+        else
+        {
+            Console.WriteLine($"Failed to upload image. HTTP Status Code: {response.HttpStatusCode}");
+        }
+    }
+    catch (AmazonS3Exception ex)
+    {
+        Console.WriteLine($"Error encountered on server. Message:'{ex.Message}'");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Unknown error encountered. Message:'{ex.Message}'");
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
