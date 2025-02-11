@@ -63,7 +63,6 @@ Step 4: Include the below code snippet in **Program.cs** to **convert PowerPoint
 
 private static readonly RegionEndpoint bucketRegion = RegionEndpoint.USEast1;
 private static IAmazonS3 s3Client;
-
 static async Task Main()
 {
     var config = new AmazonS3Config
@@ -71,7 +70,6 @@ static async Task Main()
         RegionEndpoint = bucketRegion
     };
     s3Client = new AmazonS3Client(config);
-
     Console.WriteLine("Kindly enter the S3 bucket name: ");
     string bucketName = Console.ReadLine();
     Console.WriteLine("Kindly enter the input folder name that has the input PowerPoints: ");
