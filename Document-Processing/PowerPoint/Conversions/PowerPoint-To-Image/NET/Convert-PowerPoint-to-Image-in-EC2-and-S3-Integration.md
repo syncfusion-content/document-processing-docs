@@ -294,7 +294,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 ![Install Microsoft package](EC2_S3_images/Install-microsoft-package.png)
 
-step 3: Install the .NET SDK or Runtime.
+step 3: Install the .NET SDK or Runtime using below command.
 ```
 sudo yum install dotnet-sdk-8.0
 ```
@@ -302,7 +302,7 @@ sudo yum install dotnet-sdk-8.0
 ![Install SDK](EC2_S3_images/Install-sdk.png)
 
 
-step 4:	Install the git in the EC2 instance.
+step 4:	Install the git in the EC2 instance using below command.
 ```
 sudo yum install git -y
 ```
@@ -323,21 +323,21 @@ git clone https://github.com/your-username/your-repository.git
 
 ![Clone git repo](EC2_S3_images/Clone-git-repo.png)
 
-step 7: Once cloned, move into the folder.
+step 7: Once cloned, move into the folder using below command.
 ```
 cd samplename
 ```
 
 ![Move into the folder](EC2_S3_images/Move-to-sample-folder.png)
 
-step 8:	Build and publish your .NET Core application.
+step 8:	Build and publish your .NET Core application using below command.
 ```
 dotnet publish -c Release
 ```
 
 ![Build and publish](EC2_S3_images/Build-and-publish.png)
 
-step 9:	Navigate to the publish directory.
+step 9:	Navigate to the publish directory using below command.
 ```
 cd bin/Release/net8.0/publish
 ```
