@@ -28,7 +28,7 @@ N> To run the sample without manually providing credentials, attach an IAM role 
 ## Steps to Create the Application
 
 Step 1: Create a new **.NET Core console application** project.
-![Create a .NET Core Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
+![Create a .NET Core Console application in Visual Studio](EC2_S3_images/Console-Template-Net-Core.png)
 
 Step 2: Install the following NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
@@ -37,7 +37,7 @@ Step 2: Install the following NuGet package as a reference to your project from 
 * [Microsoft.VisualStudio.Azure.Containers.Tools.Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets)
 * [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies)
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](EC2_S3_images/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -270,12 +270,15 @@ step 8: Create a new private GitHub repository and upload the sample. Refer [her
 ## Steps to Connect EC2 instance in putty
 
 step 1: Open PuTTY and enter the IP address.
+![Open PuTTY, enter the IP address](EC2_S3_images/Open-PuTTY-enter-IP-address.png)
 
 step 2: Go to Credentials category, Connections → SSH → Auth → Credentials.
 
 step 3: Click the browse in the Private key file for authentication and add the .ppk file in it. 
+![Add the .ppk file in Credentials](EC2_S3_images/In-credentials-add-ppk-file.png)
 
-step 4: Click open button and give the Username. It will be connected to the EC2 instance.
+step 4: Click open button. It will be connected to the EC2 instance and ask to login.
+![connect with EC2 instance](EC2_S3_images/Connected-with-PuTTY.png)
 
 ## Steps to deploy the sample in AWS Linux EC2 instance
 
@@ -287,42 +290,65 @@ step 2: Install the Microsoft package repository using below command.
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
+![Install Microsoft package](EC2_S3_images/Install-microsoft-package.png)
+
 step 3: Install the .NET SDK or Runtime.
 ```
 sudo yum install dotnet-sdk-8.0
 ```
+
+![Install SDK](EC2_S3_images/Install-sdk.png)
+
 
 step 4:	Install the git in the EC2 instance.
 ```
 sudo yum install git -y
 ```
 
+![Install git](EC2_S3_images/Install-git.png)
+
 step 5:	Check whether the git is installed properly using below command.
 ```
 git –version
 ```
+
+![Ensure git installation](EC2_S3_images/ensure-git-installation.png)
 
 step 6:	Clone the branch in the instance using below command.
 ```
 git clone https://github.com/your-username/your-repository.git
 ```
 
+![Clone git repo](EC2_S3_images/Clone-git-repo.png)
+
 step 7: Once cloned, move into the folder.
 ```
 cd samplename
 ```
+
+![Move into the folder](EC2_S3_images/Move-to-sample-folder.png)
 
 step 8:	Build and publish your .NET Core application.
 ```
 dotnet publish -c Release
 ```
 
+![Build and publish](EC2_S3_images/Build-and-publish.png)
+
 step 9:	Navigate to the publish directory.
 ```
 cd bin/Release/net8.0/publish
 ```
 
+![Navigate to the publish directory](EC2_S3_images/Navigate-to-publish-directory.png)
+
 step 10: Run your application.
 ```
 dotnet your-application.dll --urls http://0.0.0.0:5000
 ```
+
+![Run your application](EC2_S3_images/Run-the-sample.png)
+
+step 11: Enter the Bucket name, input and output folder name to convert and add images.
+
+![Enter Bucket name](EC2_S3_images/Enter-bucketname-foldername.png)
