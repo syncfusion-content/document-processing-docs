@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion<sup>&reg;</sup> NuGet Packages
 
-[NuGet](https://www.nuget.org/) can be used to automatically add files and references to your Visual Studio projects. You can use the Syncfusion<sup>&reg;</sup> NuGet packages without installing the Essential Studio<sup>&reg;</sup> or platform installation to development with the Syncfusion<sup>&reg;</sup> controls. From v16.2.0.46 (2018 Volume 2 Service Pack 1) onwards, all the Syncfusion<sup>&reg;</sup> components are available as NuGet packages at [nuget.org](https://www.nuget.org/profiles/SyncfusionInc). 
+[NuGet](https://www.nuget.org/) can be used to automatically add files and references to your Visual Studio projects. You can use the Syncfusion<sup>&reg;</sup> NuGet packages without installing the Essential Studio<sup>&reg;</sup> or platform installation to development with the Syncfusion<sup>&reg;</sup> controls. From v16.2.0.46 (2018 Volume 2 Service Pack 1) onwards, all the Syncfusion<sup>&reg;</sup> components are available as NuGet packages at [nuget.org](https://www.nuget.org/). 
 
 N> The Syncfusion<sup>&reg;</sup> Xamarin NuGet packages are published in [NuGet.org](https://www.nuget.org/) from v15.4.0.17.  Starting from v17.1.0.32 (2018 Volume 1), Syncfusion<sup>&reg;</sup> will no longer publish NuGet packages at [nuget.syncfusion.com](https://nuget.syncfusion.com/).
 
