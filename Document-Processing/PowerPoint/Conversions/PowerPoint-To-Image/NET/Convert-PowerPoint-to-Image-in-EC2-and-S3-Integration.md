@@ -272,14 +272,17 @@ step 8: Create a new private GitHub repository and upload the sample. Refer [her
 ## Steps to Connect EC2 instance in putty
 
 step 1: Open PuTTY and enter the IP address.
+
 ![Open PuTTY, enter the IP address](EC2_S3_images/Open-PuTTY-enter-IP-address.png)
 
 step 2: Go to Credentials category, Connections → SSH → Auth → Credentials.
 
 step 3: Click the browse in the Private key file for authentication and add the .ppk file in it. 
+
 ![Add the .ppk file in Credentials](EC2_S3_images/In-credentials-add-ppk-file.png)
 
 step 4: Click open button. It will be connected to the EC2 instance and ask to login.
+
 ![connect with EC2 instance](EC2_S3_images/Connected-with-PuTTY.png)
 
 ## Steps to deploy the sample in AWS Linux EC2 instance
