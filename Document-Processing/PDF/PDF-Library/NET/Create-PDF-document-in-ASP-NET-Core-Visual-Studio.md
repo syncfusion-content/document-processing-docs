@@ -1,9 +1,3 @@
----
-platform: document-processing
-control: PDF
-documentation: UG
-keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
----
 
 **Prerequires**:
 
