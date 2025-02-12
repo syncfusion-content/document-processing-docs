@@ -1,10 +1,5 @@
 **Prerequisites:**
 
-* Visual Studio Code.
-* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-* Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
-
-
 Step 1: Install .NET SDK: 
 * Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 Step 2: Install Visual Studio Code: 

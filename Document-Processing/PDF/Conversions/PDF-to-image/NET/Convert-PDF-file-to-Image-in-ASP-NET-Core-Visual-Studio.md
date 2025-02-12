@@ -58,3 +58,11 @@ using (FileStream output = new FileStream("output.png", FileMode.OpenOrCreate, F
 }
 
 {% endhighlight %}
+
+Step 7: Build the project.
+
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 8: Run the project.
+
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
