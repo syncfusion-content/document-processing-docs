@@ -17,11 +17,11 @@ N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency 
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative Create-PDF-document-in-ASP-NET-Core-Visual-Studio.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-ASP-NET-Core-Visual-Studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
-{% include_relative Create-PDF-document-in-ASP-NET-Core-VS-Code.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-ASP-NET-Core-VS-Code.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
