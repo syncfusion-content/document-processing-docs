@@ -1,5 +1,5 @@
 ---
-title: Create and edit OLE Objects in PowerPoint files |Syncfusion<sup>&reg;</sup>|
+title: Create and edit OLE Objects in PowerPoint files |Syncfusion®
 description: Create and edit OLE Objects in PowerPoint files; Insert and extract an embedded OLE object in PowerPoint Presentation
 platform: document-processing
 control: Presentation
@@ -8,7 +8,7 @@ keywords: OLE Object in PowerPoint presentation
 ---
 # Working with OLE Objects
 
-The OLE Object enables sharing of application objects written in different file formats. In PowerPoint presentation the application data can be inserted into a PowerPoint slide using the [programmatic identifier](https://msdn.microsoft.com/en-us/library/aa171170(v=office.11).aspx#) of each file format.
+The OLE Object enables sharing of application objects written in different file formats. In PowerPoint presentation the application data can be inserted into a PowerPoint slide using the [programmatic identifier](https://learn.microsoft.com/en-us/previous-versions/office/developer/office-2003/aa171170(v=office.11)?redirectedfrom=MSDN) of each file format.
 
 ## Inserting OLE Object to a Slide
 

@@ -378,6 +378,6 @@ With the Syncfusion<sup>&reg;</sup> Excel Library, you can show or hide rows, co
 * [How to hide worksheet tabs using XlsIO?](https://support.syncfusion.com/kb/article/2603/how-to-hide-worksheet-tabs-using-xlsio)
 * [How to set worksheet visibility to very hidden?](https://support.syncfusion.com/kb/article/4586/how-to-set-worksheet-visibility-to-very-hidden)
 * [How to copy Excel worksheet to another workbook in C#, VB.NET?](https://support.syncfusion.com/kb/article/2629/copy-excel-worksheet-to-another-workbook-in-c-vb-net)
-* [How range Copy To method overloads on WinForms XIsIO?](https://support.syncfusion.com/kb/article/2751/how-range-copy-to-method-overloads-on-winforms-xisio?isInternalRefresh=False)
+* [How range Copy To method overloads on WinForms XIsIO?](https://support.syncfusion.com/kb/article/2751/how-range-copy-to-method-overloads-on-winforms-xisio)
 * [How to set freeze panes in Excel document using C#, VB.NET?](https://support.syncfusion.com/kb/article/2684/how-to-set-freeze-panes-in-excel-document-using-c-vbnet)
 * [Blog: Freeze panes](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet/freeze-panes)
