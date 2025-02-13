@@ -759,13 +759,13 @@ apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1
 Please refer to the below screenshot,
 <br/><br/>
 
-<img src="htmlconversion_images/Failedtolaunchchromium.png"><br>
+<img src="htmlconversion_images/net-pdf-failedtolaunch-chromium.png" alt="Failedtolaunch chromium in .NET PDF."><br>
 <br/><br/>
 (Or)
 <br/><br/>
 We can install the required dependencies using the dependencies vis shell script. Please find the below.
 <br/><br/>
-<img src="htmlconversion_images/dependencies.png"><br>
+<img src="htmlconversion_images/net-pdf-dependencies.png" alt="dependencies in .NET PDF."><br>
 <br/><br/>
 code snippet:
 <br/><br/>
