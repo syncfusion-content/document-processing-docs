@@ -5,6 +5,8 @@ Step 1: Install .NET SDK:
 Step 2: Install Visual Studio: 
 * Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
+**Steps to create PDF document programmatically in .NET Core application**
+
 Step 1: Create a new C# ASP.NET Core Web Application project.
 ![Create ASP.NET Core Web application in Visual Studio](Asp.Net.Core_images/Creation1.png)
 

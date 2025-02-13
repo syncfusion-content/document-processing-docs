@@ -5,6 +5,8 @@ Step 1: Install .NET SDK:
 Step 2: Install Visual Studio: 
 * Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
+**Steps to create PDF document in Blazor Server application**
+
 Step 1: Create a new C# Blazor server-side application project. Select Blazor App from the template and click the Next button.
 ![Blazor sample creation](Create-PDF-Blazor/Blazor_project_creation.png)
 

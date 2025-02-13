@@ -5,6 +5,8 @@ Step 1: Install .NET SDK:
 Step 2: Install Visual Studio: 
 * Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
+**Steps to create PDF document in Console App**
+
 Step 1: Create a new C# Console Application project.
 ![Console sample creation](Console_images/console-sample-creation.png)
 

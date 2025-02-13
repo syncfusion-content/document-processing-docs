@@ -7,6 +7,8 @@ Step 2: Install Visual Studio Code:
 Step 3: Install C# Extension for VS Code:
 * Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
+**Steps to create PDF document in Console App**
+
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 
 ```

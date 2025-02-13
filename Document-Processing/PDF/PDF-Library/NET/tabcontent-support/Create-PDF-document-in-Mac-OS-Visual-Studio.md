@@ -5,6 +5,8 @@ Step 1: Install .NET SDK:
 Step 2: Install Visual Studio: 
 * Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
+**Steps to create PDF document programmatically in .NET Core application on MacOS**
+
 Step 1: Create a new .NET Core console application project.
 ![Mac OS console application](GettingStarted_images/Mac_OS_Console.png)
 

@@ -5,6 +5,8 @@ Step 1: Install .NET SDK:
 Step 2: Install Visual Studio: 
 * Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
+**Steps to create PDF document programmatically in .NET MAUI**
+
 Step 1: Create a new project in VS2022, select the .NET MAUI App (Preview) template, and click the **Next** button.
 ![.NET MAUI sample creation step1](MAUI_images/Create_Project.png)
 
