@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting tips for Mail merge | DocIO | Syncfusion
-description: Troubleshooting Mail Merge Issues in .NET Word Library.
+description: Learn how to troubleshoot Mail Merge issues in the .NET Word (DocIO) library, including common errors.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -27,6 +27,7 @@ Mail merge only works with merge fields, not manually typed placeholders. If tex
 3.	Choose MergeField from the list and specify the field name.
 
 **Solution using DocIO:**
+
 Refer to [Syncfusion<sup>&reg;</sup> Documentation](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-find-and-replace#find-and-replace-a-pattern-of-text-with-a-merge-field) for detailed implementation.
 
 ## Why is nested group mail merge not functioning correctly?
