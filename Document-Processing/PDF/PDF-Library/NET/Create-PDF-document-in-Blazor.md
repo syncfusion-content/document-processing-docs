@@ -15,7 +15,7 @@ To include the Syncfusion<sup>&reg;</sup> Blazor PDF library into your Blazor ap
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
 
-** Steps to create PDF document in Blazor Server application **
+**Steps to create PDF document in Blazor Server application**
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -41,7 +41,7 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor.
 
-** Steps to create PDF document in Blazor WASM application **
+**Steps to create PDF document in Blazor WASM application**
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -65,7 +65,7 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
 
-** Steps to create PDF documents in .NET MAUI Blazor application **
+**Steps to create PDF documents in .NET MAUI Blazor application**
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
