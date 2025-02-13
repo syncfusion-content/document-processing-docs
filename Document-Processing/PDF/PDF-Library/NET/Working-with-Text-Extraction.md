@@ -6,6 +6,7 @@ control: PDF
 documentation: UG
 ---
 # Working with Text Extraction
+# Handling Text Extraction
 
 Essential<sup>&reg;</sup> PDF allows you to extract the text from a particular page or the entire PDF document. 
 
@@ -356,75 +357,74 @@ You can retrieve a single character and its properties, including bounds, font n
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/.NET/Get-text-glyph-details-from-extract-text/Program.cs" %} 
 
-//Load the existing PDF document
-PdfLoadedDocument m_loadedDocument = new PdfLoadedDocument(stream);
-//Get the first page of the loaded PDF document
-PdfPageBase page = m_loadedDocument.Pages[0];
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+// Get the first page of the loaded PDF document
+PdfPageBase page = loadedDocument.Pages[0];
 TextLineCollection lineCollection = new TextLineCollection();
 
-//Extract text from the first page
-string m_extractedText = page.ExtractText(out lineCollection);
-//Gets specific line from the collection
+// Extract text from the first page
+string extractedText = page.ExtractText(out lineCollection);
+// Get a specific line from the collection
 TextLine line = lineCollection.TextLine[0];
-//Gets collection of the words in the line
+// Get the collection of words in the line
 List<TextWord> textWordCollection = line.WordCollection;
-//Gets word from the collection using index
+// Get a word from the collection using an index
 TextWord textWord = textWordCollection[0];
-// Gets Glyph details of the word
+// Get Glyph details of the word
 List<TextGlyph> textGlyphCollection = textWord.Glyphs;
 
-//Gets character of the word
+// Get a character from the word
 TextGlyph textGlyph = textGlyphCollection[0];
-//Gets bounds of the character
+// Get bounds of the character
 RectangleF glyphBounds = textGlyph.Bounds;
-//Gets font name of the character
-string GlyphFontName = textGlyph.FontName;
-//Gets font size of the character
-float GlyphFontSize = textGlyph.FontSize;
-//Gets font style of the character
-FontStyle GlyphFontStyle = textGlyph.FontStyle;
-//Gets character in the word
-char GlyphText = textGlyph.Text;
-//Gets the color of the character 
-Color GlyphColor = textGlyph.TextColor; 
+// Get font name of the character
+string glyphFontName = textGlyph.FontName;
+// Get font size of the character
+float glyphFontSize = textGlyph.FontSize;
+// Get font style of the character
+FontStyle glyphFontStyle = textGlyph.FontStyle;
+// Get the character in the word
+char glyphText = textGlyph.Text;
+// Get the color of the character
+Color glyphColor = textGlyph.TextColor;
 
 {% endhighlight %}
 
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Load the existing PDF document 
-Dim m_loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream) 
-' Get the first page of the loaded PDF document 
-Dim page As PdfPageBase = m_loadedDocument.Pages(0) 
-Dim lineCollection As New TextLineCollection() 
+' Load the existing PDF document
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream)
+' Get the first page of the loaded PDF document
+Dim page As PdfPageBase = loadedDocument.Pages(0)
+Dim lineCollection As New TextLineCollection()
 
-' Extract text from the first page 
-Dim m_extractedText As String = page.ExtractText(lineCollection) 
-' Get a specific line from the collection 
-Dim line As TextLine = lineCollection.TextLine(0) 
-' Get a collection of the words in the line 
-Dim textWordCollection As List(Of TextWord) = line.WordCollection 
-' Get a word from the collection using an index 
-Dim textWord As TextWord = textWordCollection(0) 
-' Get Glyph details of the word 
-Dim textGlyphCollection As List(Of TextGlyph) = textWord.Glyphs 
+' Extract text from the first page
+Dim extractedText As String = page.ExtractText(lineCollection)
+' Get a specific line from the collection
+Dim line As TextLine = lineCollection.TextLine(0)
+' Get a collection of words in the line
+Dim textWordCollection As List(Of TextWord) = line.WordCollection
+' Get a word from the collection using an index
+Dim textWord As TextWord = textWordCollection(0)
+' Get Glyph details of the word
+Dim textGlyphCollection As List(Of TextGlyph) = textWord.Glyphs
 
-' Get a character of the word 
-Dim textGlyph As TextGlyph = textGlyphCollection(0) 
-' Get bounds of the character 
-Dim glyphBounds As RectangleF = textGlyph.Bounds 
-' Get font name of the character 
-Dim GlyphFontName As String = textGlyph.FontName 
-' Get font size of the character 
-Dim GlyphFontSize As Single = textGlyph.FontSize 
-' Get font style of the character 
-Dim GlyphFontStyle As FontStyle = textGlyph.FontStyle 
-' Get the character in the word 
-Dim GlyphText As Char = textGlyph.Text 
-' Get the color of the character 
-Dim GlyphColor As Color = textGlyph.TextColor 
-
+' Get a character from the word
+Dim textGlyph As TextGlyph = textGlyphCollection(0)
+' Get bounds of the character
+Dim glyphBounds As RectangleF = textGlyph.Bounds
+' Get font name of the character
+Dim glyphFontName As String = textGlyph.FontName
+' Get font size of the character
+Dim glyphFontSize As Single = textGlyph.FontSize
+' Get font style of the character
+Dim glyphFontStyle As FontStyle = textGlyph.FontStyle
+' Get the character in the word
+Dim glyphText As Char = textGlyph.Text
+' Get the color of the character
+Dim glyphColor As Color = textGlyph.TextColor
 {% endhighlight %}
 
 {% endtabs %}

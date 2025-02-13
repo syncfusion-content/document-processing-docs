@@ -13,13 +13,15 @@ The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/doc
 To quickly get started with .NET PDF Library. Please, check this video:
 {% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
 
+## Steps to create PDF document in Console App
+
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative Create-PDF-document-in-Console-Visual-Studio.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-Visual-Studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
-{% include_relative Create-PDF-document-in-Console-VS-Code.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-VS-Code.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
