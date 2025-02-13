@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 ---
 # Working with Text Extraction
-# Handling Text Extraction
 
 Essential<sup>&reg;</sup> PDF allows you to extract the text from a particular page or the entire PDF document. 
 
