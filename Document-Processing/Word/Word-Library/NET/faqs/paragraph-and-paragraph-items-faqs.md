@@ -634,3 +634,18 @@ End Using
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Change-format-after-append-html).
+
+## Can the border radius be set for shapes in a Word document?
+
+No, setting a border radius for shapes is not supported. Since this functionality is not available in the Microsoft Word, the DocIO library also does not provide an option to apply rounded borders to shapes. 
+
+As a workaround, predefined shapes with rounded edges, such as rounded rectangles, can be used to achieve a similar effect.
+
+## Why is the UpdateTableOfContents() method not accessible in a cross-platform application?
+
+The UpdateTableOfContents() method requires the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package or [Word-to-PDF assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) in cross-platform applications like ASP.NET Core, Blazor and more. Ensure these dependencies are added for the method to work.
+
+## Why does the item index in a Word document differ from the DocIO library?
+
+DocIO indexes items based on the document’s internal file structure rather than the UI rendering. Elements like floating objects may appear in a different order in Microsoft Word UI compared to their actual position in the document’s underlying structure. Since DocIO follows this structure, the difference in indexing is expected.
+
