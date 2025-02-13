@@ -1,11 +1,7 @@
 **Prerequires**:
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-
-**Steps to create PDF documents in .NET MAUI Blazor application**
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
 Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid App` template in Visual Studio.![Blazor client project creation step1](Create-PDF-Blazor/Blazor_Maui_project_creation.png)
 

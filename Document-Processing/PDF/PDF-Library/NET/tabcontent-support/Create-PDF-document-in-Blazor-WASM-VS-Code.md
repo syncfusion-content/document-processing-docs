@@ -1,13 +1,10 @@
 **Prerequires**:
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio Code: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-Step 3: Install C# Extension for VS Code:
-* Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
-**Steps to create PDF document in Blazor WASM application**
+
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 
@@ -139,15 +136,15 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 @functions
-{
-    protected async Task ExportToPdf()
-    {
-        using (MemoryStream excelStream = ExportService.CreatePdf(forecasts))
-        {
-            await JS.SaveAs("Sample.pdf", excelStream.ToArray());
-        }
-    }
-}
+   {
+       protected async Task ExportToPdf()
+       {
+           using (MemoryStream excelStream = ExportService.CreatePdf(forecasts))
+           {
+               await JS.SaveAs("Sample.pdf", excelStream.ToArray());
+           }
+       }
+   }
 {% endhighlight %}
 {% endtabs %}
 
@@ -205,16 +202,16 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
 
 Step 10: Build the project.
 
-Run the following command in terminal to build the project.
+    Run the following command in terminal to build the project.
 
-```
-dotnet build
-```
+    ```
+    dotnet build
+    ```
 
-Step 11: Run the project.
+12. Run the project:
 
-Run the following command in terminal to build the project.
+    Run the following command in terminal to run the project.
 
-```
-dotnet run
+    ```
+    dotnet run
 ```
