@@ -22,6 +22,7 @@ The Syncfusion&reg; PDF to Image converter is a .NET library used to convert PDF
 * Visual Studio 2022.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
+
 Step 1: Create a new C# ASP.NET Core Web Application project.
 ![Create ASP.NET Core Web application](Asp.Net.Core_images/aspnetcore1.png)
 
