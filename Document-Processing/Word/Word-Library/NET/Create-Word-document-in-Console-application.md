@@ -883,6 +883,11 @@ By executing the program, you will get the **Word document** as follows.
 
 {% tabcontent Visual Studio %}
 
+**Prerequisites:**
+
+* Visual Studio 2022.
+* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+
 Step 1: Create a new **.NET FrameWork console application** project.
 ![Create a Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
@@ -1147,6 +1152,7 @@ By executing the program, you will get the **Word document** as follows.
 **Prerequisites:**
 
 * JetBrains Rider.
+* Install .NET Framework Developer Pack.
 
 Step 1. Open JetBrains Rider and create a new .NET Framework console application project.
 * Launch JetBrains Rider.
