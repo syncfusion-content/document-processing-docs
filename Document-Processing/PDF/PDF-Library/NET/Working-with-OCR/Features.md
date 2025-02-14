@@ -489,6 +489,72 @@ End Using
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-on-the-rotated-page-of-the-PDF-document).
 
+## Optimizing OCR Performance
+
+We can improve the speed and accuracy of the OCR process by using the [tessdata_fast](https://github.com/tesseract-ocr/tessdata_fast) or [tessdata_best](https://github.com/tesseract-ocr/tessdata_best) trained data files. Download the tessdata_best or tessdata_fast binaries and set the directory path in the TessData property of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class.
+
+For more details, refer to the following code sample.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+
+    // Load an existing PDF document.
+    FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(stream);
+
+    // Set the path to the tessdata folder.
+    processor.TessDataPath = @"/path/to/tessdata-fast/or/tessdata-best";
+
+    // Perform OCR on the loaded PDF document.
+    processor.PerformOCR(pdfLoadedDocument);
+
+    // Create a file stream to save the processed PDF document.
+    using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+    {
+        // Save the processed PDF document to the specified file stream.
+        pdfLoadedDocument.Save(outputFileStream);
+    }
+    // Close the loaded PDF document.
+    pdfLoadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the OCR processor.
+Using processor As New OCRProcessor()
+
+    ' Load an existing PDF document.
+    Dim stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    Dim pdfLoadedDocument As New PdfLoadedDocument(stream)
+
+    ' Set the path to the tessdata folder.
+    processor.TessDataPath = "/path/to/tessdata-fast/or/tessdata-best"
+
+    ' Perform OCR on the loaded PDF document.
+    processor.PerformOCR(pdfLoadedDocument)
+
+    ' Create a file stream to save the processed PDF document.
+    Using outputFileStream As New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
+        ' Save the processed PDF document to the specified file stream.
+        pdfLoadedDocument.Save(outputFileStream)
+    End Using
+
+    ' Close the loaded PDF document.
+    pdfLoadedDocument.Close(True)
+
+End Using
+
+{% endhighlight %}
+
+{% endtabs %} 
+
 ## Layout result from OCR
 
 You can get the OCRed text and its bounds from a scanned PDF document by using the [OCRLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRLayoutResult.html) Class. Refer to the following code sample. 
