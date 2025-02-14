@@ -1,19 +1,9 @@
----
-title: Create or Generate PDF file in MAUI using Visual Studio| Syncfusion
-description: Learn how to create or generate a PDF file in .NET MAUI with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
-platform: document-processing
-control: PDF
-documentation: UG
----
+**Prerequisites**:
 
-**Prerequires**:
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-## Steps to create PDF document programmatically in .NET MAUI
 
 Step 1: Create a new project in VS2022, select the .NET MAUI App (Preview) template, and click the **Next** button.
 ![.NET MAUI sample creation step1](MAUI_images/Create_Project.png)
@@ -388,5 +378,4 @@ Step 7: Build the project.
 Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
 Step 8: Run the project.
-
-Click the Start button (green arrow) or press F5 to run the app.
+   Click the Start button (green arrow) or press F5 to run the app.

@@ -102,3 +102,6 @@ wordDocument.ChartToImageConverter = new ChartToImageConverter();
 
 For more details about the conversion, refer [here]( https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/overview?cs-save-lang=1&cs-lang=csharp#convert-word-to-pdf).
 
+## How to convert Word document to PDF/A?
+
+To convert a Word document to PDF/A, refer to this [link](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level).

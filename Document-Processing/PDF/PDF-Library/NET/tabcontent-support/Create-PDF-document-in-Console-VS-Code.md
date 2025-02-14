@@ -1,21 +1,10 @@
----
-title: Create PDF file in Console App using VS code| Syncfusion
-description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
-platform: document-processing
-control: PDF
-documentation: UG
---- 
+**Prerequisites**:
 
-**Prerequires**:
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio Code: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-Step 3: Install C# Extension for VS Code:
-* Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
-## Steps to create PDF document in Console App
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 

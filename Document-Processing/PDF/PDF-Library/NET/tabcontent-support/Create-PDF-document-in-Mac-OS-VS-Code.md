@@ -1,32 +1,31 @@
----
-title: Create PDF document on Mac OS using VS| Syncfusion
-description: Create PDF document in ASP.NET Core application on Mac OS using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
-platform: document-processing
-control: PDF
-documentation: UG
-keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
----
+**Prerequisites**:
 
-**Prerequires**:
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-## Steps to Create PDF document programmatically in .NET Core application on MacOS
 
-Step 1: Create a new .NET Core console application project.
-![Mac OS console application](GettingStarted_images/Mac_OS_Console.png)
+Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 
-Step 2: Select the project version.
+```
+dotnet new blazorserver -n CreatePdfMacOSApp
+```
+Step 2: Replace ****CreatePdfMacOSApp** with your desired project name.
 
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Mac OS NuGet path](GettingStarted_images/Mac_OS_NuGet_path.png)
+Step 3: Navigate to the project directory using the following command
 
+```
+cd CreatePdfMacOSApp
+```
+Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package to your project.
+
+```
+dotnet add package Syncfusion.Pdf.Net.Core
+```
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following Namespaces in the Program.cs file.
+Step 5: Include the following Namespaces in the Program.cs file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -40,7 +39,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 5: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
+Step 6: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
 
 {% tabs %}
 
@@ -101,10 +100,18 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 
 {% endtabs %}
 
-Step 6: Build the project.
+Step 7: Build the project.
 
-Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Run the following command in terminal to build the project.
 
-Step 7: Run the project.
+   ```
+   dotnet build
+   ```
 
-Click the Start button (green arrow) or press F5 to run the app.
+Step 8: Run the project.
+
+Run the following command in terminal to build the project.
+
+   ```
+   dotnet run
+```

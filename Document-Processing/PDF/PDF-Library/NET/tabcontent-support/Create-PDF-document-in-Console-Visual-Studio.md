@@ -1,19 +1,7 @@
----
-title: Create PDF file in Console App using Visual Studio| Syncfusion
-description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
-platform: document-processing
-control: PDF
-documentation: UG
---- 
+**Prerequisites**:
 
-**Prerequires**:
-
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-
-## Steps to create PDF document in Console App
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
 Step 1: Create a new C# Console Application project.
 ![Console sample creation](Console_images/console-sample-creation.png)
@@ -38,6 +26,8 @@ using Syncfusion.Drawing;
 
 Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
 
+{% tabs %}
+
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}
  
 //Create a new PDF document.
@@ -57,6 +47,8 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
+
+{% endtabs %}
 
 Step 6: Build the project.
 
