@@ -90,8 +90,6 @@ Click the Start button (green arrow) or press F5 to run the app.
 
 **Prerequisites**:
 
-**Prerequisites**:
-
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
@@ -115,7 +113,7 @@ dotnet add package Syncfusion.Pdf.Net.Core
 ```
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following Namespaces in the Program.cs file.
+Step 5: Include the following Namespaces in the Program.cs file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
@@ -127,7 +125,7 @@ using Syncfusion.Pdf.Parsing;
 
 {% endtabs %}
 
-Step 5: Add the following code sample to the *Program.cs* file to **Perform OCR in .NET Core application on Mac OS**.
+Step 6: Add the following code sample to the *Program.cs* file to **Perform OCR in .NET Core application on Mac OS**.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -179,7 +177,7 @@ dotnet run
 {% endtabcontents %}
 
 By executing the program, you will get a PDF document as follows. 
-![WPF OCR output screenshot](OCR-Images/Output.png)
+![OCR output document](OCR-Images/Output.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Mac).
 
