@@ -764,7 +764,9 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Apply-table-formatting).
 
 ### Applying cell formatting
-  
+
+Using DocIO, you can format table cells by setting text wrapping to control content flow and adjusting text direction for better readability. You can also customize cell borders, apply vertical alignment, and set a background color to enhance the table’s appearance.
+
 #### Set cell background color
 
 The following code snippet illustrates how to specify the background color of a table cell using the [CellFormat.BackColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_BackColor) property.
