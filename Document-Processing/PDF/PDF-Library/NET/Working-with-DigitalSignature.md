@@ -784,6 +784,11 @@ class ExternalSigner : IPdfExternalSigner
             RSACng rsa = (RSACng)digitalID.PrivateKey;
             return rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
         }
+        else if (digitalID.PrivateKey is System.Security.Cryptography.RSAOpenSsl)
+        {       
+            System.Security.Cryptography.RSAOpenSsl rsa = (System.Security.Cryptography.RSAOpenSsl)digitalID.PrivateKey;
+            return rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+           }
         return null;
     }
 }

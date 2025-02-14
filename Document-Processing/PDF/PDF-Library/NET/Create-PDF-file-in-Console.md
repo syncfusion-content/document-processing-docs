@@ -13,13 +13,15 @@ The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/doc
 To quickly get started with .NET PDF Library. Please, check this video:
 {% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
 
+## Steps to create PDF document in Console App
+
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative Create-PDF-document-in-Console-Visual-Studio.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-Visual-Studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
-{% include_relative Create-PDF-document-in-Console-VS-Code.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-VS-Code.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
@@ -30,19 +32,17 @@ By executing the program, you will get the PDF document as follows.
 
 ## Create a simple PDF document using .NET Framework
 
+## Steps to create PDF document using .NET Framework
+
 The following steps illustrates creating a simple Hello world PDF document in console application using .NET Framework.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 
-**Prerequires**:
+**Prerequisites**:
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-
-## Steps to create PDF document using .NET Framework
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
 Step 1: Create a new C# Console Application (.NET Framework) project.
 ![Console Application creation](Console_images/console-app-sample-creation.png)
@@ -96,16 +96,11 @@ Click the Start button (green arrow) or press F5 to run the app.
  
 {% tabcontent Visual Studio Code %}
 
-**Prerequires**:
+**Prerequisites**:
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio Code: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-Step 3: Install C# Extension for VS Code:
-* Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
-
-## Steps to create PDF document using .NET Framework
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 

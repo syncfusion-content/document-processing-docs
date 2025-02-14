@@ -1,19 +1,7 @@
----
-title: Create or Generate PDF in Blazor WASM app using VS| Syncfusion
-description: Learn to create and generate PDF files in Blazor using the Syncfusion .NET Core PDF library. Follow simple steps to do this without Adobe.
-platform: document-processing
-control: PDF
-documentation: UG
----
+**Prerequisites**:
 
-**Prerequires**:
-
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-
-## Steps to create PDF document in Blazor WASM application
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
 Step 1: Create a new C# Blazor client-side application project. Select Blazor App from the template and click the Next button.
 ![Blazor client project creation step1](Create-PDF-Blazor/Blazor_project_creation.png)

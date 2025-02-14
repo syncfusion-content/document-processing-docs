@@ -15,14 +15,15 @@ To include the Syncfusion<sup>&reg;</sup> Blazor PDF library into your Blazor ap
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
 
+## Steps to create PDF document in Blazor Server application
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative Create-PDF-document-in-Blazor-Server-Visual-studio.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-Server-Visual-studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
-{% include_relative Create-PDF-document-in-Blazor-Server-VS-Code.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-Server-VS-Code.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
@@ -40,15 +41,15 @@ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor
 
 An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor.
 
-## Steps to create PDF document in Blazor WASM application:
+## Steps to create PDF document in Blazor WASM application
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative Create-PDF-document-in-Blazor-WASM-Visual-studio.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-Visual-studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
-{% include_relative Create-PDF-document-in-Blazor-WASM-VS-Code.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-VS-Code.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
@@ -68,11 +69,11 @@ An online sample link to [create PDF document](https://blazor.syncfusion.com/dem
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative Create-PDF-document-in-Blazor-MaUI-Visual-studio.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-MaUI-Visual-studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
-{% include_relative Create-PDF-document-in-Blazor-MaUI-VS-Code.md %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-MaUI-VS-Code.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
