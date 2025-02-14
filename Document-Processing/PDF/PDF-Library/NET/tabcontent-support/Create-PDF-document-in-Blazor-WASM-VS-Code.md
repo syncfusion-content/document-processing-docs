@@ -1,4 +1,4 @@
-**Prerequires**:
+**Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
