@@ -81,6 +81,27 @@ To resolve this, reinstall the correct versions of these NuGet packages as speci
 
 If using Docker, ensure you install the libfontconfig package within your Docker container, as mentioned in the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-resolve-libskiasharp-not-found-exception).
 
+## Will the same fonts be rendered when exporting a document to a PDF file?
+
+Yes, if the fonts used in the document are installed on the machine during PDF conversion, they will be preserved in the output. However, if any fonts are missing, they will be substituted with default fonts, which may affect the appearance of the content.
+
+For details on resolving font preservation issues during Word-to-PDF or image conversion, refer to the [documentation](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion).
+
+## Why is the chart not preserved during Word-to-PDF or image conversion in .NET Framework?
+
+During Word-to-PDF conversion in .NET Framework, need to initialize the [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) to ensure that the chart is preserved in the PDF document. 
+
+The following code example illustrates how to initialize [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html).
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
+wordDocument.ChartToImageConverter = new ChartToImageConverter();
+{% endhighlight %}
+{% endtabs %}
+
+For more details about the conversion, refer [here]( https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/overview?cs-save-lang=1&cs-lang=csharp#convert-word-to-pdf).
+
 ## How to convert Word document to PDF/A?
 
 To convert a Word document to PDF/A, refer to this [link](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level).

@@ -650,11 +650,7 @@ Step 8: Add the following code snippet in the razor file of Navigation menu in t
 
 Step 9: Build the project.
 
-Run the following command in terminal to build the project.
-
-```
-dotnet build
-```
+Click on Build → Build Solution or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 10: Run the project.
 
