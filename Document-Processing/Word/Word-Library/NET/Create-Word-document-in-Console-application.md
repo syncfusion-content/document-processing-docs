@@ -1131,11 +1131,11 @@ using (WordDocument document = new WordDocument())
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Build the project.
+Step 5: Build the project.
 
 Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
-Step 5: Run the project.
+Step 6: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
