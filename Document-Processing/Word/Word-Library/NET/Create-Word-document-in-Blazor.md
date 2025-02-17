@@ -532,7 +532,7 @@ Step 1. Open JetBrains Rider and create a new Blazor Server app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](Blazor_Images/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
@@ -1229,7 +1229,237 @@ By executing the program, you will get the **Word document** as follows.
 N> Even though Word library works in WASM, it is recommended to use server  deployment. Since the WASM deployment increases the application payload size.
 
 {% endtabcontent %}
- 
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
+
+Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
+* Launch JetBrains Rider.
+* Click new solution on the welcome screen.
+
+![Launch JetBrains Rider](Blazor_Images/Launch-JetBrains-Rider.png)
+
+* In the new Solution dialog, select Project Type as Web.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Choose template as **Blazor WebAssembly Standalone App**.
+* Enter a project name and specify the location.
+* Click create.
+
+![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-WASM-application.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) in the search bar.
+* Ensure that "nuget.org" is selected as the package source.
+* Select the latest Syncfusion.DocIO.Net.Core NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.DocIO.Net.Core NuGet package](Blazor_Images/Select-Syncfusion.DocIO.Net.Core-NuGet.png)
+
+* Click the Install button to complete the installation.
+
+![Install the Syncfusion.DocIO.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+
+Step 3: Create a razor file with name as ``DocIO`` under ``Pages`` folder and add the following namespaces in the file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+@page "/DocIO"
+@inject Microsoft.JSInterop.IJSRuntime JS
+@using Syncfusion.DocIO
+@using Syncfusion.DocIO.DLS
+@using System.IO
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 4: Add the following code to create a new button.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+<h2>Syncfusion DocIO library (Essential DocIO)</h2>
+<p>Syncfusion Blazor DocIO library (Essential DocIO) used to create, read, edit, and convert DocIO files in your applications without Microsoft Office dependencies.</p>
+<button class="btn btn-primary" @onclick="@CreateWord">Create Word</button>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 5: Create a new async method with name as ``CreateWord`` and include the following code snippet to **create a Word document in Blazor** WASM app.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+@functions {
+    async void CreateWord()
+    {
+        //Creating a new document
+        WordDocument document = new WordDocument();
+        //Adding a new section to the document
+        WSection section = document.AddSection() as WSection;
+        //Set Margin of the section
+        section.PageSetup.Margins.All = 72;
+        //Set page size of the section
+        section.PageSetup.PageSize = new Syncfusion.Drawing.SizeF(612, 792);
+
+        //Create Paragraph styles
+        WParagraphStyle style = document.AddParagraphStyle("Normal") as WParagraphStyle;
+        style.CharacterFormat.FontName = "Calibri";
+        style.CharacterFormat.FontSize = 11f;
+        style.ParagraphFormat.BeforeSpacing = 0;
+        style.ParagraphFormat.AfterSpacing = 8;
+        style.ParagraphFormat.LineSpacing = 13.8f;
+
+        style = document.AddParagraphStyle("Heading 1") as WParagraphStyle;
+        style.ApplyBaseStyle("Normal");
+        style.CharacterFormat.FontName = "Calibri Light";
+        style.CharacterFormat.FontSize = 16f;
+        style.CharacterFormat.TextColor = Syncfusion.Drawing.Color.FromArgb(46, 116, 181);
+        style.ParagraphFormat.BeforeSpacing = 12;
+        style.ParagraphFormat.AfterSpacing = 0;
+        style.ParagraphFormat.Keep = true;
+        style.ParagraphFormat.KeepFollow = true;
+        style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1;
+
+        IWParagraph paragraph = section.HeadersFooters.Header.AddParagraph();
+        paragraph.ApplyStyle("Normal");
+        paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Left;
+        WTextRange textRange = paragraph.AppendText("Adventure Works Cycles") as WTextRange;
+        textRange.CharacterFormat.FontSize = 12f;
+        textRange.CharacterFormat.FontName = "Calibri";
+        textRange.CharacterFormat.TextColor = Syncfusion.Drawing.Color.Red;
+
+        //Appends paragraph
+        paragraph = section.AddParagraph();
+        paragraph.ApplyStyle("Heading 1");
+        paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+        textRange = paragraph.AppendText("Adventure Works Cycles") as WTextRange;
+        textRange.CharacterFormat.FontSize = 18f;
+        textRange.CharacterFormat.FontName = "Calibri";
+
+        //Appends paragraph
+        paragraph = section.AddParagraph();
+        paragraph.ParagraphFormat.FirstLineIndent = 36;
+        paragraph.BreakCharacterFormat.FontSize = 12f;
+        textRange = paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is in Bothell, Washington with 290 employees, several regional sales teams are located throughout their market base.") as WTextRange;
+        textRange.CharacterFormat.FontSize = 12f;
+
+        //Appends paragraph
+        paragraph = section.AddParagraph();
+        paragraph.ParagraphFormat.FirstLineIndent = 36;
+        paragraph.BreakCharacterFormat.FontSize = 12f;
+        textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as WTextRange;
+        textRange.CharacterFormat.FontSize = 12f;
+
+        //Saves the Word document to MemoryStream
+        MemoryStream stream = new MemoryStream();
+        document.Save(stream, FormatType.Docx);
+        //Closes the Word document
+        document.Close();
+        stream.Position = 0;
+        //Download the Word document in the browser
+        JS.SaveAs("Sample.docx", stream.ToArray());
+    }
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 6: Create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+public static class FileUtils
+{
+    public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
+       => js.InvokeAsync<object>(
+            "saveAsFile",
+            filename,
+            Convert.ToBase64String(data));
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 7: Add the following JavaScript function in the Index.html file present under ``wwwroot``.
+
+{% tabs %}
+
+{% highlight HTML %}
+
+<script type="text/javascript">
+    function saveAsFile(filename, bytesBase64) {
+        if (navigator.msSaveBlob) {
+            //Download document in Edge browser
+            var data = window.atob(bytesBase64);
+            var bytes = new Uint8Array(data.length);
+            for (var i = 0; i < data.length; i++) {
+                bytes[i] = data.charCodeAt(i);
+            }
+            var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+            navigator.msSaveBlob(blob, filename);
+        }
+        else {
+            var link = document.createElement('a');
+            link.download = filename;
+            link.href = "data:application/octet-stream;base64," + bytesBase64;
+            document.body.appendChild(link); // Needed for Firefox
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+</script>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 8: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
+
+{% tabs %}
+
+{% highlight HTML %}
+
+<li class="nav-item px-3">
+    <NavLink class="nav-link" href="docio">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Create Word
+    </NavLink>
+</li>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 9: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 10: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Blazor/Blazor-WASM-app).
+
+By executing the program, you will get the **Word document** as follows.
+
+![Blazor WASM output Word document](Blazor_Images/Blazor_Output.png)
+
+N> Even though Word library works in WASM, it is recommended to use server  deployment. Since the WASM deployment increases the application payload size.
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 Kindly explore the [supported and unsupported features of Word library in Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features#blazor-supported-features)
