@@ -487,7 +487,7 @@ Step 1. Open JetBrains Rider and create a new Blazor Server app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Blazor_Images/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
@@ -495,7 +495,7 @@ Step 1. Open JetBrains Rider and create a new Blazor Server app project.
 * Enter a project name and specify the location.
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-Server-application.png)
+![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-Server-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) in the search bar.
@@ -503,11 +503,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.Presentation.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Presentation.Net.Core NuGet package](Blazor_Images/Select-Syncfusion.Presentation.Net.Core-NuGet.png)
+![Select the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/Select-Syncfusion.Presentation.Net.Core-NuGet.png)
 
 * Click the Install button to complete the installation.
 
-![Install the Syncfusion.Presentation.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
+![Install the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
@@ -1111,7 +1111,7 @@ Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Blazor_Images/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
@@ -1119,7 +1119,7 @@ Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
 * Enter a project name and specify the location.
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](Blazor_Images/Create-Blazor-WASM-application.png)
+![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-WASM-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) in the search bar.
@@ -1127,11 +1127,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.Presentation.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Presentation.Net.Core NuGet package](Blazor_Images/Select-Syncfusion.Presentation.Net.Core-NuGet.png)
+![Select the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/Select-Syncfusion.Presentation.Net.Core-NuGet.png)
 
 * Click the Install button to complete the installation.
 
-![Install the Syncfusion.Presentation.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
+![Install the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Blazor/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
