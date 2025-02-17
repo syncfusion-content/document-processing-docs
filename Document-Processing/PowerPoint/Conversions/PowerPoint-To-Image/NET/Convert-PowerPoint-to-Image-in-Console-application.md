@@ -338,7 +338,7 @@ Step 1. Open JetBrains Rider and create a new .NET Framework console application
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Console-Images/NET-FrameWork/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Console.
 * Enter a project name and specify the location.
