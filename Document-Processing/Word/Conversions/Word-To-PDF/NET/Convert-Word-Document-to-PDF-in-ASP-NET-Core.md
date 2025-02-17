@@ -347,8 +347,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 ![Output PDF document in ASP.NET Core](WordToPDF_images/OutputImage.png)
 
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% endtabcontents %}
