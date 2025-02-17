@@ -359,7 +359,7 @@ Step 1. Open JetBrains Rider and create a new .NET Framework console application
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Console-Images/NET-FrameWork/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Console.
 * Enter a project name and specify the location.
@@ -374,11 +374,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.DocToPdfConverter.WinForms NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.DocToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Select- Syncfusion.DocToPdfConverter.WinForms-NuGet.png)
+![Select the Syncfusion.DocToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Select-Syncfusion.DocToPdfConverter.WinForms-NuGet.png)
 
 * Click the Install button to complete the installation.
 
-![Install the Syncfusion.DocToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Install- Syncfusion.DocToPdfConverter.WinForms-NuGet.png)
+![Install the Syncfusion.DocToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Install-Syncfusion.DocToPdfConverter.WinForms-NuGet.png)
 
 Step 3: Include the following namespaces in **Program.cs** file.
 
