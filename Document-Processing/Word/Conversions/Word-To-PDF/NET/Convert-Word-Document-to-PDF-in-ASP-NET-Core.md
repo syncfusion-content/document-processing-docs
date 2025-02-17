@@ -349,6 +349,8 @@ By executing the program, you will get the **PDF document** as follows.
 
 {% endtabs %}
 
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
