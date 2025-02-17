@@ -2527,4 +2527,4 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Disabling-local-file-access-HTML-to-PDF/.NET).
