@@ -1,22 +1,8 @@
----
-title: Create or Generate PDF in ASP.NET Core using VS code| Syncfusion
-description: Learn how to create or generate a PDF file in ASP.NET Core with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
-platform: document-processing
-control: PDF
-documentation: UG
-keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
----
+**Prerequisites**:
 
-**Prerequires**:
-
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio Code: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-Step 3: Install C# Extension for VS Code:
-* Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
-
-## Steps to create PDF document in ASP.NET Core
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 

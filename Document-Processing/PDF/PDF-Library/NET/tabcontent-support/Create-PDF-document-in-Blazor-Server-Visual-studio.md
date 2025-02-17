@@ -1,39 +1,20 @@
----
-title: Create or Generate PDF in Blazor WASM app using VS code| Syncfusion
-description: Learn to create and generate PDF files in Blazor using the Syncfusion .NET Core PDF library. Follow simple steps to do this without Adobe.
-platform: document-processing
-control: PDF
-documentation: UG
----
+**Prerequisites**:
 
-**Prerequires**:
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-Step 1: Install .NET SDK: 
-* Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-Step 2: Install Visual Studio Code: 
-* Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-Step 3: Install C# Extension for VS Code:
-* Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
+Step 1: Create a new C# Blazor server-side application project. Select Blazor App from the template and click the Next button.
+![Blazor sample creation](Create-PDF-Blazor/Blazor_project_creation.png)
 
-## Steps to create PDF document in Blazor WASM application
+Step 2: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
+![Blazor project configuration window](Create-PDF-Blazor/Blazor_configuration_window.png)
 
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
+Step 3: Choose Blazor Server App from the dashboard and click Create button to create a new Blazor server-side application.
+![Blazor Server side application](Create-PDF-Blazor/Select_server_app.png)
 
-```
-dotnet new blazorwasm -o CreatePdfBlazorWASMApp
-```
-Step 2: Replace ****CreatePdfBlazorWASMApp** with your desired project name.
+Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
-Step 3: Navigate to the project directory using the following command
-
-```
-cd CreatePdfBlazorWASMApp
-```
-Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package to your project.
-
-```
-dotnet add package Syncfusion.Pdf.Net.Core
-```
 Step 5: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
 
 {% tabs %}
@@ -213,16 +194,8 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
 
 Step 10: Build the project.
 
-Run the following command in terminal to build the project.
-
-```
-dotnet build
-```
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
 Step 11: Run the project.
 
-Run the following command in terminal to build the project.
-
-```
-dotnet run
-```
+Click the Start button (green arrow) or press F5 to run the app.
