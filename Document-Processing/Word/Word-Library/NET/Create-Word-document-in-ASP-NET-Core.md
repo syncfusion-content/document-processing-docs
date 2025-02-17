@@ -632,8 +632,6 @@ By executing the program, you will get the **Word document** as follows.
  
 {% tabcontent JetBrains Rider %}
 
-{% endtabcontent %}
-
 **Prerequisites:**
 
 * JetBrains Rider.
@@ -944,6 +942,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **Word document** as follows.
 
 ![ASP.Net Core output Word document](ASP-NET-Core_images/GettingStartedOutput.jpg)
+
+{% endtabcontent %}
 
 {% endtabcontents %}
 
