@@ -6,10 +6,10 @@
 
 
 
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
+Step 1: Open the terminal (Ctrl+` ) and run the following command to create a .NET Core console application.
 
 ```
-dotnet new blazorserver -n CreatePdfMacOSApp
+dotnet new console -n CreatePdfMacOSApp
 ```
 Step 2: Replace ****CreatePdfMacOSApp** with your desired project name.
 
