@@ -110,7 +110,7 @@ Step 3: Navigate to the project directory using the following command
 ```
 cd CreatePdfMacOSApp
 ```
-Step 4: Use the following command in the terminal to add the [Syncfusion.HtmlToPdfConverter.Net.Mac](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac)) package to your project.
+Step 4: Use the following command in the terminal to add the [Syncfusion.HtmlToPdfConverter.Net.Mac](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac) package to your project.
 
 ```
 dotnet add package Syncfusion.HtmlToPdfConverter.Net.Mac
