@@ -32,14 +32,14 @@ By executing the program, you will get the PDF document as follows.
 
 ## Create a simple PDF document using .NET Framework
 
-## Steps to create PDF document using .NET Framework
-
 The following steps illustrates creating a simple Hello world PDF document in console application using .NET Framework.
 
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+
+**Steps to create PDF document using .NET Framework**
 
 Step 1: Create a new C# Console Application (.NET Framework) project.
 ![Console Application creation](Console_images/console-app-sample-creation.png)
