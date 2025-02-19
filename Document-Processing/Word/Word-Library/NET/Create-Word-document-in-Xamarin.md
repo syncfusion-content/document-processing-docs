@@ -16,7 +16,7 @@ Step 1: Create a new Xamarin.Forms application project.
 
 ![Create Xamarin application in Visual Studio](Xamarin_images/Create-Project-WordtoPDF.png)
 
-Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
+Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://learn.microsoft.com/en-us/previous-versions/xamarin/cross-platform/app-fundamentals/code-sharing).
 
 N> If .NET Standard is not available in the code sharing strategy, the Portable Class Library (PCL) can be selected.
 
@@ -412,4 +412,4 @@ By executing the program, you will get the Word document as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/xamarin) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
 
-An online sample link to [create a Word document](https://ej2.syncfusion.com/aspnetcore/Word/HelloWorld#/material3) in ASP.NET Core. 
+An online sample link to [create a Word document](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/helloworld#/material3) in ASP.NET Core. 

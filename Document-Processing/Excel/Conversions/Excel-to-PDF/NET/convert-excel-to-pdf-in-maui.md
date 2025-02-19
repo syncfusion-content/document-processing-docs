@@ -16,13 +16,13 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.sync
 
 {% tabcontent Visual Studio %}
 
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&viewFallbackFrom=net-maui-7.0&tabs=visual-studio).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-To create .NET Multi-platform App UI (.NET MAUI) apps using Visual Studio Code, you need the latest versions of the .NET 6 SDK and additional tools configured for .NET MAUI development. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps using Visual Studio Code, you need the latest versions of the .NET 6 SDK and additional tools configured for .NET MAUI development. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&viewFallbackFrom=net-maui-7.0&tabs=visual-studio).
 
 {% endtabcontent %}
 
@@ -302,4 +302,4 @@ By executing the program, you will get the **PDF document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to PDF](https://ej2.syncfusion.com/aspnetcore/Excel/ExcelToPDF#/material3) in ASP.NET Core.
+An online sample link to [convert an Excel document to PDF](https://ej2aspnetcore.azurewebsites.net/aspnetcore/excel/exceltopdf#/material3) in ASP.NET Core.
