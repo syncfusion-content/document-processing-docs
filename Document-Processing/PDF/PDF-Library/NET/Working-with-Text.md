@@ -82,7 +82,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/). 
 
-## The Importance of Saving and Restoring Graphics State in PDF Content Rendering
+## The importance of saving and restoring graphics state in PDF content rendering
 Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics][https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html] class.
 
 Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
@@ -114,7 +114,6 @@ using (PdfDocument pdfDocument = new PdfDocument())
        //Save the PDF document to file stream.
        pdfDocument.Save(outputFileStream);
    }
-    
 }
 
 
