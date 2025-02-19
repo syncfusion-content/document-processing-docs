@@ -7,7 +7,7 @@
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a C# ASP.NET Core Web Application project.
 
 ```
-dotnet new webapp -n CreatePdfASPNETCoreAPP
+dotnet new mvc -n CreatePdfASPNETCoreAPP
 ```
 Step 2: Replace ****CreatePdfASPNETCoreAPP** with your desired project name.
 
