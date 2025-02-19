@@ -184,6 +184,97 @@ Run the following command in terminal to build the project.
 dotnet run
 ```
 {% endtabcontent %}
+
+{% tabcontent JetBrains Raider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
+
+Step 1. Open JetBrains Rider and create a new ASP.NET Core Web application project.
+* Launch JetBrains Rider.
+* Click new solution on the welcome screen.
+
+![Launch JetBrains Rider](htmlconversion_images/Launch-JetBrains-Rider.png)
+
+* In the new Solution dialog, select Project Type as Web.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0) and template as **Web App(Model-View-Controller)**. 
+* Enter a project name and specify the location.
+* Click create.
+
+![Creating a new .NET Core console application in JetBrains Rider](htmlconversion_images/Create-ASP.NET-Core-application.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) in the search bar.
+* Ensure that "nuget.org" is selected as the package source.
+* Select the latest Syncfusion.HtmlToPdfConverter.Net.Windows NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+Add Image
+
+* Click the Install button to complete the installation.
+
+Add Image
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 4: A default controller with name HomeController.cs gets added on creation of ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.HtmlConverter;
+using System.IO;
+
+{% endhighlight %}
+
+Step 5: Add a new button in index.cshtml as shown below.
+
+{% highlight c# tabtitle="C#" %}
+
+@{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
+    {
+        <div>
+            <input type="submit" value="Convert HTML to PDF" style="width:150px;height:27px" />
+        </div>
+    }
+    Html.EndForm();
+}
+
+{% endhighlight %}
+
+Step 6: Add a new action method named ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
+
+{% highlight c# tabtitle="C#" %}
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set Blink viewport size.
+blinkConverterSettings.ViewPortSize = new Syncfusion.Drawing.Size(1280, 0);
+//Assign Blink converter settings to HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF document.
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+//Create memory stream.
+MemoryStream stream = new MemoryStream();
+//Save and close the document. 
+document.Save(stream);
+document.Close(); 
+return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
+
+{% endhighlight %}
+
+Step 7: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 8: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+{% endtabcontent %}
  
 {% endtabcontents %}
 
