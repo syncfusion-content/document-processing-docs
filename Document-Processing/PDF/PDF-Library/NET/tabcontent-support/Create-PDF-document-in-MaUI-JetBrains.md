@@ -14,7 +14,7 @@ Step 1. Open JetBrains Rider and create a new C# .NET MAUI application project.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Click create.
 
-![Creating a new C# .NET MAUI application in JetBrains Rider](Images/Create-MAUI-App-(Preview)-template-sample.png)
+![Creating a new C# .NET MAUI application in JetBrains Rider](Images/Create-MAUI-App-template-sample.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.NET](https://www.nuget.org/packages/Syncfusion.Pdf.Net) in the search bar.
