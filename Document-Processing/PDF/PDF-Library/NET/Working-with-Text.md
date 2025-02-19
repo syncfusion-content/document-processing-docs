@@ -9,7 +9,7 @@ documentation: UG
 
 ## Drawing text in a new document
 
-You can add text in the new PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class as shown in the following code sample.
+You can add text in the new PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics][def] class as shown in the following code sample.
 
 {% tabs %}
 
@@ -81,6 +81,99 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/). 
+
+## The importance of saving and restoring graphics state in PDF content rendering
+Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics][https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html] class.
+
+Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs" %}
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    PdfPage page = pdfDocument.Pages.Add();
+    // Create PDF graphics
+    PdfGraphics graphics = page.Graphics;
+    // Save the current graphics state and apply transformations
+    graphics.Save();
+    graphics.TranslateTransform(100, 50);
+    graphics.RotateTransform(45);
+    // Define the font for drawing text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 16);
+    // Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, new PointF(0, 0));
+    // Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore();
+    // Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
+      using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+   {
+       //Save the PDF document to file stream.
+       pdfDocument.Save(outputFileStream);
+   }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    PdfPage page = pdfDocument.Pages.Add();
+    // Create PDF graphics
+    PdfGraphics graphics = page.Graphics;
+    // Save the current graphics state and apply transformations
+    graphics.Save();
+    graphics.TranslateTransform(100, 50);
+    graphics.RotateTransform(45);
+    // Define the font for drawing text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 16);
+    // Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, new PointF(0, 0));
+    // Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore();
+    // Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
+    // Save the document to a file
+    pdfDocument.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+    ' Create a PDF document
+    Using pdfDocument As New PdfDocument()
+    ' Add Pages to the document
+    Dim page As PdfPage = pdfDocument.Pages.Add()
+    ' Create PDF graphics
+    Dim graphics As PdfGraphics = page.Graphics
+    ' Save the current graphics state and apply transformations
+    graphics.Save()
+    graphics.TranslateTransform(100, 50)
+    graphics.RotateTransform(45)
+    ' Define the font for drawing text
+    Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 16)
+    ' Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, New PointF(0, 0))
+    ' Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore()
+    ' Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, New PointF(0, 100))
+    ' Save the document to a file
+    pdfDocument.Save("Output.pdf")
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](PDF-Examples/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs). 
+
+
 
 ## Drawing text in an existing document
 
@@ -2326,3 +2419,6 @@ The following code example illustrates this.
 </table>
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Line-limit-in-PDF/.NET).
+
+
+[def]: https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html
