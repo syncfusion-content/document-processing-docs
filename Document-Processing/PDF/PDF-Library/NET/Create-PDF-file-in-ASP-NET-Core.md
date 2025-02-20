@@ -25,6 +25,10 @@ N> Beginning with our Volume 2, 2023 release, we have eliminated the dependency 
 {% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-ASP-NET-Core-VS-Code.md %}
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-ASP-NET-Core-JetBrains.md %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Create-new-PDF-document).
