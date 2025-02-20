@@ -23,6 +23,10 @@ To quickly get started with .NET PDF Library. Please, check this video:
 {% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Console-VS-Code.md %}
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-JetBrains.md %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET/Create_PDF).
