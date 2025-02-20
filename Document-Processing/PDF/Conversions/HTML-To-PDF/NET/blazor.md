@@ -399,7 +399,7 @@ Step 1. Open JetBrains Rider and create a new Blazor server-side app project.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Click create.
 
-Add Image
+![create a new Blazor server-side app project](htmlconversion_images/Blazor-Server-App-JetBrains.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/) in the search bar.
@@ -407,11 +407,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.HtmlToPdfConverter.Net.Windows NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-Add Image
+![Select the Syncfusion.HtmlToPdfConverter.Net.Windows package](htmlconversion_images/HTML-to-PDF-Package-JetBrains.png)
 
 * Click the Install button to complete the installation.
 
-Add Image
+![Install the package](htmlconversion_images/Install-Package-Blazor-JetBrains.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
