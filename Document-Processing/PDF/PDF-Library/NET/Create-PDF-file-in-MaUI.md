@@ -22,6 +22,10 @@ N> Our PDF library is currently supported in .NET MAUI applications on the Andro
 {% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-MaUI-VS-Code.md %}
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-MaUI-JetBrains.md %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 A complete working example of creating a PDF document in the .NET MAUI Desktop app can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfSampleMaUI-1356433164887362210.zip).
