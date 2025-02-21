@@ -6,10 +6,10 @@
 
 
 
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
+Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new .NET MAUI Application.
 
 ```
-dotnet new blazorserver -n CreatePdfMaUIApp
+dotnet new maui -n CreatePdfMaUIApp
 ```
 Step 2: Replace **CreatePdfMaUIApp** with your desired project name.
 

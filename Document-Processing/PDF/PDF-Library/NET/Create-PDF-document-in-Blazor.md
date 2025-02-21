@@ -25,6 +25,10 @@ To quickly get started with creating a PDF document in Blazor, check this video:
 {% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Blazor-Server-VS-Code.md %}
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-Server-JetBrains.md %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ServerSideApplication).
@@ -51,6 +55,10 @@ An online sample link to [create PDF document](https://blazor.syncfusion.com/dem
 {% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-VS-Code.md %}
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-JetBrains.md %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/ClientSideApplication).
@@ -74,6 +82,10 @@ An online sample link to [create PDF document](https://blazor.syncfusion.com/dem
  
 {% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Blazor-MaUI-VS-Code.md %}
+{% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-MaUI-JetBrains.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 

@@ -46,5 +46,5 @@ Syncfusion<sup>&reg;</sup> Document Processing libraries supports the following 
 * .NET 8.0
 * .NET 9.0
 
-You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Blazor, UWP, Xamarin, WinUI and .NET MAUI applications. 
+You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET MVC, ASP.NET Core, Blazor, UWP, Xamarin, WinUI and .NET MAUI applications. 
 

@@ -17,7 +17,7 @@ Essential<sup>&reg;</sup> XlsIO supports to convert Excel data as JSON files by 
 * Save as a stream with the above features
 
 To quickly start converting an Excel document to a JSON, please check out this video:
-{% youtube "https://www.youtube.com/watch?v=IpUYRwQdVsQ " %}
+{% youtube "https://www.youtube.com/watch?v=IpUYRwQdVsQ" %}
 
 ## Workbook to JSON as schema
 
