@@ -491,7 +491,7 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## Optimizing OCR Performance
 
-We can improve the speed and accuracy of the OCR process by using the [tessdata_fast](https://github.com/tesseract-ocr/tessdata_fast) or [tessdata_best](https://github.com/tesseract-ocr/tessdata_best) trained data files. Download the tessdata_best or tessdata_fast binaries and set the directory path in the TessData property of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class.
+We can improve the speed and accuracy of the OCR process by using the [tessdata_fast](https://github.com/tesseract-ocr/tessdata_fast) or [tessdata_best](https://github.com/tesseract-ocr/tessdata_best) trained data files. Download the tessdata_best or tessdata_fast binaries and set the directory path in the TessDataPath property of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class.
 
 For more details, refer to the following code sample.
 
