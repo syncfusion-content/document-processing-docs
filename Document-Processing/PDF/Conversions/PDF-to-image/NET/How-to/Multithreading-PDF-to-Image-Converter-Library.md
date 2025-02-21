@@ -139,7 +139,7 @@ End Module
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/PDF-to-image/Multithreading-using-tasks-in-.NET/).
 
 ### Multithreading PDF document reading using parallel process
 
@@ -265,4 +265,4 @@ End Module
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/PDF-to-image/Multithreading-using-parallel-process-in-.NET/).
