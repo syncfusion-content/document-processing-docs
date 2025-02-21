@@ -16,7 +16,11 @@ N> This ASP.NET Web Form platform is Deprecated; you can use the same product fr
 ## Steps to create PDF document in ASP.NET Web Forms
 
 Step 1: Create a new ASP.NET Web application project.
-![ASP.NET Web sample creation step1](Asp.Net_images/Web-application-creation.jpg)
+![ASP.NET Web sample creation step1](Asp.Net_images/Creation1.png)
+
+Step 2: Select the Empty project.
+![Select the empty project](Asp.Net_images/Creation2.png)
+
 
 Step 2: Install the [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) NuGet package as reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org/).
 ![PDF ASP.NET NuGet package installation](Asp.Net_images/NuGet-package.png)
