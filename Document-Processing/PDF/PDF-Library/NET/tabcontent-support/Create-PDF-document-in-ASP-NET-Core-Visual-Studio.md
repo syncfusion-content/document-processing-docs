@@ -8,7 +8,7 @@
 Step 1: Create a new C# ASP.NET Core Web Application project.
    ![Create ASP.NET Core Web application in Visual Studio](Asp.Net.Core_images/Creation1.png)
 
-Step 2: Select Web Application pattern (Model-View-Controller) for the project.
+Step 2: In configuration windows, name your project and click Next.
    ![Select Web Application pattern](Asp.Net.Core_images/Creation2.png)
 
 Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) package as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).

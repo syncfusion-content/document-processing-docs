@@ -7,7 +7,7 @@ Step 1. Open JetBrains Rider and create a new .NET MAUI Blazor Hybrid App projec
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Images/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
 * Enter a project name and specify the location.
@@ -15,7 +15,7 @@ Step 1. Open JetBrains Rider and create a new .NET MAUI Blazor Hybrid App projec
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Click create.
 
-![Creating a new .NET MAUI Blazor Hybrid APP](Images/Blazor-Maui-App.png)
+![Creating a new .NET MAUI Blazor Hybrid APP](JetBrains_Images/Blazor-Maui-App.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.NET](https://www.nuget.org/packages/Syncfusion.Pdf.Net) in the search bar.
@@ -23,11 +23,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.Pdf.NET NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Pdf.NET package](Images/NET-Package.png)
+![Select the Syncfusion.Pdf.NET package](JetBrains_Images/NET-Package.png)
 
 * Click the Install button to complete the installation.
 
-![Install the NuGet Package](Images/Install-NET-BlazorMaui-Package.png)
+![Install the NuGet Package](JetBrains_Images/Install-NET-BlazorMaui-Package.png)
 
 Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
 

@@ -27,6 +27,7 @@ Step 1: Create a new C# ASP.NET Core Web Application project.
 
 Step 2:  In configuration windows, name your project and click Next.
 ![ASP.NET Core project configuration1](OCR-Images/OCR-Core-project-configuration1.png)
+
 ![ASP.NET Core project configuration2](OCR-Images/OCR-Core-project-configuration2.png)
 
 Step 3:  Install the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
@@ -291,7 +292,7 @@ Step 8: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
-{% endtabcontents %}
+{% endtabcontent %}
 
 {% endtabcontents %}
 

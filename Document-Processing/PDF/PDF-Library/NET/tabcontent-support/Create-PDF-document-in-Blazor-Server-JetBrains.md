@@ -7,7 +7,7 @@ Step 1. Open JetBrains Rider and create a new Blazor server-side app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Images/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
 * Enter a project name and specify the location.
@@ -15,7 +15,7 @@ Step 1. Open JetBrains Rider and create a new Blazor server-side app project.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Click create.
 
-![create a new Blazor server-side app project](Images/Blazor-Server-App.png)
+![create a new Blazor server-side app project](JetBrains_Images/Blazor-Server-App.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) in the search bar.
@@ -23,11 +23,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.Pdf.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Pdf.Net.Core package](Images/Core-Package.png)
+![Select the Syncfusion.Pdf.Net.Core package](JetBrains_Images/Core-Package.png)
 
 * Click the Install button to complete the installation.
 
-![Install the package](Images/Install-Core-BlazorServer-Package.png)
+![Install the package](JetBrains_Images/Install-Core-BlazorServer-Package.png)
 
 Step 5: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
 

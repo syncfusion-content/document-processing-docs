@@ -27,7 +27,6 @@ Step 1: Create a new C# Blazor Server application project. Select Blazor App fro
 
 Step 2: In the project configuration window, name your project and click Create.
 ![Blazor server project configuraion1](OCR-Images/blazor_server_configuration1.png)
-![Blazor server project configuraion1](OCR-Images/blazor_server_configuration2.png)
 
 Step 3: Install the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) NuGet package as a reference to your Blazor Server application from [NuGet.org](https://www.nuget.org/).
 ![Blazor server NuGet package installation](OCR-Images/blazor_nuget_package.png)
