@@ -1,5 +1,5 @@
 ---
-title: Run .NET80/.NET90 Linux application in azure app service| Syncfusion
+title: Run .NET80/.NET90 Linux application in azure app service| Syncfusion®
 description: Learn about the steps to run the .NET80/.NET90 linux application in Azure app service with the PdfToImageConverter library.
 platform: document-processing
 control: PDF to image

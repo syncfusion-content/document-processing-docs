@@ -1,5 +1,5 @@
 ---
-title: Perform multithreading in PdfToImageConverter library | Syncfusion
+title: Perform multithreading in the PdfToImageConverter library | Syncfusion®
 description: Learn the steps to implement multithreading in the PdfToImageConverter library to enhance performance and efficiency in PDF-to-image conversion.
 platform: document-processing
 control: PDF to image
@@ -31,16 +31,16 @@ class MultiThreading
         Task[] tasks = new Task[TaskCount];
         for (int i = 0; i < TaskCount; i++)
         {
-            tasks[i] = Task.Run(() => OpenPDFAndSaveImage());
+            tasks[i] = Task.Run(() => ConvertPdfToImage());
         }
         //Ensure all tasks complete by waiting on each task.
         await Task.WhenAll(tasks);
     }
 
-    //Open a PDF document and save image using multi-threading.
-    static void OpenPDFAndSaveImage()
+    //Convert a PDF document to image using multi-threading.
+    static void ConvertPdfToImage()
     {
-        using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+        using (FileStream inputStream = new FileStream(@"../../../Data/Input.pdf", FileMode.Open, FileAccess.Read))
         {
             //Load an existing PDF document.
             using (PdfToImageConverter imageConverter = new PdfToImageConverter(inputStream))
@@ -51,7 +51,7 @@ class MultiThreading
                 outputStream.Position = 0;
 
                 //Create file stream.
-                using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output" + Guid.NewGuid().ToString() + ".jpeg"), FileMode.Create, FileAccess.ReadWrite))
+                using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../Output/Output" + Guid.NewGuid().ToString() + ".jpeg"), FileMode.Create, FileAccess.ReadWrite))
                 {
                     //Save the image to file stream.
                     outputStream.CopyTo(outputFileStream);
@@ -73,16 +73,16 @@ class MultiThreading
         Task[] tasks = new Task[TaskCount];
         for (int i = 0; i < TaskCount; i++)
         {
-            tasks[i] = Task.Run(() => OpenPDFAndSaveImage());
+            tasks[i] = Task.Run(() => ConvertPdfToImage());
         }
         //Ensure all tasks complete by waiting on each task.
         await Task.WhenAll(tasks);
     }
 
-    //Open a PDF document and save image using multi-threading.
-    static void OpenPDFAndSaveImage()
+    //Convert a PDF document to image using multi-threading.
+    static void ConvertPdfToImage()
     {
-        using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+        using (FileStream inputStream = new FileStream(@"../../../Data/Input.pdf", FileMode.Open, FileAccess.Read))
         {
             //Load an existing PDF document.
             using (PdfToImageConverter imageConverter = new PdfToImageConverter(inputStream))
@@ -93,7 +93,7 @@ class MultiThreading
                 outputStream.Position = 0;
 
                 //Create file stream.
-                using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output" + Guid.NewGuid().ToString() + ".jpeg"), FileMode.Create, FileAccess.ReadWrite))
+                using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../Output/Output" + Guid.NewGuid().ToString() + ".jpeg"), FileMode.Create, FileAccess.ReadWrite))
                 {
                     //Save the image to file stream.
                     outputStream.CopyTo(outputFileStream);
@@ -112,22 +112,22 @@ Module MultiThreading
         'Create an array of tasks based on the TaskCount.
         Dim tasks(TaskCount - 1) As Task
         For i As Integer = 0 To TaskCount - 1
-            tasks(i) = Task.Run(Sub() OpenPDFAndSaveImage())
+            tasks(i) = Task.Run(Sub() ConvertPdfToImage())
         Next
         'Ensure all tasks complete by waiting on each task.
         Task.WhenAll(tasks).Wait()
     End Sub
 
-    'Open and save a Word document using multi-threading.
-    Private Sub OpenAndSaveWordDocument()
-        Using inputStream As FileStream = New FileStream("Data/Input.pdf", FileMode.Open, FileAccess.Read)
+    'Convert a PDF document to image using multi-threading.
+    Private Sub ConvertPdfToImage()
+        Using inputStream As FileStream = New FileStream("../../../Data/Input.pdf", FileMode.Open, FileAccess.Read)
             'Load an existing PDF document.
             Using imageConverter As PdfToImageConverter = New PdfToImageConverter(inputStream)
                 Dim outputStream As Stream = imageConverter.Convert(0, False, False)
                 'Rewind the stream position to the beginning before copying.
                 outputStream.Position = 0
                 'Create file stream.
-                Using outputFileStream As FileStream = New FileStream(System.IO.Path.GetFullPath("Output/Output" & Guid.NewGuid().ToString() & ".jpeg"), FileMode.Create, FileAccess.ReadWrite)
+                Using outputFileStream As FileStream = New FileStream(System.IO.Path.GetFullPath("../../../Output/Output" & Guid.NewGuid().ToString() & ".jpeg"), FileMode.Create, FileAccess.ReadWrite)
                     'Save the image to file stream.
                     outputStream.CopyTo(outputFileStream)
                 End Using
@@ -159,14 +159,14 @@ class MultiThreading
         {
             Console.WriteLine("Task {0} started", count);
             //Create multiple PDF document, one document on each thread.
-            OpenPDFAndSaveImage(count);
+            ConvertPdfToImage(count);
             Console.WriteLine("Task {0} is done", count);
         });
     }
-    //Open and save a PDF document using multi-threading.
-    static void OpenPDFAndSaveImage(int count)
+    //Convert a PDF document to image using multi-threading.
+    static void ConvertPdfToImage(int count)
     {
-        using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+        using (FileStream inputStream = new FileStream(@"../../../Data/Input.pdf", FileMode.Open, FileAccess.Read))
         {
             //Load an existing PDF document.
             using (PdfToImageConverter imageConverter = new PdfToImageConverter(inputStream))
@@ -200,14 +200,14 @@ class MultiThreading
         {
             Console.WriteLine("Task {0} started", count);
             //Create multiple PDF document, one document on each thread.
-            OpenPDFAndSaveImage(count);
+            ConvertPdfToImage(count);
             Console.WriteLine("Task {0} is done", count);
         });
     }
-    //Open and save a PDF document using multi-threading.
-    static void OpenPDFAndSaveImage(int count)
+    //Convert a PDF document to image using multi-threading.
+    static void ConvertPdfToImage(int count)
     {
-        using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+        using (FileStream inputStream = new FileStream(@"../../../Data/Input.pdf", FileMode.Open, FileAccess.Read))
         {
             //Load an existing PDF document.
             using (PdfToImageConverter imageConverter = new PdfToImageConverter(inputStream))
@@ -239,14 +239,14 @@ Module MultiThreading
         Parallel.For(0, limit, Sub(count)
                                    Console.WriteLine("Task {0} started", count)
                                    'Create multiple PDF document, one document on each thread.
-                                   OpenPDFAndSaveImage(count)
+                                   ConvertPdfToImage(count)
                                    Console.WriteLine("Task {0} is done", count)
                                End Sub)
     End Sub
 
-    'Open and save a PDF document using multi-threading.
-    Private Shared Sub OpenPDFAndSaveImage(ByVal count As Integer)
-        Using inputStream As FileStream = New FileStream("Data/Input.pdf", FileMode.Open, FileAccess.Read)
+    'Convert a PDF document to image using multi-threading.
+    Private Shared Sub ConvertPdfToImage(ByVal count As Integer)
+        Using inputStream As FileStream = New FileStream("../../../Data/Input.pdf", FileMode.Open, FileAccess.Read)
             'Load an existing PDF document.
             Using imageConverter As PdfToImageConverter = New PdfToImageConverter(inputStream)
                 Dim outputStream As Stream = imageConverter.Convert(0, False, False)
