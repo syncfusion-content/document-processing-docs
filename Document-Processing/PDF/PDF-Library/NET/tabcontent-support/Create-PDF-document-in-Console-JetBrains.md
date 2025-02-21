@@ -7,14 +7,14 @@ Step 1. Open JetBrains Rider and create a new .NET Core console application proj
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
-![Launch JetBrains Rider](Images/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Console.
 * Enter a project name and specify the location.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](Images/Create-Console-NET-core-sample.png)
+![Creating a new .NET Core console application in JetBrains Rider](JetBrains_Images/Create-Console-NET-core-sample.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) in the search bar.
@@ -22,11 +22,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.Pdf.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Pdf.Net.Core package](Images/Core-Package.png)
+![Select the Syncfusion.Pdf.Net.Core package](JetBrains_Images/Core-Package.png)
 
 * Click the Install button to complete the installation.
 
-![Install the package](Images/Install-Core-Console-Package.png)
+![Install the package](JetBrains_Images/Install-Core-Console-Package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
