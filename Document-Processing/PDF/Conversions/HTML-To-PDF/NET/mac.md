@@ -25,7 +25,7 @@ The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.co
 Step 1: Create a new C# ASP.NET Core Web Application project.
 ![Create ASP.NET Core Web application](htmlconversion_images/mac_step1.png)  
 
-Step 2: Select the Target Framework of your project.
+Step 2: Select the Target Framework (e.g., .NET 8.0, .NET 9.0) of your project.
 ![Select target framework](htmlconversion_images/mac_step2.png)  
 
 Step 3: Configure your application and click Create.

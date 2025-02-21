@@ -28,8 +28,7 @@ Step 1: Create a new C# Blazor Server application project. Select Blazor App fro
 ![Create Blazor application](htmlconversion_images/blazor_step1.png)  
 
 In the project configuration window, name your project and select Create.
-![Project configuration1](htmlconversion_images/blazor_step2.png)  
-![Project configuration2](htmlconversion_images/blazor_step3.png)  
+![Project configuration1](htmlconversion_images/blazor_step2.png) 
 
 Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/) NuGet package as a reference to your Blazor Server application from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](htmlconversion_images/blazor_step_nuget.png)  
