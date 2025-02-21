@@ -291,7 +291,7 @@ Step 8: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
-{% endtabcontents %}
+{% endtabcontent %}
 
 {% endtabcontents %}
 
