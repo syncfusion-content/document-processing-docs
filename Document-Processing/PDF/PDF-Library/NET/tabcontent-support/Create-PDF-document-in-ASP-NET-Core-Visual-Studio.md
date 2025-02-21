@@ -6,13 +6,13 @@
 
 
 Step 1: Create a new C# ASP.NET Core Web Application project.
-   ![Create ASP.NET Core Web application in Visual Studio](Asp.Net.Core_images/Creation1.png)
+   ![Create ASP.NET Core Web application in Visual Studio](Images/Creation1.png)
 
-Step 2: Select Web Application pattern (Model-View-Controller) for the project.
-   ![Select Web Application pattern](Asp.Net.Core_images/Creation2.png)
+Step 2: In configuration windows, name your project and click Next.
+   ![Select Web Application pattern](Images/Creation2.png)
 
 Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) package as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).
-   ![Install PDF .NET Core NuGet package](Asp.Net.Core_images/Creation3.png)
+   ![Install PDF .NET Core NuGet package](Images/Creation3.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
