@@ -16,6 +16,11 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https:
 
 {% tabcontent Visual Studio %}
 
+**Prerequisites:**
+
+* Visual Studio 2022.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+
 Step 1: Execute the following command in **Linux terminal** to create a new .NET Core Console application.
 
 {% tabs %}
@@ -129,7 +134,7 @@ By executing the program, you will get the **PDF** as follows. The output will b
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
 * Click **New solution** on the welcome screen.
 
