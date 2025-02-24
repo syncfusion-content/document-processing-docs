@@ -149,16 +149,16 @@ Step 1: Open JetBrains Rider and create a new .NET Core console application proj
 ![Creating a new .NET Core console application in JetBrains Rider](Linux-images/Create-Console-NET-core-sample.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
 * Ensure that nuget.org is selected as the package source.
-* Select the latest Syncfusion.DocIO.Net.Core NuGet package from the list.
+* Select the latest Syncfusion.DocIORenderer.Net.Core NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.DocIO.Net.Core NuGet package](Linux-images/Select-Syncfusion.DocIO.Net.Core-NuGet.png)
+![Select the Syncfusion.DocIORenderer.Net.Core NuGet package](Linux-images/Select-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 * Click the **Install** button to complete the installation.
 
-![Install the Syncfusion.DocIO.Net.Core NuGet package](Linux-images/Install-Syncfusion.DocIO.Net.Core-NuGet.png)
+![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Linux-images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
