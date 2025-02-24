@@ -21,8 +21,8 @@ Step 2: Create a project name and select the location.
 Step 3: Select function worker as **.NET Framework**. 
 ![Select function worker](Azure_Images/Azure-functions-v1/Additional_information.png)
 
-Step 4: Install the [Syncfusion.PDF.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.Pdf.AspNet NuGet package](Azure_Images/Azure-functions-v1/NuGet_package.png)
+Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+![Install Syncfusion.Pdf.Net.Core NuGet package](Azure_Images/Azure-functions-v1/NuGet_package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 

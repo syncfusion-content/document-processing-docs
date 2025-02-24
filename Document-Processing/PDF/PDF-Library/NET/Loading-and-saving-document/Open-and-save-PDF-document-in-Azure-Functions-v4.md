@@ -18,7 +18,7 @@ Step 1: Create a new Azure Functions project.
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure_Images/Azure-functions-v1/Project_configuration.png)
 
-Step 3: Select function worker as **.NET 6.0 (Long-term support)**. 
+Step 3: Select function worker as **.NET 8.0 (Long-term support)**. 
 ![Select function worker](Azure_Images/Azure-functions-v4/Additional_info.png)
 
 Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
