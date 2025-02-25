@@ -521,8 +521,6 @@ By executing the program, you will get the **Word document** as follows.
 
 {% tabcontent JetBrains Rider %}
 
-{% endtabcontent %}
-
 **Prerequisites:**
 
 * JetBrains Rider.
@@ -777,6 +775,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **Word document** as follows.
 
 ![Blazor Server app output Word document](Blazor_Images/Blazor_Output.png)
+
+{% endtabcontent %}
 
 {% endtabcontents %}
 

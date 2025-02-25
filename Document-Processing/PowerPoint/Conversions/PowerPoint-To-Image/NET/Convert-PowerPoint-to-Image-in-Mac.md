@@ -183,6 +183,98 @@ By executing the program, you will get the **image** as follows.
 
 {% endtabcontent %}
 
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
+
+Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+* Launch JetBrains Rider.
+* Click **New solution** on the welcome screen.
+
+![Launch JetBrains Rider](Workingwith-Mac/Launch-JetBrains-Rider.png)
+
+* In the New Solution dialog, select **Project Type** as **Console**.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Enter a project name and specify the location.
+* Click create.
+
+![Creating a new .NET MAUI App in JetBrains Rider](Workingwith-Mac/Create-Console-NET-Core-sample-in-Mac.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) in the search bar.
+* Ensure that nuget.org is selected as the package source.
+* Select the latest Syncfusion.PresentationRenderer.Net.Core NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Mac/Select-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+* Click the **Install** button to complete the installation.
+
+![Install the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Mac/Install-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+
+Step 3: Include the following Namespaces in the **Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Presentation;
+using Syncfusion.PresentationRenderer;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 4: Add the following code snippet in **Program.cs** file to **convert a PowerPoint to image in .NET Core application on macOS**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+ //Open the file as Stream.
+ using (FileStream fileStreamInput = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+ {
+     //Open the existing PowerPoint presentation with loaded stream.
+     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+     {
+         //Initialize the PresentationRenderer to perform image conversion.
+         pptxDoc.PresentationRenderer = new PresentationRenderer();
+         //Convert PowerPoint slide to image as stream.
+         using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+         {
+             //Reset the stream position.
+             stream.Position = 0;
+             //Create FileStream to save the image file.
+             using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+             {
+                 //Save the image file.
+                 stream.CopyTo(outputStream);
+             }
+         }
+     }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 6: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/MAC).
+
+By executing the program, you will get the **image** as follows.
+
+![PowerPoint to Image on macOS](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
