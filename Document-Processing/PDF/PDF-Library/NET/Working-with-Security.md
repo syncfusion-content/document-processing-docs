@@ -1372,38 +1372,38 @@ Essential<sup>&reg;</sup> PDF supports identifying the document whether it is pr
 The following table shows the various combination for loading the secured document with user or owner password:
 
 <table>
-<thead>
-<tr>
-<th>
-Document type</th><th>
-Open with</th><th>
-User password</th><th>
-Owner password</th></tr>
-</thead>
-<tbody>
-<tr>
-<td>
-PDF document secured with both the owner and user passwords.</td><td>
-User password</td><td>
-Returns user password</td><td>
-Returns null</td></tr>
-<tr>
-<td>
-PDF document secured with both the owner and user passwords.</td><td>
-Owner password</td><td>
-Returns user password <br/><br/><b>Note:</b> Returns null for AES 256 and AES 256 Revision 6 encryptions.</td><td>
-Returns owner password</td></tr>
-<tr>
-<td>
-PDF document secured with owner password alone.</td><td>
-Owner password</td><td>
-Returns null</td><td>
-Returns owner password</td></tr>
-<tr>
-<td>
-PDF document secured with user password alone.</td><td>
-User Password</td><td>
-Returns user password</td><td>
-Returns owner Password (owner password is same as the user password; it allows full permission to users).</td></tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Document Type</th>
+      <th>Open With</th>
+      <th>User Password</th>
+      <th>Owner Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PDF document secured with both the owner and user passwords.</td>
+      <td>User password</td>
+      <td>Returns user password</td>
+      <td>Returns null</td>
+    </tr>
+    <tr>
+      <td>PDF document secured with both the owner and user passwords.</td>
+      <td>Owner password</td>
+      <td>Returns user password <br/><br/><b>Note:</b> Returns null for AES 256 and AES 256 Revision 6 encryptions.</td>
+      <td>Returns owner password</td>
+    </tr>
+    <tr>
+      <td>PDF document secured with owner password alone.</td>
+      <td>Owner password</td>
+      <td>Returns null</td>
+      <td>Returns owner password</td>
+    </tr>
+    <tr>
+      <td>PDF document secured with user password alone.</td>
+      <td>User password</td>
+      <td>Returns user password</td>
+      <td>Returns owner password (owner password is same as the user password; it allows full permission to users).</td>
+    </tr>
+  </tbody>
 </table>
