@@ -381,7 +381,205 @@ By executing the program, you will get the **image** as follows.
 ![Word to Image in .NET MAUI](WordToPDF_images/Output-WordtoImage.png)
 
 {% endtabcontent %}
- 
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
+* For more details about installation, refer [here](https://www.jetbrains.com/help/rider/MAUI.html).
+
+Step 1. Open JetBrains Rider and create a new .NET MAUI App project.
+* Launch JetBrains Rider.
+* Click new solution on the welcome screen.
+
+![Launch JetBrains Rider](MAUI_Images/Launch-JetBrains-Rider.png)
+
+* In the new Solution dialog, select Project Type as MAUI.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Choose Type as **App**.
+* Enter a project name and specify the location.
+* Click create.
+
+![Creating a new .NET MAUI App in JetBrains Rider](MAUI_Images/Create-MAUI-application.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) in the search bar.
+* Ensure that nuget.org is selected as the package source.
+* Select the latest Syncfusion.DocIORenderer.Net.Core NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.DocIORenderer.Net.Core NuGet package](MAUI_Images/Select-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
+
+* Click the Install button to complete the installation.
+
+![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](MAUI_Images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+
+Step 3: Add a new button to the **MainPage.xaml** as shown below.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Convert_Word_Document_to_Image.MainPage">
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
+            Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+            <Button 
+                Text="Convert Word Document to Image"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                SemanticProperties.Hint="Convert Word Document to Image"
+                Clicked="ConvertWordtoImage"
+                HorizontalOptions="Center" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIORenderer;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 5: Add a new action method **ConvertWordtoImage** in MainPage.xaml.cs and include the below code snippet to **convert a Word document to image**.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+//Loading an existing Word document
+Assembly assembly = typeof(App).GetTypeInfo().Assembly;
+using (WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Convert_Word_Document_to_Image.Template.Input.docx"), FormatType.Docx))
+{
+    //Instantiation of DocIORenderer for Word to image conversion
+    using (DocIORenderer render = new DocIORenderer())
+    {
+        //Convert the first page of the Word document into an image.
+        Stream imageStream = document.RenderAsImages(0, ExportImageFormat.Jpeg);
+        //Reset the stream position.
+        imageStream.Position = 0;
+        //save and Launch the image 
+        SaveService saveService = new();
+        saveService.SaveAndView("WordToImage.Jpeg", "application/jpeg", imageStream as MemoryStream);
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 6: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 7: Run the project.
+
+Select the target platform in the Run Configuration dropdown, then click Run.
+
+## Helper files for .NET MAUI
+
+Refer the below helper files and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
+
+<table>
+  <tr>
+  <td>
+    <b>Folder Name</b>
+  </td>
+  <td>
+    <b>File Name</b>
+  </td>
+  <td>
+    <b>Summary</b>
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[.NET MAUI Project](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveService.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/SaveServices/SaveService.cs)'| markdownify }}
+  </td>
+  <td>Represent the base class for save operation.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[Windows](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/Windows)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveWindows.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/Windows/SaveWindows.cs)'| markdownify }}
+  </td>
+  <td>Save implementation for Windows.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[Android](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/Android)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveAndroid.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/Android/SaveAndroid.cs)'| markdownify }}
+  </td>
+  <td>Save implementation for Android device.
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[Mac Catalyst](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/MacCatalyst)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveMac.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/MacCatalyst/SaveMac.cs)'| markdownify }}
+  </td>
+  <td>Save implementation for Mac Catalyst device.
+  </td>
+  </tr>
+  <tr>
+  <td rowspan="2">
+    {{'[iOS](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/iOS)'| markdownify }}
+  </td>
+  <td>
+    {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/iOS/SaveIOS.cs)'| markdownify }}
+  </td>
+  <td>
+    Save implementation for iOS device
+  </td>
+  </tr>
+  <tr>
+  <td>
+    {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI/Convert-Word-Document-to-Image/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
+  </td>
+  <td>
+    Helper classes for viewing the <b>Word document</b> in iOS device
+  </td>
+  </tr>
+</table>
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/.NET-MAUI).
+
+By executing the program, you will get the **image** as follows.
+
+![Word to Image in .NET MAUI](WordToPDF_images/Output-WordtoImage.png)
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/word-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
