@@ -1158,6 +1158,53 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can change the permission of the PDF document using the [Permissions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Permissions). The following code snippet illustrates the same.
 
+<table>
+<thead>
+<tr>
+<th>
+Permission Flag</th><th>
+Description</th><th>
+</thead>
+<tbody>
+<tr>
+<td>
+<b>PdfPermissionsFlags.Print</b></td><td>
+Grants permission to print the document.</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.EditContent</b></td><td>
+Grants permission to modify the content</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.CopyContent</b></td><td>
+Allows copying content from the document (e.g., text or images).</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.EditAnnotations</b></td><td>
+Allows modification of annotations, such as highlights or comments.</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.FillFields</b></td><td>
+Allows filling out interactive form fields.</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.AssembleDocument</b></td><td>
+Allows the document to be used in an assembly (i.e., modifying or interacting with the file).</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.AccessibilityCopyContent</b></td><td>
+Allows accessibility content copying.</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.FullQualityPrint</b></td><td>
+Allows to print full quality.</td><td>
+<tr>
+<td>
+<b>PdfPermissionsFlags.Default</b></td><td>
+The document has no restrictions.</td><td>
+</tbody>
+</table>
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Change-the-permission-of-the-PDF-document/.NET/Change-the-permission-of-the-PDF-document/Program.cs" %}

@@ -431,3 +431,18 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Compare-Word-documents/Check-document-has-diff-after-compare).
 
+## Is it possible to set a watermark for only the first page of a Word document?
+
+No, it is not possible to add a watermark to only the first page of a Word document because watermarks apply to the entire document by default in Microsoft Word.
+
+As a workaround, you can insert an image or text in the header of the first page to mimic a watermark effect. Refer to the [GitHub sample]( https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Sections/Set-image-in-first-page-header) for more details.
+
+## Why does the item index in a Word document differ from the DocIO library?
+
+DocIO indexes items based on the document’s internal file structure rather than the UI rendering. Elements like floating objects may appear in a different order in Microsoft Word UI compared to their actual position in the document’s underlying structure. Since DocIO follows this structure, the difference in indexing is expected.
+
+## How to view Word documents in my .NET MAUI application using DocIO?
+
+Currently, DocIO does not have dedicated viewer control for Word documents in .NET MAUI. However, we can achieve this by converting the Word document to PDF and then displaying the PDF using a PDF viewer control.
+
+To convert a Word document to PDF in .NET MAUI using DocIO, refer to the sample provided [here](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI). To view the PDF in the .NET MAUI PDF viewer control, follow the [documentation](https://help.syncfusion.com/maui/pdf-viewer/getting-started). 
