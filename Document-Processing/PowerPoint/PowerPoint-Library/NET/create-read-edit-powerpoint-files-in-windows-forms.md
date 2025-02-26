@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in Windows Forms |Syncfusion<sup>&reg;</sup>|
+title: Create and edit PowerPoint files in Windows Forms |Syncfusion
 description: Windows Forms PowerPoint library to create, read, edit and convert PowerPoint files in Windows Forms applications.
 platform: document-processing
 control: PowerPoint
@@ -193,7 +193,7 @@ Step 1. Open JetBrains Rider and create a new Windows Forms Application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
-![Launch JetBrains Rider](Windows-Forms_images/Launch-JetBrains-Rider.png)
+![Launch JetBrains Rider](Workingwith-Windows/Launch-JetBrains-Rider.png)
 
 * In the New Solution dialog, select **Project Type** as **Desktop**.
 * Enter a project name and specify the location.
@@ -201,7 +201,7 @@ Step 1. Open JetBrains Rider and create a new Windows Forms Application project.
 * Select **Template** as **Windows Forms App**.
 * Click create.
 
-![Creating a new Windows Forms App in JetBrains Rider](Windows-Forms_images/Create-WindowsForms-sample.png)
+![Creating a new Windows Forms App in JetBrains Rider](Workingwith-Windows/Create-WindowsForms-sample.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) in the search bar.
@@ -209,11 +209,11 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Select the latest Syncfusion.Presentation.WinForms NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Presentation.WinForms NuGet package](Windows-Forms_images/Search-Syncfusion.Presentation.WinForms-NuGet.png)
+![Select the Syncfusion.Presentation.WinForms NuGet package](Workingwith-Windows/Search-Syncfusion.Presentation.WinForms-NuGet.png)
 
 * Click the Install button to complete the installation.
 
-![Install the Syncfusion.Presentation.WinForms NuGet package](Windows-Forms_images/Install-Syncfusion.Presentation.WinForms-NuGet.png)
+![Install the Syncfusion.Presentation.WinForms NuGet package](Workingwith-Windows/Install-Syncfusion.Presentation.WinForms-NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
