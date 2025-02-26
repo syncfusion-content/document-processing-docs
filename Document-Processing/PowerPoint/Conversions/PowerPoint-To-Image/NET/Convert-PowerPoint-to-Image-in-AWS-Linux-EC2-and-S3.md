@@ -190,7 +190,7 @@ static async Task ConvertPptxToImage(string inputFileName, string inputFolderNam
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **Program.cs** to upload images to S3 bucket.
+Step 7: Include the below code snippet in **Program.cs** to upload images to S3 bucket.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -232,7 +232,7 @@ public static async Task UploadImageAsync(Stream imageStream, string outputFileN
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Create an Docker file which parallel to csproj file and add the following code.
+step 8: Create an Docker file which parallel to csproj file and add the following code.
 
 ```
 
@@ -266,7 +266,7 @@ ENTRYPOINT ["dotnet", "AWSConsoleApp.dll"]
 
 ```
 
-step 8: Create a new private GitHub repository and upload the sample. Refer [here](https://docs.github.com/en/get-started/start-your-journey/uploading-a-project-to-github) to create and upload in the GitHub repository.
+step 9: Create a new private GitHub repository and upload the sample. Refer [here](https://docs.github.com/en/get-started/start-your-journey/uploading-a-project-to-github) to create and upload in the GitHub repository.
 
 ## Connect to an EC2 instance using PuTTY
 
