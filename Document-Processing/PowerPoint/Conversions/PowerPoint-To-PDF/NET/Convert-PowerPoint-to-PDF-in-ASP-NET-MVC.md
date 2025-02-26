@@ -133,16 +133,16 @@ Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application projec
 ![Creating a new ASP.NET MVC web application in JetBrains Rider](Workingwith-MVC/Create-MVC-sample.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PresentationToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc5/) in the search bar.
 * Ensure that nuget.org is selected as the package source.
-* Select the latest Syncfusion.Presentation.AspNet.Mvc5 NuGet package from the list.
+* Select the latest Syncfusion.PresentationToPdfConverter.AspNet.Mvc5 NuGet package from the list.
 * Click the + (Add) button to add the package.
 
-![Select the Syncfusion.Presentation.AspNet.Mvc5 NuGet package](Workingwith-MVC/Search-Syncfusion.Presentation.AspNet.Mvc5-NuGet.png)
+![Select the Syncfusion.PresentationToPdfConverter.AspNet.Mvc5 NuGet package](Workingwith-MVC/Search-Syncfusion.PresentationToPdfConverter.AspNet.Mvc5-NuGet.png)
 
 * Click the Install button to complete the installation.
 
-![Install the Syncfusion.Presentation.AspNet.Mvc5 NuGet package](Workingwith-MVC/Install-Syncfusion.Presentation.AspNet.Mvc5-NuGet.png)
+![Install the Syncfusion.PresentationToPdfConverter.AspNet.Mvc5 NuGet package](Workingwith-MVC/Install-Syncfusion.PresentationToPdfConverter.AspNet.Mvc5-NuGet.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 

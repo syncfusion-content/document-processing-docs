@@ -222,6 +222,10 @@ using (FileStream docStream = new FileStream(Server.MapPath("~/App_Data/Template
     }
 }
 
+{% endhighlight %}
+
+{% endtabs %}
+
 Step 7: Build the project.
 
 Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
