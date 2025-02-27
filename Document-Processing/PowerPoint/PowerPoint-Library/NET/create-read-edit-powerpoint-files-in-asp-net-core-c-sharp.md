@@ -174,34 +174,6 @@ The output of the above code example will generate the below PowerPoint slide.
 
 ![ASP.Net Core PowerPoint Library Output](Workingwith-Core/GettingStartedSample.png)
 
-## Read and edit a PowerPoint file in ASP.NET Core
-
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-//Open an existing PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open(new FileStream("Sample.pptx",FileMode.Open));
-//Gets the first slide from the PowerPoint presentation
-ISlide slide = pptxDoc.Slides[0];
-//Gets the first shape of the slide
-IShape shape = slide.Shapes[0] as IShape;
-//Change the text of the shape
-if(shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-//Save the PowerPoint presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-outputStream.Position = 0;
-outputStream.Flush();
-outputStream.Dispose();
-//Close the PowerPoint presentation
-pptxDoc.Close();
-{% endhighlight %}
-
-{% endtabs %}
-
 Step 5: Build the project.
 
 Click on Build → Build Solution or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
@@ -382,34 +354,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The output of the above code example will generate the below PowerPoint slide.
 
 ![ASP.Net Core PowerPoint Library Output](Workingwith-Core/GettingStartedSample.png)
-
-## Read and edit a PowerPoint file in ASP.NET Core
-
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-//Open an existing PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open(new FileStream("Sample.pptx",FileMode.Open));
-//Gets the first slide from the PowerPoint presentation
-ISlide slide = pptxDoc.Slides[0];
-//Gets the first shape of the slide
-IShape shape = slide.Shapes[0] as IShape;
-//Change the text of the shape
-if(shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-//Save the PowerPoint presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-outputStream.Position = 0;
-outputStream.Flush();
-outputStream.Dispose();
-//Close the PowerPoint presentation
-pptxDoc.Close();
-{% endhighlight %}
-
-{% endtabs %}
 
 Step 5: Build the project.
 
@@ -607,6 +551,20 @@ The output of the above code example will generate the below PowerPoint slide.
 
 ![ASP.Net Core PowerPoint Library Output](Workingwith-Core/GettingStartedSample.png)
 
+Step 5: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 6: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core/Read-and-edit-PowerPoint-presentation).
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 ## Read and edit a PowerPoint file in ASP.NET Core
 
 You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
@@ -634,20 +592,6 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% endtabs %}
-
-Step 5: Build the project.
-
-Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
-
-Step 6: Run the project.
-
-Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET-Core/Read-and-edit-PowerPoint-presentation).
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 

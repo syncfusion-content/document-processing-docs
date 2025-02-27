@@ -146,35 +146,6 @@ By executing the program, you will get the **PowerPoint slide** as follows.
 
 ![MAUI output PowerPoint slide](Workingwith-MAUI/GettingStartedSample.png)
 
-## Read and edit a PowerPoint file in .NET MAUI
-
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-//Opens an existing PowerPoint presentation.
-Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-//Opens an existing PowerPoint presentation.
-using IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Sample.pptx"));
-//Gets the first slide from the PowerPoint presentation.
-ISlide slide = pptxDoc.Slides[0];
-//Gets the first shape of the slide.
-IShape shape = slide.Shapes[0] as IShape;
-//Modifies the text of the shape.
-if (shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-//Saves the presentation to the memory stream.
-using MemoryStream stream = new();
-pptxDoc.Save(stream);
-stream.Position = 0;
-//Saves the memory stream as file.
-SaveService saveService = new();
-saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
-{% endhighlight %}
-
-{% endtabs %}
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/.NET-MAUI/Read-and-edit-presentation).
 
 ## Helper files for .NET MAUI
@@ -394,35 +365,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **PowerPoint slide** as follows.
 
 ![MAUI output PowerPoint slide](Workingwith-MAUI/GettingStartedSample.png)
-
-## Read and edit a PowerPoint file in .NET MAUI
-
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-//Opens an existing PowerPoint presentation.
-Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-//Opens an existing PowerPoint presentation.
-using IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Sample.pptx"));
-//Gets the first slide from the PowerPoint presentation.
-ISlide slide = pptxDoc.Slides[0];
-//Gets the first shape of the slide.
-IShape shape = slide.Shapes[0] as IShape;
-//Modifies the text of the shape.
-if (shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-//Saves the presentation to the memory stream.
-using MemoryStream stream = new();
-pptxDoc.Save(stream);
-stream.Position = 0;
-//Saves the memory stream as file.
-SaveService saveService = new();
-saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
-{% endhighlight %}
-
-{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/.NET-MAUI/Read-and-edit-presentation).
 
@@ -655,35 +597,6 @@ By executing the program, you will get the **PowerPoint slide** as follows.
 
 ![MAUI output PowerPoint slide](Workingwith-MAUI/GettingStartedSample.png)
 
-## Read and edit a PowerPoint file in .NET MAUI
-
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-//Opens an existing PowerPoint presentation.
-Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-//Opens an existing PowerPoint presentation.
-using IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Sample.pptx"));
-//Gets the first slide from the PowerPoint presentation.
-ISlide slide = pptxDoc.Slides[0];
-//Gets the first shape of the slide.
-IShape shape = slide.Shapes[0] as IShape;
-//Modifies the text of the shape.
-if (shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-//Saves the presentation to the memory stream.
-using MemoryStream stream = new();
-pptxDoc.Save(stream);
-stream.Position = 0;
-//Saves the memory stream as file.
-SaveService saveService = new();
-saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
-{% endhighlight %}
-
-{% endtabs %}
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/.NET-MAUI/Read-and-edit-presentation).
 
 ## Helper files for .NET MAUI
@@ -766,6 +679,35 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+## Read and edit a PowerPoint file in .NET MAUI
+
+You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Opens an existing PowerPoint presentation.
+Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
+//Opens an existing PowerPoint presentation.
+using IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Sample.pptx"));
+//Gets the first slide from the PowerPoint presentation.
+ISlide slide = pptxDoc.Slides[0];
+//Gets the first shape of the slide.
+IShape shape = slide.Shapes[0] as IShape;
+//Modifies the text of the shape.
+if (shape.TextBody.Text == "Company History")
+    shape.TextBody.Text = "Company Profile";
+//Saves the presentation to the memory stream.
+using MemoryStream stream = new();
+pptxDoc.Save(stream);
+stream.Position = 0;
+//Saves the memory stream as file.
+SaveService saveService = new();
+saveService.SaveAndView("Output.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
+{% endhighlight %}
+
+{% endtabs %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
