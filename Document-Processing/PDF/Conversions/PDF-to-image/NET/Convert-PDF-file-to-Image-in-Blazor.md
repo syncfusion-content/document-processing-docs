@@ -28,7 +28,6 @@ Select Blazor App from the template and click the Next button.
 
 Step 2:  In configuration windows, name your project and select Create.
 ![Configuration window1](Blazor_images/blazor_step2.png)
-![Configuration window2](Blazor_images/blazor_step3.png)
 
 Step 3:  Install [Syncfusion.PdfToImageConverter.Net](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
