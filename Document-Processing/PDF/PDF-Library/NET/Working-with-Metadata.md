@@ -929,7 +929,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding Custom Schema to the PDF document
 
-Essential PDF allows you to add required metadata (custom schema) to a PDF document using the [CustomSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.CustomSchema.html) class with [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class. The following code illustrates this.
+Essential<sup>&reg;</sup> PDF allows you to add required metadata (custom schema) to a PDF document using the [CustomSchema](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.CustomSchema.html) class with [XmpMetadata](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xmp.XmpMetadata.html) class. The following code illustrates this.
 
 {% tabs %}  
 

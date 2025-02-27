@@ -196,7 +196,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating templates from existing PDF document
 
-Essential PDF supports to create the templates using [CreateTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_CreateTemplate) method from an existing PDF document page and draw it in on a new PDF document.
+Essential<sup>&reg;</sup> PDF supports to create the templates using [CreateTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_CreateTemplate) method from an existing PDF document page and draw it in on a new PDF document.
 
 The below code illustrates how to create the template from an existing page and draw it in new PDF document.
 

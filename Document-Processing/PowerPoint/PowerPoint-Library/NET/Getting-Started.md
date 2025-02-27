@@ -1,15 +1,15 @@
 ---
-title: Getting Started with PowerPoint Presentation library | Syncfusion&reg;
-description: Getting started with Essential&reg; Presentation library; Creating a PowerPoint Presentation; Modifying the existing PowerPoint presentation
+title: Getting Started with PowerPoint Presentation library | Syncfusion
+description: Getting started with Essential<sup>&reg;</sup> Presentation library; Creating a PowerPoint Presentation; Modifying the existing PowerPoint presentation
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Getting started with Essential&reg; Presentation library
+# Getting started with Essential<sup>&reg;</sup> Presentation library
 
 ## Creating a simple PowerPoint Presentation with basic elements from scratch
 
-In this page, you can learn how to create a simple [.NET PowerPoint Presentation](https://www.syncfusion.com/document-processing/powerpoint-framework/net) by using Essential&reg; Presentation API.
+In this page, you can learn how to create a simple [.NET PowerPoint Presentation](https://www.syncfusion.com/document-processing/powerpoint-framework/net) by using Essential<sup>&reg;</sup> Presentation API.
 
 To quickly get started on creating a PowerPoint presentation, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=OSGwosNnN0o" %}
@@ -55,7 +55,7 @@ For creating and manipulating a PowerPoint Presentation, include the following a
     </tbody>
 </table>
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
 Include the following namespace in your .cs or .vb code as shown below
 
@@ -83,7 +83,7 @@ using Syncfusion.Presentation;
 
 {% endtabs %}
 
-An entire PowerPoint Presentation is represented by an instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) interface and it is the root element of Essential&reg; Presentation’s DOM.
+An entire PowerPoint Presentation is represented by an instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) interface and it is the root element of Essential<sup>&reg;</sup> Presentation’s DOM.
 
 The following code example demonstrates how to create an instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) interface.
 
@@ -181,7 +181,7 @@ textPart.Font.Bold = True
 
 {% endtabs %}
 
-Essential&reg; Presentation allows you to create simple and multi-level lists that make the content easier for reading. The following code example demonstrates how to add a bulleted list in a paragraph.
+Essential<sup>&reg;</sup> Presentation allows you to create simple and multi-level lists that make the content easier for reading. The following code example demonstrates how to add a bulleted list in a paragraph.
 
 {% tabs %}
 
@@ -324,7 +324,7 @@ The resultant PowerPoint Presentation looks as follows.
 
 ## Converting PowerPoint Presentation to PDF
 
-Essential&reg; Presentation allows you to convert a PowerPoint Presentation into PDF document. The following assemblies are required for the Presentation to PDF conversion.
+Essential<sup>&reg;</sup> Presentation allows you to convert a PowerPoint Presentation into PDF document. The following assemblies are required for the Presentation to PDF conversion.
 
 <table>
     <thead>

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with charts in Excel document.
 
-Essential&reg; XlsIO has support for creating and modifying Excel charts inside a workbook or as a [chart worksheet](https://support.microsoft.com/en-us/office/create-a-chart-from-start-to-finish-0baf399e-dd61-4e18-8a73-b3fd5d5680c2?ui=en-us&rs=en-us&ad=us).
+Essential<sup>&reg;</sup> XlsIO has support for creating and modifying Excel charts inside a workbook or as a [chart worksheet](https://support.microsoft.com/en-us/office/create-a-chart-from-start-to-finish-0baf399e-dd61-4e18-8a73-b3fd5d5680c2?ui=en-us&rs=en-us&ad=us).
 
 ## Creating a Chart
 
@@ -1577,37 +1577,37 @@ The following image illustrates the basic elements of a chart.
 
 #### Chart Title
 
-With the Syncfusion&reg; Excel Library, you can customize the chart title by changing its name, font, color, position and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-title) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart title by changing its name, font, color, position and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-title) for more details.
 
 #### Chart  Area
 
-With the Syncfusion&reg; Excel Library, you can customize the chart area by changing its border, color and transparency. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-area) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart area by changing its border, color and transparency. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-area) for more details.
 
 #### Chart Plot Area
 
-With the Syncfusion&reg; Excel Library, you can customize the chart plot area by changing its border, color, transparency and position. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-plot-area) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart plot area by changing its border, color, transparency and position. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-plot-area) for more details.
 
 #### Chart Series
 
-With the Syncfusion&reg; Excel Library, you can customize the chart series by changing the series name, type, color, border, and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-series) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart series by changing the series name, type, color, border, and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-series) for more details.
 
 #### Chart Legend
 
-With the Syncfusion&reg; Excel Library, you can customize the chart legend by changing its border, color, font, position, and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-legend) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart legend by changing its border, color, font, position, and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-legend) for more details.
 
 #### Chart Data Labels
 
-With the Syncfusion&reg; Excel Library, you can customize the chart data labels by changing its color, font and position. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-data-labels) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart data labels by changing its color, font and position. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-data-labels) for more details.
 
 #### Chart Axis
 
-With the Syncfusion&reg; Excel Library, you can customize the chart axes by changing the title, border, font, rotation angle and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-axis) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart axes by changing the title, border, font, rotation angle and more. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-axis) for more details.
 
 ## Chart Appearance
  
 Chart appearance refers to the ability to customize the visual aspects of charts in your Excel documents. This includes modifying elements such as the chart area, plot area, series, legend etc. These customizations enhance the readability, aesthetics, and overall presentation of the charts. Beyond these standard elements, users can further refine the chart's appearance by utilizing Fill Settings, Adding Pictures in Chart, Positioning and Resizing, adding a Data Table to the chart, and applying 3D formats.
 
-With the Syncfusion&reg; Excel Library, you can customize various aspects of chart appearance in your Excel documents. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-appearance) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize various aspects of chart appearance in your Excel documents. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-appearance) for more details.
 
 ## Removing a Chart
 

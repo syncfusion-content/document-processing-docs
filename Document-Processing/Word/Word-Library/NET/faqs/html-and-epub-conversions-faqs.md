@@ -1,5 +1,5 @@
 ---
-title: FAQ about HTML and EPUB Conversions | DocIO | Syncfusion&reg;
+title: FAQ about HTML and EPUB Conversions | DocIO | Syncfusion
 description: Learn about the frequently asked questions about HTML and EPUB conversions in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -70,3 +70,52 @@ using (WordDocument document = new WordDocument(assembly.GetManifestResourceStre
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-EPUB-conversion/Set-title-for-EPUB).
+
+## Why are there blank spaces or empty paragraphs when converting HTML to Word?
+
+If the input HTML contains carriage return line feed (CRLF) inside the `<p>` tag, each CRLF is treated as a new line when converting the HTML to Word using Microsoft Word. DocIO follows the same behavior. This is not an issue but rather the expected behavior during HTML to Word conversion.
+
+## How DocIO handles HTML validation while importing HTML?
+
+DocIO supports validating HTML with Strict and Transitional standards. It uses XmlReader to parse input HTML content. To ensure successful parsing and document generation, the provided HTML must comply with XML standards. This means the HTML should have properly opened and closed tags to maintain a well-formed structure.
+
+T> If you wish to use HTML that does not meet XML standards (e.g., improperly opened or closed tags), you can pass `XHTMLValidationType.None` when opening HTML using one of the following overloads:  
+T> 
+T> 1. [Open(string fileName, FormatType formatType, XHTMLValidationType validationType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWordDocument.html#Syncfusion_DocIO_DLS_IWordDocument_Open_System_String_Syncfusion_DocIO_FormatType_Syncfusion_DocIO_DLS_XHTMLValidationType_)  
+T> 2. [Open(string fileName, FormatType formatType, XHTMLValidationType validationType, string baseUrl)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWordDocument.html#Syncfusion_DocIO_DLS_IWordDocument_Open_System_String_Syncfusion_DocIO_FormatType_Syncfusion_DocIO_DLS_XHTMLValidationType_System_String_)  
+T> 3. [OpenReadOnly(string fileName, FormatType formatType, XHTMLValidationType validationType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWordDocument.html#Syncfusion_DocIO_DLS_IWordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_Syncfusion_DocIO_DLS_XHTMLValidationType_)  
+T> 4. [OpenReadOnly(string fileName, FormatType formatType, XHTMLValidationType validationType, string baseUrl)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.IWordDocument.html#Syncfusion_DocIO_DLS_IWordDocument_OpenReadOnly_System_String_Syncfusion_DocIO_FormatType_Syncfusion_DocIO_DLS_XHTMLValidationType_System_String_)  
+
+## How should measurement values be defined in HTML for proper processing with DocIO?
+
+When importing an HTML file into a Word document using DocIO, it is essential to specify measurement values correctly to ensure accurate processing.
+
+**Incorrect Example:**
+
+{% tabs %}
+
+{% highlight html tabtitle="HTML" %}
+<p style="line-height: 1.5;”> Hello world</p>
+{% endhighlight %}
+
+{% endtabs %}
+
+In this example, the values lack measurement units (e.g., pt), which can lead to inconsistent formatting in the resulting Word document.
+
+**Correct Example:**
+
+{% tabs %}
+
+{% highlight html tabtitle="HTML" %}
+<p style="line-height: 1.5pt;">Hello world</p>
+{% endhighlight %}
+
+{% endtabs %}
+
+By including **pt** as the measurement unit, the spacing and styling are accurately interpreted and applied during the conversion process.
+
+## Why does Syncfusion.Drawing.ColorTranslator.FromHtml not parse #rrggbbaa hex color notation correctly? 
+
+The [System.Drawing.ColorTranslator.FromHtml](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.colortranslator.fromhtml?view=net-9.0) function does not support parsing #rrggbbaa (red, green, blue, alpha) hex color notation. This limitation exists because it adheres to the HTML 4.01 and CSS color standards, which only recognize #rrggbb (6-character) and #rgb (3-character) formats. The #rrggbbaa format, which includes alpha transparency, is a modern feature and is not supported by the function.
+
+Similarly, the Syncfusion.Drawing.ColorTranslator.FromHtml function behaves the same as the [System.Drawing.ColorTranslator.FromHtml](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.colortranslator.fromhtml?view=net-9.0) function, and it does not parse #rrggbbaa hex color notation.

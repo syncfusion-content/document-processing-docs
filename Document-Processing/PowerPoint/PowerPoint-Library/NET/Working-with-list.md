@@ -1,6 +1,6 @@
 ---
-title: Working with lists in PowerPoint Presentation | Syncfusion&reg;
-description: Learn here all about working with lists of Syncfusion&reg; Essential&reg; PowerPoint Presentation Library and more.
+title: Working with lists in PowerPoint Presentation | Syncfusion
+description: Learn here all about working with lists of Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint Presentation Library and more.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 ## Creating a simple list
 
-Essential&reg; Presentation allows you to create simple and multi-level lists that make the content easier for reading. In PowerPoint, Presentation lists consists of the following types 
+Essential<sup>&reg;</sup> Presentation allows you to create simple and multi-level lists that make the content easier for reading. In PowerPoint, Presentation lists consists of the following types 
 
 1. Numbered list
 2. Bulleted list

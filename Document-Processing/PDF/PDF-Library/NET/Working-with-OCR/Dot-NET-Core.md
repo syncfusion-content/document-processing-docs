@@ -8,9 +8,9 @@ documentation: UG
 
 # Working with Optical Character Recognition (OCR)
 
-Essential PDF provides support for Optical Character Recognition with the help of Google’s Tesseract Optical Character Recognition engine.
+Essential<sup>&reg;</sup> PDF provides support for Optical Character Recognition with the help of Google’s Tesseract Optical Character Recognition engine.
 
-N> Starting with v20.1.0.x, if you reference Syncfusion OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 ## Prerequisites
 
@@ -1166,7 +1166,7 @@ To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/e
 <tr>
 <th style="font-size:14px">Solution</th>
 <td>
-Essential PDF supports all the languages supported by Tesseract engine in the OCR processor.
+Essential<sup>&reg;</sup> PDF supports all the languages supported by Tesseract engine in the OCR processor.
 The dictionary packs for the languages can be downloaded from the following online location:<br/>
 <a href="https://code.google.com/p/tesseract-ocr/downloads/list">https://code.google.com/p/tesseract-ocr/downloads/list</a>
 <br/><br/>

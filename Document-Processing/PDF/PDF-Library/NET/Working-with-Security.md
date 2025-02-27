@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Security
 
-Essential PDF allows you to [protect the PDF document](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using encryption and set permission to the PDF document operations like printing, editing, copy content etc. using user password and owner password. Two types of encryption algorithms are available
+Essential<sup>&reg;</sup> PDF allows you to [protect the PDF document](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using encryption and set permission to the PDF document operations like printing, editing, copy content etc. using user password and owner password. Two types of encryption algorithms are available
 1. Rivest Cipher 4 (RC4)
 2. Advanced Encryption Standard (AES)
 
@@ -417,7 +417,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Encryption Options
 
-Now, the Syncfusion PDF library has provided options to encrypt the PDF document as follows: 
+Now, the Syncfusion<sup>&reg;</sup> PDF library has provided options to encrypt the PDF document as follows: 
 
 * **Encrypt all contents** - All contents of the document will be encrypted.
 
@@ -531,7 +531,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Encrypt all contents except metadata
 
-The Syncfusion Essential PDF library now supports encrypting the PDF document except the document information (metadata) by using the EncryptAllContentsExceptMetadata option. The document information will not be encrypted when using this EncryptionOption.
+The Syncfusion Essential<sup>&reg;</sup> PDF library now supports encrypting the PDF document except the document information (metadata) by using the EncryptAllContentsExceptMetadata option. The document information will not be encrypted when using this EncryptionOption.
 
 You can encrypt all contents except metadata by specifying the [EncryptionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_EncryptionOptions) property as **EncryptAllContentsExceptMetadata** option through [PdfEncryptionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionOptions.html) Enum in [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class. The following code snippet explains how to encrypt all contents except metadata of the PDF document.
 
@@ -639,7 +639,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can encrypt only attachments present in the PDF document by specifying the [EncryptionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_EncryptionOptions) property as **EncryptOnlyAttachments** option through [PdfEncryptionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionOptions.html) Enum in [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class.
 
-The following code example explains how to create an encrypt only attachment document using the Syncfusion PDF Library. 
+The following code example explains how to create an encrypt only attachment document using the Syncfusion<sup>&reg;</sup> PDF Library. 
 
 N> [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) is mandatory for encrypt only attachments and it is only supported in AES algorithms with 128bit, 256bit, and 256bit revision6 key size.
 
@@ -767,7 +767,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Opening an encrypt-only-attachment document
 
-The Syncfusion Essential PDF library now provides support for loading the encrypt-only-attachment PDF documents. To access the attachments in the existing PDF document, the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) is mandatory. 
+The Syncfusion Essential<sup>&reg;</sup> PDF library now provides support for loading the encrypt-only-attachment PDF documents. To access the attachments in the existing PDF document, the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) is mandatory. 
 
 You can provide the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) in following ways:
 *	Load the PDF document with password. 
@@ -775,7 +775,7 @@ You can provide the [UserPassword](https://help.syncfusion.com/cr/document-proce
 
 It is possible to access all the contents except attachment when loading the PDF document without [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword). 
 
-The following code example explains how to load an encrypt-only-attachment document with password in [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class using Syncfusion PDF Library. 
+The following code example explains how to load an encrypt-only-attachment document with password in [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class using Syncfusion<sup>&reg;</sup> PDF Library. 
 
 {% tabs %}
 
@@ -1320,7 +1320,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to determine whether the PDF document is protected by user or owner password
 
-Essential PDF supports identifying the document whether it is protected by user or owner.
+Essential<sup>&reg;</sup> PDF supports identifying the document whether it is protected by user or owner.
 
 The following table shows the various combination for loading the secured document with user or owner password:
 

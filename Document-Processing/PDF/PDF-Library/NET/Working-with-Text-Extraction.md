@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Text Extraction
 
-Essential PDF allows you to extract the text from a particular page or the entire PDF document. 
+Essential<sup>&reg;</sup> PDF allows you to extract the text from a particular page or the entire PDF document. 
 
 Check the following video to quickly get started with extracting text from a PDF document in .NET using the PDF Library.
 {% youtube "https://www.youtube.com/watch?v=CB4tQC-LhUU" %}

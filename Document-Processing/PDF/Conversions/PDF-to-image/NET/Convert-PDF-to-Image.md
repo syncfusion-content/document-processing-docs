@@ -1,6 +1,6 @@
 ---
-title: Convert PDF to Image| Syncfusion
-description: Learn about how to convert a PDF page to Image with easy steps using the PDFToImageConverter library.
+title: Convert PDF to Image| Syncfusion&reg;
+description: Learn how to convert a PDF document to Image file with easy steps using Syncfusion&reg; PDFToImageConverter library.
 platform: document-processing
 control: PDF to image
 documentation: UG
@@ -13,6 +13,7 @@ This PDF to image converter library allows converting PDF documents to images wi
 
 Watch the following video to quickly get started with converting PDF to image in .NET using a PDF to Image Converter Library.
 {% youtube "https://www.youtube.com/watch?v=Grjtyh5gBr8" %}
+
 
 The following code snippet illustrates how to convert PDF page into image using Convert method in PdfToImageConverter.
 

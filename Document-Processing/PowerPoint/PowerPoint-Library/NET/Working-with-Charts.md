@@ -1,6 +1,6 @@
 ---
-title: Create and edit Charts in PowerPoint files | Syncfusion&reg;
-description: Working with Charts in PowerPoint Presentation. Essential&reg; Presentation facilitates you to create and edit charts in PowerPoint files.
+title: Create and edit Charts in PowerPoint files | Syncfusion
+description: Working with Charts in PowerPoint Presentation. Essential<sup>&reg;</sup> Presentation facilitates you to create and edit charts in PowerPoint files.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -244,7 +244,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating Custom Charts 
 
-Essential&reg; Presentation facilitates you to create custom charts by adding different charts series for a single chart. 
+Essential<sup>&reg;</sup> Presentation facilitates you to create custom charts by adding different charts series for a single chart. 
 
 For example, you can use a Bar-clustered chart for the first data series and a scatter-line-marker chart for the second series. As a result, you can have a Bar-clustered chart combined with a scatter-line-marker chart.
 
@@ -627,7 +627,7 @@ Customize the **chart axes** by changing the title, border, font, rotation angle
 
 ## Applying 3D Formats
 
-Essential&reg; Presentation allows you to modify side wall, back wall, and floor settings of a 3-D chart. The following code example explains how to apply these settings to a 3-D chart.
+Essential<sup>&reg;</sup> Presentation allows you to modify side wall, back wall, and floor settings of a 3-D chart. The following code example explains how to apply these settings to a 3-D chart.
 
 {% tabs %}
 
@@ -1074,7 +1074,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PowerPoint 2016 Charts
 
-Essential&reg; Presentation supports creating and manipulating new and modern chart types such as waterfall, histogram, pareto, box and whisker, tree map, and sunburst, which are introduced in Microsoft PowerPoint 2016.
+Essential<sup>&reg;</sup> Presentation supports creating and manipulating new and modern chart types such as waterfall, histogram, pareto, box and whisker, tree map, and sunburst, which are introduced in Microsoft PowerPoint 2016.
 
 ### Funnel
 

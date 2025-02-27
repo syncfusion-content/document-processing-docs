@@ -8,11 +8,11 @@ documentation: UG
 
 # Working with .NET PDF Tables using PdfLightTable model
 
-The [Syncfusion .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or directly binding data in a tabular format. Here, you will see the creation of a PDF table using the **LightTable** model.  
+The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or directly binding data in a tabular format. Here, you will see the creation of a PDF table using the **LightTable** model.  
 
 ## Creating a simple table 
 
-The Syncfusion .NET PDF library allows you to create the table with [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from DataSet, DataTable, arrays and IEnumerable objects using [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) class. It allows you to perform simple formatting. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library allows you to create the table with [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from DataSet, DataTable, arrays and IEnumerable objects using [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) class. It allows you to perform simple formatting. 
 
 N> In Silverlight, Windows store apps and Xamarin only strongly typed IEnumerable objects are supported.
 
@@ -944,7 +944,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Table customization 
 
-The Syncfusion .NET PDF library supports users to create a customizable PDF table like [CellSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellSpacing), [CellPadding](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellPadding), [RepeatHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_RepeatHeader), [ShowHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_ShowHeader), etc. This can be achieved by using the [PdfLightTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html) class. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports users to create a customizable PDF table like [CellSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellSpacing), [CellPadding](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_CellPadding), [RepeatHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_RepeatHeader), [ShowHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html#Syncfusion_Pdf_Tables_PdfLightTableStyle_ShowHeader), etc. This can be achieved by using the [PdfLightTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableStyle.html) class. 
 
 The following code sample illustrates how to customize the table using [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html).
 
@@ -1211,7 +1211,7 @@ The following image shows the PDF document with ```PdfGridBuiltinStyle.Gridtable
 
 ## Pagination 
 
-The Syncfusion .NET PDF library provides support to paginate the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) using [PdfLightTableLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableLayoutFormat.html) class. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library provides support to paginate the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) using [PdfLightTableLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTableLayoutFormat.html) class. 
 
 The following sample illustrates how to allow the ``PdfLightTable`` to flow across pages. 
 
@@ -1326,7 +1326,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## String formatting 
 
-The Syncfusion .NET PDF library supports applying string formatting for a whole table, a column in the table, a row in a table, and a cell in a table using the [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports applying string formatting for a whole table, a column in the table, a row in a table, and a cell in a table using the [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class. 
 
 ### String formatting for whole table in PdfLightTable
 

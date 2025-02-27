@@ -610,31 +610,31 @@ A complete working example to create conditional formats with formula in C# is p
 
 These are conditional formatting rules that apply specific formatting to cells based on their values. Examples include highlighting cells that contain certain text, numbers within a specific range, dates before or after a given date, or values that are duplicates or unique. These rules help in quickly identifying and emphasizing important data points.
 
-With the Syncfusion&reg; Excel Library, you can highlight cells in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/highlight-cells) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can highlight cells in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/highlight-cells) for more details.
 
 ### Top/Bottom
 
 These conditional formatting rules are used to highlight cells that contain the highest or lowest values in a dataset. Formatting the top 10 items, bottom 10%, or the highest and lowest values based on specified criteria helps in easily spotting extremes in data, such as best-performing sales figures or lowest test scores.
 
-With the Syncfusion&reg; Excel Library, you can add top and bottom rules in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/top-bottom) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can add top and bottom rules in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/top-bottom) for more details.
 
 ### Data Bars
 
 These conditional formatting rules add horizontal bars to cells to visually represent the cell values. The length of the bar corresponds to the value in the cell, making it easy to compare values across a range. Data bars provide a quick visual summary of data distribution and relative magnitudes.
 
-With the Syncfusion&reg; Excel Library, you can add data bar in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/data-bars) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can add data bar in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/data-bars) for more details.
 
 ### Color Scales
 
 These conditional formatting rules apply a gradient of colors to cells based on their values. Each color represents a different value range, allowing for a visual representation of data trends and variations. For example, a green-yellow-red scale can indicate low, medium, and high values, respectively.
 
-With the Syncfusion&reg; Excel Library, you can add color scales in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/color-scales) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can add color scales in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/color-scales) for more details.
 
 ### Icon Sets
 
 These are collections of icons that are applied to cells based on their values. Icons, such as arrows, traffic lights, or symbols, visually indicate different data levels or conditions. For example, arrows might show upward or downward trends, and traffic lights can indicate performance status.
 
-With the Syncfusion&reg; Excel Library, you can add icon sets in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/icon-sets) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can add icon sets in conditional formatting using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/conditional-formatting/icon-sets) for more details.
 
 #### Custom Icon Sets
 

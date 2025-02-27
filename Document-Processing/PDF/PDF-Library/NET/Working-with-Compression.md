@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Compression
 
-Essential PDF allows you to [compress the PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/compress-pdf) document and thereby reduce the file size in the following three ways.
+Essential<sup>&reg;</sup> PDF allows you to [compress the PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/compress-pdf) document and thereby reduce the file size in the following three ways.
 
 1. Compress an existing PDF document
 2. Content compression for a new document
@@ -375,7 +375,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Compressing the PDF content
 
-Essential PDF allows you to control the compression level of the document by using the [PdfCompressionLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionLevel.html) Enum. The compression level can be set to best, normal, none etc...
+Essential<sup>&reg;</sup> PDF allows you to control the compression level of the document by using the [PdfCompressionLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionLevel.html) Enum. The compression level can be set to best, normal, none etc...
 
 Content compression involves,
 1) Removing all extra space characters.
@@ -526,7 +526,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Compressing images
 
-Essential PDF allows you to compress/change the quality of the image in the PDF document by assigning [Quality](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Quality) property available in the [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. 
+Essential<sup>&reg;</sup> PDF allows you to compress/change the quality of the image in the PDF document by assigning [Quality](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Quality) property available in the [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. 
 
 {% tabs %}
 

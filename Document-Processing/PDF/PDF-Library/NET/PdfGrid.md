@@ -8,7 +8,10 @@ documentation: UG
 
 # Working with .NET PDF Tables using the PdfGrid model 
 
-The [Syncfusion .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables or grids](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from the data sources or by direct data binding in a tabular format. It is designed for high performance with advanced customization, styling, and formatting. Here you will see the creation of a PDF table using the ``PdfGrid`` model.  
+The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables or grids](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from the data sources or by direct data binding in a tabular format. It is designed for high performance with advanced customization, styling, and formatting. Here you will see the creation of a PDF table using the ``PdfGrid`` model.
+
+Check the following video for a quick guide on creating a table in a PDF document using the PDF Library.
+{% youtube "https://youtu.be/BIRbIOFUdak?si=nVg6U56SCHNmybUA" %}
 
 ## Creating a simple table  
 
@@ -892,6 +895,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Syncfusion .NET PDF library supports users to create a customizable PDF table like [CellSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html#Syncfusion_Pdf_Grid_PdfGridStyle_CellSpacing), [CellPadding](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html#Syncfusion_Pdf_Grid_PdfGridStyle_CellPadding), [HorizontalOverflow](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html#Syncfusion_Pdf_Grid_PdfGridStyle_AllowHorizontalOverflow), etc. using [PdfGridStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyle.html) class.
 
+Check the following video on creating a custom table in a PDF using the .NET PDF Library.
+{% youtube "https://youtu.be/BT-fRY4ZpO0?si=R3rAD_aqFYRBCGwh" %}
+
 The following code snippet illustrates how to customize the table using [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html). 
 
 {% tabs %}
@@ -1290,7 +1296,7 @@ The following image shows the PDF document with `PdfGridBuiltinStyle.Gridtable4A
 
 ## Pagination 
 
-Essential PDF supports to paginate the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) using [PdfGridLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutFormat.html) class.
+Essential<sup>&reg;</sup> PDF supports to paginate the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) using [PdfGridLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutFormat.html) class.
 
 The below sample illustrates how to allow the ``PdfGrid`` to flow across pages.
 
@@ -1537,7 +1543,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding multiple tables 
 
-The Essential PDF supports maintaining the position of a PDF grid drawn on a PDF page using [PdfGridLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutResult.html). It provides the rendered bounds of the previously added grid, which can be used to place successive elements without overlapping. Add multiple PDF grids using the bottom position of the previously rendered PDF grid. The following code sample illustrates this.
+The Essential<sup>&reg;</sup> PDF supports maintaining the position of a PDF grid drawn on a PDF page using [PdfGridLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutResult.html). It provides the rendered bounds of the previously added grid, which can be used to place successive elements without overlapping. Add multiple PDF grids using the bottom position of the previously rendered PDF grid. The following code sample illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Add-multiple-tables-in-a-PDF-document/.NET/Add-multiple-tables-in-a-PDF-document/Program.cs" %} 
@@ -1691,7 +1697,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## String formatting 
 
-The Syncfusion .NET PDF library supports applying string formatting for a whole table, a column in a table, a row in a table, and a cell in a table using the [PdfStingFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class.
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports applying string formatting for a whole table, a column in a table, a row in a table, and a cell in a table using the [PdfStingFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class.
 
 ### String formatting for the whole table 
 
@@ -2208,7 +2214,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Row and Column spanning 
 
-The essential PDF supports both row and column spanning in a PDF table.
+The essential<sup>&reg;</sup> PDF supports both row and column spanning in a PDF table.
 
 ### Row spanning
 
@@ -2452,7 +2458,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Table cell Styles 
 
-The Syncfusion .NET PDF library allows you to add different styles like change the background color using [BackgroundBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyleBase.html#Syncfusion_Pdf_Grid_PdfGridStyleBase_BackgroundBrush), add the background image using [BackgroundImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html#Syncfusion_Pdf_Grid_PdfGridCellStyle_BackgroundImage), add borders using [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html#Syncfusion_Pdf_Grid_PdfGridCellStyle_Borders) in [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html). Also we can add cell dimension by setting row [Height](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridRow.html#Syncfusion_Pdf_Grid_PdfGridRow_Height), and column [Width](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridColumn.html#Syncfusion_Pdf_Grid_PdfGridColumn_Width) in PDF table along with spanning through the [RowSpan](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_RowSpan) and [ColumnSpan](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_ColumnSpan).
+The Syncfusion<sup>&reg;</sup> .NET PDF library allows you to add different styles like change the background color using [BackgroundBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridStyleBase.html#Syncfusion_Pdf_Grid_PdfGridStyleBase_BackgroundBrush), add the background image using [BackgroundImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html#Syncfusion_Pdf_Grid_PdfGridCellStyle_BackgroundImage), add borders using [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html#Syncfusion_Pdf_Grid_PdfGridCellStyle_Borders) in [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html). Also we can add cell dimension by setting row [Height](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridRow.html#Syncfusion_Pdf_Grid_PdfGridRow_Height), and column [Width](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridColumn.html#Syncfusion_Pdf_Grid_PdfGridColumn_Width) in PDF table along with spanning through the [RowSpan](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_RowSpan) and [ColumnSpan](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCell.html#Syncfusion_Pdf_Grid_PdfGridCell_ColumnSpan).
 
 The following code sample explains how to add different cell styles to a cell in the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html).
 
@@ -2685,7 +2691,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Table row style 
 
-The Syncfusion .NET PDF library supports applying different styles to a row in the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) by using the [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html) and [PdfGridRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridRow.html) instances. The following code sample explains this.
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports applying different styles to a row in the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) by using the [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html) and [PdfGridRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridRow.html) instances. The following code sample explains this.
 
 {% tabs %}
 
@@ -2880,7 +2886,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Word wrap
 
-The Syncfusion .NET PDF library supports word wrapping in the table cell by setting the [WordWrap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_WordWrap) property to ``Word`` of the [PdfWordWrapType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfWordWrapType.html) Enum. It also supports the ``Character`` and ``WordOnly`` text wrapping. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports word wrapping in the table cell by setting the [WordWrap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_WordWrap) property to ``Word`` of the [PdfWordWrapType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfWordWrapType.html) Enum. It also supports the ``Character`` and ``WordOnly`` text wrapping. 
 
 The following code sample explains how to apply word wrap in the PDF table cell. 
 
@@ -3185,7 +3191,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Draw HTML styled text 
 
-The Syncfusion .NET PDF library provides support to render HTML string in the PDF table cell using the [PdfHTMLTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html) class. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library provides support to render HTML string in the PDF table cell using the [PdfHTMLTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html) class. 
 
 * The PdfHTMLTextElement class provides support for a basic set of HTML tags, to render the HTML format text in the PDF document.
 
@@ -3466,7 +3472,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add different font styles for particular table cell 
 
-The Syncfusion .NET PDF library supports adding of different font styles for a particular table cell using the [BeginCellLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_BeginCellLayout) event in the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) class. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports adding of different font styles for a particular table cell using the [BeginCellLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_BeginCellLayout) event in the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) class. 
 
 The following code illustrates how to create a table with different font styles for a particular table cell using the ``PdfGrid.`` 
 
@@ -3803,7 +3809,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Draw border less table 
 
-The Syncfusion .NET PDF library allows you to draw border less tables by setting the ``Transparent`` color to all [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html#Syncfusion_Pdf_Grid_PdfGridCellStyle_Borders) property of the [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html). Also change or remove the border of either side of the table cell. 
+The Syncfusion<sup>&reg;</sup> .NET PDF library allows you to draw border less tables by setting the ``Transparent`` color to all [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html#Syncfusion_Pdf_Grid_PdfGridCellStyle_Borders) property of the [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html). Also change or remove the border of either side of the table cell. 
 
 The following code sample illustrates how to draw a border less table in a PDF document using the [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html). 
 

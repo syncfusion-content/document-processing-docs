@@ -1,5 +1,5 @@
 ---
-title: FAQ about Paragraph and Paragraph Items | DocIO | Syncfusion&reg;
+title: FAQ about Paragraph and Paragraph Items | DocIO | Syncfusion
 description: Learn about the frequently asked questions about paragraph and paragraph items in Word document in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -436,4 +436,201 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Can the chart data be refreshed?
 
-Yes, Essential&reg; DocIO supports refreshing the chart data. For more details, refer [Working with charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts).
+Yes, Essential<sup>&reg;</sup> DocIO supports refreshing the chart data. For more details, refer [Working with charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts).
+
+## How to detect the shape type in a Word document?
+
+To detect the type of a shape in a Word document, you can use the [AutoShapeType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html#Syncfusion_DocIO_DLS_Shape_AutoShapeType) property from the [Shape](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Shape.html) class, which specifies the type of the shape. Here's a code snippet to detect the shape type:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+// Get the last paragraph from the document
+WParagraph paragraph = document.LastParagraph;
+// Access the shape from the paragraph's child entities
+Shape shape = paragraph.ChildEntities[i] as Shape;
+// Get the type of the shape
+AutoShapeType shapeType = shape.AutoShapeType;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Get the last paragraph from the document
+Dim paragraph As WParagraph = document.LastParagraph
+' Access the shape from the paragraph's child entities
+Dim shape As Shape = TryCast(paragraph.ChildEntities(i), Shape)
+' Get the type of the shape
+Dim shapeType As AutoShapeType = shape.AutoShapeType
+{% endhighlight %}
+
+{% endtabs %}
+
+## Is it possible to change the DATE  field value in a Word document using DocIO? 
+
+No, DocIO does not allow directly changing the value of a DATE field in a Word document. This is because DATE fields are auto-update fields, and their values are refreshed automatically when the document is opened in Microsoft Word.
+
+When a Word document with a DATE field is opened in Microsoft Word, the field value updates automatically, even in read-only mode. DocIO follows the same behavior as Microsoft Word to ensure compatibility and consistency.
+
+In conclusion, this behavior is not a limitation or issue, but rather aligns with Microsoft Word's standard functionality.
+
+## Can the auto-scale option be set for 2D charts in a Word document?
+
+No, the auto-scale option is not available for 2D charts. This is because auto-scaling is specifically designed for 3D charts to maintain accurate proportions when rotated or resized.
+
+This behavior aligns with Microsoft Word's standards, and the DocIO library adheres to the same limitation. Even when the X and Y rotations of a 3D chart are set to 0 degrees to mimic the appearance of a 2D chart, the auto-scale option remains exclusive to true 3D chart types.
+
+## Does importing content using keep source formatting option copy the format from the style to the destination document?
+
+Yes, when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields) while importing content using [ImportContent](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html) API, it copies both the style and inline formatting. For example, if the text is red and bold in the source document(which applied through the style), the destination document will keep the same red color and bold effect.
+
+However, if part of the text has inline formatting (like a blue color), it will override the style only for that part of the text. So, the destination document will show the blue part, but the rest of the text will stay red and bold.
+
+In short, **inline formatting** takes priority over the style for specific parts of the text, while "Keep Source Formatting" ensures that most formatting is preserved.
+
+This behavior follows the Microsoft Word when using "Keep Source Formatting". Similarly, DocIO also follows this behavior when you use [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#fields).
+
+## Are strip lines on charts supported in DocIO?
+
+No, strip lines in charts are not supported in DocIO. Microsoft Word application does not provide specific settings for strip lines, which are used to highlight values or ranges with horizontal or vertical lines across chart areas. DocIO follows the same and does not support strip lines in charts.
+
+## How to enable the "Don't add space between paragraphs of the same style" option for paragraphs in a Word document?
+
+In DocIO, you can enable the **Don't add space between paragraphs of the same style** option by setting the [ContextualSpacing](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraphFormat.html#Syncfusion_DocIO_DLS_WParagraphFormat_ContextualSpacing) property to true. This ensures that no additional spacing is applied between consecutive paragraphs that use the same style.
+
+The following code illustrates how to enable the "Don't add space between paragraphs of the same style" option.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+ // Find the "Normal" paragraph style in the document's styles collection
+ WParagraphStyle normalStyle = document.Styles.FindByName("Normal") as WParagraphStyle;
+// Check if the "Normal" style is found, and if so, enable contextual spacing
+if (normalStyle != null)
+{
+    // Enable contextual spacing to avoid adding extra space between paragraphs with the same style
+    normalStyle.ParagraphFormat.ContextualSpacing = true;
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Find the "Normal" paragraph style in the document's styles collection
+Dim normalStyle As WParagraphStyle = TryCast(document.Styles.FindByName("Normal"), WParagraphStyle)
+' Check if the "Normal" style is found, and if so, enable contextual spacing
+If normalStyle IsNot Nothing Then
+    ' Enable contextual spacing to avoid adding extra space between paragraphs with the same style
+    normalStyle.ParagraphFormat.ContextualSpacing = True
+End If
+{% endhighlight %}
+
+{% endtabs %}
+
+## Why do paragraphs have spacing when appending HTML into Word document using AppendHTML() API?
+
+When converting HTML to Word documents using the Microsoft Word application, the tags automatically include default spacing (before and after). This behavior occurs because Word applies default paragraph spacing during the conversion process.
+
+![Paragraph spacing when append HTML in DOCX](../FAQ_images/Paragraph-spacing-when-append-HTML-in-DOCX.png)
+
+Similarly, the .NET Word Library (DocIO) also follows this behavior when appending HTML content using the AppendHTML(String) method.
+
+As a result, you may notice extra spacing in the paragraphs, even if the input HTML doesn’t specify spacing values in the tags.
+
+To adjust this extra spacing in DocIO, you can iterate through the paragraphs inserted by the AppendHTML method and modify their paragraph formatting. For example, you can set the spacing before and after each paragraph to zero or adjust it as needed. Here’s a simple code snippet that demonstrates how to do this:
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Open the Word document.
+using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Template.docx"), FileMode.Open, FileAccess.Read))
+{
+    using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
+    {
+        // Access the first section of the document.
+        WSection section = document.Sections[0];
+        // Get the index of the last paragraph.
+        int paraIndex = section.Body.Paragraphs.Count - 1;
+        // Append HTML content to the document with formatting in <p> tag.
+        document.LastParagraph.AppendHTML("<p>The Giant</p><p>Panda</p>");
+        // Iterate through the paragraphs in the section's body.
+        for (int i = paraIndex; i < section.Body.ChildEntities.Count; i++)
+        {
+            // Get the paragraph and check if it's not null.
+            WParagraph paragraph = section.Body.ChildEntities[i] as WParagraph;
+            if (paragraph != null)
+            {
+                // Set the paragraph formatting spacing to 0.
+                paragraph.ParagraphFormat.BeforeSpacing = 0;
+                paragraph.ParagraphFormat.AfterSpacing = 0;
+            }
+        }
+        // Save the modified document.
+        using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/Result.docx"), FileMode.Create, FileAccess.Write))
+        {
+            document.Save(outputStream, FormatType.Docx);
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Open the Word document.
+using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Template.docx"), FileMode.Open, FileAccess.Read))
+{
+    using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
+    {
+        // Access the first section of the document.
+        WSection section = document.Sections[0];
+        // Get the index of the last paragraph.
+        int paraIndex = section.Body.Paragraphs.Count - 1;
+        // Append HTML content to the document with formatting in <p> tag.
+        document.LastParagraph.AppendHTML("<p>The Giant</p><p>Panda</p>");
+        // Iterate through the paragraphs in the section's body.
+        for (int i = paraIndex; i < section.Body.ChildEntities.Count; i++)
+        {
+            // Get the paragraph and check if it's not null.
+            WParagraph paragraph = section.Body.ChildEntities[i] as WParagraph;
+            if (paragraph != null)
+            {
+                // Set the paragraph formatting spacing to 0.
+                paragraph.ParagraphFormat.BeforeSpacing = 0;
+                paragraph.ParagraphFormat.AfterSpacing = 0;
+            }
+        }
+        // Save the modified document.
+        using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/Result.docx"), FileMode.Create, FileAccess.Write))
+        {
+            document.Save(outputStream, FormatType.Docx);
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Open the Word document.
+Using inputStream As FileStream = New FileStream(Path.GetFullPath("Data/Template.docx"), FileMode.Open, FileAccess.Read)
+    Using document As WordDocument = New WordDocument(inputStream, FormatType.Docx)
+        ' Access the first section of the document.
+        Dim section As WSection = document.Sections(0)
+        ' Get the index of the last paragraph.
+        Dim paraIndex As Integer = section.Body.Paragraphs.Count - 1
+        ' Append HTML content to the document with formatting in <p> tag.
+        document.LastParagraph.AppendHTML("<p>The Giant</p><p>Panda</p>")
+        ' Iterate through the paragraphs in the section's body.
+        For i As Integer = paraIndex To section.Body.ChildEntities.Count - 1
+            ' Get the paragraph and check if it's not null.
+            Dim paragraph As WParagraph = TryCast(section.Body.ChildEntities(i), WParagraph)
+            If paragraph IsNot Nothing Then
+                ' Set the paragraph formatting spacing to 0.
+                paragraph.ParagraphFormat.BeforeSpacing = 0
+                paragraph.ParagraphFormat.AfterSpacing = 0
+            End If
+        Next
+        ' Save the modified document.
+        Using outputStream As FileStream = New FileStream(Path.GetFullPath("Output/Result.docx"), FileMode.Create, FileAccess.Write)
+            document.Save(outputStream, FormatType.Docx)
+        End Using
+    End Using
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Change-format-after-append-html).

@@ -129,7 +129,7 @@ To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/e
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-The essential PDF supports all the languages the Tesseract engine supports in the OCR processor.
+The essential<sup>&reg;</sup> PDF supports all the languages the Tesseract engine supports in the OCR processor.
 The dictionary packs for the languages can be downloaded from the following online location:<br/>
 <a href="https://code.google.com/p/tesseract-ocr/downloads/list">https://code.google.com/p/tesseract-ocr/downloads/list</a>
 <br/><br/>
@@ -411,8 +411,8 @@ EXPOSE 8081
 </table>
 
 
-## Default path reference for Syncfusion OCR packages
-When installing the Syncfusion OCR NuGet packages, the tessdata and tesseract path binaries are copied into the runtimes folder. The default binaries path references are added in the package itself, so there is no need to set the manual path.
+## Default path reference for Syncfusion<sup>&reg;</sup> OCR packages
+When installing the Syncfusion<sup>&reg;</sup> OCR NuGet packages, the tessdata and tesseract path binaries are copied into the runtimes folder. The default binaries path references are added in the package itself, so there is no need to set the manual path.
 
 If you are facing any issues with default reference path in your project. Kindly manually set the Tesseract and Tessdata path using the TessdataPath and TesseractPath in OCRProcessor class. You can find the binaries in the below project in your project location.
 
@@ -464,6 +464,29 @@ Installing the following Skiasharp NuGet for the Linux environment will resolve 
 Please find the NuGet link below,
 </br>
 NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
+</td>
+</tr>
+</table>
+
+## OCR not working on Azure App Service Linux Docker Container: Exception has been thrown by the target of an invocation
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">Syncfusion.Pdf.PdfException: Exception has been thrown by the target of an invocation while deploying ASP .NET Core applications in Azure App Service Linux Docker Container</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>when publishing the ASP.NET Core application to the Azure App Service Linux Docker container, only the .so, .dly, and .dll files are copied from the runtimes folder to the publish folder. Files in other formats are not copied to the publish folder.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To resolve this problem, the tessdata folder path must be explicitly set relative to the project directory under runtimes/tessdata. The publish folder can be located in your project directory at this path: obj\Docker\publish.
+<br/><br/>
+Please refer to the screenshot below:
+<br/><br/>
+<img alt="OCR folder image" src="OCR-Images/TessdataRemove.jpeg">
+<br/><br/>
 </td>
 </tr>
 </table>

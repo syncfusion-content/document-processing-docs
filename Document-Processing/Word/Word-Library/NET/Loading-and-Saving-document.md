@@ -1,6 +1,6 @@
 ---
-title: Loading & Saving Word document in C# | DocIO | Syncfusion&reg;
-description: Learn to open and save the Word document in C# and VB.NET using Syncfusion&reg; .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Loading & Saving Word document in C# | DocIO | Syncfusion
+description: Learn to open and save the Word document in C# and VB.NET using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 ## Namespaces required
 
-The following namespaces of Essential&reg; DocIO need to be included in your application to load and save the Word document.
+The following namespaces of Essential<sup>&reg;</sup> DocIO need to be included in your application to load and save the Word document.
 
 {% tabs %}
 
@@ -754,3 +754,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Frequently Asked Questions
 
 * [How to open a document from stream using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-open-a-document-from-stream-using-docio)
+* [How to open the Word document in DocIO if already opened in Word application?](https://help.syncfusion.com/document-processing/word/word-library/net/loading-and-saving-document#opening-the-read-only-word-document)

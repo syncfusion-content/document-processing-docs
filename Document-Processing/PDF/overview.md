@@ -10,9 +10,9 @@ keywords: PDF, SDK, Automation, API, create, view, edit, convert, read
 > With the 2024 Volume 4 release, we will discontinue support for .NET Framework 4.0 in WinForms, WPF, ASP.NET MVC, and Document Processing Libraries. Please plan to upgrade to .NET Framework 4.6.2 or higher.<br>
 With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .Net 8.0 or higher.
 
-# Welcome to Syncfusion PDF Document Processing Framework
+# Welcome to Syncfusion<sup>&reg;</sup> PDF Document Processing Framework
 
-Syncfusion PDF Document Processing Framework is a collection of PDF document processing library, PDF converters and PDF Viewer component that works without Adobe dependencies. It eases the developers, as they can just integrate and achieve the required PDF processing functionalities and concentrate on core logics of their application.
+Syncfusion<sup>&reg;</sup> PDF Document Processing Framework is a collection of PDF document processing library, PDF converters and PDF Viewer component that works without Adobe dependencies. It eases the developers, as they can just integrate and achieve the required PDF processing functionalities and concentrate on core logics of their application.
 
 
 ## List of PDF Document Processing Products:

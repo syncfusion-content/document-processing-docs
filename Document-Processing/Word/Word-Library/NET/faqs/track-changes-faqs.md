@@ -1,5 +1,5 @@
 ---
-title: FAQ about Track Changes | DocIO | Syncfusion&reg;
+title: FAQ about Track Changes | DocIO | Syncfusion
 description: Learn about the frequently asked questions about track changes in Word document in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -220,3 +220,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## What happens when Word documents with track changes are used for comparing? 
 
 The .NET Word library (DocIO) accepts all the changes in input documents and then performs a comparison between two Word documents.
+
+## Why track changes color are different in Word document?
+
+The colors for track changes in a Word document may appear different due to the settings applied in the Word application. Word automatically assigns colors to inserted and deleted text based on the track changes settings. If the colors appear differently, it could be due to customized settings for insertions, deletions, and other tracked changes in the document.
+
+To change the colors for insertions, deletions, or other changes, open the **Review tab**, select **Change Tracking Options**. In the Track Changes Options dialog, click on the **Advanced** button. In the **Insertions and Deletions** section, you can choose your preferred color for insertions and deletions from the dropdown menus. Once you’ve selected your desired colors, click OK to apply the changes. This will ensure that the colors for tracked changes reflect your preferences. For more details, you can refer to the official Microsoft support guide on [changing the track changes color](https://support.microsoft.com/en-us/office/change-the-track-changes-color-48c80bb3-458c-4abb-8e21-25f9bac47484).
+
+![Advanced track changes options in Microsoft Word](../FAQ_images/Advanced-track-changes-options-in-Microsoft-Word.png)
+

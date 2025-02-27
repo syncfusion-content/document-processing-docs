@@ -1,5 +1,5 @@
 ---
-title: RTF conversions in C# | DocIO | Syncfusion&reg;
+title: RTF conversions in C# | DocIO | Syncfusion
 description: Learn how to convert Word document to RTF and vice versa using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -20,7 +20,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [RTF conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [RTF conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
-The Essential&reg; DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
+The Essential<sup>&reg;</sup> DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -107,3 +107,7 @@ The supported and unsupported features of DocIO based on file formats can be ref
 
 * Explore how to convert the RTF file to Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/rtftodoc#/material3).
 * See how to convert a Word document to an RTF file using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtortf#/material3).
+
+## See Also
+
+* [How to copy the format of the text from an RTF string and apply it to text in DOCX format document?](https://support.syncfusion.com/kb/article/17903/how-to-copy-the-format-of-the-text-from-an-rtf-string-and-apply-it-to-text-in-docx-format-document)

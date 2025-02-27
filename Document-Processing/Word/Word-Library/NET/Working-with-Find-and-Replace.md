@@ -1,5 +1,5 @@
 ---
-title: Find and replace in Word document | DocIO | Syncfusion&reg;
+title: Find and replace in Word document | DocIO | Syncfusion
 description: Learn how to find a text and replace it with another text, image, or table in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -1827,7 +1827,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to replace the particular text with hyperlink in Word document](https://support.syncfusion.com/kb/article/10326/how-to-replace-the-particular-text-with-hyperlink-in-word-document)
-* [How to find the empty paragraphs in the Word document using Essential&reg; DocIO](https://support.syncfusion.com/kb/article/3943/how-to-find-the-empty-paragraphs-in-the-word-document-using-essential-docio-in-net-webforms-)
+* [How to find the empty paragraphs in the Word document using Essential<sup>&reg;</sup> DocIO](https://support.syncfusion.com/kb/article/3943/how-to-find-the-empty-paragraphs-in-the-word-document-using-essential-docio-in-net-webforms-)
 * [How to replace text in a Word document with HTML](https://support.syncfusion.com/kb/article/11906/how-to-replace-text-in-a-word-document-with-html)
 * [How to find and replace text inside table in Word document](https://support.syncfusion.com/kb/article/11922/how-to-find-and-replace-text-inside-table-in-word-document)
 * [How to find and replace text in headers and footers of Word document](https://support.syncfusion.com/kb/article/11848/how-to-find-and-replace-text-in-headers-and-footers-of-word-document)
@@ -1844,3 +1844,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to find and replace a text with the Excel content in a Word document?](https://support.syncfusion.com/kb/article/15947/how-to-find-and-replace-a-text-with-the-excel-content-in-a-word-document)
 * [How to replace list paragraph text with multiple paragraphs from another Word document](https://support.syncfusion.com/kb/article/17814/how-to-replace-list-paragraph-text-with-multiple-paragraphs-from-another-word-document)
 * [How to replace the text with an HTML table in a Word document](https://support.syncfusion.com/kb/article/17712/how-to-replace-the-text-with-an-html-table-in-a-word-document)
+* [How to find and apply bold formatting to a specific word in replaced content](https://support.syncfusion.com/kb/article/17700/how-to-find-and-apply-bold-formatting-to-a-specific-word-in-replaced-content)
+* [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document) 
+* [How to apply bold formatting to the content between placeholders in a Word document?](https://support.syncfusion.com/kb/article/17778/how-to-apply-bold-formatting-to-the-content-between-placeholders-in-a-word-document)

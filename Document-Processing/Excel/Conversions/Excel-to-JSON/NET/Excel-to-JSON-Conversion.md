@@ -8,13 +8,16 @@ documentation: UG
 
 # Excel to JSON Conversion
 
-Essential&reg; XlsIO supports to convert Excel data as JSON files by simply saving the workbook using the [SaveAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAsJson_System_String_) method. This support includes the features:
+Essential<sup>&reg;</sup> XlsIO supports to convert Excel data as JSON files by simply saving the workbook using the [SaveAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAsJson_System_String_) method. This support includes the features:
 
 * Save as a simple JSON file or a JSON file as schema
 * Save a workbook to JSON
 * Save a worksheet to JSON
 * Save a range to JSON
 * Save as a stream with the above features
+
+To quickly start converting an Excel document to a JSON, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=IpUYRwQdVsQ " %}
 
 ## Workbook to JSON as schema
 

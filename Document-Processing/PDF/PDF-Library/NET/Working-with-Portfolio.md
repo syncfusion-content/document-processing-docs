@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Portfolio
 
-PDF Portfolios allows the user to bring together content from a variety of sources, including documents, drawings, images, e-mail, spreadsheets and web pages. Essential PDF allows the user to create portfolios and also to extract the files from them.
+PDF Portfolios allows the user to bring together content from a variety of sources, including documents, drawings, images, e-mail, spreadsheets and web pages. Essential<sup>&reg;</sup> PDF allows the user to create portfolios and also to extract the files from them.
 
 ## Creating a PDF portfolio
 
@@ -106,7 +106,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extracting file from PDF Portfolio
 
-The Essential PDF provides support for extracting the files from the PDF Portfolio using [Attachments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Attachments) property of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class and saving the files to the disk. The following code sample shows the steps to extract files from PDF Portfolio.
+The Essential<sup>&reg;</sup> PDF provides support for extracting the files from the PDF Portfolio using [Attachments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Attachments) property of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class and saving the files to the disk. The following code sample shows the steps to extract files from PDF Portfolio.
 
 {% tabs %} 
 

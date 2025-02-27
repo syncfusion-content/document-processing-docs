@@ -1,5 +1,5 @@
 ---
-title: Merge Word documents in C# | DocIO | Syncfusion&reg;
+title: Merge Word documents in C# | DocIO | Syncfusion
 description: Learn how to merge multiple Word documents into one using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -16,6 +16,9 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [Merge Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Merge Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+To quickly start merging Word documents, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=atOSwzidmdw" %}
+
 ## Merge document in new page
 
 The following code example illustrates how to import the contents from source document into destination document where the contents are appended. 
@@ -23,9 +26,8 @@ The following code example illustrates how to import the contents from source do
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-new-page/.NET/Merge-documents-in-new-page/Program.cs" %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-new-page/.NET/Merge-documents-in-new-page/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an source document from file system through constructor of WordDocument class
@@ -82,9 +84,8 @@ In the resultant document, the imported contents start from a new page followed 
 When your requirement is to append the contents from the same page instead of starting from a new page, you need to set the break code of first section of Source document as [NoBreak](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SectionBreakCode.html). The following code example illustrates the importing contents from the same page.
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-same-page/.NET/Merge-documents-in-same-page/Program.cs" %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-same-page/.NET/Merge-documents-in-same-page/Program.cs" %}
 FileStream sourceStreamPath = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 FileStream destinationStreamPath = new FileStream(destinationFileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Opens an source document from file system through constructor of WordDocument class
@@ -234,3 +235,4 @@ destinationDocument.Close()
 * [How to merge Word documents without changing the page numbers?](https://support.syncfusion.com/kb/article/12390/how-to-merge-word-documents-without-changing-the-page-numbers)
 * [How to merge multiple documents with header and footer of destination document?](https://support.syncfusion.com/kb/article/12252/how-to-merge-multiple-documents-with-header-and-footer-of-destination-document)
 * [How to merge Word documents and generate TOC in C#?](https://support.syncfusion.com/kb/article/16895/how-to-merge-word-documents-and-generate-toc-in-c)
+* [Why aren't merged documents added to a new page when merging Word documents using DocIO?](https://support.syncfusion.com/kb/article/18903/why-arent-merged-documents-added-to-a-new-page-when-merging-word-documents-using-docio)

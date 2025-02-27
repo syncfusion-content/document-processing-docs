@@ -9,7 +9,7 @@ keywords: c# save pdf, c# load pdf
 
 # Open and Save PDF document in Xamarin
 
-The [Syncfusion Xamarin PDF library](https://www.syncfusion.com/document-processing/pdf-framework/xamarin) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Xamarin**.
+The [Syncfusion<sup>&reg;</sup> Xamarin PDF library](https://www.syncfusion.com/document-processing/pdf-framework/xamarin) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Xamarin**.
 
 ## Steps to open and save PDF document programmatically:
 
@@ -25,7 +25,7 @@ N> If .NET Standard is not available in the code sharing strategy, the Portable 
 Step 3: Install the [Syncfusion.Xamarin.PDF](https://www.nuget.org/packages/Syncfusion.Xamarin.PDF/) NuGet package as a reference to your Xamarin.Forms applications from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Xamarin.PDF NuGet package](Images/Xamarin_NuGet_package.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add new Forms XAML page in *portable project* if there is no XAML page defined in the App class. Otherwise proceed to the next step.
 <ul>
@@ -250,4 +250,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the PDF document as follows.
 ![Xamarin open and save output PDF document](Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/xamarin) to explore the rich set of Syncfusion PDF library features.
+Click [here](https://www.syncfusion.com/document-processing/pdf-framework/xamarin) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

@@ -7,9 +7,12 @@ documentation: UG
 ---
 # Working with Annotations
 
-Essential PDF provides support for interactive [annotations](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-annotation).
+Essential<sup>&reg;</sup> PDF provides support for interactive [annotations](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-annotation).
 
 You can add, delete and modify the annotation from the PDF documents.
+
+Check the following video to learn how to work with annotations in PDF documents using the .NET PDF Library.
+{% youtube "https://youtu.be/0KnFyXd-KpM?si=qCVcijc5XxcbgaZ-" %}
 
 ## Adding annotations to a PDF document
 
@@ -175,438 +178,11 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-a-popup-annotation-to-an-existing-PDF-document).
 
-## Flatten annotation
-
-Annotations can be flattened by removing the existing annotation and replacing it with graphics objects that would resemble the annotation and cannot be edited.
-
-This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) property. Please refer the sample for flattening all the annotations in the PDF document.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document/.NET/Flatten-the-annotations-in-an-existing-PDF-document/Program.cs" %}
-
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get all the pages
-foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
-{
-    //Flatten all the annotations in the page
-    loadedPage.Annotations.Flatten = true;
-}
-
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Closes the document
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get all the pages.
-foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
-{
-//Flatten all the annotations in the page
-loadedPage.Annotations.Flatten = true;
-}
-
-//Save and close the PDF document instance.
-loadedDocument.Save("output.pdf");
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("input.pdf")
-'Get all the pages
-For Each loadedPage As PdfLoadedPage In loadedDocument.Pages
-'Flatten all the annotations in the page
-loadedPage.Annotations.Flatten = True
-Next
-
-'Save and close the PDF document instance
-loadedDocument.Save("output.pdf")
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document).
-
-To flatten the specific annotation in the PDF document, use the below code example.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-specific-annotaiton-in-the-PDF-document/.NET/Flatten-the-specific-annotaiton-in-the-PDF-document/Program.cs" %}
-
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get all the pages
-foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
-{
-    //Flatten all the annotations in the page
-    foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
-    {
-        //Check for the circle annotation
-        if (annotation is PdfLoadedCircleAnnotation)
-        {
-            //Flatten the circle annotation
-            annotation.Flatten = true;
-        }
-    }
-}
-
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Closes the document
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Get all the pages
-foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
-{
-//Flatten all the annotations in the page
-foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
-{
-//Check for the circle annotation
-if (annotation is PdfLoadedCircleAnnotation)
-{
-//Flatten the circle annotation
-annotation.Flatten = true;
-}
-}
-}
-//Save and close the PDF document instance
-loadedDocument.Save("Output.pdf");
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("input.pdf")
-'Get all the pages
-For Each loadedPage As PdfLoadedPage In loadedDocument.Pages
-	'Flatten all the annotations in the page
-	For Each annotation As PdfLoadedAnnotation In loadedPage.Annotations
-		'Check for the circle annotation
-		If TypeOf annotation Is PdfLoadedCircleAnnotation Then
-			'Flatten the circle annotation
-			annotation.Flatten = True
-		End If
-	Next
-Next
-
-'Save and close the PDF document instance
-loadedDocument.Save("Output.pdf")
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-the-specific-annotaiton-in-the-PDF-document).
-
-To flatten pop-up annotation [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) property to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-popup-annotation-in-the-PDF-document/.NET/Flatten-popup-annotation-in-the-PDF-document/Program.cs" %}
-
-//Load the PDF document
-FileStream docStream = new FileStream("PopupAnnotation.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Get all the pages
-foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
-{
-    foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
-    {
-        if (annotation is PdfLoadedPopupAnnotation)
-        {
-            //Enable the flatten annotation
-            annotation.Flatten = true;
-            //Enable flatten for the pop-up window annotation
-            annotation.FlattenPopUps = true;
-        }
-    }
-}
-
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-loadedDocument.Save(stream);
-//Close the document
-loadedDocument.Close(true);
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PopupAnnotation.pdf");
-//Get all the pages
-foreach(PdfLoadedPage loadedPage in loadedDocument.Pages)
-{
-    foreach(PdfLoadedAnnotation annotation in loadedPage.Annotations)
-    {
-        if(annotation is PdfLoadedPopupAnnotation)
-        {
-            //Enable the flatten annotation
-            annotation.Flatten = true;
-            //Enable flatten for the pop-up window annotation
-            annotation.FlattenPopUps = true;
-        }
-    }
-}
-
-//Save the document
-loadedDocument.Save("Output.pdf");
-//Close the document
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("PopupAnnotation.pdf")
-'Get all the pages
-For Each loadedPage As PdfLoadedPage In loadedDocument.Pages
-    For Each annotation As PdfLoadedAnnotation In loadedPage.Annotations
-        If TypeOf annotation Is PdfLoadedPopupAnnotation Then
-            'Enable the flatten annotation
-            annotation.Flatten = True
-            'Enable flatten for the pop-up window annotation
-            annotation.FlattenPopUps = True
-        End If
-    Next
-Next
-
-'Save the document
-loadedDocument.Save("Output.pdf")
-'Close the document
-loadedDocument.Close(True)
-
-{% endhighlight %}
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-popup-annotation-in-the-PDF-document).
-
-### Flattening redaction annotation
-
-To flatten the redaction annotation in PDF document, use the following code example. 
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Get stream from an existing PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-
-//Get the annotation from annotation collection. 
-foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
-{
-    //Check for the Redaction annotation.
-    if (annot is PdfLoadedRedactionAnnotation)
-    {
-        //Get the redaction annotation. 
-        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
-
-        //Flatten the redaction annotation. 
-        redactAnnot.Flatten = true;
-    }
-}
-loadedDocument.Redact();
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream(); 
-loadedDocument.Save(stream); 
-//Close the document.
-loadedDocument.Close(true);
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-
-//Get the annotation from annotation collection. 
-foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
-{
-    //Check for the Redaction annotation.
-    if (annot is PdfLoadedRedactionAnnotation)
-    {
-        //Get the redaction annotation. 
-        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
-
-        //Flatten the redaction annotation.
-        redactAnnot.Flatten = true;
-
-    }
-}
-
-//Save the document.
-loadedDocument.Save("Output.pdf");
-//Close the document.
-loadedDocument.Close();
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document. 
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("../../Data/Input.pdf")
-
-'Get the annotation from annotation collection. 
-For Each annot As PdfAnnotation In loadedDocument.Pages(0).Annotations
-
-    'Check for redaction annotation. 
-    If TypeOf annot Is PdfLoadedRedactionAnnotation Then
-
-        'Load the redaction annotation. 
-        Dim redactAnnot As PdfLoadedRedactionAnnotation = TryCast(annot, PdfLoadedRedactionAnnotation)
-
-        'Flatten the redaction annotation.
-        redactAnnot.Flatten = True
-
-    End If
-
-Next
-
-'Save the PDF document. 
-loadedDocument.Save("Output.pdf")
-'Close the PDF document. 
-loadedDocument.Close()
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> To flatten the redaction annotation from PDF document in ASP.NET Core, you need to include the Syncfusion.Pdf.Imaging.Portable assembly reference in the .NET Core project. 
-
-## Flattening annotations without calling save method 
-
-Annotations can be flattened by removing the existing annotation and replacing it with graphic objects that would resemble the annotation and cannot be edited.
-
-This can be achieved by calling the [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method. Please refer to the sample for flattening all the annotations in the PDF document without calling the [save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method.
-
-To flatten the annotation without pop-ups [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-without-calling-save-method/.NET/Flattening-annotations-without-calling-save-method/Program.cs" %}
-
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-
-//Flatten all the annotations without popups in the document
-loadedDocument.FlattenAnnotations();
-
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Closes the document
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-
-//Flatten all the annotations without popups in the document
-loadedDocument.FlattenAnnotations();
-
-//Save and close the PDF document instance
-loadedDocument.Save("output.pdf");
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("input.pdf")
-
-'Flatten all the annotations without popups in the document
-loadedDocument.FlattenAnnotations()
-Next
-
-'Save and close the PDF document instance
-loadedDocument.Save("output.pdf")
-loadedDocument.Close(True)
-
-{% endhighlight %}
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flattening-annotations-without-calling-save-method).
-
-To flatten the annotation with pop-ups [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations_System_Boolean_) method to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
-
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-with-popups-in-PDF/.NET/Flattening-annotations-with-popups-in-PDF/Program.cs" %}
-
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Flatten all the annotations without popups in the document
-loadedDocument.FlattenAnnotations(true);
-
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//Closes the document
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-//Flatten all the annotations with popups in the document
-loadedDocument.FlattenAnnotations(true);
-//Save and close the PDF document instance
-loadedDocument.Save("output.pdf");
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("input.pdf")
-'Flatten all the annotations without popups in the document 
-loadedDocument.FlattenAnnotations(true)
-'Save and close the PDF document instance
-loadedDocument.Save("output.pdf")
-loadedDocument.Close(true)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flattening-annotations-with-popups-in-PDF).
-
 ## Supported annotation types
 
 ### 3D Annotation
 
-3D Annotations are used to represent 3D artworks in a PDF document. Essential PDF provides support to embed 3D files (u3d) in PDF. 
+3D Annotations are used to represent 3D artworks in a PDF document. Essential<sup>&reg;</sup> PDF provides support to embed 3D files (u3d) in PDF. 
 
 You can add a 3D annotation in PDF document using [Pdf3DAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.Pdf3DAnnotation.html) class. The following example illustrates this.
 {% tabs %}
@@ -1816,7 +1392,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Redaction Annotation
 
-The essential PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
+The essential<sup>&reg;</sup> PDF supports removing or redacting the sensitive text and images from the PDF documents. The redaction is the process of permanently removing sensitive information from the PDF document, use the [PdfRedaction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Redaction.PdfRedaction.html) class to remove content. Using the [PdfRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html) class, you can mark the content to redact or remove it from the PDF pages. The content will be redacted when performing the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) operation.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Removing-the-sensitive-text-and-images-from-PDF-document/.NET/Removing-the-sensitive-text-and-images-from-PDF-document/Program.cs" %}
@@ -2564,9 +2140,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Measurement Annotations
 
-Essential PDF supports interactive measurement annotations, which measures the distance, area, and angle of the line segments.
+Essential<sup>&reg;</sup> PDF supports interactive measurement annotations, which measures the distance, area, and angle of the line segments.
 
-The following measurement annotation types are supported in Essential PDF:
+The following measurement annotation types are supported in Essential<sup>&reg;</sup> PDF:
 
 ### Line measurement annotation
 
@@ -2950,7 +2526,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying the annotations
 
-Essential PDF allows you to modify the annotation of existing document. The following code illustrates this.
+Essential<sup>&reg;</sup> PDF allows you to modify the annotation of existing document. The following code illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Modifying-annotation-of-existing-PDF-document/.NET/Modifying-annotation-of-existing-PDF-document/Program.cs" %}
@@ -3025,7 +2601,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modifying the redaction annotations   
 
-The redaction annotations from the existing document can be modified using the Essential PDF library. You can add, remove, or modify the [PdfLoadedRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRedactionAnnotation.html) class in the existing PDF documents. 
+The redaction annotations from the existing document can be modified using the Essential<sup>&reg;</sup> PDF library. You can add, remove, or modify the [PdfLoadedRedactionAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRedactionAnnotation.html) class in the existing PDF documents. 
 The following code sample explains this.
 
 {% tabs %}
@@ -3145,6 +2721,160 @@ N> To modify the redaction annotation from PDF document in ASP.NET Core, you nee
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Modify-the-redaction-annotation-in-PDF-document).
 
+## Retrieve annotation
+
+### Retrieve annotation types from an existing PDF
+
+To identify annotation types in an existing PDF, the [PdfLoadedAnnotationTypes](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotationTypes.html) class can be used. This class facilitates recognizing the annotation types within the document.
+
+The following code example demonstrates how to retrieve the annotation type from an existing PDF document.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-type-from-pdf/.NET/Get-annotation-type-from-pdf/Program.cs" %}
+
+// Load the PDF document using a file stream
+using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    using (PdfLoadedDocument document = new PdfLoadedDocument(inputStream))
+    {
+        //Get the pages of the PDF file
+        for (int i = 0; i < document.PageCount; i++)
+        {
+            Console.WriteLine("Page Number: " + i);
+            PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
+
+            //Get the annotation type.
+            foreach (PdfLoadedAnnotation annotation in page.Annotations)
+            {
+                Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+     
+    //Load the PDF document
+    using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
+    {
+        //Get the pages of the PDF file
+        for (int i = 0; i < document.PageCount; i++)
+        {
+            Console.WriteLine("Page Number: " + i);
+            PdfLoadedPage page = document.Pages[i] as PdfLoadedPage;
+
+            //Get the annotation type.
+            foreach (PdfLoadedAnnotation annotation in page.Annotations)
+            {
+                Console.WriteLine("Annotation Type: " + annotation.Type.ToString());
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Using document As New PdfLoadedDocument("Input.pdf")
+    ' Iterate through the pages of the PDF file
+    For i As Integer = 0 To document.Pages.Count - 1
+        Console.WriteLine("Page Number: " & (i + 1))
+        Dim page As PdfLoadedPage = TryCast(document.Pages(i), PdfLoadedPage)
+
+        ' Check if the page contains annotations
+        If page.Annotations IsNot Nothing Then
+            ' Iterate through each annotation on the page
+            For Each annotation As PdfLoadedAnnotation In page.Annotations
+                ' Output the annotation type
+                Console.WriteLine("Annotation Type: " & annotation.AnnotationType.ToString())
+            Next
+        End If
+    Next
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-annotation-type-from-pdf/.NET).
+
+### Retrieve annotation creation date from an existing PDF
+
+The [CreationDate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_CreationDate) property is used to retrieve the creation date of an annotation from an existing PDF file. The following code example demonstrates how to access the creation date of an annotation.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-annotation-creation-date-from-PDF/.NET/Get-annotation-creation-date-from-pdf/Program.cs" %}
+
+// Load the PDF document
+using (FileStream inputStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    using (PdfLoadedDocument document = new PdfLoadedDocument(inputStream))
+    {
+        //Get the first page from the document
+        PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
+
+        //Get the annotation on that page
+        PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
+
+        //Get the annotation creation date.
+        DateTime creationDate = annotation.CreationDate;
+
+        Console.WriteLine("Annotation Creation Date: " + creationDate);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    using (PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf"))
+    {
+        //Get the first page from the document
+        PdfLoadedPage firstPage = document.Pages[0] as PdfLoadedPage;
+
+        //Get the annotation on that page
+        PdfLoadedAnnotation annotation = firstPage.Annotations[0] as PdfLoadedAnnotation;
+
+        //Get the annotation creation date.
+        DateTime creationDate = annotation.CreationDate;
+
+        Console.WriteLine("Annotation Creation Date: " + creationDate);
+    }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document
+Using document As New PdfLoadedDocument("Input.pdf")
+    ' Get the first page from the document
+    Dim firstPage As PdfLoadedPage = TryCast(document.Pages(0), PdfLoadedPage)
+
+    ' Check if the page contains annotations
+    If firstPage.Annotations IsNot Nothing AndAlso firstPage.Annotations.Count > 0 Then
+        ' Get the first annotation on that page
+        Dim annotation As PdfLoadedAnnotation = TryCast(firstPage.Annotations(0), PdfLoadedAnnotation)
+
+        ' Check if the annotation is not null
+        If annotation IsNot Nothing Then
+            ' Get the annotation creation date
+            Dim creationDate As DateTime = annotation.CreationDate
+
+            ' Output the annotation creation date
+            Console.WriteLine("Annotation Creation Date: " & creationDate.ToString())
+        End If
+    End If
+End Using
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-annotation-creation-date-from-PDF/.NET).
+
 ## Removing annotations from an existing PDF 
 
 You can remove the annotation from the annotation collection, represented by the [PdfLoadedAnnotationCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html) of the loaded page. The following code illustrates this.
@@ -3206,7 +2936,515 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Removing-annotations-from-an-existing-PDF-document).
 
-## Importing annotations from FDF file
+## Flatten annotation
+
+Annotations can be flattened by removing the existing annotation and replacing it with graphics objects that would resemble the annotation and cannot be edited.
+
+This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) property. Please refer the sample for flattening all the annotations in the PDF document.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document/.NET/Flatten-the-annotations-in-an-existing-PDF-document/Program.cs" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get all the pages
+foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
+{
+    //Flatten all the annotations in the page
+    loadedPage.Annotations.Flatten = true;
+}
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Closes the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+//Get all the pages.
+foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
+{
+//Flatten all the annotations in the page
+loadedPage.Annotations.Flatten = true;
+}
+
+//Save and close the PDF document instance.
+loadedDocument.Save("output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("input.pdf")
+'Get all the pages
+For Each loadedPage As PdfLoadedPage In loadedDocument.Pages
+'Flatten all the annotations in the page
+loadedPage.Annotations.Flatten = True
+Next
+
+'Save and close the PDF document instance
+loadedDocument.Save("output.pdf")
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-the-annotations-in-an-existing-PDF-document).
+
+To flatten the specific annotation in the PDF document, use the below code example.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-the-specific-annotaiton-in-the-PDF-document/.NET/Flatten-the-specific-annotaiton-in-the-PDF-document/Program.cs" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get all the pages
+foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
+{
+    //Flatten all the annotations in the page
+    foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
+    {
+        //Check for the circle annotation
+        if (annotation is PdfLoadedCircleAnnotation)
+        {
+            //Flatten the circle annotation
+            annotation.Flatten = true;
+        }
+    }
+}
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Closes the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+//Get all the pages
+foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
+{
+//Flatten all the annotations in the page
+foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
+{
+//Check for the circle annotation
+if (annotation is PdfLoadedCircleAnnotation)
+{
+//Flatten the circle annotation
+annotation.Flatten = true;
+}
+}
+}
+//Save and close the PDF document instance
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("input.pdf")
+'Get all the pages
+For Each loadedPage As PdfLoadedPage In loadedDocument.Pages
+	'Flatten all the annotations in the page
+	For Each annotation As PdfLoadedAnnotation In loadedPage.Annotations
+		'Check for the circle annotation
+		If TypeOf annotation Is PdfLoadedCircleAnnotation Then
+			'Flatten the circle annotation
+			annotation.Flatten = True
+		End If
+	Next
+Next
+
+'Save and close the PDF document instance
+loadedDocument.Save("Output.pdf")
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-the-specific-annotaiton-in-the-PDF-document).
+
+To flatten pop-up annotation [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedAnnotationCollection_Flatten) property to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-popup-annotation-in-the-PDF-document/.NET/Flatten-popup-annotation-in-the-PDF-document/Program.cs" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("PopupAnnotation.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get all the pages
+foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
+{
+    foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
+    {
+        if (annotation is PdfLoadedPopupAnnotation)
+        {
+            //Enable the flatten annotation
+            annotation.Flatten = true;
+            //Enable flatten for the pop-up window annotation
+            annotation.FlattenPopUps = true;
+        }
+    }
+}
+
+//Creating the stream object
+MemoryStream stream = new MemoryStream();
+//Save the document as stream
+loadedDocument.Save(stream);
+//Close the document
+loadedDocument.Close(true);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("PopupAnnotation.pdf");
+//Get all the pages
+foreach(PdfLoadedPage loadedPage in loadedDocument.Pages)
+{
+    foreach(PdfLoadedAnnotation annotation in loadedPage.Annotations)
+    {
+        if(annotation is PdfLoadedPopupAnnotation)
+        {
+            //Enable the flatten annotation
+            annotation.Flatten = true;
+            //Enable flatten for the pop-up window annotation
+            annotation.FlattenPopUps = true;
+        }
+    }
+}
+
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("PopupAnnotation.pdf")
+'Get all the pages
+For Each loadedPage As PdfLoadedPage In loadedDocument.Pages
+    For Each annotation As PdfLoadedAnnotation In loadedPage.Annotations
+        If TypeOf annotation Is PdfLoadedPopupAnnotation Then
+            'Enable the flatten annotation
+            annotation.Flatten = True
+            'Enable flatten for the pop-up window annotation
+            annotation.FlattenPopUps = True
+        End If
+    Next
+Next
+
+'Save the document
+loadedDocument.Save("Output.pdf")
+'Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-popup-annotation-in-the-PDF-document).
+
+### Flattening redaction annotation
+
+To flatten the redaction annotation in PDF document, use the following code example. 
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Get stream from an existing PDF document. 
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Get the annotation from annotation collection. 
+foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
+{
+    //Check for the Redaction annotation.
+    if (annot is PdfLoadedRedactionAnnotation)
+    {
+        //Get the redaction annotation. 
+        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
+
+        //Flatten the redaction annotation. 
+        redactAnnot.Flatten = true;
+    }
+}
+loadedDocument.Redact();
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream(); 
+loadedDocument.Save(stream); 
+//Close the document.
+loadedDocument.Close(true);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+//Get the annotation from annotation collection. 
+foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
+{
+    //Check for the Redaction annotation.
+    if (annot is PdfLoadedRedactionAnnotation)
+    {
+        //Get the redaction annotation. 
+        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
+
+        //Flatten the redaction annotation.
+        redactAnnot.Flatten = true;
+
+    }
+}
+
+//Save the document.
+loadedDocument.Save("Output.pdf");
+//Close the document.
+loadedDocument.Close();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the existing PDF document. 
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("../../Data/Input.pdf")
+
+'Get the annotation from annotation collection. 
+For Each annot As PdfAnnotation In loadedDocument.Pages(0).Annotations
+
+    'Check for redaction annotation. 
+    If TypeOf annot Is PdfLoadedRedactionAnnotation Then
+
+        'Load the redaction annotation. 
+        Dim redactAnnot As PdfLoadedRedactionAnnotation = TryCast(annot, PdfLoadedRedactionAnnotation)
+
+        'Flatten the redaction annotation.
+        redactAnnot.Flatten = True
+
+    End If
+
+Next
+
+'Save the PDF document. 
+loadedDocument.Save("Output.pdf")
+'Close the PDF document. 
+loadedDocument.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> To flatten the redaction annotation from PDF document in ASP.NET Core, you need to include the Syncfusion.Pdf.Imaging.Portable assembly reference in the .NET Core project. 
+
+### Flattening annotations without calling save method 
+
+Annotations can be flattened by removing the existing annotation and replacing it with graphic objects that would resemble the annotation and cannot be edited.
+
+This can be achieved by calling the [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method. Please refer to the sample for flattening all the annotations in the PDF document without calling the [save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save) method.
+
+To flatten the annotation without pop-ups [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-without-calling-save-method/.NET/Flattening-annotations-without-calling-save-method/Program.cs" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+//Flatten all the annotations without popups in the document
+loadedDocument.FlattenAnnotations();
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Closes the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+
+//Flatten all the annotations without popups in the document
+loadedDocument.FlattenAnnotations();
+
+//Save and close the PDF document instance
+loadedDocument.Save("output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("input.pdf")
+
+'Flatten all the annotations without popups in the document
+loadedDocument.FlattenAnnotations()
+Next
+
+'Save and close the PDF document instance
+loadedDocument.Save("output.pdf")
+loadedDocument.Close(True)
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flattening-annotations-without-calling-save-method).
+
+To flatten the annotation with pop-ups [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations_System_Boolean_) method to an existing PDF document using [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.The following code example explain this.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flattening-annotations-with-popups-in-PDF/.NET/Flattening-annotations-with-popups-in-PDF/Program.cs" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Flatten all the annotations without popups in the document
+loadedDocument.FlattenAnnotations(true);
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Closes the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+//Flatten all the annotations with popups in the document
+loadedDocument.FlattenAnnotations(true);
+//Save and close the PDF document instance
+loadedDocument.Save("output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("input.pdf")
+'Flatten all the annotations without popups in the document 
+loadedDocument.FlattenAnnotations(true)
+'Save and close the PDF document instance
+loadedDocument.Save("output.pdf")
+loadedDocument.Close(true)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flattening-annotations-with-popups-in-PDF).
+
+### Flatten specific types of annotations
+
+To flatten specific types of annotations in a PDF document, use the [FlattenAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FlattenAnnotations) method available in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) instance by providing an array of the desired annotation types. Refer to the following code example for more details.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Flatten-specific-types-of-annotations/.NET/Flatten-specific-types-of-annotations/Program.cs" %}
+
+    // Load the PDF document
+    using (FileStream docStream = new FileStream(@"input.pdf", FileMode.Open, FileAccess.Read))
+    {
+        using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream))
+        {
+            // Specify the annotation types to flatten
+            PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+            {
+                PdfLoadedAnnotationType.PolygonAnnotation
+            };
+
+            // Flatten the selected annotations
+            loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+            // Save the flattened document
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                loadedDocument.Save(memoryStream);
+                // MemoryStream can be used further as needed
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load the PDF document from a file path
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Specify the annotation types to flatten
+    PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
+    {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    };
+
+    // Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes);
+
+    // Save the flattened PDF document to a file path
+    loadedDocument.Save(@"C:\path\to\output.pdf");
+    // Close the document instance
+    loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+    ' Load the PDF document from a file path
+    Dim loadedDocument As New PdfLoadedDocument("C:\path\to\input.pdf")
+
+    ' Specify the annotation types to flatten
+    Dim pdfLoadedAnnotationTypes As PdfLoadedAnnotationType() = {
+        PdfLoadedAnnotationType.PolygonAnnotation
+    }
+
+    ' Flatten the selected annotations
+    loadedDocument.FlattenAnnotations(pdfLoadedAnnotationTypes)
+
+    ' Save the flattened PDF document to a file path
+    loadedDocument.Save("C:\path\to\output.pdf")
+
+    ' Close the document instance
+    loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Flatten-specific-types-of-annotations/.NET).
+
+## Importing annotations
+
+### Importing annotations from FDF file
 
 FDF stands for Forms Data Format. FDF is a file format for representing annotations present in a PDF document. You can import annotation data from the FDF file to PDF using the [ImportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
@@ -3256,7 +3494,7 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Importing-annotations-from-FDF-file-to-PDF-document).
 
-## Importing annotations from XFDF file
+### Importing annotations from XFDF file
 
 XFDF stands for XML Forms Data Format. XFDF is the XML version of FDF for representing annotations that are contained in a PDF document. You can import annotation data from the XFDF file to PDF using the [ImportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
@@ -3307,7 +3545,7 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Importing-annotations-from-XFDF-file-to-PDF-document).
 
-## Importing annotations from JSON file
+### Importing annotations from JSON file
 
 JSON stands for JavaScript Object Notation. It is a collection of key or value pairs and it is used for serializing and transmitting the structured data over a network connection. You can import the annotation data from the JSON file to PDF using the [ImportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
@@ -3359,7 +3597,9 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document).
 
-## Exporting annotations to FDF file
+## Exporting annotations
+
+### Exporting annotations to FDF file
 
 To export annotation data to the FDF file from PDF document, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
@@ -3404,7 +3644,7 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-annotation-to-FDF-file-from-PDF-document).
 
-## Exporting annotations to XFDF file
+### Exporting annotations to XFDF file
 
 To export annotation data to the XFDF file from PDF document, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
@@ -3449,7 +3689,7 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-annotations-to-XFDF-file-from-PDF-document).
 
-## Exporting annotations to JSON file
+### Exporting annotations to JSON file
 
 To export annotation data to the JSON file from PDF document, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
@@ -3494,13 +3734,13 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-annotations-to-JSON-file-from-PDF-document).
 
-## Exporting Newly Added Annotations to a JSON File
+### Exporting Newly Added Annotations to a JSON File
 
 To export newly added annotation data from a PDF document to a JSON file, use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method within the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-JSON-File/.NET/Exporting-Newly-Added-Annotations-JSON-File/Program.cs" %}
 
 // Load the PDF document from a file stream 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3603,13 +3843,15 @@ pdfLoadedDocument.Close(True)
 
 {% endtabs %}
 
-## Exporting Newly Added Annotations to an FDF File
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-JSON-File/.NET).
+
+### Exporting Newly Added Annotations to an FDF File
 
 To export newly added annotation data from a PDF document to an FDF (Forms Data Format) file, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-FDF-File/.NET/Exporting-Newly-Added-Annotations-FDF-File/Program.cs" %}
 
 // Load the PDF document from a file stream 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3712,13 +3954,15 @@ pdfLoadedDocument.Close(True)
 
 {% endtabs %}
 
-## Exporting Newly Added Annotations to an XFDF File
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-FDF-File/.NET).
+
+### Exporting Newly Added Annotations to an XFDF File
 
 To export newly added annotation data from a PDF document to an XFDF (XML Forms Data Format) file, you can use the [ExportAnnotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_) method in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Exporting-Newly-Added-Annotations-XFDF-File/.NET/Exporting-Newly-Added-Annotations-XFDF-File/Program.cs" %}
 
 // Load the PDF document from a file stream 
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
@@ -3818,10 +4062,11 @@ pdfLoadedDocument.ExportAnnotations("Annotation.xfdf", AnnotationDataFormat.XFdf
 ' Close the loaded PDF document  
 pdfLoadedDocument.Close(True)
 
-
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-XFDF-File/.NET).
 
 N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
 
@@ -3829,9 +4074,9 @@ N> In our PDF library, font resources are embedded into the document during the 
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
 
-The Essential PDF supports adding the annotation comments and review status to the PDF document annotations.
+The Essential<sup>&reg;</sup> PDF supports adding the annotation comments and review status to the PDF document annotations.
 
-### Adding comments to the PDF annotation
+<b> Adding comments to the PDF annotation </b>
 
 The following code example explains how to add comments to the PDF annotation.
 
@@ -4056,7 +4301,7 @@ ldoc.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-comments-to-the-existing-PDF-annotation).
 
-### Adding review status to the PDF annotation
+<b> Adding review status to the PDF annotation </b>
 
 <table border="1">
 <th style="font-size:14px" width="100px">State model</th>
@@ -4323,7 +4568,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing comments and review status from PDF annotation
 
-The Essential PDF supports removing comments and reviewing status from the PDF annotation.
+The Essential<sup>&reg;</sup> PDF supports removing comments and reviewing status from the PDF annotation.
 
 The following code example explains how to remove comments using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method from the existing PDF annotation.
 
@@ -4476,7 +4721,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying comments and review status 
 
-The Essential PDF supports modifying comments using [Comments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedRectangleAnnotation_Comments) property and reviewing status using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum in the PDF annotation.
+The Essential<sup>&reg;</sup> PDF supports modifying comments using [Comments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedRectangleAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedRectangleAnnotation_Comments) property and reviewing status using [PdfAnnotationState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationState.html) Enum in the PDF annotation.
 
 The following code example explains how to modify comments in the existing PDF annotation.
 
@@ -4640,9 +4885,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
 
-The Essential PDF supports retrieving the annotation comments and review history from the existing PDF document annotations.
+The Essential<sup>&reg;</sup> PDF supports retrieving the annotation comments and review history from the existing PDF document annotations.
 
-### Retrieve review status from PDF annotation
+<b> Retrieve review status from PDF annotation </b>
 
 You can retrieve the annotation review history from the existing PDF document annotations through the [ReviewHistory](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedPopupAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedPopupAnnotation_ReviewHistory) property.
 
@@ -4756,7 +5001,7 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Retrieve-review-status-from-the-existing-PDF-annotations).
 
-### Retrieve comments from PDF annotation
+<b> Retrieve comments from PDF annotation </b>
 
 The following code example explains how to retrieve the annotation comments from the existing PDF document annotations using [Comments](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedTextMarkupAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedTextMarkupAnnotation_Comments) property.
 
@@ -4864,140 +5109,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Retrieve-the-annotation-comments-from-the-existing-PDF).
 
-## Printing Annotations
-
-The Essential PDF supports printing the annotation in a PDF document by setting the annotation flag to ```Print``` using the [AnnotationFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedStyledAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedStyledAnnotation_AnnotationFlags) property.
-
-The following code example illustrates how to print annotation in the PDF document.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Print-annotation-in-the-PDF-document/.NET/Print-annotation-in-the-PDF-document/Program.cs" %}
-
-//Creates a new PDF document
-PdfDocument document = new PdfDocument();
-//Creates a new page 
-PdfPage page = document.Pages.Add();
-//Creates a new PDF rubber stamp annotation
-RectangleF rectangle = new RectangleF(40, 60, 80, 20);
-PdfRubberStampAnnotation rubberStampAnnotation = new PdfRubberStampAnnotation(rectangle, " Text Rubber Stamp Annotation");
-rubberStampAnnotation.Icon = PdfRubberStampAnnotationIcon.Draft;
-rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation";
-//Set the AnnotationFlags to print 
-rubberStampAnnotation.AnnotationFlags = PdfAnnotationFlags.Print;
-//Adds annotation to the page 
-page.Annotations.Add(rubberStampAnnotation);
-
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Closes the document
-document.Close(true);
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Creates a new PDF document
-PdfDocument document = new PdfDocument();
-//Creates a new page 
-PdfPage page = document.Pages.Add();
-//Creates a new PDF rubber stamp annotation
-RectangleF rectangle = new RectangleF(40, 60, 80, 20);
-PdfRubberStampAnnotation rubberStampAnnotation = new PdfRubberStampAnnotation(rectangle, " Text Rubber Stamp Annotation");
-rubberStampAnnotation.Icon = PdfRubberStampAnnotationIcon.Draft;
-rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation";
-//Set the AnnotationFlags to print 
-rubberStampAnnotation.AnnotationFlags = PdfAnnotationFlags.Print;
-//Adds annotation to the page 
-page.Annotations.Add(rubberStampAnnotation);
-
-//Saves the document
-document.Save("RubberStamp.pdf");
-//Close the document
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Creates a new PDF document
-Dim document As PdfDocument = New PdfDocument()
-'Creates a new page 
-Dim page As PdfPage = document.Pages.Add()
-'Creates a new PDF rubber stamp annotation
-Dim rectangle As RectangleF = New RectangleF(40, 60, 80, 20)
-Dim rubberStampAnnotation As PdfRubberStampAnnotation = New 
-PdfRubberStampAnnotation(rectangle, " Text Rubber Stamp Annotation")
-rubberStampAnnotation.Icon = PdfRubberStampAnnotationIcon.Draft
-rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation"
-'Set the AnnotationFlags to print 
-rubberStampAnnotation.AnnotationFlags = PdfAnnotationFlags.Print
-'Adds annotation to the page 
-page.Annotations.Add(rubberStampAnnotation)
-
-'Saves the document
-document.Save("RubberStamp.pdf")
-'Close the document
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Print-annotation-in-the-PDF-document).
-
-The following table explains annotation flags.
-
-<table>
-<thead>
-<tr>
-<th>
-Member<br/><br/></th><th>
-Meaning<br/><br/></th></tr>
-</thead>
-<tbody>
-<tr>
-<td>
-Invisible<br/><br/></td><td>
-If set, do not display the annotation if it does not belong to one of the standard annotation types and no annotation handler is available.<br/><br/></td></tr>
-<tr>
-<td>
-Hidden<br/><br/></td><td>
-If set, do not display or print the annotation, or allow user interact with annotation, regardless of annotation type or annotation handler.<br/><br/></td></tr>
-<tr>
-<td>
-Print<br/><br/></td><td>
-If set, prints the annotation when the page is printed.<br/><br/></td></tr>
-<tr>
-<td>
-NoZoom<br/><br/></td><td>
-If set, do not scale the annotation’s appearance to match the magnification of the page.<br/><br/></td></tr>
-<tr>
-<td>
-NoRotate<br/><br/></td><td>
-If set, do not rotate the annotation’s appearance to match the rotation of the page.<br/><br/></td></tr>
-<tr>
-<td>
-NoView<br/><br/></td><td>
-If set, do not display the annotation on the screens or allow user interact with annotation.<br/><br/></td></tr>
-<tr>
-<td>
-ReadOnly<br/><br/></td><td>
-If set, do not allow user interact with annotation.<br/><br/></td></tr>
-<tr>
-<td>
-Locked<br/><br/></td><td>
-If set, do not allow the annotation to be deleted or its properties to be modified by the user.<br/><br/></td></tr>
-<tr>
-<td>
-ToggleNoView<br/><br/></td><td>
-If set, inverts the interpretation of the NoView flat for certain events.<br/><br/></td></tr>
-</tbody>
-</table>
-
 ## Add Custom Stamp using Rubber Stamp Annotation
 
-Essential PDF supports adding custom stamp in an existing PDF document by using the [PdfRubberStampAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRubberStampAnnotation.html) class along with different appearance settings through [PdfAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAppearance.html). This custom stamp is movable and resizable.
+Essential<sup>&reg;</sup> PDF supports adding custom stamp in an existing PDF document by using the [PdfRubberStampAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRubberStampAnnotation.html) class along with different appearance settings through [PdfAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAppearance.html). This custom stamp is movable and resizable.
 
 Rubber stamp annotation displays text or graphics intended to look like it is stamped on the page with a rubber stamp. When opened, it displays a pop-up window containing the text of the associated note. 
 
@@ -5235,6 +5349,137 @@ ldoc.Close(True)
 
 {% endhighlight %}
 {% endtabs %}
+
+## Printing Annotations
+
+The Essential&reg; PDF supports printing the annotation in a PDF document by setting the annotation flag to ```Print``` using the [AnnotationFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedStyledAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedStyledAnnotation_AnnotationFlags) property.
+
+The following code example illustrates how to print annotation in the PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Print-annotation-in-the-PDF-document/.NET/Print-annotation-in-the-PDF-document/Program.cs" %}
+
+//Creates a new PDF document
+PdfDocument document = new PdfDocument();
+//Creates a new page 
+PdfPage page = document.Pages.Add();
+//Creates a new PDF rubber stamp annotation
+RectangleF rectangle = new RectangleF(40, 60, 80, 20);
+PdfRubberStampAnnotation rubberStampAnnotation = new PdfRubberStampAnnotation(rectangle, " Text Rubber Stamp Annotation");
+rubberStampAnnotation.Icon = PdfRubberStampAnnotationIcon.Draft;
+rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation";
+//Set the AnnotationFlags to print 
+rubberStampAnnotation.AnnotationFlags = PdfAnnotationFlags.Print;
+//Adds annotation to the page 
+page.Annotations.Add(rubberStampAnnotation);
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Closes the document
+document.Close(true);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Creates a new PDF document
+PdfDocument document = new PdfDocument();
+//Creates a new page 
+PdfPage page = document.Pages.Add();
+//Creates a new PDF rubber stamp annotation
+RectangleF rectangle = new RectangleF(40, 60, 80, 20);
+PdfRubberStampAnnotation rubberStampAnnotation = new PdfRubberStampAnnotation(rectangle, " Text Rubber Stamp Annotation");
+rubberStampAnnotation.Icon = PdfRubberStampAnnotationIcon.Draft;
+rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation";
+//Set the AnnotationFlags to print 
+rubberStampAnnotation.AnnotationFlags = PdfAnnotationFlags.Print;
+//Adds annotation to the page 
+page.Annotations.Add(rubberStampAnnotation);
+
+//Saves the document
+document.Save("RubberStamp.pdf");
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Creates a new PDF document
+Dim document As PdfDocument = New PdfDocument()
+'Creates a new page 
+Dim page As PdfPage = document.Pages.Add()
+'Creates a new PDF rubber stamp annotation
+Dim rectangle As RectangleF = New RectangleF(40, 60, 80, 20)
+Dim rubberStampAnnotation As PdfRubberStampAnnotation = New 
+PdfRubberStampAnnotation(rectangle, " Text Rubber Stamp Annotation")
+rubberStampAnnotation.Icon = PdfRubberStampAnnotationIcon.Draft
+rubberStampAnnotation.Text = "Text Properties Rubber Stamp Annotation"
+'Set the AnnotationFlags to print 
+rubberStampAnnotation.AnnotationFlags = PdfAnnotationFlags.Print
+'Adds annotation to the page 
+page.Annotations.Add(rubberStampAnnotation)
+
+'Saves the document
+document.Save("RubberStamp.pdf")
+'Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Print-annotation-in-the-PDF-document).
+
+The following table explains annotation flags.
+
+<table>
+<thead>
+<tr>
+<th>
+Member<br/><br/></th><th>
+Meaning<br/><br/></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Invisible<br/><br/></td><td>
+If set, do not display the annotation if it does not belong to one of the standard annotation types and no annotation handler is available.<br/><br/></td></tr>
+<tr>
+<td>
+Hidden<br/><br/></td><td>
+If set, do not display or print the annotation, or allow user interact with annotation, regardless of annotation type or annotation handler.<br/><br/></td></tr>
+<tr>
+<td>
+Print<br/><br/></td><td>
+If set, prints the annotation when the page is printed.<br/><br/></td></tr>
+<tr>
+<td>
+NoZoom<br/><br/></td><td>
+If set, do not scale the annotation’s appearance to match the magnification of the page.<br/><br/></td></tr>
+<tr>
+<td>
+NoRotate<br/><br/></td><td>
+If set, do not rotate the annotation’s appearance to match the rotation of the page.<br/><br/></td></tr>
+<tr>
+<td>
+NoView<br/><br/></td><td>
+If set, do not display the annotation on the screens or allow user interact with annotation.<br/><br/></td></tr>
+<tr>
+<td>
+ReadOnly<br/><br/></td><td>
+If set, do not allow user interact with annotation.<br/><br/></td></tr>
+<tr>
+<td>
+Locked<br/><br/></td><td>
+If set, do not allow the annotation to be deleted or its properties to be modified by the user.<br/><br/></td></tr>
+<tr>
+<td>
+ToggleNoView<br/><br/></td><td>
+If set, inverts the interpretation of the NoView flat for certain events.<br/><br/></td></tr>
+</tbody>
+</table>
 
 ## Troubleshooting
 

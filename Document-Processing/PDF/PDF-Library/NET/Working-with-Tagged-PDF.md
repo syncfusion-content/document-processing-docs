@@ -10,7 +10,7 @@ documentation: UG
 
 ## Introduction
 
-The Tagged PDF is a PDF that includes structure in terms for a set of instruction that defines reading order and meaning of significant elements such as figures, images, lists, tables and more. Tagged PDF documents created using Syncfusion PDF library are compliant with section 508 (PDF/UA) standard or WCAG 2.0 standard (ISO 14289-1:2014).
+The Tagged PDF is a PDF that includes structure in terms for a set of instruction that defines reading order and meaning of significant elements such as figures, images, lists, tables and more. Tagged PDF documents created using Syncfusion<sup>&reg;</sup> PDF library are compliant with section 508 (PDF/UA) standard or WCAG 2.0 standard (ISO 14289-1:2014).
 Usually tagged PDF used to making content accessible to users who rely on assistive technology.
 
 This section explains how to add tags to PDF elements such as text element, image, shapes, form fields, annotations, table, list, and more

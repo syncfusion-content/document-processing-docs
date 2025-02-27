@@ -9,12 +9,12 @@ documentation: UG
 
 An interactive form, sometimes referred to as an AcroForm is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of that make a single, globally interactive form spanning the entire document.
 
-To quickly get started with creating, filling and flattening PDF form fields in .NET using the Syncfusion PDF library, refer to this video tutorial:
+To quickly get started with creating, filling and flattening PDF form fields in .NET using the Syncfusion<sup>&reg;</sup> PDF library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=_tCUghqKwCQ" %}
 
 ## Creating a new PDF form
 
-Essential PDF allows you to [create and manage the form](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-form-fields) (AcroForm) in PDF document by using [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class. The [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html) class represents the entire field collection of the form.
+Essential<sup>&reg;</sup> PDF allows you to [create and manage the form](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-form-fields) (AcroForm) in PDF document by using [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class. The [PdfFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFormFieldCollection.html) class represents the entire field collection of the form.
 
 ### Adding the text box field 
 
@@ -373,6 +373,67 @@ loadedDocument.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-the-combo-box-in-existing-PDF-document).
+
+### Set text alignment in a Combo Box field
+
+Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedComboBoxField_TextAlignment) property of the [PdfLoadedComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedComboBoxField.html) to customize the text alignment in a combo box field. Refer to the following example for more details.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET/Set-text-alignment-in-a-Combo-Box-field/Program.cs" %}
+
+    // Load an existing document from a file stream.
+    using (FileStream fileStream = new FileStream("SourceForm.pdf", FileMode.Open, FileAccess.Read))
+    {
+        PdfLoadedDocument doc = new PdfLoadedDocument(fileStream);
+        // Load an existing combo box field by its name.
+        PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
+        // Set text alignment to center for the combo box field.
+        comboField.TextAlignment = PdfTextAlignment.Center;
+
+        // Save the updated document to a file stream.
+        using (FileStream outputStream = new FileStream("Form.pdf", FileMode.Create, FileAccess.Write))
+        {
+            doc.Save(outputStream);
+        }
+
+        // Close the document.
+        doc.Close(true);
+    }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load an existing document.
+    PdfLoadedDocument doc = new PdfLoadedDocument("SourceForm.pdf");
+    // Load an existing combo box field by its name.
+    PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoadedComboBoxField;
+    // Set text alignment to center for the combo box field.
+    comboField.TextAlignment = PdfTextAlignment.Center;
+    // Save the updated document.
+    doc.Save("Form.pdf");
+    doc.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+   
+    ' Load an existing document.
+    Dim doc As New PdfLoadedDocument("SourceForm.pdf")
+    ' Load an existing combo box field by its name.
+    Dim comboField As PdfLoadedComboBoxField = TryCast(doc.Form.Fields("EmployeeCombo"), PdfLoadedComboBoxField)
+    ' Set text alignment to center for the combo box field.
+    comboField.TextAlignment = PdfTextAlignment.Center
+    ' Save the updated document.
+    doc.Save("Form.pdf")
+    doc.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET).
 
 ### Adding the radio button field
 
@@ -1249,6 +1310,71 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-the-signatre-field-in-existing-PDF-document).
 
+### Customize the signed date
+
+The signedDate parameter in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class allows you to specify a custom date when signing a PDF document. Refer to the following example for more details.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Customize-the-signed-date/.NET/Customize-the-signed-date/Program.cs" %}
+
+//Creates a new PDF document.
+PdfDocument document = new PdfDocument();
+//Adds a new page.
+PdfPage page = document.Pages.Add();
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(page, "Signature", new DateTime(2020, 12, 24, 10, 50, 10));
+signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamp.digicert.com"));
+signature.SignedName = "Test";
+signature.Bounds = new RectangleF(new PointF(0, 0), new SizeF(200, 100));
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Creates a new PDF document.
+PdfDocument document = new PdfDocument();
+//Adds a new page.
+PdfPage page = document.Pages.Add();
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(page, "Signature", new DateTime(2020, 12, 24, 10, 50, 10));
+signature.TimeStampServer = new TimeStampServer(new Uri("http://timestamp.digicert.com"));
+signature.SignedName = "Test";
+signature.Bounds = new RectangleF(new PointF(0, 0), new SizeF(200, 100));
+//Save the document.
+document.Save("Signature.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+    
+'Creates a new PDF document.
+Dim document As New PdfDocument()
+'Adds a new page.
+Dim page As PdfPage = document.Pages.Add()
+'Creates a digital signature.
+Dim signature As New PdfSignature(page, "Signature", New DateTime(2020, 12, 24, 10, 50, 10))
+signature.TimeStampServer = New TimeStampServer(New Uri("http://timestamp.digicert.com"))
+signature.SignedName = "Test"
+signature.Bounds = New RectangleF(New PointF(0, 0), New SizeF(200, 100))
+'Save the document.
+document.Save("Signature.pdf")
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Customize-the-signed-date/.NET).
+
 ### Adding the button field 
 
 To create button fields in PDF forms, you can use [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) class.
@@ -1693,7 +1819,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Auto naming of form fields
 
-The Essential PDF supports auto naming of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
+The Essential<sup>&reg;</sup> PDF supports auto naming of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
 
 While enabling this property, the field names are auto naming. If the fields are created using same/common name, the created fields will act as individual. 
 
@@ -1813,7 +1939,7 @@ The following screenshot shows the enabling and disabling of form fields auto na
 
 ## Filling form fields in an existing PDF Document
 
-Essential PDF allows you to fill the form fields using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. 
+Essential<sup>&reg;</sup> PDF allows you to fill the form fields using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. 
 
 ### Filling the text box field
 
@@ -2485,7 +2611,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Retrieving option values from acroform radio button
 
-The Essential PDF supports retrieving option values from acroform radio button. The [OptionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonItem_OptionValue) property is used to get option values of [PdfLoadedRadioButtonItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html) instance.
+The Essential<sup>&reg;</sup> PDF supports retrieving option values from acroform radio button. The [OptionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html#Syncfusion_Pdf_Parsing_PdfLoadedRadioButtonItem_OptionValue) property is used to get option values of [PdfLoadedRadioButtonItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedRadioButtonItem.html) instance.
 
 The following code example illustrates how to get option values from acroform radio button.
 
@@ -3052,7 +3178,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Auto resizing text box field text
 
-The Essential PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
+The Essential<sup>&reg;</sup> PDF provides support to automatically resize the text of text box field based on the field width and height. You can auto resize the text box text by using the [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) property available in [PdfLoadedTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html) instance.
 
 The following code illustrates how to set [AutoResizeText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_AutoResizeText) in an existing PDF text box field. 
 
@@ -3131,7 +3257,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The static XFA document contains both the XFA and Acroform.
  
-The Essential PDF supports filling both the XFA and Acroform in a same instance (Fills the XFA form via Acroform instance) by enabling the [EnableXfaFormFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_EnableXfaFormFill) property available in the [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
+The Essential<sup>&reg;</sup> PDF supports filling both the XFA and Acroform in a same instance (Fills the XFA form via Acroform instance) by enabling the [EnableXfaFormFill](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_EnableXfaFormFill) property available in the [PdfLoadedForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html) class.
 
 The following code snippet illustrates how to fill XFA forms via Acroform API.
 
@@ -3220,7 +3346,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The form field editing or filling capabilities can be removed by either flattening the PDF document or by marking the form or field as read only.
 
-Essential PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
+Essential<sup>&reg;</sup> PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
 
 Please refer the sample for flattening the form fields in new PDF document.
 
@@ -3782,7 +3908,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Please refer to the [actions](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-action#adding-an-action-to-the-form-field) section for more details.
 
-N> Essential PDF allows users to preserve the extended rights for form filling alone.
+N> Essential<sup>&reg;</sup> PDF allows users to preserve the extended rights for form filling alone.
 
 ## Troubleshooting
 

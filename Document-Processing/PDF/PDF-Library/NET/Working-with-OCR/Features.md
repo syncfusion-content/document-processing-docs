@@ -641,7 +641,7 @@ End Using
 
 ### Tesseract 3.05
 
-Tesseract 3.05 supports the native call for both x86 and x64 architectures. By default, the x86 tesseract binaries are available with Syncfusion NuGet package or the tesseract installer. 
+Tesseract 3.05 supports the native call for both x86 and x64 architectures. By default, the x86 tesseract binaries are available with Syncfusion<sup>&reg;</sup> NuGet package or the tesseract installer. 
 
 You can download the x64 supporting tesseract binaries from the following link.
 [Tesseract 64-bit binaries](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Tesseract3.05_x641904984914)
@@ -1484,20 +1484,20 @@ You can downloaded a complete working sample from [GitHub](https://github.com/Sy
 
 ## OCR with multiple languages
 
-Syncfusion OCR processor does support multiple languages in C#. You can configure the OCR processor to recognize text in multiple languages by specifying the required language files.
+Syncfusion<sup>&reg;</sup> OCR processor does support multiple languages in C#. You can configure the OCR processor to recognize text in multiple languages by specifying the required language files.
 
-Here's a general outline of how to enable multiple languages in Syncfusion OCR processor:
+Here's a general outline of how to enable multiple languages in Syncfusion<sup>&reg;</sup> OCR processor:
 
-### Install Required Dependencies: 
+<b> Install Required Dependencies: </b> 
 Ensure you have installed the necessary NuGet packages, including `Syncfusion.OCRProcessor` and `Tesseract`, for OCR functionalities.
 
-### Set Up OCR Processor:
+<b> Set Up OCR Processor: </b>
 You need to download the language data files ([.traineddata](https://github.com/tesseract-ocr/tessdata)) for the languages you want to use. These files are required by the OCR engine to recognize different languages.
 
-### Load the Language Files:
+<b> Load the Language Files:</b>
 You can set up multiple languages by specifying the language codes (e.g., "eng" for English, "fra" for French) and ensuring that the trained data for those languages is available.
 
-Here is a basic example of using Syncfusion OCR processor with multiple languages in C#:
+Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with multiple languages in C#:
 
 {% tabs %}  
 

@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Brushes
 
-Brushes are used to draw the content on PDF document with specific color and style. Various brushes available in Syncfusion Essential PDF are,
+Brushes are used to draw the content on PDF document with specific color and style. Various brushes available in Syncfusion Essential<sup>&reg;</sup> PDF are,
 
 1. Solid Brush
 2. Gradient Brush
@@ -17,7 +17,7 @@ Brushes are used to draw the content on PDF document with specific color and sty
 
 ## Solid Brush
 
-The solid brush is used to fill an object with solid color. Essential PDF supports drawing shapes on PDF document with solid brush using the [PdfSolidBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfSolidBrush.html) class. The following code snippet illustrates this.
+The solid brush is used to fill an object with solid color. Essential<sup>&reg;</sup> PDF supports drawing shapes on PDF document with solid brush using the [PdfSolidBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfSolidBrush.html) class. The following code snippet illustrates this.
 
 {% tabs %}
 
@@ -86,7 +86,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Linear gradient brush
 
-The gradient brush is used to fill an object with blend of two or more colors. Essential PDF supports drawing shapes on PDF document with linear gradient brush using [PdfLinearGradientBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLinearGradientBrush.html) class. The following code snippet illustrates this.
+The gradient brush is used to fill an object with blend of two or more colors. Essential<sup>&reg;</sup> PDF supports drawing shapes on PDF document with linear gradient brush using [PdfLinearGradientBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLinearGradientBrush.html) class. The following code snippet illustrates this.
 
 {% tabs %}
 
