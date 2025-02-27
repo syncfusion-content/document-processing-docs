@@ -2059,6 +2059,113 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-with-baseline-alignment-in-a-PDF/). 
 
+## Drawing text using different text alignment
+
+The Essential<sup>&reg;</sup> PDF allows you to add text in the PDF document with different text alignment using the [Alignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_Alignment) property available in [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class.
+
+The following code sample explains this.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a page to the document
+PdfPage page = document.Pages.Add();
+//Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+//Create new instance for string format
+PdfStringFormat format = new PdfStringFormat();
+
+//Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right;
+format.WordSpacing = 2f;
+format.CharacterSpacing = 1f;
+
+//Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, new RectangleF(10, 10, 200, 20));
+//Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, new RectangleF(10, 10, 200, 20), format);
+
+//Create a file stream to save the document
+using (FileStream fs = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    //Save the document to the file stream
+    document.Save(fs);
+}
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a page to the document
+PdfPage page = document.Pages.Add();
+//Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+//Create new instance for string format
+PdfStringFormat format = new PdfStringFormat();
+
+//Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right;
+format.WordSpacing = 2f;
+format.CharacterSpacing = 1f;
+
+//Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, new RectangleF(10, 10, 200, 20));
+//Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, new RectangleF(10, 10, 200, 20), format);
+
+//Save the document
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+ Dim document As New PdfDocument()
+'Add a page to the document
+Dim page As PdfPage = document.Pages.Add()
+'Create PDF graphics for the page
+Dim graphics As PdfGraphics = page.Graphics
+'Create new instance for string format
+Dim format As New PdfStringFormat()
+
+'Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right
+format.WordSpacing = 2.0F
+format.CharacterSpacing = 1.0F
+
+'Set the standard font
+Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+'Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, New RectangleF(10, 10, 200, 20))
+'Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, New RectangleF(10, 10, 200, 20), format)
+
+'Save the document
+document.Save("Output.pdf")
+'Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Adding a text encoding to the PdfStandardFont 
 
 The following code sample shows how to add a text encoding using the standard PDF fonts by initializing [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class.
