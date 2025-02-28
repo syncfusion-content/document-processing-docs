@@ -1,6 +1,6 @@
 --- 
-title: Convert PPTX to Image in AWS Linux EC2 and S3 | Syncfusion
-description: Learn how to convert a PPTX to image in EC2 and S3 Integration using .NET Core PowerPoint library (Presentation) in C#. 
+title: Convert PPTX to Image in AWS Linux EC2 | Syncfusion
+description: Learn how to convert PowerPoint to image in AWS Linux EC2 using .NET Core PowerPoint library(Presentation) in C#. 
 platform: document-processing
 control: PowerPoint 
 documentation: UG 
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Amazon Linux EC2
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert PowerPoint to image in Amazon Linux EC2** within a few lines of code.
+Syncfusion<sup>&reg;</sup> [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) (Presentation) is used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert PowerPoint to image in Amazon Linux EC2** within a few lines of code.
 
 N> To run the sample without manually providing credentials, attach an IAM role with S3 access to your EC2 instance. The AWS SDK will automatically use this role, allowing secure access to S3 without storing access keys.
 
@@ -25,23 +25,30 @@ N> To run the sample without manually providing credentials, attach an IAM role 
 * Inside the bucket, create an input folder and upload the required PowerPoint files.
 * Create an output folder in the S3 bucket where the converted images will be saved.
 
-## Create an application to retrieve documents from an S3 bucket
+## Create application to convert PowerPoint to images
 
-Step 1: Create a new **.NET Core console application** project.
-![Create a .NET Core Console application in Visual Studio](AWS_Images/AWS_S3_Images/Console-Template-Net-Core.png)
+### Step 1: Create a .NET Core console application
 
-Step 2: Install the following NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Create a new .NET Core console application in Visual Studio.
+
+![Create a .NET Core Console application in Visual Studio](AWS_Images/AWS_EC2_Images/Console-Template-Net-Core.png)
+
+### Step 2: Install required NuGet packages
+
+Install the following NuGet packages from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)
 * [AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)
 * [Microsoft.VisualStudio.Azure.Containers.Tools.Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets)
 * [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies)
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](AWS_Images/AWS_S3_Images/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](AWS_Images/AWS_EC2_Images/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespaces in **Program.cs** file.
+### Step 3: Include required namespaces
+
+Add the following namespaces in Program.cs
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -55,7 +62,9 @@ using Syncfusion.PresentationRenderer;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Include the below code snippet in **Program.cs** to **convert PowerPoint to image**.
+### Step 4: Process PowerPoint files from AWS S3
+ 
+Include the following code snippet in Program.cs to convert PowerPoint presentations into images.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -88,7 +97,9 @@ static async Task Main()
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the below code snippet in **Program.cs** to get the input files from S3 bucket.
+### Step 5: Download Input files from AWS S3
+
+Include the following method to retrieve files from the specified S3 bucket.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -137,7 +148,9 @@ private static async Task<List<string>> ListFilesAsync(string inputFolderName, s
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the below code snippet in **Program.cs** to converts the PPTX to the image..
+### Step 6: Convert PowerPoint slides to images
+
+Include the following method to convert PPTX to images.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -190,7 +203,9 @@ static async Task ConvertPptxToImage(string inputFileName, string inputFolderNam
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in **Program.cs** to upload images to S3 bucket.
+### Step 7: Upload images to S3 Bucket
+
+Include the following method to upload images to S3 bucket.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -232,7 +247,9 @@ public static async Task UploadImageAsync(Stream imageStream, string outputFileN
 {% endhighlight %}
 {% endtabs %}
 
-step 8: Create an Docker file which parallel to csproj file and add the following code.
+### Step 8: Create a Dockerfile
+
+Create a Dockerfile parallel to the .csproj file and add the following code.
 
 ```
 
@@ -265,97 +282,100 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "AWSConsoleApp.dll"]
 
 ```
+### Step 9: Upload to GitHub
 
-step 9: Create a new private GitHub repository and upload the sample. Refer [here](https://docs.github.com/en/get-started/start-your-journey/uploading-a-project-to-github) to create and upload in the GitHub repository.
+Create a new private GitHub repository and upload the project. Refer to [documentation](https://docs.github.com/en/get-started/start-your-journey/uploading-a-project-to-github) for guidance.
 
 ## Connect to an EC2 instance using PuTTY
 
-step 1: Open PuTTY and enter the IP address.
+Step 1: Open **PuTTY** and enter the IP address.
 
-![Open PuTTY, enter the IP address](AWS_Images/AWS_S3_Images/Open-PuTTY-enter-IP-address.png)
+![Open PuTTY, enter the IP address](AWS_Images/AWS_EC2_Images/Open-PuTTY-enter-IP-address.png)
 
-step 2: Go to Credentials category, Connections → SSH → Auth → Credentials.
+Step 2: Go to **Credentials** category, **Connections → SSH → Auth → Credentials**.
 
-step 3: Click the browse in the Private key file for authentication and add the .ppk file in it. 
+Step 3: Click the **Browse** button in the **Private key file for authentication** and add the .ppk file in it. 
 
-![Add the .ppk file in Credentials](AWS_Images/AWS_S3_Images/In-credentials-add-ppk-file.png)
+![Add the .ppk file in Credentials](AWS_Images/AWS_EC2_Images/In-credentials-add-ppk-file.png)
 
-step 4: Click open button. It will be connected to the EC2 instance and ask to login.
+Step 4: Click **Open** button. It will be connected to the EC2 instance .
 
-![connect with EC2 instance](AWS_Images/AWS_S3_Images/Connected-with-PuTTY.png)
+![connect with EC2 instance](AWS_Images/AWS_EC2_Images/Connected-with-PuTTY.png)
 
 ## Deploy the sample on an AWS Linux EC2 Instance
 
-step 1: Ensure the EC2 instance connected with PuTTY and the github sample must be ready.
+Step 1: Enter the username to login.
 
-step 2: Install the Microsoft package repository using below command.
+![Login EC2](AWS_Images/AWS_EC2_Images/Login-EC2.png)
+
+Step 2: Install the **Microsoft package repository** using below command.
 
 ```
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
-![Install Microsoft package](AWS_Images/AWS_S3_Images/Install-microsoft-package.png)
+![Install Microsoft package](AWS_Images/AWS_EC2_Images/Install-microsoft-package.png)
 
-step 3: Install the .NET SDK or Runtime using below command.
+Step 3: Install the **.NET SDK or Runtime** using below command.
 ```
 sudo yum install dotnet-sdk-8.0
 ```
 
-![Install SDK](AWS_Images/AWS_S3_Images/Install-sdk.png)
+![Install SDK](AWS_Images/AWS_EC2_Images/Install-sdk.png)
 
 
-step 4:	Install the git in the EC2 instance using below command.
+Step 4:	Install the **Git** in the EC2 instance using below command.
 ```
 sudo yum install git -y
 ```
 
-![Install git](AWS_Images/AWS_S3_Images/Install-git.png)
+![Install git](AWS_Images/AWS_EC2_Images/Install-git.png)
 
-step 5:	Check whether the git is installed properly using below command.
+Step 5:	Check whether the **Git** is installed properly using below command.
 ```
 git –version
 ```
 
-![Ensure git installation](AWS_Images/AWS_S3_Images/ensure-git-installation.png)
+![Ensure git installation](AWS_Images/AWS_EC2_Images/ensure-git-installation.png)
 
-step 6:	Clone the branch in the instance using below command.
+Step 6:	Clone the **Git Repository** in the instance using below command.
 ```
 git clone https://github.com/your-username/your-repository.git
 ```
 
-![Clone git repo](AWS_Images/AWS_S3_Images/Clone-git-repo.png)
+![Clone git repo](AWS_Images/AWS_EC2_Images/Clone-git-repo.png)
 
-step 7: Once cloned, move into the folder using below command.
+Step 7: Once cloned, move into the **Project Folder** using the command below.
 ```
 cd samplename
 ```
 
-![Move into the folder](AWS_Images/AWS_S3_Images/Move-to-sample-folder.png)
+![Move into the folder](AWS_Images/AWS_EC2_Images/Move-to-sample-folder.png)
 
-step 8:	Build and publish your .NET Core application using below command.
+Step 8:	Build and **Publish** your .NET Core application using below command.
 ```
 dotnet publish -c Release
 ```
 
-![Build and publish](AWS_Images/AWS_S3_Images/Build-and-publish.png)
+![Build and publish](AWS_Images/AWS_EC2_Images/Build-and-publish.png)
 
-step 9:	Navigate to the publish directory using below command.
+Step 9:	Navigate to the **Publish Directory** using below command.
 ```
 cd bin/Release/net8.0/publish
 ```
 
-![Navigate to the publish directory](AWS_Images/AWS_S3_Images/Navigate-to-publish-directory.png)
+![Navigate to the publish directory](AWS_Images/AWS_EC2_Images/Navigate-to-publish-directory.png)
 
-step 10: Run your application.
+Step 10: Run your **Application** using the command below.
 ```
 dotnet your-application.dll --urls http://0.0.0.0:5000
 ```
 
-![Run your application](AWS_Images/AWS_S3_Images/Run-the-sample.png)
+![Run your application](AWS_Images/AWS_EC2_Images/Run-the-sample.png)
 
-step 11: Enter the Bucket name, input and output folder name to convert and add images.
+Step 11: Enter the **Bucket Name**, **Input Folder Name**, and **Output Folder Name** to convert and add images.
 
-![Enter Bucket name](AWS_Images/AWS_S3_Images/Enter-bucketname-foldername.png)
+![Enter Bucket name](AWS_Images/AWS_EC2_Images/Enter-bucketname-foldername.png)
 
 From GitHub, you can download the [sample with AWS credentials(using access keys)](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-S3/PPTXtoImage/) and [sample without AWS credentials](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-S3/PPTXtoImage_withoutCredentials/) project.
 
