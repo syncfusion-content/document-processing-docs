@@ -1270,3 +1270,83 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Inserting-duplicate-pages-in-the-existing-pdf). 
 
+## Insert a New Page into an Existing PDF Document While Maintaining Its Original Size
+
+The Syncfusion PDF library enables users to add a new page to an existing PDF document while maintaining the size of the existing pages.
+
+Refer to the following code example for creating new page in a PDF document while maintaining its size.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document from a FileStream
+using (FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+    // Get the size of the first page
+    PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+    // Insert a new page at the beginning with the same size as the first page
+    PdfPageBase page = loadedDocument.Pages.Insert(0, loadedPage.Size);
+
+    // Set the standard font
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+    // Draw the text on the page, centered
+    page.Graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+    // Save the updated PDF to a FileStream
+    using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+    {
+        loadedDocument.Save(outputStream);
+    }
+    // Close the loaded document
+    loadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Get the size of the first page
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+// Insert a new page at the beginning with the same size as the first page
+PdfPageBase page = loadedDocument.Pages.Insert(0, loadedPage.Size);
+
+// Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+// Draw the text on the page, centered
+page.Graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+// Save the updated PDF document
+loadedDocument.Save("Output.pdf");
+// Close the loaded document
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+' Get the size of the first page
+Dim loadedPage As PdfLoadedPage = CType(loadedDocument.Pages(0), PdfLoadedPage)
+
+' Insert a new page at the beginning with the same size as the first page
+Dim page As PdfPageBase = loadedDocument.Pages.Insert(0, loadedPage.Size)
+
+' Set the standard font
+Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 20)
+' Draw the text on the page, centered
+page.Graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, New PointF(0, 0))
+' Save the updated PDF document
+loadedDocument.Save("Output.pdf")
+' Close the loaded document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
