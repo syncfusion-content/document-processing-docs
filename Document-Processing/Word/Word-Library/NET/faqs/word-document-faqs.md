@@ -451,7 +451,7 @@ To convert a Word document to PDF in .NET MAUI using DocIO, refer to the sample 
 
 A Word document consists of sections, and each section can have different page orientations. The [PageOrientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.PageOrientation.html) of a section can be determined using the [PageSetup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSection.html#Syncfusion_DocIO_DLS_WSection_PageSetup) property.
 
-The following code illustrates how to check the orientation of each section in a document. 
+The following code illustrates how to check the orientation of each section in a Word document. 
 
 {% tabs %}
 
