@@ -14,9 +14,9 @@ The Syncfusion<sup>&reg;</sup> .NET PowerPoint library enables seamless integrat
 
 The following system configurations were used for benchmarking: 
 
-* Operating System:  
-* Processor:  
-* RAM: 
+* Operating System: Windows 10
+* Processor: 11th Gen Intel(R) Core(TM)
+* RAM: 16GB
 * .NET Version: NET 8.0
 * Syncfusion<sup>&reg;</sup> Presentation Library Version: v28.2.7
 
