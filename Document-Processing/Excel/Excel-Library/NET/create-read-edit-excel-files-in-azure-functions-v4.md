@@ -1,6 +1,6 @@
 ---
 title: Create, read, and edit Excel files in Azure Functions v4 | Syncfusion
-description: Explains how to create, read, and edit Excel files in Azure Functions v4 using Syncfusion XlsIO.
+description: Explains how to create, read, and edit Excel documents in Azure Functions v4 using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -19,7 +19,7 @@ Step 2: Name the project.
 
 ![Name the project](Azure-Images/Functions-v4/Name_the_Application_Create.png)
 
-Step 3: Select functions worker as **.NET (6.0) Long Term Support**. 
+Step 3: Select the framework and click Create button.. 
 
 ![Select functions worker](Azure-Images/Functions-v4/Functions_Worker.png)
 
