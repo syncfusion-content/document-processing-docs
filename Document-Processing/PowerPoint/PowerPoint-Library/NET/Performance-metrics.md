@@ -1,6 +1,6 @@
 ---
 title: Performance benchmark results | Syncfusion
-description: Know about the performance benchmark results of .NET Presentation Library 
+description: Know about the performance benchmark results of Syncfusion<sup>&reg;</sup> .NET Presentation Library 
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -50,7 +50,7 @@ The following system configurations were used for benchmarking:
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/).
 
 ## Clone and merge slides 
 
@@ -82,7 +82,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
 
 ## PowerPoint to Image conversion 
 
@@ -114,7 +114,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
 
 ## PowerPoint to PDF conversion 
 
@@ -146,4 +146,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/).
