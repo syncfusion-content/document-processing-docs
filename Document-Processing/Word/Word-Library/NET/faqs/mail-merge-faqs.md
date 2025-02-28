@@ -46,7 +46,7 @@ string[] fieldValues = new string[] { "Logo.png"};
 //Executes the mail merge with groups
 document.MailMerge.Execute(fieldNames, fieldValues);
 //Saves and closes WordDocument instance
-document.Save("Sample.docx");
+document.Save("Sample.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
@@ -61,7 +61,7 @@ Dim fieldValues As String() = New String() {"Logo.png"}
 'Executes the mail merge with groups
 document.MailMerge.Execute(fieldNames, fieldValues)
 'Saves and closes WordDocument instance
-document.Save("Sample.docx")
+document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
@@ -154,3 +154,9 @@ Assign an empty string to the merge field in the nested group instead of null. T
 
 **Solution 2:** Use unique field names
 Rename fields in the parent and nested groups to have distinct names. This avoids any conflict and ensures the parent group’s values are not applied to the nested group.
+
+## How to identify merge fields that do not exist in the data source?
+
+To find merge fields that have null values or missing from the data source, set [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) API as false before performing mail merge. This ensures unmerged fields remain visible in the output document. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-options?cs-save-lang=1&cs-lang=csharp#remove-empty-merge-fields) for code example.
+
+For identifying only null value fields or missing from data source, use the [BeforeClearField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html) event during the mail merge process to replace them with an error message. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-events#beforeclearfield-event) for code example.

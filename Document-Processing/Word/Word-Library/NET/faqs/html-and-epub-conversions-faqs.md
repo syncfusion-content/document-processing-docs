@@ -119,3 +119,8 @@ By including **pt** as the measurement unit, the spacing and styling are accurat
 The [System.Drawing.ColorTranslator.FromHtml](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.colortranslator.fromhtml?view=net-9.0) function does not support parsing #rrggbbaa (red, green, blue, alpha) hex color notation. This limitation exists because it adheres to the HTML 4.01 and CSS color standards, which only recognize #rrggbb (6-character) and #rgb (3-character) formats. The #rrggbbaa format, which includes alpha transparency, is a modern feature and is not supported by the function.
 
 Similarly, the Syncfusion.Drawing.ColorTranslator.FromHtml function behaves the same as the [System.Drawing.ColorTranslator.FromHtml](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.colortranslator.fromhtml?view=net-9.0) function, and it does not parse #rrggbbaa hex color notation.
+
+## How to verify whether styles and formatting in HTML are valid?
+
+To validate HTML styles and formatting, define the styles within HTML tags and open the file in a browser. If the styles render correctly, they are valid.
+
