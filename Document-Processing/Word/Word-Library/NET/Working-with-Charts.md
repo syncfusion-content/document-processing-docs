@@ -914,7 +914,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Add-data-table).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Add-data-table/).
 
 ## Applying 3D Formats
 
