@@ -64,7 +64,7 @@ Step 1: Create a **new ASP.NET Core Web application (Model-View-Controller)** pr
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Install the below NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the below NuGet packages as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)
 * [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/)
@@ -216,7 +216,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Convert-Word-Document-to-PDF.dll"]
 ```
 
-## Move application for deployment
+## Upload application to Cloud Shell Editor
 
 Step 1: Open **Cloud Shell Editor**
 
