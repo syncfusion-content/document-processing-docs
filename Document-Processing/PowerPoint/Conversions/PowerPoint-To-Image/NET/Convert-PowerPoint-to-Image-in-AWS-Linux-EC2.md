@@ -377,8 +377,11 @@ Step 11: Enter the **Bucket Name**, **Input Folder Name**, and **Output Folder N
 
 ![Enter Bucket name](AWS_Images/AWS_EC2_Images/Enter-bucketname-foldername.png)
 
-From GitHub, you can download the [sample with AWS credentials(using access keys)](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-S3/PPTXtoImage/) and [sample without AWS credentials](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-S3/PPTXtoImage_withoutCredentials/) project.
+You can download samples demonstrating how to convert a PowerPoint presentation to an image in Amazon Linux EC2 with AWS S3 integration in two ways:
 
+* [Sample with credentials](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-EC2/PPTXtoImage_withCredentials/) – Requires access keys to authenticate the S3 bucket (for ex: the user must provide an access key and secret key).
+* [Sample without credentials](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/AWS/AWS-EC2/PPTXtoImage_withoutCredentials/) – Uses default account authentication (for ex: relying on IAM roles or AWS environment credentials).
+ 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://ej2.syncfusion.com/aspnetcore/PowerPoint/PPTXToImage#/material3) in ASP.NET Core. 
