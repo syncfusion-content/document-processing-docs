@@ -14,20 +14,20 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 Step 1: Access Google Cloud Console
 
-Sign in to the Google Cloud Console and navigate to Cloud Run from the left-hand menu.
+**Sign in** to the **Google Cloud Console** and navigate to Cloud Run from the left-hand menu.
 
 ![Access Google Cloud Console](GCR_Images/Access-Google-Cloud-Console.png)
 
 
 Step 2: Activate Cloud Shell
 
-Click on the Activate Cloud Shell button in the top-right corner of the console. This opens a built-in terminal for running Google Cloud CLI commands without additional setup.
+Click on the **Activate Cloud Shell** button in the top-right corner of the console. This opens a built-in terminal for running Google Cloud CLI commands without additional setup.
 
 ![Activate Cloud Shell](GCR_Images/Activate-Cloud-Shell.png)
 
 Step 3: Verify Authenticated Accounts
 
-In the Cloud Shell terminal, enter the following command to list authenticated accounts and verify your active account:
+In the Cloud Shell terminal, enter the following **command** to list authenticated accounts and verify your active account:
 
 ```
 gcloud auth list
@@ -37,7 +37,7 @@ gcloud auth list
 
 Step 4: Set Active Account
 
-If multiple accounts are listed, set the desired account as the active account using:
+If multiple accounts are listed, **set the desired account** as the active account using:
 
 ```
 gcloud config set account <your-email@example.com>
@@ -47,11 +47,12 @@ Replace <your-email@example.com> with your actual Google Cloud email.
 
 Step 5: Enable Cloud Run API
 
-Enable the Cloud Run API using the following command:
+Enable the Cloud Run API using the following **command**:
 
 ```
 gcloud services enable run.googleapis.com
 ```
+
 ![Enable Cloud Run API](GCR_Images/Enable-Cloud-Run.png)
 
 This step ensures that Cloud Run is ready for deployment. If the API is already enabled, the command will confirm that no changes were needed.
@@ -59,13 +60,14 @@ This step ensures that Cloud Run is ready for deployment. If the API is already 
 
 ## Create an application for Cloud Run
 
-Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
+Step 1: Create a **new ASP.NET Core Web application (Model-View-Controller)** project.
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
-Step 2: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the below NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install DocIO .NET Core NuGet package](ASP-NET-Core_images/NugetPackage.png)
+* [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)
+* [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -86,7 +88,7 @@ using Syncfusion.Pdf;
 
 Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
 
@@ -105,7 +107,7 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 5: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to Pdf** and download it.
+Step 6: Add a new action method **ConvertWordDocumentToPdf** in HomeController.cs and include the below code snippet to **convert the Word document to Pdf** and download it.
 
 {% tabs %}
 
@@ -138,7 +140,7 @@ using (FileStream docStream = new FileStream(Path.GetFullPath("Data/Template.doc
 
 {% endtabs %}
 
-Step 6: Add the following code in Program.cs file.
+Step 7: Add the following code in Program.cs file.
 
 {% tabs %}
 
@@ -179,7 +181,7 @@ app.Run(url);
 
 {% endtabs %}
 
-Step 7: Create an docker file and add the following command.
+Step 8: Create an docker file and add the following command.
 
 ```
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
@@ -214,7 +216,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Convert-Word-Document-to-PDF.dll"]
 ```
 
-## Move application to Docker container
+## Move application for deployment
 
 Step 1: Open **Cloud Shell Editor**
 
@@ -222,13 +224,13 @@ Open Cloud Shell Editor by clicking the pencil icon in Cloud Shell:
 
 ![Open Cloud Shell Editor](GCR_Images/Open-Cloud-Shell-Editor.png)
 
-Step 2: Upload the sample folder
+Step 2: **Upload** the sample folder
 
-Upload the Docker sample folder to Cloud Shell Editor by selecting the Upload Files option.
+Upload the Docker sample folder to Cloud Shell Editor by selecting the **Upload Files** option.
 
 ![Upload the sample folder](GCR_Images/Upload-sample-folder.png)
 
-Step 3: Navigate to the sample folder
+Step 3: **Navigate** to the sample folder
 
 After uploading, open the terminal in Cloud Shell Editor and move to the sample folder using:
 
@@ -239,7 +241,7 @@ cd <sample-folder-name>
 Replace <sample-folder-name> with the actual folder name.
 
 
-## Build and Deploy to Cloud Run
+## Create and Deploy Docker image in Cloud Run
 
 Step 1: Build and submit Docker image to **Google Container Registry (GCR)**
 
@@ -253,7 +255,7 @@ Replace <your-project-id> with your actual Google Cloud project ID.
 
 ![Build and submit Docker image](GCR_Images/Add-Docker-Image.png)
 
-Step 2: List stored container images in GCR
+Step 2: List stored container images in **GCR**
 
 Verify the stored container images using:
 
@@ -263,7 +265,7 @@ gcloud container images list
 
 ![Stored container images in GCR](GCR_Images/List-stored-container-images.png)
 
-Step 3: Build the Docker image
+Step 3: **Build** the Docker image
 
 Enter the following command to build the application.
 
@@ -273,7 +275,7 @@ docker build . --tag gcr.io/<your-project-id>/wordtopdf
 
 ![Build the Docker image](GCR_Images/Build.png)
 
-Step 4: Run the sample locally
+Step 4: **Run** the sample locally
 
 Run the container locally on port 8080:
 
@@ -285,7 +287,7 @@ To close the preview page and return to the terminal then press **Ctrl+C** for w
 
 ![Run the sample](GCR_Images/Run.png)
 
-Step 5: Deploy the sample to Cloud Run
+Step 5: **Deploy** the sample to Cloud Run
 
 Deploy the container to Cloud Run using:
 
@@ -299,9 +301,9 @@ Step 6: Provide deployment details
 
 During deployment, provide the following:
 
-Container Path – Enter gcr.io/<your-project-id>/wordtopdf.
-Service Name – Assign a name to your service.
-Select a Region – Choose the deployment region when prompted.
+* **Container Path** – Enter **gcr.io/<your-project-id>/wordtopdf**.
+* **Service Name** – Assign a name to your service.
+* **Select a Region** – Choose the deployment region when prompted.
 
 ![Provide deployment details](GCR_Images/Provide-deployment-details.png)
 
@@ -311,7 +313,7 @@ Once deployment is complete, a Cloud Run service URL will be generated. Copy thi
 
 ![Generated Service URL](GCR_Images/Service-URL.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/GCP/Google-App-Engine).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/GCP/Google-Cloud-Run).
 
 By executing the program, you will get the **PDF document** as follows. The output will be saved in bin folder.
 
