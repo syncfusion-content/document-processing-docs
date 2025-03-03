@@ -3346,7 +3346,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The form field editing or filling capabilities can be removed by either flattening the PDF document or by marking the form or field as read only.
 
-### How to Flatten Form Fields
+### Flattening form fields in a PDF
 
 Essential<sup>&reg;</sup> PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
 
@@ -3558,7 +3558,7 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document).
 
-### How to Set Form Fields as Read-Only
+### Marking form fields as Read-Only
 
 To prevent the user from changing the form field content, you can also use [Readonly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property.
 
@@ -3709,7 +3709,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> Flattening and adding Read-only properties can be done to the entire form or an individual form field.
 
-### Removing the form fields from existing PDF document
+## Removing the form fields from existing PDF document
 
 You can remove the form fields from an existing PDF document using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_Remove_Syncfusion_Pdf_Interactive_PdfField_) or [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_RemoveAt_System_Int32_) methods of [PdfFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html) class.
 
