@@ -160,3 +160,11 @@ Rename fields in the parent and nested groups to have distinct names. This avoid
 To find merge fields that have null values or missing from the data source, set [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) API as false before performing mail merge. This ensures unmerged fields remain visible in the output document. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-options#remove-empty-merge-fields) for code example.
 
 For identifying only null value fields or missing from data source, use the [BeforeClearField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html) event during the mail merge process to replace them with an error message. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-events#beforeclearfield-event) for code example.
+
+## Why is each record merging on a new page during mail merge?
+
+In DocIO, standard mail merge duplicates the entire document for each record, causing each entry to start on a new page. For example, with 10 records, the document repeats 10 times.
+
+To merge all records into a single table on the same page, use Group Mail Merge instead. This ensures structured data insertion without unnecessary page breaks.
+
+Refer to the [Group Mail Merge](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-for-group) documentation for details.

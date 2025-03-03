@@ -124,3 +124,10 @@ Similarly, the Syncfusion.Drawing.ColorTranslator.FromHtml function behaves the 
 
 To validate HTML styles and formatting, define the styles within HTML tags and open the file in a browser. If the styles render correctly, they are valid.
 
+## How does AppendHtml() handle multiple paragraphs in an HTML string?
+
+When using AppendHtml(), the first paragraph in the HTML string is appended to the current paragraph, while the remaining paragraphs are added as separate paragraphs within the same section.
+
+Refer to the image below: The HTML contains three paragraphs, but in the resulting Word document, the first paragraph is appended to the existing paragraph in the document.
+
+![Multiple paragraphs HTML](../FAQ_images/HTML-with-multiple-paragraph.png)
