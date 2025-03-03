@@ -16,9 +16,14 @@ Step 1: Access Google Cloud Console
 
 Sign in to the Google Cloud Console and navigate to Cloud Run from the left-hand menu.
 
+![Access Google Cloud Console](GCR_Images/Access-Google-Cloud-Console.png)
+
+
 Step 2: Activate Cloud Shell
 
 Click on the Activate Cloud Shell button in the top-right corner of the console. This opens a built-in terminal for running Google Cloud CLI commands without additional setup.
+
+![Activate Cloud Shell](GCR_Images/Activate-Cloud-Shell.png)
 
 Step 3: Verify Authenticated Accounts
 
@@ -27,6 +32,8 @@ In the Cloud Shell terminal, enter the following command to list authenticated a
 ```
 gcloud auth list
 ```
+
+![Verify Authenticated Accounts](GCR_Images/Verify-Authenticated-Accounts.png)
 
 Step 4: Set Active Account
 
@@ -45,9 +52,9 @@ Enable the Cloud Run API using the following command:
 ```
 gcloud services enable run.googleapis.com
 ```
+![Enable Cloud Run API](GCR_Images/Enable-Cloud-Run.png)
 
 This step ensures that Cloud Run is ready for deployment. If the API is already enabled, the command will confirm that no changes were needed.
-
 
 
 ## Create an application for Cloud Run
@@ -213,9 +220,13 @@ Step 1: Open **Cloud Shell Editor**
 
 Open Cloud Shell Editor by clicking the pencil icon in Cloud Shell:
 
+![Open Cloud Shell Editor](GCR_Images/Open-Cloud-Shell-Editor.png)
+
 Step 2: Upload the sample folder
 
 Upload the Docker sample folder to Cloud Shell Editor by selecting the Upload Files option.
+
+![Upload the sample folder](GCR_Images/Upload-sample-folder.png)
 
 Step 3: Navigate to the sample folder
 
@@ -227,7 +238,10 @@ cd <sample-folder-name>
 
 Replace <sample-folder-name> with the actual folder name.
 
-Step 4: Build and submit Docker image to **Google Container Registry (GCR)**
+
+## Build and Deploy to Cloud Run
+
+Step 1: Build and submit Docker image to **Google Container Registry (GCR)**
 
 Run the following command to build and submit the Docker image to Google Container Registry (GCR):
 
@@ -237,17 +251,19 @@ gcloud builds submit --tag gcr.io/<your-project-id>/wordtopdf
 
 Replace <your-project-id> with your actual Google Cloud project ID.
 
-Step 5: List stored container images in GCR
+![Build and submit Docker image](GCR_Images/Add-Docker-Image.png)
+
+Step 2: List stored container images in GCR
+
 Verify the stored container images using:
 
 ```
 gcloud container images list
 ```
 
+![Stored container images in GCR](GCR_Images/List-stored-container-images.png)
 
-## Build and Deploy to Cloud Run
-
-Step 1: Build the Docker image
+Step 3: Build the Docker image
 
 Enter the following command to build the application.
 
@@ -255,7 +271,9 @@ Enter the following command to build the application.
 docker build . --tag gcr.io/<your-project-id>/wordtopdf
 ```
 
-Step 2: Run the sample locally
+![Build the Docker image](GCR_Images/Build.png)
+
+Step 4: Run the sample locally
 
 Run the container locally on port 8080:
 
@@ -265,7 +283,9 @@ docker run -p 8080:8080 gcr.io/<your-project-id>/wordtopdf
 
 To close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
 
-Step 3: Deploy the sample to Cloud Run
+![Run the sample](GCR_Images/Run.png)
+
+Step 5: Deploy the sample to Cloud Run
 
 Deploy the container to Cloud Run using:
 
@@ -273,7 +293,9 @@ Deploy the container to Cloud Run using:
 gcloud run deploy
 ```
 
-Step 4: Provide deployment details
+![Deploy the sample to Cloud Run](GCR_Images/Deploy.png)
+
+Step 6: Provide deployment details
 
 During deployment, provide the following:
 
@@ -281,10 +303,13 @@ Container Path – Enter gcr.io/<your-project-id>/wordtopdf.
 Service Name – Assign a name to your service.
 Select a Region – Choose the deployment region when prompted.
 
-Step 5: Retrieve the generated **Service URL**
+![Provide deployment details](GCR_Images/Provide-deployment-details.png)
+
+Step 7: Retrieve the generated **Service URL**
 
 Once deployment is complete, a Cloud Run service URL will be generated. Copy this URL to access your deployed service.
 
+![Generated Service URL](GCR_Images/Service-URL.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/GCP/Google-App-Engine).
 
