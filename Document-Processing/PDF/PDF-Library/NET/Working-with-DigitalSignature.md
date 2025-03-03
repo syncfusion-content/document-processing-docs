@@ -596,6 +596,112 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
+## Verify digital signature in existing PDF document
+
+You can verify the digital signature using the [IsSignatureValid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html#Syncfusion_Pdf_Security_PdfSignatureValidationResult_IsSignatureValid) property available in the [PdfSignatureValidationResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html) class.
+
+The following code example demonstrates how to verify the digital signature in an existing PDF.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Open the signed PDF file for reading
+using (FileStream inputFileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
+
+    // Check if the document has a form (which would contain signature fields)
+    if (loadedDocument.Form == null)
+    {
+        Console.WriteLine("No signature fields found in the document.");
+        return;
+    }
+
+    // Iterate through all fields in the form
+    foreach (var field in loadedDocument.Form.Fields)
+    {
+        // Check if the field is a signature field
+        if (field is PdfLoadedSignatureField signatureField)
+        {
+            // Determine whether the signature field is signed or not
+            string status = signatureField.IsSigned ? "Signed" : "UnSigned";
+
+            // Output the result for each signature field
+            Console.WriteLine($"Signature Field {signatureField.Name} is : {status}");
+        }
+    }
+    //Close the document
+    loadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+ 
+    // Load the PDF document
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Check if the document has a form (which would contain signature fields)
+    if (loadedDocument.Form == null)
+    {
+        Console.WriteLine("No signature fields found in the document.");
+        return;
+    }
+
+    // Iterate through all fields in the form
+    foreach (var field in loadedDocument.Form.Fields)
+    {
+        // Check if the field is a signature field
+        if (field is PdfLoadedSignatureField signatureField)
+        {
+            // Determine whether the signature field is signed or not
+            string status = signatureField.IsSigned ? "Signed" : "UnSigned";
+
+            // Output the result for each signature field
+            Console.WriteLine($"Signature Field {signatureField.Name} is : {status}");
+        }
+    }
+    //Close the document
+    loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+ 
+' Load the PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Check if the document has a form (which would contain signature fields)
+If loadedDocument.Form Is Nothing Then
+    Console.WriteLine("No signature fields found in the document.")
+    Return
+End If
+
+' Iterate through all fields in the form
+For Each field As PdfField In loadedDocument.Form.Fields
+    ' Check if the field is a signature field
+    If TypeOf field Is PdfLoadedSignatureField Then
+        Dim signatureField As PdfLoadedSignatureField = CType(field, PdfLoadedSignatureField)
+
+        ' Determine whether the signature field is signed or not
+        Dim status As String = If(signatureField.IsSigned, "Signed", "UnSigned")
+
+        ' Output the result for each signature field
+        Console.WriteLine($"Signature Field {signatureField.Name} is : {status}")
+    End If
+Next
+
+' Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Externally sign a PDF document 
 
 You can sign the PDF document with an external digital signature created from various sources, such as an HSM, USB token, smart card, or other cloud services such as DigitalSign. The following approaches are available for externally signing the PDF documents.
