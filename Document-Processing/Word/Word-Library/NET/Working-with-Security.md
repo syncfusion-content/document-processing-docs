@@ -219,6 +219,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can restrict a Word document from editing either by providing a password or without password. 
 
+To quickly restrict editing in a Word document using the .NET Word (DOCIO) Library, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=gRoW8EwjkoE" %}
+
 The following are the types of protection:
 
 1. [AllowOnlyComments](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): You can add/modify only the comments in the Word document.

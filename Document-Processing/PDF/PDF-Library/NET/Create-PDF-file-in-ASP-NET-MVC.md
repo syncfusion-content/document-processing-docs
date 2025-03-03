@@ -14,8 +14,12 @@ To include the .NET PDF library into your ASP.NET MVC application, please refer 
 
 ## Steps to create PDF document in ASP.NET MVC
 
-Step 1: Create a new ASP.NET MVC application project.
-![Create ASP.NET MVC Web application in Visual Studio](MVC_images/Create-MVC-application.png)
+Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
+![Create ASP.NET MVC Web application in Visual Studio](MVC_images/Creation1.png)
+
+Step 2: In the project configuration windows, name your project and click Create.
+![Add the project name](MVC_images/Creation2.png)
+![Select the MVC](MVC_images/Creation3.png)
 
 Step 2: Install the [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/) NuGet package as a reference to your ASP.NET MVC applications from [NuGet.org](https://www.nuget.org/).
 ![Install PDF MVC NuGet package](MVC_images/NuGet-package.png)
@@ -303,7 +307,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name.
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group.
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option.

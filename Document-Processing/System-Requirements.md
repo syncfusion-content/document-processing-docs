@@ -9,11 +9,11 @@ documentation: ug
 ---
 # System Requirements for Document Processing Components
 
-The system requirements for using our Syncfusion Document Processing platform are as follows
+The system requirements for using our Syncfusion<sup>&reg;</sup> Document Processing platform are as follows
 
 ### Operating Systems
 
-Syncfusion Document Processing libraries are supported on any of the following operating systems:
+Syncfusion<sup>&reg;</sup> Document Processing libraries are supported on any of the following operating systems:
 
 * Windows 10
 * Windows 11
@@ -32,19 +32,19 @@ Syncfusion Document Processing libraries are supported on any of the following o
 
 ### Development Environment
 
-In order to develop applications with the Syncfusion Document Processing libraries, you need to install any of the Visual Studio versions.
+In order to develop applications with the Syncfusion<sup>&reg;</sup> Document Processing libraries, you need to install any of the Visual Studio versions.
 
 * Microsoft Visual Studio 2015
 * Microsoft Visual Studio 2017
 * Microsoft Visual Studio 2019
 * Microsoft Visual Studio 2022
 
-Syncfusion Document Processing libraries supports the following .NET Framework and .NET versions
+Syncfusion<sup>&reg;</sup> Document Processing libraries supports the following .NET Framework and .NET versions
 
 * .NET Framework 4.6.2
 * .NET Standard 2.0
 * .NET 8.0
 * .NET 9.0
 
-You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET Web Forms, ASP.NET MVC, ASP.NET Core, Blazor, UWP, Xamarin, WinUI and .NET MAUI applications. 
+You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET MVC, ASP.NET Core, Blazor, UWP, Xamarin, WinUI and .NET MAUI applications. 
 
