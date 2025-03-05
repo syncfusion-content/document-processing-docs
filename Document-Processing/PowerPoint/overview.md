@@ -1,6 +1,6 @@
 ---
 title: PowerPoint Presentation Processing Framework | Syncfusion
-description: Syncfusion <sup>®</sup> PowerPoint Presentation Processing Framework offers PowerPoint libraries and converters without Microsoft Office.
+description: Syncfusion<sup>®</sup> PowerPoint Presentation Processing Framework offers PowerPoint libraries and converters without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
