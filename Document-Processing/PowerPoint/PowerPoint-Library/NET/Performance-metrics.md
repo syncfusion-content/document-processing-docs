@@ -1,12 +1,12 @@
 ---
 title: Performance benchmark results | Syncfusion
-description: Know about the performance benchmark results of Syncfusion<sup>&reg;</sup> .NET PowerPoint Library 
+description: Know about the performance benchmark results of Syncfusion® .NET PowerPoint Library with different slide count 
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 
-# Performance benchmark results of .NET PowerPoint Library 
+# .NET PowerPoint Library Performance Benchmarks
 
 The Syncfusion<sup>&reg;</sup> .NET PowerPoint library enables seamless integration for working with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report demonstrates the speed and efficiency of key functionalities, emphasizing how our library excels in real-world scenarios. 
 
@@ -14,11 +14,11 @@ The Syncfusion<sup>&reg;</sup> .NET PowerPoint library enables seamless integrat
 
 The following system configurations were used for benchmarking: 
 
-* Operating System: Windows 10
-* Processor: 11th Gen Intel(R) Core(TM)
-* RAM: 16GB
-* .NET Version: NET 8.0
-* Syncfusion<sup>&reg;</sup> Presentation Library Version: v28.2.7
+* **Operating System:** Windows 10
+* **Processor:** 11th Gen Intel(R) Core(TM)
+* **RAM:** 16GB
+* **.NET Version:** .NET 8.0
+* **Syncfusion<sup>&reg;</sup> .NET PowerPoint Library Version:** v28.2.7
 
 ## Open and save Presentation 
 
@@ -50,7 +50,7 @@ The following system configurations were used for benchmarking:
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/).
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/).
 
 ## Clone and merge slides 
 
@@ -82,39 +82,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
-
-## PowerPoint to Image conversion 
-
-<table>
-<tr>
-    <td><strong>Slides</strong></td>
-    <td><strong>Input Presentation File</strong></td>
-    <td><strong>Syncfusion<sup>&reg;</sup> Time (sec)</strong></td>
-</tr>
-<tr>
-    <td>2</td>
-    <td>{{'[PowerPoint-2.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-2.pptx)'| markdownify }}</td>
-    <td>1.3</td>
-</tr>
-<tr>
-    <td>50</td>
-    <td>{{'[PowerPoint-50.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-50.pptx)'| markdownify }}</td>
-    <td>2.7</td>
-</tr>
-<tr>
-    <td>100</td>
-    <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-100.pptx)'| markdownify }}</td>
-    <td>4.4</td>
-</tr>
-<tr>
-    <td>500</td>
-    <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>50</td>
-</tr>
-</table>
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
 
 ## PowerPoint to PDF conversion 
 
@@ -146,4 +114,36 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/).
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/).
+
+## PowerPoint to Image conversion 
+
+<table>
+<tr>
+    <td><strong>Slides</strong></td>
+    <td><strong>Input Presentation File</strong></td>
+    <td><strong>Syncfusion<sup>&reg;</sup> Time (sec)</strong></td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>{{'[PowerPoint-2.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-2.pptx)'| markdownify }}</td>
+    <td>1.3</td>
+</tr>
+<tr>
+    <td>50</td>
+    <td>{{'[PowerPoint-50.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-50.pptx)'| markdownify }}</td>
+    <td>2.7</td>
+</tr>
+<tr>
+    <td>100</td>
+    <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-100.pptx)'| markdownify }}</td>
+    <td>4.4</td>
+</tr>
+<tr>
+    <td>500</td>
+    <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-500.pptx)'| markdownify }}</td>
+    <td>50</td>
+</tr>
+</table>
+
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
