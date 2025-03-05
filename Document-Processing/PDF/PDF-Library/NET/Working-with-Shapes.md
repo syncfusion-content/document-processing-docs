@@ -1502,7 +1502,7 @@ The following code example demonstrates how to use a dash pattern in a line shap
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Shapes/Dash-pattern-in-shapes/.NET/Dash-pattern-in-shapes/Program.cs" %}
 
 // Create a new PDF document
 PdfDocument document = new PdfDocument();
@@ -1593,4 +1593,4 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Shapes/Dash-pattern-in-shapes/.NET).
