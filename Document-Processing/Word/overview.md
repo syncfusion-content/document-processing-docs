@@ -1,6 +1,6 @@
 ---
 title: Word Document Processing Framework | Syncfusion
-description: Syncfusion <sup>®</sup> Word Document Processing Framework offers Word document libraries, converters & Document Editor without Microsoft Office.
+description: Syncfusion<sup>®</sup> Word Document Processing Framework offers Word document libraries, converters & Document Editor without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
