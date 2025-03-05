@@ -4078,7 +4078,7 @@ The following code example how to add transparency to the PDF annotation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Adding-transparency-for-annotations/.NET/Adding-transparency-for-annotations/Program.cs" %}
 
 // Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -4168,7 +4168,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Adding-transparency-for-annotations/.NET).
 
 ## Adding comments and review status to the PDF annotation
 
