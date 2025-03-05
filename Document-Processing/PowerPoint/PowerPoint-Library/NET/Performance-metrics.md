@@ -6,7 +6,7 @@ control: Presentation
 documentation: UG
 ---
 
-# Performance benchmark results of .NET PowerPoint Library 
+# .NET PowerPoint Library Performance Benchmarks
 
 The Syncfusion<sup>&reg;</sup> .NET PowerPoint library enables seamless integration for working with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report demonstrates the speed and efficiency of key functionalities, emphasizing how our library excels in real-world scenarios. 
 
@@ -14,11 +14,11 @@ The Syncfusion<sup>&reg;</sup> .NET PowerPoint library enables seamless integrat
 
 The following system configurations were used for benchmarking: 
 
-* Operating System: Windows 10
-* Processor: 11th Gen Intel(R) Core(TM)
-* RAM: 16GB
-* .NET Version: NET 8.0
-* Syncfusion<sup>&reg;</sup> Presentation Library Version: v28.2.7
+* **Operating System:** Windows 10
+* **Processor:** 11th Gen Intel(R) Core(TM)
+* **RAM:** 16GB
+* **.NET Version:** .NET 8.0
+* **Syncfusion<sup>&reg;</sup> .NET PowerPoint Library Version:** v28.2.7
 
 ## Open and save Presentation 
 
@@ -50,7 +50,7 @@ The following system configurations were used for benchmarking:
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/).
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/).
 
 ## Clone and merge slides 
 
@@ -82,7 +82,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
 
 ## PowerPoint to Image conversion 
 
@@ -114,7 +114,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
 
 ## PowerPoint to PDF conversion 
 
@@ -146,4 +146,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 </tr>
 </table>
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/).
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/).
