@@ -1278,7 +1278,7 @@ Refer to the following code example for creating new page in a PDF document whil
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET/Insert-New-Page-in-Existing-PDF-with-Same-Size/Program.cs" %}
 
 // Load the PDF document from a FileStream
 using (FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -1349,4 +1349,4 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET).
