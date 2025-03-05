@@ -84,38 +84,6 @@ You can find the sample used for this performance evaluation on [GitHub](https:/
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
 
-## PowerPoint to Image conversion 
-
-<table>
-<tr>
-    <td><strong>Slides</strong></td>
-    <td><strong>Input Presentation File</strong></td>
-    <td><strong>Syncfusion<sup>&reg;</sup> Time (sec)</strong></td>
-</tr>
-<tr>
-    <td>2</td>
-    <td>{{'[PowerPoint-2.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-2.pptx)'| markdownify }}</td>
-    <td>1.3</td>
-</tr>
-<tr>
-    <td>50</td>
-    <td>{{'[PowerPoint-50.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-50.pptx)'| markdownify }}</td>
-    <td>2.7</td>
-</tr>
-<tr>
-    <td>100</td>
-    <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-100.pptx)'| markdownify }}</td>
-    <td>4.4</td>
-</tr>
-<tr>
-    <td>500</td>
-    <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>50</td>
-</tr>
-</table>
-
-You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
-
 ## PowerPoint to PDF conversion 
 
 <table>
@@ -147,3 +115,35 @@ You can find the sample used for this performance evaluation on [GitHub](https:/
 </table>
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/).
+
+## PowerPoint to Image conversion 
+
+<table>
+<tr>
+    <td><strong>Slides</strong></td>
+    <td><strong>Input Presentation File</strong></td>
+    <td><strong>Syncfusion<sup>&reg;</sup> Time (sec)</strong></td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>{{'[PowerPoint-2.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-2.pptx)'| markdownify }}</td>
+    <td>1.3</td>
+</tr>
+<tr>
+    <td>50</td>
+    <td>{{'[PowerPoint-50.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-50.pptx)'| markdownify }}</td>
+    <td>2.7</td>
+</tr>
+<tr>
+    <td>100</td>
+    <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-100.pptx)'| markdownify }}</td>
+    <td>4.4</td>
+</tr>
+<tr>
+    <td>500</td>
+    <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-500.pptx)'| markdownify }}</td>
+    <td>50</td>
+</tr>
+</table>
+
+You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
