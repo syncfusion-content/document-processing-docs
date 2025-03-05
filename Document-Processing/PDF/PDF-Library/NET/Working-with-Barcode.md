@@ -1067,7 +1067,7 @@ document.Close(True)
 
 ## Supported barcode error correction level
 
-This [ErrorCorrectionLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.Pdf417Barcode.html#Syncfusion_Pdf_Barcode_Pdf417Barcode_ErrorCorrectionLevel) property can be used in the code to specify the error correction level when generating QR codes, ensuring the QR code can withstand potential damage based on its intended usage.
+This [ErrorCorrectionLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfErrorCorrectionLevel.html) property can be used in the code to specify the error correction level when generating QR codes, ensuring the QR code can withstand potential damage based on its intended usage.
 
 <table>
  <thead>
