@@ -9,15 +9,15 @@ keywords: .net save pdf, .net load pdf, c# save pdf, c# load pdf
 
 # Open and Save PDF document in ASP.NET
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET**.
+The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET**.
 
-## Steps to open and save PDF document programatically: 
+## Steps to open and save PDF document programmatically: 
 
 Step 1: Create a new ASP.NET Web application project.
 ![Create ASP.NET Web application in Visual Studio](Images/Create_ASP_NET_application.png)
 ![Create ASP.NET Web application in Visual Studio - step2](Images/Select_Web_Forms.png)
 
-Step 2: Install the [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![NuGet package reference](Images/NuGet_package_ASP_NET.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
