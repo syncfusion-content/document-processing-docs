@@ -30,7 +30,7 @@ The following code example illustrating how to create a **List-type SmartArt** i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-List/.NET/Create-SmartArt-List/Create-SmartArt-List/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-List/.NET/Create-SmartArt-List/Program.cs" %}
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 // Retrieves the first paragraph and add text.
@@ -184,7 +184,7 @@ The following code example illustrating how to create a **Process-type SmartArt*
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Process/.NET/Create-SmartArt-List/Create-SmartArt-Process/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Process/.NET/Create-SmartArt-List/Program.cs" %}
 WordDocument document = new WordDocument();
 IWSection section = document.AddSection();
 // Retrieves the first paragraph and add text.
@@ -337,69 +337,398 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### cycle
 
+The following code example illustrating how to create a **Cycle-type SmartArt** in a Word document.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Cycle/.NET/Create-SmartArt-Cycle/Program.cs" %}
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Customer Service Cycle");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Block Cycle" layout
+WSmartArt blockCycleSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.BlockCycle, 432, 252);
+// Add the "Inquiry" phase node
+IOfficeSmartArtNode inquiryNode = blockCycleSmartArt.Nodes[0];
+inquiryNode.TextBody.Text = "Inquiry";
+inquiryNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Response" phase node
+IOfficeSmartArtNode responseNode = blockCycleSmartArt.Nodes[1];
+responseNode.TextBody.Text = "Response";
+responseNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Resolution" phase node
+IOfficeSmartArtNode resolutionNode = blockCycleSmartArt.Nodes[2];
+resolutionNode.TextBody.Text = "Resolution";
+resolutionNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Feedback" phase node
+IOfficeSmartArtNode feedBackNode = blockCycleSmartArt.Nodes[3];
+feedBackNode.TextBody.Text = "Feedback";
+feedBackNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Follow-up" phase node
+IOfficeSmartArtNode followupNode = blockCycleSmartArt.Nodes[4];
+followupNode.TextBody.Text = "Follow-up";
+followupNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Customer Service Cycle");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Block Cycle" layout
+WSmartArt blockCycleSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.BlockCycle, 432, 252);
+// Add the "Inquiry" phase node
+IOfficeSmartArtNode inquiryNode = blockCycleSmartArt.Nodes[0];
+inquiryNode.TextBody.Text = "Inquiry";
+inquiryNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Response" phase node
+IOfficeSmartArtNode responseNode = blockCycleSmartArt.Nodes[1];
+responseNode.TextBody.Text = "Response";
+responseNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Resolution" phase node
+IOfficeSmartArtNode resolutionNode = blockCycleSmartArt.Nodes[2];
+resolutionNode.TextBody.Text = "Resolution";
+resolutionNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Feedback" phase node
+IOfficeSmartArtNode feedBackNode = blockCycleSmartArt.Nodes[3];
+feedBackNode.TextBody.Text = "Feedback";
+feedBackNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+// Add the "Follow-up" phase node
+IOfficeSmartArtNode followupNode = blockCycleSmartArt.Nodes[4];
+followupNode.TextBody.Text = "Follow-up";
+followupNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 15f;
+//Saves the Word document
+document.Save("Result.docx", FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+Dim document As New WordDocument()
+Dim section As IWSection = document.AddSection()
+' Retrieves the first paragraph and add text.
+Dim paragraph As IWParagraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+Dim textRange1 As IWTextRange = paragraph.AppendText("Customer Service Cycle")
+textRange1.CharacterFormat.FontSize = 28.0F
+paragraph = section.AddParagraph()
+paragraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+' Add SmartArt with "Block Cycle" layout
+Dim blockCycleSmartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.BlockCycle, 432, 252)
+' Add the "Inquiry" phase node
+Dim inquiryNode As IOfficeSmartArtNode = blockCycleSmartArt.Nodes(0)
+inquiryNode.TextBody.Text = "Inquiry"
+inquiryNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 15.0F
+' Add the "Response" phase node
+Dim responseNode As IOfficeSmartArtNode = blockCycleSmartArt.Nodes(1)
+responseNode.TextBody.Text = "Response"
+responseNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 15.0F
+' Add the "Resolution" phase node
+Dim resolutionNode As IOfficeSmartArtNode = blockCycleSmartArt.Nodes(2)
+resolutionNode.TextBody.Text = "Resolution"
+resolutionNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 15.0F
+' Add the "Feedback" phase node
+Dim feedBackNode As IOfficeSmartArtNode = blockCycleSmartArt.Nodes(3)
+feedBackNode.TextBody.Text = "Feedback"
+feedBackNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 15.0F
+' Add the "Follow-up" phase node
+Dim followupNode As IOfficeSmartArtNode = blockCycleSmartArt.Nodes(4)
+followupNode.TextBody.Text = "Follow-up"
+followupNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 15.0F
+' Saves the Word document
+document.Save("Result.docx", FormatType.Docx)
+' Closes the document
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Cycle/.NET/).
 
 ### Hierarchy
 
+The following code example illustrating how to create a **Hierarchy-type SmartArt** in a Word document.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Company Organizational Structure");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Hierarchy" layout
+WSmartArt hierarchySmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.Hierarchy, 432, 252);
+// Configure the "Manager" node and its hierarchy
+IOfficeSmartArtNode manager = hierarchySmartArt.Nodes[0];
+manager.TextBody.Text = "Manager";
+manager.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[0].TextBody.Text = "Team Lead 1";
+manager.ChildNodes[0].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[0].ChildNodes[0].TextBody.Text = "Employee 1";
+manager.ChildNodes[0].ChildNodes[0].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[0].ChildNodes[1].TextBody.Text = "Employee 2";
+manager.ChildNodes[0].ChildNodes[1].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[1].TextBody.Text = "Team Lead 2";
+manager.ChildNodes[1].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[1].ChildNodes[0].TextBody.Text = "Employee 3";
+manager.ChildNodes[1].ChildNodes[0].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Company Organizational Structure");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Hierarchy" layout
+WSmartArt hierarchySmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.Hierarchy, 432, 252);
+// Configure the "Manager" node and its hierarchy
+IOfficeSmartArtNode manager = hierarchySmartArt.Nodes[0];
+manager.TextBody.Text = "Manager";
+manager.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[0].TextBody.Text = "Team Lead 1";
+manager.ChildNodes[0].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[0].ChildNodes[0].TextBody.Text = "Employee 1";
+manager.ChildNodes[0].ChildNodes[0].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[0].ChildNodes[1].TextBody.Text = "Employee 2";
+manager.ChildNodes[0].ChildNodes[1].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[1].TextBody.Text = "Team Lead 2";
+manager.ChildNodes[1].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+manager.ChildNodes[1].ChildNodes[0].TextBody.Text = "Employee 3";
+manager.ChildNodes[1].ChildNodes[0].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 20f;
+//Saves the Word document
+document.Save("Result.docx", FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+Dim document As New WordDocument()
+Dim section As IWSection = document.AddSection()
+' Retrieves the first paragraph and add text.
+Dim paragraph As IWParagraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+Dim textRange1 As IWTextRange = paragraph.AppendText("Company Organizational Structure")
+textRange1.CharacterFormat.FontSize = 28.0F
+paragraph = section.AddParagraph()
+paragraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+' Add SmartArt with "Hierarchy" layout
+Dim hierarchySmartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.Hierarchy, 432, 252)
+' Configure the "Manager" node and its hierarchy
+Dim manager As IOfficeSmartArtNode = hierarchySmartArt.Nodes(0)
+manager.TextBody.Text = "Manager"
+manager.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 20.0F
+manager.ChildNodes(0).TextBody.Text = "Team Lead 1"
+manager.ChildNodes(0).TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 20.0F
+manager.ChildNodes(0).ChildNodes(0).TextBody.Text = "Employee 1"
+manager.ChildNodes(0).ChildNodes(0).TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 20.0F
+manager.ChildNodes(0).ChildNodes(1).TextBody.Text = "Employee 2"
+manager.ChildNodes(0).ChildNodes(1).TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 20.0F
+manager.ChildNodes(1).TextBody.Text = "Team Lead 2"
+manager.ChildNodes(1).TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 20.0F
+manager.ChildNodes(1).ChildNodes(0).TextBody.Text = "Employee 3"
+manager.ChildNodes(1).ChildNodes(0).TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 20.0F
+' Saves the Word document
+document.Save("Result.docx", FormatType.Docx)
+' Closes the document
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ### Relationship
 
+The following code example illustrating how to create a **Relationship-type SmartArt** in a Word document.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Relationship/.NET/Create-SmartArt-Relationship/Program.cs" %}
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Remote Work vs Office Work");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Counter Balance Arrows" layout
+WSmartArt counterBalanceArrowsSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.CounterBalanceArrows, 432, 252);
+// Add the "Remote Work" phase node
+IOfficeSmartArtNode remoteWorkNode = counterBalanceArrowsSmartArt.Nodes[0];
+remoteWorkNode.TextBody.Text = "Remote Work";
+remoteWorkNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 19f;
+remoteWorkNode.ChildNodes.Add();
+remoteWorkNode.ChildNodes.Add();
+AddSmartArtChildNode(remoteWorkNode, "Flexibility", "Work-Life Balance", 15f);
+// Add the "Office Work" phase node
+IOfficeSmartArtNode officeWorkNode = counterBalanceArrowsSmartArt.Nodes[1];
+officeWorkNode.TextBody.Text = "Office Work";
+officeWorkNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 19f;
+officeWorkNode.ChildNodes.Add();
+officeWorkNode.ChildNodes.Add();
+AddSmartArtChildNode(officeWorkNode, "Collaboration", "Structured Environment", 15f);
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Remote Work vs Office Work");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Counter Balance Arrows" layout
+WSmartArt counterBalanceArrowsSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.CounterBalanceArrows, 432, 252);
+// Add the "Remote Work" phase node
+IOfficeSmartArtNode remoteWorkNode = counterBalanceArrowsSmartArt.Nodes[0];
+remoteWorkNode.TextBody.Text = "Remote Work";
+remoteWorkNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 19f;
+remoteWorkNode.ChildNodes.Add();
+remoteWorkNode.ChildNodes.Add();
+AddSmartArtChildNode(remoteWorkNode, "Flexibility", "Work-Life Balance", 15f);
+// Add the "Office Work" phase node
+IOfficeSmartArtNode officeWorkNode = counterBalanceArrowsSmartArt.Nodes[1];
+officeWorkNode.TextBody.Text = "Office Work";
+officeWorkNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 19f;
+officeWorkNode.ChildNodes.Add();
+officeWorkNode.ChildNodes.Add();
+AddSmartArtChildNode(officeWorkNode, "Collaboration", "Structured Environment", 15f);
+//Saves the Word document
+document.Save("Result.docx", FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim document As New WordDocument()
+Dim section As IWSection = document.AddSection()
+' Retrieves the first paragraph and add text.
+Dim paragraph As IWParagraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+Dim textRange1 As IWTextRange = paragraph.AppendText("Remote Work vs Office Work")
+textRange1.CharacterFormat.FontSize = 28.0F
+paragraph = section.AddParagraph()
+paragraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+' Add SmartArt with "Counter Balance Arrows" layout
+Dim counterBalanceArrowsSmartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.CounterBalanceArrows, 432, 252)
+' Add the "Remote Work" phase node
+Dim remoteWorkNode As IOfficeSmartArtNode = counterBalanceArrowsSmartArt.Nodes(0)
+remoteWorkNode.TextBody.Text = "Remote Work"
+remoteWorkNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 19.0F
+remoteWorkNode.ChildNodes.Add()
+remoteWorkNode.ChildNodes.Add()
+AddSmartArtChildNode(remoteWorkNode, "Flexibility", "Work-Life Balance", 15.0F)
+' Add the "Office Work" phase node
+Dim officeWorkNode As IOfficeSmartArtNode = counterBalanceArrowsSmartArt.Nodes(1)
+officeWorkNode.TextBody.Text = "Office Work"
+officeWorkNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 19.0F
+officeWorkNode.ChildNodes.Add()
+officeWorkNode.ChildNodes.Add()
+AddSmartArtChildNode(officeWorkNode, "Collaboration", "Structured Environment", 15.0F)
+' Saves the Word document
+document.Save("Result.docx", FormatType.Docx)
+' Closes the document
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example shows AddSmartArtChildNode, which is used to add child nodes to a given SmartArt node and apply formatting.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private void AddSmartArtChildNode(IOfficeSmartArtNode node, string childText1, string childText2, float fontSize)
+{
+    node.ChildNodes[0].TextBody.Text = childText1;
+    node.ChildNodes[1].TextBody.Text = childText2;
+    for (int i = 0; i < node.ChildNodes.Count; i++)
+    {
+        node.ChildNodes[i].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = fontSize;
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void AddSmartArtChildNode(IOfficeSmartArtNode node, string childText1, string childText2, float fontSize)
+{
+    node.ChildNodes[0].TextBody.Text = childText1;
+    node.ChildNodes[1].TextBody.Text = childText2;
+    for (int i = 0; i < node.ChildNodes.Count; i++)
+    {
+        node.ChildNodes[i].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = fontSize;
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Sub AddSmartArtChildNode(node As IOfficeSmartArtNode, childText1 As String, childText2 As String, fontSize As Single)
+    node.ChildNodes(0).TextBody.Text = childText1
+    node.ChildNodes(1).TextBody.Text = childText2
+    For i As Integer = 0 To node.ChildNodes.Count - 1
+        node.ChildNodes(i).TextBody.Paragraphs(0).TextParts(0).Font.FontSize = fontSize
+    Next
+End Sub
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Relationship/.NET/).
 
 ### Matrix
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -413,13 +742,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ### pyramid
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -433,13 +762,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ### Picture
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -453,14 +782,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ## Modify SmartArt appearance 
 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -474,14 +803,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ## Remove SmartArt
 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -495,7 +824,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ## Nodes in SmartArt
 
@@ -503,7 +832,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -517,13 +846,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ### Iterating through child nodes of an existing SmartArt 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -537,13 +866,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ### Removing node from an existing SmartArt 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -557,12 +886,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ###Assistant nodes in SmartArt 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 
 {% endhighlight %}
 
@@ -576,7 +905,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
 
 ## Limitations
 
