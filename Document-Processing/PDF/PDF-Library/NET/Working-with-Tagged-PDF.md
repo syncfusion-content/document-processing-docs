@@ -154,7 +154,7 @@ PdfDocument doc = new PdfDocument();
 doc.DocumentInformation.Title = "Image";
 //Creates new page
 PdfPage page = doc.Pages.Add();
-FileStream fontStream = new FileStream("Arial.tff", FileMode.Open, FileAccess.Read);
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
 PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw string
 page.Graphics.DrawString("JPEG Image:", font, true), PdfBrushes.Blue, new PointF(0, 0));
