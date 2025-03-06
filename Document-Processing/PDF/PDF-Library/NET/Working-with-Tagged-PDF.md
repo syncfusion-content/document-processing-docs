@@ -154,9 +154,10 @@ PdfDocument doc = new PdfDocument();
 doc.DocumentInformation.Title = "Image";
 //Creates new page
 PdfPage page = doc.Pages.Add();
-
+FileStream fontStream = new FileStream("Arial.tff", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw string
-page.Graphics.DrawString("JPEG Image:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(0, 0));
+page.Graphics.DrawString("JPEG Image:", font, true), PdfBrushes.Blue, new PointF(0, 0));
 
 //Load the image as stream
 FileStream imageStream = new FileStream("syncfusion.jpg", FileMode.Open, FileAccess.Read);
@@ -264,9 +265,12 @@ PdfDocument doc = new PdfDocument();
 doc.DocumentInformation.Title = "LineShape";
 //Add new page
 PdfPage page = doc.Pages.Add();
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 
 //Draw text
-page.Graphics.DrawString("Line Shape:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(30, 80));
+page.Graphics.DrawString("Line Shape:", font, PdfBrushes.Blue, new PointF(30, 80));
 
 //Initialize structure element with tag type as figure
 PdfStructureElement element = new PdfStructureElement(PdfTagType.Figure);
@@ -632,6 +636,7 @@ document.Save(stream);
 stream.Position = 0;
 //Closes the document
 document.Close(true);
+fontStream.Dispose();
 //Defining the ContentType for PDF file
 string contentType = "application/pdf";
 //Define the file name
@@ -674,6 +679,7 @@ textLink.DrawTextWebLink(page, new PointF(10, 40));
 document.Save("Output.pdf");
 //Close the document
 document.Close(true);
+fontStream.Dispose();
 
 {% endhighlight %}
 
@@ -732,9 +738,11 @@ PdfDocument pdfDocument = new PdfDocument();
 pdfDocument.DocumentInformation.Title = "TemplateDocument";
 //Add a page to the PDF document
 PdfPage pdfPage = pdfDocument.Pages.Add();
-
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
-pdfPage.Graphics.DrawString("Rectangle:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(0, 0));
+pdfPage.Graphics.DrawString("Rectangle:", font, PdfBrushes.Blue, new PointF(0, 0));
 
 //Create a PDF template
 PdfTemplate template = new PdfTemplate(100, 50);
