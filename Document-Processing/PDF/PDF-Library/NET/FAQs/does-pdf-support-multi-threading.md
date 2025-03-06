@@ -8,7 +8,7 @@ documentation: UG
 
 # Does PDF library support multithreading and thread-safe?
 
-Yes, Essential PDF allows you to create or modify PDF documents simultaneously in multi-threading environment using [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class.
+Yes, Essential<sup>&reg;</sup> PDF allows you to create or modify PDF documents simultaneously in multi-threading environment using [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class.
 
 The following code sample illustrates how to create a PDF document in multi-threading environment.
 

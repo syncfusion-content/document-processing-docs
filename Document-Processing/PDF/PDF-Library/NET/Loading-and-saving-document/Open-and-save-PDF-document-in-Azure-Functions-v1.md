@@ -21,8 +21,8 @@ Step 2: Create a project name and select the location.
 Step 3: Select function worker as **.NET Framework**. 
 ![Select function worker](Azure_Images/Azure-functions-v1/Additional_information.png)
 
-Step 4: Install the [Syncfusion.PDF.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.Pdf.AspNet NuGet package](Azure_Images/Azure-functions-v1/NuGet_package.png)
+Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+![Install Syncfusion.Pdf.Net.Core NuGet package](Azure_Images/Azure-functions-v1/NuGet_package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -124,9 +124,9 @@ Step 15: Publish has been succeed.
 ![Publish succeeded](Azure_Images/Azure-functions-v1/Published_link.png)
 
 Step 16: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 
-![Output document screenshot](Azure_Images/Azure-functions-v1/Output_screenshot.png)
+![Output document](Azure_Images/Azure-functions-v1/Output.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Azure/Azure_Functions/Azure-functions-v1).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Azure/Azure_Functions/Azure_Functions_v1/Open_and_save_PDF_document).
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 

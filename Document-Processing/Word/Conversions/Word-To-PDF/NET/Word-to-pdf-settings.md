@@ -662,7 +662,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF Conformance Level
 
-This setting allows you to set the PDF conformance level.
+This setting allows you to convert a Word document to PDF/A with a specified PDF conformance level.
 
 The following code sample shows how to set the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PdfConformanceLevel) while converting Word to PDF.
 

@@ -12,6 +12,15 @@ You can create or edit a PowerPoint file in WPF with Syncfusion<sup>&reg;</sup> 
 
 ## Create a PowerPoint file in WPF
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+**Prerequisites:**
+
+* Visual Studio 2022.
+* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+
 Step 1: Create a new C# WPF application project.
 
 ![Create WPF project](Workingwith-WPF/Project-Open-and-Save.png)
@@ -191,11 +200,243 @@ pptxDoc.Close();
 
 {% endtabs %}
 
+Step 7: Build the project.
+
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 8: Run the project.
+
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WPF/Create-PowerPoint-presentation).
 
 The output of the above code example will generate the below PowerPoint slide.
 
 ![WPF Output](Workingwith-WPF/GettingStartedSample.png)
+
+{% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET Framework Developer Pack.
+
+Step 1. Open JetBrains Rider and create a new WPF application project.
+* Launch JetBrains Rider.
+* Click **New Solution** on the welcome screen.
+
+![Launch JetBrains Rider](Workingwith-WPF/Launch-JetBrains-Rider.png)
+
+* In the New Solution dialog, select **Project Type** as **Desktop**.
+* Enter a project name and specify the location.
+* Select the target framework as **Full Framework** and choose the desired version.
+* Select **Template** as **WPF Application**.
+* Click create.
+
+![Creating a new WPF application in JetBrains Rider](Workingwith-WPF/Create-WPF-sample.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/) in the search bar.
+* Ensure that nuget.org is selected as the package source.
+* Select the latest Syncfusion.Presentation.Wpf NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.Presentation.Wpf NuGet package](Workingwith-WPF/Search-Syncfusion.Presentation.Wpf-NuGet.png)
+
+* Click the Install button to complete the installation.
+
+![Install the Syncfusion.Presentation.Wpf NuGet package](Workingwith-WPF/Install-Syncfusion.Presentation.Wpf-NuGet.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+
+Step 3: After installing the **Syncfusion.Presentation.Wpf** nuget package, the following assemblies were included in our project.
+<ul>
+<li>Syncfusion.Compression.Base</li>
+<li>Syncfusion.Licensing</li>
+<li>Syncfusion.OfficeChart.Base</li>
+<li>Syncfusion.Presentation.Base</li>
+<li>Syncfusion.Pdf.Base</li>
+<li>Syncfusion.PresentationToPdfConverter.Base</li>
+</ul>
+
+Step 4: Add a new button in the **MainWindow.xaml** as shown below.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+<Window x:Class="CreatePowerPointWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreatePowerPointWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="button" Content="Create Document" Click="OnButtonClicked" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 5: Include the following namespaces in the **MainWindow.xaml.cs** file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+using System.IO;
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 6: Include the below code snippet in the click event of the button in MainWindow.xaml.cs, to create a **PowerPoint** file and save the **PowerPoint** document as a physical file.
+
+**Create Presentation instance:**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Create a new instance of PowerPoint Presentation file
+IPresentation pptxDoc = Presentation.Create();
+{% endhighlight %}
+
+{% endtabs %}
+
+**Add a new slide**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Add a new slide to file and apply background color
+ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
+{% endhighlight %}
+
+{% endtabs %}
+
+**Apply Background**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Specify the fill type and fill color for the slide background 
+slide.Background.Fill.FillType = FillType.Solid;
+slide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(232, 241, 229);
+{% endhighlight %}
+
+{% endtabs %}
+
+**Add title content:**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Add title content to the slide by accessing the title placeholder of the TitleOnly layout-slide
+IShape titleShape = slide.Shapes[0] as IShape;
+titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = HorizontalAlignmentType.Center;
+{% endhighlight %}
+
+{% endtabs %}
+
+**Add description content:**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Add description content to the slide by adding a new TextBox
+IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+{% endhighlight %}
+
+{% endtabs %}
+
+**Add bullet points:**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Add bullet points to the slide
+IShape bulletPointsShape = slide.AddTextBox(53.22, 270, 437.90, 116.32);
+//Add a paragraph for a bullet point
+IParagraph firstPara = bulletPointsShape.TextBody.AddParagraph("The company acquired the MCY corporation for 20 billion dollars and became the top revenue maker for the year 2015.");
+//Format how the bullets should be displayed
+firstPara.ListFormat.Type = ListType.Bulleted;
+firstPara.LeftIndent = 35;
+firstPara.FirstLineIndent = -35;
+// Add another paragraph for the next bullet point
+IParagraph secondPara = bulletPointsShape.TextBody.AddParagraph("The company is participating in top open source projects in automation industry.");
+//Format how the bullets should be displayed
+secondPara.ListFormat.Type = ListType.Bulleted;
+secondPara.LeftIndent = 35;
+secondPara.FirstLineIndent = -35;
+{% endhighlight %}
+
+{% endtabs %}
+
+**Add an image:**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Gets a picture as stream.
+Stream pictureStream = File.Open("Image.png", FileMode.Open);
+//Adds the picture to a slide by specifying its size and position.
+slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download the image used in the sample from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Image-1995521764.zip).
+
+**Add a shape:**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Add an auto-shape to the slide
+IShape stampShape = slide.Shapes.AddShape(AutoShapeType.Explosion1, 48.93, 430.71, 104.13, 80.54);
+//Format the auto-shape color by setting the fill type and text
+stampShape.Fill.FillType = FillType.None;
+stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
+{% endhighlight %}
+
+{% endtabs %}
+
+**Save and close the presentation:**
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+//Save the PowerPoint Presentation 
+pptxDoc.Save("Sample.pptx");
+//Close the PowerPoint presentation
+pptxDoc.Close();
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 7: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 8: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WPF/Create-PowerPoint-presentation).
+
+The output of the above code example will generate the below PowerPoint slide.
+
+![WPF Output](Workingwith-WPF/GettingStartedSample.png)
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Read and edit a PowerPoint file in WPF
 
