@@ -538,7 +538,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PowerPoint shapes to PDF form field 
 
-This setting allows you to determine whether to **preserve PowerPoint shapes as PDF form fields** in the converted PDF document. Shapes with names starting with **FormField_** will be converted into **editable text form fields** in the resulting PDF. This feature helps in creating **interactive and fillable PDF forms** from PowerPoint presentations.
+This setting allows you to **preserve PowerPoint shapes as PDF form fields** in the converted PDF document. Shapes with names starting with **FormField_** will be converted into **editable text form fields** in the resulting PDF. This feature helps in creating **interactive and fillable PDF forms** from PowerPoint presentations.
 
 The following code sample shows how to preserve PowerPoint form fields as PDF form fields in the converted PDF document.
 
