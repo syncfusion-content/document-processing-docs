@@ -1,6 +1,6 @@
 ---
 title: Does XlsIO support multiline header footer? | Syncfusion
-description: Code example to the multiline header footer support using Syncfusion .NET Excel library (XlsIO).
+description: Code example multiline header footer support using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
