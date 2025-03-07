@@ -229,7 +229,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -352,7 +352,7 @@ The following code example illustrating how to create a **Cycle-type SmartArt** 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Cycle/.NET/Create-SmartArt-Cycle/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -394,7 +394,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -484,7 +484,7 @@ The following code example illustrating how to create a **Hierarchy-type SmartAr
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -520,7 +520,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -598,7 +598,7 @@ The following code example illustrating how to create a **Relationship-type Smar
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Relationship/.NET/Create-SmartArt-Relationship/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -634,7 +634,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -753,7 +753,7 @@ The following code example illustrating how to create a **Matrix-type SmartArt**
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Matrix/.NET/Create-SmartArt-Matrix/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -803,7 +803,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -948,7 +948,7 @@ The following code example illustrating how to create a **Pyramid-type SmartArt*
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Pyramid/.NET/Create-SmartArt-Pyramid/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -982,7 +982,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -1054,7 +1054,7 @@ The following code example illustrating how to create a **Picture-type SmartArt*
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Picture/.NET/Create-SmartArt-Picture/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
@@ -1091,7 +1091,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document
+//Adds new section to the document.
 IWSection section = document.AddSection();
 //Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
