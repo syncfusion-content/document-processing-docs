@@ -335,7 +335,7 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Process/.NET/).
 
-### cycle
+### Cycle
 
 The following code example illustrating how to create a **Cycle-type SmartArt** in a Word document.
 
@@ -726,105 +726,699 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Matrix
 
+The following code example illustrating how to create a **Matrix-type SmartArt** in a Word document.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Matrix/.NET/Create-SmartArt-Matrix/Program.cs" %}
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Marketing Campaign Process");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Grid Matrix" layout
+WSmartArt gridMatrixSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.GridMatrix, 432, 252);
+// Add the "Planning" phase node
+IOfficeSmartArtNode planningNode = gridMatrixSmartArt.Nodes[0];
+planningNode.TextBody.Text = "Planning";
+planningNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+planningNode.ChildNodes.Add();
+planningNode.ChildNodes.Add();
+AddSmartArtChildNode(planningNode, "Define goals and target audience.", "Identify key messaging and channels.", 10f);
+// Add the "Execution" phase node
+IOfficeSmartArtNode executionNode = gridMatrixSmartArt.Nodes[1];
+executionNode.TextBody.Text = "Execution";
+executionNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+executionNode.ChildNodes.Add();
+executionNode.ChildNodes.Add();
+AddSmartArtChildNode(executionNode, "Create content and implement strategies.", "Launch campaigns across chosen platforms.", 10f);
+// Add the "Monitoring" phase node
+IOfficeSmartArtNode monitoringNode = gridMatrixSmartArt.Nodes[2];
+monitoringNode.TextBody.Text = "Monitoring";
+monitoringNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+monitoringNode.ChildNodes.Add();
+monitoringNode.ChildNodes.Add();
+AddSmartArtChildNode(monitoringNode, "Track performance and engagement.", "Collect data and identify trends.", 10f);
+// Add the "Optimization" phase node
+IOfficeSmartArtNode optimizingNode = gridMatrixSmartArt.Nodes[3];
+optimizingNode.TextBody.Text = "Optimization";
+optimizingNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+optimizingNode.ChildNodes.Add();
+optimizingNode.ChildNodes.Add();
+AddSmartArtChildNode(optimizingNode, "Adjust strategies based on insights.", "Fine-tune campaigns for better results.", 10f);
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Marketing Campaign Process");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Grid Matrix" layout
+WSmartArt gridMatrixSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.GridMatrix, 432, 252);
+// Add the "Planning" phase node
+IOfficeSmartArtNode planningNode = gridMatrixSmartArt.Nodes[0];
+planningNode.TextBody.Text = "Planning";
+planningNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+planningNode.ChildNodes.Add();
+planningNode.ChildNodes.Add();
+AddSmartArtChildNode(planningNode, "Define goals and target audience.", "Identify key messaging and channels.", 10f);
+// Add the "Execution" phase node
+IOfficeSmartArtNode executionNode = gridMatrixSmartArt.Nodes[1];
+executionNode.TextBody.Text = "Execution";
+executionNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+executionNode.ChildNodes.Add();
+executionNode.ChildNodes.Add();
+AddSmartArtChildNode(executionNode, "Create content and implement strategies.", "Launch campaigns across chosen platforms.", 10f);
+// Add the "Monitoring" phase node
+IOfficeSmartArtNode monitoringNode = gridMatrixSmartArt.Nodes[2];
+monitoringNode.TextBody.Text = "Monitoring";
+monitoringNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+monitoringNode.ChildNodes.Add();
+monitoringNode.ChildNodes.Add();
+AddSmartArtChildNode(monitoringNode, "Track performance and engagement.", "Collect data and identify trends.", 10f);
+// Add the "Optimization" phase node
+IOfficeSmartArtNode optimizingNode = gridMatrixSmartArt.Nodes[3];
+optimizingNode.TextBody.Text = "Optimization";
+optimizingNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 13f;
+optimizingNode.ChildNodes.Add();
+optimizingNode.ChildNodes.Add();
+AddSmartArtChildNode(optimizingNode, "Adjust strategies based on insights.", "Fine-tune campaigns for better results.", 10f);
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim document As New WordDocument()
+Dim section As IWSection = document.AddSection()
+' Retrieves the first paragraph and add text.
+Dim paragraph As IWParagraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+Dim textRange1 As IWTextRange = paragraph.AppendText("Marketing Campaign Process")
+textRange1.CharacterFormat.FontSize = 28.0F
+paragraph = section.AddParagraph()
+paragraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+' Add SmartArt with "Grid Matrix" layout
+Dim gridMatrixSmartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.GridMatrix, 432, 252)
+' Add the "Planning" phase node
+Dim planningNode As IOfficeSmartArtNode = gridMatrixSmartArt.Nodes(0)
+planningNode.TextBody.Text = "Planning"
+planningNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 13.0F
+planningNode.ChildNodes.Add()
+planningNode.ChildNodes.Add()
+AddSmartArtChildNode(planningNode, "Define goals and target audience.", "Identify key messaging and channels.", 10.0F)
+' Add the "Execution" phase node
+Dim executionNode As IOfficeSmartArtNode = gridMatrixSmartArt.Nodes(1)
+executionNode.TextBody.Text = "Execution"
+executionNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 13.0F
+executionNode.ChildNodes.Add()
+executionNode.ChildNodes.Add()
+AddSmartArtChildNode(executionNode, "Create content and implement strategies.", "Launch campaigns across chosen platforms.", 10.0F)
+' Add the "Monitoring" phase node
+Dim monitoringNode As IOfficeSmartArtNode = gridMatrixSmartArt.Nodes(2)
+monitoringNode.TextBody.Text = "Monitoring"
+monitoringNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 13.0F
+monitoringNode.ChildNodes.Add()
+monitoringNode.ChildNodes.Add()
+AddSmartArtChildNode(monitoringNode, "Track performance and engagement.", "Collect data and identify trends.", 10.0F)
+' Add the "Optimization" phase node
+Dim optimizingNode As IOfficeSmartArtNode = gridMatrixSmartArt.Nodes(3)
+optimizingNode.TextBody.Text = "Optimization"
+optimizingNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 13.0F
+optimizingNode.ChildNodes.Add()
+optimizingNode.ChildNodes.Add()
+AddSmartArtChildNode(optimizingNode, "Adjust strategies based on insights.", "Fine-tune campaigns for better results.", 10.0F)
+' Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example shows AddSmartArtChildNode, which is used to add child nodes to a given SmartArt node and apply formatting.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private void AddSmartArtChildNode(IOfficeSmartArtNode node, string childText1, string childText2, float fontSize)
+{
+    node.ChildNodes[0].TextBody.Text = childText1;
+    node.ChildNodes[1].TextBody.Text = childText2;
+    for (int i = 0; i < node.ChildNodes.Count; i++)
+    {
+        node.ChildNodes[i].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = fontSize;
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void AddSmartArtChildNode(IOfficeSmartArtNode node, string childText1, string childText2, float fontSize)
+{
+    node.ChildNodes[0].TextBody.Text = childText1;
+    node.ChildNodes[1].TextBody.Text = childText2;
+    for (int i = 0; i < node.ChildNodes.Count; i++)
+    {
+        node.ChildNodes[i].TextBody.Paragraphs[0].TextParts[0].Font.FontSize = fontSize;
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Sub AddSmartArtChildNode(node As IOfficeSmartArtNode, childText1 As String, childText2 As String, fontSize As Single)
+    node.ChildNodes(0).TextBody.Text = childText1
+    node.ChildNodes(1).TextBody.Text = childText2
+    For i As Integer = 0 To node.ChildNodes.Count - 1
+        node.ChildNodes(i).TextBody.Paragraphs(0).TextParts(0).Font.FontSize = fontSize
+    Next
+End Sub
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Matrix/.NET/).
 
-### pyramid
+### Pyramid
+
+The following code example illustrating how to create a **Pyramid-type SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Pyramid/.NET/Create-SmartArt-Pyramid/Program.cs" %}
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Personal Growth");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Basic Pyramid" layout
+WSmartArt basicPyramidSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.BasicPyramid, 432, 252);
+// Add the "Achievement" phase node
+IOfficeSmartArtNode achievementNode = basicPyramidSmartArt.Nodes[0];
+achievementNode.TextBody.Text = "Achievement";
+achievementNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 26f;
+// Add the "Skill Development" phase node
+IOfficeSmartArtNode SkilldevelopmentNode = basicPyramidSmartArt.Nodes[1];
+SkilldevelopmentNode.TextBody.Text = "Skill Development";
+SkilldevelopmentNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 26f;
+// Add the "Self-Awareness" phase node
+IOfficeSmartArtNode selfAwarenessNode = basicPyramidSmartArt.Nodes[2];
+selfAwarenessNode.TextBody.Text = "Self-Awareness";
+selfAwarenessNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 26f;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+IWTextRange textRange1 = paragraph.AppendText("Personal Growth");
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Basic Pyramid" layout
+WSmartArt basicPyramidSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.BasicPyramid, 432, 252);
+// Add the "Achievement" phase node
+IOfficeSmartArtNode achievementNode = basicPyramidSmartArt.Nodes[0];
+achievementNode.TextBody.Text = "Achievement";
+achievementNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 26f;
+// Add the "Skill Development" phase node
+IOfficeSmartArtNode SkilldevelopmentNode = basicPyramidSmartArt.Nodes[1];
+SkilldevelopmentNode.TextBody.Text = "Skill Development";
+SkilldevelopmentNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 26f;
+// Add the "Self-Awareness" phase node
+IOfficeSmartArtNode selfAwarenessNode = basicPyramidSmartArt.Nodes[2];
+selfAwarenessNode.TextBody.Text = "Self-Awareness";
+selfAwarenessNode.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 26f;
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+Dim document As New WordDocument()
+Dim section As IWSection = document.AddSection()
+' Retrieves the first paragraph and add text.
+Dim paragraph As IWParagraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+Dim textRange1 As IWTextRange = paragraph.AppendText("Personal Growth")
+textRange1.CharacterFormat.FontSize = 28.0F
+paragraph = section.AddParagraph()
+paragraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+' Add SmartArt with "Basic Pyramid" layout
+Dim basicPyramidSmartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.BasicPyramid, 432, 252)
+' Add the "Achievement" phase node
+Dim achievementNode As IOfficeSmartArtNode = basicPyramidSmartArt.Nodes(0)
+achievementNode.TextBody.Text = "Achievement"
+achievementNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 26.0F
+' Add the "Skill Development" phase node
+Dim skillDevelopmentNode As IOfficeSmartArtNode = basicPyramidSmartArt.Nodes(1)
+skillDevelopmentNode.TextBody.Text = "Skill Development"
+skillDevelopmentNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 26.0F
+' Add the "Self-Awareness" phase node
+Dim selfAwarenessNode As IOfficeSmartArtNode = basicPyramidSmartArt.Nodes(2)
+selfAwarenessNode.TextBody.Text = "Self-Awareness"
+selfAwarenessNode.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 26.0F
+' Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Pyramid/.NET/).
 
 ### Picture
 
+The following code example illustrating how to create a **Picture-type SmartArt** in a Word document.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Picture/.NET/Create-SmartArt-Picture/Program.cs" %}
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+WTextRange textRange1 = paragraph.AppendText("Employee Report") as WTextRange;
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Picture Strips" layout
+WSmartArt pictureStripsSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.PictureStrips, 432, 252);
+// Add the "Employee1" phase node
+IOfficeSmartArtNode employeeNode1 = pictureStripsSmartArt.Nodes[0];
+employeeNode1.TextBody.Text = "Nancy Davolio";
+employeeNode1.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 25f;
+AddPicture(employeeNode1, Path.GetFullPath(@"Images/Nancy Davolio.png"));
+// Add the "Employee2" phase node
+IOfficeSmartArtNode employeeNode2 = pictureStripsSmartArt.Nodes[1];
+employeeNode2.TextBody.Text = "Andrew Fuller";
+employeeNode2.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 25f;
+AddPicture(employeeNode2, Path.GetFullPath(@"Images/Andrew Fuller.png"));
+// Add the "Employee3" phase node
+IOfficeSmartArtNode employeeNode3 = pictureStripsSmartArt.Nodes[2];
+employeeNode3.TextBody.Text = "Janet Leverling";
+employeeNode3.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 25f;
+AddPicture(employeeNode3, Path.GetFullPath(@"Images/Janet Leverling.png"));
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+// Retrieves the first paragraph and add text.
+IWParagraph paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+WTextRange textRange1 = paragraph.AppendText("Employee Report") as WTextRange;
+textRange1.CharacterFormat.FontSize = 28f;
+paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+// Add SmartArt with "Picture Strips" layout
+WSmartArt pictureStripsSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.PictureStrips, 432, 252);
+// Add the "Employee1" phase node
+IOfficeSmartArtNode employeeNode1 = pictureStripsSmartArt.Nodes[0];
+employeeNode1.TextBody.Text = "Nancy Davolio";
+employeeNode1.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 25f;
+AddPicture(employeeNode1, Path.GetFullPath(@"Images/Nancy Davolio.png"));
+// Add the "Employee2" phase node
+IOfficeSmartArtNode employeeNode2 = pictureStripsSmartArt.Nodes[1];
+employeeNode2.TextBody.Text = "Andrew Fuller";
+employeeNode2.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 25f;
+AddPicture(employeeNode2, Path.GetFullPath(@"Images/Andrew Fuller.png"));
+// Add the "Employee3" phase node
+IOfficeSmartArtNode employeeNode3 = pictureStripsSmartArt.Nodes[2];
+employeeNode3.TextBody.Text = "Janet Leverling";
+employeeNode3.TextBody.Paragraphs[0].TextParts[0].Font.FontSize = 25f;
+AddPicture(employeeNode3, Path.GetFullPath(@"Images/Janet Leverling.png"));
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+Dim document As New WordDocument()
+Dim section As IWSection = document.AddSection()
+' Retrieves the first paragraph and add text.
+Dim paragraph As IWParagraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+Dim textRange1 As WTextRange = TryCast(paragraph.AppendText("Employee Report"), WTextRange)
+textRange1.CharacterFormat.FontSize = 28.0F
+paragraph = section.AddParagraph()
+paragraph = section.AddParagraph()
+paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+' Add SmartArt with "Picture Strips" layout
+Dim pictureStripsSmartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.PictureStrips, 432, 252)
+' Add the "Employee1" phase node
+Dim employeeNode1 As IOfficeSmartArtNode = pictureStripsSmartArt.Nodes(0)
+employeeNode1.TextBody.Text = "Nancy Davolio"
+employeeNode1.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 25.0F
+AddPicture(employeeNode1, Path.GetFullPath("Images/Nancy Davolio.png"))
+' Add the "Employee2" phase node
+Dim employeeNode2 As IOfficeSmartArtNode = pictureStripsSmartArt.Nodes(1)
+employeeNode2.TextBody.Text = "Andrew Fuller"
+employeeNode2.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 25.0F
+AddPicture(employeeNode2, Path.GetFullPath("Images/Andrew Fuller.png"))
+' Add the "Employee3" phase node
+Dim employeeNode3 As IOfficeSmartArtNode = pictureStripsSmartArt.Nodes(2)
+employeeNode3.TextBody.Text = "Janet Leverling"
+employeeNode3.TextBody.Paragraphs(0).TextParts(0).Font.FontSize = 25.0F
+AddPicture(employeeNode3, Path.GetFullPath("Images/Janet Leverling.png"))
+' Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+The following code example shows AddPicture, which is used to loads an image from the specified file path and assigns it to the given SmartArt node.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+void AddPicture(IOfficeSmartArtNode node, string imagePath)
+{
+    // Load the image and assign it to the SmartArt node
+    FileStream pictureStream = new FileStream(imagePath, FileMode.Open);
+    MemoryStream memoryStream = new MemoryStream();
+    pictureStream.CopyTo(memoryStream);
+
+    //Convert the memory stream into a byte array
+    byte[] picByte = memoryStream.ToArray();
+    node.Shapes[1].Fill.FillType = OfficeShapeFillType.Picture;
+    node.Shapes[1].Fill.PictureFill.ImageBytes = picByte;
+    //Dispose the image stream.
+    pictureStream.Dispose();
+    memoryStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+void AddPicture(IOfficeSmartArtNode node, string imagePath)
+{
+    // Load the image and assign it to the SmartArt node
+    FileStream pictureStream = new FileStream(imagePath, FileMode.Open);
+    MemoryStream memoryStream = new MemoryStream();
+    pictureStream.CopyTo(memoryStream);
+
+    //Convert the memory stream into a byte array
+    byte[] picByte = memoryStream.ToArray();
+    node.Shapes[1].Fill.FillType = OfficeShapeFillType.Picture;
+    node.Shapes[1].Fill.PictureFill.ImageBytes = picByte;
+    //Dispose the image stream.
+    pictureStream.Dispose();
+    memoryStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Sub AddPicture(ByVal node As IOfficeSmartArtNode, ByVal imagePath As String)
+    ' Load the image and assign it to the SmartArt node
+    Dim pictureStream As New FileStream(imagePath, FileMode.Open)
+    Dim memoryStream As New MemoryStream()
+    pictureStream.CopyTo(memoryStream)
+    ' Convert the memory stream into a byte array
+    Dim picByte As Byte() = memoryStream.ToArray()
+    node.Shapes(1).Fill.FillType = OfficeShapeFillType.Picture
+    node.Shapes(1).Fill.PictureFill.ImageBytes = picByte
+    ' Dispose the image stream
+    pictureStream.Dispose()
+    memoryStream.Dispose()
+End Sub
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Picture/.NET/).
 
 ## Modify SmartArt appearance 
 
+You can modify the appearance of SmartArt by changing the fill type, color, and text content. The following code example demonstrates how to customize the background, text, and shape styles of SmartArt nodes.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Modify-SmartArt/.NET/Modify-SmartArt/Program.cs" %}
+//Creates an instance of WordDocument class
+FileStream fileStreamPath = new FileStream("EditSmartArtInput.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Gets the last paragraph in the document.
+WParagraph paragraph = document.LastParagraph;
+//Retrieves the SmartArt object from the paragraph.
+WSmartArt smartArt = paragraph.ChildEntities[0] as WSmartArt;
+//Sets the background fill type of the SmartArt to solid.
+smartArt.Background.FillType = OfficeShapeFillType.Solid;
+//Sets the background color of the SmartArt.
+smartArt.Background.SolidFill.Color = Color.FromArgb(255, 242, 169, 132);
+//Gets the first node of the SmartArt.
+IOfficeSmartArtNode node = smartArt.Nodes[0];
+//Modifies the text content of the first node.
+node.TextBody.Text = "Goals";
+//Retrieves the first shape of the node.
+IOfficeSmartArtShape shape = node.Shapes[0];
+//Sets the fill color of the shape.
+shape.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147);
+//Sets the line format color of the shape.
+shape.LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147);
+//Gets the first child node of the current node.
+IOfficeSmartArtNode childNode = node.ChildNodes[0];
+//Modifies the text content of the child node.
+childNode.TextBody.Text = "Set clear goals to the team.";
+//Sets the line format color of the first shape in the child node.
+childNode.Shapes[0].LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147);
 
+//Retrieves the second node in the SmartArt and updates its text content.
+node = smartArt.Nodes[1];
+node.TextBody.Text = "Progress";
+
+//Retrieves the third node in the SmartArt and updates its text content.
+node = smartArt.Nodes[2];
+node.TextBody.Text = "Result";
+//Retrieves the first shape of the third node.
+shape = node.Shapes[0];
+//Sets the fill color of the shape.
+shape.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46);
+//Sets the line format color of the shape.
+shape.LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46);
+//Sets the line format color of the first shape in the child node.
+node.ChildNodes[0].Shapes[0].LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46);
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Open an existing document.
+WordDocument document = new WordDocument("EditSmartArtInput.docx", FormatType.Docx);
+//Gets the last paragraph in the document.
+WParagraph paragraph = document.LastParagraph;
+//Retrieves the SmartArt object from the paragraph.
+WSmartArt smartArt = paragraph.ChildEntities[0] as WSmartArt;
+//Sets the background fill type of the SmartArt to solid.
+smartArt.Background.FillType = OfficeShapeFillType.Solid;
+//Sets the background color of the SmartArt.
+smartArt.Background.SolidFill.Color = Color.FromArgb(255, 242, 169, 132);
+//Gets the first node of the SmartArt.
+IOfficeSmartArtNode node = smartArt.Nodes[0];
+//Modifies the text content of the first node.
+node.TextBody.Text = "Goals";
+//Retrieves the first shape of the node.
+IOfficeSmartArtShape shape = node.Shapes[0];
+//Sets the fill color of the shape.
+shape.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147);
+//Sets the line format color of the shape.
+shape.LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147);
+//Gets the first child node of the current node.
+IOfficeSmartArtNode childNode = node.ChildNodes[0];
+//Modifies the text content of the child node.
+childNode.TextBody.Text = "Set clear goals to the team.";
+//Sets the line format color of the first shape in the child node.
+childNode.Shapes[0].LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147);
 
+//Retrieves the second node in the SmartArt and updates its text content.
+node = smartArt.Nodes[1];
+node.TextBody.Text = "Progress";
+
+//Retrieves the third node in the SmartArt and updates its text content.
+node = smartArt.Nodes[2];
+node.TextBody.Text = "Result";
+//Retrieves the first shape of the third node.
+shape = node.Shapes[0];
+//Sets the fill color of the shape.
+shape.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46);
+//Sets the line format color of the shape.
+shape.LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46);
+//Sets the line format color of the first shape in the child node.
+node.ChildNodes[0].Shapes[0].LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46);
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing document.
+Dim document As New WordDocument("EditSmartArtInput.docx", FormatType.Docx)
+'Gets the last paragraph in the document.
+Dim paragraph As WParagraph = document.LastParagraph
+'Retrieves the SmartArt object from the paragraph.
+Dim smartArt As WSmartArt = TryCast(paragraph.ChildEntities(0), WSmartArt)
+'Sets the background fill type of the SmartArt to solid.
+smartArt.Background.FillType = OfficeShapeFillType.Solid
+'Sets the background color of the SmartArt.
+smartArt.Background.SolidFill.Color = Color.FromArgb(255, 242, 169, 132)
+'Gets the first node of the SmartArt.
+Dim node As IOfficeSmartArtNode = smartArt.Nodes(0)
+'Modifies the text content of the first node.
+node.TextBody.Text = "Goals"
+'Retrieves the first shape of the node.
+Dim shape As IOfficeSmartArtShape = node.Shapes(0)
+'Sets the fill color of the shape.
+shape.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147)
+'Sets the line format color of the shape.
+shape.LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147)
+'Gets the first child node of the current node.
+Dim childNode As IOfficeSmartArtNode = node.ChildNodes(0)
+'Modifies the text content of the child node.
+childNode.TextBody.Text = "Set clear goals to the team."
+'Sets the line format color of the first shape in the child node.
+childNode.Shapes(0).LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 160, 43, 147)
 
+'Retrieves the second node in the SmartArt and updates its text content.
+node = smartArt.Nodes(1)
+node.TextBody.Text = "Progress"
+
+'Retrieves the third node in the SmartArt and updates its text content.
+node = smartArt.Nodes(2)
+node.TextBody.Text = "Result"
+'Retrieves the first shape of the third node.
+shape = node.Shapes(0)
+'Sets the fill color of the shape.
+shape.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46)
+'Sets the line format color of the shape.
+shape.LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46)
+'Sets the line format color of the first shape in the child node.
+node.ChildNodes(0).Shapes(0).LineFormat.Fill.SolidFill.Color = Color.FromArgb(255, 78, 167, 46)
+'Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Modify-SmartArt/.NET/).
 
 ## Remove SmartArt
 
+You can modify the appearance of SmartArt by changing the fill type, color, and text content. The following code example demonstrates how to customize the background, text, and shape styles of SmartArt nodes.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Remove-SmartArt/.NET/Remove-SmartArt/Program.cs" %}
+//Creates an instance of WordDocument class
+FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Get the last paragraph of the document.
+WParagraph paragraph = document.LastParagraph;
+//Iterates through the child elements of last paragraph.
+for (int i = 0; i < paragraph.ChildEntities.Count; i++)
+{
+    //Removes the SmartArt from the paragraph.
+    if (paragraph.ChildEntities[i] is WSmartArt)
+    {
+        paragraph.Items.RemoveAt(i);
+        i--;
+    }
+}
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+//Open an existing document.
+WordDocument document = new WordDocument("Input.docx", FormatType.Docx);
+//Get the last paragraph of the document.
+WParagraph paragraph = document.LastParagraph;
+//Iterates through the child elements of last paragraph.
+for (int i = 0; i < paragraph.ChildEntities.Count; i++)
+{
+    //Removes the SmartArt from the paragraph.
+    if (paragraph.ChildEntities[i] is WSmartArt)
+    {
+        paragraph.Items.RemoveAt(i);
+        i--;
+    }
+}
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+' Open an existing Word document in DOCX format.
+Dim document As New WordDocument("Input.docx", FormatType.Docx)
+' Get the last paragraph of the document.
+Dim paragraph As WParagraph = document.LastParagraph
+' Iterate through the child elements of the last paragraph.
+Dim i As Integer = 0
+While i < paragraph.ChildEntities.Count
+    ' Check if the child entity is a SmartArt object.
+    If TypeOf paragraph.ChildEntities(i) Is WSmartArt Then
+        ' Remove the SmartArt from the paragraph.
+        paragraph.Items.RemoveAt(i)
+        
+        ' Decrement the index to adjust for the removed item.
+        i -= 1
+    End If
+    i += 1
+End While
+' Save the modified document as "Result.docx".
+document.Save("Result.docx", FormatType.Docx)
+' Close the document to release resources.
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Remove-SmartArt/.NET/).
 
 ## Nodes in SmartArt
 
@@ -832,80 +1426,360 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Add-SmartArt-node/.NET/Add-SmartArt-node/Program.cs" %}
+// Create a new Word document instance.
+WordDocument document = new WordDocument();
+// Add a new section to the document.
+IWSection section = document.AddSection();
+// Add a paragraph to the section.
+IWParagraph paragraph = section.AddParagraph();
+// Append a SmartArt object of type "Alternating Hexagons" to the paragraph with specified dimensions.
+WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.AlternatingHexagons, 432, 252);
+// Add a new node to the SmartArt.
+IOfficeSmartArtNode newNode = smartArt.Nodes.Add();
+// Set text content for the newly added SmartArt node.
+newNode.TextBody.AddParagraph("New main node added.");
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+// Create a new Word document instance.
+WordDocument document = new WordDocument();
+// Add a new section to the document.
+IWSection section = document.AddSection();
+// Add a paragraph to the section.
+IWParagraph paragraph = section.AddParagraph();
+// Append a SmartArt object of type "Alternating Hexagons" to the paragraph with specified dimensions.
+WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.AlternatingHexagons, 432, 252);
+// Add a new node to the SmartArt.
+IOfficeSmartArtNode newNode = smartArt.Nodes.Add();
+// Set text content for the newly added SmartArt node.
+newNode.TextBody.AddParagraph("New main node added.");
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+' Create a new Word document instance.
+Dim document As New WordDocument()
+' Add a new section to the document.
+Dim section As IWSection = document.AddSection()
+' Add a paragraph to the section.
+Dim paragraph As IWParagraph = section.AddParagraph()
+' Append a SmartArt object of type "Alternating Hexagons" to the paragraph with specified dimensions.
+Dim smartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.AlternatingHexagons, 432, 252)
+' Add a new node to the SmartArt.
+Dim newNode As IOfficeSmartArtNode = smartArt.Nodes.Add()
+' Set text content for the newly added SmartArt node.
+newNode.TextBody.AddParagraph("New main node added.")
+' Save and close the document instance.
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Add-SmartArt-node/.NET/).
+
+In SmartArt diagrams, you can also **add nodes to several nested levels**. The maximum limit of nested levels may vary based on SmartArt types. The following code example demonstrates adding nested level nodes in a SmartArt.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Adding-nested-level-nodes/.NET/Adding-nested-level-nodes/Program.cs" %}
+//Create a new Word document instance.
+WordDocument document = new WordDocument();
+//Add a new section to the document.
+IWSection section = document.AddSection();
+//Add a paragraph to the section.
+IWParagraph paragraph = section.AddParagraph();
+//Append a SmartArt object of type "Alternating Hexagons" to the paragraph with specified dimensions.
+WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.AlternatingHexagons, 432, 252);
+//Add a new node to the SmartArt.
+IOfficeSmartArtNode newNode = smartArt.Nodes.Add();
+//Add a child node to the SmartArt node
+IOfficeSmartArtNode childNode = newNode.ChildNodes.Add();
+//Set a text to newly added child node.
+childNode.TextBody.AddParagraph("Child node of the existing node.");
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Create a new Word document instance.
+WordDocument document = new WordDocument();
+//Add a new section to the document.
+IWSection section = document.AddSection();
+//Add a paragraph to the section.
+IWParagraph paragraph = section.AddParagraph();
+//Append a SmartArt object of type "Alternating Hexagons" to the paragraph with specified dimensions.
+WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.AlternatingHexagons, 432, 252);
+//Add a new node to the SmartArt.
+IOfficeSmartArtNode newNode = smartArt.Nodes.Add();
+//Add a child node to the SmartArt node
+IOfficeSmartArtNode childNode = newNode.ChildNodes.Add();
+//Set a text to newly added child node.
+childNode.TextBody.AddParagraph("Child node of the existing node.");
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Create a new Word document instance.
+Dim document As New WordDocument()
+' Add a new section to the document.
+Dim section As IWSection = document.AddSection()
+' Add a paragraph to the section.
+Dim paragraph As IWParagraph = section.AddParagraph()
+' Append a SmartArt object of type "Alternating Hexagons" to the paragraph with specified dimensions.
+Dim smartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.AlternatingHexagons, 432, 252)
+' Add a new node to the SmartArt.
+Dim newNode As IOfficeSmartArtNode = smartArt.Nodes.Add()
+' Add a child node to the SmartArt node.
+Dim childNode As IOfficeSmartArtNode = newNode.ChildNodes.Add()
+' Set text for the newly added child node.
+childNode.TextBody.AddParagraph("Child node of the existing node.")
+' Save and close the document instance.
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Adding-nested-level-nodes/.NET/).
 
 ### Iterating through child nodes of an existing SmartArt 
 
+You can iterate through the child nodes and access the properties of each node in a SmartArt. The following code example demonstrates accessing and modifying the text content of node.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Iterate-child-nodes-of-existing-SmartArt/.NET/Iterate-child-nodes-of-existing-SmartArt/Program.cs" %}
+//Creates an instance of WordDocument class
+FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Get the last paragraph in the document.
+WParagraph paragraph = document.LastParagraph;
+//Iterate through all child elements in the paragraph.
+for (int i = 0; i < paragraph.ChildEntities.Count; i++)
+{
+    //Check if the current child entity is a SmartArt object.
+    if (paragraph.ChildEntities[i] is WSmartArt)
+    {
+        //Traverse through all nodes inside the SmartArt.
+        foreach (IOfficeSmartArtNode node in (paragraph.ChildEntities[i] as WSmartArt).Nodes)
+        {
+            //Check if the node contains the text "Inquiry".
+            if (node.TextBody.Text == "Inquiry")
+            {
+                //Update the text content of the node to "New Content".
+                node.TextBody.Paragraphs[0].TextParts[0].Text = "New Content";
+            }
+        }
+    }
+}
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+//Creates an instance of WordDocument class
+FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Get the last paragraph in the document.
+WParagraph paragraph = document.LastParagraph;
+//Iterate through all child elements in the paragraph.
+for (int i = 0; i < paragraph.ChildEntities.Count; i++)
+{
+    //Check if the current child entity is a SmartArt object.
+    if (paragraph.ChildEntities[i] is WSmartArt)
+    {
+        //Traverse through all nodes inside the SmartArt.
+        foreach (IOfficeSmartArtNode node in (paragraph.ChildEntities[i] as WSmartArt).Nodes)
+        {
+            //Check if the node contains the text "Inquiry".
+            if (node.TextBody.Text == "Inquiry")
+            {
+                //Update the text content of the node to "New Content".
+                node.TextBody.Paragraphs[0].TextParts[0].Text = "New Content";
+            }
+        }
+    }
+}
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+' Creates an instance of WordDocument class
+Dim fileStreamPath As New FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+Dim document As New WordDocument(fileStreamPath, FormatType.Docx)
+' Get the last paragraph in the document.
+Dim paragraph As WParagraph = document.LastParagraph
+' Iterate through all child elements in the paragraph.
+For i As Integer = 0 To paragraph.ChildEntities.Count - 1
+    ' Check if the current child entity is a SmartArt object.
+    If TypeOf paragraph.ChildEntities(i) Is WSmartArt Then
+        ' Traverse through all nodes inside the SmartArt.
+        For Each node As IOfficeSmartArtNode In CType(paragraph.ChildEntities(i), WSmartArt).Nodes
+            ' Check if the node contains the text "Inquiry".
+            If node.TextBody.Text = "Inquiry" Then
+                ' Update the text content of the node to "New Content".
+                node.TextBody.Paragraphs(0).TextParts(0).Text = "New Content"
+            End If
+        Next
+    End If
+Next
+' Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Iterate-child-nodes-of-existing-SmartArt/.NET/).
 
 ### Removing node from an existing SmartArt 
 
+You can remove a node from the SmartArt diagram. The following code example demonstrates the same.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Remove-node-from-existing-SmartArt/.NET/Remove-node-from-existing-SmartArt/Program.cs" %}
+//Creates an instance of WordDocument class
+FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Retrieve the first SmartArt object from the last paragraph in the document.
+WSmartArt smartArt = document.LastParagraph.ChildEntities[0] as WSmartArt;
+//Remove a node at the specified index.
+smartArt.Nodes.RemoveAt(1);
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+//Creates an instance of WordDocument class
+FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Retrieve the first SmartArt object from the last paragraph in the document.
+WSmartArt smartArt = document.LastParagraph.ChildEntities[0] as WSmartArt;
+//Remove a node at the specified index.
+smartArt.Nodes.RemoveAt(1);
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+' Create an instance of WordDocument class
+Dim fileStreamPath As New FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+Dim document As New WordDocument(fileStreamPath, FormatType.Docx)
+' Retrieve the first SmartArt object from the last paragraph in the document.
+Dim smartArt As WSmartArt = TryCast(document.LastParagraph.ChildEntities(0), WSmartArt)
+' Remove a node at the specified index.
+smartArt.Nodes.RemoveAt(1)
+' Save and close the document instance
+document.Save("Result.docx", FormatType.Docx)
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Remove-node-from-existing-SmartArt/.NET/).
 
-###Assistant nodes in SmartArt 
+### Assistant nodes in SmartArt 
+
+You can check whether a node is an assistant or not. Also you can change a node as assistant node or revert an assistant node to normal node.  The following code example demonstrates making an assistant node as normal node.
+
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
-
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Set-assistant-to-normal-node/.NET/Set-assistant-to-normal-node/Program.cs" %}
+//Create a new Word document instance.
+WordDocument document = new WordDocument();
+//Add a new section to the document.
+IWSection section = document.AddSection();
+//Add a paragraph to the section.
+IWParagraph paragraph = section.AddParagraph();
+//Add a SmartArt to the paragraph at the specified size.
+WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 432, 252);
+//Traverse through all nodes of the SmartArt.
+foreach (IOfficeSmartArtNode node in smartArt.Nodes)
+{
+    //Check if the node is assistant or not.
+    if (node.IsAssistant)
+        //Set the assistant node to false.
+        node.IsAssistant = false;
+}
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
+//Create a new Word document instance.
+WordDocument document = new WordDocument();
+//Add a new section to the document.
+IWSection section = document.AddSection();
+//Add a paragraph to the section.
+IWParagraph paragraph = section.AddParagraph();
+//Add a SmartArt to the paragraph at the specified size.
+WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 432, 252);
+//Traverse through all nodes of the SmartArt.
+foreach (IOfficeSmartArtNode node in smartArt.Nodes)
+{
+    //Check if the node is assistant or not.
+    if (node.IsAssistant)
+        //Set the assistant node to false.
+        node.IsAssistant = false;
+}
+//Saves and closes the document instance
+document.Save("Result.docx", FormatType.Docx);
+document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
+' Create a new Word document instance.
+Dim document As New WordDocument()
+' Add a new section to the document.
+Dim section As IWSection = document.AddSection()
+' Add a paragraph to the section.
+Dim paragraph As IWParagraph = section.AddParagraph()
+' Add a SmartArt of type "Organization Chart" to the paragraph with specified dimensions.
+Dim smartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 432, 252)
+' Iterate through all nodes in the SmartArt.
+For Each node As IOfficeSmartArtNode In smartArt.Nodes
+    ' Check if the current node is an assistant node.
+    If node.IsAssistant Then
+        ' Set the assistant node flag to false.
+        node.IsAssistant = False
+    End If
+Next
+' Save the modified document.
+document.Save("Result.docx", FormatType.Docx)
+' Close the document instance.
+document.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Set-assistant-to-normal-node/.NET/).
 
 ## Limitations
 
