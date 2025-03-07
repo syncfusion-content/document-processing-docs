@@ -11,9 +11,9 @@ A SmartArt diagram is a visual representation of information that helps effectiv
 
 ## Create SmartArt 
 
-You can create a SmartArt diagram in a Word document using DocIO by selecting a SmartArt type and adding content to it.
+You can create a SmartArt diagram in a Word document using DocIO by selecting a SmartArt categories and adding content to it.
 
-SmartArt diagrams help visually represent information in different formats, making it easier to structure and communicate ideas effectively. The following SmartArt types are available in Word documents using DocIO library.
+SmartArt diagrams help visually represent information in different formats, making it easier to structure and communicate ideas effectively. The following SmartArt categories are available in Word documents using DocIO library.
 
 * **List** – Displays information in a list format.
 * **Process** – Illustrates steps in a process or workflow.
@@ -26,11 +26,11 @@ SmartArt diagrams help visually represent information in different formats, maki
 
 ### List
 
-The following code example illustrating how to create a **List-type SmartArt** in a Word document.
+The following code example illustrating how to create a **List-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-List/.NET/Create-SmartArt-List/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -180,15 +180,15 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-List/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Process
 
-The following code example illustrating how to create a **Process-type SmartArt** in a Word document.
+The following code example illustrating how to create a **Process-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Process/.NET/Create-SmartArt-List/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -341,15 +341,15 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Process/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Cycle
 
-The following code example illustrating how to create a **Cycle-type SmartArt** in a Word document.
+The following code example illustrating how to create a **Cycle-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Cycle/.NET/Create-SmartArt-Cycle/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -473,15 +473,15 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Cycle/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Hierarchy
 
-The following code example illustrating how to create a **Hierarchy-type SmartArt** in a Word document.
+The following code example illustrating how to create a **Hierarchy-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -587,15 +587,15 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Relationship
 
-The following code example illustrating how to create a **Relationship-type SmartArt** in a Word document.
+The following code example illustrating how to create a **Relationship-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Relationship/.NET/Create-SmartArt-Relationship/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -742,15 +742,15 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Relationship/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Matrix
 
-The following code example illustrating how to create a **Matrix-type SmartArt** in a Word document.
+The following code example illustrating how to create a **Matrix-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Matrix/.NET/Create-SmartArt-Matrix/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -937,15 +937,15 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Matrix/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Pyramid
 
-The following code example illustrating how to create a **Pyramid-type SmartArt** in a Word document.
+The following code example illustrating how to create a **Pyramid-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Pyramid/.NET/Create-SmartArt-Pyramid/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -1043,15 +1043,15 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Pyramid/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Picture
 
-The following code example illustrating how to create a **Picture-type SmartArt** in a Word document.
+The following code example illustrating how to create a **Picture-category SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Picture/.NET/Create-SmartArt-Picture/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -1216,7 +1216,7 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Picture/.NET/).
+You can download a complete working sample from GitHub.
 
 ## Modify SmartArt appearance 
 
@@ -1224,7 +1224,7 @@ You can modify the appearance of SmartArt by changing the fill type, color, and 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Modify-SmartArt/.NET/Modify-SmartArt/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("EditSmartArtInput.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1373,7 +1373,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Modify-SmartArt/.NET/).
+You can download a complete working sample from GitHub.
 
 ## Remove SmartArt
 
@@ -1381,7 +1381,7 @@ You can modify the appearance of SmartArt by changing the fill type, color, and 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Remove-SmartArt/.NET/Remove-SmartArt/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1450,7 +1450,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Remove-SmartArt/.NET/).
+You can download a complete working sample from GitHub.
 
 ## Nodes in SmartArt
 
@@ -1458,7 +1458,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Add-SmartArt-node/.NET/Add-SmartArt-node/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 // Create a new Word document instance.
 WordDocument document = new WordDocument();
@@ -1518,13 +1518,13 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Add-SmartArt-node/.NET/).
+You can download a complete working sample from GitHub.
 
 In SmartArt diagrams, you can also **add nodes to several nested levels**. The maximum limit of nested levels may vary based on SmartArt types. The following code example demonstrates adding nested level nodes in a SmartArt.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Adding-nested-level-nodes/.NET/Adding-nested-level-nodes/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 //Create a new Word document instance.
 WordDocument document = new WordDocument();
@@ -1590,7 +1590,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Adding-nested-level-nodes/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Iterating through child nodes of an existing SmartArt 
 
@@ -1598,7 +1598,7 @@ You can iterate through the child nodes and access the properties of each node i
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Iterate-child-nodes-of-existing-SmartArt/.NET/Iterate-child-nodes-of-existing-SmartArt/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1685,7 +1685,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Iterate-child-nodes-of-existing-SmartArt/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Removing node from an existing SmartArt 
 
@@ -1693,7 +1693,7 @@ You can remove a node from the SmartArt diagram. The following code example demo
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Remove-node-from-existing-SmartArt/.NET/Remove-node-from-existing-SmartArt/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates an instance of WordDocument class
 FileStream fileStreamPath = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -1736,7 +1736,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Remove-node-from-existing-SmartArt/.NET/).
+You can download a complete working sample from GitHub.
 
 ### Assistant nodes in SmartArt 
 
@@ -1744,7 +1744,7 @@ You can check whether a node is an assistant or not. Also you can change a node 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Set-assistant-to-normal-node/.NET/Set-assistant-to-normal-node/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates a new Word document.
 //Create a new Word document instance.
 WordDocument document = new WordDocument();
@@ -1816,7 +1816,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/main/SmartArts/Set-assistant-to-normal-node/.NET/).
+You can download a complete working sample from GitHub.
 
 ## Limitations
 
