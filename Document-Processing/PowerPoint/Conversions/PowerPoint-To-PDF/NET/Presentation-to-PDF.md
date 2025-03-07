@@ -603,7 +603,6 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
 
 ## Chart quality
 
