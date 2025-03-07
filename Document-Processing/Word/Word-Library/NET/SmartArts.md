@@ -1,19 +1,17 @@
 ---
 title: Working with SmartArt in .NET Word (DocIO) library | Syncfusion
-description: Learn how to create, edit, and format smartArt in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Learn how to create, edit, and format SmartArt in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 # Working with SmartArt
 
-A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the Syncfusion Essential DocIO library.
+A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the Syncfusion<sup>&reg;</sup> Word library(DocIO).
 
 ## Create SmartArt 
 
-You can create a SmartArt diagram in a Word document using DocIO by selecting a SmartArt categories and adding content to it.
-
-SmartArt diagrams help visually represent information in different formats, making it easier to structure and communicate ideas effectively. The following SmartArt categories are available in Word documents using DocIO library.
+You can create the following categories of SmartArt in a Word document using DocIO.
 
 * **List** – Displays information in a list format.
 * **Process** – Illustrates steps in a process or workflow.
@@ -26,7 +24,7 @@ SmartArt diagrams help visually represent information in different formats, maki
 
 ### List
 
-The following code example illustrating how to create a **List-category SmartArt** in a Word document.
+The following code example illustrating how to create a **List SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -180,11 +178,11 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Process
 
-The following code example illustrating how to create a **Process-category SmartArt** in a Word document.
+The following code example illustrating how to create a **Process SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -341,11 +339,11 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Cycle
 
-The following code example illustrating how to create a **Cycle-category SmartArt** in a Word document.
+The following code example illustrating how to create a **Cycle SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -473,11 +471,11 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Hierarchy
 
-The following code example illustrating how to create a **Hierarchy-category SmartArt** in a Word document.
+The following code example illustrating how to create a **Hierarchy SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -587,11 +585,11 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Relationship
 
-The following code example illustrating how to create a **Relationship-category SmartArt** in a Word document.
+The following code example illustrating how to create a **Relationship SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -742,11 +740,11 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Matrix
 
-The following code example illustrating how to create a **Matrix-category SmartArt** in a Word document.
+The following code example illustrating how to create a **Matrix SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -937,11 +935,11 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Pyramid
 
-The following code example illustrating how to create a **Pyramid-category SmartArt** in a Word document.
+The following code example illustrating how to create a **Pyramid SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -1043,11 +1041,11 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Picture
 
-The following code example illustrating how to create a **Picture-category SmartArt** in a Word document.
+The following code example illustrating how to create a **Picture SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -1216,7 +1214,7 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ## Modify SmartArt appearance 
 
@@ -1373,11 +1371,11 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ## Remove SmartArt
 
-You can modify the appearance of SmartArt by changing the fill type, color, and text content. The following code example demonstrates how to customize the background, text, and shape styles of SmartArt nodes.
+You can remove SmartArt by iterating through the SmartArt objects or specifying an index. The following code example demonstrates how to remove SmartArt in a Word document.
 
 {% tabs %}
 
@@ -1450,11 +1448,15 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ## Nodes in SmartArt
 
+A SmartArt node in a Word document is an element within a SmartArt graphic that holds text or images for visual organization.
+
 ### Adding a node to the SmartArt 
+
+You can add a new node to the SmartArt diagram. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -1518,9 +1520,9 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
 
-In SmartArt diagrams, you can also **add nodes to several nested levels**. The maximum limit of nested levels may vary based on SmartArt types. The following code example demonstrates adding nested level nodes in a SmartArt.
+
+In SmartArt Graphics, you can also **add nodes to several nested levels**. The maximum limit of nested levels may vary based on SmartArt types. The following code example demonstrates adding nested level nodes in a SmartArt.
 
 {% tabs %}
 
@@ -1590,7 +1592,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Iterating through child nodes of an existing SmartArt 
 
@@ -1685,11 +1687,11 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Removing node from an existing SmartArt 
 
-You can remove a node from the SmartArt diagram. The following code example demonstrates the same.
+You can remove a node from the SmartArt Graphic. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -1736,7 +1738,7 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Assistant nodes in SmartArt 
 
@@ -1816,9 +1818,6 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
-
-## Limitations
 
 ## Supported SmartArt layout types
 
@@ -1956,7 +1955,3 @@ You can download a complete working sample from GitHub.
 132. Picture Accent Process
 133. Repeating Bending Process
 134. Vertical Process
-
-## Online Demo
-
-* Explore how to create a SmartArt diagram in a Word document using the .NET Word Library (DocIO) in a live demo [here]().
