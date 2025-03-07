@@ -7,11 +7,11 @@ documentation: UG
 ---
 # Working with SmartArt
 
-A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the Syncfusion<sup>&reg;</sup> Word library(DocIO).
+A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the Syncfusion<sup>&reg;</sup> Word library (DocIO).
 
 ## Create SmartArt 
 
-You can create the following categories of SmartArt in a Word document using DocIO.
+You can create the following categories of SmartArt in a Word document.
 
 * **List** – Displays information in a list format.
 * **Process** – Illustrates steps in a process or workflow.
