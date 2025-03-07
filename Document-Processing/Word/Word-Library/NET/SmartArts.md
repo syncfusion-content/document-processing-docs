@@ -15,14 +15,14 @@ You can create a SmartArt diagram in a Word document using DocIO by selecting a 
 
 SmartArt diagrams help visually represent information in different formats, making it easier to structure and communicate ideas effectively. The following SmartArt types are available in Word documents using DocIO library.
 
-* List – Displays information in a list format.
-* Process – Illustrates steps in a process or workflow.
-* Cycle – Represents a continuous cycle or loop.
-* Hierarchy – Shows hierarchical relationships, such as organizational structures.
-* Relationship – Depicts connections between different elements.
-* Matrix – Displays relationships between parts and a whole.
-* Pyramid – Represents information in a layered or hierarchical format.
-* Picture – Uses images to enhance the visual representation of data.
+* **List** – Displays information in a list format.
+* **Process** – Illustrates steps in a process or workflow.
+* **Cycle** – Represents a continuous cycle or loop.
+* **Hierarchy** – Shows hierarchical relationships, such as organizational structures.
+* **Relationship** – Depicts connections between different elements.
+* **Matrix** – Displays relationships between parts and a whole.
+* **Pyramid** – Represents information in a layered or hierarchical format.
+* **Picture** – Uses images to enhance the visual representation of data.
 
 ### List
 
@@ -31,9 +31,11 @@ The following code example illustrating how to create a **List-type SmartArt** i
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-List/.NET/Create-SmartArt-List/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document.
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange = paragraph.AppendText("Project Planning List");
@@ -66,9 +68,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document.
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange = paragraph.AppendText("Project Planning List");
@@ -185,9 +189,11 @@ The following code example illustrating how to create a **Process-type SmartArt*
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Process/.NET/Create-SmartArt-List/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Healthy Lifestyle Journey");
@@ -221,9 +227,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Healthy Lifestyle Journey");
@@ -342,9 +350,11 @@ The following code example illustrating how to create a **Cycle-type SmartArt** 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Cycle/.NET/Create-SmartArt-Cycle/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Customer Service Cycle");
@@ -382,9 +392,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Customer Service Cycle");
@@ -470,9 +482,11 @@ The following code example illustrating how to create a **Hierarchy-type SmartAr
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Hierarchy/.NET/Create-SmartArt-Hierarchy/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Company Organizational Structure");
@@ -504,9 +518,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Company Organizational Structure");
@@ -580,9 +596,11 @@ The following code example illustrating how to create a **Relationship-type Smar
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Relationship/.NET/Create-SmartArt-Relationship/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Remote Work vs Office Work");
@@ -614,9 +632,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Remote Work vs Office Work");
@@ -731,9 +751,11 @@ The following code example illustrating how to create a **Matrix-type SmartArt**
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Matrix/.NET/Create-SmartArt-Matrix/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Marketing Campaign Process");
@@ -779,9 +801,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Marketing Campaign Process");
@@ -922,9 +946,11 @@ The following code example illustrating how to create a **Pyramid-type SmartArt*
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Pyramid/.NET/Create-SmartArt-Pyramid/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Personal Growth");
@@ -954,9 +980,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 IWTextRange textRange1 = paragraph.AppendText("Personal Growth");
@@ -1024,9 +1052,11 @@ The following code example illustrating how to create a **Picture-type SmartArt*
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Create-SmartArt-Picture/.NET/Create-SmartArt-Picture/Program.cs" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 WTextRange textRange1 = paragraph.AppendText("Employee Report") as WTextRange;
@@ -1059,9 +1089,11 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 WordDocument document = new WordDocument();
+//Adds new section to the document
 IWSection section = document.AddSection();
-// Retrieves the first paragraph and add text.
+//Adds new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
 WTextRange textRange1 = paragraph.AppendText("Employee Report") as WTextRange;
@@ -1427,6 +1459,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Add-SmartArt-node/.NET/Add-SmartArt-node/Program.cs" %}
+//Creates a new Word document.
 // Create a new Word document instance.
 WordDocument document = new WordDocument();
 // Add a new section to the document.
@@ -1447,6 +1480,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 // Create a new Word document instance.
 WordDocument document = new WordDocument();
 // Add a new section to the document.
@@ -1491,6 +1525,7 @@ In SmartArt diagrams, you can also **add nodes to several nested levels**. The m
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Adding-nested-level-nodes/.NET/Adding-nested-level-nodes/Program.cs" %}
+//Creates a new Word document.
 //Create a new Word document instance.
 WordDocument document = new WordDocument();
 //Add a new section to the document.
@@ -1513,6 +1548,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a new Word document.
 //Create a new Word document instance.
 WordDocument document = new WordDocument();
 //Add a new section to the document.
@@ -1709,6 +1745,7 @@ You can check whether a node is an assistant or not. Also you can change a node 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/main/SmartArts/Set-assistant-to-normal-node/.NET/Set-assistant-to-normal-node/Program.cs" %}
+//Creates a new Word document.
 //Create a new Word document instance.
 WordDocument document = new WordDocument();
 //Add a new section to the document.
@@ -1733,7 +1770,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Create a new Word document instance.
+//Creates a new Word document.
 WordDocument document = new WordDocument();
 //Add a new section to the document.
 IWSection section = document.AddSection();
