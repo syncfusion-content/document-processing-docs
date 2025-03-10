@@ -1,6 +1,6 @@
 ---
 title: Performance benchmark results | Syncfusion
-description: Explore the performance benchmark results of PowerPoint to Image conversion using the .NET PowerPoint Library with different slide counts
+description: Explore the performance benchmark results of PowerPoint to image conversion using the .NET PowerPoint Library with different slide counts
 platform: document-processing
 control: Presentation
 documentation: UG
