@@ -1222,7 +1222,7 @@ End Sub
 {% endtabs %}
 
 By running the above code, you will generate a SmartArt as shown below.
-![Picture](SmartArts_images/Picture.png)
+![Picture](SmartArts_images/category-picture.png)
 
 ## Modify SmartArt appearance 
 
