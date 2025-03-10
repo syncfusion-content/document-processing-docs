@@ -43,7 +43,7 @@ Next
 
 ## Read
 
-The following code example demonstrates how to efficiently read a cell value.
+The following code example demonstrates how to efficiently read cell values from the Excel document with high performance using GetCellValue method.
 
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
