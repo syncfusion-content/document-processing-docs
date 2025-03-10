@@ -178,7 +178,8 @@ End Sub
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![List](SmartArts_images/List.png)
 
 ### Process
 
@@ -339,7 +340,8 @@ End Sub
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![Process](SmartArts_images/Process.png)
 
 ### Cycle
 
@@ -471,7 +473,8 @@ document.Close()
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![Cycle](SmartArts_images/Cycle.png)
 
 ### Hierarchy
 
@@ -585,7 +588,8 @@ document.Close()
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![Hierarchy](SmartArts_images/Hierarchy.png)
 
 ### Relationship
 
@@ -740,7 +744,8 @@ End Sub
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![Relationship](SmartArts_images/Relationship.png)
 
 ### Matrix
 
@@ -935,7 +940,8 @@ End Sub
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![Matrix](SmartArts_images/Matrix.png)
 
 ### Pyramid
 
@@ -1041,7 +1047,8 @@ document.Close()
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![Pyramid](SmartArts_images/Pyramid.png)
 
 ### Picture
 
@@ -1214,7 +1221,8 @@ End Sub
 
 {% endtabs %}
 
-
+By running the above code, you will generate a SmartArt as shown below.
+![Picture](SmartArts_images/Picture.png)
 
 ## Modify SmartArt appearance 
 
