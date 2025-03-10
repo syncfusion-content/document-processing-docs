@@ -763,7 +763,7 @@ The following code example illustrating how to create a **Matrix SmartArt** in a
 
 {% tabs %}
 
-% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/SmartArts/Create-SmartArt-Matrix/.NET/Create-SmartArt-Matrix/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/SmartArts/Create-SmartArt-Matrix/.NET/Create-SmartArt-Matrix/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document.
@@ -1236,7 +1236,7 @@ End Sub
 {% endtabs %}
 
 By running the above code, you will generate a **Picture SmartArt** as shown below.
-![Picture](SmartArts_images/category-picture.png)
+![SmartArt Picture category](SmartArts_images/category-picture.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/SmartArts/Create-SmartArt-Picture/.NET/).
 
@@ -1779,7 +1779,7 @@ You can check whether a node is an assistant or not. Also you can change a node 
 
 {% tabs %}
 
-% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/SmartArts/Set-assistant-to-normal-node/.NET/Set-assistant-to-normal-node/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/SmartArts/Set-assistant-to-normal-node/.NET/Set-assistant-to-normal-node/Program.cs" %}
 //Creates a new Word document.
 //Create a new Word document instance.
 WordDocument document = new WordDocument();
