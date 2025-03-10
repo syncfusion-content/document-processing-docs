@@ -51,49 +51,43 @@ using (ExcelEngine engine = new ExcelEngine())
 {
     IApplication application = engine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-
-    using (IWorkbook workbook = application.Workbooks.Open("Input.xlsx"))
+    IWorkbook workbook = application.Workbooks.Open("Input.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+    IRange range = worksheet.UsedRange;
+    int startRow = range.Row;
+    int endRow = range.LastRow;
+    int startColumn = range.Column;
+    int endColumn = range.LastColumn;
+    WorksheetImpl sheetImpl = worksheet as WorksheetImpl;
+    
+    for (int rowIndex = startRow; rowIndex <= endRow; rowIndex++)
     {
-        IWorksheet worksheet = workbook.Worksheets[0];
-        IRange range = worksheet.UsedRange;
-        int startRow = range.Row;
-        int endRow = range.LastRow;
-        int startColumn = range.Column;
-        int endColumn = range.LastColumn;
-
-        WorksheetImpl sheetImpl = worksheet as WorksheetImpl;
-        for (int i = startRow; i <= endRow; i++)
+        for (int columnIndex = startColumn; columnIndex <= endColumn; columnIndex++)
         {
-            for (int j = startColumn; j <= endColumn; j++)
-            {
-                string value = sheetImpl.GetCellValue(i, j, false);
-            }
+            string value = sheetImpl.GetCellValue(rowIndex, columnIndex, false);
         }
     }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
-Using engine As New ExcelEngine()
+Using engine As ExcelEngine = New ExcelEngine()
     Dim application As IApplication = engine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
-
-    Using workbook As IWorkbook = application.Workbooks.Open("Input.xlsx")
-        Dim worksheet As IWorksheet = workbook.Worksheets(0)
-        Dim range As IRange = worksheet.UsedRange
-        
-        Dim startRow As Integer = range.Row
-        Dim endRow As Integer = range.LastRow
-        Dim startColumn As Integer = range.Column
-        Dim endColumn As Integer = range.LastColumn
-
-        Dim sheetImpl As WorksheetImpl = TryCast(worksheet, WorksheetImpl)
-        For i As Integer = startRow To endRow
-            For j As Integer = startColumn To endColumn
-                Dim value As String = sheetImpl.GetCellValue(i, j, False)
-            Next
+    Dim workbook As IWorkbook = application.Workbooks.Open("Input.xlsx")
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+    Dim range As IRange = worksheet.UsedRange
+    Dim startRow As Integer = range.Row
+    Dim endRow As Integer = range.LastRow
+    Dim startColumn As Integer = range.Column
+    Dim endColumn As Integer = range.LastColumn
+    Dim sheetImpl As WorksheetImpl = TryCast(worksheet, WorksheetImpl)
+    
+    For rowIndex As Integer = startRow To endRow
+        For columnIndex As Integer = startColumn To endColumn
+            Dim value As String = sheetImpl.GetCellValue(rowIndex, columnIndex, False)
         Next
-    End Using
+    Next
 End Using
 {% endhighlight %}
 {% endtabs %}  
