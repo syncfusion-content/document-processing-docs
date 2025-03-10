@@ -11,8 +11,7 @@ documentation: UG
 
 PdfToImageConverter use PDFium to convert pdf document as image. PDFium is used in Google Chrome for rendering PDF files. It provides accurate and robust PDF rendering. 
 
-N>* PDFium is not supported in Windows XP operating system.
-N>* From v29.1.x onwards, Pdfium is upgraded to the new version which was built with the branch [chromium/6945](https://pdfium.googlesource.com/pdfium/+/refs/heads/chromium/6945).
+N> PDFium is not supported in Windows XP operating system.
 
 ### How PDFium works with PdfToImageConverter
 
