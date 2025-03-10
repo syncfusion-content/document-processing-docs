@@ -41,7 +41,68 @@ Next
 {% endhighlight %}
 {% endtabs %}  
 
-## Range Access
+## Read
+
+The following code example demonstrates how to efficiently read a cell value.
+
+{% tabs %}  
+{% highlight c# tabtitle="C#" %}
+ExcelEngine engine = new ExcelEngine();
+IApplication application = engine.Excel;
+application.DefaultVersion = ExcelVersion.Xlsx;
+
+IWorkbook workbook = application.Workbooks.Open("Input.xlsx");
+
+IWorksheet worksheet = workbook.Worksheets[0];
+ 
+//Get the worksheet Used Range
+IRange range = worksheet.UsedRange;
+
+int startRow = range.Row;
+int endRow = range.LastRow;
+int startColumn = range.Column;
+int endColumn = range.LastColumn;
+WorksheetImpl sheetImpl = worksheet as WorksheetImpl;
+ 
+     for (int i = startRow; i <= endRow; i++)
+     {
+         for (int j = startColumn; j <= endColumn; j++)
+         {
+             string value = sheetImpl.GetCellValue(i, j, false);
+         }
+     }
+workbook.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+Dim engine As New ExcelEngine()
+Dim application As IApplication = engine.Excel
+application.DefaultVersion = ExcelVersion.Xlsx
+
+Dim workbook As IWorkbook = application.Workbooks.Open("Input.xlsx")
+
+Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+' Get the worksheet Used Range
+Dim range As IRange = worksheet.UsedRange
+
+Dim startRow As Integer = range.Row
+Dim endRow As Integer = range.LastRow
+Dim startColumn As Integer = range.Column
+Dim endColumn As Integer = range.LastColumn
+Dim sheetImpl As WorksheetImpl = TryCast(worksheet, WorksheetImpl)
+
+For i As Integer = startRow To endRow
+    For j As Integer = startColumn To endColumn
+        Dim value As String = sheetImpl.GetCellValue(i, j, False)
+    Next
+Next
+
+workbook.Close()
+{% endhighlight %}
+{% endtabs %}  
+
+## Write
 
 Use [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html) instead of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) to optimize performance while dealing with large data.
 
