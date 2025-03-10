@@ -603,6 +603,9 @@ End Using
 
 {% endtabs %}
 
+By running the above code, you will generate a **PDF with editable text form fields** as shown below.
+![Editable text form fields](PPTXtoPDF_images/Editable-text-form-fields.png)
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX).
 
 ## Chart quality
