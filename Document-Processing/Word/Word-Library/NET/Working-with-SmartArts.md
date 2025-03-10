@@ -1236,7 +1236,7 @@ End Sub
 {% endtabs %}
 
 By running the above code, you will generate a **Picture SmartArt** as shown below.
-![SmartArt category](SmartArts_images/category-picture.png)
+![SmartArt category](SmartArts_images/SmartArt-category.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/SmartArts/Create-SmartArt-Picture/.NET/).
 
