@@ -22,6 +22,7 @@ Mail merge issues can arise due to incorrect merge fields, mismatched data sourc
      * You can press **Alt + F9** in Microsoft Word to see the actual field codes and check if they are correct.
 
 **Example:**
+
 **Word Document Fields:**
 ![Template document](../MailMerge_images/mail_merge_troubleshooting_template.png)
 **.NET Class Structure to Match Merge Fields:**
