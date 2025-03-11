@@ -25,7 +25,9 @@ Mail merge issues can arise due to incorrect merge fields, mismatched data sourc
 ![Template document](../MailMerge_images/mail_merge_troubleshooting_template.png)
 **Correct Employee Class:**
 
-{% highlight %}
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 public class Employee
 {
    public string FirstName { get; set; }  // Matches merge field name
