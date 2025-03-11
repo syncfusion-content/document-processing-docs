@@ -544,7 +544,7 @@ The following code sample shows how to preserve PowerPoint form fields as PDF fo
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX/.NET/Create-fillable-PDF-from-PPTX/Program.cs" %}
 //Open the PowerPoint file stream. 
 using (FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/Template.pptx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
@@ -603,6 +603,10 @@ End Using
 
 {% endtabs %}
 
+By running the above code, you will generate a **PDF with editable text form fields** as shown below.
+![Editable text form fields](PPTXtoPDF_images/Editable-text-form-fields.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX).
 
 ## Chart quality
 
