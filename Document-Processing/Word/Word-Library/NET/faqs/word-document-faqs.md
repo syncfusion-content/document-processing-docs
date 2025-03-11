@@ -446,3 +446,64 @@ DocIO indexes items based on the document’s internal file structure rather tha
 Currently, DocIO does not have dedicated viewer control for Word documents in .NET MAUI. However, we can achieve this by converting the Word document to PDF and then displaying the PDF using a PDF viewer control.
 
 To convert a Word document to PDF in .NET MAUI using DocIO, refer to the sample provided [here](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET-MAUI). To view the PDF in the .NET MAUI PDF viewer control, follow the [documentation](https://help.syncfusion.com/maui/pdf-viewer/getting-started). 
+
+## How to identify if a Word document is in portrait or landscape?
+
+A Word document consists of sections, and each section can have different page orientations. The [PageOrientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.PageOrientation.html) of a section can be determined using the [PageSetup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSection.html#Syncfusion_DocIO_DLS_WSection_PageSetup) property.
+
+The following code illustrates how to check the orientation of each section in a Word document. 
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Open the Word document from a file stream
+using (FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{
+    using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+    {
+        // Loop through all sections to check page orientation
+        foreach (WSection section in document.Sections)
+        {
+            PageOrientation orientation = section.PageSetup.Orientation;
+            // Perform operations based on orientation
+        }
+        // Save the Word document to a MemoryStream
+        using (MemoryStream stream = new MemoryStream())
+        {
+            document.Save(stream, FormatType.Docx);
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Open the template document
+using (WordDocument document = new WordDocument("Template.docx"))
+{
+    // Loop through all sections to check page orientation
+    foreach (WSection section in document.Sections)
+    {
+        PageOrientation orientation = section.PageSetup.Orientation;
+        // Perform operations based on orientation
+    }
+    // Save the modified document
+    document.Save("Sample.docx", FormatType.Docx);
+} 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Open the template document
+Using document As New WordDocument("Template.docx")
+    ' Loop through all sections to check page orientation
+    For Each section As WSection In document.Sections
+        Dim orientation As PageOrientation = section.PageSetup.Orientation
+        ' Perform operations based on orientation
+    Next
+    ' Save the modified document
+    document.Save("Sample.docx", FormatType.Docx)
+End Using 
+{% endhighlight %}
+
+{% endtabs %}
+
+For more details about specifying page properties, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-sections#specifying-page-properties).
