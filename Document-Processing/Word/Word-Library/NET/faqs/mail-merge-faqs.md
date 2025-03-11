@@ -163,8 +163,8 @@ For identifying only null value fields or missing from data source, use the [Bef
 
 ## Why is each record merging on a new page during mail merge?
 
-In DocIO, standard mail merge duplicates the entire document for each record, causing each entry to start on a new page. For example, with 10 records, the document repeats 10 times.
+In DocIO, simple mail merge clones the entire document for each record, causing each entry to start on a new page. For example, with 10 records, the document repeats 10 times.
 
-To merge all records into a single table on the same page, use Group Mail Merge instead. This ensures structured data insertion without unnecessary page breaks.
+To merge all records into a single table or specific region on the same page, use group mail merge instead.
 
 Refer to the [Group Mail Merge](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-for-group) documentation for details.
