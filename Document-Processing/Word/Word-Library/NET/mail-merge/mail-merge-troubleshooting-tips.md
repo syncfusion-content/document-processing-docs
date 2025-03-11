@@ -20,10 +20,11 @@ Mail merge issues can arise due to incorrect merge fields, mismatched data sourc
      * The property names in your MergeField class should be exactly the same as the merge field names in your Word document.
      * Field names are case-sensitive, so make sure they match exactly.
      * You can press **Alt + F9** in Microsoft Word to see the actual field codes and check if they are correct.
+
 **Example:**
 **Word Document Fields:**
 ![Template document](../MailMerge_images/mail_merge_troubleshooting_template.png)
-**Correct Employee Class:**
+**.NET Class Structure to Match Merge Fields:**
 
 {% tabs %}
 
