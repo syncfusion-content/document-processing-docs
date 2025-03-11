@@ -15,14 +15,16 @@ Mail merge issues can arise due to incorrect merge fields, mismatched data sourc
 *  Merge fields (<<FieldName>>) are used instead of plain text.
 *  **Data Source Check:** Ensure the required fields exist in the data source.
 *  **Match Field Names:** Sometimes, the field names in the Word document are different from the property names in your data source class. For example, if your document has "FirstName" and "LastName", but your Employee class uses different names, mail merge will not work correctly.
-**How to fix this:**
-  * The property names in your MergeField class should be exactly the same as the merge field names in your Word document.
-  * Field names are case-sensitive, so make sure they match exactly.
-  * You can press **Alt + F9** in Microsoft Word to see the actual field codes and check if they are correct.
+
+   **How to fix this:**
+     * The property names in your MergeField class should be exactly the same as the merge field names in your Word document.
+     * Field names are case-sensitive, so make sure they match exactly.
+     * You can press **Alt + F9** in Microsoft Word to see the actual field codes and check if they are correct.
 **Example:**
 **Word Document Fields:**
 ![Template document](../MailMerge_images/mail_merge_troubleshooting_template.png)
 **Correct Employee Class:**
+
 {% highlight %}
 public class Employee
 {
@@ -30,6 +32,7 @@ public class Employee
    public string LastName { get; set; }   // Matches merge field name
 }
 {% endhighlight %}
+
 *  **Show Field Codes:** Press Alt + F9 in Microsoft Word to reveal field codes and verify they are correct.
 
 ## Why does mail merge not recognize manually typed text in Word document?
