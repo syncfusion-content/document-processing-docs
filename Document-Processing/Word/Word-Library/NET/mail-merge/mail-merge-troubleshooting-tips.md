@@ -36,7 +36,7 @@ public class Employee
    public string LastName { get; set; }   // Matches merge field name
 }
 {% endhighlight %}
-
+{% endtabs %}
 *  **Show Field Codes:** Press Alt + F9 in Microsoft Word to reveal field codes and verify they are correct.
 
 ## Why does mail merge not recognize manually typed text in Word document?
