@@ -1946,3 +1946,163 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+## Custom Role Mapping
+
+The PdfRoleMap class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
+
+The following code sample demonstrates how to create Custom Role Mapping document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+// Create a new PDF document 
+PdfDocument doc = new PdfDocument(); 
+
+// Create a role map to define custom structure roles 
+PdfRoleMap roleMap = new PdfRoleMap(); 
+roleMap.Add("WorkBook", "Document"); // Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect"); // Mapping "WorkSheet" to "Sect" 
+
+// Define a custom structure type 
+string customStructureType = "WorkBook"; 
+string standardStructureType = ""; 
+
+// Try to get the standard structure type for the custom role 
+bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
+doc.StructureRoleMap = roleMap; // Assign role map to the document 
+// Set document metadata 
+doc.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page to the PDF 
+PdfPage page = doc.Pages.Add(); 
+
+// Create a custom structure element with a specified role 
+PdfStructureElement structureElement = new PdfStructureElement("WorkBook"); 
+
+structureElement.ActualText = "Simple paragraph element"; // Set alternative text for accessibility 
+// Define the content text 
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Create a text element and associate it with the structure element 
+PdfTextElement element = new PdfTextElement(text); 
+element.PdfTag = structureElement; 
+
+//Load the font file as stream  
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read); 
+// Set font and color for the text 
+element.Font = new PdfTrueTypeFont(fontStream, 10);   
+element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text on the page 
+PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+// Save the document into a memory stream (Cross-platform compatibility) 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; // Reset stream position for further processing if needed 
+// Close the document to release resources 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document 
+PdfDocument doc = new PdfDocument(); 
+
+// Create a role map to define custom structure roles 
+PdfRoleMap roleMap = new PdfRoleMap(); 
+roleMap.Add("WorkBook", "Document"); // Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect"); // Mapping "WorkSheet" to "Sect" 
+
+// Define a custom structure type 
+string customStructureType = "WorkBook"; 
+string standardStructureType = ""; 
+
+// Try to get the standard structure type for the custom role 
+bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
+doc.StructureRoleMap = roleMap; // Assign role map to the document 
+// Set document metadata 
+doc.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page to the PDF 
+PdfPage page = doc.Pages.Add(); 
+
+// Create a custom structure element with a specified role 
+PdfStructureElement structureElement = new PdfStructureElement("WorkBook"); 
+
+structureElement.ActualText = "Simple paragraph element"; // Set alternative text for accessibility 
+// Define the content text 
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Create a text element and associate it with the structure element 
+PdfTextElement element = new PdfTextElement(text); 
+element.PdfTag = structureElement; 
+
+//Load the font file as stream  
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read); 
+// Set font and color for the text 
+element.Font = new PdfTrueTypeFont(fontStream, 10);   
+element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text on the page 
+PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+// Save the document 
+doc.Save("Output.pdf"); 
+// Close the document to release resources 
+doc.Close(true); 
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document 
+Dim doc As New PdfDocument() 
+
+' Create a role map to define custom structure roles 
+Dim roleMap As New PdfRoleMap() 
+roleMap.Add("WorkBook", "Document") ' Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect") ' Mapping "WorkSheet" to "Sect" 
+
+' Define a custom structure type 
+Dim customStructureType As String = "WorkBook" 
+Dim standardStructureType As String = "" 
+
+' Try to get the standard structure type for the custom role 
+Dim found As Boolean = roleMap.TryGetStandardType(customStructureType, standardStructureType) 
+doc.StructureRoleMap = roleMap ' Assign role map to the document 
+
+' Set document metadata 
+doc.DocumentInformation.Title = "PdfTextElement" 
+
+' Add a new page to the PDF 
+Dim page As PdfPage = doc.Pages.Add() 
+
+' Create a custom structure element with a specified role 
+Dim structureElement As New PdfStructureElement("WorkBook") 
+structureElement.ActualText = "Simple paragraph element" ' Set alternative text for accessibility 
+' Define the content text 
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base." 
+
+' Create a text element and associate it with the structure element 
+Dim element As New PdfTextElement(text) 
+element.PdfTag = structureElement 
+
+' Set font and color for the text 
+Dim fontStream As FileStream = New FileStream("Font.ttf", FileMode.Open, FileAccess.Read)   
+element.Font = New PdfTrueTypeFont(fontStream, 10)   
+element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93)) 
+
+' Draw text on the page 
+Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)) 
+
+' Save the document to the file 
+doc.Save("Output.pdf") 
+' Close the document to release resources 
+doc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
