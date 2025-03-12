@@ -84,4 +84,4 @@ You can find the sample used for this performance evaluation on [GitHub](https:/
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
 
-You can find the performance benchmark report for PowerPoint to PDF and PowerPoint to Image conversion.
+You can find the performance benchmark report for [PowerPoint to PDF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/performance-metrics) and [PowerPoint to Image](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/performance-metrics) conversion.
