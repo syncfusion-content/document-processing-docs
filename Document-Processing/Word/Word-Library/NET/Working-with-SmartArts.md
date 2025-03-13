@@ -1853,6 +1853,14 @@ wordDocument.Close()
 
 {% endtabs %}
 
+The following images show the SmartArt before and after changing an assistant node into a normal node:
+
+**SmartArt with Assistant Node**
+![SmartArt with Assistant Node](SmartArts_images/AssistantNode.png)
+
+**SmartArt with Normal Node**
+![SmartArt with Normal Node](SmartArts_images/NormalNode.png)
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/SmartArts/Set-assistant-to-normal-node/.NET).																																				  
 
 ## Supported SmartArt layout types
