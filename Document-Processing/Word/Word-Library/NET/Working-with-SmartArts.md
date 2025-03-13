@@ -22,6 +22,8 @@ You can create the following categories of SmartArt in a Word document.
 * **Pyramid** – Represents information in a layered or hierarchical format.
 * **Picture** – Uses images to enhance the visual representation of data.
 
+N> DocIO supports SmartArt only in DOCX format document.
+
 ### List
 
 The following code example illustrating how to create a **List SmartArt** in a Word document.
