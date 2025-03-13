@@ -1780,22 +1780,22 @@ You can check whether a node is an assistant or not. Also you can change a node 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/SmartArts/Set-assistant-to-normal-node/.NET/Set-assistant-to-normal-node/Program.cs" %}
-//Creates a new Word document.
 //Create a new Word document instance.
-WordDocument document = new WordDocument();
-//Add a new section to the document.
-IWSection section = document.AddSection();
-//Add a paragraph to the section.
-IWParagraph paragraph = section.AddParagraph();
+WordDocument wordDocument = new WordDocument();
+//Add one section and one paragraph to the document.
+wordDocument.EnsureMinimal();
 //Add a SmartArt to the paragraph at the specified size.
-WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 432, 252);
+WSmartArt smartArt = wordDocument.LastParagraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 640, 426);
 //Traverse through all nodes of the SmartArt.
 foreach (IOfficeSmartArtNode node in smartArt.Nodes)
 {
-    //Check if the node is assistant or not.
-    if (node.IsAssistant)
-        //Set the assistant node to false.
-        node.IsAssistant = false;
+    foreach (IOfficeSmartArtNode childNode in node.ChildNodes)
+    {
+        //Check if the node is assistant or not.
+        if (childNode.IsAssistant)
+            //Set the assistant node to false.
+            childNode.IsAssistant = false;
+    }
 }
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
@@ -1805,21 +1805,22 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates a new Word document.
-WordDocument document = new WordDocument();
-//Add a new section to the document.
-IWSection section = document.AddSection();
-//Add a paragraph to the section.
-IWParagraph paragraph = section.AddParagraph();
+//Create a new Word document instance.
+WordDocument wordDocument = new WordDocument();
+//Add one section and one paragraph to the document.
+wordDocument.EnsureMinimal();
 //Add a SmartArt to the paragraph at the specified size.
-WSmartArt smartArt = paragraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 432, 252);
+WSmartArt smartArt = wordDocument.LastParagraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 640, 426);
 //Traverse through all nodes of the SmartArt.
 foreach (IOfficeSmartArtNode node in smartArt.Nodes)
 {
-    //Check if the node is assistant or not.
-    if (node.IsAssistant)
-        //Set the assistant node to false.
-        node.IsAssistant = false;
+    foreach (IOfficeSmartArtNode childNode in node.ChildNodes)
+    {
+        //Check if the node is assistant or not.
+        if (childNode.IsAssistant)
+            //Set the assistant node to false.
+            childNode.IsAssistant = false;
+    }
 }
 //Saves and closes the document instance
 document.Save("Result.docx", FormatType.Docx);
@@ -1827,26 +1828,25 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-' Create a new Word document instance.
-Dim document As New WordDocument()
-' Add a new section to the document.
-Dim section As IWSection = document.AddSection()
-' Add a paragraph to the section.
-Dim paragraph As IWParagraph = section.AddParagraph()
-' Add a SmartArt of type "Organization Chart" to the paragraph with specified dimensions.
-Dim smartArt As WSmartArt = paragraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 432, 252)
-' Iterate through all nodes in the SmartArt.
+'Create a new Word document instance.
+Dim wordDocument As New WordDocument()
+'Add one section and one paragraph to the document.
+wordDocument.EnsureMinimal()
+'Add a SmartArt to the paragraph at the specified size.
+Dim smartArt As WSmartArt = wordDocument.LastParagraph.AppendSmartArt(OfficeSmartArtType.OrganizationChart, 640, 426)
+'Traverse through all nodes of the SmartArt.
 For Each node As IOfficeSmartArtNode In smartArt.Nodes
-    ' Check if the current node is an assistant node.
-    If node.IsAssistant Then
-        ' Set the assistant node flag to false.
-        node.IsAssistant = False
-    End If
+    For Each childNode As IOfficeSmartArtNode In node.ChildNodes
+        'Check if the node is assistant or not.
+        If childNode.IsAssistant Then
+            'Set the assistant node to false.
+            childNode.IsAssistant = False
+        End If
+    Next
 Next
-' Save the modified document.
-document.Save("Result.docx", FormatType.Docx)
-' Close the document instance.
-document.Close()
+'Saves and closes the document instance.
+wordDocument.Save("Result.docx", FormatType.Docx)
+wordDocument.Close()
 {% endhighlight %}
 
 {% endtabs %}
