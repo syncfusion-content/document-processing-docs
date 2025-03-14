@@ -234,10 +234,6 @@ Step 8: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
 
-{% endhighlight %}
-
-{% endtabs %}
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/ASP.NET-MVC).
 
 By executing the program, you will get the **PDF document** as follows.

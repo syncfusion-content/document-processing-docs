@@ -2059,6 +2059,113 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-with-baseline-alignment-in-a-PDF/). 
 
+## Drawing text using different text alignment
+
+The Essential<sup>&reg;</sup> PDF allows you to add text in the PDF document with different text alignment using the [Alignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_Alignment) property available in [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class.
+
+The following code sample explains this.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-using-different-text-alignment/.NET/Drawing-text-using-different-text-alignment/Program.cs" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a page to the document
+PdfPage page = document.Pages.Add();
+//Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+//Create new instance for string format
+PdfStringFormat format = new PdfStringFormat();
+
+//Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right;
+format.WordSpacing = 2f;
+format.CharacterSpacing = 1f;
+
+//Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, new RectangleF(10, 10, 200, 20));
+//Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, new RectangleF(10, 10, 200, 20), format);
+
+//Create a file stream to save the document
+using (FileStream fs = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    //Save the document to the file stream
+    document.Save(fs);
+}
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a page to the document
+PdfPage page = document.Pages.Add();
+//Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+//Create new instance for string format
+PdfStringFormat format = new PdfStringFormat();
+
+//Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right;
+format.WordSpacing = 2f;
+format.CharacterSpacing = 1f;
+
+//Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, new RectangleF(10, 10, 200, 20));
+//Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, new RectangleF(10, 10, 200, 20), format);
+
+//Save the document
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+ Dim document As New PdfDocument()
+'Add a page to the document
+Dim page As PdfPage = document.Pages.Add()
+'Create PDF graphics for the page
+Dim graphics As PdfGraphics = page.Graphics
+'Create new instance for string format
+Dim format As New PdfStringFormat()
+
+'Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right
+format.WordSpacing = 2.0F
+format.CharacterSpacing = 1.0F
+
+'Set the standard font
+Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+'Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, New RectangleF(10, 10, 200, 20))
+'Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, New RectangleF(10, 10, 200, 20), format)
+
+'Save the document
+document.Save("Output.pdf")
+'Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-using-different-text-alignment/.NET).
+
 ## Adding a text encoding to the PdfStandardFont 
 
 The following code sample shows how to add a text encoding using the standard PDF fonts by initializing [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class.
@@ -2142,54 +2249,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Add-text-encoding-using-standard-PDF-fonts).
-
-## Find Text
-
-The code example provided below demonstrates the utilization of the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method from the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to locate text within a PDF document. This method facilitates the retrieval of both the page number and the rectangular coordinates of the identified text occurrences.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %}
-
-//Load an existing PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Returns page number and rectangle positions of the text maches. 
-Dictionary<int, List<Syncfusion.Drawing.RectangleF>> matchRects = new Dictionary<int, List<Syncfusion.Drawing.RectangleF>>();
-loadedDocument.FindText("document", out matchRects);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load an existing PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Returns page number and rectangle positions of the text maches.
-Dictionary<int, List<System.Drawing.RectangleF>> matchRects = new Dictionary<int, List<System.Drawing.RectangleF>>();
-loadedDocument.FindText("document", out matchRects);           
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load an existing PDF document. 
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-'Returns page number and rectangle positions of the text maches.
-Dim matchRects As Dictionary(Of Integer, List(Of System.Drawing.RectangleF)) = New Dictionary(Of Integer, List(Of System.Drawing.RectangleF))()
-loadedDocument.FindText("document", matchRects)
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Find-text-in-PDF-document).
-
 
 ## Customizing TrueType fonts in a PDF document
 
