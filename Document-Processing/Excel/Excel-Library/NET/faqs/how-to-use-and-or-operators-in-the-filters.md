@@ -1,14 +1,14 @@
 ---
-title: How to create AND and OR operators in the filter | Syncfusion
-description: Code example to create AND and OR operators in the filter using Syncfusion .NET Excel library (XlsIO).
+title: How to use AND and OR operators in the filter | Syncfusion
+description: Code example to use AND and OR operators in the filter using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to create AND and OR operators in the filter?
+# How to use AND and OR operators in the filter?
 
-You can create AND and OR operators in the filter by using XlsIO. The following code snippet illustrates this.
+You can use AND and OR operators in the filter by using XlsIO. The following code snippet illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
