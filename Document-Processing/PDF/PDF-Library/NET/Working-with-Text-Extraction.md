@@ -430,7 +430,9 @@ Dim glyphColor As Color = textGlyph.TextColor
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/).
 
-**Find Text Module Overview**
+## Find Text
+
+The code example provided below demonstrates the utilization of the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method from the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to locate text within a PDF document. This method facilitates the retrieval of both the page number and the rectangular coordinates of the identified text occurrences.
 
 <table>
   <thead>
@@ -498,3 +500,46 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     </tr>
   </tbody>
 </table>
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %}
+
+//Load an existing PDF document. 
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Returns page number and rectangle positions of the text maches. 
+Dictionary<int, List<Syncfusion.Drawing.RectangleF>> matchRects = new Dictionary<int, List<Syncfusion.Drawing.RectangleF>>();
+loadedDocument.FindText("document", out matchRects);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load an existing PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Returns page number and rectangle positions of the text maches.
+Dictionary<int, List<System.Drawing.RectangleF>> matchRects = new Dictionary<int, List<System.Drawing.RectangleF>>();
+loadedDocument.FindText("document", out matchRects);           
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load an existing PDF document. 
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+'Returns page number and rectangle positions of the text maches.
+Dim matchRects As Dictionary(Of Integer, List(Of System.Drawing.RectangleF)) = New Dictionary(Of Integer, List(Of System.Drawing.RectangleF))()
+loadedDocument.FindText("document", matchRects)
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Find-text-in-PDF-document).
