@@ -1494,11 +1494,11 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Shapes/Draw-large-shapes-across-multiple-pages/).
 
-## Dash Pattern
+## Dash pattern
 
-In the Syncfusion<sup>&reg;</sup> PDF Library, the [DashPattern](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfPen.html#Syncfusion_Pdf_Graphics_PdfPen_DashPattern) property is used to create custom dashed or dotted lines while drawing paths, rectangles, or borders using the [PdfPen](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfPen.html) class.
+The [DashPattern](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfPen.html#Syncfusion_Pdf_Graphics_PdfPen_DashPattern) property allows you to create custom dashed or dotted lines when drawing paths, rectangles, or borders using the [PdfPen](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfPen.html) class.
 
-The following code example demonstrates how to use a dash pattern in a line shape.
+The following code example demonstrates applying a dash pattern to a line shape.
 
 {% tabs %}
 
