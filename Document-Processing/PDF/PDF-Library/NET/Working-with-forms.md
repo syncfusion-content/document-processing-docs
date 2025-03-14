@@ -513,12 +513,6 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
    
-' Import necessary libraries
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Forms
-Imports System.Drawing
-
 ' Create a new PDF document
 Dim document As New PdfDocument()
 
