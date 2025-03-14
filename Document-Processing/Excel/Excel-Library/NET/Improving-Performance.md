@@ -58,13 +58,12 @@ using (ExcelEngine engine = new ExcelEngine())
     int endRow = range.LastRow;
     int startColumn = range.Column;
     int endColumn = range.LastColumn;
-    WorksheetImpl sheetImpl = worksheet as WorksheetImpl;
     
     for (int rowIndex = startRow; rowIndex <= endRow; rowIndex++)
     {
         for (int columnIndex = startColumn; columnIndex <= endColumn; columnIndex++)
         {
-            string value = sheetImpl.GetCellValue(rowIndex, columnIndex, false);
+            string value = worksheet.GetCellValue(rowIndex, columnIndex, false);
         }
     }
 }
@@ -81,11 +80,10 @@ Using engine As ExcelEngine = New ExcelEngine()
     Dim endRow As Integer = range.LastRow
     Dim startColumn As Integer = range.Column
     Dim endColumn As Integer = range.LastColumn
-    Dim sheetImpl As WorksheetImpl = TryCast(worksheet, WorksheetImpl)
     
     For rowIndex As Integer = startRow To endRow
         For columnIndex As Integer = startColumn To endColumn
-            Dim value As String = sheetImpl.GetCellValue(rowIndex, columnIndex, False)
+            Dim value As String = worksheet.GetCellValue(rowIndex, columnIndex, False)
         Next
     Next
 End Using
