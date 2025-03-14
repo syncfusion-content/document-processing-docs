@@ -4070,9 +4070,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
 
-## Adding transparency for annotations 
+## Setting transparency for annotations 
 
-The Syncfusion<sup>®</sup> PDF library allows you to set the transparency level for annotations, and the [Opacity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Opacity) property controls this transparency. It specifies how transparent the annotation is, with values ranging from 0 (completely transparent) to 1 (completely opaque).
+The Syncfusion<sup>®</sup> PDF Library enables you to adjust the transparency of annotations using the [Opacity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Opacity) property. This property defines the annotation's transparency level, where a value of 0 makes it fully transparent, and 1 makes it completely opaque.
 
 The following code example how to add transparency to the PDF annotation.
 
