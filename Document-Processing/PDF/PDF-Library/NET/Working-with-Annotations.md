@@ -3604,7 +3604,7 @@ The appearance streams are not generated during the annotation import process To
 
 Please refer to the below code snippet to achieve this on your end.
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document/.NET/Importing-annotations-from-JSON-file-to-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Load the PDF document
 FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
