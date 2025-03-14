@@ -5581,7 +5581,8 @@ If set, inverts the interpretation of the NoView flat for certain events.<br/><b
 </tbody>
 </table>
 
-## Troubleshooting
+
+## Troubleshooting and FAQ's
 
 <th style="font-size:14px"><b>Annotations are sometimes missing in the acrobat and the other PDF Viewer applications.
 </b></th>
@@ -5610,3 +5611,108 @@ freeText.SetAppearance(true);
 </td>
 </tr>
 </table>
+
+
+## Missing annotation after importing the data into the PDF document
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Annotation appearances are not preserved when importing annotation data into a PDF document</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>By default, annotation appearances are not created when importing annotation data, as annotations may be rendered differently across various viewers. 
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Enabling the appearance ensures that annotations are displayed consistently across all viewers. Refer to the following to update the annotation appearance.
+
+<br/><br/>
+Please refer to the below code example to achieve this on your end.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+//Import annotation data from XFDF stream
+FileStream xfdfStream = new FileStream("Annotations.xfdf", FileMode.Open, FileAccess.Read);
+lDoc.ImportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
+
+//Set appearance for all the annotations
+foreach (PdfLoadedPage page in lDoc.Pages)
+{
+    foreach (PdfAnnotation annotation in page.Annotations)
+    {
+        annotation.SetAppearance(true);
+    }
+}
+//Create file stream.
+using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+{
+    //Save the PDF document to file stream.
+    lDoc.Save(outputFileStream);
+}
+//Closes the document
+lDoc.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Loads the document
+PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
+//Import the annotation data from the JSON file
+lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf);
+//Set appearance for all the annotations
+foreach (PdfLoadedPage page in lDoc.Pages)
+{
+    foreach (PdfAnnotation annotation in page.Annotations)
+    {
+        annotation.SetAppearance(true);
+    }
+}
+
+//Saves the document
+lDoc.Save("Annotation.pdf");
+lDoc.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from the file
+Dim lDoc As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
+
+' Import annotations from a JSON file
+lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFDF)
+
+'Iterate through each page in the loaded document
+For Each pages As PdfLoadedPage In lDoc.Pages
+    'Iterate through each annotation in the page
+    For Each annot As PdfLoadedAnnotation In pages.Annotations
+        'Set the appearance for each annotation
+        annot.SetAppearance(True)
+    Next
+Next
+
+
+'Save the updated document
+lDoc.Save("Annotation.pdf")
+
+'Close the document instances
+lDoc.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+</tr>
+
+</table>
+
