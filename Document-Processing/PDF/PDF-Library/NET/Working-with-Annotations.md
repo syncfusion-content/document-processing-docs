@@ -5629,8 +5629,6 @@ freeText.SetAppearance(true);
 <td>
 Enabling the appearance ensures that annotations are displayed consistently across all viewers. Refer to the following to update the annotation appearance.
 
-The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the `SetAppearance` parameter to `true` when calling the `ImportAnnotations` method.
-
 <br/><br/>
 Please refer to the below code example to achieve this on your end.
 
