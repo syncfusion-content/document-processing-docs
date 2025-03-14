@@ -596,11 +596,11 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-## Verify digital signature in existing PDF document
+## Verify if a signature field is signed
 
-You can verify the digital signature using the [IsSignatureValid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html#Syncfusion_Pdf_Security_PdfSignatureValidationResult_IsSignatureValid) property available in the [PdfSignatureValidationResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html) class.
+The [IsSigned](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html#Syncfusion_Pdf_Parsing_PdfLoadedSignatureField_IsSigned) property in the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class allows you to determine whether a signature field in a PDF document has been signed.
 
-The following code example demonstrates how to verify the digital signature in an existing PDF.
+The following code example demonstrates how to check if a signature field is signed.
 
 {% tabs %}
 
@@ -612,58 +612,64 @@ using (FileStream inputFileStream = new FileStream("Input.pdf", FileMode.Open, F
     // Load the PDF document
     PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
 
-    // Check if the document has a form (which would contain signature fields)
-    if (loadedDocument.Form == null)
+    // Check if the document contains a form with fields
+    if (loadedDocument.Form == null || loadedDocument.Form.Fields.Count == 0)
     {
         Console.WriteLine("No signature fields found in the document.");
-        return;
     }
-
-    // Iterate through all fields in the form
-    foreach (var field in loadedDocument.Form.Fields)
+    else
     {
-        // Check if the field is a signature field
-        if (field is PdfLoadedSignatureField signatureField)
+        // Iterate through all fields in the form
+        foreach (PdfLoadedField field in loadedDocument.Form.Fields)
         {
-            // Determine whether the signature field is signed or not
-            string status = signatureField.IsSigned ? "Signed" : "UnSigned";
+            // Check if the field is a signature field
+            PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
+            if (signatureField != null)
+            {
+                // Determine whether the signature field is signed or not
+                string status = signatureField.IsSigned ? "Signed" : "UnSigned";
 
-            // Output the result for each signature field
-            Console.WriteLine($"Signature Field {signatureField.Name} is : {status}");
+                // Output the result for each signature field
+                Console.WriteLine("Signature Field " + signatureField.Name + " is: " + status);
+            }
         }
     }
-    //Close the document
+
+    // Close the document
     loadedDocument.Close(true);
 }
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
- 
+
     // Load the PDF document
     PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-    // Check if the document has a form (which would contain signature fields)
-    if (loadedDocument.Form == null)
+    // Check if the document contains a form with fields
+    if (loadedDocument.Form == null || loadedDocument.Form.Fields.Count == 0)
     {
         Console.WriteLine("No signature fields found in the document.");
-        return;
     }
-
-    // Iterate through all fields in the form
-    foreach (var field in loadedDocument.Form.Fields)
+    else
     {
-        // Check if the field is a signature field
-        if (field is PdfLoadedSignatureField signatureField)
+        // Iterate through all fields in the form
+        foreach (PdfLoadedField field in loadedDocument.Form.Fields)
         {
-            // Determine whether the signature field is signed or not
-            string status = signatureField.IsSigned ? "Signed" : "UnSigned";
+            // Check if the field is a signature field
+            PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
+            if (signatureField != null)
+            {
+                // Determine whether the signature field is signed or not
+                string status = signatureField.IsSigned ? "Signed" : "UnSigned";
 
-            // Output the result for each signature field
-            Console.WriteLine($"Signature Field {signatureField.Name} is : {status}");
+                // Output the result for each signature field
+                Console.WriteLine("Signature Field " + signatureField.Name + " is: " + status);
+            }
         }
     }
-    //Close the document
+
+    // Close the document
     loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -673,25 +679,23 @@ using (FileStream inputFileStream = new FileStream("Input.pdf", FileMode.Open, F
 ' Load the PDF document
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
-' Check if the document has a form (which would contain signature fields)
-If loadedDocument.Form Is Nothing Then
+' Check if the document contains a form with fields
+If loadedDocument.Form Is Nothing OrElse loadedDocument.Form.Fields.Count = 0 Then
     Console.WriteLine("No signature fields found in the document.")
-    Return
+Else
+    ' Iterate through all fields in the form
+    For Each field As PdfLoadedField In loadedDocument.Form.Fields
+        ' Check if the field is a signature field
+        Dim signatureField As PdfLoadedSignatureField = TryCast(field, PdfLoadedSignatureField)
+        If signatureField IsNot Nothing Then
+            ' Determine whether the signature field is signed or not
+            Dim status As String = If(signatureField.IsSigned, "Signed", "UnSigned")
+
+            ' Output the result for each signature field
+            Console.WriteLine("Signature Field " & signatureField.Name & " is: " & status)
+        End If
+    Next
 End If
-
-' Iterate through all fields in the form
-For Each field As PdfField In loadedDocument.Form.Fields
-    ' Check if the field is a signature field
-    If TypeOf field Is PdfLoadedSignatureField Then
-        Dim signatureField As PdfLoadedSignatureField = CType(field, PdfLoadedSignatureField)
-
-        ' Determine whether the signature field is signed or not
-        Dim status As String = If(signatureField.IsSigned, "Signed", "UnSigned")
-
-        ' Output the result for each signature field
-        Console.WriteLine($"Signature Field {signatureField.Name} is : {status}")
-    End If
-Next
 
 ' Close the document
 loadedDocument.Close(True)
