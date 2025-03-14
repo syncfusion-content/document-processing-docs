@@ -554,7 +554,7 @@ document.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-radio-button-in-new-PDF-document).
+You can download a complete working sample from [GitHub](https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Forms/Enabling-Edit-Option-for-the-PdfComboboxField/Enabling-Edit-Option-for-the-PdfComboboxField/Program.cs).
 
 ### Adding the radio button field
 
