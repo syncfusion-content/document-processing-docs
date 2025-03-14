@@ -604,7 +604,7 @@ The following code example demonstrates how to check if a signature field is sig
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/New%20folder/.NET/Verify-digital-sign-in-existing-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Check-If-PDF-Is-Signed/.NET/Check-If-PDF-Is-Signed/Program.cs" %}
 
 // Open the signed PDF file for reading
 using (FileStream inputFileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -704,7 +704,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/New%20folder/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Check-If-PDF-Is-Signed/.NET).
 
 ## Externally sign a PDF document 
 
