@@ -435,39 +435,45 @@ Use the [TextAlignment](https://help.syncfusion.com/cr/document-processing/Syncf
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Set-text-alignment-in-a-Combo-Box-field/.NET).
 
-### Editing the Combo Box Fields in a PDF Document
+## Creating an editable Combo Box in a PDF
 
-Setting the [Editable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html#Syncfusion_Pdf_Interactive_PdfComboBoxField_Editable) property of a combo box field to true allows users to type custom input in the combo box within the PDF document.
+Enabling the [Editable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html#Syncfusion_Pdf_Interactive_PdfComboBoxField_Editable) property for a combo box field allows users to enter custom input directly within the PDF document.
 
 The following code example demonstrates how to enable this feature:
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Adding-radio-button-in-new-PDF-document/.NET/Adding-radio-button-in-new-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Forms/Enabling-Edit-Option-for-the-PdfComboboxField/Enabling-Edit-Option-for-the-PdfComboboxField/Program.cs" %}
 
-// Create a new PDF document
-PdfDocument document = new PdfDocument(); 
+PdfDocument document = new PdfDocument();
 
-// Create a new page and add it to the document
-PdfPage page = document.Pages.Add(); 
+//Add page
+PdfPage page = document.Pages.Add();
 
-PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f); 
+//Create a PDF standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Courier, 12f);
 
-PdfComboBoxField positionComboBox = new PdfComboBoxField(page, "positionComboBox"); 
-// Set the combo box field as editable
-positionComboBox.Editable = true; 
-positionComboBox.Bounds = new RectangleF(100, 115, 200, 20); 
+//Create a combo box
 
-positionComboBox.Font = font; 
+PdfComboBoxField positionComboBox = new PdfComboBoxField(page, "positionComboBox");
 
-document.Form.Fields.Add(positionComboBox); 
+//Set the combo box bounds
+positionComboBox.Bounds = new RectangleF(100, 115, 200, 20);
 
-using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"../../../Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+//Set the font
+positionComboBox.Font = font;
+
+//Enable editing option
+positionComboBox.Editable = true;
+
+//Add it to document
+document.Form.Fields.Add(positionComboBox);
+
+using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
 {
-  // Save the PDF document to file stream
-    document.Save(outputFileStream); 
+    //Save the PDF document to file stream.
+    document.Save(outputFileStream);
 }
-// Close the docu/ment
-document.Close(true); 
+document.Close(true);
 
 {% endhighlight %}
 
