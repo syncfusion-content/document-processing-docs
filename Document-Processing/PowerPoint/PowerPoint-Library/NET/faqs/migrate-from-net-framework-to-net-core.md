@@ -1,12 +1,12 @@
 ---
-title: Migrate from .NET Framework to .NET core | Presentation | Syncfusion&reg;
-description: This section illustrates migrating Syncfusion&reg; .NET PowerPoint (Presentation) library from .NET Framework to .NET core.
+title: Migrate from .NET Framework to .NET core | Presentation | Syncfusion
+description: This section illustrates migrating Syncfusion<sup>&reg;</sup> .NET PowerPoint (Presentation) library from .NET Framework to .NET core.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 # Migrate Presentation library from .NET Framework to .NET Core
-In this section, we will see about the changes which need to be considered while migrating Syncfusion&reg; .NET PowerPoint (Presentation) library from .NET Framework to .NET Core.
+In this section, we will see about the changes which need to be considered while migrating Syncfusion<sup>&reg;</sup> .NET PowerPoint (Presentation) library from .NET Framework to .NET Core.
 
 ## NuGet Packages
 

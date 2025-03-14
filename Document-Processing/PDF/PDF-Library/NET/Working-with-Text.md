@@ -9,7 +9,7 @@ documentation: UG
 
 ## Drawing text in a new document
 
-You can add text in the new PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class as shown in the following code sample.
+You can add text in the new PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics][def] class as shown in the following code sample.
 
 {% tabs %}
 
@@ -81,6 +81,99 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/). 
+
+## The importance of saving and restoring graphics state in PDF content rendering
+Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics][https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html] class.
+
+Please refer to the below code example to understand how to save and restore the graphics state in PDF rendering.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs" %}
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    PdfPage page = pdfDocument.Pages.Add();
+    // Create PDF graphics
+    PdfGraphics graphics = page.Graphics;
+    // Save the current graphics state and apply transformations
+    graphics.Save();
+    graphics.TranslateTransform(100, 50);
+    graphics.RotateTransform(45);
+    // Define the font for drawing text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 16);
+    // Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, new PointF(0, 0));
+    // Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore();
+    // Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
+      using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+   {
+       //Save the PDF document to file stream.
+       pdfDocument.Save(outputFileStream);
+   }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    PdfPage page = pdfDocument.Pages.Add();
+    // Create PDF graphics
+    PdfGraphics graphics = page.Graphics;
+    // Save the current graphics state and apply transformations
+    graphics.Save();
+    graphics.TranslateTransform(100, 50);
+    graphics.RotateTransform(45);
+    // Define the font for drawing text
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 16);
+    // Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, new PointF(0, 0));
+    // Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore();
+    // Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, new PointF(0, 100));
+    // Save the document to a file
+    pdfDocument.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+    ' Create a PDF document
+    Using pdfDocument As New PdfDocument()
+    ' Add Pages to the document
+    Dim page As PdfPage = pdfDocument.Pages.Add()
+    ' Create PDF graphics
+    Dim graphics As PdfGraphics = page.Graphics
+    ' Save the current graphics state and apply transformations
+    graphics.Save()
+    graphics.TranslateTransform(100, 50)
+    graphics.RotateTransform(45)
+    ' Define the font for drawing text
+    Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 16)
+    ' Draw transformed text
+    graphics.DrawString("Hello, World!", font, PdfBrushes.Black, New PointF(0, 0))
+    ' Restore the previous graphics state to ensure subsequent text is unaffected
+    graphics.Restore()
+    ' Draw text that is not influenced by transformations
+    graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, New PointF(0, 100))
+    ' Save the document to a file
+    pdfDocument.Save("Output.pdf")
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](PDF-Examples/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs). 
+
+
 
 ## Drawing text in an existing document
 
@@ -855,12 +948,12 @@ Step 1: The PdfHTMLTextElement class provides support for a basic set of HTML ta
     <td>No</td>
 </tr>
 <tr>
-    <td>Superscript (Sup) (U)</td>
+    <td>Line Break (BR) (U)</td>
     <td>Yes</td>
-    <td>No</td>
+    <td>Yes</td>
 </tr>
 <tr>
-    <td>Line Break (BR) (U)</td>
+    <td>Paragraph (P)</td>
     <td>Yes</td>
     <td>Yes</td>
 </tr>
@@ -1966,6 +2059,113 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-with-baseline-alignment-in-a-PDF/). 
 
+## Drawing text using different text alignment
+
+The Essential<sup>&reg;</sup> PDF allows you to add text in the PDF document with different text alignment using the [Alignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_Alignment) property available in [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class.
+
+The following code sample explains this.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Drawing-text-using-different-text-alignment/.NET/Drawing-text-using-different-text-alignment/Program.cs" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a page to the document
+PdfPage page = document.Pages.Add();
+//Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+//Create new instance for string format
+PdfStringFormat format = new PdfStringFormat();
+
+//Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right;
+format.WordSpacing = 2f;
+format.CharacterSpacing = 1f;
+
+//Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, new RectangleF(10, 10, 200, 20));
+//Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, new RectangleF(10, 10, 200, 20), format);
+
+//Create a file stream to save the document
+using (FileStream fs = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    //Save the document to the file stream
+    document.Save(fs);
+}
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Add a page to the document
+PdfPage page = document.Pages.Add();
+//Create PDF graphics for the page
+PdfGraphics graphics = page.Graphics;
+//Create new instance for string format
+PdfStringFormat format = new PdfStringFormat();
+
+//Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right;
+format.WordSpacing = 2f;
+format.CharacterSpacing = 1f;
+
+//Set the standard font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, new RectangleF(10, 10, 200, 20));
+//Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, new RectangleF(10, 10, 200, 20), format);
+
+//Save the document
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+ Dim document As New PdfDocument()
+'Add a page to the document
+Dim page As PdfPage = document.Pages.Add()
+'Create PDF graphics for the page
+Dim graphics As PdfGraphics = page.Graphics
+'Create new instance for string format
+Dim format As New PdfStringFormat()
+
+'Set horizontal text alignment
+format.Alignment = PdfTextAlignment.Right
+format.WordSpacing = 2.0F
+format.CharacterSpacing = 1.0F
+
+'Set the standard font
+Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+'Draw the rectangle
+graphics.DrawRectangle(PdfPens.Black, New RectangleF(10, 10, 200, 20))
+'Draw the text
+graphics.DrawString("Right-Alignment", font, PdfBrushes.Red, New RectangleF(10, 10, 200, 20), format)
+
+'Save the document
+document.Save("Output.pdf")
+'Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-using-different-text-alignment/.NET).
+
 ## Adding a text encoding to the PdfStandardFont 
 
 The following code sample shows how to add a text encoding using the standard PDF fonts by initializing [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html) class as [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class.
@@ -2049,54 +2249,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Add-text-encoding-using-standard-PDF-fonts).
-
-## Find Text
-
-The code example provided below demonstrates the utilization of the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method from the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to locate text within a PDF document. This method facilitates the retrieval of both the page number and the rectangular coordinates of the identified text occurrences.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %}
-
-//Load an existing PDF document. 
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
-//Returns page number and rectangle positions of the text maches. 
-Dictionary<int, List<Syncfusion.Drawing.RectangleF>> matchRects = new Dictionary<int, List<Syncfusion.Drawing.RectangleF>>();
-loadedDocument.FindText("document", out matchRects);
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Load an existing PDF document. 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Returns page number and rectangle positions of the text maches.
-Dictionary<int, List<System.Drawing.RectangleF>> matchRects = new Dictionary<int, List<System.Drawing.RectangleF>>();
-loadedDocument.FindText("document", out matchRects);           
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load an existing PDF document. 
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
-'Returns page number and rectangle positions of the text maches.
-Dim matchRects As Dictionary(Of Integer, List(Of System.Drawing.RectangleF)) = New Dictionary(Of Integer, List(Of System.Drawing.RectangleF))()
-loadedDocument.FindText("document", matchRects)
-'Close the document.
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Find-text-in-PDF-document).
-
 
 ## Customizing TrueType fonts in a PDF document
 
@@ -2326,3 +2478,6 @@ The following code example illustrates this.
 </table>
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Line-limit-in-PDF/.NET).
+
+
+[def]: https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html

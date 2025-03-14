@@ -1,5 +1,5 @@
 ---
-title: Working with Charts in Word document | DocIO | Syncfusion&reg;
+title: Working with Charts in Word document | DocIO | Syncfusion
 description: Learn how to add, edit, and remove charts in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -797,9 +797,128 @@ Customize the **chart data labels** by changing the position, size and more usin
 ### Chart Axis
 Customize the **chart axes** by changing the title, border, font, rotation angle and more using the **Word (DocIO) library**. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/charts/chart-axis).
 
+## Add Data Table
+
+To add a data table to a chart, enable the [HasDataTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WChart.html#Syncfusion_DocIO_DLS_WChart_HasDataTable) property of the [WChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WChart.html) class. By default, it is false, hiding the data table. Setting this property to true displays the data table beneath the chart.
+
+The following code example illustrates how to add data table for chart.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Charts/Add-data-table/.NET/Add-data-table/Program.cs" %}
+//Creates a new instance of WordDocument (Empty Word Document)
+using (WordDocument document = new WordDocument())
+{
+    // Add a section to the document.
+    IWSection section = document.AddSection();
+    // Add a paragraph to the section.
+    IWParagraph paragraph = section.AddParagraph();
+    // Create and append the chart to the paragraph.
+    WChart chart = paragraph.AppendChart(446, 270);
+    // Set chart type.
+    chart.ChartType = OfficeChartType.Column_Clustered;
+    // Set chart data.
+    chart.ChartData.SetValue(2, 1, "Apples");
+    chart.ChartData.SetValue(3, 1, "Grapes");
+    chart.ChartData.SetValue(4, 1, "Banana");
+    chart.ChartData.SetValue(1, 2, "Joey");
+    chart.ChartData.SetValue(2, 2, 5);
+    chart.ChartData.SetValue(3, 2, 4);
+    chart.ChartData.SetValue(4, 2, 4);
+    // Define the data range for the chart.
+    chart.DataRange = chart.ChartData[1, 1, 4, 2];
+    // Add data table to the chart.
+    chart.HasDataTable = true;
+    IOfficeChartDataTable officeChartDataTable = chart.DataTable;
+    // Customize the data table appearance.
+    officeChartDataTable.ShowSeriesKeys = true;
+    officeChartDataTable.HasBorders = true;
+    officeChartDataTable.HasHorzBorder = true;
+    officeChartDataTable.HasVertBorder = true;
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+    document.Close();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Create a new Word document.
+WordDocument document = new WordDocument();
+// Add a section to the document.
+IWSection section = document.AddSection();
+// Add a paragraph to the section.
+IWParagraph paragraph = section.AddParagraph();
+// Create and append the chart to the paragraph.
+WChart chart = paragraph.AppendChart(446, 270);
+// Set chart type.
+chart.ChartType = OfficeChartType.Column_Clustered;
+// Set chart data.
+chart.ChartData.SetValue(2, 1, "Apples");
+chart.ChartData.SetValue(3, 1, "Grapes");
+chart.ChartData.SetValue(4, 1, "Banana");
+chart.ChartData.SetValue(1, 2, "Joey");
+chart.ChartData.SetValue(2, 2, 5);
+chart.ChartData.SetValue(3, 2, 4);
+chart.ChartData.SetValue(4, 2, 4);
+// Define the data range for the chart.
+chart.DataRange = chart.ChartData[1, 1, 4, 2];
+// Add data table to the chart.
+chart.HasDataTable = true;
+IOfficeChartDataTable officeChartDataTable = chart.DataTable;
+// Customize the data table appearance.
+officeChartDataTable.ShowSeriesKeys = true;
+officeChartDataTable.HasBorders = true;
+officeChartDataTable.HasHorzBorder = true;
+officeChartDataTable.HasVertBorder = true;
+//Saves the document
+document.Save("Sample.docx", FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Create a new Word document.
+Dim document As New WordDocument()
+' Add a section to the document.
+Dim section As IWSection = document.AddSection()
+' Add a paragraph to the section.
+Dim paragraph As IWParagraph = section.AddParagraph()
+' Create and append the chart to the paragraph.
+Dim chart As WChart = paragraph.AppendChart(446, 270)
+' Set chart type.
+chart.ChartType = OfficeChartType.Column_Clustered
+' Set chart data.
+chart.ChartData.SetValue(2, 1, "Apples")
+chart.ChartData.SetValue(3, 1, "Grapes")
+chart.ChartData.SetValue(4, 1, "Banana")
+chart.ChartData.SetValue(1, 2, "Joey")
+chart.ChartData.SetValue(2, 2, 5)
+chart.ChartData.SetValue(3, 2, 4)
+chart.ChartData.SetValue(4, 2, 4)
+' Define the data range for the chart.
+chart.DataRange = chart.ChartData(1, 1, 4, 2)
+' Add data table to the chart.
+chart.HasDataTable = True
+Dim officeChartDataTable As IOfficeChartDataTable = chart.DataTable
+' Customize the data table appearance.
+officeChartDataTable.ShowSeriesKeys = True
+officeChartDataTable.HasBorders = True
+officeChartDataTable.HasHorzBorder = True
+officeChartDataTable.HasVertBorder = True
+' Save the document.
+document.Save("Sample.docx", FormatType.Docx)
+' Close the document.
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Add-data-table/).
+
 ## Applying 3D Formats
 
-Essential&reg; DocIO allows to modify the side wall, back wall, floor of the 3D chart. The following code snippet illustrates how to apply properties for side wall, floor and back wall of a 3D chart.
+Essential<sup>&reg;</sup> DocIO allows to modify the side wall, back wall, floor of the 3D chart. The following code snippet illustrates how to apply properties for side wall, floor and back wall of a 3D chart.
 
 {% tabs %}
 
@@ -1224,7 +1343,7 @@ N> 2. The ChartToImageConverter is supported from .NET Framework 4.0 onwards.
 
 ## Word 2016 Charts
 
-Essential&reg; DocIO supports creating and manipulating new and modern chart types such as waterfall, which is introduced in Microsoft Word 2016.
+Essential<sup>&reg;</sup> DocIO supports creating and manipulating new and modern chart types such as waterfall, which is introduced in Microsoft Word 2016.
 
 ### Waterfall
 

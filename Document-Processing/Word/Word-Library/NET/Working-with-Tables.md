@@ -1,5 +1,5 @@
 ---
-title: Working with Tables in .NET Word (DocIO) library | Syncfusion&reg;
+title: Working with Tables in .NET Word (DocIO) library | Syncfusion
 description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -12,7 +12,7 @@ A table in Word document is used to arrange document content in rows and columns
 1. A row is a collection of cells and it is represented by an instance of [WTableRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableRow.html). Each row must contain at least one cell.
 2. A cell can contain one or more paragraphs and tables. An instance of [WTableCell](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableCell.html) represents a table cell. Each table cell must contain at least one paragraph.
 
-N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential&reg; DocIO does the same.
+N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential<sup>&reg;</sup> DocIO does the same.
 
 The following image illustrates how a table in Word document is organized in EssentialDocIO’s DOM:
 
@@ -764,167 +764,194 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Apply-table-formatting).
 
 ### Applying cell formatting
-  
-The following code example illustrates how to load an existing document and apply cell formatting options such as [VerticalAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_VerticalAlignment), [TextDirection](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_TextDirection), [Paddings](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Paddings), [Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Borders), etc.
+
+Using DocIO, you can format table cells by setting text wrapping to control content flow and adjusting text direction for better readability. You can also customize cell borders, apply vertical alignment, and set a background color to enhance the table’s appearance.
+
+#### Set cell background color
+
+The following code snippet illustrates how to specify the background color of a table cell using the [CellFormat.BackColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_BackColor) property.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Tables/Apply-cell-formatting/.NET/Apply-cell-formatting/Program.cs" %}
-//Loads an existing Word document into DocIO instance
-FileStream fileStreamPath = new FileStream("Table.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-WSection section = document.Sections[0];
-WTable table = section.Tables[0] as WTable;
-//Accesses the instance of the first row in the table
-WTableRow row = table.Rows[0];
-//Specifies the row height
-row.Height = 20;
-//Specifies the row height type
-row.HeightType = TableRowHeightType.AtLeast;
-//Accesses the instance of the first cell in the row
+// Access the instance of the first cell in the row
 WTableCell cell = row.Cells[0];
-//Specifies the cell back ground color
+// Specify the cell background color
 cell.CellFormat.BackColor = Color.FromArgb(192, 192, 192);
-//Specifies the same padding as table option as false to preserve current cell padding
-cell.CellFormat.SamePaddingsAsTable = false;
-//Specifies the left, right, top and bottom padding of the cell
-cell.CellFormat.Paddings.Left = 5;
-cell.CellFormat.Paddings.Right = 5;
-cell.CellFormat.Paddings.Top = 5;
-cell.CellFormat.Paddings.Bottom = 5;
-//Specifies the vertical alignment of content of text
-cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle;
-//Disables the text wrap option to avoid displaying longer text on multiple lines
-cell.CellFormat.TextWrap = false;
-//Sets the text direction for cell
-cell.CellFormat.TextDirection = TextDirection.VerticalBottomToTop;
-//Accesses the instance of the second cell in the row
-cell = row.Cells[1];
-cell.CellFormat.BackColor = Color.FromArgb(192, 192, 192);
-cell.CellFormat.SamePaddingsAsTable = false;
-//Specifies the left, right, top and bottom padding of the cell
-cell.CellFormat.Paddings.All = 5;
-cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle;
-//Disables the text wrap option to avoid displaying longer text on multiple lines
-cell.CellFormat.TextWrap = false;
-//Access the instance of the third cell in the row
-cell = row.Cells[2];
-//Set color for tablecell borders
-cell.CellFormat.Borders.BorderType = BorderStyle.Thick;
-cell.CellFormat.Borders.Color = Color.Red;
-cell.CellFormat.Borders.Top.Color = Color.Red;
-cell.CellFormat.Borders.Bottom.Color = Color.Red;
-cell.CellFormat.Borders.Right.Color = Color.Red;
-cell.CellFormat.Borders.Left.Color = Color.Red;
-//Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Closes the document
-document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates an instance of WordDocument class
-WordDocument document = new WordDocument();
-document.Open("Table.docx", FormatType.Docx);
-WSection section = document.Sections[0];
-WTable table = section.Tables[0] as WTable;
-//Accesses the instance of the first row in the table
-WTableRow row = table.Rows[0];
-//Specifies the row height
-row.Height = 20;
-//Specifies the row height type
-row.HeightType = TableRowHeightType.AtLeast;
-//Accesses the instance of the first cell in the row
+// Access the instance of the first cell in the row
 WTableCell cell = row.Cells[0];
-//Specifies the cell back ground color
+// Specify the cell background color
 cell.CellFormat.BackColor = Color.FromArgb(192, 192, 192);
-//Specifies the same padding as table option as false to preserve current cell padding
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Access the instance of the first cell in the row
+Dim cell As WTableCell = row.Cells(0)
+' Specify the cell background color
+cell.CellFormat.BackColor = Color.FromArgb(192, 192, 192)
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Set cell padding
+
+The following code snippet illustrates how to set padding values for a table cell using the [CellFormat.Paddings](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Paddings) properties.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Disable same padding as table option
 cell.CellFormat.SamePaddingsAsTable = false;
-//Specifies the left, right, top and bottom padding of the cell
+// Specify individual padding values
 cell.CellFormat.Paddings.Left = 5;
 cell.CellFormat.Paddings.Right = 5;
 cell.CellFormat.Paddings.Top = 5;
 cell.CellFormat.Paddings.Bottom = 5;
-//Specifies the vertical alignment of content of text
-cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle;
-//Disables the text wrap option to avoid displaying longer text on multiple lines
-cell.CellFormat.TextWrap = false;
-//Sets text direction for cell
-cell.CellFormat.TextDirection = TextDirection.VerticalBottomToTop;
-//Accesses the instance of the second cell in the row
-cell = row.Cells[1];
-cell.CellFormat.BackColor = Color.FromArgb(192, 192, 192);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Disable same padding as table option
 cell.CellFormat.SamePaddingsAsTable = false;
-//Specifies the left, right, top and bottom padding of the cell
-cell.CellFormat.Paddings.All = 5;
-cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle;
-//Disables the text wrap option to avoid displaying longer text on multiple lines
-cell.CellFormat.TextWrap = false;
-//Access the instance of the third cell in the row
-cell = row.Cells[2];
-//Set color for tablecell borders
-cell.CellFormat.Borders.BorderType = BorderStyle.Thick;
-cell.CellFormat.Borders.Color = Color.Red;
-cell.CellFormat.Borders.Top.Color = Color.Red;
-cell.CellFormat.Borders.Bottom.Color = Color.Red;
-cell.CellFormat.Borders.Right.Color = Color.Red;
-cell.CellFormat.Borders.Left.Color = Color.Red;
-//Saves and closes the document instance
-document.Save("TableCellFormatting.docx", FormatType.Docx);
-document.Close();
+// Specify individual padding values
+cell.CellFormat.Paddings.Left = 5;
+cell.CellFormat.Paddings.Right = 5;
+cell.CellFormat.Paddings.Top = 5;
+cell.CellFormat.Paddings.Bottom = 5;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates an instance of WordDocument class
-Dim document As New WordDocument()
-document.Open("Table.docx", FormatType.Docx)
-Dim section As WSection = document.Sections(0)
-Dim table As WTable = TryCast(section.Tables(0), WTable)
-'Accesses the instance of the first row in the table
-Dim row As WTableRow = table.Rows(0)
-'Specifies the row height
-row.Height = 20
-'Specifies the row height type
-row.HeightType = TableRowHeightType.AtLeast
-'Accesses the instance of the first cell in the row
-Dim cell As WTableCell = row.Cells(0)
-'Specifies the cell back ground color
-cell.CellFormat.BackColor = Color.FromArgb(192, 192, 192)
-'Specifies the same padding as table option as false to preserve current cell padding
+' Disable same padding as table option
 cell.CellFormat.SamePaddingsAsTable = False
-'Specifies the left, right, top and bottom padding of the cell
+' Specify individual padding values
 cell.CellFormat.Paddings.Left = 5
 cell.CellFormat.Paddings.Right = 5
 cell.CellFormat.Paddings.Top = 5
 cell.CellFormat.Paddings.Bottom = 5
-'Specifies the vertical alignment of content of text
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Set vertical alignment
+
+The following code snippet illustrates how to align text vertically within a cell using the [CellFormat.VerticalAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_VerticalAlignment) property.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Set vertical alignment
+cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Set vertical alignment
+cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Set vertical alignment
 cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle
-'Disables the text wrap option to avoid displaying longer text on multiple lines
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Set text wrap
+
+The following code snippet illustrates how to enable or disable text wrapping within a cell using the [CellFormat.TextWrap](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_TextWrap) property.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Disable text wrap
+cell.CellFormat.TextWrap = false;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Disable text wrap
+cell.CellFormat.TextWrap = false;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Disable text wrap
 cell.CellFormat.TextWrap = False
-'Sets text direction for cell
-cell.CellFormat.TextDirection = TextDirection.VerticalBottomToTop
-'Accesses the instance of the second cell in the row
-cell = row.Cells(1)
-cell.CellFormat.BackColor = Color.FromArgb(192, 192, 192)
-cell.CellFormat.SamePaddingsAsTable = False
-'Specifies the left, right, top and bottom padding of the cell
-cell.CellFormat.Paddings.All = 5
-cell.CellFormat.VerticalAlignment = VerticalAlignment.Middle
-'Disables the text wrap option to avoid displaying longer text on multiple lines
-cell.CellFormat.TextWrap = False
-'Access the instance of the third cell in the row
-cell = row.Cells(2)
-'Set color for tablecell borders
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Set text direction
+
+The following code snippet illustrates how to specify the text orientation within a cell using the [CellFormat.TextDirection](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_TextDirection) property.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Set text direction for each cell in a row
+row.Cells[0].CellFormat.TextDirection = TextDirection.Vertical;
+row.Cells[1].CellFormat.TextDirection = TextDirection.VerticalBottomToTop;
+row.Cells[2].CellFormat.TextDirection = TextDirection.VerticalTopToBottom;
+row.Cells[3].CellFormat.TextDirection = TextDirection.VerticalFarEast;
+row.Cells[4].CellFormat.TextDirection = TextDirection.HorizontalFarEast;
+row.Cells[5].CellFormat.TextDirection = TextDirection.Horizontal;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Set text direction for each cell in a row
+row.Cells[0].CellFormat.TextDirection = TextDirection.Vertical;
+row.Cells[1].CellFormat.TextDirection = TextDirection.VerticalBottomToTop;
+row.Cells[2].CellFormat.TextDirection = TextDirection.VerticalTopToBottom;
+row.Cells[3].CellFormat.TextDirection = TextDirection.VerticalFarEast;
+row.Cells[4].CellFormat.TextDirection = TextDirection.HorizontalFarEast;
+row.Cells[5].CellFormat.TextDirection = TextDirection.Horizontal;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Set text direction for each cell in a row
+row.Cells(0).CellFormat.TextDirection = TextDirection.Vertical
+row.Cells(1).CellFormat.TextDirection = TextDirection.VerticalBottomToTop
+row.Cells(2).CellFormat.TextDirection = TextDirection.VerticalTopToBottom
+row.Cells(3).CellFormat.TextDirection = TextDirection.VerticalFarEast
+row.Cells(4).CellFormat.TextDirection = TextDirection.HorizontalFarEast
+row.Cells(5).CellFormat.TextDirection = TextDirection.Horizontal
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Set cell borders
+
+The following code snippet illustrates how to customize the border styles and colors of a cell using the [CellFormat.Borders](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_Borders) properties.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Set border style and color for a table cell
+cell.CellFormat.Borders.BorderType = BorderStyle.Thick;
+cell.CellFormat.Borders.Color = Color.Red;
+cell.CellFormat.Borders.Top.Color = Color.Red;
+cell.CellFormat.Borders.Bottom.Color = Color.Red;
+cell.CellFormat.Borders.Right.Color = Color.Red;
+cell.CellFormat.Borders.Left.Color = Color.Red;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Set border style and color for a table cell
+cell.CellFormat.Borders.BorderType = BorderStyle.Thick;
+cell.CellFormat.Borders.Color = Color.Red;
+cell.CellFormat.Borders.Top.Color = Color.Red;
+cell.CellFormat.Borders.Bottom.Color = Color.Red;
+cell.CellFormat.Borders.Right.Color = Color.Red;
+cell.CellFormat.Borders.Left.Color = Color.Red;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Set border style and color for a table cell
 cell.CellFormat.Borders.BorderType = BorderStyle.Thick
 cell.CellFormat.Borders.Color = Color.Red
 cell.CellFormat.Borders.Top.Color = Color.Red
 cell.CellFormat.Borders.Bottom.Color = Color.Red
 cell.CellFormat.Borders.Right.Color = Color.Red
 cell.CellFormat.Borders.Left.Color = Color.Red
-'Saves and closes the document instance
-document.Save("TableCellFormatting.docx", FormatType.Docx)
-document.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -1022,7 +1049,7 @@ N> In ASP.NET Core, UWP, and Xamarin platforms, to apply autofit for table in a 
 
 A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. [WTableStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTableStyle.html) instance represents table style in a Word document.
 
-N>  Essential&reg; DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
+N>  Essential<sup>&reg;</sup> DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
 
 The following code example illustrates how to apply the built-in table styles to the table.
 
@@ -2126,6 +2153,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to split a table in a Word document using a bookmark between rows](https://support.syncfusion.com/kb/article/17785/how-to-split-a-table-in-a-word-document-using-a-bookmark-between-rows)
 * [How to split a table by columns in a Word document](https://support.syncfusion.com/kb/article/17714/how-to-split-a-table-by-columns-in-a-word-document)
 * [How to add rows with dynamic data into an existing table in Word document](https://support.syncfusion.com/kb/article/17819/how-to-add-rows-with-dynamic-data-into-an-existing-table-in-word-document)
+* [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
 * [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
 
 ## Frequently Asked Questions

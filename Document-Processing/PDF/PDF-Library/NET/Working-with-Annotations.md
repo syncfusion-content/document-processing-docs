@@ -11,6 +11,9 @@ Essential<sup>&reg;</sup> PDF provides support for interactive [annotations](htt
 
 You can add, delete and modify the annotation from the PDF documents.
 
+Check the following video to learn how to work with annotations in PDF documents using the .NET PDF Library.
+{% youtube "https://youtu.be/0KnFyXd-KpM?si=qCVcijc5XxcbgaZ-" %}
+
 ## Adding annotations to a PDF document
 
 You can add a popup annotation to the page using [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html) class. The following code example explains this.
@@ -4152,6 +4155,106 @@ pdfLoadedDocument.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Exporting-Newly-Added-Annotations-XFDF-File/.NET).
 
 N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
+
+## Setting transparency for annotations 
+
+The Syncfusion<sup>®</sup> PDF Library enables you to adjust the transparency of annotations using the [Opacity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Opacity) property. This property defines the annotation's transparency level, where a value of 0 makes it fully transparent, and 1 makes it completely opaque.
+
+The following code example how to add transparency to the PDF annotation.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Adding-transparency-for-annotations/.NET/Adding-transparency-for-annotations/Program.cs" %}
+
+// Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page.
+PdfPage page = document.Pages.Add();
+//Create a new rectangle
+RectangleF textAnnotationBounds = new RectangleF(10, 40, 100, 30);
+//Create a new free text annotation.
+PdfFreeTextAnnotation textAnnotation = new PdfFreeTextAnnotation(textAnnotationBounds);
+//Set the text and font
+textAnnotation.MarkupText = "Text Annotation";
+textAnnotation.Font = new PdfStandardFont(PdfFontFamily.Courier, 10);
+
+//Set transparency
+textAnnotation.Opacity = 0.5F;
+
+//Set the line caption type.
+textAnnotation.AnnotationIntent = PdfAnnotationIntent.FreeTextCallout;
+//Add this annotation to the PDF page.
+page.Annotations.Add(textAnnotation);
+ //Create file stream.
+ using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+ {
+     //Save the PDF document to file stream.
+     document.Save(outputFileStream);
+ }
+ //Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page.
+PdfPage page = document.Pages.Add();
+//Create a new rectangle
+RectangleF textAnnotationBounds = new RectangleF(10, 40, 100, 30);
+//Create a new free text annotation.
+PdfFreeTextAnnotation textAnnotation = new PdfFreeTextAnnotation(textAnnotationBounds);
+//Set the text and font
+textAnnotation.MarkupText = "Text Annotation";
+textAnnotation.Font = new PdfStandardFont(PdfFontFamily.Courier, 10);
+
+//Set transparency
+textAnnotation.Opacity = 0.5F;
+
+//Set the line caption type.
+textAnnotation.AnnotationIntent = PdfAnnotationIntent.FreeTextCallout;
+//Add this annotation to the PDF page.
+page.Annotations.Add(textAnnotation);
+//Save the document to disk.
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document.
+Dim document As New PdfDocument()
+' Add a new page.
+Dim page As PdfPage = document.Pages.Add()
+' Create a new rectangle
+Dim textAnnotationBounds As New RectangleF(10, 40, 100, 30)
+' Create a new free text annotation.
+Dim textAnnotation As New PdfFreeTextAnnotation(textAnnotationBounds)
+' Set the text and font
+textAnnotation.MarkupText = "Text Annotation"
+textAnnotation.Font = New PdfStandardFont(PdfFontFamily.Courier, 10)
+
+' Set transparency
+textAnnotation.Opacity = 0.5F
+
+' Set the line caption type.
+textAnnotation.AnnotationIntent = PdfAnnotationIntent.FreeTextCallout
+' Add this annotation to the PDF page.
+page.Annotations.Add(textAnnotation)
+' Save the document to disk.
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Adding-transparency-for-annotations/.NET).
 
 ## Adding comments and review status to the PDF annotation
 

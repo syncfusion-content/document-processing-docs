@@ -1,5 +1,5 @@
 ---
-title: Fallback fonts in PowerPoint to Image conversion| Syncfusion&reg;
+title: Fallback fonts in PowerPoint to Image conversion| Syncfusion
 description: Learn about how to specify fallback fonts during PowerPoint to Image conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Fallback fonts in PowerPoint to Image conversion
 
-During PowerPoint to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion&reg; PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
+During PowerPoint to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion<sup>&reg;</sup> PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
 
 Users can configure fallback fonts in the following ways:
 * Initialize default fallback fonts.

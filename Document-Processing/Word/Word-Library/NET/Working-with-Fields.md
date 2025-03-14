@@ -1,5 +1,5 @@
 ---
-title: Working with Fields in .NET Word (DocIO) library | Syncfusion&reg;
+title: Working with Fields in .NET Word (DocIO) library | Syncfusion
 description: Learn how to add dynamic information such as title, time, page number, etc. to a Word document as a field using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -421,7 +421,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 A cross-reference refers to an item that appears in another location in a document. You can create cross-reference to bookmarks in a document by using the [AppendCrossReference](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendCrossReference_Syncfusion_DocIO_ReferenceType_Syncfusion_DocIO_ReferenceKind_Syncfusion_DocIO_DLS_Entity_System_Boolean_System_Boolean_System_Boolean_System_String_) method of [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
 
-N> The Essential&reg; DocIO supports creating and updating the cross-reference fields only for bookmarks in a document.
+N> The Essential<sup>&reg;</sup> DocIO supports creating and updating the cross-reference fields only for bookmarks in a document.
 
 The following code example explains how to append cross reference for bookmark in a Word document.
 
@@ -1761,9 +1761,10 @@ document.Close()
 
 ## See Also
 
-* [Is it possible to update Include Text field in Word document using Essential&reg; DocIO?](https://www.syncfusion.com/kb/3921/is-it-possible-to-update-include-text-field-in-word-document-using-essential-docio)
+* [Is it possible to update Include Text field in Word document using Essential<sup>&reg;</sup> DocIO?](https://www.syncfusion.com/kb/3921/is-it-possible-to-update-include-text-field-in-word-document-using-essential-docio)
 * [How to insert author's name in a Word document?](https://www.syncfusion.com/kb/13929/how-to-insert-authors-name-in-a-word-document)
 * [How to insert IF field with multiple body items in Word document?](https://support.syncfusion.com/kb/article/15139/how-to-insert-if-field-with-multiple-body-items-in-word-document-using-net-core-word-library?isInternalRefresh=False)
 * [How to insert Merge field inside an IF field in a Word document?](https://support.syncfusion.com/kb/article/15255/how-to-insert-merge-field-inside-an-if-field-in-a-word-document-using-net-core-word-library?isInternalRefresh=False)
 * [How to add DocVariable field inside DISPLAYBARCODE field in Word document](https://support.syncfusion.com/kb/article/17561/how-to-add-docvariable-inside-displaybarcode-field-in-core-word)
 * [How to retrieve the URL from an INCLUDEPICTURE field in a Word document](https://support.syncfusion.com/kb/article/17786/how-to-retrieve-the-url-from-an-includepicture-field-in-a-word-document)
+* [How to use conditional fields to add checkboxes during mail merge in a Word document?](https://support.syncfusion.com/kb/article/17847/how-to-use-conditional-fields-to-add-checkboxes-during-mail-merge-in-a-word-document)

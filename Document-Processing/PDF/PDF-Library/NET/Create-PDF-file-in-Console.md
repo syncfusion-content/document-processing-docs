@@ -13,52 +13,21 @@ The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/doc
 To quickly get started with .NET PDF Library. Please, check this video:
 {% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
 
-## Create a simple PDF document using .NET Core
+## Steps to create PDF document in Console App
 
-The following steps illustrate creating a simple Hello World PDF document in a console application using .NET Core.
-
-Step 1: Create a new C# Console Application project.
-![Console sample creation](Console_images/console-sample-creation.png)
-
-Step 2: Name the project.
-![Name the application](Console_images/Name_project_core.png)
-
-Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
-![NET Core NuGet package](Console_images/Nuget_package_Core.png)
-
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-
-Step 4: Include the following namespaces in the *Program.cs* file.
-
-{% highlight c# tabtitle="C#" %}
-
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf;
-using Syncfusion.Drawing;
-
-{% endhighlight %}
-
-Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-Visual-Studio.md %}
+{% endtabcontent %}
  
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a page to the document.
-PdfPage page = document.Pages.Add();
-//Create PDF graphics for the page.
-PdfGraphics graphics = page.Graphics;
-//Set the standard font.
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-//Draw the text.
-graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-//Create a fileStream.
-FileStream fileStream = new FileStream("Output.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
-//Save and close the PDF document.
-document.Save(fileStream);
-document.Close(true);
+{% tabcontent Visual Studio Code %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-VS-Code.md %}
+{% endtabcontent %}
 
-{% endhighlight %}
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Console-JetBrains.md %}
+{% endtabcontent %}
+{% endtabcontents %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET/Create_PDF).
 
@@ -68,6 +37,13 @@ By executing the program, you will get the PDF document as follows.
 ## Create a simple PDF document using .NET Framework
 
 The following steps illustrates creating a simple Hello world PDF document in console application using .NET Framework.
+
+**Prerequisites**:
+
+* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
+* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+
+**Steps to create PDF document using .NET Framework**
 
 Step 1: Create a new C# Console Application (.NET Framework) project.
 ![Console Application creation](Console_images/console-app-sample-creation.png)
@@ -93,7 +69,7 @@ using System.Drawing;
 Step 5: Include the following code sample in *Program.cs* to create a PDF file.
 
 {% highlight c# tabtitle="C#" %}
- 
+
 //Create a new PDF document. 
 using (PdfDocument document = new PdfDocument()) {
     //Add a page to the document.
@@ -109,6 +85,14 @@ using (PdfDocument document = new PdfDocument()) {
 }
 
 {% endhighlight %}
+
+Step 6: Build the project.
+
+Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+Step 7: Run the project.
+
+Click the Start button (green arrow) or press F5 to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/Create%20PDF).
 

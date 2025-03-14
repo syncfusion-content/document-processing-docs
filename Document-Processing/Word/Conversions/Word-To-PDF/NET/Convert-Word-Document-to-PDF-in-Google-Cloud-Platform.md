@@ -1,5 +1,5 @@
 --- 
-title: Convert Word to PDF in Google Cloud Platform (GCP) | Syncfusion&reg; 
+title: Convert Word to PDF in Google Cloud Platform (GCP) | Syncfusion 
 description: Learn how to convert a Word document to PDF in Google Cloud Platform (GCP) using .NET Core Word (DocIO) library in C#. 
 platform: document-processing
 control: DocIO 
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert Word to PDF in Google Cloud Platform (GCP)
 
-Syncfusion&reg; DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, **convert a Word document to a PDF in Google Cloud Platform (GCP)** within a few lines of code. 
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, **convert a Word document to a PDF in Google Cloud Platform (GCP)** within a few lines of code. 
 
 N> If this is your first time working with Google Cloud Platform (GCP), please refer to the dedicated GCP resources. This section explains how to convert Word documents to PDF in C# using the .NET Core Word (DocIO) library in GCP. 
 
@@ -30,5 +30,5 @@ NuGet package name<br/></th></tr></thead>
 <td>
 {{'[App Engine](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-google-cloud-platform)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v2.88.8](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/2.88.8)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0.2)' |markdownify}} <br/></td></tr>
+{{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)' |markdownify}} <br/></td></tr>
 </table>

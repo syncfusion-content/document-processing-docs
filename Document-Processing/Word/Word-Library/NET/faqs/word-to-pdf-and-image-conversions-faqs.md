@@ -1,5 +1,5 @@
 ---
-title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion&reg;
+title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion
 description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -26,7 +26,7 @@ Yes, you can specify the PDF conformance level in Word to PDF conversion. For mo
 
 When the Word document contains metafile images (*.emf or *.wmf), we recommend using Azure Cloud Service.
 
-We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential&reg; DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
+We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential<sup>&reg;</sup> DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
 
 ## Why images are preserved as RedX images in Word to PDF or image conversion?
 
@@ -61,7 +61,7 @@ To preserve editable content while converting a Word document to a PDF or image 
 
 For more details about open Word document in read only mode, refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/loading-and-saving-document#opening-the-read-only-word-document).
 
-## Experiencing font access problems in IIS during Word to PDF/Image, but not locally?
+## Are you experiencing font access problems in IIS during Word to PDF/Image, but not locally?
 
 This issue occurs when fonts are installed using the basic *Install* option. Fonts installed this way are not shared system-wide, so IIS cannot access them.
 
@@ -80,3 +80,28 @@ If you encounter the exception *The type initializer for 'SkiaSharp.SKImageInfo'
 To resolve this, reinstall the correct versions of these NuGet packages as specified in the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os), along with the required [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf).
 
 If using Docker, ensure you install the libfontconfig package within your Docker container, as mentioned in the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-resolve-libskiasharp-not-found-exception).
+
+## Will the same fonts be rendered when exporting a document to a PDF file?
+
+Yes, if the fonts used in the document are installed on the machine during PDF conversion, they will be preserved in the output. However, if any fonts are missing, they will be substituted with default fonts, which may affect the appearance of the content.
+
+For details on resolving font preservation issues during Word-to-PDF or image conversion, refer to the [documentation](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion).
+
+## Why is the chart not preserved during Word-to-PDF or image conversion in .NET Framework?
+
+During Word-to-PDF conversion in .NET Framework, need to initialize the [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) to ensure that the chart is preserved in the PDF document. 
+
+The following code example illustrates how to initialize [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html).
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
+wordDocument.ChartToImageConverter = new ChartToImageConverter();
+{% endhighlight %}
+{% endtabs %}
+
+For more details about the conversion, refer [here]( https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/overview?cs-save-lang=1&cs-lang=csharp#convert-word-to-pdf).
+
+## How to convert Word document to PDF/A?
+
+To convert a Word document to PDF/A, refer to this [link](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level).

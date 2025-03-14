@@ -16,6 +16,9 @@ Essential<sup>&reg;</sup> XlsIO supports to convert Excel data as JSON files by 
 * Save a range to JSON
 * Save as a stream with the above features
 
+To quickly start converting an Excel document to a JSON, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=IpUYRwQdVsQ" %}
+
 ## Workbook to JSON as schema
 
 The following code illustrates how to convert an Excel workbook to the JSON file or JSON file stream as schema.
@@ -36,7 +39,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	workbook.SaveAsJson(outputStream);
 
 	//Saves the workbook to a JSON filestream as schema
-	FileStream stream1 = new FileStream("Output/Excel-Workbook-To-JSON-as-schema.json", FileMode.Create, FileAccess.ReadWrite);
+	FileStream stream1 = new FileStream(Path.GetFullPath("Output/Excel-Workbook-To-JSON-as-schema.json"), FileMode.Create, FileAccess.ReadWrite);
 	workbook.SaveAsJson(stream1, true);
 	#endregion
 

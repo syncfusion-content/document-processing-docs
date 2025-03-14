@@ -1,6 +1,6 @@
 ---
-title: Working with sections in PowerPoint Presentation | Syncfusion&reg; |
-description: Learn here all about working with sections in the Syncfusion&reg; PowerPoint Presentation Library and more.
+title: Working with sections in PowerPoint Presentation | Syncfusion |
+description: Learn here all about working with sections in the Syncfusion<sup>&reg;</sup> PowerPoint Presentation Library and more.
 platform: document-processing
 control: Presentation
 documentation: UG

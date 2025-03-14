@@ -1,5 +1,5 @@
 ---
-title: Open and save PowerPoint in Microsoft Azure | Syncfusion&reg;
+title: Open and save PowerPoint in Microsoft Azure | Syncfusion
 description: Learn how to open and save PowerPoint document in Azure services using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save PowerPoint document in Azure Platform 
 
-Syncfusion&reg; PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save PowerPoint document in Azure Platform** within a few lines of code.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save PowerPoint document in Azure Platform** within a few lines of code.
 
 N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains how to open and save PowerPoint document in C# using the PowerPoint library (Presentation) in Azure. 
 

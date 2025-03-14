@@ -20,7 +20,7 @@ Step 2: Name the project.
 
 ![Name the project](Azure-Images/Functions-v4/Name_the_Application_Image.png)
 
-Step 3: Select functions worker as **.NET (6.0) Long Term Support**. 
+Step 3: Select the framework and click Create button. 
 
 ![Select functions worker](Azure-Images/Functions-v4/Functions_Worker.png)
 

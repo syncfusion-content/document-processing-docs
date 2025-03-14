@@ -1,5 +1,5 @@
 ---
-title: Assemblies required for PowerPoint to PDF conversion | Syncfusion&reg;
+title: Assemblies required for PowerPoint to PDF conversion | Syncfusion
 description: Learn about the assemblies required to convert PowerPoint to PDF using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: Presentation
@@ -58,6 +58,13 @@ Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusio
 </td>
 </tr>
 </table>
+
+T> Switch to NuGet packages for a seamless experience:
+T> * Get frequent bug fixes every week.
+T> * Upgrade quickly with no manual effort.
+T> Note: To avoid trail watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+T>
+T> Refer [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/nuget-packages-required-for-pptxtopdf-conversion) to know more about NuGet packages required.
 
 #### Retired Platforms
 

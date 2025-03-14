@@ -1,6 +1,6 @@
 ---
-title: FAQ about using DocIO in Linux | DocIO | Syncfusion&reg;
-description: Learn about the frequently asked questions about using the .NET Word (DocIO) library in Linux.
+title: FAQ about using DocIO in Linux | DocIO | Syncfusion
+description: Learn about the frequently asked questions about using the .NET Word (DocIO) library in Linux environment.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -13,7 +13,11 @@ The frequently asked questions about using DocIO in Linux environment are listed
 
 The fonts present in the location (in Docker container) "/usr/local/share/fonts/" is used for conversion. By default, there will be limited number of fonts available in the container.
 
-You should copy necessary fonts to this location "/usr/local/share/fonts/" before conversion.
+You should copy necessary fonts to this location "/usr/local/share/fonts/" before conversion. Refer to the steps below to copy fonts.
+
+Step 1: Create a “Fonts” folder parallel to the *.sln file.
+Step 2: Place the required font files in that folder.
+Step 3: Add the following code to the Dockerfile to copy the fonts to the container:.
 
 Use the following code example to copy fonts to containers.
 
@@ -47,7 +51,7 @@ N> To use Microsoft fonts in your environment, kindly get the license clearance 
 
 ## How to install necessary fonts in Linux containers?
 
-In Word to PDF conversion, Essential&reg; DocIO uses the fonts which are installed in the corresponding production machine to measure and draw the text. If the font is not available in the production environment, then the alternate font will be used to measure and draw text based on the environment. And so, it is mandatory to install all the fonts used in the Word document in machine to achieve proper preservation.
+In Word to PDF conversion, Essential<sup>&reg;</sup> DocIO uses the fonts which are installed in the corresponding production machine to measure and draw the text. If the font is not available in the production environment, then the alternate font will be used to measure and draw text based on the environment. And so, it is mandatory to install all the fonts used in the Word document in machine to achieve proper preservation.
 
 Use the following code example to install fonts in containers.
 
@@ -74,6 +78,8 @@ RUN echo "deb http://httpredir.debian.org/debian buster main contrib non-free" >
 {% endhighlight %}
 
 {% endtabs %}
+
+If you are still facing font preservation issues after trying the above solution, you can try moving the necessary font files to a docker Linux container. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-copy-necessary-fonts-to-linux-containers) to learn how to do it.
 
 ## How to set culture/locale in Docker containers (Windows and Linux containers)?
  
@@ -172,6 +178,15 @@ NuGet packages to install
 </thead>
 <tr>
 <td>
+From v28.2.3
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
 From v27.2.2
 </td>
 <td>
@@ -251,6 +266,15 @@ NuGet packages to install
 </th>
 </tr>
 </thead>
+<tr>
+<td>
+From v28.2.3
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)'| markdownify }}
+</td>
+</tr>
 <tr>
 <td>
 From v27.2.2

@@ -1,5 +1,5 @@
 ---
-title: Working with Content Controls | DocIO | Syncfusion&reg;
+title: Working with Content Controls | DocIO | Syncfusion
 description: Learn how to work with content controls, such as rich text, date picker, checkbox, and drop-down, in a Word document using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
@@ -1686,7 +1686,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Types of Content Controls
 
-The following types of content controls can be created by using the Essential&reg; DocIO.
+The following types of content controls can be created by using the Essential<sup>&reg;</sup> DocIO.
 
 * Rich Text
 * Plain Text
@@ -2608,3 +2608,4 @@ N> In the above-mentioned code samples, for Xamarin platforms the document is sa
 * [How to remove the placeholder text if the meta property is empty in a Word document?](https://www.syncfusion.com/kb/13982/how-to-remove-the-placeholder-text-if-the-meta-property-is-empty-in-a-word-document)
 * [How to remove content control without deleting content in Word document](https://support.syncfusion.com/kb/article/17599/how-to-remove-content-control-without-deleting-content-in-word-document)
 * [How to add a checkbox content control with a tick mark in a Word document](https://support.syncfusion.com/kb/article/17809/how-to-add-a-checkbox-content-control-with-a-tick-mark-in-a-word-document)
+* [How to insert the content of a Word document into a block content control?](https://support.syncfusion.com/kb/article/17871/how-to-insert-the-content-of-a-word-document-into-a-block-content-control)

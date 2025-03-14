@@ -356,77 +356,192 @@ You can retrieve a single character and its properties, including bounds, font n
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/.NET/Get-text-glyph-details-from-extract-text/Program.cs" %} 
 
-//Load the existing PDF document
-PdfLoadedDocument m_loadedDocument = new PdfLoadedDocument(stream);
-//Get the first page of the loaded PDF document
-PdfPageBase page = m_loadedDocument.Pages[0];
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+// Get the first page of the loaded PDF document
+PdfPageBase page = loadedDocument.Pages[0];
 TextLineCollection lineCollection = new TextLineCollection();
 
-//Extract text from the first page
-string m_extractedText = page.ExtractText(out lineCollection);
-//Gets specific line from the collection
+// Extract text from the first page
+string extractedText = page.ExtractText(out lineCollection);
+// Get a specific line from the collection
 TextLine line = lineCollection.TextLine[0];
-//Gets collection of the words in the line
+// Get the collection of words in the line
 List<TextWord> textWordCollection = line.WordCollection;
-//Gets word from the collection using index
+// Get a word from the collection using an index
 TextWord textWord = textWordCollection[0];
-// Gets Glyph details of the word
+// Get Glyph details of the word
 List<TextGlyph> textGlyphCollection = textWord.Glyphs;
 
-//Gets character of the word
+// Get a character from the word
 TextGlyph textGlyph = textGlyphCollection[0];
-//Gets bounds of the character
+// Get bounds of the character
 RectangleF glyphBounds = textGlyph.Bounds;
-//Gets font name of the character
-string GlyphFontName = textGlyph.FontName;
-//Gets font size of the character
-float GlyphFontSize = textGlyph.FontSize;
-//Gets font style of the character
-FontStyle GlyphFontStyle = textGlyph.FontStyle;
-//Gets character in the word
-char GlyphText = textGlyph.Text;
-//Gets the color of the character 
-Color GlyphColor = textGlyph.TextColor; 
+// Get font name of the character
+string glyphFontName = textGlyph.FontName;
+// Get font size of the character
+float glyphFontSize = textGlyph.FontSize;
+// Get font style of the character
+FontStyle glyphFontStyle = textGlyph.FontStyle;
+// Get the character in the word
+char glyphText = textGlyph.Text;
+// Get the color of the character
+Color glyphColor = textGlyph.TextColor;
 
 {% endhighlight %}
 
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Load the existing PDF document 
-Dim m_loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream) 
-' Get the first page of the loaded PDF document 
-Dim page As PdfPageBase = m_loadedDocument.Pages(0) 
-Dim lineCollection As New TextLineCollection() 
+' Load the existing PDF document
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream)
+' Get the first page of the loaded PDF document
+Dim page As PdfPageBase = loadedDocument.Pages(0)
+Dim lineCollection As New TextLineCollection()
 
-' Extract text from the first page 
-Dim m_extractedText As String = page.ExtractText(lineCollection) 
-' Get a specific line from the collection 
-Dim line As TextLine = lineCollection.TextLine(0) 
-' Get a collection of the words in the line 
-Dim textWordCollection As List(Of TextWord) = line.WordCollection 
-' Get a word from the collection using an index 
-Dim textWord As TextWord = textWordCollection(0) 
-' Get Glyph details of the word 
-Dim textGlyphCollection As List(Of TextGlyph) = textWord.Glyphs 
+' Extract text from the first page
+Dim extractedText As String = page.ExtractText(lineCollection)
+' Get a specific line from the collection
+Dim line As TextLine = lineCollection.TextLine(0)
+' Get a collection of words in the line
+Dim textWordCollection As List(Of TextWord) = line.WordCollection
+' Get a word from the collection using an index
+Dim textWord As TextWord = textWordCollection(0)
+' Get Glyph details of the word
+Dim textGlyphCollection As List(Of TextGlyph) = textWord.Glyphs
 
-' Get a character of the word 
-Dim textGlyph As TextGlyph = textGlyphCollection(0) 
-' Get bounds of the character 
-Dim glyphBounds As RectangleF = textGlyph.Bounds 
-' Get font name of the character 
-Dim GlyphFontName As String = textGlyph.FontName 
-' Get font size of the character 
-Dim GlyphFontSize As Single = textGlyph.FontSize 
-' Get font style of the character 
-Dim GlyphFontStyle As FontStyle = textGlyph.FontStyle 
-' Get the character in the word 
-Dim GlyphText As Char = textGlyph.Text 
-' Get the color of the character 
-Dim GlyphColor As Color = textGlyph.TextColor 
-
+' Get a character from the word
+Dim textGlyph As TextGlyph = textGlyphCollection(0)
+' Get bounds of the character
+Dim glyphBounds As RectangleF = textGlyph.Bounds
+' Get font name of the character
+Dim glyphFontName As String = textGlyph.FontName
+' Get font size of the character
+Dim glyphFontSize As Single = textGlyph.FontSize
+' Get font style of the character
+Dim glyphFontStyle As FontStyle = textGlyph.FontStyle
+' Get the character in the word
+Dim glyphText As Char = textGlyph.Text
+' Get the color of the character
+Dim glyphColor As Color = textGlyph.TextColor
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/).
+
+## Find Text
+
+The code example provided below demonstrates the utilization of the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method from the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to locate text within a PDF document. This method facilitates the retrieval of both the page number and the rectangular coordinates of the identified text occurrences.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %}
+
+//Load an existing PDF document. 
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Returns page number and rectangle positions of the text maches. 
+Dictionary<int, List<Syncfusion.Drawing.RectangleF>> matchRects = new Dictionary<int, List<Syncfusion.Drawing.RectangleF>>();
+loadedDocument.FindText("document", out matchRects);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load an existing PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Returns page number and rectangle positions of the text maches.
+Dictionary<int, List<System.Drawing.RectangleF>> matchRects = new Dictionary<int, List<System.Drawing.RectangleF>>();
+loadedDocument.FindText("document", out matchRects);           
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load an existing PDF document. 
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+'Returns page number and rectangle positions of the text maches.
+Dim matchRects As Dictionary(Of Integer, List(Of System.Drawing.RectangleF)) = New Dictionary(Of Integer, List(Of System.Drawing.RectangleF))()
+loadedDocument.FindText("document", matchRects)
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Find-text-in-PDF-document).
+
+**FindText Module API Reference**
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Return Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>{{'[FindText(List<string> searchItems, out TextSearchResultCollection searchResult)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__Syncfusion_Pdf_Parsing_TextSearchResultCollection__)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of text strings (`searchItems`) across the entire document, storing the results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<string> searchItems, out TextSearchResultCollection searchResult, bool enableMultiThreading)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__Syncfusion_Pdf_Parsing_TextSearchResultCollection__System_Boolean_)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of text strings across the entire document with multi-threading enabled for faster results, storing the results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<string> searchItems, int pageIndex, out List<MatchedItem> searchResults)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__System_Int32_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of text strings on a specific page (`pageIndex`), returning matching items in `searchResults`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<string> searchItems, int pageIndex, TextSearchOptions textSearchOption, out List<MatchedItem> searchResults)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__System_Int32_TextSearchOptions_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of text strings on a specific page with customizable search options (`textSearchOption`), returning matching items in `searchResults`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<string> searchItems, TextSearchOptions textSearchOption, out TextSearchResultCollection searchResult)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__TextSearchOptions_Syncfusion_Pdf_Parsing_TextSearchResultCollection__)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of text strings across the entire document with customizable search options (`textSearchOption`), storing the results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<string> searchItems, TextSearchOptions textSearchOption, out TextSearchResultCollection searchResult, bool enableMultiThreading)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__TextSearchOptions_Syncfusion_Pdf_Parsing_TextSearchResultCollection__System_Boolean_)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of text strings across the entire document with search options and multi-threading enabled, storing results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<TextSearchItem> searchItems, out TextSearchResultCollection searchResult)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_TextSearchItem__Syncfusion_Pdf_Parsing_TextSearchResultCollection__)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of `TextSearchItem` objects across the entire document, returning results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<TextSearchItem> searchItems, out TextSearchResultCollection searchResult, bool enableMultiThreading)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_TextSearchItem__Syncfusion_Pdf_Parsing_TextSearchResultCollection__System_Boolean_)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of `TextSearchItem` objects across the entire document with multi-threading enabled, storing results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(List<TextSearchItem> searchItems, int pageIndex, out List<MatchedItem> searchResults)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_TextSearchItem__System_Int32_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a list of `TextSearchItem` objects on a specific page (`pageIndex`), returning matching items in `searchResults`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(string text, out Dictionary<int, List<RectangleF>> matchRect)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a single text string across the entire document, returning the match locations (rectangles) for each page in `matchRect`.</td>
+    </tr>
+    <tr>
+      <td><b>{{'[FindText(string text, int index, out List<RectangleF> matchRect)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF___)'| markdownify }}</b></td>
+      <td>bool</td>
+      <td>Searches for a single text string on a specific page (`index`), returning the match locations (rectangles) in `matchRect`.</td>
+    </tr>
+  </tbody>
+</table>
