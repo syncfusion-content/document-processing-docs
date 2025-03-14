@@ -3597,92 +3597,6 @@ lDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document).
 
-
-## Preserving the annotation appearance while importing the annotation data into the PDF document.
-
-The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the `SetAppearance` parameter to `true` when calling the `ImportAnnotations` method.
-
-Please refer to the below code snippet to achieve this on your end.
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-//Load the PDF document
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
-//Import annotation data from XFDF stream
-FileStream xfdfStream = new FileStream("Annotations.xfdf", FileMode.Open, FileAccess.Read);
-lDoc.ImportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
-
-//Set appearance for all the annotations
-foreach (PdfLoadedPage page in lDoc.Pages)
-{
-    foreach (PdfAnnotation annotation in page.Annotations)
-    {
-        annotation.SetAppearance(true);
-    }
-}
-//Create file stream.
-using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
-{
-    //Save the PDF document to file stream.
-    lDoc.Save(outputFileStream);
-}
-//Closes the document
-lDoc.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Loads the document
-PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
-//Import the annotation data from the JSON file
-lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf);
-//Set appearance for all the annotations
-foreach (PdfLoadedPage page in lDoc.Pages)
-{
-    foreach (PdfAnnotation annotation in page.Annotations)
-    {
-        annotation.SetAppearance(true);
-    }
-}
-
-//Saves the document
-lDoc.Save("Annotation.pdf");
-lDoc.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-' Load the PDF document from the file
-Dim lDoc As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
-
-' Import annotations from a JSON file
-lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFDF)
-
-'Iterate through each page in the loaded document
-For Each pages As PdfLoadedPage In lDoc.Pages
-    'Iterate through each annotation in the page
-    For Each annot As PdfLoadedAnnotation In pages.Annotations
-        'Set the appearance for each annotation
-        annot.SetAppearance(True)
-    Next
-Next
-
-
-'Save the updated document
-lDoc.Save("Annotation.pdf")
-
-'Close the document instances
-lDOc.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Importing-annotations-from-JSON-file-to-PDF-document).
-
 ## Exporting annotations
 
 ### Exporting annotations to FDF file
@@ -5714,6 +5628,9 @@ freeText.SetAppearance(true);
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
 Enabling the appearance ensures that annotations are displayed consistently across all viewers. Refer to the following to update the annotation appearance.
+
+The appearance streams are not generated during the annotation import process To preserve the appearance of annotations, you can set the `SetAppearance` parameter to `true` when calling the `ImportAnnotations` method.
+
 <br/><br/>
 Please refer to the below code example to achieve this on your end.
 
@@ -5728,25 +5645,22 @@ PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
 FileStream xfdfStream = new FileStream("Annotations.xfdf", FileMode.Open, FileAccess.Read);
 lDoc.ImportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
 
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-lDoc.Save(stream);
-
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
-foreach (PdfLoadedPage pages in loadedDocument.Pages)
+//Set appearance for all the annotations
+foreach (PdfLoadedPage page in lDoc.Pages)
 {
-foreach (PdfLoadedAnnotation annot in pages.Annotations)
-annot.SetAppearance(true);
+    foreach (PdfAnnotation annotation in page.Annotations)
+    {
+        annotation.SetAppearance(true);
+    }
 }
 //Create file stream.
 using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
 {
     //Save the PDF document to file stream.
-    loadedDocument.Save(outputFileStream);
+    lDoc.Save(outputFileStream);
 }
 //Closes the document
 lDoc.Close(true);
-loadedDocument.Close(true);
 
 {% endhighlight %}
 
@@ -5756,19 +5670,18 @@ loadedDocument.Close(true);
 PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
 //Import the annotation data from the JSON file
 lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf);
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-lDoc.Save(stream);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
-foreach (PdfLoadedPage pages in loadedDocument.Pages)
+//Set appearance for all the annotations
+foreach (PdfLoadedPage page in lDoc.Pages)
 {
-foreach (PdfLoadedAnnotation annot in pages.Annotations)
-annot.SetAppearance(true);
+    foreach (PdfAnnotation annotation in page.Annotations)
+    {
+        annotation.SetAppearance(true);
+    }
 }
+
 //Saves the document
-loadedDocument.Save("Annotation.pdf");
+lDoc.Save("Annotation.pdf");
 lDoc.Close(true);
-loadedDocument.Close(true);
 
 {% endhighlight %}
 
@@ -5780,17 +5693,8 @@ Dim lDoc As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
 ' Import annotations from a JSON file
 lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFDF)
 
-' Create a memory stream to save the document
-Dim stream As MemoryStream = New MemoryStream()
-
-' Save the document to the memory stream
-lDoc.Save(stream)
-
-'Load the PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(stream)
-
 'Iterate through each page in the loaded document
-For Each pages As PdfLoadedPage In loadedDocument.Pages
+For Each pages As PdfLoadedPage In lDoc.Pages
     'Iterate through each annotation in the page
     For Each annot As PdfLoadedAnnotation In pages.Annotations
         'Set the appearance for each annotation
@@ -5798,11 +5702,12 @@ For Each pages As PdfLoadedPage In loadedDocument.Pages
     Next
 Next
 
+
 'Save the updated document
-loadedDocument.Save("Annotation.pdf")
+lDoc.Save("Annotation.pdf")
 
 'Close the document instances
-loadedDocument.Close(True)
+lDoc.Close(True)
 
 {% endhighlight %}
 
