@@ -1270,11 +1270,11 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Inserting-duplicate-pages-in-the-existing-pdf). 
 
-## Insert a New Page into an Existing PDF Document While Maintaining Its Original Size
+## Adding a new page to an existing PDF while preserving its original size
 
-The Syncfusion PDF library enables users to add a new page to an existing PDF document while maintaining the size of the existing pages.
+A new page can be inserted into an existing PDF document while retaining the dimensions of the existing pages.
 
-Refer to the following code example for creating new page in a PDF document while maintaining its size.
+Refer to the following code example to create a new page in a PDF document while maintaining its original size.
 
 {% tabs %}  
 
