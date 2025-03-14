@@ -103,3 +103,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to add and remove page breaks in a worksheet?](faqs/how-to-add-and-remove-page-breaks-in-Excel)
 * [How to decrypt individual items with specific passwords?](faqs/how-to-decrypt-individual-items-with-specific-passwords-in-a-protected-zip-file)
 * [What is the behavior of FitToPagesTall and FitToPagesWide?](faqs/what-is-the-behavior-of-fittopagestall-and-fittopageswide)
+* [How to use AND and OR operators in the filter?](faqs/how-to-use-and-or-operators-in-the-filters)
