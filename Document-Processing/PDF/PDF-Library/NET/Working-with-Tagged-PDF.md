@@ -1190,6 +1190,283 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document).
 
+## Well-Tagged PDF (WTPDF) 
+
+Well-Tagged PDF (WTPDF) enables the creation of fully reusable and accessible PDF 2.0 files in an interoperable manner. WTPDF is essentially identical to PDF/UA-2. A PDF file can be compliant with PDF/UA-2, WTPDF, or both.
+
+N> PDF/UA-2 is fully compatible with PDF/A-4.
+
+The following code sample demonstrates how to create a Well-Tagged PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document
+doc.Save("Output.pdf"); 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Creates new PDF document 
+Dim doc As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A4) 
+
+'Set Pdf File version 2.0 
+doc.FileStructure.Version = PdfVersion.Version2_0 
+
+'Set true to auto tag all elements in document  
+doc.AutoTag = True 
+'Set the document title 
+doc.DocumentInformation.Title = "PdfTextElement"
+
+'Creates new page 
+Dim page As PdfPage = doc.Pages.Add() 
+Dim fontStream As FileStream = New FileStream("Font.ttf", FileMode.Open, FileAccess.Read) 
+
+'Initialize the structure element with tag type paragraph 
+Dim structureElement As PdfStructureElement = New PdfStructureElement(PdfTagType.Paragraph) 
+
+'represents the text that is exact replacement for PdfTextElement 
+structureElement.ActualText = "Simple paragraph element" 
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base." 
+
+'Initialize the PDF text element 
+Dim element As PdfTextElement = New PdfTextElement(text) 
+
+'Adding tag to the text element 
+element.PdfTag = structureElement 
+
+'Creates font for the text element 
+element.Font = New PdfTrueTypeFont(fontStream, 10) 
+element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93)) 
+
+'Draws text 
+Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)) 
+
+'Save the document and dispose it 
+doc.Save("Output.pdf") 
+doc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## PDF for Universal Accessibility (PDF/UA-2) 
+
+PDF/UA-2 ensures that PDF 2.0 files conform to the Web Content Accessibility Guidelines (WCAG), making them accessible to all users. 
+
+The following code sample demonstrates how to create a PDF with Universal Accessibility Level 2.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument();     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument();     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document
+doc.Save("Output.pdf");  
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Creates new PDF document 
+Dim doc As PdfDocument = New PdfDocument() 
+
+'Set Pdf File version 2.0 
+doc.FileStructure.Version = PdfVersion.Version2_0  
+
+'Set true to auto tag all elements in document 
+doc.AutoTag = True 
+'Set the document title 
+doc.DocumentInformation.Title = "PdfTextElement" 
+'Creates new page 
+Dim page As PdfPage = doc.Pages.Add() 
+
+Dim fontStream As FileStream = New FileStream("Font.ttf", FileMode.Open, FileAccess.Read) 
+'Initialize the structure element with tag type paragraph 
+Dim structureElement As PdfStructureElement = New PdfStructureElement(PdfTagType.Paragraph) 
+
+'Represents the text that is exact replacement for PdfTextElement 
+structureElement.ActualText = "Simple paragraph element" 
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base." 
+
+'Initialize the PDF text element 
+Dim element As PdfTextElement = New PdfTextElement(text) 
+'Adding tag to the text element 
+element.PdfTag = structureElement 
+
+'Creates font for the text element 
+element.Font = New PdfTrueTypeFont(fontStream, 10)  
+element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93)) 
+'Draw text 
+Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)) 
+
+'Save the document and dispose it 
+doc.Save("Output.pdf") 
+doc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Marking PDF content as an artifact
 
 Artifacts in the PDF document can be graphic objects or other markings that are not a part of the authored content and will include such things as: headers, footers, page numbers, watermarks, cut marks, color bars, background images, lines separating content, or decorative images. 
@@ -1748,7 +2025,167 @@ Follow the below steps to validate the tagged PDF information in Adobe Acrobat:
 
 The following screenshot shows the Accessibility checker dialog box.
 
-![TaggedPDF](TaggedPDF_images/TaggedPDF_img0.png) 
+![TaggedPDF](TaggedPDF_images/TaggedPDF_img0.png)
+
+## Custom Role Mapping
+
+The PdfRoleMap class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
+
+The following code sample demonstrates how to create Custom Role Mapping document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+// Create a new PDF document 
+PdfDocument doc = new PdfDocument(); 
+
+// Create a role map to define custom structure roles 
+PdfRoleMap roleMap = new PdfRoleMap(); 
+roleMap.Add("WorkBook", "Document"); // Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect"); // Mapping "WorkSheet" to "Sect" 
+
+// Define a custom structure type 
+string customStructureType = "WorkBook"; 
+string standardStructureType = ""; 
+
+// Try to get the standard structure type for the custom role 
+bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
+doc.StructureRoleMap = roleMap; // Assign role map to the document 
+// Set document metadata 
+doc.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page to the PDF 
+PdfPage page = doc.Pages.Add(); 
+
+// Create a custom structure element with a specified role 
+PdfStructureElement structureElement = new PdfStructureElement("WorkBook"); 
+
+structureElement.ActualText = "Simple paragraph element"; // Set alternative text for accessibility 
+// Define the content text 
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Create a text element and associate it with the structure element 
+PdfTextElement element = new PdfTextElement(text); 
+element.PdfTag = structureElement; 
+
+//Load the font file as stream  
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read); 
+// Set font and color for the text 
+element.Font = new PdfTrueTypeFont(fontStream, 10);   
+element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text on the page 
+PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+// Save the document into a memory stream (Cross-platform compatibility) 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; // Reset stream position for further processing if needed 
+// Close the document to release resources 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document 
+PdfDocument doc = new PdfDocument(); 
+
+// Create a role map to define custom structure roles 
+PdfRoleMap roleMap = new PdfRoleMap(); 
+roleMap.Add("WorkBook", "Document"); // Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect"); // Mapping "WorkSheet" to "Sect" 
+
+// Define a custom structure type 
+string customStructureType = "WorkBook"; 
+string standardStructureType = ""; 
+
+// Try to get the standard structure type for the custom role 
+bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
+doc.StructureRoleMap = roleMap; // Assign role map to the document 
+// Set document metadata 
+doc.DocumentInformation.Title = "PdfTextElement"; 
+// Add a new page to the PDF 
+PdfPage page = doc.Pages.Add(); 
+
+// Create a custom structure element with a specified role 
+PdfStructureElement structureElement = new PdfStructureElement("WorkBook"); 
+
+structureElement.ActualText = "Simple paragraph element"; // Set alternative text for accessibility 
+// Define the content text 
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Create a text element and associate it with the structure element 
+PdfTextElement element = new PdfTextElement(text); 
+element.PdfTag = structureElement; 
+
+//Load the font file as stream  
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read); 
+// Set font and color for the text 
+element.Font = new PdfTrueTypeFont(fontStream, 10);   
+element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text on the page 
+PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+// Save the document 
+doc.Save("Output.pdf"); 
+// Close the document to release resources 
+doc.Close(true); 
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document 
+Dim doc As New PdfDocument() 
+
+' Create a role map to define custom structure roles 
+Dim roleMap As New PdfRoleMap() 
+roleMap.Add("WorkBook", "Document") ' Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect") ' Mapping "WorkSheet" to "Sect" 
+
+' Define a custom structure type 
+Dim customStructureType As String = "WorkBook" 
+Dim standardStructureType As String = "" 
+
+' Try to get the standard structure type for the custom role 
+Dim found As Boolean = roleMap.TryGetStandardType(customStructureType, standardStructureType) 
+doc.StructureRoleMap = roleMap ' Assign role map to the document 
+
+' Set document metadata 
+doc.DocumentInformation.Title = "PdfTextElement" 
+
+' Add a new page to the PDF 
+Dim page As PdfPage = doc.Pages.Add() 
+
+' Create a custom structure element with a specified role 
+Dim structureElement As New PdfStructureElement("WorkBook") 
+structureElement.ActualText = "Simple paragraph element" ' Set alternative text for accessibility 
+' Define the content text 
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base." 
+
+' Create a text element and associate it with the structure element 
+Dim element As New PdfTextElement(text) 
+element.PdfTag = structureElement 
+
+' Set font and color for the text 
+Dim fontStream As FileStream = New FileStream("Font.ttf", FileMode.Open, FileAccess.Read)   
+element.Font = New PdfTrueTypeFont(fontStream, 10)   
+element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93)) 
+
+' Draw text on the page 
+Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)) 
+
+' Save the document to the file 
+doc.Save("Output.pdf") 
+' Close the document to release resources 
+doc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Get the accessibility tags
 
