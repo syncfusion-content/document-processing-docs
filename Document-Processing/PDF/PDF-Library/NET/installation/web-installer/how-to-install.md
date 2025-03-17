@@ -12,7 +12,7 @@ documentation: ug
 
 ## Overview
 
-For the Essential Studio<sup>&reg;</sup> PDF product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
+For the Essential Studio<sup>&reg;</sup> PDF product, Syncfusion<sup>&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup>&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup>&reg;</sup> Web Installer [here](https://www.syncfusion.com/account/downloads). 
 
  
 ## Installation

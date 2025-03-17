@@ -10,12 +10,12 @@ documentation: ug
 
 # Download Syncfusion Word Linux Installer
 
-The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
+The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com) website. You can either download the licensed installer or try our trial installer depending on your license.
 
    -	Trial Installer
    -	Licensed Installer
 
-You can download the Syncfusion<sup>&reg;</sup> installer from [Syncfusion.com](https://www.syncfusion.com/) website 
+You can download the Syncfusion<sup>&reg;</sup> installer from [Syncfusion.com](https://www.syncfusion.com) website 
 
 ## Download the Trial Version
 

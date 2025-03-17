@@ -13,7 +13,7 @@ The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.co
 
 ## Setting up the AWS Toolkit for Visual Studio
 
-* You can create an AWS account by referring to this [link](https://aws.amazon.com/).
+* You can create an AWS account by referring to this [link](https://aws.amazon.com).
 * Download and install the AWS Toolkit for Visual Studio, you can download the AWS toolkit from this [link](https://aws.amazon.com/visualstudio/).
 * The Toolkit can be installed from Tools/Extension and updates options in Visual Studio. 
 
