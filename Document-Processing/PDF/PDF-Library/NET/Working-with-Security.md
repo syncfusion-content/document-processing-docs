@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Security
 
-Essential<sup>&reg;</sup> PDF enables you to secure PDF documents using various encryption algorithms while defining specific permissions such as printing, editing, and copying content. You can apply both a user password (document open password) and an owner password (permission password) for enhanced protection.
+Essential<sup>&reg;</sup> PDF enables you to [secure PDF documents](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using various encryption algorithms while defining specific permissions such as printing, editing, and copying content. You can apply both a user password (document open password) and an owner password (permission password) for enhanced protection.
 
 Watch the following video to learn how to encrypt and decrypt PDF documents using the .NET PDF library.
 {% youtube "https://www.youtube.com/watch?v=aGVDvIf3ODI" %}
