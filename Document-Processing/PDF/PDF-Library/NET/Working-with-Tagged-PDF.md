@@ -1190,13 +1190,13 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document).
 
-## Well-Tagged PDF (WTPDF) 
+## Well Tagged PDF 
 
 Well-Tagged PDF (WTPDF) enables the creation of fully reusable and accessible PDF 2.0 files in an interoperable manner. WTPDF is essentially identical to PDF/UA-2. A PDF file can be compliant with PDF/UA-2, WTPDF, or both.
 
 N> PDF/UA-2 is fully compatible with PDF/A-4.
 
-The following code sample demonstrates how to create a Well-Tagged PDF document.
+The following code sample demonstrates how to create a well-tagged PDF document.
 
 {% tabs %}
 
@@ -1333,7 +1333,7 @@ doc.Close(True)
 
 {% endtabs %}
 
-## PDF for Universal Accessibility (PDF/UA-2) 
+## PDF Universal Accessibility 2
 
 PDF/UA-2 ensures that PDF 2.0 files conform to the Web Content Accessibility Guidelines (WCAG), making them accessible to all users. 
 
@@ -2027,11 +2027,11 @@ The following screenshot shows the Accessibility checker dialog box.
 
 ![TaggedPDF](TaggedPDF_images/TaggedPDF_img0.png)
 
-## Custom Role Mapping
+## Custom role mapping
 
 The PdfRoleMap class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
 
-The following code sample demonstrates how to create Custom Role Mapping document.
+The following code sample demonstrates how to create custom role mapping document.
 
 {% tabs %}
 
