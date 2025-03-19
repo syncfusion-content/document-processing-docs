@@ -1190,7 +1190,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document).
 
-## Well Tagged PDF 
+## Well-Tagged PDF (WTPDF)
 
 Well-Tagged PDF (WTPDF) enables the creation of fully reusable and accessible PDF 2.0 files in an interoperable manner. WTPDF is essentially identical to PDF/UA-2. A PDF file can be compliant with PDF/UA-2, WTPDF, or both.
 
@@ -1210,7 +1210,7 @@ document.FileStructure.Version = PdfVersion.Version2_0;
 
 //Set true to auto tag all elements in document 
 document.AutoTag = true; 
-document.DocumentInformation.Title = "PdfTextElement"; 
+document.DocumentInformation.Title = "Well Tagged PDF "; 
 // Add a new page 
 PdfPage page = document.Pages.Add(); 
 //Load the font file as stream 
@@ -1333,7 +1333,7 @@ doc.Close(True)
 
 {% endtabs %}
 
-## PDF Universal Accessibility 2
+## PDF for Universal Accessibility (PDF/UA-2) 
 
 PDF/UA-2 ensures that PDF 2.0 files conform to the Web Content Accessibility Guidelines (WCAG), making them accessible to all users. 
 
@@ -1351,7 +1351,7 @@ document.FileStructure.Version = PdfVersion.Version2_0;
 
 //Set true to auto tag all elements in document 
 document.AutoTag = true; 
-document.DocumentInformation.Title = "PdfTextElement"; 
+document.DocumentInformation.Title = "PDF Universal Accessibility 2"; 
 // Add a new page 
 PdfPage page = document.Pages.Add(); 
 
@@ -2053,7 +2053,7 @@ string standardStructureType = "";
 bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
 doc.StructureRoleMap = roleMap; // Assign role map to the document 
 // Set document metadata 
-doc.DocumentInformation.Title = "PdfTextElement"; 
+doc.DocumentInformation.Title = "Custom Role Map"; 
 // Add a new page to the PDF 
 PdfPage page = doc.Pages.Add(); 
 
