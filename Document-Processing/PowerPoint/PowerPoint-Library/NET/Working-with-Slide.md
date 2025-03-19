@@ -1,5 +1,5 @@
 ---
-title: Create, read and edit PowerPoint slides in CSharp |Syncfusion<sup>&reg;</sup>|
+title: Create, read and edit PowerPoint slides in CSharp | Syncfusion
 description: Create, read and edit PowerPoint slides in CSharp; Adding and modifying the slides in PowerPoint presentation
 platform: document-processing
 control: PowerPoint
