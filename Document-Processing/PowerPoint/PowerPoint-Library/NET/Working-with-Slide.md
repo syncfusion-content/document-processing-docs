@@ -389,11 +389,23 @@ IPresentation pptxDoc = Presentation.Open(inputStream);
 // Iterate through each slide in the presentation
 foreach (ISlide slide in presentation.Slides)
 {
+    // Iterate through each shape in the master slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.MasterSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+    // Iterate through each shape in the layout slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
     // Iterate through each shape in the slide
     foreach (IShape shape in slide.Shapes)
     {
         // Modify the shape properties (text, size, hyperlinks, etc.)
-        ModifySlideElements(shape, presentation);
+        ModifySlideElements(shape);
     }
 }
 //Save the PowerPoint Presentation as stream
@@ -411,11 +423,23 @@ IPresentation pptxDoc = Presentation.Open("Template.pptx");
 // Iterate through each slide in the presentation
 foreach (ISlide slide in presentation.Slides)
 {
+    // Iterate through each shape in the master slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.MasterSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+    // Iterate through each shape in the layout slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
     // Iterate through each shape in the slide
     foreach (IShape shape in slide.Shapes)
     {
         // Modify the shape properties (text, size, hyperlinks, etc.)
-        ModifySlideElements(shape, presentation);
+        ModifySlideElements(shape);
     }
 }
 //Saves the Presentation to the file system
@@ -428,11 +452,21 @@ pptxDoc.Close();
 'Opens an existing Presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Template.pptx")
 ' Iterate through each slide in the presentation
-For Each slide As ISlide In pptxDoc.Slides
+For Each slide As ISlide In presentation.Slides
+    ' Iterate through each shape in the master slide shapes.
+    For Each shape As IShape In slide.LayoutSlide.MasterSlide.Shapes
+        ' Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape)
+    Next
+    ' Iterate through each shape in the layout slide shapes.
+    For Each shape As IShape In slide.LayoutSlide.Shapes
+        ' Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape)
+    Next
     ' Iterate through each shape in the slide
     For Each shape As IShape In slide.Shapes
         ' Modify the shape properties (text, size, hyperlinks, etc.)
-        ModifySlideElements(shape, pptxDoc)
+        ModifySlideElements(shape)
     Next
 Next
 'Saves the Presentation to the file system
@@ -448,7 +482,7 @@ The following code example provides supporting methods for the above code.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-private static void ModifySlideElements(IShape shape, IPresentation presentation)
+private static void ModifySlideElements(IShape shape)
 {
     switch (shape.SlideItemType)
     {
@@ -508,7 +542,7 @@ private static void ModifySlideElements(IShape shape, IPresentation presentation
                 IGroupShape groupShape = shape as IGroupShape;
                 foreach (IShape childShape in groupShape.Shapes)
                 {
-                    ModifySlideElements(childShape, presentation);
+                    ModifySlideElements(childShape);
                 }
                 break;
             }
@@ -528,11 +562,14 @@ private static void ModifySlideElements(IShape shape, IPresentation presentation
             {
                 // Modify SmartArt content
                 ISmartArt smartArt = shape as ISmartArt;
-                ISmartArtNode smartArtNode = smartArt.Nodes[0];
-                smartArtNode.TextBody.Text = "Requirement";
+                //Traverse through all nodes inside SmartArt
+                foreach (ISmartArtNode node in smartArt.Nodes)
+                {
+                    ModifyTextPart(node.TextBody);
+                }
                 break;
             }
-
+            
         case SlideItemType.OleObject:
             {
                 // Modify OLE object size
@@ -545,7 +582,7 @@ private static void ModifySlideElements(IShape shape, IPresentation presentation
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-private static void ModifySlideElements(IShape shape, IPresentation presentation)
+private static void ModifySlideElements(IShape shape)
 {
     switch (shape.SlideItemType)
     {
@@ -605,7 +642,7 @@ private static void ModifySlideElements(IShape shape, IPresentation presentation
                 IGroupShape groupShape = shape as IGroupShape;
                 foreach (IShape childShape in groupShape.Shapes)
                 {
-                    ModifySlideElements(childShape, presentation);
+                    ModifySlideElements(childShape);
                 }
                 break;
             }
@@ -621,15 +658,18 @@ private static void ModifySlideElements(IShape shape, IPresentation presentation
                 break;
             }
 
-        case SlideItemType.SmartArt:
+         case SlideItemType.SmartArt:
             {
                 // Modify SmartArt content
                 ISmartArt smartArt = shape as ISmartArt;
-                ISmartArtNode smartArtNode = smartArt.Nodes[0];
-                smartArtNode.TextBody.Text = "Requirement";
+                //Traverse through all nodes inside SmartArt
+                foreach (ISmartArtNode node in smartArt.Nodes)
+                {
+                    ModifyTextPart(node.TextBody);
+                }
                 break;
             }
-
+            
         case SlideItemType.OleObject:
             {
                 // Modify OLE object size
@@ -642,13 +682,21 @@ private static void ModifySlideElements(IShape shape, IPresentation presentation
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Private Sub ModifySlideElements(ByVal shape As IShape, ByVal presentation As IPresentation)
+Private Shared Sub ModifySlideElements(ByVal shape As IShape)
     Select Case shape.SlideItemType
         Case SlideItemType.AutoShape
             ' Modify text if present in the shape
             If Not String.IsNullOrEmpty(shape.TextBody.Text) Then
                 ModifyTextPart(shape.TextBody)
+            ' If shape is a rectangle, add a hyperlink
+            ElseIf shape.AutoShapeType = AutoShapeType.Rectangle Then
+                shape.SetHyperlink("www.google.com")
             End If
+
+        Case SlideItemType.ConnectionShape
+            Dim connector As IConnector = TryCast(shape, IConnector)
+            ' Modify the arrowhead style at the beginning of the connector line
+            connector.LineFormat.BeginArrowheadStyle = ArrowheadStyle.ArrowDiamond
 
         Case SlideItemType.Placeholder
             ' Modify text if present in the placeholder
@@ -659,57 +707,47 @@ Private Sub ModifySlideElements(ByVal shape As IShape, ByVal presentation As IPr
         Case SlideItemType.Picture
             ' Resize the picture
             Dim picture As IPicture = TryCast(shape, IPicture)
-            If picture IsNot Nothing Then
-                picture.Height = 160
-                picture.Width = 130
-            End If
+            picture.Height = 160
+            picture.Width = 130
 
         Case SlideItemType.Table
             ' Get the table shape
             Dim table As ITable = TryCast(shape, ITable)
 
             ' Iterate through rows and modify text in each cell
-            If table IsNot Nothing Then
-                For Each row As IRow In table.Rows
-                    For Each cell As ICell In row.Cells
-                        ModifyTextPart(cell.TextBody)
-                    Next
+            For Each row As IRow In table.Rows
+                For Each cell As ICell In row.Cells
+                    ModifyTextPart(cell.TextBody)
                 Next
-            End If
+            Next
 
         Case SlideItemType.GroupShape
             ' Get the group shape and iterate through child shapes
             Dim groupShape As IGroupShape = TryCast(shape, IGroupShape)
-            If groupShape IsNot Nothing Then
-                For Each childShape As IShape In groupShape.Shapes
-                    ModifySlideElements(childShape, presentation)
-                Next
-            End If
+            For Each childShape As IShape In groupShape.Shapes
+                ModifySlideElements(childShape)
+            Next
 
         Case SlideItemType.Chart
             ' Modify chart properties
             Dim chart As IPresentationChart = TryCast(shape, IPresentationChart)
-            If chart IsNot Nothing Then
-                chart.ChartTitle = "Purchase Details"
-                chart.ChartTitleArea.Bold = True
-                chart.ChartTitleArea.Color = OfficeKnownColors.Red
-                chart.ChartTitleArea.Size = 20
-            End If
+            chart.ChartTitle = "Purchase Details"
+            chart.ChartTitleArea.Bold = True
+            chart.ChartTitleArea.Color = OfficeKnownColors.Red
+            chart.ChartTitleArea.Size = 20
 
         Case SlideItemType.SmartArt
             ' Modify SmartArt content
             Dim smartArt As ISmartArt = TryCast(shape, ISmartArt)
-            If smartArt IsNot Nothing AndAlso smartArt.Nodes.Count > 0 Then
-                Dim smartArtNode As ISmartArtNode = smartArt.Nodes(0)
-                smartArtNode.TextBody.Text = "Requirement"
-            End If
+            ' Traverse through all nodes inside SmartArt
+            For Each node As ISmartArtNode In smartArt.Nodes
+                ModifyTextPart(node.TextBody)
+            Next
 
         Case SlideItemType.OleObject
             ' Modify OLE object size
             Dim oleObject As IOleObject = TryCast(shape, IOleObject)
-            If oleObject IsNot Nothing Then
-                oleObject.Width = 300
-            End If
+            oleObject.Width = 300
     End Select
 End Sub
 {% endhighlight %}
