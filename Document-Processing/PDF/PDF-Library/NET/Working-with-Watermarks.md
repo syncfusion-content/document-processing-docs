@@ -374,7 +374,7 @@ The following screenshot shows the output of adding image watermark to an existi
 <img src="Watermark_images/Watermark_img4.jpg" alt="Image watermark in an existing PDF" width="100%" Height="Auto"/>
 
 
-### Adding Watermark Annotation
+## Adding Watermark Annotation
 
 A watermark annotation is used to represent graphics that are expected to be printed at a fixed size and position on a page, regardless of the dimensions of the printed page. [PdfWatermarkAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfWatermarkAnnotation.html) can be used.
 The following code example explains how to add a watermark annotation in the PDF document
@@ -453,7 +453,7 @@ loadedDocument.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Add-watermark-annotation-in-the-PDF-document).
 
 
-### Removing Watermark Annotation
+## Removing Watermark Annotation
 
 You can remove the Watermark annotation from the annotation collection, represented by the [PdfLoadedAnnotationCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html) of the loaded page. The following code illustrates this.
 
