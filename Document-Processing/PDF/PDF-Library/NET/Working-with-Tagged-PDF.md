@@ -1255,7 +1255,7 @@ document.FileStructure.Version = PdfVersion.Version2_0;
 
 //Set true to auto tag all elements in document 
 document.AutoTag = true; 
-document.DocumentInformation.Title = "PdfTextElement"; 
+document.DocumentInformation.Title = "Well Tagged PDF"; 
 // Add a new page 
 PdfPage page = document.Pages.Add(); 
 //Load the font file as stream 
@@ -1299,7 +1299,7 @@ doc.FileStructure.Version = PdfVersion.Version2_0
 'Set true to auto tag all elements in document  
 doc.AutoTag = True 
 'Set the document title 
-doc.DocumentInformation.Title = "PdfTextElement"
+doc.DocumentInformation.Title = "Well Tagged PDF"
 
 'Creates new page 
 Dim page As PdfPage = doc.Pages.Add() 
@@ -1394,7 +1394,7 @@ document.FileStructure.Version = PdfVersion.Version2_0;
 
 //Set true to auto tag all elements in document 
 document.AutoTag = true; 
-document.DocumentInformation.Title = "PdfTextElement"; 
+document.DocumentInformation.Title = "PDF Universal Accessibility 2"; 
 // Add a new page 
 PdfPage page = document.Pages.Add(); 
 
@@ -1436,7 +1436,7 @@ doc.FileStructure.Version = PdfVersion.Version2_0
 'Set true to auto tag all elements in document 
 doc.AutoTag = True 
 'Set the document title 
-doc.DocumentInformation.Title = "PdfTextElement" 
+doc.DocumentInformation.Title = "PDF Universal Accessibility 2" 
 'Creates new page 
 Dim page As PdfPage = doc.Pages.Add() 
 
@@ -2104,7 +2104,7 @@ string standardStructureType = "";
 bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
 doc.StructureRoleMap = roleMap; // Assign role map to the document 
 // Set document metadata 
-doc.DocumentInformation.Title = "PdfTextElement"; 
+doc.DocumentInformation.Title = "Custom Role Map"; 
 // Add a new page to the PDF 
 PdfPage page = doc.Pages.Add(); 
 
@@ -2155,7 +2155,7 @@ Dim found As Boolean = roleMap.TryGetStandardType(customStructureType, standardS
 doc.StructureRoleMap = roleMap ' Assign role map to the document 
 
 ' Set document metadata 
-doc.DocumentInformation.Title = "PdfTextElement" 
+doc.DocumentInformation.Title = "Custom Role Map" 
 
 ' Add a new page to the PDF 
 Dim page As PdfPage = doc.Pages.Add() 
