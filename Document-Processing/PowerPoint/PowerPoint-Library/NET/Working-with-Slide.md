@@ -1,5 +1,5 @@
 ---
-title: Create, read and edit PowerPoint slides in CSharp |Syncfusion<sup>&reg;</sup>|
+title: Create, read and edit PowerPoint slides in CSharp | Syncfusion
 description: Create, read and edit PowerPoint slides in CSharp; Adding and modifying the slides in PowerPoint presentation
 platform: document-processing
 control: PowerPoint
@@ -375,6 +375,432 @@ pptxDoc.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Add-slide-with-existing-slide-layout).
+
+## Iterating slide elements
+
+The following code example shows how to iterate through all slide elements in a PowerPoint presentation, update text, resize images, and modify charts before saving the updated presentation.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Iterate-slide-elements/.NET/Iterate-slide-elements/Program.cs" %}
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
+// Iterate through each slide in the presentation
+foreach (ISlide slide in presentation.Slides)
+{
+    // Iterate through each shape in the master slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.MasterSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+    // Iterate through each shape in the layout slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+    // Iterate through each shape in the slide
+    foreach (IShape shape in slide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+}
+//Save the PowerPoint Presentation as stream
+FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
+pptxDoc.Save(outputStream);
+//Release all resources of the stream
+outputStream.Dispose();
+//Closes the Presentation
+pptxDoc.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Opens an existing Presentation.
+IPresentation pptxDoc = Presentation.Open("Template.pptx");
+// Iterate through each slide in the presentation
+foreach (ISlide slide in presentation.Slides)
+{
+    // Iterate through each shape in the master slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.MasterSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+    // Iterate through each shape in the layout slide shapes.
+    foreach (IShape shape in slide.LayoutSlide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+    // Iterate through each shape in the slide
+    foreach (IShape shape in slide.Shapes)
+    {
+        // Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape);
+    }
+}
+//Saves the Presentation to the file system
+pptxDoc.Save("Output.pptx");
+//Closes the Presentation
+pptxDoc.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Opens an existing Presentation.
+Dim pptxDoc As IPresentation = Presentation.Open("Template.pptx")
+' Iterate through each slide in the presentation
+For Each slide As ISlide In presentation.Slides
+    ' Iterate through each shape in the master slide shapes.
+    For Each shape As IShape In slide.LayoutSlide.MasterSlide.Shapes
+        ' Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape)
+    Next
+    ' Iterate through each shape in the layout slide shapes.
+    For Each shape As IShape In slide.LayoutSlide.Shapes
+        ' Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape)
+    Next
+    ' Iterate through each shape in the slide
+    For Each shape As IShape In slide.Shapes
+        ' Modify the shape properties (text, size, hyperlinks, etc.)
+        ModifySlideElements(shape)
+    Next
+Next
+'Saves the Presentation to the file system
+pptxDoc.Save("Output.pptx")
+'Closes the Presentation
+pptxDoc.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example provides supporting methods for the above code.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private static void ModifySlideElements(IShape shape)
+{
+    switch (shape.SlideItemType)
+    {
+        case SlideItemType.AutoShape:
+            {
+                // Modify text if present in the shape
+                if (!string.IsNullOrEmpty(shape.TextBody.Text))
+                {
+                    ModifyTextPart(shape.TextBody);
+                }
+                // If shape is a rectangle, add a hyperlink
+                else if (shape.AutoShapeType == AutoShapeType.Rectangle)
+                {
+                    shape.SetHyperlink("www.google.com");
+                }
+                break;
+            }
+
+        case SlideItemType.Placeholder:
+            {
+                // Modify text if present in the placeholder
+                if (!string.IsNullOrEmpty(shape.TextBody.Text))
+                {
+                    ModifyTextPart(shape.TextBody);
+                }
+                break;
+            }
+
+        case SlideItemType.Picture:
+            {
+                // Resize the picture
+                IPicture picture = shape as IPicture;
+                picture.Height = 160;
+                picture.Width = 130;
+                break;
+            }
+
+        case SlideItemType.Table:
+            {
+                // Get the table shape
+                ITable table = shape as ITable;
+
+                // Iterate through rows and modify text in each cell
+                foreach (IRow row in table.Rows)
+                {
+                    foreach (ICell cell in row.Cells)
+                    {
+                        ModifyTextPart(cell.TextBody);
+                    }
+                }
+                break;
+            }
+
+        case SlideItemType.GroupShape:
+            {
+                // Get the group shape and iterate through child shapes
+                IGroupShape groupShape = shape as IGroupShape;
+                foreach (IShape childShape in groupShape.Shapes)
+                {
+                    ModifySlideElements(childShape);
+                }
+                break;
+            }
+
+        case SlideItemType.Chart:
+            {
+                // Modify chart properties
+                IPresentationChart chart = shape as IPresentationChart;
+                chart.ChartTitle = "Purchase Details";
+                chart.ChartTitleArea.Bold = true;
+                chart.ChartTitleArea.Color = OfficeKnownColors.Red;
+                chart.ChartTitleArea.Size = 20;
+                break;
+            }
+
+        case SlideItemType.SmartArt:
+            {
+                // Modify SmartArt content
+                ISmartArt smartArt = shape as ISmartArt;
+                //Traverse through all nodes inside SmartArt
+                foreach (ISmartArtNode node in smartArt.Nodes)
+                {
+                    ModifyTextPart(node.TextBody);
+                }
+                break;
+            }
+            
+        case SlideItemType.OleObject:
+            {
+                // Modify OLE object size
+                IOleObject oleObject = shape as IOleObject;
+                oleObject.Width = 300;
+                break;
+            }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private static void ModifySlideElements(IShape shape)
+{
+    switch (shape.SlideItemType)
+    {
+        case SlideItemType.AutoShape:
+            {
+                // Modify text if present in the shape
+                if (!string.IsNullOrEmpty(shape.TextBody.Text))
+                {
+                    ModifyTextPart(shape.TextBody);
+                }
+                // If shape is a rectangle, add a hyperlink
+                else if (shape.AutoShapeType == AutoShapeType.Rectangle)
+                {
+                    shape.SetHyperlink("www.google.com");
+                }
+                break;
+            }
+
+        case SlideItemType.Placeholder:
+            {
+                // Modify text if present in the placeholder
+                if (!string.IsNullOrEmpty(shape.TextBody.Text))
+                {
+                    ModifyTextPart(shape.TextBody);
+                }
+                break;
+            }
+
+        case SlideItemType.Picture:
+            {
+                // Resize the picture
+                IPicture picture = shape as IPicture;
+                picture.Height = 160;
+                picture.Width = 130;
+                break;
+            }
+
+        case SlideItemType.Table:
+            {
+                // Get the table shape
+                ITable table = shape as ITable;
+
+                // Iterate through rows and modify text in each cell
+                foreach (IRow row in table.Rows)
+                {
+                    foreach (ICell cell in row.Cells)
+                    {
+                        ModifyTextPart(cell.TextBody);
+                    }
+                }
+                break;
+            }
+
+        case SlideItemType.GroupShape:
+            {
+                // Get the group shape and iterate through child shapes
+                IGroupShape groupShape = shape as IGroupShape;
+                foreach (IShape childShape in groupShape.Shapes)
+                {
+                    ModifySlideElements(childShape);
+                }
+                break;
+            }
+
+        case SlideItemType.Chart:
+            {
+                // Modify chart properties
+                IPresentationChart chart = shape as IPresentationChart;
+                chart.ChartTitle = "Purchase Details";
+                chart.ChartTitleArea.Bold = true;
+                chart.ChartTitleArea.Color = OfficeKnownColors.Red;
+                chart.ChartTitleArea.Size = 20;
+                break;
+            }
+
+         case SlideItemType.SmartArt:
+            {
+                // Modify SmartArt content
+                ISmartArt smartArt = shape as ISmartArt;
+                //Traverse through all nodes inside SmartArt
+                foreach (ISmartArtNode node in smartArt.Nodes)
+                {
+                    ModifyTextPart(node.TextBody);
+                }
+                break;
+            }
+            
+        case SlideItemType.OleObject:
+            {
+                // Modify OLE object size
+                IOleObject oleObject = shape as IOleObject;
+                oleObject.Width = 300;
+                break;
+            }
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Shared Sub ModifySlideElements(ByVal shape As IShape)
+    Select Case shape.SlideItemType
+        Case SlideItemType.AutoShape
+            ' Modify text if present in the shape
+            If Not String.IsNullOrEmpty(shape.TextBody.Text) Then
+                ModifyTextPart(shape.TextBody)
+            ' If shape is a rectangle, add a hyperlink
+            ElseIf shape.AutoShapeType = AutoShapeType.Rectangle Then
+                shape.SetHyperlink("www.google.com")
+            End If
+
+        Case SlideItemType.ConnectionShape
+            Dim connector As IConnector = TryCast(shape, IConnector)
+            ' Modify the arrowhead style at the beginning of the connector line
+            connector.LineFormat.BeginArrowheadStyle = ArrowheadStyle.ArrowDiamond
+
+        Case SlideItemType.Placeholder
+            ' Modify text if present in the placeholder
+            If Not String.IsNullOrEmpty(shape.TextBody.Text) Then
+                ModifyTextPart(shape.TextBody)
+            End If
+
+        Case SlideItemType.Picture
+            ' Resize the picture
+            Dim picture As IPicture = TryCast(shape, IPicture)
+            picture.Height = 160
+            picture.Width = 130
+
+        Case SlideItemType.Table
+            ' Get the table shape
+            Dim table As ITable = TryCast(shape, ITable)
+
+            ' Iterate through rows and modify text in each cell
+            For Each row As IRow In table.Rows
+                For Each cell As ICell In row.Cells
+                    ModifyTextPart(cell.TextBody)
+                Next
+            Next
+
+        Case SlideItemType.GroupShape
+            ' Get the group shape and iterate through child shapes
+            Dim groupShape As IGroupShape = TryCast(shape, IGroupShape)
+            For Each childShape As IShape In groupShape.Shapes
+                ModifySlideElements(childShape)
+            Next
+
+        Case SlideItemType.Chart
+            ' Modify chart properties
+            Dim chart As IPresentationChart = TryCast(shape, IPresentationChart)
+            chart.ChartTitle = "Purchase Details"
+            chart.ChartTitleArea.Bold = True
+            chart.ChartTitleArea.Color = OfficeKnownColors.Red
+            chart.ChartTitleArea.Size = 20
+
+        Case SlideItemType.SmartArt
+            ' Modify SmartArt content
+            Dim smartArt As ISmartArt = TryCast(shape, ISmartArt)
+            ' Traverse through all nodes inside SmartArt
+            For Each node As ISmartArtNode In smartArt.Nodes
+                ModifyTextPart(node.TextBody)
+            Next
+
+        Case SlideItemType.OleObject
+            ' Modify OLE object size
+            Dim oleObject As IOleObject = TryCast(shape, IOleObject)
+            oleObject.Width = 300
+    End Select
+End Sub
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private static void ModifyTextPart(ITextBody textBody)
+{
+    // Iterate through paragraphs in the text body
+    foreach (IParagraph paragraph in textBody.Paragraphs)
+    {
+        // Iterate through text parts and modify the text
+        foreach (ITextPart textPart in paragraph.TextParts)
+        {
+            textPart.Text = "Adventure Works";
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private static void ModifyTextPart(ITextBody textBody)
+{
+    // Iterate through paragraphs in the text body
+    foreach (IParagraph paragraph in textBody.Paragraphs)
+    {
+        // Iterate through text parts and modify the text
+        foreach (ITextPart textPart in paragraph.TextParts)
+        {
+            textPart.Text = "Adventure Works";
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Sub ModifyTextPart(ByVal textBody As ITextBody)
+    ' Iterate through paragraphs in the text body
+    For Each paragraph As IParagraph In textBody.Paragraphs
+        ' Iterate through text parts and modify the text
+        For Each textPart As ITextPart In paragraph.TextParts
+            textPart.Text = "Adventure Works"
+        Next
+    Next
+End Sub
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Iterate-slide-elements).
 
 ## Cloning slide
 
