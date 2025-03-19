@@ -1863,6 +1863,31 @@ The following images show the SmartArt before and after changing an assistant no
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/SmartArts/Set-assistant-to-normal-node/.NET).																																				  
 
+## Limitations
+
+The .NET Word Library (DocIO) has the following limitations when creating SmartArt programmatically or processing SmartArt from an existing Word document.
+
+**Document Processing Functionalities**
+
+* Find and Replace – SmartArt content cannot be searched or replaced programmatically.
+* Grouping– SmartArt cannot be grouped. Attempting this will result in an error.
+* Ungrouping group shape with SmartArt – When ungrouping, only other elements are ungrouped from the group shape and preserved, but SmartArt is not be preserved.
+* Document Comparison – SmartArt elements are not included in document comparison operations.
+
+**Other limitations**
+
+* Mathematical Equations (MathML) – Equations within SmartArt are not supported.
+* Right-to-Left (RTL)– RTL layouts are not supported in SmartArt.
+* Equalized Character Height – Text inside SmartArt does not support equalized character height.
+* Theme Styles – Theme or preset styles applied to SmartArt shapes will not be preserved.
+* Adding Pictures – Only the "Picture Strips" layout type is preserved. Other Picture SmartArt cannot be modified or created programmatically.
+
+**Word-to-PDF and Image Conversion**
+
+SmartArt typically contains graphic properties, including bounds information for SmartArt and its nodes. When creating or modifying SmartArt using the Syncfusion Word Library, these graphic properties (e.g., bounds information) are not generated. Due to this limitation, SmartArt created or modified using the Syncfusion Word Library may not be accurately preserved during Word-to-PDF and image conversions.
+
+**To resolve this**, first save the document using DocIO before converting it to a PDF or image. Then, open the saved document in Microsoft Word, save it again, and finally convert it to a PDF or image using DocIO. This regenerates the required SmartArt properties, ensuring accurate output.
+
 ## Supported SmartArt layout types
 
 1. Basic Block List
