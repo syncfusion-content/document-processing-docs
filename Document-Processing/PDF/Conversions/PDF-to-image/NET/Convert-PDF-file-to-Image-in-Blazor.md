@@ -22,7 +22,6 @@ The Syncfusion&reg; PDF to Image converter is a .NET library used to convert PDF
 * Visual Studio 2022.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-
 Step 1: Create a new C# Blazor Server Application project.
 Select Blazor App from the template and click the Next button.
 ![Create Blazor application](Blazor_images/blazor_step1.png)
@@ -192,7 +191,6 @@ dotnet run
 ```
 
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 By executing the program, you will get the following output in the browser.
