@@ -2533,7 +2533,7 @@ N> This property determines whether the Blink rendering engine can load local re
 
 ## Best Practices: CEF Rendering Engine
 
-You can leverage various features such as Scale, Margin, AdditionalDelay, etc., in the CEF converter settings when performing HTML to PDF conversion with the CEF rendering engine. It's important to initialize the rendering engine first and then set the specific property values. This ensures that the property values are applied correctly and preserved in the output PDF document.
+You can utilize various features, such as Scale, Margin, AdditionalDelay, and more, in the CEF converter settings when performing HTML to PDF conversion with the CEF rendering engine. Initialize the rendering engine first and then configure the specific property values. This ensures that the property values are applied correctly and preserved in the resulting PDF document.
 
 To define the settings, please refer to the sample code example below:
 
