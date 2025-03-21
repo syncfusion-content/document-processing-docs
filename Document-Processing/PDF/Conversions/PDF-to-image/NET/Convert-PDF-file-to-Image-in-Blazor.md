@@ -97,7 +97,6 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
-
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 
 ```
