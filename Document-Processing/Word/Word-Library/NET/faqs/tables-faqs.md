@@ -481,3 +481,7 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Add-page-break-between-rows).
+
+## How to access a specific cell in a table in a Word document?
+
+To access a specific cell in a table, iterate through the rows and cells of the table. Refer [here]( https://help.syncfusion.com/document-processing/word/word-library/net/working-with-tables#iterating-through-table-elements) for detailed instructions on how to iterate through the table and access particular cell.

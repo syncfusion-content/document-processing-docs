@@ -4070,6 +4070,106 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
 
+## Setting transparency for annotations 
+
+The Syncfusion<sup>®</sup> PDF Library enables you to adjust the transparency of annotations using the [Opacity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Opacity) property. This property defines the annotation's transparency level, where a value of 0 makes it fully transparent, and 1 makes it completely opaque.
+
+The following code example how to add transparency to the PDF annotation.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Adding-transparency-for-annotations/.NET/Adding-transparency-for-annotations/Program.cs" %}
+
+// Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page.
+PdfPage page = document.Pages.Add();
+//Create a new rectangle
+RectangleF textAnnotationBounds = new RectangleF(10, 40, 100, 30);
+//Create a new free text annotation.
+PdfFreeTextAnnotation textAnnotation = new PdfFreeTextAnnotation(textAnnotationBounds);
+//Set the text and font
+textAnnotation.MarkupText = "Text Annotation";
+textAnnotation.Font = new PdfStandardFont(PdfFontFamily.Courier, 10);
+
+//Set transparency
+textAnnotation.Opacity = 0.5F;
+
+//Set the line caption type.
+textAnnotation.AnnotationIntent = PdfAnnotationIntent.FreeTextCallout;
+//Add this annotation to the PDF page.
+page.Annotations.Add(textAnnotation);
+ //Create file stream.
+ using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+ {
+     //Save the PDF document to file stream.
+     document.Save(outputFileStream);
+ }
+ //Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page.
+PdfPage page = document.Pages.Add();
+//Create a new rectangle
+RectangleF textAnnotationBounds = new RectangleF(10, 40, 100, 30);
+//Create a new free text annotation.
+PdfFreeTextAnnotation textAnnotation = new PdfFreeTextAnnotation(textAnnotationBounds);
+//Set the text and font
+textAnnotation.MarkupText = "Text Annotation";
+textAnnotation.Font = new PdfStandardFont(PdfFontFamily.Courier, 10);
+
+//Set transparency
+textAnnotation.Opacity = 0.5F;
+
+//Set the line caption type.
+textAnnotation.AnnotationIntent = PdfAnnotationIntent.FreeTextCallout;
+//Add this annotation to the PDF page.
+page.Annotations.Add(textAnnotation);
+//Save the document to disk.
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document.
+Dim document As New PdfDocument()
+' Add a new page.
+Dim page As PdfPage = document.Pages.Add()
+' Create a new rectangle
+Dim textAnnotationBounds As New RectangleF(10, 40, 100, 30)
+' Create a new free text annotation.
+Dim textAnnotation As New PdfFreeTextAnnotation(textAnnotationBounds)
+' Set the text and font
+textAnnotation.MarkupText = "Text Annotation"
+textAnnotation.Font = New PdfStandardFont(PdfFontFamily.Courier, 10)
+
+' Set transparency
+textAnnotation.Opacity = 0.5F
+
+' Set the line caption type.
+textAnnotation.AnnotationIntent = PdfAnnotationIntent.FreeTextCallout
+' Add this annotation to the PDF page.
+page.Annotations.Add(textAnnotation)
+' Save the document to disk.
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Adding-transparency-for-annotations/.NET).
+
 ## Adding comments and review status to the PDF annotation
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
@@ -5481,7 +5581,8 @@ If set, inverts the interpretation of the NoView flat for certain events.<br/><b
 </tbody>
 </table>
 
-## Troubleshooting
+
+## Troubleshooting and FAQ's
 
 <th style="font-size:14px"><b>Annotations are sometimes missing in the acrobat and the other PDF Viewer applications.
 </b></th>
@@ -5510,3 +5611,108 @@ freeText.SetAppearance(true);
 </td>
 </tr>
 </table>
+
+
+## Missing annotation after importing the data into the PDF document
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Annotation appearances are not preserved when importing annotation data into a PDF document</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>By default, annotation appearances are not created when importing annotation data, as annotations may be rendered differently across various viewers. 
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Enabling the appearance ensures that annotations are displayed consistently across all viewers. Refer to the following to update the annotation appearance.
+
+<br/><br/>
+Please refer to the below code example to achieve this on your end.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document
+FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+//Import annotation data from XFDF stream
+FileStream xfdfStream = new FileStream("Annotations.xfdf", FileMode.Open, FileAccess.Read);
+lDoc.ImportAnnotations(xfdfStream, AnnotationDataFormat.XFdf);
+
+//Set appearance for all the annotations
+foreach (PdfLoadedPage page in lDoc.Pages)
+{
+    foreach (PdfAnnotation annotation in page.Annotations)
+    {
+        annotation.SetAppearance(true);
+    }
+}
+//Create file stream.
+using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+{
+    //Save the PDF document to file stream.
+    lDoc.Save(outputFileStream);
+}
+//Closes the document
+lDoc.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Loads the document
+PdfLoadedDocument lDoc = new PdfLoadedDocument("input.pdf");
+//Import the annotation data from the JSON file
+lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFdf);
+//Set appearance for all the annotations
+foreach (PdfLoadedPage page in lDoc.Pages)
+{
+    foreach (PdfAnnotation annotation in page.Annotations)
+    {
+        annotation.SetAppearance(true);
+    }
+}
+
+//Saves the document
+lDoc.Save("Annotation.pdf");
+lDoc.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from the file
+Dim lDoc As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
+
+' Import annotations from a JSON file
+lDoc.ImportAnnotations("Annotations.xfdf", AnnotationDataFormat.XFDF)
+
+'Iterate through each page in the loaded document
+For Each pages As PdfLoadedPage In lDoc.Pages
+    'Iterate through each annotation in the page
+    For Each annot As PdfLoadedAnnotation In pages.Annotations
+        'Set the appearance for each annotation
+        annot.SetAppearance(True)
+    Next
+Next
+
+
+'Save the updated document
+lDoc.Save("Annotation.pdf")
+
+'Close the document instances
+lDoc.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+</tr>
+
+</table>
+

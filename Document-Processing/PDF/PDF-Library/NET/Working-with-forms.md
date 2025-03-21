@@ -3346,6 +3346,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The form field editing or filling capabilities can be removed by either flattening the PDF document or by marking the form or field as read only.
 
+### Flattening form fields in a PDF
+
 Essential<sup>&reg;</sup> PDF provides support to [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_Flatten) a form field by removing the existing form field and replacing it with graphical objects that would resemble the form field and cannot be edited.
 
 Please refer the sample for flattening the form fields in new PDF document.
@@ -3555,6 +3557,8 @@ loadedDocument.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flattening-form-fields-in-an-existing-PDF-document).
+
+### Marking form fields as Read-Only
 
 To prevent the user from changing the form field content, you can also use [Readonly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html#Syncfusion_Pdf_Interactive_PdfField_ReadOnly) property.
 

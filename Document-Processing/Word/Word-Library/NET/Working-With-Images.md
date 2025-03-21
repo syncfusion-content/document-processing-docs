@@ -634,9 +634,9 @@ using (WordDocument document = new WordDocument())
     //Add a new paragraph to the section.
     IWParagraph firstParagraph = section.AddParagraph();
     //Get the image as a byte array.
-    byte[] imageBytes = File.ReadAllBytes(Buyers.png);
+    byte[] imageBytes = File.ReadAllBytes("Buyers.png");
     //Get the SVG image as a byte array.
-    byte[] svgData = File.ReadAllBytes(Buyers.svg");
+    byte[] svgData = File.ReadAllBytes("Buyers.svg");
     //Add SVG image to the paragraph.
     IWPicture picture = firstParagraph.AppendPicture(svgData, imageBytes);
     //Set height and width for the image.
@@ -657,9 +657,9 @@ using (WordDocument document = new WordDocument())
     //Add a new paragraph to the section.
     IWParagraph firstParagraph = section.AddParagraph();
     //Get the image as a byte array.
-    byte[] imageBytes = File.ReadAllBytes(Buyers.png);
+    byte[] imageBytes = File.ReadAllBytes("Buyers.png");
     //Get the SVG image as a byte array.
-    byte[] svgData = File.ReadAllBytes(Buyers.svg");
+    byte[] svgData = File.ReadAllBytes("Buyers.svg");
     //Add SVG image to the paragraph.
     IWPicture picture = firstParagraph.AppendPicture(svgData, imageBytes);
     //Set height and width for the image.

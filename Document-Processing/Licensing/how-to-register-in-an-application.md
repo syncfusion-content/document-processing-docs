@@ -7,9 +7,9 @@ control: Essential Studio
 documentation: ug
 ---
 
-# Register Syncfusion License key in Document Processing application
+# Register Syncfusion<sup>&reg;</sup> License key in Document Processing application
 
-The generated license key is just a string that needs to be registered before any Syncfusion control is initiated. The following code is used to register the license.
+The generated license key is just a string that needs to be registered before any Syncfusion<sup>&reg;</sup> control is initiated. The following code is used to register the license.
 
 {% tabs %}
 {% highlight c# %}
@@ -18,9 +18,9 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 {% endtabs %}
 
 N> * Place the license key between double quotes.  Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
-* Syncfusion license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion license key can be deployed on any system that does not have an internet connection.
+* Syncfusion<sup>&reg;</sup> license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion<sup>&reg;</sup> license key can be deployed on any system that does not have an internet connection.
 
-I> Syncfusion license keys can be validated during the Continuous Integration (CI) processes to ensure proper licensing and prevent licensing errors during deployment. Refer to the [CI License Validation](https://help.syncfusion.com/document-processing/licensing/licensing-faq/ci-license-validation) section for detailed instructions on how to implement it.
+I> Syncfusion<sup>&reg;</sup> license keys can be validated during the Continuous Integration (CI) processes to ensure proper licensing and prevent licensing errors during deployment. Refer to the [CI License Validation](https://help.syncfusion.com/document-processing/licensing/licensing-faq/ci-license-validation) section for detailed instructions on how to implement it.
 
 Recommended place to register the license in the various platforms controls (ASP.NET Core, Xamarin, etc.) Which included in Document Processing platforms is covered in the following section.
 
@@ -211,10 +211,10 @@ public App()
 {% endhighlight %}
 {% endtabs %}
 
-N> If you are developing an application using Gorilla Player SDK, it is must to register the Syncfusion license key in Xamarin.Forms.Android, Xamarin.Forms.iOS, and Xamarin.Forms.UWP.
-   Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsandroid) to register Syncfusion license key in Xamarin.Forms.Android
-   Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsios) to register Syncfusion license key in Xamarin.Forms.iOS
-   Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsuwp) to register Syncfusion license key in Xamarin.Forms.UWP
+N> If you are developing an application using Gorilla Player SDK, it is must to register the Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.Android, Xamarin.Forms.iOS, and Xamarin.Forms.UWP.
+   Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsandroid) to register Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.Android
+   Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsios) to register Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.iOS
+   Refer [this link](https://help.syncfusion.com/xamarin/licensing/how-to-register-in-an-application#xamarinformsuwp) to register Syncfusion<sup>&reg;</sup> license key in Xamarin.Forms.UWP
 
 
 
@@ -236,7 +236,7 @@ protected override async void OnInitialized()
 
 ## Xamarin.Android
 
-Register the license key in **OnCreate** override method of your main activity class before initializing any Syncfusion control.
+Register the license key in **OnCreate** override method of your main activity class before initializing any Syncfusion<sup>&reg;</sup> control.
 
 {% tabs %}
 {% highlight c# %}
@@ -297,9 +297,9 @@ SyncfusionLicenseProvider.registerLicense("YOUR LICENSE KEY");
 
 N> License key registration is not required for Java before v19.1.
 
-## JavaScript (Essential JS 2)
+## JavaScript (Essential<sup>&reg;</sup> JS 2)
 
-Syncfusion license key should be registered, if your project using Syncfusion EJ2-JavaScript packages reference. The generated license key is a string that needs to be registered after any [Syncfusion JavaScript script reference](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start/#configure-syncfusion-javascript-es5-control-in-the-application-1). 
+Syncfusion<sup>&reg;</sup> license key should be registered, if your project using Syncfusion<sup>&reg;</sup> EJ2-JavaScript packages reference. The generated license key is a string that needs to be registered after any [Syncfusion JavaScript script reference](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start/#configure-syncfusion-javascript-es5-control-in-the-application-1). 
 
 The following code is used to register the license.
 
@@ -316,7 +316,7 @@ ej.base.registerLicense('License Key');
 
 ### JavaScript es6 / TypeScript
 
-Register the license key at the entry point of the project before using the Syncfusion controls.
+Register the license key at the entry point of the project before using the Syncfusion<sup>&reg;</sup> controls.
 
 {% tabs %}
 {% highlight JS %}
@@ -393,13 +393,13 @@ createApp(App).mount('#app')
 {% endhighlight %}
 {% endtabs %}
 
-## JavaScript (Essential JS 1)
+## JavaScript (Essential<sup>&reg;</sup> JS 1)
 
-You must have an active Syncfusion Essential JS license to use Syncfusion Essential JS1 (.js files). However, if you only use the Syncfusion Essential JS1 product, you do not need to register the Syncfusion License keys in your scripts (.js files).
+You must have an active Syncfusion<sup>&reg;</sup> Essential JS license to use Syncfusion<sup>&reg;</sup> Essential JS1 (.js files). However, if you only use the Syncfusion<sup>&reg;</sup> Essential JS1 product, you do not need to register the Syncfusion<sup>&reg;</sup> License keys in your scripts (.js files).
 
 For the following platforms, you can use the script files without registering the license keys.
 
-### JavaScript (Essential JS 1)
+### JavaScript (Essential<sup>&reg;</sup> JS 1)
 
 * AngularJS
 

@@ -7,12 +7,11 @@ documentation: UG
 keywords: PDF, Excel, Word, PowerPoint, Office, SDK, Automation, API, create, edit, convert, read
 ---
 
-> With the 2024 Volume 4 release, we will discontinue support for .NET Framework 4.0 in WinForms, WPF, ASP.NET MVC, and Document Processing Libraries. Please plan to upgrade to .NET Framework 4.6.2 or higher.<br>
-With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .Net 8.0 or higher.
+> With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .Net 8.0 or higher.
 
-# Welcome to Syncfusion Essential Document Processing Platform
+# Welcome to Syncfusion<sup>&reg;</sup> Essential Document Processing Platform
 
-Essential Document Processing is a collection of .NET class libraries to create, edit, write, and convert PDF, Excel, Word, and PowerPoint file formats in .NET Framework [C#, VB.NET], .NET Core, UWP, and Xamarin applications without Microsoft Office or Adobe dependencies.
+Essential<sup>&reg;</sup> Document Processing is a collection of .NET class libraries to create, edit, write, and convert PDF, Excel, Word, and PowerPoint file formats in .NET Framework [C#, VB.NET], .NET Core, UWP, and Xamarin applications without Microsoft Office or Adobe dependencies.
 
 ## How to best read this user guide
 
@@ -43,7 +42,7 @@ Description
 </tr>
 <tr>
 <td>
-Essential PDF
+Essential<sup>&reg;</sup> PDF
 </td>
 <td>
 .NET Class library used to create, read, and write PDF files in [.NET Framework](https://www.syncfusion.com/document-processing/pdf-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/pdf-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/pdf-framework/uwp/), [Xamarin](https://www.syncfusion.com/document-processing/pdf-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/pdf-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/pdf-framework/maui/) applications.
@@ -51,7 +50,7 @@ Essential PDF
 </tr>
 <tr>
 <td>
-Essential XlsIO
+Essential<sup>&reg;</sup> XlsIO
 </td>
 <td>
 .NET Class library used to create, read, edit, write, and convert Microsoft Excel files in [.NET Framework](https://www.syncfusion.com/document-processing/excel-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/excel-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/excel-framework/uwp/), [Xamarin](https://www.syncfusion.com/document-processing/excel-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/excel-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/excel-framework/maui/) applications.
@@ -59,7 +58,7 @@ Essential XlsIO
 </tr>
 <tr>
 <td>
-Essential DocIO
+Essential<sup>&reg;</sup> DocIO
 </td>
 <td>
 .NET Class library used to create, read, edit, and convert Microsoft Word files in [.NET Framework](https://www.syncfusion.com/document-processing/word-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/word-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/word-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/word-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/word-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/word-framework/maui/) applications.
@@ -67,7 +66,7 @@ Essential DocIO
 </tr>
 <tr>
 <td>
-Essential Presentation
+Essential<sup>&reg;</sup> Presentation
 </td>
 <td>
 .NET Class library used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in [.NET Framework](https://www.syncfusion.com/document-processing/powerpoint-framework/net/) [Windows Forms, WPF, ASP.NET MVC, ASP.NET], [.NET Core](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core/), [UWP](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/), and [Xamarin](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin/), [WinUI](https://www.syncfusion.com/document-processing/powerpoint-framework/winui/) and [.Net MAUI](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/) applications.
@@ -77,9 +76,9 @@ Essential Presentation
 
 ## Document Processing Security Information
 
-Syncfusion products are used in some of the most sensitive applications.  We must be concerned about security.
+Syncfusion<sup>&reg;</sup> products are used in some of the most sensitive applications.  We must be concerned about security.
 
-We prioritized security when developing our products.  Each control is self-contained and does not require outside server or Syncfusion API.  Our products exist as defined by the developer and only do the commands defined by the developer.  We built them to work with any security paradigms that our customers can utilize.
+We prioritized security when developing our products.  Each control is self-contained and does not require outside server or Syncfusion<sup>&reg;</sup> API.  Our products exist as defined by the developer and only do the commands defined by the developer.  We built them to work with any security paradigms that our customers can utilize.
 
 Our customers cannot use any hosted Web APIs provided by syncfusion.  We provide the necessary libraries and code examples for our customers to build their own APIs by allowing them to customize the functionality and manage their own security.
 
