@@ -422,7 +422,221 @@ By executing the program, you will get the **image** as follows.
 ![PowerPoint to Image in Blazor server app](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
 {% endtabcontent %}
- 
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
+
+Step 1. Open JetBrains Rider and create a new Blazor Server app project.
+* Launch JetBrains Rider.
+* Click new solution on the welcome screen.
+
+![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
+
+* In the new Solution dialog, select Project Type as Web.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Choose template as **Blazor Web App**.
+* Enter a project name and specify the location.
+* Click create.
+
+![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-Server-application.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) in the search bar.
+* Ensure that "nuget.org" is selected as the package source.
+* Select the latest Syncfusion.PresentationRenderer.Net.Core NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Blazor/Select-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+* Click the Install button to complete the installation.
+
+![Install the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Blazor/Install-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+
+Step 3: Create a razor file with name as **Presentation** under **Pages** folder and include the following namespaces in the file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+@page "/presentation"
+@using System.IO;
+@using Convert_PowerPoint_Presentation_to_Image;
+@inject Convert_PowerPoint_Presentation_to_Image.Data.PresentationService service
+@inject Microsoft.JSInterop.IJSRuntime JS
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 4: Add the following code to create a new button.
+
+{% tabs %}
+{% highlight CSHTML %}
+
+<h2>Syncfusion PowerPoint (Presentation) library</h2>
+<p>Syncfusion PowerPoint (Presentation) library is used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<button class="btn btn-primary" @onclick="@ConvertPPTXtoImage">Convert PPTX to Image</button>
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Add the following code in **Presentation.razor** file to **convert PowerPoint to image** and download the **image file**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+@code {
+    MemoryStream documentStream;
+    /// <summary>
+    /// Download the image file.
+    /// </summary>
+    protected async void ConvertPPTXtoImage()
+    {
+        documentStream = service.ConvertPPTXtoImage();
+        await JS.SaveAs("PPTXtoImage.Jpeg", documentStream.ToArray());
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: Create a new cs file with name as **PowerPointService** under Data folder and include the following namespaces in the file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Presentation;
+using Syncfusion.PresentationRenderer;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 7: Create a new MemoryStream method with name as **ConvertPPTXToImage** in **PowerPointService** class and include the following code snippet to **convert a PowerPoint to image in Blazor Server app**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+//Open the file as Stream.
+using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{
+    //Open the existing PowerPoint presentation with loaded stream.
+    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    {
+        //Initialize the PresentationRenderer to perform image conversion.
+        pptxDoc.PresentationRenderer = new PresentationRenderer();
+        //Convert PowerPoint slide to image as stream.
+        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+        {
+            //Save the converted image file to MemoryStream.
+            MemoryStream Stream = new MemoryStream();
+            stream.CopyTo(Stream);
+            Stream.Position = 0;
+            //Download image file in the browser.
+            return Stream;
+        }
+    }
+}  
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 8: Add the following line to the Program.cs file to register the PresentationService as a scoped service in your Blazor application.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+builder.Services.AddSingleton<PresentationService>();
+
+{% endhighlight %}
+{% endtabs %}
+            
+Step 9: Create a new class file in the project, with name as FileUtils and add the following code to invoke the JavaScript action to download the file in the browser.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+public static class FileUtils
+{
+    public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
+        => js.InvokeAsync<object>(
+             "saveAsFile",
+             filename,
+             Convert.ToBase64String(data));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 10: Add the following JavaScript function in the **_Host.cshtml** in the Pages folder.
+
+{% tabs %}
+{% highlight HTML %}
+
+<script type="text/javascript">
+    function saveAsFile(filename, bytesBase64) 
+    {
+        if (navigator.msSaveBlob) 
+        {
+            //Download document in Edge browser
+            var data = window.atob(bytesBase64);
+            var bytes = new Uint8Array(data.length);
+            for (var i = 0; i < data.length; i++) {
+                bytes[i] = data.charCodeAt(i);
+            }
+            var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+            navigator.msSaveBlob(blob, filename);
+        }
+        else 
+        {
+            var link = document.createElement('a');
+            link.download = filename;
+            link.href = "data:application/octet-stream;base64," + bytesBase64;
+            document.body.appendChild(link); // Needed for Firefox
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 11: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
+
+{% tabs %}
+
+{% highlight HTML %}
+
+ <li class="nav-item px-3">
+    <NavLink class="nav-link" href="presentation">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
+    </NavLink>
+</li>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 12: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 13: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Blazor/Server-app).
+
+By executing the program, you will get the **image** as follows.
+
+![PowerPoint to Image in Blazor server app](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
@@ -771,7 +985,183 @@ By executing the program, you will get the **image** as follows.
 N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size. You can also explore our [Blazor PowerPoint library demo](https://blazor.syncfusion.com/demos/powerpoint/getting-started) that shows how to create and modify PowerPoint files from C# with just five lines of code.
 
 {% endtabcontent %}
- 
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
+
+Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
+* Launch JetBrains Rider.
+* Click new solution on the welcome screen.
+
+![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
+
+* In the new Solution dialog, select Project Type as Web.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Choose template as **Blazor WebAssembly Standalone App**.
+* Enter a project name and specify the location.
+* Click create.
+
+![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-WASM-application.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) in the search bar.
+* Ensure that "nuget.org" is selected as the package source.
+* Select the latest Syncfusion.PresentationRenderer.Net.Core NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Blazor/Select-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+* Click the Install button to complete the installation.
+
+![Install the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Blazor/Install-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+* Similary install the [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) NuGet package from [NuGet.org](https://www.nuget.org/)
+
+![Install the SkiaSharp.Views.Blazor NuGet package](Workingwith-Blazor/Install-SkiaSharp.Views.Blazor-NuGet.png)
+
+N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 2. Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime. After installing wasm tools using the above commands, please restart your machine.
+
+Step 3: Create a razor file with name as ``Presentation`` under ``Pages`` folder and add the following namespaces in the file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+@page "/presentation"
+@inject Microsoft.JSInterop.IJSRuntime JS
+@inject HttpClient client
+@using System.IO
+@using Syncfusion.Presentation
+@using Syncfusion.PresentationRenderer
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 4: Add the following code to create a new button.
+
+{% tabs %}
+{% highlight CSHTML %}
+
+<h2>Syncfusion PowerPoint library (Essential Presentation)</h2>
+<p>Syncfusion Blazor PowerPoint library (Essential Presentation) used to create, read, edit, and convert PowerPoint files in your applications without Microsoft Office dependencies.</p>
+<button class="btn btn-primary" @onclick="@PPTXToImage">Convert PPTX to image</button>
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Create a new async method with name as ``PPTXToImage`` and include the following code snippet to **convert a PowerPoint to image in Blazor WASM app**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+//Input data file is inside the wwwroot folder.
+using (Stream inputStream = await client.GetStreamAsync("sample-data/Input.pptx"))
+{
+    //Open an existing PowerPoint Presentation file.
+    using (IPresentation pptxDoc = Syncfusion.Presentation.Presentation.Open(inputStream))
+    {
+        //Initialize the PresentationRenderer to perform image conversion.
+        pptxDoc.PresentationRenderer = new PresentationRenderer();
+        //Convert the entire Presentation to images.
+        Stream[] imageStreams = pptxDoc.RenderAsImages(ExportImageFormat.Jpeg);
+        for (int i = 0; i < imageStreams.Length; i++)
+        {
+            imageStreams[i].Position = 0;
+            //Download image file in the browser.
+            await JS.SaveAs("PPTXToImage_" + i + ".jpeg", (imageStreams[i] as MemoryStream).ToArray());
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: To download the PowerPoint presentation in browser, create a class file with FileUtils name and add the following code to invoke the JavaScript action to download the file in the browser.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+public static class FileUtils
+{
+    public static ValueTask<object> SaveAs(this IJSRuntime js, string filename, byte[] data)
+         => js.InvokeAsync<object>(
+            "saveAsFile",
+            filename,
+            Convert.ToBase64String(data));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 7: Add the following JavaScript function in the **Index.html** file present under ``wwwroot``.
+
+{% tabs %}
+{% highlight HTML %}
+
+<script type="text/javascript">
+    function saveAsFile(filename, bytesBase64) {
+        if (navigator.msSaveBlob) {
+            //Download document in Edge browser
+            var data = window.atob(bytesBase64);
+            var bytes = new Uint8Array(data.length);
+            for (var i = 0; i < data.length; i++) {
+                bytes[i] = data.charCodeAt(i);
+            }
+            var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+            navigator.msSaveBlob(blob, filename);
+        }
+        else {
+            var link = document.createElement('a');
+            link.download = filename;
+            link.href = "data:application/octet-stream;base64," + bytesBase64;
+            document.body.appendChild(link); // Needed for Firefox
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 8: Add the following code snippet in the razor file of Navigation menu in the Shared folder.
+
+{% tabs %}
+
+{% highlight HTML %}
+
+ <li class="nav-item px-3">
+    <NavLink class="nav-link" href="presentation">
+        <span class="oi oi-list-rich" aria-hidden="true"></span> Generate Presentation
+    </NavLink>
+</li>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 9: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 10: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Blazor/WASM-app).
+
+By executing the program, you will get the **image** as follows.
+
+![PowerPoint to Image in Blazor WASM app](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
+
+N> Even though PowerPoint library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size. You can also explore our [Blazor PowerPoint library demo](https://blazor.syncfusion.com/demos/powerpoint/getting-started) that shows how to create and modify PowerPoint files from C# with just five lines of code.
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 

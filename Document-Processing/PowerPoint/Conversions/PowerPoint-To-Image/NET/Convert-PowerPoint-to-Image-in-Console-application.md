@@ -170,12 +170,109 @@ By executing the program, you will get the **Image** as follows.
 ![Output image in .NET Core console application](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
 {% endtabcontent %}
- 
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
+
+Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+* Launch JetBrains Rider.
+* Click new solution on the welcome screen.
+
+![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
+
+* In the new Solution dialog, select Project Type as Console.
+* Enter a project name and specify the location.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Click create.
+
+![Creating a new .NET Core console application in JetBrains Rider](Console-Images/NET/Create-Console-NET-core-sample.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) in the search bar.
+* Ensure that "nuget.org" is selected as the package source.
+* Select the latest Syncfusion.PresentationRenderer.Net.Core NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.PresentationRenderer.Net.Core NuGet package](Console-Images/NET/Select-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+* Click the Install button to complete the installation.
+
+![Install the Syncfusion.PresentationRenderer.Net.Core NuGet package](Console-Images/NET/Install-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+
+Step 3: Include the following namespaces in **Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Presentation;
+using Syncfusion.PresentationRenderer;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 4: Include the below code snippet in **Program.cs** to **convert PowerPoint to image**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+//Open the file as Stream.
+using (FileStream fileStream = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+{
+    //Open the existing PowerPoint presentation.
+    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    {
+        //Initialize the PresentationRenderer to perform image conversion.
+        pptxDoc.PresentationRenderer = new PresentationRenderer();
+        //Convert PowerPoint slide to image as stream.
+        Stream stream = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Presentation.ExportImageFormat.Jpeg);
+        //Reset the stream position.
+        stream.Position = 0;
+        //Create the output image file stream.
+        using (FileStream fileStreamOutput = File.Create(Path.GetFullPath("Data/PPTXToImage.jpeg")))
+        {
+            //Copy the converted image stream into created output stream.
+            stream.CopyTo(fileStreamOutput);
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 6: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET).
+
+By executing the program, you will get the **Image** as follows.
+
+![Output image in .NET Core console application](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 ## Convert PowerPoint to Image in .NET Framework
 
-The below steps illustrates **convert PowerPoint to image** in console application using **.NET Framework**.
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+**Prerequisites:**
+
+* Visual Studio 2022.
+* Install **.NET desktop development** workload with necessary .NET Framework SDK.
 
 Step 1: Create a new **.NET FrameWork console application** project.
 ![Create a .NET FrameWork Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
@@ -197,7 +294,7 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the below code snippet in **Program.cs** to **convert PowerPoint to image**.
+Step 4: Include the below code snippet in **Program.cs** to **convert PowerPoint to image**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -214,8 +311,97 @@ using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {% endhighlight %}
 {% endtabs %}
 
+Step 5: Build the project.
+
+Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 6: Run the project.
+
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-Framework).
 
 By executing the program, you will get the **image** as follows.
 
 ![Output Image document in .NET FrameWork console application](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
+
+{% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+**Prerequisites:**
+
+* JetBrains Rider.
+* Install .NET Framework Developer Pack.
+
+Step 1. Open JetBrains Rider and create a new .NET Framework console application project.
+* Launch JetBrains Rider.
+* Click new solution on the welcome screen.
+
+![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
+
+* In the new Solution dialog, select Project Type as Console.
+* Enter a project name and specify the location.
+* Select the target framework as Full Framework and choose the desired version.
+* Click create.
+
+![Creating a new .NET Framework console application in JetBrains Rider](Console-Images/NET-FrameWork/Create-Console-Framework-project.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PresentationToPdfConverter.WinForms](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/) in the search bar.
+* Ensure that "nuget.org" is selected as the package source.
+* Select the latest Syncfusion.PresentationToPdfConverter.WinForms NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.PresentationToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Select-Syncfusion.PresentationToPdfConverter.WinForms-NuGet.png)
+
+* Click the Install button to complete the installation.
+
+![Install the Syncfusion.PresentationToPdfConverter.WinForms NuGet package](Console-Images/NET-FrameWork/Install-Syncfusion.PresentationToPdfConverter.WinForms-NuGet.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+
+Step 3: Include the following namespaces in **Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Presentation;
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 4: Include the below code snippet in **Program.cs** to **convert PowerPoint to image**.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+//Open an existing PowerPoint Presentation.
+using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
+{
+    //Convert the first slide into image.
+    Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile);
+    //Save the image file.
+    image.Save("PPTXtoImage.Jpeg");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Build the project.
+
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+
+Step 6: Run the project.
+
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-Framework).
+
+By executing the program, you will get the **image** as follows.
+
+![Output Image document in .NET FrameWork console application](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
+
+{% endtabcontent %}
+ 
+{% endtabcontents %}

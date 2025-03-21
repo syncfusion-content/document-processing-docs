@@ -1065,6 +1065,42 @@ document.Close(True)
 
 {% endtabs %}
 
+## Supported barcode error correction level
+
+This [ErrorCorrectionLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfErrorCorrectionLevel.html) property can be used in the code to specify the error correction level when generating QR codes, ensuring the QR code can withstand potential damage based on its intended usage.
+
+<table>
+ <thead>
+    <tr>
+      <th>Error Correction Level</th>
+      <th>Tolerance to Damage</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Low</b></td>
+      <td>Up to 7%	</td>
+       <td>This is the lowest error correction level. It allows the QR code to store the maximum amount of data but can tolerate only minimal damage or obstruction (up to 7%). It is less resilient to damage.</td>
+    </tr>
+    <tr>
+      <td><b>Medium</b></td>
+      <td>Up to 15%</td>
+      <td>The medium error correction level balances data capacity and error resilience. It can recover from up to 15% damage or obstruction in the QR code.</td>
+    </tr>
+    <tr>
+      <td><b>Quartile</b></td>
+      <td>Up to 25%</td>
+      <td>The quartile level can tolerate moderate damage (up to 25%). This level is useful in environments where the QR code is exposed to significant wear or damage. It reduces data capacity but increases resilience.</td>
+    </tr>
+    <tr>
+      <td><b>High</b></td>
+      <td>Up to 30%</td>
+      <td>The highest error correction level provides the maximum resilience to damage. It can recover from up to 30% damage or obstruction, but it stores the least amount of data. It is used when durability is more important than data capacity.</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Supported barcode types
 
 The following table contains the supported types and associated valid characters.

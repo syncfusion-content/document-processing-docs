@@ -7,7 +7,12 @@ documentation: UG
 ---
 # Working with Security
 
-Essential<sup>&reg;</sup> PDF allows you to [protect the PDF document](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using encryption and set permission to the PDF document operations like printing, editing, copy content etc. using user password and owner password. Two types of encryption algorithms are available
+Essential<sup>&reg;</sup> PDF enables you to [secure PDF documents](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using various encryption algorithms while defining specific permissions such as printing, editing, and copying content. You can apply both a user password (document open password) and an owner password (permission password) for enhanced protection.
+
+Watch the following video to learn how to encrypt and decrypt PDF documents using the .NET PDF library.
+{% youtube "https://www.youtube.com/watch?v=aGVDvIf3ODI" %}
+
+The two supported encryption algorithms are:
 1. Rivest Cipher 4 (RC4)
 2. Advanced Encryption Standard (AES)
 
@@ -1158,6 +1163,53 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can change the permission of the PDF document using the [Permissions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Permissions). The following code snippet illustrates the same.
 
+<table>
+  <thead>
+    <tr>
+      <th>Permission Flag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>PdfPermissionsFlags.Print</b></td>
+      <td>Grants permission to print the document.</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.EditContent</b></td>
+      <td>Grants permission to modify the content.</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.CopyContent</b></td>
+      <td>Allows copying content from the document (e.g., text or images).</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.EditAnnotations</b></td>
+      <td>Allows modification of annotations, such as highlights or comments.</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.FillFields</b></td>
+      <td>Allows filling out interactive form fields.</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.AssembleDocument</b></td>
+      <td>Allows the document to be used in an assembly (i.e., modifying or interacting with the file).</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.AccessibilityCopyContent</b></td>
+      <td>Allows accessibility content copying.</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.FullQualityPrint</b></td>
+      <td>Allows printing in full quality.</td>
+    </tr>
+    <tr>
+      <td><b>PdfPermissionsFlags.Default</b></td>
+      <td>The document has no restrictions.</td>
+    </tr>
+  </tbody>
+</table>
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/Change-the-permission-of-the-PDF-document/.NET/Change-the-permission-of-the-PDF-document/Program.cs" %}
@@ -1325,38 +1377,38 @@ Essential<sup>&reg;</sup> PDF supports identifying the document whether it is pr
 The following table shows the various combination for loading the secured document with user or owner password:
 
 <table>
-<thead>
-<tr>
-<th>
-Document type</th><th>
-Open with</th><th>
-User password</th><th>
-Owner password</th></tr>
-</thead>
-<tbody>
-<tr>
-<td>
-PDF document secured with both the owner and user passwords.</td><td>
-User password</td><td>
-Returns user password</td><td>
-Returns null</td></tr>
-<tr>
-<td>
-PDF document secured with both the owner and user passwords.</td><td>
-Owner password</td><td>
-Returns user password <br/><br/><b>Note:</b> Returns null for AES 256 and AES 256 Revision 6 encryptions.</td><td>
-Returns owner password</td></tr>
-<tr>
-<td>
-PDF document secured with owner password alone.</td><td>
-Owner password</td><td>
-Returns null</td><td>
-Returns owner password</td></tr>
-<tr>
-<td>
-PDF document secured with user password alone.</td><td>
-User Password</td><td>
-Returns user password</td><td>
-Returns owner Password (owner password is same as the user password; it allows full permission to users).</td></tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Document Type</th>
+      <th>Open With</th>
+      <th>User Password</th>
+      <th>Owner Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PDF document secured with both the owner and user passwords.</td>
+      <td>User password</td>
+      <td>Returns user password</td>
+      <td>Returns null</td>
+    </tr>
+    <tr>
+      <td>PDF document secured with both the owner and user passwords.</td>
+      <td>Owner password</td>
+      <td>Returns user password <br/><br/><b>Note:</b> Returns null for AES 256 and AES 256 Revision 6 encryptions.</td>
+      <td>Returns owner password</td>
+    </tr>
+    <tr>
+      <td>PDF document secured with owner password alone.</td>
+      <td>Owner password</td>
+      <td>Returns null</td>
+      <td>Returns owner password</td>
+    </tr>
+    <tr>
+      <td>PDF document secured with user password alone.</td>
+      <td>User password</td>
+      <td>Returns user password</td>
+      <td>Returns owner password (owner password is same as the user password; it allows full permission to users).</td>
+    </tr>
+  </tbody>
 </table>
