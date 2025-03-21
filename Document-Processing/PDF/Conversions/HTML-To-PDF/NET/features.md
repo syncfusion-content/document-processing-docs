@@ -2530,3 +2530,97 @@ End Using
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Disabling-local-file-access-HTML-to-PDF/.NET).
 
 N> This property determines whether the Blink rendering engine can load local resources such as CSS files, JavaScript files, images, and fonts referenced in the HTML. By default, this property is set to true.
+
+## Best Practices: CEF Rendering Engine
+
+You can leverage various features such as Scale, Margin, AdditionalDelay, etc., in the CEF converter settings when performing HTML to PDF conversion with the CEF rendering engine. It's important to initialize the rendering engine first and then set the specific property values. This ensures that the property values are applied correctly and preserved in the output PDF document.
+
+To define the settings, please refer to the sample code example below:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+byte[] CreatePdfFromUrl(string url, CefConverterSettings settings)
+{
+    // Create an instance of the HTML to PDF converter
+    HtmlToPdfConverter pdfConverter = new HtmlToPdfConverter()
+    {
+        RenderingEngine = HtmlRenderingEngine.Cef, // Set the rendering engine to Cef
+        ConverterSettings = settings, // Apply the provided converter settings
+    };
+
+    // Convert the URL to a PDF document
+    using (PdfDocument document = pdfConverter.Convert(url))
+    {
+        // Save the document to a memory stream
+        using (MemoryStream stream = new MemoryStream())
+        {
+            document.Save(stream); // Save the converted document to the stream
+            stream.Position = 0; // Reset the stream position to the beginning
+            return stream.ToArray(); // Return the byte array of the PDF
+        }
+    }
+}
+
+// Define the URL and settings
+string url = "http://google.com";
+
+// Create a PDF from the URL with custom settings
+byte[] pdfBytes = CreatePdfFromUrl(url, new CefConverterSettings()
+{
+    AdditionalDelay = 5000, // Wait time before conversion starts
+    ViewPortSize = new Syncfusion.Drawing.Size(1920, 1080), // Set the viewport size for the rendering
+    Orientation = PdfPageOrientation.Landscape, // Set the PDF orientation to Landscape
+    Scale = 0.7f, // Set the scale of the rendered content
+    EnableJavaScript = true, // Enable JavaScript execution
+    EnableHyperLink = false, // Disable hyperlinks in the PDF
+    HtmlEncoding = Encoding.UTF8 // Set the encoding for the HTML content
+});
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+byte[] CreatePdfFromUrl(string url, CefConverterSettings settings)
+{
+    // Create an instance of the HTML to PDF converter
+    HtmlToPdfConverter pdfConverter = new HtmlToPdfConverter()
+    {
+        RenderingEngine = HtmlRenderingEngine.Cef, // Set the rendering engine to Cef
+        ConverterSettings = settings, // Apply the provided converter settings
+    };
+
+    // Convert the URL to a PDF document
+    using (PdfDocument document = pdfConverter.Convert(url))
+    {
+        // Save the document to a memory stream
+        using (MemoryStream stream = new MemoryStream())
+        {
+            document.Save(stream); // Save the converted document to the stream
+            stream.Position = 0; // Reset the stream position to the beginning
+            return stream.ToArray(); // Return the byte array of the PDF
+        }
+    }
+}
+
+// Define the URL and settings
+string url = "http://google.com";
+
+// Create a PDF from the URL with custom settings
+byte[] pdfBytes = CreatePdfFromUrl(url, new CefConverterSettings()
+{
+    AdditionalDelay = 5000, // Wait time before conversion starts
+    ViewPortSize = new Syncfusion.Drawing.Size(1920, 1080), // Set the viewport size for the rendering
+    Orientation = PdfPageOrientation.Landscape, // Set the PDF orientation to Landscape
+    Scale = 0.7f, // Set the scale of the rendered content
+    EnableJavaScript = true, // Enable JavaScript execution
+    EnableHyperLink = false, // Disable hyperlinks in the PDF
+    HtmlEncoding = Encoding.UTF8 // Set the encoding for the HTML content
+});
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
