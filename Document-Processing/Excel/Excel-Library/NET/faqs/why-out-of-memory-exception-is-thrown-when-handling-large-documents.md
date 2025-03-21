@@ -1,6 +1,6 @@
 ---
 title: Memory Limitations in Syncfusion Compression | Syncfusion
-description: This page tells why out of memory exception is thrown when handling large documents.
+description: This page explains why out of memory exception is thrown when handling the large documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
