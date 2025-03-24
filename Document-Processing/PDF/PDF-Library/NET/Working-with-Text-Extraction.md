@@ -429,3 +429,181 @@ Dim glyphColor As Color = textGlyph.TextColor
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/).
+
+## Find Text
+
+The code example provided below demonstrates the utilization of the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method from the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to locate text within a PDF document. This method facilitates the retrieval of both the page number and the rectangular coordinates of the identified text occurrences.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Text/Find-text-in-PDF-document/.NET/Find-text-in-PDF-document/Program.cs" %}
+
+//Load an existing PDF document. 
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Returns page number and rectangle positions of the text maches. 
+Dictionary<int, List<Syncfusion.Drawing.RectangleF>> matchRects = new Dictionary<int, List<Syncfusion.Drawing.RectangleF>>();
+loadedDocument.FindText("document", out matchRects);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load an existing PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Returns page number and rectangle positions of the text maches.
+Dictionary<int, List<System.Drawing.RectangleF>> matchRects = new Dictionary<int, List<System.Drawing.RectangleF>>();
+loadedDocument.FindText("document", out matchRects);           
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load an existing PDF document. 
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+'Returns page number and rectangle positions of the text maches.
+Dim matchRects As Dictionary(Of Integer, List(Of System.Drawing.RectangleF)) = New Dictionary(Of Integer, List(Of System.Drawing.RectangleF))()
+loadedDocument.FindText("document", matchRects)
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Find-text-in-PDF-document).
+
+**FindText Module API Reference**
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Return Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__Syncfusion_Pdf_Parsing_TextSearchResultCollection__">
+          FindText(List<string> searchItems, out TextSearchResultCollection searchResult)
+        </a>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of text strings (`searchItems`) across the entire document, storing the results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__Syncfusion_Pdf_Parsing_TextSearchResultCollection__System_Boolean_">
+          FindText(List<string> searchItems, out TextSearchResultCollection searchResult, bool enableMultiThreading)
+        </a>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of text strings across the entire document with multi-threading enabled for faster results, storing the results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__System_Int32_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___">
+            FindText(List<string> searchItems, int pageIndex, out List<MatchedItem> searchResults)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of text strings on a specific page (`pageIndex`), returning matching items in `searchResults`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__System_Int32_TextSearchOptions_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___">
+            FindText(List<string> searchItems, int pageIndex, TextSearchOptions textSearchOption, out List<MatchedItem> searchResults)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of text strings on a specific page with customizable search options (`textSearchOption`), returning matching items in `searchResults`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__TextSearchOptions_Syncfusion_Pdf_Parsing_TextSearchResultCollection__">
+            FindText(List<string> searchItems, TextSearchOptions textSearchOption, out TextSearchResultCollection searchResult)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of text strings across the entire document with customizable search options (`textSearchOption`), storing the results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_System_String__TextSearchOptions_Syncfusion_Pdf_Parsing_TextSearchResultCollection__System_Boolean_">
+            FindText(List<string> searchItems, TextSearchOptions textSearchOption, out TextSearchResultCollection searchResult, bool enableMultiThreading)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of text strings across the entire document with search options and multi-threading enabled, storing results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_TextSearchItem__Syncfusion_Pdf_Parsing_TextSearchResultCollection__">
+            FindText(List<TextSearchItem> searchItems, out TextSearchResultCollection searchResult)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of `TextSearchItem` objects across the entire document, returning results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_TextSearchItem__Syncfusion_Pdf_Parsing_TextSearchResultCollection__System_Boolean_">
+            FindText(List<TextSearchItem> searchItems, out TextSearchResultCollection searchResult, bool enableMultiThreading)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of `TextSearchItem` objects across the entire document with multi-threading enabled, storing results in `searchResult`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_Collections_Generic_List_TextSearchItem__System_Int32_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___">
+            FindText(List<TextSearchItem> searchItems, int pageIndex, out List<MatchedItem> searchResults)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a list of `TextSearchItem` objects on a specific page (`pageIndex`), returning matching items in `searchResults`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____">
+            FindText(string text, out Dictionary<int, List<RectangleF>> matchRect)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a single text string across the entire document, returning the match locations (rectangles) for each page in `matchRect`.</td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF___">
+            FindText(string text, int index, out List<RectangleF> matchRect)
+          </a>
+        </b>
+      </td>
+      <td>bool</td>
+      <td>Searches for a single text string on a specific page (`index`), returning the match locations (rectangles) in `matchRect`.</td>
+    </tr>
+  </tbody>
+</table>
