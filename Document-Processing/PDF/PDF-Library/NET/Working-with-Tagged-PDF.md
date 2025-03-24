@@ -157,7 +157,7 @@ PdfPage page = doc.Pages.Add();
 FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
 PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw string
-page.Graphics.DrawString("JPEG Image:", font, true), PdfBrushes.Blue, new PointF(0, 0));
+page.Graphics.DrawString("JPEG Image:", font, PdfBrushes.Blue, new PointF(0, 0));
 
 //Load the image as stream
 FileStream imageStream = new FileStream("syncfusion.jpg", FileMode.Open, FileAccess.Read);
@@ -226,7 +226,7 @@ doc.DocumentInformation.Title = "Image"
 Dim page As PdfPage = doc.Pages.Add()
 
 'Draw string
-page.Graphics.DrawString("JPEG Image:", New PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, New PointF(0, 0))
+page.Graphics.DrawString("JPEG Image:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(0, 0))
 
 'Create a new PDF bitmap object
 Dim bitmap As PdfBitmap = New PdfBitmap("syncfusion.jpg")
@@ -816,7 +816,7 @@ pdfDocument.DocumentInformation.Title = "TemplateDocument"
 'Add a page to the PDF document
 Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
 
-pdfPage.Graphics.DrawString("Rectangle:", New PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, New PointF(0, 0))
+pdfPage.Graphics.DrawString("Rectangle:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(0, 0))
 
 'Create a PDF template
 Dim template As PdfTemplate = New PdfTemplate(100, 50)
@@ -1062,7 +1062,7 @@ SizeF size = page.Graphics.ClientSize;
 FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
 PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text 
-graphics.DrawString("List:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(10, 0));
+graphics.DrawString("List:", font, PdfBrushes.Blue, new PointF(10, 0));
 
 string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
 //Create string format
@@ -1171,7 +1171,7 @@ Dim size As SizeF = page.Graphics.ClientSize
 Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
 Dim font As New PdfTrueTypeFont(fontStream, 14)
 'Draw the text 
-graphics.DrawString("List:",  New PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, New Point(10, 0))
+graphics.DrawString("List:",  New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New Point(10, 0))
 
 Dim products() As String = {"Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO"}
 'Create string format
