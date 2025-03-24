@@ -339,7 +339,7 @@ doc.DocumentInformation.Title = "LineShape"
 Dim page As PdfPage = doc.Pages.Add()
 
 'Draw text
-page.Graphics.DrawString("Line Shape:", New PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, New PointF(30, 80))
+page.Graphics.DrawString("Line Shape:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(30, 80))
 
 'Initialize structure element with tag type as Figure
 Dim element As PdfStructureElement = New PdfStructureElement(PdfTagType.Figure)
