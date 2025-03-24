@@ -180,6 +180,52 @@ document.Close
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Fields/Format-fields).
 
+## Getting field code
+
+You can get the field code of a specific field using its [FieldCode](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WField.html#Syncfusion_DocIO_DLS_WField_FieldCode) property.
+
+The following code example explains how to get the field code of a specific field in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads an existing Word document into DocIO instance 
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+// Access the merge field in the first paragraph of the first section.
+WMergeField mergeField = document.Sections[0].Paragraphs[0].ChildEntities[2] as WMergeField;
+// Get and print the field code of the merge field.
+string fieldCode = mergeField.FieldCode;
+Console.WriteLine(fieldCode);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document into DocIO instance 
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
+// Access the merge field in the first paragraph of the first section.
+WMergeField mergeField = document.Sections[0].Paragraphs[0].ChildEntities[2] as WMergeField;
+// Get and print the field code of the merge field.
+string fieldCode = mergeField.FieldCode;
+Console.WriteLine(fieldCode);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads an existing Word document into the DocIO instance
+Dim document As New WordDocument("Template.docx", FormatType.Docx)
+'Access the merge field in the first paragraph of the first section
+Dim mergeField As WMergeField = TryCast(document.Sections(0).Paragraphs(0).ChildEntities(2), WMergeField)
+'Get and print the field code of the merge field
+Dim fieldCode As String = mergeField.FieldCode
+Console.WriteLine(fieldCode)
+'Close the document
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Updating fields
 
 Field updating engine calculates the resultant value based on the field code information and updates the field result with a new value. You can update the following fields by using DocIO:
