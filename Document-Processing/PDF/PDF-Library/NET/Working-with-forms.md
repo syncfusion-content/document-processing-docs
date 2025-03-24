@@ -3924,45 +3924,47 @@ The below code illustrates get the pages of a form fields.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Get stream from an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document from stream.
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
-
-// Get all the form fields in the PDF.
-PdfLoadedForm loadedForm = document.Form;
-PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
-
-// Create a dictionary to map each page object to its respective page number.
-Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
-
-// Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
-for (int i = 0; i < document.Pages.Count; i++)
+// Use the 'using' statement to automatically dispose of the FileStream when done.
+using (FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Page numbers are 1-based, so we add 1 to the index.
-    pageNumberMapping[document.Pages[i]] = i + 1;
-}
+    // Load the PDF document from the stream.
+    PdfLoadedDocument document = new PdfLoadedDocument(docStream);
 
-// Iterate through each form field and find its page number using the dictionary.
-foreach (PdfLoadedField field in fieldCollection)
-{
-    // Check if the field is associated with a page.
-    if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
+    // Get all the form fields in the PDF.
+    PdfLoadedForm loadedForm = document.Form;
+    PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
+
+    // Create a dictionary to map each page object to its respective page number.
+    Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
+
+    // Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+    for (int i = 0; i < document.Pages.Count; i++)
     {
-        // Output the field name and its associated page number.
-        Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
+        // Page numbers are 1-based, so we add 1 to the index.
+        pageNumberMapping[document.Pages[i]] = i + 1;
     }
-}
 
-// Wait for the user to press a key before closing the console window.
-Console.ReadLine();
+    // Iterate through each form field and find its page number using the dictionary.
+    foreach (PdfLoadedField field in fieldCollection)
+    {
+        // Check if the field is associated with a page.
+        if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
+        {
+            // Output the field name and its associated page number.
+            Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
+        }
+    }
+
+    // Close the PDF document.
+    document.Close(true);
+}
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 // Load the PDF document.
-PdfLoadedDocument document = new PdfLoadedDocument("input.pdf");
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
 // Get all the form fields in the PDF.
 PdfLoadedForm loadedForm = document.Form;
@@ -3989,15 +3991,15 @@ foreach (PdfLoadedField field in fieldCollection)
     }
 }
 
-// Wait for the user to press a key before closing the console window.
-Console.ReadLine();
+// Close the PDF document.
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 ' Load the PDF document.
-Dim document As New PdfLoadedDocument("input.pdf")
+Dim document As New PdfLoadedDocument("Input.pdf")
 
 ' Get all the form fields in the PDF.
 Dim loadedForm As PdfLoadedForm = document.Form
@@ -4021,8 +4023,8 @@ For Each field As PdfLoadedField In fieldCollection
     End If
 Next
 
-' Wait for the user to press a key before closing the console window.
-Console.ReadLine()
+' Close the PDF document.
+document.Close(True)
 
 {% endhighlight %}
 
