@@ -3914,6 +3914,122 @@ Please refer to the [actions](https://help.syncfusion.com/document-processing/pd
 
 N> Essential<sup>&reg;</sup> PDF allows users to preserve the extended rights for form filling alone.
 
+## Get the pages of a form field in the PDF
+
+We need to iterate through all the pages to check and determine the page index of each field. To avoid using nested loops.
+
+The below code illustrates get the pages of a form fields.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Use the 'using' statement to automatically dispose of the FileStream when done.
+using (FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the stream.
+    PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+
+    // Get all the form fields in the PDF.
+    PdfLoadedForm loadedForm = document.Form;
+    PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
+
+    // Create a dictionary to map each page object to its respective page number.
+    Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
+
+    // Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+    for (int i = 0; i < document.Pages.Count; i++)
+    {
+        // Page numbers are 1-based, so we add 1 to the index.
+        pageNumberMapping[document.Pages[i]] = i + 1;
+    }
+
+    // Iterate through each form field and find its page number using the dictionary.
+    foreach (PdfLoadedField field in fieldCollection)
+    {
+        // Check if the field is associated with a page.
+        if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
+        {
+            // Output the field name and its associated page number.
+            Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
+        }
+    }
+
+    // Close the PDF document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+// Get all the form fields in the PDF.
+PdfLoadedForm loadedForm = document.Form;
+PdfLoadedFormFieldCollection fieldCollection = loadedForm.Fields;
+
+// Create a dictionary to map each page object to its respective page number.
+Dictionary<PdfPageBase, int> pageNumberMapping = new Dictionary<PdfPageBase, int>();
+
+// Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+for (int i = 0; i < document.Pages.Count; i++)
+{
+    // Page numbers are 1-based, so we add 1 to the index.
+    pageNumberMapping[document.Pages[i]] = i + 1;
+}
+
+// Iterate through each form field and find its page number using the dictionary.
+foreach (PdfLoadedField field in fieldCollection)
+{
+    // Check if the field is associated with a page.
+    if (field.Page != null && pageNumberMapping.TryGetValue(field.Page, out int pageNumber))
+    {
+        // Output the field name and its associated page number.
+        Console.WriteLine($"{field.Name} - Page number: {pageNumber}");
+    }
+}
+
+// Close the PDF document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document.
+Dim document As New PdfLoadedDocument("Input.pdf")
+
+' Get all the form fields in the PDF.
+Dim loadedForm As PdfLoadedForm = document.Form
+Dim fieldCollection As PdfLoadedFormFieldCollection = loadedForm.Fields
+
+' Create a dictionary to map each page object to its respective page number.
+Dim pageNumberMapping As New Dictionary(Of PdfPageBase, Integer)()
+
+' Populate the pageNumberMapping dictionary with page objects and their corresponding page numbers.
+For i As Integer = 0 To document.Pages.Count - 1
+    ' Page numbers are 1-based, so we add 1 to the index.
+    pageNumberMapping(document.Pages(i)) = i + 1
+Next
+
+' Iterate through each form field and find its page number using the dictionary.
+For Each field As PdfLoadedField In fieldCollection
+    ' Check if the field is associated with a page.
+    If field.Page IsNot Nothing AndAlso pageNumberMapping.ContainsKey(field.Page) Then
+        ' Output the field name and its associated page number.
+        Console.WriteLine(String.Format("{0} - Page number: {1}", field.Name, pageNumberMapping(field.Page)))
+    End If
+Next
+
+' Close the PDF document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Troubleshooting
 
 Form fields may appear empty in adobe reader some time due to the absence of the appearance dictionary. To resolve this, you have to enable the Adobe Reader default appearance by using the [SetDefaultAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_SetDefaultAppearance_System_Boolean_) method in [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class.
