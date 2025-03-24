@@ -154,9 +154,10 @@ PdfDocument doc = new PdfDocument();
 doc.DocumentInformation.Title = "Image";
 //Creates new page
 PdfPage page = doc.Pages.Add();
-
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw string
-page.Graphics.DrawString("JPEG Image:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+page.Graphics.DrawString("JPEG Image:", font, PdfBrushes.Blue, new PointF(0, 0));
 
 //Load the image as stream
 FileStream imageStream = new FileStream("syncfusion.jpg", FileMode.Open, FileAccess.Read);
@@ -196,7 +197,7 @@ doc.DocumentInformation.Title = "Image";
 PdfPage page = doc.Pages.Add();
 
 //Draw string
-page.Graphics.DrawString("JPEG Image:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+page.Graphics.DrawString("JPEG Image:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(0, 0));
 
 //Create a new PDF bitmap object
 PdfBitmap bitmap = new PdfBitmap("syncfusion.jpg");
@@ -225,7 +226,7 @@ doc.DocumentInformation.Title = "Image"
 Dim page As PdfPage = doc.Pages.Add()
 
 'Draw string
-page.Graphics.DrawString("JPEG Image:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New PointF(0, 0))
+page.Graphics.DrawString("JPEG Image:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(0, 0))
 
 'Create a new PDF bitmap object
 Dim bitmap As PdfBitmap = New PdfBitmap("syncfusion.jpg")
@@ -264,9 +265,12 @@ PdfDocument doc = new PdfDocument();
 doc.DocumentInformation.Title = "LineShape";
 //Add new page
 PdfPage page = doc.Pages.Add();
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 
 //Draw text
-page.Graphics.DrawString("Line Shape:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(30, 80));
+page.Graphics.DrawString("Line Shape:", font, PdfBrushes.Blue, new PointF(30, 80));
 
 //Initialize structure element with tag type as figure
 PdfStructureElement element = new PdfStructureElement(PdfTagType.Figure);
@@ -305,7 +309,7 @@ doc.DocumentInformation.Title = "LineShape";
 PdfPage page = doc.Pages.Add();
 
 //Draw text
-page.Graphics.DrawString("Line Shape:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(30, 80));
+page.Graphics.DrawString("Line Shape:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(30, 80));
 
 //Initialize structure element with tag type as Figure
 PdfStructureElement element = new PdfStructureElement(PdfTagType.Figure);
@@ -335,7 +339,7 @@ doc.DocumentInformation.Title = "LineShape"
 Dim page As PdfPage = doc.Pages.Add()
 
 'Draw text
-page.Graphics.DrawString("Line Shape:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New PointF(30, 80))
+page.Graphics.DrawString("Line Shape:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(30, 80))
 
 'Initialize structure element with tag type as Figure
 Dim element As PdfStructureElement = New PdfStructureElement(PdfTagType.Figure)
@@ -607,8 +611,9 @@ PdfPage page = document.Pages.Add();
 
 //Creates new PDF structure element with tag type link
 PdfStructureElement linkStructureElement = new PdfStructureElement(PdfTagType.Link);
-//Create the font
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12f);
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 
 //Create the text web link
 PdfTextWebLink textLink = new PdfTextWebLink();
@@ -631,6 +636,7 @@ document.Save(stream);
 stream.Position = 0;
 //Closes the document
 document.Close(true);
+fontStream.Dispose();
 //Defining the ContentType for PDF file
 string contentType = "application/pdf";
 //Define the file name
@@ -650,8 +656,9 @@ PdfPage page = document.Pages.Add();
 
 //Creates new PDF structure element with tag type link
 PdfStructureElement linkStructureElement = new PdfStructureElement(PdfTagType.Link);
-//Create the font
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12f);
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 
 //Create the text web link
 PdfTextWebLink textLink = new PdfTextWebLink();
@@ -672,6 +679,7 @@ textLink.DrawTextWebLink(page, new PointF(10, 40));
 document.Save("Output.pdf");
 //Close the document
 document.Close(true);
+fontStream.Dispose();
 
 {% endhighlight %}
 
@@ -685,8 +693,9 @@ Dim page As PdfPage = document.Pages.Add()
 
 'Creates new PDF structure element with tag type link
 Dim linkStructureElement As PdfStructureElement = New PdfStructureElement(PdfTagType.Link)
-'Create the font
-Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12.0F)
+' Load the TrueType font from the local *.ttf file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
 
 'Create the text web link
 Dim textLink As PdfTextWebLink = New PdfTextWebLink()
@@ -729,9 +738,11 @@ PdfDocument pdfDocument = new PdfDocument();
 pdfDocument.DocumentInformation.Title = "TemplateDocument";
 //Add a page to the PDF document
 PdfPage pdfPage = pdfDocument.Pages.Add();
-
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
-pdfPage.Graphics.DrawString("Rectangle:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+pdfPage.Graphics.DrawString("Rectangle:", font, PdfBrushes.Blue, new PointF(0, 0));
 
 //Create a PDF template
 PdfTemplate template = new PdfTemplate(100, 50);
@@ -743,7 +754,6 @@ structureElement.AlternateText = "Template Figure";
 //Adding tag to the template element
 template.PdfTag = structureElement;
 
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
 PdfBrush brush = new PdfSolidBrush(Color.Pink);
 //Draw rectangle using template graphics
 template.Graphics.DrawRectangle(brush, new RectangleF(0, 30, 150, 90));
@@ -774,7 +784,7 @@ pdfDocument.DocumentInformation.Title = "TemplateDocument";
 PdfPage pdfPage = pdfDocument.Pages.Add();
 
 //Draw the text
-pdfPage.Graphics.DrawString("Rectangle:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+pdfPage.Graphics.DrawString("Rectangle:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(0, 0));
 
 //Create a PDF template
 PdfTemplate template = new PdfTemplate(100, 50);
@@ -785,7 +795,6 @@ PdfStructureElement structureElement = new PdfStructureElement(PdfTagType.Figure
 structureElement.AlternateText = "Template Figure";
 //Adding tag to the template element
 template.PdfTag = structureElement;
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
 PdfBrush brush = new PdfSolidBrush(Color.Pink);
 
 //Draw rectangle using template graphics
@@ -807,7 +816,7 @@ pdfDocument.DocumentInformation.Title = "TemplateDocument"
 'Add a page to the PDF document
 Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
 
-pdfPage.Graphics.DrawString("Rectangle:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New PointF(0, 0))
+pdfPage.Graphics.DrawString("Rectangle:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(0, 0))
 
 'Create a PDF template
 Dim template As PdfTemplate = New PdfTemplate(100, 50)
@@ -818,7 +827,6 @@ structureElement.AlternateText = "Template Figure"
 'Adding tag to the template element
 template.PdfTag = structureElement
 
-Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 14)
 Dim brush As PdfBrush = New PdfSolidBrush(Color.Pink)
 'Draw rectangle using template graphics
 template.Graphics.DrawRectangle(brush, New RectangleF(0, 30, 150, 90))
@@ -867,7 +875,10 @@ pdfGrid.Columns.Add(3);
 //Add header
 pdfGrid.Headers.Add(1);
 PdfGridRow pdfGridHeader = pdfGrid.Headers[0];
-pdfGridHeader.Style.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+pdfGridHeader.Style.Font = font;
 pdfGridHeader.Style.TextBrush = PdfBrushes.Brown;
 //Adding tag for each row with tag type TR
 pdfGridHeader.PdfTag = new PdfStructureElement(PdfTagType.TableRow);
@@ -930,7 +941,10 @@ pdfGrid.Columns.Add(3);
 //Add header
 pdfGrid.Headers.Add(1);
 PdfGridRow pdfGridHeader = pdfGrid.Headers[0];
-pdfGridHeader.Style.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+pdfGridHeader.Style.Font = font;
 pdfGridHeader.Style.TextBrush = PdfBrushes.Brown;
 //Adding tag for each row with tag type TR
 pdfGridHeader.PdfTag = new PdfStructureElement(PdfTagType.TableRow);
@@ -984,7 +998,10 @@ pdfGrid.Columns.Add(3)
 'Add header.
 pdfGrid.Headers.Add(1)
 Dim pdfGridHeader As PdfGridRow = pdfGrid.Headers(0)
-pdfGridHeader.Style.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold)
+' Load the TrueType font from the local *.ttf file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
+pdfGridHeader.Style.Font = font
 pdfGridHeader.Style.TextBrush = PdfBrushes.Brown
 'Adding tag for each row with tag type TR
 pdfGridHeader.PdfTag = New PdfStructureElement(PdfTagType.TableRow)
@@ -1041,10 +1058,11 @@ PdfPage page = document.Pages.Add();
 
 PdfGraphics graphics = page.Graphics;
 SizeF size = page.Graphics.ClientSize;
-//Create font
-PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 10, PdfFontStyle.Italic);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text 
-graphics.DrawString("List:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(10, 0));
+graphics.DrawString("List:", font, PdfBrushes.Blue, new PointF(10, 0));
 
 string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
 //Create string format
@@ -1100,10 +1118,11 @@ PdfPage page = document.Pages.Add();
 
 PdfGraphics graphics = page.Graphics;
 SizeF size = page.Graphics.ClientSize;
-//Create font
-PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 10, PdfFontStyle.Italic);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
-graphics.DrawString("List:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new Point(10, 0));
+graphics.DrawString("List:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new Point(10, 0));
 
 string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
 //Create string format
@@ -1148,10 +1167,11 @@ Dim page As PdfPage = document.Pages.Add()
 
 Dim graphics As PdfGraphics = page.Graphics
 Dim size As SizeF = page.Graphics.ClientSize
-'Create font
-Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.TimesRoman, 10, PdfFontStyle.Italic)
+' Load the TrueType font from the local *.ttf file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
 'Draw the text 
-graphics.DrawString("List:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New Point(10, 0))
+graphics.DrawString("List:",  New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New Point(10, 0))
 
 Dim products() As String = {"Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO"}
 'Create string format
@@ -1189,6 +1209,283 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document).
+
+## Well-Tagged PDF (WTPDF)
+
+Well-Tagged PDF (WTPDF) enables the creation of fully reusable and accessible PDF 2.0 files in an interoperable manner. WTPDF is essentially identical to PDF/UA-2. A PDF file can be compliant with PDF/UA-2, WTPDF, or both.
+
+N> PDF/UA-2 is fully compatible with PDF/A-4.
+
+The following code sample demonstrates how to create a well-tagged PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "Well Tagged PDF "; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "Well Tagged PDF"; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document
+doc.Save("Output.pdf"); 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Creates new PDF document 
+Dim doc As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A4) 
+
+'Set Pdf File version 2.0 
+doc.FileStructure.Version = PdfVersion.Version2_0 
+
+'Set true to auto tag all elements in document  
+doc.AutoTag = True 
+'Set the document title 
+doc.DocumentInformation.Title = "Well Tagged PDF"
+
+'Creates new page 
+Dim page As PdfPage = doc.Pages.Add() 
+Dim fontStream As FileStream = New FileStream("Font.ttf", FileMode.Open, FileAccess.Read) 
+
+'Initialize the structure element with tag type paragraph 
+Dim structureElement As PdfStructureElement = New PdfStructureElement(PdfTagType.Paragraph) 
+
+'represents the text that is exact replacement for PdfTextElement 
+structureElement.ActualText = "Simple paragraph element" 
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base." 
+
+'Initialize the PDF text element 
+Dim element As PdfTextElement = New PdfTextElement(text) 
+
+'Adding tag to the text element 
+element.PdfTag = structureElement 
+
+'Creates font for the text element 
+element.Font = New PdfTrueTypeFont(fontStream, 10) 
+element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93)) 
+
+'Draws text 
+Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)) 
+
+'Save the document and dispose it 
+doc.Save("Output.pdf") 
+doc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## PDF for Universal Accessibility (PDF/UA-2) 
+
+PDF/UA-2 ensures that PDF 2.0 files conform to the Web Content Accessibility Guidelines (WCAG), making them accessible to all users. 
+
+The following code sample demonstrates how to create a PDF with Universal Accessibility Level 2.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument();     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "PDF Universal Accessibility 2"; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument();     
+
+//Set Pdf File version 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Set true to auto tag all elements in document 
+document.AutoTag = true; 
+document.DocumentInformation.Title = "PDF Universal Accessibility 2"; 
+// Add a new page 
+PdfPage page = document.Pages.Add(); 
+
+//Load the font file as stream 
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read);            
+// Initialize the structure element with tag type paragraph 
+PdfStructureElement paragraphStructure = new PdfStructureElement(PdfTagType.Paragraph); 
+
+// Represents the text that is the exact replacement for PdfTextElement 
+paragraphStructure.ActualText = "Simple paragraph element"; 
+string paragraphText = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Initialize the PDF text element 
+PdfTextElement textElement = new PdfTextElement(paragraphText); 
+// Adding tag to the text element 
+textElement.PdfTag = paragraphStructure; 
+
+// Create font for the text element 
+textElement.Font = new PdfTrueTypeFont(fontStream, 10); 
+textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+// Draw text element with tag 
+textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+//Save the document
+doc.Save("Output.pdf");  
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Creates new PDF document 
+Dim doc As PdfDocument = New PdfDocument() 
+
+'Set Pdf File version 2.0 
+doc.FileStructure.Version = PdfVersion.Version2_0  
+
+'Set true to auto tag all elements in document 
+doc.AutoTag = True 
+'Set the document title 
+doc.DocumentInformation.Title = "PDF Universal Accessibility 2" 
+'Creates new page 
+Dim page As PdfPage = doc.Pages.Add() 
+
+Dim fontStream As FileStream = New FileStream("Font.ttf", FileMode.Open, FileAccess.Read) 
+'Initialize the structure element with tag type paragraph 
+Dim structureElement As PdfStructureElement = New PdfStructureElement(PdfTagType.Paragraph) 
+
+'Represents the text that is exact replacement for PdfTextElement 
+structureElement.ActualText = "Simple paragraph element" 
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base." 
+
+'Initialize the PDF text element 
+Dim element As PdfTextElement = New PdfTextElement(text) 
+'Adding tag to the text element 
+element.PdfTag = structureElement 
+
+'Creates font for the text element 
+element.Font = New PdfTrueTypeFont(fontStream, 10)  
+element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93)) 
+'Draw text 
+Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)) 
+
+'Save the document and dispose it 
+doc.Save("Output.pdf") 
+doc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Marking PDF content as an artifact
 
@@ -1748,7 +2045,167 @@ Follow the below steps to validate the tagged PDF information in Adobe Acrobat:
 
 The following screenshot shows the Accessibility checker dialog box.
 
-![TaggedPDF](TaggedPDF_images/TaggedPDF_img0.png) 
+![TaggedPDF](TaggedPDF_images/TaggedPDF_img0.png)
+
+## Custom role mapping
+
+The PdfRoleMap class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
+
+The following code sample demonstrates how to create custom role mapping document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+// Create a new PDF document 
+PdfDocument doc = new PdfDocument(); 
+
+// Create a role map to define custom structure roles 
+PdfRoleMap roleMap = new PdfRoleMap(); 
+roleMap.Add("WorkBook", "Document"); // Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect"); // Mapping "WorkSheet" to "Sect" 
+
+// Define a custom structure type 
+string customStructureType = "WorkBook"; 
+string standardStructureType = ""; 
+
+// Try to get the standard structure type for the custom role 
+bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
+doc.StructureRoleMap = roleMap; // Assign role map to the document 
+// Set document metadata 
+doc.DocumentInformation.Title = "Custom Role Map"; 
+// Add a new page to the PDF 
+PdfPage page = doc.Pages.Add(); 
+
+// Create a custom structure element with a specified role 
+PdfStructureElement structureElement = new PdfStructureElement("WorkBook"); 
+
+structureElement.ActualText = "Simple paragraph element"; // Set alternative text for accessibility 
+// Define the content text 
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Create a text element and associate it with the structure element 
+PdfTextElement element = new PdfTextElement(text); 
+element.PdfTag = structureElement; 
+
+//Load the font file as stream  
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read); 
+// Set font and color for the text 
+element.Font = new PdfTrueTypeFont(fontStream, 10);   
+element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text on the page 
+PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+// Save the document into a memory stream (Cross-platform compatibility) 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; // Reset stream position for further processing if needed 
+// Close the document to release resources 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document 
+PdfDocument doc = new PdfDocument(); 
+
+// Create a role map to define custom structure roles 
+PdfRoleMap roleMap = new PdfRoleMap(); 
+roleMap.Add("WorkBook", "Document"); // Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect"); // Mapping "WorkSheet" to "Sect" 
+
+// Define a custom structure type 
+string customStructureType = "WorkBook"; 
+string standardStructureType = ""; 
+
+// Try to get the standard structure type for the custom role 
+bool found = roleMap.TryGetStandardType(customStructureType, out standardStructureType); 
+doc.StructureRoleMap = roleMap; // Assign role map to the document 
+// Set document metadata 
+doc.DocumentInformation.Title = "Custom Role Map"; 
+// Add a new page to the PDF 
+PdfPage page = doc.Pages.Add(); 
+
+// Create a custom structure element with a specified role 
+PdfStructureElement structureElement = new PdfStructureElement("WorkBook"); 
+
+structureElement.ActualText = "Simple paragraph element"; // Set alternative text for accessibility 
+// Define the content text 
+string text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base."; 
+
+// Create a text element and associate it with the structure element 
+PdfTextElement element = new PdfTextElement(text); 
+element.PdfTag = structureElement; 
+
+//Load the font file as stream  
+FileStream fontStream = new FileStream(@"Font.ttf", FileMode.Open, FileAccess.Read); 
+// Set font and color for the text 
+element.Font = new PdfTrueTypeFont(fontStream, 10);   
+element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93)); 
+
+// Draw text on the page 
+PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
+
+// Save the document 
+doc.Save("Output.pdf"); 
+// Close the document to release resources 
+doc.Close(true); 
+
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document 
+Dim doc As New PdfDocument() 
+
+' Create a role map to define custom structure roles 
+Dim roleMap As New PdfRoleMap() 
+roleMap.Add("WorkBook", "Document") ' Mapping "WorkBook" to "Document" 
+roleMap.Add("WorkSheet", "Sect") ' Mapping "WorkSheet" to "Sect" 
+
+' Define a custom structure type 
+Dim customStructureType As String = "WorkBook" 
+Dim standardStructureType As String = "" 
+
+' Try to get the standard structure type for the custom role 
+Dim found As Boolean = roleMap.TryGetStandardType(customStructureType, standardStructureType) 
+doc.StructureRoleMap = roleMap ' Assign role map to the document 
+
+' Set document metadata 
+doc.DocumentInformation.Title = "Custom Role Map" 
+
+' Add a new page to the PDF 
+Dim page As PdfPage = doc.Pages.Add() 
+
+' Create a custom structure element with a specified role 
+Dim structureElement As New PdfStructureElement("WorkBook") 
+structureElement.ActualText = "Simple paragraph element" ' Set alternative text for accessibility 
+' Define the content text 
+Dim text As String = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European, and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base." 
+
+' Create a text element and associate it with the structure element 
+Dim element As New PdfTextElement(text) 
+element.PdfTag = structureElement 
+
+' Set font and color for the text 
+Dim fontStream As FileStream = New FileStream("Font.ttf", FileMode.Open, FileAccess.Read)   
+element.Font = New PdfTrueTypeFont(fontStream, 10)   
+element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93)) 
+
+' Draw text on the page 
+Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)) 
+
+' Save the document to the file 
+doc.Save("Output.pdf") 
+' Close the document to release resources 
+doc.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Get the accessibility tags
 

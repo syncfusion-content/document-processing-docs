@@ -41,7 +41,56 @@ Next
 {% endhighlight %}
 {% endtabs %}  
 
-## Range Access
+## Read
+
+The following code example demonstrates how to efficiently read cell values from the Excel document with high performance using GetCellValue method.
+
+{% tabs %}  
+{% highlight c# tabtitle="C#" %}
+using (ExcelEngine engine = new ExcelEngine())
+{
+    IApplication application = engine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open("Input.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+    IRange range = worksheet.UsedRange;
+    int startRow = range.Row;
+    int endRow = range.LastRow;
+    int startColumn = range.Column;
+    int endColumn = range.LastColumn;
+    
+    for (int rowIndex = startRow; rowIndex <= endRow; rowIndex++)
+    {
+        for (int columnIndex = startColumn; columnIndex <= endColumn; columnIndex++)
+        {
+            string value = worksheet.GetCellValue(rowIndex, columnIndex, false);
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+Using engine As ExcelEngine = New ExcelEngine()
+    Dim application As IApplication = engine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+    Dim workbook As IWorkbook = application.Workbooks.Open("Input.xlsx")
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+    Dim range As IRange = worksheet.UsedRange
+    Dim startRow As Integer = range.Row
+    Dim endRow As Integer = range.LastRow
+    Dim startColumn As Integer = range.Column
+    Dim endColumn As Integer = range.LastColumn
+    
+    For rowIndex As Integer = startRow To endRow
+        For columnIndex As Integer = startColumn To endColumn
+            Dim value As String = worksheet.GetCellValue(rowIndex, columnIndex, False)
+        Next
+    Next
+End Using
+{% endhighlight %}
+{% endtabs %}  
+
+## Write
 
 Use [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html) instead of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) to optimize performance while dealing with large data.
 

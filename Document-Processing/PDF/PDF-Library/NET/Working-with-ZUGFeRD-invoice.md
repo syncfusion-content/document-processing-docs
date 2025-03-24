@@ -11,16 +11,20 @@ The ZUGFeRD invoice is one of the uniformed data format for electronic invoices 
 
 ## Generating ZUGFeRD invoice 
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library has support to create PDF document with PDF/A-3b conformance, which allow to add external file to the PDF document as attachment. The ZUGFeRD has two versions, ZugferdVersion 1.0 and ZugferdVersion 2.0. The Zugferd 2.0 is an updated version of Zugferd 1.0.
+The Syncfusion<sup>&reg;</sup> .NET PDF library supports creating PDF documents with PDF/A-3b conformance, allowing external files to be added as attachments. ZUGFeRD has three versions: **ZugferdVersion 1.0**, **ZugferdVersion 2.0**, and **Factur-X**.
 
-The ZUGFeRD has five conformance levels,
-* Basic: Represents the structured data for simple invoices. Additional information can be included as free text.
-* Comfort: Represents the structured data for fully automated invoice processing.
-* Extended: Represents the additional structured data for exchanging invoice across different industry segments.
-* Minimum: Represents the basic invoice details compatible with the French Standard Factur-X.
-* EN16931: Represents the fully compliant with the EU Standard, though it only defines the core elements of an invoice.
+ZUGFeRD includes six conformance levels: 
 
-N> * The ZUGFeRD conformance levels *Minimum* and *EN16931* are only supported in ZugferdVersion2.0.
+* **Basic**: Represents structured data for simple invoices. Additional information can be included as free text. 
+* **Comfort**: Provides structured data for fully automated invoice processing. 
+* **Extended**: Includes additional structured data for exchanging invoices across different industry segments. 
+* **Minimum**: Represents basic invoice details compatible with the French Standard Factur-X. 
+* **EN16931**: Fully compliant with the *EU Standard*, though it only defines the core elements of an invoice. 
+* **XRechnung**: Aligns with Germany's e-invoicing regulations, ensuring compliance with **EN 16931** standards.
+
+N> The **Minimum** and **EN16931** conformance levels are only supported in **ZugferdVersion 2.0**. 
+N> The **XRechnung** conformance level is only supported in **Factur-X**. 
+N> A **PDF/A-3** file contains embedded XML data, making the invoice both **human-readable (PDF)** and **machine-readable (XML)** within the same document.  
 
 The ZUGFeRD invoice document can be created by specifying the conformance level as ``Pdf_A3B`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document and set the [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *Basic* in [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.ZugferdConformanceLevel.html) Enum. 
 
@@ -144,7 +148,113 @@ document.Attachments.Add(attachment)
 
 {% endtabs %}  
 
-N> *As per the ZUGFeRD standard guidelines, the XML name must be ZUGFeRD-invoice.xml.
+N> **XML Naming Guidelines** 
+
+N> As per the ZUGFeRD standard guidelines, the XML file name must follow the specified format: 
+
+N> 1. **ZUGFeRD 1.0**: The file name should be "ZUGFeRD-invoice.xml". 
+N> 2. **ZUGFeRD 2.0**: The file name should be "zugferd-invoice.xml". 
+N> 3. **Factur-X**: The file name should be "factur-x.xml", except for **XRechnung**, where the file name must be "xrechnung.xml".
+
+Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as **Factur-X** in the [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.ZugferdVersion.html) Enum.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
+
+//Set ZUGFeRD conformance level  
+ document.ZugferdConformanceLevel = ZugferdConformanceLevel.XRechnung; 
+
+//Set ZUGFeRD version 
+document.ZugferdVersion = ZugferdVersion.FacturX; 
+
+// Load the font file as stream 
+FileStream fontStream = new FileStream(@"xrechnung.xml", FileMode.Open, FileAccess.Read); 
+
+//Set an attachment  
+ PdfAttachment attachment = new PdfAttachment(@"xrechnung.xml", fontStream); 
+attachment.Relationship = PdfAttachmentRelationship.Alternative; 
+attachment.ModificationDate = DateTime.Now; 
+attachment.Description = " ZUGFeRD-Xrechnung"; 
+attachment.MimeType = "text/xml"; 
+
+//Add attachment to PDF document 
+document.Attachments.Add(attachment); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+doc.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
+
+//Set ZUGFeRD conformance level  
+ document.ZugferdConformanceLevel = ZugferdConformanceLevel.XRechnung; 
+
+//Set ZUGFeRD version 
+document.ZugferdVersion = ZugferdVersion.FacturX; 
+
+// Load the font file as stream 
+FileStream fontStream = new FileStream(@"xrechnung.xml", FileMode.Open, FileAccess.Read); 
+
+//Set an attachment  
+ PdfAttachment attachment = new PdfAttachment(@"xrechnung.xml", fontStream); 
+attachment.Relationship = PdfAttachmentRelationship.Alternative; 
+attachment.ModificationDate = DateTime.Now; 
+attachment.Description = " ZUGFeRD-Xrechnung"; 
+attachment.MimeType = "text/xml"; 
+
+//Add attachment to PDF document 
+document.Attachments.Add(attachment); 
+
+//Save the document
+doc.Save("Output.pdf"); 
+//Closes the document 
+doc.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document  
+Dim document As New PdfDocument(PdfConformanceLevel.Pdf_A3B)  
+
+' Set ZUGFeRD conformance level  
+document.ZugferdConformanceLevel = ZugferdConformanceLevel.XRechnung  
+
+' Set ZUGFeRD version  
+document.ZugferdVersion = ZugferdVersion.FacturX  
+
+' Load the file as stream  
+Dim fontStream As New FileStream("xrechnung.xml", FileMode.Open, FileAccess.Read)  
+' Set an attachment  
+Dim attachment As New PdfAttachment("xrechnung.xml", fontStream)  
+attachment.Relationship = PdfAttachmentRelationship.Alternative  
+attachment.ModificationDate = DateTime.Now 
+attachment.Description = "ZUGFeRD-Xrechnung"  
+attachment.MimeType = "text/xml" 
+
+' Add attachment to PDF document  
+document.Attachments.Add(attachment)  
+
+' Save the document
+document.Save("Output.pdf")  
+' Closes the document 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %} 
 
 ## Complete code
 
