@@ -2623,4 +2623,4 @@ byte[] pdfBytes = CreatePdfFromUrl(url, new CefConverterSettings()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/CEF-Rendering-Engine/.NET).
