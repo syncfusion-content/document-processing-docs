@@ -154,9 +154,10 @@ PdfDocument doc = new PdfDocument();
 doc.DocumentInformation.Title = "Image";
 //Creates new page
 PdfPage page = doc.Pages.Add();
-
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw string
-page.Graphics.DrawString("JPEG Image:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+page.Graphics.DrawString("JPEG Image:", font, PdfBrushes.Blue, new PointF(0, 0));
 
 //Load the image as stream
 FileStream imageStream = new FileStream("syncfusion.jpg", FileMode.Open, FileAccess.Read);
@@ -196,7 +197,7 @@ doc.DocumentInformation.Title = "Image";
 PdfPage page = doc.Pages.Add();
 
 //Draw string
-page.Graphics.DrawString("JPEG Image:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+page.Graphics.DrawString("JPEG Image:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(0, 0));
 
 //Create a new PDF bitmap object
 PdfBitmap bitmap = new PdfBitmap("syncfusion.jpg");
@@ -225,7 +226,7 @@ doc.DocumentInformation.Title = "Image"
 Dim page As PdfPage = doc.Pages.Add()
 
 'Draw string
-page.Graphics.DrawString("JPEG Image:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New PointF(0, 0))
+page.Graphics.DrawString("JPEG Image:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(0, 0))
 
 'Create a new PDF bitmap object
 Dim bitmap As PdfBitmap = New PdfBitmap("syncfusion.jpg")
@@ -264,9 +265,12 @@ PdfDocument doc = new PdfDocument();
 doc.DocumentInformation.Title = "LineShape";
 //Add new page
 PdfPage page = doc.Pages.Add();
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 
 //Draw text
-page.Graphics.DrawString("Line Shape:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(30, 80));
+page.Graphics.DrawString("Line Shape:", font, PdfBrushes.Blue, new PointF(30, 80));
 
 //Initialize structure element with tag type as figure
 PdfStructureElement element = new PdfStructureElement(PdfTagType.Figure);
@@ -305,7 +309,7 @@ doc.DocumentInformation.Title = "LineShape";
 PdfPage page = doc.Pages.Add();
 
 //Draw text
-page.Graphics.DrawString("Line Shape:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(30, 80));
+page.Graphics.DrawString("Line Shape:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(30, 80));
 
 //Initialize structure element with tag type as Figure
 PdfStructureElement element = new PdfStructureElement(PdfTagType.Figure);
@@ -335,7 +339,7 @@ doc.DocumentInformation.Title = "LineShape"
 Dim page As PdfPage = doc.Pages.Add()
 
 'Draw text
-page.Graphics.DrawString("Line Shape:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New PointF(30, 80))
+page.Graphics.DrawString("Line Shape:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(30, 80))
 
 'Initialize structure element with tag type as Figure
 Dim element As PdfStructureElement = New PdfStructureElement(PdfTagType.Figure)
@@ -607,8 +611,9 @@ PdfPage page = document.Pages.Add();
 
 //Creates new PDF structure element with tag type link
 PdfStructureElement linkStructureElement = new PdfStructureElement(PdfTagType.Link);
-//Create the font
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12f);
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 
 //Create the text web link
 PdfTextWebLink textLink = new PdfTextWebLink();
@@ -631,6 +636,7 @@ document.Save(stream);
 stream.Position = 0;
 //Closes the document
 document.Close(true);
+fontStream.Dispose();
 //Defining the ContentType for PDF file
 string contentType = "application/pdf";
 //Define the file name
@@ -650,8 +656,9 @@ PdfPage page = document.Pages.Add();
 
 //Creates new PDF structure element with tag type link
 PdfStructureElement linkStructureElement = new PdfStructureElement(PdfTagType.Link);
-//Create the font
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12f);
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 
 //Create the text web link
 PdfTextWebLink textLink = new PdfTextWebLink();
@@ -672,6 +679,7 @@ textLink.DrawTextWebLink(page, new PointF(10, 40));
 document.Save("Output.pdf");
 //Close the document
 document.Close(true);
+fontStream.Dispose();
 
 {% endhighlight %}
 
@@ -685,8 +693,9 @@ Dim page As PdfPage = document.Pages.Add()
 
 'Creates new PDF structure element with tag type link
 Dim linkStructureElement As PdfStructureElement = New PdfStructureElement(PdfTagType.Link)
-'Create the font
-Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12.0F)
+' Load the TrueType font from the local *.ttf file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
 
 'Create the text web link
 Dim textLink As PdfTextWebLink = New PdfTextWebLink()
@@ -729,9 +738,11 @@ PdfDocument pdfDocument = new PdfDocument();
 pdfDocument.DocumentInformation.Title = "TemplateDocument";
 //Add a page to the PDF document
 PdfPage pdfPage = pdfDocument.Pages.Add();
-
+//Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
-pdfPage.Graphics.DrawString("Rectangle:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+pdfPage.Graphics.DrawString("Rectangle:", font, PdfBrushes.Blue, new PointF(0, 0));
 
 //Create a PDF template
 PdfTemplate template = new PdfTemplate(100, 50);
@@ -743,7 +754,6 @@ structureElement.AlternateText = "Template Figure";
 //Adding tag to the template element
 template.PdfTag = structureElement;
 
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
 PdfBrush brush = new PdfSolidBrush(Color.Pink);
 //Draw rectangle using template graphics
 template.Graphics.DrawRectangle(brush, new RectangleF(0, 30, 150, 90));
@@ -774,7 +784,7 @@ pdfDocument.DocumentInformation.Title = "TemplateDocument";
 PdfPage pdfPage = pdfDocument.Pages.Add();
 
 //Draw the text
-pdfPage.Graphics.DrawString("Rectangle:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(0, 0));
+pdfPage.Graphics.DrawString("Rectangle:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new PointF(0, 0));
 
 //Create a PDF template
 PdfTemplate template = new PdfTemplate(100, 50);
@@ -785,7 +795,6 @@ PdfStructureElement structureElement = new PdfStructureElement(PdfTagType.Figure
 structureElement.AlternateText = "Template Figure";
 //Adding tag to the template element
 template.PdfTag = structureElement;
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
 PdfBrush brush = new PdfSolidBrush(Color.Pink);
 
 //Draw rectangle using template graphics
@@ -807,7 +816,7 @@ pdfDocument.DocumentInformation.Title = "TemplateDocument"
 'Add a page to the PDF document
 Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
 
-pdfPage.Graphics.DrawString("Rectangle:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New PointF(0, 0))
+pdfPage.Graphics.DrawString("Rectangle:", New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New PointF(0, 0))
 
 'Create a PDF template
 Dim template As PdfTemplate = New PdfTemplate(100, 50)
@@ -818,7 +827,6 @@ structureElement.AlternateText = "Template Figure"
 'Adding tag to the template element
 template.PdfTag = structureElement
 
-Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 14)
 Dim brush As PdfBrush = New PdfSolidBrush(Color.Pink)
 'Draw rectangle using template graphics
 template.Graphics.DrawRectangle(brush, New RectangleF(0, 30, 150, 90))
@@ -867,7 +875,10 @@ pdfGrid.Columns.Add(3);
 //Add header
 pdfGrid.Headers.Add(1);
 PdfGridRow pdfGridHeader = pdfGrid.Headers[0];
-pdfGridHeader.Style.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+pdfGridHeader.Style.Font = font;
 pdfGridHeader.Style.TextBrush = PdfBrushes.Brown;
 //Adding tag for each row with tag type TR
 pdfGridHeader.PdfTag = new PdfStructureElement(PdfTagType.TableRow);
@@ -930,7 +941,10 @@ pdfGrid.Columns.Add(3);
 //Add header
 pdfGrid.Headers.Add(1);
 PdfGridRow pdfGridHeader = pdfGrid.Headers[0];
-pdfGridHeader.Style.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+pdfGridHeader.Style.Font = font;
 pdfGridHeader.Style.TextBrush = PdfBrushes.Brown;
 //Adding tag for each row with tag type TR
 pdfGridHeader.PdfTag = new PdfStructureElement(PdfTagType.TableRow);
@@ -984,7 +998,10 @@ pdfGrid.Columns.Add(3)
 'Add header.
 pdfGrid.Headers.Add(1)
 Dim pdfGridHeader As PdfGridRow = pdfGrid.Headers(0)
-pdfGridHeader.Style.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold)
+' Load the TrueType font from the local *.ttf file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
+pdfGridHeader.Style.Font = font
 pdfGridHeader.Style.TextBrush = PdfBrushes.Brown
 'Adding tag for each row with tag type TR
 pdfGridHeader.PdfTag = New PdfStructureElement(PdfTagType.TableRow)
@@ -1041,10 +1058,11 @@ PdfPage page = document.Pages.Add();
 
 PdfGraphics graphics = page.Graphics;
 SizeF size = page.Graphics.ClientSize;
-//Create font
-PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 10, PdfFontStyle.Italic);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text 
-graphics.DrawString("List:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new PointF(10, 0));
+graphics.DrawString("List:", font, PdfBrushes.Blue, new PointF(10, 0));
 
 string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
 //Create string format
@@ -1100,10 +1118,11 @@ PdfPage page = document.Pages.Add();
 
 PdfGraphics graphics = page.Graphics;
 SizeF size = page.Graphics.ClientSize;
-//Create font
-PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 10, PdfFontStyle.Italic);
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text
-graphics.DrawString("List:", new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, new Point(10, 0));
+graphics.DrawString("List:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new Point(10, 0));
 
 string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
 //Create string format
@@ -1148,10 +1167,11 @@ Dim page As PdfPage = document.Pages.Add()
 
 Dim graphics As PdfGraphics = page.Graphics
 Dim size As SizeF = page.Graphics.ClientSize
-'Create font
-Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.TimesRoman, 10, PdfFontStyle.Italic)
+' Load the TrueType font from the local *.ttf file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
 'Draw the text 
-graphics.DrawString("List:", New PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold), PdfBrushes.Blue, New Point(10, 0))
+graphics.DrawString("List:",  New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New Point(10, 0))
 
 Dim products() As String = {"Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO"}
 'Create string format
