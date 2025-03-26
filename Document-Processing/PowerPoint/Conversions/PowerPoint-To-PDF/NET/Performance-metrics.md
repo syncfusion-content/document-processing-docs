@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** 11th Gen Intel(R) Core(TM)
 * **RAM:** 16GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> .NET PowerPoint Library Version:** v28.2.7
+* **Syncfusion<sup>&reg;</sup> .NET PowerPoint Library Version:** v29.1.33
 
 ## PowerPoint to PDF conversion 
 
@@ -31,22 +31,22 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>2</td>
     <td>{{'[PowerPoint-2.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/.NET/PPTX-to-PDF/Data/PowerPoint-2.pptx)'| markdownify }}</td>
-    <td>2.2</td>
+    <td>0.03</td>
 </tr>
 <tr>
     <td>50</td>
     <td>{{'[PowerPoint-50.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/.NET/PPTX-to-PDF/Data/PowerPoint-50.pptx)'| markdownify }}</td>
-    <td>3.7</td>
+    <td>0.1</td>
 </tr>
 <tr>
     <td>100</td>
     <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/.NET/PPTX-to-PDF/Data/PowerPoint-100.pptx)'| markdownify }}</td>
-    <td>4.7</td>
+    <td>1.2</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/.NET/PPTX-to-PDF/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>28</td>
+    <td>16</td>
 </tr>
 </table>
 
