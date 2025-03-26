@@ -3,7 +3,7 @@ title:  Convert Word to Image in Word Library  | DocIO | Syncfusion
 description:  Learn how to convert a Word document to image using the Syncfusion<sup>&reg;</sup> Word (DocIO) library without Microsoft Word or interop dependencies. 
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UG 
 ---
 
 # Convert Word to Image using Syncfusion<sup>&reg;</sup> Word (DocIO) library 
