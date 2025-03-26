@@ -186,10 +186,10 @@ document.Attachments.Add(attachment);
 
 //Save the document into stream 
 MemoryStream stream = new MemoryStream(); 
-doc.Save(stream); 
+document.Save(stream); 
 stream.Position = 0; 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -218,9 +218,9 @@ attachment.MimeType = "text/xml";
 document.Attachments.Add(attachment); 
 
 //Save the document
-doc.Save("Output.pdf"); 
+document.Save("Output.pdf"); 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -255,6 +255,8 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %} 
+
+You can download a complete working sample from GitHub.
 
 ## Complete code
 

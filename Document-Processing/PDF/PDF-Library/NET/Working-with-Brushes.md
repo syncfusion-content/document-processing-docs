@@ -381,3 +381,5 @@ doc.Close(True)
 
 {% endhighlight %}
 {% endtabs %}
+
+You can download a complete working sample from GitHub.

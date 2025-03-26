@@ -1258,10 +1258,10 @@ textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)
 
 //Save the document into stream 
 MemoryStream stream = new MemoryStream(); 
-doc.Save(stream); 
+document.Save(stream); 
 stream.Position = 0; 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1302,9 +1302,9 @@ textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
 
 //Save the document
-doc.Save("Output.pdf"); 
+document.Save("Output.pdf"); 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1353,6 +1353,8 @@ doc.Close(True)
 
 {% endtabs %}
 
+You can download a complete working sample from GitHub.
+
 ## PDF for Universal Accessibility (PDF/UA-2) 
 
 PDF/UA-2 ensures that PDF 2.0 files conform to the Web Content Accessibility Guidelines (WCAG), making them accessible to all users. 
@@ -1397,10 +1399,10 @@ textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)
 
 //Save the document into stream 
 MemoryStream stream = new MemoryStream(); 
-doc.Save(stream); 
+document.Save(stream); 
 stream.Position = 0; 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1439,9 +1441,9 @@ textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
 
 //Save the document
-doc.Save("Output.pdf");  
+document.Save("Output.pdf");  
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1486,6 +1488,8 @@ doc.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from GitHub.
 
 ## Marking PDF content as an artifact
 
@@ -2206,6 +2210,8 @@ doc.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from GitHub.
 
 ## Get the accessibility tags
 
