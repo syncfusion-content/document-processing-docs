@@ -305,7 +305,7 @@ The hatch brush is used to fill an object with hatch patterns. Essential<sup>&re
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Hatch-brush/.NET/Hatch-brush/Program.cs" %}
 
 //Create a new PDF document
 PdfDocument doc = new PdfDocument(); 
@@ -382,4 +382,4 @@ doc.Close(True)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Brushes/Hatch-brush/.NET).

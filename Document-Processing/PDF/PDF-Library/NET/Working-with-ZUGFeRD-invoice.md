@@ -160,7 +160,7 @@ Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by spec
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/ZUGFeRD/Factur-X/.NET/Factur-X/Program.cs" %} 
 
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
@@ -256,7 +256,7 @@ document.Close(True)
 
 {% endtabs %} 
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ZUGFeRD/Factur-X/.NET).
 
 ## Complete code
 
