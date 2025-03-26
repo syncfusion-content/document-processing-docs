@@ -301,7 +301,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Hatch Brush
 
-The hatch brush is used to fill an object with hatch patterns. Essential<sup>&reg;</sup> PDF supports drawing shapes in a PDF document using a hatch brush with the PdfHatchBrush class. The following code example illustrates this. 
+The hatch brush is used to fill an object with hatch patterns. Essential<sup>&reg;</sup> PDF supports drawing shapes in a PDF document using a hatch brush with the [PdfHatchBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHatchBrush.html) class. The following code example illustrates this. 
 
 {% tabs %}
 

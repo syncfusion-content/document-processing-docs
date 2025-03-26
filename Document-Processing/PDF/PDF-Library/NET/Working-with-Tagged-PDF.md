@@ -2053,7 +2053,7 @@ The following screenshot shows the Accessibility checker dialog box.
 
 ## Custom role mapping
 
-The PdfRoleMap class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
+The [PdfRoleMap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfRoleMap.html) class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
 
 The following code sample demonstrates how to create custom role mapping document.
 
