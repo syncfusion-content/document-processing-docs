@@ -32,7 +32,9 @@ Step 5: Include the following commands in the Docker file to install the depende
 
 RUN apt-get update && \
 apt-get install -yq --no-install-recommends \
-libgdiplus libc6-dev
+libgdiplus libc6-dev libleptonica-dev libjpeg62
+RUN ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
 
