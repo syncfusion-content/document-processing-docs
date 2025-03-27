@@ -382,8 +382,8 @@ No<br/><br/></td></tr>
 SmartArt<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
+DOCX only<br/><br/></td><td>
+DOCX only<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
