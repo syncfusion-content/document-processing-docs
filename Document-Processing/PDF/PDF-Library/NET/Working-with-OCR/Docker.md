@@ -24,7 +24,7 @@ Step 4: Install the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Sync
 ![OCR NuGet package installation](OCR-Images/OCR-Docker-NuGet-package.png)  
 
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
-N> 2. Starting with v16.2.0.x, if you reference Syncfusio<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Include the following commands in the Docker file to install the dependent packages in the docker container.
 
@@ -57,7 +57,7 @@ Step 7: Add a new button in the *index.cshtml* as follows.
 
 {% endhighlight %}
 
-![Action method file screenshot](OCR-Images/OCRDocker6.png) 
+![Action method file image](OCR-Images/OCRDocker6.png) 
 
 Step 8: A default controller with the name *HomeController.cs* gets added to the creation of the ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
