@@ -22,12 +22,6 @@ Current version of the DocIO library does not provide support for converting 3D 
 
 Yes, you can specify the PDF conformance level in Word to PDF conversion. For more details, refer [PDF Conformance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance).
 
-## Which one is better Azure App Service or Cloud Service for Word to PDF using DocIO?
-
-When the Word document contains metafile images (*.emf or *.wmf), we recommend using Azure Cloud Service.
-
-We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential DocIO preserves RedX images in the same size during the Word to PDF conversion to avoid pagination problems.
-
 ## Why are content controls not preserved as editable form fields in the converted PDF document even when PreserveFormFields is enabled? 
 
 Content controls behave differently from legacy form fields, such as Text, Checkbox, and Drop-down fields, during conversions to PDF format. While legacy form fields are typically preserved as editable form fields in the resulting PDF document, content controls are converted to plain text. The [PreserveFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PreserveFormFields) API specifically retains the interactive nature of legacy form fields, not content controls.
