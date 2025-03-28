@@ -229,3 +229,7 @@ To change the colors for insertions, deletions, or other changes, open the **Rev
 
 ![Advanced track changes options in Microsoft Word](../FAQ_images/Advanced-track-changes-options-in-Microsoft-Word.png)
 
+## Does DocIO support tracking changes in a Word document made programmatically?
+
+No, DocIO does not track changes made programmatically. However, it allows **accepting or rejecting changes** and **viewing revision information** similar to Microsoft Word's track changes feature. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/accepting-or-rejecting-track-changes) for implementation.
+
