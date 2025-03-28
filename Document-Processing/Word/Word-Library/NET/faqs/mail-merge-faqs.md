@@ -177,7 +177,7 @@ Since TryAdd() is not available, you can manually check if a key exists before a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# %}
+{% highlight c# tabtitle="C#" %}
 if (!(dynamicObject as IDictionary<string, object>).ContainsKey(node.LocalName))
     (dynamicObject as IDictionary<string, object>).Add(node.LocalName, node.InnerText);
 {% endhighlight %}
