@@ -1220,7 +1220,7 @@ The following code sample demonstrates how to create a well-tagged PDF document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Well-Tagged-PDF/.NET/Well-Tagged-PDF/Program.cs" %}
 
 //Create a new PDF document 
 PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A4);     
@@ -1258,10 +1258,10 @@ textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)
 
 //Save the document into stream 
 MemoryStream stream = new MemoryStream(); 
-doc.Save(stream); 
+document.Save(stream); 
 stream.Position = 0; 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1302,9 +1302,9 @@ textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
 
 //Save the document
-doc.Save("Output.pdf"); 
+document.Save("Output.pdf"); 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1353,6 +1353,8 @@ doc.Close(True)
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Well-Tagged-PDF/.NET).
+
 ## PDF for Universal Accessibility (PDF/UA-2) 
 
 PDF/UA-2 ensures that PDF 2.0 files conform to the Web Content Accessibility Guidelines (WCAG), making them accessible to all users. 
@@ -1361,7 +1363,7 @@ The following code sample demonstrates how to create a PDF with Universal Access
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/PDF-for-Universal-Accessibility/.NET/PDF-for-Universal-Accessibility/Program.cs" %}
 
 //Create a new PDF document 
 PdfDocument document = new PdfDocument();     
@@ -1397,10 +1399,10 @@ textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)
 
 //Save the document into stream 
 MemoryStream stream = new MemoryStream(); 
-doc.Save(stream); 
+document.Save(stream); 
 stream.Position = 0; 
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1439,9 +1441,9 @@ textElement.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 textElement.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width, 200)); 
 
 //Save the document
-doc.Save("Output.pdf");  
+document.Save("Output.pdf");  
 //Closes the document 
-doc.Close(true); 
+document.Close(true); 
 
 {% endhighlight %}
 
@@ -1486,6 +1488,8 @@ doc.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/PDF-for-Universal-Accessibility/.NET).
 
 ## Marking PDF content as an artifact
 
@@ -2049,13 +2053,13 @@ The following screenshot shows the Accessibility checker dialog box.
 
 ## Custom role mapping
 
-The PdfRoleMap class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
+The [PdfRoleMap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfRoleMap.html) class allows for flexible mapping of custom structure types to standard ones, ensuring accessibility and compliance in PDF documents. By utilizing the methods and properties described in this guide, developers can effectively manage PDF structure elements. 
 
 The following code sample demonstrates how to create custom role mapping document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Custom-Role-Mapping/.NET/Custom-Role-Mapping/Program.cs" %}
 
 // Create a new PDF document 
 PdfDocument doc = new PdfDocument(); 
@@ -2206,6 +2210,8 @@ doc.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Custom-Role-Mapping/.NET).
 
 ## Get the accessibility tags
 

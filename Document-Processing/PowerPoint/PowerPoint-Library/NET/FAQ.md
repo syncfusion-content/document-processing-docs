@@ -48,18 +48,6 @@ Current version of the Essential<sup>&reg;</sup> Presentation library does not p
 
 You can improve the quality of converted images by specifying the image resolution. Refer – [Converting PowerPoint presentation to Images](/document-processing/powerpoint/powerpoint-library/net/getting-started#converting-powerpoint-presentation-to-images)
 
-## Why metafile (*.wmf, *.emf) images are not preserved in PPTX to PDF/Image conversion?
-
-In .NET Core or .NET targeting applications, metafile (*.wmf, *.emf) images have some limitations in PresentationRenderer. Internally, PresentationRenderer use SkiaSharp graphics library to layout the text and images in PDF/Image conversion. And SkiaSharp library doesn’t support the metafile (*.emf, *.wmf) images, so, it doesn’t preserve the images in the mentioned applications.
-
-Starting from version 27.x.x, the .NET PowerPoint Library (Presentation) uses its own Metafile renderer to preserve EMF images during PPTX to PDF or image conversions. However, it does not support converting certain metafile formats, including WMF, EMF Plus, EMF Dual, and EMF Spool files. If a PowerPoint Presentation contains these types of images, Presentation doesn’t preserve these during the PPTX to PDF or image conversions.
-
-To preserve the expected images in the PDF/Image conversion, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform PPTX to PDF/Image conversion.
-
-**Suggestion**
-
-You can use the [WPF](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/) platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same C# [Windows-specific](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf) code examples for it. But in Mac and Linux environment, using the [WPF](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/) platform NuGet packages have limitations.
-
 ## What are the NuGet packages to be installed to perform PowerPoint Presentation to PDF conversion in Linux OS?
 
 In Linux OS, perform PowerPoint presentation to PDF conversion using the .NET Core (Targeting .netcoreapp) application. Refer to [PowerPoint presentation to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required#converting-powerpoint-presentation-into-pdf) to know about the packages required to deploy the .NET Core (Targeting .netcoreapp) applications with PowerPoint presentation to PDF conversion capabilities.

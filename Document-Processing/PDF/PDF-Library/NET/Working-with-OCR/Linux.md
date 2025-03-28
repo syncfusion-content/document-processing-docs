@@ -18,6 +18,8 @@ The following Linux dependencies should be installed where the conversion takes 
 sudo apt-get update
 sudo apt-get install libgdiplus
 sudo apt-get install libc6-dev
+ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
 

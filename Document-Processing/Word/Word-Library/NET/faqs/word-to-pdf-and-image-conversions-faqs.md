@@ -22,26 +22,6 @@ Current version of the DocIO library does not provide support for converting 3D 
 
 Yes, you can specify the PDF conformance level in Word to PDF conversion. For more details, refer [PDF Conformance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance).
 
-## Which one is better Azure App Service or Cloud Service for Word to PDF or image using DocIO?
-
-When the Word document contains metafile images (*.emf or *.wmf), we recommend using Azure Cloud Service.
-
-We have found metafile images (*.emf, *.wmf) that are not supported in Azure App Service while converting a Word document with metafile images into PDF or image. And also, this is one of the known limitations in Azure App Service. In this scenario, internally, Essential<sup>&reg;</sup> DocIO preserves RedX images in the same size during the Word to PDF or image conversion to avoid pagination problems.
-
-## Why images are preserved as RedX images in Word to PDF or image conversion?
-
-**In .NET Core or .NET targeting applications**, metafile (*.wmf, *.emf) images have some limitations in DocIORenderer. Internally, DocIORenderer used the SkiaSharp graphics library to layout the text and images in PDF or image conversion. And SkiaSharp library does not support the metafile (".emf", ".wmf") images, so, it does not preserve the images in the mentioned applications.
-
-Starting from version 27.x.x, the .NET Word Library (DocIO) uses its own Metafile renderer to preserve EMF images during Word to PDF or image conversions. However, it does not support converting certain metafile formats, including WMF, EMF Plus, EMF Dual, and EMF Spool files. If a Word document contains these types of images, DocIO preserves them as RedX images with the original image size during conversion to avoid pagination problems.
-
-To preserve the expected images in the PDF or image conversion, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform Word to PDF or image conversion.
-
-**Suggestions:**
-
-1. You can convert metafile image format to bitmap image format in the Word document using DocIO, you can refer to KB documentation link: [Convert and replace metafile image in word document to bitmap](https://support.syncfusion.com/kb/article/11331/how-to-convert-and-replace-emf-image-in-word-document-to-png-with-same-size). As this approach uses System.Drawing.Common, it is known limitation in Linux or cross platforms.
-
-2. Otherwise, you can use the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf/) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same [C# tab](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf) code examples for it. But in Mac and Linux environment, using the [WPF](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.Wpf) or [Windows Forms](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.WinForms/) platform NuGet packages have limitations.
-
 ## Why are content controls not preserved as editable form fields in the converted PDF document even when PreserveFormFields is enabled? 
 
 Content controls behave differently from legacy form fields, such as Text, Checkbox, and Drop-down fields, during conversions to PDF format. While legacy form fields are typically preserved as editable form fields in the resulting PDF document, content controls are converted to plain text. The [PreserveFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_PreserveFormFields) API specifically retains the interactive nature of legacy form fields, not content controls.
@@ -105,3 +85,7 @@ For more details about the conversion, refer [here]( https://help.syncfusion.com
 ## How to convert Word document to PDF/A?
 
 To convert a Word document to PDF/A, refer to this [link](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level).
+
+## How to validate the PDF conformance level in a DocIO-converted PDF?
+
+PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF, Xodo Validator, and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
