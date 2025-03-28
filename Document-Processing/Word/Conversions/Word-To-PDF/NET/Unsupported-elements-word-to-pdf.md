@@ -1,6 +1,6 @@
 ---
-title: Unsupported elements in Word to PDF Conversion in C# | DocIO | Syncfusion
-description: Learn about unsupported elements in Word to PDF conversion using the .NET Word (DocIO) library.
+title: Unsupported elements in Word to PDF Conversion | DocIO | Syncfusion
+description: Learn about the unsupported elements in Word to PDF conversion in C# using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -159,14 +159,6 @@ Font kerning
 </td>
 <td>
 Partially supported. At present, the text in a line is scaled uniformly to match the width of kerned text, instead of adjusting the space between each pair of characters.
-</td>
-</tr>
-<tr>
-<td>
-Images
-</td>
-<td>
-In .NET Core and latest target, we have limitation in metafile. Refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#why-images-are-preserved-as-redx-images-in-word-to-pdf-conversion)'| markdownify }}
 </td>
 </tr>
 </table>
