@@ -180,7 +180,7 @@ document.Close
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Fields/Format-fields).
 
-## Getting field code
+## Get field code
 
 You can get the field code of a specific field using its [FieldCode](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WField.html#Syncfusion_DocIO_DLS_WField_FieldCode) property.
 
@@ -192,10 +192,10 @@ The following code example explains how to get the field code of a specific fiel
 //Loads an existing Word document into DocIO instance 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-// Access the merge field in the first paragraph of the first section.
-WMergeField mergeField = document.Sections[0].Paragraphs[0].ChildEntities[2] as WMergeField;
-// Get and print the field code of the merge field.
-string fieldCode = mergeField.FieldCode;
+// Access the field in the first paragraph of the first section.
+WField field = document.Sections[0].Paragraphs[0].ChildEntities[2] as WField;
+// Get and print the field code.
+string fieldCode = field.FieldCode;
 Console.WriteLine(fieldCode);
 //Closes the document
 document.Close();
@@ -204,10 +204,10 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads an existing Word document into DocIO instance 
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-// Access the merge field in the first paragraph of the first section.
-WMergeField mergeField = document.Sections[0].Paragraphs[0].ChildEntities[2] as WMergeField;
-// Get and print the field code of the merge field.
-string fieldCode = mergeField.FieldCode;
+// Access the field in the first paragraph of the first section.
+WField field = document.Sections[0].Paragraphs[0].ChildEntities[2] as WField;
+// Get and print the field code.
+string fieldCode = field.FieldCode;
 Console.WriteLine(fieldCode);
 document.Close();
 {% endhighlight %}
@@ -215,16 +215,20 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing Word document into the DocIO instance
 Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Access the merge field in the first paragraph of the first section
-Dim mergeField As WMergeField = TryCast(document.Sections(0).Paragraphs(0).ChildEntities(2), WMergeField)
-'Get and print the field code of the merge field
-Dim fieldCode As String = mergeField.FieldCode
+'Access the field in the first paragraph of the first section
+Dim field As WField = TryCast(document.Sections(0).Paragraphs(0).ChildEntities(2), WField)
+'Get and print the field code
+Dim fieldCode As String = field.FieldCode
 Console.WriteLine(fieldCode)
 'Close the document
 document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Fields/Get-field-code).
+
+N> The above logic retrieves the field code of a normal field. To get the field code of complex fields, such as nested IF fields or fields spanning multiple paragraphs, [iterate through the document elements](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/iterating-word-document-elements) and then retrieve the code.
 
 ## Updating fields
 
