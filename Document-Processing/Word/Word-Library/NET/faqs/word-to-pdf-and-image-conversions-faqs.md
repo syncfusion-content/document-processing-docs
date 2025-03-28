@@ -85,3 +85,7 @@ For more details about the conversion, refer [here]( https://help.syncfusion.com
 ## How to convert Word document to PDF/A?
 
 To convert a Word document to PDF/A, refer to this [link](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level).
+
+## How to validate the PDF conformance level in a DocIO-converted PDF?
+
+PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF, Xodo Validator, and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
