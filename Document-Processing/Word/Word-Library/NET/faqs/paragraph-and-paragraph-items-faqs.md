@@ -649,3 +649,7 @@ The UpdateTableOfContents() method requires the [Syncfusion.DocIORenderer.Net.Co
 
 DocIO indexes items based on the document’s internal file structure rather than the UI rendering. Elements like floating objects may appear in a different order in Microsoft Word UI compared to their actual position in the document’s underlying structure. Since DocIO follows this structure, the difference in indexing is expected.
 
+## Is it possible to create a Spline chart in a Word document using DocIO?
+
+No, DocIO does not support spline charts directly. However, a similar effect can be achieved using a **scatter chart with a smooth line**. This chart type connects data points smoothly, resembling a spline chart. Refer to the [article](https://support.syncfusion.com/kb/article/12203/how-to-create-scatter-with-smooth-line-chart-in-word-document-using-c) and [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Create-scatter-with-smooth-line-chart) for implementation.
+
