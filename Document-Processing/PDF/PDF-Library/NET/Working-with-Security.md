@@ -7,7 +7,12 @@ documentation: UG
 ---
 # Working with Security
 
-Essential<sup>&reg;</sup> PDF allows you to [protect the PDF document](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using encryption and set permission to the PDF document operations like printing, editing, copy content etc. using user password and owner password. Two types of encryption algorithms are available
+Essential<sup>&reg;</sup> PDF enables you to [secure PDF documents](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using various encryption algorithms while defining specific permissions such as printing, editing, and copying content. You can apply both a user password (document open password) and an owner password (permission password) for enhanced protection.
+
+Watch the following video to learn how to encrypt and decrypt PDF documents using the .NET PDF library.
+{% youtube "https://www.youtube.com/watch?v=aGVDvIf3ODI" %}
+
+The two supported encryption algorithms are:
 1. Rivest Cipher 4 (RC4)
 2. Advanced Encryption Standard (AES)
 
