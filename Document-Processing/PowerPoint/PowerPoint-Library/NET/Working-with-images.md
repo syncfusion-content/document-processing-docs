@@ -1,6 +1,6 @@
 ---
 title: Add and edit images in PowerPoint slides|C# PowerPoint| Syncfusion
-description: Learn how to add, edit, and remove the images in C# using Syncfusion<sup>&reg;</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+description: Learn how to add, edit, and remove the images in C# using Syncfusion .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG
