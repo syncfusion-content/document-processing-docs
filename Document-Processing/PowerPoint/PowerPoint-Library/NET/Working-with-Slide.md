@@ -1192,3 +1192,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to set slide size for Presentation after cloning and merging a PowerPoint slide?](https://support.syncfusion.com/kb/article/17045/how-to-set-slide-size-for-powerpoint-after-cloning-and-merging-a-powerpoint-slide-in-c)
+* [How to edit the text of an existing slide and the alt text of an image in PowerPoint Presentation?](https://support.syncfusion.com/kb/article/17890/how-to-edit-the-text-of-an-existing-slide-and-the-alt-text-of-an-image-in-powerpoint-presentation)

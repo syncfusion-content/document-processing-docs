@@ -1144,3 +1144,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to maintain list format of the source document to destination document after replacing bookmark content](https://support.syncfusion.com/kb/article/17584/how-to-maintain-list-format-of-the-source-document-to-destination-document-after-replacing-bookmark-content)
 * [How to replace text between custom tags using bookmarks in a Word document](https://support.syncfusion.com/kb/article/17790/how-to-replace-text-between-custom-tags-using-bookmarks-in-a-word-document)
 * [How to clone and add a paragraph with bookmarks in the same Word document](https://support.syncfusion.com/kb/article/17804/how-to-clone-and-add-a-paragraph-with-bookmarks-in-the-same-word-document)
+* [How to find text and add bookmark to get content in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19138/how-to-find-text-and-add-bookmark-to-get-content-in-aspnet-core-word?)
+
