@@ -17,6 +17,9 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [HTML conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 * [HTML conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+To quickly start converting a Word document to HTML and vice versa, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=CQdcQZssyE8" %}
+
 ## Convert HTML to Word
 
 The following code example shows how to convert the HTML file into Word document.
