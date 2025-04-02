@@ -12,6 +12,7 @@ Brushes are used to draw the content on PDF document with specific color and sty
 1. Solid Brush
 2. Gradient Brush
 	* Linear Gradient Brush
+	* Linear Gradient Brush with Multiple Colors
 	* Radial Gradient Brush
 3. Tiling Brush
 4. Hatch Brush
@@ -155,6 +156,147 @@ doc.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Brushes/Fill-an-object-with-gradient-brush-in-a-PDF/). 
+
+## Linear Gradient Brush with Multiple Colors
+
+The gradient brush is used to fill an object with a smooth blend of two or more colors, creating a transition effect. Essential<sup>®</sup> PDF supports drawing shapes on a PDF document with a linear gradient brush using the [PdfLinearGradientBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLinearGradientBrush.html) class. This class allows you to define a gradient that smoothly interpolates between multiple colors, providing a visually appealing effect for shapes like rectangles, ellipses, and more.
+
+The following code example demonstrates how to fill a rectangle with a gradient blend of multiple colors.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document
+    PdfPage page = document.Pages.Add();
+
+    // Create PDF graphics for the page
+    PdfGraphics graphics = page.Graphics;
+
+    // Create a new PDF linear gradient brush
+    PdfLinearGradientBrush brush = new PdfLinearGradientBrush(
+        new RectangleF(new PointF(0, 0), new SizeF(200, 100)),
+        Color.Red, Color.Blue,
+        PdfLinearGradientMode.Horizontal
+    );
+
+    // Create and configure the color blend
+    PdfColorBlend colorBlend = new PdfColorBlend(4)
+    {
+        // Define the colors for the gradient
+        Colors = new PdfColor[]
+        {
+            Color.Red,
+            Color.Yellow,
+            Color.Green,
+            Color.Blue
+        },
+
+        // Define the position of each color in the gradient
+        Positions = new float[] { 0, 0.3f, 0.7f, 1 }
+    };
+
+    // Apply the color blend to the linear gradient brush
+    brush.InterpolationColors = colorBlend;
+
+    // Draw a rectangle filled with the gradient
+    graphics.DrawRectangle(brush, new RectangleF(0, 0, 200, 100));
+
+    //Create file stream.
+    using (FileStream outputFileStream = new FileStream(@"Output/Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+    {
+        //Save the PDF document to file stream.
+        document.Save(outputFileStream);
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document
+    PdfPage page = document.Pages.Add();
+
+    // Create PDF graphics for the page
+    PdfGraphics graphics = page.Graphics;
+
+    // Create a new PDF linear gradient brush
+    PdfLinearGradientBrush brush = new PdfLinearGradientBrush(
+        new RectangleF(new PointF(0, 0), new SizeF(200, 100)),
+        Color.Red, Color.Blue,
+        PdfLinearGradientMode.Horizontal
+    );
+
+    // Create and configure the color blend
+    PdfColorBlend colorBlend = new PdfColorBlend(4)
+    {
+        // Define the colors for the gradient
+        Colors = new PdfColor[]
+        {
+            Color.Red,
+            Color.Yellow,
+            Color.Green,
+            Color.Blue
+        },
+
+        // Define the position of each color in the gradient
+        Positions = new float[] { 0, 0.3f, 0.7f, 1 }
+    };
+
+    // Apply the color blend to the linear gradient brush
+    brush.InterpolationColors = colorBlend;
+
+    // Draw a rectangle filled with the gradient
+    graphics.DrawRectangle(brush, new RectangleF(0, 0, 200, 100));
+
+    //Save the PDF document to file stream.
+    document.Save("Output.pdf");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Create a new PDF document
+Using document As New PdfDocument()
+    ' Add a page to the document
+    Dim page As PdfPage = document.Pages.Add()
+
+    ' Create PDF graphics for the page
+    Dim graphics As PdfGraphics = page.Graphics
+
+    ' Create a new PDF linear gradient brush
+    Dim brush As New PdfLinearGradientBrush(
+        New RectangleF(New PointF(0, 0), New SizeF(200, 100)),
+        Color.Red, Color.Blue,
+        PdfLinearGradientMode.Horizontal
+    )
+
+    ' Create and configure the color blend
+    Dim colorBlend As New PdfColorBlend(4) With {
+        ' Define the colors for the gradient
+        .Colors = New PdfColor() {Color.Red, Color.Yellow, Color.Green, Color.Blue},
+
+        ' Define the position of each color in the gradient
+        .Positions = New Single() {0, 0.3F, 0.7F, 1}
+    }
+
+    ' Apply the color blend to the linear gradient brush
+    brush.InterpolationColors = colorBlend
+
+    ' Draw a rectangle filled with the gradient
+    graphics.DrawRectangle(brush, New RectangleF(0, 0, 200, 100))
+
+    ' Save the PDF document to a file stream
+    document.Save("Output.pdf")
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
 
 ## Radial Gradient Brush
 
