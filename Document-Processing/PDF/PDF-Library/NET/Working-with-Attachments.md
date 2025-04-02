@@ -281,7 +281,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding PDF Attachments with Interactive Launch Buttons
 
-Essential<sup>®</sup> PDF provides support for adding PDF attachments with interactive launch buttons. The following code example illustrates how to embed an attachment and create a button that opens the attachment when clicked. This is achieved using the [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) and [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) classes.
+**Scenario**:
+You need to implement a feature where, upon clicking on a content (such as a button or link), the user is navigated to a custom page in an attached PDF. This requires embedding the functionality within the PDF to open the attachment when the content is clicked.
+
+**Solution**:
+You can achieve this functionality by using JavaScript actions within Syncfusion<sup>®</sup> PDF library. This solution involves adding a PDF attachment to the document and setting up a JavaScript action on a button field that, when clicked, opens the attached PDF.This is achieved using the [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) and [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) classes.
 
 {% tabs %}
 
