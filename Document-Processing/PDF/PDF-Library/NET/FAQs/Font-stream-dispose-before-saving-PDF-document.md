@@ -8,15 +8,19 @@ documentation: UG
 
 # Font Stream Disposed Before Saving PDF Document
 
+**Overview:**
+
 This error occurs when a font stream is disposed of (i.e., released from memory) before the PDF document is saved. The Syncfusion<sup>&reg;</sup> PDF library requires that the font stream remains valid until the document is saved. Disposing of it too early can cause the document to fail to render correctly or throw errors during the saving process.
+
+**Solution:**
 
 ## Keep the font stream open until after the PDF is saved:
 
-Ensure that the font stream remains valid during the entire document creation and saving process.
+Ensure that the font stream remains valid throughout the entire document creation and saving process.
 
 ## Dispose of the font stream only after saving the document:
 
-Once the PDF is saved successfully, you can safely dispose of the font stream.
+Once the PDF document is successfully saved, you can safely dispose of the font stream without causing any issues.
 
 The following code example demonstrates how to dispose of the font stream after saving the PDF document.
 
