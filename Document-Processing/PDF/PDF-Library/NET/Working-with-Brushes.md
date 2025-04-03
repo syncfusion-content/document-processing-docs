@@ -12,7 +12,6 @@ Brushes are used to draw the content on PDF document with specific color and sty
 1. Solid Brush
 2. Gradient Brush
 	* Linear Gradient Brush
-	* Linear Gradient Brush with Multiple Colors
 	* Radial Gradient Brush
 3. Tiling Brush
 4. Hatch Brush
@@ -157,7 +156,7 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Brushes/Fill-an-object-with-gradient-brush-in-a-PDF/). 
 
-## Linear Gradient Brush with Multiple Colors
+## Multi-color linear gradient brush
 
 The gradient brush is used to fill an object with a smooth blend of two or more colors, creating a transition effect. Essential<sup>®</sup> PDF supports drawing shapes on a PDF document with a linear gradient brush using the [PdfLinearGradientBrush](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLinearGradientBrush.html) class. This class allows you to define a gradient that smoothly interpolates between multiple colors, providing a visually appealing effect for shapes like rectangles, ellipses, and more.
 
