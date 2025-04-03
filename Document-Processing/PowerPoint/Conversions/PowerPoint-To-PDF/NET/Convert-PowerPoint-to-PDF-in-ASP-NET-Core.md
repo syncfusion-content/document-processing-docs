@@ -25,7 +25,7 @@ Step 1: Create a new C# ASP.NET Core web application project.
 
 ![Create ASP.NET Core Web project for PowerPoint file](Workingwith-Core/Create-Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
@@ -235,7 +235,7 @@ Step 1. Open JetBrains Rider and create a new ASP.NET Core Web application proje
 
 ![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Core/Create-ASP.NET-Core-application.png)
 
-Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
 * Select the latest Syncfusion.PresentationRenderer.Net.Core NuGet package from the list.
