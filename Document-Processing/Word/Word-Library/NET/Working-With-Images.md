@@ -704,6 +704,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to extract Images from Word document in C# and VB?](https://support.syncfusion.com/kb/article/11829/how-to-extract-images-from-word-document-in-c-and-vb)
 * [How to replace an image with same size in a Word document](https://support.syncfusion.com/kb/article/17796/how-to-replace-an-image-with-same-size-in-a-word-document)
 * [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document)
+* [How to extract images from ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/19583/how-to-extract-images-from-aspnet-core-word-document?)
+* [How to replace SVG and other images in ASP.NET Word document?](https://support.syncfusion.com/kb/article/19459/how-to-replace-svg-and-other-images-in-aspnet-word-document?)
 
 ## Frequently Asked Questions
 
