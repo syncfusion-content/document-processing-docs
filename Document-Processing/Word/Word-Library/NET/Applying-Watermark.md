@@ -182,3 +182,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Online Demo
 
 * Explore how to insert text and picture watermark into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/watermark#/material3). 
+
+## See Also
+
+* [How to add watermark to specific page in a Word document?](https://support.syncfusion.com/kb/article/19643/how-to-add-watermark-to-specific-page-in-a-word-document)
+

@@ -2156,6 +2156,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
 * [How to copy table from another Word document with its style?](https://support.syncfusion.com/kb/article/17897/how-to-copy-table-from-another-word-document-with-its-style)
 * [How to Replace Field with Table in ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/17134/how-to-replace-field-with-table-in-aspnet-core-word-document?)
+* [How to extract tables and add to a new Document in ASP.NETCore Word?](https://support.syncfusion.com/kb/article/19585/how-to-extract-tables-and-add-to-a-new-document-in-aspnetcore-word?)
+* [How to remove multiple rows from a table in a Word Document?](https://support.syncfusion.com/kb/article/19642/how-to-remove-multiple-rows-from-a-table-in-a-word-document)
 
 ## Frequently Asked Questions
 
