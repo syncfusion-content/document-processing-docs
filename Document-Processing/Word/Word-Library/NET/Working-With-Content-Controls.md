@@ -2609,3 +2609,4 @@ N> In the above-mentioned code samples, for Xamarin platforms the document is sa
 * [How to remove content control without deleting content in Word document](https://support.syncfusion.com/kb/article/17599/how-to-remove-content-control-without-deleting-content-in-word-document)
 * [How to add a checkbox content control with a tick mark in a Word document](https://support.syncfusion.com/kb/article/17809/how-to-add-a-checkbox-content-control-with-a-tick-mark-in-a-word-document)
 * [How to insert the content of a Word document into a block content control?](https://support.syncfusion.com/kb/article/17871/how-to-insert-the-content-of-a-word-document-into-a-block-content-control)
+* [How to print extracted text from plain text in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19449/how-to-print-extracted-text-from-plain-text-in-aspnet-core-word?)

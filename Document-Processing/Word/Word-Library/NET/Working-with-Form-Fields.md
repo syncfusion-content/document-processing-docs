@@ -574,3 +574,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See also
 
 * [How to insert the content of a Word document into a block content control?](https://support.syncfusion.com/kb/article/17871/how-to-insert-the-content-of-a-word-document-into-a-block-content-control)
+* [How to change the size of Form Fields in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19467/how-to-change-the-size-of-form-fields-in-aspnet-core-word?)

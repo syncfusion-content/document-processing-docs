@@ -17,6 +17,9 @@ Refer to the following links for assemblies and NuGet packages required based on
 * [HTML conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 * [HTML conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+To quickly start converting a Word document to HTML and vice versa, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=CQdcQZssyE8" %}
+
 ## Convert HTML to Word
 
 The following code example shows how to convert the HTML file into Word document.
@@ -1278,3 +1281,4 @@ Underline types and colors are ignored.
 * [How to replace text in a list paragraph with an HTML string in a Word document?](https://support.syncfusion.com/kb/article/17674/how-to-replace-text-in-a-list-paragraph-with-an-html-string-in-a-word-document)
 * [How to convert Webpage to Word document using C#?](https://support.syncfusion.com/kb/article/17771/how-to-convert-webpage-to-word-document-using-c)
 * [How to merge header, body and footer from different HTML files into a Word document?](https://support.syncfusion.com/kb/article/17771/how-to-convert-webpage-to-word-document-using-c) 
+* [How to add numbers on pages in HTML to PDF in ASP.NET DocIO?](https://support.syncfusion.com/kb/article/19446/how-to-add-numbers-on-pages-in-html-to-pdf-in-aspnet-docio?isInternalRefresh=False)

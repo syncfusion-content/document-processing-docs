@@ -2811,6 +2811,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to copy the format of the text from an RTF string and apply it to text in DOCX format document?](https://support.syncfusion.com/kb/article/17903/how-to-copy-the-format-of-the-text-from-an-rtf-string-and-apply-it-to-text-in-docx-format-document)
 * [How to Change Font Size for all Text in ASP.NET Word?](https://support.syncfusion.com/kb/article/17719/how-to-change-font-size-for-all-text-in-aspnet-word?)
 * [How to Convert Word Document to Images in WinForms?](https://support.syncfusion.com/kb/article/17701/how-to-convert-word-document-to-images-in-winforms?)
+* [How to generate and insert a QR code in a Word Document?](https://support.syncfusion.com/kb/article/19794/how-to-generate-and-insert-a-qr-code-in-a-word-document)
+* [How to apply background color to footer and add logo in header in a Word document?](https://support.syncfusion.com/kb/article/19582/how-to-apply-background-color-to-footer-and-add-logo-in-header-in-a-word-document)
+* [How to replace SVG and other images in ASP.NET Word document?](https://support.syncfusion.com/kb/article/19459/how-to-replace-svg-and-other-images-in-aspnet-word-document?)
 
 ## Frequently Asked Questions
 
