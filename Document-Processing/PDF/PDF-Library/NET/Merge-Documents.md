@@ -142,7 +142,7 @@ stream2.Dispose()
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream). 
 
 ## Importing pages from multiple documents
 
@@ -205,7 +205,7 @@ lDoc.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Importing-pages-from-one-document-another-document/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Importing-pages-from-one-document-another-document). 
 
 You can import multiple pages from an existing document by using [ImportPageRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_) method. The following code example illustrates this.
 
@@ -340,7 +340,7 @@ lDoc2.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Import-pages-from-multiple-documents-and-arrange-pages/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Import-pages-from-multiple-documents-and-arrange-pages). 
 
 ## Best practices
 
@@ -443,7 +443,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream). 
 
 ## Optimizing PDF resources when merging PDF documents
 
@@ -519,7 +519,7 @@ finalDoc.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Optimize-the-PDF-resources-when-merging-PDF-documents/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Optimize-the-PDF-resources-when-merging-PDF-documents). 
 
 ## Extend the margin of the PDF pages while merging PDF document
 
@@ -610,7 +610,7 @@ finalDoc.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Extend-the-margin-of-PDF-pages-while-merging-PDFs/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Extend-the-margin-of-PDF-pages-while-merging-PDFs). 
 
 ##  Merge PDF document without compromising accessibility tags 
 
