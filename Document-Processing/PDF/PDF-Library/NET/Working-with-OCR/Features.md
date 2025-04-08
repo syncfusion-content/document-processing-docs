@@ -1696,3 +1696,117 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
 You can find the `.traineddata` files for different languages on the [Tesseract GitHub page](https://github.com/tesseract-ocr/tessdata).
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/OCR-with-multiple-langauages).
+
+##  Adding Line Breaks Using OCRLayoutResult
+
+Line breaks can be added to OCRed text using the [OCRLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRLayoutResult.html) API, which provides a collection of text lines detected during OCR processing. Since OCR does not inherently retain line breaks, extracting the text line by line allows you to manually insert them, ensuring proper formatting when combining the lines into a single string. This feature is particularly useful when converting scanned documents into editable text, preserving the original document layout and ensuring readability in the resulting text file.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Initialize the OCR processor
+using (OCRProcessor processor = new OCRProcessor())
+{
+    // Load the existing PDF document
+    using (FileStream stream = new FileStream(@"Input.pdf", FileMode.Open))
+    {
+        // Load the PDF document from the file stream
+        PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument(stream);
+
+        // Set OCR language to English
+        processor.Settings.Language = Languages.English;
+
+        // Set the page segmentation mode to process sparse text with orientation and script detection
+        processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
+
+        // Perform OCR on the loaded PDF document to extract text
+        processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
+
+        // Extract the OCRed text from the first page and join lines with newline characters
+        string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
+
+        // Create a file stream for saving the processed PDF document
+        using (FileStream outputFileStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+        {
+            // Save the PDF document to the file stream
+            pdfLoadedDocument.Save(outputFileStream);
+        }
+
+        // Close the PDF document
+        pdfLoadedDocument.Close(true);
+
+        // Write the extracted OCR text to an output text file
+        File.WriteAllText("Output.txt", ocrText);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Initialize the OCR processor
+using (OCRProcessor processor = new OCRProcessor())
+{
+    // Load the PDF document from the file stream
+    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Set OCR language to English
+    processor.Settings.Language = Languages.English;
+
+    // Set the page segmentation mode to process sparse text with orientation and script detection
+    processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
+
+    // Perform OCR on the loaded PDF document to extract text
+    processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
+
+    // Extract the OCRed text from the first page and join lines with newline characters
+    string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
+
+    // Save the PDF document to the file stream
+    pdfLoadedDocument.Save("Output.pdf");
+
+    // Close the PDF document
+    pdfLoadedDocument.Close(true);
+
+    // Write the extracted OCR text to an output text file
+    File.WriteAllText("Output.txt", ocrText);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize the OCR processor
+Using processor As New OCRProcessor()
+    ' Load the PDF document from the file stream
+    Dim pdfLoadedDocument As New PdfLoadedDocument("Input.pdf")
+
+    ' Set OCR language to English
+    processor.Settings.Language = Languages.English
+
+    ' Set the page segmentation mode to process sparse text with orientation and script detection
+    processor.Settings.PageSegment = PageSegMode.SparseTextOsd
+
+    ' Perform OCR on the loaded PDF document to extract text
+    Dim layoutResult As OCRLayoutResult
+    processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, layoutResult)
+
+    ' Extract the OCRed text from the first page and join lines with newline characters
+    Dim ocrText As String = String.Join(Environment.NewLine, layoutResult.Pages(0).Lines.Select(Function(line) line.Text))
+
+    ' Save the PDF document to the file stream
+    pdfLoadedDocument.Save("Output.pdf")
+
+    ' Close the PDF document
+    pdfLoadedDocument.Close(True)
+
+    ' Write the extracted OCR text to an output text file
+    File.WriteAllText("Output.txt", ocrText)
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can downloaded a complete working sample from GitHub.
