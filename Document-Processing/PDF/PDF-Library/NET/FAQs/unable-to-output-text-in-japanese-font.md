@@ -6,7 +6,7 @@ control: PDF
 documentation: UG
 ---
 
-# FAQ: Unable to Output Text in Japanese Font in PDF
+# FAQ: Japanese text not displaying in PDF
 
 ## Why is the Japanese text not visible in my PDF document?
 
