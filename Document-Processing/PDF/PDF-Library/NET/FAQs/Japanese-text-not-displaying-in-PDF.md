@@ -1,5 +1,5 @@
 ---
-title: Unable to Output Text in Japanese Font
+title: Japanese text not displaying in PDF
 description: The text is not visible due to font compatibility issues with certain viewers like Edge. To resolve this, create a TrueTypeFont using the desired font.
 platform: document-processing
 control: PDF
