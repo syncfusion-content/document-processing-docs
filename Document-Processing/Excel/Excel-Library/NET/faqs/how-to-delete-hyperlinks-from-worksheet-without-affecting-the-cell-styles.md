@@ -12,7 +12,7 @@ You can remove hyperlinks from an Excel worksheet without altering the cell form
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Delete Hyperlinks /.Net/Delete Hyperlinks/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Delete%20Hyperlinks/.Net/Delete%20Hyperlinks/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -59,4 +59,4 @@ Using engine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
-A complete working example to delete hyperlinks from an Excel worksheet without altering cell styles is available on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Delete Hyperlinks/.Net/Delete Hyperlinks).
+A complete working example to delete hyperlinks from an Excel worksheet without altering cell styles is available on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Delete%20Hyperlinks/.Net/Delete%20Hyperlinks).
