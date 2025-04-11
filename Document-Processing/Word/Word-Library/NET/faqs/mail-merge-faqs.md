@@ -168,3 +168,19 @@ In DocIO, simple mail merge clones the entire document for each record, causing 
 To merge all records into a single table or specific region on the same page, use group mail merge instead.
 
 Refer to the [Group Mail Merge](https://help.syncfusion.com/document-processing/word/word-library/net/mail-merge/mail-merge-for-group) documentation for details.
+
+## Why does TryAdd() not work with ExpandoObject in .NET Framework 4.8?
+
+Microsoft did not implement TryAdd() for ExpandoObject in .NET Framework 4.8, which results in an exception when used. To check which versions support TryAdd(), refer [here](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2.tryadd).
+
+Since TryAdd() is not available, you can manually check if a key exists before adding a new entry to the dictionary using the following workaround:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+if (!(dynamicObject as IDictionary<string, object>).ContainsKey(node.LocalName))
+    (dynamicObject as IDictionary<string, object>).Add(node.LocalName, node.InnerText);
+{% endhighlight %}
+
+{% endtabs %}
+

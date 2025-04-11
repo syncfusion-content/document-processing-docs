@@ -345,6 +345,14 @@ DocIO is a non-UI component that provides a full-fledged document object model t
 
 You can, however, split the Word document by sections, headings, bookmarks, or placeholders. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents) for more details.
 
+## Is it possible to fetch the page number of Word document elements using DocIO?
+
+No, DocIO cannot retrieve the page number of elements such as text, images, tables, or paragraphs. This is because a Word document is flow-based, where content is not preserved page by page but sequentially, section by section. Each section may span multiple pages depending on its content, such as tables, text, and images.
+
+The Word viewer/editor dynamically renders the document page by page when opened for viewing or editing. However, this page-wise rendering is not stored at the document level, as per the Word file format specification.
+
+DocIO is a non-UI component that provides a full-fledged document object model for manipulating Word document content. Therefore, fetching the page number of text, images, or any other elements from a Word document using DocIO is not feasible.
+
 ## How to check if two Word documents have the same content while ignoring formatting changes?
 
 By default, DocIO checks both content and formatting in Word files. To focus only on content, you can use the [DetectFormatChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ComparisonOptions.html#Syncfusion_DocIO_DLS_ComparisonOptions_DetectFormatChanges) API to skip formatting checks.

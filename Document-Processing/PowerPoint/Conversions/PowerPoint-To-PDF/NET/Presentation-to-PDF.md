@@ -121,10 +121,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> 1. Creating an instance of [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Presentation to PDF. Otherwise, the charts are not exported to the converted PDF
 N> 2. The assembly "Syncfusion.SfChart.WPF" is non compliance with FIPS (Federal Information Processing Standard) algorithm policy.
-N> 3. **In .NET Core targeting applications**, metafile images such as EMF and WMF have some limitations. So, those images will not preserve in Presentation document to PDF conversion using Essential<sup>&reg;</sup> Presentation. 
-
-N> 1. To preserve the expected images in the PDF, we suggest you convert the metafile image formats to bitmap image format (JPEG or PNG) and then perform Presentation to PDF conversion.
-N> 2. Otherwise, you can use the [WPF](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/) or [Windows](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/) Forms platform NuGet packages for .NET Core 3.0 or later versions targeting applications from v17.3.0.x and use the same [C# tab](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf) code examples for it. But in Mac and Linux environment, using the WPF or Windows Forms platform NuGet packages have limitations.
 
 ## PowerPoint Presentation to PDF conversion in Linux OS
 
@@ -536,6 +532,78 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-into-accessible-PDF).
 
+## PowerPoint shapes to PDF form field 
+
+This setting allows you to **preserve PowerPoint shapes as PDF form fields** in the converted PDF document. Shapes with names starting with **FormField_** will be converted into **editable text form fields** in the resulting PDF. This feature helps in creating **interactive and fillable PDF forms** from PowerPoint presentations.
+
+The following code sample shows how to preserve PowerPoint form fields as PDF form fields in the converted PDF document.
+
+{% tabs %}
+
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX/.NET/Create-fillable-PDF-from-PPTX/Program.cs" %}
+//Open the PowerPoint file stream. 
+using (FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/Template.pptx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{
+    //Load an existing PowerPoint Presentation. 
+    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    {
+        // Create new instance for PresentationToPdfConverterSettings
+        PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
+        //Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
+        settings.PreserveFormFields = true;
+        //Convert PowerPoint into PDF document. 
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        {
+            //Save the PDF file to file system. 
+            using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/PPTXToPDF.pdf"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+            {
+                pdfDocument.Save(outputStream);
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight C# tabtitle="C# [Windows-specific]" %}
+//Open a PowerPoint Presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
+{
+    // Create new instance for PresentationToPdfConverterSettings
+    PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
+    //Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
+    settings.PreserveFormFields = true;
+    //Convert the PowerPoint Presentation into a PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
+    {
+        //Save a PDF document.
+        pdfDocument.Save("Result.pdf");
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open a PowerPoint Presentation.
+Using pptxDoc As IPresentation = Presentation.Open("Template.pptx")
+    'Create new instance for PresentationToPdfConverterSettings
+    Dim settings As New PresentationToPdfConverterSettings()
+    'Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
+    settings.PreserveFormFields = True
+    'Convert the PowerPoint Presentation into a PDF document.
+    Using pdfDocument As PdfDocument = PresentationToPdfConverter.Convert(pptxDoc, settings)
+        'Save a PDF document.
+        pdfDocument.Save("Result.pdf")
+    End Using
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+By running the above code, you will generate a **PDF with editable text form fields** as shown below.
+![Editable text form fields](PPTXtoPDF_images/Editable-text-form-fields.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX).
+
 ## Chart quality
 
 The Presentation library provides an option to decide the quality of the charts to optimize the converted PDF document size. 
@@ -694,3 +762,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to convert PPTX to PDF in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12120/how-to-convert-pptx-to-pdf-in-blazor-webassembly-wasm)
 * [How to resolve font problems during PowerPoint to PDF or image conversion?](https://support.syncfusion.com/kb/article/15472/how-to-resolve-font-problems-during-powerpoint-to-pdf-or-image-conversion)
 * [How to convert and replace EMF image to PNG with same size during PowerPoint to PDF conversion?](https://support.syncfusion.com/kb/article/15641/how-to-convert-and-replace-emf-image-to-png-with-same-size-during-powerpoint-to-pdf-conversion)
+* [How to convert shapes into PDF in ASP.NET Core PowerPoint?](https://support.syncfusion.com/kb/article/19542/how-to-convert-shapes-into-pdf-in-aspnet-core-powerpoint?)

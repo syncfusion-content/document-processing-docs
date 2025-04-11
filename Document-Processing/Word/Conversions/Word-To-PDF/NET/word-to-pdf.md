@@ -284,3 +284,7 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 * [How to perform Word to PDF conversion in WinForms ?](https://support.syncfusion.com/kb/article/8848/how-to-perform-word-to-pdf-conversion-in-winforms-?isInternalRefresh=False)
 * [How to preserve track changes markup in Word to PDF conversion](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
 * [How to preserve simple markup, all markup, and no markup of track changes during Word to PDF conversion?](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
+* [How to preserve track change when converting ASP.NET Core Word to PDF?](https://support.syncfusion.com/kb/article/19563/how-to-preserve-track-change-when-converting-aspnet-core-word-to-pdf?)
+* [How to perform mail merge in Word document and convert it as PDF in WinForms?](https://support.syncfusion.com/kb/article/19782/how-to-perform-mail-merge-in-word-document-and-convert-it-as-pdf-in-winforms) 
+* [How to add numbers on pages in HTML to PDF in ASP.NET DocIO?](https://support.syncfusion.com/kb/article/19446/how-to-add-numbers-on-pages-in-html-to-pdf-in-aspnet-docio?isInternalRefresh=False)
+* [How to add signature field in PDF converted from ASP.NET Word?](https://support.syncfusion.com/kb/article/19447/how-to-add-signature-field-in-pdf-converted-from-aspnet-word?)
