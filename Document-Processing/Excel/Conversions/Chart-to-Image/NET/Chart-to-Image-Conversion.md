@@ -247,3 +247,5 @@ XlsIO supports the following chart elements in image conversion:
 5. Grid lines
 6. Legend
 7. Trend line
+
+N> Rendering of charts from Excel document to PDF is performed using our own chart library. As a result, there might be some preservation differences, and the output chart in PDF may not exactly match the chart in Microsoft Excel.
