@@ -63,6 +63,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to Parse Worksheets on Demand in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/ Worksheet/.Net/Parse%20WorkSheets%20On%20Demand).   
+A complete working example to Parse Worksheets on Demand in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet/.Net/Parse%20WorkSheets%20On%20Demand).   
 
 
