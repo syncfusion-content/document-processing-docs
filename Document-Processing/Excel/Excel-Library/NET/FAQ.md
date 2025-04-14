@@ -106,4 +106,3 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to use AND and OR operators in the filter?](faqs/how-to-use-and-or-operators-in-the-filters)
 * [Why out of memory exception is thrown when handling large documents which is having size more than 2GB?](faqs/why-out-of-memory-exception-is-thrown-when-handling-large-documents)
 * [Does XlsIO support the multiline header footer support?](faqs/does-xlsio-support-the-multiline-header-footer-support)
-* [How to run macros in Excel document?](faqs/how-to-run-macros-in-Excel-document)
