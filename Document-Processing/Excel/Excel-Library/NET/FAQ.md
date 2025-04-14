@@ -106,3 +106,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to use AND and OR operators in the filter?](faqs/how-to-use-and-or-operators-in-the-filters)
 * [Why out of memory exception is thrown when handling large documents which is having size more than 2GB?](faqs/why-out-of-memory-exception-is-thrown-when-handling-large-documents)
 * [Does XlsIO support the multiline header footer support?](faqs/does-xlsio-support-the-multiline-header-footer-support)
+* [How to add Barcode in Excel document using C#?](faqs/how-to-add-Barcode-in-Excel-document)
+* [How to delete hyperlinks from a worksheet without affecting the cell styles using C#?](faqs/how-to-delete-hyperlinks-from-worksheet-without-affecting-the-cell-styles)
+* [How to Parse Worksheets on Demand using C#?](faqs/how-to-parse-worksheets-on-demand-in-Excel)
+* [How to run macros in Excel document?](faqs/how-to-run-macros-in-Excel-document)
