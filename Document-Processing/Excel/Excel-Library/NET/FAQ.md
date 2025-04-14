@@ -104,3 +104,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to decrypt individual items with specific passwords?](faqs/how-to-decrypt-individual-items-with-specific-passwords-in-a-protected-zip-file)
 * [What is the behavior of FitToPagesTall and FitToPagesWide?](faqs/what-is-the-behavior-of-fittopagestall-and-fittopageswide)
 * [How to use AND and OR operators in the filter?](faqs/how-to-use-and-or-operators-in-the-filters)
+* [How to delete hyperlinks from a worksheet without affecting the cell styles using C#?](faqs/how-to-delete-hyperlinks-from-worksheet-without-affecting-the-cell-styles)
