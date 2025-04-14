@@ -164,7 +164,7 @@ The following code example demonstrates how to fill a rectangle with a gradient 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Brushes/Linear-Gradient-Brush-with-Multiple-Colors/.NET/Linear-Gradient-Brush-with-Multiple-Colors/Program.cs" %}
 
 // Create a new PDF document
 using (PdfDocument document = new PdfDocument())
@@ -295,7 +295,7 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Brushes/Linear-Gradient-Brush-with-Multiple-Colors/.NET).
 
 ## Radial Gradient Brush
 

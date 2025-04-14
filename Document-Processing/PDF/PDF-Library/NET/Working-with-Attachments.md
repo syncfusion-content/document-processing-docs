@@ -289,7 +289,7 @@ You can achieve this functionality by using JavaScript actions within Syncfusion
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"  %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/Program.cs" %}
 
 //Create FileStream object to read the input PDF file
 using (FileStream inputFileStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
@@ -445,4 +445,4 @@ loadedDocument.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET).
