@@ -30,7 +30,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
     }
   ],
   \"PreserveBookmarks\": true,
-  \"Folder\": ""
+  \"FolderPath\": ""
 }"'
 
 {% endhighlight %}
@@ -40,7 +40,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
 const formdata = new FormData();
 formdata.append("file1", fileInput.files[0], "merge/example.pdf");
 formdata.append("file2", fileInput.files[0], "merge/example1.pdf");
-formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true,\n \"Folder\": ""\n}");
+formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true,\n \"FolderPath\": ""\n}");
 
 const requestOptions = {
   method: "POST",
@@ -72,7 +72,7 @@ content.Add(new StringContent("{
     }
   ],
   \"PreserveBookmarks\": true,
-  \"Folder\": ""
+  \"FolderPath\": ""
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);

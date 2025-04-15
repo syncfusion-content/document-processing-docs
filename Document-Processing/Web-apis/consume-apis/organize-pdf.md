@@ -53,8 +53,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/organize' \
   \"SortedPageNumber\": [
     { \"SortedPageNumber\": 2 },
     { \"SortedPageNumber\": 1 }
-  ],
-  \"FolderPath\": \"\"
+  ]
 }"'
 
 {% endhighlight %}
@@ -95,8 +94,7 @@ formdata.append("settings", JSON.stringify({
   SortedPageNumber: [
     { SortedPageNumber: 2 },
     { SortedPageNumber: 1 }
-  ],
-  FolderPath: ""
+  ]
 }));
 
 const requestOptions = {
@@ -153,8 +151,7 @@ var settingsJson = @"{
   ""SortedPageNumber"": [
     { ""SortedPageNumber"": 2 },
     { ""SortedPageNumber"": 1 }
-  ],
-  ""FolderPath"": """"
+  ]
 }";
 
 content.Add(new StringContent(settingsJson, Encoding.UTF8, "application/json"), "settings");
