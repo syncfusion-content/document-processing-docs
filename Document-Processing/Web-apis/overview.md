@@ -33,6 +33,6 @@ In today's fast-paced digital world, businesses and developers require efficient
 
 ## Use cases
 
-- **Document Conversion:** Convert office documents Word, Excel, PowerPoint to PDF and HTML to PDF.
+- **Document Conversion:** Convert office documents Word, Excel, PowerPoint to PDF, Image to PDF, PDF to Image, XPS to PDF and HTML to PDF.
 
-- **Document Manipulation:** Perform operations like merge, split, flatten, compress, rotate, and delete PDF pages.
+- **Document Manipulation:** Perform operations like merge, split, flatten, compress, rotate, protect, unlock, organize and delete PDF pages.

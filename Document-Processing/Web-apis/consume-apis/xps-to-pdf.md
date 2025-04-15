@@ -1,36 +1,26 @@
 ---
-title: Syncfusion PDF Merge Service Guide
-description: Seamlessly combine one or multiple PDF documents into a unified PDF file with the PDF Merge Service.
+title: Syncfusion XPS to PDF Converter API Guide
+description: Convert XPS to PDF seamlessly using Syncfusion's API. Customize settings, monitor job status, and integrate effortlessly into your applications.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Merging PDFs Using Syncfusion API
+# Guide to XPS to PDF Conversion Using Syncfusion API
 
-You can effortlessly merge one or more PDF documents into a single PDF file. To perform this merge, you need to supply one or more PDF documents as input to the merge PDF document service.
+Converting an XPS document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 
-## Merge PDF Document
+## Convert XPS to PDF
 
-To merge PDF documents, send a request to the /v1/edit-pdf/merge endpoint, including both the PDF files as input and the settings as follows:
+To convert an XPS document to PDF, send a request to the /v1/conversion/xps-to-pdf endpoint, including both the XPS file as input and the settings JSON.
 
 {% tabs %}
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
---form 'file1=@"merge/example.pdf"' \
---form 'file2=@"merge/example1.pdf"' \
+curl --location 'http://localhost:8003/v1/conversion/xps-to-pdf' \
+--form 'file=@"example.xps"' \
 --form 'settings="{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"PreserveBookmarks\": true,
-  \"Folder\": ""
+  \"File\": \"file\"
 }"'
 
 {% endhighlight %}
@@ -38,9 +28,8 @@ curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file1", fileInput.files[0], "merge/example.pdf");
-formdata.append("file2", fileInput.files[0], "merge/example1.pdf");
-formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true,\n \"Folder\": ""\n}");
+formdata.append("file", fileInput.files[0], "example.xps");
+formdata.append("settings", "{\n  \"File\": \"file\"\n}");
 
 const requestOptions = {
   method: "POST",
@@ -48,7 +37,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/merge", requestOptions)
+fetch("http://localhost:4000/v1/conversion/xps-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -58,21 +47,11 @@ fetch("http://localhost:4000/v1/edit-pdf/merge", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/merge");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/xps-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file1", "merge/example.pdf");
-content.Add(new StreamContent(File.OpenRead("merge/example1.pdf")), "file2", "merge/example1.pdf");
+content.Add(new StreamContent(File.OpenRead("example.xps")), "file", "example.xps");
 content.Add(new StringContent("{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"PreserveBookmarks\": true,
-  \"Folder\": ""
+  \"File\": \"file\"
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -83,7 +62,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a job to merge PDF documents and return the job details as follows:
+Once the request is sent, it will create a conversion job to convert the XPS document to PDF and return the job details as follows:
 
 ```
 {
@@ -92,10 +71,9 @@ Once the request is sent, it will create a job to merge PDF documents and return
     "createdAt": "2024-05-06T09:39:13.9505828Z"
 }
 ```
+## Poll the status of the Conversion Job
 
-## Poll the status of the Merge Job
-
-Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
+Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
 {% tabs %}
 
@@ -112,7 +90,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

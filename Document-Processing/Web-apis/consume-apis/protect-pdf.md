@@ -1,36 +1,27 @@
 ---
-title: Syncfusion PDF Merge Service Guide
-description: Seamlessly combine one or multiple PDF documents into a unified PDF file with the PDF Merge Service.
+title: Syncfusion PDF Protecting Service Guide
+description: Protect PDF documents seamlessly using Syncfusion's API. Ensure document integrity and security by protecting.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Merging PDFs Using Syncfusion API
+# Guide to Protecting PDFs Using Syncfusion API
 
-You can effortlessly merge one or more PDF documents into a single PDF file. To perform this merge, you need to supply one or more PDF documents as input to the merge PDF document service.
+This feature enables you to protect a PDF document. To use this functionality, you need to provide a PDF document as input to the Protect PDF API.
 
-## Merge PDF Document
+## Protecting PDF Document
 
-To merge PDF documents, send a request to the /v1/edit-pdf/merge endpoint, including both the PDF files as input and the settings as follows:
+To protect a PDF document, send a request to the /v1/edit-pdf/protect-pdf endpoint with the input PDF and its options as shown below.
 
 {% tabs %}
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
---form 'file1=@"merge/example.pdf"' \
---form 'file2=@"merge/example1.pdf"' \
+curl --location 'http://localhost:8003/v1/edit-pdf/protect-pdf' \
+--form 'file=@"invoice.pdf"' \
 --form 'settings="{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"PreserveBookmarks\": true,
-  \"Folder\": ""
+  \"File\": \"file\",
+  \"Password\": \"12345678\"
 }"'
 
 {% endhighlight %}
@@ -38,9 +29,8 @@ curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file1", fileInput.files[0], "merge/example.pdf");
-formdata.append("file2", fileInput.files[0], "merge/example1.pdf");
-formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true,\n \"Folder\": ""\n}");
+formdata.append("file", fileInput.files[0], "invoice.pdf");
+formdata.append("settings", "{\n  \"File\": \"file\",\n    \"Password\": \"12345678\"\n}");
 
 const requestOptions = {
   method: "POST",
@@ -48,7 +38,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/merge", requestOptions)
+fetch("http://localhost:4000/v1/edit-pdf/protect-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -58,21 +48,12 @@ fetch("http://localhost:4000/v1/edit-pdf/merge", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/merge");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/protect-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file1", "merge/example.pdf");
-content.Add(new StreamContent(File.OpenRead("merge/example1.pdf")), "file2", "merge/example1.pdf");
+content.Add(new StreamContent(File.OpenRead("invoice.pdf")), "file", "invoice.pdf");
 content.Add(new StringContent("{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"PreserveBookmarks\": true,
-  \"Folder\": ""
+  \"File\": \"file\",
+  \"Password\": \"12345678\"
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -83,7 +64,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a job to merge PDF documents and return the job details as follows:
+Once the request is sent, it will create a protect job to protect the PDF and return the job details as follows:
 
 ```
 {
@@ -93,7 +74,7 @@ Once the request is sent, it will create a job to merge PDF documents and return
 }
 ```
 
-## Poll the status of the Merge Job
+## Poll the status of the Protect Job
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -102,6 +83,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+--header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
 
@@ -123,6 +105,7 @@ fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+request.Headers.Add("Authorization", "Bearer {{Placeholder for token}}");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
