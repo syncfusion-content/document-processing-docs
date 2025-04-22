@@ -4083,37 +4083,28 @@ The following code example demonstrates how to get values from a PDF annotation.
 // Load the existing PDF document using FileStream
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
+    // Load the PDF document from the input stream
     using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream))
     {
-        // Get the first page
-        PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Access the first page of the document
+        PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
 
-        // Get all annotations on the page
-        PdfLoadedAnnotationCollection annotations = loadedPage.Annotations;
-
-        // Make sure the 65th annotation exists and is a circle annotation
-        if (annotations.Count > 64 && annotations[64] is PdfLoadedCircleAnnotation circleAnnotation)
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
         {
-            // Get the review history from the circle annotation
-            PdfLoadedPopupAnnotationCollection reviewHistory = circleAnnotation.ReviewHistory;
+            // Get the custom value from the annotation
+            List<string> customValue = annotation.GetValues("custom");
 
-            // Ensure review history has at least two items
-            if (reviewHistory != null && reviewHistory.Count > 1)
+            foreach (string value in customValue)
             {
-                // Get the second popup annotation from review history
-                PdfLoadedPopupAnnotation popupAnnotation = reviewHistory[1] as PdfLoadedPopupAnnotation;
-
-                if (popupAnnotation != null)
-                {
-                    // Get values for the "State" key
-                    List<string> values = popupAnnotation.GetValues("State");
-                    foreach (string value in values)
-                    {
-                        Console.WriteLine(value);
-                    }
-                }
-            }
+                // Print the custom value to the console
+                Console.WriteLine("Custom value from annotation: " + value);
+            } 
         }
+        // Close the document and release resources
+        loadedDocument.Close(true);
     }
 }
 
@@ -4121,79 +4112,64 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    // Load the existing PDF document
-    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream))
     {
-        // Get the first page
-        PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Access the first page of the document
+        PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
 
-        // Get all annotations on the page
-        PdfLoadedAnnotationCollection annotations = loadedPage.Annotations;
-
-        // Make sure the 65th annotation exists and is a circle annotation
-        if (annotations.Count > 64 && annotations[64] is PdfLoadedCircleAnnotation circleAnnotation)
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
         {
-            // Get the review history from the circle annotation
-            PdfLoadedPopupAnnotationCollection reviewHistory = circleAnnotation.ReviewHistory;
+            // Get the custom value from the annotation
+            List<string> customValue = annotation.GetValues("custom");
 
-            // Ensure review history has at least two items
-            if (reviewHistory != null && reviewHistory.Count > 1)
+            foreach (string value in customValue)
             {
-                // Get the second popup annotation from review history
-                PdfLoadedPopupAnnotation popupAnnotation = reviewHistory[1] as PdfLoadedPopupAnnotation;
-
-                if (popupAnnotation != null)
-                {
-                    // Get values for the "State" key
-                    List<string> values = popupAnnotation.GetValues("State");
-                    foreach (string value in values)
-                    {
-                        Console.WriteLine(value);
-                    }
-                }
-            }
+                // Print the custom value to the console
+                Console.WriteLine("Custom value from annotation: " + value);
+            } 
         }
+        // Close the document and release resources
+        loadedDocument.Close(true);
     }
+}
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Load the existing PDF document
-Using loadedDocument As New PdfLoadedDocument("Input.pdf")
+' Load the existing PDF document using FileStream
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+' Load the PDF document from the input stream
+Using loadedDocument As New PdfLoadedDocument(inputStream)
+' Access the first page of the document
+Dim page As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 
-    ' Get the first page
-    Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+' Get the collection of annotations from the page
+Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
 
-    ' Get all annotations on the page
-    Dim annotations As PdfLoadedAnnotationCollection = loadedPage.Annotations
+' Check if at least one annotation exists and it's a popup annotation
+If annotations.Count > 0 AndAlso TypeOf annotations(0) Is PdfLoadedPopupAnnotation Then
+Dim annotation As PdfLoadedPopupAnnotation = TryCast(annotations(0), PdfLoadedPopupAnnotation)
 
-    ' Make sure the 65th annotation exists and is a circle annotation
-    If annotations.Count > 64 AndAlso TypeOf annotations(64) Is PdfLoadedCircleAnnotation Then
+' Get the custom value(s) from the annotation
+Dim customValues As List(Of String) = annotation.GetValues("custom")
 
-        Dim circleAnnotation As PdfLoadedCircleAnnotation = TryCast(annotations(64), PdfLoadedCircleAnnotation)
+' Print the custom values to the console
+For Each value As String In customValues
+Console.WriteLine("Custom value from annotation: " & value)
+Next
+End If
 
-        ' Get the review history from the circle annotation
-        Dim reviewHistory As PdfLoadedPopupAnnotationCollection = circleAnnotation.ReviewHistory
-
-        ' Ensure review history has at least two items
-        If reviewHistory IsNot Nothing AndAlso reviewHistory.Count > 1 Then
-
-            ' Get the second popup annotation from review history
-            Dim popupAnnotation As PdfLoadedPopupAnnotation = TryCast(reviewHistory(1), PdfLoadedPopupAnnotation)
-
-            If popupAnnotation IsNot Nothing Then
-                ' Get values for the "State" key
-                Dim values As List(Of String) = popupAnnotation.GetValues("State")
-
-                ' Print values
-                For Each value As String In values
-                    Console.WriteLine(value)
-                Next
-            End If
-        End If
-    End If
-
+' Close the document and release resources
+loadedDocument.Close(True)
+End Using
 End Using
 
 {% endhighlight %}
@@ -4208,137 +4184,92 @@ The following code example demonstrates how to set values from a PDF annotation.
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Load the existing PDF document using FileStream
-using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
 {
+    // Load the PDF document from the input stream
     using (PdfLoadedDocument ldoc = new PdfLoadedDocument(inputStream))
     {
-        // Get the first page
-        PdfLoadedPage lpage = ldoc.Pages[0] as PdfLoadedPage;
+        // Access the first page of the document
+        PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
 
-        // Get all annotations on the page
-        PdfLoadedAnnotationCollection annots = lpage.Annotations;
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
 
-        // Access the 65th annotation (index starts at 0)
-        if (annots.Count > 64 && annots[64] is PdfLoadedCircleAnnotation Icircle)
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
         {
-            // Get the author of the circle annotation
-            string author = Icircle.Author;
-
-            // Get the review history and comments
-            PdfLoadedPopupAnnotationCollection collection = Icircle.ReviewHistory;
-            PdfLoadedPopupAnnotationCollection collectionComments = Icircle.Comments;
-
-            // Check if there's at least a second item in the review history
-            if (collection != null && collection.Count > 1)
-            {
-                PdfLoadedPopupAnnotation annotation = collection[1] as PdfLoadedPopupAnnotation;
-
-                if (annotation != null)
-                {
-                    // Set custom state and state model
-                    annotation.SetValues("State", "Approved");
-                    annotation.SetValues("StateModel", "ReviewWorkflow");
-                    annotation.SetValues("ReviewedBy", "John Doe");
-                    annotation.SetValues("ReviewedOn", DateTime.Now.ToString("yyyy-MM-dd"));
-                }
-            }
+            // Set a custom key-value pair in the annotation's metadata
+            annotation.SetValues("custom", "This is the custom data for the annotation");
         }
 
-        // Save the modified document using FileStream
+        // Save the modified document using a new FileStream
         using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
         {
-            ldoc.Save(outputStream);
+            // Save changes to a new PDF file
+            ldoc.Save(outputStream); 
         }
+        // Close the document and release resources
+        ldoc.Close(true);
+    }
+}
+{% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument ldoc = new PdfLoadedDocument(inputStream))
+    {
+        // Access the first page of the document
+        PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
+
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+        {
+            // Set a custom key-value pair in the annotation's metadata
+            annotation.SetValues("custom", "This is the custom data for the annotation");
+        }
+        // Save changes to a new PDF file
+        ldoc.Save("Output.pdf"); 
+
+        // Close the document and release resources
         ldoc.Close(true);
     }
 }
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-// Load the existing PDF document
-using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
-{
-    // Get the first page
-    PdfLoadedPage lpage = ldoc.Pages[0] as PdfLoadedPage;
-
-    // Get all annotations on the page
-    PdfLoadedAnnotationCollection annots = lpage.Annotations;
-
-    // Access the 65th annotation (index starts at 0)
-    if (annots.Count > 64 && annots[64] is PdfLoadedCircleAnnotation Icircle)
-    {
-        // Get the author of the circle annotation
-        string author = Icircle.Author;
-
-        // Get the review history and comments
-        PdfLoadedPopupAnnotationCollection collection = Icircle.ReviewHistory;
-        PdfLoadedPopupAnnotationCollection collectionComments = Icircle.Comments;
-
-        // Check if there's at least a second item in the review history
-        if (collection != null && collection.Count > 1)
-        {
-            PdfLoadedPopupAnnotation annotation = collection[1] as PdfLoadedPopupAnnotation;
-
-            if (annotation != null)
-            {
-                // Set custom state and state model
-                annotation.SetValues("State", "Approved");
-                annotation.SetValues("StateModel", "ReviewWorkflow");
-                annotation.SetValues("ReviewedBy", "John Doe");
-                annotation.SetValues("ReviewedOn", DateTime.Now.ToString("yyyy-MM-dd"));
-            }
-        }
-    }
-
-    // Save the modified document
-    ldoc.Save("Output.pdf");
-    ldoc.Close(true);
-}
-
-{% endhighlight %}
-
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-       ' Load the existing PDF document
-        Using ldoc As New PdfLoadedDocument("Input.pdf")
+        ' Load the existing PDF document using FileStream
+        Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+            ' Load the PDF document from the input stream
+            Using ldoc As New PdfLoadedDocument(inputStream)
+                ' Access the first page of the document
+                Dim page As PdfLoadedPage = TryCast(ldoc.Pages(0), PdfLoadedPage)
 
-            ' Get the first page
-            Dim lpage As PdfLoadedPage = TryCast(ldoc.Pages(0), PdfLoadedPage)
+                ' Get the collection of annotations from the page
+                Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
 
-            ' Get all annotations on the page
-            Dim annots As PdfLoadedAnnotationCollection = lpage.Annotations
+                ' Check if at least one annotation exists and it's a popup annotation
+                If annotations.Count > 0 AndAlso TypeOf annotations(0) Is PdfLoadedPopupAnnotation Then
+                    Dim annotation As PdfLoadedPopupAnnotation = TryCast(annotations(0), PdfLoadedPopupAnnotation)
 
-            ' Access the 65th annotation (index starts at 0)
-            If annots.Count > 64 AndAlso TypeOf annots(64) Is PdfLoadedCircleAnnotation Then
-                Dim Icircle As PdfLoadedCircleAnnotation = TryCast(annots(64), PdfLoadedCircleAnnotation)
-
-                ' Get the author of the circle annotation
-                Dim author As String = Icircle.Author
-
-                ' Get the review history and comments
-                Dim collection As PdfLoadedPopupAnnotationCollection = Icircle.ReviewHistory
-                Dim collectionComments As PdfLoadedPopupAnnotationCollection = Icircle.Comments
-
-                ' Check if there's at least a second item in the review history
-                If collection IsNot Nothing AndAlso collection.Count > 1 Then
-                    Dim annotation As PdfLoadedPopupAnnotation = TryCast(collection(1), PdfLoadedPopupAnnotation)
-
-                    If annotation IsNot Nothing Then
-                        ' Set custom state and state model
-                    annotation.SetValues("State", "Approved")
-                    annotation.SetValues("StateModel", "ReviewWorkflow")
-                    annotation.SetValues("ReviewedBy", "John Doe")
-                    annotation.SetValues("ReviewedOn", DateTime.Now.ToString("yyyy-MM-dd"))
-                    End If
+                    ' Set a custom key-value pair in the annotation's metadata
+                    annotation.SetValues("custom", "This is the custom data for the annotation")
                 End If
-            End If
 
-            ' Save the modified document
-            ldoc.Save("Output.pdf")
-            ldoc.Close(True)
+                ' Save the modified document to a new file
+                ldoc.Save("Output.pdf")
+
+                ' Close the document and release resources
+                ldoc.Close(True)
+            End Using
         End Using
 
 {% endhighlight %}
