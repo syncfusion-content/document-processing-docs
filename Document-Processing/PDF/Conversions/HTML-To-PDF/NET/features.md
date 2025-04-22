@@ -2635,181 +2635,137 @@ The following code examples demonstrate how to convert HTML to PDF and programma
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-// Initialize the HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+    // Initialize the HTML to PDF converter using the Blink rendering engine
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 
-// Initialize Blink converter settings.
-BlinkConverterSettings settings = new BlinkConverterSettings();
+    // Configure the converter to preserve form fields in the PDF
+    BlinkConverterSettings settings = new BlinkConverterSettings
+    {
+        EnableForm = true // Ensures form elements like <input>, <textarea> are converted to PDF fields
+    };
+    htmlConverter.ConverterSettings = settings;
 
-// Enable form fields in the PDF (necessary for adding signature fields).
-settings.EnableForm = true;
+    // Convert the HTML file to a PDF document
+    PdfDocument document = htmlConverter.Convert("Test.html");
 
-// Assign Blink converter settings to HTML converter.
-htmlConverter.ConverterSettings = settings;
+    // Optional: Remove default appearances for form fields to match the page style
+    document.Form.SetDefaultAppearance(false);
 
-// Convert HTML to PDF and load the PDF document.
-PdfDocument document = htmlConverter.Convert(Path.GetFullPath("Test.html"));
-       
-// Set default appearance for the form fields to false (no pre-filled appearance).
-document.Form.SetDefaultAppearance(false);
+    // Save the PDF to a memory stream for further processing
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream);            // Save converted PDF to memory
+        stream.Position = 0;              // Reset stream position
+        document.Close(true);             // Close the original document
 
-// Save the converted document to a memory stream.
-using (MemoryStream stream = new MemoryStream())
+        // Replace the "signature" textarea with an actual signature field
+        AddPdfSignatureField(stream);     
+    }
+
+/// <summary>
+/// Finds the "signature" field in the form, removes it, and replaces it with a true PDF signature field.
+/// </summary>
+/// <param name="stream">MemoryStream containing the PDF document</param>
+public void AddPdfSignatureField(MemoryStream stream)
 {
-    document.Save(stream);
-    stream.Position = 0; // Reset the stream position to read from the start.
-    document.Close(true); // Close the original document.
+    // Load the PDF document from memory stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream))
+    {
+        PdfLoadedForm loadedForm = loadedDocument.Form;
 
-    // Add signature field in the generated PDF.
-    AddSignature(stream);
-}
-//Adds signature field in PDF
-static void AddSignature(MemoryStream stream)
-{
-   // Load the existing PDF document from the stream.
-   PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+        // Check for a field named "signature"
+        if (loadedForm.Fields["signature"] is PdfLoadedTextBoxField signatureTextBox)
+        {
+            // Get the original field's position and page
+            RectangleF bounds = signatureTextBox.Bounds;
+            PdfPageBase page = signatureTextBox.Page;
 
-   // Get the loaded form from the document.
-   PdfLoadedForm loadedForm = loadedDocument.Form;
+            // Remove the original textbox field
+            loadedForm.Fields.Remove(signatureTextBox);
 
-   // List to store signature fields that we will add to the form.
-   List<PdfSignatureField> signatureFields = new List<PdfSignatureField>();
+            // Create a new signature field at the same location
+            PdfSignatureField signatureField = new PdfSignatureField(page, "ClientSignature")
+            {
+                Bounds = bounds
+            };
 
-   // Loop through each form field to find suitable text box fields for signature placement.
-   for (int i = loadedForm.Fields.Count - 1; i >= 0; i--)
-   {
-       // Check if the form field is a text box field (candidate for signature).
-       if (loadedForm.Fields[i] is PdfLoadedTextBoxField)
-       {
-           // Get the loaded text box field.
-           PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[i] as PdfLoadedTextBoxField;
+            // Add the new signature field to the form
+            loadedForm.Fields.Add(signatureField);
+        }
 
-           // Check if the field name contains "textarea" (this could be customized based on field names).
-           if (loadedTextBoxField.Name.Contains("textarea"))
-           {
-               // Get the bounds (position and size) of the text box field.
-               RectangleF bounds = loadedTextBoxField.Bounds;
+        // Save the modified document to disk
+        using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+        {
+            loadedDocument.Save(outputStream);
+        }
 
-               // Get the page where this field is located.
-               PdfPageBase loadedPage = loadedTextBoxField.Page;
-
-               // Create a new signature field in the same position as the existing text box.
-               PdfSignatureField signatureField = new PdfSignatureField(loadedPage, loadedTextBoxField.Name.Trim());
-
-               // Set the bounds of the signature field to match the text box field.
-               signatureField.Bounds = bounds;
-
-               // Add the newly created signature field to the list of signature fields.
-               signatureFields.Add(signatureField);
-
-               // Remove the original text box field from the form.
-               loadedForm.Fields.Remove(loadedTextBoxField);
-           }
-       }
-   }
-
-   // Add all the new signature fields to the form.
-   foreach (PdfSignatureField signature in signatureFields)
-   {
-       loadedForm.Fields.Add(signature);
-   }
-
-   // Save the updated document with the added signature fields.
-   using (FileStream outputStream1 = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-   {
-       loadedDocument.Save(outputStream1);
-   }
-
-   // Close the document after saving.
-   loadedDocument.Close(true);
+        // Close the document and release resources
+        loadedDocument.Close(true);
+    }
 }
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Initialize the HTML to PDF converter.
-Dim htmlConverter As New HtmlToPdfConverter()
+        ' Initialize the HTML to PDF converter using the Blink rendering engine
+        Dim htmlConverter As New HtmlToPdfConverter()
 
-' Initialize Blink converter settings.
-Dim settings As New BlinkConverterSettings()
+        ' Configure the converter to preserve form fields in the PDF
+        Dim settings As New BlinkConverterSettings()
+        settings.EnableForm = True ' Ensures form elements like <input>, <textarea> are converted to PDF fields
+        htmlConverter.ConverterSettings = settings
 
-' Enable form fields in the PDF (necessary for adding signature fields).
-settings.EnableForm = True
+        ' Convert the HTML file to a PDF document
+        Dim document As PdfDocument = htmlConverter.Convert("Test.html")
 
-' Assign Blink converter settings to HTML converter.
-htmlConverter.ConverterSettings = settings
+        ' Optional: Remove default appearances for form fields to match the page style
+        document.Form.SetDefaultAppearance(False)
 
-' Convert HTML to PDF and load the PDF document.
-Dim document As PdfDocument = htmlConverter.Convert(Path.GetFullPath("Test.html"))
+        ' Save the PDF to a memory stream for further processing
+        Using stream As New MemoryStream()
+            document.Save(stream)         ' Save converted PDF to memory
+            stream.Position = 0           ' Reset stream position
+            document.Close(True)          ' Close the original document
 
-' Set default appearance for the form fields to false (no pre-filled appearance).
-document.Form.SetDefaultAppearance(False)
+            ' Replace the "signature" textarea with an actual signature field
+            AddPdfSignatureField(stream)
+        End Using
 
-' Save the converted document to a memory stream.
-Using stream As New MemoryStream()
-    document.Save(stream)
-    stream.Position = 0 ' Reset the stream position to read from the start.
-    document.Close(True) ' Close the original document.
+    ''' <summary>
+    ''' Finds the "signature" field in the form, removes it, and replaces it with a true PDF signature field.
+    ''' </summary>
+    ''' <param name="stream">MemoryStream containing the PDF document</param>
+    Sub AddPdfSignatureField(stream As MemoryStream)
+        ' Load the PDF document from memory stream
+        Using loadedDocument As New PdfLoadedDocument(stream)
+            Dim loadedForm As PdfLoadedForm = loadedDocument.Form
 
-    ' Add signature field in the generated PDF.
-    AddSignature(stream)
-End Using
+            ' Check for a field named "signature"
+            Dim signatureTextBox As PdfLoadedTextBoxField = TryCast(loadedForm.Fields("signature"), PdfLoadedTextBoxField)
+            If signatureTextBox IsNot Nothing Then
+                ' Get the original field's position and page
+                Dim bounds As RectangleF = signatureTextBox.Bounds
+                Dim page As PdfPageBase = signatureTextBox.Page
 
-' Adds signature field in PDF
-Private Sub AddSignature(stream As MemoryStream)
-    ' Load the existing PDF document from the stream.
-    Dim loadedDocument As New PdfLoadedDocument(stream)
+                ' Remove the original textbox field
+                loadedForm.Fields.Remove(signatureTextBox)
 
-    ' Get the loaded form from the document.
-    Dim loadedForm As PdfLoadedForm = loadedDocument.Form
-
-    ' List to store signature fields that we will add to the form.
-    Dim signatureFields As New List(Of PdfSignatureField)()
-
-    ' Loop through each form field to find suitable text box fields for signature placement.
-    For i As Integer = loadedForm.Fields.Count - 1 To 0 Step -1
-        ' Check if the form field is a text box field (candidate for signature).
-        If TypeOf loadedForm.Fields(i) Is PdfLoadedTextBoxField Then
-            ' Get the loaded text box field.
-            Dim loadedTextBoxField As PdfLoadedTextBoxField = CType(loadedForm.Fields(i), PdfLoadedTextBoxField)
-
-            ' Check if the field name contains "textarea" (this could be customized based on field names).
-            If loadedTextBoxField.Name.Contains("textarea") Then
-                ' Get the bounds (position and size) of the text box field.
-                Dim bounds As RectangleF = loadedTextBoxField.Bounds
-
-                ' Get the page where this field is located.
-                Dim loadedPage As PdfPageBase = loadedTextBoxField.Page
-
-                ' Create a new signature field in the same position as the existing text box.
-                Dim signatureField As New PdfSignatureField(loadedPage, loadedTextBoxField.Name.Trim())
-
-                ' Set the bounds of the signature field to match the text box field.
+                ' Create a new signature field at the same location
+                Dim signatureField As New PdfSignatureField(page, "ClientSignature")
                 signatureField.Bounds = bounds
 
-                ' Add the newly created signature field to the list of signature fields.
-                signatureFields.Add(signatureField)
-
-                ' Remove the original text box field from the form.
-                loadedForm.Fields.Remove(loadedTextBoxField)
+                ' Add the new signature field to the form
+                loadedForm.Fields.Add(signatureField)
             End If
-        End If
-    Next
 
-    ' Add all the new signature fields to the form.
-    For Each signature As PdfSignatureField In signatureFields
-        loadedForm.Fields.Add(signature)
-    Next
+            ' Save the modified document
+            loadedDocument.Save("Output.pdf")
 
-    ' Save the updated document with the added signature fields.
-    Using outputStream1 As New FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite)
-        loadedDocument.Save(outputStream1)
-    End Using
-
-    ' Close the document after saving.
-    loadedDocument.Close(True)
-End Sub
+            ' Close the document and release resources
+            loadedDocument.Close(True)
+        End Using
+    End Sub
 
 {% endhighlight %}
 
