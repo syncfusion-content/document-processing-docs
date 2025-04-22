@@ -111,3 +111,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to Parse Worksheets on Demand using C#?](faqs/how-to-parse-worksheets-on-demand-in-Excel)
 * [How to run macros in Excel document?](faqs/how-to-run-macros-in-Excel-document)
 * [Does XlsIO support editing an Excel document that is already open in Microsoft Excel?](faqs/does-xlsio-support-editing-an-Excel-document-that-is-already-open-in-Microsoft-Excel)
+* [How to compute the size of the Excel file?](faqs/how-to-compute-the-size-of-the-Excel-file)
