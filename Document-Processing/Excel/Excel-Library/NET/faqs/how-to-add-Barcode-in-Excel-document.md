@@ -8,7 +8,7 @@ documentation: UG
 # How to add Barcode in Excel document using C#?
 You can embed barcode images into an Excel worksheet using Syncfusion XlsIO. The following code snippets illustrate how to insert barcodes at specified locations and save the workbook.
 {% tabs %} 
-{% highlight c# tabtitle="C# [Cross-platform]" %} playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Barcode/.Net/Add%20Barcode/Barcode/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %} playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Barcode/.NET/Add%20Barcode/Barcode/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
@@ -78,7 +78,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add Barcode in Excel document in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Barcode/.Net/Add%20Barcode).   
+A complete working example to add Barcode in Excel document in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Barcode/.NET/Add%20Barcode).   
 
 
 
