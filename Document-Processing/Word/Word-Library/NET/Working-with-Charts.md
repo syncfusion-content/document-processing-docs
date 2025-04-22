@@ -1601,6 +1601,7 @@ The following chart types are supported in DocIO.
 * [How to change chart title position in the Word document?](https://support.syncfusion.com/kb/article/12292/how-to-change-chart-title-position-in-the-word-document)
 * [How to align text to the right of the stacked bar chart in a Word document](https://support.syncfusion.com/kb/article/17588/how-to-align-text-to-the-right-of-the-stacked-bar-chart-in-a-word-document)
 * [How to set 2D array data values for a combination chart in a Word document](https://support.syncfusion.com/kb/article/17787/how-to-set-2d-array-data-values-for-a-combination-chart-in-a-word-document)
+* [How to find and edit a specific shape or chart by name in a Word document?](https://support.syncfusion.com/kb/article/19748/how-to-find-and-edit-a-specific-shape-or-chart-by-name-in-a-word-document)
 
 ## Frequently Asked Questions
 

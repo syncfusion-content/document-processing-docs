@@ -278,3 +278,171 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Attachment/Extract-and-saving-an-attachment-to-the-disk/).
+
+## Adding PDF Attachments with Interactive Launch Buttons
+
+**Scenario**:
+You need to implement a feature where, upon clicking on a content (such as a button or link), the user is navigated to a custom page in an attached PDF. This requires embedding the functionality within the PDF to open the attachment when the content is clicked.
+
+**Solution**:
+You can achieve this functionality by using JavaScript actions within Syncfusion<sup>®</sup> PDF library. This solution involves adding a PDF attachment to the document and setting up a JavaScript action on a button field that, when clicked, opens the attached PDF.This is achieved using the [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) and [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) classes.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/Program.cs" %}
+
+//Create FileStream object to read the input PDF file
+using (FileStream inputFileStream = new FileStream(@"Data/Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the existing PDF file
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputFileStream);
+
+    // Get the first page of the PDF
+    PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+    // Create a PDF attachment
+    PdfAttachment attachment = new PdfAttachment("Attachment.pdf", System.IO.File.ReadAllBytes(@"Data/Attachment.pdf"));
+    attachment.Description = "Attachment";
+
+    // Create attachments section if it doesn't exist
+    if (loadedDocument.Attachments == null)
+        loadedDocument.CreateAttachment();
+
+    // Add the attachment to the document
+    loadedDocument.Attachments.Add(attachment);
+
+    // Create a button field on the page
+    PdfButtonField buttonField = new PdfButtonField(lpage, "Button");
+    buttonField.Bounds = new RectangleF(100, 100, 100, 20);
+    buttonField.BorderColor = new PdfColor(Color.Black);
+    buttonField.BackColor = new PdfColor(Color.LightGray);
+    buttonField.Text = "Click Me";
+    buttonField.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+
+    // Add JavaScript action to open the attachment
+    buttonField.Actions.MouseUp = new PdfJavaScriptAction("this.exportDataObject({ cName: \"Attachment.pdf\", nLaunch: 2 });");
+
+    // Create a form if it doesn't exist
+    if (loadedDocument.Form == null)
+        loadedDocument.CreateForm();
+
+    // Add the button field to the form
+    loadedDocument.Form.Fields.Add(buttonField);
+
+    // Set default appearance for form fields
+    loadedDocument.Form.SetDefaultAppearance(false);
+
+    //Create file stream.
+    using (FileStream outputFileStream = new FileStream(@"Output/Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+    {
+        //Save the PDF document to file stream.
+        loadedDocument.Save(outputFileStream);
+    }
+
+    //Close the document.
+    loadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+    // Load the existing PDF file
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Get the first page of the PDF
+    PdfLoadedPage lpage = loadedDocument.Pages[0] as PdfLoadedPage;
+
+    // Create a PDF attachment
+    PdfAttachment attachment = new PdfAttachment("Attachment.pdf", System.IO.File.ReadAllBytes(@"Data/Attachment.pdf"));
+    attachment.Description = "Attachment";
+
+    // Create attachments section if it doesn't exist
+    if (loadedDocument.Attachments == null)
+        loadedDocument.CreateAttachment();
+
+    // Add the attachment to the document
+    loadedDocument.Attachments.Add(attachment);
+
+    // Create a button field on the page
+    PdfButtonField buttonField = new PdfButtonField(lpage, "Button");
+    buttonField.Bounds = new RectangleF(100, 100, 100, 20);
+    buttonField.BorderColor = new PdfColor(Color.Black);
+    buttonField.BackColor = new PdfColor(Color.LightGray);
+    buttonField.Text = "Click Me";
+    buttonField.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+
+    // Add JavaScript action to open the attachment
+    buttonField.Actions.MouseUp = new PdfJavaScriptAction("this.exportDataObject({ cName: \"Attachment.pdf\", nLaunch: 2 });");
+
+    // Create a form if it doesn't exist
+    if (loadedDocument.Form == null)
+        loadedDocument.CreateForm();
+
+    // Add the button field to the form
+    loadedDocument.Form.Fields.Add(buttonField);
+
+    // Set default appearance for form fields
+    loadedDocument.Form.SetDefaultAppearance(false);
+
+    //Save the PDF document to file stream.
+    loadedDocument.Save("Output.pdf");
+
+    //Close the document.
+    loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the existing PDF file
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Get the first page of the PDF
+Dim lpage As PdfLoadedPage = CType(loadedDocument.Pages(0), PdfLoadedPage)
+
+' Create a PDF attachment
+Dim attachment As New PdfAttachment("Attachment.pdf", System.IO.File.ReadAllBytes("Data/Attachment.pdf"))
+attachment.Description = "Attachment"
+
+' Create attachments section if it doesn't exist
+If loadedDocument.Attachments Is Nothing Then
+    loadedDocument.CreateAttachment()
+End If
+
+' Add the attachment to the document
+loadedDocument.Attachments.Add(attachment)
+
+' Create a button field on the page
+Dim buttonField As New PdfButtonField(lpage, "Button")
+buttonField.Bounds = New RectangleF(100, 100, 100, 20)
+buttonField.BorderColor = New PdfColor(Color.Black)
+buttonField.BackColor = New PdfColor(Color.LightGray)
+buttonField.Text = "Click Me"
+buttonField.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+
+' Add JavaScript action to open the attachment
+buttonField.Actions.MouseUp = New PdfJavaScriptAction("this.exportDataObject({ cName: ""Attachment.pdf"", nLaunch: 2 });")
+
+' Create a form if it doesn't exist
+If loadedDocument.Form Is Nothing Then
+    loadedDocument.CreateForm()
+End If
+
+' Add the button field to the form
+loadedDocument.Form.Fields.Add(buttonField)
+
+' Set default appearance for form fields
+loadedDocument.Form.SetDefaultAppearance(False)
+
+' Save the PDF document to file stream
+loadedDocument.Save("Output.pdf")
+
+' Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Attachment/Adding-PDF-Attachments-with-Interactive-Launch-Buttons/.NET).

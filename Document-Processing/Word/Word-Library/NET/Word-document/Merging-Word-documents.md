@@ -236,3 +236,5 @@ destinationDocument.Close()
 * [How to merge multiple documents with header and footer of destination document?](https://support.syncfusion.com/kb/article/12252/how-to-merge-multiple-documents-with-header-and-footer-of-destination-document)
 * [How to merge Word documents and generate TOC in C#?](https://support.syncfusion.com/kb/article/16895/how-to-merge-word-documents-and-generate-toc-in-c)
 * [Why aren't merged documents added to a new page when merging Word documents using DocIO?](https://support.syncfusion.com/kb/article/18903/why-arent-merged-documents-added-to-a-new-page-when-merging-word-documents-using-docio)
+* [How to merge Word documents while keeping the same headers and footers?](https://support.syncfusion.com/kb/article/19454/how-to-merge-word-documents-while-keeping-the-same-headers-and-footers)
+
