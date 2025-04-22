@@ -4070,7 +4070,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
 
-## Get and Set Values for PDF Annotations
+## Get and set custom values for PDF annotations
 
 The Syncfusion<sup>®</sup> PDF library provides robust functionality to manipulate PDF documents, including annotations. This document focuses on using the [GetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_GetValues_System_String_) and [SetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_SetValues_System_String_System_String_) methods with PDF annotations to retrieve and set annotation-specific values.
 
@@ -4236,8 +4236,8 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
                 if (annotation != null)
                 {
                     // Set custom state and state model
-                    annotation.SetValues("State", "Unknown");
-                    annotation.SetValues("StateModel", "CustomState");
+                    annotation.SetValues("State", "Approved");
+                    annotation.SetValues("StateModel", "ReviewWorkflow");
                 }
             }
         }
@@ -4283,8 +4283,8 @@ using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
             if (annotation != null)
             {
                 // Set custom state and state model
-                annotation.SetValues("State", "Unknown");
-                annotation.SetValues("StateModel", "CustomState");
+                annotation.SetValues("State", "Approved");
+                annotation.SetValues("StateModel", "ReviewWorkflow");
             }
         }
     }
@@ -4324,8 +4324,8 @@ using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
 
                     If annotation IsNot Nothing Then
                         ' Set custom state and state model
-                        annotation.SetValues("State", "Unknown")
-                        annotation.SetValues("StateModel", "CustomState")
+                        annotation.SetValues("State", "Approved")
+                        annotation.SetValues("StateModel", "ReviewWorkflow")
                     End If
                 End If
             End If
