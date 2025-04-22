@@ -112,3 +112,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to run macros in Excel document?](faqs/how-to-run-macros-in-Excel-document)
 * [Does XlsIO support editing an Excel document that is already open in Microsoft Excel?](faqs/does-xlsio-support-editing-an-Excel-document-that-is-already-open-in-Microsoft-Excel)
 * [How to compute the size of the Excel file?](faqs/how-to-compute-the-size-of-the-Excel-file)
+* [How to set and format time values in Excel using TimeSpan?](faqs/how-to-set-and-format-time-values-in-Excel-using-TimeSpan)
