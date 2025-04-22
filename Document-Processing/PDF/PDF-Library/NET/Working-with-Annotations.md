@@ -4238,6 +4238,8 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
                     // Set custom state and state model
                     annotation.SetValues("State", "Approved");
                     annotation.SetValues("StateModel", "ReviewWorkflow");
+                    annotation.SetValues("ReviewedBy", "John Doe");
+                    annotation.SetValues("ReviewedOn", DateTime.Now.ToString("yyyy-MM-dd"));
                 }
             }
         }
@@ -4285,6 +4287,8 @@ using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
                 // Set custom state and state model
                 annotation.SetValues("State", "Approved");
                 annotation.SetValues("StateModel", "ReviewWorkflow");
+                annotation.SetValues("ReviewedBy", "John Doe");
+                annotation.SetValues("ReviewedOn", DateTime.Now.ToString("yyyy-MM-dd"));
             }
         }
     }
@@ -4324,8 +4328,10 @@ using (PdfLoadedDocument ldoc = new PdfLoadedDocument("Input.pdf"))
 
                     If annotation IsNot Nothing Then
                         ' Set custom state and state model
-                        annotation.SetValues("State", "Approved")
-                        annotation.SetValues("StateModel", "ReviewWorkflow")
+                    annotation.SetValues("State", "Approved")
+                    annotation.SetValues("StateModel", "ReviewWorkflow")
+                    annotation.SetValues("ReviewedBy", "John Doe")
+                    annotation.SetValues("ReviewedOn", DateTime.Now.ToString("yyyy-MM-dd"))
                     End If
                 End If
             End If
