@@ -62,6 +62,14 @@ Syncfusion.XlsIO.UWP
 Syncfusion.XlsIO.NET
 </td>
 </tr>
+<tr>
+<td>
+{{'[Linux (.NET Core)](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-linux-c-sharp)' | markdownify}}
+</td>
+<td>
+Syncfusion.XlsIO.Net.Core
+</td>
+</tr>
 </tbody>
 </table>
 
