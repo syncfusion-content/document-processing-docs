@@ -13,8 +13,6 @@ XlsIO provides support for importing data to Excel and exporting data from Excel
 To quickly learn how to import and export data between a datatable and Excel, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=TFYqnr1hDH0" %}
 
-This section explains how to seamlessly import and export data between a datatable and Excel using the Syncfusion .NET Excel Library.
-
 ## Import to Excel
 
 It refers to the process of importing data from various sources into an Excel worksheet.
