@@ -33,6 +33,13 @@ XlsIO provides the ability to export data from Excel to the following data struc
 * [Excel to Data Table](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/export-from-excel#excel-to-datatable)
 * [Excel to Collection Objects](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/export-from-excel#excel-to-collection-objects)
 
+## Import and Export Data Between DataTable and Excel 
+
+To quickly learn how to import and export data between a datatable and Excel, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=TFYqnr1hDH0" %}
+
+This section explains how to seamlessly import and export data between a datatable and Excel using the Syncfusion .NET Excel Library.
+
 ## See Also
 
 * [How to use ImportOnSave option while importing data using XlsIO?](https://support.syncfusion.com/kb/article/11143/how-to-use-importonsave-option-while-importing-data-using-xlsio)
