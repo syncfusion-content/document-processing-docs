@@ -1367,8 +1367,10 @@ Ensure it is configured to always be copied to the output directory during build
 2.<b>Deploy to Azure App Service (Linux)</b>
 Publish your application to the Azure App Service.
 3.<b>Configure Startup Command</b>
+<br/><br/>
 After deployment, go to the Azure portal configuration for your app service.
 In the Startup Command section, add:
+<br/><br/>
 {% tabs %}
 {% highlight %}
 
@@ -1380,10 +1382,15 @@ In the Startup Command section, add:
 <img alt="Runtime folder" src="htmlconversion_images/Azurepath.png">
 <br/><br/>
 This ensures that your script runs to install necessary dependencies before the application launches.
+<br/><br/>
 4.<b>Restart the App Service</b>
+<br/><br/>
 This will trigger the execution of your startup script, resolving installation and font issues.
+<br/><br/>
 5.<b>Verification</b>
+<br/><br/>
 After the service restarts, try the conversion or operation again to ensure the issues are resolved.
+<br/><br/>
 </td>
 </tr>
 
