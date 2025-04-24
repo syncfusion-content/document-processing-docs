@@ -1338,19 +1338,17 @@ For more details to install the dependencies through SSH terminal window, refer 
 
 </table>
 
-## Application Fails to Launch Due to Font Loading Issue on Azure App Service (Linux)
+## Azure App Service is user interactable before installing the Blink prerequisites by script file
 
 <table>
 <th style="font-size:14px" width="100px">Issue</th>
-<th style="font-size:14px">Application Fails to Launch Due to Font Loading Issue on Azure App Service (Linux)
+<th style="font-size:14px">Azure App Service is user interactable before installing the Blink prerequisites by script file
 </th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
 <td>	
-<b>Installation and Font Issues</b>: Prerequisites might not be installed before app startup, causing dependency issues.
-<b>Startup Command Execution</b>: Linux app services might not run the necessary installation scripts automatically before the service starts.
-
+<b>User Interaction</b>: The App service might start before installing the required prerequisites causing user interaction.
 </td>
 </tr>
 <tr>
