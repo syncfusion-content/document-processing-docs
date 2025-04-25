@@ -2624,3 +2624,151 @@ byte[] pdfBytes = CreatePdfFromUrl(url, new CefConverterSettings()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/CEF-Rendering-Engine/.NET).
+
+## Adding Digital Signatures to HTML-converted PDFs
+
+This section demonstrates implementing digital signatures in PDFs generated from HTML sources using [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. Digital signatures provide cryptographic proof of document authenticity and integrity.
+
+The following code examples demonstrate how to convert HTML to PDF and programmatically add signature fields to the generated document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+    // Initialize the HTML to PDF converter using the Blink rendering engine
+    HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+    // Configure the converter to preserve form fields in the PDF
+    BlinkConverterSettings settings = new BlinkConverterSettings
+    {
+        EnableForm = true // Ensures form elements like <input>, <textarea> are converted to PDF fields
+    };
+    htmlConverter.ConverterSettings = settings;
+
+    // Convert the HTML file to a PDF document
+    PdfDocument document = htmlConverter.Convert("Test.html");
+
+    // Optional: Remove default appearances for form fields to match the page style
+    document.Form.SetDefaultAppearance(false);
+
+    // Save the PDF to a memory stream for further processing
+    using (MemoryStream stream = new MemoryStream())
+    {
+        document.Save(stream);            // Save converted PDF to memory
+        stream.Position = 0;              // Reset stream position
+        document.Close(true);             // Close the original document
+
+        // Replace the "signature" textarea with an actual signature field
+        AddPdfSignatureField(stream);     
+    }
+
+/// <summary>
+/// Finds the "signature" field in the form, removes it, and replaces it with a true PDF signature field.
+/// </summary>
+/// <param name="stream">MemoryStream containing the PDF document</param>
+public void AddPdfSignatureField(MemoryStream stream)
+{
+    // Load the PDF document from memory stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream))
+    {
+        PdfLoadedForm loadedForm = loadedDocument.Form;
+
+        // Check for a field named "signature"
+        if (loadedForm.Fields["signature"] is PdfLoadedTextBoxField signatureTextBox)
+        {
+            // Get the original field's position and page
+            RectangleF bounds = signatureTextBox.Bounds;
+            PdfPageBase page = signatureTextBox.Page;
+
+            // Remove the original textbox field
+            loadedForm.Fields.Remove(signatureTextBox);
+
+            // Create a new signature field at the same location
+            PdfSignatureField signatureField = new PdfSignatureField(page, "ClientSignature")
+            {
+                Bounds = bounds
+            };
+
+            // Add the new signature field to the form
+            loadedForm.Fields.Add(signatureField);
+        }
+
+        // Save the modified document to disk
+        using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+        {
+            loadedDocument.Save(outputStream);
+        }
+
+        // Close the document and release resources
+        loadedDocument.Close(true);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+        ' Initialize the HTML to PDF converter using the Blink rendering engine
+        Dim htmlConverter As New HtmlToPdfConverter()
+
+        ' Configure the converter to preserve form fields in the PDF
+        Dim settings As New BlinkConverterSettings()
+        settings.EnableForm = True ' Ensures form elements like <input>, <textarea> are converted to PDF fields
+        htmlConverter.ConverterSettings = settings
+
+        ' Convert the HTML file to a PDF document
+        Dim document As PdfDocument = htmlConverter.Convert("Test.html")
+
+        ' Optional: Remove default appearances for form fields to match the page style
+        document.Form.SetDefaultAppearance(False)
+
+        ' Save the PDF to a memory stream for further processing
+        Using stream As New MemoryStream()
+            document.Save(stream)         ' Save converted PDF to memory
+            stream.Position = 0           ' Reset stream position
+            document.Close(True)          ' Close the original document
+
+            ' Replace the "signature" textarea with an actual signature field
+            AddPdfSignatureField(stream)
+        End Using
+
+    ''' <summary>
+    ''' Finds the "signature" field in the form, removes it, and replaces it with a true PDF signature field.
+    ''' </summary>
+    ''' <param name="stream">MemoryStream containing the PDF document</param>
+    Sub AddPdfSignatureField(stream As MemoryStream)
+        ' Load the PDF document from memory stream
+        Using loadedDocument As New PdfLoadedDocument(stream)
+            Dim loadedForm As PdfLoadedForm = loadedDocument.Form
+
+            ' Check for a field named "signature"
+            Dim signatureTextBox As PdfLoadedTextBoxField = TryCast(loadedForm.Fields("signature"), PdfLoadedTextBoxField)
+            If signatureTextBox IsNot Nothing Then
+                ' Get the original field's position and page
+                Dim bounds As RectangleF = signatureTextBox.Bounds
+                Dim page As PdfPageBase = signatureTextBox.Page
+
+                ' Remove the original textbox field
+                loadedForm.Fields.Remove(signatureTextBox)
+
+                ' Create a new signature field at the same location
+                Dim signatureField As New PdfSignatureField(page, "ClientSignature")
+                signatureField.Bounds = bounds
+
+                ' Add the new signature field to the form
+                loadedForm.Fields.Add(signatureField)
+            End If
+
+            ' Save the modified document
+            loadedDocument.Save("Output.pdf")
+
+            ' Close the document and release resources
+            loadedDocument.Close(True)
+        End Using
+    End Sub
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
