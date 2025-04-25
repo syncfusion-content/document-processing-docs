@@ -1338,6 +1338,62 @@ For more details to install the dependencies through SSH terminal window, refer 
 
 </table>
 
+## Azure App Service is user interactable before installing the Blink prerequisites by script file
+
+<table>
+<th style="font-size:14px" width="100px">Issue</th>
+<th style="font-size:14px">Azure App Service is user interactable before installing the Blink prerequisites by script file
+</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>	
+<b>User Interaction</b>: The App service might start before installing the required prerequisites causing user interaction.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+
+1.<b>Script Execution at Startup</b>
+Copy the prerequisites script (dependenciesInstall.sh) into your application directory.
+
+Ensure it is configured to always be copied to the output directory during build/publish.
+<br/><br/>
+<img alt="Runtime folder" src="htmlconversion_images/Azuredirectory.png">
+<br/><br/>
+2.<b>Deploy to Azure App Service (Linux)</b>
+Publish your application to the Azure App Service.
+3.<b>Configure Startup Command</b>
+<br/><br/>
+After deployment, go to the Azure portal configuration for your app service.
+In the Startup Command section, add:
+<br/><br/>
+{% tabs %}
+{% highlight %}
+
+/home/site/wwwroot/dependenciesInstall.sh && dotnet YourApplicationName.dll
+
+{% endhighlight %}
+{% endtabs %}
+<br/><br/>
+<img alt="Runtime folder" src="htmlconversion_images/Azurepath.png">
+<br/><br/>
+This ensures that your script runs to install necessary dependencies before the application launches.
+<br/><br/>
+4.<b>Restart the App Service</b>
+<br/><br/>
+This will trigger the execution of your startup script, resolving installation and font issues.
+<br/><br/>
+5.<b>Verification</b>
+<br/><br/>
+After the service restarts, try the conversion or operation again to ensure the issues are resolved.
+<br/><br/>
+</td>
+</tr>
+
+</table>
+
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
 The problem is limited to Azure Functions with premium plans in Net 8.0 version. To fix this, we can either manually install the necessary Chromium dependencies in the SSH portal or include the runtimes folder (Blink binaries) in the project location.
