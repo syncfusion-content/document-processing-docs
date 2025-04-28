@@ -534,8 +534,8 @@ This ensures each pod has its own writable temporary directory, ideal for short-
 <br/><br/>
 <b>2.Grant Write Access Using SecurityContext:</b>
 <br/><br/>
-Configure your container to have permission to write to mounted volumes by adding:
-securityContext:
+To ensure your container has permission to write to mounted volumes, add:
+<br/><br/>
 {% tabs %}
 
 {% highlight C# %}
@@ -550,16 +550,16 @@ securityContext:
 <br/><br/>
 N> Avoid setting `runAsUser: 0` in production, as running containers as root poses a security risk.
 <br/><br/>
-
 <b>3.Use Persistent Writable Storage (Azure Files Example):</b>
 <br/><br/>
 If persistent storage is required, configure Azure Files:
+<br/><br/>
 {% tabs %}
 
 {% highlight C# %}
 
 volumes:
-  - name: azurefile
+    - name: azurefile
     azureFile:
       secretName: azure-secret
       shareName: aksshare
