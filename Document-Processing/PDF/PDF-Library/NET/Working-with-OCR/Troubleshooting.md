@@ -569,10 +569,8 @@ volumes:
 
 {% endtabs %}
 <br/><br/>
-
 This setup allows your container to write to a persistent Azure File Share, making it suitable for use cases that require long-term file storage.
 <br/><br/>
-
 By applying these configuration changes, you can ensure that your AKS workloads have the necessary write access for operations, while maintaining security and flexibility.
 
 </td>
