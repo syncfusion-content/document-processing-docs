@@ -491,3 +491,92 @@ Please refer to the screenshot below:
 </tr>
 </table>
 
+## 'Imagestream is null' exception while performing OCR in AKS (Linux)
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">	
+'Imagestream is null' exception while performing OCR in AKS (Linux))</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>This issue typically arises due to insufficient file system permissions for the temporary directory used during OCR processing in an AKS (Azure Kubernetes Service) Linux environment.
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+To ensure your Kubernetes workloads have appropriate read, write, and execute permissions on temporary directories, consider the following solutions:
+<br/><br/>
+<b>1.Use an EmptyDir Volume for a Writable Temp Directory:</b>
+Update your deployment YAML to include a writable temporary directory with `emptyDir`:
+<br/><br/>
+{% tabs %}
+
+{% highlight C# %}
+
+spec:
+  containers:
+    - name: your-container
+      image: your-image
+      volumeMounts:
+        - name: temp-volume
+          mountPath: /tmp # or /app/tmp if your app uses that
+  volumes:
+    - name: temp-volume
+      emptyDir: {}
+
+{% endhighlight %}
+
+{% endtabs %}
+<br/><br/>
+This ensures each pod has its own writable temporary directory, ideal for short-lived, non-persistent data
+<br/><br/>
+<b>2.Grant Write Access Using SecurityContext:</b>
+<br/><br/>
+Configure your container to have permission to write to mounted volumes by adding:
+securityContext:
+{% tabs %}
+
+{% highlight C# %}
+
+securityContext:
+  runAsUser: 1000 # safer than root
+  fsGroup: 2000   # gives access to mounted files
+
+{% endhighlight %}
+
+{% endtabs %}
+<br/><br/>
+N> Avoid setting `runAsUser: 0` in production, as running containers as root poses a security risk.
+<br/><br/>
+
+<b>3.Use Persistent Writable Storage (Azure Files Example):</b>
+<br/><br/>
+If persistent storage is required, configure Azure Files:
+{% tabs %}
+
+{% highlight C# %}
+
+volumes:
+  - name: azurefile
+    azureFile:
+      secretName: azure-secret
+      shareName: aksshare
+      readOnly: false
+
+{% endhighlight %}
+
+{% endtabs %}
+<br/><br/>
+
+This setup allows your container to write to a persistent Azure File Share, making it suitable for use cases that require long-term file storage.
+<br/><br/>
+
+By applying these configuration changes, you can ensure that your AKS workloads have the necessary write access for operations, while maintaining security and flexibility.
+
+</td>
+</tr>
+
+</table>
+
