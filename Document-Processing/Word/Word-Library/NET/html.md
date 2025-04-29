@@ -1270,8 +1270,8 @@ Underline types and colors are ignored.
 
 ## Online Demo
 
-* Explore how to convert a Word document to HTML using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtohtml#/material3).
-* See how to convert HTML to a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/htmltoword#/material3).
+* Explore how to convert a Word document to HTML using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtohtml#/bootstrap5).
+* See how to convert HTML to a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/htmltoword#/bootstrap5).
 
 ## See Also
 
