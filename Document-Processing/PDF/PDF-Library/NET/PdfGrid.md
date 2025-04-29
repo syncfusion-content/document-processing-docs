@@ -4444,3 +4444,163 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Add-a-hyperlink-in-a-table-cell).
+
+## Changing margins from the second page onwards
+
+This guide demonstrates how to set custom margins for the first page of a PDF document (such as for a cover page or a header) and apply different margins to the subsequent pages using the [PdfGridLayoutFormat ](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutFormat.html) class. This approach is useful for creating visually distinct sections within the same document, enhancing both structure and readability.
+
+The following code sample demonstrates how to change the page margins beginning with the second page of a PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+// Create PDF document with default settings
+PdfDocument document = new PdfDocument();
+
+// Configure marginless page layout
+document.PageSettings.Margins.Top = 0;
+document.PageSettings.Margins.Bottom = 0;
+
+// Add first page to the document
+PdfPage page = document.Pages.Add();
+
+// Initialize grid component for data presentation
+PdfGrid pdfGrid = new PdfGrid();
+
+// Generate sample data (300 rows)
+List<object> data = new List<object>();
+for (int i = 0; i < 100; i++)
+{
+    // Create three unique rows per iteration
+    data.Add(new { ID = "1", Name = "Clay", Price = "$10" });
+    data.Add(new { ID = "2", Name = "Gray", Price = "$20" });
+    data.Add(new { ID = "3", Name = "Ash", Price = "$30" });
+}
+
+// Configure grid data binding
+pdfGrid.DataSource = data; // Automatic conversion to IEnumerable
+
+// Set up grid layout with header space
+PdfGridLayoutFormat format = new PdfGridLayoutFormat
+{
+    PaginateBounds = new RectangleF(0, 15,
+        page.GetClientSize().Width,
+        page.GetClientSize().Height - 15)
+};
+
+// Render grid to page with automatic pagination
+pdfGrid.Draw(page, new RectangleF(0, 0,
+    page.GetClientSize().Width,
+    page.GetClientSize().Height), format);
+
+// Generate output file
+using (FileStream stream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+{
+    document.Save(stream);
+}
+
+// Proper document cleanup
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create PDF document with default settings
+PdfDocument document = new PdfDocument();
+
+// Configure marginless page layout
+document.PageSettings.Margins.Top = 0;
+document.PageSettings.Margins.Bottom = 0;
+
+// Add first page to the document
+PdfPage page = document.Pages.Add();
+
+// Initialize grid component for data presentation
+PdfGrid pdfGrid = new PdfGrid();
+
+// Generate sample data (300 rows)
+List<object> data = new List<object>();
+for (int i = 0; i < 100; i++)
+{
+    // Create three unique rows per iteration
+    data.Add(new { ID = "1", Name = "Clay", Price = "$10" });
+    data.Add(new { ID = "2", Name = "Gray", Price = "$20" });
+    data.Add(new { ID = "3", Name = "Ash", Price = "$30" });
+}
+
+// Configure grid data binding
+pdfGrid.DataSource = data; // Automatic conversion to IEnumerable
+
+// Set up grid layout with header space
+PdfGridLayoutFormat format = new PdfGridLayoutFormat
+{
+    PaginateBounds = new RectangleF(0, 15,
+        page.GetClientSize().Width,
+        page.GetClientSize().Height - 15)
+};
+
+// Render grid to page with automatic pagination
+pdfGrid.Draw(page, new RectangleF(0, 0,
+    page.GetClientSize().Width,
+    page.GetClientSize().Height), format);
+
+// Save the PDF documeent
+document.Save("Output.pdf");
+
+// Proper document cleanup
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create PDF document with default settings
+Dim document As New PdfDocument()
+
+' Configure marginless page layout
+document.PageSettings.Margins.Top = 0
+document.PageSettings.Margins.Bottom = 0
+
+' Add first page to the document
+Dim page As PdfPage = document.Pages.Add()
+
+' Initialize grid component for data presentation
+Dim pdfGrid As New PdfGrid()
+
+' Generate sample data (300 rows)
+Dim data As New List(Of Object)()
+For i As Integer = 0 To 99
+    ' Create three unique rows per iteration
+    data.Add(New With {.ID = "1", .Name = "Clay", .Price = "$10"})
+    data.Add(New With {.ID = "2", .Name = "Gray", .Price = "$20"})
+    data.Add(New With {.ID = "3", .Name = "Ash", .Price = "$30"})
+Next
+
+' Configure grid data binding
+pdfGrid.DataSource = data ' Automatic conversion to IEnumerable
+
+' Set up grid layout with header space
+Dim format As New PdfGridLayoutFormat() With {
+    .PaginateBounds = New RectangleF(0, 15,
+        page.GetClientSize().Width,
+        page.GetClientSize().Height - 15)
+}
+
+' Render grid to page with automatic pagination
+pdfGrid.Draw(page, New RectangleF(0, 0,
+    page.GetClientSize().Width,
+    page.GetClientSize().Height), format)
+
+' Save the PDF document
+document.Save("Output.pdf")
+
+' Proper document cleanup
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
