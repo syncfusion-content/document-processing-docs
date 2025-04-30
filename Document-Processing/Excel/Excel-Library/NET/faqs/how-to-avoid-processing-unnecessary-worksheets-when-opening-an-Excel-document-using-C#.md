@@ -1,11 +1,11 @@
 ---
-title: How to Parse Worksheets on Demand in Excel using C# | Syncfusion
-description: Code example to Parse Worksheets on Demand using Syncfusion .NET Excel library (XlsIO).
+title: How to avoid processing unnecessary worksheets when opening an Excel document using C# | Syncfusion
+description: Code example to avoid processing unnecessary worksheets when opening an Excel document using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# How to Parse Worksheets on Demand using C#?
+# How to avoid processing unnecessary worksheets when opening an Excel document using C#?
 XlsIO provides support to Parse Worksheets on Demand in Excel. The following code snippet illustrates this.
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" %} playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand/Parse%20Worksheets%20On%20Demand/Program.cs,180" %}
@@ -63,6 +63,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to Parse Worksheets on Demand in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand).   
+A complete working example to avoid processing unnecessary worksheets when opening an Excel document using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand).   
 
 
