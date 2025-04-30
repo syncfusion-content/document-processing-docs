@@ -1911,9 +1911,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
-## Hide or Unhide Shapes
+## Show or Hide Shapes
 
-You can programmatically hide or un-hide shapes in an Excel worksheet using the [IShapes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShapes.html) interface. The following code snippets demonstrate how to toggle shape visibility in Excel using C# (cross-platform and Windows-specific) and VB.NET.
+You can programmatically show or hide shapes in an Excel worksheet using the [IShapes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShapes.html) interface. The following code snippets demonstrate how to toggle shape visibility in Excel using C# (cross-platform and Windows-specific) and VB.NET.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Hide%20or%20Unhide%20Shape/.NET/Hide%20or%20Unhide%20Shape/Hide%20or%20Unhide%20Shape/Program.cs,180" %}
