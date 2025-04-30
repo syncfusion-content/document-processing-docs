@@ -2884,7 +2884,7 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Add-different-styles-to-a-row-in-PDF-table).
 
-## Applying Style to PDF Grid Cells
+## Applying Style to PDF grid cells
 
 The [ApplyStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridRow.html#Syncfusion_Pdf_Grid_PdfGridRow_ApplyStyle_Syncfusion_Pdf_Grid_PdfGridCellStyle_) method allows you to customize the appearance of cells within a PDF grid by applying a predefined [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html). This method can be used to set various properties such as font, background color, text color, borders, and more.
 
