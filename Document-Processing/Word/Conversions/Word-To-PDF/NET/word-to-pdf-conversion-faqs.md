@@ -37,3 +37,59 @@ PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF, X
 
 When a Word document with revisions is converted to a PDF using Microsoft Word, the revisions are preserved as balloons. So, it is not possible to preserve revisions in a Word document as comments in a PDF. Using DocIO, revisions can be displayed as balloons in the converted PDF by enabling the [ShowMarkup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.RevisionOptions.html#Syncfusion_DocIO_DLS_RevisionOptions_ShowMarkup) property. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#show-or-hide-revisions-in-balloons) and [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Show-or-hide-revisions-in-balloons) for implementation.
 
+## Why does a Word document converted to PDF on one device not display correctly when converted on another device?
+
+If a converted PDF does not display correctly on another device, it may be due to missing fonts. The document appears fine on a machine with the required fonts installed but may not be rendered properly on another device. To fix this, set [EmbedFonts](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_EmbedFonts) and [EmbedCompleteFonts](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_EmbedCompleteFonts) to **true** during Word-to-PDF conversion to include the fonts in the PDF, ensuring consistent display across all devices.
+
+For more details with implementation, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#embedding-fonts).
+
+## Why are Chinese characters missing or blank in the PDF after Word-to-PDF conversion?
+
+Chinese characters may not appear in the converted PDF if the original Word document uses fonts like **Calibri**, which do not support Chinese glyphs in PDFs.
+
+To render Chinese and other Unicode characters correctly, we **recommend using the Arial Unicode MS font in your Word document**. If Arial Unicode MS is not installed on the machine during conversion, the characters will not display properly in the output PDF. To resolve this, **install the Arial Unicode MS font** on the system before converting the document.
+
+## What is the difference between font substitution and fallback fonts in Word to PDF conversion?
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Fallback Fonts</th>
+      <th>Font Substitution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Purpose</td>
+      <td>Handles missing glyphs in a font.</td>
+      <td>Replaces an entirely missing font.</td>
+    </tr>
+    <tr>
+      <td>When It’s Used</td>
+      <td>A font is present but lacks specific character glyphs.</td>
+      <td>The required font is not installed on the system.</td>
+    </tr>
+    <tr>
+      <td>How It Works</td>
+      <td>Uses an alternative font only for missing glyphs while keeping the original font for other characters.</td>
+      <td>Replaces the missing font with a specified alternative for all text using that font.</td>
+    </tr>
+    <tr>
+      <td>Example</td>
+      <td>Arial does not support Japanese characters, so "Noto Sans JP" is used for those glyphs.</td>
+      <td>Arial is missing on the system, so "Helvetica" is used instead.</td>
+    </tr>
+    <tr>
+      <td>Key Benefit</td>
+      <td>Preserves the original font style while ensuring all text is rendered correctly.</td>
+      <td>Ensures text consistency when the original font is unavailable.</td>
+    </tr>
+    <tr>
+      <td>Documentation link</td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf">Fallback fonts</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf">Font substitution</a></td>
+    </tr>
+  </tbody>
+</table>
+
