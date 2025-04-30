@@ -143,3 +143,5 @@ You will receive one of the following statuses until the job is completed. Upon 
     "message": "Failed to convert the document to PDF"        
 }
 ```
+
+**Note**: The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)

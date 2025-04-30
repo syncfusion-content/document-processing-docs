@@ -142,3 +142,5 @@ syncfusion:
   volumes:
     - ./directory-path-on-the-host:/usr/local/share/fonts/
 ```
+
+**Note**: The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)

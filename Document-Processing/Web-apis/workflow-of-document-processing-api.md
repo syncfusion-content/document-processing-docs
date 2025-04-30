@@ -69,3 +69,5 @@ Content-Disposition: attachment; filename="file.pdf"
 Date: Mon, 09 May 2024 12:00:00 GMT
 api-supported-versions: 1.0
 ```
+
+**Note**: The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
