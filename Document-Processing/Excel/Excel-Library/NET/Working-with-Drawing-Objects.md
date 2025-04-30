@@ -1911,4 +1911,83 @@ End Using
 {% endhighlight %}
 {% endtabs %}  
 
+## Hide or Unhide Shapes
+
+You can programmatically hide or un-hide shapes in an Excel worksheet using the [IShapes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShapes.html) interface. The following code snippets demonstrate how to toggle shape visibility in Excel using C# (cross-platform and Windows-specific) and VB.NET.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20Shapes/Hide%20or%20Unhide%20Shape/.NET/Hide%20or%20Unhide%20Shape/Hide%20or%20Unhide%20Shape/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine()) 
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx; 
+    FileStream inputStream = new FileStream("Data/Input.xlsx", FileMode.Open, FileAccess.Read); 
+    IWorkbook workbook = application.Workbooks.Open(inputStream); 
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    IShapes shapes = worksheet.Shapes;
+    AutoShapeImpl shape1 = shapes[0] as AutoShapeImpl;
+
+    //Set shape1 to be hidden
+    shape1.IsHidden = true;
+
+    AutoShapeImpl shape2 = shapes[1] as AutoShapeImpl;
+
+    //Set shape2 to be visible
+    shape2.IsHidden = false;
+
+    //Saving the workbook as stream
+    FileStream outputStream = new FileStream("Output/Output.xlsx", FileMode.Create, FileAccess.Write);
+    workbook.SaveAs(outputStream);
+    outputStream.Dispose();
+    inputStream.Dispose();
+} 
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %} 
+using (ExcelEngine excelEngine = new ExcelEngine()) 
+{ 
+    IApplication application = excelEngine.Excel; 
+    IWorkbook workbook = application.Workbooks.Open("Input.xlsx"); 
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    IShapes shapes = worksheet.Shapes;
+    AutoShapeImpl shape1 = shapes[0] as AutoShapeImpl;
+
+    //Set shape1 to be hidden
+    shape1.IsHidden = true;
+
+    AutoShapeImpl shape2 = shapes[1] as AutoShapeImpl;
+
+    //Set shape2 to be visible
+    shape2.IsHidden = false;
+
+    workbook.SaveAs("Output.xlsx");
+} 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine() 
+    Dim application As IApplication = excelEngine.Excel 
+    Dim workbook As IWorkbook = application.Workbooks.Open("Input.xlsx") 
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+    Dim shapes As IShapes = worksheet.Shapes
+    Dim shape1 As AutoShapeImpl = TryCast(shapes(0), AutoShapeImpl)
+
+    'Set shape1 to be hidden
+    shape1.IsHidden = True
+
+    Dim shape2 As AutoShapeImpl = TryCast(shapes(1), AutoShapeImpl)
+
+    'Set shape2 to be visible
+    shape2.IsHidden = False
+
+    workbook.SaveAs("Output.xlsx")
+End Using 
+{% endhighlight %} 
+{% endtabs %}
+
+A complete working example to hide or un-hide shapes in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Hide%20or%20Unhide%20Shape/.NET/Hide%20or%20Unhide%20Shape). 
+
 
