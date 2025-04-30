@@ -22,6 +22,18 @@ IApplication application = excelEngine.Excel;
 //Loads or open an existing workbook through Open method of IWorkbooks
 IWorkbook workbook = application.Workbooks.Open(Server.MapPath("App_Data/Sample.xlsx"));
 {% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates a new instance for ExcelEngine
+Using excelEngine As New ExcelEngine()
+
+'Initialize IApplication
+Dim application As IApplication = excelEngine.Excel
+
+'Loads or open an existing workbook through Open method of IWorkbooks
+Dim workbook As IWorkbook = application.Workbooks.Open(Server.MapPath("App_Data/Sample.xlsx"))
+End Using
+{% endhighlight %}
 {% endtabs %}
 
 ## Saving an Excel workbook
@@ -47,5 +59,26 @@ workbook.Version = ExcelVersion.Xlsx;
 
 //Save the workbook to disk in xlsx format
 workbook.SaveAs("Output.xlsx", HttpContext.ApplicationInstance.Response, ExcelDownloadType.Open);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates a new instance for ExcelEngine
+Using excelEngine As New ExcelEngine()
+
+'Initialize IApplication
+Dim application As IApplication = excelEngine.Excel
+
+'Loads or open an existing workbook through Open method of IWorkbooks
+Dim workbook As IWorkbook = application.Workbooks.Open(Server.MapPath("App_Data/Sample.xlsx"))
+
+'To-Do some manipulation
+'To-Do some manipulation
+
+'Set the version of the workbook
+workbook.Version = ExcelVersion.Xlsx
+
+'Save the workbook to disk in xlsx format
+workbook.SaveAs("Output.xlsx", HttpContext.ApplicationInstance.Response, ExcelDownloadType.Open)
+End Using
 {% endhighlight %}
 {% endtabs %} 
