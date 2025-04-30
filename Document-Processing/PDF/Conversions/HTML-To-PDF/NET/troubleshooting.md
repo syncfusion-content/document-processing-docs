@@ -1370,7 +1370,7 @@ After deployment, go to the Azure portal configuration for your app service.
 In the Startup Command section, add:
 <br/><br/>
 {% tabs %}
-{% highlight C# %}
+{% highlight %}
 
 /home/site/wwwroot/dependenciesInstall.sh && dotnet YourApplicationName.dll
 
