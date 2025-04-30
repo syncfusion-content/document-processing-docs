@@ -10,6 +10,9 @@ documentation: UG
 
 XlsIO provides support for importing data to Excel and exporting data from Excel. This includes handling various data formats and structures, enabling users to integrate Excel with different data sources and utilize Excel's capabilities for data manipulation and analysis.
 
+To quickly learn how to import and export data between a datatable and Excel, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=TFYqnr1hDH0" %}
+
 ## Import to Excel
 
 It refers to the process of importing data from various sources into an Excel worksheet.

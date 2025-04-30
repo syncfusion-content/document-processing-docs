@@ -2884,6 +2884,157 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Add-different-styles-to-a-row-in-PDF-table).
 
+## Applying Style to PDF Grid Cells
+
+The [ApplyStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridRow.html#Syncfusion_Pdf_Grid_PdfGridRow_ApplyStyle_Syncfusion_Pdf_Grid_PdfGridCellStyle_) method allows you to customize the appearance of cells within a PDF grid by applying a predefined [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html). This method can be used to set various properties such as font, background color, text color, borders, and more.
+
+The following code sample explains how to use the ``ApplyStyle`` method to apply a style to a specific cell in a PDF grid:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]"  %} 
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a page.
+PdfPage page = document.Pages.Add();
+//Create a PdfGrid.
+PdfGrid pdfGrid = new PdfGrid();
+//Create a DataTable.
+DataTable dataTable = new DataTable();
+//Add columns to the DataTable
+dataTable.Columns.Add("ID");
+dataTable.Columns.Add("Name");
+//Add rows to the DataTable.
+dataTable.Rows.Add(new object[] { "E01", "Clay" });
+dataTable.Rows.Add(new object[] { "E02", "Thomas" });
+//Assign data source.
+pdfGrid.DataSource = dataTable;
+
+//Create Cell Style
+PdfGridCellStyle headerStyle = new PdfGridCellStyle();
+headerStyle.TextBrush = PdfBrushes.Red;
+headerStyle.BackgroundBrush = new PdfSolidBrush(Syncfusion.Drawing.Color.LightBlue); 
+//Apply style to the header row
+pdfGrid.Headers[0].ApplyStyle(headerStyle);
+
+//Create Cell Style
+PdfGridCellStyle rowStyle = new PdfGridCellStyle();
+rowStyle.TextBrush = PdfBrushes.Cyan;
+rowStyle.BackgroundBrush = new PdfSolidBrush(Syncfusion.Drawing.Color.YellowGreen); 
+//Apply style to the first row
+pdfGrid.Rows[0].ApplyStyle(rowStyle);
+
+//Draw grid to the page of PDF document.
+pdfGrid.Draw(page, new PointF(10, 10));
+//Save the PDF document to stream.
+using(FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite ))
+{
+    document.Save(outputStream);
+}
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a page.
+PdfPage page = document.Pages.Add();
+//Create a PdfGrid.
+PdfGrid pdfGrid = new PdfGrid();
+//Create a DataTable.
+DataTable dataTable = new DataTable();
+//Add columns to the DataTable
+dataTable.Columns.Add("ID");
+dataTable.Columns.Add("Name");
+//Add rows to the DataTable.
+dataTable.Rows.Add(new object[] { "E01", "Clay" });
+dataTable.Rows.Add(new object[] { "E02", "Thomas" });
+//Assign data source.
+pdfGrid.DataSource = dataTable;
+
+//Create Cell Style
+PdfGridCellStyle headerStyle = new PdfGridCellStyle();
+headerStyle.TextBrush = PdfBrushes.Red;
+headerStyle.BackgroundBrush = new PdfSolidBrush(Syncfusion.Drawing.Color.LightBlue); 
+//Apply style to the header row
+pdfGrid.Headers[0].ApplyStyle(headerStyle);
+
+//Create Cell Style
+PdfGridCellStyle rowStyle = new PdfGridCellStyle();
+rowStyle.TextBrush = PdfBrushes.Cyan;
+rowStyle.BackgroundBrush = new PdfSolidBrush(Syncfusion.Drawing.Color.YellowGreen); 
+//Apply style to the first row
+pdfGrid.Rows[0].ApplyStyle(rowStyle);
+
+//Draw grid to the page of PDF document.
+pdfGrid.Draw(page, new PointF(10, 10));
+//Save the PDF document
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document.
+Dim document As New PdfDocument()
+
+' Add a page.
+Dim page As PdfPage = document.Pages.Add()
+
+' Create a PdfGrid.
+Dim pdfGrid As New PdfGrid()
+
+' Create a DataTable.
+Dim dataTable As New DataTable()
+
+' Add columns to the DataTable
+dataTable.Columns.Add("ID")
+dataTable.Columns.Add("Name")
+
+' Add rows to the DataTable.
+dataTable.Rows.Add(New Object() {"E01", "Clay"})
+dataTable.Rows.Add(New Object() {"E02", "Thomas"})
+
+' Assign data source to the PdfGrid.
+pdfGrid.DataSource = dataTable
+
+' Create Cell Style for header
+Dim headerStyle As New PdfGridCellStyle()
+headerStyle.TextBrush = PdfBrushes.Red
+headerStyle.BackgroundBrush = New PdfSolidBrush(Syncfusion.Drawing.Color.LightBlue)
+
+' Apply style to the header row
+pdfGrid.Headers(0).ApplyStyle(headerStyle)
+
+' Create Cell Style for row
+Dim rowStyle As New PdfGridCellStyle()
+rowStyle.TextBrush = PdfBrushes.Cyan
+rowStyle.BackgroundBrush = New PdfSolidBrush(Syncfusion.Drawing.Color.YellowGreen)
+
+' Apply style to the first row
+pdfGrid.Rows(0).ApplyStyle(rowStyle)
+
+' Draw the grid to the page of the PDF document.
+pdfGrid.Draw(page, New PointF(10, 10))
+
+' Save the PDF document
+document.Save("Output.pdf")
+
+' Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Word wrap
 
 The Syncfusion<sup>&reg;</sup> .NET PDF library supports word wrapping in the table cell by setting the [WordWrap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_WordWrap) property to ``Word`` of the [PdfWordWrapType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfWordWrapType.html) Enum. It also supports the ``Character`` and ``WordOnly`` text wrapping. 
@@ -4293,3 +4444,163 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Add-a-hyperlink-in-a-table-cell).
+
+## Changing margins from the second page onwards
+
+This guide demonstrates how to set custom margins for the first page of a PDF document (such as for a cover page or a header) and apply different margins to the subsequent pages using the [PdfGridLayoutFormat ](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutFormat.html) class. This approach is useful for creating visually distinct sections within the same document, enhancing both structure and readability.
+
+The following code sample demonstrates how to change the page margins beginning with the second page of a PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+// Create PDF document with default settings
+PdfDocument document = new PdfDocument();
+
+// Configure marginless page layout
+document.PageSettings.Margins.Top = 0;
+document.PageSettings.Margins.Bottom = 0;
+
+// Add first page to the document
+PdfPage page = document.Pages.Add();
+
+// Initialize grid component for data presentation
+PdfGrid pdfGrid = new PdfGrid();
+
+// Generate sample data (300 rows)
+List<object> data = new List<object>();
+for (int i = 0; i < 100; i++)
+{
+    // Create three unique rows per iteration
+    data.Add(new { ID = "1", Name = "Clay", Price = "$10" });
+    data.Add(new { ID = "2", Name = "Gray", Price = "$20" });
+    data.Add(new { ID = "3", Name = "Ash", Price = "$30" });
+}
+
+// Configure grid data binding
+pdfGrid.DataSource = data; // Automatic conversion to IEnumerable
+
+// Set up grid layout with header space
+PdfGridLayoutFormat format = new PdfGridLayoutFormat
+{
+    PaginateBounds = new RectangleF(0, 15,
+        page.GetClientSize().Width,
+        page.GetClientSize().Height - 15)
+};
+
+// Render grid to page with automatic pagination
+pdfGrid.Draw(page, new RectangleF(0, 0,
+    page.GetClientSize().Width,
+    page.GetClientSize().Height), format);
+
+// Generate output file
+using (FileStream stream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+{
+    document.Save(stream);
+}
+
+// Proper document cleanup
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create PDF document with default settings
+PdfDocument document = new PdfDocument();
+
+// Configure marginless page layout
+document.PageSettings.Margins.Top = 0;
+document.PageSettings.Margins.Bottom = 0;
+
+// Add first page to the document
+PdfPage page = document.Pages.Add();
+
+// Initialize grid component for data presentation
+PdfGrid pdfGrid = new PdfGrid();
+
+// Generate sample data (300 rows)
+List<object> data = new List<object>();
+for (int i = 0; i < 100; i++)
+{
+    // Create three unique rows per iteration
+    data.Add(new { ID = "1", Name = "Clay", Price = "$10" });
+    data.Add(new { ID = "2", Name = "Gray", Price = "$20" });
+    data.Add(new { ID = "3", Name = "Ash", Price = "$30" });
+}
+
+// Configure grid data binding
+pdfGrid.DataSource = data; // Automatic conversion to IEnumerable
+
+// Set up grid layout with header space
+PdfGridLayoutFormat format = new PdfGridLayoutFormat
+{
+    PaginateBounds = new RectangleF(0, 15,
+        page.GetClientSize().Width,
+        page.GetClientSize().Height - 15)
+};
+
+// Render grid to page with automatic pagination
+pdfGrid.Draw(page, new RectangleF(0, 0,
+    page.GetClientSize().Width,
+    page.GetClientSize().Height), format);
+
+// Save the PDF documeent
+document.Save("Output.pdf");
+
+// Proper document cleanup
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create PDF document with default settings
+Dim document As New PdfDocument()
+
+' Configure marginless page layout
+document.PageSettings.Margins.Top = 0
+document.PageSettings.Margins.Bottom = 0
+
+' Add first page to the document
+Dim page As PdfPage = document.Pages.Add()
+
+' Initialize grid component for data presentation
+Dim pdfGrid As New PdfGrid()
+
+' Generate sample data (300 rows)
+Dim data As New List(Of Object)()
+For i As Integer = 0 To 99
+    ' Create three unique rows per iteration
+    data.Add(New With {.ID = "1", .Name = "Clay", .Price = "$10"})
+    data.Add(New With {.ID = "2", .Name = "Gray", .Price = "$20"})
+    data.Add(New With {.ID = "3", .Name = "Ash", .Price = "$30"})
+Next
+
+' Configure grid data binding
+pdfGrid.DataSource = data ' Automatic conversion to IEnumerable
+
+' Set up grid layout with header space
+Dim format As New PdfGridLayoutFormat() With {
+    .PaginateBounds = New RectangleF(0, 15,
+        page.GetClientSize().Width,
+        page.GetClientSize().Height - 15)
+}
+
+' Render grid to page with automatic pagination
+pdfGrid.Draw(page, New RectangleF(0, 0,
+    page.GetClientSize().Width,
+    page.GetClientSize().Height), format)
+
+' Save the PDF document
+document.Save("Output.pdf")
+
+' Proper document cleanup
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
