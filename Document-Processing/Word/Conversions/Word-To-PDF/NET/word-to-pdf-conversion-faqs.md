@@ -61,32 +61,32 @@ To render Chinese and other Unicode characters correctly, we **recommend using t
   </thead>
   <tbody>
     <tr>
-      <td>Purpose</td>
+      <td><b>Purpose</b></td>
       <td>Handles missing glyphs in a font.</td>
       <td>Replaces an entirely missing font.</td>
     </tr>
     <tr>
-      <td>When It’s Used</td>
+      <td><b>When It’s Used</b></td>
       <td>A font is present but lacks specific character glyphs.</td>
       <td>The required font is not installed on the system.</td>
     </tr>
     <tr>
-      <td>How It Works</td>
+      <td><b>How It Works</b></td>
       <td>Uses an alternative font only for missing glyphs while keeping the original font for other characters.</td>
       <td>Replaces the missing font with a specified alternative for all text using that font.</td>
     </tr>
     <tr>
-      <td>Example</td>
+      <td><b>Example</b></td>
       <td>Arial does not support Japanese characters, so "Noto Sans JP" is used for those glyphs.</td>
       <td>Arial is missing on the system, so "Helvetica" is used instead.</td>
     </tr>
     <tr>
-      <td>Key Benefit</td>
+      <td><b>Key Benefit</b></td>
       <td>Preserves the original font style while ensuring all text is rendered correctly.</td>
       <td>Ensures text consistency when the original font is unavailable.</td>
     </tr>
     <tr>
-      <td>Documentation link</td>
+      <td><b>Documentation link</b></td>
       <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf">Fallback fonts</a></td>
       <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf">Font substitution</a></td>
     </tr>
