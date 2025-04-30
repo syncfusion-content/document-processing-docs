@@ -108,7 +108,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [Does XlsIO support the multiline header footer support?](faqs/does-xlsio-support-the-multiline-header-footer-support)
 * [How to add Barcode in Excel document using C#?](faqs/how-to-add-Barcode-in-Excel-document)
 * [How to delete hyperlinks from a worksheet without affecting the cell styles using C#?](faqs/how-to-delete-hyperlinks-from-worksheet-without-affecting-the-cell-styles)
-* [How to Parse Worksheets on Demand using C#?](faqs/how-to-parse-worksheets-on-demand-in-Excel)
+* [How to avoid processing unnecessary worksheets when opening an Excel document using C#?](faqs/how-to-avoid-processing-unnecessary-worksheets-when-opening-an-Excel-document-using-C#)
 * [How to run macros in Excel document?](faqs/how-to-run-macros-in-Excel-document)
 * [Does XlsIO support editing an Excel document that is already open in Microsoft Excel?](faqs/does-xlsio-support-editing-an-Excel-document-that-is-already-open-in-Microsoft-Excel)
 * [How to compute the size of the Excel file?](faqs/how-to-compute-the-size-of-the-Excel-file)
