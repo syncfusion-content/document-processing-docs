@@ -892,3 +892,120 @@ End Using
 {% endtabs %}
 
 A complete working example to access filters from Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Accessing%20Filter/.NET/Accessing%20Filter).
+
+## Accessing DataSorter through Worksheet AutoFilters
+
+The following code example illustrates, if AutoFilters are applied, the DataSorter should be accessed through the AutoFilters of the worksheet, rather than directly through the worksheet.  
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Accessing%20DataSorter%20through%20Worksheet%20AutoFilters/.NET/Sorting%20Worksheet/Sorting%20Worksheet/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Input.xlsx"), FileMode.Open, FileAccess.Read);
+  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Access sort fields from AutoFilters
+  ISortFields sortFieldsCollection = worksheet.AutoFilters.DataSorter.SortFields;
+
+  //Copy sort fields to a list
+  List<ISortField> sortFields = new List<ISortField>();
+
+  for (int i = 0; i < sortFieldsCollection.Count; i++)
+  {
+      sortFields.Add(sortFieldsCollection[i]);
+  }
+
+  //Remove each sort field
+  foreach (ISortField sortField in sortFields)
+  {
+      worksheet.AutoFilters.DataSorter.SortFields.Remove(sortField);
+  }
+
+  //Now re-use the AutoFilters DataSorter
+  IDataSort sorter = worksheet.AutoFilters.DataSorter;
+  sorter.SortRange = worksheet.UsedRange;
+  sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
+  sorter.Sort();
+
+  #region Save
+  FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+  #endregion
+
+  //Dispose streams
+  outputStream.Dispose();
+  inputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Excel2013;
+  IWorkbook workbook = application.Workbooks.Open("Input.xlsx");
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Access sort fields from AutoFilters
+  ISortFields sortFieldsCollection = worksheet.AutoFilters.DataSorter.SortFields;
+
+  //Copy sort fields to a list
+  List<ISortField> sortFields = new List<ISortField>();
+
+  for (int i = 0; i < sortFieldsCollection.Count; i++)
+  {
+      sortFields.Add(sortFieldsCollection[i]);
+  }
+
+  //Remove each sort field
+  foreach (ISortField sortField in sortFields)
+  {
+      worksheet.AutoFilters.DataSorter.SortFields.Remove(sortField);
+  }
+
+  //Now re-use the AutoFilters DataSorter
+  IDataSort sorter = worksheet.AutoFilters.DataSorter;
+  sorter.SortRange = worksheet.UsedRange;
+  sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
+  sorter.Sort();
+
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  Dim workbook As IWorkbook = application.Workbooks.Open("Input.xlsx")
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Access sort fields from AutoFilters
+  If worksheet.AutoFilters IsNot Nothing AndAlso worksheet.AutoFilters.DataSorter IsNot Nothing Then
+      'Copy sort fields to a list
+      Dim sortFieldsList As New List(Of ISortField)()
+
+      For i As Integer = 0 To worksheet.AutoFilters.DataSorter.SortFields.Count - 1
+          sortFieldsList.Add(worksheet.AutoFilters.DataSorter.SortFields(i))
+      Next
+
+      'Remove each sort field
+      For Each sortField In sortFieldsList
+          worksheet.AutoFilters.DataSorter.SortFields.Remove(sortField)
+      Next
+
+      'Now re-use the AutoFilters DataSorter
+      Dim sorter As IDataSort = worksheet.AutoFilters.DataSorter
+      sorter.SortRange = worksheet.Range("A1:A6")
+      sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending)
+      sorter.Sort()     
+  End If
+
+  workbook.SaveAs("Output.xlsx")  
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to apply icon filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Accessing%20DataSorter%20through%20Worksheet%20AutoFilters/.NET/Sorting%20Worksheet).
