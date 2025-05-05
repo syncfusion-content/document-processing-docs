@@ -1072,8 +1072,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to clone and merge Word documents using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/cloneandmerge#/material3).
-* See how to apply various document settings to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/documentsettings#/material3).
+* Explore how to clone and merge Word documents using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/cloneandmerge#/bootstrap5).
+* See how to apply various document settings to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/documentsettings#/bootstrap5).
 
 ## See Also
 

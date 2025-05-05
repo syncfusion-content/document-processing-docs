@@ -418,4 +418,4 @@ By executing the program, you will get the **image** as follows.
  
 {% endtabcontents %}
 
-An online sample link to [convert Word document to image](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtoimage#/material3) in ASP.NET Core.
+An online sample link to [convert Word document to image](https://ej2.syncfusion.com/aspnetcore/word/wordtoimage#/bootstrap5) in ASP.NET Core.

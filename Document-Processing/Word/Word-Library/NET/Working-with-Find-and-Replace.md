@@ -1820,9 +1820,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/findandhighlight#/material3).
-* See how to replace a specific text in the Word document with another text using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/simplereplace#/material3).
-* See how to replace a specific content in the Word document with another document using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/advancedreplace#/material3).
+* Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/findandhighlight#/bootstrap5).
+* See how to replace a specific text in the Word document with another text using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/simplereplace#/bootstrap5).
+* See how to replace a specific content in the Word document with another document using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/advancedreplace#/bootstrap5).
 
 ## See Also
 
