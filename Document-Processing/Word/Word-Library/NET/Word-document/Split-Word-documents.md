@@ -641,7 +641,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to split a Word document by section using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbysection#/material3).
-* See how to split a Word document by heading using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbyheading#/material3).
-* See how to split a Word document by bookmark using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbybookmark#/material3).
-* See how to split a Word document by placeholder using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/splitbybookmark#/material3).
+* Explore how to split a Word document by section using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbysection#/bootstrap5).
+* See how to split a Word document by heading using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbyheading#/bootstrap5).
+* See how to split a Word document by bookmark using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbybookmark#/bootstrap5).
+* See how to split a Word document by placeholder using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/splitbyplaceholder#/bootstrap5).

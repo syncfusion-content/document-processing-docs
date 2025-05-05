@@ -2128,8 +2128,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to format a table in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/formattable#/material3).
-* See how to apply built-in and custom styles to the tables of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/tablestyles#/material3). 
+* Explore how to format a table in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/formattable#/bootstrap5).
+* See how to apply built-in and custom styles to the tables of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/tablestyles#/bootstrap5). 
 
 ## See Also
 
