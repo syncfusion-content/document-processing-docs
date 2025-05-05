@@ -246,7 +246,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to compare Word documents using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/comparedocuments#/material3).
+* Explore how to compare Word documents using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/comparedocuments#/bootstrap5).
 
 ## See Also
 

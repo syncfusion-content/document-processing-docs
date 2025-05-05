@@ -2775,9 +2775,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to apply built-in and custom styles to the contents of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/styles#/material3).
-* See how to create a Word document with right-to-left language text using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/rtl#/material3).
-* See how to insert breaks to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/insertbreak#/material3).
+* Explore how to apply built-in and custom styles to the contents of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/styles#/bootstrap5).
+* See how to create a Word document with right-to-left language text using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/rtl#/bootstrap5).
+* See how to insert breaks to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/insertbreak#/bootstrap5).
 
 ## See Also
 

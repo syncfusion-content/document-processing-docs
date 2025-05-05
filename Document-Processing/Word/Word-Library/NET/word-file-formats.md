@@ -1036,5 +1036,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to convert the Word document to Word processing XML using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtowordml#/material3).
-* See how to convert the Word processing XML to Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordmltoword#/material3).
+* Explore how to convert the Word document to Word processing XML using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordtowordml#/bootstrap5).
+* See how to convert the Word processing XML to Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/wordmltoword#/bootstrap5).

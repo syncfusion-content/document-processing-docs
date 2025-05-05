@@ -1807,7 +1807,7 @@ document.Close()
 
 ## Online Demo
 
-* Explore how to update fields in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/updatefields#/material3).
+* Explore how to update fields in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/updatefields#/bootstrap5).
 
 ## See Also
 
