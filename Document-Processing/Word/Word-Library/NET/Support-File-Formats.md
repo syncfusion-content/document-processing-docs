@@ -268,3 +268,7 @@ Source Format
 
 N> 1. Importing ODT format is not supported, you can save the existing document as ODT using DocIO. 
 N> 2. Exporting the Word Processing 2003 XML document is not supported. Whereas you can import the Word Processing 2003 XML documents and export it to other supported file formats. 
+
+## See Also
+
+* [How to Identify and Manage File formats Unsupported by .NET Core Word?](https://support.syncfusion.com/kb/article/19611/how-to-identify-and-manage-file-formats-unsupported-by-net-core-word)
