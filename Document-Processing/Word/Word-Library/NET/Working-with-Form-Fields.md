@@ -569,7 +569,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to create a simple job application form and fill the form using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/forms#/material3).
+* Explore how to create a simple job application form and fill the form using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/forms#/bootstrap5).
 
 ## See also
 

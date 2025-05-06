@@ -278,5 +278,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to encrypt and decrypt the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/encryptanddecrypt#/material3).  
-* See how to protect the Word document from editing using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/documentprotection#/material3).
+* Explore how to encrypt and decrypt the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/encryptanddecrypt#/bootstrap5).  
+* See how to protect the Word document from editing using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/documentprotection#/bootstrap5).

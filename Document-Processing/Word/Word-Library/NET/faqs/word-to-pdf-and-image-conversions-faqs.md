@@ -31,9 +31,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Why are some fonts missing when converting a Word document to PDF in the Syncfusion<sup>®</sup> demo application?
 
-The Syncfusion<sup>®</sup> [online demo](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdf#/material3) has a limited set of default fonts. If certain fonts are missing during the Word-to-PDF conversion, it may cause preservation problems.
+The Syncfusion<sup>®</sup> [online demo](https://ej2.syncfusion.com/aspnetcore/word/wordtopdf#/bootstrap5) has a limited set of default fonts. If certain fonts are missing during the Word-to-PDF conversion, it may cause preservation problems.
 
-To ensure the fonts appear exactly as they do in the Word document during PDF conversion in our [online demo](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdf#/material3), we recommend embedding the missing fonts directly into the Word document before performing the conversion. For detailed guidance on embedding fonts in a Word document using Microsoft Word, refer [here](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion#suggestion-3:-embed-fonts-in-docx).
+To ensure the fonts appear exactly as they do in the Word document during PDF conversion in our [online demo](https://ej2.syncfusion.com/aspnetcore/word/wordtopdf#/bootstrap5), we recommend embedding the missing fonts directly into the Word document before performing the conversion. For detailed guidance on embedding fonts in a Word document using Microsoft Word, refer [here](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion#suggestion-3:-embed-fonts-in-docx).
 
 ## How to edit a Word document in Microsoft Word and convert it to PDF/image simultaneously using the DocIO library?
 

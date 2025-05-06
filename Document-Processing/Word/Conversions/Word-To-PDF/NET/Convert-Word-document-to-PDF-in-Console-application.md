@@ -434,4 +434,4 @@ By executing the program, you will get the **PDF** as follows.
  
 {% endtabcontents %}
 
-An online sample link to [convert Word document to PDF](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/wordtopdf#/material3) in ASP.NET Core.
+An online sample link to [convert Word document to PDF](https://ej2.syncfusion.com/aspnetcore/word/wordtopdf#/bootstrap5) in ASP.NET Core.
