@@ -28,8 +28,6 @@ Step 1: Create a new C# ASP.NET Core web application project.
 Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
-
-{% endtabcontent %}
  
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 Step 3: Include the following namespaces in **HomeController.cs**.
@@ -105,6 +103,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the **PDF document** as follows.
 
 ![Converted PDF from PowerPoint in ASP.NET Core](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
+
+{% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
