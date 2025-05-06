@@ -436,3 +436,5 @@ T> Passing null for both the property names and property values in the above API
 
 * [How to find and replace text in heading paragraphs in a Word document](https://support.syncfusion.com/kb/article/17658/how-to-find-and-replace-text-in-heading-paragraphs-in-a-word-document)
 * [How to replace a logo with text and another image with different text in a Word document](https://support.syncfusion.com/kb/article/17805/how-to-replace-a-logo-with-text-and-another-image-with-different-text-in-a-word-document)
+* [How to Find and Remove a Table by Title in .Net Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
+* [How to Find and Remove Corrupted Images in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19605/how-to-find-and-remove-corrupted-images-in-net-core-word-document)

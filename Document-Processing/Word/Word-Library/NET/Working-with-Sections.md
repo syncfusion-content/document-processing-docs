@@ -1543,6 +1543,7 @@ N> * And also, it is not feasible to get the page-wise details from Word documen
 * [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 * [How to apply background color to footer and add logo in header in a Word document?](https://support.syncfusion.com/kb/article/19582/how-to-apply-background-color-to-footer-and-add-logo-in-header-in-a-word-document)
 * [How to merge Word documents while keeping the same headers and footers?](https://support.syncfusion.com/kb/article/19454/how-to-merge-word-documents-while-keeping-the-same-headers-and-footers)
+* [How to copy the header and footer from one template Word document to another Word document?](https://support.syncfusion.com/kb/article/19727/how-to-copy-the-header-and-footer-from-one-template-word-document-to-another-word-document)
 
 ## Frequently Asked Questions
 

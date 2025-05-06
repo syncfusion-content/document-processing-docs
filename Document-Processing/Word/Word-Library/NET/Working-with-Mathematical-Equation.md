@@ -2106,3 +2106,6 @@ By executing the above code example, it generates output Word document as follow
 * Explore how to create a Word document with mathematical equations using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/createequation#/bootstrap5).
 * See how to modify a mathematical equation in a Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/editequation#/bootstrap5).
 
+## See Also
+
+* [How to Remove Equations from .NET Core Word Document?](https://support.syncfusion.com/kb/article/19729/how-to-remove-equations-from-net-core-word-document)

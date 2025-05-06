@@ -2814,6 +2814,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to generate and insert a QR code in a Word Document?](https://support.syncfusion.com/kb/article/19794/how-to-generate-and-insert-a-qr-code-in-a-word-document)
 * [How to apply background color to footer and add logo in header in a Word document?](https://support.syncfusion.com/kb/article/19582/how-to-apply-background-color-to-footer-and-add-logo-in-header-in-a-word-document)
 * [How to replace SVG and other images in ASP.NET Word document?](https://support.syncfusion.com/kb/article/19459/how-to-replace-svg-and-other-images-in-aspnet-word-document?)
+* [How to restart numbering when replacing multiple texts with the same HTML list in Word document?](https://support.syncfusion.com/kb/article/19665/how-to-restart-numbering-when-replacing-multiple-texts-with-the-same-html-list-in-word-document)
+* [How to create a list with a hanging indent in a Word document?](https://support.syncfusion.com/kb/article/19649/how-to-create-a-list-with-a-hanging-indent-in-a-word-document)
+* [How to Keep Paragraphs Inside a Table in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19678/how-to-keep-paragraphs-inside-a-table-in-aspnet-core-word)
 
 ## Frequently Asked Questions
 
