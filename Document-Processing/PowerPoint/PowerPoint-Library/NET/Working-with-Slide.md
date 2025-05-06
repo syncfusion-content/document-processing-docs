@@ -7,6 +7,9 @@ documentation: UG
 ---
 # Working with Slides in PowerPoint  
 
+To quickly start add, remove, resize, and customize PowerPoint slides, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=NQNIY5cTb0w" %}
+
 ## Adding slide to the PowerPoint presentation
 
 In PowerPoint presentation, a slide is a container for the elements like shapes, images, charts, text box etc. The slides may inherit the formatting and layout properties from its 'Master' and 'Layout' slides.

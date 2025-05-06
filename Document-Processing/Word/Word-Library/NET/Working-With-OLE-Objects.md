@@ -483,3 +483,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Online Demo
 
 * Explore how to insert an OLE Object into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2aspnetcore.azurewebsites.net/aspnetcore/word/insertoleobject#/material3).
+
+## See Also
+
+* [How to insert Excel, Word, PowerPoint, and PDF as OLE object in the Word document?](https://support.syncfusion.com/kb/article/19806/how-to-insert-excel-word-powerpoint-and-pdf-as-ole-object-in-the-word-document)
