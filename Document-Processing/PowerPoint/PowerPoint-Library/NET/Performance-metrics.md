@@ -10,7 +10,7 @@ documentation: UG
 
 The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables seamless integration for working with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report demonstrates the speed and efficiency of key functionalities, emphasizing how our library excels in real-world scenarios. 
 
-## Benchmark Environment 
+## Environment 
 
 The following system configurations were used for benchmarking: 
 
@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** 11th Gen Intel(R) Core(TM)
 * **RAM:** 16GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> .NET PowerPoint Library Version:** v29.1.33
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Presenattion.Net.Core v29.1.33](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/29.1.33)
 
 ## Open and save Presentation 
 
