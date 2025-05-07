@@ -2884,7 +2884,7 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Add-different-styles-to-a-row-in-PDF-table).
 
-## Applying Style to PDF Grid Cells
+## Applying style to PDF grid cells
 
 The [ApplyStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridRow.html#Syncfusion_Pdf_Grid_PdfGridRow_ApplyStyle_Syncfusion_Pdf_Grid_PdfGridCellStyle_) method allows you to customize the appearance of cells within a PDF grid by applying a predefined [PdfGridCellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridCellStyle.html). This method can be used to set various properties such as font, background color, text color, borders, and more.
 
@@ -2892,7 +2892,7 @@ The following code sample explains how to use the ``ApplyStyle`` method to apply
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"  %} 
+{% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Applying-Customizing-Styles-in-PDF-Grid/.NET/Applying-Customizing-Styles-in-PDF-Grid/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3033,7 +3033,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Applying-Customizing-Styles-in-PDF-Grid/.NET).
 
 ## Word wrap
 
