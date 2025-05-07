@@ -1462,9 +1462,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfLightTable/Add-string-formatting-for-whole-table-in-a-PDF).
 
-### String formatting to a column in PdfGrid
-
-The following code sample explains how to add string formatting to a column in the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html).
+### Add string formatting to a column in PdfLightTable
 
 The following code sample explains how to add string formatting to a column in the [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html).
 
