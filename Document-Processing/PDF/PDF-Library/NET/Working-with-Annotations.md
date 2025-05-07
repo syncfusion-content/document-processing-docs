@@ -4070,6 +4070,214 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> In our PDF library, font resources are embedded into the document during the save operation. If a newly created annotation uses the [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), its font resources will not be exported when exporting the [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html). To ensure proper export of [PdfAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html) with [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html), we recommend saving the document before exporting the annotation.
 
+## Get and set custom values for PDF annotations
+
+The Syncfusion<sup>®</sup> PDF library provides robust functionality to manipulate PDF documents, including annotations. This document focuses on using the [GetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_GetValues_System_String_) and [SetValues](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_SetValues_System_String_System_String_) methods with PDF annotations to retrieve and set annotation-specific values.
+
+The following code example demonstrates how to get values from a PDF annotation.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream))
+    {
+        // Access the first page of the document
+        PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+        {
+            // Get the custom value from the annotation
+            List<string> customValue = annotation.GetValues("custom");
+
+            foreach (string value in customValue)
+            {
+                // Print the custom value to the console
+                Console.WriteLine("Custom value from annotation: " + value);
+            } 
+        }
+        // Close the document and release resources
+        loadedDocument.Close(true);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputStream))
+    {
+        // Access the first page of the document
+        PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+        {
+            // Get the custom value from the annotation
+            List<string> customValue = annotation.GetValues("custom");
+
+            foreach (string value in customValue)
+            {
+                // Print the custom value to the console
+                Console.WriteLine("Custom value from annotation: " + value);
+            } 
+        }
+        // Close the document and release resources
+        loadedDocument.Close(true);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the existing PDF document using FileStream
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+' Load the PDF document from the input stream
+Using loadedDocument As New PdfLoadedDocument(inputStream)
+' Access the first page of the document
+Dim page As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+
+' Get the collection of annotations from the page
+Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
+
+' Check if at least one annotation exists and it's a popup annotation
+If annotations.Count > 0 AndAlso TypeOf annotations(0) Is PdfLoadedPopupAnnotation Then
+Dim annotation As PdfLoadedPopupAnnotation = TryCast(annotations(0), PdfLoadedPopupAnnotation)
+
+' Get the custom value(s) from the annotation
+Dim customValues As List(Of String) = annotation.GetValues("custom")
+
+' Print the custom values to the console
+For Each value As String In customValues
+Console.WriteLine("Custom value from annotation: " & value)
+Next
+End If
+
+' Close the document and release resources
+loadedDocument.Close(True)
+End Using
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
+The following code example demonstrates how to set values from a PDF annotation.
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument ldoc = new PdfLoadedDocument(inputStream))
+    {
+        // Access the first page of the document
+        PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
+
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+        {
+            // Set a custom key-value pair in the annotation's metadata
+            annotation.SetValues("custom", "This is the custom data for the annotation");
+        }
+
+        // Save the modified document using a new FileStream
+        using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+        {
+            // Save changes to a new PDF file
+            ldoc.Save(outputStream); 
+        }
+        // Close the document and release resources
+        ldoc.Close(true);
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the existing PDF document using FileStream
+using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream
+    using (PdfLoadedDocument ldoc = new PdfLoadedDocument(inputStream))
+    {
+        // Access the first page of the document
+        PdfLoadedPage page = ldoc.Pages[0] as PdfLoadedPage;
+
+        // Get the collection of annotations from the page
+        PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+        // Check if at least one annotation exists and it's a popup annotation
+        if (annotations.Count > 0 && annotations[0] is PdfLoadedPopupAnnotation annotation)
+        {
+            // Set a custom key-value pair in the annotation's metadata
+            annotation.SetValues("custom", "This is the custom data for the annotation");
+        }
+        // Save changes to a new PDF file
+        ldoc.Save("Output.pdf"); 
+
+        // Close the document and release resources
+        ldoc.Close(true);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+        ' Load the existing PDF document using FileStream
+        Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+            ' Load the PDF document from the input stream
+            Using ldoc As New PdfLoadedDocument(inputStream)
+                ' Access the first page of the document
+                Dim page As PdfLoadedPage = TryCast(ldoc.Pages(0), PdfLoadedPage)
+
+                ' Get the collection of annotations from the page
+                Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
+
+                ' Check if at least one annotation exists and it's a popup annotation
+                If annotations.Count > 0 AndAlso TypeOf annotations(0) Is PdfLoadedPopupAnnotation Then
+                    Dim annotation As PdfLoadedPopupAnnotation = TryCast(annotations(0), PdfLoadedPopupAnnotation)
+
+                    ' Set a custom key-value pair in the annotation's metadata
+                    annotation.SetValues("custom", "This is the custom data for the annotation")
+                End If
+
+                ' Save the modified document to a new file
+                ldoc.Save("Output.pdf")
+
+                ' Close the document and release resources
+                ldoc.Close(True)
+            End Using
+        End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Setting transparency for annotations 
 
 The Syncfusion<sup>®</sup> PDF Library enables you to adjust the transparency of annotations using the [Opacity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Opacity) property. This property defines the annotation's transparency level, where a value of 0 makes it fully transparent, and 1 makes it completely opaque.

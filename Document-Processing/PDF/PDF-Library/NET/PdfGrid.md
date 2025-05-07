@@ -2892,7 +2892,7 @@ The following code sample explains how to use the ``ApplyStyle`` method to apply
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"  %} 
+{% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfGrid/Applying-Customizing-Styles-in-PDF-Grid/.NET/Applying-Customizing-Styles-in-PDF-Grid/Program.cs" %} 
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -3033,7 +3033,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Applying-Customizing-Styles-in-PDF-Grid/.NET).
 
 ## Word wrap
 
