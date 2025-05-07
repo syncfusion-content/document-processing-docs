@@ -28,6 +28,7 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why does the item index in a Word document differ from the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-item-index-in-a-word-document-differ-from-the-docio-library)
 * [How to view Word documents in my .NET MAUI application using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-view-word-documents-in-my-net-maui-application-using-docio)
 * [How to identify if a Word document is in portrait or landscape?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-identify-if-a-word-document-is-in-portrait-or-landscape)
+* [How to save the Word document with same compatibility using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#saving-word-document-with-compatibility)
 
 ## Sections
 

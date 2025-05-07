@@ -1282,3 +1282,4 @@ Underline types and colors are ignored.
 * [How to convert Webpage to Word document using C#?](https://support.syncfusion.com/kb/article/17771/how-to-convert-webpage-to-word-document-using-c)
 * [How to merge header, body and footer from different HTML files into a Word document?](https://support.syncfusion.com/kb/article/17771/how-to-convert-webpage-to-word-document-using-c) 
 * [How to add numbers on pages in HTML to PDF in ASP.NET DocIO?](https://support.syncfusion.com/kb/article/19446/how-to-add-numbers-on-pages-in-html-to-pdf-in-aspnet-docio?isInternalRefresh=False)
+* [How to restart numbering when replacing multiple texts with the same HTML list in Word document?](https://support.syncfusion.com/kb/article/19665/how-to-restart-numbering-when-replacing-multiple-texts-with-the-same-html-list-in-word-document)

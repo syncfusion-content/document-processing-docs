@@ -877,7 +877,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Essential<sup>&reg;</sup> DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. These dictionaries prescribe where words of a specific language can be hyphenated. Use the dictionary files as OpenOffice format dictionary.
 
-N> If automatic hyphenation is not enabled in the Word document, you can enable it by using [WordDocument.Properties.Hyphenation.AutoHyphenation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenation.html#Syncfusion_DocIO_DLS_Hyphenation_AutoHyphenation) of DocIO.
+N> 1. If automatic hyphenation is not enabled in the Word document, you can enable it by using [WordDocument.Properties.Hyphenation.AutoHyphenation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenation.html#Syncfusion_DocIO_DLS_Hyphenation_AutoHyphenation) of DocIO.
+N> 2. After converting Word documents to PDF, release any dictionary file streams to avoid memory leaks. Call [Hyphenator.UnloadDictionaries()](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Hyphenator.html#Syncfusion_DocIO_DLS_Hyphenator_UnloadDictionaries) to free hyphenation resources and optimize performance.
 
 The following code sample shows how to hyphenate text in a Word document while converting it to PDF format.
 

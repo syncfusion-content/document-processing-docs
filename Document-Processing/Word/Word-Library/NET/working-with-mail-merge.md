@@ -334,3 +334,5 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 * [How to Execute Nested Group Mail Merge with JSON in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19550/how-to-execute-nested-group-mail-merge-with-json-in-aspnet-core-word?)
 * [How to Replace Merge Fields with Markdown and URLs in .NET Core Word?](https://support.syncfusion.com/kb/article/19622/how-to-replace-merge-fields-with-markdown-and-urls-in-net-core-word?isInternalRefresh=False)
 * [How to Replace Merge Fields with Markdown Content in .NET Core Word?](https://support.syncfusion.com/kb/article/19630/how-to-replace-merge-fields-with-markdown-content-in-net-core-word?)
+* [How to generate a QR code from a URL and insert it into a Word document during mail merge?](https://support.syncfusion.com/kb/article/19819/how-to-generate-a-qr-code-from-a-url-and-insert-it-into-a-word-document-during-mail-merge)
+* [How to change the font of hindi text during mail merge in a Word document?](https://support.syncfusion.com/kb/article/19789/how-to-change-the-font-of-hindi-text-during-mail-merge-in-a-word-document)
