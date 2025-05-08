@@ -12,7 +12,7 @@ The following code snippets illustrate how to set traffic lights icon in Excel c
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Excel2013;
+    application.DefaultVersion = ExcelVersion.Xlsx;
     IWorkbook workbook = application.Workbooks.Create(1);
     IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -65,7 +65,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Excel2013;
+    application.DefaultVersion = ExcelVersion.Xlsx;
     IWorkbook workbook = application.Workbooks.Create(1);
     IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -113,7 +113,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
-    application.DefaultVersion = ExcelVersion.Excel2013
+    application.DefaultVersion = ExcelVersion.Xlsx
     Dim workbook As IWorkbook = application.Workbooks.Create(1)
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
