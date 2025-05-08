@@ -11,8 +11,7 @@ documentation: UG
 You can remove hyperlinks from an Excel worksheet without altering the cell formatting using [HyperLinks]( https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HyperLinks) property of the [IWorksheet]( https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface. Below are the code examples in C# (cross-platform and Windows-specific) and VB.NET to demonstrate how to do this.
 
 {% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %} playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Hyperlinks/.NET/Delete%20Hyperlinks/Delete%20Hyperlinks/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Hyperlinks/.NET/Delete%20Hyperlinks/Delete%20Hyperlinks/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
