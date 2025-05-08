@@ -8,7 +8,7 @@ documentation: UG
 # How to set traffic lights icon in Excel conditional formatting using C#?
 The following code snippets illustrate how to set traffic lights icon in Excel conditional formatting.
 {% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" %} playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon/Traffic%20lights%20icon/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon/Traffic%20lights%20icon/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
