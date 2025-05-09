@@ -29,5 +29,4 @@ The document Processing API provides following capabilities
 - [Organize PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/organize-pdf)
 
 
-> **Note:**
-> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
+><span>ℹ️ **Info:**</span> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
