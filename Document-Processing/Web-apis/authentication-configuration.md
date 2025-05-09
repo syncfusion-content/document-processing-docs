@@ -137,4 +137,4 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
  N> The bearer token used in the example above is for demonstration purposes. It is recommended to generate your own JWT using the private key. To generate a JWT, refer to the steps provided in the documentation on how to create a JWT using your private key.
 
 
-><span>ℹ️ **Info:**</span> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
+N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)

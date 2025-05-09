@@ -70,4 +70,4 @@ Date: Mon, 09 May 2024 12:00:00 GMT
 api-supported-versions: 1.0
 ```
 
-><span>ℹ️ **Info:**</span> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
+N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
