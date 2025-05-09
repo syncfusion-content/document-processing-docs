@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 # How to avoid processing unnecessary worksheets when opening an Excel document using C#?
-XlsIO provides support to Parse Worksheets on Demand in Excel. The following code snippet illustrates this.
+XlsIO provides support to avoid processing unnecessary worksheets when opening an Excel. The following code snippet illustrates this.
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand/Parse%20Worksheets%20On%20Demand/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -34,7 +34,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Excel2013;
+    application.DefaultVersion = ExcelVersion.Xlsx;
     IWorkbook workbook = application.Workbooks.Open("Input.xlsx",ExcelOpenType.Automatic,ExcelParseOptions.ParseWorksheetsOnDemand);
 
     // Access the first worksheet (triggers parsing)
@@ -49,7 +49,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
     Using excelEngine As ExcelEngine = New ExcelEngine()
         Dim application As IApplication = excelEngine.Excel
-        application.DefaultVersion = ExcelVersion.Excel2013
+        application.DefaultVersion = ExcelVersion.Xlsx
         Dim workbook As IWorkbook = application.Workbooks.Open("Input.xlsx", ExcelParseOptions.ParseWorksheetsOnDemand)
 
         ' Access the first worksheet (triggers parsing)
@@ -64,5 +64,3 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endtabs %}
 
 A complete working example to avoid processing unnecessary worksheets when opening an Excel document using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand).   
-
-
