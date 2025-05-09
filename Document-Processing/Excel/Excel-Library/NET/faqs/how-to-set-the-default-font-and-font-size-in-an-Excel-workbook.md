@@ -11,9 +11,7 @@ documentation: UG
 You can programmatically set the default font and font size in an Excel workbook using the [StandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_StandardFont) and [StandardFontSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_StandardFontSize) properties of the [IWorkbook](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html) interface. The following code examples demonstrate how to do this in C# (Cross-platform and Windows-specific) and VB.NET.
 
 {% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Workbook%20default%20font%20and%20font%20size/.NET/Workbook%20default%20font%20and%20font%20size/Workbook%20default%20font%20and%20font%20size/Program.cs,180" %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Workbook%20default%20font%20and%20font%20size/.NET/Workbook%20default%20font%20and%20font%20size/Workbook%20default%20font%20and%20font%20size/Program.cs,180" %} 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
