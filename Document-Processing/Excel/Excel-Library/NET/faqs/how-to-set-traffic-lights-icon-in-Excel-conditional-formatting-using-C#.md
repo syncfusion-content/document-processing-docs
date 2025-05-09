@@ -5,8 +5,11 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
+
 # How to set traffic lights icon in Excel conditional formatting using C#?
-The following code snippets illustrate how to set traffic lights icon in Excel conditional formatting.
+
+The following code snippets illustrate how to set traffic lights icon in Excel conditional formatting in C# (cross-platform and Windows-specific) and VB.NET.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon/Traffic%20lights%20icon/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -134,7 +137,8 @@ Using excelEngine As New ExcelEngine()
     worksheet.Range("A7").Number = 0.6
     worksheet.Range("A7").NumberFormat = "0%"
 
-    'Adjust row height and column width of the used range    worksheet.UsedRange.RowHeight = 20
+    'Adjust row height and column width of the used range    
+    worksheet.UsedRange.RowHeight = 20
     worksheet.UsedRange.ColumnWidth = 25
 
     ' Apply the first conditional format
@@ -159,7 +163,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set traffic lights icon in Excel conditional formatting using C#is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon).   
+A complete working example to set traffic lights icon in Excel conditional formatting using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon).   
 
 
 
