@@ -115,3 +115,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to set and format time values in Excel using TimeSpan?](faqs/how-to-set-and-format-time-values-in-Excel-using-TimeSpan)
 * [How to set the default font and font size in an Excel Workbook?](faqs/how-to-set-the-default-font-and-font-size-in-an-Excel-workbook)
 * [How to set traffic lights icon in Excel conditional formatting using C#?](faqs/how-to-set-traffic-lights-icon-in-Excel-conditional-formatting-using-C#)
+* [How to apply TimePeriod conditional formatting in Excel using C#?](faqs/how-to-apply-TimePeriod-conditional-formatting-in-Excel)
