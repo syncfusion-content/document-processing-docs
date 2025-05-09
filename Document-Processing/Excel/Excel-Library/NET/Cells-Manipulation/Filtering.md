@@ -893,12 +893,12 @@ End Using
 
 A complete working example to access filters from Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Accessing%20Filter/.NET/Accessing%20Filter).
 
-## Accessing DataSorter through Worksheet AutoFilters
+## Sorting Data with Filters
 
 The following code example illustrates, if AutoFilters are applied, the DataSorter should be accessed through the AutoFilters of the worksheet, rather than directly through the worksheet.  
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Accessing%20DataSorter%20through%20Worksheet%20AutoFilters/.NET/Sorting%20Worksheet/Sorting%20Worksheet/Program.cs,180" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Sorting%20Data%20with%20Filters/.NET/Sorting%20Worksheet/Sorting%20Worksheet/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -945,7 +945,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
+  application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Input.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -1008,4 +1008,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply icon filter on Excel data in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Accessing%20DataSorter%20through%20Worksheet%20AutoFilters/.NET/Sorting%20Worksheet).
+A complete working example to sort data with filters in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Sorting%20Data%20with%20Filters/.NET/Sorting%20Worksheet).
