@@ -8,7 +8,7 @@ documentation: UG
 
 # How to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel?
 
-You can change how data is interpreted in a chart by switching the series alignment from horizontal (rows) to vertical (columns) using Syncfusion XlsIO. This is done by using [IsSeriesInRows]( https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_IsSeriesInRows) property of the [IChart]( https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface. 
+You can change how data is interpreted in a chart by switching the series alignment from horizontal (rows) to vertical (columns) using Syncfusion XlsIO. This is done by using [IsSeriesInRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_IsSeriesInRows) property of the [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface. 
 
 The following code snippets demonstrate how to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel using C# (cross-platform and Windows-specific) and VB.NET.
 
