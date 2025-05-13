@@ -118,3 +118,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to apply TimePeriod conditional formatting in Excel using C#?](faqs/how-to-apply-TimePeriod-conditional-formatting-in-Excel)
 * [How to get the list of worksheet names in an Excel workbook?](faqs/how-to-get-the-list-of-worksheet-names-in-an-Excel-workbook)
 * [How to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel?](faqs/how-to-switch-chart-series-data-interpretation-from-horizontal-(rows)-to-vertical-(columns)-in-Excel)
+* [How to add Oval shape to Excel chart using XlsIO?](faqs/how-to-add-oval-shape-to-Excel-chart)
