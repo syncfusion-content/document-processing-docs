@@ -26,9 +26,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/organize' \
     {
       \"File\": \"file1\",
       \"Password\": \"password1\",
-      \"DeletedPages\": [
-        { \"pageNumber\": 2, \"fileName\": \"file1\" }
-      ]
+      \"DeletedPages\": { \"file1\": [2] }
     },
     {
       \"File\": \"file2\",
@@ -50,10 +48,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/organize' \
       \"HasEmptyPageAfter\": true
     }
   ],
-  \"SortedPageNumber\": [
-    { \"SortedPageNumber\": 2 },
-    { \"SortedPageNumber\": 1 }
-  ]
+  \"SortedPageNumbers\": [2,1]
 }"'
 
 {% endhighlight %}
@@ -69,7 +64,7 @@ formdata.append("settings", JSON.stringify({
     {
       File: "file1",
       Password: "password1",
-      DeletedPages: [{ pageNumber: 2, fileName: "file1" }]
+      DeletedPages: {"file1": [2]}
     },
     {
       File: "file2",
@@ -91,10 +86,7 @@ formdata.append("settings", JSON.stringify({
       HasEmptyPageAfter: true
     }
   ],
-  SortedPageNumber: [
-    { SortedPageNumber: 2 },
-    { SortedPageNumber: 1 }
-  ]
+  SortedPageNumbers: [2,1]
 }));
 
 const requestOptions = {
@@ -125,7 +117,7 @@ var settingsJson = @"{
       ""File"": ""file1"",
       ""Password"": ""password1"",
       ""DeletedPages"": [
-        { ""pageNumber"": 2, ""fileName"": ""file1"" }
+        {""file1"":[2] }
       ]
     },
     {
@@ -148,10 +140,7 @@ var settingsJson = @"{
       ""HasEmptyPageAfter"": true
     }
   ],
-  ""SortedPageNumber"": [
-    { ""SortedPageNumber"": 2 },
-    { ""SortedPageNumber"": 1 }
-  ]
+  ""SortedPageNumbers"": [2,1]
 }";
 
 content.Add(new StringContent(settingsJson, Encoding.UTF8, "application/json"), "settings");
