@@ -124,7 +124,7 @@ Using excelEngine As New ExcelEngine()
     series.DataPoints.DefaultDataPoint.DataLabels.IsValue = True
     series.DataPoints.DefaultDataPoint.DataLabels.ShowLeaderLines = True
 
-    'Manually resizing data label area using Manual Layout
+    'Manually resizing data label area using Manual Layout          
     series.DataPoints(0).DataLabels.Layout.ManualLayout.Left = 0.09
     series.DataPoints(0).DataLabels.Layout.ManualLayout.Top = 0.01
 
