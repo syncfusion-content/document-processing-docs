@@ -9,6 +9,8 @@ documentation: UG
 
 In today's fast-paced digital world, businesses and developers require efficient and scalable solutions for document processing tasks such as conversion, extraction, and manipulation. A ready-to-deploy Docker image for creating document processing Web APIs offers a streamlined and standardized approach to rapidly set up and deploy these services.
 
+The [Syncfusion Document Processing API](https://hub.docker.com/r/syncfusion/document-processing-apis) is now available as a Docker-based solution, enabling developers to quickly deploy web services for document conversion, data extraction, and file manipulation.
+
 ## Key features
 
 - **Pre-configured Environment:** The Docker image comes with all necessary software, libraries, and dependencies pre-installed, ensuring a consistent and hassle-free setup.
@@ -33,6 +35,6 @@ In today's fast-paced digital world, businesses and developers require efficient
 
 ## Use cases
 
-- **Document Conversion:** Convert office documents Word, Excel, PowerPoint to PDF and HTML to PDF.
+- **Document Conversion:** Convert office documents Word, Excel, PowerPoint to PDF, Image to PDF, PDF to Image, XPS to PDF and HTML to PDF.
 
-- **Document Manipulation:** Perform operations like merge, split, flatten, compress, rotate, and delete PDF pages.
+- **Document Manipulation:** Perform operations like merge, split, flatten, compress, rotate, protect, unlock, organize and delete PDF pages.

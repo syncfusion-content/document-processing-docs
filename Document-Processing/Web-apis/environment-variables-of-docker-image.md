@@ -54,9 +54,49 @@ You may want to adjust certain settings of the Syncfusion Document Processing AP
 <td>Postgresql port address.<br/><br/></td>
 </tr>
 <tr>
-<td>WORKER_POOL_SIZE<br/><br/></td>
-<td>Optional<br/><br/></td>
-<td>This setting determines the number of concurrent processes initiated for managing document processing tasks. Default value is 3.<br/><br/></td>
+  <td>WORKER_POOL_SIZE<br/><br/></td>
+  <td>Optional<br/><br/></td>
+  <td>
+    This setting determines the number of concurrent processes initiated for managing document processing tasks. 
+    Default value is 3.<br/><br/>
+    The optimal value depends on the memory (RAM), CPU capacity, and the expected workload. Higher resource availability and lighter workloads 
+    allow for larger pool sizes, while limited environments or heavy processing (e.g., large files) may require smaller values 
+    to prevent CPU and memory exhaustion.<br/><br/>
+    <b>Recommended configuration:</b><br/><br/>
+    <table>
+      <tr>
+        <th>vCPUs</th>
+        <th>RAM</th>
+        <th>Normal Load</th>
+        <th>High Load</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2–4 GB</td>
+        <td>1–2 jobs</td>
+        <td>1 job</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>4–6 GB</td>
+        <td>2–3 jobs</td>
+        <td>1–2 jobs</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>8–12 GB</td>
+        <td>4–6 jobs</td>
+        <td>3–4 jobs</td>
+      </tr>
+      <tr>
+        <td>6+</td>
+        <td>16 GB+</td>
+        <td>6 jobs</td>
+        <td>3–6 jobs</td>
+      </tr>
+    </table><br/>
+    It is strongly recommended to monitor system resource usage under real workloads and adjust the WORKER_POOL_SIZE accordingly.
+  </td>
 </tr>
 <tr>
 <td>ENABLE_JWT_SECURITY<br/><br/></td>
@@ -102,3 +142,5 @@ syncfusion:
   volumes:
     - ./directory-path-on-the-host:/usr/local/share/fonts/
 ```
+
+N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
