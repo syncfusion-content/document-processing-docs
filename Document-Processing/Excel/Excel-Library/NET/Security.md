@@ -389,7 +389,7 @@ The list of supported Excel sheet protection options and their behavior in Syncf
 
 <table>
   <tr>
-    <th>ExcelSheetProtection Enum</th>
+    <th>Option</th>
     <th>Description</th>
   </tr>
   <tr>
