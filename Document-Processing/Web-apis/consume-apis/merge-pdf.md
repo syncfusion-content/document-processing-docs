@@ -29,7 +29,8 @@ curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
       \"File\": \"file2\",
     }
   ],
-  \"PreserveBookmarks\": true
+  \"PreserveBookmarks\": true,
+  \"FolderPath\": ""
 }"'
 
 {% endhighlight %}
@@ -39,7 +40,7 @@ curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
 const formdata = new FormData();
 formdata.append("file1", fileInput.files[0], "merge/example.pdf");
 formdata.append("file2", fileInput.files[0], "merge/example1.pdf");
-formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true\n}");
+formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true,\n \"FolderPath\": ""\n}");
 
 const requestOptions = {
   method: "POST",
@@ -70,7 +71,8 @@ content.Add(new StringContent("{
       \"File\": \"file2\",
     }
   ],
-  \"PreserveBookmarks\": true
+  \"PreserveBookmarks\": true,
+  \"FolderPath\": ""
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -159,3 +161,5 @@ You will receive one of the following statuses until the job is completed. Upon 
     "message": "Failed to convert the document to PDF"        
 }
 ```
+
+N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
