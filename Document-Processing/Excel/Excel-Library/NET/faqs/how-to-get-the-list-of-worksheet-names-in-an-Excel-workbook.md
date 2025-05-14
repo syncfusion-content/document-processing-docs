@@ -1,6 +1,6 @@
 ---
 title: Get Worksheet Names | Excel library | Syncfusion
-description: In this section, you can learn about how to retrieve all worksheet names or visible worksheet names or hidden worksheet names in an Excel workbook using Syncfusion .NET Excel library.
+description: In this section, you can learn about how to get all worksheet names or visible worksheet names or hidden worksheet names in an Excel workbook using Syncfusion .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,11 +8,11 @@ documentation: UG
 
 # How to get the list of worksheet names in an Excel workbook?
 
-You can retrieve the list of worksheet names in an Excel workbook using Syncfusion XlsIO. This can include all worksheets or only visible worksheets or only hidden worksheets, based on your requirement.
+You can get the list of worksheet names in an Excel workbook using Syncfusion XlsIO. This can include all worksheets or only visible worksheets or only hidden worksheets, based on your requirement.
 
-## Retrieve All Worksheet Names
+## Get All Worksheet Names
 
-The following code snippet demonstrates how to retrieve all worksheet names from an Excel workbook.
+The following code snippet demonstrates how to get all worksheet names from an Excel workbook.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet%20Names/.NET/All%20Worksheet%20Names/All%20Worksheet%20Names/Program.cs,180" %}
@@ -77,9 +77,9 @@ End Using
 
 A complete working example to get all worksheet names in an Excel workbook using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet%20Names/.NET/All%20Worksheet%20Names).
 
-## Retrieve Only Visible Worksheet Names
+## Get Only Visible Worksheet Names
 
-The following code snippet demonstrates how to retrieve only visible worksheet names from an Excel workbook.
+The following code snippet demonstrates how to get only visible worksheet names from an Excel workbook.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet%20Names/.NET/Visible%20Worksheet%20Names/Visible%20Worksheet%20Names/Program.cs,180" %}
@@ -147,9 +147,9 @@ End Using
 
 A complete working example to get visible worksheet names in an Excel workbook using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet%20Names/.NET/Visible%20Worksheet%20Names).
 
-## Retrieve Only Hidden Worksheet Names
+## Get Only Hidden Worksheet Names
 
-The following code snippet demonstrates how to retrieve only hidden worksheet names from an Excel workbook.
+The following code snippet demonstrates how to get only hidden worksheet names from an Excel workbook.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet%20Names/.NET/Hidden%20Worksheet%20Names/Hidden%20Worksheet%20Names/Program.cs,180" %}
