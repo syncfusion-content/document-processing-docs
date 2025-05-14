@@ -11,7 +11,7 @@ Redacting a PDF is the process of permanently removing sensitive or confidential
 
 N> 1.CJK text without TrueType font and complex script text cannot be redacted.
 N> 2.To redact the content from the existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
-N> 3.To ensure cross-platform compatibility when performing image-based operations such as redaction using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the appropriate platform-specific native assets such as `SkiaSharp.NativeAssets.Windows` for Windows or `SkiaSharp.NativeAssets.Linux` for Linux in your project.
+N> 3.To ensure compatibility on **Linux** when performing image-based operations such as compression or rendering using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
 
 To quickly get started with redacting PDF documents in .NET using the PDF Library, check this video. 
 {% youtube "https://www.youtube.com/watch?v=sSnHbKm3WTk" %}
