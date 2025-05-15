@@ -4445,6 +4445,134 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfGrid/Add-a-hyperlink-in-a-table-cell).
 
+## Prevent row breaks across pages
+
+The [AllowRowBreakAcrossPages](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_AllowRowBreakAcrossPages) property ensures that each row in a PdfGrid is rendered entirely on a single page. If there isn't enough space on the current page, the entire row is moved to the next page instead of being split across two pages.
+
+The following code sample demonstrates how to prevent row breaks across pages in a PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    //Create a PdfGrid.
+    PdfGrid pdfGrid = new PdfGrid();
+    // Create a list with multiple short rows and one very large row
+    var data = new List<object>
+            {
+                new { ID = "E01", Description = "Short text 1" },
+                new { ID = "E02", Description = "Short text 2" },
+                new
+                {
+                    ID = "E03",
+                    Description = new string('A', 5000) 
+                },
+                new { ID = "E04", Description = "Short text 3" }
+            };
+
+    // Assign the list as the data source
+    pdfGrid.DataSource = data;
+
+    // Prevent row breaking across pages
+    pdfGrid.AllowRowBreakAcrossPages = false;
+
+    // Draw the grid on the page
+    pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, 0));
+
+    //Create file stream.
+    using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output/Output.pdf"), FileMode.Create, FileAccess.ReadWrite))
+    {
+        //Save the PDF document to file stream.
+        document.Save(outputFileStream);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    //Create a PdfGrid.
+    PdfGrid pdfGrid = new PdfGrid();
+    // Create a list with multiple short rows and one very large row
+    var data = new List<object>
+            {
+                new { ID = "E01", Description = "Short text 1" },
+                new { ID = "E02", Description = "Short text 2" },
+                new
+                {
+                    ID = "E03",
+                    Description = new string('A', 5000) 
+                },
+                new { ID = "E04", Description = "Short text 3" }
+            };
+
+    // Assign the list as the data source
+    pdfGrid.DataSource = data;
+
+    // Prevent row breaking across pages
+    pdfGrid.AllowRowBreakAcrossPages = false;
+
+    // Draw the grid on the page
+    pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, 0));
+
+    //Save the PDF document to file stream.
+    document.Save(outputFileStream);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document
+Using document As New PdfDocument()
+
+    ' Add a page
+    Dim page As PdfPage = document.Pages.Add()
+
+    ' Create a PdfGrid
+    Dim pdfGrid As New PdfGrid()
+
+    ' Create a list with multiple short rows and one very large row
+    Dim data As New List(Of Object) From {
+        New With {.ID = "E01", .Description = "Short text 1"},
+        New With {.ID = "E02", .Description = "Short text 2"},
+        New With {.ID = "E03", .Description = New String('A', 5000)},
+        New With {.ID = "E04", .Description = "Short text 3"}
+    }
+
+    ' Assign the list as the data source
+    pdfGrid.DataSource = data
+
+    ' Prevent row breaking across pages
+    pdfGrid.AllowRowBreakAcrossPages = False
+
+    ' Draw the grid on the page
+    pdfGrid.Draw(page, New PointF(0, 0))
+
+    ' Save the PDF document to file stream
+    document.Save("Output.pdf")
+
+End Using
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Changing margins from the second page onwards
 
 This guide demonstrates how to set custom margins for the first page of a PDF document (such as for a cover page or a header) and apply different margins to the subsequent pages using the [PdfGridLayoutFormat ](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGridLayoutFormat.html) class. This approach is useful for creating visually distinct sections within the same document, enhancing both structure and readability.
