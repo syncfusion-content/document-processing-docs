@@ -1,39 +1,36 @@
 ---
-title: Syncfusion Word to PDF Converter Service Guide
-description: Effortlessly convert Word documents to PDF using Syncfusion's API. Customize settings and integrate seamlessly for efficient document management.
+title: Syncfusion PDF Protecting Service Guide
+description: Protect PDF documents seamlessly using Syncfusion's API. Ensure document integrity and security by protecting.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Converting Word to PDF Using Syncfusion API
+# Guide to Protecting PDFs Using Syncfusion API
 
-Converting a Word document to PDF is simple with support for .doc, .docx, and .rtf formats. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+This feature enables you to protect a PDF document. To use this functionality, you need to provide a PDF document as input to the Protect PDF API.
 
-## Convert Word to PDF
+## Protecting PDF Document
 
-To convert a Word document to PDF, send a request to the /v1/conversion/word-to-pdf endpoint, including both the Word file as input and the settings JSON.
+To protect a PDF document, send a request to the /v1/edit-pdf/protect-pdf endpoint with the input PDF and its options as shown below.
 
 {% tabs %}
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
---form 'file=@"SalesInvoice.docx"' \
+curl --location 'http://localhost:8003/v1/edit-pdf/protect-pdf' \
+--form 'file=@"invoice.pdf"' \
 --form 'settings="{
   \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
-}"
+  \"Password\": \"12345678\"
+}"'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "SalesInvoice.docx");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PreserveFormFields\": true,\n  \"PdfComplaince\": \"PDF/A-1B\",\n  \"EnableAccessibility\": false\n}");
+formdata.append("file", fileInput.files[0], "invoice.pdf");
+formdata.append("settings", "{\n  \"File\": \"file\",\n    \"Password\": \"12345678\"\n}");
 
 const requestOptions = {
   method: "POST",
@@ -41,24 +38,22 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8003/v1/conversion/word-to-pdf", requestOptions)
+fetch("http://localhost:4000/v1/edit-pdf/protect-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/word-to-pdf");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/protect-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("SalesInvoice.docx")), "file", "SalesInvoice.docx");
+content.Add(new StreamContent(File.OpenRead("invoice.pdf")), "file", "invoice.pdf");
 content.Add(new StringContent("{
   \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
+  \"Password\": \"12345678\"
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -69,7 +64,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a conversion job to convert the Word document to PDF and return the job details as follows:
+Once the request is sent, it will create a protect job to protect the PDF and return the job details as follows:
 
 ```
 {
@@ -79,15 +74,16 @@ Once the request is sent, it will create a conversion job to convert the Word do
 }
 ```
 
-## Poll the status of the Conversion Job
+## Poll the status of the Protect Job
 
-Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
+Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
 {% tabs %}
 
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+--header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
 
@@ -98,7 +94,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -109,6 +105,7 @@ fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2
 
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+request.Headers.Add("Authorization", "Bearer {{Placeholder for token}}");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());

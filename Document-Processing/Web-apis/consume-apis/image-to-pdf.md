@@ -1,39 +1,48 @@
 ---
-title: Syncfusion Word to PDF Converter Service Guide
-description: Effortlessly convert Word documents to PDF using Syncfusion's API. Customize settings and integrate seamlessly for efficient document management.
+title: Syncfusion Image to PDF Converter Service Guide
+description: Convert Images to PDF seamlessly using Syncfusion's API. Customize settings, monitor job status, and integrate effortlessly into your applications.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Converting Word to PDF Using Syncfusion API
+# Guide to Image to PDF Conversion Using Syncfusion API
 
-Converting a Word document to PDF is simple with support for .doc, .docx, and .rtf formats. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+Converting Image files to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
 
-## Convert Word to PDF
+## Convert Image to PDF
 
-To convert a Word document to PDF, send a request to the /v1/conversion/word-to-pdf endpoint, including both the Word file as input and the settings JSON.
+To convert the Images to PDF, send a request to the /v1/conversion/image-to-pdf endpoint, including both the image files as inputs and the settings JSON.
 
 {% tabs %}
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
---form 'file=@"SalesInvoice.docx"' \
+curl --location 'http://localhost:8003/v1/conversion/image-to-pdf' \
+--form 'file1=@"page_0b199abad.jpeg"' \
+--form 'file2=@"page_1d859a4b3.jpeg"' \
 --form 'settings="{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
-}"
+  \"Files\": [
+    {
+      \"File\": \"file1\",
+    },
+    {
+      \"File\": \"file2\",
+    }
+  ],
+  \"Orientation\": Syncfusion.Pdf.PdfPageOrientation.Portrait,
+  \"Margin\": 0,
+  \"EnableSaveAsSeperateFile\": false,
+  \"PageSize\": ImageToPdfPageSize.A4
+}"'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "SalesInvoice.docx");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PreserveFormFields\": true,\n  \"PdfComplaince\": \"PDF/A-1B\",\n  \"EnableAccessibility\": false\n}");
+formdata.append("file1", fileInput.files[0], "page_0b199abad.jpeg");
+formdata.append("file2", fileInput.files[0], "page_1d859a4b3.jpeg");
+formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"Orientation\": Syncfusion.Pdf.PdfPageOrientation.Portrait,\n  \"Margin\": 0,\n  \"EnableSaveAsSeperateFile\": false,\n  \"PageSize\": ImageToPdfPageSize.A4\n}");
 
 const requestOptions = {
   method: "POST",
@@ -41,24 +50,33 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8003/v1/conversion/word-to-pdf", requestOptions)
+fetch("http://localhost:4000/v1/conversion/image-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/word-to-pdf");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/image-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("SalesInvoice.docx")), "file", "SalesInvoice.docx");
+content.Add(new StreamContent(File.OpenRead("page_0b199abad.jpeg")), "file1", "page_0b199abad.jpeg");
+content.Add(new StreamContent(File.OpenRead("page_1d859a4b3.jpeg")), "file2", "page_1d859a4b3.jpeg");
 content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
+  \"Files\": [
+    {
+      \"File\": \"file1\",
+    },
+    {
+      \"File\": \"file2\",
+    }
+  ],
+  \"Orientation\": Syncfusion.Pdf.PdfPageOrientation.Portrait,
+  \"Margin\": 0,
+  \"EnableSaveAsSeperateFile\": false,
+  \"PageSize\": ImageToPdfPageSize.A4
 }"), "settings");
 request.Content = content;
 var response = await client.SendAsync(request);
@@ -69,7 +87,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-Once the request is sent, it will create a conversion job to convert the Word document to PDF and return the job details as follows:
+Once the request is sent, it will create a job to merge PDF documents and return the job details as follows:
 
 ```
 {
@@ -144,7 +162,7 @@ You will receive one of the following statuses until the job is completed. Upon 
     "jobID": "ef0766ab-bc74-456c-8143-782e730a89df",
     "status": "errror",
     "code": "500",
-    "message": "Failed to convert the document to PDF"        
+    "message": "Failed to convert the Image to PDF"        
 }
 ```
 
