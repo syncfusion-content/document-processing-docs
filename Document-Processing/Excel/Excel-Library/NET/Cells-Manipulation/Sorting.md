@@ -31,30 +31,33 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region Sort On Cell Values
-	//Creates the data sorter
-	IDataSort sorter = workbook.CreateDataSorter();
+    //Creates the data sorter
+    IDataSort sorter = workbook.CreateDataSorter();
 
-	//Range to sort
-	sorter.SortRange = worksheet.Range["A1:A11"];
+    //Range to sort
+    sorter.SortRange = worksheet.Range["A1:B11"];
 
-	//Adds the sort field with the column index, sort based on and order by attribute
-	sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
+    //Adds a sort field: sort by values in column A in ascending order
+    sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
 
-	//Sort based on the sort Field attribute
-	sorter.Sort();
+    //Adds a sort field: then by values in column B in descending order
+    sorter.SortFields.Add(1, SortOn.Values, OrderBy.Descending);
 
-	//Creates the data sorter
-	sorter = workbook.CreateDataSorter();
+    //Sort based on the sort Field attribute
+    sorter.Sort();
 
-	//Range to sort
-	sorter.SortRange = worksheet.Range["B1:B11"];
+    //Creates the data sorter
+    sorter = workbook.CreateDataSorter();
 
-	//Adds the sort field with the column index, sort based on and order by attribute
-	sorter.SortFields.Add(1, SortOn.Values, OrderBy.Descending);
+    //Range to sort
+    sorter.SortRange = worksheet.Range["C1:C11"];
 
-	//Sort based on the sort Field attribute
-	sorter.Sort();
-	#endregion
+    //Adds a sort field: sort by values in column C in descending order
+    sorter.SortFields.Add(2, SortOn.Values, OrderBy.Descending);
+
+    //Sort based on the sort Field attribute
+    sorter.Sort();
+    #endregion
 
 	#region Save
 	//Saving the workbook
@@ -73,19 +76,31 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
-  IWorksheet sheet = workbook.Worksheets[0];
+  IWorksheet worksheet = workbook.Worksheets[0];
 
   //Creates the data sorter
   IDataSort sorter = workbook.CreateDataSorter();
 
   //Range to sort
-  sorter.SortRange = sheet.Range["D3:D16"];
+  sorter.SortRange = worksheet.Range["A1:B11"];
 
-  //Adds the sort field with the column index, sort based on and order by attribute
-  ISortField sortField = sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
+  //Adds a sort field: sort by values in column A in ascending order
+  sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
 
-  //Adds another sort field
-  ISortField sortField2 = sorter.SortFields.Add(1, SortOn.Values, OrderBy.Ascending);
+  //Adds a sort field: then by values in column B in descending order
+  sorter.SortFields.Add(1, SortOn.Values, OrderBy.Descending);
+
+  //Sort based on the sort Field attribute
+  sorter.Sort();
+
+  //Creates the data sorter
+  sorter = workbook.CreateDataSorter();
+
+  //Range to sort
+  sorter.SortRange = worksheet.Range["C1:C11"];
+
+  //Adds a sort field: sort by values in column C in descending order
+  sorter.SortFields.Add(2, SortOn.Values, OrderBy.Descending);
 
   //Sort based on the sort Field attribute
   sorter.Sort();
@@ -101,20 +116,33 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  'Creates the Data sorter
+  'Creates the data sorter
   Dim sorter As IDataSort = workbook.CreateDataSorter()
 
-  'Specifies the sort range
-  sorter.SortRange = sheet.Range("D3:D16")
+  'Range to sort 
+  sorter.SortRange = worksheet.Range("A1:B11")
 
-  'Adds the sort field with column index, sort based on and order by attribute
-  Dim sortField As ISortField = sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending)
+  'Adds a sort field: sort by values in column A in ascending order
+  sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending)
 
-  'Adds the second sort field
-  Dim sortField2 As ISortField = sorter.SortFields.Add(1, SortOn.Values, OrderBy.Ascending)
+  'Adds a sort field: then by values in column B in descending order
+  sorter.SortFields.Add(1, SortOn.Values, OrderBy.Descending)
 
-  'Sorts the data with the sort field attribute
+  'Sort based on the sort Field attribute
   sorter.Sort()
+
+  'Creates the data sorter
+  sorter = workbook.CreateDataSorter()
+
+  'Range to sort 
+  sorter.SortRange = worksheet.Range("C1:C11")
+
+  'Add sort field: sort by values in column C in descending order
+  sorter.SortFields.Add(2, SortOn.Values, OrderBy.Descending)
+
+  'Sort based on the sort Field attribute
+  sorter.Sort()
+
 
   workbook.Version = ExcelVersion.Xlsx
   workbook.SaveAs("Sort.xlsx")
