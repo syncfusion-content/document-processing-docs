@@ -878,7 +878,7 @@ Step 6: Include the following code in the **Pages/Home.razor** file.
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel document to PDF in .NET MAUI Blazor Hybrid App is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Client%20Side/ExcelToPdfHybridApp).
+A complete working example of how to convert an Excel document to PDF in .NET MAUI Blazor Hybrid App is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/MAUI/ExcelToPDF).
 
 By executing the program, you will get the **PDF document** as follows.
 
