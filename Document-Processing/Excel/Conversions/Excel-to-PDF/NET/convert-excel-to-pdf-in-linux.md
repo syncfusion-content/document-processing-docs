@@ -26,9 +26,19 @@ Step 3: Select the framework and click **Create** button.
 
 ![Framework version](Linux_images/Linux_images_img3.png)
 
-Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the following Nuget packages in your application from [NuGet.org](https://www.nuget.org/) by execute the following command.
 
-![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Linux_images/Linux_images_img4.png)
+* [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.0)
+* [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
+
+{% tabs %}
+{% highlight KCONFIG %}
+dotnet add package Syncfusion.XlsIO.Net.Core --version 29.1.41
+dotnet add package SkiaSharp.NativeAssets.Linux --version 3.119.0
+dotnet add package HarfBuzzSharp.NativeAssets.Linux --version 8.3.1.1
+{% endhighlight %}
+{% endtabs %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
@@ -91,11 +101,16 @@ dotnet new console -o Convert-Excel-to-PDF
 cd Convert-Excel-to-PDF
 ```
 
-Step 3: To **Convert an Excel document to PDF in .NET Core app**,run the following command to  install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) package.
-![Install Syncfusion.XlsIORenderer.Net.Core Nuget Package](Linux_images/Linux_images_img7.png)
+Step 3: Install the following Nuget packages in your application from [NuGet.org](https://www.nuget.org/) by execute the following command.
+
+* [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.0)
+* [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
 
 ```
-dotnet add package Syncfusion.XlsIORenderer.Net.Core
+dotnet add package Syncfusion.XlsIORenderer.Net.Core --version 29.1.41
+dotnet add package SkiaSharp.NativeAssets.Linux --version 3.119.0
+dotnet add package HarfBuzzSharp.NativeAssets.Linux --version 8.3.1.1
 ```
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
