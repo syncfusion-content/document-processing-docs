@@ -1,5 +1,5 @@
 ---
-title: Fix the ArgumentOutOfRangeException when accessing a large number of rows and columns.
+title: Avoid exceptions when accessing Excel cell ranges | Syncfusion
 description: This page helps how to fix the ArgumentOutOfRangeException when accessing a large number of rows and columns in Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
