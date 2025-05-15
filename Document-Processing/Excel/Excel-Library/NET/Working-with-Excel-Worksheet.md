@@ -373,6 +373,73 @@ Showing or hiding in Excel refers to making rows, columns, or specific elements 
 
 With the Syncfusion<sup>&reg;</sup> Excel Library, you can show or hide rows, columns, or specific elements within an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/show-or-hide) for more details.
 
+## Activate
+
+The following code example illustrates how to activate a worksheet in a workbook.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Activate%20Worksheet/.NET/Activate%20Worksheet/Activate%20Worksheet/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(2);
+  IWorksheet sheet = workbook.Worksheets[1];
+
+  sheet.Range["A1:M20"].Text = "Activate";
+
+  #region Activate Worksheet
+  //Activate the sheet
+  sheet.Activate();
+  #endregion
+
+  #region Save
+  //Saving the workbook
+  FileStream outputStream = new FileStream(Path.GetFullPath("Output/ActivateWorksheet.xlsx"), FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+  #endregion
+
+  //Dispose streams
+  outputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(2);
+  IWorksheet sheet = workbook.Worksheets[1];
+
+  sheet.Range["A1:M20"].Text = "Activate";
+
+  //Activate the sheet 
+  sheet.Activate();
+
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(2)
+  Dim sheet As IWorksheet = workbook.Worksheets(1)
+
+  sheet.Range("A1:M20").Text = "Activate" 
+
+  'Activate the sheet 
+  sheet.Activate()
+
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example for activating an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Activate%20Worksheet/.NET/Activate%20Worksheet).
+
 ## See Also
 
 * [How to hide worksheet tabs using XlsIO?](https://support.syncfusion.com/kb/article/2603/how-to-hide-worksheet-tabs-using-xlsio)
