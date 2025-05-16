@@ -46,23 +46,7 @@ Step 6: Add the following environment variable in the **aws-lambda-tools-default
 
 {% endtabs %}
 
-Step 7: Defining library paths in an AWS Lambda project enables the application to locate the necessary native libraries at runtime. This is essential for ensuring that the application functions correctly across different environments. The following code snippet illustrates how to define these paths.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-
-//Path to the original library file.
-string originalLibraryPath = "/lib64/libdl.so.2";
-
-//Path to the symbolic link where the library will be copied.
-string symlinkLibraryPath = "/tmp/libdl.so";
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 8: Include the following namespaces in **Function.cs** file.
+Step 7: Include the following namespaces in **Function.cs** file.
 
 {% tabs %}
 
@@ -78,7 +62,7 @@ using Syncfusion.Drawing;
 
 {% endtabs %}
 
-step 9: Add the following code snippet in **Function.cs** to convert a Word document to PDF.
+step 8: Add the following code snippet in **Function.cs** to convert a Word document to PDF.
 
 {% tabs %}
 
@@ -92,19 +76,6 @@ step 9: Add the following code snippet in **Function.cs** to convert a Word docu
 /// <returns></returns>
 public string FunctionHandler(string input, ILambdaContext context)
 {
-    //Path to the original library file.
-    string originalLibraryPath = "/lib64/libdl.so.2";
-
-    //Path to the symbolic link where the library will be copied.
-    string symlinkLibraryPath = "/tmp/libdl.so";
-
-    //Check if the original library file exists.
-    if (File.Exists(originalLibraryPath))
-    {
-        //Copy the original library file to the symbolic link path, overwriting if it already exists.
-        File.Copy(originalLibraryPath, symlinkLibraryPath, true);
-    }
-
     string filePath = Path.GetFullPath(@"Data/Adventure.docx");    
     //Load the file from the disk
     FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
@@ -145,19 +116,22 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 
 {% endtabs %}
 
-Step 10: Right-click the project and select **Publish to AWS Lambda**.
+N> If using an older version of Syncfusion libraries, there is a chance of encountering a libSkiaSharp not found exception during the conversion process.
+To resolve this, refer to the code snippet provided in the documentation [here]( https://help.syncfusion.com/document-processing/faq/how-to-resolve-libskiasharp-not-found-exception-in-net8-and-net9-on-linux).
+
+Step 9: Right-click the project and select **Publish to AWS Lambda**.
 ![Publish to AWS Lambda](AWS_Images/Lambda_Images/Publish-WordtoPDF.png)
 
-Step 11: Create a new AWS profile in the Upload Lambda Function Window. After creating the profile, add a name for the Lambda function to publish. Then, click **Next**.
+Step 10: Create a new AWS profile in the Upload Lambda Function Window. After creating the profile, add a name for the Lambda function to publish. Then, click **Next**.
 ![Upload Lambda Function](AWS_Images/Lambda_Images/Upload-Lampda-WordtoPDF.png)
 
-Step 12: In the Advanced Function Details window, specify the **Role Name** as based on AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
+Step 11: In the Advanced Function Details window, specify the **Role Name** as based on AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
 ![Advance Function Details](AWS_Images/Lambda_Images/Advanced-AWS-WordtoPDF.png)
 
-Step 13: After deploying the application, you can see the published Lambda function in **AWS console**.
+Step 12: After deploying the application, you can see the published Lambda function in **AWS console**.
 ![After deploying the application](AWS_Images/Lambda_Images/Function-WordtoPDF.png)
 
-Step 14: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
+Step 13: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
 ![AWS Lambda Function](AWS_Images/Lambda_Images/General-configuration-WordtoPDF.png)
 
 ## Steps to post the request to AWS Lambda
