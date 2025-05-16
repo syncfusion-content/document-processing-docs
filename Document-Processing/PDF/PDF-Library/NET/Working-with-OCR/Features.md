@@ -707,13 +707,7 @@ End Using
 
 ### Tesseract 3.05
 
-Tesseract 3.05 supports the native call for both x86 and x64 architectures. By default, the x86 tesseract binaries are available with Syncfusion<sup>&reg;</sup> NuGet package or the tesseract installer. 
-
-You can download the x64 supporting tesseract binaries from the following link.
-[Tesseract 64-bit binaries](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Tesseract3.05_x641904984914)
-
-N> This 64-bit binaries are required only when the native call property is enabled.
-N> Make sure to provide the 64-bit binaries path while using the 64-bit environment.
+Tesseract 3.05 supports the native call for both x86 and x64 architectures. 
 
 The following code sample demonstrates the OCR processor with native call support of tesseract 3.05 by setting [TesseractVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_TesseractVersion) as 3.05.
 
