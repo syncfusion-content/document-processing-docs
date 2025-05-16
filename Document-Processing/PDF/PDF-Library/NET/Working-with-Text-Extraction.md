@@ -430,6 +430,9 @@ Dim glyphColor As Color = textGlyph.TextColor
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Get-text-glyph-details-from-extract-text/).
 
+N> In .NET Framework, use the `ExtractText(out List<TextData>)` or `ExtractText(out List<TextLine>)` method to extract text with metadata from a PDF.
+N> In contrast, for .NET Core, the equivalent method is `ExtractText(out TextLineCollection)`, which provides a unified structure for handling extracted text data.
+
 ## Find Text
 
 The code example provided below demonstrates the utilization of the [FindText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_FindText_System_String_System_Collections_Generic_Dictionary_System_Int32_System_Collections_Generic_List_System_Drawing_RectangleF____) method from the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to locate text within a PDF document. This method facilitates the retrieval of both the page number and the rectangular coordinates of the identified text occurrences.
