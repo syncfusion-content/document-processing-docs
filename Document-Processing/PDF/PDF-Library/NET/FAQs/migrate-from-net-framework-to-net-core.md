@@ -223,7 +223,7 @@ Not supported
 {{'[TextData](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.TextData.html)'| markdownify }}
 </td>
 <td> 
-Not supported  
+TextLineCollection <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document)'| markdownify }}
 </td>
 </tr>
 <tr>
