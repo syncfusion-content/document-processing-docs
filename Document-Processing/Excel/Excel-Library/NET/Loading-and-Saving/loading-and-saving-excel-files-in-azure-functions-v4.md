@@ -76,37 +76,35 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %} 
 
-## Steps to publish as Azure Functions v4
-
-Step 1: Right-click the project and select **Publish** option.
+Step 7: Right-click the project and select **Publish** option.
 
 ![Publish](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img5.png)
 
-Step 2: Select the publish target as **Azure**.
+Step 8: Select the publish target as **Azure**.
 
 ![Add a Publish Profile](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img6.png)
 
-Step 3: Select the Specific target as **Azure Function App (Windows)**.
+Step 9: Select the Specific target as **Azure Function App (Windows)**.
 
 ![Select the publish target](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img7.png)
 
-Step 4: Select the **Create new** button.
+Step 10: Select the **Create new** button.
 
 ![Click create new option](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img8.png)
 
-Step 5: Click the **Create** button to proceed with creation. 
+Step 11: Click the **Create** button to proceed with creation. 
 
 ![Hosting](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img9.png)
 
-Step 6: Click the **Finish** button to finalize the **Azure Function** creation. 
+Step 12: Click the **Finish** button to finalize the **Azure Function** creation. 
 
 ![Creating app service](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img10.png)
 
-Step 7: Click **Close** button.
+Step 13: Click **Close** button.
 
 ![Profile created](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img11.png)
 
-Step 8: Click the **Publish** button.
+Step 14: Click the **Publish** button.
 
 ![Click Publish Button](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img12.png)
 
@@ -114,9 +112,60 @@ Step 15: Publish has been succeeded.
 
 ![Publish succeeded](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img13.png)
 
-Step 16: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **Loading and Saving Excel files** using the template Excel document). You will get the output PDF document as follows.   
+Step 16: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **Loading and Saving Excel files** using the template Excel document). You will get the output Excel document as follows.   
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img30.png)
+
+## Steps to post the request to Azure Functions
+
+Step 1: Create a console application to request the Azure Functions API.
+
+Step 2: Add the following code snippet into **Main** method to post the request to Azure Functions with template Excel document and get the resultant Excel document.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+//Reads the template Excel document.
+FileStream excelStream = new FileStream("../../Sample.xlsx", FileMode.Open, FileAccess.Read);
+excelStream.Position = 0;
+
+//Saves the Excel document in memory stream.
+MemoryStream inputStream = new MemoryStream();
+excelStream.CopyTo(inputStream);
+inputStream.Position = 0;
+
+try
+{
+  Console.WriteLine("Please enter your Azure Functions URL :");
+  string functionURL = Console.ReadLine();
+
+  //Create HttpWebRequest with hosted azure functions URL              
+  HttpWebRequest req = (HttpWebRequest)WebRequest.Create(functionURL);
+
+  //Set request method as POST
+  req.Method = "POST";
+
+  //Get the request stream to save the Excel document stream
+  Stream stream = req.GetRequestStream();
+
+  //Write the Excel document stream into request stream
+  stream.Write(inputStream.ToArray(), 0, inputStream.ToArray().Length);
+
+  //Gets the responce from the Azure Functions
+  HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+
+  //Saves the Excel stream
+  FileStream outStream = File.Create("Sample.xlsx");
+  res.GetResponseStream().CopyTo(outStream);
+
+  //Dispose the streams
+  inputStream.Dispose();
+  outStream.Dispose();
+}
+catch (Exception ex)
+{
+    throw;
+}
+{% endhighlight %}
+{% endtabs %}
 
 A complete working example of how to load and save an Excel document in Azure Functions v4 in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Azure/Azure%20Functions%20v4/Loading%20and%20Saving).
 
