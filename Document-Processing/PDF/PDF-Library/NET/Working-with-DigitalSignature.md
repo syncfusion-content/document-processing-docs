@@ -2986,6 +2986,218 @@ loadedDocument.Close(true)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Validate-all-signatures-in-digitally-signed-PDF/).
 
+### Validate and classify digital signatures in a PDF document
+
+It checks each signature field in the PDF to determine if it’s a timestamp, LTV (Long-Term Validation), or LTA (Long-Term Archival) signature. It also identifies the cryptographic standard used, such as CAdES, and prints the results to the console.
+
+This example shows how to validate and identify different types of digital signatures in a PDF using C#.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Get the stream from the document
+FileStream documentStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+// Load the signed PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
+
+// Get the PDF form
+PdfLoadedForm form = loadedDocument.Form;
+
+// Initialize flag to detect timestamp signatures
+bool isTimeStampSignature = false;
+
+// Loop through all form fields in reverse
+for (int i = form.Fields.Count - 1; i >= 0; i--)
+{
+    PdfLoadedField field = form.Fields[i] as PdfLoadedField;
+
+    // Check if the field is a signature field
+    if (field is PdfLoadedSignatureField)
+    {
+        PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
+        Console.WriteLine("Signature field name: " + signatureField.Name);
+
+        // Validate the signature
+        PdfSignatureValidationResult result = signatureField.ValidateSignature();
+
+        if (result != null)
+        {
+            // Check if it's a timestamp signature
+            if (result.TimeStampInformation != null && result.TimeStampInformation.IsDocumentTimeStamp)
+            {
+                isTimeStampSignature = true;
+                Console.WriteLine("Signature is a time stamp signature.");
+            }
+            else
+            {
+                bool isCAdES = false;
+
+                // Check if the cryptographic standard is CAdES
+                if (result.CryptographicStandard == CryptographicStandard.CADES)
+                {
+                    isCAdES = true;
+                }
+
+                // Check if LTV (Long-Term Validation) is enabled
+                if (result.LtvVerificationInfo.IsLtvEnabled)
+                {
+                    // Identify the type of long-term signature
+                    if (isCAdES && isTimeStampSignature)
+                    {
+                        Console.WriteLine("LTA signature.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("LTV signature.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No LTV signature.");
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Signature is not valid.");
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the signed PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Signed PDF.pdf");
+
+// Get the PDF form
+PdfLoadedForm form = loadedDocument.Form;
+
+// Initialize flag to detect timestamp signatures
+bool isTimeStampSignature = false;
+
+// Loop through all form fields in reverse
+for (int i = form.Fields.Count - 1; i >= 0; i--)
+{
+    PdfLoadedField field = form.Fields[i] as PdfLoadedField;
+
+    // Check if the field is a signature field
+    if (field is PdfLoadedSignatureField)
+    {
+        PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
+        Console.WriteLine("Signature field name: " + signatureField.Name);
+
+        // Validate the signature
+        PdfSignatureValidationResult result = signatureField.ValidateSignature();
+
+        if (result != null)
+        {
+            // Check if it's a timestamp signature
+            if (result.TimeStampInformation != null && result.TimeStampInformation.IsDocumentTimeStamp)
+            {
+                isTimeStampSignature = true;
+                Console.WriteLine("Signature is a time stamp signature.");
+            }
+            else
+            {
+                bool isCAdES = false;
+
+                // Check if the cryptographic standard is CAdES
+                if (result.CryptographicStandard == CryptographicStandard.CADES)
+                {
+                    isCAdES = true;
+                }
+
+                // Check if LTV (Long-Term Validation) is enabled
+                if (result.LtvVerificationInfo.IsLtvEnabled)
+                {
+                    // Identify the type of long-term signature
+                    if (isCAdES && isTimeStampSignature)
+                    {
+                        Console.WriteLine("LTA signature.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("LTV signature.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No LTV signature.");
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Signature is not valid.");
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the signed PDF document
+Dim loadedDocument As New PdfLoadedDocument("Signed PDF.pdf")
+
+' Get the PDF form
+Dim form As PdfLoadedForm = loadedDocument.Form
+
+' Initialize flag to detect timestamp signatures
+Dim isTimeStampSignature As Boolean = False
+
+' Loop through all form fields in reverse
+For i As Integer = form.Fields.Count - 1 To 0 Step -1
+    Dim field As PdfLoadedField = TryCast(form.Fields(i), PdfLoadedField)
+
+    ' Check if the field is a signature field
+    If TypeOf field Is PdfLoadedSignatureField Then
+        Dim signatureField As PdfLoadedSignatureField = CType(field, PdfLoadedSignatureField)
+        Console.WriteLine("Signature field name: " & signatureField.Name)
+
+        ' Validate the signature
+        Dim result As PdfSignatureValidationResult = signatureField.ValidateSignature()
+
+        If result IsNot Nothing Then
+            ' Check if it's a timestamp signature
+            If result.TimeStampInformation IsNot Nothing AndAlso result.TimeStampInformation.IsDocumentTimeStamp Then
+                isTimeStampSignature = True
+                Console.WriteLine("Signature is a time stamp signature.")
+            Else
+                Dim isCAdES As Boolean = False
+
+                ' Check if the cryptographic standard is CAdES
+                If result.CryptographicStandard = CryptographicStandard.CADES Then
+                    isCAdES = True
+                End If
+
+                ' Check if LTV (Long-Term Validation) is enabled
+                If result.LtvVerificationInfo.IsLtvEnabled Then
+                    ' Identify the type of long-term signature
+                    If isCAdES AndAlso isTimeStampSignature Then
+                        Console.WriteLine("LTA signature.")
+                    Else
+                        Console.WriteLine("LTV signature.")
+                    End If
+                Else
+                    Console.WriteLine("No LTV signature.")
+                End If
+            End If
+        Else
+            Console.WriteLine("Signature is not valid.")
+        End If
+    End If
+Next
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Deferred signing in PDF document
 
 The following code sample shows how to be deferred signing in a PDF document from an external signature using [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.IPdfExternalSigner.html) class and [AddExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_AddExternalSigner_Syncfusion_Pdf_Security_IPdfExternalSigner_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Byte___) method in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html).
