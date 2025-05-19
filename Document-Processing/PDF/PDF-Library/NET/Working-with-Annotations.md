@@ -2545,6 +2545,9 @@ popUp.Border = new PdfAnnotationBorder(4, 0, 0);
 popUp.Color = new PdfColor(Color.Red);
 popUp.Text = "Modified annotation";
 
+// Update the appearance so the new content is visible
+popUp.SetAppearance(true);  
+
 //Save the document into stream
 MemoryStream stream = new MemoryStream();
 lDoc.Save(stream);
@@ -2568,6 +2571,9 @@ popUp.Border = new PdfAnnotationBorder(4, 0, 0);
 popUp.Color = new PdfColor(Color.Red);
 popUp.Text = "Modified annotation";
 
+// Update the appearance so the new content is visible
+popUp.SetAppearance(true); 
+
 //Saves the document
 lDoc.Save("sample.pdf");
 lDoc.Close(true);
@@ -2589,6 +2595,9 @@ popUp.Border = New PdfAnnotationBorder(4, 0, 0)
 popUp.Color = New PdfColor(Color.Red)
 popUp.Text = "Modified annotation"
 
+' Update the appearance so the new content is visible
+popUp.SetAppearance(True)
+
 'Saves the document
 lDoc.Save("sample.pdf")
 lDoc.Close(True)
@@ -2597,7 +2606,10 @@ lDoc.Close(True)
 
 {% endtabs %}
 
+N> When you modify the properties of an annotation such as its content, color, or position the visual representation in the PDF viewer may not automatically update; calling `SetAppearance(true)` ensures that the appearance stream is rebuilt so the annotation reflects all the latest changes visually.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Modifying-annotation-of-existing-PDF-document/.NET).
+
 
 ### Modifying the redaction annotations   
 
