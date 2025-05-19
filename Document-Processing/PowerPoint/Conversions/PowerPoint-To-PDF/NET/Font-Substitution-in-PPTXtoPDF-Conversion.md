@@ -115,7 +115,7 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Apply-substitution-font-name).
 
-N> The SubstituteFont event must be hooked **after** loading the PowerPoint presentation using the IPresentation constructor. Hooking the event **before** opening or loading the presentation will not work because the FontSettings object is initialized only after the presentation is loaded. This is expected behavior.  
+N> Hook the SubstituteFont event only after the presentation is loaded to ensure it works correctly.  
 
 ## Upload font stream
 
