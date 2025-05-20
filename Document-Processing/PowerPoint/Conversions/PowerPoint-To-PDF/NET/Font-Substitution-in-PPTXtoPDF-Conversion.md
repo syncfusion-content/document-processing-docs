@@ -115,6 +115,8 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Apply-substitution-font-name).
 
+N> Hook the SubstituteFont event only after the presentation is loaded to ensure it works correctly.  
+
 ## Upload font stream
 
 The following code example demonstrates how to upload a font stream for missing font while converting a PowerPoint presentation to PDF. The provided alternate font stream is not mandatory to be installed in the production environment.
