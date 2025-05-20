@@ -120,3 +120,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel?](faqs/how-to-switch-chart-series-data-interpretation-from-horizontal-(rows)-to-vertical-(columns)-in-Excel)
 * [How to add Oval shape to Excel chart using XlsIO?](faqs/how-to-add-oval-shape-to-Excel-chart)
 * [How to show the leader line on Excel chart?](faqs/how-to-show-the-leader-line-on-Excel-chart)
+* [Does XlsIO support converting an empty Excel document to PDF?](faqs/does-xlsio-support-converting-an-empty-Excel-document-to-PDF)
