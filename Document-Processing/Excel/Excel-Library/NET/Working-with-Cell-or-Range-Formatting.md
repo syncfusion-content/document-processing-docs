@@ -936,6 +936,14 @@ workbook.DetectDateTimeInValue = false;
 workbook.DetectDateTimeInValue = False
 {% endhighlight %}
 {% endtabs %}  
+
+##  Number Format Detection Behavior Based on System Culture
+
+In Microsoft Excel, when a value is inserted, the system's culture settings determine whether the value is interpreted as a [Text](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Text) or [Number](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Number). If it is a valid number according to the current culture, Excel automatically detects and applies a corresponding number format.
+
+For example, **205,206** is recognized as a [Number](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Number) in en-US culture because the comma acts as a thousands separator, whereas **10,2** is treated as [Text](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Text) since it does not match the numeric format of the default culture.
+
+However, in **XlsIO**, number formats are not automatically detected when assigning values. If you want to preserve specific formatting (such as numbers with thousands separators or custom decimal formats), you must explicitly set the number format for the cell or range. This ensures that the value is correctly interpreted and displayed as intended in the resulting Excel document.
   
 ## Hide Cell Content by setting Number Format
 
