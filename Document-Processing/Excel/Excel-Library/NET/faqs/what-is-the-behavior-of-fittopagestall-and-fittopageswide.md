@@ -1,5 +1,5 @@
 ---
-title: Understanding FitToPagesTall and FitToPagesWide Settings in Excel Print Layout | Syncfusion
+title: Set page width and height in Excel using C# | XlsIO | Syncfusion
 description: This page explains the behavior of FitToPagesTall and FitToPagesWide.
 platform: document-processing
 control: XlsIO
