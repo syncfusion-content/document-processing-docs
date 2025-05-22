@@ -190,7 +190,7 @@ EMF and WMF images are not supported in .NET Core platforms.
 	* [Word document to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)
 	* [Word document to Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image)
 	* [Updating table of contents](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-table-of-contents#updating-table-of-contents)
-	* [Convert chart to image](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/working-with-charts#convert-chart-to-image)
+	* [Convert chart to image](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts#convert-chart-to-image)
 * During Word to PDF/Image conversion, if you are facing font-related problems (like accessing font from the environment), you can pass the fonts as streams using our [font substitution approach](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#font-substitution).
 
 N> If you want to migrate without any code changes from [“Syncfusion.DocIO.ASP.NET”](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet) NuGet in application targeting .NET Framework, you can consider to use anyone of the packages 
