@@ -1,5 +1,5 @@
 ---
-title: Convert Word to PDF in Word Library | DocIO | Syncfusion<sup>&reg;</sup>&reg;
+title: Convert Word to PDF in Word Library | DocIO | Syncfusion
 description: Learn how to convert a Word document to PDF using the Syncfusion<sup>&reg;</sup> Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
