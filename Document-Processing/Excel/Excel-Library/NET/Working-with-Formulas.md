@@ -1589,7 +1589,7 @@ MODE<br/><br/></td><td>
 Returns the most common value in a data set<br/><br/></td></tr>
 <tr>
 <td>
-MMONTH<br/><br/></td><td>
+MONTH<br/><br/></td><td>
 Converts a serial number to a month<br/><br/></td></tr>
 <tr>
 <td>
