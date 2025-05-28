@@ -665,3 +665,225 @@ N> To convert Excel to PDF, it is necessary to access the font stream internally
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
 An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
+
+## Excel to PDF in .NET MAUI Blazor Hybrid App
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+Step 1: Create a new C# .NET MAUI Blazor Hybrid Application project.
+
+![Create a .NET MAUI Hybrid application in visual studio](Blazor_images\Blazor_images_Hybrid_App.png)
+
+Step 2: Name the project.
+
+![Name the project](Blazor_images\Blazor_images_Hybrid_App_ProjectName.png)
+
+Step 3: Select the framework and click **Create** button.
+
+![Framework version](Blazor_images\Blazor_images_Hybrid_App_Framework.png)
+
+Step 4: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+* [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
+
+![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Hybrid_App_Nuget.png)
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 5: Add a new button in **Pages/Home.razor**
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+@page "/"
+
+<h3>Convert Excel to PDF</h3>
+
+<button class="btn btn-primary" @onclick="ConvertExceltoPDF">Convert Excel to PDF</button>
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: Include the following namespaces in the **Pages/Home.razor** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+@using Syncfusion.XlsIO
+@using Syncfusion.XlsIORenderer
+@using Syncfusion.Pdf
+@using System.IO
+{% endhighlight %}
+{% endtabs %}
+
+Step 7: Include the following code in the **Pages/Home.razor** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+@code {
+    private async Task ConvertExceltoPDF()
+    {
+        using ExcelEngine excelEngine = new();
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
+
+        string inputPath = Path.Combine(FileSystem.Current.AppDataDirectory, "InputTemplate.xlsx");
+
+        // Copy the Excel file from wwwroot to local app storage if it doesn't exist
+        if (!File.Exists(inputPath))
+        {
+            using Stream resourceStream = await FileSystem.OpenAppPackageFileAsync("wwwroot/data/InputTemplate.xlsx");
+            using FileStream outputStream = File.Create(inputPath);
+            await resourceStream.CopyToAsync(outputStream);
+        }
+
+        using FileStream excelStream = File.OpenRead(inputPath);
+        IWorkbook workbook = application.Workbooks.Open(excelStream);
+
+        XlsIORenderer renderer = new XlsIORenderer();
+        PdfDocument pdf = renderer.ConvertToPDF(workbook);
+
+        using MemoryStream stream = new();
+        pdf.Save(stream);
+        pdf.Close();
+        workbook.Close();
+
+        stream.Position = 0;
+
+        // Save the generated PDF to local storage
+        
+        string outputDir = Path.Combine(FileSystem.Current.AppDataDirectory, "Output");
+
+        // Create folder if it doesn't exist
+        Directory.CreateDirectory(outputDir); 
+
+        string outputPath = Path.Combine(outputDir, "Sample.pdf");
+
+        using FileStream fileStream = new FileStream(outputPath, FileMode.Create, FileAccess.Write);
+        stream.CopyTo(fileStream);
+        await Application.Current.MainPage.DisplayAlert("Success", $"PDF saved to:\n{outputPath}", "OK");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Step 1: Create a new C# .NET MAUI Blazor Hybrid Application project.
+
+![Create a .NET MAUI Blazor Hybrid Application project in visual studio](Blazor_images\Blazor_images_Hybrid_App_VSC.png)
+
+Step 2: Name the project and create the project.
+
+![Name the project](Blazor_images\Blazor_images_Hybrid_App_ProjectName_VSC.png)
+
+Alternatively, create a .NET MAUI Blazor Hybrid Application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+```
+dotnet new maui-blazor -n ConvertExcelToPdf
+cd ConvertExcelToPdf
+```
+
+Step 3. To **convert an Excel document to PDF in Blazor**,run the following command to install [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core).
+![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images\Blazor_images_Hybrid_App_Nuget_VSC.png)
+
+```
+dotnet add package Syncfusion.XlsIORenderer.Net.Core
+```
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
+Step 4: Add a new button in **Pages/Home.razor**
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+@page "/"
+
+<h3>Convert Excel to PDF</h3>
+
+<button class="btn btn-primary" @onclick="ConvertExceltoPDF">Convert Excel to PDF</button>
+
+{% endhighlight %}
+{% endtabs %}
+
+Step 5: Include the following namespaces in the **Pages/Home.razor** file.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+@using Syncfusion.XlsIO
+@using Syncfusion.XlsIORenderer
+@using Syncfusion.Pdf
+@using System.IO
+{% endhighlight %}
+{% endtabs %}
+
+Step 6: Include the following code in the **Pages/Home.razor** file.
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+@code {
+    private async Task ConvertExceltoPDF()
+    {
+        using ExcelEngine excelEngine = new();
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
+
+        string inputPath = Path.Combine(FileSystem.Current.AppDataDirectory, "InputTemplate.xlsx");
+
+        // Copy the Excel file from wwwroot to local app storage if it doesn't exist
+        if (!File.Exists(inputPath))
+        {
+            using Stream resourceStream = await FileSystem.OpenAppPackageFileAsync("wwwroot/data/InputTemplate.xlsx");
+            using FileStream outputStream = File.Create(inputPath);
+            await resourceStream.CopyToAsync(outputStream);
+        }
+
+        using FileStream excelStream = File.OpenRead(inputPath);
+        IWorkbook workbook = application.Workbooks.Open(excelStream);
+
+        XlsIORenderer renderer = new XlsIORenderer();
+        PdfDocument pdf = renderer.ConvertToPDF(workbook);
+
+        using MemoryStream stream = new();
+        pdf.Save(stream);
+        pdf.Close();
+        workbook.Close();
+
+        stream.Position = 0;
+
+        // Save the generated PDF to local storage
+        
+        string outputDir = Path.Combine(FileSystem.Current.AppDataDirectory, "Output");
+
+        // Create folder if it doesn't exist
+        Directory.CreateDirectory(outputDir); 
+
+        string outputPath = Path.Combine(outputDir, "Sample.pdf");
+
+        // Save the PDF to a file
+        using (FileStream fileStream = new FileStream(outputPath, FileMode.Create, FileAccess.Write))
+        {
+            stream.CopyTo(fileStream);
+        }
+
+        // Display alert with the actual file path
+        await Application.Current.MainPage.DisplayAlert("Success", $"PDF saved to:\n{outputPath}", "OK");
+
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+A complete working example of how to convert an Excel document to PDF in .NET MAUI Blazor Hybrid App is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/MAUI/ExcelToPDF).
+
+By executing the program, you will get the **PDF document** as follows.
+
+![Output File in Blazor Client App](Blazor_images\Blazor_images_Server_and_Client_App_Output.png)
+
+Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
+
+An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
