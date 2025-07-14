@@ -1817,9 +1817,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Flatten-the-existing-form-fields-with-complex-script).
 
-## Auto naming of form fields
+## Grouping (auto naming) of form fields
 
-The Essential<sup>&reg;</sup> PDF supports auto naming of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
+The Essential<sup>&reg;</sup> PDF supports grouping (auto naming) of form fields in a PDF document while creating form fields with same name. The [FieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) is used to enable or disable auto naming of form field. 
 
 While enabling this property, the field names are auto naming. If the fields are created using same/common name, the created fields will act as individual. 
 
@@ -2703,6 +2703,180 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-option-value-from-acroform-radio-button).
 
+## Unified radio button selection
+
+The essential<sup>&reg;</sup> PDF allows radio buttons within the same group that have identical export values to be selected or deselected simultaneously. 
+
+If **AllowUnisonSelection** is disabled, radio buttons, even with the same label, operate independently and do not share selection states. 
+
+With ****AllowUnisonSelection** enabled, radio buttons sharing the same name within a group will function collectively, maintaining a unified selection state. 
+
+The following code example illustrates how to enable or disable unison functionality for radio button fields.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a new page to the PDF document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create the form. 
+PdfForm form = document.Form; 
+//Set default appearance as false. 
+document.Form.SetDefaultAppearance(false); 
+
+// Create a radio button list  
+PdfRadioButtonListField reportFrequencyRadioList = new PdfRadioButtonListField(page, "reportFrequency"); 
+
+//only one selection allowed 
+reportFrequencyRadioList.AllowUnisonSelection = false; 
+PdfRadioButtonListItem dailyItem = new PdfRadioButtonListItem(page, "Daily"); 
+dailyItem.Bounds = new RectangleF(100, 100, 20, 20); 
+
+// Create radio button item: "Weekly" 
+PdfRadioButtonListItem weeklyItem = new PdfRadioButtonListItem(page, "Weekly"); 
+weeklyItem.Bounds = new RectangleF(100, 140, 20, 20); 
+
+// Create radio button item: "Monthly" 
+PdfRadioButtonListItem monthlyItem = new PdfRadioButtonListItem(page, "Monthly"); 
+monthlyItem.Bounds = new RectangleF(100, 180, 20, 20); 
+
+// Add items to the radio button list 
+reportFrequencyRadioList.Items.Add(dailyItem); 
+reportFrequencyRadioList.Items.Add(weeklyItem); 
+reportFrequencyRadioList.Items.Add(monthlyItem); 
+
+// Add the radio button list field to the document's form fields 
+document.Form.Fields.Add(reportFrequencyRadioList); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+document.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a new page to the PDF document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create the form. 
+PdfForm form = document.Form; 
+//Set default appearance as false. 
+document.Form.SetDefaultAppearance(false); 
+
+// Create a radio button list  
+PdfRadioButtonListField reportFrequencyRadioList = new PdfRadioButtonListField(page, "reportFrequency"); 
+
+//only one selection allowed 
+reportFrequencyRadioList.AllowUnisonSelection = false; 
+PdfRadioButtonListItem dailyItem = new PdfRadioButtonListItem(page, "Daily"); 
+dailyItem.Bounds = new RectangleF(100, 100, 20, 20); 
+
+// Create radio button item: "Weekly" 
+PdfRadioButtonListItem weeklyItem = new PdfRadioButtonListItem(page, "Weekly"); 
+weeklyItem.Bounds = new RectangleF(100, 140, 20, 20); 
+
+// Create radio button item: "Monthly" 
+PdfRadioButtonListItem monthlyItem = new PdfRadioButtonListItem(page, "Monthly"); 
+monthlyItem.Bounds = new RectangleF(100, 180, 20, 20); 
+
+// Add items to the radio button list 
+reportFrequencyRadioList.Items.Add(dailyItem); 
+reportFrequencyRadioList.Items.Add(weeklyItem); 
+reportFrequencyRadioList.Items.Add(monthlyItem); 
+
+// Add the radio button list field to the document's form fields 
+document.Form.Fields.Add(reportFrequencyRadioList); 
+
+//Save the document. 
+document.Save("Output.pdf"); 
+//Close the document. 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document  
+Dim document As New PdfDocument() 
+'Add a new page to the PDF document 
+Dim page As PdfPage = document.Pages.Add() 
+
+'Create the form 
+Dim form As PdfForm = document.Form 
+
+' Set default appearance as false.
+document.Form.SetDefaultAppearance(False)
+
+' Create a radio button list
+Dim reportFrequencyRadioList As New PdfRadioButtonListField(page, "reportFrequency")
+
+' Only one selection allowed
+reportFrequencyRadioList.AllowUnisonSelection = False
+
+' Create radio button item: "Daily"
+Dim dailyItem As New PdfRadioButtonListItem(page, "Daily")
+dailyItem.Bounds = New RectangleF(100, 100, 20, 20)
+
+' Create radio button item: "Weekly"
+Dim weeklyItem As New PdfRadioButtonListItem(page, "Weekly")
+weeklyItem.Bounds = New RectangleF(100, 140, 20, 20)
+
+' Create radio button item: "Monthly"
+Dim monthlyItem As New PdfRadioButtonListItem(page, "Monthly")
+monthlyItem.Bounds = New RectangleF(100, 180, 20, 20)
+
+' Add items to the radio button list
+reportFrequencyRadioList.Items.Add(dailyItem)
+reportFrequencyRadioList.Items.Add(weeklyItem)
+reportFrequencyRadioList.Items.Add(monthlyItem)
+
+' Add the radio button list field to the document's form fields
+document.Form.Fields.Add(reportFrequencyRadioList) 
+
+'Save the document 
+document.Save("Output.pdf") 
+'Close the document 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
+The screenshot below highlights the difference between having the radio button unison feature disabled versus enabled.
+
+<table>
+  <thead>
+    <tr>
+      <th>Disabling Unison</th>
+      <th>Unison Enabled</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+          <br/><br/>
+          <img alt="Radio disable" src="Form_images/Radio_disabling.png">
+          <br/><br/>   
+      </td>
+      <td>
+       <br/><br/>
+          <img alt="Radio Enable" src="Form_images/Radio_disabling.png">
+          <br/><br/> 
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Set appearance to the PDF form fields
 
@@ -3906,7 +4080,237 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export-FDF-file-from-PDF-document).
 
+## Export value for check box field 
 
+You can set the export value of the check box field in PDF forms using [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) class.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a new page to the PDF document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create the form. 
+PdfForm form = document.Form; 
+
+//Enable the field auto naming.  
+form.FieldAutoNaming = false;  
+
+//Set default appearance as false. 
+document.Form.SetDefaultAppearance(false); 
+
+// Create First checkbox field 
+PdfCheckBoxField checkBoxField1 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField1.Bounds = new RectangleF(10, 150, 50, 20); 
+checkBoxField1.BorderColor = Color.Red; 
+checkBoxField1.BorderWidth = 3; 
+checkBoxField1.BackColor = Color.Yellow; 
+
+//Set the Export value 
+checkBoxField1.ExportValue = "Value"; 
+checkBoxField1.Checked = true; 
+
+// Add to form 
+form.Fields.Add(checkBoxField1); 
+
+// Create Second checkbox field 
+PdfCheckBoxField checkBoxField2 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField2.Bounds = new RectangleF(10, 250, 50, 20); 
+checkBoxField2.BorderColor = Color.Green; 
+checkBoxField2.BorderWidth = 2; 
+checkBoxField2.BackColor = Color.YellowGreen; 
+
+// Add to form 
+form.Fields.Add(checkBoxField2); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+document.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document 
+PdfDocument document = new PdfDocument(); 
+//Add a new page to the PDF document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create the form. 
+PdfForm form = document.Form; 
+
+//Enable the field auto naming.  
+form.FieldAutoNaming = false; 
+
+//Set default appearance as false. 
+document.Form.SetDefaultAppearance(false); 
+
+// Create First checkbox field 
+PdfCheckBoxField checkBoxField1 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField1.Bounds = new RectangleF(10, 150, 50, 20); 
+checkBoxField1.BorderColor = Color.Red; 
+checkBoxField1.BorderWidth = 3; 
+checkBoxField1.BackColor = Color.Yellow; 
+
+//Set the Export value 
+checkBoxField1.ExportValue = "Value"; 
+checkBoxField1.Checked = true; 
+
+// Add to form 
+form.Fields.Add(checkBoxField1);  
+
+// Create Second checkbox field 
+PdfCheckBoxField checkBoxField2 = new PdfCheckBoxField(page, "CheckBox"); 
+checkBoxField2.Bounds = new RectangleF(10, 250, 50, 20); 
+checkBoxField2.BorderColor = Color.Green; 
+checkBoxField2.BorderWidth = 2; 
+checkBoxField2.BackColor = Color.YellowGreen; 
+
+// Add to form 
+form.Fields.Add(checkBoxField2); 
+
+//Save the document. 
+document.Save("Output.pdf"); 
+//Close the document. 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document  
+Dim document As New PdfDocument() 
+'Add a new page to the PDF document 
+Dim page As PdfPage = document.Pages.Add() 
+
+'Create the form 
+Dim form As PdfForm = document.Form 
+
+'Enable the field auto naming  
+form.FieldAutoNaming = False 
+
+'Set default appearance as false. 
+document.Form.SetDefaultAppearance(False) 
+
+' Create First checkbox field  
+Dim checkBoxField1 As New PdfCheckBoxField(page, "CheckBox") 
+checkBoxField1.Bounds = New RectangleF(10, 150, 50, 20) 
+checkBoxField1.BorderColor = Color.Red 
+checkBoxField1.BorderWidth = 3 
+checkBoxField1.BackColor = Color.Yellow 
+checkBoxField1.ExportValue = "Value" 
+checkBoxField1.Checked = True 
+'Add to form
+form.Fields.Add(checkBoxField1) 
+
+' Create Second checkbox field  
+Dim checkBoxField2 As New PdfCheckBoxField(page, "CheckBox") 
+checkBoxField2.Bounds = New RectangleF(10, 250, 50, 20) 
+checkBoxField2.BorderColor = Color.Green 
+checkBoxField2.BorderWidth = 2 
+checkBoxField2.BackColor = Color.YellowGreen 
+'Add to form
+form.Fields.Add(checkBoxField2) 
+
+'Save the document 
+document.Save("Output.pdf") 
+'Close the document 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
+### Modify export value in check box item
+
+You can Modified the export value a check box field property of [PdfLoadedCheckBoxItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedCheckBoxItem.html) class.  
+
+Please refer to the code example below to set the check box item.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Load the PDF document. 
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read); 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
+
+//Get the loaded form. 
+PdfLoadedForm loadedForm = loadedDocument.Form; 
+
+//load the check box from field collection. 
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
+PdfLoadedCheckBoxItem pdfLoadedCheckBoxItem = loadedCheckBoxField.Items[0] as PdfLoadedCheckBoxItem; 
+
+//Set the Export value  
+pdfLoadedCheckBoxItem.ExportValue = "123"; 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+document.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load the PDF document. 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
+
+//Get the loaded form. 
+PdfLoadedForm loadedForm = loadedDocument.Form; 
+
+//load the check box from field collection. 
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
+//load the check box from field collection. 
+PdfLoadedCheckBoxField loadedCheckBoxField = loadedForm.Fields[0] as PdfLoadedCheckBoxField; 
+PdfLoadedCheckBoxItem pdfLoadedCheckBoxItem = loadedCheckBoxField.Items[0] as PdfLoadedCheckBoxItem; 
+
+//Set the Export value  
+pdfLoadedCheckBoxItem.ExportValue = "123"; 
+
+//Save the document. 
+loadedDocument.Save("Output.pdf"); 
+//Close the document. 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Load the PDF document. 
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf") 
+
+'Get the loaded form. 
+Dim loadedForm As PdfLoadedForm = loadedDocument.Form 
+
+'load the check box from field collection. 
+Dim loadedCheckBoxField As PdfLoadedCheckBoxField = TryCast(loadedForm.Fields(0), PdfLoadedCheckBoxField) 
+' Get the first item in the checkbox field 
+Dim pdfLoadedCheckBoxItem As PdfLoadedCheckBoxItem = TryCast(loadedCheckBoxField.Items(0), PdfLoadedCheckBoxItem) 
+' Set the Export value 
+pdfLoadedCheckBoxItem.ExportValue = "123" 
+
+'Save the document. 
+loadedDocument.Save("Output.pdf") 
+'Close the document. 
+loadedDocument.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
 
 ## Adding actions to form fields 
 

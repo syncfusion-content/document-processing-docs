@@ -276,6 +276,638 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Allow-editing-form-fields-only).
 
+## Editable ranges
+
+An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the Syncfusion .NET Word library (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
+
+### Add an editable range
+
+You can add an editable range in the Word document by using **AppendEditableRangeStart** and **AppendEditableRangeEnd** methods of [WParagraph](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html) class.
+
+The following code example illustrates how to add an editable range in the Word document.
+
+N> 1. DocIO supports editable ranges in DOCX format documents only.
+N> 2. Refer to the appropriate tabs in the code snippets section: **C# [Cross-platform]** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; **C# [Windows-specific]** for WinForms and WPF; **VB.NET [Windows-specific]** for VB.NET applications.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Add a section and a paragraph to the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text to the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Add an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Set protection with a password to allow read-only access
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Save the Word document to a MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Create a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Add a section and a paragraph to the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text to the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Add an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Set protection with a password to allow read-only access
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Save the Word document
+    document.Save("EditableRange.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates a Word document
+Using document As WordDocument = New WordDocument()
+    'Adds a section and a paragraph in the document
+    document.EnsureMinimal()
+    Dim paragraph As WParagraph = document.LastParagraph
+
+    'Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ")
+
+    'Adds an editable range to the paragraph
+    Dim editableRangeStart As EditableRangeStart = paragraph.AppendEditableRangeStart()
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.")
+    paragraph.AppendEditableRangeEnd(editableRangeStart)
+
+    'Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password")
+
+    'Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+By running the above code, you will generate a **Editable range** as shown below.
+![Editable range](Security_images/EditableRangeInParagraph.png)
+
+### Retrieve Id of an editable range
+
+You can retrieve the ID of an editable range using the **Id** property of the **EditableRange** class. 
+
+The following code example illustrates how to retrieve the ID of an editable range from a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Adds a section and a paragraph in the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Adds an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Retrieve the editable range Id
+    string editableRangeId = editableRangeStart.Id;
+
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Adds a section and a paragraph in the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Adds an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Retrieve the editable range Id
+    string editableRangeId = editableRangeStart.Id;
+
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates a Word document
+Using document As WordDocument = New WordDocument()
+    'Adds a section and a paragraph in the document
+    document.EnsureMinimal()
+    Dim paragraph As WParagraph = document.LastParagraph
+
+    'Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ")
+
+    'Adds an editable range to the paragraph
+    Dim editableRangeStart As EditableRangeStart = paragraph.AppendEditableRangeStart()
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.")
+    paragraph.AppendEditableRangeEnd(editableRangeStart)
+
+    'Retrieve the editable range Id
+    Dim editableRangeId As String = editableRangeStart.Id
+
+    'Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password")
+
+    'Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+### Find an editable range
+
+You can find an editable range of specific id in the collection of editable ranges through **FindById** method of **EditableRangeCollection** class. 
+
+The following code example illustrates how to find the editable range in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads an existing Word document
+using (FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{
+    using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+    {
+        //Get the editable range by Id
+        EditableRange editableRange = document.EditableRanges.FindById("0");
+
+        //Saves the Word document to MemoryStream
+        MemoryStream stream = new MemoryStream();
+        document.Save(stream, FormatType.Docx);
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document
+using (WordDocument document = new WordDocument("Template.docx"))
+{
+    //Get the editable range by Id
+    EditableRange editableRange = document.EditableRanges.FindById("0");
+
+    //Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads an existing Word document
+Using document As WordDocument = New WordDocument("Template.docx")
+
+    'Get the editable range by Id
+    Dim editableRange As EditableRange = document.EditableRanges.FindById("0")
+
+    'Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+### Remove an editable range
+
+You can remove an editable range using the **Remove** method of the **EditableRangeCollection** class.
+
+The following code example demonstrates how to remove an editable range from a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads an existing Word document
+using (FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{    
+    using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+    {
+        //Get the editable range by Id
+        EditableRange editableRange = document.EditableRanges.FindById("0");
+
+        //Remove the editable range
+        document.EditableRanges.Remove(editableRange);
+
+        //Saves the Word document to MemoryStream
+        MemoryStream stream = new MemoryStream();
+        document.Save(stream, FormatType.Docx);
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document
+using (WordDocument document = new WordDocument("Template.docx"))
+{
+    //Get the editable range by Id
+    EditableRange editableRange = document.EditableRanges.FindById("0");
+
+    //Remove the editable range
+    document.EditableRanges.Remove(editableRange);
+
+    //Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads an existing Word document
+Using document As WordDocument = New WordDocument("Template.docx")
+
+    'Get the editable range by Id
+    Dim editableRange As EditableRange = document.EditableRanges.FindById("0")
+
+    'Remove the editable range
+    document.EditableRanges.Remove(editableRange)
+
+    'Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+An editable range at a specific index can also be removed from the **EditableRangeCollection** using the **RemoveAt** method.
+
+The following code example demonstrates how to remove an editable range at particular index from a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Remove-editable-range-at-an-index/.NET/Remove-editable-range-at-an-index/Program.cs" %}
+//Loads an existing Word document
+using (FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+{                
+    using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+    {
+        //Remove the editable range at a particular index
+        document.EditableRanges.RemoveAt(1);
+
+        //Saves the Word document to MemoryStream
+        MemoryStream stream = new MemoryStream();
+        document.Save(stream, FormatType.Docx);
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document
+using (WordDocument document = new WordDocument("Template.docx"))
+{
+    //Remove the editable range at a particular index
+    document.EditableRanges.RemoveAt(1);
+
+    //Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads an existing Word document
+Using document As WordDocument = New WordDocument("Template.docx")
+
+    'Remove the editable range at a particular index
+    document.EditableRanges.RemoveAt(1)
+
+    'Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+### Editing permission
+You can restrict editable ranges to specific groups or individuals.
+
+#### Group permission
+
+You can make an editable range editable by a group using the **EditorGroup** property of the **EditableRange** class.
+
+The following code example illustrates how to make an editable range available to a group in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Adds a section and a paragraph in the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Adds an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+
+    //Set the editor group
+    editableRangeStart.EditableRange.EditorGroup = EditorType.Everyone;
+
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Adds a section and a paragraph in the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Adds an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+
+    //Set the editor group
+    editableRangeStart.EditableRange.EditorGroup = EditorType.Everyone;
+
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates a Word document
+Using document As WordDocument = New WordDocument()
+    'Adds a section and a paragraph in the document
+    document.EnsureMinimal()
+    Dim paragraph As WParagraph = document.LastParagraph
+
+    'Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ")
+
+    'Adds an editable range to the paragraph
+    Dim editableRangeStart As EditableRangeStart = paragraph.AppendEditableRangeStart()
+
+    'Set the editor group
+    editableRangeStart.EditableRange.EditorGroup = EditorType.Everyone
+
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.")
+    paragraph.AppendEditableRangeEnd(editableRangeStart)
+
+    'Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password")
+
+    'Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+#### Single user permission
+
+Use the **SingleUser** property of the **EditableRange** class to make an editable range available to a single user for editing.
+
+The following code example illustrates how to make an editable range available to a single user in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Adds a section and a paragraph in the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Adds an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+
+    //Set the single user
+    editableRangeStart.EditableRange.SingleUser = "user@domain.com";
+
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates a Word document
+using (WordDocument document = new WordDocument())
+{
+    //Adds a section and a paragraph in the Word document
+    document.EnsureMinimal();
+    WParagraph paragraph = document.LastParagraph;
+
+    //Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+
+    //Adds an editable range to the paragraph
+    EditableRangeStart editableRangeStart = paragraph.AppendEditableRangeStart();
+
+    //Set the single user
+    editableRangeStart.EditableRange.SingleUser = "user@domain.com";
+
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.");
+    paragraph.AppendEditableRangeEnd(editableRangeStart);
+
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+
+    //Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates a Word document
+Using document As WordDocument = New WordDocument()
+    'Adds a section and a paragraph in the document
+    document.EnsureMinimal()
+    Dim paragraph As WParagraph = document.LastParagraph
+
+    'Append text into the paragraph
+    paragraph.AppendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ")
+
+    'Adds an editable range to the paragraph
+    Dim editableRangeStart As EditableRangeStart = paragraph.AppendEditableRangeStart()
+
+    'Set the single user
+    editableRangeStart.EditableRange.SingleUser = "user@domain.com"
+
+    paragraph.AppendText("sample databases are based, is a large, multinational manufacturing company.")
+    paragraph.AppendEditableRangeEnd(editableRangeStart)
+
+    'Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password")
+
+    'Saves the Word document
+    document.Save("EditableRange.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+### Add editable range in a table
+
+Using the **FirstColumn** and **LastColumn** properties of the **EditableRange** class, you can specify the starting and ending columns of an editable range within a table.
+
+The following code example illustrates how to add an editable range inside a table in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Template.docx")))
+{
+    // Access the first table in the first section of the document
+    WTable table = document.Sections[0].Tables[0] as WTable;
+    // Access the paragraph in the third row and third column of the table
+    WParagraph paragraph = table[2, 2].ChildEntities[0] as WParagraph;
+    // Create a new editable range start for the table cell paragraph
+    EditableRangeStart editableRangeStart = new EditableRangeStart(document);
+    // Insert the editable range start at the beginning of the paragraph
+    paragraph.ChildEntities.Insert(0, editableRangeStart);
+    // Set the editor group for the editable range to allow everyone to edit
+    editableRangeStart.EditorGroup = EditorType.Everyone;
+    // Apply editable range to second column only
+    editableRangeStart.FirstColumn = 1;
+    editableRangeStart.LastColumn = 1;
+    // Access the paragraph
+    paragraph = table[5, 2].ChildEntities[0] as WParagraph;
+    // Append an editable range end to close the editable region
+    paragraph.AppendEditableRangeEnd();
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx); 
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Template.docx")))
+{
+    // Access the first table in the first section of the document
+    WTable table = document.Sections[0].Tables[0] as WTable;
+    // Access the paragraph in the third row and third column of the table
+    WParagraph paragraph = table[2, 2].ChildEntities[0] as WParagraph;
+    // Create a new editable range start for the table cell paragraph
+    EditableRangeStart editableRangeStart = new EditableRangeStart(document);
+    // Insert the editable range start at the beginning of the paragraph
+    paragraph.ChildEntities.Insert(0, editableRangeStart);
+    // Set the editor group for the editable range to allow everyone to edit
+    editableRangeStart.EditorGroup = EditorType.Everyone;
+    // Apply editable range to second column only
+    editableRangeStart.FirstColumn = 1;
+    editableRangeStart.LastColumn = 1;
+    // Access the paragraph
+    paragraph = table[5, 2].ChildEntities[0] as WParagraph;
+    // Append an editable range end to close the editable region
+    paragraph.AppendEditableRangeEnd();
+    //Sets the protection with password and allows only reading
+    document.Protect(ProtectionType.AllowOnlyReading, "password");
+    //Saves the Word document
+    document.Save("Result.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Load an existing Word document.
+Using document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
+    ' Access the first table in the first section of the document.
+    Dim table As WTable = TryCast(document.Sections(0).Tables(0), WTable)
+    ' Access the paragraph in the third row and third column of the table.
+    Dim paragraph As WParagraph = TryCast(table(2, 2).ChildEntities(0), WParagraph)
+    ' Create a new editable range start for the table cell paragraph.
+    Dim editableRangeStart As New EditableRangeStart(document)
+    ' Insert the editable range start at the beginning of the paragraph.
+    paragraph.ChildEntities.Insert(0, editableRangeStart)
+    ' Set the editor group for the editable range to allow everyone to edit.
+    editableRangeStart.EditorGroup = EditorType.Everyone
+    ' Apply editable range to the second column only.
+    editableRangeStart.FirstColumn = 1
+    editableRangeStart.LastColumn = 1
+    ' Access the paragraph.
+    paragraph = TryCast(table(5, 2).ChildEntities(0), WParagraph)
+    ' Append an editable range end to close the editable region.
+    paragraph.AppendEditableRangeEnd()
+    ' Set the protection with password and allow only reading.
+    document.Protect(ProtectionType.AllowOnlyReading, "password")
+    ' Save the Word document.
+    document.Save("Result.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+By running the above code, you will generate a **Editable range** as shown below.
+![Editable range](Security_images/EditableRangeInTable.png)
+
+
+N> 1. Editable ranges are supported only in DOCX format.
+N> 2. The **SingleUser** and **EditorGroup** properties cannot be set simultaneously for the same editable range. Setting one will clear the other.
+
 ## Online Demo
 
 * Explore how to encrypt and decrypt the Word document using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/encryptanddecrypt#/bootstrap5).  

@@ -1,5 +1,5 @@
 ---
-title: Convert Word to PDF in Word Library | DocIO | Syncfusion<sup>&reg;</sup>&reg;
+title: Convert Word to PDF in Word Library | DocIO | Syncfusion
 description: Learn how to convert a Word document to PDF using the Syncfusion<sup>&reg;</sup> Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
@@ -157,6 +157,8 @@ The .NET Word Library (DocIO) supports below formats to convert into PDF.
 * Markdown 
 * HTML 
 
+N> To see limitations and unsupported features in Word to PDF conversion, refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf).
+
 ## Word to PDF conversion in Linux OS
 
 In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeting .netcoreapp) application. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux).
@@ -171,10 +173,6 @@ In Linux OS, you can perform the Word to PDF conversion using .NET Core (Targeti
 ## Customization settings
 
 The Essential<sup>&reg;</sup> DocIO provides settings while performing Word to PDF conversion mentioned below, 
-
-### Fast rendering
-
-This setting allows you to **convert PDF faster** by using direct PDF rendering approach rather than EMF rendering approach. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#fast-rendering).
 
 ### Embedding fonts
 
@@ -251,7 +249,7 @@ During Word to PDF conversions, if a glyph of the input text is unavailable in t
 
 ## Unsupported elements in Word to PDF conversion
 
-Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf) to know about unsupported elements in Word to PDF conversion.
+Refer [here](document-processing/word/conversions/word-to-pdf/net/limitations-word-to-pdf) to know about unsupported elements in Word to PDF conversion.
 
 ## Show Warning for Unsupported Elements
 

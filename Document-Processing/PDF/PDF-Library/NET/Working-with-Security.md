@@ -420,6 +420,136 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Encrypt-PDF-with-AES-using-owner-password/).
 
+## Working with AES-GCM encryption
+
+To encrypt a PDF document using AES-GCM, set the [Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Algorithm) property to AESGCM using the [PdfEncryptionAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.html) enum and the KeySize property to **256bit** using the PdfEncryptionKeySize enum in the [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class.
+
+N> AES-GCM encryption is supported only in PDF version 2.0. Ensure that the PDF file version is set to 2.0.
+
+Refer to the following code example for further details.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+
+//Set the document version as 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create PDF graphics for the page. 
+PdfGraphics graphics = page.Graphics; 
+//Create font. 
+PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 15f, PdfFontStyle.Bold); 
+//Create brush. 
+PdfBrush brush = PdfBrushes.Black; 
+
+//Draw the text. 
+graphics.DrawString("Encrypted document with AES-GCM 256bit", font, brush, new PointF(0, 40)); 
+
+//Get document security. 
+PdfSecurity security = document.Security; 
+//Specifies key size and encryption algorithm. 
+security.KeySize = PdfEncryptionKeySize.Key256Bit; 
+security.Algorithm = PdfEncryptionAlgorithm.AESGCM; 
+
+//Set Owner and User password. 
+security.OwnerPassword = "ownerPassword"; 
+security.UserPassword = "userPassword"; 
+
+//Save the document into stream. 
+MemoryStream stream = new MemoryStream(); 
+document.Save(stream); 
+
+//Close the document. 
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+
+//Set the document version as 2.0
+document.FileStructure.Version = PdfVersion.Version2_0; 
+
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create PDF graphics for the page. 
+PdfGraphics graphics = page.Graphics; 
+
+//Set the font. 
+PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 15f, PdfFontStyle.Bold); 
+
+//Set the brush. 
+PdfBrush brush = PdfBrushes.Black; 
+
+//Document security. 
+PdfSecurity security = document.Security; 
+
+//Specifies key size and encryption algorithm. 
+security.KeySize = PdfEncryptionKeySize.Key256Bit; 
+security.Algorithm = PdfEncryptionAlgorithm.AESGCM; 
+security.OwnerPassword = "ownerPassword"; 
+security.UserPassword = "userPassword"; 
+
+//Draw the text. 
+graphics.DrawString("Encrypted document with AES-GCM 256bit", font, brush, new PointF(0, 40)); 
+
+//Save and close the document. 
+document.Save("Output.pdf"); 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document 
+Dim document As PdfDocument = New PdfDocument() 
+
+' Set the document version as 2.0 
+document.FileStructure.Version = PdfVersion.Version2_0 
+
+' Add a page to the document 
+Dim page As PdfPage = document.Pages.Add() 
+
+' Create PDF graphics for the page 
+Dim graphics As PdfGraphics = page.Graphics 
+
+' Set the font 
+Dim font As New PdfStandardFont(PdfFontFamily.TimesRoman, 20.0F, PdfFontStyle.Bold) 
+
+' Set the brush 
+Dim brush As PdfBrush = PdfBrushes.Black 
+
+'Document security. 
+Dim security As PdfSecurity = document.Security 
+
+'Specifies key size and encryption algorithm using 256 bit key in AES-GCM mode. 
+security.KeySize = PdfEncryptionKeySize.Key256Bit 
+security.Algorithm = PdfEncryptionAlgorithm.AESGCM 
+security.OwnerPassword = "ownerPassword" 
+security.UserPassword = "userPassword" 
+
+'Draw the text. 
+graphics.DrawString("Encrypted document with AES-GCM 256bit", font, brush, New PointF(0, 40)) 
+
+'Save and close the document. 
+document.Save("Output.pdf") 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Encryption Options
 
 Now, the Syncfusion<sup>&reg;</sup> PDF library has provided options to encrypt the PDF document as follows: 

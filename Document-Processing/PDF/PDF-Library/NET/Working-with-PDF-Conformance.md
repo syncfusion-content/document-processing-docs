@@ -1318,6 +1318,143 @@ N> 1. Converting PDF to PDF/X-1a conformance document is not supported.
 N> 2. CMYK color space images and symbolic fonts are not supported.
 N> 3. From the .NET Framework 3.5 version, the Essential<sup>&reg;</sup> PDF is compatible with the PDF to PDF/A conversion. 
 
+## Font subsetting during PDF to PDF/A conversion
+
+You can optimize the size of PDF/A documents by embedding only the required font glyphs during conversion. This is achieved by setting the SubsetFonts and ConformanceLevel properties using the PdfConformanceOptions class. 
+
+Refer to the following code sample for implementation. 
+
+N> To convert an existing PDF to a PDF/A-compliant document in .NET Core, ensure that the **Syncfusion.Pdf.Imaging.Net.Core** assembly package is referenced in your project.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}	
+
+//Load an existing PDF document  
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);  
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
+
+//Sample level font event handling  
+loadedDocument.SubstituteFont += LoadedDocument_SubstituteFont;  
+
+//Create conformance options 
+PdfConformanceOptions options = new PdfConformanceOptions();  
+//Set the conformance level 
+options.ConformanceLevel = PdfConformanceLevel.Pdf_A1B;  
+
+//Embed fonts as subsets  
+options.SubsetFonts = true;  
+
+// Convert to PDF/A conformance 
+loadedDocument.ConvertToPDFA(options); 
+
+//Save the document into stream 
+MemoryStream stream = new MemoryStream(); 
+loadedDocument.Save(stream); 
+stream.Position = 0; 
+//Closes the document 
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Load an existing PDF document  
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
+
+//Convert to PDF/A conformance  
+PdfConformanceOptions options = new PdfConformanceOptions(); 
+options.ConformanceLevel = PdfConformanceLevel.Pdf_A1B; 
+
+//Embed fonts as subsets  
+options.SubsetFonts = true; 
+loadedDocument.ConvertToPDFA(options); 
+
+//Save the PDF document
+loadedDocument.Save("Output.pdf"); 
+//Closes the document 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load an existing PDF document. 
+Dim document As New PdfLoadedDocument("Input.pdf") 
+
+' Convert to PDF/A conformance 
+ Dim options As PdfConformanceOptions = New PdfConformanceOptions() 
+ options.ConformanceLevel = PdfConformanceLevel.Pdf_A1B 
+
+' Embed fonts as subsets 
+ options.SubsetFonts = True 
+ document.ConvertToPDFA(options) 
+
+' Save the PDF document
+document.Save("Output.pdf")  
+' Closes the document 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from GitHub.
+
+To convert an existing PDF document to the PDFA document in .NET Core, you need to substitute the non-embedded fonts in the input document. Refer to the following code sample to achieve the same.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}	
+
+static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args) 
+
+{ 
+     //get the font name 
+     string fontName = args.FontName.Split(',')[0]; 
+
+     //get the font style 
+     PdfFontStyle fontStyle = args.FontStyle; 
+     SKFontStyle sKFontStyle = SKFontStyle.Normal; 
+
+     if (fontStyle != PdfFontStyle.Regular) 
+     { 
+         if (fontStyle == PdfFontStyle.Bold) 
+         { 
+             sKFontStyle = SKFontStyle.Bold; 
+         } 
+         else if (fontStyle == PdfFontStyle.Italic) 
+         { 
+             sKFontStyle = SKFontStyle.Italic; 
+         } 
+         else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold)) 
+         { 
+             sKFontStyle = SKFontStyle.BoldItalic; 
+         } 
+     } 
+
+    SKTypeface typeface = SKTypeface.FromFamilyName(fontName, sKFontStyle); 
+    SKStreamAsset typeFaceStream = typeface.OpenStream(); 
+    MemoryStream memoryStream = null; 
+    if (typeFaceStream != null && typeFaceStream.Length > 0) 
+    { 
+         //Create the fontData from the type face stream.	  
+         byte[] fontData = new byte[typeFaceStream.Length];	  
+         typeFaceStream.Read(fontData, typeFaceStream.Length);	  
+         typeFaceStream.Dispose();	  
+
+         //Create the new memory stream from the font data.	  
+         memoryStream = new MemoryStream(fontData); 
+    }	 
+
+    //set the font stream to the event args.	 
+    args.FontStream = memoryStream; 
+}
+
+{% endhighlight %}
+
+{% endtabs %} 
+
 ## Get PDF Conformance Level
 
 You can find the conformance level of the existing PDF document using the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) property in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. Refer to the following code sample to get the conformance level of the existing PDF document. 

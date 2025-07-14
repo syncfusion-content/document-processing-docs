@@ -45,7 +45,7 @@ Syncfusion.OfficeChart.Portable<br/>
 Syncfusion.Pdf.Portable<br/>
 Syncfusion.PresentationRenderer.Portable<br/>
 Syncfusion.Pdf.Imaging.Portable<br/>
-Syncfusion.MetafileRenderer.NET<br/>
+Syncfusion.MetafileRenderer.Portable<br/>
 Syncfusion.SkiaSharpHelper.Portable<br/>
 SkiaSharp
 </td>

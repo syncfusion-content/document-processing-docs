@@ -551,6 +551,141 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Redaction-without-fill-color-and-appearance/).
 
+## Redaction appearance fill color
+
+The Essential<sup>&reg;</sup> PDF library allows you to enhance redaction annotations by applying a fill color using the AppearanceFillColor property. This helps improve the visibility of redacted content and supports custom styling preferences.
+
+The following code example demonstrates how to apply a appearance fill color to a redaction annotation. 
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create a new Redaction annotation 
+PdfRedactionAnnotation annot = new PdfRedactionAnnotation(); 
+//Assign the Bounds Value 
+annot.Bounds = new Rectangle(100, 120, 100, 100); 
+//Assign the InnerColor 
+annot.InnerColor = Color.Black; 
+//Assign the BorderColor 
+annot.BorderColor = Color.Yellow;
+
+//Assign the AppearanceFillColor 
+annot.AppearanceFillColor = Color.BlueViolet; 
+
+//Assign tbe TextColor 
+annot.TextColor = Color.Blue; 
+//Assign the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10);	 
+//Assign the OverlayText 
+annot.OverlayText = "REDACTION"; 
+//Assign the TextAlignment 
+annot.TextAlignment = PdfTextAlignment.Right;	 
+//Assign the RepeatText 
+annot.RepeatText = true; 
+annot.SetAppearance(true); 
+
+//Add the annotation to the page 
+page.Annotations.Add(annot);  
+
+//Save the document into stream. 
+MemoryStream stream = new MemoryStream();		 
+document.Save(stream); 
+//Close the document. 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create a new Redaction annotation 
+PdfRedactionAnnotation annot = new PdfRedactionAnnotation(); 
+//Assign the Bounds Value 
+annot.Bounds = new Rectangle(100, 120, 100, 100); 
+//Assign the InnerColor 
+annot.InnerColor = Color.Black; 
+//Assign the BorderColor 
+annot.BorderColor = Color.Yellow;
+
+//Assign the AppearanceFillColor 
+annot.AppearanceFillColor = Color.BlueViolet;
+
+//Assign tbe TextColor 
+annot.TextColor = Color.Blue; 
+//Assign the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10);	 
+//Assign the OverlayText 
+annot.OverlayText = "REDACTION"; 
+//Assign the TextAlignment 
+annot.TextAlignment = PdfTextAlignment.Right;	 
+//Assign the RepeatText 
+annot.RepeatText = true; 
+annot.SetAppearance(true); 
+
+//Add the annotation to the page 
+page.Annotations.Add(annot); 
+
+//Save the PDF document 
+document.Save("Output.pdf");	 
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document 
+Dim document As PdfDocument = New PdfDocument() 
+' Create a new page 
+Dim page As PdfPage = document.Pages.Add() 
+
+' Create a New Redaction annotation 
+Dim annot As PdfRedactionAnnotation = New PdfRedactionAnnotation() 
+' Assign the Bounds value 
+annot.Bounds = New Rectangle(100, 120, 100, 100) 
+' Assign the InnerColor 
+annot.InnerColor = Color.Black	 
+' Assign the BorderColor 
+annot.BorderColor = Color.Yellow
+
+' Assign the AppearanceFillColor 
+annot.AppearanceFillColor = Color.BlueViolet;
+
+' Assign the TextColor 
+annot.TextColor = Color.Blue 
+' Assign the font value 
+annot.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 10)	 
+' Assign the OverlayText 
+annot.OverlayText = "REDACTION" 
+' Assign the TextAlignment 
+annot.TextAlignment = PdfTextAlignment.Right 
+' Assign the RepeatText 
+annot.RepeatText = True 
+annot.SetAppearance(True) 
+
+' Add the annotation to the page. 
+page.Annotations.Add(annot) 
+
+'Save and close the document. 
+document.Save("Output.pdf") 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Get redaction progress 
 
 You can get the redaction process using [RedactionProgress](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_RedactionProgress) event in [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.   
