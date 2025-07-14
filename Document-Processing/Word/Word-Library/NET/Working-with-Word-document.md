@@ -1095,6 +1095,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to copy style between Word documents](https://support.syncfusion.com/kb/article/17738/how-to-copy-style-between-word-documents)
 * [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 * [How to generate and insert a QR code in a Word Document?](https://support.syncfusion.com/kb/article/19794/how-to-generate-and-insert-a-qr-code-in-a-word-document)
+* [How to Remove Empty Tables from .NET Core Word Document?](https://support.syncfusion.com/kb/article/20090/how-to-remove-empty-tables-from-net-core-word-document)
 
 ## Frequently Asked Questions
 

@@ -1953,3 +1953,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to find and apply bold formatting to a specific word in replaced content](https://support.syncfusion.com/kb/article/17700/how-to-find-and-apply-bold-formatting-to-a-specific-word-in-replaced-content)
 * [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document) 
 * [How to apply bold formatting to the content between placeholders in a Word document?](https://support.syncfusion.com/kb/article/17778/how-to-apply-bold-formatting-to-the-content-between-placeholders-in-a-word-document)
+* [How to Replace and Convert Word Document to PDF in ASP.NET Core?](https://support.syncfusion.com/kb/article/20112/how-to-replace-and-convert-word-document-to-pdf-in-aspnet-core)

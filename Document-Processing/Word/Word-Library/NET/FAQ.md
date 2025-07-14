@@ -29,6 +29,13 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [How to view Word documents in my .NET MAUI application using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-view-word-documents-in-my-net-maui-application-using-docio)
 * [How to identify if a Word document is in portrait or landscape?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-identify-if-a-word-document-is-in-portrait-or-landscape)
 * [How to save the Word document with same compatibility using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#saving-word-document-with-compatibility)
+* [How to create a Word document using DocIO in a python wrapper-based web API using .NET Core Word library?](https://support.syncfusion.com/kb/article/20139/how-to-create-a-word-document-using-docio-in-aspnet-core)
+* [How to integrate DocIO functionality in Node.js using ASP.NET Core Web API?](https://support.syncfusion.com/kb/article/20317/how-to-integrate-docio-functionality-in-nodejs-using-aspnet-core-web-api)
+* [Is it possible to fetch the page number of Word document elements using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#is-it-possible-to-fetch-the-page-number-of-word-document-elements-using-docio)
+* [Is it possible to download a Word document from an AWS S3 bucket and use it in DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#is-it-possible-to-download-a-word-document-from-an-aws-s3-bucket-and-use-it-in-docio)
+* [Can DocIO open or process MPIP-protected Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#can-docio-open-or-process-mpip-protected-word-documents)
+* [Why does content imported from one Word document to another start on a new page, even without a section break?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-content-imported-from-one-word-document-to-another-start-on-a-new-page-even-without-a-section-break)
+* [Does DocIO process corrupted Word documents?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#does-docio-process-corrupted-word-documents)
 
 ## Sections
 
@@ -52,6 +59,11 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Can the border radius be set for shapes in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#can-the-border-radius-be-set-for-shapes-in-a-word-document)
 * [Why is the UpdateTableOfContents() method not accessible in a cross-platform application?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-is-the-updatetableofcontents-method-not-accessible-in-a-cross-platform-application)
 * [Why does the item index in a Word document differ from the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-does-the-item-index-in-a-word-document-differ-from-the-docio-library)
+* [Is it possible to create a Spline chart in a Word document using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#is-it-possible-to-create-a-spline-chart-in-a-word-document-using-docio)
+* [Why does an exception occur while manipulating found text using Find APIs?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-does-an-exception-occur-while-manipulating-found-text-using-find-apis)
+* [Why is some text not found in a Word document when using the Find functionality in DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-is-some-text-not-found-in-a-word-document-when-using-the-find-functionality-in-docio)
+* [Why is a bookmark name with a hyphen (-) converted to an underscore (_) in DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-is-a-bookmark-name-with-a-hyphen---converted-to-an-underscore-_-in-docio)
+* [Why is formatting not preserved after calling GetAsOneRange()?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-is-formatting-not-preserved-after-calling-getasonerange)
 
 ## Mail merge
 
@@ -59,6 +71,8 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why does DocIO use merge field values from the parent group when the nested group data does not contain a value?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#why-does-docio-use-merge-field-values-from-the-parent-group-when-the-nested-group-data-does-not-contain-a-value)
 * [How to identify merge fields that do not exist in the data source?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#how-to-identify-merge-fields-that-do-not-exist-in-the-data-source)
 * [Why is each record merging on a new page during mail merge?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#why-is-each-record-merging-on-a-new-page-during-mail-merge)
+* [Why does TryAdd() not work with ExpandoObject in .NET Framework 4.8?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#why-does-tryadd-not-work-with-expandoobject-in-net-framework-48)
+* [Why do merge fields disappear when running mail merge multiple times?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#why-do-merge-fields-disappear-when-running-mail-merge-multiple-times)
 
 ## Tables
 
@@ -71,6 +85,7 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why does setting the top or bottom padding for one cell in a Word document apply the same padding to all cells in the row?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#why-does-setting-the-top-or-bottom-padding-for-one-cell-in-a-word-document-apply-the-same-padding-to-all-cells-in-the-row)
 * [Is it possible to insert a page break inside a table using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#is-it-possible-to-insert-a-page-break-inside-a-table-using-docio)
 * [How to access a specific cell in a table in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-access-a-specific-cell-in-a-table-in-a-word-document)
+* [Is it possible to access and edit the content of a table in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#is-it-possible-to-access-and-edit-the-content-of-a-table-in-a-word-document)
 
 ## Track Changes
 
@@ -79,6 +94,7 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [How to enable track changes for Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#how-to-enable-track-changes-for-word-document)
 * [What happens when Word documents with track changes are used for comparing?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#what-happens-when-word-documents-with-track-changes-are-used-for-comparing)
 * [Why track changes color are different in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#why-track-changes-color-are-different-in-word-document)
+* [Is it possible to track changes made programmatically using the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#is-it-possible-to-track-changes-made-programmatically-using-the-docio-library)
 
 ## Word to PDF and Image conversions
 
@@ -95,6 +111,16 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Will the same fonts be rendered when exporting a document to a PDF file?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#will-the-same-fonts-be-rendered-when-exporting-a-document-to-a-pdf-file)
 * [Why is the chart not preserved during Word-to-PDF or image conversion in .NET Framework?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-is-the-chart-not-preserved-during-word-to-pdf-or-image-conversion-in-net-framework)
 * [How to convert Word document to PDF/A?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#how-to-convert-word-document-to-pdfa)
+* [How to validate the PDF conformance level in a DocIO-converted PDF?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#how-to-validate-the-pdf-conformance-level-in-a-docio-converted-pdf)
+* [Why does memory usage appear high in Visual Studio after converting a Word document to PDF using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-does-memory-usage-appear-high-in-visual-studio-after-converting-a-word-document-to-pdf-using-docio)
+* [Is it possible to substitute fonts in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#is-it-possible-to-substitute-fonts-in-a-word-document)
+* [How does hyphenation work in Microsoft Word compared to Syncfusion<sup>®</sup> DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#how-does-hyphenation-work-in-microsoft-word-compared-to-syncfusion-docio)
+* [How to identify the language of a specific word in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#how-to-identify-the-language-of-a-specific-word-in-a-word-document)
+* [Why does hyphenation appear incorrectly or missing in the converted PDF?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#why-does-hyphenation-appear-incorrectly-or-missing-in-the-converted-pdf)
+* [How to improve hyphenation accuracy during Word to PDF conversion?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#how-to-improve-hyphenation-accuracy-during-word-to-pdf-conversion)
+* [How to set custom Image Resolution in ASP.NET Core?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#how-to-set-custom-image-resolution-in-aspnet-core)
+* [What languages and Unicode support are available in the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#what-languages-and-unicode-support-are-available-in-the-docio-library)
+* [What are Web Layout View and Print Layout View in Microsoft Word, and which one does DocIO use for PDF conversion?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#what-are-web-layout-view-and-print-layout-view-in-microsoft-word-and-which-one-does-docio-use-for-pdf-conversion)
 
 ## HTML and EPUB conversions
 
@@ -105,6 +131,10 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why does Syncfusion.Drawing.ColorTranslator.FromHtml not parse #rrggbbaa hex color notation correctly?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#why-does-syncfusiondrawingcolortranslatorfromhtml-not-parse-rrggbbaa-hex-color-notation-correctly)
 * [How to verify whether styles and formatting in HTML are valid?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-to-verify-whether-styles-and-formatting-in-html-are-valid)
 * [How does AppendHtml() handle multiple paragraphs in an HTML string?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-does-appendhtml-handle-multiple-paragraphs-in-an-html-string)
+* [Why do multi-column layouts in Word documents not appear correctly in HTML after conversion?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#why-do-multi-column-layouts-in-word-documents-not-appear-correctly-in-html-after-conversion)
+* [How to apply custom fonts and sizes to mathematical equations in a Word document using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-to-apply-custom-fonts-and-sizes-to-mathematical-equations-in-a-word-document-using-docio)
+* [Why does a URL-referenced image show as a red X after appending HTML?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#why-does-a-url-referenced-image-show-as-a-red-x-after-appending-html)
+* [How to preserve `<li>` tags in HTML when converting a Word document using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-to-preserve-li-tags-in-html-when-converting-a-word-document-using-docio)
 
 ## Linux
 
@@ -116,6 +146,7 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [How to perform Word to PDF in Linux prior to v18.4 release?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)
 * [What are the NuGet packages to be installed to perform Word to PDF conversion in Linux OS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)
 * [What are the NuGet packages to be installed to perform Word to Image conversion in Linux OS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-image-conversion-in-linux-os)
+* [Why does SkiaSharp throw a type initializer exception in Azure Function on macOS?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#why-does-skiasharp-throw-a-type-initializer-exception-in-azure-function-on-macos)
 
 ## Multithreading
 

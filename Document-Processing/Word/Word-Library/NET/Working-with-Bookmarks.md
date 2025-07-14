@@ -1148,4 +1148,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to replace text between custom tags using bookmarks in a Word document](https://support.syncfusion.com/kb/article/17790/how-to-replace-text-between-custom-tags-using-bookmarks-in-a-word-document)
 * [How to clone and add a paragraph with bookmarks in the same Word document](https://support.syncfusion.com/kb/article/17804/how-to-clone-and-add-a-paragraph-with-bookmarks-in-the-same-word-document)
 * [How to find text and add bookmark to get content in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19138/how-to-find-text-and-add-bookmark-to-get-content-in-aspnet-core-word?)
+* [How to add bookmarks in the header and footer sections of a Word document?](https://support.syncfusion.com/kb/article/20101/how-to-add-bookmarks-in-the-header-and-footer-sections-of-a-word-document)
+* [How to export content between two bookmarks as HTML in a Word document?](https://support.syncfusion.com/kb/article/20097/how-to-export-content-between-two-bookmarks-as-html-in-a-word-document)
+* [How to apply a style to bookmark content in a Word document?](https://support.syncfusion.com/kb/article/20093/how-to-apply-a-style-to-bookmark-content-in-a-word-document)
 
