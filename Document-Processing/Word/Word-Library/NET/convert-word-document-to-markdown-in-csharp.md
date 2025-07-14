@@ -10,6 +10,9 @@ documentation: UG
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports the conversion of a Word document to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
+To quickly start converting a Word document to Markdown and vice versa, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=7iMVgVKXRdU" %}
+
 ## Assemblies and NuGet packages required
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to a Markdown file using the .NET Word Library (DocIO).

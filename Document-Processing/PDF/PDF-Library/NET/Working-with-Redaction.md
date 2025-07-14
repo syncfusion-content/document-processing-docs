@@ -11,7 +11,7 @@ Redacting a PDF is the process of permanently removing sensitive or confidential
 
 N> 1.CJK text without TrueType font and complex script text cannot be redacted.
 N> 2.To redact the content from the existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
-N> 3.To ensure compatibility on **Linux** when performing image-based operations such as redaction using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
+N> 3.For other Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
 
 To quickly get started with redacting PDF documents in .NET using the PDF Library, check this video. 
 {% youtube "https://www.youtube.com/watch?v=sSnHbKm3WTk" %}
@@ -550,6 +550,141 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Redaction-without-fill-color-and-appearance/).
+
+## Redaction appearance fill color
+
+The Essential<sup>&reg;</sup> PDF library allows you to enhance redaction annotations by applying a fill color using the [AppearanceFillColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html#Syncfusion_Pdf_Interactive_PdfRedactionAnnotation_AppearanceFillColor) property. This helps improve the visibility of redacted content and supports custom styling preferences.
+
+The following code example demonstrates how to apply a appearance fill color to a redaction annotation. 
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Redaction-fill-color-customization/.NET/Redaction-fill-color-customization/Program.cs" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create a new Redaction annotation 
+PdfRedactionAnnotation annot = new PdfRedactionAnnotation(); 
+//Assign the Bounds Value 
+annot.Bounds = new Rectangle(100, 120, 100, 100); 
+//Assign the InnerColor 
+annot.InnerColor = Color.Black; 
+//Assign the BorderColor 
+annot.BorderColor = Color.Yellow;
+
+//Assign the AppearanceFillColor 
+annot.AppearanceFillColor = Color.BlueViolet; 
+
+//Assign tbe TextColor 
+annot.TextColor = Color.Blue; 
+//Assign the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10);	 
+//Assign the OverlayText 
+annot.OverlayText = "REDACTION"; 
+//Assign the TextAlignment 
+annot.TextAlignment = PdfTextAlignment.Right;	 
+//Assign the RepeatText 
+annot.RepeatText = true; 
+annot.SetAppearance(true); 
+
+//Add the annotation to the page 
+page.Annotations.Add(annot);  
+
+//Save the document into stream. 
+MemoryStream stream = new MemoryStream();		 
+document.Save(stream); 
+//Close the document. 
+document.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document. 
+PdfDocument document = new PdfDocument(); 
+//Add a page to the document. 
+PdfPage page = document.Pages.Add(); 
+
+//Create a new Redaction annotation 
+PdfRedactionAnnotation annot = new PdfRedactionAnnotation(); 
+//Assign the Bounds Value 
+annot.Bounds = new Rectangle(100, 120, 100, 100); 
+//Assign the InnerColor 
+annot.InnerColor = Color.Black; 
+//Assign the BorderColor 
+annot.BorderColor = Color.Yellow;
+
+//Assign the AppearanceFillColor 
+annot.AppearanceFillColor = Color.BlueViolet;
+
+//Assign tbe TextColor 
+annot.TextColor = Color.Blue; 
+//Assign the font 
+annot.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10);	 
+//Assign the OverlayText 
+annot.OverlayText = "REDACTION"; 
+//Assign the TextAlignment 
+annot.TextAlignment = PdfTextAlignment.Right;	 
+//Assign the RepeatText 
+annot.RepeatText = true; 
+annot.SetAppearance(true); 
+
+//Add the annotation to the page 
+page.Annotations.Add(annot); 
+
+//Save the PDF document 
+document.Save("Output.pdf");	 
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document 
+Dim document As PdfDocument = New PdfDocument() 
+' Create a new page 
+Dim page As PdfPage = document.Pages.Add() 
+
+' Create a New Redaction annotation 
+Dim annot As PdfRedactionAnnotation = New PdfRedactionAnnotation() 
+' Assign the Bounds value 
+annot.Bounds = New Rectangle(100, 120, 100, 100) 
+' Assign the InnerColor 
+annot.InnerColor = Color.Black	 
+' Assign the BorderColor 
+annot.BorderColor = Color.Yellow
+
+' Assign the AppearanceFillColor 
+annot.AppearanceFillColor = Color.BlueViolet;
+
+' Assign the TextColor 
+annot.TextColor = Color.Blue 
+' Assign the font value 
+annot.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 10)	 
+' Assign the OverlayText 
+annot.OverlayText = "REDACTION" 
+' Assign the TextAlignment 
+annot.TextAlignment = PdfTextAlignment.Right 
+' Assign the RepeatText 
+annot.RepeatText = True 
+annot.SetAppearance(True) 
+
+' Add the annotation to the page. 
+page.Annotations.Add(annot) 
+
+'Save and close the document. 
+document.Save("Output.pdf") 
+document.Close(True) 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Redaction-fill-color-customization/.NET).
 
 ## Get redaction progress 
 

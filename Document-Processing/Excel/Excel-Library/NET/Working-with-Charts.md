@@ -9,6 +9,9 @@ documentation: UG
 
 Essential<sup>&reg;</sup> XlsIO has support for creating and modifying Excel charts inside a workbook or as a [chart worksheet](https://support.microsoft.com/en-us/office/create-a-chart-from-start-to-finish-0baf399e-dd61-4e18-8a73-b3fd5d5680c2?ui=en-us&rs=en-us&ad=us).
 
+To quickly learn how to work with charts in Excel documents, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=WDUU8xhEHGo" %}
+
 ## Creating a Chart
 
 The [IChartShape](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartShape.html) interface represents the chart in a worksheet. A chart can be created either through the existing data in the worksheet, directly entering series or by adding series one by one.
@@ -1608,6 +1611,128 @@ With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize the chart a
 Chart appearance refers to the ability to customize the visual aspects of charts in your Excel documents. This includes modifying elements such as the chart area, plot area, series, legend etc. These customizations enhance the readability, aesthetics, and overall presentation of the charts. Beyond these standard elements, users can further refine the chart's appearance by utilizing Fill Settings, Adding Pictures in Chart, Positioning and Resizing, adding a Data Table to the chart, and applying 3D formats.
 
 With the Syncfusion<sup>&reg;</sup> Excel Library, you can customize various aspects of chart appearance in your Excel documents. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-appearance) for more details.
+
+## Positioning a Chart
+
+The following code example illustrates how to position a chart in Excel.
+
+{% tabs %} 
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Position%20Chart/.NET/Position%20Chart/Position%20Chart/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+	IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Add data
+  worksheet.Range["A1"].Text = "Category";
+  worksheet.Range["B1"].Text = "Value";
+  worksheet.Range["A2"].Text = "A";
+  worksheet.Range["A3"].Text = "B";
+  worksheet.Range["A4"].Text = "C";
+  worksheet.Range["B2"].Number = 10;
+  worksheet.Range["B3"].Number = 20;
+  worksheet.Range["B4"].Number = 30;
+
+  //Add a chart
+  IChartShape chart = worksheet.Charts.Add();
+  chart.DataRange = worksheet.Range["A1:B4"];
+  chart.ChartType = ExcelChartType.Column_Clustered;
+
+  //Set chart position 
+  chart.Top = 100;     
+  chart.Left = 150;       
+
+  //Set height and width
+  IChart chart1 = worksheet.Charts[0];
+  chart1.Height = 300;  
+  chart1.Width = 500;   
+
+  #region Save
+  //Saving the workbook
+  FileStream outputStream = new FileStream(Path.GetFullPath("Output.xlsx"), FileMode.Create, FileAccess.Write);
+  workbook.SaveAs(outputStream);
+  #endregion
+
+  //Dispose streams   
+  outputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Add data
+  worksheet.Range["A1"].Text = "Category";
+  worksheet.Range["B1"].Text = "Value";
+  worksheet.Range["A2"].Text = "A";
+  worksheet.Range["A3"].Text = "B";
+  worksheet.Range["A4"].Text = "C";
+  worksheet.Range["B2"].Number = 10;
+  worksheet.Range["B3"].Number = 20;
+  worksheet.Range["B4"].Number = 30;
+
+  //Add a chart
+  IChartShape chart = worksheet.Charts.Add();
+  chart.DataRange = worksheet.Range["A1:B4"];
+  chart.ChartType = ExcelChartType.Column_Clustered;
+
+  //Set chart position 
+  chart.Top = 100;     
+  chart.Left = 150;
+
+  //Set height and width
+  IChart chart1 = worksheet.Charts[0];
+  chart1.Height = 300;  
+  chart1.Width = 500;           
+
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Add data
+  worksheet.Range("A1").Text = "Category"
+  worksheet.Range("B1").Text = "Value"
+  worksheet.Range("A2").Text = "A"
+  worksheet.Range("A3").Text = "B"
+  worksheet.Range("A4").Text = "C"
+  worksheet.Range("B2").Number = 10
+  worksheet.Range("B3").Number = 20
+  worksheet.Range("B4").Number = 30
+
+  'Add a chart
+  Dim chart As IChartShape = worksheet.Charts.Add()
+  chart.DataRange = worksheet.Range("A1:B4")
+  chart.ChartType = ExcelChartType.Column_Clustered
+
+  'Set chart position
+  chart.Top = 100
+  chart.Left = 150
+
+  'Set height and width
+  Dim chart1 As IChart = worksheet.Charts(0)
+  chart1.Height = 300
+  chart1.Width = 500
+
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}  
+
+A complete working example to position chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Position%20Chart/.NET/Position%20Chart).
 
 ## Removing a Chart
 

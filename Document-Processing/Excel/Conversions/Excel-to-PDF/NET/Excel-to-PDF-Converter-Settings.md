@@ -2206,6 +2206,8 @@ It is recommended to implement [IWarning](https://help.syncfusion.com/cr/documen
 
 In addition, a decision to continue the conversion process can be done here by setting boolean value to the property [Cancel](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWarning.html#Syncfusion_XlsIO_IWarning_Cancel). If **Cancel** is set to TRUE the conversion cancels, else the conversion continues.
 
+N> Currently, warnings are captured only for elements that are supported during Excel document creation but not during Excel to PDF conversion. Features that are unsupported during Excel document creation itself are not captured by XlsIO.
+
 The following code snippet shows how to capture warnings during Excel-to-PDF conversion.
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Warnings/.NET/Warnings/Warnings/Program.cs,180" %}

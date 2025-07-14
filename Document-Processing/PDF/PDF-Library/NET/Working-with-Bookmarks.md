@@ -13,6 +13,9 @@ Essential<sup>&reg;</sup> PDF provides support to insert, remove and modify the 
 
 The [PdfBookmarkBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) collection represents the bookmarks in a PDF document. You can add a bookmark in a new PDF document using [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmark.html) class. Please refer the following code example.
 
+To quickly get started with adding, modifying, and removing PDF bookmarks in .NET using the Syncfusion<sup>&reg;</sup> PDF library, refer to this video tutorial:
+{% youtube "https://youtu.be/A6Tdkqr6Wfs?si=koRFBG6FgTJYEsSw" %}
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-a-PDF-document/.NET/Adding-bookmarks-in-a-PDF-document/Program.cs" %}

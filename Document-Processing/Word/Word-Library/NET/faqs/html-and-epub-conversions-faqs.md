@@ -131,3 +131,32 @@ When using AppendHtml(), the first paragraph in the HTML string is appended to t
 Refer to the image below: The HTML contains three paragraphs, but in the resulting Word document, the first paragraph is appended to the existing paragraph in the document.
 
 ![Multiple paragraphs HTML](../FAQ_images/HTML-with-multiple-paragraph.png)
+
+## Why do multi-column layouts in Word documents not appear correctly in HTML after conversion?
+
+When converting a Word document with multiple columns to HTML using Microsoft Word or Syncfusion DocIO, the content appears in a single column. This is expected behavior because HTML does not natively support multi-column layouts.
+
+## How to apply custom fonts and sizes to mathematical equations in a Word document using DocIO?
+
+In Microsoft Word, customizing fonts and sizes for mathematical equations can be tricky. When you apply changes to the whole equation, they may not affect all parts as expected. This happens because Word applies changes to the equation container, not the individual parts.
+
+You can customize fonts and sizes for specific parts, like variables (e.g., "A"). However, symbols like parentheses or brackets adjust automatically based on the equation's content and cannot have their font properties directly changed.
+
+With DocIO, you can programmatically set fonts and sizes for variables and letters in an equation. Keep in mind, symbols like parentheses or special characters are dynamic and will adjust automatically, so their fonts can't be directly customized.
+
+## Why does a URL-referenced image show as a red X after appending HTML?
+
+Images referenced by URLs are not imported automatically in the Word document. To import them, handle the ImageNodeVisited event to download images from the URLs during HTML processing.
+For a detailed example, refer to the [article](https://support.syncfusion.com/kb/article/11339/how-to-get-image-from-url-while-opening-html-in-aspnet-core-word?isInternalRefresh=False).
+
+## How to preserve `<li>` tags in HTML when converting a Word document using DocIO?
+
+By default, DocIO exports list items as `<p>` tags in HTML, similar to Microsoft Word. To export them as proper `<li>` tags, disable Word compatibility using the [HTMLExportWithWordCompatibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_HTMLExportWithWordCompatibility) property. This ensures list items are preserved within `<ul>` or `<ol>` elements using `<li>` tags.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+document.SaveOptions.HTMLExportWithWordCompatibility = false;
+{% endhighlight %}
+
+{% endtabs %}

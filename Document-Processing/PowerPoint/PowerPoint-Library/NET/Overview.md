@@ -37,6 +37,7 @@ It is a non-UI component that provides a full-fledged PowerPoint presentation in
 * Microsoft PowerPoint 2019
 * Microsoft 365
 
+T> If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 
 N> 1. The current version of Essential<sup>&reg;</sup> Presentation supports the .PPTX, .PPTM, .POTX, .POTM file formats only.
 N> 2. The current version of Essential<sup>&reg;</sup> Presentation does not support some features in Microsoft PowerPoint such as Word Art, creation and editing of Handouts, equations, create and edit audio and video content, built-in themes, and its variants.

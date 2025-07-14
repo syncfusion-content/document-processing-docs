@@ -7,6 +7,11 @@ documentation: UG
 ---
 # Working with text in the PDF document
 
+Essential<sup>®</sup> PDF supports adding text to a PDF document using the Syncfusion .NET PDF library. You can add text using standard, TrueType, CJK fonts, RTL text, and complex scripts.
+
+To quickly get started with adding text to PDF documents using the Syncfusion<sup>®</sup> PDF library for .NET, refer to this video tutorial:
+{% youtube "https://youtu.be/-LJdP6x1JmM?si=NfMHO8l1pKeY-dV-" %}
+
 ## Drawing text in a new document
 
 You can add text in the new PDF document by using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics][def] class as shown in the following code sample.
@@ -80,7 +85,9 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Drawing-text-in-a-new-PDF-document/).
+
+N>  Due to the inherent limitations of the PDF specification and the rendering capabilities of PDF libraries, emojis with skin tone modifiers are not supported in generated PDF documents. Only the base versions of emojis can be displayed. This limitation is common across most PDF libraries, as the PDF format does not explicitly support rendering skin tone variations in emojis.
 
 ## The importance of saving and restoring graphics state in PDF content rendering
 Saving and restoring the graphics state in a PDF document is crucial for maintaining the consistency and integrity of the document's layout and appearance. This approach allows you to make temporary changes to the graphics state, such as transformations, clipping paths, or color adjustments, without affecting subsequent content rendering by using the [Save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [Restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore) methods of the [PdfGraphics][https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html] class.

@@ -385,7 +385,82 @@ End Using
 
 A complete working example to protect a worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/XlsIO-Excel-Protect-UnProtect/Protect-Worksheet/.NET/Protect-Worksheet).
 
-N> By using the [ExcelSheetProtection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelSheetProtection.html) enumerator, you can set protection to the workbook elements/operations.
+The list of supported Excel sheet protection options and their behavior in Syncfusion XlsIO is given below.
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.DeletingRows</td>
+    <td>Allows users to delete entire rows when the worksheet is protected. The deletion is only possible if the rows contain only unlocked cells.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.DeletingColumns</td>
+    <td>Allows users to delete entire columns in a protected worksheet. The operation is permitted only if the columns consist entirely of unlocked cells.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.InsertingRows</td>
+    <td>Permits the insertion of new rows into areas with unlocked cells.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.InsertingColumns</td>
+    <td>Permits the insertion of new columns into areas with unlocked cells.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.InsertingHyperlinks</td>
+    <td>Allows the user to insert hyperlinks into unlocked cells.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.FormattingCells</td>
+    <td>Enables formatting of unlocked cells (e.g., fonts, number formats) while the sheet is protected.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.FormattingColumns</td>
+    <td>Allows formatting of entire columns even when the sheet is protected.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.FormattingRows</td>
+    <td>Allows formatting of entire rows even when the sheet is protected.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.Objects</td>
+    <td>Prevents editing or deletion of objects like charts, shapes, or images on the sheet.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.Scenarios</td>
+    <td>Protects defined scenarios from modification or deletion.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.Sorting</td>
+    <td>Enables sorting functionality in a protected worksheet, assuming all cells involved are unlocked.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.Filtering</td>
+    <td>Allows filtering of data using AutoFilter drop-downs while the sheet is protected.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.UsingPivotTables</td>
+    <td>Enables users to interact with PivotTables (e.g., refresh or rearrange) in a protected sheet.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.LockedCells</td>
+    <td>Applies protection to all locked cells. Users cannot modify these cells unless unlocked or explicitly permitted.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.UnLockedCells</td>
+    <td>Specifies that users are allowed to edit unlocked cells even when the worksheet is protected.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.Content</td>
+    <td>Prevents editing of any content on the worksheet unless specific permissions are granted.</td>
+  </tr>
+  <tr>
+    <td>ExcelSheetProtection.All</td>
+    <td>Applies all protection options available for the worksheet, including locking cells, disabling formatting, insertion, deletion, etc.</td>
+  </tr>
+</table>
 
 **Chart** **Sheet** **Protection**
 

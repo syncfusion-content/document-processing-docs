@@ -7,6 +7,8 @@ documentation: UG
 ---
 # NuGet Packages Required 
 
+## Create and modify PDF documents
+
 To work with PDF documents, the following NuGet packages need to be installed in your application.
 
 <table>
@@ -117,6 +119,86 @@ Windows UI (WinUI) <br/>
 
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release(v16.3.0.21), Syncfusion<sup>&reg;</sup> has changed some of the NuGet package names to search and find the required Syncfusion<sup>&reg;</sup> NuGet packages in nuget.org easily based on the control and its platforms.
+
+## Additional NuGet package for advanced PDF processing (.NET Core)
+
+For advanced PDF features like compression, redaction, PDF/A conversion, image extraction, and OCR, include the corresponding Syncfusion<sup>&reg;</sup> imaging package in your .NET Core applications:
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET Core (Targeting NET Core)
+        Console Application (Targeting .NET Core)
+        Blazor
+      </td>
+      <td>
+        {{'[Syncfusion.Pdf.Imaging.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Windows UI (WinUI)
+        .NET Multi-platform App UI (.NET MAUI)
+      </td>
+      <td>
+        {{'[Syncfusion.Pdf.Imaging.NET.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.NET)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Additional NuGet packages required for Linux
+
+The SkiaSharp native assets NuGet package is required as additional dependency in your application created for deploying in Linux environments. There are 2 types of NuGet packages, please choose the correct NuGet package based on your Linux environment. 
+ 
+The following table illustrates the native assets NuGet package with their matching Linux environments
+
+<table>
+  <thead>
+    <tr>
+      <th>Required Native assets NuGet packages</th>
+      <th>Applicable Linux environments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)'| markdownify }}
+      </td>
+      <td>
+        Common Linux distributions such as Ubuntu, Alpine, CentOS, Debian, Fedora, and RHEL
+        Azure App Service
+        Google App Engine
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)'| markdownify }}
+      </td>
+      <td>
+        AWS Lambda
+        AWS Elastic Beanstalk
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Converting HTML to PDF
 

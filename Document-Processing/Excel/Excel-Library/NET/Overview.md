@@ -47,4 +47,19 @@ The library can be used in Windows Forms, WPF, UWP, ASP.NET Web Forms, ASP.NET M
 * Microsoft Excel 2019
 * Microsoft 365
 
+**Supported File Formats**
+
+* XLSX
+* XLSM
+* XLS
+* XLTX
+* XLTM
+* XLT
+* CSV
+* SpreadsheetML
+* TSV
+* XLSB (Limited support)
+
 N> You can also explore our [.Net Excel Framework demo](https://www.syncfusion.com/demos/fileformats/excel-library) that shows how to create and modify Excel files from C# with 5 lines of code on different platforms.
+
+N> XlsIO does not support Excel documents generated before version Excel 97.

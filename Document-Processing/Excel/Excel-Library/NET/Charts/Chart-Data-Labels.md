@@ -286,3 +286,184 @@ End Using
 {% endtabs %}
 
 A complete working example for the chart data label in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Data%20Labels/.NET/Data%20Labels).
+
+## Callouts
+
+The following code example illustrates how to display data label callouts in charts.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Data%20Labels/.NET/Pie%20Data%20Label%20Call%20Out/Pie%20Data%20Label%20Call%20Out/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Create(1);
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Assigning data to cells
+    worksheet.Range["A1"].Text = "Category";
+    worksheet.Range["B1"].Text = "Value";
+    worksheet.Range["A2"].Text = "Apples";
+    worksheet.Range["B2"].Number = 30;
+    worksheet.Range["A3"].Text = "Bananas";
+    worksheet.Range["B3"].Number = 45;
+    worksheet.Range["A4"].Text = "Cherries";
+    worksheet.Range["B4"].Number = 25;
+
+    //Add a pie chart to the worksheet
+    IChartShape chart = worksheet.Charts.Add();
+
+    //Set data range for the chart
+    chart.DataRange = worksheet.Range["A1:B4"];
+
+    //Specify chart type
+    chart.ChartType = ExcelChartType.Pie;
+
+    //Set chart properties
+    chart.IsSeriesInRows = false;
+    chart.ChartTitle = "Fruit Distribution";
+    chart.HasLegend = true;
+    chart.Legend.Position = ExcelLegendPosition.Right;
+
+    //Position the chart within the worksheet
+    chart.TopRow = 6;
+    chart.LeftColumn = 1;
+    chart.BottomRow = 20;
+    chart.RightColumn = 10;
+
+    //Customize data label for the first data point
+    IChartSerie series = chart.Series[0];                      
+    series.DataPoints[0].DataLabels.IsCategoryName = true;
+    series.DataPoints[0].DataLabels.IsValue = true;
+
+    //Enable data label callouts for the first data point
+    series.DataPoints[0].DataLabels.ShowLeaderLines = true;
+
+    //Manually resizing data label area using Manual Layout
+    chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Left = 0.09;
+    chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Top = 0.01;
+
+    #region Save
+    //Saving the workbook
+    FileStream outputStream = new FileStream(Path.GetFullPath("Output.xlsx"), FileMode.Create, FileAccess.Write);
+    workbook.SaveAs(outputStream);
+    #endregion
+
+    //Dispose streams
+    outputStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Assigning data to cells
+  worksheet.Range["A1"].Text = "Category";
+  worksheet.Range["B1"].Text = "Value";
+  worksheet.Range["A2"].Text = "Apples";
+  worksheet.Range["B2"].Number = 30;
+  worksheet.Range["A3"].Text = "Bananas";
+  worksheet.Range["B3"].Number = 45;
+  worksheet.Range["A4"].Text = "Cherries";
+  worksheet.Range["B4"].Number = 25;
+
+  //Add a pie chart to the worksheet
+  IChartShape chart = worksheet.Charts.Add();
+
+  //Set data range for the chart
+  chart.DataRange = worksheet.Range["A1:B4"];
+
+  //Specify chart type
+  chart.ChartType = ExcelChartType.Pie;
+
+  //Set chart properties
+  chart.IsSeriesInRows = false;
+  chart.ChartTitle = "Fruit Distribution";
+  chart.HasLegend = true;
+  chart.Legend.Position = ExcelLegendPosition.Right;
+
+  //Position the chart within the worksheet
+  chart.TopRow = 6;
+  chart.LeftColumn = 1;
+  chart.BottomRow = 20;
+  chart.RightColumn = 10;
+
+  //Customize data label for the first data point
+  IChartSerie series = chart.Series[0];                      
+  series.DataPoints[0].DataLabels.IsCategoryName = true;
+  series.DataPoints[0].DataLabels.IsValue = true;
+
+  //Enable data label callouts for the first data point
+  series.DataPoints[0].DataLabels.ShowLeaderLines = true;
+
+  //Manually resizing data label area using Manual Layout
+  chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Left = 0.09;
+  chart.Series[0].DataPoints[0].DataLabels.Layout.ManualLayout.Top = 0.01;
+
+  //Save the workbook
+  workbook.SaveAs("Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Assigning data to cells
+  worksheet.Range("A1").Text = "Category"
+  worksheet.Range("B1").Text = "Value"
+  worksheet.Range("A2").Text = "Apples"
+  worksheet.Range("B2").Number = 30
+  worksheet.Range("A3").Text = "Bananas"
+  worksheet.Range("B3").Number = 45
+  worksheet.Range("A4").Text = "Cherries"
+  worksheet.Range("B4").Number = 25
+
+  'Add a pie chart to the worksheet
+  Dim chart As IChartShape = worksheet.Charts.Add()
+
+  'Set data range for the chart
+  chart.DataRange = worksheet.Range("A1:B4")
+
+  'Specify chart type
+  chart.ChartType = ExcelChartType.Pie
+
+  'Set chart properties
+  chart.IsSeriesInRows = False
+  chart.ChartTitle = "Fruit Distribution"
+  chart.HasLegend = True
+  chart.Legend.Position = ExcelLegendPosition.Right
+
+  'Position the chart within the worksheet
+  chart.TopRow = 6
+  chart.LeftColumn = 1
+  chart.BottomRow = 20
+  chart.RightColumn = 10
+
+  'Customize data label for the first data point
+  Dim series As IChartSerie = chart.Series(0)
+  series.DataPoints(0).DataLabels.IsCategoryName = True
+  series.DataPoints(0).DataLabels.IsValue = True
+
+  'Enable data label callouts for the first data point
+  series.DataPoints(0).DataLabels.ShowLeaderLines = True
+
+  'Manually resizing data label area using Manual Layout
+  chart.Series(0).DataPoints(0).DataLabels.Layout.ManualLayout.Left = 0.09
+  chart.Series(0).DataPoints(0).DataLabels.Layout.ManualLayout.Top = 0.01
+
+  'Save the workbook
+  workbook.SaveAs("Output.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}  
+
+A complete working example to display data label callouts in pie charts in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Data%20Labels/.NET/Pie%20Data%20Label%20Call%20Out).

@@ -54,6 +54,8 @@ In this template, Employees is the group name and the same name should be used w
 
 The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [ExecuteGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method to perform Mail merge within a group from various data sources. 
 
+N> For group mail merge, declare a class with the field names, create a list, and pass it to [MailMergeDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_). Ensure that the property and field names in the input document match when creating the data table.
+
 The following code example shows how to perform Mail merge in the specific region with **data source retrieved from SQL connection**.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.

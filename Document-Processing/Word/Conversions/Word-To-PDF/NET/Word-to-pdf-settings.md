@@ -9,64 +9,6 @@ documentation: UG
 
 The Essential<sup>&reg;</sup> DocIO provides settings while performing Word to PDF conversion mentioned below, 
 
-## Fast rendering
-
-This setting allows you to **convert PDF faster** by using direct PDF rendering approach rather than EMF rendering approach.
-
-The following code sample shows how to convert the Word document to PDF using direct PDF rendering approach. 
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//DocIO supports Word to PDF fast rendering in Windows forms, WPF, ASP.NET and ASP.NET MVC platform alone
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Loads an existing Word document
-WordDocument wordDocument = new WordDocument("Template.docx", FormatType.Docx);
-//Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
-wordDocument.ChartToImageConverter = new ChartToImageConverter();
-//Sets the scaling mode for charts (Normal mode reduces the Pdf file size)
-wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal;
-//Creates an instance of the DocToPDFConverter - responsible for Word to PDF conversion
-DocToPDFConverter converter = new DocToPDFConverter();
-//Sets true to enable the fast rendering using direct PDF conversion.
-converter.Settings.EnableFastRendering = true;
-//Converts Word document into PDF document
-PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
-//Saves the PDF file to file system
-pdfDocument.Save("WordtoPDF.pdf");
-//Closes the instance of document objects
-pdfDocument.Close(true);
-wordDocument.Close();
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads an existing Word document
-Dim wordDocument As New WordDocument("Template.docx", FormatType.Docx)
-'Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
-wordDocument.ChartToImageConverter = New ChartToImageConverter()
-'Sets the scaling mode for charts (Normal mode reduces the Pdf file size)
-wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal
-'creates an instance of the DocToPDFConverter - responsible for Word to PDF conversion
-Dim converter As New DocToPDFConverter()
-'Sets true to enable the fast rendering using direct PDF conversion.
-converter.Settings.EnableFastRendering = true
-'Converts Word document into PDF document
-Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
-'Saves the PDF file to file system
-pdfDocument.Save("WordtoPDF.pdf")
-'Closes the instance of document objects
-pdfDocument.Close(True)
-wordDocument.Close()
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Enable-fast-rendering).
-
 ## Embedding fonts
 
 You can customize the TrueType fonts embedding in two ways as follows:
@@ -76,6 +18,8 @@ You can customize the TrueType fonts embedding in two ways as follows:
 This setting allows you to **embed the particular font information** (glyphs) from the TrueType fonts used for the rendered characters in converted PDF document.
 
 The following code sample shows how to embed the TrueType fonts into the converted PDF document.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 

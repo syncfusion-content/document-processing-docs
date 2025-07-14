@@ -58,10 +58,7 @@ Step 6: Add the following code example in the Function1 class to convert HTML to
                 
             //Initialize the HTML to PDF converter with the Blink rendering engine.
             HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Blink);
-              
-            //Set command line arguments to run without sandbox.
-            settings.CommandLineArguments.Add("--no-sandbox");
-            settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+
             settings.BlinkPath = blinkBinariesPath;
             //Assign BlinkConverter settings to the HTML converter 
             htmlConverter.ConverterSettings = settings;
@@ -95,6 +92,13 @@ Step 6: Add the following code example in the Function1 class to convert HTML to
     }
 
 {% endhighlight %}
+
+N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
+N> ```csharp
+N> settings.CommandLineArguments.Add("--no-sandbox");
+N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+N> ```
+N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
 
 Step 7: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
 

@@ -121,9 +121,6 @@ public ActionResult ExportToPDF()
     //Initialize HTML to PDF converter 
     HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
     BlinkConverterSettings settings = new BlinkConverterSettings();
-    //Set command line arguments to run without sandbox.
-    settings.CommandLineArguments.Add("--no-sandbox");
-    settings.CommandLineArguments.Add("--disable-setuid-sandbox");
     //Assign BlinkConverter settings to the HTML converter 
     htmlConverter.ConverterSettings = settings;
     //Convert HTML string to PDF
@@ -159,6 +156,13 @@ private void InstallDependecies(string shellFilePath)
 }
 
 {% endhighlight %}
+
+N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
+N> ```csharp
+N> settings.CommandLineArguments.Add("--no-sandbox");
+N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+N> ```
+N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
 
 **Steps to publish as Azure App Linux**
 

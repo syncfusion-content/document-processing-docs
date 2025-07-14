@@ -485,3 +485,56 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to access a specific cell in a table in a Word document?
 
 To access a specific cell in a table, iterate through the rows and cells of the table. Refer [here]( https://help.syncfusion.com/document-processing/word/word-library/net/working-with-tables#iterating-through-table-elements) for detailed instructions on how to iterate through the table and access particular cell.
+
+## Is it possible to access and edit the content of a table in a Word document?
+
+Yes, you can access and edit the content of tables in a Word document using several methods. Below are some approaches:
+
+**Approach 1: Access a Table by Index**
+
+You can access a table by its index in the document. Use the get(index) method to retrieve the table from the collection based on its position. Here’s an example:
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Access the second table in the last section
+IWTable table = document.LastSection.Tables[1];
+{% endhighlight %}
+{% endtabs %}
+
+**Approach 2: Retrieve All Tables in the Document**
+
+To work with all tables in the document, you can use the [FindAllItemsByProperty](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAllItemsByProperty_Syncfusion_DocIO_DLS_EntityType_System_String_System_String_) API to retrieve all tables, then iterate through them:
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+WordDocument document = new WordDocument("Data\\Input.docx");
+// Find all tables in the document
+List<Entity> tables = document.FindAllItemsByProperty(EntityType.Table, null, null);
+foreach (Entity entity in tables)
+{
+    WTable table = (WTable)entity;
+    foreach (WTableRow row in table.Rows)
+    {
+        foreach (WTableCell cell in row.Cells)
+        {
+            foreach (WParagraph paragraph in cell.Paragraphs)
+            {
+                // Perform your manipulation here
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %} 
+
+**Approach 3: Access a Table by Alternate Text**
+
+If your table has a unique Alternate Text (Title), you can access it directly using FindItemByProperty API:
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Find the first table in the document with the title "Table1"
+WTable table = document.FindItemByProperty(EntityType.Table, "Title", "Table1") as WTable;
+{% endhighlight %}
+{% endtabs %}
+ 

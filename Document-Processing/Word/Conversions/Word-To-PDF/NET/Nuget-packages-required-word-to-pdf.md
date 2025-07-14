@@ -119,6 +119,8 @@ Install-Package Syncfusion.DocIORenderer.NET
 </tr>
 </table>
 
+T> If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
+
 #### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
@@ -155,6 +157,48 @@ N> 2. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https:/
 N> 3. Please refer the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
 N> 4. From v28.2.3, the dependent package SkiaSharp is upgraded from 2.88.8 to 3.116.1 version and it is mandatory to use SkiaSharp.NativeAssets.Linux v3.116.1 and HarfBuzzSharp.NativeAssets.Linux v8.3.0.1 packages for converting Word documents into PDF in Linux environment.
 N> 5. "DocIO supports Word to PDF conversion in UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
+N> 6. Syncfusion has **deprecated the ASP.NET package**. We strongly recommend upgrading your applications to ASP.NET Core. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core) to migrate from .NET Framework to .NET Core.
+
+### Additional NuGet packages required for Linux
+
+The SkiaSharp and HarfBuzzSharp native asset NuGet packages are required as additional dependencies when deploying your application in Linux environments. There are two types of NuGet packages—choose the appropriate ones based on your specific Linux environment.
+
+The following table illustrates the native assets NuGet packages and their applicable Linux environments:
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Required Native assets NuGet packages</th>
+      <th>Applicable Linux environments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)'| markdownify }}
+      </td>
+      <td>
+        <ul>
+          <li>Common Linux distributions such as Ubuntu, Alpine, CentOS, Debian, Fedora, and RHEL</li>
+          <li>Azure App Service</li>
+          <li>Google App Engine</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)'| markdownify }}
+      </td>
+      <td>
+        <ul>
+          <li>AWS Lambda</li>
+          <li>AWS Elastic Beanstalk</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Converting Charts
 

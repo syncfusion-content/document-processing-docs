@@ -653,3 +653,22 @@ DocIO indexes items based on the document’s internal file structure rather tha
 
 No, DocIO does not support spline charts directly. However, a similar effect can be achieved using a **scatter chart with a smooth line**. This chart type connects data points smoothly, resembling a spline chart. Refer to the [article](https://support.syncfusion.com/kb/article/12203/how-to-create-scatter-with-smooth-line-chart-in-word-document-using-c) and [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Charts/Create-scatter-with-smooth-line-chart) for implementation.
 
+## Why does an exception occur while manipulating found text using Find APIs?
+
+Modifying or removing multiple `TextSelection` instances during iteration (e.g., with `Find` API results) may alter the document structure and cause exceptions. To avoid this, apply changes only to the first found selection before performing a new search.
+
+## Why is some text not found in a Word document when using the Find functionality in DocIO?
+
+This usually occurs when the target text includes line breaks. Microsoft Word treats line breaks as separators, so text split across lines is not recognized as a single searchable string. DocIO behaves the same way. To handle such cases, use pattern-based searches with Regex or adjust the text to avoid line breaks.
+
+## Why is a bookmark name with a hyphen (-) converted to an underscore (_) in DocIO?
+
+In DocIO, hyphens (-) in bookmark names are replaced with underscores (_) because Microsoft Word does not allow bookmark names with hyphens. This is expected behavior, not an issue.
+
+![Bookmark name with hyphen converted as underscore](../FAQ_images/BoomarkName-with-hyphen.png)
+
+## Why is formatting not preserved after calling GetAsOneRange()?
+
+The [GetAsOneRange()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TextSelection.html#Syncfusion_DocIO_DLS_TextSelection_GetAsOneRange) method applies the character formatting of the **first text range** in the selection to the entire range. For example, if the first range (e.g., "word") has bold and italic formatting, these styles are applied to the entire range, changing the formatting for all the text.
+
+To preserve individual formatting, use [GetRanges()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TextSelection.html#Syncfusion_DocIO_DLS_TextSelection_GetRanges) instead of GetAsOneRange(). This method returns an array of text ranges, allowing you to iterate and apply the original formatting to each range separately.

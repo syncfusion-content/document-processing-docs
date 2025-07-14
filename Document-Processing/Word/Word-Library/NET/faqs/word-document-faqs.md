@@ -515,3 +515,42 @@ End Using
 {% endtabs %}
 
 For more details about specifying page properties, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-sections#specifying-page-properties).
+
+## Is it possible to download a Word document from an AWS S3 bucket and use it in DocIO?
+
+Yes, you can download a Word document from an AWS S3 bucket and use it with DocIO. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-aws-s3-cloud-storage#download-file-from-aws-s3-cloud-storage) to learn more about downloading and loading documents from an AWS S3 bucket.
+
+## Can DocIO open or process MPIP-protected Word documents?
+
+No, DocIO cannot open or process Microsoft Purview Information Protection (MPIP) protected Word files because it requires user authentication. DocIO is a standalone library and does not integrate with Microsoft 365 or Azure AD, so it cannot decrypt MPIP-protected content.
+
+## Why does content imported from one Word document to another start on a new page, even without a section break?
+
+This occurs when page setup properties (like margins, or paper size) differ between the source and destination documents. In DocIO, importing content clones the entire section, including its page settings. If these settings don’t match, Microsoft Word treats it as a separate section and starts it on a new page when opening in Word viewer— even if no section break is specified. This is the default behavior.
+
+As a workaround, keep the same section and page setup properties in both the source and destination documents before merging. Alternatively, iterate through each section of the source document and set its page properties to match those of the destination document.
+
+The following code illustrates how to set the page properties to source document as same as the destination document.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+// Match page setup before importing
+IWSection sourceSection = sourceDoc.Sections[0];
+IWSection destSection = destinationDoc.Sections[0];
+//Sets the destination document page setup properties to the source document sections.
+sourceSection.PageSetup.DifferentFirstPage = destSecPageSetup.DifferentFirstPage;
+sourceSection.PageSetup.Margins.All = destSection.PageSetup.Margins.All;
+sourceSection.PageSetup.Orientation = destSection.PageSetup.Orientation;
+sourceSection.PageSetup.PageSize = destSection.PageSetup.PageSize;
+// Now import the section
+destinationDoc.Sections.Add(sourceDoc.Sections[0].Clone());
+{% endhighlight %}
+{% endtabs %}
+
+## Does DocIO process corrupted Word documents?
+
+Corruption in Word document can be due to improper structure, invalid tags, or encoded characters. Microsoft Word can recover corrupted documents by rewriting the internal structure if you click "Yes."
+
+![Microsoft Word Coruppted popup message](../FAQ_images/Corrupted-message.png)
+
+In DocIO, if the structure is incorrect, an exception is thrown. Otherwise, DocIO tries to parse the document, which may result in missing elements or corruption. DocIO does not auto-correct file-level corruption, so the output may still have issues.

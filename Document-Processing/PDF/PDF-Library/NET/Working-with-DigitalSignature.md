@@ -1701,6 +1701,10 @@ ltDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Sign_PDF_with_LTA/).
 
+N> When using a custom timestamp server for digital signatures with LTA, you may encounter  `OverflowException`  if the estimated signature size is too small.
+
+N> To avoid this, increase the [EstimatedSignatureSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize) property to allocate enough space for the timestamp and LTV data returned by the server.
+
 ## Digitally sign a PDF document using the Windows certificate store
 
 A Windows certificate store is a secure way to store the digital ID. If a root certificate is added to the Windows certificate store, you do not need to manually add and trust each of the certificates that are already present in the Windows certificate store.
@@ -5126,4 +5130,40 @@ signature.Bounds= new RectangleF(new PointF(0, 0), new SizeF(100, 100));
 {% endtabs %}
 </td>
 </tr>
+</table>
+
+<th style="font-size:14px"><b>Digital signature with LTA `Overflow exception when using custom timestamp server`.
+</b></th>
+
+<table>
+
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">when signing a PDF with LTA using a custom timestamp server.
+System.OverflowException: `Arithmetic operation resulted in an overflow`.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>This exception occurs when the `EstimatedSignatureSize` is set too small to accommodate the data returned by certain timestamp servers. Some servers may return a larger timestamp token or include additional certificate/OCSP information, which exceeds the allocated space, causing an arithmetic overflow.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Increase the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize">EstimatedSignatureSize</a> property when configuring the PDF digital signature to ensure enough space is reserved for the full timestamp and LTV content.
+<br><br/>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+// Set the estimated signature size
+signature.EstimatedSignatureSize = 20000;
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
 </table>

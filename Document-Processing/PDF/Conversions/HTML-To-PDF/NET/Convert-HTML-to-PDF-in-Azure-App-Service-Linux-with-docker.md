@@ -77,9 +77,6 @@ public ActionResult ExportToPDF()
     //Initialize HTML to PDF converter. 
     HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
     BlinkConverterSettings settings = new BlinkConverterSettings();
-    //Set command line arguments to run without the sandbox.
-    settings.CommandLineArguments.Add("--no-sandbox");
-    settings.CommandLineArguments.Add("--disable-setuid-sandbox");
     //Assign Blink settings to the HTML converter.
     htmlConverter.ConverterSettings = settings;
     //Convert URL to PDF.
@@ -91,6 +88,13 @@ public ActionResult ExportToPDF()
 }
 
 {% endhighlight %}
+
+N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
+N> ```csharp
+N> settings.CommandLineArguments.Add("--no-sandbox");
+N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+N> ```
+N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
 
 Step 8: Build and run the sample in docker, it will pull the Linux docker image from the docker hub and run the project. Now, the webpage will open in the browser and click the button to convert the Syncfusion<sup>&reg;</sup> webpage to a PDF.
 ![Convert HTMLToPDF Azure Docker Step6](htmlconversion_images/AzureDocker9.png) 

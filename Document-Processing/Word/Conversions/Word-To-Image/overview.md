@@ -30,6 +30,8 @@ Refer to the following links for assemblies and NuGet packages required based on
 To quickly start converting a Word document to an image, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=hoV3i7nl85I" %}
 
+T> 1. If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
+
 ## Convert Word to Image
 
 The following namespaces are required to compile the code in this topic:
@@ -272,7 +274,31 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Specific-range-of-pages-Word-to-image).
 
+## Supported File formats
+
+The .NET Word Library (DocIO) supports below formats to convert into image. 
+
+* DOC, DOCX, Word Processing XML (2003 & 2007), DOT, DOTX, DOCM, and DOTM
+* RTF 
+* Text 
+* Markdown 
+* HTML 
+
+N> To see limitations and unsupported features in Word to image conversion, refer [here]().
+
 T> For troubleshooting issues in the .NET Word Library (DocIO), refer [this](https://support.syncfusion.com/kb/article/16012/troubleshooting-guide-for-syncfusion-word-docio-library-issues?isInternalRefresh=False) article that provides comprehensive guidance on resolving common problems.
+
+## Supported File formats
+
+The .NET Word Library (DocIO) supports below formats to convert into image. 
+
+* DOC, DOCX, Word Processing XML (2003 & 2007), DOT, DOTX, DOCM, and DOTM
+* RTF 
+* Text 
+* Markdown 
+* HTML 
+
+N> To see limitations and unsupported features in Word to image conversion, refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/unsupported-elements-word-to-image).
 
 ## Custom image resolution
 
