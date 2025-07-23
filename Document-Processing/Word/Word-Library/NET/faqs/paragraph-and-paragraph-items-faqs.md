@@ -672,3 +672,185 @@ In DocIO, hyphens (-) in bookmark names are replaced with underscores (_) becaus
 The [GetAsOneRange()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TextSelection.html#Syncfusion_DocIO_DLS_TextSelection_GetAsOneRange) method applies the character formatting of the **first text range** in the selection to the entire range. For example, if the first range (e.g., "word") has bold and italic formatting, these styles are applied to the entire range, changing the formatting for all the text.
 
 To preserve individual formatting, use [GetRanges()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.TextSelection.html#Syncfusion_DocIO_DLS_TextSelection_GetRanges) instead of GetAsOneRange(). This method returns an array of text ranges, allowing you to iterate and apply the original formatting to each range separately.
+
+## Is it possible to hide chart legend using DocIO library?
+
+There is no direct option to hide a chart legend entry in DocIO. However, the legend can be hidden by setting the [IsDeleted](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeChartLegendEntry.html#Syncfusion_OfficeChart_IOfficeChartLegendEntry_IsDeleted) property to true. This removes the corresponding entry from the legend.
+To show it again, set [IsDeleted](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeChartLegendEntry.html#Syncfusion_OfficeChart_IOfficeChartLegendEntry_IsDeleted) to false. This approach can hide and show legend items during Word document creation or modification.
+ 
+The following code illustrates how to hide the chart legend.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+ // To hide
+chart.Legend.LegendEntries[3].IsDeleted = true;
+// To restore
+chart.Legend.LegendEntries[3].IsDeleted = false;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' To hide
+chart.Legend.LegendEntries(3).IsDeleted = True
+' To restore
+chart.Legend.LegendEntries(3).IsDeleted = False
+{% endhighlight %}
+
+{% endtabs %}
+
+For more information on Chart, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts)
+
+## Why is formatting applied to the field not preserved in the result document?
+
+If font formatting (such as font name and size) is applied only to the field code and not to the field result, formatting issues may occur. To ensure the field result displays with the correct formatting, it is necessary to iterate through the field content up to the field end and apply the desired formatting  to the text ranges.
+
+The following code illustrates how to apply formatting to a field while creating a new Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+ // Create a new Word document
+ WordDocument document = new WordDocument();
+ // Add a new section to the document
+ IWSection section = document.AddSection();
+ // Add a paragraph to the header with center alignment
+ IWParagraph headerParagraph = section.HeadersFooters.Header.AddParagraph();
+ headerParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+ // Add text and format it
+ IWTextRange text = headerParagraph.AppendText("Page Number: ");
+ text.CharacterFormat.FontSize = 8;
+ text.CharacterFormat.FontName = "Calibri";
+ // Append a page number field to the header
+ IWField pageField = headerParagraph.AppendField("Page No:", FieldType.FieldPage);
+ // Initialize entity to iterate through field components
+ IEntity entity = pageField;
+ while (entity.NextSibling != null)
+ {
+     // Check if the current entity is a text range
+     if (entity is WTextRange)
+     {
+         // Cast the entity to a WTextRange type
+         WTextRange textRange = entity as WTextRange;
+         // Set character format for text ranges
+         textRange.CharacterFormat.FontSize = 8;
+         textRange.CharacterFormat.FontName = "Calibri";
+         textRange.CharacterFormat.Bold = true;
+     }
+     // Break the loop at the end of the field
+     else if ((entity is WFieldMark) && (entity as WFieldMark).Type == FieldMarkType.FieldEnd)
+         break;
+     // Move to the next sibling item
+     entity = entity.NextSibling;
+ }
+ // Save and Close the document
+ document.Save("Sample.docx", FormatType.Docx);
+ document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Create a new Word document
+Dim document As New WordDocument()
+' Add a new section to the document
+Dim section As IWSection = document.AddSection()
+' Add a paragraph to the header with center alignment
+Dim headerParagraph As IWParagraph = section.HeadersFooters.Header.AddParagraph()
+headerParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
+' Add text and format it
+Dim text As IWTextRange = headerParagraph.AppendText("Page Number: ")
+text.CharacterFormat.FontSize = 8
+text.CharacterFormat.FontName = "Calibri"
+' Append a page number field to the header
+Dim pageField As IWField = headerParagraph.AppendField("Page No:", FieldType.FieldPage)
+' Initialize entity to iterate through field components
+Dim entity As IEntity = pageField
+Do While entity.NextSibling IsNot Nothing
+    ' Check if the current entity is a text range
+    If TypeOf entity Is WTextRange Then
+        ' Cast the entity to a WTextRange type
+        Dim textRange As WTextRange = CType(entity, WTextRange)
+        ' Set character format for text ranges
+        textRange.CharacterFormat.FontSize = 8
+        textRange.CharacterFormat.FontName = "Calibri"
+        textRange.CharacterFormat.Bold = True
+    End If
+    ' Break the loop at the end of the field
+    If TypeOf entity Is WFieldMark AndAlso CType(entity, WFieldMark).Type = FieldMarkType.FieldEnd Then
+        Exit Do
+    End If
+    ' Move to the next sibling item
+    entity = entity.NextSibling
+Loop
+' Save and Close the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+For more detailed information about working with fields, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-fields)
+
+## Why are tabs not preserved in TOC entries after updating the table of contents?
+
+Tabs in the `Table of Contents` (TOC) entries may not be preserved due to their configuration in TOC styles. If the TOC style includes tab values, Microsoft Word will preserve these when updating the TOC. 
+
+However, if there are no tabs defined in the TOC style, Word will insert tabs inline based on the page width. This is the default behavior of Microsoft Word, and `DocIO follows the same approach`. 
+
+To ensure that tabs are preserved, it is necessary to clear the tab settings in the TOC styles programmatically before updating the table of contents. The following code snippet demonstrates how to achieve this using DocIO.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+// Loads the template document
+WordDocument document = new WordDocument("Template.docx");
+// Loop through TOC styles from TOC 1 to TOC 9
+for (int i = 1; i <= 9; i++)
+{
+    // Find the style by name (e.g., "TOC 1", "TOC 2", ..., "TOC 9")
+    Style style = (Style)document.Styles.FindByName("TOC " + i);
+    // If the style exists and is a paragraph style, clear its tab stops
+    if (style != null)
+        (style as WParagraphStyle).ParagraphFormat.Tabs.Clear();
+}
+// Updates the table of contents
+document.UpdateTableOfContents();
+// Save the Word document
+document.Save("Output.docx");
+// Close the Word document
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Loads the template document
+Dim document As New WordDocument("Template.docx")
+' Loop through TOC styles from TOC 1 to TOC 9
+For i As Integer = 1 To 9
+    ' Find the style by name (e.g., "TOC 1", "TOC 2", ..., "TOC 9")
+    Dim style As Style = CType(document.Styles.FindByName("TOC " & i), Style)
+    ' If the style exists and is a paragraph style, clear its tab stops
+    If style IsNot Nothing Then
+        CType(style, WParagraphStyle).ParagraphFormat.Tabs.Clear()
+    End If
+Next
+' Updates the table of contents
+document.UpdateTableOfContents()
+' Save the Word document
+document.Save("Output.docx")
+' Close the Word document
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+This code clears any pre-existing tabs in the TOC styles, ensuring that they are formatted as expected when the TOC is updated. 
+
+For more information on working with Table Of Content, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-table-of-contents).
+
+## Why does FindByName using the style name return null?
+
+In DocIO, the [FindByName](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.StyleCollection.html#Syncfusion_DocIO_DLS_StyleCollection_FindByName_System_String_) method searches for a style by its name and retrieves the style object. However, returning null can occur if the specified style name does not exist in the style collection, or if casting is attempted on a style to an incorrect type, such as treating a paragraph style as a character style.
+ 
+`Suggestions to handle this behavior:`
+ 
+When using `FindByName` to get a style in DocIO, it does not automatically indicate whether it's a paragraph or character style. To avoid errors, always check the style's [StyleType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.StyleType.html) before casting it to [WParagraphStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraphStyle.html) or [WCharacterStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WCharacterStyle.html). This ensures the style is applied correctly without runtime issues.
+ 
+For more details, refer [Working with styles](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-paragraph#working-with-styles)

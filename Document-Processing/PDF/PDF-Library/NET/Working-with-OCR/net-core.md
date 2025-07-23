@@ -30,7 +30,7 @@ Step 2:  In configuration windows, name your project and click Next.
 
 ![ASP.NET Core project configuration2](OCR-Images/OCR-Core-project-configuration2.png)
 
-Step 3:  Install the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
 ![PDF OCR ASP.NET Core NuGet package](OCR-Images/OCR-Core-NuGet-package.png)
 
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.

@@ -2162,6 +2162,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Find and Remove a Table by Title in .Net Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
 * [How to adjust the first column to fill remaining space in a Word table?](https://support.syncfusion.com/kb/article/19652/how-to-adjust-the-first-column-to-fill-remaining-space-in-a-word-table)
 * [How to Keep Paragraphs Inside a Table in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19678/how-to-keep-paragraphs-inside-a-table-in-aspnet-core-word)
+* [How to copy rows from one table to another while preserving formatting in a Word document?](https://support.syncfusion.com/kb/article/20307/how-to-copy-rows-from-one-table-to-another-while-preserving-formatting-in-a-word-document)
+* [How to Remove Empty Tables from .NET Core Word Document?](https://support.syncfusion.com/kb/article/20090/how-to-remove-empty-tables-from-net-core-word-document)
 
 ## Frequently Asked Questions
 

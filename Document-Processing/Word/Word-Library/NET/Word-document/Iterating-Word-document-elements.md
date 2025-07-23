@@ -641,3 +641,4 @@ T> If you wish to find an item in a Word document rather than iterating through 
 ## See Also
 
 * [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
+* [How to find start and end markers and iterate between them in a Word document?](https://support.syncfusion.com/kb/article/20110/how-to-find-start-and-end-markers-and-iterate-between-them-in-a-word-document)

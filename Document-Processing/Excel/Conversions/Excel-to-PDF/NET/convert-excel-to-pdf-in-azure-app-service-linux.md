@@ -34,7 +34,9 @@ Step 4: Install the following NuGet packages as reference to your project from [
 ![Install SkiaSharp NuGet Package](Azure-Images/App-Service-Linux/SkiaSharp_NuGet.png)
 ![Install HarfBuzzSharp NuGet Package](Azure-Images/App-Service-Linux/HarfBuzzSharp_NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
+
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% tabs %}  

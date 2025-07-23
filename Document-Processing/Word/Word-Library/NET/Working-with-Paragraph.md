@@ -1775,6 +1775,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to restart numbering when replacing multiple texts with the same HTML list in Word document?](https://support.syncfusion.com/kb/article/19665/how-to-restart-numbering-when-replacing-multiple-texts-with-the-same-html-list-in-word-document)
 * [How to create a list with a hanging indent in a Word document?](https://support.syncfusion.com/kb/article/19649/how-to-create-a-list-with-a-hanging-indent-in-a-word-document)
 * [How to Keep Paragraphs Inside a Table in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19678/how-to-keep-paragraphs-inside-a-table-in-aspnet-core-word)
+* [How to apply highlight color to fields in a Word document?](https://support.syncfusion.com/kb/article/20092/how-to-apply-highlight-color-to-fields-in-a-word-document)
+* [How to Replace DISPLAYBARCODE Field with Image in DocIO .NET Core?](https://support.syncfusion.com/kb/article/19842/how-to-replace-displaybarcode-field-with-image-in-docio-net-core)
 
 ## Frequently Asked Questions
 

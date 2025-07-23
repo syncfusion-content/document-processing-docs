@@ -7,9 +7,10 @@ documentation: UG
 ---
 # Working with Attachments
 
-Essential<sup>&reg;</sup> PDF provides support for file attachments in PDF documents.
+Essential<sup>&reg;</sup> PDF provides support for file attachments in PDF documents. These attachments can include any type of file, offering detailed information within the PDF.
 
-Attachments can contain any kind of file with detailed information.
+To quickly get started with adding, removing, and extracting file attachments in PDF documents using the Syncfusion<sup>&reg;</sup> PDF Library for .NET, refer to this video tutorial:
+{% youtube "https://youtu.be/Tcg1S-PPxHI?si=5IBb4CrzrqjIlNwR" %}
 
 ##  Adding attachment to a PDF document
 

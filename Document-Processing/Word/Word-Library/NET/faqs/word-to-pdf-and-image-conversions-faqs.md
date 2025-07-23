@@ -226,3 +226,17 @@ For **Unicode support** during Word-to-PDF conversion, the library provides fall
 
 **DocIO PDF conversion behavior:**
 DocIO uses the **Print Layout View** during document conversion to preserve the layout, including page breaks and formatting.
+
+## What are the chances of an SVG image not rendering correctly during Word-to-PDF conversion using DocIO?
+
+If an SVG image does not render correctly in the converted PDF, it may be due to the absence of a fallback image format. Word documents typically include a PNG fallback for SVG images to ensure compatibility across different rendering environments.
+ 
+Since DocIO is a non - UI library and does not render SVGs directly, it relies on the PNG fallback embedded in the Word file to render the image during PDF conversion. If the fallback PNG is missing, the SVG may not appear in the output PDF.
+
+## Which can be safely used as a replacement for Arial Unicode MS for accurate and consistent Chinese text rendering?
+
+`Simsun Regular` is a reliable replacement for `Arial Unicode MS` when rendering Chinese text in Word documents, especially during Word to PDF conversion.
+
+Simsun is a system font that comes pre-installed on most Windows environments. When the Chinese text is used in Word documents, it ensures accurate text display and preserves formatting when the document is converted to PDF.
+
+Using `Simsun Regular` helps avoid font substitution issues and ensures consistent rendering of Chinese characters.
