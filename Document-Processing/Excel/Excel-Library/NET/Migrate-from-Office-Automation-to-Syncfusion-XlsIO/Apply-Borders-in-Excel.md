@@ -157,10 +157,10 @@ private void ApplyBorders()
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Put some text into different cells (A2, A4, A6, and A8)
-    worksheet.Range[2, 1].Value = "Hair Lines";
-    worksheet.Range[4, 1].Value = "Thin Lines";
-    worksheet.Range[6, 1].Value = "Medium Lines";
-    worksheet.Range[8, 1].Value = "Thick Lines";
+    worksheet.SetValue(2, 1, "Hair Lines");
+    worksheet.SetValue(4, 1, "Thin Lines");
+    worksheet.SetValue(6, 1, "Medium Lines");
+    worksheet.SetValue(8, 1, "Thick Lines");
 
     //Define a range object (A2)
     IRange range;
@@ -205,10 +205,10 @@ Private Sub ApplyBorders()
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
     'Put some text into different cells (A2, A4, A6, and A8)
-    worksheet.Range(2, 1).Value = "Hair Lines"
-    worksheet.Range(4, 1).Value = "Thin Lines"
-    worksheet.Range(6, 1).Value = "Medium Lines"
-    worksheet.Range(8, 1).Value = "Thick Lines"
+    worksheet.SetValue(2, 1, "Hair Lines")
+    worksheet.SetValue(4, 1, "Thin Lines")
+    worksheet.SetValue(6, 1, "Medium Lines")
+    worksheet.SetValue(8, 1, "Thick Lines")
 
     'Define a range object (A2)
     Dim range As IRange

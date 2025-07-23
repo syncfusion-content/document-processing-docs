@@ -846,3 +846,40 @@ Install-Package Syncfusion.XlsIORenderer.NET
 // Uninstall package
 Uninstall-Package Syncfusion.XlsIORenderer.NET -RemoveDependencies 
 ~~~
+
+## Additional NuGet packages required for Linux
+
+The SkiaSharp native assets NuGet package is required as additional dependency in your application created for deploying in Linux environments. There are 2 types of NuGet packages, please choose the correct NuGet package based on your Linux environment. 
+
+The following table illustrates the native assets NuGet package with their matching Linux environments.
+
+<table>
+<thead>
+<tr>
+<th width="40%">
+Required Native assets NuGet packages
+</th>
+<th width="40%">
+Applicable Linux environments
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)' | markdownify}}
+</td>
+<td>
+Azure App Service<br/>
+Google App Engine
+</td>
+</tr>
+<tr>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)' | markdownify}}
+</td>
+<td>
+AWS Lambda<br/>
+AWS Elastic Beanstalk
+</td>
+</tr>
+</table>

@@ -125,18 +125,18 @@ private void FilterData()
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Add data into A1 and B1 cells as headers
-    worksheet[1, 1].Value = "Product ID";
-    worksheet[1, 2].Value = "Product Name";
+    worksheet.SetValue(1, 1, "Product ID");
+    worksheet.SetValue(1, 2, "Product Name");
 
     //Add data into cells
     worksheet[2, 1].Value2 = 1;
     worksheet[3, 1].Value2 = 2;
     worksheet[4, 1].Value2 = 3;
     worksheet[5, 1].Value2 = 4;
-    worksheet[2, 2].Value = "Apples";
-    worksheet[3, 2].Value = "Bananas";
-    worksheet[4, 2].Value = "Grapes";
-    worksheet[5, 2].Value = "Oranges";
+    worksheet.SetValue(2, 2, "Apples");
+    worksheet.SetValue(3, 2, "Bananas");
+    worksheet.SetValue(4, 2, "Grapes");
+    worksheet.SetValue(5, 2, "Oranges");
 
     //Create an auto-filter in the first worksheet and specify the filter range
     worksheet.AutoFilters.FilterRange = worksheet.Range["A1:B5"];
@@ -171,18 +171,18 @@ Private Sub FilterData()
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
     'Add data into A1 and B1 cells as headers
-    worksheet(1, 1).Value = "Product ID"
-    worksheet(1, 2).Value = "Product Name"
+    worksheet.SetValue(1, 1, "Product ID")
+    worksheet.SetValue(1, 2, "Product Name")
 
     'Add data into cells
     worksheet(2, 1).Value2 = 1
     worksheet(3, 1).Value2 = 2
     worksheet(4, 1).Value2 = 3
     worksheet(5, 1).Value2 = 4
-    worksheet(2, 2).Value = "Apples"
-    worksheet(3, 2).Value = "Bananas"
-    worksheet(4, 2).Value = "Grapes"
-    worksheet(5, 2).Value = "Oranges"
+    worksheet.SetValue(2, 2, "Apples")
+    worksheet.SetValue(3, 2, "Bananas")
+    worksheet.SetValue(4, 2, "Grapes")
+    worksheet.SetValue(5, 2, "Oranges")
 
     'Create an auto-filter in the first worksheet and specify the filter range
     worksheet.AutoFilters.FilterRange = worksheet.Range("A1:B5")

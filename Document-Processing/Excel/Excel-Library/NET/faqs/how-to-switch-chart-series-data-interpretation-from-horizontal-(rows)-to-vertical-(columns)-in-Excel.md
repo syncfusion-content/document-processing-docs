@@ -1,5 +1,5 @@
 ---
-title: How to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel | Syncfusion 
+title: How to change chart series data interpretation in Excel | Syncfusion 
 description: Code example to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel using Syncfusion .NET Excel library (XlsIO). 
 platform: document-processing 
 control: XlsIO 

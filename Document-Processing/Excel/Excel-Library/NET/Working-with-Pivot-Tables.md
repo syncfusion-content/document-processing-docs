@@ -531,7 +531,7 @@ The following code example illustrates how to refresh the pivot table after upda
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Updating a new value in the pivot data
-	worksheet.Range["C2"].Value = "250";
+    worksheet.SetValue(2, 3, "250");
 
 	//Accessing the pivot table 
 	IPivotTable pivotTable = workbook.Worksheets[1].PivotTables[0];
@@ -561,7 +561,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Updating a new value in the pivot data
-  worksheet.Range["C2"].Value = "250";
+  worksheet.SetValue(2, 3, "250");
 
   //Accessing the pivot table 
   IPivotTable pivotTable = worksheet.PivotTables[0];
@@ -582,7 +582,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
   'Updating a new value in the pivot data
-  worksheet.Range("C2").Value = "250"
+  worksheet.SetValue(2, 3, "250")
 
   'Accessing the pivot table
   Dim pivotTable As IPivotTable = worksheet.PivotTables(0)

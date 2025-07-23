@@ -60,7 +60,9 @@ Step 4: Install the following **Nuget packages** in your application from [Nuget
 ![Install SkiaSharp.NativeAssets.Linux Nuget Package](GCP_Images/Install_Nuget_SkiaSharp.png)
 ![Install HarfBuzzSharp.NativeAssets.Linux Nuget Package](GCP_Images/Install_Nuget_HarfBuzzSharp.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
+
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Include the following namespaces in the **HomeController.cs** file.
 
@@ -261,11 +263,11 @@ gcloud app deploy --version v0
 {% endhighlight %}
 {% endtabs %}
 
-!["Add required files to publish folder](GCP_Images/Deploy_ExceltoPDF.png)
+![Add required files to publish folder](GCP_Images/Deploy_ExceltoPDF.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
 
-!["Add required files to publish folder](GCP_Images/Browse_ExceltoPDF.png)
+![Add required files to publish folder](GCP_Images/Browse_ExceltoPDF.png)
 
 A complete working example of how to convert an Excel document to PDF in GCP is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20Core/Convert%20Excel%20to%20PDF).
 

@@ -91,12 +91,10 @@ private void WrapText()
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Place some text in cell A1 without wrapping
-    IRange cellA1 = worksheet.Range["A1"];
-    cellA1.Value = "Sample Text Unwrapped";
+    worksheet.SetValue(1, 1, "Sample Text Unwrapped");
 
     //Place some text in cell A2 with wrapping
-    IRange cellA2 = worksheet.Range["A2"];
-    cellA2.Value = "Sample Text Wrapped";
+    worksheet.SetValue(2, 1, "Sample Text Wrapped");
     cellA2.WrapText = true;
 
     //Save the workbook
@@ -118,12 +116,10 @@ Private Sub WrapText()
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
     'Place some text in cell A1 without wrapping
-    Dim cellA1 As IRange = worksheet.Range("A1")
-    cellA1.Value = "Sample Text Unwrapped"
+    worksheet.SetValue(1, 1, "Sample Text Unwrapped")
 
     'Place some text in cell A2 with wrapping
-    Dim cellA2 As IRange = worksheet.Range("A2")
-    cellA2.Value = "Sample Text Wrapped"
+    worksheet.SetValue(2, 1, "Sample Text Wrapped")
     cellA2.WrapText = True
 
     'Save as Excel file
