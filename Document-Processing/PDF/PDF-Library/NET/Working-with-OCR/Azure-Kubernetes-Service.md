@@ -102,7 +102,92 @@ public ActionResult PerformOCR()
 
 {% endhighlight %}
 
+## Deploying an Application to Kubernetes
 
+### Overview
+This guide provides step-by-step instructions to deploy an application using Docker and Kubernetes. We'll tag a Docker image, push it to a repository, and apply Kubernetes configurations.
+
+### Prerequisites
+* Docker installed on your system
+* Access to a Kubernetes cluster
+* Kubernetes CLI (kubectl) installed
+
+### Detailed Explanation of Docker Image Tagging
+Step 1: Tag the Docker image
+
+Tagging a Docker image is an essential step in Docker container management. It allows you to create an alias for a Docker image, making it easier to identify and manage. Tags are often used to denote different versions or environments (e.g., development, staging, production).
+
+1.Open your terminal. Ensure Docker is running on your system.
+
+2.Run the tag command. Use the following syntax to tag your Docker image:
+
+{% highlight c# tabtitle="C#" %}
+
+    docker tag <source-image> <repository>:<tag>
+
+{% endhighlight %}
+
+![Tag commends in docker file](OCR-Images/Tag-docker-image.png) 
+
+Step 2: Push the Docker Image
+
+Pushing uploads your tagged image to a Docker repository, making it accessible for deployment.
+
+{% highlight c# tabtitle="C#" %}
+
+docker push <source-image> <repository>:<tag>
+
+{% endhighlight %}
+
+![Push commends in docker file](OCR-Images/Push-docker-aks.png) 
+
+Step 3: Apply the deployment configuration
+
+This step creates or updates your application's deployment configuration in your Kubernetes cluster.
+
+{% highlight c# tabtitle="C#" %}
+
+kubectl apply -f deployment.yaml
+
+{% endhighlight %}
+
+![Deploy commends in docker file](OCR-Images/Deploy-docker-aks.png) 
+
+Step 4: Apply the service configuration
+
+Creating a service configuration exposes your application to the network, allowing external access.
+
+{% highlight c# tabtitle="C#" %}
+
+kubectl apply -f service.yaml
+
+{% endhighlight %}
+
+![Apply commends in docker file](OCR-Images/Apply-docker-aks.png) 
+
+Step 5: Viewing service details
+
+Using **kubectl get service** allows you to check the services running in your Kubernetes cluster, ensuring they are correctly configured and accessible. You can copy the external IP and paste it into a browser like Chrome to view your application's output.
+
+{% highlight c# tabtitle="C#" %}
+
+kubectl get service
+
+{% endhighlight %}
+
+![Service commends in docker file](OCR-Images/Service-docker-aks.png) 
+
+ Now be able to use this to browse the the web app running on AKS.
+
+ ![Button click in docker file](OCR-Images/Button-docker-aks.png) 
+
+ Click create PDF document to create a PDF document.You will get the output PDF document as follows.
+
+ ![Output in docker file](OCR-Images/ocr-output-image.png) 
+
+ You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Docker).
+
+ Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion® PDF library features.
 
 
 
