@@ -1039,7 +1039,178 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-tags-to-table-in-the-PDF-document).
 
-## Adding tags to nested list elements
+## Adding tag to List Element
+
+You can add the tags to list element in PDF document by specifying the tag type as ```List``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum available in the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class. 
+
+The following code example illustrates how to add tag support for list element.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document/.NET/Add-the-tag-to-list-element-in-PDF-document/Program.cs" %} 	
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Sets document title
+document.DocumentInformation.Title = "List";
+//Add a new page to the document
+PdfPage page = document.Pages.Add();
+
+PdfGraphics graphics = page.Graphics;
+SizeF size = page.Graphics.ClientSize;
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+//Draw the text 
+graphics.DrawString("List:", font, PdfBrushes.Blue, new PointF(10, 0));
+
+string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
+//Create string format
+PdfStringFormat format = new PdfStringFormat();
+format.LineSpacing = 10f;
+
+//Initialize new structure element with tag type List.
+PdfStructureElement listElement = new PdfStructureElement(PdfTagType.List);
+
+//Create ordered list
+PdfOrderedList pdfList = new PdfOrderedList();
+//Adding tag for list element
+pdfList.PdfTag = listElement;
+pdfList.Marker.Brush = PdfBrushes.Black;
+pdfList.Indent = 20;
+//Set format for sub list
+pdfList.Font = font;
+pdfList.StringFormat = format;
+
+for (int i = 0; i < products.Length; i++)
+{
+    pdfList.Items.Add(string.Concat("Essential ", products[i]));
+    //Adding tag for the list item
+    pdfList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
+}
+
+//Draw the list
+pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));
+
+//Save the document into stream
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+stream.Position = 0;
+//Closes the document
+document.Close(true);
+//Defining the content type for PDF file
+string contentType = "application/pdf";
+//Define the file name
+string fileName = "Output.pdf";
+//Creates a FileContentResult object by using the file contents, content type, and file name
+return File(stream, contentType, fileName);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document
+PdfDocument document = new PdfDocument();
+//Sets document title
+document.DocumentInformation.Title = "List";
+//Add a new page to the document
+PdfPage page = document.Pages.Add();
+
+PdfGraphics graphics = page.Graphics;
+SizeF size = page.Graphics.ClientSize;
+// Load the TrueType font from the local *.ttf file.
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+//Draw the text
+graphics.DrawString("List:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new Point(10, 0));
+
+string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
+//Create string format
+PdfStringFormat format = new PdfStringFormat();
+format.LineSpacing = 10f;
+
+//Initialize new structure element with tag type List.
+PdfStructureElement listElement = new PdfStructureElement(PdfTagType.List);
+
+//Create ordered list
+PdfOrderedList pdfList = new PdfOrderedList();
+//Adding tag for list element
+pdfList.PdfTag = listElement;
+pdfList.Marker.Brush = PdfBrushes.Black;
+pdfList.Indent = 20;
+//Set format for sub list
+pdfList.Font = font;
+pdfList.StringFormat = format;
+for (int i = 0; i < products.Length; i++)
+{
+    pdfList.Items.Add(string.Concat("Essential ", products[i]));
+    //Adding tag for the list item
+    pdfList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
+}
+//Draw the list
+pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));
+
+//Save and close the document
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new PDF document
+Dim document As PdfDocument = New PdfDocument()
+'Sets document title
+document.DocumentInformation.Title = "List"
+'Add a new page to the document
+Dim page As PdfPage = document.Pages.Add()
+
+Dim graphics As PdfGraphics = page.Graphics
+Dim size As SizeF = page.Graphics.ClientSize
+' Load the TrueType font from the local *.ttf file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
+'Draw the text 
+graphics.DrawString("List:",  New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New Point(10, 0))
+
+Dim products() As String = {"Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO"}
+'Create string format
+Dim format As PdfStringFormat = New PdfStringFormat()
+format.LineSpacing = 10.0F
+
+'Initialize new structure element with tag type list
+Dim listElement As PdfStructureElement = New PdfStructureElement(PdfTagType.List)
+
+'Create ordered list
+Dim pdfList As PdfOrderedList = New PdfOrderedList()
+'Adding tag for list element
+pdfList.PdfTag = listElement
+pdfList.Marker.Brush = PdfBrushes.Black
+pdfList.Indent = 20
+'Set format for sub list
+pdfList.Font = font
+pdfList.StringFormat = format
+
+For i As Integer = 0 To products.Length - 1
+    pdfList.Items.Add(String.Concat("Essential ", products(i)))
+    'Adding tag for the list item
+    pdfList.Items(i).PdfTag = New PdfStructureElement(PdfTagType.ListItem)
+Next
+
+'Draw the list
+pdfList.Draw(page, New RectangleF(0, 20, size.Width, size.Height))
+
+'Save and close the document
+document.Save("Output.pdf")
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document).
+
+### Adding tags to nested list elements
 
 You can apply tags to nested list elements using the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class, which helps define the structural hierarchy and semantic roles of both main and sublist items. This ensures better document accessibility and logical organization. Refer to the code example below for implementation details.
 
@@ -1281,177 +1452,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from GitHub.
-
-## Adding tag to List Element
-
-You can add the tags to list element in PDF document by specifying the tag type as ```List``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum available in the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class. 
-
-The following code example illustrates how to add tag support for list element.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document/.NET/Add-the-tag-to-list-element-in-PDF-document/Program.cs" %} 	
-
-//Create a new PDF document
-PdfDocument document = new PdfDocument();
-//Sets document title
-document.DocumentInformation.Title = "List";
-//Add a new page to the document
-PdfPage page = document.Pages.Add();
-
-PdfGraphics graphics = page.Graphics;
-SizeF size = page.Graphics.ClientSize;
-// Load the TrueType font from the local *.ttf file.
-FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontStream, 14);
-//Draw the text 
-graphics.DrawString("List:", font, PdfBrushes.Blue, new PointF(10, 0));
-
-string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
-//Create string format
-PdfStringFormat format = new PdfStringFormat();
-format.LineSpacing = 10f;
-
-//Initialize new structure element with tag type List.
-PdfStructureElement listElement = new PdfStructureElement(PdfTagType.List);
-
-//Create ordered list
-PdfOrderedList pdfList = new PdfOrderedList();
-//Adding tag for list element
-pdfList.PdfTag = listElement;
-pdfList.Marker.Brush = PdfBrushes.Black;
-pdfList.Indent = 20;
-//Set format for sub list
-pdfList.Font = font;
-pdfList.StringFormat = format;
-
-for (int i = 0; i < products.Length; i++)
-{
-    pdfList.Items.Add(string.Concat("Essential ", products[i]));
-    //Adding tag for the list item
-    pdfList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
-}
-
-//Draw the list
-pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));
-
-//Save the document into stream
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-stream.Position = 0;
-//Closes the document
-document.Close(true);
-//Defining the content type for PDF file
-string contentType = "application/pdf";
-//Define the file name
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name
-return File(stream, contentType, fileName);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-//Create a new PDF document
-PdfDocument document = new PdfDocument();
-//Sets document title
-document.DocumentInformation.Title = "List";
-//Add a new page to the document
-PdfPage page = document.Pages.Add();
-
-PdfGraphics graphics = page.Graphics;
-SizeF size = page.Graphics.ClientSize;
-// Load the TrueType font from the local *.ttf file.
-FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
-PdfFont font = new PdfTrueTypeFont(fontStream, 14);
-//Draw the text
-graphics.DrawString("List:", new PdfTrueTypeFont(new Font("Arial", 14), true), PdfBrushes.Blue, new Point(10, 0));
-
-string[] products = { "Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO" };
-//Create string format
-PdfStringFormat format = new PdfStringFormat();
-format.LineSpacing = 10f;
-
-//Initialize new structure element with tag type List.
-PdfStructureElement listElement = new PdfStructureElement(PdfTagType.List);
-
-//Create ordered list
-PdfOrderedList pdfList = new PdfOrderedList();
-//Adding tag for list element
-pdfList.PdfTag = listElement;
-pdfList.Marker.Brush = PdfBrushes.Black;
-pdfList.Indent = 20;
-//Set format for sub list
-pdfList.Font = font;
-pdfList.StringFormat = format;
-for (int i = 0; i < products.Length; i++)
-{
-    pdfList.Items.Add(string.Concat("Essential ", products[i]));
-    //Adding tag for the list item
-    pdfList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
-}
-//Draw the list
-pdfList.Draw(page, new RectangleF(0, 20, size.Width, size.Height));
-
-//Save and close the document
-document.Save("Output.pdf");
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Create a new PDF document
-Dim document As PdfDocument = New PdfDocument()
-'Sets document title
-document.DocumentInformation.Title = "List"
-'Add a new page to the document
-Dim page As PdfPage = document.Pages.Add()
-
-Dim graphics As PdfGraphics = page.Graphics
-Dim size As SizeF = page.Graphics.ClientSize
-' Load the TrueType font from the local *.ttf file
-Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
-Dim font As New PdfTrueTypeFont(fontStream, 14)
-'Draw the text 
-graphics.DrawString("List:",  New PdfTrueTypeFont(new Font("Arial", 14), True), PdfBrushes.Blue, New Point(10, 0))
-
-Dim products() As String = {"Tools", "Grid", "Chart", "Edit", "Diagram", "XlsIO", "Grouping", "Calculate", "PDF", "HTMLUI", "DocIO"}
-'Create string format
-Dim format As PdfStringFormat = New PdfStringFormat()
-format.LineSpacing = 10.0F
-
-'Initialize new structure element with tag type list
-Dim listElement As PdfStructureElement = New PdfStructureElement(PdfTagType.List)
-
-'Create ordered list
-Dim pdfList As PdfOrderedList = New PdfOrderedList()
-'Adding tag for list element
-pdfList.PdfTag = listElement
-pdfList.Marker.Brush = PdfBrushes.Black
-pdfList.Indent = 20
-'Set format for sub list
-pdfList.Font = font
-pdfList.StringFormat = format
-
-For i As Integer = 0 To products.Length - 1
-    pdfList.Items.Add(String.Concat("Essential ", products(i)))
-    'Adding tag for the list item
-    pdfList.Items(i).PdfTag = New PdfStructureElement(PdfTagType.ListItem)
-Next
-
-'Draw the list
-pdfList.Draw(page, New RectangleF(0, 20, size.Width, size.Height))
-
-'Save and close the document
-document.Save("Output.pdf")
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-the-tag-to-list-element-in-PDF-document).
 
 ## Well-Tagged PDF (WTPDF)
 
