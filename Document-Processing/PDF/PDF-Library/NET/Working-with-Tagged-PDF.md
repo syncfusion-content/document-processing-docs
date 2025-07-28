@@ -1039,6 +1039,249 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-tags-to-table-in-the-PDF-document).
 
+## Tagged nested ordered lists
+
+This code demonstrates how to create a PDF document with ordered lists, including tags for accessibility. The tagging is implemented using [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) classes to define the structure and semantic roles of both the main list and the nested sublist items.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %} 
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+
+// Set the document title
+document.DocumentInformation.Title = "Nested List";
+
+// Add a new page to the PDF
+PdfPage page = document.Pages.Add();
+PdfGraphics graphics = page.Graphics;
+SizeF size = page.Graphics.ClientSize;
+
+//Get stream from the font file. 
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+
+// Draw the title on the PDF
+graphics.DrawString("Nested Ordered List:", font, PdfBrushes.Blue, new PointF(10, 0));
+
+// Create a string format for line spacing of list items
+PdfStringFormat format = new PdfStringFormat();
+format.LineSpacing = 10f;
+
+// Create the main list structure element with a List tag for accessibility
+PdfStructureElement mainListElement = new PdfStructureElement(PdfTagType.List);
+
+// Initialize the main ordered list
+PdfOrderedList mainList = new PdfOrderedList
+{
+    PdfTag = mainListElement,
+    Marker = { Brush = PdfBrushes.Black },
+    Indent = 20,
+    Font = font,
+    StringFormat = format
+};
+
+// Add items to the main list and tag each item for accessibility
+string[] mainItems = { "Essential Tools", "Essential PDF", "Essential XlsIO" };
+for (int i = 0; i < mainItems.Length; i++)
+{
+    mainList.Items.Add(mainItems[i]);
+    mainList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
+}
+
+// Create a sublist with accessibility tags
+PdfStructureElement subListElement = new PdfStructureElement(PdfTagType.List);
+PdfOrderedList subList = new PdfOrderedList
+{
+    PdfTag = subListElement,
+    Marker = { Brush = PdfBrushes.Black },
+    Indent = 20,
+    Font = font,
+    StringFormat = format
+};
+
+// Add items to the sublist and tag each item for accessibility
+string[] subItems = { "Create PDF", "Modify PDF", "Secure PDF", "Compress PDF" };
+for (int i = 0; i < subItems.Length; i++)
+{
+    subList.Items.Add(subItems[i]);
+    subList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
+}
+// Nest the sublist under the second item of the main list
+mainList.Items[1].SubList = subList;
+
+// Draw the main list, which includes the nested sublist, on the PDF
+mainList.Draw(page, new RectangleF(0, 30, size.Width, size.Height));
+
+//Create file stream.
+using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+{
+    //Save the PDF document to file stream.
+    document.Save(outputFileStream);
+}
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Create a new PDF document
+PdfDocument document = new PdfDocument();
+
+// Set the document title
+document.DocumentInformation.Title = "Nested List";
+
+// Add a new page to the PDF
+PdfPage page = document.Pages.Add();
+PdfGraphics graphics = page.Graphics;
+SizeF size = page.Graphics.ClientSize;
+
+//Get stream from the font file. 
+FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Read);
+PdfFont font = new PdfTrueTypeFont(fontStream, 14);
+
+// Draw the title on the PDF
+graphics.DrawString("Nested Ordered List:", font, PdfBrushes.Blue, new PointF(10, 0));
+
+// Create a string format for line spacing of list items
+PdfStringFormat format = new PdfStringFormat();
+format.LineSpacing = 10f;
+
+// Create the main list structure element with a List tag for accessibility
+PdfStructureElement mainListElement = new PdfStructureElement(PdfTagType.List);
+
+// Initialize the main ordered list
+PdfOrderedList mainList = new PdfOrderedList
+{
+    PdfTag = mainListElement,
+    Marker = { Brush = PdfBrushes.Black },
+    Indent = 20,
+    Font = font,
+    StringFormat = format
+};
+
+// Add items to the main list and tag each item for accessibility
+string[] mainItems = { "Essential Tools", "Essential PDF", "Essential XlsIO" };
+for (int i = 0; i < mainItems.Length; i++)
+{
+    mainList.Items.Add(mainItems[i]);
+    mainList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
+}
+
+// Create a sublist with accessibility tags
+PdfStructureElement subListElement = new PdfStructureElement(PdfTagType.List);
+PdfOrderedList subList = new PdfOrderedList
+{
+    PdfTag = subListElement,
+    Marker = { Brush = PdfBrushes.Black },
+    Indent = 20,
+    Font = font,
+    StringFormat = format
+};
+
+// Add items to the sublist and tag each item for accessibility
+string[] subItems = { "Create PDF", "Modify PDF", "Secure PDF", "Compress PDF" };
+for (int i = 0; i < subItems.Length; i++)
+{
+    subList.Items.Add(subItems[i]);
+    subList.Items[i].PdfTag = new PdfStructureElement(PdfTagType.ListItem);
+}
+// Nest the sublist under the second item of the main list
+mainList.Items[1].SubList = subList;
+
+// Draw the main list, which includes the nested sublist, on the PDF
+mainList.Draw(page, new RectangleF(0, 30, size.Width, size.Height));
+
+//Save the PDF document
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create a new PDF document
+Dim document As New PdfDocument()
+
+' Set the document title
+document.DocumentInformation.Title = "Nested List"
+
+' Add a new page to the PDF
+Dim page As PdfPage = document.Pages.Add()
+Dim graphics As PdfGraphics = page.Graphics
+Dim size As SizeF = graphics.ClientSize
+
+' Get stream from the font file
+Dim fontStream As New FileStream("Arial.ttf", FileMode.Open, FileAccess.Read)
+Dim font As New PdfTrueTypeFont(fontStream, 14)
+
+' Draw the title on the PDF
+graphics.DrawString("Nested Ordered List:", font, PdfBrushes.Blue, New PointF(10, 0))
+
+' Create a string format for line spacing of list items
+Dim format As New PdfStringFormat()
+format.LineSpacing = 10.0F
+
+' Create the main list structure element with a List tag for accessibility
+Dim mainListElement As New PdfStructureElement(PdfTagType.List)
+
+' Initialize the main ordered list
+Dim mainList As New PdfOrderedList() With {
+    .PdfTag = mainListElement,
+    .Marker = New PdfOrderedMarkers() With {.Brush = PdfBrushes.Black},
+    .Indent = 20,
+    .Font = font,
+    .StringFormat = format
+}
+
+' Add items to the main list and tag each item for accessibility
+Dim mainItems As String() = {"Essential Tools", "Essential PDF", "Essential XlsIO"}
+For Each item As String In mainItems
+    Dim listItem As New PdfListItem(item) With {
+        .PdfTag = New PdfStructureElement(PdfTagType.ListItem)
+    }
+    mainList.Items.Add(listItem)
+Next
+
+' Create a sublist with accessibility tags
+Dim subListElement As New PdfStructureElement(PdfTagType.List)
+Dim subList As New PdfOrderedList() With {
+    .PdfTag = subListElement,
+    .Marker = New PdfOrderedMarkers() With {.Brush = PdfBrushes.Black},
+    .Indent = 20,
+    .Font = font,
+    .StringFormat = format
+}
+
+' Add items to the sublist and tag each item for accessibility
+Dim subItems As String() = {"Create PDF", "Modify PDF", "Secure PDF", "Compress PDF"}
+For Each item As String In subItems
+    Dim listItem As New PdfListItem(item) With {
+        .PdfTag = New PdfStructureElement(PdfTagType.ListItem)
+    }
+    subList.Items.Add(listItem)
+Next
+
+' Nest the sublist under the second item of the main list
+mainList.Items(1).SubList = subList
+
+' Draw the main list, which includes the nested sublist, on the PDF
+mainList.Draw(page, New RectangleF(0, 30, size.Width, size.Height))
+
+' Save the PDF document
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Adding tag to List Element
 
 You can add the tags to list element in PDF document by specifying the tag type as ```List``` of [PdfTagType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfTagType.html) Enum available in the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class. 
