@@ -39,57 +39,84 @@ Step 5: Include the following namespaces in Function1.cs file.
 
 {% endhighlight %}
 
-Step 6: Add the following code example in the Function1 class to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. 
+Step 6: This Azure Function converts HTML to PDF using HTTP triggers. It handles GET/POST requests, processes the HTML, and returns a PDF response.
 
 {% highlight c# tabtitle="C#" %}
 
     [Function("Function1")]
     public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, FunctionContext executionContext)
     {
-        string blinkBinariesPath = string.Empty;
-        //Create a new PDF document.
-        PdfDocument document;
-        BlinkConverterSettings settings = new BlinkConverterSettings();
-        //Creating the stream object.
-        MemoryStream stream;
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
         try
         {
-            blinkBinariesPath = SetupBlinkBinaries();              
-                
-            //Initialize the HTML to PDF converter with the Blink rendering engine.
-            HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Blink);
-
-            settings.BlinkPath = blinkBinariesPath;
-            //Assign BlinkConverter settings to the HTML converter 
-            htmlConverter.ConverterSettings = settings;
-            //Convert URL to PDF
-            document = htmlConverter.Convert("http://www.syncfusion.com");
-            stream = new MemoryStream();
-            //Save and close the PDF document  
-            document.Save(stream);
+            byte[] pdfBytes = HtmlToPdfConvert("<p>Hello world</p>");
+            return new FileStreamResult(new MemoryStream(pdfBytes), "application/pdf");
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
-            //Create a new PDF document.
-            document = new PdfDocument();
-            //Add a page to the document.
-            PdfPage page = document.Pages.Add();
-            //Create PDF graphics for the page.
-            PdfGraphics graphics = page.Graphics;
+            _logger.LogError(ex.Message.ToString(), "An error occurred while converting HTML to PDF.");
+            return new ContentResult
+            {
+                Content = $"Error: {ex.Message}",
+                ContentType = "text/plain",
+                StatusCode = StatusCodes.Status500InternalServerError
+            };
 
-            //Set the standard font.
-            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 8);
-            //Draw the text.
-            graphics.DrawString(ex.Message.ToString(), font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(0, 0));
-              
-            stream = new MemoryStream();
-            //Save the document into memory stream.
-            document.Save(stream);
         }
-        document.Close();
-        stream.Position = 0;
-        return new FileStreamResult(stream, "application/pdf");
     }
+
+{% endhighlight %}
+
+step 7: Use the following code example in the HtmlToPdfConvert method to convert HTML to a PDF document using the [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments are configured based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
+
+{% highlight c# tabtitle="C#" %}
+
+public byte[] HtmlToPdfConvert(string htmlText)
+{
+    if (string.IsNullOrWhiteSpace(htmlText))
+    {
+        throw new ArgumentException("HTML text cannot be null or empty.", nameof(htmlText));
+    }
+    try
+    {
+        // Setup Blink binaries and install necessary packages
+        var blinkBinariesPath = SetupBlinkBinaries();
+        InstallLinuxPackages();
+
+        // Initialize HTML to PDF converter
+        HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.Blink);
+
+        // Display settings
+        BlinkConverterSettings settings = new BlinkConverterSettings
+        {
+            BlinkPath = blinkBinariesPath,
+            ViewPortSize = new Syncfusion.Drawing.Size(1024, 768), // Set your desired viewport size
+            Margin = new PdfMargins
+            {
+                Top = 20, // Set your desired margins
+                Left = 20,
+                Right = 20,
+                Bottom = 20
+            }
+        };
+        htmlConverter.ConverterSettings = settings;
+
+        // Convert HTML to PDF
+        using (var memoryStream = new MemoryStream())
+        {
+            PdfDocument document = htmlConverter.Convert(htmlText, null);
+            document.Save(memoryStream);
+            document.Close(true);
+            return memoryStream.ToArray();
+        }
+    }
+    catch (Exception ex)
+    {
+        // Handle exceptions
+        Console.WriteLine("An error occurred: " + ex.Message);
+        throw;
+    }
+}
 
 {% endhighlight %}
 
@@ -100,61 +127,137 @@ N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
 N> ```
 N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
 
-Step 7: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
+Step 8: This code is designed to ensure that the necessary Linux packages for HTML to PDF conversion are installed if the operating system is Linux. It adjusts file permissions and executes a shell script to carry out the installation.
 
 {% highlight c# tabtitle="C#" %}
 
-    private static string SetupBlinkBinaries( )
+// This method checks if the current operating system is Linux and installs necessary package 
+// dependencies for HTML to PDF conversion if they are not already installed.
+private static void InstallLinuxPackages()
+{
+    // Check if the OS is Linux; return immediately if not.
+    if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
     {
-        var fileInfo = new FileInfo(Assembly.GetExecutingAssembly().Location);
-        string path = fileInfo.Directory.Parent.FullName;
-        string blinkAppDir = Path.Combine(path, @"wwwroot");
-        string tempBlinkDir = Path.GetTempPath();
-        string chromePath = Path.Combine(tempBlinkDir, "chrome");
-        if (!File.Exists(chromePath))
-        {
-            CopyFilesRecursively(blinkAppDir, tempBlinkDir);
-            SetExecutablePermission(tempBlinkDir);
-        }
-        return tempBlinkDir;
+        return;
     }
-    private static void CopyFilesRecursively(string sourcePath, string targetPath)
+
+    // Define file permissions needed for the executable files.
+    FileAccessPermissions ExecutableFilePermissions =
+        FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
+        FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead |
+        FileAccessPermissions.OtherExecute;
+
+    // Get the directory where the assembly is located.
+    string assemblyDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+    // Path for the shell script file that installs dependencies.
+    string shellFilePath = Path.Combine(assemblyDirectory);
+    string tempBlinkDir = Path.GetTempPath();
+    string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+
+    // Check if the dependencies script does not already exist.
+    if (!File.Exists(dependenciesPath))
     {
-        //Create all the directories from the source to the destination path.
-        foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+        // Copy necessary files to a temporary directory.
+        CopyFilesRecursively(shellFilePath, tempBlinkDir);
+
+        // Get the path for the executable script.
+        var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+
+        // If the script exists, update its permissions to make it executable.
+        if (File.Exists(execPath))
         {
-            Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
-        }
-        //Copy all the files from the source path to the destination path.
-        foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
-        {
-            File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
-        }
-    }
-    [DllImport("libc", SetLastError = true, EntryPoint = "chmod")]
-    internal static extern int Chmod(string path, FileAccessPermissions mode);
-    private static void SetExecutablePermission(string tempBlinkDir)
-    {
-        FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
-        FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
-        string[] executableFiles = new string[] { "chrome", "chrome_sandbox" };
-        foreach (string executable in executableFiles)
-        {
-            var execPath = Path.Combine(tempBlinkDir, executable);
-            if (File.Exists(execPath))
+            var code = Chmod(execPath, ExecutableFilePermissions);
+            if (code != 0)
             {
-                var code = Function1.Chmod(execPath, ExecutableFilePermissions);
-                if (code != 0)
-                {
-                    throw new Exception("Chmod operation failed");
-                }
+                throw new Exception("Chmod operation failed");
             }
         }
+
+        // Start a new process to run the shell script.
+        Process process = new Process
+        {
+            StartInfo = new ProcessStartInfo
+            {
+                FileName = "/bin/bash",
+                Arguments = "-c " + execPath,
+                CreateNoWindow = true,
+                UseShellExecute = false,
+            }
+        };
+
+        // Execute the process and wait for it to finish.
+        process.Start();
+        process.WaitForExit();
     }
+}
 
 {% endhighlight %}
 
-Step 8: Include the below enum in the Function1.cs file. 
+
+Step 9: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
+
+{% highlight c# tabtitle="C#" %}
+
+private static string SetupBlinkBinaries()
+{
+    string assemblyDirectory = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "runtimes", "linux", "native");
+    string blinkAppDir = Path.Combine(assemblyDirectory);
+    string tempBlinkDir = Path.GetTempPath();
+    string chromePath = Path.Combine(tempBlinkDir, "chrome");
+
+    if (!File.Exists(chromePath))
+    {
+        CopyFilesRecursively(blinkAppDir, tempBlinkDir);
+        SetExecutablePermission(tempBlinkDir);
+    }
+    return tempBlinkDir;
+}
+
+private static void CopyFilesRecursively(string sourcePath, string targetPath)
+{
+    // Create all the directories from the source to the destination path.
+    foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+    {
+        Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+    }
+
+    // Copy all the files from the source path to the destination path.
+    foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
+    {
+        File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+    }
+}
+
+[DllImport("libc", SetLastError = true, EntryPoint = "chmod")]
+internal static extern int Chmod(string path, FileAccessPermissions mode);
+
+private static void SetExecutablePermission(string tempBlinkDir)
+{
+    FileAccessPermissions ExecutableFilePermissions =
+        FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
+        FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead |
+        FileAccessPermissions.OtherExecute;
+        
+    string[] executableFiles = new string[] { "chrome", "chrome_sandbox" };
+
+    foreach (string executable in executableFiles)
+    {
+        var execPath = Path.Combine(tempBlinkDir, executable);
+         if (File.Exists(execPath))
+        {
+            var code = Chmod(execPath, ExecutableFilePermissions);
+            if (code != 0)
+            {
+                throw new Exception("Chmod operation failed");
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+Step 10: Include the below enum in the Function1.cs file. 
 
 {% highlight c# tabtitle="C#" %}
 
