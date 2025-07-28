@@ -1039,9 +1039,9 @@ pdfDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Tagged%20PDF/Add-tags-to-table-in-the-PDF-document).
 
-## Tagged nested ordered lists
+## Adding tags to nested list elements
 
-This code demonstrates how to create a PDF document with ordered lists, including tags for accessibility. The tagging is implemented using [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) classes to define the structure and semantic roles of both the main list and the nested sublist items.
+You can apply tags to nested list elements using the [PdfStructureElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfStructureElement.html) class, which helps define the structural hierarchy and semantic roles of both main and sublist items. This ensures better document accessibility and logical organization. Refer to the code example below for implementation details.
 
 {% tabs %}
 
