@@ -3236,6 +3236,127 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Modifying-fore-and-backcolor-of-existing-form-fields).
 
+## Customize indicator colors in PDF checkboxes and radio buttons
+
+You can customize the color of the check mark in checkbox fields and the dot in radio button fields within a PDF document by setting the [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_ForeColor) property. This allows you to improve the appearance and maintain the visual consistency of your PDF forms.
+
+The following code example demonstrates how to modify these indicator colors programmatically.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Open the input PDF file stream.
+using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Load the PDF document from the input stream.
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
+
+    // Access the existing form fields in the PDF.
+    PdfLoadedForm form = loadedDocument.Form;
+
+    // Iterate through all form fields to find checkboxes and radio button lists.
+    foreach (PdfLoadedField field in form.Fields)
+    {
+        // If the field is a checkbox, change its check mark color using ForeColor.
+        if (field is PdfLoadedCheckBoxField checkBoxField)
+        {
+            checkBoxField.ForeColor = Color.Red; // Set desired checkbox color.
+        }
+        // If the field is a radio button list, change each item's dot color.
+        else if (field is PdfLoadedRadioButtonListField radioButtonField)
+        {
+            foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
+            {
+                item.ForeColor = Color.Blue; // Set desired radio button color.
+            }
+        }
+    }
+    // Disable the default appearance to allow custom rendering of form fields.
+    form.SetDefaultAppearance(false);
+    // Create the output file stream.
+    using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+    {
+        // Save the modified PDF document to the new file stream.
+        loadedDocument.Save(outputFileStream);
+    }
+    // Close the PDF document.
+    loadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document from the input PDF file.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Access the form fields in the loaded PDF document.
+PdfLoadedForm form = loadedDocument.Form;
+
+// Loop through all fields in the form to find checkboxes and radio buttons.
+foreach (PdfLoadedField field in form.Fields)
+{
+    // If the field is a checkbox, set the checkmark color using the ForeColor property.
+    if (field is PdfLoadedCheckBoxField checkBoxField)
+    {
+        checkBoxField.ForeColor = Color.Red; // Set checkbox checkmark to red
+    }
+    // If the field is a radio button list, set the dot color for each radio button item.
+    else if (field is PdfLoadedRadioButtonListField radioButtonField)
+    {
+        foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
+        {
+            item.ForeColor = Color.Blue; // Set radio button dot to blue
+        }
+    }
+}
+// Disable the default appearance to allow custom rendering of form fields.
+form.SetDefaultAppearance(false);
+// Save the updated PDF document to a new file.
+loadedDocument.Save("Output.pdf");
+
+// Close the PDF document and release resources.
+loadedDocument.Close(true);
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document from the input PDF file.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Access the form fields in the loaded PDF document.
+Dim form As PdfLoadedForm = loadedDocument.Form
+
+' Loop through all fields in the form to find checkboxes and radio buttons.
+For Each field As PdfLoadedField In form.Fields
+    ' If the field is a checkbox, set the checkmark color using the ForeColor property.
+    If TypeOf field Is PdfLoadedCheckBoxField Then
+        Dim checkBoxField As PdfLoadedCheckBoxField = CType(field, PdfLoadedCheckBoxField)
+        checkBoxField.ForeColor = Color.Red ' Set checkbox checkmark to red
+    ' If the field is a radio button list, set the dot color for each radio button item.
+    ElseIf TypeOf field Is PdfLoadedRadioButtonListField Then
+        Dim radioButtonField As PdfLoadedRadioButtonListField = CType(field, PdfLoadedRadioButtonListField)
+        For Each item As PdfLoadedRadioButtonItem In radioButtonField.Items
+            item.ForeColor = Color.Blue ' Set radio button dot to blue
+        Next
+    End If
+Next
+' Disable the default appearance to allow custom rendering of form fields.
+form.SetDefaultAppearance(False)
+' Save the updated PDF document to a new file.
+loadedDocument.Save("Output.pdf")
+
+' Close the PDF document and release resources.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from GitHub.
+
 ## Retrieving the widget annotation in PDF document
 
 You can retrieve an existing widget annotation in a PDF document by using the [PdfLoadedWidgetAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedWidgetAnnotation.html) class.
