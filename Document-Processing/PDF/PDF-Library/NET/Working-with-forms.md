@@ -3238,7 +3238,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Customize indicator colors in PDF checkboxes and radio buttons
 
-You can customize the color of the checkmark in checkbox fields and the dot in radio button fields within a PDF document by setting the [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_ForeColor) property. This allows you to improve the appearance and maintain the visual consistency of your PDF forms.
+You can customize the color of the check mark in checkbox fields and the dot in radio button fields within a PDF document by setting the [ForeColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedTextBoxField.html#Syncfusion_Pdf_Parsing_PdfLoadedTextBoxField_ForeColor) property. This allows you to improve the appearance and maintain the visual consistency of your PDF forms.
 
 The following code example demonstrates how to modify these indicator colors programmatically.
 
@@ -3258,7 +3258,7 @@ using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAc
     // Iterate through all form fields to find checkboxes and radio button lists.
     foreach (PdfLoadedField field in form.Fields)
     {
-        // If the field is a checkbox, change its checkmark color using ForeColor.
+        // If the field is a checkbox, change its check mark color using ForeColor.
         if (field is PdfLoadedCheckBoxField checkBoxField)
         {
             checkBoxField.ForeColor = Color.Red; // Set desired checkbox color.
