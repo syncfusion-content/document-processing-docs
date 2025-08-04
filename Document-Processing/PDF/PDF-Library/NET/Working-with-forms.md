@@ -3272,6 +3272,8 @@ using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAc
             }
         }
     }
+    // Disable the default appearance to allow custom rendering of form fields.
+    form.SetDefaultAppearance(false);
     // Create the output file stream.
     using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
     {
@@ -3309,7 +3311,8 @@ foreach (PdfLoadedField field in form.Fields)
         }
     }
 }
-
+// Disable the default appearance to allow custom rendering of form fields.
+form.SetDefaultAppearance(false);
 // Save the updated PDF document to a new file.
 loadedDocument.Save("Output.pdf");
 
@@ -3340,7 +3343,8 @@ For Each field As PdfLoadedField In form.Fields
         Next
     End If
 Next
-
+' Disable the default appearance to allow custom rendering of form fields.
+form.SetDefaultAppearance(False)
 ' Save the updated PDF document to a new file.
 loadedDocument.Save("Output.pdf")
 
