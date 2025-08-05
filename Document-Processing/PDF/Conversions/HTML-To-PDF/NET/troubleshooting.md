@@ -82,6 +82,70 @@ document.Close(true);
 </tr>
 </table>
 
+## Application Crash in Syncfusion 29.X.X Due to Missing `locales` Folder Required by Chromium During HTML Rendering or Conversion
+
+<table>
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Application crashes in Syncfusion libraries version 29.2.11 because Chromium fails to find the required `locales` folder in the published output directory, leading to runtime errors when launching HTML rendering or conversion.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>Starting with Syncfusion package version 29.X.X, Chromium was updated to 133.x.x, which now requires the `locales` directory to be present at runtime. However, when publishing a .NET application with the `linux-x64` runtime identifier, only files are copied to the root output folder and the folder structure—including 'locales'—is omitted. As a result, Chromium cannot locate the required 'locales' directory, triggering a runtime exception during HTML rendering or conversion.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>
+To overcome this issue, we have three workaround solutions.
+<br/>
+Step 1: Using the "Portable" <b>Runtime Identifier</b> ensures that the runtime files are copied into the correct folder structure, allowing the conversion process to complete without any issues.
+<br/>
+Step 2: To resolve this issue, we recommend copying the <b>runtimes</b> folder into the project directory, placing it at the same level as the <b>.csproj</b> file. Additionally, ensure that all files within the runtimes folder have their <b>Copy to Output Directory</b> property set to <b>Copy if newer</b>. Please refer to the screenshot below for guidance.
+<br/>
+<img src="htmlconversion_images/Outputdictionarypath.png" alt="Output dictionary path">
+<br/>
+<br/>
+Step 3: If manually copying the files doesn't meet your requirements, we recommend applying the following code changes in the <b>.csproj</b> file and updating the publish profile. This will ensure the necessary files are copied automatically during the publishing process.
+<br/>
+Add the following code snippet to the <b>.pubxml</b> file to apply the necessary configuration.
+<br/>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+<PropertyGroup>
+
+ <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+
+</PropertyGroup>
+
+{% endhighlight %}
+{% endtabs %}
+<br/>
+Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> folder is copied to the publish directory during the build process.
+<br/>
+{% highlight C# tabtitle="C#" %}
+
+<ItemGroup>
+
+  <None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
+
+        CopyToOutputDirectory="Always"
+
+        Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
+
+</ItemGroup>
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+</table>
+
 ## Blink rendering engine only supported from .NET Framework 4.5
 
 <table>
