@@ -1,7 +1,7 @@
 ---
-title: How to paste WordDocument from .NET Word library (DocIO) in the WPF SfRichTextBoxAdv. | Syncfusion
+title: How to paste WordDocument from DocIO in the WPF SfRichTextBoxAdv. | Syncfusion
 description: Learn here all about how to paste WordDocument from .NET Word library (DocIO) in Syncfusion WPF SfRichTextBoxAdv and more.
-platform: WPF
+platform: wpf
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: paste-WordDocument-from-DocIO
@@ -75,5 +75,5 @@ Private WordDocument CreateTable()
 {% endhighlight %}
 {% endtabs %}
 
-# Limitation
+## Limitation
 When the document content is pasted into the SfRichTextBoxAdv control using WordDocument as a parameter, the history will not be maintained. That is, if a table is created using WordDocument, with multiple formats applied, and then table is pasted into the SfRichTextBoxAdv control, performing Undo will remove the inserted table, and performing Redo will insert the table again. Since, we are creating table outside of SfRichTextBoxAdv and it will not maintain history.

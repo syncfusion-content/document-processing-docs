@@ -99,7 +99,7 @@ The following code example demonstrates how to show the default search pane in S
 
 {% endtabs %}
 
-![http://help.syncfusion.com/winrt/richtextboxadv/Find-and-Replace-text_images/Find-and-Replace-text_img1.png](Find-and-Replace_images/Find-and-Replace_img1.jpeg)
+![UWP RichTextBox displays Find option](Find-and-Replace_images/Find-and-Replace_img1.jpeg)
 
 The following code example demonstrates how to show the advance find pane in SfRichTextBoxAdv through command binding.
 {% tabs %}
@@ -111,7 +111,7 @@ The following code example demonstrates how to show the advance find pane in SfR
 {% endhighlight %}
 {% endtabs %}
 
-![http://help.syncfusion.com/winrt/richtextboxadv/Find-and-Replace-text_images/Find-and-Replace-text_img2.png](Find-and-Replace_images/Find-and-Replace_img2.jpeg)
+![UWP RichTextBox displays Find option](Find-and-Replace_images/Find-and-Replace_img2.jpeg)
 
 The following code example demonstrates how to show the advance replace pane in SfRichTextBoxAdv through command binding.
 {% tabs %}
@@ -124,6 +124,6 @@ The following code example demonstrates how to show the advance replace pane in 
 
 {% endtabs %}
 
-![http://help.syncfusion.com/winrt/richtextboxadv/Find-and-Replace-text_images/Find-and-Replace-text_img2.png](Find-and-Replace_images/Find-and-Replace_img3.jpeg)
+![UWP RichTextBox displays Find option](Find-and-Replace_images/Find-and-Replace_img3.jpeg)
 
 N> Currently, the SfRichTextBoxAdv does not support options pane in Phone device.
