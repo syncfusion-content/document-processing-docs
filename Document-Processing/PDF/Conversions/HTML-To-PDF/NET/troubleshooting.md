@@ -128,6 +128,7 @@ Add the following code snippet to the <b>.pubxml</b> file to apply the necessary
 <br/>
 Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> folder is copied to the publish directory during the build process.
 <br/>
+{% tabs %}
 {% highlight C# tabtitle="C#" %}
 
 <ItemGroup>
@@ -993,7 +994,7 @@ System type       : 64-bit operating system, x64-based processor
 
 The benchmark details were obtained using the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) package. You can refer to the following sample, as well as the input and output files used:
 
-Input Html files         : <a href="https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data">https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data</a>
+Input HTML files         : <a href="https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data">https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data</a>
 
 Output PDF files        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip">https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip</a>
 
