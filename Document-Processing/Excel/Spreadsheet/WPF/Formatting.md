@@ -2,6 +2,7 @@
 layout: post
 title: Formatting in WPF Spreadsheet control | Syncfusion®
 description: Learn here all about Formatting support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---

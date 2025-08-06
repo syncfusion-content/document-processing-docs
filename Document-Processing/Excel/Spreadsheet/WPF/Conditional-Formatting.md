@@ -2,7 +2,7 @@
 layout: post
 title: Conditional Formatting in WPF Spreadsheet control | Syncfusion®
 description: Learn here all about Conditional Formatting support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
-platform: wpf
+platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---

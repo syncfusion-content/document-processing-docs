@@ -2,7 +2,7 @@
 layout: post
 title: Formatting in Windows Forms Spreadsheet control | Syncfusion®
 description: Learn about Formatting support in Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
-platform: windowsforms
+platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---

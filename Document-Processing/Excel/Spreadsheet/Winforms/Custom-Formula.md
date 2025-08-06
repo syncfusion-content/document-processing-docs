@@ -2,7 +2,7 @@
 layout: post
 title: Custom Formula in Windows Forms Spreadsheet control | Syncfusion®
 description: Learn about Custom Formula support in Syncfusion® Windows Forms Spreadsheet control and more details.
-platform: windowsforms
+platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
