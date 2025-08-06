@@ -1,7 +1,7 @@
 ---
 title: Opening large size documents in WPF SfRichTextBoxAdv | Syncfusion
 description: Understand why out of memory exceptions occur in Syncfusion WPF SfRichTextBoxAdv when opening large documents and how to resolve them.
-platform: wpf
+platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: out-of-memory-exception

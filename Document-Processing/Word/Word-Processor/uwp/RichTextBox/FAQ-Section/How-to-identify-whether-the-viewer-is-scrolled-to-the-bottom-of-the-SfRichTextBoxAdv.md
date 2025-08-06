@@ -1,7 +1,7 @@
 ---
 title: Detect viewer scrolled to bottom UWP SfRichTextBoxAdv | Syncfusion
 description: Learn here all about how to identify whether the viewer is scrolled to the bottom in Syncfusion UWP SfRichTextBoxAdv and more.
-platform: uwp
+platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: scroll-to-bottom

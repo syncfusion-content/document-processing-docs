@@ -1,7 +1,7 @@
 ---
 title: Spell Check in WPF RichTextBox control | Syncfusion
 description: Learn here all about Spell Check support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
-platform: wpf
+platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: spell-check

@@ -1,7 +1,7 @@
 ---
 title: Import and Export in WPF RichTextBox control | Syncfusion
 description: Learn here all about Import and Export support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
-platform: wpf
+platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: import, export, load, save

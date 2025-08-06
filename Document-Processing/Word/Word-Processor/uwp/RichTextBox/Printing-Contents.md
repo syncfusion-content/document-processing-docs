@@ -1,7 +1,7 @@
 ---
 title: Printing Contents in UWP RichTextBox control | Syncfusion
 description: Learn here all about Printing Contents support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
-platform: uwp
+platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: printing

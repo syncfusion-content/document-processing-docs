@@ -1,7 +1,7 @@
 ---
 title: Styles and Templates in WPF RichTextBox control | Syncfusion
 description: Learn here all about Styles and Templates support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
-platform: wpf
+platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: styles-and-templates, custom-style

@@ -1,7 +1,7 @@
 ---
 title: Automatic Suggestion in UWP RichTextBox control | Syncfusion
 description: Learn here all about Automatic Suggestion support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
-platform: uwp
+platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: automatic-suggestion, @mentions
