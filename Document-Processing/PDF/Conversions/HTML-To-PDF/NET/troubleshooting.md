@@ -93,7 +93,7 @@ document.Close(true);
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>Starting with Syncfusion package version 29.X.X, Chromium was updated to 133.x.x, which now requires the `locales` directory to be present at runtime. However, when publishing a .NET application with the `linux-x64` runtime identifier, only files are copied to the root output folder and the folder structure—including 'locales'—is omitted. As a result, Chromium cannot locate the required 'locales' directory, triggering a runtime exception during HTML rendering or conversion.
+<td>Starting with Syncfusion package version 29.X.X, Chromium was updated to 133.x.x, which now requires the `locales` directory to be present at runtime. However, when publishing a .NET application with the `linux-x64` runtime identifier, only files are copied to the root output folder and the folder structure including 'locales' is omitted. As a result, Chromium cannot locate the required 'locales' directory, triggering a runtime exception during HTML rendering or conversion.
 </td>
 </tr>
 
@@ -1054,7 +1054,7 @@ N> * External resources loaded in the HTML (such as images, scripts, and styles)
 N> * Network speed for online URL conversions
 N> * Hardware resources (CPU and memory)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Performance_Testing/Syncfusion_HTMLtoPDF).
 
 ## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
 
