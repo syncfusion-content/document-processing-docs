@@ -37,6 +37,10 @@ Step 5: Include the following namespaces in **HomeController.cs**.
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
 {% endhighlight %}
+
+{% highlight c# tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+{% endhighlight %}
 {% endtabs %}  
 
 Step 6: Add a new button in the **Index.cshtml** as shown below.
@@ -53,6 +57,19 @@ Step 6: Add a new button in the **Index.cshtml** as shown below.
     }
     Html.EndForm();
 }
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+@Code
+    Html.BeginForm("LoadingandSaving", "Home", FormMethod.Get)
+End Code
+<div>
+    <br />
+    <input type="submit" value="Loading and Saving Document" style="width:230px;height:27px" />
+</div>
+@Code
+    Html.EndForm()
+End Code
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,6 +103,34 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Download the Excel document in the browser.
     return File(outputStream, "application/msexcel", "Output.xlsx");
 }
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Create an instance of ExcelEngine
+Using excelEngine As New ExcelEngine()
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+
+    'Load an existing Excel document
+    Dim inputStream As New FileStream(Server.MapPath("~/Data/Input.xlsx"), FileMode.Open, FileAccess.Read)
+    Dim workbook As IWorkbook = application.Workbooks.Open(inputStream)
+
+    'Access first worksheet
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+    'Set text in cell A3
+    worksheet.Range("A3").Text = "Hello World"
+
+    'Save to memory stream
+    Dim outputStream As New MemoryStream()
+    workbook.SaveAs(outputStream)
+
+    'Reset position
+    outputStream.Position = 0
+
+    'Download the Excel document
+    Return File(outputStream, "application/msexcel", "Output.xlsx")
+End Using
 {% endhighlight %}
 {% endtabs %} 
 

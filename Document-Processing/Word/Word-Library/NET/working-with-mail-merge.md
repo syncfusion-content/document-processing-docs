@@ -336,3 +336,8 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 * [How to Replace Merge Fields with Markdown Content in .NET Core Word?](https://support.syncfusion.com/kb/article/19630/how-to-replace-merge-fields-with-markdown-content-in-net-core-word?)
 * [How to generate a QR code from a URL and insert it into a Word document during mail merge?](https://support.syncfusion.com/kb/article/19819/how-to-generate-a-qr-code-from-a-url-and-insert-it-into-a-word-document-during-mail-merge)
 * [How to change the font of hindi text during mail merge in a Word document?](https://support.syncfusion.com/kb/article/19789/how-to-change-the-font-of-hindi-text-during-mail-merge-in-a-word-document)
+* [How to Mail Merge Two Data Sources in a Word Document .NET Core?](https://support.syncfusion.com/kb/article/20360/how-to-mail-merge-two-data-sources-in-a-word-document-net-core)
+* [How to Generate Invoices with Dynamic in Word Document .NET Core?](https://support.syncfusion.com/kb/article/20106/how-to-generate-invoices-with-dynamic-in-word-document-net-core)
+* [How to Convert Mail Merge to PDF in ASP.NET Core?](https://support.syncfusion.com/kb/article/20107/how-to-convert-mail-merge-to-pdf-in-aspnet-core)
+* [How to perform mail merge in Word with XML data containing HTML tags in C#?](https://support.syncfusion.com/kb/article/20109/how-to-perform-mail-merge-in-word-with-xml-data-containing-html-tags-in-c)
+* [How to Change the Merge Field Name in ASP.NET Word?](https://support.syncfusion.com/kb/article/19117/how-to-change-the-merge-field-name-in-aspnet-word)

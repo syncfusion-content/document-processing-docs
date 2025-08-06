@@ -284,7 +284,7 @@ The .NET Word Library (DocIO) supports below formats to convert into image.
 * Markdown 
 * HTML 
 
-N> To see limitations and unsupported features in Word to image conversion, refer [here]().
+N> To see limitations and unsupported features in Word to image conversion, refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/unsupported-elements-word-to-image).
 
 ## Custom image resolution
 

@@ -1,5 +1,5 @@
 ---
-title: Converting HTML to PDF | Syncfusion
+title: HTML to PDF converter features in .NET PDF Library | Syncfusion
 description: Learn how to convert HTML to PDF using Blink rendering engines (Blink, WebKit and IE) with various features like TOC, partial web page to PDF etc.
 platform: document-processing
 control: PDF
@@ -238,6 +238,54 @@ image[0].Dispose(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-image-file).
+
+## SVG file to Image
+
+To convert SVG file to Image using [ConvertToImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_ConvertToImage_System_String_) method, refer to the following code example.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Converting_SVG_to_Image_using_HtmlConverter/.NET/Converting_SVG_to_Image_using_HtmlConverter/Program.cs" %}
+
+// Create an instance of the Syncfusion HtmlToPdfConverter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+// Read the SVG content from a file
+string svg = File.ReadAllText("sample.svg");
+
+// Convert the SVG content to an image using the converter
+Image image = htmlConverter.ConvertToImage(svg, "");
+
+// Extract the image data as a byte array
+byte[] imageBytes = image.ImageData;
+
+// Save the image data to a file in JPEG format
+File.WriteAllBytes("Output.jpg"), imageBytes);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Create an instance of the Syncfusion HtmlToPdfConverter
+Dim htmlConverter As New HtmlToPdfConverter()
+
+' Read the SVG content from a file
+Dim svg As String = File.ReadAllText("sample.svg")
+
+' Convert the SVG content to an image using the converter
+Dim image As Syncfusion.Drawing.Image = htmlConverter.ConvertToImage(svg, "")
+
+' Extract the image data as a byte array
+Dim imageBytes As Byte() = image.ImageData
+
+' Save the image data to a file in JPEG format
+File.WriteAllBytes("Output.jpg", imageBytes)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Converting_SVG_to_Image_using_HtmlConverter/.NET).
 
 ## JavaScript
 

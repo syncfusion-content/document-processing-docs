@@ -64,9 +64,6 @@ Step 4:  Add code samples in Program.cs file to convert HTML to PDF document usi
 //Initialize HTML to PDF converter. 
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 BlinkConverterSettings settings = new BlinkConverterSettings();
-//Set command line arguments to run without the sandbox. 
-settings.CommandLineArguments.Add("--no-sandbox");
-settings.CommandLineArguments.Add("--disable-setuid-sandbox");
 //Assign Blink settings to the HTML converter.
 htmlConverter.ConverterSettings = settings;
 //Convert URL to PDF document. 
@@ -77,6 +74,13 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
+
+N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
+N> ```csharp
+N> settings.CommandLineArguments.Add("--no-sandbox");
+N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
+N> ```
+N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
 
 Step 5: Execute the following command to restore the NuGet packages.
 

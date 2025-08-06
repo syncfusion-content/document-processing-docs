@@ -181,6 +181,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can format the merged image like resizing the image and more during mail merge process using the [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) Event. 
 
+N> The [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) event triggers only for image merge fields. Ensure you have a valid image merge field in the template document, following the syntax: **{ MERGEFIELD Image:logo }**.
+
 The following code example shows how to use the [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) event during Mail merge process.
 
 {% tabs %}

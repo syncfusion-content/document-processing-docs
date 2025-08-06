@@ -312,3 +312,26 @@ From v20.2
 </td>
 </tr>
 </table>
+
+## Why does SkiaSharp throw a type initializer exception in Azure Function on macOS?
+
+This error occurs due to missing native libraries (libSkiaSharp.dylib, libHarfBuzzSharp.dylib) when running an Azure Function locally on macOS. The required libraries are not copied to the output folder during build.
+
+**To resolve:**
+
+- Build the project.
+- Copy *libSkiaSharp.dylib* and *libHarfBuzzSharp.dylib* from:
+
+```
+bin/Debug/net6.0/runtimes/osx/native/
+```
+
+- Paste them into:
+
+```
+bin/Debug/net6.0/
+```
+
+- Run the function again.
+
+> This issue affects only local macOS development. It does not occur after deploying to Azure App Service.

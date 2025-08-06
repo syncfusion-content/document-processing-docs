@@ -29,6 +29,7 @@ You can compress the existing PDF document by using [PdfLoadedDocument](https://
 
 N> 1.To compress an existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
 N> 2.To ensure compatibility on **Linux** when performing image-based operations such as compression or rendering using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
+N> 3. For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
 
 ## Compressing images with image quality
 

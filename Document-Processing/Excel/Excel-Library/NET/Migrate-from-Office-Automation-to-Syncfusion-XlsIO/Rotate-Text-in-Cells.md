@@ -104,11 +104,8 @@ private void RotateText()
     //Get the first sheet
     IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Get a particular cell
-    IRange range = worksheet.Range["B2"];
-
-    //Put some text value
-    range.Value = "Syncfusion Software";
+    //Set value to cell
+    worksheet.SetValue(2, 2, "Syncfusion Software");
 
     //Specify the angle of rotation of the text
     range.CellStyle.Rotation = 45;
@@ -137,11 +134,8 @@ Private Sub RotateText()
     'Get the first sheet
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-    'Get a particular cell
-    Dim range As IRange = worksheet.Range("B2")
-
-    'Put some text value
-    range.Value = "Syncfusion Software"
+    'Set value to cell
+    worksheet.SetValue(2, 2, "Syncfusion Software")
 
     'Specify the angle of rotation of the text
     range.CellStyle.Rotation = 45

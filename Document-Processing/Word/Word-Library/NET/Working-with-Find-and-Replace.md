@@ -25,7 +25,7 @@ The following table illustrates the supported overloads for Find and Replace fun
 <tr>
 <td>{{ '[Find(string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Finds the text based on specified string, taking into the consideration of caseSensitive and wholeWord options.</td>
-<td>{{ '[Find first occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next)' | markdownify }}</td>
+<td>{{ '[Find first occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-text-in-Word-document)' | markdownify }}</td>
 </tr>
 <tr>
 <td>{{ '[Find(Regex pattern)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
@@ -45,7 +45,7 @@ The following table illustrates the supported overloads for Find and Replace fun
 <tr>
 <td>{{ '[FindNext(TextBodyItem startTextBodyItem, string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Finds the next entry of the specified text from the specified text body item, taking into the consideration of caseSensitive and wholeWord options.</td>
-<td>{{ '[Find next occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next)' | markdownify }}</td>
+<td>{{ '[Find next occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next)' | markdownify }}</td>
 </tr>
 <tr>
 <td>{{ '[FindNext(TextBodyItem startBodyItem, Regex pattern)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
@@ -167,15 +167,198 @@ The following table illustrates the supported overloads for Find and Replace fun
 
 ## Finding contents in a Word document
 
-You can find the first occurrence of a particular text within a single paragraph in the document by using [Find](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_) method and its next occurrence by using [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method. You can also find a particular text pattern in the document.
+You can find the first occurrence of a particular text within a single paragraph in the document by using [Find](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_) method. You can also find a particular text pattern in the document.
 
-The following code example illustrates how to find a particular text and its next occurrence in the document.
+The following code example illustrates how to find a particular text in the document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-find-next/.NET/Find-and-find-next/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-text-in-Word-document/.NET/Find-text-in-Word-document/Program.cs" %}
+//Loads the template document
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("as graphical contents", false, true);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("as graphical contents", false, true);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx", FormatType.Docx)
+'Find the first occurrence of a particular text in the document
+Dim textSelection As TextSelection = document.Find("as graphical contents", False, True)
+'Gets the found text as single text range
+Dim textRange As WTextRange = textSelection.GetAsOneRange()
+'Modifies the text
+textRange.Text = "Replaced text"
+'Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-text-in-Word-document).
+
+### Match case
+
+The following code example illustrates how to find a particular text by matching case in the document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-match-case/.NET/Find-match-case/Program.cs" %}
+//Loads the template document
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("adventure", true, false);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("adventure", true, false);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx", FormatType.Docx)
+'Find the first occurrence of a particular text in the document
+Dim textSelection As TextSelection = document.Find("adventure", true, false)
+'Gets the found text as single text range
+Dim textRange As WTextRange = textSelection.GetAsOneRange()
+'Modifies the text
+textRange.Text = "Replaced text"
+'Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-match-case).
+
+### Whole words only
+
+The following code example illustrates how to find a whole word in the document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-whole-words-only/.NET/Find-whole-words-only/Program.cs" %}
+//Loads the template document
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("AdventureWorks", false, true);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
+//Finds the first occurrence of a particular text in the document
+TextSelection textSelection = document.Find("AdventureWorks", false, true);
+//Gets the found text as single text range
+WTextRange textRange = textSelection.GetAsOneRange();
+//Modifies the text
+textRange.Text = "Replaced text";
+//Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow;
+//Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As New WordDocument("Template.docx", FormatType.Docx)
+'Find the first occurrence of a particular text in the document
+Dim textSelection As TextSelection = document.Find("AdventureWorks", false, true)
+'Gets the found text as single text range
+Dim textRange As WTextRange = textSelection.GetAsOneRange()
+'Modifies the text
+textRange.Text = "Replaced text"
+'Sets highlight color
+textRange.CharacterFormat.HighlightColor = Color.Yellow
+'Saves and closes the document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-whole-words-only).
+
+### Find next occurrence
+
+The following code example illustrates how to find the next occurrence in the document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-next/.NET/Find-next/Program.cs" %}
 //Loads the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -246,158 +429,11 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next).
-
-You can find all the occurrence of a particular text within a single paragraph in the document by using [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. 
-
-The following code example illustrates how to find all the occurrences of a particular text in the document.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-highlight-all/.NET/Find-and-highlight-all/Program.cs" %}
-//Loads the template document
-FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-//Finds all the occurrences of a particular text
-TextSelection[] textSelections = document.FindAll("paragraph", false, true);
-foreach (TextSelection textSelection in textSelections)
-{
-    //Gets the found text as single text range and sets highlight color
-    WTextRange textRange = textSelection.GetAsOneRange();
-    textRange.CharacterFormat.HighlightColor = Color.YellowGreen;
-}
-//Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Closes the document
-document.Close();
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Loads the template document
-WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Finds all the occurrences of a particular text
-TextSelection[] textSelections = document.FindAll("paragraph", false, true);
-foreach (TextSelection textSelection in textSelections)
-{
-    //Gets the found text as single text range and sets highlight color
-    WTextRange textRange = textSelection.GetAsOneRange();
-    textRange.CharacterFormat.HighlightColor = Color.YellowGreen;
-}
-//Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx);
-document.Close();
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads the template document
-Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Finds all the occurrences of a particular text
-Dim textSelections As TextSelection() = document.FindAll("paragraph", False, True)
-For Each textSelection As TextSelection In textSelections
-    'Gets the found text as single text range and sets highlight color
-    Dim textRange As WTextRange = textSelection.GetAsOneRange()
-    textRange.CharacterFormat.HighlightColor = Color.YellowGreen
-Next
-'Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx)
-document.Close()
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-highlight-all).
-
-You can find the first occurrence of a particular text extended to several paragraphs in the document by using [FindSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_String_System_Boolean_System_Boolean_) method and its next occurrence by using [FindNextSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
-
-The following code example illustrates how to find a particular text extended to several paragraphs in the Word document.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-find-next-paragraphs/.NET/Find-and-find-next-paragraphs/Program.cs" %}
-//Loads the template document
-FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-//Finds the first occurrence of a particular text extended to several paragraphs in the document
-TextSelection[] textSelections = document.FindSingleLine("First paragraph Second paragraph", true, false);
-WParagraph paragraph = null;
-foreach (TextSelection textSelection in textSelections)
-{
-    //Gets the found text as single text range and set highlight color
-    WTextRange textRange = textSelection.GetAsOneRange();
-    textRange.CharacterFormat.HighlightColor = Color.YellowGreen;
-    paragraph = textRange.OwnerParagraph;
-}
-//Finds the next occurrence of a particular text extended to several paragraphs in the document
-textSelections = document.FindNextSingleLine(paragraph, "First paragraph Second paragraph", true, false);
-foreach (TextSelection textSelection in textSelections)
-{
-    //Gets the found text as single text range and sets italic formatting
-    WTextRange text = textSelection.GetAsOneRange();
-    text.CharacterFormat.Italic = true;
-}
-//Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Closes the document
-document.Close();
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Loads the template document
-WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Finds the first occurrence of a particular text extended to several paragraphs in the document
-TextSelection[] textSelections = document.FindSingleLine("First paragraph Second paragraph", true, false);
-WParagraph paragraph = null;
-foreach (TextSelection textSelection in textSelections)
-{
-    //Gets the found text as single text range and set highlight color
-    WTextRange textRange = textSelection.GetAsOneRange();
-    textRange.CharacterFormat.HighlightColor = Color.YellowGreen;
-    paragraph = textRange.OwnerParagraph;
-}
-//Finds the next occurrence of a particular text extended to several paragraphs in the document
-textSelections = document.FindNextSingleLine(paragraph, "First paragraph Second paragraph", true, false);
-foreach (TextSelection textSelection in textSelections)
-{
-    //Gets the found text as single text range and sets italic formatting
-    WTextRange text = textSelection.GetAsOneRange();
-    text.CharacterFormat.Italic = true;
-}
-//Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx);
-document.Close();
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads the template document
-Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Finds the first occurrence of a particular text extended to several paragraphs in the document
-Dim textSelections As TextSelection() = document.FindSingleLine("First paragraph Second paragraph", True, False)
-Dim paragraph As WParagraph = Nothing
-For Each textSelection As TextSelection In textSelections
-    'Gets the found text as single text range and sets highlight color
-    Dim textRange As WTextRange = textSelection.GetAsOneRange()
-    textRange.CharacterFormat.HighlightColor = Color.YellowGreen
-    paragraph = textRange.OwnerParagraph
-Next
-'Finds the next occurrence of a particular text extended to several paragraphs in the document
-textSelections = document.FindNextSingleLine(paragraph, "First paragraph Second paragraph", True, False)
-For Each textSelection As TextSelection In textSelections
-    'Gets the found text as single text range and sets italic formatting
-    Dim text As WTextRange = textSelection.GetAsOneRange()
-    text.CharacterFormat.Italic = True
-Next
-'Saves and closes the document
-document.Save("Sample.docx", FormatType.Docx)
-document.Close()
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next-paragraphs).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next).
 
 ## Replacing the Search results
+
+### Find and replace text with body part
 
 You can replace a particular text with another text, part of a document or entire document by using [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_System_Boolean_) method. 
 
@@ -453,6 +489,8 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-body-part).
+
+### Find and replace first occurrence
 
 You can specify to replace only the first occurrence of the specified text by setting [ReplaceFirst](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceFirst) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to true. 
 
@@ -515,6 +553,8 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-first-occurrence).
 
+### Find and replace text with Word document
+
 The following code example illustrates how to replace a particular text with a Word document.
 
 {% tabs %}
@@ -563,6 +603,8 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-Word-document).
 
+### Find and replace paragraphs with text
+
 You can replace a particular text extended to several paragraphs in a document with another text or part of a document by using [ReplaceSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_System_String_System_Boolean_System_Boolean_) method.
 
 The following code example illustrates how to replace the text extended to several paragraphs with simple text.
@@ -606,7 +648,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-paragraphs-with-text).
 
-## Find next and replace with formatted text
+### Find next and replace with formatted text
 You can find the next occurrence of a text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_) method. You can also replace the text that extends to two paragraphs using [ReplaceSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_) method.
 
 The following code example illustrates how to replace the text extended to several paragraphs with a particular text in the document.
@@ -666,7 +708,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-and-replace-with-formatted-text).
 
-## Find and replace text with other text
+### Find and replace text with other text
 
 You can find text in a Word document and replace it with other text. Unlike the [Find](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_) method, the Replace method replaces all occurrences of the text. You can customize it to replace only the first occurrence of a text by setting the [ReplaceFirst](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceFirst) property of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to true.
 
@@ -710,7 +752,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-misspelled-word).
 
-## Find and replace non-breaking spaces with regular spaces
+### Find and replace non-breaking spaces with regular spaces
 You can find non-breaking spaces used in a Word document and replace them with regular spaces using [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_System_String_System_Boolean_System_Boolean_) method.
 
 The following code example illustrates how to find and replace non-breaking spaces with regular spaces in a Word document.
@@ -758,7 +800,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-non-breaking-spaces).
 
-## Find and replace text with an image
+### Find and replace text with an image
 You can find placeholder text in a Word document and replace it with any desired image.
 
 The following code example illustrates how to find and replace text in a word document with an image
@@ -889,7 +931,7 @@ document.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-image).
 
-## Find and replace a pattern of text with a merge field 
+### Find and replace a pattern of text with a merge field 
 You can find and replace a pattern of text in a Word document with merge fields using Regex.
 
 The following code example illustrates how to create a mail merge template by replacing a pattern of text (enclosed within ‘«’ and ‘»’) in a Word document with the desired merge fields.
@@ -977,7 +1019,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-with-merge-field).
 
-## Find and replace text with a table 
+### Find and replace text with a table 
 You can find placeholder text in a Word document and replace it with a table.
 
 The following code example illustrates how to do this.
@@ -1358,7 +1400,7 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-table).
 
-## Find and replace text in Word document with another document 
+### Find and replace text in Word document with another document 
 
 You can find and replace text with another Word document.
 
@@ -1422,9 +1464,11 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-with-Word-document).
 
-## Find and replace text extending to several paragraphs
+### Find and replace text extending to several paragraphs
 
 Apart from finding text in a paragraph, you can also find and replace text that extends to several paragraphs in a Word document. You can find the first occurrence of the text that extends to several paragraphs by using the [FindSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text by using the [FindNextSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method. Similarly, you can replace text that extends to several paragraphs by using [ReplaceSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_) method.
+
+N> The [FindSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_String_System_Boolean_System_Boolean_) method matches text across multiple paragraphs but skips intermediate empty paragraphs in the resulting text selection.
 
 The following code example illustrates how to replace text that extends to several paragraphs.
 
@@ -1491,7 +1535,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-multiple-paragraphs).
 
-## Find text in a Word document and format 
+### Find text in a Word document and format 
 
 You can find text in a Word document and format or highlight it .You can find the first occurrence of text using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
 
@@ -1549,7 +1593,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-highlight-all).
 
-## Find and replace the pattern of text with normal text
+### Find and replace the pattern of text with normal text
 
 You can find the pattern of text using Regex and replace it with normal text in a Word document using the [Replace](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_System_String_) method.
 
@@ -1598,7 +1642,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-pattern-text-with-normal-text).
 
-## Find and replace a pattern of multiline text
+### Find and replace a pattern of multiline text
 
 You can find a pattern of text which extends to several paragraphs using Regex and replace it with normal text in a Word document using the [ReplaceSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_System_String_) method.
 
@@ -1647,7 +1691,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-multiline-text-with-single-line).
 
-## Find and replace text with formatted text
+### Find and replace text with formatted text
 
 You can select a text using the [Find](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_Text_RegularExpressions_Regex_) method and replace text in a Word document with that selected text along with formatting (bold, italic, and so on).
 
@@ -1702,7 +1746,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-formatted-text).
 
-## Find and replace the text extended to several paragraphs
+### Find and replace the text extended to several paragraphs
 
 You can select a text which extends to several paragraphs using the [FindSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_Text_RegularExpressions_Regex_) method and replace text in the Word document with that selected text.
 
@@ -1757,7 +1801,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-extended-to-several-paragraphs).
 
-## Find next multiline text and replace with selected text
+### Find next multiline text and replace with selected text
 
 You can select the next occurrence of a text which extends to several paragraphs using the [FindNextSingleLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_) method and replace text in the Word document with that selected text.
 
@@ -1818,6 +1862,68 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-multiline-text-and-replace-text).
 
+## Find and format text
+
+You can able to find and format the text in Word document using DocIO.
+
+### Find and highlight all in Word document
+
+You can find text in a Word document and format or highlight it .You can find the first occurrence of text using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
+
+The following code example illustrates how to find all occurrences of a length of text and highlight it.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-highlight-all/.NET/Find-and-highlight-all/Program.cs" %}
+//Loads the template document
+FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Finds all occurrence of the text in the Word document
+TextSelection[] textSelections = document.FindAll("Adventure", true, true);
+for (int i = 0; i < textSelections.Length; i++)
+{
+    //Sets the highlight color for the searched text as Yellow
+    textSelections[i].GetAsOneRange().CharacterFormat.HighlightColor = Color.Yellow;
+}
+//Saves and closes the document
+FileStream outputStream = new FileStream("Sample.docx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
+document.Save(outputStream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Loads the template document
+WordDocument document = new WordDocument("Template.docx");
+//Finds all occurrence of the text in the Word document
+TextSelection[] textSelections = document.FindAll("Adventure", true, true);
+for (int i = 0; i < textSelections.Length; i++)
+{
+    //Sets the highlight color for the searched text as Yellow
+    textSelections[i].GetAsOneRange().CharacterFormat.HighlightColor = Color.Yellow;
+}
+//Saves and closes the document instance
+document.Save("Result.docx");
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Loads the template document
+Dim document As WordDocument = New WordDocument("Template.docx")
+'Finds all occurrence of the text in the Word document
+Dim textSelections() As TextSelection = document.FindAll("Adventure", True, True)
+For i As Integer = 0 To textSelections.Length - 1
+    'Sets the highlight color for the searched text as Yellow.
+    textSelections(i).GetAsOneRange.CharacterFormat.HighlightColor = Color.Yellow
+Next
+'Saves and closes the document instance
+document.Save("Result.docx")
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-highlight-all).
+
 ## Online Demo
 
 * Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the .NET Word Library (DocIO) in a live demo [here](https://ej2.syncfusion.com/aspnetcore/word/findandhighlight#/bootstrap5).
@@ -1847,3 +1953,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to find and apply bold formatting to a specific word in replaced content](https://support.syncfusion.com/kb/article/17700/how-to-find-and-apply-bold-formatting-to-a-specific-word-in-replaced-content)
 * [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document) 
 * [How to apply bold formatting to the content between placeholders in a Word document?](https://support.syncfusion.com/kb/article/17778/how-to-apply-bold-formatting-to-the-content-between-placeholders-in-a-word-document)
+* [How to Replace and Convert Word Document to PDF in ASP.NET Core?](https://support.syncfusion.com/kb/article/20112/how-to-replace-and-convert-word-document-to-pdf-in-aspnet-core)

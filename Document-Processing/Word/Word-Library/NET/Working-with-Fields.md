@@ -255,7 +255,7 @@ The following are the known limitations:
 * Updating of NUMPAGES field and Cross Reference field with Page number and Paragraph number options are not supported in Silverlight, WinRT, Universal, and Windows Phone applications.
 * Currently group shapes, drawing canvas, and table auto resizing are not supported in Word to PDF layouting, and this may lead to update incorrect page number and total number of pages.
 
-N> In ASP.NET Core, Blazor, and Xamarin platforms, to update fields (including Page, NumPages) in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application.
+N> In ASP.NET Core, Blazor, Xamarin, WinUI and .NET MAUI platforms, to update fields like Page and NumPages in a Word document, pass true to the UpdateDocumentFields() method and reference the Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) packagesin your application.
 
 The following code example explains how to update the fields present in Word document.
 
@@ -1820,3 +1820,5 @@ document.Close()
 * [How to use conditional fields to add checkboxes during mail merge in a Word document?](https://support.syncfusion.com/kb/article/17847/how-to-use-conditional-fields-to-add-checkboxes-during-mail-merge-in-a-word-document)
 * [How to generate a QR code from a URL and insert it into a Word document during mail merge?](https://support.syncfusion.com/kb/article/19819/how-to-generate-a-qr-code-from-a-url-and-insert-it-into-a-word-document-during-mail-merge)
 * [How to unlink all fields in a Word document?](https://support.syncfusion.com/kb/article/19805/how-to-unlink-all-fields-in-a-word-document)
+* [How to apply highlight color to fields in a Word document?](https://support.syncfusion.com/kb/article/20092/how-to-apply-highlight-color-to-fields-in-a-word-document)
+* [How to Replace DISPLAYBARCODE Field with Image in DocIO .NET Core?](https://support.syncfusion.com/kb/article/19842/how-to-replace-displaybarcode-field-with-image-in-docio-net-core)

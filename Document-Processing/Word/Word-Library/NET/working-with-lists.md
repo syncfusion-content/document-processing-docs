@@ -449,7 +449,7 @@ The following code example demonstrates how to create a list number format.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/List-number-format/.NET/List-number-format/Program.cs" %}
 // Creates a new Word document.
 WordDocument document = new WordDocument();
 // Adds a new section to the document.
@@ -718,6 +718,8 @@ document.Close()
 
 By running the above code, you will generate a **List Numbered Format** as shown below.
 ![List](Lists_images/ListNumberFormat.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/List-number-format).
 
 N> Except for the following [ListPatternType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ListPatternType.html) enumeration values: Arabic, Bullet, ChineseCountingThousand, FarEast, KanjiDigit, LeadingZero, LowLetter, LowRoman, None, Number, Ordinal, OrdinalText, Special, UpLetter, and UpRoman, all other [ListPatternType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ListPatternType.html) values are supported only during DOCX to DOCX, DOCX to PDF, and DOCX to image conversions.
 

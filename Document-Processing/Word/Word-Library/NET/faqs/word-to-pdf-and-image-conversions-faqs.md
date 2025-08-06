@@ -89,3 +89,154 @@ To convert a Word document to PDF/A, refer to this [link](https://help.syncfusio
 ## How to validate the PDF conformance level in a DocIO-converted PDF?
 
 PDF conformance can be verified using tools like **Adobe Acrobat Pro, VeraPDF, Xodo Validator, and PDFCreator Validator**. These tools check if the PDF meets compliance standards. DocIO-generated PDFs can be validated using any of these tools to ensure compliance with the required standards.
+
+## Why does memory usage appear high in Visual Studio after converting a Word document to PDF using DocIO?
+
+When converting Word documents to PDF using the Syncfusion DocIO library, Visual Studio may continue to show high memory usage—even after the conversion and proper disposal of objects. This does not indicate a memory leak.
+
+To confirm that memory is being properly released, the following sample demonstrates how to measure heap memory using GC.GetTotalMemory(false) before and after document processing:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+Console.WriteLine("Heap memory before loading document: " + GetMemoryInKB() + " KB");
+// Load Word document
+WordDocument document = new WordDocument("Input.docx", FormatType.Docx);
+Console.WriteLine("Heap memory after loading document: " + GetMemoryInKB() + " KB");
+// Convert to PDF
+DocIORenderer renderer = new DocIORenderer();
+PdfDocument pdf = renderer.ConvertToPDF(document);
+Console.WriteLine("Heap memory after PDF conversion: " + GetMemoryInKB() + " KB");
+// Save PDF to file
+using (FileStream output = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    pdf.Save(output);
+}
+// Dispose objects
+pdf.Dispose();
+renderer.Dispose();
+document.Dispose();
+// Force garbage collection
+GC.Collect();
+GC.WaitForPendingFinalizers();
+Console.WriteLine("Heap memory after disposing objects: " + GetMemoryInKB() + " KB");
+
+static long GetMemoryInKB()
+{
+    return GC.GetTotalMemory(false) / 1000;
+}
+{% endhighlight %}
+{% endtabs %}
+
+From the output above, you can see that heap memory is being reclaimed properly, even if Visual Studio's process memory view does not update immediately.
+
+## Is it possible to substitute fonts in a Word document?
+
+No, DocIO does not support substituting fonts within a Word document. Font substitution is applied only during Word-to-PDF and image conversions to ensure rendering accuracy. To change fonts in the actual Word document, refer to: [How to change font for all text in a Word document](https://support.syncfusion.com/kb/article/17487/how-to-change-the-font-for-all-text-in-a-net-core-word-document).
+
+## How does hyphenation work in Microsoft Word compared to Syncfusion<sup>®</sup> DocIO?
+
+**In Microsoft Word:** Microsoft Word automatically applies hyphenation based on built-in language rules. It uses its own internal dictionary that is not directly accessible. Users can enable/disable auto-hyphenation in Word settings.
+
+**In Syncfusion<sup>®</sup> DocIO:** DocIO applies hyphenation rules using an external dictionary file. During hyphenation, it checks the language code for each word and applies hyphenation based on the corresponding dictionary file. If the required dictionary file is missing for a word, hyphenation is not performed for that word in the given Word document because no matching dictionary file is found for the language code.
+
+## How to identify the language of a specific word in a Word document?
+
+In Microsoft Word, select the word, then navigate to Review > Language > Set Proofing Language to check the language assigned to it.
+![Check language for specific word](../FAQ_images/Check-proofing-language.png)
+
+## Why does hyphenation appear incorrectly or missing in the converted PDF?
+
+Incorrect hyphenation happens when words are split improperly. This may be caused by missing hyphenation rules in the dictionary or font substitution. If the font used in the Word document is not available in the environment, a fallback font is used, which can alter text size and cause unexpected hyphenation. You can use the [SubstituteFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.FontSettings.html#Syncfusion_DocIO_DLS_FontSettings_SubstituteFont) event to detect and log missing fonts during conversion. Refer to the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Get-missing-fonts-for-pdf-conversion) for printing the missing fonts by passing the input document.
+
+Missing hyphenation occurs when certain words are not hyphenated at all. This usually means the dictionary file is missing or does not contain hyphenation rules for those words.
+
+## How to improve hyphenation accuracy during Word to PDF conversion?
+
+To improve hyphenation accuracy during Word to PDF conversion:
+- **Verify the dictionary file:** Ensure the .dic file contains valid hyphenation patterns for the target language.
+- **Test with different dictionaries:** Use alternative .dic files to identify better or more accurate hyphenation results.
+
+## How to set custom Image Resolution in ASP.NET Core?
+
+DocIO supports converting Word documents to images with standard resolution in **Windows Forms, WPF, ASP.NET**, and **ASP.NET MVC** platforms.
+
+In **ASP.NET Core (Windows only)**, DocIO does not provide built-in support to set custom image resolution (DPI) or size (width/height) during Word-to-image conversion. However, you can adjust the resolution and dimensions of the exported images after conversion using **System.Drawing** APIs.
+
+This approach works only on Windows. The System.Drawing.Common package is supported on Windows only from .NET 6. Refer to the .NET documentation [System.Drawing.Common is Windows-only](https://docs.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only)
+
+The following example demonstrates how to convert a Word document to images and set custom image resolution and size.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Open the input Word document stream in read mode
+using (FileStream docStream = new FileStream(Path.GetFullPath(@"Data/Template.docx"), FileMode.Open, FileAccess.Read))
+{
+    // Load the Word document using Syncfusion DocIO
+    using (WordDocument document = new WordDocument(docStream, FormatType.Automatic))
+    {
+        // Create an instance of DocIORenderer to render the Word document as images
+        using (DocIORenderer render = new DocIORenderer())
+        {
+            // Convert all pages of the Word document to image streams
+            Stream[] imageStreams = document.RenderAsImages();
+            // Iterate through each image stream (one per page)
+            for (int i = 0; i < imageStreams.Length; i++)
+            {
+                // Reset the stream position to the beginning
+                imageStreams[i].Position = 0;
+                // Define custom dimensions for the output image
+                int customWidth = 1500;
+                int customHeight = 1500;
+                // Load the image from stream
+                Image image = Image.FromStream(imageStreams[i]);
+
+                // Save the image to a new memory stream in PNG format
+                MemoryStream stream = new MemoryStream();
+                image.Save(stream, ImageFormat.Png);
+                // Create a new bitmap with custom size and pixel format
+                Bitmap bitmap = new Bitmap(customWidth, customHeight, PixelFormat.Format32bppPArgb);
+                // Create graphics object to draw on the bitmap
+                Graphics graphics = Graphics.FromImage(bitmap);
+                // Set bitmap resolution to 300 DPI
+                bitmap.SetResolution(300, 300);
+                // Draw the resized image onto the custom-sized bitmap
+                graphics.DrawImage(Image.FromStream(stream), new Rectangle(0, 0, bitmap.Width, bitmap.Height));
+                // Save the final bitmap image to output folder
+                bitmap.Save(Path.GetFullPath(@"Output/Image_" + i + ".png"));
+            }
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Set-custom-image-resolution/.NET).
+
+## What languages and Unicode support are available in the DocIO library?
+
+DocIO library supports **multiple languages, including Chinese and Japanese**, with no specific language limitations when creating and saving Word documents.
+
+For **Unicode support** during Word-to-PDF conversion, the library provides fallback font options to ensure proper rendering of Unicode characters. Refer to the [documentation on fallback fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf#supported-script-types).
+
+## What are Web Layout View and Print Layout View in Microsoft Word, and which one does DocIO use for PDF conversion?
+
+**Web Layout View:** Displays the document as it would appear on a webpage, without page breaks or print formatting.
+
+**Print Layout View:** Shows the document as it would appear when printed, with page breaks, headers, and margins.
+
+**DocIO PDF conversion behavior:**
+DocIO uses the **Print Layout View** during document conversion to preserve the layout, including page breaks and formatting.
+
+## What are the chances of an SVG image not rendering correctly during Word-to-PDF conversion using DocIO?
+
+If an SVG image does not render correctly in the converted PDF, it may be due to the absence of a fallback image format. Word documents typically include a PNG fallback for SVG images to ensure compatibility across different rendering environments.
+ 
+Since DocIO is a non - UI library and does not render SVGs directly, it relies on the PNG fallback embedded in the Word file to render the image during PDF conversion. If the fallback PNG is missing, the SVG may not appear in the output PDF.
+
+## Which can be safely used as a replacement for Arial Unicode MS for accurate and consistent Chinese text rendering?
+
+`Simsun Regular` is a reliable replacement for `Arial Unicode MS` when rendering Chinese text in Word documents, especially during Word to PDF conversion.
+
+Simsun is a system font that comes pre-installed on most Windows environments. When the Chinese text is used in Word documents, it ensures accurate text display and preserves formatting when the document is converted to PDF.
+
+Using `Simsun Regular` helps avoid font substitution issues and ensures consistent rendering of Chinese characters.

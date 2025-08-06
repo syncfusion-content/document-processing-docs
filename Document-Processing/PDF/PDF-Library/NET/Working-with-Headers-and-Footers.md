@@ -9,6 +9,9 @@ documentation: UG
 
 Essential<sup>&reg;</sup> PDF supports to draw the header and footer in PDF document using [PdfPageTemplateElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageTemplateElement.html) class. The header and footer can contain any types of element including dynamic fields.
 
+To quickly get started with adding headers and footers to PDF files using the Syncfusion<sup>®</sup> PDF library for .NET, refer to this video tutorial:
+{% youtube "https://youtu.be/zGcQEVw5v9Y?si=lI6qZLUJRw6UWUZi" %}
+
 ## Adding an automatic field in header and footer
 
 Essential<sup>&reg;</sup> PDF supports to add page count, page numbers, date and time using dynamic fields such as [PdfPageCountField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageCountField.html), [PdfPageNumberField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageNumberField.html) etc.

@@ -86,6 +86,8 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </tbody>
 </table>
 
+T> If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+
 #### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
@@ -106,7 +108,49 @@ The following NuGet packages need to be included in your application based on th
 </tr>
 </table>
 
-N> PowerPoint Presentation to image conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards for ASP.NET Core and Xamarin.
+N> 1. PowerPoint Presentation to image conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards for ASP.NET Core and Xamarin.
+N> 2. Syncfusion has **deprecated the ASP.NET package**. We strongly recommend upgrading your applications to ASP.NET Core. Refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core) to migrate from .NET Framework to .NET Core.
+
+### Additional NuGet packages required for Linux
+
+The SkiaSharp and HarfBuzzSharp native asset NuGet packages are required as additional dependencies when deploying your application in Linux environments. There are two types of NuGet packages—choose the appropriate ones based on your specific Linux environment.
+
+The following table illustrates the native assets NuGet packages and their applicable Linux environments:
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Required Native assets NuGet packages</th>
+      <th>Applicable Linux environments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)'| markdownify }}
+      </td>
+      <td>
+        <ul>
+          <li>Common Linux distributions such as Ubuntu, Alpine, CentOS, Debian, Fedora, and RHEL</li>
+          <li>Azure App Service</li>
+          <li>Google App Engine</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)'| markdownify }}
+      </td>
+      <td>
+        <ul>
+          <li>AWS Lambda</li>
+          <li>AWS Elastic Beanstalk</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Converting charts in Presentation
 

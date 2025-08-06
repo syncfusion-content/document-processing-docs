@@ -39,9 +39,10 @@ Syncfusion.DocIO.UWP<br/>Syncfusion.OfficeChart.UWP<br/></td></tr>
 Syncfusion.DocIO.NET<br/>Syncfusion.Compression.NET<br/>Syncfusion.OfficeChart.NET<br/></td></tr>
 </table>
 
-T> Switch to NuGet packages for a seamless experience:
-T> * Get frequent bug fixes every week.
-T> * Upgrade quickly with no manual effort.
+T> 1. If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
+T> 2. Switch to NuGet packages for a seamless experience:
+T>    * Get frequent bug fixes every week.
+T>    * Upgrade quickly with no manual effort.
 T> Note: To avoid trail watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 T>
 T> Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required) to know more about NuGet packages required.

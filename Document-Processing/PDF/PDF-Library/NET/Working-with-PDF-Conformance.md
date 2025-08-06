@@ -1202,7 +1202,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 An existing PDF document can be converted to PDF/A conformance document, by setting the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) value in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) to ```Pdf_A1B```,```Pdf_A2B```,```Pdf_A3B```, and ```Pdf_A4``` of  [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html). Refer to the following code sample to achieve the same.
 
-N> To convert the existing PDF to PDF/A conformance document in .NET Core, you need to include the Syncfusion.Pdf.Imaging.Portable assembly reference in the .NET Core project.
+N> 1.To convert the existing PDF to PDF/A conformance document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
+N> 2.For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
 
 {% tabs %}  
 
@@ -1320,7 +1321,7 @@ N> 3. From the .NET Framework 3.5 version, the Essential<sup>&reg;</sup> PDF is 
 
 ## Font subsetting during PDF to PDF/A conversion
 
-You can optimize the size of PDF/A documents by embedding only the required font glyphs during conversion. This is achieved by setting the SubsetFonts and ConformanceLevel properties using the PdfConformanceOptions class. 
+You can optimize the size of PDF/A documents by embedding only the required font glyphs during conversion. This is achieved by setting the SubsetFonts and [ConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfConformanceOptions.html#Syncfusion_Pdf_Parsing_PdfConformanceOptions_ConformanceLevel) properties using the [PdfConformanceOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfConformanceOptions.html) class. 
 
 Refer to the following code sample for implementation. 
 
@@ -1328,7 +1329,7 @@ N> To convert an existing PDF to a PDF/A-compliant document in .NET Core, ensure
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}	
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Font_Subsetting_in_PDFA_conversion/.NET/Font_Subsetting_in_PDFA_conversion/Program.cs" %}	
 
 //Load an existing PDF document  
 FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);  
@@ -1399,7 +1400,7 @@ document.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Font_Subsetting_in_PDFA_conversion/.NET).
 
 To convert an existing PDF document to the PDFA document in .NET Core, you need to substitute the non-embedded fonts in the input document. Refer to the following code sample to achieve the same.
 

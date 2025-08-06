@@ -1,6 +1,6 @@
 ---
-title: Converting HTML to PDF | Syncfusion
-description: Learn how to convert HTML to PDF using 3 different rendering engines (Blink, WebKit and IE) with various features like TOC, partial web page to PDF etc.
+title: HTML to PDF conversion in .NET PDF Library overview | Syncfusion
+description: Understand HTML-to-PDF conversion in the Blink rendering engine, by using various features like TOC, partial web page to PDF, and more.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -55,7 +55,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6, .NET 8, and .NET 9) Windows
+(.NET Core, .NET 8, and .NET 9) Windows
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Windows.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/)'| markdownify }}
@@ -63,7 +63,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6, .NET 8, and .NET 9) Linux
+(.NET Core, .NET 8, and .NET 9) Linux
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Linux.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/)'| markdownify }}
@@ -71,7 +71,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6, .NET 8, and .NET 9) Mac
+(.NET Core, .NET 8, and .NET 9) Mac
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Mac.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac/)'| markdownify }}
@@ -79,7 +79,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6, .NET 8, and .NET 9) AWS
+(.NET Core, .NET 8, and .NET 9) AWS
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Aws.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Aws/)'| markdownify }}

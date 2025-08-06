@@ -487,3 +487,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to insert Excel, Word, PowerPoint, and PDF as OLE object in the Word document?](https://support.syncfusion.com/kb/article/19806/how-to-insert-excel-word-powerpoint-and-pdf-as-ole-object-in-the-word-document)
+* [How to Add a PDF with first page preview in Word document .NET Core?](https://support.syncfusion.com/kb/article/19817/how-to-add-a-pdf-with-first-page-preview-in-word-document-net-core)

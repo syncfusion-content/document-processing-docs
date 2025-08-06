@@ -1,6 +1,6 @@
 ---
 title: Supported file formats in .NET Word (DocIO) Library | Syncfusion
-description: Learn more about the supported file formats in .NET Word (DocIO) Library.
+description: Learn more about the supported file formats in .NET Word (DocIO) Library to create, edit, and convert Word document.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -14,71 +14,55 @@ The following table describes the supported file formats and their conversions i
 
 <table>
 <tr>
+<th rowspan="2">Source Format</th>
+<th colspan="14">Destination Format</th>
+</tr>
+<tr>
 <th>
-Source Format  
+{{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}
 </th>
 <th>
-{{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}
+{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}
 </th>
 <th>
-{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}
+{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}
 </th>
 <th>
-{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}
+{{'[DOT](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}
 </th>
 <th>
-{{'[DOT](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}
+{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}
 </th>
 <th>
-{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}
+{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}
 </th>
 <th>
-{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}
+{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}
 </th>
 <th>
-{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}
+{{'[ODT](https://help.syncfusion.com/document-processing/word/word-library/net/word-to-odt)'| markdownify }}
 </th>
 <th>
-{{'[ODT](https://help.syncfusion.com/document-processing/word/word-library/net/word-to-odt)'| markdownify }}
+{{'[RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf)'| markdownify }}
 </th>
 <th>
-{{'[RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf)'| markdownify }}
+{{'[Text](https://help.syncfusion.com/document-processing/word/word-library/net/text)'| markdownify }}
 </th>
 <th>
-{{'[Text](https://help.syncfusion.com/document-processing/word/word-library/net/text)'| markdownify }}
+{{'[Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-word-document-to-markdown-in-csharp)'| markdownify }}
 </th>
 <th>
-{{'[Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-word-document-to-markdown-in-csharp)'| markdownify }}
+{{'[HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html)'| markdownify }}
 </th>
 <th>
-{{'[HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html)'| markdownify }}
+{{'[PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)'| markdownify }}
 </th>
 <th>
-{{'[PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)'| markdownify }}
-</th>
-<th>
-{{'[Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image)'| markdownify }}
+{{'[Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image)'| markdownify }}
 </th>
 </tr>
 <tr>
-<th>{{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}</th>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<th>{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}</th>
+<th>{{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -95,7 +79,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[Word Processing XML (2003)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml)'| markdownify }}</th>
+<th>{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -112,7 +96,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}</th>
+<th>{{'[Word Processing XML (2003)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-processing-xml-xml)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -129,7 +113,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOT](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}</th>
+<th>{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -146,7 +130,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}</th>
+<th>{{'[DOT](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -163,7 +147,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}</th>
+<th>{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -180,7 +164,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}</th>
+<th>{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -197,7 +181,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf)'| markdownify }}</th>
+<th>{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -214,7 +198,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[Text](https://help.syncfusion.com/document-processing/word/word-library/net/text)'| markdownify }}</th>
+<th>{{'[RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -231,7 +215,7 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp)'| markdownify }}</th>
+<th>{{'[Text](https://help.syncfusion.com/document-processing/word/word-library/net/text)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -248,7 +232,24 @@ Source Format
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html)'| markdownify }}</th>
+<th>{{'[Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp)'| markdownify }}</th>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<th>{{'[HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>

@@ -129,15 +129,15 @@ private void CreatePieChart()
 
     //Add sample data for pie chart
     //Add headings in A1 and B1.
-    worksheet.Range["A1"].Value = "Products";
-    worksheet.Range["B1"].Value = "Users";
+    worksheet.SetValue(1, 1, "Products");
+    worksheet.SetValue(1, 2, "Users");
 
     //Add data from A2 till B4
-    worksheet.Range["A2"].Value = "XlsIO";
+    worksheet.SetValue(2, 1, "XlsIO");
     worksheet.Range["B2"].Value2 = 10000;
-    worksheet.Range["A3"].Value = "DocIO";
+    worksheet.SetValue(3, 1, "DocIO");
     worksheet.Range["B3"].Value2 = 8000;
-    worksheet.Range["A4"].Value = "PDF";
+    worksheet.SetValue(4, 1, "PDF");
     worksheet.Range["B4"].Value2 = 12000;
 
     //Add a pie chart and set data range in the worksheet
@@ -175,15 +175,15 @@ Private Sub CreatePieChart()
 
     'Add sample data for pie chart
     'Add headings in A1 and B1.
-    worksheet.Range("A1").Value = "Products"
-    worksheet.Range("B1").Value = "Users"
+    worksheet.SetValue(1, 1, "Products")
+    worksheet.SetValue(1, 2, "Users")
 
     'Add data from A2 till B4
-    worksheet.Range("A2").Value = "XlsIO"
+    worksheet.SetValue(2, 1, "XlsIO")
     worksheet.Range("B2").Value2 = 10000
-    worksheet.Range("A3").Value = "DocIO"
+    worksheet.SetValue(3, 1, "DocIO")
     worksheet.Range("B3").Value2 = 8000
-    worksheet.Range("A4").Value = "PDF"
+    worksheet.SetValue(4, 1, "PDF")
     worksheet.Range("B4").Value2 = 12000
 
     'Add a pie chart and set data range in the worksheet

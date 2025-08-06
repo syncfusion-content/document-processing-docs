@@ -11,6 +11,8 @@ Essential<sup>&reg;</sup> DocIO is a native [.NET Word library](https://www.sync
 
 It is a non-UI component that provides a full-fledged document instance model similar to the Microsoft Office COM libraries to iterate with the document elements explicitly and perform necessary manipulation. It is built from scratch in C# and does not require Microsoft Word to be installed in the machine. It supports Word 97-2003 and later version documents.
 
+T> If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
+
 **Key Features**
 
 * Support to [create Word document](https://help.syncfusion.com/document-processing/word/word-library/net/getting-started) from scratch.

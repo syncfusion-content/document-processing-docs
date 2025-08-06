@@ -515,3 +515,161 @@ End Using
 {% endtabs %}
 
 For more details about specifying page properties, refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-sections#specifying-page-properties).
+
+## Is it possible to download a Word document from an AWS S3 bucket and use it in DocIO?
+
+Yes, you can download a Word document from an AWS S3 bucket and use it with DocIO. Refer to the [documentation](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-aws-s3-cloud-storage#download-file-from-aws-s3-cloud-storage) to learn more about downloading and loading documents from an AWS S3 bucket.
+
+## Can DocIO open or process MPIP-protected Word documents?
+
+No, DocIO cannot open or process Microsoft Purview Information Protection (MPIP) protected Word files because it requires user authentication. DocIO is a standalone library and does not integrate with Microsoft 365 or Azure AD, so it cannot decrypt MPIP-protected content.
+
+## Why does content imported from one Word document to another start on a new page, even without a section break?
+
+This occurs when page setup properties (like margins, or paper size) differ between the source and destination documents. In DocIO, importing content clones the entire section, including its page settings. If these settings don’t match, Microsoft Word treats it as a separate section and starts it on a new page when opening in Word viewer— even if no section break is specified. This is the default behavior.
+
+As a workaround, keep the same section and page setup properties in both the source and destination documents before merging. Alternatively, iterate through each section of the source document and set its page properties to match those of the destination document.
+
+The following code illustrates how to set the page properties to source document as same as the destination document.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+// Match page setup before importing
+IWSection sourceSection = sourceDoc.Sections[0];
+IWSection destSection = destinationDoc.Sections[0];
+//Sets the destination document page setup properties to the source document sections.
+sourceSection.PageSetup.DifferentFirstPage = destSecPageSetup.DifferentFirstPage;
+sourceSection.PageSetup.Margins.All = destSection.PageSetup.Margins.All;
+sourceSection.PageSetup.Orientation = destSection.PageSetup.Orientation;
+sourceSection.PageSetup.PageSize = destSection.PageSetup.PageSize;
+// Now import the section
+destinationDoc.Sections.Add(sourceDoc.Sections[0].Clone());
+{% endhighlight %}
+{% endtabs %}
+
+## Does DocIO process corrupted Word documents?
+
+Corruption in Word document can be due to improper structure, invalid tags, or encoded characters. Microsoft Word can recover corrupted documents by rewriting the internal structure if you click "Yes."
+
+![Microsoft Word Coruppted popup message](../FAQ_images/Corrupted-message.png)
+
+In DocIO, if the structure is incorrect, an exception is thrown. Otherwise, DocIO tries to parse the document, which may result in missing elements or corruption. DocIO does not auto-correct file-level corruption, so the output may still have issues.
+
+## Is custom chart templates (.crtx) supported in Word Library?
+
+No, the .NET Word Library does not support custom chart templates (.crtx files).
+
+These templates are part of Microsoft Excel's UI and are stored outside the document. Since the Word Library works programmatically and doesn't rely on external UI-based templates, applying .crtx files isn't supported.
+
+## How does Syncfusion DocIO process Word documents internally?
+
+Syncfusion DocIO processes Word documents by loading them into a memory stream as a structured Document Object Model (DOM). It organizes content into sections, paragraphs, tables, and other elements, allowing easy editing and formatting.
+ 
+When performing operations like editing or cloning, DocIO traverses this structure and carefully handles each element to preserve the document's formatting, styles, and structure. For large or complex documents with many nested elements, it may take some time.
+
+## Method `GetFontExactHeight` does not have an implementation error occurs at runtime. What is the cause and how to resolve it?
+
+This error occurs due to a version mismatch between dependent libraries. The method may be unavailable or incompatible when different versions of related libraries are used in the same project. Ensure all related libraries used in the project are of the same version to maintain compatibility and prevent runtime errors.
+
+N> All Syncfusion packages (e.g., `Syncfusion.DocIO`, `Syncfusion.DocIORenderer`, and `Syncfusion.Pdf`) must be referenced with the same version number in the project.
+Using mismatched versions can cause runtime errors such as Method 'GetFontExactHeight' in type 'Syncfusion.DocIORenderer.RenderHelper' does not have an implementation.
+
+## Is it possible to insert chart at specific page in Word document?
+
+No, it is not possible to directly insert a chart at a specific page in a Word document. A Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, etc.
+
+The Word viewer/editor dynamically renders the document page by page during editing or viewing, but this layout is not preserved at the document level.
+
+DocIO is a non-UI component that allows manipulation of Word document contents through a comprehensive document object model. However, it does not support retrieving or modifying content based on specific page numbers because pages are not fixed entities in the document structure.
+
+Here are three approaches using DocIO to insert a chart at a specific location based on document elements:
+
+`Approach 1: Content Control with Titles`
+
+Use content controls with titles to define locations in the Word document. DocIO can locate these controls and insert a chart at those positions.
+
+For more information on working with content control, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/find-item-in-word-document#find-item-by-property).
+
+`Approach 2: Replace Placeholder Text with a Chart`
+
+Insert unique placeholder strings (e.g., <<InsertChartHere>>) in the  Word document. You can programmatically find and replace these placeholders with charts.
+
+For more information on working with Find and Replace, refer to the KB [here](https://support.syncfusion.com/kb/article/13951/how-to-find-and-replace-a-text-with-chart-in-word-document).
+
+This KB demonstrates how to find and replace text with the chart in the document.
+
+For more details, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-find-and-replace). 
+
+`Approach 3: Use Bookmarks for Targeted Location`
+
+Place bookmarks at desired locations in the document. DocIO can find these Bookmarks and replace their content with a chart.
+
+For more information on working with Bookmark, refer to the documentation [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-bookmarks#replacing-content-in-a-bookmark).
+
+## How to preserve formatting of source document while inserting in a bookmark location in another document?
+
+When inserting a source document into a destination document at a specific bookmark location using the .NET Word Library DocIO, the formatting from the source document may not be preserved by default. This occurs because the destination document can override styles during the import process.
+
+To retain the original formatting of the source document, the [ImportOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html) property should be set to [ImportOptions.KeepSourceFormatting](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ImportOptions.html#Syncfusion_DocIO_DLS_ImportOptions_KeepSourceFormatting) before performing the insertion. This ensures that all styles, fonts, and formatting from the source document are preserved in the destination document.
+
+The following code sample how to preserve the formatting of the source document when inserting it at a bookmark location in another document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+ // Load the destination document
+ WordDocument destinationDocument = new WordDocument("DestinationDocument.docx");
+ // Load the source document
+ WordDocument sourceDocument = new WordDocument("SourceDocument.docx");
+ // Create a part of the source document for import
+ WordDocumentPart sourceDoc = new WordDocumentPart(sourceDocument);
+ // Set import options to keep source formatting
+ destinationDocument.ImportOptions = ImportOptions.KeepSourceFormatting;
+ // Create a bookmarks navigator for the destination document
+ BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(destinationDocument);
+ // Move to the specified bookmark in the destination document
+ bookmarksNavigator.MoveToBookmark("bkmk1");
+ // Replace the content at the bookmark with the source document content
+ bookmarksNavigator.ReplaceContent(sourceDoc);
+ // Save the modified destination document to a new file
+ destinationDocument.Save("Output.docx", FormatType.Docx);
+ // Close the documents
+ sourceDoc.Close();
+ sourceDocument.Close();
+ destinationDocument.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+' Load the destination document
+Dim destinationDocument As New WordDocument("DestinationDocument.docx")
+' Load the source document
+Dim sourceDocument As New WordDocument("SourceDocument.docx")
+' Create a part of the source document for import
+Dim sourceDoc As New WordDocumentPart(sourceDocument)
+' Set import options to keep source formatting
+destinationDocument.ImportOptions = ImportOptions.KeepSourceFormatting
+' Create a bookmarks navigator for the destination document
+Dim bookmarksNavigator As New BookmarksNavigator(destinationDocument)
+' Move to the specified bookmark in the destination document
+bookmarksNavigator.MoveToBookmark("bkmk1")
+' Replace the content at the bookmark with the source document content
+bookmarksNavigator.ReplaceContent(sourceDoc)
+' Save the modified destination document to a new file
+destinationDocument.Save("Output.docx", FormatType.Docx)
+' Close the documents
+sourceDoc.Close()
+sourceDocument.Close()
+destinationDocument.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+N> When using this option, the Table of Contents (TOC) entries may appear in blue. This is because they are styled with the `Hyperlink` style, which applies blue font color by default. This is expected behavior and not an issue.
+
+## Is it possible to get position (in points or coordinates) of an element?
+
+No, it's not possible to get the exact position (like X, Y coordinates or page number) of an element in a Word document using DocIO.
+ 
+This is because a Word document is a flow-based document, where contents are not preserved page by page. Instead, the contents are preserved sequentially, section by section. Each section may extend across multiple pages based on its contents, such as tables, text, images, and more. Position information of elements is not maintained at the file level in a Word document.
+
+DocIO is a non-UI component that provides a full-fledged document object model to manipulate the Word document contents based on file-level information. Hence, it is not feasible to retrieve the position of an element within a Word document using DocIO.

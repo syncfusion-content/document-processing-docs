@@ -1,6 +1,6 @@
 ---
-title: Converting HTML to PDF | Syncfusion
-description: Learn how to convert HTML to PDF using Blink rendering engines with various features like TOC, partial web page to PDF etc.
+title: Troubleshoot HTML to PDF conversion in .NET PDF Library | Syncfusion
+description: Learn how to convert HTML to PDF using the Blink rendering engine with various features like TOC, partial web page to PDF, and more.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -1389,6 +1389,38 @@ This will trigger the execution of your startup script, resolving installation a
 <br/><br/>
 After the service restarts, try the conversion or operation again to ensure the issues are resolved.
 <br/><br/>
+</td>
+</tr>
+
+</table>
+
+<table>
+
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Failed to convert webpage exception in Azure App Service (Windows) using CEF rendering engine — deployed via Azure DevOps pipeline
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>Missing <b>CEF (Chromium Embedded Framework)</b> binaries during Azure pipeline deployment.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>Add the following package references to your `.csproj` file to ensure CEF binaries are included during Azure DevOps build:
+<br><br/>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+<PackageReference Include="Syncfusion.HtmlToPdfConverter.Cef.Net.Windows" Version="29.1.41" />
+<PackageReference Include="chromiumembeddedframework.runtime.win-x64" Version="119.4.3" />
+
+{% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 

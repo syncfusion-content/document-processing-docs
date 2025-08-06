@@ -15,6 +15,7 @@ The following are the types of form field in the Word document
 * Drop-down – represented by an instance of [WDropDownFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WDropDownFormField.html)
 * Text input – represented by an instance of [WTextFormField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextFormField.html)
 
+N> To generate editable fields in the PDF converted from a Word document, use Form Fields; regular text and content controls will not be editable. Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field) to learn more about converting form fields as editable fields during Word to PDF conversion.
 
 ## Check Box
 

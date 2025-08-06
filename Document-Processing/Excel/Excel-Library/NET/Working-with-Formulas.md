@@ -153,8 +153,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorksheet sheet1 = workbook.Worksheets[0];
 	IWorksheet sheet2 = workbook.Worksheets[1];
 
-	sheet1.Range["A2"].Value = "20";
-	sheet2.Range["B2"].Value = "10";
+    sheet1.SetValue(2, 1, "20");
+    sheet2.SetValue(2, 2, "10");
 
 	#region Cross Sheet Formula
 	//Setting formula for the range with cross-sheet reference
@@ -252,8 +252,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	//Returns the calculated value of a formula using the most current inputs
 	string calculatedValue = sheet["C1"].CalculatedValue;
-	sheet.Range["C3"].Value = "Calculated Value of the formula in C1 calculated through XlsIO is : " + calculatedValue;
-	
+	sheet.SetValue(3, 3, "Calculated Value of the formula in C1 calculated through XlsIO is : " + calculatedValue);
+
 	sheet.DisableSheetCalculations();
 	#endregion
 
@@ -1589,7 +1589,7 @@ MODE<br/><br/></td><td>
 Returns the most common value in a data set<br/><br/></td></tr>
 <tr>
 <td>
-MMONTH<br/><br/></td><td>
+MONTH<br/><br/></td><td>
 Converts a serial number to a month<br/><br/></td></tr>
 <tr>
 <td>
@@ -2235,8 +2235,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	application.DefaultVersion = ExcelVersion.Xlsx;
 	IWorkbook workbook = application.Workbooks.Create(1);
 	IWorksheet sheet = workbook.Worksheets[0];
-	sheet.Range["A1"].Value = "10";
-	sheet.Range["B1"].Value = "20";
+    sheet.SetValue(1, 1, "10");
+    sheet.SetValue(1, 2, "20");
 
 	//Defining a name in workbook level for the cell A1
 	IName name1 = workbook.Names.Add("One");

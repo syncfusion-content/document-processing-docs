@@ -442,6 +442,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N>  1. The word to PDF layout engine is used for updating the page count in word document. Due to its limitations, it may result in an incorrect page count and the execution of this process may take some time.
 N>  2. In ASP.NET Core and Xamarin platforms, to update page count in a Word document we recommend you to use Word to PDF [assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) or [NuGet](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-word-document-to-pdf) as a reference in your application to update page count in a Word document.
+N>  3. DocIO uses the Word-to-PDF layout engine to update page count. If the required fonts are missing in the environment, alternate fonts are used, which may affect accuracy. [Ensure](https://support.syncfusion.com/kb/article/6821/check-whether-fonts-in-word-document-are-available-in-machine-for-pdf-or-image-conversion) all fonts used in the input document are available for a correct page count.
 
 ### Adding Custom Document properties
 
@@ -1094,6 +1095,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to copy style between Word documents](https://support.syncfusion.com/kb/article/17738/how-to-copy-style-between-word-documents)
 * [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 * [How to generate and insert a QR code in a Word Document?](https://support.syncfusion.com/kb/article/19794/how-to-generate-and-insert-a-qr-code-in-a-word-document)
+* [How to Remove Empty Tables from .NET Core Word Document?](https://support.syncfusion.com/kb/article/20090/how-to-remove-empty-tables-from-net-core-word-document)
 
 ## Frequently Asked Questions
 

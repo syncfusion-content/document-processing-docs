@@ -11,7 +11,7 @@ Redacting a PDF is the process of permanently removing sensitive or confidential
 
 N> 1.CJK text without TrueType font and complex script text cannot be redacted.
 N> 2.To redact the content from the existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
-N> 3.To ensure compatibility on **Linux** when performing image-based operations such as redaction using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
+N> 3.For other Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
 
 To quickly get started with redacting PDF documents in .NET using the PDF Library, check this video. 
 {% youtube "https://www.youtube.com/watch?v=sSnHbKm3WTk" %}
@@ -553,13 +553,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Redaction appearance fill color
 
-The Essential<sup>&reg;</sup> PDF library allows you to enhance redaction annotations by applying a fill color using the AppearanceFillColor property. This helps improve the visibility of redacted content and supports custom styling preferences.
+The Essential<sup>&reg;</sup> PDF library allows you to enhance redaction annotations by applying a fill color using the [AppearanceFillColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRedactionAnnotation.html#Syncfusion_Pdf_Interactive_PdfRedactionAnnotation_AppearanceFillColor) property. This helps improve the visibility of redacted content and supports custom styling preferences.
 
 The following code example demonstrates how to apply a appearance fill color to a redaction annotation. 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Redaction-fill-color-customization/.NET/Redaction-fill-color-customization/Program.cs" %}
 
 //Create a new PDF document. 
 PdfDocument document = new PdfDocument(); 
@@ -684,7 +684,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Redaction-fill-color-customization/.NET).
 
 ## Get redaction progress 
 

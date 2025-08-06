@@ -148,7 +148,7 @@ class AWSExternalOcrEngine : IOcrEngine
 {% endhighlight %}
 
 By executing the program, you will get a PDF document as follows. 
-![Output PDF screenshot](OCR-Images/Output.png)
+![Output PDF](OCR-Images/Output.png)
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/AWS%20Textract).
 

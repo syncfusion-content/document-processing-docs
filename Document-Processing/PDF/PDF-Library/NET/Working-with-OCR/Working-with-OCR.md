@@ -60,7 +60,7 @@ Directly install the NuGet package to your application from [nuget.org](https://
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6 and .NET 7) Windows, Linux and Mac
+(.NET Standard 2.0, .NET 8 and .NET 9) Windows, Linux and Mac
 </td>
 <td>
 {{'[Syncfusion.PDF.OCR.NET.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET)'| markdownify }}
@@ -108,7 +108,7 @@ ASP.NET MVC5
 </tr>
 <tr>
 <td>
-ASP.NET Core (.NET 5, .NET 6 and .NET 7) Windows, Linux and Mac
+ASP.NET Core (.NET 8 and .NET 9) Windows, Linux and Mac
 </td>
 <td>
 {{'[Syncfusion.PDF.OCR.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)'| markdownify }}
@@ -157,7 +157,7 @@ Windows Forms, WPF, ASP.NET, and ASP.NET MVC
 </tr>
 <tr>
 <td>
-.NET 5/.NET 6
+.NET 8/.NET 9
 </td>
 <td>
 <ul>
@@ -285,7 +285,7 @@ using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
 
-Step 5: Use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in Program.cs file. 
+Step 5: Use the following code sample to perform OCR on the entire PDF document using PerformOCR method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class in Program.cs file. 
 
 {% highlight c# tabtitle="C#" %}
 

@@ -48,7 +48,8 @@ Syncfusion.OfficeChart.NET<br/>
 </td></tr>
 </table>
 
-T> Switch to NuGet packages for a seamless experience:
+T> 1. If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> 2. Switch to NuGet packages for a seamless experience:
 T> * Get frequent bug fixes every week.
 T> * Upgrade quickly with no manual effort.
 T> Note: To avoid trail watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.

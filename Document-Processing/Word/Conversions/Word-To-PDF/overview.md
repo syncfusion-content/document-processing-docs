@@ -38,6 +38,8 @@ Refer to the following links for assemblies required based on platforms to conve
 To quickly start converting a Word document to a PDF, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=8QdevnBxgHk" %}
 
+T> If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
+
 ## Convert Word to PDF
 
 The following namespaces are required to compile the code:
@@ -146,6 +148,7 @@ T> For troubleshooting issues in the .NET Word Library (DocIO), refer [this](htt
 N> 1. For .NET Framework, creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word to PDF. Otherwise, the charts are not preserved in the converted PDF. Whereas this is not necessary for .NET Core, as ChartToImageConverter is initialized internally in Syncfusion.DocIORenderer.Portable assembly.
 N> 2. Total number of pages in the converted PDF may vary based on unsupported elements in the input Word document.
 N> 3. "DocIO supports Word to PDF conversion in UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
+N> 4. Font-related issues during Word to PDF or image conversion can arise due to missing or incorrect font. For detailed instructions on resolving these problems, refer to this [articl(https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion).
 
 ## Supported File formats
 
@@ -284,3 +287,4 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 * [How to preserve simple markup, all markup, and no markup of track changes during Word to PDF conversion?](https://support.syncfusion.com/kb/article/14997/how-to-preserve-simple-markup-all-markup-and-no-markup-of-track-changes-during-word-to-pdf-conversion)
 * [How to create a Word document with form fields from JSON and convert it to PDF?](https://support.syncfusion.com/kb/article/19823/how-to-create-a-word-document-with-form-fields-from-json-and-convert-it-to-pdf)
 * [How to Rename PDF Bookmark in Word to PDF in .Net Core Word Document?](https://support.syncfusion.com/kb/article/19808/how-to-rename-pdf-bookmark-in-word-to-pdf-in-net-core-word-document)
+* [How to check if a font contains the required glyphs for Word to PDF and image conversion?](https://support.syncfusion.com/kb/article/19671/how-to-check-if-a-font-contains-the-required-glyphs-for-word-to-pdf-and-image-conversion)

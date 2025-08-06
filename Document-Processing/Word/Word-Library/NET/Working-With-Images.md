@@ -710,6 +710,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to fix Images in a Specific Position in .Net Core Word Document?](https://support.syncfusion.com/kb/article/19660/how-to-fix-images-in-a-specific-position-in-net-core-word-document)
 * [How to Apply Border to an Image in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19726/how-to-apply-border-to-an-image-in-net-core-word-document)
 * [How to Find and Remove Corrupted Images in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19605/how-to-find-and-remove-corrupted-images-in-net-core-word-document)
+* [How to Convert Excel Worksheets to Images in .NET Core Word document?](https://support.syncfusion.com/kb/article/20162/how-to-convert-excel-worksheets-to-images-in-net-core-word-document)
 
 ## Frequently Asked Questions
 

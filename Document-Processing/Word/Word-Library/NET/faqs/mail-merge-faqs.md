@@ -184,3 +184,20 @@ if (!(dynamicObject as IDictionary<string, object>).ContainsKey(node.LocalName))
 
 {% endtabs %}
 
+## Why do merge fields disappear when running mail merge multiple times?
+
+If you perform mail merge in stages, such as merging some fields first and others later, unused merge fields may be removed after the first execution. This happens because DocIO clears unused fields by default.
+
+To resolve this, set the [ClearFields](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property to false before the first merge to retain all merge fields for later use.
+
+The following example demonstrates how to prevent merge fields from being removed during multiple mail merge operations.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+document.MailMerge.ClearFields = false;
+document.MailMerge.Execute(new[] { "Name" }, new[] { "John" });
+document.MailMerge.Execute(new[] { "Email" }, new[] { "john@example.com" });
+{% endhighlight %}
+
+{% endtabs %}

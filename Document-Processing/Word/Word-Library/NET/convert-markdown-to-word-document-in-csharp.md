@@ -10,6 +10,9 @@ documentation: UG
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports the conversion of Markdown to Word document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
+To quickly start converting a Word document to Markdown and vice versa, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=7iMVgVKXRdU" %}
+
 ## Assemblies and NuGet packages required
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a Word document using the .NET Word Library (DocIO).
@@ -63,6 +66,9 @@ End Using
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Convert-Markdown-to-Word).
 
 T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf), and [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image).
+
+N> 1. Hook the event handler before opening a Word document as per the above code example.
+N> 2. In Markdown to Word conversion, SVG or invalid images are replaced with a red "X" image instead of the original image.
 
 ## Customize image data
 
