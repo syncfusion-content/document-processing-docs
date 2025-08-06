@@ -2,7 +2,7 @@
 layout: post
 title: Themes in WPF Spreadsheet control | Syncfusion®
 description: Learn here all about Themes support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control, its elements and more.
-platform: wpf
+platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---

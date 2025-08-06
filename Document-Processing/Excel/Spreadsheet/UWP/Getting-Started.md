@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with UWP Spreadsheet control | Syncfusion®
 description: Learn here about getting started with Syncfusion® UWP Spreadsheet (SfSpreadsheet) control, its elements and more.
-platform: UWP
+platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---

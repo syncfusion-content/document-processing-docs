@@ -2,7 +2,7 @@
 layout: post
 title: Rows and Columns in WPF Spreadsheet control | Syncfusion®
 description: Learn here all about Rows and Columns support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
-platform: wpf
+platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---

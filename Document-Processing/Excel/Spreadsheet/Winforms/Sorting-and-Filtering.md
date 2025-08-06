@@ -2,7 +2,7 @@
 layout: post
 title: Sorting And Filtering in Windows Forms Spreadsheet | Syncfusion®
 description: Learn about Sorting And Filtering support in Syncfusion® Windows Forms Spreadsheet control and more details.
-platform: windowsforms
+platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---

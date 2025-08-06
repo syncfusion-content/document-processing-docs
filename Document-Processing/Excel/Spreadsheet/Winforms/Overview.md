@@ -2,7 +2,7 @@
 layout: post
 title: About Windows Forms Spreadsheet control | Syncfusion®
 description: Learn here all about introduction of Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
-platform: windowsforms
+platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---

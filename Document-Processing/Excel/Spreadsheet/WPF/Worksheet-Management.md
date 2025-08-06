@@ -2,7 +2,7 @@
 layout: post
 title: Worksheet Management in WPF Spreadsheet control | Syncfusion®
 description: Learn here all about Worksheet Management support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
-platform: wpf
+platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
