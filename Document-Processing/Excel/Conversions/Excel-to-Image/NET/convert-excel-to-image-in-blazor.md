@@ -93,7 +93,7 @@ using System.IO;
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as ``ExceltoImage`` and include the following code snippet to convert Excel document to Image in Blazor Server web application.
+Step 9: Create a new MemoryStream method with name as **ExceltoImage** and include the following code snippet to convert Excel document to Image in Blazor Server web application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -174,7 +174,7 @@ Step 11: Add the following JavaScript function in the ``App.razor``.
 {% endcapture %}
 {{ codesnippet7 | OrderList_Indent_Level_1 }}
 
-Step 12: Add the following code in ``NavMenu.razor`` file present under ``Layout`` folder.
+Step 12: Add the following code in **NavMenu.razor** file present under ``Layout`` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -192,6 +192,6 @@ Step 13: Add the service in the ``Program.cs`` file.
 {% highlight c# tabtitle="C#" %}
 builder.Services.AddScoped<ConvertExceltoImage.Components.Data.ExcelService>();
 {% endhighlight %}
-{% endtabs %}
+{% endtabs %}     
 
-A complete working example of how to convert Excel to Image in Blazor Server web application in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/ConvertExceltoImage).
+A complete working example of how to convert Excel to Image in Blazor Server web application in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/ConvertExceltoImage">this GitHub page</a>.
