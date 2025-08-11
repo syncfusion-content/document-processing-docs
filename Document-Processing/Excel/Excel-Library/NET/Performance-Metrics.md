@@ -51,9 +51,9 @@ The table below illustrates the performance of data types for open operations.
     <td>1545</td>        
     <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub page</a></td>
   </tr>
-</table>
+</table>            
 
-You can find the sample used for open operation performance evaluation on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open).
+You can find the sample used for open operation performance evaluation on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open">this GitHub page</a>.
 
 The table below illustrates the performance of data types for read operations.
 
