@@ -442,6 +442,104 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Adding-sections-with-different-page-settings/). 
 
+## Set section page numbers with custom styles in PDFs
+
+You can customize the numbering style of page labels in a PDF section by setting the [NumberStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfMultipleNumberValueField.html#Syncfusion_Pdf_PdfMultipleNumberValueField_NumberStyle) property of a [PdfSectionPageNumberField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSectionPageNumberField.html).
+For example, to use lowercase Roman numerals (i, ii, iii, ...), assign `PdfNumberStyle.LowerRoman` to the [NumberStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfMultipleNumberValueField.html#Syncfusion_Pdf_PdfMultipleNumberValueField_NumberStyle) property.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new document.
+PdfDocument document = new PdfDocument();
+//Add the section.
+PdfSection section = document.Sections.Add();
+//Set the font.
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Create section page number field.
+PdfSectionPageNumberField sectionPageNumber = new PdfSectionPageNumberField();
+sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman;
+sectionPageNumber.Font = font;
+//Draw the sectionPageNumber in section.
+for (int i = 0; i < 3; i++)
+{
+    PdfPage page = section.Pages.Add();
+    sectionPageNumber.Draw(page.Graphics);
+    page.Graphics.DrawString("This code is a practical example of how to automatically add Roman numeral page numbers", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(10, 0));
+}
+//Create file stream.
+using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
+{
+    //Save the PDF document to file stream.
+    document.Save(outputFileStream);
+}
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new document.
+PdfDocument document = new PdfDocument();
+//Add the section.
+PdfSection section = document.Sections.Add();
+//Set the font.
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+//Create section page number field.
+PdfSectionPageNumberField sectionPageNumber = new PdfSectionPageNumberField();
+sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman;
+sectionPageNumber.Font = font;
+//Draw the sectionPageNumber in section.
+for (int i = 0; i < 3; i++)
+{
+    PdfPage page = section.Pages.Add();
+    sectionPageNumber.Draw(page.Graphics);
+    page.Graphics.DrawString("This code is a practical example of how to automatically add Roman numeral page numbers", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(10, 0));
+}
+//Create file stream.
+//Save the PDF document to file stream.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Create a new document.
+Dim document As New PdfDocument()
+
+'Add the section.
+Dim section As PdfSection = document.Sections.Add()
+
+'Set the font.
+Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+
+'Create section page number field.
+Dim sectionPageNumber As New PdfSectionPageNumberField()
+sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman
+sectionPageNumber.Font = font
+
+'Draw the sectionPageNumber in section.
+For i As Integer = 0 To 2
+    Dim page As PdfPage = section.Pages.Add()
+    sectionPageNumber.Draw(page.Graphics)
+    page.Graphics.DrawString("This code is a practical example of how to automatically add Roman numeral page numbers", font, PdfBrushes.Black, New Syncfusion.Drawing.PointF(10, 0))
+Next
+
+'Save the PDF document to file stream.
+document.Save("Output.pdf")
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from GitHub.
+
 ## Get number of pages from a PDF document 
 
 You can get page count from the existing PDF document as shown in the following code snippet.
