@@ -205,6 +205,71 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 
 </table>
 
+## Application Crash in Syncfusion 29.X.X Due to Missing `locales` Folder Required by Chromium During HTML Rendering or Conversion
+
+<table>
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Application crashes in Syncfusion libraries version 29.2.11 because Chromium fails to find the required `locales` folder in the published output directory, leading to runtime errors when launching HTML rendering or conversion.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>Starting with Syncfusion package version 29.X.X, Chromium was updated to 133.x.x, which now requires the `locales` directory to be present at runtime. However, when publishing a .NET application with the `linux-x64` runtime identifier, only files are copied to the root output folder and the folder structure including 'locales' is omitted. As a result, Chromium cannot locate the required 'locales' directory, triggering a runtime exception during HTML rendering or conversion.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>
+To overcome this issue, we have three workaround solutions.
+<br/>
+Step 1: Using the "Portable" <b>Runtime Identifier</b> ensures that the runtime files are copied into the correct folder structure, allowing the conversion process to complete without any issues.
+<br/>
+Step 2: To resolve this issue, we recommend copying the <b>runtimes</b> folder into the project directory, placing it at the same level as the <b>.csproj</b> file. Additionally, ensure that all files within the runtimes folder have their <b>Copy to Output Directory</b> property set to <b>Copy if newer</b>. Please refer to the screenshot below for guidance.
+<br/>
+<img src="htmlconversion_images/Outputdictionarypath.png" alt="Output dictionary path">
+<br/>
+<br/>
+Step 3: If manually copying the files doesn't meet your requirements, we recommend applying the following code changes in the <b>.csproj</b> file and updating the publish profile. This will ensure the necessary files are copied automatically during the publishing process.
+<br/>
+Add the following code snippet to the <b>.pubxml</b> file to apply the necessary configuration.
+<br/>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+<PropertyGroup>
+
+ <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+
+</PropertyGroup>
+
+{% endhighlight %}
+{% endtabs %}
+<br/>
+Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> folder is copied to the publish directory during the build process.
+<br/>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+<ItemGroup>
+
+  <None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
+
+        CopyToOutputDirectory="Always"
+
+        Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
+
+</ItemGroup>
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+</table>
+
 ## Access is denied in runtimes folders. Runtimes folder requires read/write/execute permission
 
 <table>
@@ -929,7 +994,7 @@ System type       : 64-bit operating system, x64-based processor
 
 The benchmark details were obtained using the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) package. You can refer to the following sample, as well as the input and output files used:
 
-Input Html files         : <a href="https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data">https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data</a>
+Input HTML files         : <a href="https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data">https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data</a>
 
 Output PDF files        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip">https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip</a>
 
@@ -989,7 +1054,7 @@ N> * External resources loaded in the HTML (such as images, scripts, and styles)
 N> * Network speed for online URL conversions
 N> * Hardware resources (CPU and memory)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Performance_Testing/Syncfusion_HTMLtoPDF).
 
 ## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
 
