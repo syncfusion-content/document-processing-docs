@@ -93,7 +93,7 @@ using System.IO;
 {% endcapture %}
 {{ codesnippet4 | OrderList_Indent_Level_1 }}
 
-Step 9: Create a new MemoryStream method with name as <code>ExceltoImage</code> and include the following code snippet to convert Excel document to Image in Blazor Server web application.
+Step 9: Create a new MemoryStream method with name as <code>Excel&#8203;toImage</code> and include the following code snippet to convert Excel document to Image in Blazor Server web application.
 {% capture codesnippet5 %}
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -174,7 +174,7 @@ Step 11: Add the following JavaScript function in the ``App.razor``.
 {% endcapture %}
 {{ codesnippet7 | OrderList_Indent_Level_1 }}
 
-Step 12: Add the following code in <code>NavMenu.razor</code> file present under ``Layout`` folder.
+Step 12: Add the following code in <code>Na&#8203;vMenu.razor</code> file present under ``Layout`` folder.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
