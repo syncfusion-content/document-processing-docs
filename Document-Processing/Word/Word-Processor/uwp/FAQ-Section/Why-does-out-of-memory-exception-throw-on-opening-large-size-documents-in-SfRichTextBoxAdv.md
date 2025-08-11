@@ -6,7 +6,7 @@ control: SfRichTextBoxAdv
 documentation: ug
 keywords: out-of-memory-exception
 ---
-# Why does out of memory exception throw on opening large size documents in SfRichTextBoxAdv in UWP RichTextBox (SfRichTextBoxAdv)
+# Why does SfRichTextBoxAdv throw out of memory on large documents
 
 ## Why does out of memory exception throw on opening large size documents in SfRichTextBoxAdv
 
