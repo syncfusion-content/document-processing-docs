@@ -442,7 +442,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Adding-sections-with-different-page-settings/). 
 
-## Set section page numbers with custom styles in PDFs
+## Customize section page numbering styles in PDF documents
 
 You can customize the numbering style of page labels in a PDF section by setting the [NumberStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfMultipleNumberValueField.html#Syncfusion_Pdf_PdfMultipleNumberValueField_NumberStyle) property of a [PdfSectionPageNumberField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSectionPageNumberField.html).
 For example, to use lowercase Roman numerals (i, ii, iii, ...), assign `PdfNumberStyle.LowerRoman` to the [NumberStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfMultipleNumberValueField.html#Syncfusion_Pdf_PdfMultipleNumberValueField_NumberStyle) property.
@@ -459,6 +459,7 @@ PdfSection section = document.Sections.Add();
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
 //Create section page number field.
 PdfSectionPageNumberField sectionPageNumber = new PdfSectionPageNumberField();
+//Set the page number style as LowerRoman
 sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman;
 sectionPageNumber.Font = font;
 //Draw the sectionPageNumber in section.
@@ -489,6 +490,7 @@ PdfSection section = document.Sections.Add();
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
 //Create section page number field.
 PdfSectionPageNumberField sectionPageNumber = new PdfSectionPageNumberField();
+//Set the page number style as LowerRoman
 sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman;
 sectionPageNumber.Font = font;
 //Draw the sectionPageNumber in section.
@@ -519,6 +521,7 @@ Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
 
 'Create section page number field.
 Dim sectionPageNumber As New PdfSectionPageNumberField()
+'Set the page number style as LowerRoman
 sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman
 sectionPageNumber.Font = font
 
@@ -539,6 +542,10 @@ document.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from GitHub.
+
+When you execute this code, the output PDF will appear as shown in the screenshot below:
+
+<img src="Asp.Net.Core_images/Section-pdf.png" alt="Customize section output">
 
 ## Get number of pages from a PDF document 
 
