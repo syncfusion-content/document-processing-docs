@@ -2486,5 +2486,56 @@ The following code example illustrates this.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Line-limit-in-PDF/.NET).
 
+## Troubleshooting and FAQ's
 
-[def]: https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html
+### Why are German culture-specific characters (like € or umlauts) not printing correctly in the PDF when exporting the Grid?
+<table>
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">German culture-specific or other Unicode characters are not displayed correctly in the exported PDF file such as the euro symbol (€) or umlaut characters (ä, ö, ü).
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>By default, standard PDF fonts (like Helvetica, Times Roman, Courier) <b>do not support Unicode characters</b>. These fonts have a limited set of glyphs and can't render many non-ASCII or non-Latin characters. As a result, Unicode text will not appear or will be replaced by missing-character symbols in the PDF.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>
+To properly render Unicode characters (including German-specific symbols) in your PDF export:<br>
+<b> Use a TrueType Font: </b><br>
+Utilize Syncfusion’s PdfTrueTypeFont when creating or exporting PDFs. TrueType fonts fully support Unicode text rendering and will display all culture-specific characters correctly.<br>
+<b>Check Standard Font Support:</b><br>
+To determine if a specific font supports your text, use the font's MeasureString function to check if each character can be rendered:<br>
+{% tabs %}
+
+{% highlight C# tabtitle="C#" %}
+
+string cellValue = "2,30 €";
+bool standardFontNotSupported = true;
+foreach(char charvalue in cellValue.ToCharArray())
+{
+    string measureCharacter = charvalue.ToString();
+    SizeF sizeF = font.MeasureString(measureCharacter);
+    if(sizeF.Width == 0)
+    {
+        standardFontNotSupported = false;
+        break;
+    }
+}
+string fontSupport = (standardFontNotSupported == true) ? "Support" : "Not supported";
+Console.WriteLine(cellValue + ":" + "PdfStandardFont" + fontSupport);
+
+{% endhighlight %}
+{% endtabs %}
+<br>
+<b>Update Your Export Logic:</b><br>
+If your test reveals that the standard font cannot display certain characters, switch to a PdfTrueTypeFont that supports the required Unicode range.<br>
+
+</td>
+</tr>
+</table>
