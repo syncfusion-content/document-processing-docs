@@ -2492,7 +2492,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 <table>
 <th style="font-size:14px" width="100px">Exception
 </th>
-<th style="font-size:14px">German culture-specific or other Unicode characters are not displayed correctly in the exported PDF file such as the euro symbol (€) or umlaut characters (ä, ö, ü).
+<th style="font-size:14px">German culture-specific characters and other Unicode symbols, such as (€) and umlaut characters (ä, ö, ü), are not rendered correctly in the exported PDF file.
 </th>
 
 <tr>
