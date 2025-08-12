@@ -453,30 +453,47 @@ For example, to use lowercase Roman numerals (i, ii, iii, ...), assign `PdfNumbe
 
 //Create a new document.
 PdfDocument document = new PdfDocument();
-//Add the section.
+//Add a section to the document.
 PdfSection section = document.Sections.Add();
-//Set the font.
+//Set the font for the page number.
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
-//Create section page number field.
+//Create a section page number field.
 PdfSectionPageNumberField sectionPageNumber = new PdfSectionPageNumberField();
-//Set the page number style as LowerRoman
+
+//Set the page number style to LowerRoman (i, ii, iii, etc.).
 sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman;
 sectionPageNumber.Font = font;
-//Draw the sectionPageNumber in section.
+
+//Add pages to the section and draw the page number field in the footer.
 for (int i = 0; i < 3; i++)
 {
+    //Add a new page to the section.
     PdfPage page = section.Pages.Add();
-    sectionPageNumber.Draw(page.Graphics);
-    page.Graphics.DrawString("This code is a practical example of how to automatically add Roman numeral page numbers", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(10, 0));
+
+    //Get the page's client size to calculate the footer position.
+    SizeF pageSize = page.GetClientSize();
+
+    //Define the position for the page number in the footer (bottom-left).
+    PointF footerPosition = new PointF(10, pageSize.Height - 20);
+
+    //Draw the section page number at the calculated footer position.
+    sectionPageNumber.Draw(page.Graphics, footerPosition);
+
+    // You can add other content to the main body of the page here.
+    // For example, let's draw text at the top, leaving space for the footer.
+    page.Graphics.DrawString("This is the main content of a page with a footer.", font, PdfBrushes.Black, new PointF(10, 10));
 }
+
 //Create file stream.
 using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.ReadWrite))
 {
     //Save the PDF document to file stream.
     document.Save(outputFileStream);
 }
+
 //Close the document.
 document.Close(true);
+
 
 {% endhighlight %}
 
@@ -484,23 +501,37 @@ document.Close(true);
 
 //Create a new document.
 PdfDocument document = new PdfDocument();
-//Add the section.
+//Add a section to the document.
 PdfSection section = document.Sections.Add();
-//Set the font.
+//Set the font for the page number.
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
-//Create section page number field.
+//Create a section page number field.
 PdfSectionPageNumberField sectionPageNumber = new PdfSectionPageNumberField();
-//Set the page number style as LowerRoman
+
+//Set the page number style to LowerRoman (i, ii, iii, etc.).
 sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman;
 sectionPageNumber.Font = font;
-//Draw the sectionPageNumber in section.
+
+//Add pages to the section and draw the page number field in the footer.
 for (int i = 0; i < 3; i++)
 {
+    //Add a new page to the section.
     PdfPage page = section.Pages.Add();
-    sectionPageNumber.Draw(page.Graphics);
-    page.Graphics.DrawString("This code is a practical example of how to automatically add Roman numeral page numbers", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(10, 0));
+
+    //Get the page's client size to calculate the footer position.
+    SizeF pageSize = page.GetClientSize();
+
+    //Define the position for the page number in the footer (bottom-left).
+    PointF footerPosition = new PointF(10, pageSize.Height - 20);
+
+    //Draw the section page number at the calculated footer position.
+    sectionPageNumber.Draw(page.Graphics, footerPosition);
+
+    // You can add other content to the main body of the page here.
+    // For example, let's draw text at the top, leaving space for the footer.
+    page.Graphics.DrawString("This is the main content of a page with a footer.", font, PdfBrushes.Black, new PointF(10, 10));
 }
-//Create file stream.
+
 //Save the PDF document to file stream.
 document.Save("Output.pdf");
 //Close the document.
@@ -512,28 +543,38 @@ document.Close(true);
 
 'Create a new document.
 Dim document As New PdfDocument()
-
-'Add the section.
+'Add a section to the document.
 Dim section As PdfSection = document.Sections.Add()
-
-'Set the font.
-Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
-
-'Create section page number field.
+'Set the font for the page number.
+Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+'Create a section page number field.
 Dim sectionPageNumber As New PdfSectionPageNumberField()
-'Set the page number style as LowerRoman
+
+'Set the page number style to LowerRoman (i, ii, iii, etc.).
 sectionPageNumber.NumberStyle = PdfNumberStyle.LowerRoman
 sectionPageNumber.Font = font
 
-'Draw the sectionPageNumber in section.
+'Add pages to the section and draw the page number field in the footer.
 For i As Integer = 0 To 2
+    'Add a new page to the section.
     Dim page As PdfPage = section.Pages.Add()
-    sectionPageNumber.Draw(page.Graphics)
-    page.Graphics.DrawString("This code is a practical example of how to automatically add Roman numeral page numbers", font, PdfBrushes.Black, New Syncfusion.Drawing.PointF(10, 0))
+
+    'Get the page's client size to calculate the footer position.
+    Dim pageSize As SizeF = page.GetClientSize()
+
+    'Define the position for the page number in the footer (bottom-left).
+    Dim footerPosition As New PointF(10, pageSize.Height - 20)
+
+    'Draw the section page number at the calculated footer position.
+    sectionPageNumber.Draw(page.Graphics, footerPosition)
+
+    'Draw main content at the top.
+    page.Graphics.DrawString("This is the main content of a page with a footer.", font, PdfBrushes.Black, New PointF(10, 10))
 Next
 
 'Save the PDF document to file stream.
 document.Save("Output.pdf")
+
 'Close the document.
 document.Close(True)
 
@@ -542,10 +583,6 @@ document.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from GitHub.
-
-When you execute this code, the output PDF will appear as shown in the screenshot below:
-
-<img src="Asp.Net.Core_images/Section-pdf.png" alt="Customize section output">
 
 ## Get number of pages from a PDF document 
 
