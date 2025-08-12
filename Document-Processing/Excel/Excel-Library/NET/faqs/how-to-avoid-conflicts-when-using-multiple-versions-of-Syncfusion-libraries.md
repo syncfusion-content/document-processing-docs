@@ -1,6 +1,6 @@
 ---
-title: Avoid conflicts with multiple Syncfusion library versions
-description: This page explains about how to avoid conflicts with multiple Syncfusion library versions
+title: How to avoid conflicts with multiple Syncfusion library versions
+description: This page explains about how to avoid conflicts when using multiple versions of Syncfusion libraries.
 platform: document-processing
 control: XlsIO
 documentation: UG
