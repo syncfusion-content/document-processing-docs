@@ -3355,7 +3355,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Customize-indicator-colors/.NET)..
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Customize-indicator-colors/.NET).
 
 ## Retrieving the widget annotation in PDF document
 
