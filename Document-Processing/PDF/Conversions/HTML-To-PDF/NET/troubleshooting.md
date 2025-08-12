@@ -226,17 +226,12 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 <td>
 To overcome this issue, we have three workaround solutions.
 <br/>
-Step 1: Using the "Portable" <b>Runtime Identifier</b> ensures that the runtime files are copied into the correct folder structure, allowing the conversion process to complete without any issues.
-<br/>
-Step 2: To resolve this issue, we recommend copying the <b>runtimes</b> folder into the project directory, placing it at the same level as the <b>.csproj</b> file. Additionally, ensure that all files within the runtimes folder have their <b>Copy to Output Directory</b> property set to <b>Copy if newer</b>. Please refer to the screenshot below for guidance.
-<br/>
-<img src="htmlconversion_images/Outputdictionarypath.png" alt="Output dictionary path">
-<br/>
-<br/>
-Step 3: If manually copying the files doesn't meet your requirements, we recommend applying the following code changes in the <b>.csproj</b> file and updating the publish profile. This will ensure the necessary files are copied automatically during the publishing process.
-<br/>
-Add the following code snippet to the <b>.pubxml</b> file to apply the necessary configuration.
-<br/>
+Step 1: Using the "Portable" <b>Runtime Identifier</b> ensures that the runtime files are copied into the correct folder structure, allowing the conversion process to complete without any issues.<br>
+Step 2: To resolve this issue, we recommend copying the <b>runtimes</b> folder into the project directory, placing it at the same level as the <b>.csproj</b> file. Additionally, ensure that all files within the runtimes folder have their <b>Copy to Output Directory</b> property set to <b>Copy if newer</b>. Please refer to the screenshot below for guidance.<br>
+<img src="htmlconversion_images/Outputdictionarypath.png" alt="Output dictionary path"><br>
+
+Step 3: If manually copying the files doesn't meet your requirements, we recommend applying the following code changes in the <b>.csproj</b> file and updating the publish profile. This will ensure the necessary files are copied automatically during the publishing process.<br>
+Add the following code snippet to the <b>.pubxml</b> file to apply the necessary configuration.<br>
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
@@ -248,9 +243,8 @@ Add the following code snippet to the <b>.pubxml</b> file to apply the necessary
 
 {% endhighlight %}
 {% endtabs %}
-<br/>
-Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> folder is copied to the publish directory during the build process.
-<br/>
+
+Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> folder is copied to the publish directory during the build process.<br>
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 
