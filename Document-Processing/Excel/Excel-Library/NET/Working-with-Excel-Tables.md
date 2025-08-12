@@ -97,7 +97,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IListObject table = worksheet.ListObjects[0];
 
 	//Modifying table name
-	table.Name = "SalesTable";
+	table.DisplayName = "SalesTable";
 
 	#region Save
 	//Saving the workbook
@@ -123,7 +123,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IListObject table = worksheet.ListObjects[0];
 
   //Modifying table name
-  table.Name = "SalesTable";
+  table.DisplayName = "SalesTable";
 
   string fileName = "Output.xlsx";
   workbook.SaveAs(fileName);
@@ -141,7 +141,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim table As IListObject = worksheet.ListObjects(0)
 
   'Modifying table name
-  table.Name = "SalesTable"
+  table.DisplayName = "SalesTable"
 
   Dim fileName As String = "Output.xlsx"
   workbook.SaveAs(fileName)
