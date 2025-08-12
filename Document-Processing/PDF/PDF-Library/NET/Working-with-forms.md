@@ -3244,7 +3244,7 @@ The following code example demonstrates how to modify these indicator colors pro
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Customize-indicator-colors/.NET/Customize-indicator-colors/Program.cs" %}
 
 // Open the input PDF file stream.
 using (FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -3355,7 +3355,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Customize-indicator-colors/.NET)..
 
 ## Retrieving the widget annotation in PDF document
 
