@@ -1,12 +1,12 @@
 ---
-title: How to avoid conflicts when using multiple versions of Syncfusion libraries | Syncfusion
-description: This page explains about how to avoid conflicts when using multiple versions of Syncfusion libraries.
+title: Avoid conflicts with multiple Syncfusion library versions
+description: This page explains about how to avoid conflicts with multiple Syncfusion library versions
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to avoid conflicts when using multiple versions of Syncfusion libraries?
+# Avoid conflicts with multiple Syncfusion library versions
 
 When working with Syncfusion across multiple projects in a solution, version mismatches can lead to build errors, runtime issues, and unexpected behavior. This FAQ outlines common problems and best practices to maintain consistency and avoid conflicts.
  
