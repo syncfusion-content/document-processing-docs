@@ -1,5 +1,5 @@
 ---
-title: How to paste a WordDocument from DocIO in UWP SfRichTextBoxAdv. | Syncfusion
+title: How to paste DocIO Word content in SfRichTextBoxAdv? | Syncfusion
 description: Learn here all about how to paste WordDocument from .NET Word library (DocIO) in Syncfusion UWP SfRichTextBoxAdv and more.
 platform: document-processing
 control: SfRichTextBoxAdv
