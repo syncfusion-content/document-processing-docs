@@ -5,7 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Headers and Footers 
+# Working with PDF Headers and Footers
 
 Essential<sup>&reg;</sup> PDF supports to draw the header and footer in PDF document using [PdfPageTemplateElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageTemplateElement.html) class. The header and footer can contain any types of element including dynamic fields.
 
