@@ -5833,7 +5833,7 @@ freeText.SetAppearance(true);
 </table>
 
 
-## Missing annotation after importing the data into the PDF document
+### Missing annotation after importing the data into the PDF document
 
 <table>
 <th style="font-size:14px" width="100px">Issue</th>
@@ -5936,3 +5936,30 @@ lDoc.Close(True)
 
 </table>
 
+### Why are annotation comments and review history not properly linked to their parent annotations when loading a PDF document?
+
+<table>
+  <tr>
+    <th style="font-size:14px; width:100px;">Exception</th>
+    <td style="font-size:14px;">
+      When loading certain PDF documents, annotation comments and review history may not be correctly linked to their parent annotations. As a result, the annotation hierarchy (such as sticky notes with replies) can appear flat or fragmented, making it difficult to track comments and review history.
+    </td>
+  </tr>
+  <tr>
+    <th style="font-size:14px; width:100px;">Reason</th>
+    <td style="font-size:14px;">
+      Linking between annotations relies on specific relationships defined in the PDF's annotation dictionary. If comments (such as pop-up notes or replies) are not properly referenced or classified in the dictionary, the PDF parser may fail to associate them with their parent annotations. This is especially important for popup annotations (used for sticky notes and comments), as proper classification ensures they are managed correctly during parsing and rendering.
+    </td>
+  </tr>
+  <tr>
+    <th style="font-size:14px; width:100px;">Solution</th>
+    <td style="font-size:14px;">
+      To ensure annotation comments and review history are properly linked:<br>
+      1. Verify that popup annotations and review comments in the PDF are correctly classified and referenced in the annotation dictionary.<br>
+      2. Use PDF tools or libraries that adhere to the PDF specification for managing annotation parent-child relationships.<br>
+      3. When generating or editing PDFs, ensure that comments and replies are created as child annotations linked to their parent through the appropriate dictionary structure (for example, by setting the <code>/Parent</code> entry in the annotation dictionary).<br>
+      <br>
+      Following these steps will ensure that annotation histories are accurately loaded, rendered, and navigable, providing a clear and traceable experience for reviewers and readers.
+    </td>
+  </tr>
+</table>
