@@ -1,6 +1,6 @@
 ---
 title: OCR Processor for .NET PDF Framework with Tesseract | Syncfusion
-description: This section explains how to process OCR for the existing PDF documents and images with different version Tesseract.
+description: This section explains the framework for processing OCR on existing PDF documents and images using different versions of Tesseract.
 platform: document-processing
 control: PDF
 documentation: UG
