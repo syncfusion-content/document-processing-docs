@@ -6,7 +6,7 @@ control: PDF
 documentation: UG
 ---
 
-# Working with Optical Character Recognition (OCR)
+# Working with Optical Character Recognition
 
 Essential<sup>&reg;</sup> PDF provides support for Optical Character Recognition with the help of Google’s Tesseract Optical Character Recognition engine.
 
