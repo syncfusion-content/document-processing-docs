@@ -22,8 +22,8 @@ Step 2: In configuration windows, name your project and click Next.
 ![Configuration window1](OCR-Images/Azure_configuration_window1.png) 
 ![Configuration window2](OCR-Images/azure_additional_information.png) 
 
-Step 3: Install the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](OCR-Images/azure_NuGet_package.png) 
+Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+![PDF OCR ASP.NET Core NuGet package](OCR-Images/OCR-Core-NuGet-package.png)
 
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -125,8 +125,8 @@ Step 2: Select the framework to Azure Functions and select HTTP triggers as foll
 ![Configuration window1](OCR-Images/AzureFunctions2.png) 
 ![Additional information](OCR-Images/AzureFunctions3.png) 
 
-Step 3: Install the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](OCR-Images/AzureFunctions4.png) 
+Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+![NuGet package installation](OCR-Images/OCR-Core-NuGet-package.png)
 
 Step 4: Copy the tessdata folder from the **bin->Debug->net6.0->runtimes** and paste it into the folder that contains the project file.
 ![OCR Azure Functions Tessdata Path](OCR-Images/Tessdata-path.png) 
