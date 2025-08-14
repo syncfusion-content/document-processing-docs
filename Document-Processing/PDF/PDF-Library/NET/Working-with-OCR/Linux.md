@@ -37,11 +37,11 @@ dotnet new console
 
 ![OCR Linux Step1](OCR-Images/LinuxStep1.png)
 
-Step 2: Install the [Syncfusion.PDF.OCR.Net](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net/) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
 
 {% highlight c# tabtitle="C#" %}
 
-dotnet add package Syncfusion.PDF.OCR.Net -v xx.x.x.xx -s https://www.nuget.org/
+dotnet add package Syncfusion.PDF.OCR.Net.Core -v xx.x.x.xx -s https://www.nuget.org/
 
 {% endhighlight %}
 

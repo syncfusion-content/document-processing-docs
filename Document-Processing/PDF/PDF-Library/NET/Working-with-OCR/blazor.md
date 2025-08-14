@@ -28,8 +28,8 @@ Step 1: Create a new C# Blazor Server application project. Select Blazor App fro
 Step 2: In the project configuration window, name your project and click Create.
 ![Blazor server project configuraion1](OCR-Images/blazor_server_configuration1.png)
 
-Step 3: Install the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) NuGet package as a reference to your Blazor Server application from [NuGet.org](https://www.nuget.org/).
-![Blazor server NuGet package installation](OCR-Images/blazor_nuget_package.png)
+Step 3:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+![NuGet package installation](OCR-Images/OCR-Core-NuGet-package.png)
 
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -194,10 +194,10 @@ Step 3: Navigate to the project directory using the following command
 ```
 cd CreatePdfBlazorServerApp
 ```
-Step 4: Use the following command in the terminal to add the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) package to your project.
+Step 4: Use the following command in the terminal to add the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) package to your project.
 
 ```
-dotnet add package Syncfusion.PDF.OCR.NET
+dotnet add package Syncfusion.PDF.OCR.Net.Core
 ```
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -371,7 +371,7 @@ Step 1. Open JetBrains Rider and create a new Blazor server-side app project.
 ![Creating a new Blazor server-side app project in JetBrains Rider](OCR-Images/Blazor-Server-App-JetBrains.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
 * Select the latest Syncfusion.HtmlToPdfConverter.Net.Windows NuGet package from the list.
 * Click the + (Add) button to add the package.

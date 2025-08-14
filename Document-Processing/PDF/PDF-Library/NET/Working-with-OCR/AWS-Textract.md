@@ -19,8 +19,8 @@ Step 1: Create a new .NET Console application project.
 In project configuration window, name your project and select Next. 
 ![Project configuration window](OCR-Images/NET-sample-creation-step2.png)
 
-Step 2: Install [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) and [AWSSDK.Textract](https://www.nuget.org/packages/AWSSDK.Textract) NuGet packages as reference to your .NET application from [nuget.org](https://www.nuget.org/). 
-![NuGet package installation1](OCR-Images/NET-sample-creation-step3.png)
+Step 2: Install [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) and [AWSSDK.Textract](https://www.nuget.org/packages/AWSSDK.Textract) NuGet packages as reference to your .NET application from [nuget.org](https://www.nuget.org/).  
+![NuGet package installation1](OCR-Images/OCR-Core-NuGet-package.png)
 ![NuGet package installation2](OCR-Images/NET-sample-creation-step4.png)
 
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
