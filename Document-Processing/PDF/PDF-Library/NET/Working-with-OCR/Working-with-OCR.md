@@ -244,9 +244,6 @@ processor.PerformOCR(lDoc);
 
 {% endhighlight %}
 
-Download the language packages from the following link.  
-[https://code.google.com/p/tesseract-ocr/downloads/list](https://code.google.com/p/tesseract-ocr/downloads/list)
-
 ## Get Started with OCR 
 
 To quickly get started with extracting text from scanned PDF documents in .NET using the Syncfusion<sup>&reg;</sup> OCR processor Library, refer to this video tutorial:
