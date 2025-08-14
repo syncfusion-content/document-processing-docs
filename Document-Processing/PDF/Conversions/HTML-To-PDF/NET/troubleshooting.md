@@ -1485,6 +1485,48 @@ After the service restarts, try the conversion or operation again to ensure the 
 
 </table>
 
+## Localized Content Not Reflected in PDF Output When Using Blink HTML-to-PDF Conversion Despite Browser Culture Change
+
+<table>
+
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">The output PDF does not display the expected localized (e.g., German) content when converting HTML with the Blink rendering engine, even if the web app's culture is changed in the browser.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The HTML to PDF converter launches the Blink rendering engine (Chromium headless browser) internally and converts the content at the specified URL or HTML string. If culture or language selection (such as switching from English to German) is implemented using cookies (e.g.,<b>.AspNetCore.Culture</b>), the URL itself does not change; only cookies control the localization. The converter does not automatically read or apply browser cookies set during user interaction, so the correct culture is not applied during rendering resulting in the default (often English) content in the PDF.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td><b>To ensure that the correct localized or culture-specific content appears in the generated PDF:</b>
+</br>
+Set the required culture cookie explicitly using the Cookies property in BlinkConverterSettings before starting conversion.
+</br>
+Example for setting German culture:
+</br>
+{% tabs %}
+{% highlight C# %}
+
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings settings = new BlinkConverterSettings();
+// Sets German culture
+settings.Cookies.Add(".AspNetCore.Culture", "c%3Dde-DE%7Cuic%3Dde-DE"); 
+htmlConverter.ConverterSettings = settings;
+PdfDocument doc = htmlConverter.Convert(url);
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
 ## Due to insufficient permissions, we are unable to launch the Chromium process for conversion in Azure Function .NET 8.0 with premium plans.
 
 The problem is limited to Azure Functions with premium plans in Net 8.0 version. To fix this, we can either manually install the necessary Chromium dependencies in the SSH portal or include the runtimes folder (Blink binaries) in the project location.
