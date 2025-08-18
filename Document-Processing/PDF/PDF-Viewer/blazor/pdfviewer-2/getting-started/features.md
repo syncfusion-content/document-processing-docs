@@ -2,7 +2,7 @@
 layout: post
 title: Overview of Blazor SfPdfViewer Component | Syncfusion
 description: Checkout and learn about overview of the Syncfusion Blazor SfPdfViewer component and much more details.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

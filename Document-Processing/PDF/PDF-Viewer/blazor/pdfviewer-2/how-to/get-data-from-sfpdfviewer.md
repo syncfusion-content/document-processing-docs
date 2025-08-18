@@ -2,7 +2,7 @@
 layout: post
 title: Get loaded PDF document's data from Blazor SfPdfViewer | Syncfusion
 description: Learn here all about how to get loaded PDF document's data in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

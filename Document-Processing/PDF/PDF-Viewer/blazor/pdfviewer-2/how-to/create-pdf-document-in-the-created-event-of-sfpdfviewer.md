@@ -2,7 +2,7 @@
 layout: post
 title: Create PDF document in the SfPdfViewer created event | Syncfusion
 description: Learn here all about how to create PDF document in the created event of Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

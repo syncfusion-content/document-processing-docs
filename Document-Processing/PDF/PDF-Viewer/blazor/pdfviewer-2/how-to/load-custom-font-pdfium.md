@@ -2,7 +2,7 @@
 layout: post
 title: Load Custom Fonts in a PDF Viewer | Syncfusion
 description: Learn here all about Custom Fonts in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

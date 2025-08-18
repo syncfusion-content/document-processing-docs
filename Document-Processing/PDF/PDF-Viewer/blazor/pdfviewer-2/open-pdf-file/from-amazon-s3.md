@@ -2,7 +2,7 @@
 layout: post
 title:  Open PDF files from AWS S3 in SfPdfViewer Component | Syncfusion
 description: Learn here all about how to Open PDF files from AWS S3 in Syncfusion Blazor SfPdfViewer component and much more details.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

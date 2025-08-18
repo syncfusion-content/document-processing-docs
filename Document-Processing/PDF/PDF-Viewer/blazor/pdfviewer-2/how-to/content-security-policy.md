@@ -2,7 +2,7 @@
 layout: post
 title: Use strict CSP in Blazor SfPdfViewer | Syncfusion
 description: Learn here all about how to use the Content Security Policy in Syncfusion Blazor SfPdfViewer component.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

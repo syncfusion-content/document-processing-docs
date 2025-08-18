@@ -2,7 +2,7 @@
 layout: post
 title: Coordinate Conversion Between Page and Client Points | Syncfusion
 description: Learn here all about how to perform coordinate conversion between page and client points into Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

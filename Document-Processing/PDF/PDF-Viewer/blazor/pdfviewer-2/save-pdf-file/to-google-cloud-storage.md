@@ -2,7 +2,7 @@
 layout: post
 title: Save PDF files to GCS in Blazor SfPdfViewer Component | Syncfusion
 description: Learn here all about how to Save PDF files to Google Cloud Storage in Syncfusion Blazor SfPdfViewer component and much more details.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

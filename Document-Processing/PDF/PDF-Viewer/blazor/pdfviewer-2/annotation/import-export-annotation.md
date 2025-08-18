@@ -2,7 +2,7 @@
 layout: post
 title: Import and Export annotations in Blazor SfPdfViewer | Syncfusion
 description: Learn here all about import and export annotations in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

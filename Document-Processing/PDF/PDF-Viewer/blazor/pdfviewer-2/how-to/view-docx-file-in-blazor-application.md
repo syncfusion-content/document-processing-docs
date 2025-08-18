@@ -2,7 +2,7 @@
 layout: post
 title: View DOCX file in Blazor application using SfPdfViewer | Syncfusion
 description: Learn here all about View DOCX file in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

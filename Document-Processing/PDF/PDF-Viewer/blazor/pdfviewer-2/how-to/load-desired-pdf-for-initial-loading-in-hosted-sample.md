@@ -2,7 +2,7 @@
 layout: post
 title: Load PDF for initial loading in Blazor SfPdfViewer | Syncfusion
 description: Learn here all about how to load desired PDF for initial loading in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

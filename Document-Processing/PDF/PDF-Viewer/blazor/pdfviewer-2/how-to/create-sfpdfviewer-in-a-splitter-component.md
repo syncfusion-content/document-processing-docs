@@ -2,7 +2,7 @@
 layout: post
 title: Create SfPdfViewer in a Splitter Component in Blazor | Syncfusion
 description: Learn here all about how to create SfPdfViewer in a Splitter Component in Syncfusion Blazor SfPdfViewer component.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

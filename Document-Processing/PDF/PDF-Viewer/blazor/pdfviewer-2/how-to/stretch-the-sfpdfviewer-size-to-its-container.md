@@ -2,7 +2,7 @@
 layout: post
 title: Update the Viewer size to its container in SfPdfViewer | Syncfusion
 description: Learn here all about how to stretch the SfPdfViewer size to its container in Syncfusion Blazor SfPdfViewer component.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Check Document Editing Status in Blazor SfPdfViewer | Syncfusion
 description: Learn here all about how to check the editing status of the document in Syncfusion Blazor SfPdfViewer component.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

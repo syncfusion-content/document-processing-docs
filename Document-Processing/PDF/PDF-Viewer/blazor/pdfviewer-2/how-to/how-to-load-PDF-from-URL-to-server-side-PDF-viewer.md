@@ -2,7 +2,7 @@
 layout: post
 title: How to load PDF from URL to server-side PDF viewer | Syncfusion
 description: Learn here all about how to load PDf from URL on the server-side and load into Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

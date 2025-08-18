@@ -2,7 +2,7 @@
 layout: post
 title: Events in Blazor SfPdfViewer Component | Syncfusion
 description: Checkout and learn here all about events in Syncfusion Blazor SfPdfViewer component and much more details.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

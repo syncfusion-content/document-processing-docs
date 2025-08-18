@@ -2,7 +2,7 @@
 layout: post
 title: Magnification in Blazor SfPdfViewer Component | Syncfusion
 description: Checkout and learn here all about magnification in Syncfusion Blazor SfPdfViewer component and much more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

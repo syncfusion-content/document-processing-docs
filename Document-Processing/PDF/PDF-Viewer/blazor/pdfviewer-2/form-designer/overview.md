@@ -2,7 +2,7 @@
 layout: post
 title: Overview of the Form Designer in SfPdfViewer for Blazor | Syncfusion
 description: Learn about the Form Designer feature in SfPdfViewer for Blazor. Discover how to create, edit, and manage interactive form fields within PDF documents.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

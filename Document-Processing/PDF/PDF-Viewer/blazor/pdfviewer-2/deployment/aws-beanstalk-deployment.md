@@ -2,7 +2,7 @@
 layout: post
 title: Blazor SfPdfViewer deployment in AWS BeanStalk | Syncfusion
 description: AWS Elastic Beanstalk simplifies the deployment and management of scalable web applications and services on Linux-based infrastructure
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

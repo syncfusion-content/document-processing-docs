@@ -2,7 +2,7 @@
 layout: post
 title: Text Search in Blazor SfPdfViewer Component | Syncfusion
 description: Checkout and learn here all about text search in Syncfusion Blazor SfPdfViewer component and much more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

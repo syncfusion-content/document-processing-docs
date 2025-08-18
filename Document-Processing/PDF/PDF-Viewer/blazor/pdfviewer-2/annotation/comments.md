@@ -2,7 +2,7 @@
 layout: post
 title: Comments in Blazor SfPdfViewer Component | Syncfusion
 description: Checkout and learn here all about comments in Syncfusion Blazor SfPdfViewer component and much more details.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

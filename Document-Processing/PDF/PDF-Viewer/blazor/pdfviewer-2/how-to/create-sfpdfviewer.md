@@ -2,7 +2,7 @@
 layout: post
 title: View the created PDF document | Syncfusion
 description: Learn here all about View the created PDF document in Syncfusion Blazor SfPdfviewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfviewer
 documentation: ug
 ---

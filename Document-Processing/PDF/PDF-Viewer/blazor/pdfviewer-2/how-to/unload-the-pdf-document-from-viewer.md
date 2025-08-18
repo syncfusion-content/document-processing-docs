@@ -2,7 +2,7 @@
 layout: post
 title: Unload the PDF document from Viewer in Blazor SfPdfViewer | Syncfusion
 description: Learn here all about Unload the PDF document from Viewer in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

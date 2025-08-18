@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with SfPdfViewer in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor SfPdfViewer component in Blazor WebAssembly (WASM) App using Visual Studio and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

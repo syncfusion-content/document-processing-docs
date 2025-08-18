@@ -2,7 +2,7 @@
 layout: post
 title: Prevent the PDF from scrolling | Syncfusion
 description: Learn here all about Create SfPdfViewer in a popup window in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Open PDF files from Google Drive in SfPdfViewer Component | Syncfusion
 description: Learn here all about how to Open PDF files from Google Drive in Syncfusion Blazor SfPdfViewer component and much more details.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

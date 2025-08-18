@@ -2,7 +2,7 @@
 layout: post
 title: Increase the connection buffer size in Blazor SfPdfViewer | Syncfusion
 description: Learn here all about how to increase the connection buffer size in Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
