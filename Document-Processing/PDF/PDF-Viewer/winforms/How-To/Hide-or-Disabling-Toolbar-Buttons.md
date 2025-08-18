@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide-or-Disabling-Toolbar-Buttons | Windows Forms | Syncfusion&reg;
-description: Learn how to disable specific button using the API ToolbarSettings API.
+description: Learn how to disable specific button using the API ToolbarSettings of Syncfusion&reg; Windows Forms PdfViewer Control.
 platform: windowsforms
 control: PdfViewerControl
 documentation: ug

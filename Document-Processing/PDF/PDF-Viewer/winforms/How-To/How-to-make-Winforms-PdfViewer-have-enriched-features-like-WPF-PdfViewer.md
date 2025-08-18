@@ -12,7 +12,7 @@ To leverage the advanced features offered by the WPF PdfViewer, such as adding a
 
 we can  host a WPF PdfViewer control within a Windows Forms application using an ElementHost. By embedding the WPF PdfViewer, you can access advanced features available in the WPF control while maintaining a Windows Forms interface.
 
-## Steps to host the WPF PdfViewer in the winforms application
+## Steps to host the WPF PdfViewer in the WinForms application
 
 1. Add an WPF UserControl and install the [Syncfusion.PdfViewer.WPF](https://www.nuget.org/packages/Syncfusion.PdfViewer.WPF) NuGet package to your WinForms application.
 
