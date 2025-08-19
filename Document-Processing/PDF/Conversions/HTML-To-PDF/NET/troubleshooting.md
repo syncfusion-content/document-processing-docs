@@ -477,25 +477,25 @@ Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-t
 </tr>
 </table>
 
-## HTML to PDF Conversion Fails on Azure App Service When Published via GitHub Actions Using Syncfusion v29.1.38
+## HTML to PDF Conversion Fails on Azure App Service When Published via GitHub Actions Using CEF Rendering Engine
 
 <table>
 <th style="font-size:14px" width="100px">Issue
 </th>
-<th style="font-size:14px">When publishing an application using <b>Syncfusion.HtmlToPdfConverter.Cef.Net.Windows(v29.1.38)</b> to Azure App Service via GitHub Actions, the HTML to PDF conversion fails. This typically results in a runtime error indicating that a required component or dependency could not be found or initialized.
+<th style="font-size:14px">When publishing an application using <b>Syncfusion.HtmlToPdfConverter.Cef.Net.Windows</b> to Azure App Service via GitHub Actions, the HTML to PDF conversion fails. This typically results in a runtime error indicating that a required component or dependency could not be found or initialized.
 </th>
 
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>The failure is due to native binaries for the CEF(Chromium Embedded Framework) rendering engine located in the <b>runtime/win-x64/native</b> directory not being copied correctly to the output directory during the publishing process. This issue is common in CI/CD pipelines like GitHub Actions, causing the application to fail at runtime due to missing native files.<br>
+<td>The failure is due to native binaries for the <b>CEF(Chromium Embedded Framework)</b> rendering engine located in the <b>runtime/win-x64/native</b> directory not being copied correctly to the output directory during the publishing process. This issue is common in CI/CD pipelines like <b>GitHub Actions</b>, causing the application to fail at runtime due to missing native files.<br>
 </td>
 </tr>
 
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>To fix this, explicitly include the CEF runtime package in your <b>.csproj</b> file to ensure the necessary binaries are included in the published output. Add the following package reference.<br>
+<td>To fix this, explicitly include the <b>CEF runtime package</b> in your <b>.csproj</b> file to ensure the necessary binaries are included in the published output. Add the following package reference.<br>
 
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
