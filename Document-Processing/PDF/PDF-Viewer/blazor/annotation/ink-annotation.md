@@ -10,7 +10,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF
 
 The PDF Viewer control provides the options to add, edit, and delete the ink annotations.
 
-![InkAnnotation](../../pdfviewer/images/ink_annotation.png)
+![InkAnnotation](../images/ink_annotation.png)
 
 ## Adding an ink annotation to the PDF document
 
@@ -20,7 +20,7 @@ The ink annotations can be added to the PDF document using the annotation toolba
 * Select the **Draw Ink** button in the annotation toolbar. It enables the ink annotation mode.
 * You can draw anything over the pages of the PDF document.
 
-![InkTool](../../pdfviewer/images/ink_tool.png)
+![InkTool](../images/ink_tool.png)
 
 ```csharp
 @using Syncfusion.Blazor.PdfViewer

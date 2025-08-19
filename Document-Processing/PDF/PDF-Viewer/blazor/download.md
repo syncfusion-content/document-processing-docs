@@ -23,7 +23,7 @@ The PDF Viewer supports downloading the loaded PDF file from the toolbar by defa
 }
 ```
 
-![Blazor PDFViewer with Download Option](../pdfviewer/images/blazor-pdfviewer-download-option.png)
+![Blazor PDFViewer with Download Option](images/blazor-pdfviewer-download-option.png)
 
 
 ```cshtml
