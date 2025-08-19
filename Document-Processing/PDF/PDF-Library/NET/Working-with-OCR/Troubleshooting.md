@@ -472,7 +472,7 @@ NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoD
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>when publishing the ASP.NET Core application to the Azure App Service Linux Docker container, only the .so, .dly, and .dll files are copied from the runtimes folder to the publish folder. Files in other formats are not copied to the publish folder.
+<td>when publishing the ASP.NET Core application to the Azure App Service Linux Docker container, only the .so, .dylib, and .dll files are copied from the runtimes folder to the publish folder. Files in other formats are not copied to the publish folder.
 </td>
 </tr>
 <tr>
@@ -488,12 +488,12 @@ Please refer to the screenshot below:
 </tr>
 </table>
 
-## 'Imagestream is null' exception while performing OCR in AKS (Linux)
+## 'Image stream is null' exception while performing OCR in AKS (Linux)
 
 <table>
 <th style="font-size:14px" width="100px">Exception</th>
 <th style="font-size:14px">	
-'Imagestream is null' exception while performing OCR in AKS (Linux))</th>
+'Image stream is null' exception while performing OCR in AKS (Linux))</th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
