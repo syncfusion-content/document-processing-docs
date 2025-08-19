@@ -15,7 +15,7 @@ From the release of version **21.1.0.35 (2023 Volume 1)** of Essential Studio<su
 * Linux – libpdfium.so
 * OSX – libpdfium.dylib
 
-![Output window with error message](../../pdfviewer/images/Outputwindowwitherrormessage.png)
+![Output window with error message](../images/Outputwindowwitherrormessage.png)
 
 ## To solve this issue, you should follow the below steps:
 

@@ -23,7 +23,7 @@ The PDF Viewer supports printing the loaded PDF file by default. You can enable 
 }
 ```
 
-![Printing in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-print.png)
+![Printing in Blazor PDFViewer](images/blazor-pdfviewer-print.png)
 
 
 ```cshtml

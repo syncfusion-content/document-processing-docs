@@ -29,7 +29,7 @@ The built-in toolbar of PDF Viewer contains the following page navigation tools:
 * **Go** **To**: Allows you to quickly jump to the desired page number.
 * **Previous** **Page**: Scrolls backwards through pages, one page at a time.
 
-![Blazor PDFViewer with Page Navigation](../pdfviewer/images/blazor-pdfviewer-page-navigation.png)
+![Blazor PDFViewer with Page Navigation](images/blazor-pdfviewer-page-navigation.png)
 
 You can enable or disable the page navigation option in PDF Viewer default toolbar by setting the `EnableNavigation` property.
 
@@ -108,7 +108,7 @@ Also, you can programmatically perform page navigation as follows.
 
 The bookmarks saved in PDF files are loaded and listed in the bookmark pane (in the left navigation pane). The users can jump to areas of interest by clicking the desired bookmark easily.
 
-![Blazor PDFViewer with Bookmark Navigation](../pdfviewer/images/blazor-pdfviewer-bookmark-navigation.png)
+![Blazor PDFViewer with Bookmark Navigation](images/blazor-pdfviewer-bookmark-navigation.png)
 
 You can enable or disable the bookmark navigation pane by setting the `EnableBookmark` property.
 
@@ -127,7 +127,7 @@ You can enable or disable the bookmark navigation pane by setting the `EnableBoo
 
 Page thumbnails is the miniature representation of actual pages in the PDF files. This feature displays thumbnails of the pages and represents a link to the respective pages. Clicking a page thumbnail will display the respective page in the document view.
 
-![Blazor PDFViewer with Page Thumbnail Navigation](../pdfviewer/images/blazor-pdfviewer-page-thumbnail-navigation.png)
+![Blazor PDFViewer with Page Thumbnail Navigation](images/blazor-pdfviewer-page-thumbnail-navigation.png)
 
 You can enable or disable the thumbnail navigation pane by setting the `EnableThumbnail` property.
 
@@ -168,13 +168,13 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-view
 
 Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
 
-![Blazor PDFViewer Hyperlink Navigation](../pdfviewer/images/blazor-pdfviewer-hyperlink-navigation.png)
+![Blazor PDFViewer Hyperlink Navigation](images/blazor-pdfviewer-hyperlink-navigation.png)
 
 ## Table of content navigation
 
 Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
 
-![Table of Content in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-title-of-content.png)
+![Table of Content in Blazor PDFViewer](images/blazor-pdfviewer-title-of-content.png)
 
 You can enable or disable both hyperlink and table of content navigation by setting the `EnableHyperlink` property.
 

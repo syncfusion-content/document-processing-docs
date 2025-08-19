@@ -50,19 +50,19 @@ The stroke color, thickness, and opacity of the ink annotation can be edited usi
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![InkStrokeColor](../../pdfviewer/images/ink_strokecolor.png)
+![InkStrokeColor](../images/ink_strokecolor.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![InkThickness](../../pdfviewer/images/ink_thickness.png)
+![InkThickness](../images/ink_thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![InkOpacity](../../pdfviewer/images/ink_opacity.png)
+![InkOpacity](../images/ink_opacity.png)
 
 ## Setting default properties during the control initialization
 

@@ -23,7 +23,7 @@ The form fields displayed in the PDF Viewer are:
 * Signature Field
 * List box
 
-![Form Filling in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-form-filling.png)
+![Form Filling in Blazor PDFViewer](images/blazor-pdfviewer-form-filling.png)
 
 ## Disabling form fields
 
@@ -44,21 +44,21 @@ Signature can be added to the Signature field by using the following steps:
 
 * Click the Signature Field in the PDF document. The signature panel will appear.
 
-![Signature Field in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-signature-field.png)
+![Signature Field in Blazor PDFViewer](images/blazor-pdfviewer-signature-field.png)
 
 * Draw the signature in the signature panel.
 
-![Displaying Signature Panel in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-signature-panel.png)
+![Displaying Signature Panel in Blazor PDFViewer](images/blazor-pdfviewer-signature-panel.png)
 
 * Click the **CREATE** button, the drawn signature will be added in the signature field.
 
-![Displaying Signature in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-signature.png)
+![Displaying Signature in Blazor PDFViewer](images/blazor-pdfviewer-signature.png)
 
 ## Delete the signature inside the signature field
 
 You can also delete the signature in the signature field by using Delete Option in the annotation toolbar.
 
-![Deleting Signature in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-delete-signature.png)
+![Deleting Signature in Blazor PDFViewer](images/blazor-pdfviewer-delete-signature.png)
 
 ## Export and import form fields
 

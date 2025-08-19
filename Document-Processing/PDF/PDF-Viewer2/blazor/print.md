@@ -26,7 +26,7 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 
 ```
 
-![Printing in Blazor SfPdfViewer](../pdfviewer/images/blazor-pdfviewer-print.png)
+![Printing in Blazor SfPdfViewer](../../PDF-Viewer/blazor/images/blazor-pdfviewer-print.png)
 
 
 ```cshtml

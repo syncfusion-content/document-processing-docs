@@ -13,7 +13,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF
 
 You can find the specified text content in the PDF document using the built-in options provided with the toolbar. On initiating the search operation, the control searches for the specified text and highlights all the occurrences in the pages.
 
-![Text Search in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-text-search.png)
+![Text Search in Blazor PDFViewer](images/blazor-pdfviewer-text-search.png)
 
 You can enable or disable the text search by setting the `EnableTextSearch` API.
 

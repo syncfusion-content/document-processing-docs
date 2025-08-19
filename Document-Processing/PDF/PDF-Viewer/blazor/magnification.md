@@ -19,7 +19,7 @@ The built-in toolbar of PDF Viewer contains the following zooming options:
 * **Fit** **Page**: Fits the page entirely in the available document view port size.
 * **Fit** **Width**: Fits the page to the width of the view port size.
 
-![Magnification in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-magnification.png)
+![Magnification in Blazor PDFViewer](images/blazor-pdfviewer-magnification.png)
 
 You can enable or disable the magnification option in PDF Viewer default toolbar by setting the `EnableMagnification` property.
 

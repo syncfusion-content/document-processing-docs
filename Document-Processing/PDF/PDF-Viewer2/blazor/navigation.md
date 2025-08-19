@@ -27,7 +27,7 @@ The built-in toolbar of SfPdfViewer contains the following page navigation tools
 * **Go** **To**: Allows you to quickly jump to the desired page number.
 * **Previous** **Page**: Scrolls backwards through pages, one page at a time.
 
-![Blazor SfPdfViewer with Page Navigation](../pdfviewer/images/blazor-pdfviewer-page-navigation.png)
+![Blazor SfPdfViewer with Page Navigation](../../PDF-Viewer/blazor/images/blazor-pdfviewer-page-navigation.png)
 
 You can enable or disable the page navigation option in SfPdfViewer default toolbar by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property.
 
@@ -118,7 +118,7 @@ Also, you can programmatically perform page navigation as follows.
 
 The bookmarks saved in PDF files are loaded and listed in the bookmark pane (in the left navigation pane). The users can jump to areas of interest by clicking the desired bookmark easily.
 
-![Blazor SfPdfViewer with Bookmark Navigation](../pdfviewer/images/blazor-pdfviewer-bookmark-navigation.png)
+![Blazor SfPdfViewer with Bookmark Navigation](../../PDF-Viewer/blazor/images/blazor-pdfviewer-bookmark-navigation.png)
 
 You can enable or disable the bookmark navigation pane by setting the [EnableBookmark](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableBookmarkPanel) property.
 
@@ -138,7 +138,7 @@ You can enable or disable the bookmark navigation pane by setting the [EnableBoo
 
 Page thumbnails is the miniature representation of actual pages in the PDF files. This feature displays thumbnails of the pages and represents a link to the respective pages. Clicking a page thumbnail will display the respective page in the document view.
 
-![Blazor SfPdfViewer with Page Thumbnail Navigation](../pdfviewer/images/blazor-pdfviewer-page-thumbnail-navigation.png)
+![Blazor SfPdfViewer with Page Thumbnail Navigation](../../PDF-Viewer/blazor/images/blazor-pdfviewer-page-thumbnail-navigation.png)
 
 You can enable or disable the thumbnail navigation pane by setting the [EnableThumbnail](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableThumbnailPanel) property.
 
@@ -187,13 +187,13 @@ The following code illustrates how to open thumbnail panel programmatically.
 
 Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
 
-![Blazor SfPdfViewer Hyperlink Navigation](../pdfviewer/images/blazor-pdfviewer-hyperlink-navigation.png)
+![Blazor SfPdfViewer Hyperlink Navigation](../../PDF-Viewer/blazor/images/blazor-pdfviewer-hyperlink-navigation.png)
 
 ## Table of content navigation
 
 Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
 
-![Table of Content in Blazor SfPdfViewer](../pdfviewer/images/blazor-pdfviewer-title-of-content.png)
+![Table of Content in Blazor SfPdfViewer](../../PDF-Viewer/blazor/images/blazor-pdfviewer-title-of-content.png)
 
 You can enable or disable both hyperlink and table of content navigation by setting the `EnableHyperlink` property.
 
