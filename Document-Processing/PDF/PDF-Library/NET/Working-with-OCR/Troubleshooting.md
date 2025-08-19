@@ -140,6 +140,32 @@ For example, to perform the optical character recognition in German, the propert
 </tr>
 </table>
 
+## OCR fails in .NET Core WinForms but Works in .NET Framework
+
+<table>
+<th style="font-size:14px" width="100px">Exception</th>
+<th style="font-size:14px">OCR processing works correctly in a <b>.NET Framework WinForms</b> application but fails to produce any output when the same logic is used in a <b>.NET Core WinForms</b> application. The application runs without throwing any exceptions, but no text is recognized from the PDF or image.</th>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The root cause is a <b>platform-specific dependency mismatch</b>. The Tesseract binaries required for .NET Framework are different from those required for .NET Core. Even if the binaries are present in the output folder, using Framework-specific binaries in a .NET Core project causes the OCR process to fail silently.    
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Ensure your .NET Core project uses the correct Tesseract binaries built for .NET Core: <br>
+1.<b>Install the Correct NuGet Package</b>:<br>
+Reference the Syncfusion.PDF.OCR.Net.Core NuGet package in your .NET Core project.<br>
+2.<b>Verify the Tesseract Binaries</b>:<br>
+Confirm that the correct binaries are copied to your output directory:<br>
+a.Extract the Syncfusion.PDF.OCR.Net.Core NuGet package.<br>
+b.Copy the appropriate runtimes folder from the extracted package into your project's output directory (e.g., bin/Debug/net6.0-windows/).<br>
+
+</td>
+</tr>
+</table>
+
 ## Text does not recognize properly when performing OCR on a PDF document with low-quality images
 
 <table>
