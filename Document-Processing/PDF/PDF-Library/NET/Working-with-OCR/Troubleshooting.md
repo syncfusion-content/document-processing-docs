@@ -205,9 +205,9 @@ By using the best tessdata, we can improve the OCR results. For more information
 <th style="font-size:14px" width="100px">Solution
 </th>
 <td>To resolve this problem, you should install and utilize Tesseract 5 on your Mac machine. Refer to the following steps for installing Tesseract 5 and integrating it into an OCR processing workflow. 
-<br><br/>
+<br>
 1.Execute the following command to install Tesseract 5. 
-<br><br/>
+<br>
 {% tabs %}
 {% highlight C# %}
 
@@ -215,9 +215,9 @@ brew install tesseract
 
 {% endhighlight %}
 {% endtabs %}
-<br><br/>
+<br>
 If the "brew" is not installed on your machine, you can install it using the following command.
-<br><br/>
+<br>
 {% tabs %}
 {% highlight C# %}
 
@@ -225,10 +225,9 @@ If the "brew" is not installed on your machine, you can install it using the fol
 
 {% endhighlight %}
 {% endtabs %}
-<br><br/>
-
+<br>
 2.Once Tesseract 5 is successfully installed, you can configure the path to the latest binaries by copying the location of the Tesseract folder and setting it as the Tesseract binaries path when setting up the OCR processor. Refer to the example code below:
-<br><br/>
+<br>
 {% tabs %}
 {% highlight C# %}
 
@@ -237,10 +236,10 @@ using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract
 
 {% endhighlight %}
 {% endtabs %}
-<br><br/>
+<br>
 
 3.Add the TessDataPath from bin folder. Refer to the example code below:
-<br></br>
+<br>
 {% tabs %}
 {% highlight C# tabtitle="C# [Cross-platform]" %}
 
@@ -485,10 +484,8 @@ bin\Debug\net6.0.\runtimes\osx\native
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-Installing the following Skiasharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.
-</br></br>
-Please find the NuGet link below,
-</br>
+Installing the following Skiasharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.<br>
+Please find the NuGet link below,<br>
 NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
 </td>
 </tr>
@@ -501,7 +498,7 @@ NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoD
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>when publishing the ASP.NET Core application to the Azure App Service Linux Docker container, only the .so, .dly, and .dll files are copied from the runtimes folder to the publish folder. Files in other formats are not copied to the publish folder.
+<td>when publishing the ASP.NET Core application to the Azure App Service Linux Docker container, only the .so, .dylib, and .dll files are copied from the runtimes folder to the publish folder. Files in other formats are not copied to the publish folder.
 </td>
 </tr>
 <tr>
@@ -517,12 +514,12 @@ Please refer to the screenshot below:
 </tr>
 </table>
 
-## 'Imagestream is null' exception while performing OCR in AKS (Linux)
+## 'Image stream is null' exception while performing OCR in AKS (Linux)
 
 <table>
 <th style="font-size:14px" width="100px">Exception</th>
 <th style="font-size:14px">	
-'Imagestream is null' exception while performing OCR in AKS (Linux))</th>
+'Image stream is null' exception while performing OCR in AKS (Linux))</th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
