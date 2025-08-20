@@ -2,7 +2,7 @@
 layout: post
 title: Performance practices in React Spreadsheet component | Syncfusion
 description: Learn here all about performance best practices in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-react
+platform: document-processing
 control: Performance
 documentation: ug
 domainurl: ##DomainURL##

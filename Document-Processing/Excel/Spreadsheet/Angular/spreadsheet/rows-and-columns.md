@@ -2,7 +2,7 @@
 layout: post
 title: Rows and columns in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Rows and columns in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-angular
+platform: document-processing
 control: Rows and columns 
 documentation: ug
 domainurl: ##DomainURL##

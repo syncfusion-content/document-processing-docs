@@ -3,7 +3,7 @@ layout: post
 title: Identify the context menu opened in React Spreadsheet component | Syncfusion
 description: Learn here all about how to identify the context menu that has been opened in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more. 
 control: Spreadsheet
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

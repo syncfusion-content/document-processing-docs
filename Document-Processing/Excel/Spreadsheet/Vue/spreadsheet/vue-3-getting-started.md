@@ -3,7 +3,7 @@ layout: post
 title: Vue 3 getting started with the Spreadsheet component | Syncfusion
 description:  Check out and learn about Vue 3 getting started with the Vue Spreadsheet component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

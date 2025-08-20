@@ -3,7 +3,7 @@ layout: post
 title: Protect sheet in React Spreadsheet component | Syncfusion
 description: Learn here all about Protect sheet in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Protect sheet 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Context menu in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Context menu in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Context menu 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

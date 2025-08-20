@@ -2,7 +2,7 @@
 layout: post
 title: Formulas in ##Platform_Name## Spreadsheet Control | Syncfusion
 description: Learn here all about Formulas in Syncfusion Essential ##Platform_Name## Spreadsheet control, its elements and more.
-platform: ej2-javascript
+platform: document-processing
 control: Formulas 
 publishingplatform: ##Platform_Name##
 documentation: ug

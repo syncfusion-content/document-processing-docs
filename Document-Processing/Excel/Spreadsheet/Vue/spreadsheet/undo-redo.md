@@ -3,7 +3,7 @@ layout: post
 title: Undo redo in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Undo redo in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Undo redo 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

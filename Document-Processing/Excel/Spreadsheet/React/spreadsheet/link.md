@@ -3,7 +3,7 @@ layout: post
 title: Link in React Spreadsheet component | Syncfusion
 description: Learn here all about Link in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Link 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

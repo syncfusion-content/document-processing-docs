@@ -3,7 +3,7 @@ layout: post
 title: Editing in React Spreadsheet component | Syncfusion
 description: Learn here all about Editing in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Editing 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

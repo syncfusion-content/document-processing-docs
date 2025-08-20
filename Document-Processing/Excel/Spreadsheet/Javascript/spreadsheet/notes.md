@@ -2,7 +2,7 @@
 layout: post
 title: Notes in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about the notes feature in ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Notes 
 publishingplatform: ##Platform_Name##
 documentation: ug

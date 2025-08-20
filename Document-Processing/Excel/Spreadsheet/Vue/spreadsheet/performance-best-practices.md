@@ -2,7 +2,7 @@
 layout: post
 title: Performance practices in Vue Spreadsheet component | Syncfusion
 description: Learn here all about performance best practices in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-vue
+platform: document-processing
 control: Performance
 documentation: ug
 domainurl: ##DomainURL##

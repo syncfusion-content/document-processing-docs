@@ -2,7 +2,7 @@
 layout: post
 title: Interactive context menu in Angular Spreadsheet | Syncfusion
 description: Learn here all about how to identify the context menu opened in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more. 
-platform: ej2-angular
+platform: document-processing
 control: Spreadsheet
 documentation: ug
 domainurl: ##DomainURL##

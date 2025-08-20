@@ -2,7 +2,7 @@
 layout: post
 title: Ej1 api migration in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Ej1 api migration in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Ej1 api migration 
 publishingplatform: ##Platform_Name##
 documentation: ug

@@ -2,7 +2,7 @@
 layout: post
 title: Change active sheet in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about changing active sheet index when import a file in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Spreadsheet 
 publishingplatform: ##Platform_Name##
 documentation: ug

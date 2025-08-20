@@ -2,7 +2,7 @@
 layout: post
 title: Overview of the React Spreadsheet component | Syncfusion
 description: Learn here all about overview of the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-react
+platform: document-processing
 control: Index
 documentation: ug
 domainurl: ##DomainURL##

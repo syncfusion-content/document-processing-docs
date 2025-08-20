@@ -3,7 +3,7 @@ layout: post
 title: Global local in React Spreadsheet component | Syncfusion
 description: Learn here all about Global local in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Global local 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

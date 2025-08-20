@@ -2,7 +2,7 @@
 layout: post
 title: Performance practices in Angular Spreadsheet component | Syncfusion
 description: Learn here all about performance best practices in the Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-angular
+platform: document-processing
 control: Performance 
 documentation: ug
 domainurl: ##DomainURL##

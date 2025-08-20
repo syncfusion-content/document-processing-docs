@@ -2,7 +2,7 @@
 layout: post
 title: Print in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about print feature in ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Print
 publishingplatform: ##Platform_Name##
 documentation: ug

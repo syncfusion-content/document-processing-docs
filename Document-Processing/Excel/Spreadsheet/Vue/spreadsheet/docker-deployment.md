@@ -2,7 +2,7 @@
 layout: post
 title: Docker image deployment in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Docker image deployment in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-vue
+platform: document-processing
 control: Docker deployment 
 documentation: ug
 domainurl: ##DomainURL##

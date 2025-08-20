@@ -3,7 +3,7 @@ layout: post
 title: Open save in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Open save in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Open save 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

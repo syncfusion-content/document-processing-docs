@@ -2,7 +2,7 @@
 layout: post
 title: Docker image deployment in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Docker image deployment in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Docker deployment 
 publishingplatform: ##Platform_Name##
 documentation: ug

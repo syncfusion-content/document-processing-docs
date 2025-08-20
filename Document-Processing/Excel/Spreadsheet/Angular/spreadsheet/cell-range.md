@@ -2,7 +2,7 @@
 layout: post
 title: Cell Range in Angular Spreadsheet Component | Syncfusion
 description: Learn here all about cell range in Syncfusion Essential Angular Spreadsheet component, it's elements and more.
-platform: ej2-angular
+platform: document-processing
 control: Cell range 
 documentation: ug
 domainurl: ##DomainURL##

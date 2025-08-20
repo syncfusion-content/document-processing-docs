@@ -3,7 +3,7 @@ layout: post
 title: Mobile responsiveness in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Mobile responsiveness in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Mobile responsiveness 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

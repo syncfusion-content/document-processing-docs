@@ -3,7 +3,7 @@ layout: post
 title: Selection in React Spreadsheet component | Syncfusion
 description: Learn here all about Selection in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Selection 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

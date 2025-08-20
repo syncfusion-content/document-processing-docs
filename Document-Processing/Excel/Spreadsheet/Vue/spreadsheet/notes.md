@@ -3,7 +3,7 @@ layout: post
 title: Notes in Vue Spreadsheet component | Syncfusion
 description: Learn here all about the notes feature in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Notes
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

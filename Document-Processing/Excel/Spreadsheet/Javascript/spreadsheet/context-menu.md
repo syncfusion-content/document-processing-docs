@@ -2,7 +2,7 @@
 layout: post
 title: Context menu in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Context menu in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Context menu 
 publishingplatform: ##Platform_Name##
 documentation: ug

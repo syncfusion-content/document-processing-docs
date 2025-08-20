@@ -2,7 +2,7 @@
 layout: post
 title: Overview of the Vue Spreadsheet component | Syncfusion
 description: Learn here all about overview of the Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-vue
+platform: document-processing
 control: Index
 documentation: ug
 domainurl: ##DomainURL##

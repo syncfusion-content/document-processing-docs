@@ -2,7 +2,7 @@
 layout: post
 title: Mobile responsiveness in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Mobile responsiveness in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-angular
+platform: document-processing
 control: Mobile responsiveness 
 documentation: ug
 domainurl: ##DomainURL##

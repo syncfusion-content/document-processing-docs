@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Angular Spreadsheet component | Syncfusion
 description: Checkout and learn here all about getting started with Syncfusion Essential Angular Spreadsheet component, it's elements, and more details.
-platform: ej2-angular
+platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##

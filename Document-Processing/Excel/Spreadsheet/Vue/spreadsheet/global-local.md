@@ -3,7 +3,7 @@ layout: post
 title: Global local in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Global local in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Global local 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

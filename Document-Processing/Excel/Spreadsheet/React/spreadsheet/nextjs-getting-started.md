@@ -3,7 +3,7 @@ layout: post
 title: React Spreadsheet getting started with Next.js | Syncfusion
 description: Checkout and learn about how to use React Spreadsheet component of Syncfusion Essential JS 2 in the Next.js project.
 control: Next.js
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

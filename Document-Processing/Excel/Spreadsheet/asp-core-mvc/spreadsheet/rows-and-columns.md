@@ -2,7 +2,7 @@
 layout: post
 title: Rows and columns in ##Platform_Name## Spreadsheet | Syncfusion
 description: Learn here all about Rows And Columns in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Rows And Columns
 publishingplatform: ##Platform_Name##
 documentation: ug

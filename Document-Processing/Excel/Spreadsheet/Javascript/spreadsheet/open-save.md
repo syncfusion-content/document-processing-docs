@@ -2,7 +2,7 @@
 layout: post
 title: Open save in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Open save in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Open save 
 publishingplatform: ##Platform_Name##
 documentation: ug

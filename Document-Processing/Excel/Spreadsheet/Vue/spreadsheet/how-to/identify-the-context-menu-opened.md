@@ -3,7 +3,7 @@ layout: post
 title: Identify the context menu opened in the Vue Spreadsheet component | Syncfusion
 description: Learn here all about how to identify the context menu opened in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more. 
 control: Spreadsheet
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

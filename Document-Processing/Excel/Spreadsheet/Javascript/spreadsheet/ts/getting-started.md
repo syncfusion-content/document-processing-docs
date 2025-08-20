@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with ##Platform_Name## Spreadsheet control | Syncfusion
 description:  Checkout and learn about Getting started with ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more details.
-platform: ej2-javascript
+platform: document-processing
 control: Getting started 
 publishingplatform: ##Platform_Name##
 documentation: ug

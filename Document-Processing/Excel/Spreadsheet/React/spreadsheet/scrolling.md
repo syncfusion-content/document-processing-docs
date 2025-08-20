@@ -3,7 +3,7 @@ layout: post
 title: Scrolling in React Spreadsheet component | Syncfusion
 description: Learn here all about Scrolling in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Scrolling 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

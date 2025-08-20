@@ -2,7 +2,7 @@
 layout: post
 title: Global local in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Global local in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-angular
+platform: document-processing
 control: Global local 
 documentation: ug
 domainurl: ##DomainURL##

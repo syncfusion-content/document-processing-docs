@@ -3,7 +3,7 @@ layout: post
 title: Data binding in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Data binding in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Data binding 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

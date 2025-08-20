@@ -3,7 +3,7 @@ layout: post
 title: Scrolling in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Scrolling in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Scrolling 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

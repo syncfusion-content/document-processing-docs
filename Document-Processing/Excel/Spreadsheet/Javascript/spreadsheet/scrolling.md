@@ -2,7 +2,7 @@
 layout: post
 title: Scrolling in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Scrolling in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Scrolling 
 publishingplatform: ##Platform_Name##
 documentation: ug

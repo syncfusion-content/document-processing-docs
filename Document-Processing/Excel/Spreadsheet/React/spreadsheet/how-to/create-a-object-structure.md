@@ -3,7 +3,7 @@ layout: post
 title: Create a object structure in React Spreadsheet component | Syncfusion
 description: Learn here all about Create a object structure in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Create a object structure 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

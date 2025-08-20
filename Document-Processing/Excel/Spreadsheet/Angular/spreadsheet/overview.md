@@ -2,7 +2,7 @@
 layout: post
 title: Overview of the Angular Spreadsheet component | Syncfusion
 description: Learn here all about overview of the Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-angular
+platform: document-processing
 control: Index 
 documentation: ug
 domainurl: ##DomainURL##

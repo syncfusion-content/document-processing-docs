@@ -2,7 +2,7 @@
 layout: post
 title: Create a object structure in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Create a object structure in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Create a object structure 
 publishingplatform: ##Platform_Name##
 documentation: ug

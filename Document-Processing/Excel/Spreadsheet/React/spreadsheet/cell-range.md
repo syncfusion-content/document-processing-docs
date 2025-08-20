@@ -3,7 +3,7 @@ layout: post
 title: Cell range in React Spreadsheet component | Syncfusion
 description: Learn here all about Cell range in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Cell range 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

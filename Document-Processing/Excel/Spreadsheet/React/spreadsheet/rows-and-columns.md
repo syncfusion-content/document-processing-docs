@@ -3,7 +3,7 @@ layout: post
 title: Rows and columns in React Spreadsheet component | Syncfusion
 description: Learn here all about Rows and columns in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Rows and columns 
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

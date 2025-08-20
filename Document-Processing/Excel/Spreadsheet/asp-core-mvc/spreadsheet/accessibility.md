@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in ##Platform_Name## Spreadsheet Control
 description: "Documentation for the accessibility in the Essential JS2 Spreadsheet, featuring WAI-ARIA standards."
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Accessibility
 publishingplatform: ##Platform_Name##
 documentation: ug

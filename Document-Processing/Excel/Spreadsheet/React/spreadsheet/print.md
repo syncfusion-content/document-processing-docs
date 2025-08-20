@@ -3,7 +3,7 @@ layout: post
 title: Print in React Spreadsheet component | Syncfusion
 description: Learn here all about print feature in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Print
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

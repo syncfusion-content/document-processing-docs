@@ -3,7 +3,7 @@ layout: post
 title: Rows and columns in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Rows and columns in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Rows and columns 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

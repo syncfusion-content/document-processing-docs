@@ -2,7 +2,7 @@
 layout: post
 title: Data validation in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Data validation in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Data validation 
 publishingplatform: ##Platform_Name##
 documentation: ug

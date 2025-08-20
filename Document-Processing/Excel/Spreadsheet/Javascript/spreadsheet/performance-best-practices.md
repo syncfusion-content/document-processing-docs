@@ -2,7 +2,7 @@
 layout: post
 title: Performance best practices in ##Platform_Name## Spreadsheet Control | Syncfusion
 description: Learn here all about how to optimize the performance ##Platform_Name## Spreadsheet control, its elements and more.
-platform: ej2-javascript
+platform: document-processing
 control: Performance 
 publishingplatform: ##Platform_Name##
 documentation: ug

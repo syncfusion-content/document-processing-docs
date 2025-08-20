@@ -2,7 +2,7 @@
 layout: post
 title: Feature List in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Feature List in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Feature List
 publishingplatform: ##Platform_Name##
 documentation: ug

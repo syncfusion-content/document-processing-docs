@@ -2,7 +2,7 @@
 layout: post
 title: Sort in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Sort in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: document-processing
 control: Sort 
 publishingplatform: ##Platform_Name##
 documentation: ug
