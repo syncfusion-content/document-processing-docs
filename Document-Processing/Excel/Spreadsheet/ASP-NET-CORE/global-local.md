@@ -4,7 +4,6 @@ title: Global Local in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Global Local in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global Local
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -12,15 +11,7 @@ documentation: ug
 
 ## Localization
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 The [Localization](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [locale](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Locale) value and translation object.
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-The [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization/) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [locale](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Locale) value and translation object.
-
-{% endif %}
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -389,28 +380,14 @@ To load translation object in an application, use `load` function of the `L10n` 
 
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/locale/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/locale/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="LocaleController.cs" %}
-{% include code-snippet/spreadsheet/locale/Core/localeController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/locale/Core/localeController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/locale/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="LocaleController.cs" %}
-{% include code-snippet/spreadsheet/locale/MVC/localeController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -420,28 +397,14 @@ The Internationalization library is used to globalize number, date, and time val
 
 The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/internationalization/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/internationalization/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InternationalizationController.cs" %}
-{% include code-snippet/spreadsheet/internationalization/Core/internationalizationController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/internationalization/Core/internationalizationController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/internationalization/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="InternationalizationController.cs" %}
-{% include code-snippet/spreadsheet/internationalization/MVC/internationalizationController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -449,28 +412,14 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 
 RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableRtl) to true.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/rtl/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/rtl/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RtlController.cs" %}
-{% include code-snippet/spreadsheet/rtl/Core/rtlController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/rtl/Core/rtlController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/rtl/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="RtlController.cs" %}
-{% include code-snippet/spreadsheet/rtl/MVC/rtlController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

@@ -4,7 +4,6 @@ title: Searching in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Searching in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Searching
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -64,28 +63,14 @@ In the following sample, searching can be done by following ways:
 * Select the next (or) previous button to find the entered value in the spreadsheet.
 * You can have more options to find values by selecting the more options in the search toolbar.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/search/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/search/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SearchController.cs" %}
-{% include code-snippet/spreadsheet/search/Core/searchController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/search/Core/searchController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/search/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="SearchController.cs" %}
-{% include code-snippet/spreadsheet/search/MVC/searchController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

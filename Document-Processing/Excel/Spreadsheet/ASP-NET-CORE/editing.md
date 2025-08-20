@@ -4,7 +4,6 @@ title: Editing in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Editing in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Editing
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -40,28 +39,14 @@ To cancel the editing without saving the changes, you can use one of the followi
 
 The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_CellEdit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeCellSave) and use `closeEdit` method in spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/editing/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/editing/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="EditingController.cs" %}
-{% include code-snippet/spreadsheet/editing/Core/editingController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/editing/Core/editingController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/editing/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="EditingController.cs" %}
-{% include code-snippet/spreadsheet/editing/MVC/editingController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

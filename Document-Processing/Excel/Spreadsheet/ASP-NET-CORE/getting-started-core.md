@@ -4,7 +4,6 @@ title: Getting Started with ##Platform_Name## Spreadsheet Control
 description: Checkout and learn about getting started with ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started Core
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -92,7 +91,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Sprea
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/getting-started-core/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/getting-started-core/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 

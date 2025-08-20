@@ -4,7 +4,6 @@ title: Overview of the ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Overview of the Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Index
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

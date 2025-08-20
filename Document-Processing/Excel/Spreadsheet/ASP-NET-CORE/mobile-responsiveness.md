@@ -4,7 +4,6 @@ title: Mobile Responsiveness in ##Platform_Name## Syncfusion Spreadsheet Compone
 description: Learn here all about Mobile Responsiveness in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile Responsiveness
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

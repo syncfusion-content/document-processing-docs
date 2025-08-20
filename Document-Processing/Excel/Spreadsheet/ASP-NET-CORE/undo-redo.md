@@ -4,7 +4,6 @@ title: Undo Redo in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Undo Redo in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Undo Redo
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -39,28 +38,14 @@ You can update your own custom actions in UndoRedo collection, by using the `upd
 
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/undo-redo/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/undo-redo/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="UndoRedoController.cs" %}
-{% include code-snippet/spreadsheet/undo-redo/Core/undoRedoController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/undo-redo/Core/undoRedoController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/undo-redo/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="UndoRedoController.cs" %}
-{% include code-snippet/spreadsheet/undo-redo/MVC/undoRedoController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

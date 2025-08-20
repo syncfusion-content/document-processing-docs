@@ -4,7 +4,6 @@ title: Worksheet in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Worksheet in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Worksheet
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -23,28 +22,14 @@ You can dynamically add or insert a sheet by one of the following ways,
 
 The following code example shows the insert sheet operation in spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-sheet/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/spreadsheet/insert-sheet/Core/insertSheetController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet/Core/insertSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-sheet/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/spreadsheet/insert-sheet/MVC/insertSheetController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ### Insert a sheet programmatically and make it active sheet
 
@@ -52,28 +37,14 @@ A sheet is a collection of cells organized in the form of rows and columns that 
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-sheet-change-active-sheet/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/spreadsheet/insert-sheet-change-active-sheet/Core/insertSheetController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/Core/insertSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-sheet-change-active-sheet/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/spreadsheet/insert-sheet-change-active-sheet/MVC/insertSheetController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 ## Delete sheet
@@ -105,28 +76,14 @@ Gridlines act as a border like appearance of cells. They are used to distinguish
 
 The following code example shows the headers and gridlines operation in spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/header-gridlines/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/header-gridlines/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="HeaderController.cs" %}
-{% include code-snippet/spreadsheet/header-gridlines/Core/headerController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/header-gridlines/Core/headerController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/header-gridlines/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="HeaderController.cs" %}
-{% include code-snippet/spreadsheet/header-gridlines/MVC/headerController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Sheet visibility
 
@@ -144,28 +101,14 @@ state property to `Visible` is the only way to view this sheet. |
 
 The following code example shows the three types of sheet visibility state.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/sheet-visiblity/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/sheet-visiblity/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SheetVisiblityController.cs" %}
-{% include code-snippet/spreadsheet/sheet-visiblity/Core/sheetVisiblityController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/sheet-visiblity/Core/sheetVisiblityController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/sheet-visiblity/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="SheetVisiblityController.cs" %}
-{% include code-snippet/spreadsheet/sheet-visiblity/MVC/sheetVisiblityController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
