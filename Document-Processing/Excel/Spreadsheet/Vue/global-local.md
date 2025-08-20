@@ -384,14 +384,14 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs2/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs2/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/local-data-binding-cs2" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -612,14 +612,14 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs3/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs3/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/local-data-binding-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/local-data-binding-cs3" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/local-data-binding-cs3" %}
 
 ## Note
 

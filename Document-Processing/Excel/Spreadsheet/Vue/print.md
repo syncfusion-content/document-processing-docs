@@ -32,14 +32,14 @@ The `printOptions` contain three properties, as described below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/print-cs2/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/print-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/print-cs2/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/print-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs2" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/print-cs2" %}
 
 ## Disable printing
 
@@ -49,14 +49,14 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/print-cs3/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/print-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/print-cs3/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/print-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs3" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/print-cs3" %}
 
 ## Limitations
 
