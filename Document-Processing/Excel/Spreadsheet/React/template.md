@@ -18,14 +18,14 @@ Sample link: [`Cell template`](https://ej2.syncfusion.com/react/demos/#/material
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/template-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/template-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/template-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/template-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/template-cs1" %} 
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/template-cs1" %} 
 
 ## Note
 

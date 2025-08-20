@@ -33,23 +33,23 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/spreadsheet/formula-cs3/app/App.jsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs3/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/spreadsheet/formula-cs3/app/App.tsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs3/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="locale.json" %}
-{% include code-snippet/spreadsheet/formula-cs3/app/locale.json %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs3/app/locale.json %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/formula-cs3/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/formula-cs3/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs3" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/formula-cs3" %}
 
 ## Create User Defined Functions / Custom Functions
 
@@ -61,20 +61,20 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/formula-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/formula-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/formula-cs1/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/formula-cs1/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/formula-cs1" %}
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
@@ -82,20 +82,20 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/formula-cs2/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/formula-cs2/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/formula-cs2/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/formula-cs2/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/formula-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs2" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/formula-cs2" %}
 
 ## Formula bar
 
@@ -114,20 +114,20 @@ The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/defined-name-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/defined-name-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/defined-name-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/defined-name-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/defined-name-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -148,20 +148,20 @@ The following code example demonstrates how to set the Automatic calculation mod
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/calculation-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/calculation-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/calculation-cs1/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/calculation-cs1/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -176,20 +176,20 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/calculation-cs2/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/calculation-cs2/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/calculation-cs2/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/calculation-cs2/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/calculation-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/calculation-cs2" %}
 
 ## Supported Formulas
 

@@ -384,20 +384,20 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs2/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs2/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs2/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/local-data-binding-cs2/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/local-data-binding-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/local-data-binding-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -506,20 +506,20 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/internationalization-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/internationalization-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/internationalization-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/internationalization-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/internationalization-cs1/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/internationalization-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/internationalization-cs1/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/internationalization-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/internationalization-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/internationalization-cs1" %}
 
 ## Note
 
