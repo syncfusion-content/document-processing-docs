@@ -1,25 +1,16 @@
 ---
 layout: post
-title: Searching in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Searching in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Searching in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Searching in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Searching 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Searching in ##Platform_Name## Spreadsheet control
-
-{% if page.publishingplatform == "typescript" %}
-
-Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfindandreplace) property to enable or disable the Find and Replace functionality.
-
-{% elsif page.publishingplatform == "javascript" %}
+# Searching in Javascript-ES5 Spreadsheet control
 
 Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowfindandreplace) property to enable or disable the Find and Replace functionality.
-
-{% endif %}
  
 > * The default value for `allowFindAndReplace` property is `true`.
 
@@ -40,11 +31,7 @@ Find can be done by any of the following ways:
 > * `Match case`: To find the matched value with case sensitive.
 > * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
 
-{% if page.publishingplatform == "typescript" %}
-* Using [`find()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#find) method to perform find operation.
-{% elsif page.publishingplatform == "javascript" %}
 * Using [`find()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#find) method to perform find operation.
-{% endif %}
 
 ## Replace
 
@@ -57,13 +44,8 @@ Replace can be done by any of the following ways:
 * Use `Ctrl + H` key to open the Find and Replace dialog.
 * Use Replace button to change the found value in sheet or workbook.
 * Using Replace All button, all the matched criteria can be replaced with find value based on sheet or workbook.
-{% if page.publishingplatform == "typescript" %}
-* Using [`replace()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
-* Using [`replace()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
-{% elsif page.publishingplatform == "javascript" %}
 * Using [`replace()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
 * Using [`replace()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
-{% endif %}
 
 ## Go to
 
@@ -71,13 +53,8 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 
 **User Interface**:
 
-{% if page.publishingplatform == "typescript" %}
-* Use `Ctrl + G` key to open the Go To dialog.
-* Use [`goTo()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#goto) method to perform Go To operation.
-{% elsif page.publishingplatform == "javascript" %}
 * Use `Ctrl + G` key to open the Go To dialog.
 * Use [`goTo()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#goto) method to perform Go To operation.
-{% endif %}
 
 In the following sample, searching can be done by following ways:
 
@@ -86,32 +63,16 @@ In the following sample, searching can be done by following ways:
 * Select the next (or) previous button to find the entered value in the spreadsheet.
 * You can have more options to find values by selecting the more options in the search toolbar.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/searching-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/searching-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/searching-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/searching-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/searching-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/searching-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/searching-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/searching-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/searching-cs1" %}
 
 ## Limitations
 

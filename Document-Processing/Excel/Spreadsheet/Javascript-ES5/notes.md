@@ -1,25 +1,16 @@
 ---
 layout: post
-title: Notes in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about the notes feature in ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Notes in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about the notes feature in Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in ##Platform_Name## Spreadsheet control
-
-{% if page.publishingplatform == "typescript" %}
-
-The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enablenotes) property, which defaults to **true**.
-
-{% elsif page.publishingplatform == "javascript" %}
+# Notes in Javascript-ES5 Spreadsheet control
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablenotes) property, which defaults to **true**.
-
-{% endif %}
 
 When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
@@ -27,32 +18,16 @@ When opening the Excel document with notes in the Spreadsheet, they will be disp
 
 In the below example, you can add, edit, save, and delete notes.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/note-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/note-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/note-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/note-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/note-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/note-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/note-cs1" %}
 
 ## Adding a note
 
@@ -89,77 +64,37 @@ The Spreadsheet data, including notes, can be saved and exported as an Excel doc
 
 ## Disabling notes
 
-{% if page.publishingplatform == "typescript" %}
-
-To disable the note functionality, you need to set the [`enableNotes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 To disable the note functionality, you need to set the [`enableNotes`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
-
-{% endif %}
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 
 In the below example, the note functionality is disabled in the Spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/note-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/note-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/note-cs2" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/note-cs2/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/note-cs2/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/note-cs2" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/note-cs2" %}
 
 ## Integrating notes during initial loading and using cell data binding
 
 The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/note-cs3/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/note-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/note-cs3" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/note-cs3/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/note-cs3/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/note-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/note-cs3" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/note-cs3" %}
 
 ## Limitations
 

@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Getting started with ##Platform_Name## Spreadsheet control | Syncfusion
-description:  Checkout and learn about Getting started with ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more details.
+title: Getting started with Javascript-ES5 Spreadsheet control | Syncfusion
+description:  Checkout and learn about Getting started with Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in ##Platform_Name## Spreadsheet control
+# Getting started in Javascript-ES5 Spreadsheet control
 
 This section explains the steps to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control in a JavaScript application.
 
@@ -268,14 +267,14 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/spreadsheet/es5-getting-started-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/spreadsheet/es5-getting-started-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/spreadsheet/es5-getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
 
 > You can refer to our [JavaScript Spreadsheet](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript Spreadsheet example](https://ej2.syncfusion.com/demos/#/material/spreadsheet/default.html) to knows how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
 

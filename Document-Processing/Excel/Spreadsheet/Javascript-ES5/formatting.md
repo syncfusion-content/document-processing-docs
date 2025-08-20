@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Formatting in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Formatting in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Formatting in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Formatting in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Formatting 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formatting in ##Platform_Name## Spreadsheet control
+# Formatting in Javascript-ES5 Spreadsheet control
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
@@ -18,15 +17,7 @@ Formatting options make your data easier to view and understand. The different t
 
 ## Number Formatting
 
-{% if page.publishingplatform == "typescript" %}
-
-Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
-
-{% elsif page.publishingplatform == "javascript" %}
-
 Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
-
-{% endif %}
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -45,15 +36,8 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 Number formatting can be applied in following ways,
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
 
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#numberformat) method, you can set the number format to a cell or range of cells.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 * Using the [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#numberformat) method, you can set the number format to a cell or range of cells.
 
-{% endif %}
 * Selecting the number format option from ribbon toolbar.
 
 ### Custom Number Formatting
@@ -103,46 +87,22 @@ The different types of custom number format populated in the custom number forma
 
 Custom Number formatting can be applied in following ways,
 
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#numberformat) method, you can set your own custom number format to a cell or range of cells.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 * Using the [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#numberformat) method, you can set your own custom number format to a cell or range of cells.
-
-{% endif %}
 
 * Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
 
 The following code example shows the number formatting in cell data.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/format/number-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/format/number-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/format/number-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/format/number-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/format/number-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/format/number-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1" %}
 
 ## Configure culture-based custom format
 
@@ -155,39 +115,6 @@ Compared to Excel, the date, time, currency, and accounting formats vary across 
 > The format code should use the default decimal separator (.) and group separator (,).
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German (de)` culture.
-
-{% if page.publishingplatform == "typescript" %}
-
-```ts
-import { configureLocalizedFormat } from '@syncfusion/ej2-spreadsheet';
-
-const deLocaleFormats: FormatOption[] = [
-    { id: 14, code: 'dd.MM.yyyy' },
-    { id: 15, code: 'dd. MMM yy' },
-    { id: 16, code: 'dd. MMM' },
-    { id: 17, code: 'MMM yy' },
-    { id: 20, code: 'hh:mm' },
-    { id: 21, code: 'hh:mm:ss' },
-    { id: 22, code: 'dd.MM.yyyy hh:mm' },
-    { id: 37, code: '#,##0;-#,##0' },
-    { id: 38, code: '#,##0;[Red]-#,##0' },
-    { id: 39, code: '#,##0.00;-#,##0.00' },
-    { id: 40, code: '#,##0.00;[Red]-#,##0.00' },
-    { id: 5, code: '#,##0 "€";-#,##0 "€"' },
-    { id: 6, code: '#,##0 "€";[Red]-#,##0 "€"' },
-    { id: 7, code: '#,##0.00 "€";-#,##0.00 "€"' },
-    { id: 8, code: '#,##0.00 "€";[Red]-#,##0.00 "€"' },
-    { id: 41, code: '_-* #,##0_-;-* #,##0_-;_-* "-"_-;_-@_-' },
-    { id: 42, code: '_-* #,##0 "€"_-;-* #,##0 "€"_-;_-* "-" "€"_-;_-@_-' },
-    { id: 43, code: '_-* #,##0.00_-;-* #,##0.00_-;_-* "-"??_-;_-@_-' },
-    { id: 44, code: '_-* #,##0.00 "€"_-;-* #,##0.00 "€"_-;_-* "-"?? "€"_-;_-@_-' }
-];
-
-// Mapping culture-based number formats for the "de" culture: The "spreadsheetObj" parameter is an instance of the spreadsheet component, and the "deLocaleFormats" parameter is an array containing format codes and their corresponding format IDs for the "de" culture.
-configureLocalizedFormat(spreadsheetObj, deLocaleFormats);
-```
-
-{% elsif page.publishingplatform == "javascript" %}
 
 ```js
 const deLocaleFormats = [
@@ -216,54 +143,25 @@ const deLocaleFormats = [
 ej.spreadsheet.configureLocalizedFormat(spreadsheetObj, deLocaleFormats);
 ```
 
-{% endif %}
-
 The following code example demonstrates how to configure culture-based formats for different cultures in the spreadsheet.
-
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/format/globalization-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/format/globalization-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/format/globalization-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/format/globalization-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/format/globalization-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/format/globalization-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1" %}
 
 ## Text and cell formatting
-
-{% if page.publishingplatform == "typescript" %}
-
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
-* Using the `style` property, you can set formats to each cell at initial load.
-* Using the [`cellFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#cellformat) method, you can set formats to a cell or range of cells.
-* You can also apply by clicking the desired format option from the ribbon toolbar.
-
-{% elsif page.publishingplatform == "javascript" %}
 
 Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
 * Using the `style` property, you can set formats to each cell at initial load.
 * Using the [`cellFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#cellformat) method, you can set formats to a cell or range of cells.
 * You can also apply by clicking the desired format option from the ribbon toolbar.
-
-{% endif %}
 
 ### Fonts
 
@@ -317,32 +215,16 @@ Borders can be applied in the following ways,
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/format/cell-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/format/cell-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/format/cell-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/format/cell-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/format/cell-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/format/cell-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1" %}
 
 ### Limitations of Formatting
 
@@ -353,15 +235,7 @@ The following features are not supported in Formatting:
 
 ## Conditional Formatting
 
-{% if page.publishingplatform == "typescript" %}
-
-Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowConditionalFormat) property.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowConditionalFormat) property.
-
-{% endif %}
 
 > The default value for the `allowConditionalFormat` property is `true`.
 
@@ -371,15 +245,7 @@ You can apply conditional formatting by using one of the following ways,
 
 * Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
 
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#conditionalFormat) method to define the condition.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 * Using the [`conditionalFormat()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#conditionalFormat) method to define the condition.
-
-{% endif %}
 
 * Using the `conditionalFormats` in sheets model.
 
@@ -447,42 +313,19 @@ You can clear the defined rules by using one of the following ways,
 
 * Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
 
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clearConditionalFormat) method to clear the defined rules.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 * Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#clearConditionalFormat) method to clear the defined rules.
 
-{% endif %}
-
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/conditional-formatting-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/conditional-formatting-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/conditional-formatting-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/conditional-formatting-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/conditional-formatting-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/conditional-formatting-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 

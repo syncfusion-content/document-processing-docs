@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about print feature in ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Print in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about print feature in Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in ##Platform_Name## Spreadsheet control
+# Print in Javascript-ES5 Spreadsheet control
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 
@@ -31,73 +30,33 @@ The `printOptions` contain three properties, as described below.
 
 > When the `print` method is called without any parameters, the default printing will be performed.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/print-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/print-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs2" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/print-cs2/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/print-cs2/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs2" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/print-cs2" %}
 
 ## Disable printing
 
-{% if page.publishingplatform == "typescript" %}
-
-The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowprint) property to **false**. After disabling, the **"Print"** option will not be available in the **"File"** menu of the ribbon and as a keyboard shortcut.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowprint) property to **false**. After disabling, the **"Print"** option will not be available in the **"File"** menu of the ribbon and as a keyboard shortcut.
-
-{% endif %}
 
 ![Spreadsheet with print option disabled](./images/spreadsheet_print_disable.png)
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/print-cs3/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/print-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs3" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/print-cs3/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/print-cs3/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/print-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs3" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/print-cs3" %}
 
 ## Limitations
 

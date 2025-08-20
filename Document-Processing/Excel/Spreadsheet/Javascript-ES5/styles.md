@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Styles in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Styles in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Styles in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Styles in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Styles 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in ##Platform_Name## Spreadsheet control
+# Styles in Javascript-ES5 Spreadsheet control
 
 To modify the Spreadsheet appearance, you need to override the default CSS of the spreadsheet. Please find the CSS structure that can be used to modify the Spreadsheet appearance. Also, you have an option to create your own custom theme for all the JavaScript controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Accessibility in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Accessibility in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Accessibility in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Accessibility 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in ##Platform_Name## Spreadsheet control
+# Accessibility in Javascript-ES5 Spreadsheet control
 
 The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -117,12 +116,4 @@ The accessibility compliance of the Spreadsheet control is shown in the followin
 
 ## See also
 
-{% if page.publishingplatform == "typescript" %}
-
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 controls](https://ej2.syncfusion.com/documentation/common/accessibility)
-
-{% elsif page.publishingplatform == "javascript" %}
-
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 controls](https://ej2.syncfusion.com/javascript/documentation/common/accessibility)
-
-{% endif %}
