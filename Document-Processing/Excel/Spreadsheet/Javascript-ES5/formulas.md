@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Formulas in ##Platform_Name## Spreadsheet Control | Syncfusion
-description: Learn here all about Formulas in Syncfusion Essential ##Platform_Name## Spreadsheet control, its elements and more.
+title: Formulas in Javascript-ES5 Spreadsheet Control | Syncfusion
+description: Learn here all about Formulas in Syncfusion Essential Javascript-ES5 Spreadsheet control, its elements and more.
 platform: document-processing
 control: Formulas 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formulas in ##Platform_Name## Spreadsheet Control
+# Formulas in Javascript-ES5 Spreadsheet Control
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
@@ -20,12 +19,7 @@ You can set formula for a cell in the following ways,
 * Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing).
-{% if page.publishingplatform == "typescript" %}
-* Using the [`updateCell`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
-{% elsif page.publishingplatform == "javascript" %}
-* Using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
-{% endif %}
- 
+* Using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula. 
 
 ## Culture-Based Argument Separator
 
@@ -33,187 +27,80 @@ Previously, although you could import culture-based Excel files into the Spreads
 
 > Before importing culture-based Excel files, ensure that the Spreadsheet is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
 
-{% if page.publishingplatform == "typescript" %}
-
-When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/documentation/api/spreadsheet/#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/documentation/api/spreadsheet/#listseparator) property will be updated based on the culture of the launched import/export service.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#listseparator) property will be updated based on the culture of the launched import/export service.
-
-{% endif %}
 
 In the example below, the Spreadsheet component is rendered with the `German` [`de`] culture. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/formula-cs3/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/formula-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs3" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/formula-cs3/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/formula-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/formula-cs3/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/formula-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs3" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/formula-cs3" %}
 
 ## Create User Defined Functions / Custom Functions
 
 The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
 
-{% if page.publishingplatform == "typescript" %}
-
-You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
-
-{% endif %}
 
 The following code example shows an unsupported formula in the spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/formula-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/formula-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/formula-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/formula-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/formula-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/formula-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs1" %}
-{% endif %}
-
-{% if page.publishingplatform == "typescript" %}
-
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
-
-{% elsif page.publishingplatform == "javascript" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/formula-cs1" %}
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
-
-{% endif %}
  
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/formula-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/formula-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs2" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/formula-cs2/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/formula-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/formula-cs2/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/formula-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs2" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/formula-cs2" %}
 
 ## Formula bar
 
-{% if page.publishingplatform == "typescript" %}
-
-Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#showformulabar) property to enable or disable the formula bar.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#showformulabar) property to enable or disable the formula bar.
-
-{% endif %}
 
 ## Named Ranges
 
 You can define a meaningful name for a cell range and use it in the formula for calculation. It makes your formula much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways,
-
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`definedNames`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#definednames) collection, you can add multiple named ranges at initial load.
-* Use the [`addDefinedName`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically.
-* You can remove an added named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#removedefinedname) method.
-* Select the range of cells, and then enter the name for the selected range in the `Name box`.
-
-{% elsif page.publishingplatform == "javascript" %}
 
 * Using the [`definedNames`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#definednames) collection, you can add multiple named ranges at initial load.
 * Use the [`addDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically.
 * You can remove an added named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removedefinedname) method.
 * Select the range of cells, and then enter the name for the selected range in the `Name box`.
 
-{% endif %}
-
 The following code example shows the usage of named ranges support.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/defined-name-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/defined-name-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/defined-name-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/defined-name-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/defined-name-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -222,58 +109,26 @@ The Spreadsheet provides a `Calculation Mode` feature like the calculation optio
 * `Automatic`: Formulas are recalculated instantly whenever a change occurs in the dependent cells.
 * `Manual`: Formulas are recalculated only when triggered explicitly by the user using options like `Calculate Sheet` or `Calculate Workbook`.
 
-{% if page.publishingplatform == "typescript" %}
-
-You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#calculationmode) property of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#calculationmode) property of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
-
-{% endif %}
 
 ### Automatic Mode
 
 In Automatic Mode, formulas are recalculated instantly whenever a dependent cell is modified. This mode is perfect for scenarios where real-time updates are essential, ensuring that users see the latest results without additional actions.
 
-{% if page.publishingplatform == "typescript" %}
-
-For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. You can enable this mode by setting the [`calculationMode`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#calculationmode) property to `Automatic`.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. You can enable this mode by setting the [`calculationMode`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#calculationmode) property to `Automatic`.
-
-{% endif %}
 
 The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/calculation-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/calculation-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/calculation-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/calculation-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/calculation-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/calculation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -286,32 +141,16 @@ For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`
 
 The following code example demonstrates how to set the Manual calculation mode in a Spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/calculation-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/calculation-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs2" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/calculation-cs2/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/calculation-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/calculation-cs2/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/calculation-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/calculation-cs2" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/calculation-cs2" %}
 
 ## Supported Formulas
 

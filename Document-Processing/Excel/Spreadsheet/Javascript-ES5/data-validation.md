@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Data validation in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Data validation in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Data validation in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Data validation in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Data validation 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data validation in ##Platform_Name## Spreadsheet control
+# Data validation in Javascript-ES5 Spreadsheet control
 
 Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](../api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
 
@@ -51,32 +50,16 @@ You can clear the highlighted invalid data by using the following ways,
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
 * Use the [`removeInvalidHighlight()`](../api/spreadsheet/#removeinvalidhighlight) method programmatically.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs2" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs2" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/data-validation-cs2" %}
 
 ## See Also
 

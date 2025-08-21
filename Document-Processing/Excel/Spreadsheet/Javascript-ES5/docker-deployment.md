@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Docker image deployment in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Docker image deployment in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Docker image deployment in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Docker image deployment in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Docker deployment 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Docker Image Overview in ##Platform_Name## Spreadsheet control
+# Docker Image Overview in Javascript-ES5 Spreadsheet control
 
 The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 
@@ -60,44 +59,6 @@ docker-compose up
 Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
 
 **Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started)
-
-{% if page.publishingplatform == "typescript" %}
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Essential JS 2</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Essential JS 2" />
-    <meta name="author" content="Syncfusion" />
-    <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-    <!--Element which will render as Spreadsheet-->
-    <div id="Spreadsheet"></div>
-</body>
-</html>
-```
-
-```ts
-
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
-
-// Initialize Spreadsheet control
-let spreadsheet: Spreadsheet = new Spreadsheet({
-  openUrl: 'http://localhost:6002/api/spreadsheet/open',
-  saveUrl: 'http://localhost:6002/api/spreadsheet/save'
-});
-
-// Render initialized Spreadsheet
-spreadsheet.appendTo('#Spreadsheet');
-
-```
-
-{% elsif page.publishingplatform == "javascript" %}
 
 ```html
 <!DOCTYPE html>
@@ -153,8 +114,6 @@ spreadsheet.appendTo('#Spreadsheet');
   </body>
 </html>
 ```
-
-{% endif %}
 
 ## How to configure different cultures using a Docker compose file
 

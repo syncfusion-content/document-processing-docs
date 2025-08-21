@@ -1,24 +1,16 @@
 ---
 layout: post
-title: Clipboard in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Clipboard in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Clipboard in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Clipboard in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in ##Platform_Name## Spreadsheet control
-
-{% if page.publishingplatform == "typescript" %}
-
-The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
-
-{% elsif page.publishingplatform == "javascript" %}
+# Clipboard in Javascript-ES5 Spreadsheet control
 
 The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
-{% endif %}
  
 > By default, the `enableClipboard` property is true.
 
@@ -33,15 +25,8 @@ Cut can be done in one of the following ways.
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
 * Using `Ctrl + X` | `Command + X` keyboard shortcut.
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`cut`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#cut) method.
-
-{% elsif page.publishingplatform == "javascript" %}
 
 * Using the [`cut`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#cut) method.
-
-{% endif %}
  
 ## Copy
 
@@ -54,15 +39,8 @@ Copy can be done in one of the following ways.
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
 * Using `Ctrl + C` | `Command + C` keyboard shortcut.
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`copy`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#copy) method.
-
-{% elsif page.publishingplatform == "javascript" %}
 
 * Using the [`copy`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#copy) method.
-
-{% endif %}
 
 ## Paste
 
@@ -80,83 +58,37 @@ Paste can be done in one of the following ways.
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
 * Using `Ctrl + V` | `Command + V` keyboard shortcut.
-{% if page.publishingplatform == "typescript" %}
-
-* Using the [`paste`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#paste) method.
-
-{% elsif page.publishingplatform == "javascript" %}
 
 * Using the [`paste`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#paste) method.
 
-{% endif %}
-
 > If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clipboard-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clipboard-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
-{% if page.publishingplatform == "typescript" %}
-
-The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#actionbegin) event, you can set `cancel` argument as false in paste request type.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
-{% endif %}
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clipboard-cs2" %}
-
-{% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clipboard-cs2" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2" %}
 
 ## Limitations
 

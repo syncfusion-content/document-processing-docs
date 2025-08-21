@@ -1,29 +1,19 @@
 ---
 layout: post
-title: Global local in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Global local in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Global local in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Global local in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global local 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in ##Platform_Name## Spreadsheet control
+# Global local in Javascript-ES5 Spreadsheet control
 
 ## Localization
 
-{% if page.publishingplatform == "typescript" %}
-
-The [`Localization`](https://ej2.syncfusion.com/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#locale) value and translation object.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 The [`Localization`](https://ej2.syncfusion.com/javascript/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
 [`locale`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#locale) value and translation object.
-
-{% endif %}
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -388,44 +378,20 @@ IsProtected | is protected
 
 ### Loading translations
 
-{% if page.publishingplatform == "typescript" %}
-
-To load translation object in an application, use [`load`](https://ej2.syncfusion.com/documentation/common/internationalization#loading-culture-data) function of the [`L10n`](https://ej2.syncfusion.com/documentation/common/internationalization) class.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 To load translation object in an application, use [`load`](https://ej2.syncfusion.com/javascript/documentation/common/internationalization#loading-culture-data) function of the [`L10n`](https://ej2.syncfusion.com/javascript/documentation/common/internationalization) class.
-
-{% endif %}
 
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/global/locale-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/global/locale-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/global/locale-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/global/locale-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/global/locale-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/global/locale-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/global/locale-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/global/locale-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/global/locale-cs1" %}
 
 ## Internationalization
 
@@ -433,80 +399,32 @@ The Internationalization library is used to globalize number, date, and time val
 
 The following example demonstrates the Spreadsheet in French [`fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/global/internationalization-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/global/internationalization-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/global/internationalization-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/global/internationalization-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/global/internationalization-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/global/internationalization-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/global/internationalization-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/global/internationalization-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/global/internationalization-cs1" %}
 
 ## Right to left (RTL)
 
-{% if page.publishingplatform == "typescript" %}
-
-RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enablertl) to true.
-
-{% elsif page.publishingplatform == "javascript" %}
-
 RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablertl) to true.
-
-{% endif %}
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/global/rtl-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/global/rtl-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/spreadsheet/global/rtl-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/global/rtl-cs1/index.js %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/global/rtl-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/global/rtl-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es5/global/rtl-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/global/rtl-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/global/rtl-cs1" %}
 
 ## See Also
 
-{% if page.publishingplatform == "typescript" %}
-
-* [Localization](https://ej2.syncfusion.com/documentation/common/localization)
-
-{% elsif page.publishingplatform == "javascript" %}
-
 * [Localization](https://ej2.syncfusion.com/javascript/documentation/common/localization)
-
-{% endif %}

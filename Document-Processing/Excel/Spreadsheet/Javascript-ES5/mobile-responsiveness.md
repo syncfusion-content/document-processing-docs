@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Mobile responsiveness in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Mobile responsiveness in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Mobile responsiveness in Javascript-ES5 Spreadsheet control | Syncfusion
+description: Learn here all about Mobile responsiveness in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile responsiveness 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mobile responsiveness in ##Platform_Name## Spreadsheet control
+# Mobile responsiveness in Javascript-ES5 Spreadsheet control
 
 The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 
