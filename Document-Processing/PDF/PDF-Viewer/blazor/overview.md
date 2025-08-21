@@ -8,30 +8,30 @@ documentation: UG
 
 # Overview of Blazor PDF Viewer Component
 
-The [`Blazor PDF Viewer`](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) is a UI component for displaying PDFs from byte arrays, streams, or file paths. In addition to being able to print PDFs, it supports reviewing PDFs with annotation tools. Thumbnails, bookmarks, hyperlinks, and tables of content provide easy navigation within and outside PDF files. Form-filling support allows filling and printing with AcroForms.
+The [`Blazor PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) is a UI component for displaying PDFs from byte arrays, streams, or file paths. In addition to being able to print PDFs, it supports reviewing PDFs with annotation tools. Thumbnails, bookmarks, hyperlinks, and tables of content provide easy navigation within and outside PDF files. Form-filling support allows filling and printing with AcroForms.
 
 ## Key Features 
 
 * Accurate and reliable rendering of PDF pages.
 * Provides easy page navigation with,
-    * [Thumbnail page view](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#page-thumbnail-navigation)
-    * [Bookmark panel](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#bookmark-navigation)
-    * [Hyperlink navigation](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#hyperlink-navigation)
-    * [Table of content navigation](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#table-of-content-navigation)
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#page-thumbnail-navigation)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#bookmark-navigation)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#hyperlink-navigation)
+    * [Table of content navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#table-of-content-navigation)
 * Core interactions
-    * [Zooming](https://blazor.syncfusion.com/documentation/pdfviewer-2/magnification) and [panning](https://blazor.syncfusion.com/documentation/pdfviewer-2/interaction#panning-mode)
-    * [Text searching](https://blazor.syncfusion.com/documentation/pdfviewer-2/text-search)
+    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/interaction#panning-mode)
+    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/text-search)
     * Text selection and copy
-* [Print](https://blazor.syncfusion.com/documentation/pdfviewer-2/print) PDF file.
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/print) PDF file.
 * Annotate PDF with different types of annotations such as,
-    * [Highlight](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/text-markup-annotation#highlight-a-text), [underline](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/text-markup-annotation#underline-a-text), and [strikeout](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/text-markup-annotation#strikethrough-a-text) annotation
-    * [Shape annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/shape-annotation): Rectangle, circle, polygon, line, and arrow.
-    * [Stamp annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/stamp-annotation): Built-in and custom stamp
-    * [Measurement annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/measurement-annotation)
-    * [Free text annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/free-text-annotation)
-    * Add a [comment](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/comments) or [note](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/sticky-notes-annotation) for all type of annotations
-* [FormFilling](https://blazor.syncfusion.com/documentation/pdfviewer-2/form-filling)
-* [Handwritten Signature](https://blazor.syncfusion.com/documentation/pdfviewer-2/hand-written-signature)
+    * [Highlight](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#highlight-a-text), [underline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#underline-a-text), and [strikeout](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#strikethrough-a-text) annotation
+    * [Shape annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/shape-annotation): Rectangle, circle, polygon, line, and arrow.
+    * [Stamp annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/stamp-annotation): Built-in and custom stamp
+    * [Measurement annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/measurement-annotation)
+    * [Free text annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/free-text-annotation)
+    * Add a [comment](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/comments) or [note](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/sticky-notes-annotation) for all type of annotations
+* [FormFilling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/form-filling)
+* [Handwritten Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/hand-written-signature)
 
 ## Supported Web platforms
 
