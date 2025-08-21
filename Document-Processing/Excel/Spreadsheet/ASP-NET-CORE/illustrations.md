@@ -74,7 +74,7 @@ Image feature allows you to view and insert a image in a spreadsheet and you can
 {% include code-snippet/excel/spreadsheet/asp-net-core/image/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ImageController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/image/Core/imageController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/image/imageController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,7 +131,7 @@ The available arguments in the `ChartModel` are:
 {% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs1/Core/chartController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs1/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,7 +159,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 {% include code-snippet/excel/spreadsheet/asp-net-core/chart/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart/Core/chartController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -172,7 +172,7 @@ Using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusi
 {% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs2/Core/chartController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs2/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

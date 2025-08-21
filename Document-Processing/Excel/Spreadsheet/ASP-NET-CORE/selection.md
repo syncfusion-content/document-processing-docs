@@ -52,7 +52,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 {% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/Core/selectionController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,7 +78,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 {% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/Core/selectionController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,7 +93,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 {% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectedCellValuesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/Core/selectedCellValuesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/selectedCellValuesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,7 +106,7 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/Core/selectionController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

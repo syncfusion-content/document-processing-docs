@@ -41,7 +41,7 @@ The following code example shows `sort` functionality in the Spreadsheet control
 {% include code-snippet/excel/spreadsheet/asp-net-core/sort-by-cell/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/sort-by-cell/Core/sortController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/sort-by-cell/sortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,7 +115,7 @@ N> * All the arguments are optional.
 {% include code-snippet/excel/spreadsheet/asp-net-core/passing-sort/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PassingSortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/passing-sort/Core/passingSortController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/passing-sort/passingSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -142,7 +142,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 {% include code-snippet/excel/spreadsheet/asp-net-core/custom-sort/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomSortController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/custom-sort/Core/customSortController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/custom-sort/customSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

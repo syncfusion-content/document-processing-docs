@@ -27,7 +27,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 {% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet/Core/insertSheetController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet/insertSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,7 +42,7 @@ The following code example shows how to insert a sheet programmatically and make
 {% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/Core/insertSheetController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-sheet-change-active-sheet/insertSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,7 +81,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 {% include code-snippet/excel/spreadsheet/asp-net-core/header-gridlines/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="HeaderController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/header-gridlines/Core/headerController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/header-gridlines/headerController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,7 +106,7 @@ The following code example shows the three types of sheet visibility state.
 {% include code-snippet/excel/spreadsheet/asp-net-core/sheet-visiblity/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SheetVisiblityController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/sheet-visiblity/Core/sheetVisiblityController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/sheet-visiblity/sheetVisiblityController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

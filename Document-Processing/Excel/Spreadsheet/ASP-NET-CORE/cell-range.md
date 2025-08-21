@@ -29,7 +29,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 {% include code-snippet/excel/spreadsheet/asp-net-core/wrap-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="WrapTextController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/wrap-text/Core/wrapTextController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/wrap-text/wrapTextController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,7 +68,7 @@ The following code example shows the merge cells operation in spreadsheet.
 {% include code-snippet/excel/spreadsheet/asp-net-core/merge-cells/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="MergeCellController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/merge-cells/Core/mergeCellController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/merge-cells/mergeCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,7 +128,7 @@ You can clear the highlighted invalid data by using the following ways,
 {% include code-snippet/excel/spreadsheet/asp-net-core/data-validation/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation/Core/dataValidation.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -154,7 +154,7 @@ The following code example demonstrates how to add custom data validation with a
 {% include code-snippet/excel/spreadsheet/asp-net-core/data-validation-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation-cs2/Core/dataValidation.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/data-validation-cs2/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -235,7 +235,7 @@ In the following sample, you can enable/disable the fill option on the button cl
 {% include code-snippet/excel/spreadsheet/asp-net-core/autofill/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="AutofillController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/autofill/Core/autofillController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/autofill/autofillController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -270,7 +270,7 @@ Clear the cell contents and formats in the Spreadsheet document by using the `cl
 {% include code-snippet/excel/spreadsheet/asp-net-core/clear/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClearController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/clear/Core/clearController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/clear/clearController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

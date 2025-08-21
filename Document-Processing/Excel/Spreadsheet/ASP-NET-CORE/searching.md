@@ -68,7 +68,7 @@ In the following sample, searching can be done by following ways:
 {% include code-snippet/excel/spreadsheet/asp-net-core/search/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SearchController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/search/Core/searchController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/search/searchController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

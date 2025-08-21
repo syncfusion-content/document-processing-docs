@@ -23,7 +23,7 @@ In the below example, you can add, edit, save, and delete notes.
 {% include code-snippet/excel/spreadsheet/asp-net-core/note-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs1/Core/notesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs1/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,7 +73,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 {% include code-snippet/excel/spreadsheet/asp-net-core/note-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs2/Core/notesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs2/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +86,7 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 {% include code-snippet/excel/spreadsheet/asp-net-core/note-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs3/Core/notesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs3/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -35,7 +35,7 @@ The `printOptions` contain three properties, as described below.
 {% include code-snippet/excel/spreadsheet/asp-net-core/print-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs2/Core/printController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs2/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,7 +50,7 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 {% include code-snippet/excel/spreadsheet/asp-net-core/print-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs3/Core/printController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs3/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -49,7 +49,7 @@ The following example shows `Protect Sheet` functionality with password in the S
 {% include code-snippet/excel/spreadsheet/asp-net-core/protect-sheet/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectSheetController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/protect-sheet/Core/protectSheetController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/protect-sheet/protectSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,7 +80,7 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 {% include code-snippet/excel/spreadsheet/asp-net-core/lock-cells/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="LockCellController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/lock-cells/Core/lockCellController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/lock-cells/lockCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,7 +118,7 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 {% include code-snippet/excel/spreadsheet/asp-net-core/read-only/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ReadOnlyController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/read-only/Core/readOnlyController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/read-only/readOnlyController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,7 +143,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 {% include code-snippet/excel/spreadsheet/asp-net-core/protect-workbook/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectWorkbookController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/protect-workbook/Core/protectWorkbookController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/protect-workbook/protectWorkbookController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,7 +156,7 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 {% include code-snippet/excel/spreadsheet/asp-net-core/password/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PasswordController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/password/Core/passwordController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/password/passwordController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

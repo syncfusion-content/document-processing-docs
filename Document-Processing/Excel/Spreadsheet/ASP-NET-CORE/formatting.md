@@ -94,7 +94,7 @@ The following code example shows the number formatting in cell data.
 {% include code-snippet/excel/spreadsheet/asp-net-core/number-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NumberFormatController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/number-format/Core/numberFormatController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/number-format/numberFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -149,7 +149,7 @@ The following code example demonstrates how to configure culture-based formats f
 {% include code-snippet/excel/spreadsheet/asp-net-core/globalization-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CultureController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/globalization-cs1/Core/cultureController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/globalization-cs1/cultureController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -217,7 +217,7 @@ The following code example shows the style formatting in text and cells of the s
 {% include code-snippet/excel/spreadsheet/asp-net-core/cell-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellFormatController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/cell-format/Core/cellFormatController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/cell-format/cellFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -314,7 +314,7 @@ You can clear the defined rules by using one of the following ways,
 {% include code-snippet/excel/spreadsheet/asp-net-core/conditional-formatting/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ConditionalFormattingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/conditional-formatting/Core/conditionalFormattingController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/conditional-formatting/conditionalFormattingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

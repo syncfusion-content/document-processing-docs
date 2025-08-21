@@ -40,7 +40,7 @@ The following code example shows the usage of ribbon customization.
 {% include code-snippet/excel/spreadsheet/asp-net-core/ribbon/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RibbonController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/ribbon/Core/ribbonController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/ribbon/ribbonController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

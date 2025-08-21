@@ -44,7 +44,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% include code-snippet/excel/spreadsheet/asp-net-core/editing/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="EditingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/editing/Core/editingController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/editing/editingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

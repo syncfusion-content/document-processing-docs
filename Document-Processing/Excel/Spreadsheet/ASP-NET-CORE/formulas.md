@@ -36,7 +36,7 @@ In the example below, the Spreadsheet control is rendered with the `German cultu
 {% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs3/Core/formulaController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs3/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,7 +53,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 {% include code-snippet/excel/spreadsheet/asp-net-core/formula/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula/Core/formulaController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,7 +66,7 @@ The following code example shows how to use `computeExpression` method in the sp
 {% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs2/Core/formulaController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs2/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,7 +90,7 @@ The following code example shows the usage of named ranges support.
 {% include code-snippet/excel/spreadsheet/asp-net-core/defined-names/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DefinedNameController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/defined-names/Core/definedNameController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/defined-names/definedNameController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,7 +116,7 @@ The following code example demonstrates how to set the Automatic calculation mod
 {% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs1/Core/calculationModeController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs1/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -136,7 +136,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 {% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs2/Core/calculationModeController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs2/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

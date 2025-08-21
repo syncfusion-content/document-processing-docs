@@ -19,7 +19,7 @@ The following code example describes the above behavior.
 {% include code-snippet/excel/spreadsheet/asp-net-core/template/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Template.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/template/Core/template.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/template/template.cs %}
 {% endhighlight %}
 {% endtabs %}
 

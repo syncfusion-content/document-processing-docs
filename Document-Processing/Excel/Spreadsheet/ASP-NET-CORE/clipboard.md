@@ -65,7 +65,7 @@ N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`)
 {% include code-snippet/excel/spreadsheet/asp-net-core/clipboard/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/clipboard/Core/clipboardController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/clipboard/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,7 +80,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% include code-snippet/excel/spreadsheet/asp-net-core/prevent-paste/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/prevent-paste/Core/clipboardController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/prevent-paste/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
