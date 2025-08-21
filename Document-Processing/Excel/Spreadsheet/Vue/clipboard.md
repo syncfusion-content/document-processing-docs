@@ -62,14 +62,14 @@ Paste can be done in one of the following ways.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/clipboard-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/clipboard-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clipboard-cs1" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -77,14 +77,14 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/clipboard-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/clipboard-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clipboard-cs2" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/clipboard-cs2" %}
 
 ## Limitations
 

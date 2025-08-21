@@ -142,10 +142,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/getting-started-cs1/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/getting-started-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/getting-started-cs1/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,7 +163,7 @@ or
 yarn run serve
 ```
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/getting-started-cs1" %}
 
 > You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) that shows you how to present and manipulate data.
 

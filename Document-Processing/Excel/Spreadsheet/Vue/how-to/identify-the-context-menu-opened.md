@@ -25,11 +25,11 @@ The following code example shows how to identify the context menu opened.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/find-target-context-menu/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/find-target-context-menu/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/find-target-context-menu/app.vue %}
+{% include code-snippet/excel/spreadsheet/vue/find-target-context-menu/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/find-target-context-menu" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/find-target-context-menu" %}
