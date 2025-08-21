@@ -7,6 +7,89 @@ documentation: UG
 ---
 # Working with PDF Conformance in File Formats PDF
 
+<b>PDF/A Standards & Conformance Levels Comparison</b>
+
+<table>
+  <thead>
+    <tr>
+      <th>PDF/A Version</th>
+      <th>Based On</th>
+      <th>Conformance Levels</th>
+      <th>Key Features</th>
+      <th>Restrictions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PDF/A-1</td>
+      <td>PDF 1.4</td>
+      <td>a, b</td>
+      <td>Basic archiving, embedded fonts, color profiles</td>
+      <td> No JPEG2000, transparency, layers, or attachments</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2</td>
+      <td>PDF 1.7</td>
+      <td>a, b, u</td>
+      <td>JPEG2000, transparency, layers, PDF/A attachments, digital signatures</td>
+      <td> Only PDF/A files can be attached</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3</td>
+      <td>PDF 1.7</td>
+      <td>a, b, u</td>
+      <td>Same as PDF/A-2 + arbitrary file attachments (e.g., XML, CSV)</td>
+      <td> Risk of non-archivable content due to arbitrary attachments</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4</td>
+      <td>PDF 2.0</td>
+      <td>e, f</td>
+      <td>RichMedia, 3D annotations, modern engineering workflows</td>
+      <td> No a, b, u levels; encryption and JavaScript still forbidden</td>
+    </tr>
+  </tbody>
+</table>
+
+<b>Conformance Level Details</b>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Name</th>
+      <th>Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>b</td>
+      <td>Basic</td>
+      <td>Ensures visual reproducibility only. Fonts must be embedded.</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>Accessible</td>
+      <td>Includes b + logical structure, tagged content, language metadata, alt text.</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>Unicode</td>
+      <td>Includes b + Unicode mapping for searchable and copyable text.</td>
+    </tr>
+    <tr>
+      <td>e</td>
+      <td>Engineering</td>
+      <td>PDF/A-4 only. Supports RichMedia, 3D, and embedded files for engineering use.</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>File Embedding</td>
+      <td>PDF/A-4 only. Allows embedding of arbitrary file formats.</td>
+    </tr>
+  </tbody>
+</table>
+
 The Essential<sup>&reg;</sup> PDF currently supports the following PDF conformances:
 
 * PDF/A-1a conformance
@@ -1656,3 +1739,76 @@ document.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Convert-PDFA-to-PDF-document).
+
+<b>PDF/A Conformance Level Support</b>
+<table>
+  <thead>
+    <tr>
+      <th>Conformance Level</th>
+      <th>Creation Support</th>
+      <th>Loading (Conversion) Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PDF/A-1a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-1b</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/X-1a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2b</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-2u</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3a</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3b</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-3u</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4e</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>PDF/A-4f</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
