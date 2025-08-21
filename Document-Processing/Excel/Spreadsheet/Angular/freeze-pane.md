@@ -55,7 +55,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/freezepane-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/freezepane-cs1" %}
 
 ## Limitations
 

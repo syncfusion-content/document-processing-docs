@@ -40,7 +40,7 @@ The `printOptions` contain three properties, as described below.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/print-cs2" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/print-cs2" %}
 
 ## Disable printing
 
@@ -58,7 +58,7 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/print-cs3" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/print-cs3" %}
 
 ## Limitations
 

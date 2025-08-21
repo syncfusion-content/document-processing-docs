@@ -99,7 +99,7 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/format/number-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/format/number-cs1" %}
 
 ## Configure culture-based custom format
 
@@ -154,7 +154,7 @@ The following code example demonstrates how to configure culture-based formats f
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/format/globalization-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/format/globalization-cs1" %}
 
 ## Text and cell formatting
 
@@ -225,7 +225,7 @@ The following code example shows the style formatting in text and cells of the s
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/format/number-cs2" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/format/number-cs2" %}
 
 ### Limitations of Formatting
 
@@ -323,7 +323,7 @@ You can clear the defined rules by using one of the following ways,
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/conditional-formatting-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 

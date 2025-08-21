@@ -46,7 +46,7 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/filter-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -96,7 +96,7 @@ The following code example shows how to get the filtered rows.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/filter-cs2" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/filter-cs2" %}
 
 ## Limitations
 
