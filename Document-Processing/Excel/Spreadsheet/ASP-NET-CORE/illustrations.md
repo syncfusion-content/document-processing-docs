@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Illustrations in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Illustrations in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Illustrations in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Illustrations in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Illustrations
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -70,28 +69,14 @@ Image feature allows you to view and insert a image in a spreadsheet and you can
 * You can change the position of the image by drag and drop.
 * Use the `top` and `left` property in the `insertImage()` method programmatically.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/image/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/image/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ImageController.cs" %}
-{% include code-snippet/spreadsheet/image/Core/imageController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/image/imageController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/image/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ImageController.cs" %}
-{% include code-snippet/spreadsheet/image/MVC/imageController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -141,28 +126,14 @@ The available arguments in the `ChartModel` are:
 * id: Specifies the chart element id.
 * markerSettings: Specifies the marker settings. The marker is used to provide information about the data points in the series and is currently only applicable to the line chart.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/chart-cs1/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/spreadsheet/chart-cs1/Core/chartController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs1/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/chart-cs1/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/spreadsheet/chart-cs1/MVC/chartController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ### Delete Chart
 
@@ -183,55 +154,27 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 * You can change the position of the chart by drag and drop.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/chart/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/spreadsheet/chart/Core/chartController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/chart/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/spreadsheet/chart/MVC/chartController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 #### Customization of line chart markers
 
 Using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActionBegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/chart-cs2/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/spreadsheet/chart-cs2/Core/chartController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs2/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/chart-cs2/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/spreadsheet/chart-cs2/MVC/chartController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ### Limitations of Chart
 

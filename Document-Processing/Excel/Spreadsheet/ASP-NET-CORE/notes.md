@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Notes in ##Platform_Name## Syncfusion Spreadsheet Control
-description: Learn here all about the notes feature in ##Platform_Name## Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Notes in EJ2 ASP.NET CORE Syncfusion Spreadsheet Control
+description: Learn here all about the notes feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -19,28 +18,14 @@ When opening the Excel document with notes in the Spreadsheet, they will be disp
 
 In the below example, you can add, edit, save, and delete notes.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/note-cs1/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/spreadsheet/note-cs1/Core/notesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs1/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/note-cs1/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/spreadsheet/note-cs1/MVC/notesController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Adding a note
 
@@ -83,55 +68,27 @@ To disable the note functionality, you need to set the [`enableNotes`](https://h
 
 In the below example, the note functionality is disabled in the Spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/note-cs2/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/spreadsheet/note-cs2/Core/notesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs2/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/note-cs2/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/spreadsheet/note-cs2/MVC/notesController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Integrating notes during initial loading and using cell data binding
 
 The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/note-cs3/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/spreadsheet/note-cs3/Core/notesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/note-cs3/notesController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/note-cs3/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="NotesController.cs" %}
-{% include code-snippet/spreadsheet/note-cs3/MVC/notesController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Limitations
 

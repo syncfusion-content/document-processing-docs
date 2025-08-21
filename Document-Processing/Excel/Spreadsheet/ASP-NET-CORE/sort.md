@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Sort in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Sort in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sort in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Sort in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Sort
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -37,28 +36,14 @@ N> * The `beforeSort` event will be triggered before sorting the specified range
 
 The following code example shows `sort` functionality in the Spreadsheet control.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/sort-by-cell/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/sort-by-cell/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SortController.cs" %}
-{% include code-snippet/spreadsheet/sort-by-cell/Core/sortController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/sort-by-cell/sortController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/sort-by-cell/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="SortController.cs" %}
-{% include code-snippet/spreadsheet/sort-by-cell/MVC/sortController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -125,28 +110,14 @@ The multi-column sorting can also be performed manually by passing sort options 
 N> * All the arguments are optional.
 <br/> * When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/passing-sort/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/passing-sort/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PassingSortController.cs" %}
-{% include code-snippet/spreadsheet/passing-sort/Core/passingSortController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/passing-sort/passingSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/passing-sort/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="PassingSortController.cs" %}
-{% include code-snippet/spreadsheet/passing-sort/MVC/passingSortController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -166,28 +137,14 @@ You can also define the sorting of cell values based on your own customized pers
 
 In the following demo, the `Trustworthiness` column is sorted based on the custom lists `Perfect`, `Sufficient`, and `Insufficient`.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/custom-sort/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/custom-sort/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CustomSortController.cs" %}
-{% include code-snippet/spreadsheet/custom-sort/Core/customSortController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/custom-sort/customSortController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/custom-sort/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="CustomSortController.cs" %}
-{% include code-snippet/spreadsheet/custom-sort/MVC/customSortController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Known error validations
 

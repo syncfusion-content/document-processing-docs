@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Identify the context menu opened in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about how to identify the context menu opened in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Identify the context menu opened in EJ2 ASP.NET CORE Spreadsheet control | Syncfusion
+description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -23,19 +22,9 @@ The class name returned by the [contextMenuBeforeOpen](https://help.syncfusion.c
 
 The following code example shows how to identify the context menu opened.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/find-target-context-menu/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/find-target-context-menu/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/find-target-context-menu/razor %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}

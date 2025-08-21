@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Rows and columns in ##Platform_Name## Spreadsheet | Syncfusion
-description: Learn here all about Rows And Columns in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Rows and columns in EJ2 ASP.NET CORE Spreadsheet | Syncfusion
+description: Learn here all about Rows And Columns in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Rows And Columns
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -30,28 +29,14 @@ The rows can be inserted in the following ways,
 
 The following code example shows the options for inserting rows in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-row/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-row/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertRowController.cs" %}
-{% include code-snippet/spreadsheet/insert-row/Core/insertRowController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-row/insertRowController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-row/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="InsertRowController.cs" %}
-{% include code-snippet/spreadsheet/insert-row/MVC/insertRowController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -64,28 +49,14 @@ The columns can be inserted in the following ways,
 
 The following code example shows the options for inserting columns in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-column/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-column/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertColumnController.cs" %}
-{% include code-snippet/spreadsheet/insert-column/Core/insertColumnController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/insert-column/insertColumnController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/insert-column/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="InsertColumnController.cs" %}
-{% include code-snippet/spreadsheet/insert-column/MVC/insertColumnController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -100,28 +71,14 @@ The rows and columns can be deleted dynamically in the following ways,
 
 The following code example shows the delete operation of rows and columns in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/delete-row/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/delete-row/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DeleteRowController.cs" %}
-{% include code-snippet/spreadsheet/delete-row/Core/deleteRowController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/delete-row/deleteRowController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/delete-row/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="DeleteRowController.cs" %}
-{% include code-snippet/spreadsheet/delete-row/MVC/deleteRowController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -147,28 +104,14 @@ The columns can be hidden or shown through following ways,
 
 The following code example shows the hide/show rows and columns operation in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/show-hide/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/show-hide/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ShowHideController.cs" %}
-{% include code-snippet/spreadsheet/show-hide/Core/showHideController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/show-hide/showHideController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/show-hide/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ShowHideController.cs" %}
-{% include code-snippet/spreadsheet/show-hide/MVC/showHideController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -189,28 +132,14 @@ You can provide the following type of ranges to the method:
 
 The following code example shows how to change the height for single/multiple rows in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/row-height/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/row-height/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RowHeightController.cs" %}
-{% include code-snippet/spreadsheet/row-height/Core/rowHeightController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/row-height/rowHeightController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/row-height/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="RowHeightController.cs" %}
-{% include code-snippet/spreadsheet/row-height/MVC/rowHeightController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ### Column
 
@@ -225,28 +154,14 @@ You can provide the following type of ranges to the method:
 
 The following code example shows how to change the width for single/multiple columns in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/column-width/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/column-width/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ColumnWidthController.cs" %}
-{% include code-snippet/spreadsheet/column-width/Core/columnWidthController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/column-width/columnWidthController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/column-width/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ColumnWidthController.cs" %}
-{% include code-snippet/spreadsheet/column-width/MVC/columnWidthController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Changing text in column headers
 
@@ -254,22 +169,11 @@ Using the [`beforeCellRender`](https://help.syncfusion.com/cr/aspnetcore-js2/Syn
 
 The following code example shows how to change the text in the column headers.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/column-header-change/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/column-header-change/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/column-header-change/razor %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Limitations of insert and delete
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Formatting in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Formatting in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Formatting in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Formatting
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -90,28 +89,14 @@ Custom Number formatting can be applied in following ways,
 
 The following code example shows the number formatting in cell data.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/number-format/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/number-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NumberFormatController.cs" %}
-{% include code-snippet/spreadsheet/number-format/Core/numberFormatController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/number-format/numberFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/number-format/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="NumberFormatController.cs" %}
-{% include code-snippet/spreadsheet/number-format/MVC/numberFormatController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Configure culture-based custom format
 
@@ -124,8 +109,6 @@ Compared to Excel, the date, time, currency, and accounting formats vary across 
 > The format code should use the default decimal separator (.) and group separator (,).
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
-
-{% if page.publishingplatform == "aspnet-core" %}
 
 ```csharp
 List<object> deLocaleFormats = new List<object>()
@@ -158,66 +141,17 @@ ViewBag.deLocaleFormats = deLocaleFormats;
     ej.spreadsheet.configureLocalizedFormat(spreadsheet, deLocaleFormats);
 </script>
 ```
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-```csharp
-List<object> deLocaleFormats = new List<object>()
-{
-    new { id = 37, code = @"#,##0;-#,##0" },
-    new { id = 38, code = @"#,##0;[Red]-#,##0" },
-    new { id = 39, code = @"#,##0.00;-#,##0.00" },
-    new { id = 40, code = @"#,##0.00;[Red]-#,##0.00" },
-    new { id = 5, code = @"#,##0 ""€"";-#,##0 ""€""" },
-    new { id = 6, code = @"#,##0 ""€"";[Red]-#,##0 ""€""" },
-    new { id = 7, code = @"#,##0.00 ""€"";-#,##0.00 ""€""" },
-    new { id = 8, code = @"#,##0.00 ""€"";[Red]-#,##0.00 ""€""" },
-    new { id = 41, code = @"_-* #,##0_-;-* #,##0_-;_-* ""-""_-;_-@_-" },
-    new { id = 42, code = @"_-* #,##0 ""€""_-;-* #,##0 ""€""_-;_-* ""-"" ""€""_-;_-@_-" },
-    new { id = 43, code = @"_-* #,##0.00_-;-* #,##0.00_-;_-* ""-""??_-;_-@_-" },
-    new { id = 44, code = @"_-* #,##0.00 ""€""_-;-* #,##0.00 ""€""_-;_-* ""-""?? ""€""_-;_-@_-" },
-    new { id = 14, code = @"dd.MM.yyyy" },
-    new { id = 15, code = @"dd. MMM yy" },
-    new { id = 16, code = @"dd. MMM" },
-    new { id = 17, code = @"MMM yy" },
-    new { id = 20, code = @"hh:mm" },
-    new { id = 21, code = @"hh:mm:ss" },
-    new { id = 22, code = @"dd.MM.yyyy hh:mm" }
-};
-ViewBag.deLocaleFormats = deLocaleFormats;
-
-<script>
-    var deLocaleFormats = @Html.Raw(Json.Encode(deLocaleFormats));
-    // Mapping culture-based number formats for the "de" culture: The "spreadsheet" parameter is an instance of the spreadsheet component, and the "deLocaleFormats" parameter is an array containing format codes and their corresponding format IDs for the "de" culture.
-    ej.spreadsheet.configureLocalizedFormat(spreadsheet, deLocaleFormats);
-</script>
-```
-
-{% endif %}
 
 The following code example demonstrates how to configure culture-based formats for different cultures in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/globalization-cs1/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/globalization-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CultureController.cs" %}
-{% include code-snippet/spreadsheet/globalization-cs1/Core/cultureController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/globalization-cs1/cultureController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/globalization-cs1/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="CultureController.cs" %}
-{% include code-snippet/spreadsheet/globalization-cs1/MVC/cultureController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Text and cell formatting
 
@@ -278,28 +212,14 @@ Borders can be applied in the following ways,
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/cell-format/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/cell-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellFormatController.cs" %}
-{% include code-snippet/spreadsheet/cell-format/Core/cellFormatController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/cell-format/cellFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/cell-format/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="CellFormatController.cs" %}
-{% include code-snippet/spreadsheet/cell-format/MVC/cellFormatController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -389,28 +309,14 @@ You can clear the defined rules by using one of the following ways,
 * Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
 * Using the `clearConditionalFormat` method to clear the defined rules.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/conditional-formatting/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/conditional-formatting/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ConditionalFormattingController.cs" %}
-{% include code-snippet/spreadsheet/conditional-formatting/Core/conditionalFormattingController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/conditional-formatting/conditionalFormattingController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/conditional-formatting/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="ConditionalFormattingController.cs" %}
-{% include code-snippet/spreadsheet/conditional-formatting/MVC/conditionalFormattingController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

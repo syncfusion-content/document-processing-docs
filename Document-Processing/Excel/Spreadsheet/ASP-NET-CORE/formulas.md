@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Formulas in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Formulas in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formulas in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Formulas in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Formulas
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -32,28 +31,14 @@ When loading spreadsheet data with culture-based formula argument separators usi
 
 In the example below, the Spreadsheet control is rendered with the `German culture (de)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/formula-cs3/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/spreadsheet/formula-cs3/Core/formulaController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs3/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/formula-cs3/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/spreadsheet/formula-cs3/MVC/formulaController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Create User Defined Functions / Custom Functions
 
@@ -63,55 +48,27 @@ You can define and use an unsupported formula, i.e. a user defined/custom formul
 
 The following code example shows an unsupported formula in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/formula/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/spreadsheet/formula/Core/formulaController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/formula/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/spreadsheet/formula/MVC/formulaController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 Second, if you want to directly compute any formula or expression, you can use the `computeExpression` method. This method will work for both built-in and used-defined/custom formula.
 
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/formula-cs2/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/spreadsheet/formula-cs2/Core/formulaController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/formula-cs2/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/formula-cs2/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="FormulaController.cs" %}
-{% include code-snippet/spreadsheet/formula-cs2/MVC/formulaController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Formula bar
 
@@ -128,28 +85,14 @@ You can define a meaningful name for a cell range and use it in the formula for 
 
 The following code example shows the usage of named ranges support.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/defined-names/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/defined-names/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DefinedNameController.cs" %}
-{% include code-snippet/spreadsheet/defined-names/Core/definedNameController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/defined-names/definedNameController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/defined-names/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="DefinedNameController.cs" %}
-{% include code-snippet/spreadsheet/defined-names/MVC/definedNameController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Calculation Mode
 
@@ -168,28 +111,14 @@ For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1
 
 The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/calculation-cs1/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/spreadsheet/calculation-cs1/Core/calculationModeController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs1/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/calculation-cs1/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/spreadsheet/calculation-cs1/MVC/calculationModeController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ### Manual Mode
 
@@ -202,28 +131,14 @@ For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`
 
 The following code example demonstrates how to set the Manual calculation mode in a Spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/calculation-cs2/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/spreadsheet/calculation-cs2/Core/calculationModeController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/calculation-cs2/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/calculation-cs2/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="CalculationModeController.cs" %}
-{% include code-snippet/spreadsheet/calculation-cs2/MVC/calculationModeController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Supported Formulas
 

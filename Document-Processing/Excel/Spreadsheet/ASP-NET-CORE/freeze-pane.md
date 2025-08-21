@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Freeze Pane in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Freeze Pane in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Freeze Pane in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Freeze Pane in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Freeze Pane
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -46,28 +45,14 @@ In the active spreadsheet, select the cell where you want to create frozen colum
 
 In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as ‘2’. Hence, the two columns on the left and the top two rows are frozen.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/freeze-pane/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/freeze-pane/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FreezePane.cs" %}
-{% include code-snippet/spreadsheet/freeze-pane/Core/freezePane.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/freeze-pane/freezePane.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/freeze-pane/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="FreezePane.cs" %}
-{% include code-snippet/spreadsheet/freeze-pane/MVC/freezePane.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

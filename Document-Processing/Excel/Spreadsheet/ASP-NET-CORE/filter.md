@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Filter in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Filter in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Filter in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Filter in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Filter
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -37,28 +36,14 @@ N> * The `beforeFilter` event will be triggered before filtering the specified r
 
 The following code example shows `filter` functionality in the Spreadsheet control.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/filter/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/filter/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FilterController.cs" %}
-{% include code-snippet/spreadsheet/filter/Core/filterController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/filter/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/filter/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="FilterController.cs" %}
-{% include code-snippet/spreadsheet/filter/MVC/filterController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -100,28 +85,14 @@ Filtering allows you to view specific rows in a spreadsheet while hiding the oth
 
 The following code example shows how to get the filtered rows.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/filter-cs1/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/filter-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/spreadsheet/filter-cs1/Core/filterController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/filter-cs1/filterController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/filter-cs1/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="InsertSheetController.cs" %}
-{% include code-snippet/spreadsheet/filter-cs1/MVC/filterController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Limitations
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Syncfusion Spreadsheet Control
-description: Learn here all about print feature in ##Platform_Name## Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Print in EJ2 ASP.NET CORE Syncfusion Spreadsheet Control
+description: Learn here all about print feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -31,28 +30,14 @@ The `printOptions` contain three properties, as described below.
 
 > When the `print` method is called without any parameters, the default printing will be performed.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/print-cs2/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/spreadsheet/print-cs2/Core/printController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs2/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/print-cs2/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/spreadsheet/print-cs2/MVC/printController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Disable printing
 
@@ -60,28 +45,14 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 ![Spreadsheet with print option disabled](./images/spreadsheet_print_disable.png)
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/print-cs3/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs3/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/spreadsheet/print-cs3/Core/printController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/print-cs3/printController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/print-cs3/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="PrintController.cs" %}
-{% include code-snippet/spreadsheet/print-cs3/MVC/printController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Limitations
 

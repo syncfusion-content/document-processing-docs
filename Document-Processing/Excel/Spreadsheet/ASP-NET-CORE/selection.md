@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Selection in ##Platform_Name## Spreadsheet Control | Syncfusion
-description: Learn here all about Selection in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Selection in EJ2 ASP.NET CORE Spreadsheet Control | Syncfusion
+description: Learn here all about Selection in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Selection
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -48,28 +47,14 @@ You can perform row selection in any of the following ways,
 
 The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange` method.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/row-selection/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/spreadsheet/row-selection/Core/selectionController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/row-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/row-selection/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/spreadsheet/row-selection/MVC/selectionController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 
@@ -88,92 +73,42 @@ You can perform column selection in any of the following ways,
 
 The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange` method.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/column-selection/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/spreadsheet/column-selection/Core/selectionController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/column-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/column-selection/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/spreadsheet/column-selection/MVC/selectionController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Get selected cell values
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#getdata) method.
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#getdata) method.
-
-{% endif %}
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/selected-cell-values/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectedCellValuesController.cs" %}
-{% include code-snippet/spreadsheet/selected-cell-values/Core/selectedCellValuesController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/selected-cell-values/selectedCellValuesController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/selected-cell-values/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="SelectedCellValuesController.cs" %}
-{% include code-snippet/spreadsheet/selected-cell-values/MVC/selectedCellValuesController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Remove Selection
 
 The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) to disable's the UI selection.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/disable-selection/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/spreadsheet/disable-selection/Core/selectionController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/disable-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/disable-selection/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/spreadsheet/disable-selection/MVC/selectionController.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Data Binding in ##Platform_Name## Spreadsheet Control | Syncfusion
-description: Learn here all about Data Binding in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Data Binding in EJ2 ASP.NET CORE Spreadsheet Control | Syncfusion
+description: Learn here all about Data Binding in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Data Binding
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -25,10 +24,10 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/local-data-binding/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="LocalDataController.cs" %}
-{% include code-snippet/spreadsheet/local-data-binding/Core/localDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/localDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,10 +35,10 @@ Refer to the following code example for local data binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/local-data-binding/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="LocalDataController.cs" %}
-{% include code-snippet/spreadsheet/local-data-binding/MVC/localDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/local-data-binding/MVC/localDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -61,10 +60,10 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/field-mapping/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="FieldMappingController.cs" %}
-{% include code-snippet/spreadsheet/field-mapping/Core/fieldMappingController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/fieldMappingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,10 +71,10 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/field-mapping/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="FieldMappingController.cs" %}
-{% include code-snippet/spreadsheet/field-mapping/MVC/fieldMappingController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/field-mapping/MVC/fieldMappingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -90,10 +89,10 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/remote-data-binding/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RemoteDataController.cs" %}
-{% include code-snippet/spreadsheet/remote-data-binding/Core/remoteDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/remoteDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -101,10 +100,10 @@ Refer to the following code example for remote data binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/remote-data-binding/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="RemoteDataController.cs" %}
-{% include code-snippet/spreadsheet/remote-data-binding/MVC/remoteDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/remote-data-binding/MVC/remoteDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -121,10 +120,10 @@ N> By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/odata-adaptor/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ODataController.cs" %}
-{% include code-snippet/spreadsheet/odata-adaptor/Core/oDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/oDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,10 +131,10 @@ N> By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/odata-adaptor/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ODataController.cs" %}
-{% include code-snippet/spreadsheet/odata-adaptor/MVC/oDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/odata-adaptor/MVC/oDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -150,10 +149,10 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/webapi-adaptor/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="WebApiController.cs" %}
-{% include code-snippet/spreadsheet/webapi-adaptor/Core/webApiController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/webApiController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -161,10 +160,10 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/webapi-adaptor/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="WebApiController.cs" %}
-{% include code-snippet/spreadsheet/webapi-adaptor/MVC/webApiController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/webapi-adaptor/MVC/webApiController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -181,10 +180,10 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/cell-data-binding/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellDataController.cs" %}
-{% include code-snippet/spreadsheet/cell-data-binding/Core/cellDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/cellDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,10 +191,10 @@ Refer to the following code example for cell data binding.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/cell-data-binding/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellDataController.cs" %}
-{% include code-snippet/spreadsheet/cell-data-binding/MVC/cellDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/MVC/cellDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -224,10 +223,10 @@ N> For `add` action, the value for all the fields will be `null` in the data. In
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="DynamicDataController.cs" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding/Core/dynamicDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/dynamicDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -235,10 +234,10 @@ N> For `add` action, the value for all the fields will be `null` in the data. In
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DynamicDataController.cs" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding/MVC/dynamicDataController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding/MVC/dynamicDataController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -255,10 +254,10 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding-cs2/tagHelper %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="UpdateRangeController.cs" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding-cs2/Core/updateRangeController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/updateRangeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -266,10 +265,10 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding-cs2/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="UpdateRangeController.cs" %}
-{% include code-snippet/spreadsheet/dynamic-data-binding-cs2/MVC/updateRangeController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-core/dynamic-data-binding-cs2/MVC/updateRangeController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
