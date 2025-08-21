@@ -49,7 +49,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/editing-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/editing-cs1" %}
 
 ## Limitations
 

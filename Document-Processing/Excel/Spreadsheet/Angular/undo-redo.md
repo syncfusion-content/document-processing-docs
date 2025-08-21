@@ -48,7 +48,7 @@ The following code example shows `How to update and customize your own actions f
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/undo-redo-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/undo-redo-cs1" %}
 
 ## Note
 

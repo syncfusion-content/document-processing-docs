@@ -112,7 +112,7 @@ The Spreadsheet component's accessibility levels are ensured through an [accessi
 
 The accessibility compliance of the Spreadsheet component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/spreadsheet.html) in a new window to evaluate the accessibility of the Spreadsheet component with accessibility tools.
 
-{% previewsample "page.domainurl/samples/spreadsheet/accessibility" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/accessibility" %}
 
 ## See also
 

@@ -70,7 +70,7 @@ Paste can be done in one of the following ways.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/clipboard-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -86,7 +86,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/clipboard-cs2" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/clipboard-cs2" %}
 
 ## Limitations
 

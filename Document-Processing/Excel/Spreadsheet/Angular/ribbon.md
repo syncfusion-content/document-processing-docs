@@ -40,7 +40,7 @@ The following code example shows the usage of ribbon customization.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/ribbon/cutomization-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/ribbon/cutomization-cs1" %}
 
 ## Note
 

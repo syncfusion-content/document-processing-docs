@@ -62,7 +62,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/link-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/link-cs1" %}
 
 ## Limitations
 

@@ -33,4 +33,4 @@ The following code example shows how to identify the context menu opened.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/spreadsheet/contextmenu-cs1" %}
+{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/contextmenu-cs1" %}
