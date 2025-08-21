@@ -36,6 +36,24 @@ Below is an example of the print preview dialog on the Android platform. The app
 
 ![Printing PDF Files in .NET MAUI PDF Viewer](Images/Print/print.png)
 
+## How to adjust the print quality on the Windows platform?
+
+[SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows users to adjust the printing quality on the Windows platform using the  `PrintSettings.PrintQuality` API. The `PrintQuality` enumeration supports the below quality levels:
+* Low
+* Default
+* Medium
+* High
+* Ultra
+
+{% tabs %}
+{% highlight c# %}
+// Sets high print quality
+PdfViewer.PrintSettings.PrintQuality = PrintQuality.High;
+{% endhighlight %}
+{% endtabs %}
+
+N> The `PrintQuality` API is only applicable to the Windows platform and does not affect printing on Android, iOS, or macOS.
+
 ## Limitations
 
 Currently, when printing a document that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the printed document.
