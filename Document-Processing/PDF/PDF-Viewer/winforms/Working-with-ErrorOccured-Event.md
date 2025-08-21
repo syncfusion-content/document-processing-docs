@@ -7,7 +7,7 @@ control: PdfViewerControl
 documentation: ug
 ---
 
-# Working with ErrorOccurred Event in Windows Forms PDF Viewer(PdfViewerControl)
+# Working with ErrorOccurred Event in WinForms PDF Viewer(PdfViewerControl)
 
 PDF Viewer provides support to identify the error using the ErrorOccurred Event,The [ErrorOccurred](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ErrorOccurred) event in the PdfViewerControl is triggered whenever an error occurs within the control. This event provides an opportunity to handle errors effectively by allowing developers to log the details or display appropriate messages to users when an issue arises within the [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
 
