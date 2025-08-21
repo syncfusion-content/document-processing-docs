@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data validation in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Data validation in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Data validation in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Data validation in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Data validation 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data validation in Javascript-ES5 Spreadsheet control
+# Data validation in EJ2 Javascript Spreadsheet control
 
 Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](../api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
 

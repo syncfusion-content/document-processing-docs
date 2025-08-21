@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Docker image deployment in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Docker image deployment in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Docker image deployment in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Docker image deployment in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Docker deployment 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Docker Image Overview in Javascript-ES5 Spreadsheet control
+# Docker Image Overview in EJ2 Javascript Spreadsheet control
 
 The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 

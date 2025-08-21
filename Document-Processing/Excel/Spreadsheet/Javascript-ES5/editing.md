@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editing in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Editing in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Editing in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Editing in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editing in Javascript-ES5 Spreadsheet control
+# Editing in EJ2 Javascript Spreadsheet control
 
 You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowediting) property to enable or disable the editing feature.
 

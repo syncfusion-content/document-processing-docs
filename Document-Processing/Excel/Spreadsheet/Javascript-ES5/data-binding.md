@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Data binding in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Data binding in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Data binding in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Data binding 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Javascript-ES5 Spreadsheet control
+# Data binding in EJ2 Javascript Spreadsheet control
 
 The Spreadsheet uses [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data/) or JavaScript object array collection.
 

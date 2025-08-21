@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Performance best practices in Javascript-ES5 Spreadsheet Control | Syncfusion
-description: Learn here all about how to optimize the performance Javascript-ES5 Spreadsheet control, its elements and more.
+title: Performance best practices in EJ2 Javascript Spreadsheet Control | Syncfusion
+description: Learn here all about how to optimize the performance EJ2 Javascript Spreadsheet control, its elements and more.
 platform: document-processing
 control: Performance 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Performance Best Practices in Javascript-ES5 Spreadsheet Control
+# Performance Best Practices in EJ2 Javascript Spreadsheet Control
 
 Performance optimization is crucial when working with large datasets in the [Syncfusion® JavaScript Spreadsheet](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
