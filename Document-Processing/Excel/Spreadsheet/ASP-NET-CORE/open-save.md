@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Save in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Open Save in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Open Save in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Open Save in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open Save
 documentation: ug

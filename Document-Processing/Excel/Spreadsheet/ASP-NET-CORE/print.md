@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Syncfusion Spreadsheet Control
-description: Learn here all about print feature in ##Platform_Name## Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Print in EJ2 ASP.NET CORE Syncfusion Spreadsheet Control
+description: Learn here all about print feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Worksheet in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Worksheet in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Worksheet in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about Worksheet in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Worksheet
 documentation: ug

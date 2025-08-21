@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change active sheet in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about changing active sheet index when import a file in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Change active sheet in EJ2 ASP.NET CORE Spreadsheet control | Syncfusion
+description: Learn here all about changing active sheet index when import a file in Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

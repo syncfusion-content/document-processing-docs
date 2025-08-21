@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance Best Practices in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about performance best practices in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Performance Best Practices in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+description: Learn here all about performance best practices in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in ##Platform_Name## Spreadsheet control
+# Performance Best Practices in EJ2 ASP.NET CORE Spreadsheet control
 
 Performance optimization is crucial when working with large datasets in the [Syncfusion® ASP.NET Core Spreadsheet](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
