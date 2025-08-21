@@ -39,7 +39,7 @@ documentation: UG
       <td>PDF 1.7</td>
       <td>a, b, u</td>
       <td>Same as PDF/A-2 + arbitrary file attachments (e.g., XML, CSV)</td>
-      <td> Risk of non-archivable content due to arbitrary attachments</td>
+      <td>Risk of compromising archival integrity due to unsupported attachments</td>
     </tr>
     <tr>
       <td>PDF/A-4</td>
