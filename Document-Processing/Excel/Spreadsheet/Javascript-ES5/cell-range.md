@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell range in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Cell range in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Cell range in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Cell range in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Cell range 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell range in Javascript-ES5 Spreadsheet control
+# Cell range in EJ2 Javascript Spreadsheet control
 
 A group of cells in a sheet is known as cell range.
 

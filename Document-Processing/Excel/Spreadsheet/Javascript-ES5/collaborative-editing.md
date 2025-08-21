@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative editing in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Collaborative editing in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Collaborative editing in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Collaborative editing in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Collaborative editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in Javascript-ES5 Spreadsheet control
+# Collaborative editing in EJ2 Javascript Spreadsheet control
 
 The collaborative editing support allows you to work at a spreadsheet collaboratively with other users. Multiple users can access to the the same spreadsheet simultaneously.
 

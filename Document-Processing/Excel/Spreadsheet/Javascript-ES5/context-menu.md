@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Context menu in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Context menu in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Context menu in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Context menu in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Context menu 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in Javascript-ES5 Spreadsheet control
+# Context menu in EJ2 Javascript Spreadsheet control
 
 Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablecontextmenu) property to enable/disable context menu.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open save in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Open save in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Open save in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Open save in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open save 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open save in Javascript-ES5 Spreadsheet control
+# Open save in EJ2 Javascript Spreadsheet control
 
 The native data format for Spreadsheet is `JSON`. When you open an excel file, it needs to be read and converted to client side Spreadsheet model. The converted client side Spreadsheet model is sent as JSON which is used to render Spreadsheet. Similarly, when you save the Spreadsheet, the client Spreadsheet model is sent to the server as JSON for processing and saved as Excel file formats. [`Server configuration`](./open-save#server-configuration) is used for this process.
 

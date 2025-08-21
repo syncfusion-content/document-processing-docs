@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Link in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Link in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Link in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in Javascript-ES5 Spreadsheet control
+# Link in EJ2 Javascript Spreadsheet control
 
 Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
 

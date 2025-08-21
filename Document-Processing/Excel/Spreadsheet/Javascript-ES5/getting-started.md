@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Javascript-ES5 Spreadsheet control | Syncfusion
-description:  Checkout and learn about Getting started with Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more details.
+title: Getting started with EJ2 Javascript Spreadsheet control | Syncfusion
+description:  Checkout and learn about Getting started with EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Javascript-ES5 Spreadsheet control
+# Getting started in EJ2 Javascript Spreadsheet control
 
 This section explains the steps to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control in a JavaScript application.
 

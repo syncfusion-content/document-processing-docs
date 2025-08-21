@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Scrolling in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Scrolling in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Scrolling in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling in Javascript-ES5 Spreadsheet control
+# Scrolling in EJ2 Javascript Spreadsheet control
 
 Scrolling helps you to move quickly to different areas of the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowscrolling) as true.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Illustrations in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Illustrations in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Illustrations in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Illustrations in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Illustrations 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Illustrations in Javascript-ES5 Spreadsheet control
+# Illustrations in EJ2 Javascript Spreadsheet control
 
 Illustrations help you to insert an image, shapes, and graphic objects in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature list in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Feature list in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Feature list in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Feature list in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature list 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature list in Javascript-ES5 Spreadsheet control
+# Feature list in EJ2 Javascript Spreadsheet control
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 

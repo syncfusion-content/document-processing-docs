@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sort in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Sort in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Sort in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Sort in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Sort 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sort in Javascript-ES5 Spreadsheet control
+# Sort in EJ2 Javascript Spreadsheet control
 
 Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
 

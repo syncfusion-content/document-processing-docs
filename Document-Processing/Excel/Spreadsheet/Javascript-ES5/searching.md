@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Searching in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Searching in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Searching in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Searching in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Searching 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Searching in Javascript-ES5 Spreadsheet control
+# Searching in EJ2 Javascript Spreadsheet control
 
 Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowfindandreplace) property to enable or disable the Find and Replace functionality.
  

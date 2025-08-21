@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about the notes feature in Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Notes in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about the notes feature in EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in Javascript-ES5 Spreadsheet control
+# Notes in EJ2 Javascript Spreadsheet control
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [`enableNotes`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablenotes) property, which defaults to **true**.
 

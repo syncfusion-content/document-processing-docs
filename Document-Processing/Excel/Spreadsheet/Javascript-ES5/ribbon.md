@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ribbon in Javascript-ES5 Spreadsheet control | Syncfusion
-description: Learn here all about Ribbon in Syncfusion Javascript-ES5 Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Ribbon in EJ2 Javascript Spreadsheet control | Syncfusion
+description: Learn here all about Ribbon in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Ribbon 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon in Javascript-ES5 Spreadsheet control
+# Ribbon in EJ2 Javascript Spreadsheet control
 
 It helps to organize a spreadsheet’s features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
 
