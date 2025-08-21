@@ -11,7 +11,7 @@ documentation: ug
 
 The new Blazor SfPdfViewer component allows users to view, edit, print, and download PDF files without the web service dependency in Blazor applications. It is designed to be fast and responsive and comes with the same feature set as the previous PDF Viewer. It is easy to use and can be integrated into both Blazor Server and WASM applications with minimal effort.
 
-The Blazor SfPdfViewer component shares the same key features as the [Blazor PDF Viewer component](https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/features), but this new component has some advantages over the old component.
+The Blazor SfPdfViewer component shares the same key features as the [Blazor PDF Viewer component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/features), but this new component has some advantages over the old component.
 
 ## Performance Improvement
 
@@ -19,7 +19,7 @@ We have enhanced the performance in rendering, scrolling, zooming, panning, and 
 
 ## Elimination of Service Dependency
 
-The old PDF viewer component required a separate [Service URL](https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/web-assembly-application) to load the document. However, in the [PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application), we have eliminated the need for a service URL. Now, the document can be loaded offline without making a service call. 
+The old PDF viewer component required a separate [Service URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application) to load the document. However, in the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/web-assembly-application), we have eliminated the need for a service URL. Now, the document can be loaded offline without making a service call. 
 
 ## Common Package
 
@@ -33,24 +33,24 @@ The old PDF viewer component required numerous C# calls to retrieve document inf
 
 * Accurate and reliable rendering of PDF pages.
 * Provides easy page navigation with,
-    * [Thumbnail page view](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#page-thumbnail-navigation)
-    * [Bookmark panel](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#bookmark-navigation)
-    * [Hyperlink navigation](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#hyperlink-navigation)
-    * [Table of content navigation](https://blazor.syncfusion.com/documentation/pdfviewer-2/navigation#table-of-content-navigation)
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#page-thumbnail-navigation)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#bookmark-navigation)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#hyperlink-navigation)
+    * [Table of content navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#table-of-content-navigation)
 * Core interactions
-    * [Zooming](https://blazor.syncfusion.com/documentation/pdfviewer-2/magnification) and [panning](https://blazor.syncfusion.com/documentation/pdfviewer-2/interaction#panning-mode)
-    * [Text searching](https://blazor.syncfusion.com/documentation/pdfviewer-2/text-search)
+    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/interaction#panning-mode)
+    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/text-search)
     * Text selection and copy
-* [Print](https://blazor.syncfusion.com/documentation/pdfviewer-2/print) PDF file.
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/print) PDF file.
 * Annotate PDF with different types of annotations such as,
-    * [Highlight](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/text-markup-annotation#highlight-a-text), [underline](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/text-markup-annotation#underline-a-text), and [strikeout](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/text-markup-annotation#strikethrough-a-text) annotation
-    * [Shape annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/shape-annotation): Rectangle, circle, polygon, line, and arrow.
-    * [Stamp annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/stamp-annotation): Built-in and custom stamp
-    * [Measurement annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/measurement-annotation)
-    * [Free text annotation](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/free-text-annotation)
-    * Add a [comment](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/comments) or [note](https://blazor.syncfusion.com/documentation/pdfviewer-2/annotation/sticky-notes-annotation) for all type of annotations
-* [FormFilling](https://blazor.syncfusion.com/documentation/pdfviewer-2/form-filling)
-* [Handwritten Signature](https://blazor.syncfusion.com/documentation/pdfviewer-2/hand-written-signature)
+    * [Highlight](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#highlight-a-text), [underline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#underline-a-text), and [strikeout](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#strikethrough-a-text) annotation
+    * [Shape annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/shape-annotation): Rectangle, circle, polygon, line, and arrow.
+    * [Stamp annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/stamp-annotation): Built-in and custom stamp
+    * [Measurement annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/measurement-annotation)
+    * [Free text annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/free-text-annotation)
+    * Add a [comment](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/comments) or [note](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/sticky-notes-annotation) for all type of annotations
+* [FormFilling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/form-filling)
+* [Handwritten Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/hand-written-signature)
 
 ### Supported Features: Desktop vs Mobile
 
