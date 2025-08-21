@@ -25,11 +25,11 @@ The following code example shows how to identify the context menu opened.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/find-target-context-menu/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/find-target-context-menu/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/find-target-context-menu/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/find-target-context-menu/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/find-target-context-menu" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/find-target-context-menu" %}
