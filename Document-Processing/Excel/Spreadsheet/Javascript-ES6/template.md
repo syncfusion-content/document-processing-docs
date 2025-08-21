@@ -4,7 +4,6 @@ title: Template in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Template in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Template 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,32 +14,16 @@ Cell Template is used for adding HTML elements into Spreadsheet. You can add the
 
 The following code example describes the above behavior.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/template-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/template-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/template-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/template-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/template-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/template-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/template-cs1" %}
 
 ## See Also
 

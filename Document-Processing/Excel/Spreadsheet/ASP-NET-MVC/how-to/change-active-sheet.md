@@ -4,7 +4,6 @@ title: Change active sheet in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about changing active sheet index when import a file in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -14,25 +13,11 @@ You can change the active sheet of imported file by updating [`activeSheetIndex`
 
 The following code example shows how to set the active sheet when importing an Excel file.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/change-active-sheet/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/spreadsheet/change-active-sheet/Core/opencontroller.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/change-active-sheet/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/change-active-sheet/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="OpenController.cs" %}
-{% include code-snippet/spreadsheet/change-active-sheet/MVC/opencontroller.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/change-active-sheet/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}

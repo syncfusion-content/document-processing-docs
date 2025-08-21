@@ -4,7 +4,6 @@ title: Cell Range in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Cell Range in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Cell Range
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -25,30 +24,14 @@ Wrap text can be applied or removed to a cell or range of cells in the following
 
 The following code example shows the wrap text functionality in spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/wrap-text/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="WrapTextController.cs" %}
-{% include code-snippet/spreadsheet/wrap-text/Core/wrapTextController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/wrap-text/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/wrap-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="WrapTextController.cs" %}
-{% include code-snippet/spreadsheet/wrap-text/MVC/wrapTextController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/wrap-text/wrapTextController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
-
-
 
 ### Limitations of Wrap text
 
@@ -78,29 +61,14 @@ The available merge options in spreadsheet are,
 
 The following code example shows the merge cells operation in spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/merge-cells/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="MergeCellController.cs" %}
-{% include code-snippet/spreadsheet/merge-cells/Core/mergeCellController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/merge-cells/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/merge-cells/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="MergeCellController.cs" %}
-{% include code-snippet/spreadsheet/merge-cells/MVC/mergeCellController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/merge-cells/mergeCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
-
 
 
 ### Limitations of Merge
@@ -152,28 +120,14 @@ You can clear the highlighted invalid data by using the following ways,
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
 * Use the `removeInvalidHighlight()` method programmatically.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/data-validation/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/spreadsheet/data-validation/Core/dataValidation.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/data-validation/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/spreadsheet/data-validation/MVC/dataValidation.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 ### Custom Data validation
 
@@ -192,28 +146,14 @@ You can apply custom data validation using two methods.
 
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/Core/dataValidation.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation-cs2/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="DataValidation.cs" %}
-{% include code-snippet/spreadsheet/data-validation-cs2/MVC/dataValidation.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/data-validation-cs2/dataValidation.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 ### Limitations of Data validation
 
@@ -287,28 +227,14 @@ You can do this by one of the following ways,
 
 In the following sample, you can enable/disable the fill option on the button click event by using the `showFillOptions` property in `autoFillSettings`.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/autofill/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="AutofillController.cs" %}
-{% include code-snippet/spreadsheet/autofill/Core/autofillController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/autofill/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/autofill/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="AutofillController.cs" %}
-{% include code-snippet/spreadsheet/autofill/MVC/autofillController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/autofill/autofillController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 
@@ -336,28 +262,14 @@ Clear has the following types in the spreadsheet,
 
 Clear the cell contents and formats in the Spreadsheet document by using the `clear` method. The clear method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/clear/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="ClearController.cs" %}
-{% include code-snippet/spreadsheet/clear/Core/clearController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/clear/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/clear/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClearController.cs" %}
-{% include code-snippet/spreadsheet/clear/MVC/clearController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/clear/clearController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 

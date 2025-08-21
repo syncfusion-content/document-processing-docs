@@ -4,22 +4,13 @@ title: Freeze pane in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Freeze pane in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Freeze pane 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Freeze pane in ##Platform_Name## Spreadsheet control
 
-{% if page.publishingplatform == "typescript" %}
-
 Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#sheets) property.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#sheets) property.
-
-{% endif %}
 
 ## Apply freezepanes on UI
 
@@ -27,17 +18,8 @@ Freeze Panes helps you to keep particular rows or columns visible when scrolling
 
 In the active spreadsheet, click the cell where you want to create freeze panes. Freeze panes can be done in any of the following ways:
 
-{% if page.publishingplatform == "typescript" %}
-
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
 * Use the [`freezePanes`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#freezepanes) method programmatically.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
-* Use the [`freezePanes`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#freezepanes) method programmatically.
-
-{% endif %}
 
 ## FrozenRows
 
@@ -63,32 +45,16 @@ In the active spreadsheet, select the cell where you want to create frozen colum
 
 In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as ‘2’. Hence, the two columns on the left and the top two rows are frozen.
 
-{% if page.publishingplatform == "typescript" %}
-
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/freezepane-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/freezepane-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/freezepane-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/freezepane-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/freezepane-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/freezepane-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/freezepane-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/freezepane-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/freezepane-cs1" %}
 
 ## Limitations
 

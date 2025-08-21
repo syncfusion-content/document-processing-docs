@@ -4,7 +4,6 @@ title: Cell range in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Cell range in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Cell range 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -15,58 +14,26 @@ A group of cells in a sheet is known as cell range.
 
 ## Wrap text
 
-{% if page.publishingplatform == "typescript" %}
-
 Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowwrap) property to enable or disable the wrap text support in spreadsheet.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowwrap) property to enable or disable the wrap text support in spreadsheet.
-
-{% endif %}
 
 Wrap text can be applied or removed to a cell or range of cells in the following ways,
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
-{% if page.publishingplatform == "typescript" %}
-
 * Using the [`wrap`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#wrap) method, you can apply or remove the wrap text once the component is loaded.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Using the [`wrap`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#wrap) method, you can apply or remove the wrap text once the component is loaded.
-
-{% endif %}
 
 The following code example shows the wrap text functionality in spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/wrap-text-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/wrap-text-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/wrap-text-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/wrap-text-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/wrap-text-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/wrap-text-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -77,30 +44,14 @@ The following features have some limitations in wrap text:
 
 ## Merge cells
 
-{% if page.publishingplatform == "typescript" %}
-
 Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowmerge) property to enable or disable the merge cells option in spreadsheet.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowmerge) property to enable or disable the merge cells option in spreadsheet.
-
-{% endif %}
 
 You can merge the range of cells in the following ways,
 
 * Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
 
-{% if page.publishingplatform == "typescript" %}
-
 * Use [`merge`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#merge) method to merge the range of cells, once the component is loaded.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Use [`merge`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#merge) method to merge the range of cells, once the component is loaded.
-
-{% endif %}
 
 The available merge options in spreadsheet are,
 
@@ -113,32 +64,16 @@ The available merge options in spreadsheet are,
 
 The following code example shows the merge cells operation in spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/merge-cells-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/merge-cells-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/merge-cells-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/merge-cells-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/merge-cells-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/merge-cells-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1" %}
 
 ### Limitations of Merge
 
@@ -149,15 +84,7 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-{% if page.publishingplatform == "typescript" %}
-
 Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
-
-{% endif %}
  
 > * The default value for `allowDataValidation` property is `true`.
 
@@ -168,15 +95,7 @@ You can apply data validation to restrict the type of data or the values that us
 You can apply data validation by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-{% if page.publishingplatform == "typescript" %}
-
 * Use the [`addDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#adddatavalidation) method programmatically.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Use the [`addDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddatavalidation) method programmatically.
-
-{% endif %}
 
 ### Clear Validation
 
@@ -185,15 +104,7 @@ Clear validation feature is used to remove data validations from the specified r
 You can clear data validation rule by one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-{% if page.publishingplatform == "typescript" %}
-
 * Use the [`removeDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#removedatavalidation) method programmatically.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removedatavalidation) method programmatically.
-
-{% endif %}
 
 ### Highlight Invalid Data
 
@@ -202,15 +113,7 @@ Highlight invalid data feature is used to highlight the previously entered inval
 You can highlight an invalid data by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-{% if page.publishingplatform == "typescript" %}
-
 * Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#addinvalidhighlight) method programmatically.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#addinvalidhighlight) method programmatically.
-
-{% endif %}
 
 ### Clear Highlighted Invalid Data
 
@@ -219,42 +122,18 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 You can clear the highlighted invalid data by using the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
-{% if page.publishingplatform == "typescript" %}
-
 * Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
 
-{% elsif page.publishingplatform == "javascript" %}
-
-* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
-
-{% endif %} 
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/data-validation-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/data-validation-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/data-validation-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/data-validation-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1" %}
 
 ### Custom Data validation
 
@@ -269,44 +148,20 @@ When this rule is applied, the Spreadsheet evaluates the entered value against t
 You can apply custom data validation using two methods.
 
 * The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
-{% if page.publishingplatform == "typescript" %}
-
 * The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
-
-{% endif %}
 
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
 
-{% if page.publishingplatform == "typescript" %}
-
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/data-validation-cs3/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/data-validation-cs3/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs3" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/data-validation-cs3/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/data-validation-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs3" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3" %}
 
 ### Limitations of Data validation
 
@@ -380,32 +235,16 @@ You can do this by one of the following ways,
 
 In the following sample, you can enable/disable the fill option on the button click event by using the `showFillOptions` property in `autoFillSettings`.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/autofill-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/autofill-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/autofill-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/autofill-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/autofill-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/autofill-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1" %}
 
 ### Limitations of Autofill
 
@@ -423,15 +262,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
-{% if page.publishingplatform == "typescript" %}
-
 * Using the [`clear()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clear) method to clear the values.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Using the [`clear()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#clear) method to clear the values.
-
-{% endif %}
  
 Clear has the following types in the spreadsheet,
 
@@ -444,42 +275,18 @@ Clear has the following types in the spreadsheet,
 
 ### Methods
 
-{% if page.publishingplatform == "typescript" %}
-
 Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clear) method. The [clear](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#clear) method. The [clear](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
-
-{% endif %}
  
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/clear-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/clear-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/clear-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/clear-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clear-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/clear-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/clear-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/clear-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/clear-cs1" %}
 
 ## See Also
 

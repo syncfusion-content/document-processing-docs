@@ -4,7 +4,6 @@ title: Getting started with ##Platform_Name## Spreadsheet control | Syncfusion
 description:  Checkout and learn about Getting started with ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -143,14 +142,14 @@ The following example shows a basic Spreadsheet component.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/spreadsheet/getting-started-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/spreadsheet/getting-started-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/spreadsheet/spreadsheet/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
 > You can refer to our [JavaScript Spreadsheet](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript Spreadsheet example](https://ej2.syncfusion.com/demos/#/material/spreadsheet/default.html) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
 

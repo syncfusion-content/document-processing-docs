@@ -4,7 +4,6 @@ title: Open in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Open in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -25,29 +24,16 @@ In user interface you can open an Excel document by clicking `File > Open` menu 
 
 The following code example shows `Open` option in the Spreadsheet control.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/open-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/open-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/open-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/open-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/open-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/open-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/open-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/open-cs1" %}
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 > * The default value of the [allowOpen](../api/spreadsheet/#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](../api/spreadsheet/#allowopen) property in previous code snippet.

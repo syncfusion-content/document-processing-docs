@@ -4,7 +4,6 @@ title: Clipboard in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Clipboard in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -61,28 +60,14 @@ Paste can be done in one of the following ways.
 
 N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/clipboard/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/spreadsheet/clipboard/Core/clipboardController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/clipboard/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/clipboard/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/spreadsheet/clipboard/MVC/clipboardController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/clipboard/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 
@@ -90,28 +75,14 @@ N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`)
 
 The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActionBegin) event, you can set `cancel` argument as false in paste request type.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/prevent-paste/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/spreadsheet/prevent-paste/Core/clipboardController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/prevent-paste/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/prevent-paste/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ClipboardController.cs" %}
-{% include code-snippet/spreadsheet/prevent-paste/MVC/clipboardController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/prevent-paste/clipboardController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 

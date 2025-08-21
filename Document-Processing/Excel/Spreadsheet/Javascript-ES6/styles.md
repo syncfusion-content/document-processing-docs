@@ -4,7 +4,6 @@ title: Styles in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Styles in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Styles 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

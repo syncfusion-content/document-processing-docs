@@ -4,7 +4,6 @@ title: Template in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Template in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Template
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -15,28 +14,14 @@ Cell Template is used for adding HTML elements into Spreadsheet. You can add the
 
 The following code example describes the above behavior.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/template/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="Template.cs" %}
-{% include code-snippet/spreadsheet/template/Core/template.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/template/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/template/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Template.cs" %}
-{% include code-snippet/spreadsheet/template/MVC/template.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/template/template.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 

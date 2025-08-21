@@ -62,11 +62,11 @@ Paste can be done in one of the following ways.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/clipboard-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/clipboard-cs1/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/clipboard-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -78,11 +78,11 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/clipboard-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/clipboard-cs2/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/clipboard-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

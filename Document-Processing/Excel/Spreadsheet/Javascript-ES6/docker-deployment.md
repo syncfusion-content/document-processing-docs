@@ -4,7 +4,6 @@ title: Docker image deployment in ##Platform_Name## Spreadsheet control | Syncfu
 description: Learn here all about Docker image deployment in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Docker deployment 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -61,8 +60,6 @@ Now the Spreadsheet server Docker instance runs on localhost with the provided p
 
 **Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started)
 
-{% if page.publishingplatform == "typescript" %}
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -96,65 +93,6 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 spreadsheet.appendTo('#Spreadsheet');
 
 ```
-
-{% elsif page.publishingplatform == "javascript" %}
-
-```html
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Essential JS 2 Spreadsheet</title>
-    <!-- Essential JS 2 Spreadsheet's dependents material theme -->
-    <link href="resources/base/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/inputs/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/buttons/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/splitbuttons/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/lists/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/navigations/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/popups/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/grids/styles/material.css" rel="stylesheet" type="text/css"/>
-    <!-- Essential JS 2 Spreadsheet's material theme -->
-    <link href="resources/spreadsheet/styles/material.css" rel="stylesheet" type="text/css"/>
-    <!-- Essential JS 2 Spreadsheet's dependents script -->
-    <script src="resources/scripts/ej2-base.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-buttons.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-popups.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-splitbuttons.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-inputs.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-lists.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-data.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-dropdowns.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-navigations.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-excel-export.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-pdf-export.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-calendars.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-compression.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-file-utils.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-grids.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-svg-base.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-charts.min.js" type="text/javascript"></script>
-    <!-- Essential JS 2 Spreadsheet global script -->
-    <script src="resources/scripts/ej2-spreadsheet.min.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <!-- Element which is going to render as Spreadsheet -->
-    <div id='Spreadsheet'></div>
-    <script>
-      // Initialize Spreadsheet component.
-      const spreadsheet = new ej.spreadsheet.Spreadsheet({
-        openUrl: 'http://localhost:6002/api/spreadsheet/open',
-        saveUrl: 'http://localhost:6002/api/spreadsheet/save'
-      });
-      // Render the initialized Spreadsheet component.
-      spreadsheet.appendTo('#Spreadsheet');
-    </script>
-  </body>
-</html>
-```
-
-{% endif %}
 
 ## How to configure different cultures using a Docker compose file
 

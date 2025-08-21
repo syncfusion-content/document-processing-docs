@@ -4,7 +4,6 @@ title: Protect Sheet in ##Platform_Name## Spreadsheet Control | Syncfusion
 description: Learn here all about Protect Sheet in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Protect Sheet
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -45,25 +44,12 @@ In the active Spreadsheet, the sheet protection can be done by any of the follow
 
 The following example shows `Protect Sheet` functionality with password in the Spreadsheet control.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/protect-sheet/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="ProtectSheetController.cs" %}
-{% include code-snippet/spreadsheet/protect-sheet/Core/protectSheetController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/protect-sheet/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-sheet/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectSheetController.cs" %}
-{% include code-snippet/spreadsheet/protect-sheet/MVC/protectSheetController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-sheet/protectSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
 {% endif %}
@@ -90,28 +76,14 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 
 In protected spreadsheet, to make some particular cell or range of cells are editable, you can use `lockCells()` method, with the parameter `range` and `isLocked` property as false.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/lock-cells/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="LockCellController.cs" %}
-{% include code-snippet/spreadsheet/lock-cells/Core/lockCellController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/lock-cells/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/lock-cells/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="LockCellController.cs" %}
-{% include code-snippet/spreadsheet/lock-cells/MVC/lockCellController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/lock-cells/lockCellController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 ## Make cells read-only without protecting worksheet
 
@@ -142,28 +114,14 @@ You can make the cells read-only in the cell data binding by setting the `isRead
 
 The following example demonstrates how to make rows, columns, and cells read-only without protecting the sheet:
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/read-only/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="ReadOnlyController.cs" %}
-{% include code-snippet/spreadsheet/read-only/Core/readOnlyController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/read-only/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/read-only/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ReadOnlyController.cs" %}
-{% include code-snippet/spreadsheet/read-only/MVC/readOnlyController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/read-only/readOnlyController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 ## Protect Workbook
 
@@ -181,55 +139,27 @@ In the active Spreadsheet, you can protect the worksheet by selecting the Data t
 
 The following example shows `Protect Workbook` by using the [`isProtected`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_IsProtected) property in the Spreadsheet control.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/protect-workbook/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="ProtectWorkbookController.cs" %}
-{% include code-snippet/spreadsheet/protect-workbook/Core/protectWorkbookController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/protect-workbook/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-workbook/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ProtectWorkbookController.cs" %}
-{% include code-snippet/spreadsheet/protect-workbook/MVC/protectWorkbookController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-workbook/protectWorkbookController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 
 The following example shows `Protect Workbook` by using the [`password`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as Syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/password/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="PasswordController.cs" %}
-{% include code-snippet/spreadsheet/password/Core/passwordController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/password/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/password/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PasswordController.cs" %}
-{% include code-snippet/spreadsheet/password/MVC/passwordController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/password/passwordController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 

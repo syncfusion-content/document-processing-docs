@@ -4,22 +4,13 @@ title: Link in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Link in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Link in ##Platform_Name## Spreadsheet control
 
-{% if page.publishingplatform == "typescript" %}
-
 Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
-
-{% endif %}
 
 > * The default value for `allowHyperlink` property is `true`.
 
@@ -35,11 +26,7 @@ In the active spreadsheet, click the cell where you want to create a hyperlink. 
 * Right-click the cell and then click Hyperlink item in the context menu.
 * Use `Ctrl + K` keyboard shortcut to apply the hyperlink.
 
-{% if page.publishingplatform == "typescript" %}
 * Use the [`addHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#addhyperlink) method programmatically.
-{% elsif page.publishingplatform == "javascript" %}
-* Use the [`addHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#addhyperlink) method programmatically.
-{% endif %}
  
 ## Edit Hyperlink
 
@@ -62,48 +49,23 @@ Performing this operation remove a single hyperlink without losing the display t
 
 In the active spreadsheet, click the cell where you want to remove a hyperlink. remove hyperlink can be done by any of the following ways:
 
-{% if page.publishingplatform == "typescript" %}
-
 * Right-click the cell and then click Remove Hyperlink item in the context menu.
 * Use the [`removeHyperlink()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#removehyperlink) method programmatically.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Right-click the cell and then click Remove Hyperlink item in the context menu.
-* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removehyperlink) method programmatically.
-
-{% endif %}
 
 ## How to change target attribute
 
 There is an event named `beforeHyperlinkClick` which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the `target` property in the arguments of that event.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/link-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/link-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/link-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/link-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/link-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/link-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/link-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/link-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/link-cs1" %}
 
 ## Limitations
 

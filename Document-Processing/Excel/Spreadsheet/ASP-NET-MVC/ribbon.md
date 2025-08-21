@@ -4,7 +4,6 @@ title: Ribbon in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Ribbon in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Ribbon
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -36,28 +35,14 @@ items. |
 
 The following code example shows the usage of ribbon customization.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/ribbon/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="RibbonController.cs" %}
-{% include code-snippet/spreadsheet/ribbon/Core/ribbonController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/ribbon/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/ribbon/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="RibbonController.cs" %}
-{% include code-snippet/spreadsheet/ribbon/MVC/ribbonController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/ribbon/ribbonController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 

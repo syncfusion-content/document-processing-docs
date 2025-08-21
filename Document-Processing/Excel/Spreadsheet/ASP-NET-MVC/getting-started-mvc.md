@@ -4,7 +4,6 @@ title: Getting Started with ##Platform_Name## Spreadsheet Control |Syncfusion
 description: Checkout and learn about getting started with ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started Mvc
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -19,7 +18,7 @@ This section briefly explains about how to include [ASP.NET MVC Spreadsheet](htt
 
 ## Create ASP.NET MVC application with HTML helper
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/overview/getting-started/introduction/getting-started#create-your-first-app)
 
 * [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template)
 
@@ -89,7 +88,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spread
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/getting-started-mvc/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/getting-started-mvc/razor %}
 {% endhighlight %}
 {% endtabs %}
 

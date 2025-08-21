@@ -40,11 +40,11 @@ The following code example shows `How to update and customize your own actions f
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/undo-redo-cs1/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/undo-redo-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/undo-redo-cs1/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/undo-redo-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

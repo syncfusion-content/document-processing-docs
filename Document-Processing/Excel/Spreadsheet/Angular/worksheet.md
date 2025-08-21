@@ -24,11 +24,11 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/insert/sheet-cs1/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/insert/sheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/insert/sheet-cs1/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/insert/sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -42,11 +42,11 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/insert-sheet-change-active-sheet-cs1/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/insert-sheet-change-active-sheet-cs1/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -83,11 +83,11 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/headers-gridlines-cs1/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/headers-gridlines-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/headers-gridlines-cs1/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/headers-gridlines-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -109,11 +109,11 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/sheet-visibility-cs1/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/sheet-visibility-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/sheet-visibility-cs1/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/sheet-visibility-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

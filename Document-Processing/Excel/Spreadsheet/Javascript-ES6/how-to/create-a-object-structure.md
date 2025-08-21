@@ -4,22 +4,13 @@ title: Create a object structure in ##Platform_Name## Spreadsheet control | Sync
 description: Learn here all about Create a object structure in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create a object structure 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Create a object structure in ##Platform_Name## Spreadsheet control
 
-{% if page.publishingplatform == "typescript" %}
-
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#properties) of the spreadsheet as value.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#properties) of the spreadsheet as value.
-
-{% endif %}
 
 ```js
 { Workbook: {} }
@@ -178,29 +169,13 @@ The following table defines each property of the `DefinedName`.
 
 In the following demo, the JSON structure is passed to the `openFromJson` method to render the spreadsheet in the `created` event.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/json-structure-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/json-structure-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/json-structure-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/json-structure-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/json-structure-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/json-structure-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/json-structure-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/json-structure-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/json-structure-cs1" %}

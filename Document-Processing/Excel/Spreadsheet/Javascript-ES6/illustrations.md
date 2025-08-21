@@ -4,7 +4,6 @@ title: Illustrations in ##Platform_Name## Spreadsheet control | Syncfusion
 description: Learn here all about Illustrations in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Illustrations 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -70,32 +69,16 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 * You can change the position of the image by drag and drop.
 * Use the `top` and `left` property in the `insertImage()` method programmatically.
 
-{% if page.publishingplatform == "typescript" %}
-
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/image-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/image-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/image-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/image-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/image-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/image-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/image-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/image-cs1" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/image-cs1" %}
 
 ### Limitations of Image
 
@@ -106,19 +89,9 @@ The following features have some limitations in Image:
 
 ## Chart
 
-{% if page.publishingplatform == "typescript" %}
-
 A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
 
 > The default value for the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowchart) property is `true`.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
-
-> The default value for the [`allowChart`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowchart) property is `true`.
-
-{% endif %}
 
 ### Types of chart
 
@@ -136,19 +109,9 @@ The following types of charts are available in the Spreadsheet.
 You can insert the chart by using one of the following ways,
 
 * Select the chart icon in the Ribbon toolbar under the Insert Tab.
-{% if page.publishingplatform == "typescript" %}
-
 * Use the [`insertChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertchart) method programmatically.
 
 The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertchart) method is,
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Use the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertchart) method programmatically.
-
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#insertchart) method is,
-
-{% endif %}
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -163,49 +126,23 @@ The available arguments in the `ChartModel` are:
 * id: Specifies the chart element id.
 * markerSettings: Specifies the marker settings. The marker is used to provide information about the data points in the series and is currently only applicable to the line chart.
 
-{% if page.publishingplatform == "typescript" %}
-
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/chart-cs2/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/chart-cs2/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs2" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/chart-cs2/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/chart-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs2" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/chart-cs2" %}
 
 ### Delete Chart
 
 * If you want to delete the chart, just select the chart, and then press the Delete key.
-{% if page.publishingplatform == "typescript" %}
-
 * Use the [`deleteChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#deletechart) method programmatically.
 
 The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#deletechart) method is,
-
-{% elsif page.publishingplatform == "javascript" %}
-
-* Use the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#deletechart) method programmatically.
-
-The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#deletechart) method is,
-
-{% endif %}
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -219,71 +156,34 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 * You can change the position of the chart by drag and drop.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/chart-cs1/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/chart-cs1/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs1" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/chart-cs1" %}
 
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/chart-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/chart-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs1" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/chart-cs1" %}
 {% endif %}
 
 #### Customization of line chart markers
 
-{% if page.publishingplatform == "typescript" %}
-
 Using the [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
-
-{% elsif page.publishingplatform == "javascript" %}
-
-Using the [`actionBegin`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
-
-{% endif %}
-
-{% if page.publishingplatform == "typescript" %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/chart-cs3/index.ts %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/chart-cs3/index.html %}
+{% include code-snippet/excel/spreadsheet/javascript-es6/chart-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs3" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/chart-cs3/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/chart-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs3" %}
-{% endif %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/chart-cs3" %}
 
 ### Limitations of Chart
 

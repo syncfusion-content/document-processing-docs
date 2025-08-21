@@ -4,7 +4,6 @@ title: Scrolling in ##Platform_Name## Syncfusion Spreadsheet Component
 description: Learn here all about Scrolling in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -52,26 +51,12 @@ If you want to perform scrolling with defined rows and columns, you must define 
 
 The following code example shows the finite scrolling with defined rows and columns in the spreadsheet. Here, we used rowCount as 20 and colCount as 20, after reaching the 20th row or 20th column you can't able to scroll.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/scrolling/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="ScrollingController.cs" %}
-{% include code-snippet/spreadsheet/scrolling/Core/scrollingController.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/spreadsheet/scrolling/razor %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/scrolling/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="ScrollingController.cs" %}
-{% include code-snippet/spreadsheet/scrolling/MVC/scrollingController.cs %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/scrolling/scrollingController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 

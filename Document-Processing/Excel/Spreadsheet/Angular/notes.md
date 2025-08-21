@@ -20,11 +20,11 @@ In the below example, you can add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/note-cs1/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/note-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/note-cs1/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/note-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -73,11 +73,11 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/note-cs2/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/note-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/note-cs2/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/note-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -89,11 +89,11 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/note-cs3/src/app.component.ts %}
+{% include code-snippet/excel/spreadsheet/angular/note-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/note-cs3/src/main.ts %}
+{% include code-snippet/excel/spreadsheet/angular/note-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

@@ -4,21 +4,12 @@ title: Performance Best Practices in ##Platform_Name## Syncfusion Spreadsheet Co
 description: Learn here all about performance best practices in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Performance
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
 # Performance Best Practices in ##Platform_Name## Spreadsheet control
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-Performance optimization is crucial when working with large datasets in the [Syncfusion® ASP.NET Core Spreadsheet](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 Performance optimization is crucial when working with large datasets in the [Syncfusion® ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
-
-{% endif %}
 
 ## How to improve performance when opening Excel files in the Spreadsheet?
 
@@ -28,15 +19,7 @@ Virtual scrolling is an essential performance feature in the Spreadsheet that en
 
 This approach significantly reduces initial load time, DOM size, and memory usage — resulting in smoother rendering and interaction, especially when working with thousands of rows or columns.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-For more details, refer to the [virtual scrolling documentation](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/scrolling#virtual-scrolling).
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 For more details, refer to the [virtual scrolling documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/scrolling#virtual-scrolling).
-
-{% endif %}
 
 ### Chunk response processing
 
@@ -44,17 +27,8 @@ When opening large Excel files with extensive data and features, server response
 
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-To enable the chunk response processing feature, you can refer to the following UG section:
-* [Chunk Response Processing](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#chunk-response-processing)
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 To enable the chunk response processing feature, you can refer to the following UG section:
 * [Chunk Response Processing](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/open-save#chunk-response-processing)
-
-{% endif %}
 
 ### Configure JSON serialization options during open
 
@@ -67,15 +41,7 @@ This is particularly useful when:
 
 Refer to the following UG section to learn how to configure these options:
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-* [Configure JSON serialization options during open](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#configure-json-deserialization-options)
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 * [Configure JSON serialization options during open](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/open-save#configure-json-deserialization-options)
-
-{% endif %}
 
 ### Configuring threshold limits
 
@@ -130,44 +96,11 @@ Enabling manual mode is highly beneficial when:
 * Applying formulas dynamically to a large number of cells.
 * You want to postpone calculations until all content or changes are finalized.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/formulas#manual-mode).
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/formulas#manual-mode).
-
-{% endif %}
 
 ## How to improve save performance in the Spreadsheet?
 
 ### Handling large file saves with `isFullPost` option
-
-{% if page.publishingplatform == "aspnet-core" %}
-
-When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
-
-To mitigate these issues during the save operation, you can set the `isFullPost` property to **false** in the [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event of the Spreadsheet.
-
-The following code example shows how to set `isFullPost` to **false** in the Spreadsheet component:
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-
-<ejs-spreadsheet id="spreadsheet" beforeSave="beforeSave" openUrl="Home/Open" saveUrl="Home/Save">
-</ejs-spreadsheet>
-
-<script>
-       function beforeSave(args) {
-            args.isFullPost = false; 
-    	}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
 
 When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
@@ -187,8 +120,6 @@ The following code example shows how to set `isFullPost` to **false** in the Spr
 {% endhighlight %}
 {% endtabs %}
 
-{% endif %}
-
 ### Configure JSON serialization options during save
 
 Serialization options in the Spreadsheet allows you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the `saveAsJson` method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
@@ -202,43 +133,13 @@ Proper use of serialization options during save improves performance and reduces
 
 Refer to the following UG section to learn how to configure these options:
 
-{% if page.publishingplatform == "aspnet-core" %}
-
-* [Configure JSON serialization options during save](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#configure-json-serialization-options)
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
 * [Configure JSON serialization options during save](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/open-save#configure-json-serialization-options)
-
-{% endif %}
 
 ## How to improve cell selection performance in Spreadsheet?
 
 ### Disabling aggregate calculation
 
 When working with large datasets in the Spreadsheet, user interactions such as selecting a large range of cells can experience delays. This occurs because, by default, the Spreadsheet performs aggregate calculations (e.g., SUM, AVERAGE, COUNT, MIN, and MAX) on the selected range and displays the results in the sheet tab panel at the bottom-right corner.
-
-{% if page.publishingplatform == "aspnet-core" %}
-
-To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ShowAggregate) property.
-
-Benefits:
-* Reduces selection lag when dealing with large data ranges.
-* Prevents real-time computation of formulas like SUM, AVERAGE, MIN, and MAX for large selections.
-* Keeps the UI responsive during large selection operations.
-
-You can disable aggregate calculation using the following code example:
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-
-<ejs-spreadsheet id="spreadsheet" showAggregate="false" openUrl="Home/Open" saveUrl="Home/Save">
-</ejs-spreadsheet>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
 
 To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ShowAggregate) property.
 
@@ -257,20 +158,8 @@ You can disable aggregate calculation using the following code example:
 {% endhighlight %}
 {% endtabs %}
 
-{% endif %}
-
 ## See Also
-
-{% if page.publishingplatform == "aspnet-core" %}
-
-* [Open and Save](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save)
-* [Docker Deployment](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/docker-deployment)
-* [Scrolling](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/scrolling)
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
 
 * [Open and Save](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/open-save)
 * [Docker Deployment](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/docker-deployment)
 * [Scrolling](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/scrolling)
-
-{% endif %}
