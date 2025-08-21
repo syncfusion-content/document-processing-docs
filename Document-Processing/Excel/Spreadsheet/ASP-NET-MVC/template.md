@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Template in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Template in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
+description: Learn here all about Template in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Template
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Undo redo in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Undo redo in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Undo redo in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Undo redo in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Undo redo 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo redo in ##Platform_Name## Spreadsheet control
+# Undo redo in EJ2 TypeScript Spreadsheet control
 
 `Undo` option helps you to undone the last action performed and `Redo` option helps you to do the same action which is reverted in the Spreadsheet. You can use the [`allowUndoRedo`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowundoredo) property to enable or disable undo redo functionality in spreadsheet.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formatting in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Formatting in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Formatting in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Formatting in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Formatting 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formatting in ##Platform_Name## Spreadsheet control
+# Formatting in EJ2 TypeScript Spreadsheet control
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting

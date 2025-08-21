@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sort in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Sort in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Sort in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Sort in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Sort 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sort in ##Platform_Name## Spreadsheet control
+# Sort in EJ2 TypeScript Spreadsheet control
 
 Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
 

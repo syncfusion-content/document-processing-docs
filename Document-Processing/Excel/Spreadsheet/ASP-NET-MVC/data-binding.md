@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in ##Platform_Name## Spreadsheet Control | Syncfusion
-description: Learn here all about Data Binding in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Data Binding in EJ2 ASP.NET MVC Spreadsheet Control | Syncfusion
+description: Learn here all about Data Binding in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Data Binding
 documentation: ug

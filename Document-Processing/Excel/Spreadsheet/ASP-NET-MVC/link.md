@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Link in ##Platform_Name## Syncfusion Spreadsheet Component
-description: Learn here all about Link in Syncfusion ##Platform_Name## Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Link in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
+description: Learn here all about Link in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link
 documentation: ug

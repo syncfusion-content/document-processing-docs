@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Freeze pane in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Freeze pane in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Freeze pane in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Freeze pane in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Freeze pane 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Freeze pane in ##Platform_Name## Spreadsheet control
+# Freeze pane in EJ2 TypeScript Spreadsheet control
 
 Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#sheets) property.
 

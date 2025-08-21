@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Open in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Open in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Open in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open in ##Platform_Name## Spreadsheet control
+# Open in EJ2 TypeScript Spreadsheet control
 
 The Spreadsheet control opens an Excel document with its data, style, format, and more. To enable this feature, set [`allowOpen`](../api/spreadsheet/#allowopen) to `true` and assign service url to the [`openUrl`](../api/spreadsheet/#openurl) property.
 

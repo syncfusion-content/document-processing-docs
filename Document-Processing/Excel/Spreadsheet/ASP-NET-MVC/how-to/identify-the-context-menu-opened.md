@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Identify the context menu opened in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about how to identify the context menu opened in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Identify the context menu opened in EJ2 ASP.NET MVC Spreadsheet control | Syncfusion
+description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature list in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Feature list in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Feature list in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Feature list in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature list 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature list in ##Platform_Name## Spreadsheet control
+# Feature list in EJ2 TypeScript Spreadsheet control
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 

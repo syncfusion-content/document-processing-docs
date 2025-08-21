@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Global local in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Global local in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Global local in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global local 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in ##Platform_Name## Spreadsheet control
+# Global local in EJ2 TypeScript Spreadsheet control
 
 ## Localization
 

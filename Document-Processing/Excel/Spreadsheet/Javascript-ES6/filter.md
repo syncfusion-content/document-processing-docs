@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Filter in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Filter in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Filter in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Filter 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter in ##Platform_Name## Spreadsheet control
+# Filter in EJ2 TypeScript Spreadsheet control
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property to enable or disable filtering functionality.
 

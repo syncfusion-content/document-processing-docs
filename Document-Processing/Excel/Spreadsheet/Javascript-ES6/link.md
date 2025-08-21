@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Link in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Link in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Link in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in ##Platform_Name## Spreadsheet control
+# Link in EJ2 TypeScript Spreadsheet control
 
 Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
 

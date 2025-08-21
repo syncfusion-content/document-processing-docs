@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Illustrations in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Illustrations in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Illustrations in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Illustrations in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Illustrations 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Illustrations in ##Platform_Name## Spreadsheet control
+# Illustrations in EJ2 TypeScript Spreadsheet control
 
 Illustrations help you to insert an image, shapes, and graphic objects in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet.
 

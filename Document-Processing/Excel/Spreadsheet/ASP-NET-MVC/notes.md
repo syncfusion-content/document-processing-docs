@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Notes in ##Platform_Name## Syncfusion Spreadsheet Control
-description: Learn here all about the notes feature in ##Platform_Name## Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Notes in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
+description: Learn here all about the notes feature in EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes
 documentation: ug

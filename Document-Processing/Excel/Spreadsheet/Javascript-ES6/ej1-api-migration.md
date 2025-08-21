@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Ej1 api migration in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Ej1 api migration in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Ej1 api migration 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in ##Platform_Name## Spreadsheet control
+# Ej1 api migration in EJ2 TypeScript Spreadsheet control
 
 This article describes the API migration process of the Spreadsheet component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

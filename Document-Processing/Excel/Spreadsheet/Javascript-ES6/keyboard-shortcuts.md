@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard shortcuts in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Keyboard shortcuts in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Keyboard shortcuts in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Keyboard shortcuts in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Keyboard shortcuts 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcuts in ##Platform_Name## Spreadsheet control
+# Keyboard shortcuts in EJ2 TypeScript Spreadsheet control
 
 The keyboard shortcuts supported in the spreadsheet are,
 

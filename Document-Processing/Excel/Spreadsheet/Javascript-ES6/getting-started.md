@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with ##Platform_Name## Spreadsheet control | Syncfusion
-description:  Checkout and learn about Getting started with ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more details.
+title: Getting started with EJ2 TypeScript Spreadsheet control | Syncfusion
+description:  Checkout and learn about Getting started with EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in ##Platform_Name## Spreadsheet control
+# Getting started in EJ2 TypeScript Spreadsheet control
 
 This section explains the steps to create a simple Spreadsheet component using Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 

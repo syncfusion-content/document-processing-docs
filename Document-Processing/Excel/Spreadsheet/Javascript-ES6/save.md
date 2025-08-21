@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Save in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Save in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Save in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save in ##Platform_Name## Spreadsheet control
+# Save in EJ2 TypeScript Spreadsheet control
 
 The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](../api/spreadsheet/#allowsave) to `true` and assign service url to the [`saveUrl`](../api/spreadsheet/#saveurl) property.
 

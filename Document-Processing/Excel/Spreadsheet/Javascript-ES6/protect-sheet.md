@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Protect sheet in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Protect sheet in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Protect sheet in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Protect sheet in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Protect sheet 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Protect sheet in ##Platform_Name## Spreadsheet control
+# Protect sheet in EJ2 TypeScript Spreadsheet control
 
 Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 
