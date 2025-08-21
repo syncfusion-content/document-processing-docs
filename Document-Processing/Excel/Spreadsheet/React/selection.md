@@ -49,20 +49,20 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/selection-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/selection-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/selection-cs1/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/selection-cs1/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/selection-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selection-cs1" %}
 
 ## Column selection
 
@@ -81,20 +81,20 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/selection-cs2/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/selection-cs2/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs2/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/selection-cs2/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/selection-cs2/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/selection-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selection-cs2" %}
 
 ## Get selected cell values
 
@@ -104,20 +104,20 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/selected-cell-values/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selected-cell-values/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/selected-cell-values/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selected-cell-values/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/selected-cell-values/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selected-cell-values/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/selected-cell-values/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selected-cell-values/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/selected-cell-values" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selected-cell-values" %}
 
 ## Remove selection
 
@@ -125,20 +125,20 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/selection-cs3/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/selection-cs3/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs3/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/selection-cs3/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs3/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/selection-cs3/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/selection-cs3/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/selection-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selection-cs3" %}
 
 ## Limitations
 

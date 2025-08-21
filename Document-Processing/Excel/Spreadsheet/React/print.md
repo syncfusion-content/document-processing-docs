@@ -32,14 +32,14 @@ The `printOptions` contain three properties, as described below.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/print-cs2/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/print-cs2/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/print-cs2/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/print-cs2/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/print-cs2" %}
 
 ## Disable printing
 
@@ -49,14 +49,14 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/print-cs3/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/print-cs3/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/print-cs3/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/print-cs3/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/print-cs3" %}
 
 ## Limitations
 

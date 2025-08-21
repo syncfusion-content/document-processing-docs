@@ -32,20 +32,20 @@ The following code example shows the usage of ribbon customization.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/ribbon-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/ribbon-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/ribbon-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/ribbon-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/ribbon-cs1/app/datasource.jsx %}
+{% include code-snippet/excel/spreadsheet/react/ribbon-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/ribbon-cs1/app/datasource.tsx %}
+{% include code-snippet/excel/spreadsheet/react/ribbon-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/ribbon-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/ribbon-cs1" %}
 
 ## Note
 

@@ -16,11 +16,11 @@ The following code example shows how to set the active sheet when importing an E
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/change-active-sheet-cs1/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/change-active-sheet-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/change-active-sheet-cs1/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/change-active-sheet-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/spreadsheet/change-active-sheet-cs1" %}
+{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/change-active-sheet-cs1" %}
