@@ -5,7 +5,6 @@ description: Learn here all about Global local in Syncfusion Angular Spreadsheet
 platform: document-processing
 control: Global local 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Global local in Angular Spreadsheet component
@@ -391,7 +390,7 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/local-data-binding-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -420,7 +419,7 @@ The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/internationalization-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/internationalization-cs1" %}
 
 ## Right to left (RTL)
 
@@ -436,7 +435,7 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/local-data-binding-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs3" %}
 
 ## Note
 

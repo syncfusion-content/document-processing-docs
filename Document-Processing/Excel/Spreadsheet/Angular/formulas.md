@@ -5,7 +5,6 @@ description: Learn here all about Formulas in Syncfusion Angular Spreadsheet com
 platform: document-processing
 control: Formulas 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Formulas in Angular Spreadsheet component
@@ -41,7 +40,7 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/formula-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/formula-cs3" %}
 
 ## Create User Defined Functions / Custom Functions
 
@@ -61,7 +60,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/formula-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/formula-cs1" %}
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
@@ -77,7 +76,7 @@ The following code example shows how to use `computeExpression` method in the sp
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/formula-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/formula-cs2" %}
 
 ## Formula bar
 
@@ -104,7 +103,7 @@ The following code example shows the usage of named ranges support.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/defined-name-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -133,7 +132,7 @@ The following code example demonstrates how to set the Automatic calculation mod
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/calculation-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -156,7 +155,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/calculation-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/calculation-cs2" %}
 
 ## Supported Formulas
 

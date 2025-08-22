@@ -5,7 +5,6 @@ description: Learn here all about Rows and columns in Syncfusion Angular Spreads
 platform: document-processing
 control: Rows and columns 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Rows and columns in Angular Spreadsheet component
@@ -39,7 +38,7 @@ The following code example shows the options for inserting rows in the spreadshe
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/insert/row-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert/row-cs1" %}
 
 ### Column
 
@@ -60,7 +59,7 @@ The following code example shows the options for inserting columns in the spread
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/insert/column-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert/column-cs1" %}
 
 ## Delete
 
@@ -83,7 +82,7 @@ The following code example shows the delete operation of rows and columns in the
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/delete/row-column-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/delete/row-column-cs1" %}
 
 ## Limitations
 
@@ -126,7 +125,7 @@ The following code example shows the hide/show rows and columns operation in the
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/hide-show-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/hide-show-cs1" %}
 
 ## Changing text in column headers
 
@@ -144,7 +143,7 @@ The following code example shows how to change the text in the column headers.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/column-header-change-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/column-header-change-cs1" %}
 
 ## Note
 

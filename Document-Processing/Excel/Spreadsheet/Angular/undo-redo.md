@@ -5,7 +5,6 @@ description: Learn here all about Undo redo in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Undo redo 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Undo redo in Angular Spreadsheet component
@@ -48,7 +47,7 @@ The following code example shows `How to update and customize your own actions f
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/undo-redo-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/undo-redo-cs1" %}
 
 ## Note
 

@@ -5,7 +5,6 @@ description: Checkout and learn here all about getting started with Syncfusion E
 platform: document-processing
 control: Getting started 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Getting started with Angular Spreadsheet component
@@ -166,7 +165,7 @@ The following example shows a basic Spreadsheet component
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/spreadsheet-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/spreadsheet-cs1" %}
 
 > You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/bootstrap5/spreadsheet/default) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
 

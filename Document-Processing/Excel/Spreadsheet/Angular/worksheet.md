@@ -5,7 +5,6 @@ description: Learn here all about Worksheet in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Worksheet 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Worksheet in Angular Spreadsheet component
@@ -32,7 +31,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/insert/sheet-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert/sheet-cs1" %}
 
 ### Insert a sheet programmatically and make it active sheet
 
@@ -50,7 +49,7 @@ The following code example shows how to insert a sheet programmatically and make
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1" %}
 
 ## Delete sheet
 
@@ -91,7 +90,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/headers-gridlines-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/headers-gridlines-cs1" %}
 
 ## Sheet visibility
 
@@ -117,7 +116,7 @@ The following code example shows the three types of sheet visibility state.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/sheet-visibility-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/sheet-visibility-cs1" %}
 
 ## Note
 

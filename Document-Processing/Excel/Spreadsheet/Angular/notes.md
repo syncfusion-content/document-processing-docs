@@ -5,7 +5,6 @@ description: Learn here all about the notes feature in Syncfusion Angular Spread
 platform: document-processing
 control: Notes 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Notes in Angular Spreadsheet component
@@ -28,7 +27,7 @@ In the below example, you can add, edit, save, and delete notes.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/note-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/note-cs1" %}
 
 ## Adding a note
 
@@ -81,7 +80,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/note-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/note-cs2" %}
 
 ## Integrating notes during initial loading and using cell data binding
 
@@ -97,7 +96,7 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/note-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/note-cs3" %}
 
 ## Limitations
 

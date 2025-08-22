@@ -5,7 +5,6 @@ description: Learn here all about Sort in Syncfusion Angular Spreadsheet compone
 platform: document-processing
 control: Sort 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Sort in Angular Spreadsheet component
@@ -46,7 +45,7 @@ The following code example shows `sort` functionality in the Spreadsheet control
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/sort-by-cell-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/sort-by-cell-cs1" %}
 
 ## Data contains header
 
@@ -122,7 +121,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/passing-sort-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/passing-sort-cs1" %}
 
 ## Custom sort comparer
 
@@ -150,7 +149,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/custom-sort-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/custom-sort-cs1" %}
 
 
 ## Known error validations

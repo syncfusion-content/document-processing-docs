@@ -5,7 +5,6 @@ description: Learn here all about print feature in Syncfusion Angular Spreadshee
 platform: document-processing
 control: Print 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Print in Angular Spreadsheet component
@@ -40,7 +39,7 @@ The `printOptions` contain three properties, as described below.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/print-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/print-cs2" %}
 
 ## Disable printing
 
@@ -58,7 +57,7 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/print-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/print-cs3" %}
 
 ## Limitations
 

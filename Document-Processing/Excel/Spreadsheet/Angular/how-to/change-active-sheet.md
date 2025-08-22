@@ -5,7 +5,6 @@ description: Learn here all about changing the active sheet index while importin
 platform: document-processing
 control: Spreadsheet
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 ## Changing the active sheet while importing a file in Angular Spreadsheet component
@@ -24,4 +23,4 @@ The following code example shows how to set the active sheet when importing an E
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/change-active-sheet-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/change-active-sheet-cs1" %}

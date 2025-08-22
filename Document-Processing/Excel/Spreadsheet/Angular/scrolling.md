@@ -5,7 +5,6 @@ description: Learn here all about Scrolling in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Scrolling 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Scrolling in Angular Spreadsheet component
@@ -61,7 +60,7 @@ The following code example shows the finite scrolling with defined rows and colu
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/scrolling-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/scrolling-cs1" %}
 
 ## Note
 

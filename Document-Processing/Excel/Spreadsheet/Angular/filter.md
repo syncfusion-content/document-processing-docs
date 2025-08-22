@@ -5,7 +5,6 @@ description: Learn here all about Filter in Syncfusion Angular Spreadsheet compo
 platform: document-processing
 control: Filter 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Filter in Angular Spreadsheet component
@@ -46,7 +45,7 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/filter-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -96,7 +95,7 @@ The following code example shows how to get the filtered rows.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/filter-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/filter-cs2" %}
 
 ## Limitations
 

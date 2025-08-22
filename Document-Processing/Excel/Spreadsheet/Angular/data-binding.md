@@ -5,7 +5,6 @@ description: Learn here all about Data binding in Syncfusion Angular Spreadsheet
 platform: document-processing
 control: Data binding 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Data binding in Angular Spreadsheet component
@@ -30,7 +29,7 @@ Refer to the following code example for local data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/local-data-binding-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs1" %}
 
 > The local data source can also be provided as an instance of the [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/). By default, [`DataManager`](https://helpej2.syncfusion.com/angular/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/angular/documentation/data/adaptors#json-adaptor) for local data-binding.
 
@@ -52,7 +51,7 @@ The following code example demonstrates how to customize the mapping of column d
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/field-mapping-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/field-mapping-cs1" %}
 
 ## Remote data
 
@@ -70,7 +69,7 @@ Refer to the following code example for remote data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/remote-data-binding-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs1" %}
 
 > By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
@@ -88,7 +87,7 @@ Refer to the following code example for remote data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/remote-data-binding-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs2" %}
 
 ### Web API
 
@@ -104,7 +103,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/remote-data-binding-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/remote-data-binding-cs3" %}
 
 ## Cell data binding
 
@@ -122,7 +121,7 @@ Refer to the following code example for cell data binding.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/cell-data-binding-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/cell-data-binding-cs1" %}
 
 > The cell data binding also supports formula, style, number format, and more.
 
@@ -152,7 +151,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/dynamic-data-binding-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs1" %}
 
 ## Dynamic data binding using updateRange method
 
@@ -172,7 +171,7 @@ The following code example demonstrates how to dynamically update data using the
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/dynamic-data-binding-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/dynamic-data-binding-cs2" %}
 
 ## Note
 

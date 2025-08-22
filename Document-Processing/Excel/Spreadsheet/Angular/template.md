@@ -5,7 +5,6 @@ description: Learn here all about Template in Syncfusion Angular Spreadsheet com
 platform: document-processing
 control: Template 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Template in Angular Spreadsheet component
@@ -26,7 +25,7 @@ Sample link: [`Cell template`](https://ej2.syncfusion.com/angular/demos/#/materi
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/template-cs1" %} -->
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/template-cs1" %} -->
 
 ## Note
 
