@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI-Driven Smart PDF Form Filling .NET MAUI PDF Viewer control | Syncfusion
+title: AI Smart PDF Form Filling .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about Integrating AI-powered smart pdf form Filling in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its uses.
 platform: MAUI
 control: SfPdfViewer
