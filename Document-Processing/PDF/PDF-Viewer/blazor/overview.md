@@ -6,7 +6,7 @@ control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of Blazor PDF Viewer Component
+# Overview of Blazor PDF Viewer Classic Component
 
 The [`Blazor PDF Viewer`](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) is a UI component for displaying PDFs from byte arrays, streams, or file paths. In addition to being able to print PDFs, it supports reviewing PDFs with annotation tools. Thumbnails, bookmarks, hyperlinks, and tables of content provide easy navigation within and outside PDF files. Form-filling support allows filling and printing with AcroForms.
 

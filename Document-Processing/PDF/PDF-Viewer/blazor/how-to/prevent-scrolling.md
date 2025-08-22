@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Prevent the PDF from scrolling | Syncfusion
+title: Prevent the PDF from scrolling in Blazor PDF Viewer | Syncfusion
 description: Learn here about Create PDF Viewer in a popup window in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Prevent the PDF from scrolling and remove the vertical scrollbar
+# Prevent the PDF from scrolling and remove the vertical scrollbar in Blazor PDF Viewer Component
 
 To prevent a PDF from scrolling and remove the vertical scroll bar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer component, use CSS to set the `overflow` property of the component container to `hidden`.
 
