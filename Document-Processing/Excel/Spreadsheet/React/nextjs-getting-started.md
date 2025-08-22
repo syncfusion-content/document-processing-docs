@@ -5,7 +5,6 @@ description: Checkout and learn about how to use React Spreadsheet component of 
 control: Next.js
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components 

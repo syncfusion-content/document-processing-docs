@@ -5,7 +5,6 @@ description: Learn here all about Searching in Syncfusion React Spreadsheet comp
 control: Searching 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Searching in React Spreadsheet component
@@ -78,7 +77,7 @@ In the following sample, searching can be done by following ways:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/searching-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/searching-cs1" %}
 
 ## Limitations
 

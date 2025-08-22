@@ -5,7 +5,6 @@ description: Learn here all about Feature list in Syncfusion React Spreadsheet c
 control: Feature list 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Feature list in React Spreadsheet component

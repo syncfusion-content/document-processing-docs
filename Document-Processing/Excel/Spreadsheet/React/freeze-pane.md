@@ -5,7 +5,6 @@ description: Learn here all about Freeze pane in Syncfusion React Spreadsheet co
 control: Freeze pane 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Freeze pane in React Spreadsheet component
@@ -64,7 +63,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/freeze-pane-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/freeze-pane-cs1" %}
 
 ## Limitations
 

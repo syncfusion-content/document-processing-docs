@@ -5,7 +5,6 @@ description: Learn here all about Accessibility in Syncfusion React Spreadsheet 
 control: Accessibility 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Accessibility in React Spreadsheet component

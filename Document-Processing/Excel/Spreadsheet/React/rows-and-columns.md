@@ -5,7 +5,6 @@ description: Learn here all about Rows and columns in Syncfusion React Spreadshe
 control: Rows and columns 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Rows and columns in React Spreadsheet component
@@ -44,7 +43,7 @@ The following code example shows the options for inserting rows in the spreadshe
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/insert-row-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/insert-row-cs1" %}
 
 ### Column
 
@@ -70,7 +69,7 @@ The following code example shows the options for inserting columns in the spread
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/insert-column-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/insert-column-cs1" %}
 
 ## Delete
 
@@ -98,7 +97,7 @@ The following code example shows the delete operation of rows and columns in the
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/delete-row-column-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/delete-row-column-cs1" %}
 
 ## Limitations of insert and delete
 
@@ -146,7 +145,7 @@ The following code example shows the hide/show rows and columns operation in the
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/show-hide-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/show-hide-cs1" %}
 
 ## Size
 
@@ -180,7 +179,7 @@ The following code example shows how to change the height for single/multiple ro
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/row-height-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/row-height-cs1" %}
 
 ### Column
 
@@ -210,7 +209,7 @@ The following code example shows how to change the width for single/multiple col
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/column-width-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/column-width-cs1" %}
 
 ## Changing text in column headers
 
@@ -227,7 +226,7 @@ The following code example shows how to change the text in the column headers.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/column-header-change-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/column-header-change-cs1" %}
 
 ## Note
 

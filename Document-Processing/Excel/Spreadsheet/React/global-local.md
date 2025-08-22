@@ -5,7 +5,6 @@ description: Learn here all about Global local in Syncfusion React Spreadsheet c
 control: Global local 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Global local in React Spreadsheet component
@@ -397,7 +396,7 @@ The following example demonstrates the Spreadsheet in `French` culture. In the b
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/local-data-binding-cs2" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -519,7 +518,7 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/internationalization-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/internationalization-cs1" %}
 
 ## Note
 

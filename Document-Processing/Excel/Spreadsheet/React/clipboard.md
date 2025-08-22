@@ -5,7 +5,6 @@ description: Learn here all about Clipboard in Syncfusion React Spreadsheet comp
 control: Clipboard 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Clipboard in React Spreadsheet component
@@ -75,7 +74,7 @@ Paste can be done in one of the following ways.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/clipboard-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -96,7 +95,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/clipboard-cs2" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/clipboard-cs2" %}
 
 ## Limitations
 

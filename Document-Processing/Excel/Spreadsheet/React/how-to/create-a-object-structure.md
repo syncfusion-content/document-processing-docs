@@ -5,7 +5,6 @@ description: Learn here all about Create a object structure in Syncfusion React 
 control: Create a object structure 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Create a object structure in React Spreadsheet component
@@ -184,4 +183,4 @@ In the following demo, the JSON structure is passed to the `openFromJson` method
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/json-structure-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/json-structure-cs1" %}
