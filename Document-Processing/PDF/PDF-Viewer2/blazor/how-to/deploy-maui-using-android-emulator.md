@@ -80,6 +80,6 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 ## See also
 
-* [Supported Features: Desktop vs Mobile](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/features#supported-features-desktop-vs-mobile).
+* [Supported Features: Desktop vs Mobile](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/overview#supported-features-desktop-vs-mobile).
 
 * [Render PDF document from url in the MAUI app](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/deploy-maui-windows).
