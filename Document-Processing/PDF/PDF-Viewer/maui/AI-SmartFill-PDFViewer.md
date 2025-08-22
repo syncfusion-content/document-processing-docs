@@ -1,3 +1,13 @@
+---
+layout: post
+title: AI-Driven Smart PDF Form Filling .NET MAUI PDF Viewer control | Syncfusion
+description: Learn here all about Integrating AI-powered smart pdf form Filling in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its uses.
+platform: MAUI
+control: SfPdfViewer
+documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+---
+
 # AI-Driven Smart PDF Form Filling in .NET MAUI PDF Viewer
 
 This document provides a comprehensive guide to implementing smart PDF form filling functionality within the Syncfusion [.NET MAUI PDFViewer](https://www.syncfusion.com/maui-controls/maui-pdfviewer) control. By integrating Azure OpenAI, this solution enables an intelligent, AI-powered smart PDF form filling. 
