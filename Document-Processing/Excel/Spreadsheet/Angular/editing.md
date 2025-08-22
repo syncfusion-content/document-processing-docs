@@ -5,7 +5,6 @@ description: Learn here all about Editing in Syncfusion Angular Spreadsheet comp
 platform: document-processing
 control: Editing 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Editing in Angular Spreadsheet component
@@ -49,7 +48,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/editing-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/editing-cs1" %}
 
 ## Limitations
 

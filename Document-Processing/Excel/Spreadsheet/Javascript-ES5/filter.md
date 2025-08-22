@@ -5,7 +5,6 @@ description: Learn here all about Filter in Syncfusion EJ2 Javascript Spreadshee
 platform: document-processing
 control: Filter 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Filter in EJ2 Javascript Spreadsheet control
@@ -47,7 +46,7 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/filter-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -97,7 +96,7 @@ The following code example shows how to get the filtered rows.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/filter-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/filter-cs2" %}
 
 ## Limitations
 

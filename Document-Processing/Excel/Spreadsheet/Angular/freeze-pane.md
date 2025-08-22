@@ -5,7 +5,6 @@ description: Learn here all about Freeze pane in Syncfusion Angular Spreadsheet 
 platform: document-processing
 control: Freeze pane 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Freeze pane in Angular Spreadsheet component
@@ -55,7 +54,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/freezepane-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/freezepane-cs1" %}
 
 ## Limitations
 

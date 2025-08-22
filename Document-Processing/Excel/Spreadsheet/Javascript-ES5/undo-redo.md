@@ -5,7 +5,6 @@ description: Learn here all about Undo redo in Syncfusion EJ2 Javascript Spreads
 platform: document-processing
 control: Undo redo 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Undo redo in EJ2 Javascript Spreadsheet control
@@ -47,7 +46,7 @@ The following code example shows `How to update and customize your own actions f
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/undo-redo-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/undo-redo-cs1" %}
 
 ## See Also
 

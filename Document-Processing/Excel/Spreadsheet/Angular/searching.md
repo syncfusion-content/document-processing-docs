@@ -5,7 +5,6 @@ description: Learn here all about Searching in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Searching 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Searching in Angular Spreadsheet component
@@ -73,7 +72,7 @@ In the following sample, searching can be done by following ways:
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/searching-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/searching-cs1" %}
 
 ## Limitations
 

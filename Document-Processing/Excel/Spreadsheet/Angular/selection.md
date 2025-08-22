@@ -5,7 +5,6 @@ description: Learn here all about Selection in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Selection 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Selection in Angular Spreadsheet component
@@ -57,7 +56,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/selection-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs1" %}
 
 ## Column selection
 
@@ -84,7 +83,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/selection-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs2" %}
 
 ## Get selected cell values
 
@@ -100,7 +99,7 @@ You can select single or multiple cells, rows, or columns using mouse and keyboa
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/selected-cell-values" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selected-cell-values" %}
 
 ## Remove Selection
 
@@ -116,7 +115,7 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/selection-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs3" %}
 
 ## Limitations
 

@@ -5,7 +5,6 @@ description: Learn here all about Selection in Syncfusion EJ2 TypeScript Spreads
 platform: document-processing
 control: Selection 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Selection in EJ2 TypeScript Spreadsheet control
@@ -56,7 +55,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/selection-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/selection-cs1" %}
 
 ## Column selection
 
@@ -82,7 +81,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/selection-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/selection-cs2" %}
 
 ## Get selected cell values
 
@@ -99,7 +98,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/selected-cell-values" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/selected-cell-values" %}
 
 ## Remove Selection
 
@@ -114,7 +113,7 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/selection-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/selection-cs3" %}
 
 ## Limitations
 

@@ -5,7 +5,6 @@ description: Learn here all about overview of the Syncfusion Vue Spreadsheet com
 platform: document-processing
 control: Index
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Overview of the Vue Spreadsheet component

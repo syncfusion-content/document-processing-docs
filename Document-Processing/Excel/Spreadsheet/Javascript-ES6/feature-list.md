@@ -5,7 +5,6 @@ description: Learn here all about Feature list in Syncfusion EJ2 TypeScript Spre
 platform: document-processing
 control: Feature list 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Feature list in EJ2 TypeScript Spreadsheet control

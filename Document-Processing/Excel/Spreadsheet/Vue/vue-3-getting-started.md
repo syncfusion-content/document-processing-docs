@@ -5,7 +5,6 @@ description:  Check out and learn about Vue 3 getting started with the Vue Sprea
 control: Vue 3 getting started
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Getting Started with the Vue Spreadsheet Component in Vue 3

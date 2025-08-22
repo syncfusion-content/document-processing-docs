@@ -5,7 +5,6 @@ description: Learn here all about Freeze pane in Syncfusion Vue Spreadsheet comp
 control: Freeze pane 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Freeze pane in Vue Spreadsheet component
@@ -54,7 +53,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/freezepane-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/freezepane-cs1" %}
 
 ## Limitations
 

@@ -5,7 +5,6 @@ description: Learn here all about Link in Syncfusion Vue Spreadsheet component o
 control: Link 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Link in Vue Spreadsheet component
@@ -63,7 +62,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/link-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/link-cs2" %}
 
 ## Limitations
 

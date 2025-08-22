@@ -5,7 +5,6 @@ description: Learn here all about performance best practices in the Syncfusion A
 platform: document-processing
 control: Performance 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Performance Best Practices in Angular Spreadsheet Component

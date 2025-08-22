@@ -5,7 +5,6 @@ description:  Checkout and learn about Getting started with React Spreadsheet co
 control: Getting started 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Getting started with React Spreadsheet component
@@ -117,7 +116,7 @@ The following example shows a basic spreadsheet component.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/getting-started-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/getting-started-cs1" %}
 
 > You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/spreadsheet/default) that shows you how to present and manipulate data.
 

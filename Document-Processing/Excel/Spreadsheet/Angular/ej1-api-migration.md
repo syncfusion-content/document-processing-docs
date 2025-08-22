@@ -5,7 +5,6 @@ description: Learn here all about Ej1 api migration in Syncfusion Angular Spread
 platform: document-processing
 control: Ej1 api migration 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Ej1 api migration in Angular Spreadsheet component

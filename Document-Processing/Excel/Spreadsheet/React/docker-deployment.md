@@ -5,7 +5,6 @@ description: Learn here all about Docker image deployment in Syncfusion React Sp
 platform: document-processing
 control: Docker deployment 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Docker Image Overview in React Spreadsheet component

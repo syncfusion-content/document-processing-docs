@@ -5,7 +5,6 @@ description: Learn here all about Ribbon in Syncfusion EJ2 Javascript Spreadshee
 platform: document-processing
 control: Ribbon 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Ribbon in EJ2 Javascript Spreadsheet control
@@ -39,7 +38,7 @@ The following code example shows the usage of ribbon customization.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/ribbon/cutomization-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/ribbon/cutomization-cs1" %}
 
 ## See Also
 

@@ -5,7 +5,6 @@ description: Learn here all about Collaborative editing in Syncfusion EJ2 Javasc
 platform: document-processing
 control: Collaborative editing 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Collaborative editing in EJ2 Javascript Spreadsheet control

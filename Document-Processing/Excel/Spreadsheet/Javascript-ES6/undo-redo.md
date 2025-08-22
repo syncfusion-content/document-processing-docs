@@ -5,7 +5,6 @@ description: Learn here all about Undo redo in Syncfusion EJ2 TypeScript Spreads
 platform: document-processing
 control: Undo redo 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Undo redo in EJ2 TypeScript Spreadsheet control

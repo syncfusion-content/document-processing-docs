@@ -5,7 +5,6 @@ description: Learn here all about Accessibility in Syncfusion Angular Spreadshee
 platform: document-processing
 control: Accessibility 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Accessibility in Angular Spreadsheet component
@@ -112,7 +111,7 @@ The Spreadsheet component's accessibility levels are ensured through an [accessi
 
 The accessibility compliance of the Spreadsheet component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/spreadsheet.html) in a new window to evaluate the accessibility of the Spreadsheet component with accessibility tools.
 
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/accessibility" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/accessibility" %}
 
 ## See also
 

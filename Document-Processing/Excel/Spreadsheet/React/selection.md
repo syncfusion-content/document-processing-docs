@@ -5,7 +5,6 @@ description: Learn here all about Selection in Syncfusion React Spreadsheet comp
 control: Selection 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Selection in React Spreadsheet component
@@ -62,7 +61,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selection-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selection-cs1" %}
 
 ## Column selection
 
@@ -94,7 +93,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selection-cs2" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selection-cs2" %}
 
 ## Get selected cell values
 
@@ -117,7 +116,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selected-cell-values" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selected-cell-values" %}
 
 ## Remove selection
 
@@ -138,7 +137,7 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/selection-cs3" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/selection-cs3" %}
 
 ## Limitations
 

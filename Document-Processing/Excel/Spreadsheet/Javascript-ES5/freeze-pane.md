@@ -5,7 +5,6 @@ description: Learn here all about Freeze pane in Syncfusion EJ2 Javascript Sprea
 platform: document-processing
 control: Freeze pane 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Freeze pane in EJ2 Javascript Spreadsheet control
@@ -54,7 +53,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/freezepane-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/freezepane-cs1" %}
 
 ## Limitations
 

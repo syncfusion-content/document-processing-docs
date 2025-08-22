@@ -5,7 +5,6 @@ description:  Checkout and learn about Getting started with Vue Spreadsheet comp
 control: Getting started 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Getting Started with the Vue Spreadsheet Component in Vue 2
@@ -163,7 +162,7 @@ or
 yarn run serve
 ```
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/getting-started-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/getting-started-cs1" %}
 
 > You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-components/vue-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/default.html) that shows you how to present and manipulate data.
 

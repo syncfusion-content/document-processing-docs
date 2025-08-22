@@ -5,7 +5,6 @@ description: Learn here all about Clipboard in Syncfusion EJ2 Javascript Spreads
 platform: document-processing
 control: Clipboard 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Clipboard in EJ2 Javascript Spreadsheet control
@@ -72,7 +71,7 @@ Paste can be done in one of the following ways.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -88,7 +87,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/clipboard-cs2" %}
 
 ## Limitations
 

@@ -5,7 +5,6 @@ description: Learn here all about how to optimize the performance EJ2 Javascript
 platform: document-processing
 control: Performance 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Performance Best Practices in EJ2 Javascript Spreadsheet Control

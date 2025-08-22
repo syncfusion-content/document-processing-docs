@@ -5,7 +5,6 @@ description: Learn here all about Cell range in Syncfusion EJ2 TypeScript Spread
 platform: document-processing
 control: Cell range 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Cell range in EJ2 TypeScript Spreadsheet control
@@ -33,7 +32,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/wrap-text-cs1" %}
 
 ### Limitations of Wrap text
 
@@ -73,7 +72,7 @@ The following code example shows the merge cells operation in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/merge-cells-cs1" %}
 
 ### Limitations of Merge
 
@@ -133,7 +132,7 @@ You can clear the highlighted invalid data by using the following ways,
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs1" %}
 
 ### Custom Data validation
 
@@ -161,7 +160,7 @@ The following code example demonstrates how to add custom data validation with a
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs3" %}
 
 ### Limitations of Data validation
 
@@ -244,7 +243,7 @@ In the following sample, you can enable/disable the fill option on the button cl
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/autofill-cs1" %}
 
 ### Limitations of Autofill
 
@@ -286,7 +285,7 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/clear-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/clear-cs1" %}
 
 ## See Also
 

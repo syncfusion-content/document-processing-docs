@@ -5,7 +5,6 @@ description: Learn here all about Formatting in Syncfusion React Spreadsheet com
 control: Formatting 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Formatting in React Spreadsheet component
@@ -108,7 +107,7 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/numberformat-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/numberformat-cs1" %}
 
 ## Configure culture-based custom format
 
@@ -168,7 +167,7 @@ The following code example demonstrates how to configure culture-based formats f
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/globalization-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/globalization-cs1" %}
 
 ## Text and cell formatting
 
@@ -244,7 +243,7 @@ The following code example shows the style formatting in text and cells of the s
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/cellformat-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/cellformat-cs1" %}
 
 ### Limitations of Formatting
 
@@ -347,7 +346,7 @@ You can clear the defined rules by using one of the following ways,
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/conditional-formatting-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 

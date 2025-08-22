@@ -5,7 +5,6 @@ description: Learn here all about changing active sheet index when import a file
 platform: document-processing
 control: Spreadsheet 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Changing the active sheet in EJ2 Javascript Spreadsheet control
@@ -24,4 +23,4 @@ The following code example shows how to set the active sheet when importing an E
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/change-active-sheet-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/change-active-sheet-cs1" %}

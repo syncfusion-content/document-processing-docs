@@ -5,7 +5,6 @@ description: Learn here all about Clipboard in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Clipboard 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Clipboard in Angular Spreadsheet component
@@ -70,7 +69,7 @@ Paste can be done in one of the following ways.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/clipboard-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/clipboard-cs1" %}
 
 ## Prevent the paste functionality
 
@@ -86,7 +85,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/clipboard-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/clipboard-cs2" %}
 
 ## Limitations
 

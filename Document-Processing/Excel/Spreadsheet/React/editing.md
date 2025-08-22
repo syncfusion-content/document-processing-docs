@@ -5,7 +5,6 @@ description: Learn here all about Editing in Syncfusion React Spreadsheet compon
 control: Editing 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Editing in React Spreadsheet component
@@ -58,7 +57,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/editing-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/editing-cs1" %}
 
 ## Limitations
 

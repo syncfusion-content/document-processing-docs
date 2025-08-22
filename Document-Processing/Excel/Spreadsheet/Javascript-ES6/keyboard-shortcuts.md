@@ -5,7 +5,6 @@ description: Learn here all about Keyboard shortcuts in Syncfusion EJ2 TypeScrip
 platform: document-processing
 control: Keyboard shortcuts 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Keyboard shortcuts in EJ2 TypeScript Spreadsheet control

@@ -5,7 +5,6 @@ description: Learn here all about Link in Syncfusion Angular Spreadsheet compone
 platform: document-processing
 control: Link 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Link in Angular Spreadsheet component
@@ -62,7 +61,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/link-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/link-cs1" %}
 
 ## Limitations
 

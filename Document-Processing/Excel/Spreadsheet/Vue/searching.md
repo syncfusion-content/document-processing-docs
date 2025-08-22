@@ -5,7 +5,6 @@ description: Learn here all about Searching in Syncfusion Vue Spreadsheet compon
 control: Searching 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Searching in Vue Spreadsheet component
@@ -72,7 +71,7 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/searching-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/searching-cs1" %}
 
 ## Limitations
 

@@ -5,7 +5,6 @@ description: Learn here all about Undo redo in Syncfusion React Spreadsheet comp
 control: Undo redo 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Undo redo in React Spreadsheet component
@@ -53,7 +52,7 @@ The following code example shows `How to update and customize your own actions f
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/undo-redo-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/undo-redo-cs1" %}
 
 ## Note
 

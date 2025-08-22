@@ -5,7 +5,6 @@ description: Learn here all about how to identify the context menu opened in Syn
 platform: document-processing
 control: Spreadsheet
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Identify the context menu opened in Angular Spreadsheet Component
@@ -33,4 +32,4 @@ The following code example shows how to identify the context menu opened.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/excel/spreadsheet/angular/contextmenu-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/contextmenu-cs1" %}
