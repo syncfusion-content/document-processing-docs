@@ -5,7 +5,6 @@ description:  Checkout and learn about Getting started with EJ2 Javascript Sprea
 platform: document-processing
 control: Getting started 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Getting started in EJ2 Javascript Spreadsheet control
@@ -274,7 +273,7 @@ Output will be displayed as follows.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
 
 > You can refer to our [JavaScript Spreadsheet](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript Spreadsheet example](https://ej2.syncfusion.com/demos/#/material/spreadsheet/default.html) to knows how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
 

@@ -5,7 +5,6 @@ description: Learn here all about Styles in Syncfusion EJ2 Javascript Spreadshee
 platform: document-processing
 control: Styles 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Styles in EJ2 Javascript Spreadsheet control

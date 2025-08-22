@@ -5,7 +5,6 @@ description: Learn here all about Scrolling in Syncfusion EJ2 Javascript Spreads
 platform: document-processing
 control: Scrolling 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Scrolling in EJ2 Javascript Spreadsheet control
@@ -60,4 +59,4 @@ The following code example shows the finite scrolling with defined rows and colu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/scrolling-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/scrolling-cs1" %}

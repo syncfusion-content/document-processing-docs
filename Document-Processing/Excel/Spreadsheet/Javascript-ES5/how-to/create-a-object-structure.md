@@ -5,7 +5,6 @@ description: Learn here all about Create a object structure in Syncfusion EJ2 Ja
 platform: document-processing
 control: Create a object structure 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Create a object structure in EJ2 Javascript Spreadsheet control
@@ -179,4 +178,4 @@ In the following demo, the JSON structure is passed to the `openFromJson` method
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/json-structure-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/json-structure-cs1" %}

@@ -5,7 +5,6 @@ description: Learn here all about Mobile responsiveness in Syncfusion EJ2 Javasc
 platform: document-processing
 control: Mobile responsiveness 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Mobile responsiveness in EJ2 Javascript Spreadsheet control
