@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Blazor PDF Viewer Classic Component | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Blazor PDF Viewer Classic component and much more details.
+title: Overview of Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn about overview of the Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
-# Overview of Blazor PDF Viewer Classic Component
+# Overview of Blazor PDF Viewer Component
 
 The [Blazor PDF Viewer component](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) allows to view, print, and annotate the PDF files in your Blazor applications and its key features are,
 * Accurate and reliable rendering of PDF pages.
