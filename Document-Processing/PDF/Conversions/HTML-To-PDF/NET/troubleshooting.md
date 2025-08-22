@@ -205,6 +205,65 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 
 </table>
 
+## Application Crash in Syncfusion 29.X.X Due to Missing `locales` Folder Required by Chromium During HTML Rendering or Conversion
+
+<table>
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Application crashes in Syncfusion libraries version 29.2.11 because Chromium fails to find the required `locales` folder in the published output directory, leading to runtime errors when launching HTML rendering or conversion.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>Starting with Syncfusion package version 29.X.X, Chromium was updated to 133.x.x, which now requires the `locales` directory to be present at runtime. However, when publishing a .NET application with the `linux-x64` runtime identifier, only files are copied to the root output folder and the folder structure including 'locales' is omitted. As a result, Chromium cannot locate the required 'locales' directory, triggering a runtime exception during HTML rendering or conversion.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>
+To overcome this issue, we have three workaround solutions.
+<br/>
+Step 1: Using the "Portable" <b>Runtime Identifier</b> ensures that the runtime files are copied into the correct folder structure, allowing the conversion process to complete without any issues.<br>
+Step 2: To resolve this issue, we recommend copying the <b>runtimes</b> folder into the project directory, placing it at the same level as the <b>.csproj</b> file. Additionally, ensure that all files within the runtimes folder have their <b>Copy to Output Directory</b> property set to <b>Copy if newer</b>. Please refer to the screenshot below for guidance.<br>
+<img src="htmlconversion_images/Outputdictionarypath.png" alt="Output dictionary path"><br>
+
+Step 3: If manually copying the files doesn't meet your requirements, we recommend applying the following code changes in the <b>.csproj</b> file and updating the publish profile. This will ensure the necessary files are copied automatically during the publishing process.<br>
+Add the following code snippet to the <b>.pubxml</b> file to apply the necessary configuration.<br>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+<PropertyGroup>
+
+ <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+
+</PropertyGroup>
+
+{% endhighlight %}
+{% endtabs %}
+
+Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> folder is copied to the publish directory during the build process.<br>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+<ItemGroup>
+
+  <None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
+
+        CopyToOutputDirectory="Always"
+
+        Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
+
+</ItemGroup>
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+</table>
+
 ## Access is denied in runtimes folders. Runtimes folder requires read/write/execute permission
 
 <table>
@@ -414,6 +473,39 @@ settings.AdditionalDelay = 4000;
 </th>
 <td>You can convert HTML to PDF using the Blink rendering engine in Azure cloud service (which has the elevated permission and rights to access the GDI calls). 
 Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink">link</a> for more information. 
+</td>
+</tr>
+</table>
+
+## HTML to PDF Conversion Fails on Azure App Service When Published via GitHub Actions Using CEF Rendering Engine
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">When publishing an application using <b>Syncfusion.HtmlToPdfConverter.Cef.Net.Windows</b> to Azure App Service via GitHub Actions, the HTML to PDF conversion fails. This typically results in a runtime error indicating that a required component or dependency could not be found or initialized.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The failure is due to native binaries for the <b>CEF(Chromium Embedded Framework)</b> rendering engine located in the <b>runtime/win-x64/native</b> directory not being copied correctly to the output directory during the publishing process. This issue is common in CI/CD pipelines like <b>GitHub Actions</b>, causing the application to fail at runtime due to missing native files.<br>
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>To fix this, explicitly include the <b>CEF runtime package</b> in your <b>.csproj</b> file to ensure the necessary binaries are included in the published output. Add the following package reference.<br>
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+<PackageReference Include="chromiumembeddedframework.runtime.win-x64" Version="119.4.3" />
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>Note</b>: Use version 119.4.3, which is a verified dependency for <b>CefSharp.OffScreen.NetCore (v119.4.30)</b>. Using a different version is not advised and may lead to unexpected behavior.<br>
 </td>
 </tr>
 </table>
@@ -929,7 +1021,7 @@ System type       : 64-bit operating system, x64-based processor
 
 The benchmark details were obtained using the [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows) package. You can refer to the following sample, as well as the input and output files used:
 
-Input Html files         : <a href="https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data">https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data</a>
+Input HTML files         : <a href="https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data">https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF/wwwroot/Data</a>
 
 Output PDF files        : <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip">https://www.syncfusion.com/downloads/support/directtrac/general/ze/Output-924807763.zip</a>
 
@@ -989,7 +1081,7 @@ N> * External resources loaded in the HTML (such as images, scripts, and styles)
 N> * Network speed for online URL conversions
 N> * Hardware resources (CPU and memory)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html_to_pdf_conversion/tree/main/Performance_Testing/Syncfusion_HTMLtoPDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Performance_Testing/Syncfusion_HTMLtoPDF).
 
 ## Custom fonts are not rendered in Azure App Service and Function Linux using Blink.
 
@@ -1418,6 +1510,45 @@ After the service restarts, try the conversion or operation again to ensure the 
 
 <PackageReference Include="Syncfusion.HtmlToPdfConverter.Cef.Net.Windows" Version="29.1.41" />
 <PackageReference Include="chromiumembeddedframework.runtime.win-x64" Version="119.4.3" />
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+
+</table>
+
+## Localized Content Not Reflected in PDF Output When Using Blink HTML-to-PDF Conversion Despite Browser Culture Change
+
+<table>
+
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">The output PDF does not display the expected localized (e.g., German) content when converting HTML with the Blink rendering engine, even if the web app's culture is changed in the browser.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The HTML to PDF converter launches the Blink rendering engine (Chromium headless browser) internally and converts the content at the specified URL or HTML string. If culture or language selection (such as switching from English to German) is implemented using cookies (e.g.,<b>.AspNetCore.Culture</b>), the URL itself does not change; only cookies control the localization. The converter does not automatically read or apply browser cookies set during user interaction, so the correct culture is not applied during rendering resulting in the default (often English) content in the PDF.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td><b>To ensure that the correct localized or culture-specific content appears in the generated PDF:</b><br>
+Set the required culture cookie explicitly using the Cookies property in BlinkConverterSettings before starting conversion.<br>
+Example for setting German culture:<br>
+{% tabs %}
+{% highlight C# %}
+
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings settings = new BlinkConverterSettings();
+// Sets German culture
+settings.Cookies.Add(".AspNetCore.Culture", "c%3Dde-DE%7Cuic%3Dde-DE"); 
+htmlConverter.ConverterSettings = settings;
+PdfDocument doc = htmlConverter.Convert(url);
 
 {% endhighlight %}
 {% endtabs %}

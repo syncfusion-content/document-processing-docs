@@ -1,5 +1,5 @@
 ---
-title: Perform OCR on PDF and image files | Syncfusion
+title: Perform OCR on PDF features | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions using Syncfusion .NET OCR library.  
 platform: document-processing
 control: PDF
@@ -60,15 +60,8 @@ Directly install the NuGet package to your application from [nuget.org](https://
 </tr>
 <tr>
 <td>
-(.NET Standard 2.0, .NET 8 and .NET 9) Windows, Linux and Mac
-</td>
-<td>
-{{'[Syncfusion.PDF.OCR.NET.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-Windows Forms
+Windows Forms<br/>
+Console Application (Targeting .NET Framework)
 </td>
 <td>
 {{'[Syncfusion.Pdf.OCR.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.WinForms)'| markdownify }}
@@ -84,7 +77,7 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET 
+ASP.NET
 </td>
 <td>
 {{'[Syncfusion.Pdf.OCR.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.AspNet)'| markdownify }}
@@ -108,10 +101,12 @@ ASP.NET MVC5
 </tr>
 <tr>
 <td>
-ASP.NET Core (.NET 8 and .NET 9) Windows, Linux and Mac
+ASP.NET Core (Targeting NET Core) <br/>
+Console Application (Targeting .NET Core) <br/> 
+Blazor
 </td>
 <td>
-{{'[Syncfusion.PDF.OCR.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)'| markdownify }}
+{{'[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -249,9 +244,6 @@ processor.PerformOCR(lDoc);
 
 {% endhighlight %}
 
-Download the language packages from the following link.  
-[https://code.google.com/p/tesseract-ocr/downloads/list](https://code.google.com/p/tesseract-ocr/downloads/list)
-
 ## Get Started with OCR 
 
 To quickly get started with extracting text from scanned PDF documents in .NET using the Syncfusion<sup>&reg;</sup> OCR processor Library, refer to this video tutorial:
@@ -269,8 +261,8 @@ Step 1: Create a new .NET console application.
 In project configuration window, name your project and select Next.
 <img src="OCR-Images/OCR-NET-step2.png" alt="Create .NET console Step1" width="100%" Height="Auto"/>
 
-Step 2: Install [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) NuGet package as a reference to your .NET application from [nuget.org](https://www.nuget.org).
-<img src="OCR-Images/OCR-NET-step3.png" alt="Create .NET console Step3" width="100%" Height="Auto"/>
+Step 2:  Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).   
+![NuGet package installation](OCR-Images/OCR-Core-NuGet-package.png)
 
 Step 3:Please use the OCR language data for other languages using the following link.
 
