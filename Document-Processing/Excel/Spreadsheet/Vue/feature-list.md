@@ -5,7 +5,6 @@ description: Learn here all about Feature list in Syncfusion Vue Spreadsheet com
 control: Feature list 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Feature list in Vue Spreadsheet component

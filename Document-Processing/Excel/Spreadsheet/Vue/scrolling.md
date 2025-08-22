@@ -5,7 +5,6 @@ description: Learn here all about Scrolling in Syncfusion Vue Spreadsheet compon
 control: Scrolling 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Scrolling in Vue Spreadsheet component
@@ -60,7 +59,7 @@ The following code example shows the finite scrolling with defined rows and colu
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/scrolling-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/scrolling-cs1" %}
 
 ## Note
 

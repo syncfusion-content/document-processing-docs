@@ -5,7 +5,6 @@ description: Learn here all about the notes feature in Syncfusion Vue Spreadshee
 control: Notes
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Notes in Vue Spreadsheet component
@@ -27,7 +26,7 @@ In the below example, you can add, edit, save, and delete notes.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/note-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/note-cs1" %}
 
 ## Adding a note
 
@@ -79,7 +78,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/note-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/note-cs2" %}
 
 ## Integrating notes during initial loading and using cell data binding
 
@@ -94,7 +93,7 @@ The notes can be added initially when the Spreadsheet loads using cell data bind
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/note-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/note-cs3" %}
 
 ## Limitations
 

@@ -5,7 +5,6 @@ description: Learn here all about Template in Syncfusion Vue Spreadsheet compone
 control: Template 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Template in Vue Spreadsheet component

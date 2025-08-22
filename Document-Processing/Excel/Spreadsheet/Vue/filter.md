@@ -5,7 +5,6 @@ description: Learn here all about Filter in Syncfusion Vue Spreadsheet component
 control: Filter 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Filter in Vue Spreadsheet component
@@ -45,7 +44,7 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/filter-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/filter-cs1" %}
 
 ## Filter by cell value
 
@@ -94,7 +93,7 @@ The following code example shows how to get the filtered rows.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/filter-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/filter-cs2" %}
 
 ## Limitations
 

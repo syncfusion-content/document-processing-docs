@@ -5,7 +5,6 @@ description: Learn here all about Accessibility in Syncfusion Vue Spreadsheet co
 control: Accessibility 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Accessibility in Vue Spreadsheet component
