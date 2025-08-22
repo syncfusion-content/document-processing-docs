@@ -5,7 +5,6 @@ description: Learn here all about Link in Syncfusion EJ2 TypeScript Spreadsheet 
 platform: document-processing
 control: Link 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Link in EJ2 TypeScript Spreadsheet control
@@ -65,7 +64,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/link-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/link-cs1" %}
 
 ## Limitations
 

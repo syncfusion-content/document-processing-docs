@@ -5,7 +5,6 @@ description: Learn here all about Data validation in Syncfusion EJ2 TypeScript S
 platform: document-processing
 control: Data validation 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Data validation in EJ2 TypeScript Spreadsheet control
@@ -59,7 +58,7 @@ You can clear the highlighted invalid data by using the following ways,
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/data-validation-cs2" %}
 
 ## See Also
 
