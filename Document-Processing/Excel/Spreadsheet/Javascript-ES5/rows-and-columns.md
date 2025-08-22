@@ -5,7 +5,6 @@ description: Learn here all about Rows and columns in Syncfusion EJ2 Javascript 
 platform: document-processing
 control: Rows and columns 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Rows and columns in EJ2 Javascript Spreadsheet control
@@ -38,7 +37,7 @@ The following code example shows the options for inserting rows in the spreadshe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/insert/row-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/insert/row-cs1" %}
 
 ### Column
 
@@ -58,7 +57,7 @@ The following code example shows the options for inserting columns in the spread
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/insert/column-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/insert/column-cs1" %}
 
 ## Delete
 
@@ -80,7 +79,7 @@ The following code example shows the delete operation of rows and columns in the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/delete/row-column-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/delete/row-column-cs1" %}
 
 ## Limitations of insert and delete
 
@@ -122,7 +121,7 @@ The following code example shows the hide/show rows and columns operation in the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/hide-show-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/hide-show-cs1" %}
 
 ## Size
 
@@ -150,7 +149,7 @@ The following code example shows how to change the height for single/multiple ro
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/row-height-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/row-height-cs1" %}
 
 ### Column
 
@@ -174,7 +173,7 @@ The following code example shows how to change the width for single/multiple col
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/column-width-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/column-width-cs1" %}
 
 ## Changing text in column headers
 
@@ -191,7 +190,7 @@ The following code example shows how to change the text in the column headers.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/column-header-change-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/column-header-change-cs1" %}
 
 ## See Also
 

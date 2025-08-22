@@ -5,7 +5,6 @@ description: Learn here all about Accessibility in Syncfusion EJ2 Javascript Spr
 platform: document-processing
 control: Accessibility 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Accessibility in EJ2 Javascript Spreadsheet control

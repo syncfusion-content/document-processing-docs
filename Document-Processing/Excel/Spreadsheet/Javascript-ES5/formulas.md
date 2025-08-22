@@ -5,7 +5,6 @@ description: Learn here all about Formulas in Syncfusion Essential EJ2 Javascrip
 platform: document-processing
 control: Formulas 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Formulas in EJ2 Javascript Spreadsheet Control
@@ -40,7 +39,7 @@ In the example below, the Spreadsheet component is rendered with the `German` [`
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/formula-cs3" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/formula-cs3" %}
 
 ## Create User Defined Functions / Custom Functions
 
@@ -59,7 +58,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/formula-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/formula-cs1" %}
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
  
@@ -74,7 +73,7 @@ The following code example shows how to use `computeExpression` method in the sp
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/formula-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/formula-cs2" %}
 
 ## Formula bar
 
@@ -100,7 +99,7 @@ The following code example shows the usage of named ranges support.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/defined-name-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -128,7 +127,7 @@ The following code example demonstrates how to set the Automatic calculation mod
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/calculation-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -150,7 +149,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/calculation-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/calculation-cs2" %}
 
 ## Supported Formulas
 

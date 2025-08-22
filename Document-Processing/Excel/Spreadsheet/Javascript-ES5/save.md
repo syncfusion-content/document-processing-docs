@@ -5,7 +5,6 @@ description: Learn here all about Save in Syncfusion EJ2 Javascript Spreadsheet 
 platform: document-processing
 control: Save 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Save in EJ2 Javascript Spreadsheet control
@@ -30,7 +29,7 @@ The following code example shows `Save` option in the Spreadsheet control.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/save-cs2" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/save-cs2" %}
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 > * The default value of [allowSave](../api/spreadsheet/#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](../api/spreadsheet/#allowsave) property in previous code snippet.

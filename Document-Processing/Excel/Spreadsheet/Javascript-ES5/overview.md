@@ -5,7 +5,6 @@ description: Learn here all about Overview of the Syncfusion EJ2 Javascript Spre
 platform: document-processing
 control: Index 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Overview of the EJ2 Javascript Spreadsheet control

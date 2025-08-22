@@ -5,7 +5,6 @@ description: Learn here all about Formatting in Syncfusion EJ2 Javascript Spread
 platform: document-processing
 control: Formatting 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Formatting in EJ2 Javascript Spreadsheet control
@@ -102,7 +101,7 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/format/number-cs1" %}
 
 ## Configure culture-based custom format
 
@@ -154,7 +153,7 @@ The following code example demonstrates how to configure culture-based formats f
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/format/globalization-cs1" %}
 
 ## Text and cell formatting
 
@@ -224,7 +223,7 @@ The following code example shows the style formatting in text and cells of the s
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/format/cell-cs1" %}
 
 ### Limitations of Formatting
 
@@ -325,7 +324,7 @@ You can clear the defined rules by using one of the following ways,
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/conditional-formatting-cs1" %}
 
 ### Limitations of Conditional formatting
 

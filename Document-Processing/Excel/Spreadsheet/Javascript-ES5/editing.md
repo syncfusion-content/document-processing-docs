@@ -5,7 +5,6 @@ description: Learn here all about Editing in Syncfusion EJ2 Javascript Spreadshe
 platform: document-processing
 control: Editing 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Editing in EJ2 Javascript Spreadsheet control
@@ -53,7 +52,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es5/editing-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/editing-cs1" %}
 
 ## Limitations
 
