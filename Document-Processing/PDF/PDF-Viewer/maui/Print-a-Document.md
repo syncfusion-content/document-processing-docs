@@ -40,7 +40,7 @@ Below is an example of the print preview dialog on the Android platform. The app
 
 [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows users to adjust the printing quality on the Windows platform using the  `PrintSettings.PrintQuality` API. The `PrintQuality` enumeration supports the below quality levels:
 * Low - Optimizes print speed and uses minimal memory during printing
-* Default - Suitable for standard text and basic graphics
+* Default - Suitable for standard text and basic graphics while preserving the quality of previous versions
 * Medium - Balances clarity and performance during printing
 * High - Ensures sharper lines and crisp small annotations in the output
 * Ultra - Optimizes the detail on large-format print documents like CAD drawings and architectural plans
