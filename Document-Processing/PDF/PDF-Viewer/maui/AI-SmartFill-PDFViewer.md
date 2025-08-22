@@ -85,3 +85,110 @@ public async Task GetAnswerFromGPT(string userPrompt)
 {% endtabs %}
 
 The AIHelper class now offers a convenient way to interact with the Azure OpenAI API and retrieve completion results based on the provided prompt.
+
+## Integrating AI-powered smart pdf form Filling in .NET MAUI PDFViewer
+
+To design automatically fill PDF forms using the [.NET MAUI PDFViewer](https://www.syncfusion.com/maui-controls/maui-pdfviewer), you can use AI to generate XFDF (XML Forms Data Format) files containing the required form data. This process involves several steps, from exporting form data to AI for intelligent data mapping and finally importing the data back into the PDF form using the .NET MAUI PDF Viewer.
+
+### Export form data from the PDF
+
+First, [export the form data](https://help.syncfusion.com/maui/pdf-viewer/form-filling#export-form-data) from the PDF using the .NET MAUI PDF Viewer and convert to string. Refer the following code.
+
+```
+private string GetXFDFAsString()
+{
+    using (MemoryStream stream = new MemoryStream())
+    {
+        // Export form data in XFDF format to the stream
+        PdfViewer.ExportFormData(stream, DataFormat.XFdf);
+        // Reset the stream position to the beginning before reading
+        stream.Position = 0;
+        using (StreamReader reader = new StreamReader(stream))
+        {
+            return reader.ReadToEnd(); // Read and return the XFDF content as string
+        }
+    }
+}
+```
+
+### Copy text to populate the form fields
+
+Copy the required text information from any source to your clipboard. This text content should contain all the relevant information needed to populate the form fields.
+
+The clipboard event triggers when clipboard data changes, and it only works on the Windows platform. Refer below code 
+
+```
+Clipboard.ClipboardContentChanged += Clipboard_ClipboardContentChanged;
+
+private async void Clipboard_ClipboardContentChanged(object? sender, EventArgs e)
+{
+          string? copiedText = await Clipboard.GetTextAsync();
+}
+```
+
+if we need to add text to copy clipboard using below code
+
+```
+Clipboard.SetTextAsync(“Form data in clipboard”);
+```
+
+### Generate XFDF content with AI
+
+Now provide the exported form data and copied text to the AI, prompting it to generate XFDF content by intelligently mapping extracted values to form fields. Refer the following code.
+
+```
+using Microsoft.Extentions.AI;
+
+public async Task<String> GenerateXFDFContent(string exportedFormData, string copiedTextContent, IChatClient client)
+{
+    // Create a prompt for the AI model.
+    string prompt = $"Merge the copied text content into the XFDF file content. Hint text: {CustomValues}. " +
+              $"Ensure the copied text content matches the appropriate field names. " +
+              $"Here are the details: " +
+              $"Copied text content: {copiedTextContent}, " +
+              $"XFDF information: {exportedFormData}. " +
+              $"Provide the resultant XFDF directly. " +
+              $"Please follow these conditions: " +
+              $"1. The input data is not directly provided as the field name; you need to think and merge appropriately. " +
+              $"2. When comparing input data and field names, ignore case sensitivity. " +
+              $"3. First, determine the best match for the field name. If there isn’t an exact match, use the input data to find a close match. " +
+              $"4. Remove ```xml and ``` if they are present in the code.";
+    // Get the AI response.
+    string xfdfContent = await client.CompleteAsync(prompt);
+    return xfdfContent;
+}
+
+```
+
+### Convert XFDF content to file stream and import in the .NET MAUI PDF Viewer
+
+Convert the generated XFDF content to an XFDF file stream. This file stream can then be used to fill the PDF form automatically by importing it using the PDF Viewer.
+
+Refer to the following code.
+
+```
+string resultantXfdfFileStream = await _smartAI.GetAnswerFromGPT(mergePrompt);
+var inputFileStream = new MemoryStream();
+// Write the merged XFDF content to the MemoryStream
+using (var writer = new StreamWriter(inputFileStream, leaveOpen: true))
+{
+    await writer.WriteAsync(resultantXfdfFileStream);
+    await writer.FlushAsync();
+}
+// Reset stream position before importing
+inputFileStream.Position = 0;
+// Import the XFDF form data into the PDF Viewer
+PdfViewer.ImportFormData(inputFileStream, DataFormat.XFdf, true);
+
+```
+
+By following these steps, you can create XFDF form contents with AI and automatically fill PDF forms using the .NET MAUI PDF Viewer.
+
+### Desktop Smart PDF form fields
+
+![Smart fill for desktop](Images/AISamples/Desktop_AISmartFill.gif)
+
+### Mobile Smart Fill form fields
+
+![Smart fill for mobile](Images/AISamples/Mobile_AISmartFill.gif)
+
