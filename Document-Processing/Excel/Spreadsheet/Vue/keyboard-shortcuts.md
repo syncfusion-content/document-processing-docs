@@ -5,7 +5,6 @@ description: Learn here all about Keyboard shortcuts in Syncfusion Vue Spreadshe
 control: Keyboard shortcuts 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Keyboard shortcuts in Vue Spreadsheet component

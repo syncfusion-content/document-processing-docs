@@ -5,7 +5,6 @@ description: Learn here all about Sort in Syncfusion Vue Spreadsheet component o
 control: Sort 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Sort in Vue Spreadsheet component
@@ -45,7 +44,7 @@ The following code example shows `Sort` functionality in the Spreadsheet control
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/sort-by-cell-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/sort-by-cell-cs1" %}
 
 ## Data contains header
 
@@ -118,7 +117,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/passing-sort-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/passing-sort-cs1" %}
 
 ## Custom sort comparer
 
@@ -145,7 +144,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/custom-sort-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/custom-sort-cs1" %}
 
 ## Known error validations
 

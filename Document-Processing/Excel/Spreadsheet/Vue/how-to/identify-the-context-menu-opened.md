@@ -5,7 +5,6 @@ description: Learn here all about how to identify the context menu opened in Syn
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 ## Identify the context menu opened in Vue Spreadsheet component
@@ -32,4 +31,4 @@ The following code example shows how to identify the context menu opened.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/vue/find-target-context-menu" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/find-target-context-menu" %}

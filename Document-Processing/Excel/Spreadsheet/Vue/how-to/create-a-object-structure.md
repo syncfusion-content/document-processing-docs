@@ -5,7 +5,6 @@ description: Learn here all about Create a object structure in Syncfusion Vue Sp
 control: Create a object structure 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Create a object structure in Vue Spreadsheet component
