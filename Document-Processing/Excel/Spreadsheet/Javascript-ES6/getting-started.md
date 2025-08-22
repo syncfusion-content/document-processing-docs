@@ -5,7 +5,6 @@ description:  Checkout and learn about Getting started with EJ2 TypeScript Sprea
 platform: document-processing
 control: Getting started 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Getting started in EJ2 TypeScript Spreadsheet control
@@ -149,7 +148,7 @@ The following example shows a basic Spreadsheet component.
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
 > You can refer to our [JavaScript Spreadsheet](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript Spreadsheet example](https://ej2.syncfusion.com/demos/#/material/spreadsheet/default.html) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
 

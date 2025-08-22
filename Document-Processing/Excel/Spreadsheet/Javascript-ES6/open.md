@@ -5,7 +5,6 @@ description: Learn here all about Open in Syncfusion EJ2 TypeScript Spreadsheet 
 platform: document-processing
 control: Open 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Open in EJ2 TypeScript Spreadsheet control
@@ -33,7 +32,7 @@ The following code example shows `Open` option in the Spreadsheet control.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/open-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/open-cs1" %}
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 > * The default value of the [allowOpen](../api/spreadsheet/#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](../api/spreadsheet/#allowopen) property in previous code snippet.

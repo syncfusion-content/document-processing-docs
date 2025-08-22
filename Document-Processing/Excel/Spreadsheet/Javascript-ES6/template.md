@@ -5,7 +5,6 @@ description: Learn here all about Template in Syncfusion EJ2 TypeScript Spreadsh
 platform: document-processing
 control: Template 
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Template in EJ2 TypeScript Spreadsheet control
@@ -23,7 +22,7 @@ The following code example describes the above behavior.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/javascript-es6/template-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/template-cs1" %}
 
 ## See Also
 
