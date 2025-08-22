@@ -40,7 +40,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfV
 
 ![Open PDF Document with Exsiting Form Fileds](form-designer-images/Open_PDF_Document_With_Exsiting_Form_Fileds.png)
 
-Also, refer to [Open PDF files in SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/opening-pdf-file) for more details.
+Also, refer to [Open PDF files in SfPdfViewer](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/opening-pdf-file) for more details.
 
 ### Saving Form Fields
 
@@ -48,7 +48,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfV
 
 ![Download PDF Document with Form Fileds](form-designer-images/Download_PDF_Document_With_Form_Fileds.png)
 
-Also, refer to [Saving PDF file in Blazor SfPdfViewer Component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/saving-pdf-file) for more details.
+Also, refer to [Saving PDF file in Blazor SfPdfViewer Component](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/saving-pdf-file) for more details.
 
 ### Printing Form Fields
 

@@ -14,24 +14,24 @@ The [`Blazor PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-v
 
 * Accurate and reliable rendering of PDF pages.
 * Provides easy page navigation with,
-    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#page-thumbnail-navigation)
-    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#bookmark-navigation)
-    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#hyperlink-navigation)
-    * [Table of content navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#table-of-content-navigation)
+    * [Thumbnail page view](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#page-thumbnail-navigation)
+    * [Bookmark panel](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#bookmark-navigation)
+    * [Hyperlink navigation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#hyperlink-navigation)
+    * [Table of content navigation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/navigation#table-of-content-navigation)
 * Core interactions
-    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/interaction#panning-mode)
-    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/text-search)
+    * [Zooming](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/magnification) and [panning](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/interaction#panning-mode)
+    * [Text searching](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/text-search)
     * Text selection and copy
-* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/print) PDF file.
+* [Print](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/print) PDF file.
 * Annotate PDF with different types of annotations such as,
-    * [Highlight](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#highlight-a-text), [underline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#underline-a-text), and [strikeout](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#strikethrough-a-text) annotation
-    * [Shape annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/shape-annotation): Rectangle, circle, polygon, line, and arrow.
-    * [Stamp annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/stamp-annotation): Built-in and custom stamp
-    * [Measurement annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/measurement-annotation)
-    * [Free text annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/free-text-annotation)
-    * Add a [comment](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/comments) or [note](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/sticky-notes-annotation) for all type of annotations
-* [FormFilling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/form-filling)
-* [Handwritten Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/hand-written-signature)
+    * [Highlight](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#highlight-a-text), [underline](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#underline-a-text), and [strikeout](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/text-markup-annotation#strikethrough-a-text) annotation
+    * [Shape annotation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/shape-annotation): Rectangle, circle, polygon, line, and arrow.
+    * [Stamp annotation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/stamp-annotation): Built-in and custom stamp
+    * [Measurement annotation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/measurement-annotation)
+    * [Free text annotation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/free-text-annotation)
+    * Add a [comment](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/comments) or [note](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/annotation/sticky-notes-annotation) for all type of annotations
+* [FormFilling](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/form-filling)
+* [Handwritten Signature](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/hand-written-signature)
 
 ## Supported Web platforms
 
