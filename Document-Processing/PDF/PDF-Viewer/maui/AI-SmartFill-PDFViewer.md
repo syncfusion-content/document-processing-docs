@@ -22,7 +22,7 @@ internal class AzureOpenAIService
     const string deploymentName = "GPT-4O";
     const string imageDeploymentName = "DALL-E";
     string key = "API key";
-   IChatClient? client;
+    IChatClient? client;
 
     internal AzureOpenAIService()
     {
