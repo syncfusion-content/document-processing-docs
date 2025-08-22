@@ -5,7 +5,6 @@ description: Learn here all about changing the active sheet index while importin
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 ## Changing the active sheet while importing a file in React Spreadsheet component
@@ -23,4 +22,4 @@ The following code example shows how to set the active sheet when importing an E
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/change-active-sheet-cs1" %}
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/change-active-sheet-cs1" %}

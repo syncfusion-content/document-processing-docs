@@ -5,7 +5,6 @@ description: Learn here all about Keyboard shortcuts in Syncfusion React Spreads
 control: Keyboard shortcuts 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Keyboard shortcuts in React Spreadsheet component

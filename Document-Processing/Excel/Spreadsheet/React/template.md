@@ -5,7 +5,6 @@ description: Learn here all about Template in Syncfusion React Spreadsheet compo
 control: Template 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Template in React Spreadsheet component
@@ -25,7 +24,7 @@ Sample link: [`Cell template`](https://ej2.syncfusion.com/react/demos/#/material
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/template-cs1" %} 
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/template-cs1" %} 
 
 ## Note
 

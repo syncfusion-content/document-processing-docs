@@ -5,7 +5,6 @@ description: Learn here all about Link in Syncfusion React Spreadsheet component
 control: Link 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Link in React Spreadsheet component
@@ -61,7 +60,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/excel/spreadsheet/react/link-cs1" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/link-cs1" %}
 
 ## Limitations
 

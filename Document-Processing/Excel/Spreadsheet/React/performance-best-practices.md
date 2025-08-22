@@ -5,7 +5,6 @@ description: Learn here all about performance best practices in Syncfusion React
 platform: document-processing
 control: Performance
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Performance Best Practices in React Spreadsheet Component

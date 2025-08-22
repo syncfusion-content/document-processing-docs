@@ -5,7 +5,6 @@ description: Learn here all about overview of the Syncfusion React Spreadsheet c
 platform: document-processing
 control: Index
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Overview of the React Spreadsheet component

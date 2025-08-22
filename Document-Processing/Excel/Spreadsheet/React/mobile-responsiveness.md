@@ -5,7 +5,6 @@ description: Learn here all about Mobile responsiveness in Syncfusion React Spre
 control: Mobile responsiveness 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Mobile responsiveness in React Spreadsheet component
