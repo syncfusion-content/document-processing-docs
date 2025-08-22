@@ -123,4 +123,4 @@ Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentati
 * [React](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started)
 * [ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started)
 * [ASP.NET MVC](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started)
-* [Blazor](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/features)
+* [Blazor](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/overview)
