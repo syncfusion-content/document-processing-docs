@@ -6,7 +6,7 @@ control: PDF
 documentation: UG
 ---
 
-# Working with Optical Character Recognition (OCR)
+# Working with Optical Character Recognition
 
 Essential<sup>&reg;</sup> PDF provides support for Optical Character Recognition with the help of Google’s Tesseract Optical Character Recognition engine.
 
@@ -108,13 +108,7 @@ processor.PerformOCR(lDoc, "tessdata/");
 {% endtabs %} 
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
-
-You can download the language packages from the following link
-
-[https://code.google.com/p/tesseract-ocr/downloads/list](https://code.google.com/p/tesseract-ocr/downloads/list)
-        
-
-
+ 
 ## Prerequisites for Linux
 
 *	We are using the “System.Drawing.Common” API in the OCR Processor. So, it is mandatory to install the “libgdiplus” and “libopenjp2-7” package. Please refer to the following commands to install the packages.
@@ -350,7 +344,7 @@ return File(outputStream, contentType, fileName);
 
 {% endtabs %} 
 
-N> The [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.Base~Syncfusion.OCRProcessor.OCRProcessor~PerformOCR(PdfLoadedDocument,String).html) methods return only the text OCRed by [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html). Other existing text in the PDF page will not be returned in this method.
+N> The `PerformOCR` methods return only the text OCRed by `OCRProcessor`. Other existing text in the PDF page will not be returned in this method.
 
 ## Performing OCR for a region
 

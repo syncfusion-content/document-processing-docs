@@ -18,9 +18,9 @@ Step 1: Create a new .NET Console application project.
 In project configuration window, name your project and select Next. 
 ![NET sample configuration window](OCR-Images/NET-sample-Azure-step2.png)
 
-Step 2: Install [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) and [Microsoft.Azure.CognitiveServices.Vision.ComputerVision](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision) NuGet packages as reference to your .NET application from [nuget.org](https://www.nuget.org/). 
-![NuGet package installation](OCR-Images/NET-sample-Azure-step3.png)
-![NuGet package installation](OCR-Images/NET-sample-Azure-step4.png)
+Step 2: Install [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) and [Microsoft.Azure.CognitiveServices.Vision.ComputerVision](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision) NuGet packages as reference to your .NET application from [nuget.org](https://www.nuget.org/).  
+![NuGet package installation1](OCR-Images/OCR-Core-NuGet-package.png)
+![NuGet package installation2](OCR-Images/NET-sample-Azure-step4.png)
 
 N> 1. Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup><sup>&reg;</sup></sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup><sup>&reg;</sup></sup> license key in your application to use our components.

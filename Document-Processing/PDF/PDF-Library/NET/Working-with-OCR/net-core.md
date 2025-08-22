@@ -119,7 +119,7 @@ Step 3: Navigate to the project directory using the following command
 ```
 cd CreatePdfASPNETCoreAPP
 ```
-Step 4: Use the following command in the terminal to add the [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) package to your project.
+Step 4: Use the following command in the terminal to add the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) package to your project.
 
 ```
 dotnet add package Syncfusion.PDF.OCR.NET
@@ -217,7 +217,7 @@ Step 1. Open JetBrains Rider and create a new ASP.NET Core Web application proje
 ![Creating a new .NET Core console application in JetBrains Rider](OCR-Images/Create-ASP.NET-Core-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
-* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET) in the search bar.
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) in the search bar.
 * Ensure that "nuget.org" is selected as the package source.
 * Select the latest Syncfusion.PDF.OCR.NET NuGet package from the list.
 * Click the + (Add) button to add the package.
