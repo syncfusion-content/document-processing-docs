@@ -55,8 +55,6 @@ N> Parameter denotes is include hidden bookmarks. If false, ignore hidden bookma
 
 The following example shows how to open bookmark dialog in Document Editor.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/tagHelper %}
@@ -65,20 +63,6 @@ The following example shows how to open bookmark dialog in Document Editor.
 {% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-
 
 ## See Also
 

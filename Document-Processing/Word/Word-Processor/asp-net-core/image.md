@@ -13,7 +13,6 @@ documentation: ug
 
 Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the `insertImage()` method.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -21,17 +20,6 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 {% endhighlight %}
 {% highlight c# tabtitle="Image.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/image/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Image.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.

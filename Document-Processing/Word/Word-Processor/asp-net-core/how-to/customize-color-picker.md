@@ -15,7 +15,6 @@ Document editor provides an options to customize the color picker using `colorPi
 
 Similarly, you can use `documentEditorSettings` property for DocumentEditor also.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -26,17 +25,6 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/customize-color-picker/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="customize-color-picker.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/customize-color-picker/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 The following table illustrates all the possible properties for the color picker.
 

@@ -83,7 +83,6 @@ documenteditor.selection.tableFormat.tableAlignment='Center';
 
 Set the desired width of table cells that will be considered when the table is layouted.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -93,24 +92,12 @@ Set the desired width of table cells that will be considered when the table is l
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/cell-width/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Cell-width.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ## Table width
 
 You can set the desired width of a table in `Point` or `Percent` type.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -120,24 +107,11 @@ You can set the desired width of a table in `Point` or `Percent` type.
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-width/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Table-width.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-
 
 ## Apply borders
 
 Document editor exposes API to customize the borders for table cells by specifying the settings.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -146,18 +120,6 @@ Document editor exposes API to customize the borders for table cells by specifyi
 {% highlight c# tabtitle="Apply-borders.cs" %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/apply-borders/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Apply-borders.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ## Working with row formatting
@@ -168,7 +130,6 @@ Document editor allows various row formatting such as height and repeat header.
 
 You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -176,17 +137,6 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
 {% endhighlight %}
 {% highlight c# tabtitle="Row-height.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/row-height/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Row-height.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 ### Header row

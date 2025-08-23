@@ -17,7 +17,6 @@ You can get the selected content from the React Document Editor component as pla
 
 You can use `text` API to get the selected content as plain text from React Document Editor component.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -26,18 +25,6 @@ You can use `text` API to get the selected content as plain text from React Docu
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 You can add the following custom options using this API,
@@ -50,7 +37,6 @@ You can add the following custom options using this API,
 
 You can use `sfdt` API to get the selected content as rich text from React Document Editor component.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -59,18 +45,6 @@ You can use `sfdt` API to get the selected content as rich text from React Docum
 {% highlight c# tabtitle="Get-sfdt.cs" %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-sfdt/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-sfdt.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 You can add the following custom options using this API,

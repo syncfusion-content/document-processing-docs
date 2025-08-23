@@ -43,7 +43,6 @@ Similarly, using [`endOffset`], you can get end hierarchical index which denotes
 
 The following code snippet illustrate how to get the selection start and end offset on selection changes in document.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -51,16 +50,6 @@ The following code snippet illustrate how to get the selection start and end off
 {% endhighlight %}
 {% highlight c# tabtitle="select.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/select/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="select.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 ## Selects the content based on left and top position

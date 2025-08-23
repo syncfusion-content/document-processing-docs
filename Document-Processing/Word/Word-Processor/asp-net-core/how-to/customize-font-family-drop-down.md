@@ -15,7 +15,6 @@ Document editor provides options to customize the font family drop down list val
 
 Similarly, you can use `documentEditorSettings` property for DocumentEditor also.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -24,14 +23,5 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 {% highlight c# tabtitle="Font-family.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/font-family/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Font-family.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 ![Font](../images/font-family.png)

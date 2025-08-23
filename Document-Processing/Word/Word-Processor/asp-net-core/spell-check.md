@@ -13,7 +13,6 @@ documentation: ug
 
 Document editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -21,16 +20,6 @@ Document editor supports performing spell checking for any input text. You can p
 {% endhighlight %}
 {% highlight c# tabtitle="Spell-checker.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/spell-checker/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Spell-checker.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 

@@ -34,7 +34,6 @@ var tocSettings=
 documenteditor.editor.insertTableOfContents(tocSettings);
 ```
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -42,17 +41,6 @@ documenteditor.editor.insertTableOfContents(tocSettings);
 {% endhighlight %}
 {% highlight c# tabtitle="Table-of-contents.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-of-contents/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Table-of-contents.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 ## Update or edit table of contents

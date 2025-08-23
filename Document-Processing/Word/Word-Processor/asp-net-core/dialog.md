@@ -19,7 +19,6 @@ Font dialog allows to modify all text properties for selected contents at once s
 
 N>To enable font dialog for a document editor instance, set ‘enableFontDialog’ to true.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -30,25 +29,11 @@ N>To enable font dialog for a document editor instance, set ‘enableFontDialog�
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/dialog/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-
 
 ## Paragraph dialog
 
 This dialog allows modifying the paragraph formatting for selection at once such as text alignment, indentation, and spacing.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -57,23 +42,11 @@ This dialog allows modifying the paragraph formatting for selection at once such
 {% highlight c# tabtitle="Paragraph-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/paragraph-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Paragraph-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Table dialog
 
 This dialog allows creating and inserting a table at cursor position by specifying the required number of rows and columns.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -81,17 +54,6 @@ This dialog allows creating and inserting a table at cursor position by specifyi
 {% endhighlight %}
 {% highlight c# tabtitle="Table-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Table-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 ## Bookmark dialog
@@ -103,7 +65,6 @@ This dialog allows to perform the following operations:
 * Create a bookmark at current selection.
 * Delete an existing bookmark.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -112,23 +73,11 @@ This dialog allows to perform the following operations:
 {% highlight c# tabtitle="Bookmark-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Bookmark-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Hyperlink dialog
 
 This dialog allows editing or inserting a hyperlink at cursor position.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -137,23 +86,11 @@ This dialog allows editing or inserting a hyperlink at cursor position.
 {% highlight c# tabtitle="Hyperlink-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Hyperlink-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Table of contents dialog
 
 This dialog allows creating and inserting table of contents at cursor position. If the table of contents already exists at cursor position, you can customize its properties.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -162,23 +99,11 @@ This dialog allows creating and inserting table of contents at cursor position. 
 {% highlight c# tabtitle="Table-of-contents-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-of-contents-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Table-of-contents-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Styles Dialog
 
 This dialog allows managing the styles in a document. It will display all the styles in the document with options to modify the properties of the existing style or create new style with the help of ‘Style dialog’.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -187,23 +112,11 @@ This dialog allows managing the styles in a document. It will display all the st
 {% highlight c# tabtitle="Styles-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/styles-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Styles-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Style dialog
 
 You can directly use this dialog for modifying any existing style or add new style by providing the style name.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -212,23 +125,11 @@ You can directly use this dialog for modifying any existing style or add new sty
 {% highlight c# tabtitle="Style-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/style-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Style-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## List dialog
 
 This dialog allows creating a new list or modifying existing lists in the document.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -237,46 +138,22 @@ This dialog allows creating a new list or modifying existing lists in the docume
 {% highlight c# tabtitle="List-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/list-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="List-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Borders and shading dialog
 
 This dialog allows customizing the border style, border width, and background color of the table or selected cells.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/borders-shading-dialog/tagHelper %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/borders-shading-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Borders-and-shading-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Table options dialog
 
 This dialog allows customizing the default cell margins and spacing between each cells of the selected table.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -285,23 +162,10 @@ This dialog allows customizing the default cell margins and spacing between each
 {% highlight c# tabtitle="Table-options-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-options-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Table-options-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Table properties dialog
 
 This dialog allows customizing the table, row, and cell properties of the selected table.
-
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -310,23 +174,11 @@ This dialog allows customizing the table, row, and cell properties of the select
 {% highlight c# tabtitle="Table-properties-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-properties-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Table-properties-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Page setup dialog
 
 This dialog allows customizing margins, size, and layout options for pages of the section.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -334,17 +186,6 @@ This dialog allows customizing margins, size, and layout options for pages of th
 {% endhighlight %}
 {% highlight c# tabtitle="Page-setup-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/page-setup-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Page-setup-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 ## See Also

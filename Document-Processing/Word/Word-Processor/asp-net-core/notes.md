@@ -21,7 +21,6 @@ The footnotes and endnotes are both ways of adding extra bits of information to 
 
 Document editor exposes an API to insert footnotes at cursor position programmatically or can be inserted to the end of selected text.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -32,25 +31,11 @@ Document editor exposes an API to insert footnotes at cursor position programmat
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/footnote/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/footnote/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-
 
 ## Insert endnotes
 
 Document editor exposes an API to insert endnotes at cursor position programmatically or can be inserted to the end of selected text.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -60,19 +45,6 @@ Document editor exposes an API to insert endnotes at cursor position programmati
 {% include code-snippet/document-editor/asp-net-core/document-editor/endnote/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/endnote/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/endnote/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ## Update or edit footnotes and endnotes

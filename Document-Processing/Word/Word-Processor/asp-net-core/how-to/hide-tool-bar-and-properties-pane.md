@@ -20,7 +20,6 @@ By default, Document editor container has built-in properties pane which contain
 
 The following example code illustrates how to hide the properties pane.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -29,15 +28,6 @@ The following example code illustrates how to hide the properties pane.
 {% highlight c# tabtitle="Hide-the-default-propertiespane.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/hide-the-default-propertiespane/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Hide-the-default-propertiespane.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 N> Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
 
@@ -47,7 +37,6 @@ You can use [`enableToolbar`] API in `DocumentEditorContainer` to hide the exist
 
 The following example code illustrates how to hide the existing toolbar.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -56,15 +45,6 @@ The following example code illustrates how to hide the existing toolbar.
 {% highlight c# tabtitle="Hide-the-default-toolbar.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/hide-the-default-toolbar/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Hide-the-default-toolbar.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 ## See Also
 

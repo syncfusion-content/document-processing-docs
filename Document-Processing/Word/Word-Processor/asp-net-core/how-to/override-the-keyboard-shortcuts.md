@@ -17,7 +17,6 @@ Document editor triggers the [`keyDown`](https://help.syncfusion.com/cr/aspnetco
 
 The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in document editor.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -26,17 +25,6 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 {% highlight c# tabtitle="Prevent-default.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/prevent-default/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Prevent-default.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
-
 
 ## Override or define the keyboard shortcut
 
@@ -44,7 +32,6 @@ Override or define a new keyboard shortcut behaviour instead of preventing the k
 
 For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by default, and there is no behaviour for `Ctrl + Alt + S`. The following code demonstrates how to override the `Ctrl + S` shortcut to save a document in DOCX format and define `Ctrl + Alt + S` to save the document in SFDT format.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -52,14 +39,4 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 {% endhighlight %}
 {% highlight c# tabtitle="Override.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/override/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Override.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 

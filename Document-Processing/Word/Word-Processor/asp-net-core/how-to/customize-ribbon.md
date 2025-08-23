@@ -27,7 +27,6 @@ Document Editor provides APIs to remove existing File menu items and add new cus
 
 In below code example, In the example below, the "Open" and "Export" items have been removed from the File Menu Items, and new custom items have been added.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -37,17 +36,6 @@ In below code example, In the example below, the "Open" and "Export" items have 
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/customize-ribbon-file/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Customize-ribbon-file.cs" %}
-{% endhighlight %}
-{% endtabs %}
-
-{% endif %}
 
 ## Backstage Menu Customization
 
@@ -55,7 +43,6 @@ The Document Editor provides an `backStageMenu` API to add a backstage menu. Whe
 
 The following code example shows how to add the backstage menu items.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -65,17 +52,6 @@ The following code example shows how to add the backstage menu items.
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/customize-ribbon-backstage/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Customize-ribbon-backstage.cs" %}
-{% endhighlight %}
-{% endtabs %}
-
-{% endif %}
 
 Refer this documentation know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
 

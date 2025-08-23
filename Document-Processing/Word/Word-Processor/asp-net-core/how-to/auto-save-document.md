@@ -17,7 +17,6 @@ The following example illustrates how to auto save the document in server.
 
 * In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`] method.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -25,16 +24,6 @@ The following example illustrates how to auto save the document in server.
 {% endhighlight %}
 {% highlight c# tabtitle="Auto-save-server.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save-server/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Auto-save-server.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 

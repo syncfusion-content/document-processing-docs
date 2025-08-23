@@ -16,7 +16,6 @@ Similarly, you can use [`documentEditorSettings`] property for DocumentEditor al
 
 The following example code illustrates how to change the default search highlight color.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -24,16 +23,6 @@ The following example code illustrates how to change the default search highligh
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/search-highlight-color/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 Output will be like below:

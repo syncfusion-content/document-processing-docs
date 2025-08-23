@@ -15,7 +15,6 @@ This article explains how to autosave the document in AWS S3. You can automatica
 
 * In the client-side, using content change event, the edited content can be automatically saved in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using `saveAsBlob` method.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -23,17 +22,6 @@ This article explains how to autosave the document in AWS S3. You can automatica
 {% endhighlight %}
 {% highlight c# tabtitle="Auto-save.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Auto-save.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 * Configure the access key and secret key in `web.config` file and register profile in `startup.cs`.

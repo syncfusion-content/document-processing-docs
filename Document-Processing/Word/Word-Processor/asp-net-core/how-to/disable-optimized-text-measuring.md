@@ -19,7 +19,6 @@ If you want the Document editor component to retain the document pagination (dis
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditorContainer` instance.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -28,23 +27,12 @@ The following example code illustrates how to disable optimized text measuring i
 {% highlight c# tabtitle="Optimized-text.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimized-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Optimized-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 ## Disable optimized text measuring in `DocumentEditor` instance
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditor` instance.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -52,14 +40,4 @@ The following example code illustrates how to disable optimized text measuring i
 {% endhighlight %}
 {% highlight c# tabtitle="Optimized-text.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/optimized-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Optimized-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 

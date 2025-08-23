@@ -106,7 +106,6 @@ Document Editor provides support for protecting the document with `FormFieldsOnl
 
 Document editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -115,14 +114,5 @@ Document editor provides an option to protect and unprotect document using `enfo
 {% highlight c# tabtitle="Protect-unprotect.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/protect-unprotect/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Protect-unprotect.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.

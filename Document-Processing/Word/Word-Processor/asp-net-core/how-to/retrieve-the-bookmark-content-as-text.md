@@ -17,7 +17,7 @@ You can get the bookmark or whole document content from the Document Editor comp
 You can [`selectBookmark`] API to navigate to the bookmark and use [`text`] API to get the bookmark content as plain text from Document Editor component.
 
 The following example code illustrates how to get the bookmark content as plain text.
-{% if page.publishingplatform == "aspnet-core" %}
+
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -26,15 +26,6 @@ The following example code illustrates how to get the bookmark content as plain 
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 To get the bookmark content as SFDT (rich text), check this [`link`](../../asp-net-core/how-to/get-the-selected-content#get-the-selected-content-as-sfdt-rich-text)
 
@@ -43,7 +34,7 @@ To get the bookmark content as SFDT (rich text), check this [`link`](../../asp-n
 You can use [`text`] API to get the whole document content as plain text from Document Editor component.
 
 The following example code illustrates how to get the whole document content as plain text.
-{% if page.publishingplatform == "aspnet-core" %}
+
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -52,22 +43,13 @@ The following example code illustrates how to get the whole document content as 
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 ## Get the whole document content as SFDT(rich text)
 
 You can use [`serialize`] API to get the whole document content as SFDT string from Document Editor component.
 
 The following example code illustrates how to get the whole document content as SFDT.
-{% if page.publishingplatform == "aspnet-core" %}
+
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -76,15 +58,6 @@ The following example code illustrates how to get the whole document content as 
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 ## Get the header content as text
 
@@ -92,7 +65,6 @@ You can use [`goToHeader`] API to navigate the selection to the header and then 
 
 The following example code illustrates how to get the header content as plain text.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -101,14 +73,5 @@ The following example code illustrates how to get the header content as plain te
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 Similarly, you can use [`goToFooter`] API to navigate the selection to the footer and then use [`text`] API to get the content as plain text.

@@ -18,7 +18,7 @@ You can use [`selectCurrentWord`] API in selection module to select the current 
 
 The following example code illustrates how to select and get the current word as plain text.
 
-{% if page.publishingplatform == "aspnet-core" %}
+
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -28,17 +28,6 @@ The following example code illustrates how to select and get the current word as
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-word/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-word.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 ## Select and get the paragraph in current cursor position
 
@@ -46,7 +35,6 @@ You can use [`selectParagraph`] API in selection module to select the current pa
 
 The following example code illustrates how to select and get the current paragraph as SFDT.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -55,14 +43,3 @@ The following example code illustrates how to select and get the current paragra
 {% highlight c# tabtitle="Get-paragraph.cs" %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/get-paragraph/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Get-paragraph.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}

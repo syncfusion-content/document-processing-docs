@@ -17,7 +17,6 @@ Document editor tracks the history of all editing actions done in the document, 
 
 Inject the `EditorHistory` module in your application to provide history preservation functionality for `DocumentEditor`.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -25,17 +24,6 @@ Inject the `EditorHistory` module in your application to provide history preserv
 {% endhighlight %}
 {% highlight c# tabtitle="History.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/history/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="History.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 You can enable or disable history preservation for a document editor instance any time using the `enableEditorHistory` property.

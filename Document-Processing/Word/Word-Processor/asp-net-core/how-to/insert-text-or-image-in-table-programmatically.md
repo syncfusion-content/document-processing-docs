@@ -16,7 +16,6 @@ Use [`selection`] API's to navigate between rows and cells.
 
 The following example illustrates how to create 2*2 table and then add text and image programmatically.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -25,15 +24,6 @@ The following example illustrates how to create 2*2 table and then add text and 
 {% highlight c# tabtitle="Insert-text-image-table" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/insert-text-image-table/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Insert-text-image-table" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 The output will be like below.
 ![Insert text or image in table programmatically](../images/table-image.png)

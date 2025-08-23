@@ -17,7 +17,6 @@ The document editor component searches a portion of text in the document through
 
 This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -27,19 +26,6 @@ This provides the options to search for a portion of text in the document. After
 {% include code-snippet/document-editor/asp-net-core/document-editor/options-pane/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/options-pane/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Options-pane.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/options-pane/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 You can close the options pane by pressing `Esc` key.
@@ -137,7 +123,6 @@ documenteditor.searchResultsChange = function() {
 
 Using the exposed APIs, you can customize the find and replace functionality in your application.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -147,19 +132,6 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 {% include code-snippet/document-editor/asp-net-core/document-editor/find-replace/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/find-replace/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Find-replace.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/find-replace/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ## See Also

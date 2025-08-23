@@ -19,7 +19,6 @@ DocumentEditorContainer allows to customize (add, show, hide, enable, and disabl
 * Show, Hide - Existing items can be shown or hidden using the [`ToolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_ToolbarItems) property. Pre-defined toolbar items are available with `ToolbarItem`.
 * Enable, Disable - Toolbar items can be enabled or disabled using `enableItems`
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -27,16 +26,6 @@ DocumentEditorContainer allows to customize (add, show, hide, enable, and disabl
 {% endhighlight %}
 {% highlight c# tabtitle="Custom-toolbar.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/custom-toolbar/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Custom-toolbar.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 

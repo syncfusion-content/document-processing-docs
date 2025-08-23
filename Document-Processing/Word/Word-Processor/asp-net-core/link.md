@@ -21,7 +21,6 @@ Document editor triggers ‘requestNavigate’ event whenever user clicks Ctrl k
 
 The following example illustrates how to add requestNavigate event for DocumentEditor.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -32,24 +31,11 @@ The following example illustrates how to add requestNavigate event for DocumentE
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
 The following example illustrates how to add requestNavigate event for DocumentEditorContainer component.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -60,17 +46,6 @@ The following example illustrates how to add requestNavigate event for DocumentE
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/link/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/link/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 If the selection is in hyperlink, trigger this event by calling ‘navigateHyperlink’ method of ‘Selection’ instance.
 
@@ -96,7 +71,6 @@ N> `<http://>`<br>
 <br/> `www.`<br>
 <br/> `mailto:`<br>
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -107,17 +81,6 @@ N> `<http://>`<br>
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-edit/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-edit/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Customize screen tip
 
@@ -143,7 +106,6 @@ documenteditor.editor.removeHyperlink();
 
 Document editor provides dialog support to insert or edit a hyperlink.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -153,19 +115,6 @@ Document editor provides dialog support to insert or edit a hyperlink.
 {% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.

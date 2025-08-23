@@ -18,7 +18,6 @@ RestrictEditing allows you to restrict the document modification and makes the D
 
 The following example code illustrates how to header and footer edit in `DocumentEditorContainer` instance.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -27,21 +26,10 @@ The following example code illustrates how to header and footer edit in `Documen
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/disable-header-footer/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 Otherwise, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`] API in selection module.
 
 The following example code illustrates how to close header and footer when selection is inside header or footer in `DocumentEditorContainer` instance.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -50,15 +38,6 @@ The following example code illustrates how to close header and footer when selec
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/disable-header-footer-close/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 ## Disable header and footer edit in DocumentEditor instance
 
@@ -66,7 +45,6 @@ Like restrictEditing, you can use [`isReadOnly`] property in Document editor to 
 
 The following example code illustrates how to header and footer edit in `DocumentEditor` instance.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -75,12 +53,3 @@ The following example code illustrates how to header and footer edit in `Documen
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/disable-header-footer-documenteditor/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}

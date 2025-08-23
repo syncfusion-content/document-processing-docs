@@ -40,7 +40,6 @@ Document editor exposes API to enable local paste within the control. On enablin
 * Selected contents will be stored to an internal clipboard in addition to system clipboard.
 * Clipboard paste will be overridden, and internally stored data that has formatted text will be pasted.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -48,17 +47,6 @@ Document editor exposes API to enable local paste within the control. On enablin
 {% endhighlight %}
 {% highlight c# tabtitle="Clipboard.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/clipboard/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Clipboard.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 By default, **enableLocalPaste** is false. When local paste is enabled for a document editor instance, you can paste contents programmatically if the internal clipboard has stored data during last copy operation.

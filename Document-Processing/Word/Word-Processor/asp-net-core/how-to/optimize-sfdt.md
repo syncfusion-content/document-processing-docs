@@ -27,7 +27,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 <td>Client-side</td>
 <td>
 
-{% if page.publishingplatform == "aspnet-core" %}
+
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -35,19 +35,9 @@ As a backward compatibility to create older format SFDT files, refer the followi
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimize-sfdt/razorOld %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 </td>
 <td>
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -55,14 +45,6 @@ As a backward compatibility to create older format SFDT files, refer the followi
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimize-sfdt/razor %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 </td>
@@ -99,7 +81,6 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Client-side</td>
 <td>
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -107,14 +88,6 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimize-sfdt/razor %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 </td>
 </tr>

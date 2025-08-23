@@ -23,7 +23,6 @@ You can create and insert a table at cursor position by specifying the required 
 
 ## Set the maximum number of Rows when inserting a table
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 You can use the `maximumRows` property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
 
@@ -43,28 +42,6 @@ Refer to the following sample code.
     }
 </script>
 ```
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-You can use the `maximumRows` property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
-
-```ts
-<div>
-@Html.EJS().DocumentEditorContainer("container").Created("onCreated").EnableToolbar(true).Render()
-</div>
-<script>
-    var container;
-    function onCreated() {
-        var documenteditorElement = document.getElementById("container");
-        container = documenteditorElement.ej2_instances[0];
-        container.documentEditorSetting = {
-            maximumRows: 4
-        };
-    }
-</script>
-```
-
-{% endif %}
 
 When the maximum row limit is reached, an alert will appear, as follow 
 
@@ -74,7 +51,6 @@ When the maximum row limit is reached, an alert will appear, as follow
 
 ## Set the maximum number of Columns when inserting a table
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 You can use the `maximumColumns` property to set the maximum number of columns allowed while inserting a table in the Document Editor component.
 
@@ -95,29 +71,6 @@ Refer to the following sample code.
 </script>
 ```
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-You can use the `maximumColumns` property to set the maximum number of columns allowed while inserting a table in the Document Editor component.
-
-Refer to the following sample code.
-
-```ts
-<div>
-@Html.EJS().DocumentEditorContainer("container").Created("onCreated").EnableToolbar(true).Render()
-</div>
-<script>
-    var container;
-    function onCreated() {
-        var documenteditorElement = document.getElementById("container");
-        container = documenteditorElement.ej2_instances[0];
-        container.documentEditorSetting = {
-            maximumColumns: 4
-        };
-    }
-</script>
-```
-
-{% endif %}
 
 When the maximum column limit is reached, an alert will appear, as follow 
 
@@ -240,7 +193,6 @@ Document Editor preserves the position properties of the table and displays the 
 
 The following sample demonstrates how to delete the table row or columns, merge cells and how to bind the API with button.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -250,19 +202,6 @@ The following sample demonstrates how to delete the table row or columns, merge 
 {% include code-snippet/document-editor/asp-net-core/document-editor/table/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Table.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ## See Also

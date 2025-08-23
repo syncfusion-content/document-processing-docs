@@ -163,7 +163,6 @@ documenteditor.selection.characterFormat.highlightColor= '#FFC0CB';
 
 ## Toolbar with options for text formatting
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -173,18 +172,6 @@ documenteditor.selection.characterFormat.highlightColor= '#FFC0CB';
 {% include code-snippet/document-editor/asp-net-core/document-editor/text-format/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/text-format/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Text-format.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/text-format/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 

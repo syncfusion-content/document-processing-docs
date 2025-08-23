@@ -20,7 +20,6 @@ N> Currently, Documenteditor have options to insert page number at current curso
 
 The following example code illustrates how to insert page number in header.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -29,15 +28,6 @@ The following example code illustrates how to insert page number in header.
 {% highlight c# tabtitle="Insert-page-number.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/insert-page-number/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Insert-page-number.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 Also, you use [`insertField`] API in Editor module to insert the Page number in current position
 
@@ -52,7 +42,6 @@ You can use [`pageCount`] API to gets the total number of pages in Document.
 
 The following example code illustrates how to get the number of pages in Document.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -61,15 +50,6 @@ The following example code illustrates how to get the number of pages in Documen
 {% highlight c# tabtitle="Page-count.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/Page-count/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="pageCount.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 ## Navigate to specific page
 
@@ -77,7 +57,6 @@ You can use [`goToPage`] API in Selection module to move selection to the start 
 
 The following example code illustrates how to move selection to specific page.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -86,12 +65,3 @@ The following example code illustrates how to move selection to specific page.
 {% highlight c# tabtitle="Go-to-page.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/go-to-page/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Go-to-page.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}

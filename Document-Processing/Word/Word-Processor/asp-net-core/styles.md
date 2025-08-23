@@ -73,7 +73,6 @@ New Styles are defined and added to the style collection of the document. In thi
 
 ### Defining a character style
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -83,22 +82,10 @@ New Styles are defined and added to the style collection of the document. In thi
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/character-style/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Character-style.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ### Defining a paragraph style
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -108,22 +95,9 @@ New Styles are defined and added to the style collection of the document. In thi
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/paragraph-style/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Paragraph-style.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-
 
 ### Defining a linked style
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -132,18 +106,6 @@ New Styles are defined and added to the style collection of the document. In thi
 {% highlight c# tabtitle="Linked-style.cs" %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/linked-style/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Linked-style.cs" %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ### Applying a style

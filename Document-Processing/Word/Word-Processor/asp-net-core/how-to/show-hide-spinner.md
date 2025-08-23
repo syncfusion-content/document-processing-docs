@@ -21,7 +21,6 @@ showSpinner(document.getElementById('container'));
 hideSpinner(document.getElementById('container'));
 ```
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -29,17 +28,6 @@ hideSpinner(document.getElementById('container'));
 {% endhighlight %}
 {% highlight c# tabtitle="Spinner.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/spinner/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Spinner.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 N> In above example, we have used setInterval to hide spinner, just for demo purpose.

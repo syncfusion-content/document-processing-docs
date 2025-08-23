@@ -146,7 +146,6 @@ Document Editor provides support for protecting the document with `CommentsOnly`
 
 Document editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -156,18 +155,6 @@ Document editor provides an option to protect and unprotect document using `enfo
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/comment-only-protect/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/comment-only-protect/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Comment-only.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/comment-only-protect/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 Comment only protection can be enabled in UI by using [Restrict Editing pane](../asp-net-core/document-management#restrict-editing-pane/)
@@ -182,7 +169,6 @@ Mention support displays a list of items that users can select or tag from the s
 
 The following example illustrates how to enable mention support in Document Editor
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -193,17 +179,6 @@ The following example illustrates how to enable mention support in Document Edit
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/comments-mention/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="comments-mention.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/comments-mention/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Events
 
@@ -211,7 +186,6 @@ DocumentEditor provides `beforeCommentAction` event, which is triggered on comme
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -222,14 +196,3 @@ To demonstrate a specific use case, let’s consider an example where we want to
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/comments-event/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="comments-event.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/comments-event/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}

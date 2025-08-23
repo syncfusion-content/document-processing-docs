@@ -17,7 +17,6 @@ At present, Document editor component is not responsive for mobile, and the edit
 
 Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke `fitPage` method with `FitPageWidth` parameter in document change event, such as to display one full page by adjusting the zoom factor.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -25,16 +24,6 @@ Hence, it is recommended to switch the Document editor component as read-only in
 {% endhighlight %}
 {% highlight c# tabtitle="Mobile-view.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/mobile-view/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Mobile-view.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 

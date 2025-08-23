@@ -16,7 +16,6 @@ Using ruler we can refer to setting specific margins, tab stops, or indentations
 
 The following example illustrates how to enable ruler in Document Editor
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -27,18 +26,6 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/ruler/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/ruler/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 
 ## How to enable ruler in Document Editor Container component
@@ -47,7 +34,6 @@ Using ruler we can refer to setting specific margins, tab stops, or indentations
 
 The following example illustrates how to enable ruler in Document Editor Container.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -58,14 +44,3 @@ The following example illustrates how to enable ruler in Document Editor Contain
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/ruler/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/ruler/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %} 

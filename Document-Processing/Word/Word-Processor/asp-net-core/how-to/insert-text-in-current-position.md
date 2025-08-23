@@ -22,7 +22,6 @@ The following example code illustrates how to add the text in current selection.
 // It will insert the provided text in current selection
 this.container.documentEditor.editor.insertText('Syncfusion');
 ```
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -31,15 +30,6 @@ this.container.documentEditor.editor.insertText('Syncfusion');
 {% highlight c# tabtitle="Insert-text.cs" %}
 {% endhighlight %}{% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/insert-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Insert-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 ## Insert paragraph in current cursor position
 
@@ -62,7 +52,6 @@ The following example illustrates how to insert the HTML content at current curs
 
 * Send the HTML content to server side for SFDT conversion. Refer to the following example to send the HTML content to server side and inserting it in current cursor position.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -70,16 +59,6 @@ The following example illustrates how to insert the HTML content at current curs
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-rich-text.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/insert-rich-text/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Insert-rich-text.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 * Refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
