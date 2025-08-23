@@ -22,8 +22,9 @@ The following example code illustrates how to change the default search highligh
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/search-highlight-color/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/search-highlight-color/document-editor.cs %}
-{% endhighlight %}{% endtabs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/search-highlight-color/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 Output will be like below:

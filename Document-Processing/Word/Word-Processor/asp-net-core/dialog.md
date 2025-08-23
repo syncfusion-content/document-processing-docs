@@ -163,6 +163,7 @@ This dialog allows customizing the border style, border width, and background co
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/borders-shading-dialog/tagHelper %}
+{% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/borders-shading-dialog/document-editor.cs %}
 {% endhighlight %}
@@ -179,7 +180,7 @@ This dialog allows customizing the default cell margins and spacing between each
 {% include code-snippet/document-editor/asp-net-core/document-editor/table-options-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/able-options-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/table-options-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -193,7 +194,7 @@ This dialog allows customizing the table, row, and cell properties of the select
 {% include code-snippet/document-editor/asp-net-core/document-editor/table-properties-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-properties-dialogs/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/table-properties-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

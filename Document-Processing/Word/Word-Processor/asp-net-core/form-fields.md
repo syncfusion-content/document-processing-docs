@@ -112,8 +112,9 @@ Document editor provides an option to protect and unprotect document using `enfo
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/protect-unprotect/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/protect-unprotect/document-editor.cs %}
-{% endhighlight %}{% endtabs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/protect-unprotect/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.

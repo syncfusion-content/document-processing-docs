@@ -20,8 +20,10 @@ DocumentEditor allows to change the view to web layout and print using the [`lay
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/web-layout/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Web-layout.cs" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/web-layout/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -36,8 +38,10 @@ DocumentEditorContainer component allows to change the view to web layout and pr
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/web-layout/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Web-layout.cs" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/web-layout/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 N> Default value of [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_LayoutType) in DocumentEditorContainer component is [`Pages`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html).
