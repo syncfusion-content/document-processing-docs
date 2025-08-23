@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get current Word/Para in ##Platform_Name## Document editor control | Syncfusion
-description: Learn how to select and retrieve current word and Paragraph from the Syncfusion ##Platform_Name## Document Editor Component
+title: Get current Word/Para in Document editor control | Syncfusion
+description: Learn how to select and retrieve current word and Paragraph from the Syncfusion Document Editor Component
 platform: ej2-asp-core-mvc
 control: Get The Current Word And Paragrapgh
 publishingplatform: ##Platform_Name##

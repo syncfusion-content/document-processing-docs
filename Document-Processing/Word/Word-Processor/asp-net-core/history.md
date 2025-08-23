@@ -1,7 +1,7 @@
 ---
 layout: post
-title: History in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about history in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: History in Document Editor Component | Syncfusion
+description: Learn here all about history in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: History
 publishingplatform: ##Platform_Name##

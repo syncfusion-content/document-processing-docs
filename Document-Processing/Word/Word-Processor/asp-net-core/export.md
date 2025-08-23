@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about Export in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export in Document Editor Component | Syncfusion
+description: Learn here all about Export in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Export
 publishingplatform: ##Platform_Name##
@@ -24,7 +24,6 @@ We are providing two types of save APIs  as mentioned below.
 
 The following example shows how to export documents in document editor as Syncfusion document text (.sfdt).
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -44,26 +43,6 @@ The following example shows how to export documents in document editor as Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-sfdt/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-sfdt/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-sfdt/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-sfdt/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 
 N>To enable Sfdt export for a document editor instance, set [`enableSfdtExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableSfdtExport) to true.
@@ -72,7 +51,6 @@ N>To enable Sfdt export for a document editor instance, set [`enableSfdtExport`]
 
 The following example shows how to export the document as Word document (.docx).
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -92,27 +70,6 @@ The following example shows how to export the document as Word document (.docx).
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-docx/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-docx/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-docx/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-docx/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
 
 N>To enable word export for a document editor instance, set [`enableWordExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableWordExport) to true.
 
@@ -122,7 +79,6 @@ The following example shows how to export the document as Word Template (.dotx).
 
 >Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../asp-net-core/import#why-the-document-pagination-differs-from-microsoft-word)
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -142,32 +98,11 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-dotx/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-dotx/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-dotx/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-dotx/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
 
 ## Text export
 
 The following example shows how to export document as text document (.txt).
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -187,36 +122,12 @@ The following example shows how to export document as text document (.txt).
 {% endhighlight %}
 {% endtabs %}
 
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-txt/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-txt/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-txt/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-txt/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-{% endif %}
-
-
 
 N>To enable text export for a document editor instance, set [`enableTextExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableTextExport) to true.
 
 ## Export as blob
 
 Document editor also supports API to store the document into a blob.
-
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -231,23 +142,6 @@ Document editor also supports API to store the document into a blob.
 {% endhighlight %}
 {% highlight c# tabtitle="Export-blob.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-blob/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Export-blob.cs" %}
-{% endhighlight %}{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-blob/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Export-blob.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
 
 
 
@@ -272,7 +166,6 @@ public HttpResponseMessage ExportAsRtf()
 
 In client-side, you can consume this web service and save the document as Rich Text Format (.rtf) file.
 
-{% if page.publishingplatform == "aspnet-core" %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -280,17 +173,6 @@ In client-side, you can consume this web service and save the document as Rich T
 {% endhighlight %}
 {% highlight c# tabtitle="Export-rtf.cs" %}
 {% endhighlight %}{% endtabs %}
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/export-rtf/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Export-rtf.cs" %}
-{% endhighlight %}{% endtabs %}
-{% endif %}
-
 
 
 ## See Also

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Keyboard Shortcut in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about keyboard shortcut in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcut in Document Editor Component | Syncfusion
+description: Learn here all about keyboard shortcut in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Keyboard Shortcut
 publishingplatform: ##Platform_Name##

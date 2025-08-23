@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Security Advisories in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about Security Advisories in  ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Security Advisories in Document Editor Control | Syncfusion
+description: Learn here all about Security Advisories in  Document Editor component of Syncfusion Essential JS 2 and more.
 control: Security advisories 
 platform: ej2-asp-core-mvc
 publishingplatform: ##Platform_Name##

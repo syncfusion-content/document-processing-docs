@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about styles in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Styles in Document Editor Component | Syncfusion
+description: Learn here all about styles in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Styles
 publishingplatform: ##Platform_Name##

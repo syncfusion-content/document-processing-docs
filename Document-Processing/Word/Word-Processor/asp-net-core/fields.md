@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fields ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about Fields in Syncfusion ##Platform_Name## Document Editor Component
+title: Fields in Document Editor Component | Syncfusion
+description: Learn here all about Fields in Syncfusion Document Editor Component
 platform: ej2-asp-core-mvc
 control: Fields
 publishingplatform: ##Platform_Name##

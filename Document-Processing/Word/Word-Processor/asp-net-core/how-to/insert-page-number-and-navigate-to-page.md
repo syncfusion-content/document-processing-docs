@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Insert Page number and Navigate to specific page ##Platform_Name## Document Editor Component
-description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion ##Platform_Name## Document Editor Component
+title: Insert Page number and Navigate to specific page Document Editor Component
+description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion Document Editor Component
 platform: ej2-asp-core-mvc
 control: Insert Page number And Navigate To Specific Page
 publishingplatform: ##Platform_Name##

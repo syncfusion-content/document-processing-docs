@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about print in Syncfusion ##Platform_Name## Document Editor control of Syncfusion Essential JS 2 and more.
+title: Print in Document Editor Control | Syncfusion
+description: Learn here all about print in Syncfusion Document Editor control of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Print
 publishingplatform: ##Platform_Name##

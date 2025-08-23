@@ -1,7 +1,7 @@
 ---
 layout: post
-title: how to change the default search highlight color ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn how to change the default search highlight color in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: how to change the default search highlight color Document Editor Component | Syncfusion
+description: Learn how to change the default search highlight color in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Change The Default Search Highlight Color
 publishingplatform: ##Platform_Name##

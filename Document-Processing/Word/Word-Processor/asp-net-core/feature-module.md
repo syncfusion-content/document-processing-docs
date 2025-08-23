@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Feature Module in ##Platform_Name## Document Editor Component
-description: Learn here all about Feature Module in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Feature Module in Document Editor Component | Syncfusion
+description: Learn here all about Feature Module in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Feature Module
 publishingplatform: ##Platform_Name##

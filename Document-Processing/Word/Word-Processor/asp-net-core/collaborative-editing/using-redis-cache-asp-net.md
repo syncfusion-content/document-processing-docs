@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Collaborative Editing in ##Platform_Name## Document Editor Control | Syncfusion
+title: Collaborative Editing in Document Editor Control | Syncfusion
 component: DocumentEditor
-description: Learn how to enable and perform collaborative editing in Syncfusion ##Platform_Name## Document editor.
+description: Learn how to enable and perform collaborative editing in Syncfusion Document editor.
 platform: ej2-asp-core-mvc
 publishingplatform: ##Platform_Name##
 documentation: ug

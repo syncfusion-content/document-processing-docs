@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Syncfusion ##Platform_Name## Document Editor Control
-description: Checkout and learn about getting started with ##Platform_Name## Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Syncfusion Document Editor Control
+description: Checkout and learn about getting started with Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: ej2-asp-core-mvc
 control: Getting Started Core
 publishingplatform: ##Platform_Name##

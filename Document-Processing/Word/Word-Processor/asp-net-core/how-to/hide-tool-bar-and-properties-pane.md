@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hide the default tool bar and properties pane in ##Platform_Name## Document Editor Component
-description: Learn how to hide the default tool bar properties pane from the Syncfusion ##Platform_Name## Document Editor Component
+title: Hide the default tool bar and properties pane in Document Editor Component
+description: Learn how to hide the default tool bar properties pane from the Syncfusion Document Editor Component
 platform: ej2-asp-core-mvc
 control: Hide The Default Tool Bar And Properties Pane
 publishingplatform: ##Platform_Name##

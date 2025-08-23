@@ -1,7 +1,7 @@
 ---
 layout: post
-title: how to enable ruler in ##Platform_Name## Document Editor Component
-description: Learn how to enable ruler in ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: how to enable ruler in Document Editor Component
+description: Learn how to enable ruler in Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Enable Ruler
 publishingplatform: ##Platform_Name##

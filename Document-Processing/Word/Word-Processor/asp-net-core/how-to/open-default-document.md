@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Default Document in ##Platform_Name## Document Editor Component
-description: Learn here all about how to open default document in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Open Default Document in Document Editor Component
+description: Learn here all about how to open default document in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-asp-core-mvc
 control: Open Default Document
 publishingplatform: ##Platform_Name##
