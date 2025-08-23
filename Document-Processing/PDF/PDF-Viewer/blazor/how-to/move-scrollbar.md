@@ -1,28 +1,30 @@
 ---
 layout: post
 title: Move the scrollbar to the exact location of annotations | Syncfusion
-description: Learn here all about move scrollbar to the exact location of annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Learn here all about move scrollbar to the exact location of annotations in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
 # Move the scrollbar to the exact location of annotations
 
-The Syncfusion&reg; Blazor PDF Viewer component allows you to move the scrollbar to the exact location of annotations present in a loaded PDF document using the **GoToBookmark** method.
+The Syncfusion&reg; Blazor SfPdfViewer component allows you to move the scrollbar to the exact location of annotations present in a loaded PDF document using the [GoToBookmarkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GoToBookmarkAsync_System_Int32_System_Double_) method.
 
 The following code example shows how to move the scrollbar to annotation location.
 
-```csharp
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
 
 <button @onclick="navigate">Navigation</button>
 
-<SfPdfViewerServer @ref="PdfViewer" DocumentPath="@DocumentPath">
+<SfPdfViewer2 @ref="PdfViewer" DocumentPath="@DocumentPath">
     <PdfViewerEvents DocumentLoaded="DocumentLoad"></PdfViewerEvents>
-</SfPdfViewerServer>
+</SfPdfViewer2>
 
-@code{
-    SfPdfViewerServer PdfViewer;
+@code {
+    SfPdfViewer2 PdfViewer;
     public string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
     public Dictionary<int, System.Drawing.SizeF> pageSize { get; set; }
 
@@ -33,14 +35,14 @@ The following code example shows how to move the scrollbar to annotation locatio
 
     private async void navigate()
     {
-        var annotationCollection = await PdfViewer.GetAnnotations();
+        var annotationCollection = await PdfViewer.GetAnnotationsAsync();
         var pageNumber = (annotationCollection[0].PageNumber);
         var Y = annotationCollection[0].Bound.Top;
-        await PdfViewer.GoToBookmark(pageNumber, (pageSize[pageNumber].Height - Y));
+        await PdfViewer.GoToBookmarkAsync(pageNumber, (pageSize[pageNumber].Height - Y));
     }
 
 }
 
 ```
 
-Find the sample [How to move the scrollbar to exact location of annotations](https://www.syncfusion.com/downloads/support/directtrac/general/ze/TestApp-1621872311)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Move%20scrollbar%20programmatically).

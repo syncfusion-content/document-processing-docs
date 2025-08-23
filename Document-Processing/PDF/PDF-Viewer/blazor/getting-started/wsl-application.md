@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Getting Started with PDF Viewer in Blazor WSL mode | Syncfusion
-description: Learn how to getting started with PDF Viewer control in Blazor WSL (Windows Subsystem for Linux) mode. 
+title: Getting Started with SfPdfViewer in Blazor WSL mode | Syncfusion
+description: Learn how to getting started with SfPdfViewer control in Blazor WSL (Windows Subsystem for Linux) mode. 
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+# Getting Started with Blazor PDF Viewer in WSL mode
 
-# Getting Started with Blazor PDF Viewer Component in WSL mode
-
-To run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer in WSL (Windows Subsystem for Linux) mode, follow these steps:
+To run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next Gen) component in WSL (Windows Subsystem for Linux) mode, follow these steps:
 
 **Step 1:** Enable the Windows Subsystem for Linux and the Virtual Machine Platform.
 
@@ -45,7 +43,7 @@ On Ubuntu, create a new user with a username and password.
     rm packages-microsoft-prod.deb
 
     sudo apt-get update && \
-    sudo apt-get install -y dotnet-sdk-6.0
+    sudo apt-get install -y dotnet-sdk-7.0
 
 ```
 
@@ -61,37 +59,22 @@ If the above result is not shown, please run the comments below
     sudo apt remove netstandard*
     sudo apt-get remove dotnet-host
     sudo apt autoremove
-    sudo apt autoremove -y dotnet-sdk-6.0
+    sudo apt autoremove -y dotnet-sdk-7.0
     sudo apt-get update
     dotnet
-    sudo apt-get install -y dotnet-sdk-6.0
+    sudo apt-get install -y dotnet-sdk-7.0
     dotnet
     dotnet --info
 ```
-**Step 4:** Run the sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor PDF Viewer.
+**Step 4:** Now, run the server or webassembly sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor PDF Viewer component.
+
+![WSL-Mode](gettingstarted-images/WSL-Mode.png)
 
 N> If you encounter any issues while running in WSL (Windows Subsystem for Linux) mode, use the following instructions to resolve them.
 
 If the sample does not load the PDF file and throws an exception.
 
 ![Create-new-blazor-wsl-app](gettingstarted-images/exception.png)
-
-To resolve the issue, use the following codes to install the dependencies required for our Blazor PDF Viewer to run.
-
-Open the Ubuntu comment window and type the following comments.
-
-```
-    sudo cp -u /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
-```
-Blazor PDF Viewer uses libdl.so. It has a different name in different WSL Linux versions. To ensure its presence, check the following \wsl.localhost\Ubuntu\usr\lib\x86_64-linux-gnu location.
-
-![Create-new-blazor-wsl-app](gettingstarted-images/libdl.png)
-
-If it is in a different name like libdl.so.4, then change the comment as follows.
-
-```
-sudo cp -u /lib/x86_64-linux-gnu/libdl.so.4 /lib/x86_64-linux-gnu/libdl.so
-```
 
 Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor PDF Viewer dependencies for a Linux run.
 
@@ -106,3 +89,9 @@ Then, in the Ubuntu command window, run the following commands one by one to ins
 Close the project, reopen it, and run it in WSL mode. It will run properly.
 
 ![Create-new-blazor-wsl-app](gettingstarted-images/final.png)
+
+## See also
+
+* [Getting Started with Blazor PDF Viewer Component in Blazor Server App](./server-side-application)
+
+* [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](./web-assembly-application)

@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Events in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor PDF Viewer component and much more details.
+title: Events in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about events in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+# Events in Blazor SfPdfViewer Component
 
-# Events in Blazor PDF Viewer Component
-
-The events provided in PDF Viewer component are listed out as follows:
+The events provided in SfPdfViewer component are listed out as follows:
 
 |Name|Description|
 |---|---|
@@ -26,15 +24,16 @@ The events provided in PDF Viewer component are listed out as follows:
 |AnnotationSelected|Triggers when an annotation is selected over the page of the PDF document.|
 |AnnotationUnselected|Triggers when an annotation is unselected over the page of the PDF document.|
 |Created|Triggers when the PDFViewer component is created.|
+|DocumentEdited|Triggers when the PDF Document getting edited in SfPdfViewer.|
 |DocumentLoaded|Triggers while loading document into PdfViewer.|
 |DocumentLoadFailed|Triggers while loading document got failed in PdfViewer.|
 |DcoumentUnloaded|Triggers while close the document|
 |DownloadEnd|Triggers an event when the download actions is finished.|
 |DownloadStart|Triggers an event when the download action is started.|
-|ExportFailed|Triggers when an export annotations failed in the PDF Viewer.|
-|ExportStarted|Triggers when an exported annotations started in the PDF Viewer.|
-|ExportSucceed|Triggers when an export annotations succeed in the PDF Viewer.|
-|ExtractTextCompleted|Triggers when an text extraction is completed in the PDF Viewer.|
+|ExportFailed|Triggers when an export annotations failed in the SfPdfViewer.|
+|ExportStarted|Triggers when an exported annotations started in the SfPdfViewer.|
+|ExportSucceed|Triggers when an export annotations succeed in the SfPdfViewer.|
+|ExtractTextCompleted|Triggers when an text extraction is completed in the SfPdfViewer.|
 |ImportFailed|Triggers when an imports annotations failed in the PDF document.
 |ImportStarted|Triggers when an imported annotations started in the PDF document.|
 |ImportSucceed|Triggers when an imports annotations succeed in the PDF document.|
@@ -48,7 +47,7 @@ The events provided in PDF Viewer component are listed out as follows:
 |OnTextSearchStart|Triggers an event when the text search is started.|
 |OnTextSelectionEnd|Triggers an event when the text selection is finished.|
 |OnTextSelectionStart|Triggers an event when the text selection is started.|
-|OnThumbnailClick|Triggers an event when the thumbnail is clicked in the thumbnail panel of PDF Viewer.|
+|OnThumbnailClick|Triggers an event when the thumbnail is clicked in the thumbnail panel of SfPdfViewer.|
 |PageChanged|Triggers when there is change in current page number.|
 |PageMouseover|Triggers when mouse over the page.|
 |PrintEnd|Triggers an event when the print actions is finished.|
@@ -60,22 +59,27 @@ The events provided in PDF Viewer component are listed out as follows:
 |SignatureUnselected|Triggers when signature is unselected over the page of the PDF document.|
 |ZoomChanged|Triggers when there is change in the magnification value.|
 
-## Adding PDF Viewer events to Blazor component
+## Adding SfPdfViewer events to Blazor component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer events has to be wrapped inside the `PdfViewerEvents` tag.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer events has to be wrapped inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
 
 ```cshtml
-<SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px" >
-    <PdfViewerEvents DocumentLoaded="@DocumentLoaded"></PdfViewerEvents>
-</SfPdfViewerServer>
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%">
+    <PdfViewerEvents DocumentLoaded="DocumentLoaded"></PdfViewerEvents>
+</SfPdfViewer2>
 
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
     private void DocumentLoaded(LoadEventArgs args)
     {
         object PageData = args.PageData;
     }
 }
+
 ```
 
 ## Created event
@@ -85,12 +89,12 @@ The Created event is triggered when the PDFViewer component is rendered.
 The following code illustrates how to load PDF document on created event.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewerServer
-@using Syncfusion.Blazor.PdfViewer
 
-<SfPdfViewerServer DocumentPath="@DocumentPath" Width="560" Height="315">
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2  DocumentPath="@DocumentPath" Height="100%" Width="100%">
     <PdfViewerEvents Created="created"></PdfViewerEvents>
-</SfPdfViewerServer>
+</SfPdfViewer2>
 
 @code 
 {
@@ -107,7 +111,31 @@ The following code illustrates how to load PDF document on created event.
         DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
     }  
 }
-```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event).
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
+```
+
+## DocumentEdited Event
+
+The DocumentEdited Event is Triggered when the PDF document getting Edited. 
+
+The following code illustrates how to trigger the DocumentEdited Event. In that code , [EditingAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.EditingAction.html) provides the information related to document edited. 
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents DocumentEdited="@DocumentEdited"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task DocumentEdited(DocumentEditedEventArgs args) 
+    {
+        Console.WriteLine(args.EditingAction);
+    }	 
+}
+
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event)

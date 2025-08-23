@@ -1,43 +1,86 @@
 ---
 layout: post
 title: Overview of Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Blazor PDF Viewer component and much more details.
+description: Checkout and learn about overview of the Syncfusion Blazor SfPdfViewer component and much more details.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
-
 # Overview of Blazor PDF Viewer Component
 
-The [Blazor PDF Viewer component](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) allows to view, print, and annotate the PDF files in your Blazor applications and its key features are,
+The new Blazor SfPdfViewer component allows users to view, edit, print, and download PDF files without the web service dependency in Blazor applications. It is designed to be fast and responsive and comes with the same feature set as the previous PDF Viewer. It is easy to use and can be integrated into both Blazor Server and WASM applications with minimal effort.
+
+The Blazor SfPdfViewer component shares the same key features as the [Blazor PDF Viewer component](../../PDF-Viewer-Classic/blazor/overview), but this new component has some advantages over the old component.
+
+## Performance Improvement
+
+We have enhanced the performance in rendering, scrolling, zooming, panning, and printing.  
+
+## Elimination of Service Dependency
+The old PDF viewer component required a separate [Service URL](../../PDF-Viewer-Classic/blazor/getting-started/web-assembly-application) to load the document. However, in the [PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application), we have eliminated the need for a service URL. Now, the document can be loaded offline without making a service call. 
+
+## Common Package
+
+In the previous component, we had different packages for different operating systems such as [Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows), [Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux), and [OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX). In the [SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) version, we have introduced common packages that work across all environments. 
+
+## Reduced Server Calls
+
+The old PDF viewer component required numerous C# calls to retrieve document information such as text on the page, hyperlinks, and page images. In the PDF Viewer, we have shifted these functionalities to the client side, resulting in improved performance. 
+
+## Some of the key features are listed below
+
 * Accurate and reliable rendering of PDF pages.
 * Provides easy page navigation with,
-    * Thumbnail page view
-    * Bookmark panel
-    * Hyperlink navigation
-    * Table of content navigation
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#page-thumbnail-navigation)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#bookmark-navigation)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#hyperlink-navigation)
+    * [Table of content navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation#table-of-content-navigation)
 * Core interactions
-    * Zooming and panning
-    * Text searching
+    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/interaction#panning-mode)
+    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/text-search)
     * Text selection and copy
-* Print PDF file.
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/print) PDF file.
 * Annotate PDF with different types of annotations such as,
-    * Highlight, underline, and strikeout annotation
-    * Shape annotation: Rectangle, circle, polygon, line, and arrow.
-    * Stamp annotation: Built-in and custom stamp
-    * Measurement annotation
-    * Free text annotation
-    * Add a comment or note for all type of annotations
-* FormFilling
-* Handwritten Signature
+    * [Highlight](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/text-markup-annotation#highlight-a-text), [underline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/text-markup-annotation#underline-a-text), and [strikeout](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/text-markup-annotation#strikethrough-a-text) annotation
+    * [Shape annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/shape-annotation): Rectangle, circle, polygon, line, and arrow.
+    * [Stamp annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/stamp-annotation): Built-in and custom stamp
+    * [Measurement annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/measurement-annotation)
+    * [Free text annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/free-text-annotation)
+    * Add a [comment](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/comments) or [note](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/annotation/sticky-notes-annotation) for all type of annotations
+* [FormFilling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/form-filling)
+* [Handwritten Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/hand-written-signature)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
-<br />For **Blazor WebAssembly App**, use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.PdfViewer NuGet package. This component requires server-side processing to render the PDF files through web service.
-<br />For **Blazor Server App**, use the [SfPdfViewerServer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewerServer.SfPdfViewerServer.html) component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
-<br/>* For Windows, use [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows)
-<br/>* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
-<br/>* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
+### Supported Features: Desktop vs Mobile
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
+The table below provides a list of supported and non-supported features on both desktop and mobile devices.
+
+|Feature|Desktop|Mobile Devices|
+|--|--|--|	
+|Keyboard interaction|	Yes|	No|
+|Opening file different origin|	Yes|	Yes|
+|Saving a file to a different origin|	Yes	|Yes|
+|Toolbar|	Yes	|No|
+|Mobile toolbar|	No	|Yes|
+|Navigation toolbar|	Yes	|No|
+|Page Navigation|	Yes|	No|
+|Magnification|	Yes|	Yes|
+|Text search|	Yes|	Yes|
+|Text selection|	Yes|	No|
+|Pan mode|	Yes|	Yes|
+|Hand Written Signature|	Yes|	Yes|
+|Annotation rendering|	Yes|	Yes|
+|Annotation interaction|	Yes|	Yes|
+|Annotation property editing|	Yes|	No|
+|Add annotation through touch|	Yes|	No|
+|Import/export annotation|	Yes|	Yes|
+|From fields rendering|	Yes|	Yes|
+
+N> Enable desktop mode on mobile devices using the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) property to view the toolbar as in desktop.
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides the SfPdfViewer component for both Blazor Server and Blazor WebAssembly applications.
+<br />For both **Blazor WebAssembly App** and **Blazor Server App** use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.SfPdfViewer NuGet package. This component will not requires server-side processing to render the PDF files through web service.
+<br/>* For Windows, Linux and Mac (OSX) uses the sample Nuget [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
+
+N> You can refer to the [Blazor SfPdfViewer](
+https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer2/default-functionalities?theme=fluent) to understand how to explain core features of PDF Viewer.

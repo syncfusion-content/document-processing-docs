@@ -1,78 +1,82 @@
 ---
 layout: post
-title: Text Search in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about text search in Syncfusion Blazor PDF Viewer component and much more.
+title: Text Search in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about text search in Syncfusion Blazor SfPdfViewer component and much more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
-
-# Text Search in Blazor PDF Viewer Component
+# Text Search in Blazor SfPdfViewer Component
 
 You can find the specified text content in the PDF document using the built-in options provided with the toolbar. On initiating the search operation, the control searches for the specified text and highlights all the occurrences in the pages.
 
-![Text Search in Blazor PDFViewer](images/blazor-pdfviewer-text-search.png)
+![Text Search in Blazor SfPdfViewer](../../PDF-Viewer/blazor/images/blazor-pdfviewer-text-search.png)
 
-You can enable or disable the text search by setting the `EnableTextSearch` API.
+You can enable or disable the text search by setting the [EnableTextSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSearch) API.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewerServer
 
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableTextSearch="true"/>
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableTextSearch="true" />
 
 @code{
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
+
 ```
 
 Also, you can programmatically perform search operation as given in the following code example.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewerServer
+
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
 
 <div style="display:inline-block">
     <SfButton OnClick="OnSearchClick">Search Text</SfButton>
 </div>
+
 <div style="display:inline-block">
     <SfButton OnClick="OnSearchNext">Search Next</SfButton>
 </div>
+
 <div style="display:inline-block">
     <SfButton OnClick="OnSearchPrevious">Search Previous</SfButton>
 </div>
+
 <div style="display:inline-block">
     <SfButton OnClick="OnCancelSearch">Cancel Search</SfButton>
 </div>
 
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer" />
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
-@code{
-    SfPdfViewerServer Viewer;
+@code {
+    SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public void OnSearchClick(MouseEventArgs args)
+    public async void OnSearchClick(MouseEventArgs args)
     {
         //Here PDF is to be serached from the loaded document
-        Viewer.SearchText("pdf", false);
+        await Viewer.SearchTextAsync("pdf", false);
     }
 
-    public void OnSearchNext(MouseEventArgs args)
+    public async void OnSearchNext(MouseEventArgs args)
     {
-        Viewer.SearchNext();
+        await Viewer.SearchNextAsync();
     }
 
-    public void OnSearchPrevious(MouseEventArgs args)
+    public async void OnSearchPrevious(MouseEventArgs args)
     {
-        Viewer.SearchPrevious();
+        await Viewer.SearchPreviousAsync();
     }
 
-    public void OnCancelSearch(MouseEventArgs args)
+    public async void OnCancelSearch(MouseEventArgs args)
     {
-        Viewer.CancelTextSearch();
+        await Viewer.CancelTextSearchAsync();
     }
+
 }
-```
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap5) to understand how to explain core features of PDF Viewer.
+```

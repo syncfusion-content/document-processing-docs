@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Shape annotations in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about shape annotations in Syncfusion Blazor PDF Viewer component and more.
+title: Shape annotations in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about shape annotations in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer2/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+# Shape annotations in Blazor SfPdfViewer Component
 
-# Shape annotations in Blazor PDF Viewer Component
-
-The PDF Viewer control provides the options to add, edit and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:
+The SfPdfViewer control provides the options to add, edit and delete the shape annotations. The shape annotation types supported in the SfPdfViewer control are:
 
 * Line
 * Arrow
@@ -19,40 +17,43 @@ The PDF Viewer control provides the options to add, edit and delete the shape an
 * Circle
 * Polygon
 
-![Shape Annotation in Blazor PDFViewer](../images/blazor-pdfviewer-shape-annotation.png)
+![Shape Annotation in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-shape-annotation.png)
 
 ## Adding a shape annotation to the PDF document
 
 Shape annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+* Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
 * Click the **Shape Annotation** dropdown button. A dropdown pop-up will appear and shows the shape annotations to be added.
 * Select the shape types to be added to the page in the dropdown pop-up. It enables the selected shape annotation mode.
 * You can add the shapes over the pages of the PDF document.
 
-In the pan mode, if the shape annotation mode is entered, the PDF Viewer control will switch to text select mode.
+In the pan mode, if the shape annotation mode is entered, the SfPdfViewer control will switch to text select mode.
 
-![Adding Shapes in Blazor PDFViewer Toolbar](../images/blazor-pdfviewer-add-shape-in-toolbar.png)
+![Adding Shapes in Blazor SfPdfViewer Toolbar](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-add-shape-in-toolbar.png)
 
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewerServer
+
 @using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton OnClick="OnClick">Click Here</SfButton>
-<SfPdfViewerServer DocumentPath="@DocumentPath" @ref="viewer" Width="1060px" Height="500px">
-</SfPdfViewerServer>
+<SfButton OnClick="OnClick">Circle Annotation</SfButton>
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Width="100%"
+              Height="100%">
+</SfPdfViewer2>
 
-@code{
-    SfPdfViewerServer viewer;
-
-    public void OnClick(MouseEventArgs args)
+@code {
+    SfPdfViewer2 viewer;
+    public async void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.Circle);
+        await viewer.SetAnnotationModeAsync(AnnotationType.Circle);
     }
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
+
 ```
 
 ## Editing the properties of the shape annotation
@@ -63,74 +64,114 @@ The fill color, stroke color, thickness and opacity of the shape annotation can 
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Editing Fill Color in Blazor PDFViewer](../images/blazor-pdfviewer-edit-fill-color.png)
+![Editing Fill Color in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-edit-fill-color.png)
 
 ### Editing stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![Editing Shape Stroke Color in Blazor PDFViewer](../images/blazor-pdfviewer-edit-shape-stroke-color.png)
+![Editing Shape Stroke Color in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-edit-shape-stroke-color.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![Editing Shape Thickness in Blazor PDFViewer](../images/blazor-pdfviewer-shape-thickness.png)
+![Editing Shape Thickness in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-shape-thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![Editing Shape Opacity in Blazor PDFViewer](../images/blazor-pdfviewer-shape-opacity.png)
+![Editing Shape Opacity in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-shape-opacity.png)
 
 ### Editing the line properties
 
 The properties of the line shapes such as line and arrow annotations can be edited using the Line Properties window. It can be opened by selecting the Properties option in the context menu that appears on right clicking the line and arrow annotations.
 
 
-![Editing Line Property in Blazor PDFViewer](../images/blazor-pdfviewer-edit-line-property.png)
+![Editing Line Property in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-edit-line-property.png)
 
 ## Setting default properties during control initialization
 
 The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
 ```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.PdfViewerServer
 
-<SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" LineSettings="@LineSettings" ArrowSettings="@ArrowSettings" RectangleSettings="@RectangleSettings" CircleSettings="@CircleSettings" PolygonSettings="@PolygonSettings">
-</SfPdfViewerServer>
+@using Syncfusion.Blazor.SfPdfViewer
 
-@code{
-    SfPdfViewerServer viewer;
+<SfPdfViewer2 @ref="@viewer"
+              DocumentPath="@DocumentPath"
+              LineSettings="@LineSettings"
+              ArrowSettings="@ArrowSettings"
+              RectangleSettings="@RectangleSettings"
+              CircleSettings="@CircleSettings"
+              PolygonSettings="@PolygonSettings"
+              Width="100%"
+              Height="100%">
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    PdfViewerLineSettings LineSettings = new PdfViewerLineSettings { FillColor="blue", Opacity = 0.6 ,StrokeColor="green"};
-    PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings { FillColor="green", Opacity = 0.6 ,StrokeColor="blue"};
-    PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings { FillColor="yellow", Opacity = 0.6 ,StrokeColor="orange" };
-    PdfViewerCircleSettings CircleSettings = new PdfViewerCircleSettings { FillColor = "orange", Opacity = 0.6, StrokeColor = "pink" };
-    PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings {FillColor="pink", Opacity = 0.6 ,StrokeColor="yellow" };
+
+    PdfViewerLineSettings LineSettings = new PdfViewerLineSettings
+        {
+            FillColor = "blue",
+            Opacity = 0.6,
+            StrokeColor = "green"
+        };
+
+     PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings
+        {
+            FillColor = "green",
+            Opacity = 0.6,
+            StrokeColor = "blue"
+        };
+
+    PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings
+        {
+            FillColor = "yellow",
+            Opacity = 0.6,
+            StrokeColor = "orange"
+        };
+
+    PdfViewerCircleSettings CircleSettings = new PdfViewerCircleSettings
+        {
+            FillColor = "orange",
+            Opacity = 0.6,
+            StrokeColor = "pink"
+        };
+
+    PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings
+        {
+            FillColor = "pink",
+            Opacity = 0.6,
+            StrokeColor = "yellow"
+        };
 }
+
 ```
 
 ## Customize annotation selector
 
-You can customize the appearance of the annotation's selector using the [AnnotationSelectorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property of the [PdfViewerRectangleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerRectangleSettings.html) class.
+You can customize the appearance of the annotation's selector using the [AnnotationSelectorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSelectorSettings.html) property of the [PdfViewerRectangleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerRectangleSettings.html) class.
 
 The following code illustrates how to change the resizer shape of the shape annotation's selector.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewer
-@using Syncfusion.Blazor.PdfViewerServer
 
-<SfPdfViewerServer @ref="viewer" DocumentPath="@DocumentPath" Height="500px" Width="100%" RectangleSettings=@rectangleSettings>    
-</SfPdfViewerServer>
+@using Syncfusion.Blazor.SfPdfViewer
 
+<SfPdfViewer2 @ref="viewer"
+              DocumentPath="@DocumentPath"
+              Height="100" Width="100%"
+              RectangleSettings=@rectangleSettings>
+</SfPdfViewer2>
 
-@code{
+@code {
     //Sets the PDF document path for initial loading.
-    private string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
-    
-    SfPdfViewerServer viewer;
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    SfPdfViewer2 viewer;
 
     //Defines the settings of rectangle annotation.
     PdfViewerRectangleSettings rectangleSettings = new PdfViewerRectangleSettings
@@ -142,12 +183,192 @@ The following code illustrates how to change the resizer shape of the shape anno
             ResizerShape = AnnotationResizerShape.Circle
         }
     };
-    
 }
+
 ```
 
-![Custom Selector in Blazor PDFViewer](../images/CustomSelector.png)
+![Custom Selector in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/customselector.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Annotations/Selector/Customize%20annotation%20selector).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector).
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap5) to understand how to explain core features of PDF Viewer.
+## Add shape annotation Programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically add shape annotations such as Rectangle, Line, Arrow, Circle, and Polygon within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_)  method.
+
+Below is an example demonstrating how you can use this method to add shape annotation to a PDF document:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddShapeAnnotationAsync">Add Shape Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+
+    public async void AddShapeAnnotationAsync(MouseEventArgs args)
+    {
+        PdfAnnotation annotation = new PdfAnnotation();
+        // Set the Shape annotation type like Rectangle, Line, Arrow, Circle, Polygon.
+        annotation.Type = AnnotationType.Rectangle;
+        // Set the page number starts from 0. So, if set 0 it represents the page 1.
+        annotation.PageNumber = 0;
+
+        // Bound of the rectangle annotation
+        annotation.Bound = new Bound();
+        annotation.Bound.X = 200;
+        annotation.Bound.Y = 150;
+        annotation.Bound.Width = 300;
+        annotation.Bound.Height = 100;
+        // Add rectangle annotation
+        await Viewer.AddAnnotationAsync(annotation);
+    }
+}
+
+```
+This code will add a shape annotation to the first page of the PDF document.
+
+![Programmatically Added Shape annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-shape-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Shapes/Add).
+
+
+## Add and Delete multiple annotations at once in a PDF Viewer
+
+The PDF Viewer provides support to add and delete multiple annotations at once. we can programmatically create a collection of annotations, such as lines or shapes, and apply them to the document in one go using [AddAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation__). Similarly, the viewer allows you to retrieve and remove all annotations from the document efficiently using [DeleteAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation__). This capability is particularly useful for bulk annotation management within a Blazor application.
+
+
+The following code demonstrates how to add multiple annotations at once to PDF Viewer.
+
+```cshtml
+
+<SfButton OnClick="AddAnnotations">AddAnnotations</SfButton>
+<SfPdfViewer2 @ref="Viewer" 
+              DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
+ 
+
+@code {
+    SfPdfViewer2 Viewer;
+    
+    public async void AddAnnotations() 
+    {
+        List < PdfAnnotation > annotations = new List < PdfAnnotation > ();
+
+        PdfAnnotation annotation1 = new PdfAnnotation();
+        annotation1.Type = AnnotationType.Line;
+        annotation1.VertexPoints = new List <VertexPoint>() 
+        {
+            new VertexPoint() 
+            {
+                X = 200,
+                Y = 230
+            },
+            new VertexPoint() 
+            {
+                X = 350,
+                Y = 230
+            }
+        };
+        annotation1.PageNumber = 0;
+        annotations.Add(annotation1);
+
+        PdfAnnotation annotation2 = new PdfAnnotation();
+        annotation2.Type = AnnotationType.Circle;
+        annotation2.Bound = new Bound() 
+        {
+            X = 200,
+            Y = 300,
+            Width = 90,
+            Height = 90
+        };
+        annotation2.PageNumber = 0;
+        annotations.Add(annotation2);
+
+        // Add multiple annotations at once
+        await Viewer.AddAnnotationsAsync(annotations);
+    }
+}
+    
+```
+
+The following code demonstrates how to delete multiple annotations at once in PDF Viewer.
+
+```cshtml
+
+<SfButton OnClick="DeleteAnnotations">DeleteAnnotations</SfButton>
+<SfPdfViewer2 @ref="Viewer" 
+              DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2 Viewer;
+    
+    public async void DeleteAnnotations()
+    {
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        // Delete multiple annotations at once
+        await Viewer.DeleteAnnotationsAsync(annotationCollection);
+    }
+}
+
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Add%20and%20Delete%20Annotations%20as%20collection).
+
+
+## Edit shape annotation Programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically edit the shape annotation such as Rectangle, Line, Arrow, Circle, and Polygon within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can utilize this method to edit the shape annotation programmatically:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@EditShapeAnnotationAsync">Edit Shape Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+
+    public async void EditShapeAnnotationAsync(MouseEventArgs args)
+    {
+        // Get annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        // Select the annotation want to edit
+        PdfAnnotation annotation = annotationCollection[0];
+        // Change the fill color of rectangle annotation
+        annotation.FillColor = "#FFFF00";
+        // Change the stroke color of rectangle annotation
+        annotation.StrokeColor = "#0000FF";
+        // Change the thickness of rectangle annotation
+        annotation.Thickness = 3;
+        // Change the Opacity (0 to 1) of rectangle annotation
+        annotation.Opacity = 0.5;
+        // Edit the rectangle shape annotation
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code snippet will edit the shape annotation programmatically within the SfPdfViewer control.
+
+![Programmatically Edit Shape Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-shape-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Shapes/Edit).
+
+## See also
+
+* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
