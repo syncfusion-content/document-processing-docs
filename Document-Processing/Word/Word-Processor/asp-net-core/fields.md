@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Fields in Document Editor Component | Syncfusion
-description: Learn here all about Fields in Syncfusion Document Editor Component
+description: Learn here all about overview of Fields in ##Platform_Name## Syncfusion Document Editor Component.
 platform: ej2-asp-core-mvc
 control: Fields
 publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
-# Fields
+# Fields in Document Editor Component
 
 Document Editor has preservation support for all types of fields in an existing word document without any data loss.
 

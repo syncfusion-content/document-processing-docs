@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# History
+# History in Document Editor Component
 
 Document editor tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 

@@ -157,7 +157,7 @@ Document editor provides an option to protect and unprotect document using `enfo
 {% endtabs %}
 
 
-Comment only protection can be enabled in UI by using [Restrict Editing pane](../asp-net-core/document-management#restrict-editing-pane/)
+Comment only protection can be enabled in UI by using [Restrict Editing pane](../asp-net-core/restrict-editing#restrict-editing-pane)
 
 ![Enable comment only protection](images/commentsonly.png)
 

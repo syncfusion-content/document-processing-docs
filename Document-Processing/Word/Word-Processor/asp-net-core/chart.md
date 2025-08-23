@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Chart
+# Chart in Document Editor Component
 
 Document Editor provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 

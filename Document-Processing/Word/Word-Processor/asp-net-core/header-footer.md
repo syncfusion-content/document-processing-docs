@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Headers and Footers
+# Headers and Footers in Document Editor Component
 
 Document editor supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 

@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Bookmarks
+# Bookmarks in Document Editor Component
 
 Bookmark is a powerful tool that helps to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
