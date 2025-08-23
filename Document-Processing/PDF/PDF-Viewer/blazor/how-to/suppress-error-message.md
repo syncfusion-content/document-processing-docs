@@ -1,30 +1,32 @@
 ---
 layout: post
-title: Suppress the error dialog in the Blazor PDF Viewer | Syncfusion
-description: Learn here all about how to suppress the error dialog in Syncfusion Blazor PDF Viewer component and more.
+title: Suppress the error dialog in the Blazor SfPdfViewer | Syncfusion
+description: Learn here all about how to suppress the error dialog in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Suppress the error dialog in Blazor PDF Viewer Component
+# Suppress the error dialog in Blazor SfPdfViewer Component
 
-The Syncfusion&reg; Blazor PDF Viewer component allows you to suppress or disable the error dialog box displayed in the PDF Viewer using the [**EnableErrorDialog**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_EnableErrorDialog) property. The default value of the property is `true`.
+The Syncfusion&reg; Blazor SfPdfViewer component allows you to suppress or disable the error dialog box displayed in the SfPdfViewer using the [**EnableErrorDialog**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableErrorDialog) property. The default value of the property is `true`.
 
 The following code example shows how to suppress the error dialog.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer @ref="PdfViewer" ServiceUrl="https://localhost:44399/pdfviewer"  DocumentPath="@DocumentPath" EnableErrorDialog="false" Height="500px" Width="1060px">
-</SfPdfViewer>
+<SfPdfViewer2 @ref="PdfViewer"
+              DocumentPath="@DocumentPath"
+              EnableErrorDialog="false"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
 
 @code{
-    SfPdfViewer PdfViewer;
+    SfPdfViewer2 PdfViewer;
     private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
 }
 ```
  
-Find the sample, [How to suppress the error dialog in the Blazor PDF Viewer](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAsssembly1506143488)
-
-N> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain the core features of the PDF Viewer.
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Supress%20the%20Error%20Dialog)

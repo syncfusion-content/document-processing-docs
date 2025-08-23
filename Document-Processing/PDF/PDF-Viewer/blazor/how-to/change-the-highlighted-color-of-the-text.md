@@ -1,40 +1,39 @@
 ---
 layout: post
-title: Change the text highlight color in Blazor PDF Viewer | Syncfusion
-description: Learn here all about how to change the highlighted color of the text in Syncfusion Blazor PDF Viewer component.
+title: Change highlight color text in Blazor PDF Viewer | Syncfusion
+description: Learn here all about how to change the highlighted color of the text in Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Change the highlight color of the text in Blazor PDF Viewer Component
+# Change the highlight color of the text in Blazor SfPdfViewer Component
 
-You can change the highlight color of the selected annotation using the `Color` property of the [PdfViewerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerHighlightSettings.html) class.
+You can change the highlight color of the selected annotation using the `Color` property of the [PdfViewerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerHighlightSettings.html) class.
 
 The following code illustrates how to change the highlight color of the text.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 
 <!--Render simple PDF Viewer with customized highlight options-->
-<SfPdfViewer @ref="PDFViewer" 
-             DocumentPath="@DocumentPath" 
-             ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer">
-    <PdfViewerHighlightSettings Color="@highlightColor"></PdfViewerHighlightSettings>
-</SfPdfViewer>
+<SfPdfViewer2 @ref="PDFViewer"
+              DocumentPath="@DocumentPath">
+    <PdfViewerHighlightSettings Color="@highlightColor">
+    </PdfViewerHighlightSettings>
+</SfPdfViewer2>
 
 @code{
-    SfPdfViewer PDFViewer;
-
+    SfPdfViewer2 PDFViewer;
     //Sets the PDF document path for initial loading.
-    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
+    private string DocumentPath { get; set; } = "Data/PDF_Succinctly.pdf";
 
     //Defines the color for text markup annotations like highlight.
     private string highlightColor = "Green";
 
 }
 ```
-![Highlight Text in Blazor PDFViewer](../images/HighlightText.png)
+![Highlight Text in Blazor PDFViewer](../../../PDF-Viewer/blazor/images/highlighttext.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Annotations/Text%20Markup/Customize%20highlight%20annotation).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Text%20Markup/Customize%20highlight%20annotation).

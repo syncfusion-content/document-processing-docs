@@ -1,55 +1,58 @@
 ---
 layout: post
 title: Identify if the Viewer has values in the Undo, Redo stack | Syncfusion
-description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion Blazor PDF Viewer component and more.
+description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Identify if the PDF Viewer has values in the Undo, Redo collections
+# Identify if the SfPdfViewer has values in the Undo, Redo collections
 
-Syncfusion&reg; Blazor PDF Viewer component allows you to identify if the PDF Viewer has values in the Undo and Redo collections using the `CanUndo` and `CanRedo` APIs of the PDF Viewer.
+Syncfusion&reg; Blazor SfPdfViewer component allows you to identify if the SfPdfViewer has values in the Undo and Redo collections using the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) APIs of the SfPdfViewer.
 
 The following code example shows how to achieve this based on the Undo Redo actions.
 
-```csharp
+```cshtml
 
-@using Syncfusion.Blazor.PdfViewer
-@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 @if (canUndo)
 {
     <button @onclick="undo">Undo</button>
 }
+
 else
 {
     <button @onclick="undo" disabled>Undo</button>
 }
+
 @if (canRedo)
 {
     <button @onclick="redo">Redo</button>
 }
+
 else
 {
     <button @onclick="redo" disabled>Redo</button>
 }
-<SfPdfViewerServer @ref="@viewer"
-                   @bind-CanUndo="@canUndo"
-                   @bind-CanRedo="@canRedo"
-                   DocumentPath="@DocumentPath"
-                   Height="540px"
-                   Width="100%">
-</SfPdfViewerServer>
 
-@code 
+<SfPdfViewer2 @ref="@viewer"
+              @bind-CanUndo="@canUndo"
+              @bind-CanRedo="@canRedo"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
+
+@code
 {
-    SfPdfViewerServer viewer;
+    SfPdfViewer2 viewer;
     bool canUndo = true;
     bool canRedo = true;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    
+
     // Event triggers on Undo button click.
     private async Task undo()
     {
@@ -66,3 +69,5 @@ else
 }
 
 ```
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Identify%20the%20PdfViewer%20has%20Undo%2C%20Redo)

@@ -1,31 +1,34 @@
 ---
 layout: post
-title: Check the status of annotations in Blazor PDF Viewer | Syncfusion
-description: Learn here all about how to check the status of annotations or comments in Syncfusion Blazor PDF Viewer component and more.
+title: Check the status of annotations in Blazor SfPdfViewer | Syncfusion
+description: Learn here all about how to check the status of annotations or comments in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Check the status of annotations in Blazor PDF Viewer Component
+# Check the status of annotations or comments in Blazor SfPdfViewer
 
-The Syncfusion&reg; Blazor PDF Viewer component allows to check the status of the annotations in the PDF viewer using the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfAnnotation.html) class.
+The Syncfusion&reg; Blazor SfPdfViewer component allows to check the status of the annotations in the SfPdfViewer using the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) class.
 
 The following code example shows the review status of the annotation.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewer
-@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 @inject IJSRuntime JsRuntime;
 
 <SfButton OnClick="reviewStatus">Review Status</SfButton>
-<SfPdfViewerServer @ref="pdfviewer" CommentPanelVisible="true" DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
+<SfPdfViewer2 @ref="pdfviewer"
+              CommentPanelVisible="true"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%"></SfPdfViewer2>
 
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    SfPdfViewerServer pdfviewer;    
+    SfPdfViewer2 pdfviewer;    
 
     //Prints the comment status of the PDF document in console.
     public async void reviewStatus()
@@ -44,4 +47,14 @@ The following code example shows the review status of the annotation.
     }
 }
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status).
+
+## See also
+
+* [Free text annotations in Blazor SfPdfViewer Component](../annotation/free-text-annotation)
+
+* [Ink Annotation in the Blazor SfPdfViewer component](../annotation/ink-annotation)
+
+* [Stamp annotations in Blazor SfPdfViewer Component](../annotation/stamp-annotation)
+
+* [Comments in Blazor SfPdfViewer Component](../annotation/comments)

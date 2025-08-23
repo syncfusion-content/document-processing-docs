@@ -32,4 +32,4 @@ The [`ASP.NET MVC`](https://www.syncfusion.com/aspnet-mvc-ui-controls/pdf-viewer
 * [React](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started)
 * [Vue](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started)
 * [ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started)
-* [Blazor](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/features)
+* [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)
