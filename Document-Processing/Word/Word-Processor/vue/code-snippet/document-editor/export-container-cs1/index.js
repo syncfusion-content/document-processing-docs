@@ -15,7 +15,7 @@ new Vue({
     `,
 
     data(){
-        return { serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//' }
+        return { serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/' }
     },
     provide: {
         //Inject require modules.

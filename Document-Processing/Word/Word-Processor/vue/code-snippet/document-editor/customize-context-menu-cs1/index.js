@@ -20,7 +20,7 @@ new Vue({
     data() {
       return {
         serviceUrl:
-          'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//',
+          'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
       };
     },
     provide: {

@@ -21,7 +21,7 @@ export default {
             let editor = this.$refs.doceditcontainer.ej2Instances.documentEditor;
             //Open the default document in Document Editor.
             editor.open(sfdt);
-            this.$refs.doceditcontainer.ej2Instances.serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//';
+            this.$refs.doceditcontainer.ej2Instances.serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
       },
       provide: {
             DocumentEditorContainer: [Toolbar]

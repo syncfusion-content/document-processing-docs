@@ -14,7 +14,7 @@ onMounted(function () {
       let editor = doceditcontainer.value.ej2Instances.documentEditor;
       //Open the default document in Document Editor.
       editor.open(sfdt);
-      doceditcontainer.value.ej2Instances.serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//';
+      doceditcontainer.value.ej2Instances.serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
 })
 provide('DocumentEditorContainer', [Toolbar]);
 

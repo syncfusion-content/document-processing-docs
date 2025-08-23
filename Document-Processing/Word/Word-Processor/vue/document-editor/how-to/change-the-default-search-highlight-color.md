@@ -29,7 +29,7 @@ The following example code illustrates how to change the default search highligh
 import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 import { provide } from 'vue';
 
-const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//';
+const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
 // Add required color to change the default search highlight color
 const settings = { searchHighlightColor: 'Grey' }
 
@@ -56,7 +56,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//',
+      serviceUrl: 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
       // Add required color to change the default search highlight color
       settings: { searchHighlightColor: 'Grey' }
     }
@@ -71,7 +71,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor//` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Output will be like below:
 

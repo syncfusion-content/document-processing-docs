@@ -58,7 +58,7 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { provide, ref } from 'vue';
 
 const container = ref(null);
-const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//';
+const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar]);
@@ -90,7 +90,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//',
+        'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
     };
   },
   provide: {
@@ -112,7 +112,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor//` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Document editor have [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#selectionchange) event which is triggered whenever the selection changes in Document.
 

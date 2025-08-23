@@ -14,7 +14,7 @@ import {
 import { createSpinner, showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
 
 const container = ref(null);
-const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//';
+const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
 
 provide('DocumentEditorContainer', [Toolbar],);
 

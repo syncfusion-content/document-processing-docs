@@ -32,7 +32,7 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { provide, ref } from 'vue';
 
 const container = ref(null);
-const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//';
+const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar]);
@@ -73,7 +73,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//',
+        'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
     };
   },
   provide: {
@@ -103,7 +103,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor//` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 To get the bookmark content as SFDT (rich text), please check this [`link`](../../document-editor/how-to/get-the-selected-content#get-the-selected-content-as-sfdt-rich-text)
 
@@ -127,7 +127,7 @@ import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar
 import { provide, ref } from 'vue';
 
 const container = ref(null);
-const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//';
+const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
 
 //Inject require modules.
 provide('DocumentEditorContainer', [Toolbar]);
@@ -164,7 +164,7 @@ export default {
   data() {
     return {
       serviceUrl:
-        'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//',
+        'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
     };
   },
   provide: {
@@ -190,4 +190,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor//` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

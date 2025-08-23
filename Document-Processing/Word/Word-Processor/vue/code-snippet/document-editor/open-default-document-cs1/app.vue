@@ -12,7 +12,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor//',
+      serviceUrl: 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
       height: '370px'
     }
   },
