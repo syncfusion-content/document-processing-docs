@@ -24,7 +24,8 @@ DocumentEditorContainer allows to customize (add, show, hide, enable, and disabl
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/custom-toolbar/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Custom-toolbar.cs" %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/custom-toolbar/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 

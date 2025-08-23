@@ -20,8 +20,10 @@ DocumentEditorContainer allows you to add a new button to the existing items in 
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/add-save-button-in-toolbar/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Add-save-button-in-toolbar.cs" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/add-save-button-in-toolbar/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 N> Default value of `ToolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']`.

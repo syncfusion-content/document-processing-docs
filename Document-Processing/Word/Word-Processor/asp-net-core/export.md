@@ -133,14 +133,16 @@ Document editor also supports API to store the document into a blob.
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/export-blob/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Export-blob.cs" %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/export-blob/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/export-container-blob/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Export-blob.cs" %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/export-container-blob/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 
@@ -171,7 +173,8 @@ In client-side, you can consume this web service and save the document as Rich T
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/export-rtf/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Export-rtf.cs" %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/export-rtf/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 

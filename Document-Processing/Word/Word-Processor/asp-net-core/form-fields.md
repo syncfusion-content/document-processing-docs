@@ -111,7 +111,8 @@ Document editor provides an option to protect and unprotect document using `enfo
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/protect-unprotect/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Protect-unprotect.cs" %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/protect-unprotect/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 

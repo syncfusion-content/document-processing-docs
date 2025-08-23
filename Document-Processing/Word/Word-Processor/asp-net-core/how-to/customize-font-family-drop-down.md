@@ -20,7 +20,8 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/font-family/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Font-family.cs" %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/font-family/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 

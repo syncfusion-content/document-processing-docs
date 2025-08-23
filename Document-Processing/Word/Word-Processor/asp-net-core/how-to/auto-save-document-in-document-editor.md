@@ -20,8 +20,10 @@ This article explains how to autosave the document in AWS S3. You can automatica
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/auto-save/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Auto-save.cs" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 * Configure the access key and secret key in `web.config` file and register profile in `startup.cs`.

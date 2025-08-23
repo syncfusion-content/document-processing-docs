@@ -45,8 +45,10 @@ Document editor exposes API to enable local paste within the control. On enablin
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/clipboard/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Clipboard.cs" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/clipboard/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 By default, **enableLocalPaste** is false. When local paste is enabled for a document editor instance, you can paste contents programmatically if the internal clipboard has stored data during last copy operation.

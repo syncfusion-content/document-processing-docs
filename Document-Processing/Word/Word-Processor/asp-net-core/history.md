@@ -22,7 +22,8 @@ Inject the `EditorHistory` module in your application to provide history preserv
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/history/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="History.cs" %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/history/document-editor.cs %}
 {% endhighlight %}{% endtabs %}
 
 

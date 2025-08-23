@@ -68,6 +68,8 @@ The following code shows how to add a sub items in the custom option in context 
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/customize-sub-context-menu/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Customize-sub-context-menu" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/customize-sub-context-menu/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
