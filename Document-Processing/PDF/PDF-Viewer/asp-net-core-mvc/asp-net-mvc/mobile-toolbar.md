@@ -14,7 +14,7 @@ The Mobile PDF Viewer offers a variety of features for viewing, searching, annot
 ## Mobile Mode Toolbar Configuration
 In mobile mode, the toolbar is optimized for ease of use on small screens, presenting users with the most common actions for interacting with a PDF document. Below are the key features available in mobile mode:
 
-![Mobile toolbar with primary PDF interaction options](./images/mobileToolbar.png)
+![Mobile toolbar with primary PDF interaction options](../images/mobileToolbar.png)
 
 ### Main Toolbar Options:
 
@@ -22,17 +22,17 @@ In mobile mode, the toolbar is optimized for ease of use on small screens, prese
 
 **SearchOption:** Access the search bar to find text within the document.
 
-![Search bar displayed for finding text within a PDF](./images/searchOption.png)
+![Search bar displayed for finding text within a PDF](../images/searchOption.png)
 
 **UndoRedoTool:** Quickly undo or redo any annotations made.
 
 **OrganizePagesTool:** Enable or disable page organization features to modify document pages.
 
-![Page organization interface for modifying PDF pages](./images/organizePages.png)
+![Page organization interface for modifying PDF pages](../images/organizePages.png)
 
 **AnnotationEditTool:** Activate or deactivate annotation editing to add or modify annotations.
 
-![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](./images/editAnnotation.png)
+![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](../images/editAnnotation.png)
 
 
 N> In mobile mode, the annotation toolbar is conveniently displayed at the bottom of the viewer.
@@ -45,7 +45,7 @@ When you open the "more options" menu, you will see additional actions such as:
 
 **BookmarkOption:** Allows you to view bookmarks within the document.
 
-![More options menu showing additional actions like download and bookmark](./images/more-options.png)
+![More options menu showing additional actions like download and bookmark](../images/more-options.png)
 
 ## Enabling Desktop Mode in Mobile
 
