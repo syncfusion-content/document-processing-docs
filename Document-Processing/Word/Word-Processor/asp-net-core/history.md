@@ -24,7 +24,8 @@ Inject the `EditorHistory` module in your application to provide history preserv
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
 {% include code-snippet/document-editor/asp-net-core/document-editor/history/document-editor.cs %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 You can enable or disable history preservation for a document editor instance any time using the `enableEditorHistory` property.

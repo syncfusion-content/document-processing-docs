@@ -23,7 +23,7 @@ Document Editor allows to add custom option in context menu. It can be achieved 
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/add-custom-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/add-custom-menu/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/add-custom-menu/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,7 +43,7 @@ Using `addCustomMenu()` method, you can hide the default context menu, by settin
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/hide-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hide-context-menu/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/hide-context-menu/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,7 +58,7 @@ The following code shows how to hide or show added custom option in context menu
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/customize-context-menu/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/customize-context-menu/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/customize-context-menu/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
