@@ -42,7 +42,7 @@ You can enable/disable page navigation option in PDF Viewer using the following 
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/navigation.png)
+![Alt text](../images/navigation.png)
 
 ## Bookmark navigation
 
@@ -66,7 +66,7 @@ You can enable/disable bookmark navigation by using the following code snippet.,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/bookmark.png)
+![Alt text](../images/bookmark.png)
 
 ## Thumbnail navigation
 
@@ -90,13 +90,13 @@ You can enable/disable thumbnail navigation by using the following code snippet.
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/thumbnail.png)
+![Alt text](../images/thumbnail.png)
 
 ## Hyperlink navigation
 
 Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
 
-![Alt text](./images/link.png)
+![Alt text](../images/link.png)
 
 ## Table of content navigation
 
@@ -140,7 +140,7 @@ You can change the open state of the hyperlink in the PDF Viewer by using the fo
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/toc.png)
+![Alt text](../images/toc.png)
 
 ## See also
 

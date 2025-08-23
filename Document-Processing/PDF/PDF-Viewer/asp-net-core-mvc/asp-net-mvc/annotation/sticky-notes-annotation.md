@@ -12,7 +12,7 @@ documentation: ug
 
 The PDF Viewer control provides the options to add, edit, and delete the sticky note annotations in the PDF document.
 
-![StickyNotesAnnotation](../images/stickynotes_annotation.png)
+![StickyNotesAnnotation](../../images/stickynotes_annotation.png)
 
 ## Adding a sticky note annotation to the PDF document
 
@@ -22,7 +22,7 @@ Sticky note annotations can be added to the PDF document using the annotation to
 * Click the position where you want to add sticky note annotation in the PDF document.
 * Sticky note annotation will be added in the clicked positions.
 
-![StickyNotesTool](../images/stickynotes_tool.png)
+![StickyNotesTool](../../images/stickynotes_tool.png)
 
 Annotation comments can be added to the PDF document using the comment panel.
 
@@ -31,7 +31,7 @@ Annotation comments can be added to the PDF document using the comment panel.
 * Now, you can add Comments, Reply, and Status using the Comment Panel.
 * Now, you can add Comments, Reply, and Status using the Comment Panel.
 
-![StickyNotesComment](../images/stickynotes_comment.png)
+![StickyNotesComment](../../images/stickynotes_comment.png)
 
 ## Adding a sticky note annotation to the PDF document Programmatically
 
@@ -137,7 +137,7 @@ Here is an example of how you can use the **editAnnotation()** method:
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![StickyNotesOpacity](../images/sticky_opacity.png)
+![StickyNotesOpacity](../../images/sticky_opacity.png)
 
 ### Editing comments
 
@@ -145,11 +145,11 @@ The comment, comment reply, and comment status of the annotation can be edited u
 
 * Open the comment panel using the Comment Panel button showing in the annotation toolbar.
 
-![StickyNotesComment](../images/commentPanel.png)
+![StickyNotesComment](../../images/commentPanel.png)
 
 You can modify or delete the comments or comments replay and it’s status using the menu option provided in the comment panel.
 
-![StickyNotesEdit](../images/sticky_editbtn.png)
+![StickyNotesEdit](../../images/sticky_editbtn.png)
 
 ## Setting default properties during the control initialization
 
