@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from Google Cloud Storage
+# Open PDF file from Google Cloud Storage in Blazor SfPdfViewer
 
 To load a PDF file from Google Cloud Storage in a SfPdfViewer, you can follow the steps below
 

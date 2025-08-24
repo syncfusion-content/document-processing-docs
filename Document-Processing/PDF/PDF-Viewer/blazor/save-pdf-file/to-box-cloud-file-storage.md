@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to Box cloud file storage
+# Save PDF file to Box cloud file storage in Blazor SfPdfViewer
 
 To save a PDF file to Box cloud file storage, you can follow the steps below
 

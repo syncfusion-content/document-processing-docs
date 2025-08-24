@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to AWS S3
+# Save PDF file to AWS S3 in Blazor SfPdfViewer
 
 To save a PDF file to AWS S3, you can follow the steps below
 

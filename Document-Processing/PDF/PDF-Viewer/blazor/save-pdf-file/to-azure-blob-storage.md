@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to Azure Blob Storage 
+# Save PDF file to Azure Blob Storage in Blazor SfPdfViewer
 
 To save a PDF file to Azure Blob Storage , you can follow the steps below
 

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to Google Drive
+# Save PDF file to Google Drive in Blazor SfPdfViewer
 
 To save a PDF file to Google Drive, you can follow the steps below
 

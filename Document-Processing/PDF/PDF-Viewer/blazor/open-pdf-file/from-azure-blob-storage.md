@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from Azure Blob Storage 
+# Open PDF file from Azure Blob Storage in Blazor SfPdfViewer
 
 To load a PDF file from Azure Blob Storage  in a SfPdfViewer, you can follow the steps below
 

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from Google Drive
+# Open PDF file from Google Drive in Blazor SfPdfViewer
 
 To load a PDF file from Google Drive in a SfPdfViewer, you can follow the steps below
 
