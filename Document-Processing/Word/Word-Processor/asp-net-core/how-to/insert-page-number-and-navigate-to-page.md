@@ -2,7 +2,7 @@
 layout: post
 title: Insert Page number and Navigate to specific page Document Editor Component
 description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion Document Editor Component
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Insert Page number And Navigate To Specific Page
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -16,7 +16,7 @@ You can insert page number and navigate to specific page in Document Editor comp
 
 You can use [`insertPageNumber`] API in editor module to insert the page number in current cursor position. By default, Page number will insert in Arabic number style. You can change it, by providing the number style in parameter.
 
-N> Currently, Documenteditor have options to insert page number at current cursor position.
+N> Currently, Document Editor have options to insert page number at current cursor position.
 
 The following example code illustrates how to insert page number in header.
 

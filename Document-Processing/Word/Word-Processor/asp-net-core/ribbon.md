@@ -2,7 +2,7 @@
 layout: post
 title: Ribbon in Document editor control | Syncfusion
 description: Learn here all about the Ribbon UI in Syncfusion Document editor control, how to switch between Ribbon and Toolbar modes.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Ribbon
 publishingplatform: ##Platform_Name##
 documentation: ug

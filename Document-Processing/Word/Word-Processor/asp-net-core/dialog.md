@@ -2,7 +2,7 @@
 layout: post
 title: Dialog in Document Editor Component | Syncfusion
 description: Learn here all about dialog in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Dialog
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Dialog in Document Editor Component
 
-Documenteditor provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
+Document Editor provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
 
 ## Font Dialog
 

@@ -2,7 +2,7 @@
 layout: post
 title: How to insert text or image in table programmatically in Document Editor Component
 description: Learn how to insert text or image in table programmatically in Document Editor Component
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Insert Text Or Image In Table
 publishingplatform: ##Platform_Name##
 documentation: ug

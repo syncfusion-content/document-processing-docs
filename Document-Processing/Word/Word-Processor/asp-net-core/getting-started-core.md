@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with Syncfusion Document Editor Control
 description: Checkout and learn about getting started with Document Editor control of Syncfusion Essential JS 2 and more details.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Getting Started Core
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -113,7 +113,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Ge
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core using Razor Pages](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/razor-pages)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core MVC using Tag Helper](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/aspnet-core-mvc-taghelper)
-* [How to localize the Documenteditor container](../asp-net-core/global-local).
+* [How to localize the Document Editor container](../asp-net-core/global-local).
 * [How to load the document by default](../asp-net-core/how-to/open-default-document).
 * [How to customize tool bar](../asp-net-core/how-to/customize-tool-bar).
 * [How to resize Document editor component](../asp-net-core/how-to/resize-document-editor).

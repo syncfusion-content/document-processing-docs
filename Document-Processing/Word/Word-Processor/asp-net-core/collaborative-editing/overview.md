@@ -3,7 +3,7 @@ layout: post
 title: Collaborative Editing in DocumentEditor Control | Syncfusion
 component: DocumentEditor
 description: Learn about collaborative editing in Syncfusion Document editor control of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##

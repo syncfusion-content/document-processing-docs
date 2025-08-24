@@ -2,7 +2,7 @@
 layout: post
 title: Auto Save Document in Document Editor Component | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion Document Editor component of syncfusion and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Auto Save Document In Document Editor
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -11,11 +11,11 @@ documentation: ug
 
 # Auto save document in Document editor control
 
-In this article, we are going to see how to autosave the document to server. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
+In this article, we are going to see how to auto save the document to server. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
 The following example illustrates how to auto save the document in server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`] method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`] method.
 
 
 {% tabs %}
@@ -48,4 +48,4 @@ public string AutoSave()
 ```
 
 ## See Also
-* [Autosave document in DocumentEditor](../../asp-net-core/how-to/auto-save-document-in-document-editor)
+* [AutoSave document in DocumentEditor](../../asp-net-core/how-to/auto-save-document-in-document-editor)

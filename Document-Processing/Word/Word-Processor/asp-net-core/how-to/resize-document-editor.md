@@ -2,7 +2,7 @@
 layout: post
 title: Resize Document Editor in Document Editor Component
 description: Learn here all about how to resize Document Editor in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Resize Document Editor
 publishingplatform: ##Platform_Name##
 documentation: ug

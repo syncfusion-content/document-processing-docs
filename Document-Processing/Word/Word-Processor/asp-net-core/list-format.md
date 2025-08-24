@@ -2,7 +2,7 @@
 layout: post
 title: List Format in Document Editor Component
 description: Learn here all about List Format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: List Format
 publishingplatform: ##Platform_Name##
 documentation: ug

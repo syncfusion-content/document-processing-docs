@@ -2,7 +2,7 @@
 layout: post
 title: Section Format in Document Editor Control | Syncfusion
 description: Learn here all about section format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Section Format
 publishingplatform: ##Platform_Name##
 documentation: ug

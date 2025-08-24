@@ -50,7 +50,7 @@ When local paste is enabled for a Document Editor instance, you can paste conten
  this.$refs.documenteditor.ej2Instances.editor.pasteLocal();
 ```
 
-### EnableLocalPaste behaviour
+### EnableLocalPaste behavior
 
 |**EnableLocalPaste** |**Paste behavior details**|
 |--------------------------|----------------------|

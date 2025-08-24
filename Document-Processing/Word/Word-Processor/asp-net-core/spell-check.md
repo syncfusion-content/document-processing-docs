@@ -2,7 +2,7 @@
 layout: post
 title: Spell Check in Document Editor Component
 description: Learn here all about spell check in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Spell Check
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -148,4 +148,4 @@ Using this option, you can open spell check dialog.
 
 ![Spell check dialog](images/spell-check-dialog.png)
 
-* Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) link for configuring spell checker in server-side.
+* Refer to the [Spell checker](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.

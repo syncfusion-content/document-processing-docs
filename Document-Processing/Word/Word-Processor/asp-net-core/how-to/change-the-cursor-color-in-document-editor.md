@@ -2,7 +2,7 @@
 layout: post
 title: How to change cursor color by CSS DocumentEditor | Syncfusion
 description: Learn how to change the cursor color using CSS in ##Platform_Name## Document Editor component of syncfusion and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Change The Cursor Color
 publishingplatform: ##Platform_Name##
 documentation: ug

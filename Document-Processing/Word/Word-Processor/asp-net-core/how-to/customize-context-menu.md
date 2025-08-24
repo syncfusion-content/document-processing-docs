@@ -2,7 +2,7 @@
 layout: post
 title: Customize Context Menu in Document Editor Component | Syncfusion
 description: Learn here all about how to customize context menu in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Customize Context Menu
 publishingplatform: ##Platform_Name##
 documentation: ug

@@ -2,7 +2,7 @@
 layout: post
 title: Link in Document Editor Component
 description: Learn here all about Link in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Link
 publishingplatform: ##Platform_Name##
 documentation: ug

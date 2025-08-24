@@ -2,7 +2,7 @@
 layout: post
 title: Customize Color Picker in Syncfusion  Document Editor Component
 description: Learn here all about how to customize color picker in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Customize Color Picker
 publishingplatform: ##Platform_Name##
 documentation: ug

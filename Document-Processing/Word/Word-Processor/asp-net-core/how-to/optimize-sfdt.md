@@ -2,7 +2,7 @@
 layout: post
 title: Optimize the SFDT file in Document Editor Component
 description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion Document Editor component of syncfusion and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Optimize the SFDT file
 publishingplatform: ##Platform_Name##
 documentation: ug

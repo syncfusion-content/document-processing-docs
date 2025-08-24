@@ -2,7 +2,7 @@
 layout: post
 title: Show Hide Spinner in Document Editor Component
 description: Learn here all about how to show hide spinner in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Show Hide Spinner
 publishingplatform: ##Platform_Name##
 documentation: ug

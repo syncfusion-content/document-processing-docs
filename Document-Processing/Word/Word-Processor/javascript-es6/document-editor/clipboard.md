@@ -69,7 +69,7 @@ Alternatively, you can use the keyboard shortcuts,
 * Copy: Ctrl + C
 * Paste: Ctrl + V
 
-### EnableLocalPaste behaviour
+### EnableLocalPaste behavior
 
 |**EnableLocalPaste** |**Paste behavior details**|
 |--------------------------|----------------------|

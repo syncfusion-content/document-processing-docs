@@ -2,7 +2,7 @@
 layout: post
 title: Chart in Document Editor Component | Syncfusion
 description: Learn here all about chart in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-asp-core-mvc
+platform: document-processing
 control: Chart
 publishingplatform: ##Platform_Name##
 documentation: ug
