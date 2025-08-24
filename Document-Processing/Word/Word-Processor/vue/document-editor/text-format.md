@@ -3,7 +3,7 @@ layout: post
 title: Text format in Vue Document editor component | Syncfusion
 description: Learn here all about Text format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Text format 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

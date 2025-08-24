@@ -3,7 +3,7 @@ layout: post
 title: Unsupported file in Vue Document editor component | Syncfusion
 description: Learn here all about Unsupported file in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Unsupported file 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

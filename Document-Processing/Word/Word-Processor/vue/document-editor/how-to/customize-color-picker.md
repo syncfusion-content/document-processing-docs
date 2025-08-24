@@ -3,7 +3,7 @@ layout: post
 title: Customize color picker in Vue Document editor | Syncfusion
 description: Learn here all about Customize color picker in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Customize color picker
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

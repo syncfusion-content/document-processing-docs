@@ -3,7 +3,7 @@ layout: post
 title: Get the selected content in Vue Document editor component | Syncfusion
 description: Learn here all about Get the selected content in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Get the selected content 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

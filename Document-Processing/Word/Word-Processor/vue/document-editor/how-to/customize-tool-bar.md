@@ -3,7 +3,7 @@ layout: post
 title: Customize tool bar in Vue Document editor component | Syncfusion
 description: Learn here all about Customize tool bar in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Customize tool bar 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

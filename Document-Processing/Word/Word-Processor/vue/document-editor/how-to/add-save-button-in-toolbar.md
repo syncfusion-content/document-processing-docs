@@ -3,7 +3,7 @@ layout: post
 title: Add save button in Vue Document editor toolbar | Syncfusion
 description: Learn here to add save button in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Add save button tool bar 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

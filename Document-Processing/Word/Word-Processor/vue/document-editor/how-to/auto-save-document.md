@@ -3,7 +3,7 @@ layout: post
 title: Auto save document in Vue Document editor component | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Auto save document in document editor 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

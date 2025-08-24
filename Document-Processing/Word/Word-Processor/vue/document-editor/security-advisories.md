@@ -3,7 +3,7 @@ layout: post
 title: Security Advisories in Vue Document Editor component | Syncfusion
 description: Learn here all about Security Advisories in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Security advisories 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

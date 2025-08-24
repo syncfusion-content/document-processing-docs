@@ -3,7 +3,7 @@ layout: post
 title: List format in Vue Document editor component | Syncfusion
 description: Learn here all about List format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: List format 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

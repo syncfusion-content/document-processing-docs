@@ -3,7 +3,7 @@ layout: post
 title: Styles in Vue Document editor component | Syncfusion
 description: Learn here all about Styles in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Styles 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

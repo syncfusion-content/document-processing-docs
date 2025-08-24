@@ -3,7 +3,7 @@ layout: post
 title: Read only by default in Vue Document editor component | Syncfusion
 description: Learn here all about Read only by default in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Read only by default 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

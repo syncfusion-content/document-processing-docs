@@ -3,7 +3,7 @@ layout: post
 title: Find and replace in Vue Document editor component | Syncfusion
 description: Learn here all about Find and replace in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Find and replace 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
