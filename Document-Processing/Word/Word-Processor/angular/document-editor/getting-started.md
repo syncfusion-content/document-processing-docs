@@ -155,7 +155,7 @@ export class AppComponent implements OnInit {
 
 #### Run the DocumentEditorContainer application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
@@ -213,7 +213,7 @@ export class AppComponent implements OnInit {
 
 #### Run the  DocumentEditor application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
