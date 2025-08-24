@@ -1,42 +1,39 @@
 ---
 layout: post
-title: Globalization and RTL in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about globalization and RTL in Syncfusion Blazor PDF Viewer component and more.
+title: Globalization and RTL in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about globalization and RTL in Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
-
-# Globalization and RTL in Blazor PDF Viewer Component
+# Globalization and RTL in Blazor SfPdfViewer Component
 
 ## Localization
 
-[Blazor PDFViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Right to Left
 
-Also, this component provides support to render the user interface suitable for users who use **right-to-left (RTL)** languages (Arabic, Hebrew, Azerbaijani, Persian, Urdu). You can specify the control to render in RTL by setting the `EnableRtl` property to true.
+To enable right-to-left (RTL) rendering for the user interface, you can set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property of the desired control to `true`. This will ensure that the control is rendered appropriately for users who use RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
 
-The following code snippet shows how to localize the component for Arabic language by setting the Locale and EnableRtl properties and providing the localized text.
+By setting EnableRtl to `true`, the control will adjust its layout and appearance to align text, icons, and other elements from right to left, providing an optimized user experience for RTL language users.
 
 ```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.PdfViewerServer
 
+@using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableRtl="true" Locale="ar-AE" />
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              EnableRtl="true" />
 
-@code{
-    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-    protected override void OnAfterRender(bool firstRender)
-    {
-        this.JsRuntime.Sf().LoadLocaleData("wwwroot/locale.json");
-    }
+@code {
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
+
 ```
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap5) to understand how to explain core features of PDF Viewer.
+## See also
+
+* [Events in Blazor SfPdfViewer Component](./events)

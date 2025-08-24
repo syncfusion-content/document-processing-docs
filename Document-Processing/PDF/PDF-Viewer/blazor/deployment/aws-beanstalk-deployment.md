@@ -1,54 +1,50 @@
 ---
 layout: post
-title: Blazor PDF Viewer deployment in AWS BeanStalk | Syncfusion
-description: AWS Elastic Beanstalk simplifies the deployment and management of scalable web applications and services in Linux-based infrastructure
+title: Blazor SfPdfViewer deployment in AWS BeanStalk | Syncfusion
+description: AWS Elastic Beanstalk simplifies the deployment and management of scalable web applications and services on Linux-based infrastructure
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Deploy Blazor Server App in AWS Elastic Beanstalk Linux
+# Deploy Blazor Server App on AWS Elastic Beanstalk Linux
 
-This section briefly explains about how to integrate [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio and deploy it on AWS Elastic Beanstalk.
+In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Server app and deploy it on AWS Elastic Beanstalk. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/AWS/AWS_Elastic_Beanstalk/SfPdfViewerApp).
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Integrate PDF Viewer into Blazor Server App
+## Create a new Blazor App in Visual Studio
 
-1. Start Visual Studio and select **Create a new project**.
-2. For a Blazor Server experience, choose the **Blazor Server App** template. Select **Next**.
-![Create-new-blazor-server-app](aws-benstalk-deployment-images/start-window-create-new-project.png)
-3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next.
-![Set-project-name](aws-benstalk-deployment-images/Set-project-name.png)
-4. In the **Additional information** dialog, set the target framework.
-![Set-target-framework](aws-benstalk-deployment-images/Additional_information.png)
+Create a new Blazor Server app and name it **PDFViewerGettingStarted**.
 
-## Install Blazor PDF Viewer NuGet package in Blazor Server App to deploy in AWS Elastic Beanstalk Linux
+N> The PDF Viewer component is supported from .NET 6.0 onwards.
 
-To add Blazor PDF Viewer component in Blazor Server App and deploy it to AWS Elastic Beanstalk Linux, use `SfPdfViewerServer` component and theme style sheet in corresponding NuGet based on the operating system of the server you intend to host, as shown below.
-* [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-* [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/)
+## Install Blazor PDF Viewer NuGet package in Blazor Server App
+
+Add the following NuGet packages into the Blazor Server app.
+
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the **Syncfusion.Blazor** and **Syncfusion.Blazor.PdfViewerServer** namespaces.
+* In the **~/_Imports.razor** file, add the following namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the Blazor Server App. Here
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 9 11" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 9 12" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -59,30 +55,27 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+
 // Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Style Sheet and Script Reference
+## Adding stylesheet and script
 
-Add the theme style sheet and script reference as below in the Blazor Server App.
-Refer script and style sheet in the `<head>` of the **~/Pages/_Layout.cshtml**.
-
+Add the following stylesheet and script to the head section of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml hl_lines="4 6" %}
+{% highlight cshtml %}
 
 <head>
-    ....
-    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor PDF Viewer controls scripts -->
-    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
+    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
@@ -90,52 +83,29 @@ Refer script and style sheet in the `<head>` of the **~/Pages/_Layout.cshtml**.
 
 ## Adding Blazor PDF Viewer Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
 
 {% tabs %}
 {% highlight razor %}
 
 @page "/"
-<SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
 
-@code{
-private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-}
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
 
 {% endhighlight %}
 {% endtabs %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor PDF Viewer` component will be rendered in the default web browser.
+N> If you don't provide the `DocumentPath` property value, the PDF Viewer component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
 
-## Steps to Configure the Linux VM used for deploying Blazor Server App in AWS Elastic Beanstalk Linux
+## Run the application
 
-1. Open the PuTTY app and Login as ec2-user in Linux VM after adding SSH Authentication credentials.
-![putty-session-login](aws-benstalk-deployment-images/putty-image.png)
-2. Navigate to root directory in the opened terminal and type ls for listing the directories
-![linux-directories](aws-benstalk-deployment-images/linux-terminal.png)
-3. Install the dotnet framework for running the Blazor Server App in Linux by running the following code. 
+Run the application, and the PDF file will be displayed using Syncfusion&reg; Blazor PDF Viewer component in your browser.
 
-```
-    wget https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](aws-benstalk-deployment-images/blazor-pdfviewer.png)" %}
 
-    sudo dpkg -i packages-microsoft-prod.deb
-
-    rm packages-microsoft-prod.deb
-
-    sudo yum update && \
-    sudo yum install -y dotnet-sdk-6.0
-
-```
-Check the comment dotnet --info and it should come as follows.
-
-![install-dotnet-frameworks](aws-benstalk-deployment-images/dotnet-info.png)
-
-4. Navigate to lib64 directory and use the following commands
-
-```
-    sudo cp -u libdl.so.2 libdl.so
-
-```
 
 ## Steps to publish as AWS Elastic Beanstalk
 
@@ -158,6 +128,12 @@ Check the comment dotnet --info and it should come as follows.
 9. After opening the provided URL the provided PDF document will be displayed in PDF Viewer.
 ![beanstalk-output](aws-benstalk-deployment-images/beanstalk-output.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Server%20Deployment/AWS/AWS_Elastic_Beanstalk/PdfViewerServerApp)
+## See also
+
+* [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application)
+
+* [Getting Started with Blazor PDF Viewer Component in WSL mode](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/wsl-application)
+
+* [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
 
 

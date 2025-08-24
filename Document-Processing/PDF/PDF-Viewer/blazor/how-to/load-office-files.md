@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Load office files in Blazor PDF Viewer | Syncfusion
-description: Learn here all about how to load the microsoft office files like powerpoint in the Syncfusion Blazor PDF Viewer component and more.
+title: Load office files in Blazor SfPdfViewer | Syncfusion
+description: Learn here all about how to load the microsoft office files like powerpoint in the Syncfusion Blazor SfPdfViewer component and more.
 platform: document-processing
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Load Microsoft Office files in Blazor PDF Viewer Component
+# Load Microsoft Office files in Blazor SfPdfViewer Component
 
-The PDF Viewer library allows you to load Microsoft office files such as powerpoint, excel, word and image using the success event of uploader.
+The SfPdfViewer library allows you to load Microsoft office files such as powerpoint, excel, word and image using the success event of uploader.
 
-In the below code, word document is converted in to pdf document and return that pdf document into base64 string which then loaded in to the PDF Viewer. Similarly, loaded the powerpoint, excel and image in to the PDF Viewer.
+In the below code, word document is converted in to pdf document and return that pdf document into base64 string which then loaded in to the SfPdfViewer. Similarly, loaded the powerpoint, excel and image in to the SfPdfViewer.
 
 ```cshtml
 
 @page "/"
-@using Syncfusion.Blazor.PdfViewerServer
-@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Pdf;
 @using Syncfusion.Pdf.Graphics;
 @using Syncfusion.Pdf.Interactive;
@@ -38,10 +37,14 @@ In the below code, word document is converted in to pdf document and return that
     <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
                            RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
 </SfUploader>
-<SfPdfViewerServer @ref="viewerInstance" Height="500px" Width="1060px" ToolbarSettings="@ToolbarSettings"></SfPdfViewerServer>
+<SfPdfViewer2 @ref="viewerInstance" 
+              Height="100%" 
+              Width="100%" 
+              ToolbarSettings="@ToolbarSettings">
+</SfPdfViewer2>
 
 @code {
-    SfPdfViewerServer viewerInstance;
+    SfPdfViewer2 viewerInstance;
 
     public PdfViewerToolbarSettings ToolbarSettings = new PdfViewerToolbarSettings()
         {
@@ -130,14 +133,20 @@ In the below code, word document is converted in to pdf document and return that
         }
     }
 
-    public void loadPDFdocument(byte[] bytes)
+    public async void loadPDFdocument(byte[] bytes)
     {
         // Convert a PDF document into a base64 string.
         string base64String = Convert.ToBase64String(bytes);
-        // Load the base64 string in the PDF Viewer.
-        viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
+        // Load the base64 string in the SfPdfViewer.
+        await viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Common/Load%20PDF%2C%20Excel%2C%20PPT%20file%20types).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20PDF%2C%20Excel%2C%20PPT%20file%20types).
+
+## See also
+
+* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./load-pdf-document-dynamically)
+
+* [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)
