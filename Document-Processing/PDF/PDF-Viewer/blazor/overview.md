@@ -83,4 +83,4 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides the SfPdfViewer com
 <br/>* For Windows, Linux and Mac (OSX) uses the sample Nuget [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 
 N> You can refer to the [Blazor SfPdfViewer](
-https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer2/default-functionalities?theme=fluent) to understand how to explain core features of PDF Viewer.
+https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=fluent) to understand how to explain core features of PDF Viewer.

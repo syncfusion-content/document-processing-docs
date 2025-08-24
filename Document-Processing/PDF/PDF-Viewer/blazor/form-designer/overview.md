@@ -48,7 +48,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfV
 
 ![Download PDF Document with Form Fileds](form-designer-images/Download_PDF_Document_With_Form_Fileds.png)
 
-Also, refer to [Saving PDF file in Blazor SfPdfViewer Component](https://blazor.syncfusion.com/documentation/pdfviewer-2/saving-pdf-file) for more details.
+Also, refer to [Saving PDF file in Blazor SfPdfViewer Component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file) for more details.
 
 ### Printing Form Fields
 
