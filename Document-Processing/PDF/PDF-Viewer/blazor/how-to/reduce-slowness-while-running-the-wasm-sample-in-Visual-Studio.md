@@ -11,7 +11,7 @@ documentation: ug
 
 You may experience performance issues when running the WASM sample in Visual Studio. To improve performance and reduce slowness, we recommend disabling the new .NET 9+ Mono Debugger, as it can impact the execution speed in this mode.
 
-![Mono Debugger](../../pdfviewer-2/images/mono_debugger.png)
+![Mono Debugger](../images/mono_debugger.png)
 
 Disabling the Mono Debugger should help resolve the performance issues and provide a smoother experience while debugging your WebAssembly project.
 
