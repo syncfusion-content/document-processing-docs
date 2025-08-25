@@ -128,6 +128,25 @@ FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
 
 ```
 
+You can also enable the autofit support for free text annotation by using the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer. PdfViewerFreeTextSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerFreeTextSettings_AutoFit) boolean property in PdfViewerFreeTextSettings as below. The width of the free text rectangle box will be increased based on the text added to it.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="@Viewer" Height="100%" Width="100%">
+    <PdfViewerFreeTextSettings AutoFit="true"></PdfViewerFreeTextSettings>
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2? Viewer;
+    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+}
+
+```
+![Enable AutoFit Free Text Annotation in Blazor SfPdfViewer](../images/enable_auto_fit_property.png)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/FreeText%20Annotation%20with%20enable%20AutoFit).
+
 ## Add free text annotation programmatically
 
 The Blazor SfPdfViewer offers the capability to programmatically add the free text annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
