@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion
-description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Deploy SfPdfViewer in Blazor MAUI in Android | Syncfusion
+description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Android in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -80,6 +80,6 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 ## See also
 
-* [Supported Features: Desktop vs Mobile](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/features#supported-features-desktop-vs-mobile).
+* [Supported Features: Desktop vs Mobile](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview#supported-features-desktop-vs-mobile).
 
-* [Render PDF document from url in the MAUI app](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/deploy-maui-windows).
+* [Render PDF document from url in the MAUI app](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows).

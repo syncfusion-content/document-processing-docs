@@ -26,7 +26,7 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 
 ```
 
-![Printing in Blazor SfPdfViewer](../../PDF-Viewer/blazor/images/blazor-pdfviewer-print.png)
+![Printing in Blazor SfPdfViewer](../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-print.png)
 
 
 ```cshtml
@@ -54,7 +54,7 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 
 ## See also
 
-* [Download in Blazor SfPdfViewer Component](https://blazor.syncfusion.com/documentation/pdfviewer-2/saving-pdf-file#download-in-blazor-sfpdfviewer-component)
+* [Download in Blazor SfPdfViewer Component](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download-in-blazor-sfpdfviewer-component)
 
 * [How to perform print in same window](./how-to/perform-print-in-same-window)
 
