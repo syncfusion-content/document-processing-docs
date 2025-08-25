@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in Vue Document editor component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

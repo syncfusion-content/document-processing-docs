@@ -3,7 +3,7 @@ layout: post
 title: Word processor server docker image overview in Vue Document editor component | Syncfusion
 description: Learn here all about Word processor server docker image overview in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Word processor server docker image overview 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

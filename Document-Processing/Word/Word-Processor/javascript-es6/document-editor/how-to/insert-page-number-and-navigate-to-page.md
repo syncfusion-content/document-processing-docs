@@ -17,7 +17,7 @@ You can insert page number and navigate to specific page in JavaScript Document 
 
 You can use [`insertPageNumber`](../../api/document-editor/editor/#insertpagenumber) API in editor module to insert the page number in current cursor position. By default, Page number will insert in Arabic number style. You can change it, by providing the number style in parameter.
 
->Note: Currently, Documenteditor have options to insert page number at current cursor position.
+>Note: Currently, Document Editor have options to insert page number at current cursor position.
 
 The following example code illustrates how to insert page number in header.
 

@@ -3,7 +3,7 @@ layout: post
 title: Document management in Vue Document editor component | Syncfusion
 description: Learn here all about Document management in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Document management 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

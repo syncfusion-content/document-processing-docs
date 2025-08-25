@@ -3,7 +3,7 @@ layout: post
 title: Server side export in Vue Document editor component | Syncfusion
 description: Learn here all about Server side export in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Server side export 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

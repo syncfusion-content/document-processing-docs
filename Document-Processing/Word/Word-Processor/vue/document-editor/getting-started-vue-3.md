@@ -3,7 +3,7 @@ layout: post
 title: Getting started vue 3 with Vue Document editor component | Syncfusion
 description:  Checkout and learn about Getting started vue 3 with Vue Document editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started vue 3 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

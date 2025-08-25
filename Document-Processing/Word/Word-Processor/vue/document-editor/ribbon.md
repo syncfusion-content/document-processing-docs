@@ -2,7 +2,7 @@
 layout: post
 title: Ribbon in Vue Document editor control | Syncfusion
 description: Learn here all about the Ribbon UI in Syncfusion Vue Document editor control, how to switch between Ribbon and Toolbar modes.
-platform: ej2-vue
+platform: document-processing
 control: Ribbon
 documentation: ug
 domainurl: ##DomainURL##

@@ -3,7 +3,7 @@ layout: post
 title: Change document view in Vue Document editor component | Syncfusion
 description: Learn here all about Change document view in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Change document view 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

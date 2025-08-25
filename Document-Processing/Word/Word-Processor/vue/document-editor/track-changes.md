@@ -3,7 +3,7 @@ layout: post
 title: Track changes in Vue Document editor component | Syncfusion
 description: Learn here all about Track changes in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Track changes 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Web services in Vue Document editor component | Syncfusion
 description: Learn here all about Web services in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Web services 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -3,14 +3,14 @@ layout: post
 title: Resize document editor in Vue Document editor component | Syncfusion
 description: Learn here all about Resize document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Resize document editor 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Resize document editor in Vue Document editor component
 
-In this article, we are going to see how to change height and width of Documenteditor.
+In this article, we are going to see how to change height and width of Document Editor.
 
 ## Change height of Document Editor
 

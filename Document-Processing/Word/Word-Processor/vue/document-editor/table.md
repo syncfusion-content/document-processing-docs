@@ -3,7 +3,7 @@ layout: post
 title: Table in Vue Document editor component | Syncfusion
 description: Learn here all about Table in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Table 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Content control in Vue Document editor control | Syncfusion
 description: Learn here all about Content control in Syncfusion Vue Document editor control of Syncfusion Essential JS 2 and more.
 control: Content control 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
