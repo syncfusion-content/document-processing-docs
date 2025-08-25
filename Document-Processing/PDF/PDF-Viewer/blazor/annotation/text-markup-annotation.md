@@ -11,7 +11,7 @@ documentation: ug
 
 The SfPdfViewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough and squiggly annotations in the PDF document.
 
-![Blazor SfPdfViewer with Text Markup Annotation](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-text-markup-annotation.png)
+![Blazor SfPdfViewer with Text Markup Annotation](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-text-markup-annotation.png)
 
 ## Adding text markup annotation to the PDF Document
 
@@ -26,7 +26,7 @@ There are two ways to highlight a text in the PDF document.
 * Select a text in the PDF document and right-click it.
 * Select **Highlight** option in the context menu that appears
 
-![Highlighting Context in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-highlight-context.png)
+![Highlighting Context in Blazor SfPdfViewer](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-highlight-context.png)
 
 **Using the annotation toolbar.**
 
@@ -35,7 +35,7 @@ There are two ways to highlight a text in the PDF document.
 * Select the text and the highlight annotation will be added.
 * You can also select the text and apply the highlight annotation using the **Highlight** button.
 
-![Highlighting Text in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-highlight-text.png)
+![Highlighting Text in Blazor SfPdfViewer](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-highlight-text.png)
 
 In the pan mode, if the highlight mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection for highlighting the text.
 
@@ -72,7 +72,7 @@ There are two ways to underline a text in the PDF document.
 * Select a text in the PDF document and right-click it.
 * Select **Underline** option in the context menu that appears.
 
-![Displaying Underline in Blazor SfPdfViewer ContextMenu](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-underline-context-menu.png)
+![Displaying Underline in Blazor SfPdfViewer ContextMenu](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-underline-context-menu.png)
 
 **Using the annotation toolbar.**
 
@@ -81,7 +81,7 @@ There are two ways to underline a text in the PDF document.
 * Select the text and the underline annotation will be added.
 * You can also select the text and apply the underline annotation using the **Underline** button.
 
-![Blazor SfPdfViewer with Underline Text](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-underline-text.png)
+![Blazor SfPdfViewer with Underline Text](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-underline-text.png)
 
 In the pan mode, if the underline mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection for underlining the text.
 
@@ -118,7 +118,7 @@ Using the context menu.
 * Select a text in the PDF document and right-click it.
 * Select **strikethrough** option in the context menu that appears.
 
-![Displaying Strike Through in Blazor SfPdfViewer ContextMenu](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
+![Displaying Strike Through in Blazor SfPdfViewer ContextMenu](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
@@ -127,7 +127,7 @@ Using the context menu.
 * Select the text and the strikethrough annotation will be added.
 * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
 
-![Blazor PDFViewer with StrikeThrough Text](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-strike-through-text.png)
+![Blazor PDFViewer with StrikeThrough Text](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-strike-through-text.png)
 
 In the pan mode, if the strikethrough mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection to strike through the text.
 
@@ -163,7 +163,7 @@ Using the context menu.
 * Select a text in the PDF document and right-click it.
 * Select **squiggly** option in the context menu that appears.
 
-![Displaying Squiggly in Blazor SfPdfViewer ContextMenu](../../pdfviewer-2/images/blazor-pdfviewer-squiggly-in-contextmenu.png)
+![Displaying Squiggly in Blazor SfPdfViewer ContextMenu](../images/blazor-pdfviewer-squiggly-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
@@ -172,7 +172,7 @@ Using the context menu.
 * Select the text and the squiggly annotation will be added.
 * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
 
-![Blazor PDFViewer with Squiggly Text](../../pdfviewer-2/images/blazor-pdfviewer-squiggly-text.png)
+![Blazor PDFViewer with Squiggly Text](../images/blazor-pdfviewer-squiggly-text.png)
 
 In the pan mode, if the squiggly mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection to squiggly the text.
 
@@ -208,13 +208,13 @@ The color and the opacity of the text markup annotation can be edited using the 
 
 The color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Editing Text Color in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-editing-text-color.png)
+![Editing Text Color in Blazor SfPdfViewer](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-editing-text-color.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![Editing Text Opacity in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-edit-text-opacity.png)
+![Editing Text Opacity in Blazor SfPdfViewer](../../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-edit-text-opacity.png)
 
 ## Text markup annotation settings
 
