@@ -9,7 +9,7 @@ documentation: ug
 
 # Select and Deselect Annotations in Flutter PDF Viewer (SfPdfViewer)
 
-This section will go through the various functions available in the `SfPdfViewer` to select and deselect annotations in a PDF document.
+This section will go through the various functions available in the `SfPdfViewer` for selecting and deselecting annotations in a PDF document.
 
 ## Select an Annotation
 
