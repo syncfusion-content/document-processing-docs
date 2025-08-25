@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Globalization in Document Editor Component
+# Globalization in ASP.NET MVC in Document Editor Component
 
 ## Localization
 

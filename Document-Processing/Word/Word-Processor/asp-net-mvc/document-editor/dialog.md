@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Dialog in Document Editor Component
+# Dialog in ASP.NET MVC in Document Editor Component
 
 Document Editor provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
 

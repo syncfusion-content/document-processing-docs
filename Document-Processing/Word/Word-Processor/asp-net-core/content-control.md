@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Content Control in DocumentEditor
+# Content Control in ASP.NET Core in DocumentEditor
 
 Document Editor provides support for inserting, editing content controls.
 

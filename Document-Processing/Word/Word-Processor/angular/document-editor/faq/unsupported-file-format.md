@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Why Do I Get the Unsupported Warning Message When Opening a Document?
+# Why Do I Get the Unsupported Warning Message When Opening a Document in Angular?
 
 If you receive an "The file format you have selected isn't supported. Please choose valid format." message when opening a document in the Document Editor, it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
