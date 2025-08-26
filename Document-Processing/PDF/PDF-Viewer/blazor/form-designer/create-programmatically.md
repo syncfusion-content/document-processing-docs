@@ -58,7 +58,7 @@ The example below demonstrates how to add form fields in the PdfViewer component
 ```
 The following image illustrates the programmatic addition of form fields in Blazor SfPdfViewer:
 
-![Programmatical Add Form Fields in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-add.png)
+![Programmatical Add Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-add.png)
 
 N> Users can also add form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
 [Interactively Add Form Fields](./ui-interactions)
@@ -110,7 +110,7 @@ This code below is for [thickness](https://help.syncfusion.com/cr/blazor/Syncfus
 ```
 The following image illustrates the listbox field thickness customization in Blazor SfPdfViewer:
 
-![Form Field Thickness Customization in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png)
+![Form Field Thickness Customization in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/FieldSetting.razor).
 
@@ -161,7 +161,7 @@ Below is an example demonstrating how to set and clear the form field drawing mo
 ```
 The following image illustrates setting and clearing the form field mode in Blazor SfPdfViewer:  
 
-![Set and Clear Form Field Mode in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif)
+![Set and Clear Form Field Mode in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SetMode.razor).
 
@@ -210,7 +210,7 @@ Controls the visual aspects of form fields, including [background color](https:/
 ```
 The following image illustrates updating the appearance of a button form field in Blazor SfPdfViewer:  
 
-![Update Form Field Appearance in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
+![Update Form Field Appearance in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateApperanceProperties.razor).
 
@@ -251,7 +251,7 @@ Includes properties like [name](https://help.syncfusion.com/cr/blazor/Syncfusion
 ```
 The following image illustrates updating the metadata of dropdown field in Blazor SfPdfViewer:  
 
-![Update Form Field Metadata in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
+![Update Form Field Metadata in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateValueProperties.razor).
 
@@ -284,7 +284,7 @@ When multiple fields share the same name, changes apply to all linked fields. Up
 ```
 The following image illustrates updating linked properties of a radio button form field in Blazor SfPdfViewer:  
 
-![Update Linked Field Properties in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png)
+![Update Linked Field Properties in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateLinkedProperties.razor).
 
@@ -325,7 +325,7 @@ Removes all form fields from the document using [`DeleteFormFieldsAsync()`](http
 ```
 The following image illustrates deleting all form fields in Blazor SfPdfViewer:  
 
-![Delete All Form Fields in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
+![Delete All Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteAllFields.razor).
 
@@ -359,7 +359,7 @@ Deletes only the currently selected form field using [`DeleteFormFieldsAsync()`]
 ```
 The following image illustrates deleting a selected password field in Blazor SfPdfViewer:  
 
-![Delete Selected Password Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
+![Delete Selected Password Field in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteSelectedField.razor).
 
@@ -394,7 +394,7 @@ Removes specific form fields using [`DeleteFormFieldsAsync()`](https://help.sync
 ```
 The following image illustrates deleting form fields by their IDs in Blazor SfPdfViewer:  
 
-![Delete Form Fields by IDs in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-ids.png)
+![Delete Form Fields by IDs in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-ids.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteById.razor).
 
@@ -440,7 +440,7 @@ To select a form field using its unique identifier, pass the field's ID to the [
 ```
 The following image illustrates selecting a button field by its ID in Blazor SfPdfViewer:  
 
-![Select Button Field by ID in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
+![Select Button Field by ID in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectFieldById.razor).
 
@@ -480,7 +480,7 @@ Alternatively, you can retrieve all available form fields using [`GetFormFieldsA
 ```
 The following image illustrates selecting a checkbox field in Blazor SfPdfViewer:  
 
-![Select CheckBox Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
+![Select CheckBox Field in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectByField.razor).
 
@@ -515,7 +515,7 @@ To ensure proper rendering and saving of form fields with custom fonts in SfPdfV
     }
 }
 ```
-![Custom Font Support for Form Fields in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/custom_font_support_for_form_fields.png)
+![Custom Font Support for Form Fields in Blazor SfPdfViewer](../form-designer/custom_font_support_for_form_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20FormFields).
 
@@ -560,7 +560,7 @@ To ensure proper rendering and saving of signature with custom fonts in SfPdfVie
 	};
 }
 ```
-![Custom Font Support for Signature Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/custom_font_support_signature_fields.png)
+![Custom Font Support for Signature Field in Blazor SfPdfViewer](../form-designer/custom_font_support_signature_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20Signature%20Field).
 
