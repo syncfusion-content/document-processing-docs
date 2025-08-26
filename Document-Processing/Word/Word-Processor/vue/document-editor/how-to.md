@@ -3,7 +3,7 @@ layout: post
 title: How to in Vue Document editor component | Syncfusion
 description: Learn here all about How to in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: How to 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

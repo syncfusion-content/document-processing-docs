@@ -2,7 +2,7 @@
 layout: post
 title: Open document from Azure Blob Storage in ##Platform_Name## Document editor control | Syncfusion
 description:  Learn about how to Open document from Azure Blob Storage in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
-platform: ej2-vue
+platform: document-processing
 control: Open document from Azure Blob Storage
 publishingplatform: ##Platform_Name##
 documentation: ug

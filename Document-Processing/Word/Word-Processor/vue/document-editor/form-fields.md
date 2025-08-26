@@ -3,7 +3,7 @@ layout: post
 title: Form fields in Vue Document editor component | Syncfusion
 description: Learn here all about Form fields in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Form fields 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

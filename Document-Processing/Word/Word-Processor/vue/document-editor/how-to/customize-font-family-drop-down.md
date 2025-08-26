@@ -3,7 +3,7 @@ layout: post
 title: Customize font family drop down in Vue Document editor component | Syncfusion
 description: Learn here all about Customize font family drop down in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Customize font family drop down 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

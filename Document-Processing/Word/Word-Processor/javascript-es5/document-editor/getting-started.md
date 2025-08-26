@@ -135,7 +135,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 JavaScript components c
         documenteditor.enableAllModules();
         documenteditor.pageOutline = '#E0E0E0';
 
-        //Documenteditor control rendering starts
+        //Document Editor control rendering starts
         documenteditor.appendTo('#DocumentEditor');
     </script>
   </body>
@@ -278,7 +278,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
       //Set page border color.
       documenteditor.pageOutline = '#E0E0E0';
 
-      //Documenteditor control rendering starts
+      //Document Editor control rendering starts
       documenteditor.appendTo('#DocumentEditor');
   </script>
   </body>
@@ -376,7 +376,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Pro
 
 ## Frequently Asked Questions
 
-* [How to localize the Documenteditor container](../document-editor/global-local).
+* [How to localize the Document Editor container](../document-editor/global-local).
 * [How to load the document by default](../document-editor/how-to/open-default-document).
 * [How to customize tool bar](../document-editor/how-to/customize-tool-bar).
 * [How to resize Document editor component?](../document-editor/how-to/resize-document-editor)

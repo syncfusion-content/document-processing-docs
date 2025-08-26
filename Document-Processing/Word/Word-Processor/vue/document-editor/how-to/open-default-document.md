@@ -3,7 +3,7 @@ layout: post
 title: Open default document in Vue Document editor component | Syncfusion
 description: Learn here all about Open default document in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Open default document 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

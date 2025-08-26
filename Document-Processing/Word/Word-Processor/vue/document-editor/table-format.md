@@ -3,7 +3,7 @@ layout: post
 title: Table format in Vue Document editor component | Syncfusion
 description: Learn here all about Table format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Table format 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

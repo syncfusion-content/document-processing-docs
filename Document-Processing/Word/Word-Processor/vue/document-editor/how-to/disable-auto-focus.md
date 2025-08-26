@@ -2,7 +2,7 @@
 layout: post
 title: How to disable auto focus in document editor in Vue Document editor component | Syncfusion
 description: Learn here all about How to disable and enable auto focus in document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-vue
+platform: document-processing
 control: How to disable auto focus in document editor 
 documentation: ug
 domainurl: ##DomainURL##

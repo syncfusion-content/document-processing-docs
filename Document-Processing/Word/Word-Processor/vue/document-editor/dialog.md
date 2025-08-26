@@ -3,7 +3,7 @@ layout: post
 title: Dialog in Vue Document editor component | Syncfusion
 description: Learn here all about Dialog in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Dialog 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

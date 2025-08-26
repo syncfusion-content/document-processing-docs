@@ -17,7 +17,7 @@ To implement CustomFonts, follow these steps:
    
 2. Include the exact paths to these font files in the customFonts list for proper referencing. This ensures that Pdfium can utilize these fonts as needed.
 
-![CustomFonts in Blazor PDFViewer](../../../PDF-Viewer/blazor/images/customfont-files.png)
+![CustomFonts in Blazor PDFViewer](../../blazor-classic/images/customfont-files.png)
 
 The following code demonstrates how to load the CustomFonts to PDF Viewer.
 

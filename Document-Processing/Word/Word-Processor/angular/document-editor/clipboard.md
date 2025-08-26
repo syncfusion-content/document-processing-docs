@@ -108,7 +108,7 @@ Alternatively, you can use the keyboard shortcuts,
 * Copy: Ctrl + C
 * Paste: Ctrl + V
 
-### EnableLocalPaste behaviour
+### EnableLocalPaste behavior
 
 |**EnableLocalPaste** |**Paste behavior details**|
 |--------------------------|----------------------|
@@ -137,4 +137,4 @@ This paste option appears as follows.
 ## See Also
 
 * [Feature modules](../document-editor/feature-module)
-* [Keyboard shortcuts](../document-editor/keyboard-shortcut.md/#clipboard)
+* [Keyboard shortcuts](../document-editor/keyboard-shortcut.md)

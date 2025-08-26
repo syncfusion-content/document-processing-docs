@@ -3,7 +3,7 @@ layout: post
 title: How to publish documenteditor web api application in azure app service from visual studio in Vue Document editor component | Syncfusion
 description: Learn here all about How to publish documenteditor web api application in azure app service from visual studio in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: How to publish documenteditor web api application in azure app service from visual studio 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

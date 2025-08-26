@@ -2,7 +2,7 @@
 layout: post
 title: Save document to One Drive in ##Platform_Name## Document editor control | Syncfusion
 description:  Learn about how to Save document to One Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
-platform: ej2-vue
+platform: document-processing
 control: Save document to One Drive
 publishingplatform: ##Platform_Name##
 documentation: ug

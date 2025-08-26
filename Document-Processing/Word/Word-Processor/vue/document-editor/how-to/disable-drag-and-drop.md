@@ -2,7 +2,7 @@
 layout: post
 title: Disable drag and drop in document editor in Vue Document editor component | Syncfusion
 description: Learn here all about Disable drag and drop in document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-vue
+platform: document-processing
 control: Disable drag and drop in document editor 
 documentation: ug
 domainurl: ##DomainURL##

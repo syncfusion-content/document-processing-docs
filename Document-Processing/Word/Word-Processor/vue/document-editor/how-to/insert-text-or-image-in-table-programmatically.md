@@ -3,7 +3,7 @@ layout: post
 title: Insert text or image in table programmatically in Vue Document editor component | Syncfusion
 description: Learn here all about Insert text or image in table programmatically in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Insert text or image in table programmatically 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
