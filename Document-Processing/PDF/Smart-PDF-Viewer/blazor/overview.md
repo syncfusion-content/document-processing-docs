@@ -39,6 +39,6 @@ The **Blazor Smart PDF Viewer** is an advanced component in Syncfusion’s Blazo
 
 ## Integration
 
-* Powered by AI services such as Azure OpenAI.
+* Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), Syncfusion.AI.PdfViewer, [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
 * Features can be selectively enabled based on application needs.
 * Compatible with Blazor Server Application

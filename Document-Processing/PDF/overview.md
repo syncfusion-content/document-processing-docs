@@ -19,4 +19,4 @@ Syncfusion<sup>&reg;</sup> PDF Document Processing Framework is a collection of 
 * PDF Library - is a class library used to create, read, and write PDF files through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, MAUI] and Flutter applications.
 * PDF Conversions - is a class library that convert several file formats like HTML, Word, Excel, PowerPoint, and images to PDF documents. It also supports convert PDF to image. 
 * PDF Viewer - GUI component used to view, edit and print PDF files in Windows Forms, WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, Blazor, MAUI and Flutter applications.
-* Smart PDF Viewer – is an AI-enhanced viewer built on top of the PDF Viewer component, offering intelligent features such as document summarization, smart redact, and smart fill to improve document comprehension, privacy, and automation in Blazor applications.
+* Smart PDF Viewer – is an AI-enhanced viewer built on top of the PDF Viewer component, offering intelligent features in Blazor applications including document summarization, question answering, smart redact, and smart fill.
