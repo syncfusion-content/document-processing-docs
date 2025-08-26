@@ -10,7 +10,6 @@ documentation: ug
 # Smart Fill in Blazor Smart PDF Viewer
 This feature streamlines the process of completing PDF forms. The AI analyzes the document and user-provided input to automatically populate relevant fields, reducing manual effort and minimizing errors. Users can review and adjust the filled fields to ensure the final output meets their requirements.
 
-![Smart Fill](images/smartfill_pdfviewer.gif)
 
 
 ## Smart Fill Settings in Syncfusion Blazor Smart PDF Viewer
