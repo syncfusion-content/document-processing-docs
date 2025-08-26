@@ -48,7 +48,7 @@ The Document Editor component requires server-side interactions for the followin
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
 * [SpellCheck](../document-editor/spell-check)
-* [Save as file formats other than SFDT and DOCX](../document-editor/server-side-export)
+* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents/server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
