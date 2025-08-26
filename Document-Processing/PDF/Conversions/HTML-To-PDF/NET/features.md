@@ -2456,7 +2456,7 @@ The Blink HTML converter support adding the image background from HTML to Image 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF).
 
-## Get Html Bounds
+## Get HTML Bounds
 
 We can calculate and retrieve the dimensions (width and height) of the HTML content based on the current settings, such as viewport width and scale, using the [GetHtmlBounds](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_GetHtmlBounds_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
@@ -2838,6 +2838,8 @@ You can configure the wait behavior using the [WaitForNavigation](https://help.s
 N> This feature is applicable only to the Blink rendering engine and is supported in both .NET Core and .NET Framework libraries.
 
 Refer to the following code sample to wait until browser navigation completes.
+
+{% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
