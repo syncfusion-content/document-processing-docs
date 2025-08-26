@@ -1283,10 +1283,20 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## PDF to PDF/A conversion
 
-An existing PDF document can be converted to PDF/A conformance document, by setting the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) value in the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) to ```Pdf_A1B```,```Pdf_A2B```,```Pdf_A3B```, and ```Pdf_A4``` of  [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html). Refer to the following code sample to achieve the same.
+An existing PDF document can be converted to a PDF/A conformance document by setting the [Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance) property of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class to one of the following values from the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) enumeration:
+
+<b>Available PDF/A Conformance Options:</b>
+* Pdf_A1B
+* Pdf_A2B
+* Pdf_A3B 
+* Pdf_A4
+* Pdf_A4E
+* Pdf_A4F
 
 N> 1.To convert the existing PDF to PDF/A conformance document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
 N> 2.For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
+
+Refer to the following code sample to implement this conversion.
 
 {% tabs %}  
 
@@ -1740,13 +1750,13 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Convert-PDFA-to-PDF-document).
 
-<b>PDF/A Conformance Level Support</b>
+<b>Supported PDF standards for creation and conversion</b>
 <table>
   <thead>
     <tr>
       <th>Conformance Level</th>
       <th>Creation Support</th>
-      <th>Loading (Conversion) Support</th>
+      <th>Conversion Support</th>
     </tr>
   </thead>
   <tbody>
