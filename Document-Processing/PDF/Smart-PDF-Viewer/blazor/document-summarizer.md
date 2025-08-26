@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Summaries in Blazor Smart PDF Viewer | Syncfusion
-description: Checkout and learn about Document Summaries in Blazor Smart PDF Viewer and much more details.
+description: Checkout and learn about Document Summaries in Blazor Smart PDF Viewer.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
@@ -17,7 +17,7 @@ The AI AssistView provides users with the ability to generate a summary of the P
 
 ## Component Usage
 
-```razor
+```cshtml
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     <AssistViewSettings/>
 </SfSmartPdfViewer>

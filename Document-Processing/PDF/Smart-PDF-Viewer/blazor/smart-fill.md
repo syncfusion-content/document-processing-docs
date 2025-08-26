@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Smart Fill in Blazor Smart PDF Viewer | Syncfusion
-description: Checkout and learn about Smart Fill in Blazor Smart PDF Viewer and much more details.
+description: Checkout and learn about Smart Fill in Blazor Smart PDF Viewer.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
