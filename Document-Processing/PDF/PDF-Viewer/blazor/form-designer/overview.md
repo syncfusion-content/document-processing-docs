@@ -40,7 +40,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfV
 
 ![Open PDF Document with Exsiting Form Fileds](form-designer-images/Open_PDF_Document_With_Exsiting_Form_Fileds.png)
 
-Also, refer to [Open PDF files in SfPdfViewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/opening-pdf-file) for more details.
+Also, refer to [Open PDF files in SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/opening-pdf-file) for more details.
 
 ### Saving Form Fields
 
