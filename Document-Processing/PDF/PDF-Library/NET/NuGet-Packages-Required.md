@@ -37,22 +37,6 @@ WPF
 </tr>
 <tr>
 <td>
-.NET Framework 4.0 Client Profile
-</td>
-<td>
-{{'[Syncfusion.Pdf.ClientProfile.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.ClientProfile/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.Pdf.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>
@@ -332,14 +316,6 @@ WPF
 </td>
 <td>
 {{'[Syncfusion.PDF.OCR.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.WPF/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.PDF.OCR.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.PDF.OCR.AspNet.Mvc4/)'| markdownify }}
 </td>
 </tr>
 <tr>
