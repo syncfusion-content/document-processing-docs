@@ -155,7 +155,7 @@ export class AppComponent implements OnInit {
 
 #### Run the DocumentEditorContainer application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
@@ -165,11 +165,11 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs2/src/app.component.ts %}
+{% include /word/word-processor/angular/code-snippet/document-editor/document-editor-container-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs2/src/main.ts %}
+{% include /word/word-processor/angular/code-snippet/document-editor/document-editor-container-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -213,7 +213,7 @@ export class AppComponent implements OnInit {
 
 #### Run the  DocumentEditor application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
@@ -223,11 +223,11 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/getting-started-cs1/src/app.component.ts %}
+{% include /word/word-processor/angular/code-snippet/document-editor/getting-started-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/getting-started-cs1/src/main.ts %}
+{% include /word/word-processor/angular/code-snippet/document-editor/getting-started-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -238,7 +238,7 @@ Output will be displayed as follows.
 
 ## Frequently Asked Questions
 
-* [How to localize the Documenteditor container](../document-editor/global-local).
+* [How to localize the Document Editor container](../document-editor/global-local).
 * [How to load the document by default](../document-editor/how-to/open-default-document).
 * [How to customize tool bar](../document-editor/how-to/customize-tool-bar).
 * [How to resize Document editor component?](../document-editor/how-to/resize-document-editor)

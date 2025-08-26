@@ -3,7 +3,7 @@ layout: post
 title: Restrict editing in Vue Document Editor Component | Syncfusion
 description: Learn here all about Restrict editing in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Restrict editing 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

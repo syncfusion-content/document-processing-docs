@@ -15,7 +15,7 @@ To implement FallbackFontCollection, follow these step:
 
 1. Upload the font files you want to use into the `wwwroot` folder of your project.
 
-![Font Collection in Blazor PDFViewer](../../../PDF-Viewer/blazor/images/load-font-collection.png)
+![Font Collection in Blazor PDFViewer](../../blazor-classic/images/load-font-collection.png)
 
 The following code demonstrates how to load the font collection to PDF Viewer.
 

@@ -3,7 +3,7 @@ layout: post
 title: Keyboard Shortcuts in Vue Document Editor Component | Syncfusion
 description: Learn here all about override the keyboard shortcuts in Syncfusion Essential Vue Document Editor component, it's elements and more.
 control: Override the keyboard shortcuts 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

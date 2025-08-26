@@ -3,7 +3,7 @@ layout: post
 title: Clipboard in Vue Document editor component | Syncfusion
 description: Learn here all about Clipboard in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Clipboard 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -50,7 +50,7 @@ When local paste is enabled for a Document Editor instance, you can paste conten
  this.$refs.documenteditor.ej2Instances.editor.pasteLocal();
 ```
 
-### EnableLocalPaste behaviour
+### EnableLocalPaste behavior
 
 |**EnableLocalPaste** |**Paste behavior details**|
 |--------------------------|----------------------|

@@ -3,7 +3,7 @@ layout: post
 title: Export document as pdf in Vue Document editor component | Syncfusion
 description: Learn here all about Export document as pdf in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Export document as pdf 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

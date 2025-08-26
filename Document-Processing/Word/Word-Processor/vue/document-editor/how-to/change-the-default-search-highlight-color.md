@@ -3,7 +3,7 @@ layout: post
 title: Change the default search highlight color in Vue Document editor component | Syncfusion
 description: Learn here all about Change the default search highlight color in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Change the default search highlight color 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -11,7 +11,7 @@ documentation: ug
 
 In this section, we'll guide you how to render PDF Viewer from embedded source in a MAUI app. We'll break it down into simple steps to make it easy to follow.
 
-Refer [here](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/deploy-maui-windows) to create MAUI app.
+Refer [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/deploy-maui-windows) to create MAUI app.
 
 ## Add PDF Viewer component
 

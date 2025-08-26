@@ -3,7 +3,7 @@ layout: post
 title: Getting started with Vue Document editor component | Syncfusion
 description:  Checkout and learn about Getting started with Vue Document editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -268,7 +268,7 @@ DocumentEditorContainer output will be displayed as follows.
 
 ## Frequently Asked Questions
 
-* [How to localize the Documenteditor container](../document-editor/global-local).
+* [How to localize the Document Editor container](../document-editor/global-local).
 * [How to load the document by default](../document-editor/how-to/open-default-document).
 * [How to customize tool bar](../document-editor/how-to/customize-tool-bar).
 * [How to resize Document editor component](../document-editor/how-to/resize-document-editor).

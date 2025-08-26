@@ -21,7 +21,7 @@ The free text annotations can be added to the PDF document using the annotation 
 
 In the pan mode, if the free text annotation mode is entered, the SfPdfViewer control will switch to text select mode.
 
-![Free Text Annotation in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-free-text-annotation.png)
+![Free Text Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-free-text-annotation.png)
 
 ```cshtml
 
@@ -51,55 +51,55 @@ The font family, font size, font styles, font color, text alignment, fill color,
 
 The font family of the annotation can be edited by selecting the desired font in the Font Family tool.
 
-![Editing Font Family of Blazor SfPdfViewer Text](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-edit-font-family.png)
+![Editing Font Family of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-edit-font-family.png)
 
 ### Editing font size
 
 The font size of the annotation can be edited by selecting the desired size in the Font Size tool.
 
-![Editing Font Size of Blazor SfPdfViewer Text](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-edit-font-size.png)
+![Editing Font Size of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-edit-font-size.png)
 
 ### Editing font color
 
 The font color of the annotation can be edited using the color palette provided in the Font Color tool.
 
-![Editing Font Color of Blazor SfPdfViewer Text](../../../PDF-Viewer/blazor/images/fontcolor.png)
+![Editing Font Color of Blazor SfPdfViewer Text](../../blazor-classic/images/fontcolor.png)
 
 ### Editing the text alignment
 
 The text in the annotation can be aligned by selecting the desired styles in the dropdown pop-up in the Text Align tool.
 
-![Editing Free Text Annotation in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-text-alignment.png)
+![Editing Free Text Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-text-alignment.png)
 
 ### Editing text styles
 
 The style of the text in the annotation can be edited by selecting the desired styles in the dropdown pop-up in the Font Style tool.
 
-![Editing Font Style in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-edit-font-style.png)
+![Editing Font Style in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-font-style.png)
 
 ### Editing fill color
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Editing Fill Color in Blazor SfPdfViewer Text](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-text-fill-color.png)
+![Editing Fill Color in Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-text-fill-color.png)
 
 ### Editing stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![Editing Stroke Color of Blazor SfPdfViewer Text](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-font-stroke.png)
+![Editing Stroke Color of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-font-stroke.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![Editing Font Border Thickness of Blazor SfPdfViewer Text](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-font-border-thickness.png)
+![Editing Font Border Thickness of Blazor SfPdfViewer Text](../../blazor-classic/images/blazor-pdfviewer-font-border-thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![Editing Font Opacity in Blazor SfPdfViewer](../../../PDF-Viewer/blazor/images/blazor-pdfviewer-font-opacity.png)
+![Editing Font Opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-font-opacity.png)
 
 ## Setting default properties during control initialization
 
@@ -127,6 +127,25 @@ FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
 }
 
 ```
+
+You can also enable the autofit support for free text annotation by using the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerFreeTextSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerFreeTextSettings_AutoFit) boolean property in PdfViewerFreeTextSettings as below. The width of the free text rectangle box will be increased based on the text added to it.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="@Viewer" Height="100%" Width="100%">
+    <PdfViewerFreeTextSettings AutoFit="true"></PdfViewerFreeTextSettings>
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2? Viewer;
+    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+}
+
+```
+![Enable AutoFit Free Text Annotation in Blazor SfPdfViewer](../images/enable_auto_fit_property.png)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/FreeText%20Annotation%20with%20enable%20AutoFit).
 
 ## Add free text annotation programmatically
 

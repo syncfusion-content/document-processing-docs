@@ -3,7 +3,7 @@ layout: post
 title: Retrieve the bookmark content as text in Vue Document editor component | Syncfusion
 description: Learn here all about Retrieve the bookmark content as text in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Retrieve the bookmark content as text 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
