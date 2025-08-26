@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with SfSmartPdfViewer in Blazor Web App | Syncfusion
-description: Learn how to get started with the SfSmartPdfViewer control in a Blazor Web App, which includes AI Assistance, smart redaction, and smart form filling powered by AI.
+title: Getting Started with SmartPdfViewer in Blazor Web App | Syncfusion
+description: Learn how to get started with SfSmartPdfViewer in Blazor Web App using AI interaction, smart redaction, and form filling.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
@@ -259,7 +259,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
 {% endtabs %}
