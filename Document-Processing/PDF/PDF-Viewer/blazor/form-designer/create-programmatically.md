@@ -58,7 +58,7 @@ The example below demonstrates how to add form fields in the PdfViewer component
 ```
 The following image illustrates the programmatic addition of form fields in Blazor SfPdfViewer:
 
-![Programmatical Add Form Fields in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-add.png)
+![Programmatical Add Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-add.png)
 
 N> Users can also add form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
 [Interactively Add Form Fields](./ui-interactions)
@@ -110,7 +110,7 @@ This code below is for [thickness](https://help.syncfusion.com/cr/blazor/Syncfus
 ```
 The following image illustrates the listbox field thickness customization in Blazor SfPdfViewer:
 
-![Form Field Thickness Customization in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png)
+![Form Field Thickness Customization in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/FieldSetting.razor).
 
@@ -161,7 +161,7 @@ Below is an example demonstrating how to set and clear the form field drawing mo
 ```
 The following image illustrates setting and clearing the form field mode in Blazor SfPdfViewer:  
 
-![Set and Clear Form Field Mode in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif)
+![Set and Clear Form Field Mode in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SetMode.razor).
 
@@ -210,7 +210,7 @@ Controls the visual aspects of form fields, including [background color](https:/
 ```
 The following image illustrates updating the appearance of a button form field in Blazor SfPdfViewer:  
 
-![Update Form Field Appearance in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
+![Update Form Field Appearance in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateApperanceProperties.razor).
 
@@ -251,7 +251,7 @@ Includes properties like [name](https://help.syncfusion.com/cr/blazor/Syncfusion
 ```
 The following image illustrates updating the metadata of dropdown field in Blazor SfPdfViewer:  
 
-![Update Form Field Metadata in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
+![Update Form Field Metadata in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateValueProperties.razor).
 
@@ -284,7 +284,7 @@ When multiple fields share the same name, changes apply to all linked fields. Up
 ```
 The following image illustrates updating linked properties of a radio button form field in Blazor SfPdfViewer:  
 
-![Update Linked Field Properties in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png)
+![Update Linked Field Properties in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateLinkedProperties.razor).
 
@@ -325,7 +325,7 @@ Removes all form fields from the document using [`DeleteFormFieldsAsync()`](http
 ```
 The following image illustrates deleting all form fields in Blazor SfPdfViewer:  
 
-![Delete All Form Fields in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
+![Delete All Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteAllFields.razor).
 
@@ -359,7 +359,7 @@ Deletes only the currently selected form field using [`DeleteFormFieldsAsync()`]
 ```
 The following image illustrates deleting a selected password field in Blazor SfPdfViewer:  
 
-![Delete Selected Password Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
+![Delete Selected Password Field in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteSelectedField.razor).
 
@@ -394,7 +394,7 @@ Removes specific form fields using [`DeleteFormFieldsAsync()`](https://help.sync
 ```
 The following image illustrates deleting form fields by their IDs in Blazor SfPdfViewer:  
 
-![Delete Form Fields by IDs in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-ids.png)
+![Delete Form Fields by IDs in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-ids.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteById.razor).
 
@@ -440,7 +440,7 @@ To select a form field using its unique identifier, pass the field's ID to the [
 ```
 The following image illustrates selecting a button field by its ID in Blazor SfPdfViewer:  
 
-![Select Button Field by ID in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
+![Select Button Field by ID in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectFieldById.razor).
 
@@ -480,12 +480,113 @@ Alternatively, you can retrieve all available form fields using [`GetFormFieldsA
 ```
 The following image illustrates selecting a checkbox field in Blazor SfPdfViewer:  
 
-![Select CheckBox Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
+![Select CheckBox Field in Blazor SfPdfViewer](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectByField.razor).
 
 N> Ensure form field interaction mode is enabled before selecting a field.
 Refer to the documentation for enabling form field toolbar [Interaction mode](./overview).
+
+## Custom Font Support for Form Fields
+
+The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Form Fields like {Text Box, List Box, Drop Down} using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties
+
+### Integrating Custom Font Collections into Form Fields in SfPdfViewer
+
+To ensure proper rendering and saving of form fields with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the Font Family dropdown of the property dialog using the FontFamilies property or a string array, and used seamlessly in Form Fields for loading, editing, and saving.
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
+    <PdfViewerEvents Created="@Created"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2? pdfViewer;
+    internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Allura", "Playwrite CA", "Ojuju" };
+    private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
+    public void Created()
+    {
+        pdfViewer!.FallbackFontCollection.Add("Allura", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf")));
+        pdfViewer!.FallbackFontCollection.Add("Playwrite CA", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/PlaywriteCA-Regular.ttf")));
+        pdfViewer!.FallbackFontCollection.Add("Ojuju", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Ojuju-Regular.ttf")));
+    }
+}
+```
+![Custom Font Support for Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_for_form_fields.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20FormFields).
+
+## Custom Font Support for Signature Fields
+
+The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Signature Fields using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [SignatureFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer. PdfViewerSignatureDialogSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerSignatureDialogSettings_SignatureFonts) properties
+
+### Integrating Custom Font Collections into Signature Fields in SfPdfViewer
+
+To ensure proper rendering and saving of signature with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the signature dialog using the SignatureFonts property or a string array, and used seamlessly in Signature Fields for loading, editing, and saving.
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
+	<PdfViewerEvents Created="@Created"></PdfViewerEvents>
+	<PdfViewerSignatureDialogSettings SignatureFonts="signatureFonts" />
+</SfPdfViewer2>
+
+@code {
+	SfPdfViewer2? Viewer;
+	private string DocumentPath { get; set; } = "wwwroot/Data/With_Four_Signature_Fields.pdf";
+
+	public void Created()
+	{
+		Stream font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf"));
+		Viewer!.FallbackFontCollection.Add("allura", font);
+		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Tangerine-Regular.ttf"));
+		Viewer!.FallbackFontCollection.Add("tangerine", font);
+		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Sacramento-Regular.ttf"));
+		Viewer!.FallbackFontCollection.Add("sacramento", font);
+		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Inspiration-Regular.ttf"));
+		Viewer!.FallbackFontCollection.Add("inspiration", font);
+	}
+	string[] signatureFonts =
+	{
+		"Allura",
+		"Tangerine",
+		"Sacramento",
+		"Inspiration"
+	};
+}
+```
+![Custom Font Support for Signature Field in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_signature_fields.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20Signature%20Field).
+
+To ensure proper and seamless execution when using Google API fonts in the PDF Viewer component, it's essential to load these fonts into the sample application as well. This is particularly important because FreeText annotations are rendered directly onto the canvas, making it mandatory to have the fonts available in the sample for accurate rendering.
+
+The following example illustrates how to load custom fonts in FreeText annotations using fonts from Google Fonts or other external sources.
+
+```cshtml
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        var fontFamily = ["Allura, Tangerine, Sacramento, Inspiration"];
+        for (var fontIndex=0; fontIndex<fontFamily.length; fontIndex++)
+        {
+            document.fonts.load(`16px ${fontFamily[fontIndex]}`).then(() => {
+                console.log(`Font "${fontFamily[fontIndex]}" loaded successfully.`);
+            }).catch(err => {
+                console.error(`Failed to load font "${font}":`, err);
+            });
+        }
+    });
+</script>
+```
+
+>**Note:** If external fonts are not properly loaded in the environment, it may lead to slight inconsistencies when importing and rendering free text annotations using those custom fonts. This issue typically occurs only with fonts that are referenced externally, such as those loaded from web-based sources.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Load%20Custom%20Font%20From%20External%20Links).
 
 ## See also
 
