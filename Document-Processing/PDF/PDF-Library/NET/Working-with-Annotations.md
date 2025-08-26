@@ -5812,8 +5812,8 @@ Refer to the following code example to apply the BoundsCollection property to a 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Load an existing document. 
-PdfLoadedDocument document = new PdfLoadedDocument(@"Input.pdf"); 
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read); 
+PdfLoadedDocument document = new PdfLoadedDocument(docStream); 
 //Load the existing PdfLoadedRedactionAnnotation 
 PdfLoadedRedactionAnnotation annot = document.Pages[0].Annotations[0] as PdfLoadedRedactionAnnotation; 
 
