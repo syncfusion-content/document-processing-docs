@@ -515,7 +515,7 @@ To ensure proper rendering and saving of form fields with custom fonts in SfPdfV
     }
 }
 ```
-![Custom Font Support for Form Fields in Blazor SfPdfViewer](../form-designer/custom_font_support_for_form_fields.png)
+![Custom Font Support for Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_for_form_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20FormFields).
 
@@ -560,7 +560,7 @@ To ensure proper rendering and saving of signature with custom fonts in SfPdfVie
 	};
 }
 ```
-![Custom Font Support for Signature Field in Blazor SfPdfViewer](../form-designer/custom_font_support_signature_fields.png)
+![Custom Font Support for Signature Field in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_signature_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20Signature%20Field).
 
