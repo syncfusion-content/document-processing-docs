@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Summaries in Blazor Smart PDF Viewer | Syncfusion
-description: Checkout and learn about Document Summaries in Blazor Smart PDF Viewer.
+description: Checkout and learn about Document Summaries in SfSmartPdfViewer.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
