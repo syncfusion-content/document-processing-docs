@@ -7,7 +7,7 @@ control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Smart Pdf Viewer
+# Getting Started with Smart PDF Viewer
 
 This section briefly explains how to include [Blazor Smart PDF Viewer](https://www.syncfusion.com/blazor-components) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio code.
 
@@ -20,7 +20,7 @@ This section briefly explains how to include [Blazor Smart PDF Viewer](https://w
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer Component is compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio
 
@@ -28,15 +28,15 @@ You can create a **Blazor Server App** using Visual Studio 2022 via [Microsoft T
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer and Themes NuGet in the App
 
-To add **Blazor Smart PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages?q=Syncfusion.Blazor.SfSmartPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor Smart PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version 31.2.4
-Install-Package Syncfusion.Blazor.Themes -Version 31.2.4
+Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version 31.2.*
+Install-Package Syncfusion.Blazor.Themes -Version 31.2.*
 
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +52,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer Component is compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -73,13 +73,13 @@ cd BlazorApp
 
 * Press Ctrl+` to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install a [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages?q=Syncfusion.Blazor.SfSmartPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Run the following command to install a [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfSmartPdfViewer/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.SfSmartPdfViewer -v 31.2.4
-dotnet add package Syncfusion.Blazor.Themes -v 31.2.4
+dotnet add package Syncfusion.Blazor.SfSmartPdfViewer -v 31.2.*
+dotnet add package Syncfusion.Blazor.Themes -v 31.2.*
 dotnet restore
 
 {% endhighlight %}
@@ -107,7 +107,7 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfSmartPdfViewer` namespac
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="6" %}
 
 using Syncfusion.Blazor;
 
@@ -151,7 +151,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app. 
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="10 12 14 15 16 23 25" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -217,7 +217,7 @@ dotnet add package OllamaSharp --version 5.3.6
 Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="4 6 7" %}
 
 ...
 var builder = WebApplication.CreateBuilder(args);
@@ -249,7 +249,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
 {% endtabs %}
@@ -263,8 +263,10 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
 
-<Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="wwwroot/Fsharp_Succinctly.pdf">
-</Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer>
+@using Syncfusion.Blazor.SfSmartPdfViewer
+
+<SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="wwwroot/Fsharp_Succinctly.pdf">
+</SfSmartPdfViewer>
 
 {% endhighlight %}
 {% endtabs %}
