@@ -276,7 +276,3 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 ![Syncfusion Blazor Smart PDF Viewer](gettingstarted-images/smart-pdf-viewer.png)
 
 N> [View Sample in GitHub]().
-
-## See also
-
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
