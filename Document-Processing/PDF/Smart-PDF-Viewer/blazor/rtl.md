@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL in Blazor Smart PDF Viewer | Syncfusion
-description: Checkout and learn about RTL in Blazor SfSmartPdfViewer.
+description: Learn how to enable and use Right-to-Left (RTL) text support in Blazor SfSmartPdfViewer for multilingual PDF viewing.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
