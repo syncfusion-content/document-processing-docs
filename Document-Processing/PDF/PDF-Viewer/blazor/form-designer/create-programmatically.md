@@ -493,7 +493,7 @@ The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Form F
 
 ### Integrating Custom Font Collections into Form Fields in SfPdfViewer
 
-To ensure proper rendering and saving of form fields with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Allura and Playwrite CA can be loaded as TTF files, added to the Font Family dropdown of the property dialog using the FontFamilies property or a string array, and used seamlessly in Form Fields for loading, editing, and saving.
+To ensure proper rendering and saving of form fields with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the Font Family dropdown of the property dialog using the FontFamilies property or a string array, and used seamlessly in Form Fields for loading, editing, and saving.
 
 ```cshtml
 @using Syncfusion.Blazor;
@@ -525,7 +525,7 @@ The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Signat
 
 ### Integrating Custom Font Collections into Signature Fields in SfPdfViewer
 
-To ensure proper rendering and saving of signature with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Allura and Playwrite CA can be loaded as TTF files, added to the signature dialog using the SignatureFonts property or a string array, and used seamlessly in Signature Fields for loading, editing, and saving.
+To ensure proper rendering and saving of signature with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the signature dialog using the SignatureFonts property or a string array, and used seamlessly in Signature Fields for loading, editing, and saving.
 
 ```cshtml
 @using Syncfusion.Blazor;
