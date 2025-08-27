@@ -12,6 +12,15 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
 
 ![Smart Fill](images/smartfill_pdfviewer.gif)
 
+## Component Usage
+
+```cshtml
+@* Enables AI-powered automatic form filling to reduce manual input and improve accuracy *@
+
+<SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+     <SmartFillSettings/>
+</SfSmartPdfViewer>
+```
 
 ## Smart Fill Settings in Syncfusion Blazor Smart PDF Viewer
 - The `SmartFillSettings` class configures settings for the Smart Fill feature in the Smart PDF Viewer. This feature leverages AI to automate the population of PDF form fields based on clipboard or specified data.
@@ -26,11 +35,18 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
 - Helps maintain a clean and intuitive UI by hiding the feature when it's not applicable.
 - Can be dynamically toggled based on user roles, document content, or application logic.
 
-```csharp
-<SfSmartPdfViewer>
+```chtml
+@* Controls visibility and accessibility of the Smart Fill feature based on document content or app logic *@
+
+<SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     <SmartFillSettings Enable="false" />
 </SfSmartPdfViewer>
 ```
 
 ## Integration
 To integrate Smart Fill into your PDF viewer workflow, include the `SmartFillSettings` component within the `SfSmartPdfViewer` tag. Ensure that your PDF documents contain form fields to utilize the AI-powered filling capabilities.
+
+## See also
+
+* [Document Summaries in Blazor Smart PDF Viewer](./document-summarizer.md)
+* [Smart Redact in Blazor Smart PDF Viewer]()
