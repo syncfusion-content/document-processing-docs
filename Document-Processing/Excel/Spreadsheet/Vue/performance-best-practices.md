@@ -77,9 +77,11 @@ public IActionResult Open(IFormCollection openRequest)
 
 ### Optimize Excel open with parsing options
 
-To improve performance when opening large Excel files, use parsing options like `IgnoreStyle` and `IgnoreFormat` to skip unnecessary styles and formats. This reduces memory usage, speeds up loading, and minimizes JSON size—especially helpful for files with many styled but empty cells.
+To improve performance when opening large Excel files, use parsing options to skip non-essential properties during import. These options help reduce memory usage, speed up loading, and minimize JSON size—especially useful for files with complex formatting or large datasets.
 
-To learn how to configure these parsing options, please refer to the UG section below.
+By configuring the parse options, you can load Excel files into the Spreadsheet while retaining only the necessary content. This ensures efficient handling of large or high-memory files without compromising essential data.
+
+To learn how to configure the parsing options, please refer to the UG section below.
 * [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
 
 ## How to improve performance on formula calculation in Spreadsheet?
