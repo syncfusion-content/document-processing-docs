@@ -372,14 +372,14 @@ The code example below demonstrates how to configure parse options on the `clien
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/open-save-cs10/app/app.jsx %}
+{% include code-snippet/excel/spreadsheet/react/open-save-cs10/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/open-save-cs10/app/app.tsx %}
+{% include code-snippet/excel/spreadsheet/react/open-save-cs10/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs10" %}
+ {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/open-save-cs10" %}
 
 
 To receive and apply the parsing options passed from the client, add deserialization logic in the server-side open request handler
