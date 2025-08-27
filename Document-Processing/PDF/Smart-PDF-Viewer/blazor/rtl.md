@@ -11,6 +11,8 @@ documentation: ug
 
 The Blazor Smart PDF Viewer supports Right-to-Left (RTL) rendering to accommodate languages that are read from right to left, such as Arabic and Hebrew. By default, RTL support is disabled. You can enable it by setting the `EnableRtl` property to `true`.
 
+![RTL Desktop](images/rtl-desktop.png)
+
 ## Example
 
 ```cshtml
@@ -20,7 +22,6 @@ The Blazor Smart PDF Viewer supports Right-to-Left (RTL) rendering to accommodat
 EnableRtl="true">
 </SfSmartPdfViewer>
 ```
-
-![RTL Desktop](images/rtl-desktop.png)
+[View sample in GitHub]()
 
 In this example, the `EnableRtl` property is set to `true`, enabling RTL layout for the PDF viewer.

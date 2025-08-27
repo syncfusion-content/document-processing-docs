@@ -24,7 +24,7 @@ The AI AssistView provides users with the ability to generate a summary of the P
     <AssistViewSettings/>
 </SfSmartPdfViewer>
 ```
-
+[View sample in GitHub]()
 ## AssistViewSettings Parameters
 
 ### ShowPromptSuggestions
@@ -142,6 +142,7 @@ Sets the initial query shown in the input field when the Assist view opens. This
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
+[View sample in GitHub]()
 
 ### SuggestedPrompts
 Provides a list of predefined prompts that guide the user or help the AI understand the context better.
@@ -165,6 +166,8 @@ Provides a list of predefined prompts that guide the user or help the AI underst
 }
 
 ```
+[View sample in GitHub]()
+
 ### PageStart
 Defines the starting page number for the document overview. Useful for focusing AI analysis on specific sections.
 ```cshtml
@@ -177,6 +180,7 @@ Defines the starting page number for the document overview. Useful for focusing 
 </SfSmartPdfViewer>
 
 ```
+[View sample in GitHub]()
 
 ### PageEnd
 Defines the ending page number for the document overview. Helps limit the scope of AI processing and manage performance.
@@ -190,6 +194,7 @@ Defines the ending page number for the document overview. Helps limit the scope 
 </SfSmartPdfViewer>
 
 ```
+[View sample in GitHub]()
 
 ## Customizing Assist View with PdfViewerTemplates – SmartPdfViewer
 
@@ -201,8 +206,12 @@ The `PdfViewerTemplates` class in Syncfusion's `SmartPdfViewer` component allows
 ### PromptTemplate
 Defines the toolbar layout within the prompt view. Developers can use `PromptToolbar` and `PromptToolbarItem` to add icons and actions that guide user input.
 
+![Summarizer Prompt Template](images/summarizer_prompt-template.png)
+
 ``` cshtml
 @* Customizes the prompt input area with toolbar icons to guide user interaction *@
+
+@using Syncfusion.Blazor.InteractiveChat;
 
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     <AssistViewSettings>
@@ -217,12 +226,16 @@ Defines the toolbar layout within the prompt view. Developers can use `PromptToo
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
+[View sample in GitHub]()
 
 ### ResponseTemplate
 Customizes the toolbar shown in the response section. Using `ResponseToolbar` and `ResponseToolbarItem`, developers can include feedback options like "like" or "dislike".
 
+![Summarizer Response Template](images/summarizer_response-template.png)
 ``` cshtml
 @* Adds a custom toolbar to the AI response section for feedback actions like 'like' and 'dislike' *@
+
+@using Syncfusion.Blazor.InteractiveChat;
 
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     <AssistViewSettings>
@@ -237,6 +250,7 @@ Customizes the toolbar shown in the response section. Using `ResponseToolbar` an
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
+[View sample in GitHub]()
 
 ### BannerTemplate
 Use the `BannerTemplate` to displays a banner at the top of the Assist view. This can be used for branding, instructions, or welcome messages to enhance user engagement. The following code demonstrates BannerTemplate usage in the SfSmartPdfViewer component.
@@ -259,6 +273,7 @@ Use the `BannerTemplate` to displays a banner at the top of the Assist view. Thi
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
+[View sample in GitHub]()
 
 ## Integration Notes
 
