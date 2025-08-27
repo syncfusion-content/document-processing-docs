@@ -484,7 +484,7 @@ The code example below demonstrates how to configure parse options on the `clien
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/app-composition.vue %}
+{% include code-snippet/excel/spreadsheet/vue/open-save-cs4/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/excel/spreadsheet/vue/open-save-cs4/app.vue %}
