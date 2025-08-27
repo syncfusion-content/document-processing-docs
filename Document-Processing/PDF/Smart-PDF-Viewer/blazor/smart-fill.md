@@ -46,7 +46,6 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
 ## Integration
 To integrate Smart Fill into your PDF viewer workflow, include the `SmartFillSettings` component within the `SfSmartPdfViewer` tag. Ensure that your PDF documents contain form fields to utilize the AI-powered filling capabilities.
 
-
 ## See also
 
 * [Document Summaries in Blazor Smart PDF Viewer](./document-summarizer.md)
