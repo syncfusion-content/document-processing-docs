@@ -194,6 +194,14 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 
 ## Configuring Ollama for Self-Hosted AI Models
 
+To use Ollama for running self-hosted models:
+
+* **Download and install Ollama**
+Visit [Ollama’s official website](https://ollama.com/) and install the application appropriate for your operating system.
+
+* **Install the desired model from the Ollama library**
+You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., llama2:13b, mistral:7b, etc.).
+
 In Visual Studio, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
 
 {% tabs %}
