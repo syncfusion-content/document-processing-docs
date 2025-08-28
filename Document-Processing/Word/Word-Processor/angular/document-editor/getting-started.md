@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Angular Document editor component | Syncfusion
 description:  Checkout and learn about Getting started with Angular Document editor component of Syncfusion Essential JS 2 and more details.
-platform: ej2-angular
+platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##

@@ -84,7 +84,6 @@ container.documentEditor.importContentControlData(data);
 
 Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#exportContentControlData)
 
-{% elsif page.publishingplatform == "javascript" %}
 {% highlight js %}
 var contentControlInfos = container.documentEditor.exportContentControlData();
 {% endhighlight %}

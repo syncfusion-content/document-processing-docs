@@ -133,7 +133,6 @@ This dialog allows managing the styles in a document. It will display all the st
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs8" %}
-{% endif %}
 
 ## Style dialog
 
