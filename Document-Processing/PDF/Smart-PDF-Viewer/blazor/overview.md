@@ -8,20 +8,25 @@ documentation: ug
 ---
 # Overview of Blazor Smart PDF Viewer
 
-The **Blazor Smart PDF Viewer** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. It builds upon the core capabilities of the traditional PDF Viewer by introducing intelligent features such as **Document Summarization**, **Smart Redact**, and **Smart Fill**, enabling users to manage documents more efficiently and securely.
+The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html)** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. Its features include [**Document Summarization with Q&A**](./document-summarizer.md), **Smart Redaction**, and [**Smart Fill**](./smart-fill.md). It enables users to manage documents more efficiently and securely.
 
 ## Document Summarization
 
 * Uses AI to analyze PDF content and generate concise summaries.
+* Allows users to ask questions about the document using both their own queries and AI-suggested questions.
 * Helps users quickly understand key points without reading the entire document.
 * Useful for legal contracts, research papers, business reports, and other lengthy documents.
 
-## Smart Redact
+[Explore Blazor Smart PDF Viewer Document Summarization Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/summarizer?theme=fluent2)
+
+## Smart Redaction
 
 * Automatically detects and removes sensitive or confidential information.
 * Identifies patterns such as personal identifiers and financial data.
 * Ensures consistent and secure redaction across documents.
 * Supports privacy compliance and reduces manual effort.
+
+[Explore Blazor Smart PDF Viewer Smart Redaction Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartredact?theme=fluent2)
 
 ## Smart Fill
 
@@ -29,6 +34,8 @@ The **Blazor Smart PDF Viewer** is an advanced component in Syncfusion’s Blazo
 * Understands the structure and expected input of PDF forms.
 * Reduces manual data entry and improves accuracy.
 * Streamlines workflows in applications like onboarding, surveys, and registrations.
+
+[Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfil?theme=fluent2)
 
 ## Benefits
 

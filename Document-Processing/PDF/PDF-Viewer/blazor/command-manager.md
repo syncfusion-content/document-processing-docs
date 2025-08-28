@@ -9,9 +9,9 @@ documentation: ug
 
 # Command Manager in Blazor SfPdfViewer Component
 
-The Pdfviewer provides support to map or bind command execution with a desired combination of key gestures.
+The PDF viewer provides support to map or bind command execution with a desired combination of key gestures.
 
-The [PdfViewerCommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyboardInteractions.PdfViewerCommandManager.html) provides support to define custom commands. These custom commands are executed when the specified key gesture is recognized. 
+The [PdfViewerCommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommandManager.html) provides support to define custom commands. These custom commands are executed when the specified key gesture is recognized. 
 
 ## Command Execution
 To execute custom commands, simply provide a list of keyboard shortcuts along with the corresponding actions. These actions will be triggered when the specified keyboard shortcuts are pressed.
