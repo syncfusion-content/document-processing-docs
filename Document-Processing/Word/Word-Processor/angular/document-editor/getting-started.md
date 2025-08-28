@@ -18,7 +18,7 @@ To get started quickly with DocumentEditor component using CLI, you can check th
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ## Dependencies
 
@@ -50,7 +50,7 @@ The Document Editor component requires server-side interactions for the followin
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
 * [SpellCheck](../document-editor/spell-check)
-* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents\server-side-export)
+* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents/server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
@@ -165,11 +165,11 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include /word/word-processor/angular/code-snippet/document-editor/document-editor-container-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/document-editor-container-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include /word/word-processor/angular/code-snippet/document-editor/document-editor-container-cs2/src/main.ts %}
+{% include code-snippet/document-editor/document-editor-container-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -177,7 +177,7 @@ DocumentEditorContainer output will be displayed as follows.
 
 > The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: If you see a license banner when running your application, it means that you need to obtain a license key and register it within the application in order to use Syncfusion components. You can find more information on how to obtain and register a license key on our [Licensing overview](https://ej2.syncfusion.com/angular/documentation/licensing/overview) page.
+>Note: If you see a license banner when running your application, it means that you need to obtain a license key and register it within the application in order to use Syncfusion components. You can find more information on how to obtain and register a license key on our [Licensing overview](../licensing/overview/) page.
 
 ### DocumentEditor Component
 
@@ -213,7 +213,7 @@ export class AppComponent implements OnInit {
 
 #### Run the  DocumentEditor application
 
-The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
@@ -223,17 +223,18 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include /word/word-processor/angular/code-snippet/document-editor/getting-started-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/getting-started-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include /word/word-processor/angular/code-snippet/document-editor/getting-started-cs1/src/main.ts %}
+{% include code-snippet/document-editor/getting-started-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
 {% previewsample "page.domainurl/samples/document-editor/getting-started-cs1" %}
 
 > The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
 
 
 ## Frequently Asked Questions
