@@ -5832,8 +5832,7 @@ freeText.SetAppearance(true);
 </tr>
 </table>
 
-
-## Missing annotation after importing the data into the PDF document
+<b> Missing annotation after importing the data into the PDF document</b>
 
 <table>
 <th style="font-size:14px" width="100px">Issue</th>
