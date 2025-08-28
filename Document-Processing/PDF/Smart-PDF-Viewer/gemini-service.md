@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gemini AI Service with SmartPdfviewer in Blazor App | Syncfusion
-description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion SmartPdfviewer in a Blazor App.
+title: Gemini AI Service with Smart PDF Viewer in Blazor App | Syncfusion
+description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion Smart PDF Viewer in a Blazor App.
 control: SmartPdfviewer
 documentation: ug
 ---
 
-# Getting Started with SmartPdfviewer using Gemini AI Service
+# Getting Started with Smart PDF Viewer using Gemini AI Service
 
-This guide provides step-by-step instructions for integrating and using Syncfusion's SmartPdfviewer with Gemini AI services in your Blazor App.
+This guide provides step-by-step instructions for integrating and using Syncfusion's Smart PDF Viewer with Gemini AI services in your Blazor App.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ For a complete list of models and their capabilities, visit the [Gemini Models D
 
 After completing this setup, you can:
 
-1. [Add SmartPdfviewer to your Blazor pages](Add link for smart pdfviewer getting Started)
+1. [Add SmartPdfviewer to your Blazor pages]()
 
 ---
 
@@ -228,11 +228,11 @@ public class GeminiChatParameters
 
 ## Step 3: Create a Custom AI Service
 
-The Syncfusion SmartPdfviewer are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the SmartPdfviewer to the Gemini AI service.
+The Syncfusion Smart PDF Viewer are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart PDF Viewer to the Gemini AI service.
 
 ### Understanding the Interface
 
-The `IChatInferenceService` interface is the bridge between Syncfusion SmartPdfviewer and AI services:
+The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF Viewer and AI services:
 
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
@@ -259,7 +259,7 @@ public class MyCustomService : IChatInferenceService
 
 ## Step 4: Configure the Blazor App
 
-Configure your Blazor application to use the Gemini AI service with Syncfusion SmartPdfviewer. This involves registering necessary services and setting up the dependency injection container.
+Configure your Blazor application to use the Gemini AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
 ```CSharp
 
@@ -270,7 +270,6 @@ var builder = WebApplication.CreateBuilder(args);
 ....
 
 builder.Services.AddSyncfusionBlazor();
-builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<GeminiService>();
 builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 
