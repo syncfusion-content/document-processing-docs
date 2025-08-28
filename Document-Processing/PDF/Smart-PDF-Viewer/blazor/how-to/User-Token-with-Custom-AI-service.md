@@ -20,7 +20,7 @@ Before you begin, ensure you have:
 
 After completing this setup, you can:
 
-1. [Add Smart PDF Viewer to your Blazor pages](https://blazor.syncfusion.com/document-processing/pdf/smart-pdf-viewer/overview)
+1. [Add Smart PDF Viewer to your Blazor pages](../getting-started/web-app.md)
 
 ---
 ## Step 1: create user token service
