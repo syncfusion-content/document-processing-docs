@@ -22,11 +22,11 @@ Before you begin, ensure you have:
 
 For a complete list of models and their capabilities, visit the [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models).
 
-## Getting Started for Gemini AI with SmartPdfviewer
+## Getting Started for Gemini AI with Smart PDF Viewer
 
 After completing this setup, you can:
 
-1. [Add SmartPdfviewer to your Blazor pages](https://helpstaging.syncfusion.com/document-processing/pdf/smart-pdf-viewer/overview)
+1. [Add Smart PDF Viewer to your Blazor pages](https://blazor.syncfusion.com/document-processing/pdf/smart-pdf-viewer/overview)
 
 ---
 
