@@ -33,15 +33,15 @@ The Document Editor component is used to create, edit, view, and print Word docu
 * Provides a [server-side helper library](../document-editor/web-services-overview) to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
 
 ## Supported Web platforms
-
-* [Javascript(ES5)](../../javascript/document-editor/getting-started)
-* [Javascript](../../typescript/document-editor/getting-started)
+ 
+* [Javascript(ES5)](../../javascript-es5/document-editor/getting-started)
+* [Javascript(ES6)](../../javascript-es6/document-editor/getting-started)
 * [Angular](../../angular/document-editor/getting-started)
 * [React](../../react/document-editor/getting-started)
 * [Vue](../../vue/document-editor/getting-started)
-* [ASP.NET Core](../../asp-net-core/document-editor/getting-started)
+* [ASP.NET Core](../../asp-net-core/getting-started-core)
 * [ASP.NET MVC](../../asp-net-mvc/document-editor/getting-started)
-* [Blazor](../../blazor/document-editor/getting-started)
+* [Blazor](../../blazor/document-editor/getting-started/server-side-application)
 
 ### Supported platforms for server-side dependencies
 

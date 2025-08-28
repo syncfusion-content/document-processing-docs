@@ -70,6 +70,6 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
 ### See Also
 
-* [How to protect the document in form filling mode](../document-editor/form-fields.md/#protect-the-document-in-form-filling-mode)
-* [How to protect the document in comments only mode](../document-editor/comments.md/#protect-the-document-in-comments-only-mode)
-* [How to protect the document in track changes only mode](../document-editor/track-changes.md/#protect-the-document-in-track-changes-only-mode)
+* [How to protect the document in form filling mode](../document-editor/form-fields#protect-the-document-in-form-filling-mode)
+* [How to protect the document in comments only mode](../document-editor/comments#protect-the-document-in-comments-only-mode)
+* [How to protect the document in track changes only mode](../document-editor/track-changes#protect-the-document-in-track-changes-only-mode)

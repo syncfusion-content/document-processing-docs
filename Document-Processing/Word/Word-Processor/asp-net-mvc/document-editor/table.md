@@ -209,4 +209,4 @@ The following sample demonstrates how to delete the table row or columns, merge 
 ## See Also
 
 * [Feature modules](../document-editor/feature-module)
-* [Insert table dialog](../document-editor/dialog.md/#table-dialog)
+* [Insert table dialog](../document-editor/dialog#table-dialog)

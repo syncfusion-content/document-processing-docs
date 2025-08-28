@@ -19,7 +19,7 @@ Document Editor provides built-in dialog to add, delete, and navigate bookmarks 
 
 ## Add bookmark
 
-Using [`insertBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#insertbookmark) method, Bookmark can be added to the selected text.
+Using [`insertBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#insertbookmark) method, Bookmark can be added to the selected text.
 
 ```c#
 this.$refs.container.ej2Instances.documentEditor.editor.insertBookmark("Bookmark1");
@@ -27,7 +27,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertBookmark("Bookmark
 
 ## Select Bookmark
 
-You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection/#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
+You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
 
 ```c#
 this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark("Bookmark1", true)
@@ -37,7 +37,7 @@ this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark("Bookm
 
 ## Delete Bookmark
 
-You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#deletebookmark) method as shown in the following code snippet.
+You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#deletebookmark) method as shown in the following code snippet.
 
 ```c#
 this.$refs.container.ej2Instances.documentEditor.editor.deleteBookmark("Bookmark1");
@@ -45,7 +45,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.deleteBookmark("Bookmark
 
 ## Get Bookmark from document
 
-You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#getbookmarks) method as shown in the following code snippet.
+You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#getbookmarks) method as shown in the following code snippet.
 
 ```c#
 this.$refs.container.ej2Instances.documentEditor.getBookmarks(false);
@@ -55,7 +55,7 @@ this.$refs.container.ej2Instances.documentEditor.getBookmarks(false);
 
 ## Get Bookmark from selection
 
-You can get bookmarks in current selection in the document using [`getBookmarks`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection/#getbookmarks) method as shown in the following code snippet.
+You can get bookmarks in current selection in the document using [`getBookmarks`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#getbookmarks) method as shown in the following code snippet.
 
 ```csharp
 this.$refs.container.ej2Instances.documentEditor.selection.getBookmarks(false);

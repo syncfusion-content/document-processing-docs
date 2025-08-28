@@ -14,7 +14,7 @@ In this article, we are going to see how to auto save the document in AWS S3. Yo
 
 The following example illustrates how to auto save the document in AWS S3.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#saveasblob) method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

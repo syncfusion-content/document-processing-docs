@@ -364,15 +364,15 @@ The Document Editor component requires server-side interactions for the followin
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
 * [Spell check](../document-editor/spell-check)
-* [Save as file formats other than SFDT and DOCX](../document-editor/server-side-export)
+* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents/server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
-Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](../api/document-editor-container/#serviceurl).
+Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#serviceurl).
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it in server on the go. You can also create own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker).
 
->Note: Staring from `v19.3.0.x`, we have optimized the accuracy of text size measurements such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [to disable it and retain the document pagination behavior of older versions](../document-editor/how-to/disable-optimized-text-measuring)..
+>Note: Staring from `v19.3.0.x`, we have optimized the accuracy of text size measurements such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [to disable it and retain the document pagination behavior of older versions](../document-editor/how-to/disable-optimized-text-measuring).
 
 ## Frequently Asked Questions
 

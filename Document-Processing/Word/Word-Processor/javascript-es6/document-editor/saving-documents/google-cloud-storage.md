@@ -127,7 +127,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to you
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](../../api/document-editor/#saveAsBlob) and sent to server-side for saving in Google Cloud Storage.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Google Cloud Storage.
 
  
 

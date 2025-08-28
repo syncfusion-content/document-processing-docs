@@ -24,7 +24,7 @@ documentEditor.editor.insertComment('Test comment');
 
 ## Add a New Comment with Date, Author, and Status
 
-Comments can be inserted into the selected text with a specified date, author, and status [`insertComment`](../api/document-editor/editor/#insertcomment).
+Comments can be inserted into the selected text with a specified date, author, and status [`insertComment`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertcomment).
 
 {% highlight js %}
 // In this example, a comment with the text "Hello world"
@@ -48,7 +48,7 @@ documentEditor.editor.insertComment('Hello world', commentProperties);
 
 ## Add a Reply Comment with Date, Author, and Status
 
-Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](../api/document-editor/editor/#insertreplycomment).
+Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertreplycomment).
 
 {% highlight js %}
 // In this example, a comment with the text "Hello world"
@@ -74,7 +74,7 @@ documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentPrope
 
 ## Get Comments
 
-Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](../api/document-editor/#getComments).
+Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#getComments).
 
 {% highlight js %}
 //Get Comments in the document along with the properties author, date, status.
@@ -97,7 +97,7 @@ documentEditor.selection.navigatePreviousComment();
 
 ## Delete comment
 
-Current comment can be be deleted using [`deleteComment`](../api/document-editor/editor/#deletecomment).
+Current comment can be be deleted using [`deleteComment`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#deletecomment).
 
 
 {% highlight js %}
@@ -127,7 +127,7 @@ documentEditor.editor.deleteAllComments();
 
 Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](../api/document-editor/editor/#enforceprotection) and [`stopProtection`](../api/document-editor/editor/#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
@@ -181,7 +181,7 @@ container.appendTo('#container');
 
 ## Events
 
-DocumentEditor provides [beforeCommentAction](../api/document-editor-container/#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](../api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
+DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 

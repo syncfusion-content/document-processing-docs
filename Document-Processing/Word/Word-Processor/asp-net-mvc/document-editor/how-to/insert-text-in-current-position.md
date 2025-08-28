@@ -14,7 +14,7 @@ You can insert the text, paragraph and rich-text content in Document Editor comp
 
 ## Insert text in current cursor position
 
-You can use [`insertText`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/editor/#inserttext) API in editor module to insert the text in current cursor position.
+You can use [`insertText`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/editor#inserttext) API in editor module to insert the text in current cursor position.
 
 The following example code illustrates how to add the text in current selection.
 

@@ -18,11 +18,11 @@ The following example illustrates to disable the auto focus in DocumentEditorCon
 <DocumentEditorContainerComponent id="container" height={'590px'} enableAutoFocus={false} />
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#enableautofocus) property is `true`.
 The following example illustrates to disable the auto focus in DocumentEditor.
 
 ```typescript
 <DocumentEditorComponent id="container" height={'590px'} enableAutoFocus={false}/>
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/react/documentation/api/document-editor#enableautofocus) property is `true`.

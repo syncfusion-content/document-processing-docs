@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # Insert text or image in table programmatically in React Document editor component
 
-Using Document editor API's, you can insert [`text`](../../document-editor/how-to/insert-text-in-current-position.md/#insert-text-in-current-cursor-position) or [`image`](../../document-editor/image.md/#images) in [`table`](../../document-editor/table.md/#create-a-table) programmatically based on your requirement.
-[`text`](../../document-editor/how-to/insert-text-in-current-position.md)
+Using Document editor API's, you can insert [`text`](../../document-editor/how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or [`image`](../../document-editor/image#images) in [`table`](../../document-editor/table#create-a-table) programmatically based on your requirement.
+[`text`](../../document-editor/how-to/insert-text-in-current-position)
 
-Use [`selection`](../../document-editor/how-to/move-selection-to-specific-position.md/#selects-content-based-on-start-and-end-hierarchical-index) API's to navigate between rows and cells.
+Use [`selection`](../../document-editor/how-to/move-selection-to-specific-position#selects-content-based-on-start-and-end-hierarchical-index) API's to navigate between rows and cells.
 
 The following example illustrates how to create 2*2 table and then add text and image programmatically.
 

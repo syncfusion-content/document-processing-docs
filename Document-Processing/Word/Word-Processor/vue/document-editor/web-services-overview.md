@@ -54,7 +54,7 @@ Please check below table for expected web API structure.
 
 ## Customize the expected method name
 
-Document editor component provides an option to customize the expected method name for Import, SystemClipboard, RestrictEditing and SpellCheck using [serverActionSettings](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel/#serveractionsettings).
+Document editor component provides an option to customize the expected method name for Import, SystemClipboard, RestrictEditing and SpellCheck using [serverActionSettings](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#serveractionsettings).
 
 The following example code illustrates how to customize the method name using serverActionSettings.
 
@@ -116,7 +116,7 @@ export default {
 
 ## Add the custom headers to XMLHttpRequest
 
-Document editor component provides an an option to add custom headers of XMLHttpRequest using the [`headers`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel/#headers).
+Document editor component provides an an option to add custom headers of XMLHttpRequest using the [`headers`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#headers).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -177,7 +177,7 @@ export default {
 
 ## Modify the XMLHttpRequest before request send
 
-Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/#beforexmlhttprequestsend) event and it gets triggered before a server request.
+Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#beforexmlhttprequestsend) event and it gets triggered before a server request.
 
 You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/xmlHttpRequestEventArgs/) properties.
 

@@ -14,7 +14,7 @@ In this article, we are going to see how to export the document as Pdf format. Y
 
 ## Export the document as pdf in client-side
 
-Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportasimage`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF). There is one limitation we can’t search the text because we are exporting the pdf as image.
+Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportasimage`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF). There is one limitation we can’t search the text because we are exporting the pdf as image.
 
 >Note: You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 
@@ -184,7 +184,7 @@ With the help of [`Synfusion DocIO`](https://help.syncfusion.com/file-formats/do
 
 The following way illustrates how to convert the document as Pdf:
 
-* Using [`serialize`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#serialize) API, convert the document as Sfdt and send it to server-side.
+* Using [`serialize`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#serialize) API, convert the document as Sfdt and send it to server-side.
 
   The following example code illustrates how to convert the document to sfdt and pass it to server-side.
 

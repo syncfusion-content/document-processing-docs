@@ -137,7 +137,7 @@ N> The **FolderId** part is the unique identifier for the folder. For example, i
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#open) method.
+In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method.
 
 ```typescript
 import * as ReactDOM from 'react-dom';

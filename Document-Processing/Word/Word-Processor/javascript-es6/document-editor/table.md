@@ -26,7 +26,7 @@ Refer to the following sample code.
 
  
 
-You can use the [maximumRows](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings/#maximumrows) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
+You can use the [maximumRows](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings#maximumrows) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
 
 Refer to the following sample code.
 
@@ -43,7 +43,7 @@ When the maximum row limit is reached, an alert will appear, as follow
 
  
 
-You can use the [maximumColumns](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings/#maximumcolumns) property to set the maximum number of columns allowed while inserting a table in the Document Editor component.
+You can use the [maximumColumns](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings#maximumcolumns) property to set the maximum number of columns allowed while inserting a table in the Document Editor component.
 
 Refer to the following sample code.
 
@@ -59,7 +59,7 @@ When the maximum column limit is reached, an alert will appear, as follow
 
 ## Insert rows
 
-You can add a row (or several rows) above or below the row at cursor position by using the [`insertRow`](../api/document-editor/editor/#insertrow) method. This method accepts the following parameters:
+You can add a row (or several rows) above or below the row at cursor position by using the [`insertRow`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertrow) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -81,7 +81,7 @@ documentedior.editor.insertRow(true, 3)
 
 ## Insert columns
 
-You can add a column (or several columns) to the left or right of the column at cursor position by using the [`insertColumn`](../api/document-editor/editor/#insertcolumn) method. This method accepts the following parameters:
+You can add a column (or several columns) to the left or right of the column at cursor position by using the [`insertColumn`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertcolumn) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -139,7 +139,7 @@ documenteditor.selection.selectCell();
 
 ## Delete table
 
-Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](../api/document-editor/editor/#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteTable();
@@ -147,7 +147,7 @@ documenteditor.editor.deleteTable();
 
 ## Delete row
 
-Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](../api/document-editor/editor/#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteRow();
@@ -155,7 +155,7 @@ documenteditor.editor.deleteRow();
 
 ## Delete column
 
-Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](../api/document-editor/editor/#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteColumn();
@@ -195,5 +195,5 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [Insert table dialog](../document-editor/dialog#table-dialog)

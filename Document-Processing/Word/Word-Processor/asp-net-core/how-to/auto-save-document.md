@@ -48,4 +48,4 @@ public string AutoSave()
 ```
 
 ## See Also
-* [AutoSave document in DocumentEditor](../../asp-net-core/how-to/auto-save-document-in-document-editor)
+* [AutoSave document in DocumentEditor](https://ej2.syncfusion.com/aspnetcore/documentation/document-editor/how-to/auto-save-document-in-document-editor)

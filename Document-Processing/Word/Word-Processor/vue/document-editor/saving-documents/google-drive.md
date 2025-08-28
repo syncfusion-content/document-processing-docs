@@ -2,7 +2,7 @@
 layout: post
 title: Save document to Google Drive in ##Platform_Name## Document editor control | Syncfusion
 description:  Learn about how to Save document to Google Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
-platform: ej2-react
+platform: document-processing
 control: Save document to Google Drive
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -148,7 +148,7 @@ N> You must use a unique `Client_ID` from json file to interface your applicatio
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#saveasblob) and sent to server-side for saving in Google Drive.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and sent to server-side for saving in Google Drive.
 
 ```typescript
 <template>

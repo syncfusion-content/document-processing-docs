@@ -14,7 +14,7 @@ You can get the current word or paragraph content from the React Document Editor
 
 ## Select and get the word in current cursor position
 
-You can use [`selectCurrentWord`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#selectcurrentword) API in selection module to select the current word at cursor position and use [`text`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#text-code-classlanguage-textstringcode) API to get the selected content as plain text from React Document Editor component.
+You can use [`selectCurrentWord`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#selectcurrentword) API in selection module to select the current word at cursor position and use [`text`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the selected content as plain text from React Document Editor component.
 
 The following example code illustrates how to select and get the current word as plain text.
 
@@ -66,7 +66,7 @@ To get the bookmark content as SFDT (rich text), please check this [`link`](./ge
 
 ## Select and get the paragraph in current cursor position
 
-You can use [`selectParagraph`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#selectparagraph) API in selection module to select the current paragraph at cursor position and use [`text`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#text-code-classlanguage-textstringcode) API or [`sfdt`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#sfdt-code-classlanguage-textstringcode) API to get the selected content as plain text or SFDT from React Document Editor component.
+You can use [`selectParagraph`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#selectparagraph) API in selection module to select the current paragraph at cursor position and use [`text`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API or [`sfdt`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#sfdt-code-classlanguage-textstringcode) API to get the selected content as plain text or SFDT from React Document Editor component.
 
 The following example code illustrates how to select and get the current paragraph as SFDT.
 
