@@ -2,7 +2,7 @@
 layout: post
 title: Gemini AI Service with Smart PDF Viewer in Blazor App | Syncfusion
 description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion Smart PDF Viewer in a Blazor App.
-control: SmartPdfviewer
+control: Smart PDF Viewer
 documentation: ug
 ---
 
@@ -26,7 +26,7 @@ For a complete list of models and their capabilities, visit the [Gemini Models D
 
 After completing this setup, you can:
 
-1. [Add SmartPdfviewer to your Blazor pages]()
+1. [Add SmartPdfviewer to your Blazor pages](https://helpstaging.syncfusion.com/document-processing/pdf/smart-pdf-viewer/overview)
 
 ---
 
@@ -277,4 +277,4 @@ var app = builder.Build();
 ....
 
 ```
-[View sample in GitHub](Need to add sample)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
