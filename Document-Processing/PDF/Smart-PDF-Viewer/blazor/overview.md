@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Overview of Blazor Smart PDF Viewer
 
-The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html)** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. It builds upon the core capabilities of the traditional PDF Viewer by introducing intelligent features such as [**Document Summarization with Q&A**](./document-summarizer.md), **Smart Redaction**, and [**Smart Fill**](./smart-fill.md), enabling users to manage documents more efficiently and securely.
+The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html)** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. Its features include [**Document Summarization with Q&A**](./document-summarizer.md), **Smart Redaction**, and [**Smart Fill**](./smart-fill.md). It enables users to manage documents more efficiently and securely.
 
 ## Document Summarization
 
