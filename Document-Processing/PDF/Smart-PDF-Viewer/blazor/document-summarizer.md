@@ -24,7 +24,7 @@ The AI AssistView provides users with the ability to generate a summary of the P
     <AssistViewSettings/>
 </SfSmartPdfViewer>
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/AssistViewSettings)
 ## AssistViewSettings Parameters
 
 ### ShowPromptSuggestions
@@ -142,7 +142,7 @@ The [InitialPromptSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Bl
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/InitialPromptSettings)
 
 ### SuggestedPrompts
 [SuggestedPrompts](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_SuggestedPrompts) provides a list of predefined prompts that guide the user or help the AI understand the context better.
@@ -166,7 +166,7 @@ The [InitialPromptSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Bl
 }
 
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/SuggestedPrompts)
 
 ### PageStart
 [PageStart](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_PageStart) defines the starting page number for the document overview. Useful for focusing AI analysis on specific sections.
@@ -180,7 +180,7 @@ The [InitialPromptSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Bl
 </SfSmartPdfViewer>
 
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/InitialPromptSettings)
 
 ### PageEnd
 [PageEnd](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_PageEnd) defines the ending page number for the document overview. Helps limit the scope of AI processing and manage performance.
@@ -194,7 +194,7 @@ The [InitialPromptSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Bl
 </SfSmartPdfViewer>
 
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/InitialPromptSettings)
 
 ## Customizing Assist View with PdfViewerTemplates – SmartPdfViewer
 
@@ -226,7 +226,7 @@ The [PdfViewerTemplates](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazo
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/PdfViewerTemplates)
 
 ### ResponseTemplate
 [ResponseTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_ResponseTemplate) customizes the toolbar shown in the response section. Using `ResponseToolbar` and `ResponseToolbarItem`, developers can include feedback options like "like" or "dislike".
@@ -250,7 +250,7 @@ The [PdfViewerTemplates](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazo
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/PdfViewerTemplates)
 
 ### BannerTemplate
 Use the [BannerTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_BannerTemplate) to displays a banner at the top of the Assist view. This can be used for branding, instructions, or welcome messages to enhance user engagement. The following code demonstrates BannerTemplate usage in the SfSmartPdfViewer component.
@@ -273,7 +273,7 @@ Use the [BannerTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazo
     </AssistViewSettings>
 </SfSmartPdfViewer>
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/PdfViewerTemplates)
 
 ## Integration Notes
 
@@ -281,6 +281,6 @@ To apply these templates, include them within the `AssistViewSettings` of the `S
 
 ## See also
 
-* [Smart Redaction in Blazor Smart PDF Viewer]()
+* [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)
 * [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)
 

@@ -292,3 +292,10 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 ![Syncfusion Blazor Smart PDF Viewer](gettingstarted-images/smart-pdf-viewer.png)
 
 N> [View Sample in GitHub]().
+
+## See also
+
+* [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service)
+* [Document Summarizer in Blazor Smart PDF Viewer](../document-summarizer.md)
+* [Smart Redaction in Blazor Smart PDF Viewer](../smart-redaction)
+* [Smart Fill in Blazor Smart PDF Viewer](../smart-fill)

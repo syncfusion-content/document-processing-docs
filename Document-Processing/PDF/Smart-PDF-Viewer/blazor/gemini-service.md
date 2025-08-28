@@ -281,3 +281,7 @@ var app = builder.Build();
 
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
+
+## See also
+
+* [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)

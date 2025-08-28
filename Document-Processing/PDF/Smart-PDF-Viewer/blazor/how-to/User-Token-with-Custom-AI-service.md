@@ -458,7 +458,7 @@ builder.Services.AddScoped<IChatInferenceService, AzureAIService>(sp =>
     return new AzureAIService(userTokenService, azureOpenAIChatClient);
 });
 
-````
+```
 Here,
 
 * **apiKey**: "Azure OpenAI API Key";
@@ -468,3 +468,8 @@ Here,
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
+
+## See also
+
+* [Getting Started with Blazor Smart PDF Viewer in Server Web App](../getting-started/web-app)
+* [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service.md)

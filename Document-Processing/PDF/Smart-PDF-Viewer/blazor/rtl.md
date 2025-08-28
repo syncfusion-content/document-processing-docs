@@ -25,3 +25,7 @@ EnableRtl="true">
 [View sample in GitHub]()
 
 In this example, the [EnableRtl](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property is set to `true`, enabling RTL layout for the PDF viewer.
+
+## See also
+
+* [Getting Started with Blazor Smart PDF Viewer in Server Web App](./getting-started/web-app)
