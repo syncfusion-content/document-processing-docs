@@ -71,4 +71,4 @@ Document editor restarts the numbering or continue numbering for a numbered list
 
 ## See Also
 
-* [List dialog](../document-editor/dialog.md/#list-dialog)
+* [List dialog](../document-editor/dialog#list-dialog)

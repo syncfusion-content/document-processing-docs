@@ -138,7 +138,7 @@ private string GetValue(IFormCollection data, string key)
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and sent to server-side for saving in One Drive.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and sent to server-side for saving in One Drive.
 
 ```typescript
 

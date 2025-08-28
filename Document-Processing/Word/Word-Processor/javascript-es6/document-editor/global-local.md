@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The [`Localization`](../api/base/l10n/) library allows you to localize default text content of the DocumentEditor. The Document Editor component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://ej2.syncfusion.com/demos/document-editor/right-to-left/)
+The [`Localization`](https://ej2.syncfusion.com/documentation/api/base/l10n/) library allows you to localize default text content of the DocumentEditor. The Document Editor component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://ej2.syncfusion.com/demos/document-editor/right-to-left/)
 
 Note: Please refer the [Locale](https://github.com/syncfusion/ej2-locale/tree/master/src).
 

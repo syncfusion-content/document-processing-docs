@@ -135,7 +135,7 @@ In DocumentEditor, we have built-in review panel in which we have provided suppo
 
 Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](../api/document-editor/editor/#enforceprotection) and [`stopProtection`](../api/document-editor/editor/#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
@@ -164,7 +164,7 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 
 ## Events
 
-DocumentEditor provides [beforeAcceptRejectChanges](../api/document-editor-container#beforeacceptrejectchanges) event, which is triggered before a tracked content is accepted or rejected. This event provides an opportunity to perform custom logic before accepting or rejecting changes. The event handler receives the [RevisionActionEventArgs](../api/document-editor/revisionActionEventArgs) object as an argument, which allows access to information about the tracked content. . 
+DocumentEditor provides [beforeAcceptRejectChanges](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#beforeacceptrejectchanges) event, which is triggered before a tracked content is accepted or rejected. This event provides an opportunity to perform custom logic before accepting or rejecting changes. The event handler receives the [RevisionActionEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionActionEventArgs) object as an argument, which allows access to information about the tracked content. . 
 
 To demonstrate a specific use case, let's consider an example where we want to restrict the accept and reject changes functionality based on the author name. The following code snippet illustrates how to allow only the author of the tracked content to accept or reject changes:
 

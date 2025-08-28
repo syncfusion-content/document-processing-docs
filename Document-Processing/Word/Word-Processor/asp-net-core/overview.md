@@ -35,12 +35,12 @@ The Document Editor component is used to create, edit, view, and print Word docu
 * Provides a server-side helper library to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
 
 ## Supported Web platforms
-
-* [Javascript(ES5)](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/getting-started)
-* [Javascript(ES6)](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/getting-started)
-* [Angular](https://help.syncfusion.com/document-processing/word/word-processor/angular/getting-started)
-* [React](https://help.syncfusion.com/document-processing/word/word-processor/react/getting-started)
-* [Vue](https://help.syncfusion.com/document-processing/word/word-processor/vue/getting-started)
-* [ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/getting-started-core)
-* [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/getting-started)
-* [Blazor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/server-side-application)
+ 
+* [Javascript(ES5)](../../javascript-es5/document-editor/getting-started)
+* [Javascript(ES6)](../../javascript-es6/document-editor/getting-started)
+* [Angular](../../angular/document-editor/getting-started)
+* [React](../../react/document-editor/getting-started)
+* [Vue](../../vue/document-editor/getting-started)
+* [ASP.NET Core](../../asp-net-core/getting-started-core)
+* [ASP.NET MVC](../../asp-net-mvc/document-editor/getting-started)
+* [Blazor](../../blazor/document-editor/getting-started/server-side-application)

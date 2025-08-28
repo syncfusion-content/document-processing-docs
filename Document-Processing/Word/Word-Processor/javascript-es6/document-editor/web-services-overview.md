@@ -26,11 +26,11 @@ You can deploy web APIs for server-side dependencies of Document Editor componen
 |[Restrict editing](../document-editor/document-management)|When protecting the document, for generating hash.|**Client**: Sends the input data for hashing algorithm.<br> **Server**: Receives the input data for hashing algorithm and sends the result hash information back to the client.|
 |[Spellcheck](../document-editor/spell-check)(default)|When the spellchecker is enabled on client-side Document Editor, and it performs the spell check validation for words in the document.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
 |[SpellCheckByPage](../document-editor/spell-check)|Document editor provides options to spellcheck page by page when loading the documents. By [enabling optimized spell check](../document-editor/spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
-|[Save as file formats other than SFDT and DOCX](../document-editor/server-side-export) (optional API)|You can configure this API, if you want to save the document in file format other than DOCX and SFDT.<br><br> For saving the files as WordML, DOC, RTF, HTML, ODT, Text using Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO) and PDF using  Syncfusion<sup style="font-size:70%">&reg;</sup> Word (DocIO) and PDF libraries.|You can transfer document from client to server either as SFDT or DOCX format.<br><br>First option (SFDT):<br>**Client**: Sends the SFDT.<br>**Server**: Receives the SFDT and saves the converted document as any file format supported by [Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.<br><br>Second option (DOCX):<br>**Client**: Sends the DOCX file.<br>**Server**: Receives the DOCX file and saves the converted document as any file format supported by [Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.|
+|[Save as file formats other than SFDT and DOCX](../document-editor/saving-documents/server-side-export) (optional API)|You can configure this API, if you want to save the document in file format other than DOCX and SFDT.<br><br> For saving the files as WordML, DOC, RTF, HTML, ODT, Text using Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO) and PDF using  Syncfusion<sup style="font-size:70%">&reg;</sup> Word (DocIO) and PDF libraries.|You can transfer document from client to server either as SFDT or DOCX format.<br><br>First option (SFDT):<br>**Client**: Sends the SFDT.<br>**Server**: Receives the SFDT and saves the converted document as any file format supported by [Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.<br><br>Second option (DOCX):<br>**Client**: Sends the DOCX file.<br>**Server**: Receives the DOCX file and saves the converted document as any file format supported by [Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.|
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
-Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](../api/document-editor-container#serviceurl).
+Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/document-editor-container#serviceurl).
 
 If your running web service Url is `http://localhost:62869/`, set the serviceUrl like below:
 
@@ -55,7 +55,7 @@ Please check below table for expected web API structure.
 
 ## Customize the expected method name
 
-Document editor component provides an option to customize the expected method name for Import, SystemClipboard, RestrictEditing and SpellCheck using [serverActionSettings](../api/document-editor-container/documentEditorContainerModel/#serveractionsettings).
+Document editor component provides an option to customize the expected method name for Import, SystemClipboard, RestrictEditing and SpellCheck using [serverActionSettings](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#serveractionsettings).
 
 The following example code illustrates how to customize the method name using serverActionSettings.
 
@@ -89,9 +89,9 @@ Document editor component provides an an option to add custom headers of XMLHttp
 
 ## Modify the XMLHttpRequest before request send
 
-Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](../api/document-editor-container/#beforexmlhttprequestsend) event and it gets triggered before a server request.
+Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforexmlhttprequestsend) event and it gets triggered before a server request.
 
-You can customize the required [`XMLHttpRequest`](../api/document-editor/xmlHttpRequestEventArgs/) properties.
+You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/documentation/api/document-editor/xmlHttpRequestEventArgs/) properties.
 
 The following example code illustrates how to modify the XMLHttpRequest using beforeXmlHttpRequestSend.
 

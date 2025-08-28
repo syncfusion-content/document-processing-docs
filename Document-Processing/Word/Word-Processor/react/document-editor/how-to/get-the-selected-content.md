@@ -14,7 +14,7 @@ You can get the selected content from the React Document Editor component as pla
 
 ## Get the selected content as plain text
 
-You can use [`text`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#text-code-classlanguage-textstringcode) API to get the selected content as plain text from React Document Editor component.
+You can use [`text`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the selected content as plain text from React Document Editor component.
 
 The following example code illustrates how to add search in google option in context menu for the selected text.
 
@@ -91,7 +91,7 @@ You can add the following custom options using this API,
 
 ## Get the selected content as SFDT (rich text)
 
-You can use [`sfdt`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#sfdt-code-classlanguage-textstringcode) API to get the selected content as rich text from React Document Editor component.
+You can use [`sfdt`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#sfdt-code-classlanguage-textstringcode) API to get the selected content as rich text from React Document Editor component.
 
 The following example code illustrates how to get the content of a bookmark and export it as SFDT.
 
@@ -143,5 +143,5 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 You can add the following custom options using this API,
 
 * Save or export the selected content as SFDT file.
-* Get the content of a bookmark in Word document as SFDT by selecting a bookmark using [`selectbookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#selectbookmark) API.
-* Create template content that can be inserted to multiple documents in cursor position using [`paste`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#paste) API.
+* Get the content of a bookmark in Word document as SFDT by selecting a bookmark using [`selectbookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#selectbookmark) API.
+* Create template content that can be inserted to multiple documents in cursor position using [`paste`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#paste) API.

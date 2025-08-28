@@ -19,7 +19,7 @@ The following example illustrates to disable the auto focus in DocumentEditorCon
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px', enableAutoFocus: false});
 ```
 
->Note: Default value of [`enableAutoFocus`](../../api/document-editor-container/#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/documentation/api/document-editor-container#enableautofocus) property is `true`.
 
 The following example illustrates to disable the auto focus in DocumentEditor.
 
@@ -27,4 +27,4 @@ The following example illustrates to disable the auto focus in DocumentEditor.
 let editor: DocumentEditor = new DocumentEditor({ height: '590px', enableAutoFocus: false});
 ```
 
->Note: Default value of [`enableAutoFocus`](../../api/document-editor/#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/documentation/api/document-editor#enableautofocus) property is `true`.

@@ -134,7 +134,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](../../api/document-editor/#saveAsBlob) and sent to server-side for saving in Box cloud file storage.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Box cloud file storage.
 
  
 

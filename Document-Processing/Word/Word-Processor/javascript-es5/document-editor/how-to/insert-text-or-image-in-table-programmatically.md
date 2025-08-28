@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Insert text or image in table programmatically in ##Platform_Name## Document editor control
 
-Using Document editor API's, you can insert [`text`](../../document-editor/how-to/insert-text-in-current-position/#insert-text-in-current-cursor-position) or [`image`](../../document-editor/image/#images) in [`table`](../../document-editor/table/#create-a-table) programmatically based on your requirement.
+Using Document editor API's, you can insert [`text`](../../document-editor/how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or [`image`](../../document-editor/image#images) in [`table`](../../document-editor/table#create-a-table) programmatically based on your requirement.
 
-Use [`selection`](../../document-editor/how-to/move-selection-to-specific-position/#selects-content-based-on-start-and-end-hierarchical-index) API's to navigate between rows and cells.
+Use [`selection`](../../document-editor/how-to/move-selection-to-specific-position#selects-content-based-on-start-and-end-hierarchical-index) API's to navigate between rows and cells.
 
 The following example illustrates how to create 2*2 table and then add text and image programmatically.
 

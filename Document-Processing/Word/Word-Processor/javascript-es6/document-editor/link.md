@@ -105,7 +105,7 @@ Refer to the following example.
         
 {% previewsample "page.domainurl/code-snippet/document-editor/hyperlink-cs2" %}
 
-Also Document Editor expose API [`insertHyperlink()`](../api/document-editor/editor/#inserthyperlink)to insert hyperlink.
+Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserthyperlink)to insert hyperlink.
 
 Refer to the following sample code.
 
@@ -158,5 +158,5 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [Hyperlink dialog](../document-editor/dialog#hyperlink-dialog)

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Print in ##Platform_Name## Document editor control
 
-To print the document, use the [`print`](../api/document-editor#print) method from Document Editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/documentation/api/document-editor#print) method from Document Editor instance.
 
 Refer to the following example for showing a document and print it.
 
@@ -45,7 +45,7 @@ Refer to the following example for creating a document and print it.
 
 ## Improve print quality
 
-Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](../api/document-editor/documentEditorSettingsModel/#printdevicepixelratio) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
+Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
 
 The following example code illustrates how to improve the print quality in Document editor container.
 
@@ -106,7 +106,7 @@ documenteditor.appendTo('#DocumentEditor');
 documenteditor.showPageSetupDialog();
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in Document Editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](../api/document-editor#serialize) method in Document Editor instance and open the SFDT data in another instance of Document Editor in separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in Document Editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/documentation/api/document-editor#serialize) method in Document Editor instance and open the SFDT data in another instance of Document Editor in separate window.
 
 The following example shows how to customize layout options only for printing.
 
@@ -125,5 +125,5 @@ The following example shows how to customize layout options only for printing.
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [Page Setup dialog](../document-editor/dialog#page-setup-dialog)

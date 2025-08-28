@@ -48,7 +48,7 @@ The Document Editor component requires server-side interactions for the followin
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
 * [SpellCheck](../document-editor/spell-check)
-* [Save as file formats other than SFDT and DOCX](../document-editor/server-side-export)
+* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents/server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
@@ -56,7 +56,7 @@ To know about server-side dependencies, please refer this [page](../document-edi
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli

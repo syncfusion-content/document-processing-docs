@@ -17,7 +17,7 @@ DocumentEditorContainer component provide support for inserting Text, CheckBox, 
 
 ## Insert form field
 
-Form fields can be inserted using [`insertFormField`](../api/document-editor/editor/#insertformfield) method in editor module.
+Form fields can be inserted using [`insertFormField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertformfield) method in editor module.
 
 ```ts
 //Insert Text form field
@@ -30,7 +30,7 @@ documentEditor.editor.insertFormField('DropDown');
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`getFormFieldNames()`](../api/document-editor/#getformfieldnames).
+All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/documentation/api/document-editor#getformfieldnames).
 
 ```ts
 let formFieldsNames: string[] = documentEditor.getFormFieldNames();
@@ -38,7 +38,7 @@ let formFieldsNames: string[] = documentEditor.getFormFieldNames();
 
 ## Get form field properties
 
-Form field properties can be retrieved using [`getFormFieldInfo()`](../api/document-editor/#getformfieldinfo).
+Form field properties can be retrieved using [`getFormFieldInfo()`](https://ej2.syncfusion.com/documentation/api/document-editor#getformfieldinfo).
 
 ```ts
 //Get Text form field by using bookmark name.
@@ -51,7 +51,7 @@ let dropdownfieldInfo: DropDownFormFieldInfo = documentEditor.getFormFieldInfo('
 
 ## Set form field properties
 
-Form field properties can be modified using [`setFormFieldInfo`](../api/document-editor/#setformfieldinfo).
+Form field properties can be modified using [`setFormFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor#setformfieldinfo).
 
 ```ts
 // Set text form field properties
@@ -79,7 +79,7 @@ documentEditor.setFormFieldInfo('Drop1', dropdownfieldInfo);
 
 ## Form Field Shading
 
-You can customize form field shading at the application level using the [`formFieldSettings`](../api/document-editor/#formFieldSettings) property.
+You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/documentation/api/document-editor#formFieldSettings) property.
 
 The example code below demonstrates how to set a custom shading color and how to disable shading (by default, shading is enabled).
 
@@ -95,7 +95,7 @@ N> This customization only affects the application UI and will not be preserved 
 
 ## Export form field data
 
-Data of the all the Form fields in the document can be exported using [`exportFormData`](../api/document-editor/#exportformdata).
+Data of the all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/documentation/api/document-editor#exportformdata).
 
 ```ts
 let formFieldDate: FormFieldData[] = documentEditor.exportFormData();
@@ -103,7 +103,7 @@ let formFieldDate: FormFieldData[] = documentEditor.exportFormData();
 
 ## Import form field data
 
-Form fields can be prefilled with data using [`importFormData`](../api/document-editor/#importformdata).
+Form fields can be prefilled with data using [`importFormData`](https://ej2.syncfusion.com/documentation/api/document-editor#importformdata).
 
 ```ts
 let textformField: FormFieldData = { fieldName: 'Text1', value: 'Hello World' };
@@ -115,7 +115,7 @@ this.container.documentEditor.importFormData([textformField, checkformField, dro
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`resetFormFields`](../api/document-editor/#resetformfields).
+Reset all the form fields in current document to default value using [`resetFormFields`](https://ej2.syncfusion.com/documentation/api/document-editor#resetformfields).
 
 ```ts
 documentEditor.resetFormFields();
@@ -125,7 +125,7 @@ documentEditor.resetFormFields();
 
 Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](../api/document-editor/editor/#enforceprotection) and [`stopProtection`](../api/document-editor/editor/#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 

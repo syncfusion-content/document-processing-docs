@@ -15,7 +15,7 @@ In this article, we are going to see how to change height and width of Document 
 
 ## Change height of Document Editor
 
-DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](../../api/document-editor-container/documentEditorContainerModel/#height) property, the value which is in pixel.
+DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorContainerModel#height) property, the value which is in pixel.
 
 The following example code illustrates how to change height of Document Editor.
 
@@ -26,11 +26,11 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 container.appendTo('#DocumentEditor');
 ```
 
-Similarly, you can use [`height`](../../api/document-editor#height) property for DocumentEditor also.
+Similarly, you can use [`height`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#height) property for DocumentEditor also.
 
 ## Change width of Document Editor
 
-DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](../../api/document-editor-container/documentEditorContainerModel/#width) property, the value which is in percent.
+DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documenteditorcontainermodel/#width) property, the value which is in percent.
 
 The following example code illustrates how to change width of Document Editor.
 
@@ -41,11 +41,11 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 container.appendTo('#DocumentEditor');
 ```
 
-Similarly, you can use [`width`](../../api/document-editor#width) property for DocumentEditor also.
+Similarly, you can use [`width`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#width) property for DocumentEditor also.
 
 ## Resize Document Editor
 
-Using [`resize`](../../api/document-editor-container#resize) method, you change height and width of Document editor.
+Using [`resize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#resize) method, you change height and width of Document editor.
 
 The following example code illustrates how to fit Document Editor to browser window size.
 

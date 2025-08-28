@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 # Customize color picker in React Document editor control
 
-Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel/#colorpickersettings) in Document editor settings. Color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
+Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in Document editor settings. Color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
 
-Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#documenteditorsettings) property for DocumentEditor also.
+Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 
 The following example code illustrates how to Customize the color picker in Document editor container.
 

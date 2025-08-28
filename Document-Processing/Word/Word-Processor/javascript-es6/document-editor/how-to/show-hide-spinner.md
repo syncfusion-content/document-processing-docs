@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Show hide spinner in ##Platform_Name## Document editor control
 
-Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started/#create-the-spinner-globally) component, you can show/hide spinner while opening document in DocumentEditor .
+Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show/hide spinner while opening document in DocumentEditor .
 
 Example code snippet to show/hide spinner
 

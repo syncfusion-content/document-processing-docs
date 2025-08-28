@@ -2,7 +2,7 @@
 title: "how to enable ruler in document edior"
 component: "DocumentEditor"
 description: "Learn how to enable ruler in Angular Document Editor component."
-platform: ej2-angular
+platform: document-processing
 control: Enable ruler
 documentation: ug
 domainurl: ##DomainURL##

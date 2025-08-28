@@ -29,7 +29,7 @@ BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFo
 
 ## Insert content control
 
-Content control can be inserted using [`insertContentControl`](../api/document-editor/editor/#insertContentControl) method in editor module.
+Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertContentControl) method in editor module.
 
 {% highlight js %}
 //Insert Rich Text Content Control
@@ -71,7 +71,7 @@ container.documentEditor.editor.insertContentControl('Picture', 'data:image/png;
 
 ## Import content control properties
 
-Content control properties can be set using the [`ContentControlInfo`](../api/document-editor/#importContentControlData) and import it using [`importContentControlData`](../api/document-editor/#importContentControlData)
+Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#importContentControlData) and import it using [`importContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#importContentControlData)
 
 {% highlight js %}
 var data = [];
@@ -82,7 +82,7 @@ container.documentEditor.importContentControlData(data);
 
 ## Export content control properties
 
-Content control properties can be exported using the [`exportContentControlData`](../api/document-editor/#exportContentControlData)
+Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#exportContentControlData)
 
 {% elsif page.publishingplatform == "javascript" %}
 {% highlight js %}
@@ -91,7 +91,7 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetcontentcontroldata`](../api/document-editor/#resetcontentcontroldata)
+Content control properties can be reset using the [`resetcontentcontroldata`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#resetcontentcontroldata)
 
 {% highlight js %}
 var data = [];

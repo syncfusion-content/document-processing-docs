@@ -148,7 +148,7 @@ N> You must use a unique `Client_ID` from json file to interface your applicatio
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/#saveAsBlob) and sent to server-side for saving in Google Drive.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Google Drive.
 
 
 {% tabs %}
