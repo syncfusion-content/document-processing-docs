@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Blazor Smart PDF Viewer | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Blazor Smart PDF Viewer and much more details.
+description: Checkout and learn about the overview of the Syncfusion Blazor Smart PDF Viewer and explore more useful details.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
@@ -33,7 +33,6 @@ The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusio
 * Intelligently populates form fields based on context.
 * Understands the structure and expected input of PDF forms.
 * Reduces manual data entry and improves accuracy.
-* Streamlines workflows in applications like onboarding, surveys, and registrations.
 
 [Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfil?theme=fluent2)
 
