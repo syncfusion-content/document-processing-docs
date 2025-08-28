@@ -9,7 +9,7 @@ documentation: ug
 
 # Document Summaries in Blazor Smart PDF Viewer
 
-The SmartPdfViewer `AssistViewSettings` is allows for seamless interaction with PDF documents by incorporating AI-assisted functionalities such as summarization and question answering.
+The SmartPdfViewer [AssistViewSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html) is allows for seamless interaction with PDF documents by incorporating AI-assisted functionalities such as summarization and question answering.
 
 The AI AssistView provides users with the ability to generate a summary of the PDF document and ask questions about its content. Users can activate the AI assistant by clicking the **AI AssistView** button at the bottom-right of the viewer. The assistant can respond to user queries and offer AI-generated suggestions to guide exploration of the document.
 
@@ -28,7 +28,7 @@ The AI AssistView provides users with the ability to generate a summary of the P
 ## AssistViewSettings Parameters
 
 ### ShowPromptSuggestions
-`ShowPromptSuggestions` determines whether prompt suggestions are displayed to the user in the Assist view. When set to `true`, the interface will show a list of suggested prompts that users can click to initiate AI queries. This helps guide users who may not know what to ask and improves the overall usability of the assistant. The default value is `true`.
+[ShowPromptSuggestions](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_ShowPromptSuggestions) determines whether prompt suggestions are displayed to the user in the Assist view. When set to `true`, the interface will show a list of suggested prompts that users can click to initiate AI queries. This helps guide users who may not know what to ask and improves the overall usability of the assistant. The default value is `true`.
 ```cshtml
 @* Enables display of suggested prompts in the Assist view to guide user queries *@
 
@@ -38,7 +38,7 @@ The AI AssistView provides users with the ability to generate a summary of the P
 ```
 
 ### Prompt
-The `Prompt` property allows developers to set a predefined query that appears in the input field when the Assist view is opened. This can be used to direct the AI assistant to perform a specific task, such as summarizing the document or answering a particular question. It enhances the user experience by providing immediate context and guidance.
+The [Prompt](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_Prompt) property allows developers to set a predefined query that appears in the input field when the Assist view is opened. This can be used to direct the AI assistant to perform a specific task, such as summarizing the document or answering a particular question. It enhances the user experience by providing immediate context and guidance.
 ```cshtml
 @* Sets a predefined prompt to appear in the Assist view input field when opened *@
 
@@ -48,7 +48,7 @@ The `Prompt` property allows developers to set a predefined query that appears i
 ```
 
 ### PromptChanged
-`PromptChanged` is a callback that is triggered whenever the user modifies the prompt text. It allows developers to track changes in real time and respond to user input dynamically. For example, the application can log the new prompt or trigger additional actions based on the updated query.
+[PromptChanged](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_PromptChanged) is a callback that is triggered whenever the user modifies the prompt text. It allows developers to track changes in real time and respond to user input dynamically. For example, the application can log the new prompt or trigger additional actions based on the updated query.
 ```cshtml
 @* Handles changes to the prompt input, allowing dynamic response to user edits *@
 
@@ -65,7 +65,7 @@ The `Prompt` property allows developers to set a predefined query that appears i
 ```
 
 ### Placeholder
-The `Placeholder` property sets the placeholder text in the input field of the Assist view. This text appears when the field is empty and serves as a hint to the user about what kind of input is expected. The default value is "Type your prompt for assistance..." and can be customized to suit the application's tone and purpose.
+The [Placeholder](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_Placeholder) property sets the placeholder text in the input field of the Assist view. This text appears when the field is empty and serves as a hint to the user about what kind of input is expected. The default value is "Type your prompt for assistance..." and can be customized to suit the application's tone and purpose.
 ```cshtml
 @* Sets custom placeholder text in the Assist view input field to guide user input *@
 
@@ -74,18 +74,18 @@ The `Placeholder` property sets the placeholder text in the input field of the A
 </SfSmartPdfViewer>
 ```
 
-### MinContentLength
-`MinContentLength` specifies the minimum number of characters that must be present in the document for AI processing to be enabled. If the document contains fewer characters than the specified threshold, an error message will be displayed and AI features will be disabled. This ensures that the AI assistant has sufficient content to analyze and prevents unnecessary processing of trivial documents. The default value is `100`.
+### MinLength
+[MinLength](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_MinLength) specifies the minimum number of characters that must be present in the document for AI processing to be enabled. If the document contains fewer characters than the specified threshold, an error message will be displayed and AI features will be disabled. This ensures that the AI assistant has sufficient content to analyze and prevents unnecessary processing of trivial documents. The default value is `100`.
 ```cshtml
 @* Specifies minimum character count required in the document for AI features to activate *@
 
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-   <AssistViewSettings MinContentLength="100" />
+   <AssistViewSettings MinLength="100" />
 </SfSmartPdfViewer>
 ```
 
 ### StreamResponse
-When `StreamResponse` enabled, this allows AI responses to be streamed to the user in real time. Instead of waiting for the entire response to be generated, users see the output as it is being composed. This improves perceived performance and makes the interaction feel more dynamic. The default value is `false`.
+When [StreamResponse](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_StreamResponse) enabled, this allows AI responses to be streamed to the user in real time. Instead of waiting for the entire response to be generated, users see the output as it is being composed. This improves perceived performance and makes the interaction feel more dynamic. The default value is `false`.
 ```cshtml
 @* Enables real-time streaming of AI responses for a more dynamic user experience *@
 
@@ -95,7 +95,7 @@ When `StreamResponse` enabled, this allows AI responses to be streamed to the us
 ```
 
 ### MaxRetryAttempts
-`MaxRetryAttempts` sets the maximum number of retry attempts for AI processing. If the assistant encounters an error, it will retry the operation up to the specified number of times before showing an error message. This helps improve reliability in cases where transient issues may affect AI response generation. The default value is `3`.
+[MaxRetryAttempts](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_MaxRetryAttempts) sets the maximum number of retry attempts for AI processing. If the assistant encounters an error, it will retry the operation up to the specified number of times before showing an error message. This helps improve reliability in cases where transient issues may affect AI response generation. The default value is `3`.
 ```cshtml
 @* Sets the number of retry attempts for AI processing in case of transient errors *@
 
@@ -105,7 +105,7 @@ When `StreamResponse` enabled, this allows AI responses to be streamed to the us
 ```
 
 ### Timeout
-The `Timeout` property defines the maximum duration (in seconds) that the AI assistant will wait for a response before timing out. If the response is not received within this period, the operation is aborted and an error is shown. This prevents the application from hanging indefinitely and ensures timely feedback to the user. The default value is `30`.
+The [Timeout](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_Timeout) property defines the maximum duration (in seconds) that the AI assistant will wait for a response before timing out. If the response is not received within this period, the operation is aborted and an error is shown. This prevents the application from hanging indefinitely and ensures timely feedback to the user. The default value is `30`.
 ```cshtml
 @* Defines the maximum wait time (in seconds) for AI response before showing a timeout error *@
 
@@ -115,7 +115,7 @@ The `Timeout` property defines the maximum duration (in seconds) that the AI ass
 ```
 
 ### Enable
-`Enable` controls whether the Assist view and its features are available in the PDF viewer. When set to `false`, the AI assistant is completely disabled, and the launch button is hidden from the toolbar. This is useful for scenarios where AI features are not required or need to be restricted. The default value is `true`.
+[Enable](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_Enable) controls whether the Assist view and its features are available in the PDF viewer. When set to `false`, the AI assistant is completely disabled, and the launch button is hidden from the toolbar. This is useful for scenarios where AI features are not required or need to be restricted. The default value is `true`.
 ```cshtml
 @* Toggles the availability of the AI Assist view and its features in the PDF viewer *@
 
@@ -125,12 +125,12 @@ The `Timeout` property defines the maximum duration (in seconds) that the AI ass
 ```
 
 ## InitialPromptSettings – SmartPdfViewer
-The `InitialPromptSettings` allows developers to configure the initial behavior of the AI Assist view in the SfSmartPdfViewer. It helps guide the AI assistant by providing a predefined prompt, suggested queries, and page range for summarization. This improves the relevance and performance of AI responses, especially in structured document workflows.
+The [InitialPromptSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html) allows developers to configure the initial behavior of the AI Assist view in the SfSmartPdfViewer. It helps guide the AI assistant by providing a predefined prompt, suggested queries, and page range for summarization. This improves the relevance and performance of AI responses, especially in structured document workflows.
 
 ## InitialPromptSetting Parameter
 
 ### Prompt
-Sets the initial query shown in the input field when the Assist view opens. This helps direct the AI assistant to perform a specific task immediately.
+[Prompt](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_Prompt) sets the initial query shown in the input field when the Assist view opens. This helps direct the AI assistant to perform a specific task immediately.
 
 ![Prompt](images/initialprompt_prompt.gif)
 ``` chtml
@@ -145,7 +145,7 @@ Sets the initial query shown in the input field when the Assist view opens. This
 [View sample in GitHub]()
 
 ### SuggestedPrompts
-Provides a list of predefined prompts that guide the user or help the AI understand the context better.
+[SuggestedPrompts](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_SuggestedPrompts) provides a list of predefined prompts that guide the user or help the AI understand the context better.
 
 ![SuggestedPrompts](images/initialprompt_suggested.png)
 ```cshtml
@@ -169,7 +169,7 @@ Provides a list of predefined prompts that guide the user or help the AI underst
 [View sample in GitHub]()
 
 ### PageStart
-Defines the starting page number for the document overview. Useful for focusing AI analysis on specific sections.
+[PageStart](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_PageStart) defines the starting page number for the document overview. Useful for focusing AI analysis on specific sections.
 ```cshtml
 @* Defines the starting page number for AI analysis in the Assist view (starts from page 1) *@
 
@@ -183,7 +183,7 @@ Defines the starting page number for the document overview. Useful for focusing 
 [View sample in GitHub]()
 
 ### PageEnd
-Defines the ending page number for the document overview. Helps limit the scope of AI processing and manage performance.
+[PageEnd](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_PageEnd) defines the ending page number for the document overview. Helps limit the scope of AI processing and manage performance.
 ```cshtml
 @* Defines the ending page number for AI analysis in the Assist view to limit processing scope *@
 
@@ -198,13 +198,13 @@ Defines the ending page number for the document overview. Helps limit the scope 
 
 ## Customizing Assist View with PdfViewerTemplates – SmartPdfViewer
 
-The `PdfViewerTemplates` class in Syncfusion's `SmartPdfViewer` component allows developers to customize the layout and functionality of the Assist view. This includes defining templates for the prompt input toolbar, AI response toolbar, and banner section, enabling a more personalized and interactive user experience.
+The [PdfViewerTemplates](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html) class in Syncfusion's [SmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) component allows developers to customize the layout and functionality of the Assist view. This includes defining templates for the prompt input toolbar, AI response toolbar, and banner section, enabling a more personalized and interactive user experience.
 
 
 ## Template Properties
 
 ### PromptTemplate
-Defines the toolbar layout within the prompt view. Developers can use `PromptToolbar` and `PromptToolbarItem` to add icons and actions that guide user input.
+[PromptTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_PromptTemplate) defines the toolbar layout within the prompt view. Developers can use `PromptToolbar` and `PromptToolbarItem` to add icons and actions that guide user input.
 
 ![Summarizer Prompt Template](images/summarizer_prompt-template.png)
 
@@ -229,7 +229,7 @@ Defines the toolbar layout within the prompt view. Developers can use `PromptToo
 [View sample in GitHub]()
 
 ### ResponseTemplate
-Customizes the toolbar shown in the response section. Using `ResponseToolbar` and `ResponseToolbarItem`, developers can include feedback options like "like" or "dislike".
+[ResponseTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_ResponseTemplate) customizes the toolbar shown in the response section. Using `ResponseToolbar` and `ResponseToolbarItem`, developers can include feedback options like "like" or "dislike".
 
 ![Summarizer Response Template](images/summarizer_response-template.png)
 ``` cshtml
@@ -253,7 +253,7 @@ Customizes the toolbar shown in the response section. Using `ResponseToolbar` an
 [View sample in GitHub]()
 
 ### BannerTemplate
-Use the `BannerTemplate` to displays a banner at the top of the Assist view. This can be used for branding, instructions, or welcome messages to enhance user engagement. The following code demonstrates BannerTemplate usage in the SfSmartPdfViewer component.
+Use the [BannerTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_BannerTemplate) to displays a banner at the top of the Assist view. This can be used for branding, instructions, or welcome messages to enhance user engagement. The following code demonstrates BannerTemplate usage in the SfSmartPdfViewer component.
 
 ![Summarizer Banner Template](images/summarizer_banner-template.png)
 
@@ -281,6 +281,6 @@ To apply these templates, include them within the `AssistViewSettings` of the `S
 
 ## See also
 
-* [Smart Redact in Blazor Smart PDF Viewer]()
+* [Smart Redaction in Blazor Smart PDF Viewer]()
 * [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)
 
