@@ -3470,6 +3470,106 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Get-widget-annotation-in-PDF/.NET).
 
+## Retrieving Custom Values from PDF Form Fields 
+
+Essential&reg; PDF supports retrieving custom values from form fields using the [TryGetValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_TryGetValue_System_String_System_Object__) method available in the PdfField class. This method enables developers to safely access custom properties embedded within a PDF form field without throwing exceptions if the specified key is missing. 
+
+Refer to the code snippet below to retrieve a custom value from a form field using the TryGetValue method.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document using a file stream 
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read); 
+ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream); 
+
+//Gets the first page of the document 
+ PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
+
+// Get the custom value from the annotation 
+ object values; 
+ bool foundValue = field.TryGetValue("T", out values); 
+
+// Check the values 
+ if (foundValue && values is List<string> stringValues) 
+ { 
+     foreach (string value in stringValues) 
+     { 
+        // Print the custom value to the console 
+         Console.WriteLine($"Found value: {value}"); 
+     } 
+ } 
+ else 
+ { 
+     Console.WriteLine("not found "); 
+ } 
+// Close the document and release resources 
+loadedDocument.Close(true); 
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document using a file stream 
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"); 
+
+//Gets the first page of the document 
+ PdfField field = loadedDocument.Form.Fields[0] as PdfField; 
+
+// Get the custom value from the annotation 
+ object values; 
+ bool foundValue = field.TryGetValue("T", out values); 
+
+// Check the values 
+ if (foundValue && values is List<string> stringValues) 
+ { 
+     foreach (string value in stringValues) 
+     { 
+
+        // Print the custom value to the console 
+         Console.WriteLine($"Found value: {value}"); 
+     } 
+ } 
+ else 
+ { 
+     Console.WriteLine("not found "); 
+ } 
+// Close the document and release resources 
+loadedDocument.Close(true); 
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Get the first form field from the document
+Dim field As PdfField = TryCast(loadedDocument.Form.Fields(0), PdfField)
+
+' Try to get the custom value "T" from the field
+Dim values As Object = Nothing
+Dim foundValue As Boolean = field.TryGetValue("T", values)
+
+' Check and print the values if found
+If foundValue AndAlso TypeOf values Is List(Of String) Then
+    Dim stringValues As List(Of String) = CType(values, List(Of String))
+    For Each value As String In stringValues
+        ' Print the custom value to the console
+        Console.WriteLine($"Found value: {value}")
+    Next
+Else
+    Console.WriteLine("Value not found.")
+End If
+' Close the document and release resources
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from GitHub.
 
 ## Auto resizing text box field text
 

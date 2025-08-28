@@ -2887,6 +2887,125 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-annotation-creation-date-from-PDF/.NET).
 
+### Retrieving custom values from PDF annotations
+
+The Essential&reg; PDF supports retrieving custom values from annotations using the [TryGetValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedAnnotation_TryGetValue_System_String_System_Object__) method available in the [PdfLoadedAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedAnnotation.html) class. This method allows developers to safely access custom properties embedded within a PDF annotation without throwing exceptions if the specified key is missing. 
+
+Refer to the code snippet below to retrieve a custom value from an annotation using the TryGetValue method.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the PDF document using a file stream
+FileStream docStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+
+// Get the first page of the document
+PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+
+// Get the annotation collection from the page
+PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+// Get the first annotation (assumed to be a rectangle annotation)
+PdfLoadedRectangleAnnotation annot = annotations[0] as PdfLoadedRectangleAnnotation;
+
+// Try to get the custom value "Subtype" from the annotation
+object values;
+bool foundValue = annot.TryGetValue("Subtype", out values);
+
+// Check and print the values if found
+if (foundValue && values is List<string> stringValues)
+{
+    foreach (string value in stringValues)
+    {
+        // Print the custom value to the console
+        Console.WriteLine($"Found Subtype value: {value}");
+    }
+}
+else
+{
+    Console.WriteLine("Subtype value not found.");
+}
+// Close the document and release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the PDF document using a file stream
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Get the first page of the document
+PdfLoadedPage page = loadedDocument.Pages[0] as PdfLoadedPage;
+
+// Get the annotation collection from the page
+PdfLoadedAnnotationCollection annotations = page.Annotations;
+
+// Get the first annotation (assumed to be a rectangle annotation)
+PdfLoadedRectangleAnnotation annot = annotations[0] as PdfLoadedRectangleAnnotation;
+
+// Try to get the custom value "Subtype" from the annotation
+object values;
+bool foundValue = annot.TryGetValue("Subtype", out values);
+
+// Check and print the values if found
+if (foundValue && values is List<string> stringValues)
+{
+    foreach (string value in stringValues)
+    {
+        // Print the custom value to the console
+        Console.WriteLine($"Found Subtype value: {value}");
+    }
+}
+else
+{
+    Console.WriteLine("Subtype value not found.");
+}
+// Close the document and release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the PDF document using a file stream
+Dim docStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+Dim loadedDocument As New PdfLoadedDocument(docStream)
+
+' Get the first page of the document
+Dim page As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+
+' Get the annotation collection from the page
+Dim annotations As PdfLoadedAnnotationCollection = page.Annotations
+
+' Get the first annotation (assumed to be a rectangle annotation)
+Dim annot As PdfLoadedRectangleAnnotation = TryCast(annotations(0), PdfLoadedRectangleAnnotation)
+
+' Try to get the custom value "Subtype" from the annotation
+Dim values As Object = Nothing
+Dim foundValue As Boolean = annot.TryGetValue("Subtype", values)
+
+' Check and print the values if found
+If foundValue AndAlso TypeOf values Is List(Of String) Then
+    Dim stringValues As List(Of String) = CType(values, List(Of String))
+    For Each value As String In stringValues
+        ' Print the custom value to the console
+        Console.WriteLine($"Found Subtype value: {value}")
+    Next
+Else
+    Console.WriteLine("Subtype value not found.")
+End If
+
+' Close the document and release resources
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Removing annotations from an existing PDF 
 
 You can remove the annotation from the annotation collection, represented by the [PdfLoadedAnnotationCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedAnnotationCollection.html) of the loaded page. The following code illustrates this.
