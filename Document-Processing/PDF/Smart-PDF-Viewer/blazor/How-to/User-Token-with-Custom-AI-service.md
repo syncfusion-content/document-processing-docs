@@ -1,6 +1,6 @@
 ---
 layout: post
-title: UserToken with Azure service in Smart PDF Viewer in Blazor App | Syncfusion
+title: Smart PDF Viewer Service with Azure UserToken in Blazor App| Syncfusion
 description: Learn how to implement a User Token with Custom Azure AI service in Syncfusion Smart PDF Viewer in a Blazor App.
 control: Smart PDF Viewer
 documentation: ug
