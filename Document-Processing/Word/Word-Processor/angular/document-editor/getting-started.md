@@ -50,7 +50,7 @@ The Document Editor component requires server-side interactions for the followin
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
 * [SpellCheck](../document-editor/spell-check)
-* [Save as file formats other than SFDT and DOCX](../document-editor/server-side-export)
+* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents/server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
@@ -155,7 +155,7 @@ export class AppComponent implements OnInit {
 
 #### Run the DocumentEditorContainer application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
@@ -236,9 +236,10 @@ Output will be displayed as follows.
 > The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 
+
 ## Frequently Asked Questions
 
-* [How to localize the Documenteditor container](../document-editor/global-local).
+* [How to localize the Document Editor container](../document-editor/global-local).
 * [How to load the document by default](../document-editor/how-to/open-default-document).
 * [How to customize tool bar](../document-editor/how-to/customize-tool-bar).
 * [How to resize Document editor component?](../document-editor/how-to/resize-document-editor)
