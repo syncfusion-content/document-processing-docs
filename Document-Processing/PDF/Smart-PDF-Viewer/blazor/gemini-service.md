@@ -79,61 +79,64 @@ public class GeminiService
     public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
     {
         // Construct the API endpoint URL
-        var requestUri = $"https://generativelanguage.googleapis.com/v1beta/models/{ModelName}:generateContent";
-        
-        // Prepare the request parameters
-        var parameters = BuildGeminiChatParameters(chatMessages);
-        var payload = new StringContent(
-            JsonSerializer.Serialize(parameters, JsonOptions), 
-            Encoding.UTF8, 
-            "application/json"
-        );
+         string requestUri = $"https://generativelanguage.googleapis.com/v1beta/models/{ModelName}:generateContent";
 
-        try
-        {
-            // Send request and process response
-            using var response = await HttpClient.PostAsync(requestUri, payload);
-            response.EnsureSuccessStatusCode();
+         // Prepare the request parameters
+         GeminiChatParameters parameters = BuildGeminiChatParameters(chatMessages);
+         StringContent payload = new StringContent(
+             JsonSerializer.Serialize(parameters, JsonOptions),
+             Encoding.UTF8,
+             new System.Net.Http.Headers.MediaTypeHeaderValue("application/json")
+         );
 
-            var json = await response.Content.ReadAsStringAsync();
-            var result = JsonSerializer.Deserialize<GeminiResponseObject>(json, JsonOptions);
+         try
+         {
+             // Send request and process response
+             HttpResponseMessage response = await HttpClient.PostAsync(requestUri, payload);
+             response.EnsureSuccessStatusCode();
 
-            // Extract and return the generated text
-            return result?.Candidates?.FirstOrDefault()?.Content?.Parts?.FirstOrDefault()?.Text 
-                ?? "No response from model.";
-        }
-        catch (Exception ex) when (ex is HttpRequestException or JsonException)
-        {
-            throw new InvalidOperationException("Gemini API error.", ex);
-        }
-    }
+             string json = await response.Content.ReadAsStringAsync();
+             GeminiResponseObject result = JsonSerializer.Deserialize<GeminiResponseObject>(json, JsonOptions);
 
-    private GeminiChatParameters BuildGeminiChatParameters(IList<ChatMessage> messages)
-    {
-        // Convert chat messages to Gemini's format
-        var contents = messages.Select(m => new ResponseContent(
-            m.Text, 
-            m.Role == ChatRole.User ? "user" : "model"
-        )).ToList();
+             // Extract and return the generated text
+             return result?.Candidates?.FirstOrDefault()?.Content?.Parts?.FirstOrDefault()?.Text
+                 ?? "No response from model.";
+         }
+         catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
+         {
+             throw new InvalidOperationException("Gemini API error.", ex);
+         }
+     }
 
-        // Configure request parameters including safety settings
-        return new GeminiChatParameters
-        {
-            Contents = contents,
-            GenerationConfig = new GenerationConfig
-            {
-                MaxOutputTokens = 2000,
-                StopSequences = new() { "END_INSERTION", "NEED_INFO", "END_RESPONSE" }
-            },
-            SafetySettings = new()
-            {
-                new() { Category = "HARM_CATEGORY_HARASSMENT", Threshold = "BLOCK_ONLY_HIGH" },
-                new() { Category = "HARM_CATEGORY_HATE_SPEECH", Threshold = "BLOCK_ONLY_HIGH" },
-                new() { Category = "HARM_CATEGORY_SEXUALLY_EXPLICIT", Threshold = "BLOCK_ONLY_HIGH" },
-                new() { Category = "HARM_CATEGORY_DANGEROUS_CONTENT", Threshold = "BLOCK_ONLY_HIGH" }
-            }
-        };
-    }
+     private GeminiChatParameters BuildGeminiChatParameters(IList<ChatMessage> messages)
+     {
+         // Convert chat messages to Gemini's format
+         List<ResponseContent> contents = messages.Select(m => new ResponseContent(
+             m.Text,
+             m.Role == ChatRole.User ? "user" : "model"
+         )).ToList();
+
+         // Configure request parameters including safety settings
+         GeminiChatParameters parameters = new GeminiChatParameters
+         {
+             Contents = contents,
+             GenerationConfig = new GenerationConfig
+             {
+                 MaxOutputTokens = 2000,
+                 StopSequences = new List<string> { "END_INSERTION", "NEED_INFO", "END_RESPONSE" }
+             },
+             SafetySettings = new List<SafetySetting>
+     {
+         new SafetySetting { Category = "HARM_CATEGORY_HARASSMENT", Threshold = "BLOCK_ONLY_HIGH" },
+         new SafetySetting { Category = "HARM_CATEGORY_HATE_SPEECH", Threshold = "BLOCK_ONLY_HIGH" },
+         new SafetySetting { Category = "HARM_CATEGORY_SEXUALLY_EXPLICIT", Threshold = "BLOCK_ONLY_HIGH" },
+         new SafetySetting { Category = "HARM_CATEGORY_DANGEROUS_CONTENT", Threshold = "BLOCK_ONLY_HIGH" }
+     }
+         };
+
+         return parameters;
+     }
+
 }
 ```
 
