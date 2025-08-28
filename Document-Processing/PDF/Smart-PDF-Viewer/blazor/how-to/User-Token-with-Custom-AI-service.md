@@ -471,5 +471,5 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 
 ## See also
 
-* [Getting Started with Blazor Smart PDF Viewer in Server Web App](../getting-started/web-app)
+* [Getting Started with Blazor Smart PDF Viewer in Web App Server](../getting-started/web-app)
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service.md)

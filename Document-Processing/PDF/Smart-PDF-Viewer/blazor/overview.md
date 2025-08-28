@@ -52,7 +52,7 @@ The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusio
 
 ## See also
 
-* [Getting Started with Blazor Smart PDF Viewer in Server Web App](./getting-started/web-app)
+* [Getting Started with Blazor Smart PDF Viewer in Web App Server](./getting-started/web-app)
 * [Document Summarizer in Blazor Smart PDF Viewer](./document-summarizer.md)
 * [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)
 * [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)
