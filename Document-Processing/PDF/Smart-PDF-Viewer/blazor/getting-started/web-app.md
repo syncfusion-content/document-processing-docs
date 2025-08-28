@@ -11,8 +11,6 @@ documentation: ug
 
 This section briefly explains how to include [Blazor Smart PDF Viewer](https://www.syncfusion.com/blazor-components) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio code.
 
-To get start quickly with Blazor Smart PDF Viewer component, you can check on this video.
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -104,15 +102,15 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 | Interactive Render Mode | Description |
 | -- | -- |
-| Server | Open **~/_Import.razor** file, which is located in the `Components` folder.|
+| Server | Open **~/_Imports.razor** file, which is located in the `Components` folder.|
 
 Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfSmartPdfViewer` namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Import.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.SfSmartPdfViewer
+@using Syncfusion.Blazor.SmartPdfViewer
 
 {% endhighlight %}
 {% endtabs %}
@@ -281,7 +279,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
 
-@using Syncfusion.Blazor.SfSmartPdfViewer;
+@using Syncfusion.Blazor.SmartPdfViewer;
 
 <SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="wwwroot/Fsharp_Succinctly.pdf">
 </SfSmartPdfViewer>
