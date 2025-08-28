@@ -105,4 +105,4 @@ By customizing margins, papers, and layouts, the layout of the document will be 
 ## See Also
 
 * [Feature modules](../document-editor/feature-module)
-* [Page Setup dialog](../document-editor/dialog.md/#page-setup-dialog)
+* [Page Setup dialog](../document-editor/dialog#page-setup-dialog)

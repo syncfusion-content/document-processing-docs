@@ -55,7 +55,7 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 
    Now the Word Processor server Docker instance runs in the localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Word Processor Web API control `http://localhost:6002/api/documenteditor`. It returns the default get method response.
 
-**Step 4:** Append the Docker instance running the URL `(http://localhost:6002/api/documenteditor)` to the service URL in the client-side Word Processor control. For more information about how to get started with the Word Processor control, refer to this [`getting started page.`](../../angular/document-editor/getting-started.md)
+**Step 4:** Append the Docker instance running the URL `(http://localhost:6002/api/documenteditor)` to the service URL in the client-side Word Processor control. For more information about how to get started with the Word Processor control, refer to this [`getting started page.`](../getting-started)
 
 ## How to configure spell checker dictionaries path in Docker compose file
 
@@ -178,4 +178,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-Refer to these getting started pages to create a Word Processor in [`Typescript`](../../../typescript/document-editor/getting-started.md), [`Angular`](../../../angular/document-editor/getting-started.md), [`Vue`](../../../vue/document-editor/getting-started.md), [`ASP.NET MVC`](../../../asp-net-mvc/document-editor/getting-started.md), [`ASP.NET Core`](../../../asp-net-core/document-editor/getting-started.md), and [`Blazor`](../../../blazor/getting-started/server-side-application.md).
+Refer to these getting started pages to create a Word Processor in [`Typescript`](../../../javascript-es6/document-editor/getting-started), [`Angular`](../../../angular/document-editor/getting-started), [`Vue`](../../../vue/document-editor/getting-started), [`ASP.NET MVC`](../../../asp-net-mvc/document-editor/getting-started), [`ASP.NET Core`](../../../asp-net-core/getting-started-core), and [`Blazor`](../../../blazor/document-editor/getting-started/server-side-application).

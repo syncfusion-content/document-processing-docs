@@ -120,7 +120,7 @@ N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token a
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/#saveAsBlob) and sent to server-side for saving in Dropbox cloud file storage.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Dropbox cloud file storage.
 
 
 {% tabs %}

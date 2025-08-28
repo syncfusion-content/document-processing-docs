@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize font family drop down in Angular Document editor
 
-Document editor provides an options to customize the font family drop down list values using [`fontfamilies`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#fontfamilies) in Document editor settings. Fonts which are added in fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#documenteditorsettings) will be displayed on font drop down list of text properties pane and font dialog.
+Document editor provides an options to customize the font family drop down list values using [`fontfamilies`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in Document editor settings. Fonts which are added in fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#documenteditorsettings) will be displayed on font drop down list of text properties pane and font dialog.
 
 Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 

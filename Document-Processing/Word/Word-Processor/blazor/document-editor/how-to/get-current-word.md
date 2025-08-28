@@ -39,7 +39,7 @@ The following example code illustrates how to select and get the current word as
 }
 ```
 
-To get the bookmark content as SFDT (rich text), check this [`link`](../../blazor/how-to/get-the-selected-content.md/#get-the-selected-content-as-sfdt-rich-text).
+To get the bookmark content as SFDT (rich text), check this [`link`](./get-the-selected-content).
 
 ## Select and get the paragraph in current cursor position
 

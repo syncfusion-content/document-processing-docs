@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Move selection to specific position in ##Platform_Name## Document editor
 
-Using [`select`](../../api/document-editor/selection/#select) API in selection module, You can set cursor position to anywhere in the document.
+Using [`select`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#select) API in selection module, You can set cursor position to anywhere in the document.
 
 ## Selects content based on start and end hierarchical index
 
@@ -39,7 +39,7 @@ The following table illustrates about Hierarchical index in detail.
 
 ## Get the selection start and end hierarchical index
 
-Using [`startOffset`](../../api/document-editor/selection/#startoffset), you can get start hierarchical index which denotes the start index of current selection. Similarly, using [`endOffset`](../../api/document-editor/selection/#endoffset), you can get end hierarchical index which denotes the end index of current selection.
+Using [`startOffset`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#startoffset), you can get start hierarchical index which denotes the start index of current selection. Similarly, using [`endOffset`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#endoffset), you can get end hierarchical index which denotes the end index of current selection.
 
 The following code snippet illustrate how to get the selection start and end offset on selection changes in document.
 
@@ -61,11 +61,11 @@ let endOffset:string = container.documentEditor.selection.endOffset;
 };
 ```
 
-Document editor have [`selectionChange`](../../api/document-editor/#selectionchange) event which is triggered whenever the selection changes in Document.
+Document editor have [`selectionChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#selectionchange) event which is triggered whenever the selection changes in Document.
 
 ## Selects the content based on left and top position
 
-Here, you can specify the [`selection settings`](../../api/document-editor/selectionSettings/) to select the content based on left and top position.
+Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selectionSettings/) to select the content based on left and top position.
 
 x denotes the left position and y denotes the top position and extend denotes whether to extend or update selection.
 

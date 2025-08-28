@@ -44,4 +44,4 @@ The following example code illustrates how to hide the existing toolbar.
 
 ## See Also
 
-* [How to customize the toolbar](../../blazor/how-to/customize-tool-bar)
+* [How to customize the toolbar](./customize-tool-bar)

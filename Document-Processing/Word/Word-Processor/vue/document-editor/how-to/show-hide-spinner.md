@@ -3,14 +3,14 @@ layout: post
 title: Show hide spinner in Vue Document editor component | Syncfusion
 description: Learn here all about Show hide spinner in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Show hide spinner 
-platform: ej2-vue
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Show hide spinner in Vue Document editor component
 
-Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started/#create-the-spinner-globally) component, you can show/hide spinner while opening document in DocumentEditor .
+Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show/hide spinner while opening document in DocumentEditor .
 
 Example code snippet to show/hide spinner
 

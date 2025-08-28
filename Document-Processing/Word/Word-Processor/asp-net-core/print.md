@@ -98,5 +98,5 @@ By customizing margins, papers, and layouts, the layout of the document will be 
 
 ## See Also
 
-* [Feature modules](../asp-net-core/feature-module/)
+* [Feature modules](../asp-net-core/feature-module)
 * [Page Setup dialog](../asp-net-core/dialog#page-setup-dialog)

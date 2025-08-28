@@ -47,4 +47,4 @@ In this article, we are going to see how to open a document in read only mode by
 
 
 
->Note: You can use the [`restrictEditing`](../../api/document-editor-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](../../api/document-editor/#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
+>Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/documentation/api/document-editor-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.

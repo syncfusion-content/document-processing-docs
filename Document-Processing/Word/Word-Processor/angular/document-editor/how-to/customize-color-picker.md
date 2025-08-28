@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize color picker in Angular Document editor component
 
-Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#colorpickersettings)in the document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors.
+Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings)in the document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors.
 
 Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/) property for DocumentEditor also.
 

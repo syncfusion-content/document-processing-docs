@@ -112,7 +112,7 @@ public async Task<string> LoadFromGoogleCloud([FromBody] Dictionary<string, stri
 
 **Step 3:**  Modify the index File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#open) method.
+In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';

@@ -14,7 +14,7 @@ You can set the default character format, paragraph format and section format in
 
 ## Set the default character format
 
-You can use [`setDefaultCharacterFormat`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#setdefaultcharacterformat) method to set the default character format. For example, Document editor default font size is 11 and you can change it as any valid value.
+You can use [`setDefaultCharacterFormat`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#setdefaultcharacterformat) method to set the default character format. For example, Document editor default font size is 11 and you can change it as any valid value.
 
 The following example code illustrates how to change the default font size in Document editor.
 
@@ -114,7 +114,7 @@ export class AppComponent implements OnInit {
 
 ## Set the default paragraph format
 
-You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#setdefaultparagraphformat) API to set the default paragraph format. You can change the required [`ParagraphFormatProperties`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/paragraphFormatProperties) default value.
+You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#setdefaultparagraphformat) API to set the default paragraph format. You can change the required [`ParagraphFormatProperties`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/paragraphFormatProperties) default value.
 
 The following example code illustrates how to change the paragraph format(before spacing, line spacing etc.,) default value in Document editor.
 
@@ -168,7 +168,7 @@ export class AppComponent implements OnInit {
 
 ## Set the default section format
 
-You can use [`setDefaultSectionFormat`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#setdefaultsectionformat) API to set the default section format. You can change the required [`SectionFormatProperties`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/sectionFormatProperties) default value.
+You can use [`setDefaultSectionFormat`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#setdefaultsectionformat) API to set the default section format. You can change the required [`SectionFormatProperties`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/sectionFormatProperties) default value.
 
 The following example code illustrates how to change the section format(header and footer distance, page width and height, etc.,) default value in Document editor.
 

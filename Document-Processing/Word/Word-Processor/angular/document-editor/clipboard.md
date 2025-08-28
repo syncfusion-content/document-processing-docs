@@ -137,4 +137,4 @@ This paste option appears as follows.
 ## See Also
 
 * [Feature modules](../document-editor/feature-module)
-* [Keyboard shortcuts](../document-editor/keyboard-shortcut.md)
+* [Keyboard shortcuts](../document-editor/keyboard-shortcut)

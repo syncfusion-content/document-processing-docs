@@ -23,7 +23,7 @@ Start by following the steps provided in this [link](../../document-editor/getti
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
-* Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../../document-editor/web-services-overview)for instructions on how to create a web service project.
+* Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../../document-editor/web-services-overview) for instructions on how to create a web service project.
 
 * Open the `DocumentEditorController.cs` file in your web service project.
 
@@ -134,7 +134,7 @@ N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_T
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](../../api/document-editor/#open) method.
+In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#open) method.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

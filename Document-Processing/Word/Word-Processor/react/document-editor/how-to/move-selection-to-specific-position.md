@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Move selection to specific position in React Document editor component
 
-Using [`select`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#select) API in selection module, You can set cursor position to anywhere in the document.
+Using [`select`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#select) API in selection module, You can set cursor position to anywhere in the document.
 
 ## Selects content based on start and end hierarchical index
 
@@ -38,8 +38,8 @@ The following table illustrates about Hierarchical index in detail.
 
 ## Get the selection start and end hierarchical index
 
-Using [`startOffset`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#startoffset), you can get start hierarchical index which denotes the start index of current selection.
-Similarly, using [`endOffset`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection/#endoffset), you can get end hierarchical index which denotes the end index of current selection.
+Using [`startOffset`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#startoffset), you can get start hierarchical index which denotes the start index of current selection.
+Similarly, using [`endOffset`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#endoffset), you can get end hierarchical index which denotes the end index of current selection.
 
 The following code snippet illustrate how to get the selection start and end offset on selection changes in document.
 
@@ -81,7 +81,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Document editor have [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor/#selectionchange) event which is triggered whenever the selection changes in Document.
+Document editor have [`selectionChange`](https://ej2.syncfusion.com/react/documentation/api/document-editor#selectionchange) event which is triggered whenever the selection changes in Document.
 
 ## Selects the content based on left and top position
 

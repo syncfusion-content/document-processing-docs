@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 
-You can use [`restrictEditing`](../../api/document-editor-container/#restrictediting) property to disable header and footer editing based on selection context type.
+You can use [`restrictEditing`](https://ej2.syncfusion.com/documentation/api/document-editor-container#restrictediting) property to disable header and footer editing based on selection context type.
 
 RestrictEditing allows you to restrict the document modification and makes the Document read only mode. So, by using this property, and if selection inside header or footer, you can set this property as true.
 
@@ -42,7 +42,7 @@ container.selectionChange = (): void => {
 };
 ```
 
-Otherwise, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`](../../api/document-editor/selection/#closeheaderfooter) API in selection module.
+Otherwise, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#closeheaderfooter) API in selection module.
 
 The following example code illustrates how to close header and footer when selection is inside header or footer in `DocumentEditorContainer` instance.
 
@@ -69,7 +69,7 @@ container.selectionChange = (): void => {
 
 ## Disable header and footer edit in DocumentEditor instance
 
-Like restrictEditing, you can use [`isReadOnly`](../../api/document-editor/#isreadonly) property in Document editor to disable header and footer edit.
+Like restrictEditing, you can use [`isReadOnly`](https://ej2.syncfusion.com/documentation/api/document-editor#isreadonly) property in Document editor to disable header and footer edit.
 
 The following example code illustrates how to header and footer edit in `DocumentEditor` instance.
 

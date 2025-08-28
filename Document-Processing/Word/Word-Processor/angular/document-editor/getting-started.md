@@ -18,7 +18,7 @@ To get started quickly with DocumentEditor component using CLI, you can check th
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](../system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Dependencies
 
@@ -50,7 +50,7 @@ The Document Editor component requires server-side interactions for the followin
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
 * [SpellCheck](../document-editor/spell-check)
-* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents\server-side-export.md)
+* [Save as file formats other than SFDT and DOCX](../document-editor/saving-documents\server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 

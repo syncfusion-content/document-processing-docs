@@ -69,4 +69,4 @@ N>Same method is used for inserting, updating, and editing table of contents. Th
 
 ## See Also
 
-* [Table of contents dialog](../document-editor/dialog.md/#table-of-contents-dialog)
+* [Table of contents dialog](../document-editor/dialog#table-of-contents-dialog)

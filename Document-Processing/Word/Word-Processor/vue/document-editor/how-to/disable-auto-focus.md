@@ -18,11 +18,11 @@ The following example illustrates to disable the auto focus in DocumentEditorCon
 <ejs-documenteditorcontainer ref="doceditcontainer" :enableAutoFocus='false' height='600px'></ejs-documenteditorcontainer>
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#enableautofocus) property is `true`.
 The following example illustrates to disable the auto focus in DocumentEditor.
 
 ```typescript
 <ejs-documenteditor ref="doceditcontainer" :enableAutoFocus='false' height='600px'></ejs-documenteditor>
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enableautofocus) property is `true`.

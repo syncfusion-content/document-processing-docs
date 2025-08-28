@@ -14,7 +14,7 @@ You can insert the text, paragraph and rich-text content in Vue Document Editor 
 
 ## Insert text in current cursor position
 
-You can use [`insertText`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#inserttext) API in editor module to insert the text in current cursor position.
+You can use [`insertText`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#inserttext) API in editor module to insert the text in current cursor position.
 
 The following example code illustrates how to add the text in current selection.
 
@@ -101,7 +101,7 @@ Please check below gif which illustrates how to insert text in current cursor po
 
 ## Insert paragraph in current cursor position
 
-To insert new paragraph at current selection, you can can use [`insertText`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#inserttext) API with parameter as `\r\n` or `\n`.
+To insert new paragraph at current selection, you can can use [`insertText`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#inserttext) API with parameter as `\r\n` or `\n`.
 
 The following example code illustrates how to add the new paragraph in current selection.
 
@@ -112,7 +112,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertText('\n');
 
 ## Insert the rich-text content
 
-To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`](../../document-editor/web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#paste) API to insert the sfdt at current cursor position.
+To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`](../../document-editor/web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#paste) API to insert the sfdt at current cursor position.
 
 >Note: Html string should be welformatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only welformatted XHTML.  
 

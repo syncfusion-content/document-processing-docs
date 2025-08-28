@@ -24,7 +24,7 @@ Refer to the following sample code.
 
 ## Set the maximum number of Rows when inserting a table
 
-You can use the [maximumRows](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettings/#maximumrows) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
+You can use the [maximumRows](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettings#maximumrows) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
 
 ```ts
 function App() {
@@ -45,7 +45,7 @@ When the maximum row limit is reached, an alert will appear, as follow
 
 ## Set the maximum number of Columns when inserting a table
 
-You can use the [maximumColumns](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettings/#maximumcolumns) property to set the maximum number of Columns allowed while inserting a table in the Document Editor component.
+You can use the [maximumColumns](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettings#maximumcolumns) property to set the maximum number of Columns allowed while inserting a table in the Document Editor component.
 
 Refer to the following sample code.
 
@@ -68,7 +68,7 @@ When the maximum column limit is reached, an alert will appear, as follow
 
 ## Insert rows
 
-You can add a row (or several rows) above or below the row at cursor position by using the [`insertRow`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#insertrow) method. This method accepts the following parameters:
+You can add a row (or several rows) above or below the row at cursor position by using the [`insertRow`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertrow) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -88,7 +88,7 @@ Refer to the following sample code.
 
 ## Insert columns
 
-You can add a column (or several columns) to the left or right of the column at cursor position by using the [`insertColumn`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#insertcolumn) method. This method accepts the following parameters:
+You can add a column (or several columns) to the left or right of the column at cursor position by using the [`insertColumn`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertcolumn) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -144,7 +144,7 @@ You can select the cell at cursor position by using the following sample code.
 
 ## Delete table
 
-Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
 
    ```ts
     documenteditor.editor.deleteTable();
@@ -152,7 +152,7 @@ Document Editor allows you to delete the entire table. You can use the [`deleteT
 
 ## Delete row
 
-Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteRow();
@@ -160,7 +160,7 @@ documenteditor.editor.deleteRow();
 
 ## Delete column
 
-Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor/#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteColumn();

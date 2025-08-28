@@ -16,7 +16,7 @@ DocumentEditorContainer component provide support for inserting Text, CheckBox, 
 
 ## Insert form field
 
-Form fields can be inserted using [`insertFormField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertformfield) method in editor module.
+Form fields can be inserted using [`insertFormField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertformfield) method in editor module.
 
 ```typescript
 //Insert Text form field
@@ -29,7 +29,7 @@ this.documentEditor.editor.insertFormField('DropDown');
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#getformfieldnames).
+All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getformfieldnames).
 
 ```typescript
 let formFieldsNames: string[] = this.documentEditor.getFormFieldNames();
@@ -37,7 +37,7 @@ let formFieldsNames: string[] = this.documentEditor.getFormFieldNames();
 
 ## Get form field properties
 
-Form field properties can be retrieved using [`getFormFieldInfo()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#getformfieldinfo).
+Form field properties can be retrieved using [`getFormFieldInfo()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getformfieldinfo).
 
 ```typescript
 //Text form field
@@ -50,7 +50,7 @@ let dropdownfieldInfo: DropDownFormFieldInfo = this.documentEditor.getFormFieldI
 
 ## Set form field properties
 
-Form field properties can be modified using [`setFormFieldInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#setformfieldinfo).
+Form field properties can be modified using [`setFormFieldInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#setformfieldinfo).
 
 ```typescript
 // Set text form field properties
@@ -78,7 +78,7 @@ this.documentEditor.setFormFieldInfo('Drop1',dropdownfieldInfo);
 
 ## Form Field Shading
 
-You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#formFieldSettings) property.
+You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#formFieldSettings) property.
 
 The example code below demonstrates how to set a custom shading color and how to disable shading (by default, shading is enabled).
 
@@ -94,7 +94,7 @@ N> This customization only affects the application UI and will not be preserved 
 
 ## Export form field data
 
-Data of the all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportformdata).
+Data of the all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#exportformdata).
 
 ```typescript
 let formFieldDate: FormFieldData[] = this.documentEditor.exportFormData();
@@ -102,7 +102,7 @@ let formFieldDate: FormFieldData[] = this.documentEditor.exportFormData();
 
 ## Import form field data
 
-Form fields can be prefilled with data using [`importFormData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#importformdata).
+Form fields can be prefilled with data using [`importFormData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#importformdata).
 
 ```typescript
 let textformField: FormFieldData = {fieldName: 'Text1', value: 'Hello World'};
@@ -114,7 +114,7 @@ this.documentEditor.importFormData([textformField,checkformField,dropdownformFie
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`resetFormFields`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#resetformfields).
+Reset all the form fields in current document to default value using [`resetFormFields`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#resetformfields).
 
 ```typescript
 this.documentEditor.resetFormFields();
@@ -124,7 +124,7 @@ this.documentEditor.resetFormFields();
 
 Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 

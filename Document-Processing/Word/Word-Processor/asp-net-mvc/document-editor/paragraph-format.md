@@ -157,5 +157,5 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 ## See Also
 
 * [Feature modules](../document-editor/feature-module)
-* [Paragraph dialog](../document-editor/dialog.md/#paragraph-dialog)
+* [Paragraph dialog](../document-editor/dialog#paragraph-dialog)
 * [Keyboard shortcuts](../document-editor/keyboard-shortcut)
