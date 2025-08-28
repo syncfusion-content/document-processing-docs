@@ -8,7 +8,6 @@
 
 <script>
     function beforeOpen(args) {
-        // These options are taken directly from your app.tsx file.
         // They will be sent to the server with the open request.
         args.parseOptions = {
             ignoreStyle: true,
