@@ -177,7 +177,7 @@ DocumentEditorContainer output will be displayed as follows.
 
 > The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: If you see a license banner when running your application, it means that you need to obtain a license key and register it within the application in order to use Syncfusion components. You can find more information on how to obtain and register a license key on our [Licensing overview](../licensing/overview/) page.
+>Note: If you see a license banner when running your application, it means that you need to obtain a license key and register it within the application in order to use Syncfusion components. You can find more information on how to obtain and register a license key on our [Licensing overview](https://ej2.syncfusion.com/angular/documentation/licensing/overview) page.
 
 ### DocumentEditor Component
 
@@ -213,7 +213,7 @@ export class AppComponent implements OnInit {
 
 #### Run the  DocumentEditor application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open
