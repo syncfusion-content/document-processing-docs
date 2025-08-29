@@ -104,7 +104,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 | -- | -- |
 | Server | Open **~/_Imports.razor** file, which is located in the `Components` folder.|
 
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SfSmartPdfViewer` namespace.
+Import the [Syncfusion.Blazor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) and [Syncfusion.Blazor.SmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -291,4 +291,11 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 
 ![Syncfusion Blazor Smart PDF Viewer](gettingstarted-images/smart-pdf-viewer.png)
 
-N> [View Sample in GitHub]().
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/GettingStarted).
+
+## See also
+
+* [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service)
+* [Document Summarizer in Blazor Smart PDF Viewer](../document-summarizer)
+* [Smart Redaction in Blazor Smart PDF Viewer](../smart-redaction)
+* [Smart Fill in Blazor Smart PDF Viewer](../smart-fill)

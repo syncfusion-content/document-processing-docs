@@ -163,7 +163,7 @@ Using the context menu.
 * Select a text in the PDF document and right-click it.
 * Select **squiggly** option in the context menu that appears.
 
-![Displaying Squiggly in Blazor SfPdfViewer ContextMenu](../../pdfviewer-2/images/blazor-pdfviewer-squiggly-in-contextmenu.png)
+![Displaying Squiggly in Blazor SfPdfViewer ContextMenu](../images/blazor-pdfviewer-squiggly-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
@@ -172,7 +172,7 @@ Using the context menu.
 * Select the text and the squiggly annotation will be added.
 * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
 
-![Blazor PDFViewer with Squiggly Text](../../pdfviewer-2/images/blazor-pdfviewer-squiggly-text.png)
+![Blazor PDFViewer with Squiggly Text](../images/blazor-pdfviewer-squiggly-text.png)
 
 In the pan mode, if the squiggly mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection to squiggly the text.
 

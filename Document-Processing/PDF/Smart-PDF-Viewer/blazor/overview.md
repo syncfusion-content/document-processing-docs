@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Overview of Blazor Smart PDF Viewer | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Blazor Smart PDF Viewer and much more details.
+description: Checkout and learn about the overview of the Syncfusion Blazor Smart PDF Viewer and explore more useful details.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 # Overview of Blazor Smart PDF Viewer
 
-The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html)** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. Its features include [**Document Summarization with Q&A**](./document-summarizer.md), **Smart Redaction**, and [**Smart Fill**](./smart-fill.md). It enables users to manage documents more efficiently and securely.
+The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html)** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. Its features include [**Document Summarization with Q&A**](./document-summarizer), [**Smart Redaction**](./smart-redaction), and [**Smart Fill**](./smart-fill). It enables users to manage documents more efficiently and securely.
 
 ## Document Summarization
 
@@ -33,9 +33,8 @@ The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusio
 * Intelligently populates form fields based on context.
 * Understands the structure and expected input of PDF forms.
 * Reduces manual data entry and improves accuracy.
-* Streamlines workflows in applications like onboarding, surveys, and registrations.
 
-[Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfil?theme=fluent2)
+[Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfill?theme=fluent2)
 
 ## Benefits
 
@@ -49,3 +48,10 @@ The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusio
 * Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), Syncfusion.AI.PdfViewer, [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
 * Features can be selectively enabled based on application needs.
 * Compatible with Blazor Server Application
+
+## See also
+
+* [Getting Started with Blazor Smart PDF Viewer in Web App Server](./getting-started/web-app)
+* [Document Summarizer in Blazor Smart PDF Viewer](./document-summarizer)
+* [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)
+* [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)

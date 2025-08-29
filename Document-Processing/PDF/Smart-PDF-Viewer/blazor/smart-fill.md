@@ -21,7 +21,7 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
      <SmartFillSettings/>
 </SfSmartPdfViewer>
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/SmartFill)
 
 ## Smart Fill Settings in Syncfusion Blazor Smart PDF Viewer
 - The [SmartFillSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartFillSettings.html) class configures settings for the Smart Fill feature in the Smart PDF Viewer. This feature leverages AI to automate the population of PDF form fields based on clipboard or specified data.
@@ -49,5 +49,6 @@ To integrate Smart Fill into your PDF viewer workflow, include the [SmartFillSet
 
 ## See also
 
-* [Document Summaries in Blazor Smart PDF Viewer](./document-summarizer.md)
-* [Smart Redaction in Blazor Smart PDF Viewer]()
+* [Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfill?theme=fluent2)
+* [Document Summaries in Blazor Smart PDF Viewer](./document-summarizer)
+* [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)

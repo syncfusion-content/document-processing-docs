@@ -11,7 +11,7 @@ documentation: ug
 
 The new Blazor SfPdfViewer component allows users to view, edit, print, and download PDF files without the web service dependency in Blazor applications. It is designed to be fast and responsive and comes with the same feature set as the previous PDF Viewer. It is easy to use and can be integrated into both Blazor Server and WASM applications with minimal effort.
 
-The Blazor SfPdfViewer component shares the same key features as the [Blazor PDF Viewer component](../blazor-classic/overview.md), but this new component has some advantages over the old component.
+The Blazor SfPdfViewer component shares the same key features as the [Blazor PDF Viewer component](../blazor-classic/overview), but this new component has some advantages over the old component.
 
 ## Performance Improvement
 
