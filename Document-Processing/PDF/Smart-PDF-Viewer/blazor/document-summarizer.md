@@ -133,7 +133,7 @@ The [InitialPromptSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Bl
 [Prompt](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Blazor_SmartPdfViewer_InitialPromptSettings_Prompt) sets the initial query shown in the input field when the Assist view opens. This helps direct the AI assistant to perform a specific task immediately.
 
 ![Prompt](images/initialprompt_prompt.gif)
-``` chtml
+``` cshtml
 @* Sets the initial prompt that appears in the Assist view input field when the viewer loads *@
 
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
