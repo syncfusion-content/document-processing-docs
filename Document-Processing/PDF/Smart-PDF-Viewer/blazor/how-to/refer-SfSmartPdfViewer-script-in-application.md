@@ -17,3 +17,7 @@ documentation: ug
 
 To refer the script and pdfium files in your application, please refer the below image.
 ![Scripts in Blazor SfSmartPdfViewer](../images/pdfium.png)
+
+## See also
+
+* [Getting Started with Blazor Smart PDF Viewer in Web App Server](../getting-started/web-app)
