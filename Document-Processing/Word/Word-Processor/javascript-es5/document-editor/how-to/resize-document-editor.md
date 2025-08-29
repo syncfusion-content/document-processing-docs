@@ -15,7 +15,7 @@ In this article, we are going to see how to change height and width of Document 
 
 ## Change height of Document Editor
 
-DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel/#height) property, the value which is in pixel.
+DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel#height) property, the value which is in pixel.
 
 The following example code illustrates how to change height of Document Editor.
 
