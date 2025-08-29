@@ -27,7 +27,7 @@ For a complete list of models and their capabilities, visit the [Gemini Models D
 
 After completing this setup, you can:
 
-1. [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app.md)
+1. [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app)
 
 ---
 

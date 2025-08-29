@@ -21,7 +21,7 @@ Before you begin, ensure you have:
 
 After completing this setup, you can:
 
-1. [Add Smart PDF Viewer to your Blazor pages](../getting-started/web-app.md)
+1. [Add Smart PDF Viewer to your Blazor pages](../getting-started/web-app)
 
 ---
 ## Step 1: create user token service
@@ -473,4 +473,4 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 ## See also
 
 * [Getting Started with Blazor Smart PDF Viewer in Web App Server](../getting-started/web-app)
-* [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service.md)
+* [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service)

@@ -50,5 +50,5 @@ To integrate Smart Fill into your PDF viewer workflow, include the [SmartFillSet
 ## See also
 
 * [Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfill?theme=fluent2)
-* [Document Summaries in Blazor Smart PDF Viewer](./document-summarizer.md)
+* [Document Summaries in Blazor Smart PDF Viewer](./document-summarizer)
 * [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)

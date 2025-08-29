@@ -296,6 +296,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pd
 ## See also
 
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](../custom-ai-service)
-* [Document Summarizer in Blazor Smart PDF Viewer](../document-summarizer.md)
+* [Document Summarizer in Blazor Smart PDF Viewer](../document-summarizer)
 * [Smart Redaction in Blazor Smart PDF Viewer](../smart-redaction)
 * [Smart Fill in Blazor Smart PDF Viewer](../smart-fill)
