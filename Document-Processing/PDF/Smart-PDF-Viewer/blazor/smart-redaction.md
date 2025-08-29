@@ -66,7 +66,7 @@ The output shows the Smart Redaction feature in action, where AI automatically d
 
 To apply these settings, include them within the `SmartRedactSettings` of the `SfSmartPdfViewer` component. The Smart Redaction feature combines the power of AI with user control to ensure accurate and compliant redaction of sensitive information in PDF documents.
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Smart%20Redaction)
 
 ## Important Redaction Behaviors and Limitations
 

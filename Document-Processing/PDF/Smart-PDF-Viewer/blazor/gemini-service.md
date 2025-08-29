@@ -280,7 +280,7 @@ var app = builder.Build();
 ....
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Coordinate%20Conversion%20Between%20Page%20and%20Client%20Points)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
 
 ## See also
 
