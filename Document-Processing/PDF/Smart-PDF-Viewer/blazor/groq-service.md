@@ -211,5 +211,10 @@ var app = builder.Build();
 ....
 
 ```
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GroqService)
+
+## See also
+
+* [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)
+* [Gemini AI Service in Blazor Smart PDF Viewer](./gemini-service)
 

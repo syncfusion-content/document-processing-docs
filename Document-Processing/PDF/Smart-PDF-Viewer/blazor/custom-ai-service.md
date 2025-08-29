@@ -54,3 +54,4 @@ builder.Services.AddSingleton<IChatInferenceService, YourCustomService>();
 ## See also
 
 * [Gemini AI Service in Blazor Smart PDF Viewer](./gemini-service)
+* [Groq AI Service in Blazor Smart PDF Viewer](./groq-service)
