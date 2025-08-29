@@ -36,7 +36,7 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
 - Helps maintain a clean and intuitive UI by hiding the feature when it's not applicable.
 - Can be dynamically toggled based on user roles, document content, or application logic.
 
-```chtml
+```cshtml
 @* Controls visibility and accessibility of the Smart Fill feature based on document content or app logic *@
 
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
