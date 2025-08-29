@@ -34,7 +34,7 @@ The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusio
 * Understands the structure and expected input of PDF forms.
 * Reduces manual data entry and improves accuracy.
 
-[Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfil?theme=fluent2)
+[Explore Blazor Smart PDF Viewer Smart Fill Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartfill?theme=fluent2)
 
 ## Benefits
 
@@ -45,7 +45,7 @@ The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusio
 
 ## Integration
 
-* Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), [Syncfusion.AI.PdfViewer](https://www.nuget.org/packages/[Syncfusion.AI.PdfViewer), [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
+* Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), Syncfusion.AI.PdfViewer, [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
 * Features can be selectively enabled based on application needs.
 * Compatible with Blazor Server Application
 
