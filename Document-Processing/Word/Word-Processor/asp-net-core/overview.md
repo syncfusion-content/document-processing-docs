@@ -36,11 +36,11 @@ The Document Editor component is used to create, edit, view, and print Word docu
 
 ## Supported Web platforms
  
-* [Javascript(ES5)](../../javascript-es5/document-editor/getting-started)
-* [Javascript(ES6)](../../javascript-es6/document-editor/getting-started)
-* [Angular](../../angular/document-editor/getting-started)
-* [React](../../react/document-editor/getting-started)
-* [Vue](../../vue/document-editor/getting-started)
-* [ASP.NET Core](../../asp-net-core/getting-started-core)
-* [ASP.NET MVC](../../asp-net-mvc/document-editor/getting-started)
-* [Blazor](../../blazor/document-editor/getting-started/server-side-application)
+* [Javascript(ES5)](../javascript-es5/getting-started)
+* [Javascript(ES6)](../javascript-es6/getting-started)
+* [Angular](../angular/getting-started)
+* [React](../react/getting-started)
+* [Vue](../vue/getting-started)
+* [ASP.NET Core](../asp-net-core/getting-started-core)
+* [ASP.NET MVC](../asp-net-mvc/getting-started)
+* [Blazor](../blazor/getting-started/server-side-application)
