@@ -104,7 +104,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 | -- | -- |
 | Server | Open **~/_Imports.razor** file, which is located in the `Components` folder.|
 
-Import the [Syncfusion.Blazor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) and [Syncfusion.Blazor.SfSmartPdfViewer]() namespace.
+Import the [Syncfusion.Blazor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) and [Syncfusion.Blazor.SmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}

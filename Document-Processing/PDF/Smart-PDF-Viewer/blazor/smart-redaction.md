@@ -9,7 +9,7 @@ documentation: ug
 
 # Smart Redaction in Blazor Smart PDF Viewer
 
-The `SmartPdfViewer` enables intelligent redaction of sensitive information in PDF documents by incorporating AI-assisted functionalities. The Smart Redaction feature automatically detects and allows users to redact sensitive data such as personally identifiable information (PII), financial data, and other confidential content.
+The [SmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) enables intelligent redaction of sensitive information in PDF documents by incorporating AI-assisted functionalities. The Smart Redaction feature automatically detects and allows users to redact sensitive data such as personally identifiable information (PII), financial data, and other confidential content.
 
 ![Smart Redaction](images/smart-redaction.gif)
 
@@ -26,7 +26,7 @@ The AI-powered Smart Redaction provides users with the ability to select specifi
 ## SmartRedactSettings Parameters
 
 ### Enable
-This property controls whether the Smart Redaction feature is enabled in the PDF viewer. When set to `false`, the Smart Redact button in the side toolbar will be hidden and all redaction functionalities will be inaccessible to users. This setting is helpful when you want to restrict or disable access to advanced redaction tools based on context, role, or compliance requirements. The default value is `true`.
+This [Enable](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartRedactSettings.html#Syncfusion_Blazor_SmartPdfViewer_SmartRedactSettings_Enable) property controls whether the Smart Redaction feature is enabled in the PDF viewer. When set to `false`, the Smart Redact button in the side toolbar will be hidden and all redaction functionalities will be inaccessible to users. This setting is helpful when you want to restrict or disable access to advanced redaction tools based on context, role, or compliance requirements. The default value is `true`.
 
 ```cshtml
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
@@ -64,7 +64,7 @@ The output shows the Smart Redaction feature in action, where AI automatically d
 
 ![Redact Patterns in Smart Redaction](images/redact-patterns.gif)
 
-To apply these settings, include them within the `SmartRedactSettings` of the `SfSmartPdfViewer` component. The Smart Redaction feature combines the power of AI with user control to ensure accurate and compliant redaction of sensitive information in PDF documents.
+To apply these settings, include them within the [SmartRedactSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartRedactSettings.html) of the [SfSmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer.html) component. The Smart Redaction feature combines the power of AI with user control to ensure accurate and compliant redaction of sensitive information in PDF documents.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Smart%20Redaction)
 
@@ -86,5 +86,6 @@ The Smart Redaction feature uses AI to detect sensitive information, but manual 
 
 ## See also
 
+* [Explore Blazor Smart PDF Viewer Smart Redaction Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/smartredact?theme=fluent2)
 * [Document Summaries in Blazor Smart PDF Viewer](./document-summarizer)
 * [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)

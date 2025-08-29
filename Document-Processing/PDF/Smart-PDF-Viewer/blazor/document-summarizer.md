@@ -281,6 +281,7 @@ To apply these templates, include them within the `AssistViewSettings` of the `S
 
 ## See also
 
+* [Explore Blazor Smart PDF Viewer Document Summarization Demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/smart-pdf-viewer/summarizer?theme=fluent2)
 * [Smart Redaction in Blazor Smart PDF Viewer](./smart-redaction)
 * [Smart Fill in Blazor Smart PDF Viewer](./smart-fill)
 
