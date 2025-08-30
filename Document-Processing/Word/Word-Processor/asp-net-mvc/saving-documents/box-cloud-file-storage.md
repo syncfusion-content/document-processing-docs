@@ -133,10 +133,10 @@ In the client-side, to export the document into blob the document using [`saveAs
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/save-box-cloud-file-storage/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-box-cloud-file-storage/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/save-box-cloud-file-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/save-box-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

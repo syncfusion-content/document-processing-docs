@@ -17,26 +17,26 @@ In this article, we are going to see how to open a document in read only mode by
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/read-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/read-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/read-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/read-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/read-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/read-cs1" %}
 
 ## Opening a document in ready only mode by default in DocumentEditorContainer
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/read-container-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/read-container-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/read-container-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/read-container-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/read-container-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/read-container-cs1" %}
 
 >Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.

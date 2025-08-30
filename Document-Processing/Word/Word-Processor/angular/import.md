@@ -16,11 +16,11 @@ The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/import-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/import-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/import-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/import-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -32,11 +32,11 @@ The following example shows how to import document from local machine.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/import-cs3/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/import-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/import-cs3/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/import-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

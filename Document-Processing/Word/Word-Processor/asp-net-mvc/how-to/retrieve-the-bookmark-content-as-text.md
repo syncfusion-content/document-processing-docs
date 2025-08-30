@@ -21,7 +21,7 @@ The following example code illustrates how to get the bookmark content as plain 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -37,7 +37,7 @@ The following example code illustrates how to get the whole document content as 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -51,7 +51,7 @@ The following example code illustrates how to get the whole document content as 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -65,7 +65,7 @@ The following example code illustrates how to get the header content as plain te
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}{% endtabs %}

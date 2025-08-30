@@ -19,10 +19,10 @@ The following example demonstrates how to enable track changes.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/track-changes/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Track-changes-only.cs" %}
-{% include code-snippet/document-editor-container/track-changes/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ The following example demonstrates how to enable track changes.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/track-changes-default/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-default/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Track-changes-default.cs" %}
-{% include code-snippet/document-editor-container/track-changes-default/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-default/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 ## Show/Hide Revisions Pane
@@ -46,10 +46,10 @@ The following example code illustrates how to show/hide the revisions pane.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/toggle-track-pane/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/toggle-track-pane/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Track-changes-only.cs" %}
-{% include code-snippet/document-editor-container/toggle-track-pane/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/toggle-track-pane/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 ## Get all tracked revisions
@@ -136,10 +136,10 @@ The following example code illustrates how to enforce and stop protection in Doc
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/track-changes-only-protect/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-only-protect/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Track-changes-only.cs" %}
-{% include code-snippet/document-editor-container/track-changes-only-protect/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-only-protect/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

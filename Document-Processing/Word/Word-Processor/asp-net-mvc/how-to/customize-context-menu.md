@@ -20,7 +20,7 @@ Document Editor allows to add custom option in context menu. It can be achieved 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/add-custom-menu/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/add-custom-menu/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Add-custom-menu.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -38,7 +38,7 @@ Using `addCustomMenu()` method, you can hide the default context menu, by settin
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/hide-context-menu/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/hide-context-menu/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Hide-context-menu.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -52,7 +52,7 @@ The following code shows how to hide or show added custom option in context menu
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/customize-context-menu/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/customize-context-menu/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Customize-context-menu.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -66,7 +66,7 @@ The following code shows how to add a sub items in the custom option in context 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/customize-sub-context-menu/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/customize-sub-context-menu/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Customize-sub-context-menu" %}
 {% endhighlight %}{% endtabs %}
