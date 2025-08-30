@@ -24,7 +24,7 @@ hideSpinner(document.getElementById('container'));
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/spinner/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/spinner/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Spinner.cs" %}
 {% endhighlight %}{% endtabs %}

@@ -22,10 +22,10 @@ N> You can install the PDF export packages from this [`link`](https://www.npmjs.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/export-pdf-client/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/export-pdf-client/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-pdf-client.cs" %}
-{% include code-snippet/document-editor-container/export-pdf-client/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/export-pdf-client/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -42,10 +42,10 @@ The following way illustrates how to convert the document as PDF:
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/export-pdf-server/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/export-pdf-server/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-pdf-server.cs" %}
-{% include code-snippet/document-editor-container/export-pdf-server/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/export-pdf-server/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

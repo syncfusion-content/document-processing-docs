@@ -18,7 +18,7 @@ This article explains how to auto save the document in AWS S3. You can automatic
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/auto-save/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/auto-save/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Auto-save.cs" %}
 {% endhighlight %}{% endtabs %}

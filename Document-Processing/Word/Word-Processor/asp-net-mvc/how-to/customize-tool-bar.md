@@ -22,7 +22,7 @@ DocumentEditorContainer allows to customize (add, show, hide, enable, and disabl
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/custom-toolbar/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/custom-toolbar/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Custom-toolbar.cs" %}
 {% endhighlight %}{% endtabs %}

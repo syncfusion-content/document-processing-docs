@@ -37,7 +37,7 @@ documenteditor.editor.insertTableOfContents(tocSettings);
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/table-of-contents/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/table-of-contents/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table-of-contents.cs" %}
 {% endhighlight %}{% endtabs %}

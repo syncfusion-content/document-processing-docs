@@ -26,11 +26,11 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs5/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs5/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs5/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs5/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

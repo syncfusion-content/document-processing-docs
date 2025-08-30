@@ -150,10 +150,10 @@ Document editor provides an option to protect and unprotect document using `enfo
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/comment-only-protect/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/comment-only-protect/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Comment-only.cs" %}
-{% include code-snippet/document-editor-container/comment-only-protect/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/comment-only-protect/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -174,10 +174,10 @@ The following example illustrates how to enable mention support in Document Edit
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/comments-mention/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/comments-mention/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="comments-mention.cs" %}
-{% include code-snippet/document-editor-container/comments-mention/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/comments-mention/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,10 +191,10 @@ To demonstrate a specific use case, let’s consider an example where we want to
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/comments-event/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/comments-event/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="comments-event.cs" %}
-{% include code-snippet/document-editor-container/comments-event/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/comments-event/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

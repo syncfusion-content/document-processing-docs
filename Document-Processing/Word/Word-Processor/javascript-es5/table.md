@@ -176,14 +176,14 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/table-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/table-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/table-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/table-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/table-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/table-cs1" %}
 
 ## See Also
 

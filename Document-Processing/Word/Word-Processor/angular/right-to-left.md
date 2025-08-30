@@ -14,11 +14,11 @@ Document Editor provides RTL (right-to-left) support. This can be enabled using 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/rtl-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/rtl-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/rtl-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/rtl-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

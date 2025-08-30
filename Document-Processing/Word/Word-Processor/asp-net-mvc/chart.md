@@ -16,10 +16,10 @@ Document Editor provides chart preservation support. Using Document Editor, you 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/chart/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/chart/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/chart/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/chart/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

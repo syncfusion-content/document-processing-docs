@@ -21,7 +21,7 @@ The following example code illustrates how to select and get the current word as
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-word/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-word/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-word.cs" %}
 {% endhighlight %}
@@ -36,7 +36,7 @@ The following example code illustrates how to select and get the current paragra
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-paragraph/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-paragraph/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-paragraph.cs" %}
 {% endhighlight %}

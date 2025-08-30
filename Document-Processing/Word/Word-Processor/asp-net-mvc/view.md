@@ -17,7 +17,7 @@ DocumentEditor allows to change the view to web layout and print using the [`lay
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/web-layout/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/web-layout/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Web-layout.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -31,10 +31,10 @@ The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/ruler/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/ruler/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/ruler/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/ruler/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,9 +47,9 @@ The following example illustrates how to enable heading navigation pane in Docum
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/heading-navigation/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/heading-navigation/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="heading-navigation.cs" %}
-{% include code-snippet/document-editor/heading-navigation/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/heading-navigation/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}

@@ -111,10 +111,10 @@ In the client-side, the document is returned from the web service is opening usi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/open-dropbox-cloud-file-storage/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-dropbox-cloud-file-storage/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/open-dropbox-cloud-file-storage/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-dropbox-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

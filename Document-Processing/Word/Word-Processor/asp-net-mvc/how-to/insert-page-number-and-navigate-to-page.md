@@ -23,7 +23,7 @@ The following example code illustrates how to insert page number in header.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/insert-page-number/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/insert-page-number/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-page-number.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -44,7 +44,7 @@ The following example code illustrates how to get the number of pages in Documen
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/Page-count/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/Page-count/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="pageCount.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -56,7 +56,7 @@ The following example code illustrates how to move selection to specific page.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/go-to-page/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/go-to-page/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Go-to-page.cs" %}
 {% endhighlight %}{% endtabs %}

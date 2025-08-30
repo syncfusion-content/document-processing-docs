@@ -37,11 +37,11 @@ this.documentEditor.editor.insertTableOfContents(tocSettings);
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/link-cs8/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/link-cs8/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/link-cs8/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/link-cs8/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

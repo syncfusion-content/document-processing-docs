@@ -23,7 +23,7 @@ The following example code illustrates how to hide the properties pane.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/hide-the-default-propertiespane/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/hide-the-default-propertiespane/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Hide-the-default-propertiespane.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -39,7 +39,7 @@ The following example code illustrates how to hide the existing toolbar.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/hide-the-default-toolbar/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/hide-the-default-toolbar/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Hide-the-default-toolbar.cs" %}
 {% endhighlight %}{% endtabs %}

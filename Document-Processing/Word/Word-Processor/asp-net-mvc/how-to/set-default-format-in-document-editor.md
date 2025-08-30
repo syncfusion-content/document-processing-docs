@@ -20,7 +20,7 @@ You can use `setDefaultCharacterFormat` method to set the default character form
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/character-format-font/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/character-format-font/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-format-font.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -32,7 +32,7 @@ Similarly, you can change the required `CharacterFormatProperties` default value
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/character-format/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/character-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-format.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -46,7 +46,7 @@ You can use `setDefaultParagraphFormat` API to set the default paragraph format.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/paragraph-format/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/paragraph-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-format.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -60,7 +60,7 @@ You can use `setDefaultSectionFormat` API to set the default section format. You
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/section-format/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/section-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Section-format.cs" %}
 {% endhighlight %}{% endtabs %}

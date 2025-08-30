@@ -20,10 +20,10 @@ Using `open` method in Document editor allows to open the Document in sfdt forma
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/open-default-document/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/open-default-document/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/open-default-document/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/open-default-document/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,10 +36,10 @@ To open the document by default, call the open method in the `created` event of 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/open-default-document/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-default-document/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor-container/open-default-document/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-default-document/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

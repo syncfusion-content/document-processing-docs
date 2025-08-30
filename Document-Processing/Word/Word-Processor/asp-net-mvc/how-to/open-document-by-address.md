@@ -18,7 +18,7 @@ This article explains how to open a document from URL in DocumentEditor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/open-by-url/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/open-by-url/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Open-by-url.cs" %}
 {% endhighlight %}{% endtabs %}

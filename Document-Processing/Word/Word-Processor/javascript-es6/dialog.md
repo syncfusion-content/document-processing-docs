@@ -23,14 +23,14 @@ Refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs2" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs2" %}
 
 ## Paragraph dialog
 
@@ -42,14 +42,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs3/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs3/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs3" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs3" %}
 
 ## Table dialog
 
@@ -61,14 +61,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs4/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs4/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs4" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs4" %}
 
 ## Bookmark dialog
 
@@ -84,14 +84,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs5/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs5/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs5" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs5" %}
 
 ## Hyperlink dialog
 
@@ -103,14 +103,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs6/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs6/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs6" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs6" %}
 
 ## Table of contents dialog
 
@@ -122,14 +122,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs7/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs7/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs7/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs7" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs7" %}
 
 ## Styles Dialog
 
@@ -139,14 +139,14 @@ This dialog allows managing the styles in a document. It will display all the st
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs8/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs8/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs8/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs8" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs8" %}
 
 ## Style dialog
 
@@ -158,14 +158,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs9/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs9/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs9/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs9" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs9" %}
 
 ## List dialog
 
@@ -176,14 +176,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs10/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs10/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs10/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs10" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs10" %}
 
 ## Borders and shading dialog
 
@@ -195,14 +195,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs11/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs11/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs11/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs11" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs11" %}
 
 
 ## Table options dialog
@@ -215,14 +215,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs12/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs12/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs12/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs12/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs12" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs12" %}
 
 ## Table properties dialog
 
@@ -234,14 +234,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs13/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs13/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs13/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs13/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs13" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs13" %}
 
 ## Page setup dialog
 
@@ -253,14 +253,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs14/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs14/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs14/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs14/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs14" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs14" %}
 
 ## Column dialog
 
@@ -272,14 +272,14 @@ To open this dialog, refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/dialog-cs15/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs15/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs15/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs15/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs15" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs15" %}
 
 ## See Also
 

@@ -16,27 +16,27 @@ Refer to the following example for showing a document and print it.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/print-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/document-editor/print-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/print-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/document-editor/print-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/print-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/print-cs1" %}
 
 Refer to the following example for creating a document and print it.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/print-cs2/app-composition.vue %}
+{% include code-snippet/document-editor/vue/document-editor/print-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/print-cs2/app.vue %}
+{% include code-snippet/document-editor/vue/document-editor/print-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/print-cs2" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/print-cs2" %}
 
 ## Improve print quality
 
@@ -184,11 +184,11 @@ The following example shows how to customize layout options only for printing.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/print-cs3/app-composition.vue %}
+{% include code-snippet/document-editor/vue/document-editor/print-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/print-cs3/app.vue %}
+{% include code-snippet/document-editor/vue/document-editor/print-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/print-cs3" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/print-cs3" %}

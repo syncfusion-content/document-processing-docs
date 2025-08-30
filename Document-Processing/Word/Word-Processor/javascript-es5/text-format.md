@@ -198,14 +198,14 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/text-format-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/text-format-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/text-format-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/text-format-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/text-format-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/text-format-cs1" %}
 
 ## See Also
 

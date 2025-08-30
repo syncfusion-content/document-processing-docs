@@ -166,10 +166,10 @@ documenteditor.selection.characterFormat.highlightColor= '#FFC0CB';
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/text-format/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/text-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Text-format.cs" %}
-{% include code-snippet/document-editor/text-format/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/text-format/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -30,7 +30,7 @@ In below code example, In the example below, the "Open" and "Export" items have 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/customize-ribbon-file/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/customize-ribbon-file/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Customize-ribbon-file.cs" %}
 {% endhighlight %}
@@ -46,7 +46,7 @@ The following code example shows how to add the backstage menu items.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/customize-ribbon-backstage/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/customize-ribbon-backstage/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Customize-ribbon-backstage.cs" %}
 {% endhighlight %}

@@ -88,7 +88,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Docume
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/getting-started/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/getting-started/razor %}
 {% endhighlight %}
 {% endtabs %}
 

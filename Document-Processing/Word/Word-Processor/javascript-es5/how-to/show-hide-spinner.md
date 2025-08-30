@@ -27,13 +27,13 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/spinner-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/spinner-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/spinner-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/spinner-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/spinner-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/spinner-cs1" %}
 
 >Note: In above example, we have used setInterval to hide spinner, just for demo purpose.

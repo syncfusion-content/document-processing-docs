@@ -21,7 +21,7 @@ The following example code illustrates how to header and footer edit in `Documen
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/disable-header-footer/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/disable-header-footer/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -33,7 +33,7 @@ The following example code illustrates how to close header and footer when selec
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/disable-header-footer-close/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/disable-header-footer-close/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -46,7 +46,7 @@ The following example code illustrates how to header and footer edit in `Documen
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/disable-header-footer-documenteditor/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/disable-header-footer-documenteditor/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}

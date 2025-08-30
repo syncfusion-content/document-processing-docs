@@ -206,11 +206,11 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/customize-context-menu-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/customize-context-menu-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/customize-context-menu-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/customize-context-menu-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

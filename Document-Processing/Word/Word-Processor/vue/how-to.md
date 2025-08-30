@@ -18,14 +18,14 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/export-cs4/app-composition.vue %}
+{% include code-snippet/document-editor/vue/document-editor/export-cs4/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/export-cs4/app.vue %}
+{% include code-snippet/document-editor/vue/document-editor/export-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/export-cs4" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs4" %}
 
 ## Override or define the keyboard shortcut
 
@@ -35,11 +35,11 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/export-cs5/app-composition.vue %}
+{% include code-snippet/document-editor/vue/document-editor/export-cs5/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/export-cs5/app.vue %}
+{% include code-snippet/document-editor/vue/document-editor/export-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/export-cs5" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs5" %}
