@@ -162,7 +162,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app. 
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="10 12 14 15 16 23 25" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="10 12 14 15 16 19 21" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -177,13 +177,9 @@ builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
 builder.Services.AddMemoryCache();
 
-string apiKey = "api-key";
-string deploymentName = "deployment-name";
-string endpoint = "endpoint URL";
-
-string azureOpenAiKey = apiKey;
-string azureOpenAiEndpoint = endpoint;
-string azureOpenAiModel = deploymentName;
+string azureOpenAiKey = "api-key";
+string azureOpenAiEndpoint = "endpoint URL";
+string azureOpenAiModel = "deployment-name";
 AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(new Uri(azureOpenAiEndpoint), new ApiKeyCredential(azureOpenAiKey));
 IChatClient azureOpenAiChatClient = azureOpenAIClient.GetChatClient(azureOpenAiModel).AsIChatClient();
 builder.Services.AddChatClient(azureOpenAiChatClient);
@@ -256,8 +252,7 @@ var app = builder.Build();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the ~/Components/App.razor file as shown below:
 
-{% tabs %}
-
+```html
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -267,8 +262,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     ....
     <script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
 </body>
-
-{% endtabs %}
+```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
