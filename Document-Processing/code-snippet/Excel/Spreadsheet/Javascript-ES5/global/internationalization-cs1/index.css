@@ -1,0 +1,47 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  font-family: 'Helvetica Neue','calibiri';
+  font-size: 14px;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+body {
+  height: 425px;
+}
+
+.custom.e-headercell {
+  background-color: #f48fb1 !important;
+  color: white;
+}
+
+.custom.e-rowcell {
+  background-color: #fce4ec;
+  color: white;
+}
+
+.e-grid .e-rowcell.customcss{
+  background-color: #ecedee;
+  font-family: 'Bell MT';
+	color: red;
+	font-size: 20px;
+}
+
+.e-grid .e-headercell.customcss{
+  background-color: #2382c3;
+  color: white;
+	font-family: 'Bell MT';
+	font-size: 20px;
+}
+
+.orientationcss .e-headercelldiv {
+  transform: rotate(90deg);
+}
+

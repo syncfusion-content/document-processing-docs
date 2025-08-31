@@ -1,0 +1,191 @@
+---
+layout: post
+title: Rows and columns in EJ2 ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn here all about Rows And Columns in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+platform: document-processing
+control: Rows And Columns
+documentation: ug
+---
+
+
+# Rows and columns in Spreadsheet control
+
+Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
+
+* Insert
+* Delete
+* Show and Hide
+
+## Insert
+
+You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowInsert) property to enable or disable the insert option in Spreadsheet.
+
+### Row
+
+The rows can be inserted in the following ways,
+
+* Using `insertRow` method, you can insert the rows once the component is loaded.
+* Using context menu, insert the empty rows in the desired position.
+
+The following code example shows the options for inserting rows in the spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-row/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="InsertRowController.cs" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-row/insertRowController.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+
+
+### Column
+
+The columns can be inserted in the following ways,
+
+* Using `insertColumn` method, you can insert the columns once the component is loaded.
+* Using context menu, insert the empty columns in the desired position.
+
+The following code example shows the options for inserting columns in the spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-column/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="InsertColumnController.cs" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/insert-column/insertColumnController.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+
+
+## Delete
+
+Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDelete) property to enable or disable the delete option in Spreadsheet.
+
+The rows and columns can be deleted dynamically in the following ways,
+
+* Using `delete` method, you can delete the loaded rows and columns.
+* Using context menu, you can delete the selected rows and columns.
+
+The following code example shows the delete operation of rows and columns in the spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/delete-row/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="DeleteRowController.cs" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/delete-row/deleteRowController.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+
+
+## Hide and show
+
+You can show or hide the rows and columns in the spreadsheet through property binding, method, and context menu.
+
+### Row
+
+The rows can be hidden or shown through the following ways,
+
+* Using `hidden` property in row, you can hide/show the rows at initial load.
+* Using `hideRow` method, you can hide the rows by specifying the start and end row index, set the last argument `hide` as `false` to unhide the hidden rows.
+* Right-click on the row header and select the desired option from context menu
+
+### Column
+
+The columns can be hidden or shown through following ways,
+
+* Using `hidden` property in columns, you can hide/show the columns at initial load.
+* Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
+* Right-click on the column header and select the desired option from context menu
+
+The following code example shows the hide/show rows and columns operation in the spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/show-hide/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="ShowHideController.cs" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/show-hide/showHideController.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+
+
+## Size
+
+You can change the size of rows and columns in the spreadsheet by using `setRowsHeight` and `setColumnsWidth` methods.
+
+### Row
+
+You can change the height of single or multiple rows by using the `setRowsHeight` method.
+
+You can provide the following type of ranges to the method:
+
+* Single row range: `['2:2']`
+* Multiple rows range: `['1:100']`
+* Multiple rows with discontinuous range: `['1:10', '15:25', '30:40']`
+* Multiple rows with different sheets: `[Sheet1!1:50, 'Sheet2!1:50', 'Sheet3!1:50']`
+
+The following code example shows how to change the height for single/multiple rows in the spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-height/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="RowHeightController.cs" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-height/rowHeightController.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+### Column
+
+You can change the width of single or multiple columns by using the `setColumnsWidth` method.
+
+You can provide the following type of ranges to the method:
+
+* Single column range: `['F:F']`
+* Multiple columns range: `['A:F']`
+* Multiple columns with discontinuous range: `['A:C', 'G:I', 'K:M']`
+* Multiple columns with different sheets: `[Sheet1!A:H, 'Sheet2!A:H', 'Sheet3!A:H']`
+
+The following code example shows how to change the width for single/multiple columns in the spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-width/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="ColumnWidthController.cs" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-width/columnWidthController.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+## Changing text in column headers
+
+Using the [`beforeCellRender`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeCellRender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
+
+The following code example shows how to change the text in the column headers.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-header-change/razor %}
+{% endhighlight %}
+{% endtabs %}
+
+## Limitations of insert and delete
+
+The following features have some limitations in Insert/Delete:
+
+* Insert row/column between the formatting applied cells.
+* Insert row/column between the data validation.
+* Insert row/column between the conditional formatting applied cells.
+* Insert/delete row/column between the filter applied cells.
+
+## See Also
+
+* [Hyperlink](./link)
+* [Sorting](./sort)
+* [Filtering](./filter)

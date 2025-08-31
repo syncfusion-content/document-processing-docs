@@ -104,7 +104,7 @@ The SfPdfViewer supports downloading the loaded PDF file from the toolbar by def
 
 ```
 
-![Blazor SfPdfViewer with Download Option](../../PDF-Viewer-Classic/blazor/images/blazor-pdfviewer-download-option.png)
+![Blazor SfPdfViewer with Download Option](../blazor-classic/images/blazor-pdfviewer-download-option.png)
 
 
 ```cshtml
