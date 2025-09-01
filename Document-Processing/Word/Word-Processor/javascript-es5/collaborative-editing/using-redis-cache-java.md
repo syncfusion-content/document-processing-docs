@@ -29,7 +29,7 @@ To enable collaborative editing, inject `CollaborativeEditingHandler` and set th
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/collaborative-editing-java-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/collaborative-editing-java-cs1/index.js %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,7 +39,7 @@ To broadcast the changes made and receive changes from remote users, configure S
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/collaborative-editing-java-cs1/script-1.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/collaborative-editing-java-cs1/script-1.js %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,7 +49,7 @@ When opening a document, we need to generate a unique ID for each document. Thes
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/collaborative-editing-java-cs1/script-2.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/collaborative-editing-java-cs1/script-2.js %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,7 +59,7 @@ Changes made on the client-side need to be sent to the server-side to broadcast 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/collaborative-editing-java-cs1/script-3.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/collaborative-editing-java-cs1/script-3.js %}
 {% endhighlight %}
 {% endtabs %}
 

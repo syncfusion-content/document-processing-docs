@@ -49,14 +49,14 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/data-protection-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/data-protection-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/data-protection-cs2" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/data-protection-cs2" %}
 
 ### See Also
 

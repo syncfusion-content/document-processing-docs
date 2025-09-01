@@ -28,14 +28,14 @@ The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/ruler-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/ruler-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/ruler-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1" %}
 
 ## Navigation Pane
 

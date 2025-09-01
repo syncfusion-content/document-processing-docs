@@ -15,14 +15,14 @@ The Document Editor renders the document as page by page. You can scroll through
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/scrolling-zooming-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs1" %}
 
 > Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
@@ -30,14 +30,14 @@ In case, if you wish to move the selection to any page in Document Editor and br
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/scrolling-zooming-cs2" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs2" %}
 
 ## Zooming
 
@@ -84,11 +84,11 @@ The following code example shows how to provide zoom options in Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs3/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs3/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/scrolling-zooming-cs3" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs3" %}

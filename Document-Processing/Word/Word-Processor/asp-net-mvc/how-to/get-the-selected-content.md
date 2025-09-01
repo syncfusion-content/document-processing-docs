@@ -20,7 +20,7 @@ You can use `text` API to get the selected content as plain text from React Docu
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
 {% endhighlight %}
@@ -40,7 +40,7 @@ You can use `sfdt` API to get the selected content as rich text from React Docum
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/get-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-sfdt/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-sfdt.cs" %}
 {% endhighlight %}

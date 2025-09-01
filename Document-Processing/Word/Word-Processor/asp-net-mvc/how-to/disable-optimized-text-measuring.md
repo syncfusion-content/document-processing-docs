@@ -22,7 +22,7 @@ The following example code illustrates how to disable optimized text measuring i
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/optimized-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/optimized-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Optimized-text.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -36,7 +36,7 @@ The following example code illustrates how to disable optimized text measuring i
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/optimized-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/optimized-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Optimized-text.cs" %}
 {% endhighlight %}{% endtabs %}

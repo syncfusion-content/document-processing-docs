@@ -18,7 +18,7 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/font-family/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/font-family/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Font-family.cs" %}
 {% endhighlight %}{% endtabs %}

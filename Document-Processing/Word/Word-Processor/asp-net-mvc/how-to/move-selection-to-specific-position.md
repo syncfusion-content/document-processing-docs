@@ -46,7 +46,7 @@ The following code snippet illustrate how to get the selection start and end off
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/select/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/select/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="select.cs" %}
 {% endhighlight %}{% endtabs %}

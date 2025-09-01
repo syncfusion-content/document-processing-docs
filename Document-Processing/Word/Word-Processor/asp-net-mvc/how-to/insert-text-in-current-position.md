@@ -26,7 +26,7 @@ this.container.documentEditor.editor.insertText('Syncfusion');
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/insert-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/insert-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-text.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -55,7 +55,7 @@ The following example illustrates how to insert the HTML content at current curs
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/insert-rich-text/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/insert-rich-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-rich-text.cs" %}
 {% endhighlight %}{% endtabs %}

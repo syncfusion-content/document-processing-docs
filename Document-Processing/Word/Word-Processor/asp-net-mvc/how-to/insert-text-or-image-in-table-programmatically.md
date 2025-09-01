@@ -19,7 +19,7 @@ The following example illustrates how to create 2*2 table and then add text and 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/insert-text-image-table/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/insert-text-image-table/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-text-image-table" %}
 {% endhighlight %}{% endtabs %}

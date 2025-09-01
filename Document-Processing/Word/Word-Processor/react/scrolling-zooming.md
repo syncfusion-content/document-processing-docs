@@ -14,17 +14,17 @@ The Document Editor renders the document as page by page. You can scroll through
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs1/app/index.jsx %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs1/app/index.tsx %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs1/index.html %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/scrolling-zooming-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/scrolling-zooming-cs1" %}
 
 > Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
@@ -32,17 +32,17 @@ In case, if you wish to move the selection to any page in document editor and br
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs2/app/index.jsx %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs2/app/index.tsx %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs2/index.html %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/scrolling-zooming-cs2" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/scrolling-zooming-cs2" %}
 
 ## Zooming
 
@@ -170,14 +170,14 @@ The following code example shows how to provide zoom options in document editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs3/app/index.jsx %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs3/app/index.tsx %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/scrolling-zooming-cs3/index.html %}
+{% include code-snippet/document-editor/react/document-editor/scrolling-zooming-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/scrolling-zooming-cs3" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/scrolling-zooming-cs3" %}
