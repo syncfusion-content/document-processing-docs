@@ -16,7 +16,7 @@ The [Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.
 The AI-powered Smart Redaction provides users with the ability to select specific patterns (emails, names, phone numbers, etc.) and automatically identify sensitive information throughout the document. Users can activate the smart redaction feature by clicking the **Smart Redaction** button in the side toolbar. The system can detect various types of sensitive content and allows users to review and selectively redact identified information.
 
 ## Component Usage
-Add the following code in your **~Pages/Home.razor** file to check or utilize the Smart Redaction feature in Syncfusion's Smart PDF Viewer.
+Add the following code in your **~Pages/Home.razor** file to check or utilize the Smart Redaction feature in Smart PDF Viewer.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}

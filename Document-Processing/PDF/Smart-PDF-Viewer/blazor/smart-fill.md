@@ -13,7 +13,7 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
 ![Smart Fill](images/smartfill_pdfviewer.gif)
 
 ## Component Usage
-Add the following code in your **~Pages/Home.razor** file to check or utilize the Smart Fill feature in Syncfusion's Smart PDF Viewer.
+Add the following code in your **~Pages/Home.razor** file to check or utilize the Smart Fill feature in Smart PDF Viewer.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
