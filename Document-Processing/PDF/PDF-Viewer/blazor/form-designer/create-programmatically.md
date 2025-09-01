@@ -496,8 +496,7 @@ The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Form F
 To ensure proper rendering and saving of form fields with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the Font Family dropdown of the property dialog using the FontFamilies property or a string array, and used seamlessly in Form Fields for loading, editing, and saving.
 
 ```cshtml
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
+@page "/"
 
 <SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
     <PdfViewerEvents Created="@Created"></PdfViewerEvents>
@@ -505,10 +504,16 @@ To ensure proper rendering and saving of form fields with custom fonts in SfPdfV
 
 @code {
     SfPdfViewer2? pdfViewer;
+
+    // Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar
     internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Allura", "Playwrite CA", "Ojuju" };
+
     private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
+
     public void Created()
     {
+        // Use FallbackFontCollection to save the custom font
+        // Maps the font family name to its corresponding TTF file as a memory stream
         pdfViewer!.FallbackFontCollection.Add("Allura", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf")));
         pdfViewer!.FallbackFontCollection.Add("Playwrite CA", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/PlaywriteCA-Regular.ttf")));
         pdfViewer!.FallbackFontCollection.Add("Ojuju", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Ojuju-Regular.ttf")));
@@ -528,8 +533,7 @@ The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in Signat
 To ensure proper rendering and saving of signature with custom fonts in SfPdfViewer, especially when the fonts are not installed on the system, the FallbackFontCollection property must be set; additionally, custom fonts like Arial Black and Courier New can be loaded as TTF files, added to the signature dialog using the SignatureFonts property or a string array, and used seamlessly in Signature Fields for loading, editing, and saving.
 
 ```cshtml
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
+@page "/"
 
 <SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
 	<PdfViewerEvents Created="@Created"></PdfViewerEvents>
@@ -538,26 +542,21 @@ To ensure proper rendering and saving of signature with custom fonts in SfPdfVie
 
 @code {
 	SfPdfViewer2? Viewer;
+
 	private string DocumentPath { get; set; } = "wwwroot/Data/With_Four_Signature_Fields.pdf";
+
+    // Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar
+    public string[] signatureFonts = { "Allura", "Tangerine, "Sacramento", "Inspiration" };
 
 	public void Created()
 	{
-		Stream font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("allura", font);
-		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Tangerine-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("tangerine", font);
-		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Sacramento-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("sacramento", font);
-		font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Inspiration-Regular.ttf"));
-		Viewer!.FallbackFontCollection.Add("inspiration", font);
+        // Use FallbackFontCollection to save the custom font
+        // Maps the font family name to its corresponding TTF file as a memory stream
+        pdfViewer!.FallbackFontCollection.Add("Allura", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Allura-Regular.ttf")));
+        pdfViewer!.FallbackFontCollection.Add("Tangerine", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Tangerine-Regular.ttf")));
+        pdfViewer!.FallbackFontCollection.Add("Sacramento", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Sacramento-Regular.ttf")));
+        pdfViewer!.FallbackFontCollection.Add("Inspiration", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Inspiration-Regular.ttf")));
 	}
-	string[] signatureFonts =
-	{
-		"Allura",
-		"Tangerine",
-		"Sacramento",
-		"Inspiration"
-	};
 }
 ```
 ![Custom Font Support for Signature Field in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_signature_fields.png)
