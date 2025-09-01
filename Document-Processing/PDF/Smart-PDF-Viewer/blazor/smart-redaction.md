@@ -9,14 +9,14 @@ documentation: ug
 
 # Smart Redaction in Blazor Smart PDF Viewer
 
-The [SmartPdfViewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) enables intelligent redaction of sensitive information in PDF documents by incorporating AI-assisted functionalities. The Smart Redaction feature automatically detects and allows users to redact sensitive data such as personally identifiable information (PII), financial data, and other confidential content.
+The [Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html) enables intelligent redaction of sensitive information in PDF documents by incorporating AI-assisted functionalities. The Smart Redaction feature automatically detects and allows users to redact sensitive data such as personally identifiable information (PII), financial data, and other confidential content.
 
 ![Smart Redaction](images/smart-redaction.gif)
 
 The AI-powered Smart Redaction provides users with the ability to select specific patterns (emails, names, phone numbers, etc.) and automatically identify sensitive information throughout the document. Users can activate the smart redaction feature by clicking the **Smart Redaction** button in the side toolbar. The system can detect various types of sensitive content and allows users to review and selectively redact identified information.
 
 ## Component Usage
-Add the following code in your **~Pages/Home.razor** file.
+Add the following code in your **~Pages/Home.razor** file to check or utilize the Smart Redaction feature in Syncfusion's Smart PDF Viewer.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -58,7 +58,9 @@ The default patterns include:
 - Account Numbers
 - Credit Card Numbers
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/Home.razor" %}
+
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     <SmartRedactSettings RedactPatterns="@redactPatterns" />
 </SfSmartPdfViewer>
@@ -70,7 +72,10 @@ The default patterns include:
         "Languages"
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 The output shows the Smart Redaction feature in action, where AI automatically detects the specified sensitive information patterns throughout the document.
 
 ![Redact Patterns in Smart Redaction](images/redact-patterns.gif)
