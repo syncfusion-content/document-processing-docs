@@ -287,3 +287,4 @@ var app = builder.Build();
 
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)
 * [Groq AI Service in Blazor Smart PDF Viewer](./groq-service)
+* [DeepSeek AI Service in Blazor Smart PDF Viewer](./deepseek-service)

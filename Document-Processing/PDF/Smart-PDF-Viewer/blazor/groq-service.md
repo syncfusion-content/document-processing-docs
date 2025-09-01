@@ -218,4 +218,5 @@ var app = builder.Build();
 
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)
 * [Gemini AI Service in Blazor Smart PDF Viewer](./gemini-service)
+* [DeepSeek AI Service in Blazor Smart PDF Viewer](./deepseek-service)
 
