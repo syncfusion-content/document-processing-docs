@@ -32,7 +32,7 @@ The `UserTokenService` is responsible for generating secure tokens for users. Th
 2.	Add the following implementation:
 
 {% tabs %}
-{% highlight c# tabtitle="UserTokenService.cs" %}
+{% highlight c# tabtitle="~/UserTokenService.cs" %}
 
 // This class handles user token management including generation, tracking, and resetting.
 public class UserTokenService
@@ -160,7 +160,7 @@ The `UserTokensController` class serves as the API layer for interacting with th
 2.	Add the following implementation:
 
 {% tabs %}
-{% highlight c# tabtitle="UserTokensController.cs" %}
+{% highlight c# tabtitle="~/UserTokensController.cs" %}
 // Defines the route for the API controller and marks it as an API controller
 [Route("api/[controller]")]
 [ApiController]
@@ -219,7 +219,7 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 2. Add the following implementation:
 
 {% tabs %}
-{% highlight c# tabtitle="AzureAIService.cs" %}
+{% highlight c# tabtitle="~/AzureAIService.cs" %}
 
 // AzureAIService integrates with Azure OpenAI to generate chat completions and manage token usage.
 public class AzureAIService : IChatInferenceService
@@ -497,7 +497,7 @@ function hideSpinner() {
 Configure your Blazor application to use the User Token with Azure AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="~/Program.cs" %}
 
 using Azure.AI.OpenAI;
 using System.ClientModel;

@@ -46,7 +46,7 @@ The `GeminiService` class serves as the foundation for integrating Gemini AI int
 2. Add the following implementation:
 
 {% tabs %}
-{% highlight c# tabtitle="GeminiService.cs" %}
+{% highlight c# tabtitle="~/GeminiService.cs" %}
 using Microsoft.Extensions.AI;
 using System.Net;
 using System.Text;
@@ -156,7 +156,7 @@ To efficiently communicate with the Gemini AI API, we need to define a set of C#
 2. Add the following model classes:
 
 {% tabs %}
-{% highlight c# tabtitle="GeminiModels.cs" %}
+{% highlight c# tabtitle="~/GeminiModels.cs" %}
 // Represents a text segment in the API communication
 public class Part
 {
@@ -251,7 +251,7 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 2. Add the following implementation:
 
 {% tabs %}
-{% highlight c# tabtitle="MyCustomService.cs" %}
+{% highlight c# tabtitle="~/MyCustomService.cs" %}
 using Syncfusion.Blazor.AI;
 
 public class MyCustomService : IChatInferenceService
@@ -278,7 +278,7 @@ public class MyCustomService : IChatInferenceService
 Configure your Blazor application in **~/Program.cs** file to use the Gemini AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="7 8" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 using Syncfusion.Blazor.AI;
 var builder = WebApplication.CreateBuilder(args);
 
