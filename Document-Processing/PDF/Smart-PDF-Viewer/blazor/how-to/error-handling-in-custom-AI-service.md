@@ -74,25 +74,22 @@ public partial class Home : IDisposable
     public async void OpenDialog()
     {
         DialogText = GeminiService!.DialogMessage;
-
-        int fontSize = 16;
-        int charWidth = (int)(fontSize * 0.6);
-        int baseWidth = 48;
-        int baseHeight = 176;
+        int fontSize = 16; // px
+        int charWidth = (int)(fontSize * 0.6); // Approximate width per character in px
+        int baseWidth = 48; // Common addition to width
+        int baseHeight = 140; // Additional height
 
         int textLength = DialogText?.Length ?? 0;
         int calculatedWidth = (textLength * charWidth) + baseWidth;
-        int calculatedHeight = fontSize * 2 + baseHeight;
+        int calculatedHeight = fontSize * 2 + baseHeight; // 2 lines minimum + base
 
         int minWidth = 400;
-        int maxWidth = 600;
-        int minHeight = 280;
-        int maxHeight = 600;
+        int maxWidth = 500;
 
         string width = $"{Math.Clamp(calculatedWidth, minWidth, maxWidth)}px";
-        string height = $"{Math.Clamp(calculatedHeight, minHeight, maxHeight)}px";
+        string height = calculatedWidth > maxWidth ? $"{calculatedHeight + 19.2}px" : $"{calculatedHeight}px";
 
-        await DialogService!.AlertAsync(DialogText, "Custom service exception", new DialogOptions()
+        await DialogService.AlertAsync(DialogText, "Custom service exception", new DialogOptions()
         {
             ShowCloseIcon = true,
             Width = width,
