@@ -275,7 +275,7 @@ public class MyCustomService : IChatInferenceService
 
 ## Step 4: Configure the Blazor App
 
-Configure your Blazor application in **~/Program.cs** file to use the Gemini AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
+Configure your Blazor application to use the Gemini AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
