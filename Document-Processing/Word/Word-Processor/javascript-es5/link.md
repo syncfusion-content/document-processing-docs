@@ -23,14 +23,14 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/hyperlink-cs1/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/hyperlink-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/hyperlink-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs1" %}
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
@@ -92,14 +92,14 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/hyperlink-cs2/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/hyperlink-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/hyperlink-cs2" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/hyperlink-cs2" %}
 
 Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserthyperlink)to insert hyperlink.
 
@@ -135,14 +135,14 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/dialog-cs16/index.js %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs16/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/dialog-cs16/index.html %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/dialog-cs16/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/dialog-cs16" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs16" %}
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 

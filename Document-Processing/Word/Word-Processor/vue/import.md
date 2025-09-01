@@ -16,14 +16,14 @@ The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/import-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/document-editor/import-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/import-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/document-editor/import-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/import-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/import-cs1" %}
 
 ## Import document from local machine
 
@@ -31,14 +31,14 @@ The following example shows how to import document from local machine.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/import-sfdt-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/document-editor/import-sfdt-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/import-sfdt-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/document-editor/import-sfdt-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/import-sfdt-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/import-sfdt-cs1" %}
 
 ## Convert word documents into SFDT
 

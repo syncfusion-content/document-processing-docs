@@ -21,14 +21,14 @@ This provides the options to search for a portion of text in the document. After
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/find-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/find-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/find-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/find-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/find-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/find-cs1" %}
 
 You can close the options pane by pressing `Esc` key.
 
@@ -139,11 +139,11 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/replace-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/replace-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/replace-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/replace-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/replace-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/replace-cs1" %}
