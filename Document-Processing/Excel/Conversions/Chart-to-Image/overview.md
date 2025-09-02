@@ -177,7 +177,9 @@ Line
 <td>
 * Line<br/>
 * Line_Markers<br/>
-* Line_3D
+* Line_3D<br/>
+* Stacked_Line<br/>
+* Stacked_Line_Markers
 </td>
 </tr>
 <tr>
@@ -219,7 +221,9 @@ Stock
 </td>
 <td>
 * Stock_HighLowClose<br/>
-* Stock_OpenHighLowClose
+* Stock_OpenHighLowClose<br/>
+* Stock_VolumeOpenHighLowClose<br/>
+* Stock_VolumeHighLowClose
 </td>
 </tr>
 <tr>
