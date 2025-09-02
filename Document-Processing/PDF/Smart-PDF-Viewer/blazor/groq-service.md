@@ -218,4 +218,5 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pd
 
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)
 * [Gemini AI Service in Blazor Smart PDF Viewer](./gemini-service)
+* [DeepSeek AI Service in Blazor Smart PDF Viewer](./deepseek-service)
 

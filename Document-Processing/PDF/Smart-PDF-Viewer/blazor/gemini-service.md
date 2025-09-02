@@ -287,3 +287,4 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pd
 
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)
 * [Groq AI Service in Blazor Smart PDF Viewer](./groq-service)
+* [DeepSeek AI Service in Blazor Smart PDF Viewer](./deepseek-service)

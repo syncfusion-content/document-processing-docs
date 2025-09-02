@@ -15,13 +15,17 @@ The Blazor Smart PDF Viewer supports Right-to-Left (RTL) rendering to accommodat
 
 ## Example
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/Home.razor" %}
+
 @* Enables Right-to-Left layout support for languages like Arabic and Hebrew *@
 
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
 EnableRtl="true">
 </SfSmartPdfViewer>
-```
+
+{% endhighlight %}
+{% endtabs %}
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/RTL)
 
 In this example, the [EnableRtl](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property is set to `true`, enabling RTL layout for the PDF viewer.
