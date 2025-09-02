@@ -48,16 +48,23 @@ The AI AssistView provides users with the ability to generate a summary of the P
 {% endtabs %}
 
 ### Prompt
-The [Prompt](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_Prompt) property allows developers to set a predefined query that appears in the input field when the Assist view is opened. This can be used to direct the AI assistant to perform a specific task, such as summarizing the document or answering a particular question. It enhances the user experience by providing immediate context and guidance.
+The [Prompt](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.AssistViewSettings.html#Syncfusion_Blazor_SmartPdfViewer_AssistViewSettings_Prompt) property is used to define a query that guides the AI assistant within the AssistView panel. If the user wants to change the prompt at runtime, developers can bind a custom prompt dynamically—for example, by using a button click event to update the prompt value. This allows for flexible interaction and real-time customization of the assistant’s behavior based on user input.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
 
-@* Sets a predefined prompt to appear in the Assist view input field when opened *@
-
+<button @onclick="ChangePrompt">Change Prompt</button>
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    <AssistViewSettings Prompt="Explain this document." />
+<AssistViewSettings @bind-Prompt="@Prompts"></AssistViewSettings>
 </SfSmartPdfViewer>
+ 
+@code {
+    string Prompts;
+    void ChangePrompt()
+    {
+        Prompts = "Explain this document";
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
