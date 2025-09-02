@@ -133,9 +133,9 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Configure AI Service
+## To Configure Azure OpenAI Service
 
-In Visual Studio, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
+In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
@@ -147,7 +147,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI -Version 9.8.0-preview.1.25412.6
 {% endhighlight %}
 {% endtabs %}
 
-In Visual Studio Code, Open terminal in VS Code. Run these commands:
+In **Visual Studio Code**, Open terminal in VS Code. Run these commands:
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
@@ -162,7 +162,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app. 
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="10 12 14 15 16 19 21" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="10 12 14 15 16 17 18 19 21" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -199,7 +199,7 @@ Here,
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 
-## Configuring Ollama for Self-Hosted AI Models
+## To Configure Ollama for Self-Hosted AI Models
 
 To use Ollama for running self-hosted models:
 
@@ -209,7 +209,7 @@ Visit [Ollama’s official website](https://ollama.com/) and install the applica
 * **Install the desired model from the Ollama library**
 You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., llama2:13b, mistral:7b, etc.).
 
-In Visual Studio, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
+In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
@@ -219,7 +219,7 @@ Install-Package OllamaSharp -Version 5.3.6
 {% endhighlight %}
 {% endtabs %}
 
-In Visual Studio Code, Open terminal in VS Code. Run these commands:
+In **Visual Studio Code**, Open terminal in VS Code. Run these commands:
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
@@ -232,12 +232,15 @@ dotnet add package OllamaSharp --version 5.3.6
 Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="4 6 7" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="5 8 9 10" %}
 
 ...
 var builder = WebApplication.CreateBuilder(args);
 
+// Define the name of the AI model to use from Ollama (e.g., llama2, mistral, etc.)
 string aiModel = "llama2";
+
+// Add your local Ollama server URL (e.g., "http://localhost:11434")
 IChatClient chatClient = new OllamaApiClient("http://localhost:11434", aiModel);
 builder.Services.AddChatClient(chatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
@@ -252,14 +255,17 @@ var app = builder.Build();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the ~/Components/App.razor file as shown below:
 
+
 ```html
 <head>
     ....
+    <!-- Syncfusion Blazor Smart PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
     ....
+    <!-- Syncfusion Blazor Smart PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
 </body>
 ```
@@ -273,9 +279,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
 
-@using Syncfusion.Blazor.SmartPdfViewer;
+@page "/"
 
-<SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="wwwroot/Fsharp_Succinctly.pdf">
+<SfSmartPdfViewer Height="100%" Width="100%" DocumentPath="https://cdn.syncfusion.com/content/pdf/http-succinctly.pdf">
 </SfSmartPdfViewer>
 
 {% endhighlight %}

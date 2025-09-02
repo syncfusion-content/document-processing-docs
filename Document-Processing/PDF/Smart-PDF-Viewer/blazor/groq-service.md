@@ -170,7 +170,7 @@ public class GroqResponseObject
 
 Create a bridge between Syncfusion's Smart PDF Viewer and our Groq service. This enables the Smart PDF Viewer to use Groq's AI capabilities through a `IChatInferenceService` interface.
 
-The `IChatInferenceService` interface is part of Syncfusion's infrastructure that allows Smart Components to work with different AI providers:
+The `IChatInferenceService` interface is part of Syncfusion's infrastructure that allows Smart PDF Viewer to work with different AI providers:
 
 1. Create a new file named `MyCustomService.cs` 
 2. Add the Syncfusion namespace
@@ -212,10 +212,11 @@ var app = builder.Build();
 ....
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GroqService)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GroqService)
 
 ## See also
 
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)
 * [Gemini AI Service in Blazor Smart PDF Viewer](./gemini-service)
+* [DeepSeek AI Service in Blazor Smart PDF Viewer](./deepseek-service)
 
