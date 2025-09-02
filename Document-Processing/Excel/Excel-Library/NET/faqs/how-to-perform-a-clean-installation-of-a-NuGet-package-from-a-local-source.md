@@ -1,5 +1,5 @@
 ---
-title: How to perform a clean installation of a NuGet package from a local source
+title: How to install a Syncfusion NuGet package from a local source
 description: This page explains about how to perform a clean installation of a NuGet package from a local source.
 platform: document-processing
 control: XlsIO
