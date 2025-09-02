@@ -85,7 +85,7 @@ public class DeepSeekAIService
 
     public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
     {
-        var requestBody = new DeepSeekChatRequest
+        DeepSeekChatRequest requestBody = new DeepSeekChatRequest
         {
             Model = ModelName,
             Temperature = 0.7f,
@@ -97,16 +97,16 @@ public class DeepSeekAIService
         };
 
 
-        var json = JsonSerializer.Serialize(requestBody, JsonOptions);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        string json = JsonSerializer.Serialize(requestBody, JsonOptions);
+        StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
         try
         {
-            var response = await HttpClient.PostAsync(Endpoint, content);
+            HttpResponseMessage response = await HttpClient.PostAsync(Endpoint, content);
             response.EnsureSuccessStatusCode();
 
-            var responseString = await response.Content.ReadAsStringAsync();
-            var responseObject = JsonSerializer.Deserialize<DeepSeekChatResponse>(responseString, JsonOptions);
+            string responseString = await response.Content.ReadAsStringAsync();
+            DeepSeekChatResponse? responseObject = JsonSerializer.Deserialize<DeepSeekChatResponse>(responseString, JsonOptions);
 
             return responseObject?.Choices?.FirstOrDefault()?.Message?.Content ?? "No response from DeepSeek.";
         }
