@@ -1,12 +1,12 @@
 ---
-title: Chart to Image Conversion using XlsIO | Syncfusion
+title: Syncfusion Chart to Image Conversion using XlsIO | Syncfusion
 description: This page explains about how to convert charts from Excel documents to images using XlsIO. It allows to specify the image quality and format.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-## Chart to Image Conversion
+# Chart to Image Conversion
 
 Refer to the following links for assemblies/nuget packages required based on platforms to convert the chart to image.
 
