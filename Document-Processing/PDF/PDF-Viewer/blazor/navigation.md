@@ -229,7 +229,7 @@ You can set the target attribute for a hyperlink in SfPdfViewer using the [Hyper
 
 The SfPdfViewer includes a modern navigation panel that replaces the legacy panel. It expands the viewer's capabilities beyond simple thumbnails, bookmarks, and comments to offer a more comprehensive and interactive viewing experience.
 
-You can toggle the visibility of this modern navigation panel using the `EnableNavigationPanel` property.
+You can toggle the visibility of this modern navigation panel using the [`EnableNavigationPanel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigationPanel) property.
 
 The following code snippet demonstrates how to enable the modern navigation panel:
 
@@ -257,7 +257,7 @@ The modern navigation panel contains the following built-in items:
 
 ### Rearrange the default items of navigation panel
 
-This customization is achieved using the `BuiltInItems` property, which accepts a list of `NavigationToolbarItem` enums. The viewer will render the navigation icons in the exact sequence you provide in this list.
+This customization is achieved using the `BuiltInItems` property, which accepts a list of [`NavigationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItem.html) enums. The viewer will render the navigation icons in the exact sequence you provide in this list.
 
 The following code snippet demonstrates how to set the navigation panel to display the Thumbnails first, followed by Bookmarks and comment panel.
 
@@ -288,7 +288,7 @@ The following code snippet demonstrates how to set the navigation panel to displ
 
 ### Open or close navigation panel programmatically
 
-You can programmatically open or close a navigation panel by calling the `ToggleItemByIndex` method. This method takes the index of the panel item and toggles its state which opens it if closed, and then closes it if open.
+You can programmatically open or close a navigation panel by calling the [`ToggleItemByIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ToggleItemByIndex_System_Int32_) method. This method takes the index of the panel item and toggles its state which opens it if closed, and then closes it if open.
 
 The following code snippet demonstrates to toggle the visibility of the second item in the navigation panel (which has an index of 1).
 
@@ -319,7 +319,7 @@ The following code snippet demonstrates to toggle the visibility of the second i
 
 ### How to add customize items in the navigation panel
 
-You can add custom items to the SfPdfViewer navigation toolbar. To do this, create a list of `CustomNavigationToolbarItem` objects and assign it to the `CustomItems` property.
+You can add custom items to the SfPdfViewer navigation toolbar. To do this, create a list of [`CustomNavigationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html) objects and assign it to the `CustomItems` property.
 
 Each CustomNavigationToolbarItem object has several properties to define its appearance and behavior: 
 * **Index** : Sets the position of the item in the toolbar.
@@ -328,11 +328,11 @@ Each CustomNavigationToolbarItem object has several properties to define its app
 * **HeaderText** : Sets the header text displayed at the top of the custom panel.
 * **IconCss** : Specifies the CSS class for the item's icon.
 * **Template** : Allows you to define a custom template for the panel's content. 
-* **ItemType** : Determines the item's type, such as a clickable button `NavigationToolbarItemType.Button` or a visual separator `NavigationToolbarItemType.Separator`.
+* **ItemType** : Determines the item's type, such as a clickable button [`NavigationToolbarItemType.Button`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Button) or a visual separator [`NavigationToolbarItemType.Separator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.NavigationToolbarItemType.html#Syncfusion_Blazor_SfPdfViewer_NavigationToolbarItemType_Separator).
 
 ### How to add the customize template for the navigation panel
 
-You can define a completely custom UI for a navigation panel by assigning a RenderFragment to the `Template` property of a `CustomNavigationToolbarItem`.
+You can define a completely custom UI for a navigation panel by assigning a RenderFragment to the `Template` property of a [`CustomNavigationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CustomNavigationToolbarItem.html).
 
 The following code snippet demonstrates to add the default toolbar with a custom item containing a small, interactive panel with the customized UI.
 
@@ -374,6 +374,7 @@ The following code snippet demonstrates to add the default toolbar with a custom
     };
     // List to hold the custom navigation toolbar items.
     List<CustomNavigationToolbarItem> customNavigationToolbarItems;
+
     // Initializes the component and sets up the custom navigation items.
     protected override void OnInitialized()
     {
@@ -391,6 +392,7 @@ The following code snippet demonstrates to add the default toolbar with a custom
             }
         };
     }
+
     // Defines the RenderFragment for the custom panel's content.
     private RenderFragment EditAnnotationTemplate()
     {
@@ -406,16 +408,19 @@ The following code snippet demonstrates to add the default toolbar with a custom
             </button>
         </div>;
     }
+
     // Sets the annotation mode to Rectangle.
     private async Task AddRectangle()
     {
         await pdfViewer.SetAnnotationModeAsync(AnnotationType.Rectangle);
     }
+
     // Sets the annotation mode to Radius.
     private async Task AddRadius()
     {
         await pdfViewer.SetAnnotationModeAsync(AnnotationType.Radius);
     }
+
     // Sets the annotation mode to FreeText.
     private async Task AddFreeText()
     {
@@ -460,3 +465,4 @@ On mobile devices, the navigation toolbar is collapsed into a toggle menu to sav
 ## See also
 
 * [Magnification in Blazor SfPdfViewer Component](./magnification)
+* [Getting Started with SmartPdfViewer in Blazor Web App](../../Smart-PDF-Viewer/blazor/getting-started/web-app)

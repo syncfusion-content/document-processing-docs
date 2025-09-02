@@ -45,7 +45,13 @@ The `GeminiService` class serves as the foundation for integrating Gemini AI int
 1. Create a new class file named `GeminiService.cs` in your project
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/GeminiService.cs" %}
+using Microsoft.Extensions.AI;
+using System.Net;
+using System.Text;
+using System.Text.Json;
+
 public class GeminiService
 {
     // HTTP client configuration for optimal performance
@@ -137,9 +143,10 @@ public class GeminiService
 
          return parameters;
      }
-
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 2: Define Request and Response Models
 
@@ -148,7 +155,8 @@ To efficiently communicate with the Gemini AI API, we need to define a set of C#
 1. Create a new file named `GeminiModels.cs` in your project
 2. Add the following model classes:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/GeminiModels.cs" %}
 // Represents a text segment in the API communication
 public class Part
 {
@@ -227,8 +235,9 @@ public class GeminiChatParameters
     // Content safety filters
     public List<SafetySetting> SafetySettings { get; init; } = new();
 }
-```
 
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 3: Create a Custom AI Service
 
@@ -241,7 +250,8 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/MyCustomService.cs" %}
 using Syncfusion.Blazor.AI;
 
 public class MyCustomService : IChatInferenceService
@@ -259,15 +269,16 @@ public class MyCustomService : IChatInferenceService
         return _geminiService.CompleteAsync(options.Messages);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Configure the Blazor App
 
 Configure your Blazor application to use the Gemini AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
-```CSharp
-
-using Syncfusion.Blazor.SmartComponents;
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 using Syncfusion.Blazor.AI;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -280,7 +291,9 @@ builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
 
 ## See also
