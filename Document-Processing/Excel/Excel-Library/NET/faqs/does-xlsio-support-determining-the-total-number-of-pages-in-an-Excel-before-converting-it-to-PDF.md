@@ -6,6 +6,6 @@ control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support determining the total number of pages in an Excel before converting it to PDF?
+# XlsIO support for determining Excel page count before PDF conversion
 
 XlsIO does not support determining the total number of pages in an Excel file before converting it to PDF. The final page count depends on factors such as print settings, page layout, scaling options, and content distribution. These elements can only be assessed during the conversion process, so calculating the page count in advance is not possible.
