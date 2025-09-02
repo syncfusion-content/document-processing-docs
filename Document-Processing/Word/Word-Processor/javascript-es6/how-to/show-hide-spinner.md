@@ -29,14 +29,14 @@ Refer to the following example.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/spinner-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/spinner-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/spinner-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/spinner-cs1" %}
 
 
 

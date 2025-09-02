@@ -123,14 +123,14 @@ The following is the output of custom context menu with customization.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/customize-context-menu-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/customize-context-menu-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/customize-context-menu-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1" %}
 
 
 

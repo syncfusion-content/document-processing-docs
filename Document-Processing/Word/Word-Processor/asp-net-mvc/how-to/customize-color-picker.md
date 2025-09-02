@@ -18,10 +18,10 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/customize-color-picker/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/customize-color-picker/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="customize-color-picker.cs" %}
-{% include code-snippet/document-editor-container/customize-color-picker/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/customize-color-picker/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

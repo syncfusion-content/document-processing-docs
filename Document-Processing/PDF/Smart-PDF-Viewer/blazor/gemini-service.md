@@ -294,9 +294,10 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
 
 ## See also
 
 * [Custom AI Service Integration in Blazor Smart PDF Viewer](./custom-ai-service)
 * [Groq AI Service in Blazor Smart PDF Viewer](./groq-service)
+* [DeepSeek AI Service in Blazor Smart PDF Viewer](./deepseek-service)

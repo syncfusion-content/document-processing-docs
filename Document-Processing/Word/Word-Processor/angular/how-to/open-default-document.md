@@ -16,11 +16,11 @@ In this article, we are going to see how to open a default document when Documen
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/open-default-document-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/open-default-document-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/open-default-document-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/open-default-document-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -30,11 +30,11 @@ In this article, we are going to see how to open a default document when Documen
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs4/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs4/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs4/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs4/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

@@ -19,7 +19,7 @@ The following example code illustrates how to change the default search highligh
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/search-highlight-color/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/search-highlight-color/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
 {% endhighlight %}{% endtabs %}

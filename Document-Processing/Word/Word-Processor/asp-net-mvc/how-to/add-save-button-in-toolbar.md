@@ -18,7 +18,7 @@ DocumentEditorContainer allows you to add a new button to the existing items in 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/add-save-button-in-toolbar/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor/add-save-button-in-toolbar/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Add-save-button-in-toolbar.cs" %}
 {% endhighlight %}{% endtabs %}

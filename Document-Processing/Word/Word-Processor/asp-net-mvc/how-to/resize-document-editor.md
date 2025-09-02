@@ -20,7 +20,7 @@ DocumentEditorContainer initially renders with default height. You can change th
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/change-height/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/change-height/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Change-height.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -36,7 +36,7 @@ DocumentEditorContainer initially renders with default width. You can change the
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/change-width/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/change-width/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Change-width.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -52,7 +52,7 @@ Using `resize` method, you change height and width of Document editor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor-container/resize/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/resize/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Resize.cs" %}
 {% endhighlight %}{% endtabs %}

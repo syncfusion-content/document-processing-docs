@@ -165,11 +165,11 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/document-editor-container-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
@@ -223,11 +223,11 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/getting-started-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor/getting-started-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/getting-started-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor/getting-started-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   

@@ -13,6 +13,11 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
 ![Smart Fill](images/smartfill_pdfviewer.gif)
 
 ## Component Usage
+Add the following code in your **~Pages/Home.razor** file to check or utilize the Smart Fill feature in Smart PDF Viewer.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Home.razor" %}
+
 
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
@@ -26,7 +31,7 @@ This feature streamlines the process of completing PDF forms. The AI analyzes th
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/SmartFill)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/SmartFill)
 
 ## Smart Fill Settings in Syncfusion Blazor Smart PDF Viewer
 - The [SmartFillSettings](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.SmartFillSettings.html) class configures settings for the Smart Fill feature in the Smart PDF Viewer. This feature leverages AI to automate the population of PDF form fields based on clipboard or specified data.
