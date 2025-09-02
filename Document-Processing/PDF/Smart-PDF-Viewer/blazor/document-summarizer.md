@@ -275,7 +275,7 @@ The [PdfViewerTemplates](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazo
 ## Template Properties
 
 ### PromptTemplate
-[PromptTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_PromptTemplate) defines the toolbar layout within the prompt view. Developers can use `PromptToolbar` and `PromptToolbarItem` to add icons and actions that guide user input.
+[PromptTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_PromptTemplate) defines the toolbar layout within the prompt view. Developers can use [PromptToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbar.html) and [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbarItem.html#constructors) to add icons and actions that guide user input.
 
 ![Summarizer Prompt Template](images/summarizer_prompt-template.png)
 
@@ -305,7 +305,7 @@ The [PdfViewerTemplates](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazo
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/DocumentSummarizer/PdfViewerTemplates)
 
 ### ResponseTemplate
-[ResponseTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_ResponseTemplate) customizes the toolbar shown in the response section. Using `ResponseToolbar` and `ResponseToolbarItem`, developers can include feedback options like "like" or "dislike".
+[ResponseTemplate](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.PdfViewerTemplates.html#Syncfusion_Blazor_SmartPdfViewer_PdfViewerTemplates_ResponseTemplate) customizes the toolbar shown in the response section. Using [ResponseToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbar.html) and [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html), developers can include feedback options like "like" or "dislike".
 
 ![Summarizer Response Template](images/summarizer_response-template.png)
 {% tabs %}
