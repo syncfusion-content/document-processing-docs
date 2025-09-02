@@ -18,10 +18,6 @@ Add the following code in your **~Pages/Home.razor** file to check or utilize th
 {% tabs %}
 {% highlight razor tabtitle="~/Home.razor" %}
 
-
-{% tabs %}
-{% highlight razor tabtitle="~/Home.razor" %}
-
 @* Enables AI-powered automatic form filling to reduce manual input and improve accuracy *@
 
 <SfSmartPdfViewer DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
