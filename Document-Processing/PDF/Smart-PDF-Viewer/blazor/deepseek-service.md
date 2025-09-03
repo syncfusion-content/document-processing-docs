@@ -2,8 +2,8 @@
 layout: post
 title: Deepseek AI Service with Smart PDF Viewer in Blazor App | Syncfusion
 description: Learn how to integrate and use the Syncfusion Smart PDF Viewer in a Blazor Web App with DeepSeek AI services.
-platform: Blazor
-control: Smart PDF Viewer
+platform: document-processing
+control: SfSmartPdfViewer
 documentation: ug
 ---
 
@@ -49,7 +49,9 @@ The `DeepSeekAIService` class is responsible for managing all interactions with 
 2. Add the following using statements for required dependencies
 3. Implement the service class as shown below
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/DeepSeekAIService.cs" %}
+
 using System.Text;
 using System.Text.Json;
 using System.Net;
@@ -124,7 +126,9 @@ public class DeepSeekAIService
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 2: Define Request and Response Models
 
@@ -132,7 +136,9 @@ To effectively communicate with DeepSeek's API, we need to create strongly-typed
 
 Create a new file named `DeepSeekModels.cs` with the following models:
 
-```CSharp
+{% tabs %}
+{% highlight c# tabtitle="~/DeepSeekModels.cs" %}
+
 // Represents a single message in the chat conversation
 public class DeepSeekMessage
 {
@@ -159,7 +165,9 @@ public class DeepSeekChoice
 {
     public DeepSeekMessage Message { get; set; }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 3: Create a Custom AI Service
 
@@ -170,7 +178,9 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/MyCustomService.cs" %}
+
 using Syncfusion.Blazor.AI;
 // Custom implementation of the IChatInferenceService interface
 public class MyCustomService : IChatInferenceService
@@ -188,13 +198,16 @@ public class MyCustomService : IChatInferenceService
         return _DeepSeekService.CompleteAsync(options.Messages);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Configure the Blazor App
 
 Configure your Blazor application to use the DeepSeek AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
-```CSharp
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 
 using Syncfusion.Blazor.AI;
 var builder = WebApplication.CreateBuilder(args);
@@ -208,7 +221,8 @@ builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub]()
 
