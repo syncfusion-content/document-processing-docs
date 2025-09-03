@@ -282,10 +282,10 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/custom-context-menu/index.ts %}
+{% include code-snippet/pdfviewer/javascript/custom-context-menu/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/custom-context-menu/index.html %}
+{% include code-snippet/pdfviewer/javascript/custom-context-menu/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -293,4 +293,4 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
 `viewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/custom-context-menu" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/custom-context-menu" %}

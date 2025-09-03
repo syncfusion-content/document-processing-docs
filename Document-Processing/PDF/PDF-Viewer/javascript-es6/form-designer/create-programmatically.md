@@ -104,7 +104,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs3" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/addformfield-cs3" %}
 
 ## Edit/Update form field programmatically
 
@@ -189,7 +189,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs3" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/updateformfield-cs3" %}
 
 ## Delete form field programmatically
 
@@ -274,7 +274,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs3" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/deleteformfield-cs3" %}
 
 ## Saving the form fields
 

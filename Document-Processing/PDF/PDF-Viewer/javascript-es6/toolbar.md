@@ -119,7 +119,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-hide-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/toolbar/toolbar-hide-cs1" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -181,7 +181,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-method-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/toolbar/toolbar-method-cs1" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -244,7 +244,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/toolbar/toolbar-items-cs1" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -306,7 +306,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/toolbar/toolbar-items-method-cs1" %}
 
 ## Customize Built-In Toolbar
 

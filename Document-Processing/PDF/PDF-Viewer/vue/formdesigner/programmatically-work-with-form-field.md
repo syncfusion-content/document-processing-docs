@@ -27,14 +27,14 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/addformfield-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/app.vue %}
+{% include code-snippet/pdfviewer/vue/addformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/addformfield-cs2" %}
 
 ## Edit/Update form field programmatically
 
@@ -42,14 +42,14 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/updateformfield-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/app.vue %}
+{% include code-snippet/pdfviewer/vue/updateformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/updateformfield-cs2" %}
 
 ## Delete form field programmatically
 
@@ -57,14 +57,14 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/deleteformfield-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/app.vue %}
+{% include code-snippet/pdfviewer/vue/deleteformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/deleteformfield-cs2" %}
 
 ## Saving the form fields
 

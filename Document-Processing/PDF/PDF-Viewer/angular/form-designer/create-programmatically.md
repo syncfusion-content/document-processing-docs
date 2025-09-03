@@ -86,7 +86,7 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/addformfield-cs1/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/addformfield-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,7 +95,7 @@ Add the below serviceUrl in the `app.component.ts` file
 `public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer'`;
 Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
 
-{% previewsample "page.domainurl/samples/pdfviewer/addformfield-cs1" %}
+{% previewsample "page.domainurl/samples/pdfviewer/anagular/addformfield-cs1" %}
 
 ## Edit/Update form field programmatically
 
@@ -163,7 +163,7 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/updateformfield-cs1/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/updateformfield-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -172,7 +172,7 @@ Add the below serviceUrl in the `app.component.ts` file
 `public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer'`;
 Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
 
-{% previewsample "page.domainurl/samples/pdfviewer/updateformfield-cs1" %}
+{% previewsample "page.domainurl/samples/pdfviewer/angular/updateformfield-cs1" %}
 
 ## Delete form field programmatically
 
@@ -240,7 +240,7 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs1/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/deleteformfield-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -249,7 +249,7 @@ Add the below serviceUrl in the `app.component.ts` file
 `public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer'`;
 Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
 
-{% previewsample "page.domainurl/samples/pdfviewer/deleteformfield-cs1" %}
+{% previewsample "page.domainurl/samples/pdfviewer/angular/deleteformfield-cs1" %}
 
 The following code illustrates how to delete a signature from the signature field using the `retrieveFormFields` and `clearFormFields` APIs.
 
