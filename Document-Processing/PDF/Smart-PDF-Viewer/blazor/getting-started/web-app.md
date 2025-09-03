@@ -35,8 +35,8 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version 31.2.*
-Install-Package Syncfusion.Blazor.Themes -Version 31.2.*
+Install-Package Syncfusion.Blazor.SfSmartPdfViewer -Version 31.1.17
+Install-Package Syncfusion.Blazor.Themes -Version 31.1.17
 
 {% endhighlight %}
 {% endtabs %}
@@ -118,11 +118,15 @@ Import the [Syncfusion.Blazor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="6" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="5 7 10" %}
 
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
+
+builder.Services.AddMemoryCache();
 
 // Add service to the container.
 builder.Services.AddSyncfusionBlazor();
@@ -162,7 +166,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI --version 9.8.0-preview.1.2541
 To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app. 
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="10 12 14 15 16 17 18 19 21" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="10 11 12 13 14 15 17" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -172,10 +176,6 @@ using Syncfusion.Blazor.AI;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
-
-builder.Services.AddMemoryCache();
 
 string azureOpenAiKey = "api-key";
 string azureOpenAiEndpoint = "endpoint URL";
@@ -207,9 +207,15 @@ To use Ollama for running self-hosted models:
 Visit [Ollama’s official website](https://ollama.com/) and install the application appropriate for your operating system.
 
 * **Install the desired model from the Ollama library**
-You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., llama2:13b, mistral:7b, etc.).
+You can explore available models from the [Ollama Library](https://ollama.com/library) (e.g., llama2:13b, llama2:7b, mistral:7b, etc.).
 
-In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these commands one by one:
+To download and run a model (e.g., llama2:7b), use the following command:
+
+```bash
+ollama run llama2:7b
+```
+
+In **Visual Studio**, Go to Tools → NuGet Package Manager → Package Manager Console. Run these command:
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager" %}
@@ -232,15 +238,21 @@ dotnet add package OllamaSharp --version 5.3.6
 Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="5 8 9 10" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="11 14 15 16" %}
 
+using Microsoft.Extensions.AI;
+using OllamaSharp;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.AI;
 ...
 var builder = WebApplication.CreateBuilder(args);
+...
+builder.Services.AddSyncfusionBlazor();
 
-// Define the name of the AI model to use from Ollama (e.g., llama2, mistral, etc.)
-string aiModel = "llama2";
+// Define the name of the AI model to use from Ollama (e.g., llama2:13b, mistral:7b, etc.)
+string aiModel = "llama2:7b";
 
-// Add your local Ollama server URL (e.g., "http://localhost:11434")
+// By default, Ollama runs on port 11434, you can also customize this port manually.
 IChatClient chatClient = new OllamaApiClient("http://localhost:11434", aiModel);
 builder.Services.AddChatClient(chatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
@@ -250,6 +262,17 @@ var app = builder.Build();
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Running Ollama locally may lead to slower response times due to system resource usage.
+
+### To Check the Installed Model and Its Details in Ollama
+- To verify which models are currently installed and available on your local Ollama server (example: running on port 11434), run the following command in your terminal or command prompt:
+
+```bash
+
+curl http://localhost:11434/api/tags
+
+```
 
 ## Add stylesheet and script resources
 

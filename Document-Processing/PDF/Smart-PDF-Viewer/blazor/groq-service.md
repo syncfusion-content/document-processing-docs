@@ -56,14 +56,19 @@ In this step, we'll create a service class that handles all interactions with th
 3. Implement the service class following the code below
 
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/GroqService.cs" %}
 
 using System.Net;
 using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.AI;
+
+// Service class to interact with the Groq 
 public class GroqService
 {
+
+   // Constants for API configuration
    private const string ApiKey = "Your API key";
    private const string ModelName = "Your Model Name";
    private const string Endpoint = "https://api.groq.com/openai/v1/chat/completions";
@@ -77,54 +82,60 @@ public class GroqService
       DefaultRequestVersion = HttpVersion.Version30
    };
 
+   // JSON serialization options with camelCase naming
    private static readonly JsonSerializerOptions JsonOptions = new()
    {
       PropertyNamingPolicy = JsonNamingPolicy.CamelCase
    };
 
+   // Constructor to set up authorization header
    public GroqService()
    {
       if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
       {
-            HttpClient.DefaultRequestHeaders.Clear();
-            HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {ApiKey}");
+         HttpClient.DefaultRequestHeaders.Clear();
+         HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {ApiKey}");
       }
    }
 
+   // Method to send chat messages and receive a response from Groq
    public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
    {
+      // Prepare the request payload with model and messages
       var requestPayload = new GroqChatParameters
       {
-            Model = ModelName,
-            Messages = chatMessages.Select(m => new Message
-            {
-               Role = m.Role == ChatRole.User ? "user" : "assistant",
-               Content = m.Text
-            }).ToList(),
-            Stop = new() { "END_INSERTION", "NEED_INFO", "END_RESPONSE" }
+         Model = ModelName,
+         Messages = chatMessages.Select(m => new Message
+         {
+            Role = m.Role == ChatRole.User ? "user" : "assistant",
+            Content = m.Text
+         }).ToList(),
+         Stop = new() { "END_INSERTION", "NEED_INFO", "END_RESPONSE" }
       };
 
       var content = new StringContent(JsonSerializer.Serialize(requestPayload, JsonOptions), Encoding.UTF8, "application/json");
 
       try
       {
-            var response = await HttpClient.PostAsync(Endpoint, content);
-            response.EnsureSuccessStatusCode();
+         // Send POST request to Groq API
+         var response = await HttpClient.PostAsync(Endpoint, content);
+         response.EnsureSuccessStatusCode();
 
-            var responseString = await response.Content.ReadAsStringAsync();
-            var responseObject = JsonSerializer.Deserialize<GroqResponseObject>(responseString, JsonOptions);
+         var responseString = await response.Content.ReadAsStringAsync();
+         var responseObject = JsonSerializer.Deserialize<GroqResponseObject>(responseString, JsonOptions);
 
-            return responseObject?.Choices?.FirstOrDefault()?.Message?.Content ?? "No response from model.";
+         // Return the model's response or fallback message
+         return responseObject?.Choices?.FirstOrDefault()?.Message?.Content ?? "No response from model.";
       }
       catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
       {
-            throw new InvalidOperationException("Failed to communicate with Groq API.", ex);
+         throw new InvalidOperationException("Failed to communicate with Groq API.", ex);
       }
    }
 }
 
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 2: Define Request and Response Models
 
@@ -140,31 +151,39 @@ To communicate effectively with the Groq API, we need to define C# classes that 
 * **GroqResponseObject**: The response received from Groq
 * **Choice**: Represents a single response option from the model
 
-```CSharp
+{% tabs %}
+{% highlight c# tabtitle="~/GroqModels.cs" %}
+
+// Represents a single response option returned by the Groq model
 public class Choice
 {
-    public Message Message { get; set; }
+   public Message Message { get; set; }
 }
 
+// Represents a single chat message with a role and content
 public class Message
 {
-    public string Role { get; set; }
-    public string Content { get; set; }
+   public string Role { get; set; }
+   public string Content { get; set; }
 }
 
+// The main request object sent to the Groq API
 public class GroqChatParameters
 {
-    public string Model { get; set; }
-    public List<Message> Messages { get; set; }
-    public List<string> Stop { get; set; }
+   public string Model { get; set; }
+   public List<Message> Messages { get; set; }
+   public List<string> Stop { get; set; }
 }
 
+// Represents the full response object received from Groq
 public class GroqResponseObject
 {
-    public string Model { get; set; }
-    public List<Choice> Choices { get; set; }
+   public string Model { get; set; }
+   public List<Choice> Choices { get; set; }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 3: Create a Custom AI Service
 
@@ -177,27 +196,37 @@ The `IChatInferenceService` interface is part of Syncfusion's infrastructure tha
 3. Implement the interface as shown below
 
 
-```CSharp
+{% tabs %}
+{% highlight c# tabtitle="~/MyCustomService.cs" %}
+
 using Syncfusion.Blazor.AI;
+
+// Custom service that bridges GroqService with Syncfusion's Smart PDF Viewer
 public class MyCustomService : IChatInferenceService
 {
-    public GroqService _groqServices;
-    public MyCustomService(GroqService groqServices) {
-        _groqServices = groqServices;
-    }
-    public Task<string> GenerateResponseAsync(ChatParameters options)
-    {
-        return _groqServices.CompleteAsync(options.Messages);
-        throw new NotImplementedException();
-    }
+   // Instance of GroqService to handle AI requests
+   public GroqService _groqServices;
+   public MyCustomService(GroqService groqServices) {
+      _groqServices = groqServices;
+   }
+
+   // Implementation of the GenerateResponseAsync method from IChatInferenceService
+   public Task<string> GenerateResponseAsync(ChatParameters options)
+   {
+      return _groqServices.CompleteAsync(options.Messages);
+      throw new NotImplementedException();
+   }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Configure the Blazor App
 
 Configure your Blazor application to use the Groq AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
-```CSharp
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 
 using Syncfusion.Blazor.AI;
 var builder = WebApplication.CreateBuilder(args);
@@ -211,7 +240,9 @@ builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GroqService)
 
 ## See also

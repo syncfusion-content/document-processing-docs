@@ -504,6 +504,13 @@ using System.ClientModel;
 using Microsoft.Extensions.AI;
 using Syncfusion.Blazor.AI;
 
+...
+var builder = WebApplication.CreateBuilder(args);
+
+....
+
+builder.Services.AddSyncfusionBlazor();
+
 // Define your Azure OpenAI credentials and model
 string azureOpenAIKey = "Your API Key"; // Replace with your actual Azure OpenAI API key
 string azureOpenAIEndpoint = "Your Endpoint"; // Replace with your Azure OpenAI endpoint URL
@@ -526,6 +533,9 @@ builder.Services.AddScoped<IChatInferenceService, AzureAIService>(sp =>
     UserTokenService userTokenService = sp.GetRequiredService<UserTokenService>();
     return new AzureAIService(userTokenService, azureOpenAIChatClient);
 });
+
+var app = builder.Build();
+....
 
 {% endhighlight %}
 {% endtabs %}
