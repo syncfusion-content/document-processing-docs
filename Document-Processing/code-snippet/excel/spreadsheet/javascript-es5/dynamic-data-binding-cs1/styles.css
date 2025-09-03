@@ -1,0 +1,33 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+body {
+  height: 425px;
+}
+
+#changeDataBtn {
+margin-bottom: 10px;
+}
+
+#EventLog b {
+  color: #388e3c;
+}
+
+#evt {
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
