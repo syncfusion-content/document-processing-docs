@@ -54,8 +54,10 @@ using System.Text;
 using System.Text.Json;
 using System.Net;
 using Microsoft.Extensions.AI;
+// Define the DeepSeekAIService class to interact with the DeepSeek API
 public class DeepSeekAIService
 {
+    // Constants for API configuration
     private const string ApiKey = "Your API Key";
     private const string ModelName = "Your Model Name";
     private const string Endpoint = "https://api.deepseek.com/v1/chat/completions";
@@ -69,11 +71,13 @@ public class DeepSeekAIService
         DefaultRequestVersion = HttpVersion.Version30
     };
 
+    // Set JSON serialization options to use camelCase naming
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
+    // Constructor to initialize the HttpClient with authorization header
     public DeepSeekAIService()
     {
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
@@ -83,6 +87,7 @@ public class DeepSeekAIService
         }
     }
 
+    // Method to send chat messages to DeepSeek API and receive a response
     public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
     {
         DeepSeekChatRequest requestBody = new DeepSeekChatRequest
@@ -96,15 +101,17 @@ public class DeepSeekAIService
             }).ToList()
         };
 
-
+        // Serialize the request body to JSON
         string json = JsonSerializer.Serialize(requestBody, JsonOptions);
         StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
         try
         {
+            // Send POST request to DeepSeek API/ Send POST request to DeepSeek API
             HttpResponseMessage response = await HttpClient.PostAsync(Endpoint, content);
             response.EnsureSuccessStatusCode();
 
+            // Read and deserialize the response
             string responseString = await response.Content.ReadAsStringAsync();
             DeepSeekChatResponse? responseObject = JsonSerializer.Deserialize<DeepSeekChatResponse>(responseString, JsonOptions);
 
@@ -126,12 +133,14 @@ To effectively communicate with DeepSeek's API, we need to create strongly-typed
 Create a new file named `DeepSeekModels.cs` with the following models:
 
 ```CSharp
+// Represents a single message in the chat conversation
 public class DeepSeekMessage
 {
     public string Role { get; set; }
     public string Content { get; set; }
 }
 
+// Represents the request payload sent to the DeepSeek API
 public class DeepSeekChatRequest
 {
     public string Model { get; set; }
@@ -139,11 +148,13 @@ public class DeepSeekChatRequest
     public List<DeepSeekMessage> Messages { get; set; }
 }
 
+// Represents the response received from the DeepSeek API
 public class DeepSeekChatResponse
 {
     public List<DeepSeekChoice> Choices { get; set; }
 }
 
+// Represents a single choice in the response
 public class DeepSeekChoice
 {
     public DeepSeekMessage Message { get; set; }
@@ -161,10 +172,12 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 
 ```csharp
 using Syncfusion.Blazor.AI;
+// Custom implementation of the IChatInferenceService interface
 public class MyCustomService : IChatInferenceService
 {
     private readonly DeepSeekAIService _DeepSeekService;
 
+    // Constructor injection of DeepSeekAIService
     public MyCustomService(DeepSeekAIService DeepSeekService)
     {
         _DeepSeekService = DeepSeekService;

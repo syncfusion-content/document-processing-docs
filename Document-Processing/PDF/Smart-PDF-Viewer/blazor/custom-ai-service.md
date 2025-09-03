@@ -36,10 +36,9 @@ Here are examples of AI services integrated using the `IChatInferenceService` in
 
 | Service | Documentation |
 |---------|---------------|
-| Claude | [Claude Integration](claude-service) |
 | DeepSeek | [DeepSeek Integration](deepseek-service) |
-| Groq | [Groq Integration](groq-service) |
 | Gemini | [Gemini Integration](gemini-service) |
+| Groq | [Groq Integration](groq-service) |
 
 
 ## Service Registration
