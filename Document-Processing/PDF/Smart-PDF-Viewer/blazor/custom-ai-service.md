@@ -59,7 +59,7 @@ Since the Custom AI service operates independently from the built-in AI service,
 Exceptions that occur while creating a request to the custom AI service are captured using try-catch blocks. The resulting error message is assigned to the DialogMessage property, and the OnDialogOpen event is triggered to notify other components such as Home so they can display the error in a dialog appropriately.
 
 ```cs
-public class GeminiService
+public class MyCustomService : IChatInferenceService
 {
     public event Action OnDialogOpen;
 
@@ -70,8 +70,9 @@ public class GeminiService
         OnDialogOpen?.Invoke();
     }
 
-    public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
+    public async Task<string> GenerateResponseAsync(ChatParameters options)
     {
+        //Add completion request
         try
         {
             // Add the request logic for the Custom AI service.
@@ -105,7 +106,7 @@ In the Smart PDF Viewer, error messages are displayed using SfDialogService. The
 public partial class Home : IDisposable
 {
     [Inject]
-    public GeminiService? GeminiService { get; set; }
+    public MyCustomService? myCustomService { get; set; }
 
     [Inject]
     public SfDialogService? DialogService { get; set; }
@@ -114,7 +115,7 @@ public partial class Home : IDisposable
 
     public async void OpenDialog()
     {
-        DialogText = GeminiService!.DialogMessage;
+        DialogText = myCustomService!.DialogMessage;
         int fontSize = 16; // px
         int charWidth = (int)(fontSize * 0.6); // Approximate width per character in px
         int baseWidth = 48; // Common addition to width
@@ -140,12 +141,12 @@ public partial class Home : IDisposable
 
     protected override void OnInitialized()
     {
-        GeminiService!.OnDialogOpen += OpenDialog;
+        myCustomService!.OnDialogOpen += OpenDialog;
     }
 
     public void Dispose()
     {
-        GeminiService!.OnDialogOpen -= OpenDialog;
+        myCustomService!.OnDialogOpen -= OpenDialog;
     }
 }
 
