@@ -40,7 +40,7 @@ Refer to the following code snippet to switch to highlight mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/highlight-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/highlight-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,13 +48,13 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/highlight-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/highlight-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from highlight mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/highlight-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/highlight-normal-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,7 +62,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/highlight-normal-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/highlight-normal-mode-cs1" %}
 
 ## Highlight a text programmatically
 
@@ -144,7 +144,7 @@ Refer to the following code snippet to switch to underline mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/underline-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/underline-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,14 +152,14 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/underline-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/underline-mode-cs1" %}
 
 
 Refer to the following code snippet to switch back to normal mode from underline mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/underline-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/underline-normal-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -167,7 +167,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/underline-normal-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/underline-normal-mode-cs1" %}
 
 ## Underline a text programmatically
 
@@ -250,7 +250,7 @@ Refer to the following code snippet to switch to strikethrough mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/strikethrough-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -258,13 +258,13 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/strikethrough-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from underline mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/strikethrough-normal-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -272,7 +272,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/strikethrough-normal-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/strikethrough-normal-mode-cs1" %}
 
 ## Strikethrough a text programmatically
 
@@ -354,7 +354,7 @@ Refer to the following code snippet to switch to squiggly mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/squiggly-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -362,13 +362,13 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/squiggly-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from squiggly mode.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-normal-mode-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/squiggly-normal-mode-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -376,7 +376,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/squiggly-normal-mode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/squiggly-normal-mode-cs1" %}
 
 ## Squiggly a text programmatically
 
@@ -522,11 +522,11 @@ Refer to the following code snippet for calling undo and redo actions from the c
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/es5-text-markup-annotation/undo-redo-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-text-markup-annotation/undo-redo-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/es5-text-markup-annotation/undo-redo-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-text-markup-annotation/undo-redo-cs1" %}
 
 ## Saving the text markup annotation
 

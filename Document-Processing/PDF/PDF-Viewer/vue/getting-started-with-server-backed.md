@@ -272,10 +272,10 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/getting-started-cs1/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/getting-started-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/getting-started-cs1/app.vue %}
+{% include code-snippet/pdfviewer/vue/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -295,7 +295,7 @@ or
 yarn run serve
 ```
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/getting-started-cs1" %}
 
 > For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
 

@@ -213,11 +213,11 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/custom-context-menu/src/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/custom-context-menu/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/custom-context-menu/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/custom-context-menu/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -226,6 +226,6 @@ Add the below serviceUrl in the `app.component.ts` file
 `public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer'`;
 Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
 
-{% previewsample "page.domainurl/samples/pdfviewer/custom-context-menu" %}
+{% previewsample "page.domainurl/samples/pdfviewer/angular/custom-context-menu" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu)

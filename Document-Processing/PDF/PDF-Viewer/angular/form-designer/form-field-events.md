@@ -34,11 +34,11 @@ The [formFieldAdd](https://helpej2.syncfusion.com/angular/documentation/api/pdfv
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldaddevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldaddevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldaddevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldaddevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -48,11 +48,11 @@ The [formFieldClick](https://helpej2.syncfusion.com/angular/documentation/api/pd
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldclickevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldclickevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldclickevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldclickevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,11 +62,11 @@ The [formFieldDoubleClick](https://helpej2.syncfusion.com/angular/documentation/
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfielddoubleclickevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfielddoubleclickevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfielddoubleclickevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfielddoubleclickevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,11 +76,11 @@ The [formFieldFocusOut](https://helpej2.syncfusion.com/angular/documentation/api
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldfocusoutevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldfocusoutevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldfocusoutevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldfocusoutevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,11 +90,11 @@ The [formFieldMouseLeave](https://helpej2.syncfusion.com/angular/documentation/a
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldmouseleaveevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldmouseleaveevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldmouseleaveevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldmouseleaveevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -104,11 +104,11 @@ The [formFieldMouseOver](https://helpej2.syncfusion.com/angular/documentation/ap
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldmouseoverevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldmouseoverevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldmouseoverevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldmouseoverevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,11 +118,11 @@ The [formFieldMove](https://helpej2.syncfusion.com/angular/documentation/api/pdf
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldmousemoveevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldmousemoveevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldmousemoveevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldmousemoveevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,11 +132,11 @@ The [formFieldPropertiesChange](https://helpej2.syncfusion.com/angular/documenta
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldpropertieschangeevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldpropertieschangeevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldpropertieschangeevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldpropertieschangeevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,11 +146,11 @@ The [formFieldRemove](https://helpej2.syncfusion.com/angular/documentation/api/p
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldremoveevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldremoveevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldremoveevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldremoveevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -160,11 +160,11 @@ The [formFieldResize](https://helpej2.syncfusion.com/angular/documentation/api/p
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldresizeevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldresizeevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldresizeevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldresizeevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -174,11 +174,11 @@ The [formFieldSelect](https://helpej2.syncfusion.com/angular/documentation/api/p
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldselectevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldselectevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldselectevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldselectevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -188,11 +188,11 @@ The [formFieldUnselect](https://helpej2.syncfusion.com/angular/documentation/api
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldunselectevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldunselectevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldunselectevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldunselectevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -202,11 +202,11 @@ The [validateFormFields](https://helpej2.syncfusion.com/angular/documentation/ap
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/formfieldvalidationevent-cs2/src/app/app.component.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldvalidationevent-cs2/src/app/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/pdfviewer/formfieldvalidationevent-cs2/src/main.ts %}
+{% include code-snippet/pdfviewer/angular/formfieldvalidationevent-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -2,8 +2,8 @@
 layout: post
 title: Deepseek AI Service with Smart PDF Viewer in Blazor App | Syncfusion
 description: Learn how to integrate and use the Syncfusion Smart PDF Viewer in a Blazor Web App with DeepSeek AI services.
-platform: Blazor
-control: Smart PDF Viewer
+platform: document-processing
+control: SfSmartPdfViewer
 documentation: ug
 ---
 
@@ -49,13 +49,17 @@ The `DeepSeekAIService` class is responsible for managing all interactions with 
 2. Add the following using statements for required dependencies
 3. Implement the service class as shown below
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/DeepSeekAIService.cs" %}
+
 using System.Text;
 using System.Text.Json;
 using System.Net;
 using Microsoft.Extensions.AI;
+// Define the DeepSeekAIService class to interact with the DeepSeek API
 public class DeepSeekAIService
 {
+    // Constants for API configuration
     private const string ApiKey = "Your API Key";
     private const string ModelName = "Your Model Name";
     private const string Endpoint = "https://api.deepseek.com/v1/chat/completions";
@@ -69,11 +73,13 @@ public class DeepSeekAIService
         DefaultRequestVersion = HttpVersion.Version30
     };
 
+    // Set JSON serialization options to use camelCase naming
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
+    // Constructor to initialize the HttpClient with authorization header
     public DeepSeekAIService()
     {
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
@@ -83,6 +89,7 @@ public class DeepSeekAIService
         }
     }
 
+    // Method to send chat messages to DeepSeek API and receive a response
     public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
     {
         DeepSeekChatRequest requestBody = new DeepSeekChatRequest
@@ -96,15 +103,17 @@ public class DeepSeekAIService
             }).ToList()
         };
 
-
+        // Serialize the request body to JSON
         string json = JsonSerializer.Serialize(requestBody, JsonOptions);
         StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
         try
         {
+            // Send POST request to DeepSeek API/ Send POST request to DeepSeek API
             HttpResponseMessage response = await HttpClient.PostAsync(Endpoint, content);
             response.EnsureSuccessStatusCode();
 
+            // Read and deserialize the response
             string responseString = await response.Content.ReadAsStringAsync();
             DeepSeekChatResponse? responseObject = JsonSerializer.Deserialize<DeepSeekChatResponse>(responseString, JsonOptions);
 
@@ -117,7 +126,9 @@ public class DeepSeekAIService
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 2: Define Request and Response Models
 
@@ -125,13 +136,17 @@ To effectively communicate with DeepSeek's API, we need to create strongly-typed
 
 Create a new file named `DeepSeekModels.cs` with the following models:
 
-```CSharp
+{% tabs %}
+{% highlight c# tabtitle="~/DeepSeekModels.cs" %}
+
+// Represents a single message in the chat conversation
 public class DeepSeekMessage
 {
     public string Role { get; set; }
     public string Content { get; set; }
 }
 
+// Represents the request payload sent to the DeepSeek API
 public class DeepSeekChatRequest
 {
     public string Model { get; set; }
@@ -139,16 +154,20 @@ public class DeepSeekChatRequest
     public List<DeepSeekMessage> Messages { get; set; }
 }
 
+// Represents the response received from the DeepSeek API
 public class DeepSeekChatResponse
 {
     public List<DeepSeekChoice> Choices { get; set; }
 }
 
+// Represents a single choice in the response
 public class DeepSeekChoice
 {
     public DeepSeekMessage Message { get; set; }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 3: Create a Custom AI Service
 
@@ -159,12 +178,16 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="~/MyCustomService.cs" %}
+
 using Syncfusion.Blazor.AI;
+// Custom implementation of the IChatInferenceService interface
 public class MyCustomService : IChatInferenceService
 {
     private readonly DeepSeekAIService _DeepSeekService;
 
+    // Constructor injection of DeepSeekAIService
     public MyCustomService(DeepSeekAIService DeepSeekService)
     {
         _DeepSeekService = DeepSeekService;
@@ -175,13 +198,16 @@ public class MyCustomService : IChatInferenceService
         return _DeepSeekService.CompleteAsync(options.Messages);
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Configure the Blazor App
 
 Configure your Blazor application to use the DeepSeek AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
-```CSharp
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 
 using Syncfusion.Blazor.AI;
 var builder = WebApplication.CreateBuilder(args);
@@ -195,7 +221,8 @@ builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub]()
 

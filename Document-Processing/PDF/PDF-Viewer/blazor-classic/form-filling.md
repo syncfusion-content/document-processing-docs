@@ -69,7 +69,7 @@ The PDF Viewer control supports exporting and importing the form field data in t
 * XFDF
 * JSON
 
-> N The form field data will be exported as stream, and that data from the stream will be imported into the current PDF document.
+N> The form field data will be exported as stream, and that data from the stream will be imported into the current PDF document.
 
 ### Export and import as XML
 

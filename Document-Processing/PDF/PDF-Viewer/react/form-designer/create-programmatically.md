@@ -136,7 +136,7 @@ root.render(<App />);
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/addformfield-cs1" %}
 
 ## Edit/Update form field programmatically
 
@@ -254,7 +254,7 @@ root.render(<App />);
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/updateformfield-cs1" %}
 
 ## Delete form field programmatically
 
@@ -372,7 +372,7 @@ root.render(<App />);
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/deleteformfield-cs1" %}
 
 ## setFormFieldMode programmatically
 
