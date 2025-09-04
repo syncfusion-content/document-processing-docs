@@ -43,7 +43,7 @@ After completing this setup, you can:
 
 ## Install the following NuGet packages to your project:
 
-open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install the following pacakages
+open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install the following packages
 
 1.[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI).
 2.[Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
