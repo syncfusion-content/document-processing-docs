@@ -238,7 +238,7 @@ dotnet add package OllamaSharp --version 5.3.6
 Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Server App" hl_lines="11 14 15 16" %}
+{% highlight razor tabtitle="Blazor Server App" hl_lines="11 14 15 16 17 18 21 22 23" %}
 
 using Microsoft.Extensions.AI;
 using OllamaSharp;
@@ -253,7 +253,14 @@ builder.Services.AddSyncfusionBlazor();
 string aiModel = "llama2:7b";
 
 // By default, Ollama runs on port 11434, you can also customize this port manually.
-IChatClient chatClient = new OllamaApiClient("http://localhost:11434", aiModel);
+HttpClient httpClient = new HttpClient
+{
+    BaseAddress = new Uri("http://localhost:11434"), // Ollama server address
+    Timeout = Timeout.InfiniteTimeSpan // Supports extended processing time for AI responses
+};
+
+// Initialize the chat client using the Ollama API and the specified model
+IChatClient chatClient = new OllamaApiClient(httpClient, aiModel);
 builder.Services.AddChatClient(chatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
@@ -264,6 +271,8 @@ var app = builder.Build();
 {% endtabs %}
 
 N> Running Ollama locally may lead to slower response times due to system resource usage.
+To accommodate this, you can configure the Syncfusion Smart PDF Viewer to disable timeout for AI assist view operations by setting the timeout to 0.
+[Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
 
 ### To Check the Installed Model and Its Details in Ollama
 - To verify which models are currently installed and available on your local Ollama server (example: running on port 11434), run the following command in your terminal or command prompt:
