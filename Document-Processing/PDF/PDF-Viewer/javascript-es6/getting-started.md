@@ -197,7 +197,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/getting-started-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/getting-started-cs2" %}
 
 ## Module injection
 

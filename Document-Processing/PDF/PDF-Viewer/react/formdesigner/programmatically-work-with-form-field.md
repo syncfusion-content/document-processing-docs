@@ -27,19 +27,19 @@ Using addFormField method, the form fields can be added to the PDF document prog
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/app/index.jsx %}
+{% include code-snippet/pdfviewer/react/addformfield-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/addformfield-cs2/app/index.tsx %}
+{% include code-snippet/pdfviewer/react/addformfield-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/addformfield-cs2" %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/addformfield-cs2" %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,19 +49,19 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/app/index.jsx %}
+{% include code-snippet/pdfviewer/react/updateformfield-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/updateformfield-cs2/app/index.tsx %}
+{% include code-snippet/pdfviewer/react/updateformfield-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/updateformfield-cs2" %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/updateformfield-cs2" %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,19 +71,19 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/app/index.jsx %}
+{% include code-snippet/pdfviewer/react/deleteformfield-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/deleteformfield-cs2/app/index.tsx %}
+{% include code-snippet/pdfviewer/react/deleteformfield-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs2-standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/deleteformfield-cs2-standalone" %}
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/deleteformfield-cs2" %}
 {% endhighlight %}
 {% endtabs %}
 

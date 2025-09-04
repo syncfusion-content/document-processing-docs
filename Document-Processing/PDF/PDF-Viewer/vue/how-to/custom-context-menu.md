@@ -838,10 +838,10 @@ The following is the output of custom context menu with customization.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/custom-context-menu/app-composition.vue %}
+{% include code-snippet/pdfviewer/vue/custom-context-menu/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/pdfviewer/custom-context-menu/app.vue %}
+{% include code-snippet/pdfviewer/vue/custom-context-menu/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -849,6 +849,6 @@ N> To set up the **server-backed PDF Viewer** in the app.Vue file, include the f
 **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/custom-context-menu" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/custom-context-menu" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Customize%20context%20menu)

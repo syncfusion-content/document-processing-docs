@@ -149,7 +149,7 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/addformfield-cs1" %}
 
 ## Edit or update form field programmatically
 
@@ -282,7 +282,7 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/updateformfield-cs1" %}
 
 ## Delete form field programmatically
 
@@ -414,7 +414,7 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/deleteformfield-cs1" %}
 
 ## Saving the form fields
 

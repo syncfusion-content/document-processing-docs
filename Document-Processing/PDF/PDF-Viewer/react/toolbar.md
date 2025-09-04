@@ -98,7 +98,7 @@ root.render(<App />);
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs2" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs2" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/Toolbar/How%20to%20hide%20toolbar/src/index.js)
 
@@ -178,7 +178,7 @@ root.render(<App />);
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs3" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs3" %}
 
 ## Show/Hide the built-in toolbaritem
 
@@ -250,7 +250,7 @@ root.render(<App />);
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs4" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs4" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -326,7 +326,7 @@ root.render(<App />);
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
 **serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/base-cs5" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs5" %}
 
 ## Customize Built-In Toolbar
 
