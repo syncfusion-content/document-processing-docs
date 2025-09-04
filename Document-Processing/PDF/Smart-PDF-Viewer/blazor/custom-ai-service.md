@@ -58,19 +58,38 @@ Since the Custom AI service operates independently from the built-in AI service,
 
 Exceptions that occur while creating a request to the custom AI service are captured using try-catch blocks. The resulting error message is assigned to the DialogMessage property, and the OnDialogOpen event is triggered to notify other components such as Home so they can display the error in a dialog appropriately.
 
+## Step 1: Create a ErrorDialog Service
+
+1.Create a new class file named ErrorDialogService.cs in your project
+2.Add the following implementation:
+
 ```cs
-public class MyCustomService : IChatInferenceService
+public class ErrorDialogService 
 {
     public event Action OnDialogOpen;
 
-    public string DialogMessage { get; private set; }
+    public string DialogMessage { get; set; }
 
-    private void RaiseDialogOpen()
+    internal void RaiseDialogOpen()
     {
         OnDialogOpen?.Invoke();
     }
+}
+```
+## Step 2: Add the ErrorDialogService in MyCustomService class
 
-    public async Task<string> GenerateResponseAsync(ChatParameters options)
+{% tabs %}
+{% highlight c# tabtitle="~/MyCustomService.cs" hl_lines="1 3 6 18 19" %}
+
+ private readonly ErrorDialogService _errorDialogService;
+
+ public MyCustomService(IChatClient client,ErrorDialogService errorDialogService)
+ {
+    // initialize your chat client instance
+    this._errorDialogService = errorDialogService ?? throw new ArgumentNullException(nameof(errorDialogService));
+ }
+
+ public async Task<string> GenerateResponseAsync(ChatParameters options)
     {
         //Add completion request
         try
@@ -79,34 +98,48 @@ public class MyCustomService : IChatInferenceService
         }
         catch (Exception ex)
         {
-            DialogMessage = ex.Message; // Set the value
-            RaiseDialogOpen();
+            _errorDialogService.DialogMessage = ex.Message; // Set the value
+            _errorDialogService.RaiseDialogOpen();
             return "";
         }
     }
-}
-```
 
-### Configure the Dialog Service
+{% endhighlight %}
+{% endtabs %}
+
+
+### Step 3: Configure the Dialog Service
 
 Configure the dialog service in `Program.cs` to enable error display functionality when a request or response to the Custom AI service fails. This setup ensures that any errors encountered during communication with the service can be shown in a dialog component.
 
-```cs
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="1 2 5 6" %}
 
+builder.Services.AddScoped<ErrorDialogService>();
 builder.Services.AddScoped<SfDialogService>();
+builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
+{
+    ErrorDialogService errorDialogService = sp.GetRequiredService<ErrorDialogService>();
+    return new MyCustomService( "YourChatclient" ,errorDialogService );
+});
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-### Show the Error Dialog
+### Step 4: Show the Error Dialog
 
 In the Smart PDF Viewer, error messages are displayed using SfDialogService. The component listens for the OnDialogOpen event from CustomService, and when triggered, the OpenDialog method calculates the dialog size dynamically based on the length of the error message and presents it accordingly. To ensure efficient resource management, the event subscription is properly disposed of when the component is no longer in use.
 
-```C#
+1.Create a new class file named Home.razor.cs in your project
+2.Add the following implementation:
+
+{% tabs %}
+{% highlight c# tabtitle="~/Home.razor.cs"%}
 
 public partial class Home : IDisposable
 {
     [Inject]
-    public MyCustomService? myCustomService { get; set; }
+    public ErrorDialogService? ErrorDialogService { get; set; }
 
     [Inject]
     public SfDialogService? DialogService { get; set; }
@@ -115,7 +148,7 @@ public partial class Home : IDisposable
 
     public async void OpenDialog()
     {
-        DialogText = myCustomService!.DialogMessage;
+        DialogText = ErrorDialogService!.DialogMessage;
         int fontSize = 16; // px
         int charWidth = (int)(fontSize * 0.6); // Approximate width per character in px
         int baseWidth = 48; // Common addition to width
@@ -141,16 +174,17 @@ public partial class Home : IDisposable
 
     protected override void OnInitialized()
     {
-        myCustomService!.OnDialogOpen += OpenDialog;
+        ErrorDialogService!.OnDialogOpen += OpenDialog;
     }
 
     public void Dispose()
     {
-        myCustomService!.OnDialogOpen -= OpenDialog;
+        ErrorDialogService!.OnDialogOpen -= OpenDialog;
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
 
