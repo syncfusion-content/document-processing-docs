@@ -65,7 +65,7 @@ N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-control
 
 ## Localize when the resource file is present in a different assembly or different namespace
 
-[WPF-Spreadsheet](https://help.syncfusion.com/wpf/spreadsheet/getting-started) (SfSpreadsheet) reads the localization resource files based on the assembly name from its default namespace. If you have the localization resource file other than the executing assembly (Assembly.GetExecutingAssembly())or other than the default namespace, then you have to pass the assembly having the resource file and its default namespace to [GridResourceWrapper.SetResources](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.Resources.GridResourceWrapper.html#Syncfusion_UI_Xaml_Spreadsheet_Resources_GridResourceWrapper_SetResources_System_Reflection_Assembly_System_String_) method.
+[WPF-Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/getting-started) (SfSpreadsheet) reads the localization resource files based on the assembly name from its default namespace. If you have the localization resource file other than the executing assembly (Assembly.GetExecutingAssembly())or other than the default namespace, then you have to pass the assembly having the resource file and its default namespace to [GridResourceWrapper.SetResources](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.Resources.GridResourceWrapper.html#Syncfusion_UI_Xaml_Spreadsheet_Resources_GridResourceWrapper_SetResources_System_Reflection_Assembly_System_String_) method.
 
 {% tabs %}
 {% highlight c# %}
