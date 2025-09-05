@@ -561,4 +561,4 @@ export default {
 
 ## Related Links
 
-- [File menu Customization Demo](https://ej2.syncfusion.com/demos#/material/document-editor/ribbon-customization)
+- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/ribbon-customization)
