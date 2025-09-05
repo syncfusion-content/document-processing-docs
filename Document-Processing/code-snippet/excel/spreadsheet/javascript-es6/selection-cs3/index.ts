@@ -1,0 +1,35 @@
+
+
+
+import { Spreadsheet, ColumnModel } from '@syncfusion/ej2-spreadsheet';
+import { budgetData} from './datasource.ts';
+
+let columns: ColumnModel[] = [
+    {
+        width: 130
+    },
+    {
+        width: 92
+    },
+    {
+        width: 96
+    }
+];
+
+let spreadsheet: Spreadsheet = new Spreadsheet({
+    sheets: [{ name: 'Budget', ranges: [{ dataSource: budgetData }], columns: columns }],
+    selectionSettings: { mode: 'None' },
+    created: (): void => {
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:D1');
+        },
+    // Triggers before going to the editing mode.
+    cellEdit: (args: CellEditEventArgs): void => {
+         args.cancel = true;
+    }
+});
+
+//Render the initialized Spreadsheet
+spreadsheet.appendTo('#spreadsheet');
+
+
+
