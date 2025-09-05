@@ -146,7 +146,11 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub]()
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/DeepseekService)
+
+N> Running Deepseek service may lead to slower response times due to system resource usage.
+To accommodate this, you can configure the Syncfusion Smart PDF Viewer to disable timeout for AI assist view operations by setting the timeout to 0.
+[Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
 
 ## See also
 

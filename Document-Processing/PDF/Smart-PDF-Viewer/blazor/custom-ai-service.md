@@ -126,15 +126,30 @@ builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
 {% endhighlight %}
 {% endtabs %}
 
-### Step 4: Show the Error Dialog
+### step 4: Add the SfDialogProvider in the **~Pages/Home.razor** file.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Home.razor" %}
+
+@page "/"
+
+<Syncfusion.Blazor.Popups.SfDialogProvider/>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Step 5: Show the Error Dialog
 
 In the Smart PDF Viewer, error messages are displayed using SfDialogService. The component listens for the OnDialogOpen event from CustomService, and when triggered, the OpenDialog method calculates the dialog size dynamically based on the length of the error message and presents it accordingly. To ensure efficient resource management, the event subscription is properly disposed of when the component is no longer in use.
 
-1.Create a new class file named Home.razor.cs in your project
+1.Create a new class file named Home.razor.cs by right-clicking on the Pages folder, then selecting Add → Class.
 2.Add the following implementation:
 
 {% tabs %}
 {% highlight cs tabtitle="~/Home.razor.cs" %}
+
+using Microsoft.AspNetCore.Components;
+using Syncfusion.Blazor.Popups;
 
 public partial class Home : IDisposable
 {
@@ -186,7 +201,7 @@ public partial class Home : IDisposable
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
 
 ## See also
 
