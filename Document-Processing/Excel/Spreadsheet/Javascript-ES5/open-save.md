@@ -824,7 +824,7 @@ Open and save helper functions are shipped in the Syncfusion.EJ2.Spreadsheet pac
 * Syncfusion.Compression.Base
 * Syncfusion.XlsIO.Base
 
-And also refer [this](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#server-dependencies) for more information.
+And also refer [this](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save#server-dependencies) for more information.
 
 ## See Also
 
