@@ -2,7 +2,7 @@
 layout: post
 title:  ScrollHead in Xamarin.Android PDF Viewer | Syncfusion
 description: Working with ScrollHead
-platform: Xamarin.Android
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

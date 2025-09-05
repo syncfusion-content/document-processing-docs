@@ -2,7 +2,7 @@
 layout: post
 title: Form filling in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about PDF form filling feature of Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
