@@ -15,7 +15,7 @@ The PDF Viewer library allows you to print the PDF document programmatically usi
 
 The following steps are used to print the PDF document programmatically.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to perform the print operation.
 

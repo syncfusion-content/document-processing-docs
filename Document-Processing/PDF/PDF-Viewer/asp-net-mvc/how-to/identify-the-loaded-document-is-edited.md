@@ -14,7 +14,7 @@ The PDF Viewer server library allows you to identify whether loaded PDF document
 
 The following steps are used to identify loaded document is edited in PDF viewer control,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet with button click event to identity loaded document edited.
 

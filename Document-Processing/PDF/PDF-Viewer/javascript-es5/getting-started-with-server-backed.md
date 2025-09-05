@@ -51,7 +51,7 @@ N> The Web API hosted link https://services.syncfusion.com/js/production/api/pdf
 
 **Step 4:** Now, run the `index.html` in web browser, it will render the `Essential JS 2 PDF Viewer` component.
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
+> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
 
 ## How to run the PDF Viewer web service
 

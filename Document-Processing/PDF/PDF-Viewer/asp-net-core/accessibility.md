@@ -220,4 +220,4 @@ The accessibility compliance of the PDF Viewer component is shown in the followi
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/pdfviewer.html" %}
 
-N> Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+N> Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.

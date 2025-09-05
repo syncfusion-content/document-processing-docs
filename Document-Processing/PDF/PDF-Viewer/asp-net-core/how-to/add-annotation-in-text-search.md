@@ -18,7 +18,7 @@ This guide demonstrates how to add rectangle annotations based on the bounds of 
 
 **Step 1:** Set Up the PDF Viewer in Your ASP.NET Core Project
 
-Follow the steps provided in the [Syncfusion PDF Viewer Getting Started Guide](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started) to create a basic PDF Viewer sample.
+Follow the steps provided in the [Syncfusion PDF Viewer Getting Started Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a basic PDF Viewer sample.
 
 **Step 2:** Set Up the PdfViewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 

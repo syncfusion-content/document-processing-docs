@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Open Thumbnail pane programmatically
 
-The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
+The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
 
 The following steps are used to open the thumbnail.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to open thumbnail.
 
