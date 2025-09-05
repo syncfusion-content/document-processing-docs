@@ -15,7 +15,7 @@ The PDF Viewer server library allows you to can access the filename of the loade
 
 The following steps are used to access the file name of loaded PDF document in PDF viewer control,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Access file name using below code snippet,
 

@@ -77,7 +77,7 @@ The Syncfusion PDF Viewer allows you to load and save PDF files directly from Az
 ---
 
 ### **Step 5: ASP.NET MVC PDF Viewer Control Configuration**
-1. Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started-with-server-backed) to create a simple PDF Viewer sample.
+1. Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/-with-server-backed) to create a simple PDF Viewer sample.
 
 2. Add the following code snippet in `HomeController.cs`.
 

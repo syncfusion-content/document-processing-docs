@@ -17,7 +17,7 @@ This guide demonstrates how to add rectangle annotations based on the bounds of 
 
 ## Steps to Add Rectangle Annotations on Search Result Highlight
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Initialize the PDF Viewer with Required Modules
 

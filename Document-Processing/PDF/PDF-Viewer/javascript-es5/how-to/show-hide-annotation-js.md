@@ -17,7 +17,7 @@ This guide demonstrates how to show or hide annotations in the Syncfusion PDF Vi
 
 ## How to Show/Hide Annotations
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Create a Button in Your HTML File
 

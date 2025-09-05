@@ -19,7 +19,7 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Typescript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -104,7 +104,7 @@ The following code steps how the PDF file can be loaded in PDF Viewer as base64 
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://helpej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Use the following code snippet to load PDF document using base64 string.
 
@@ -128,7 +128,7 @@ To load a PDF file from SQL Server database in a PDF Viewer, you can follow the 
 
 **Step 1:** Create a Simple PDF Viewer Sample in Typescript
 
-Start by following the steps provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

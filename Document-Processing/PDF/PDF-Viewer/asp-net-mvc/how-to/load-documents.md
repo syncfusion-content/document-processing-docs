@@ -15,7 +15,7 @@ The PDF Viewer server library allows to switch or load the PDF documents dynamic
 
 The following steps are used to load the PDF document dynamically.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to load PDF document using base64 string.
 

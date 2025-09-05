@@ -17,7 +17,7 @@ This guide explains how to add and display custom items in the custom stamp drop
 
 ### Steps to Show Custom Items in Custom Stamp Dropdown
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Configure Custom Stamp Settings
 

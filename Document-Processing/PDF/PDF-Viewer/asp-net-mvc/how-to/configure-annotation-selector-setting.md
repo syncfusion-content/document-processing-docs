@@ -16,7 +16,7 @@ The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetmvc-js
 
 ### How to Configure Annotation Selector Settings
 
-**Step 1:**	Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:**	Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Set Up PDF Viewer in Your View: Add the following code snippet to your view (e.g., Index.cshtml)
 

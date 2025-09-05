@@ -13,9 +13,9 @@ domainurl: ##DomainURL##
 
 The PDF Viewer library allows you to add a new page to the PDF document using the PDF library.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
+**Step 2:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service/) to create the PDF Viewer web service.
 
 **Step 3:** Add the following code sample in the PDF Viewer controller code to add a new page in the PDF document using the PDF library.
 

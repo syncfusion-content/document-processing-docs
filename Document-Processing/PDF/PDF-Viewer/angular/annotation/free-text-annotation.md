@@ -102,7 +102,7 @@ import { LinkAnnotationService, BookmarkViewService,
 
 ## How to clear the selection focus from free text annotation
 
-The free text annotations selection focus can be cleared by using the [setAnnotationMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/)  property of the `annotationModule`.
+The free text annotations selection focus can be cleared by using the [setAnnotationMode](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/)  property of the `annotationModule`.
 
 Refer to the following code sample to remove the selection focus from the annotation by using a button click.
 
@@ -149,7 +149,7 @@ RemoveSelection() {
 
 ## Adding a Free Text annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Free Text annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, you can add a Free Text annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a Free Text annotation programmatically
 
