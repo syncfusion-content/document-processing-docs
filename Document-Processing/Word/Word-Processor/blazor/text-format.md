@@ -162,4 +162,4 @@ The highlight color of the selected text can be get or set using the following s
 await documentEditor.Selection.CharacterFormat.SetHighlightColorAsync(HighlightColor.Pink);
 ```
 
-You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
