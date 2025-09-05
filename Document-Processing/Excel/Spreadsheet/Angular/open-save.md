@@ -879,7 +879,7 @@ Open and save helper functions are shipped in the Syncfusion.EJ2.Spreadsheet pac
 * Syncfusion.Compression.Base
 * Syncfusion.XlsIO.Base
 
-And also refer [this](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save#server-dependencies) for more information.
+And also refer [this](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/open-save#server-dependencies) for more information.
 
 ## Supported File Formats
 
@@ -891,7 +891,7 @@ The following list of Excel file formats are supported in Spreadsheet:
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-ui-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 
