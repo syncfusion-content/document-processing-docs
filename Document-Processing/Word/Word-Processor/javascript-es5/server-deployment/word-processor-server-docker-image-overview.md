@@ -228,4 +228,4 @@ container.created = function () {
 container.appendTo('#container');
 ```
 
-Refer to these getting started pages to create a Word Processor in [`Angular`](../../angular/getting-started), [`React`](../../react/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../../blazor/document-editor/getting-started/server-side-application).
+Refer to these getting started pages to create a Word Processor in [`Angular`](../../angular/getting-started), [`React`](../../react/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../blazor/getting-started/server-side-application).
