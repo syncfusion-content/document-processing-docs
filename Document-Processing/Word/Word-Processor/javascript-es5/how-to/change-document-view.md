@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Change document view in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Change document view in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Change document view in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Change document view in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change document view 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change document view in ##Platform_Name## Document editor control
+# Change document view in JavaScript (ES5) Document editor control
 
 ## How to change the document view in DocumentEditor component
 

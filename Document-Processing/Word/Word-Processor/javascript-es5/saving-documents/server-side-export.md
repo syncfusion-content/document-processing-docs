@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Server side export in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Server side export in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Server side export in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Server side export in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Server side export 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server side export in ##Platform_Name## Document editor control
+# Server side export in JavaScript (ES5) Document editor control
 
 ## SFDT to DOCX export
 

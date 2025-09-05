@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Form fields in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Form fields in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Form fields in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Form fields in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Form fields 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in ##Platform_Name## Document editor control
+# Form fields in JavaScript (ES6) Document editor control
 
 DocumentEditorContainer component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 

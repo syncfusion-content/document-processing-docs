@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Paragraph format in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Paragraph format in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Paragraph format in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Paragraph format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph format 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paragraph format in ##Platform_Name## Document editor control
+# Paragraph format in JavaScript (ES5) Document editor control
 
 Document Editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Clipboard in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Clipboard in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Clipboard in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Clipboard in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in ##Platform_Name## Document editor control
+# Clipboard in JavaScript (ES5) Document editor control
 
 Document Editor takes advantage of system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 

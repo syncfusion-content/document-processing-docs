@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Shapes in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Shapes in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Shapes in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Shapes in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Shapes 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in ##Platform_Name## Document editor control
+# Shapes in JavaScript (ES5) Document editor control
 
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, DocumentEditor does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
