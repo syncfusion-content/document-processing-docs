@@ -57,7 +57,7 @@ docker-compose up
 
 Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
 
-**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/vue/documentation/api/spreadsheet/#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/vue/documentation/api/spreadsheet/#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet component. For more information on how to get started with the Spreadsheet component, refer to this [`getting started page.`](https://ej2.syncfusion.com/vue/documentation/spreadsheet/getting-started).
+**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/vue/documentation/api/spreadsheet/#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/vue/documentation/api/spreadsheet/#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet component. For more information on how to get started with the Spreadsheet component, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/getting-started).
 
 
 {% tabs %}
@@ -150,4 +150,4 @@ services:
       - "6002:8080"
 ```
 
-Please refer to these getting started pages to create a Spreadsheet in [`Javascript`](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started), [`Angular`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started), [`React`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started), [`ASP.NET Core`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core), and [`ASP.NET MVC`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc).
+Please refer to these getting started pages to create a Spreadsheet in [`Javascript`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/getting-started), [`Angular`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started), [`React`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started), [`ASP.NET Core`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core), and [`ASP.NET MVC`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc).

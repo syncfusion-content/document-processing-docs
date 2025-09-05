@@ -157,7 +157,7 @@ export default {
  @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
 </style>
 ``` -->
-Sample link: [`Cell template`](https://ej2.syncfusion.com/vue/demos/#/material/spreadsheet/cell-template)
+Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/cell-template.html)
 
 ## Note
 
