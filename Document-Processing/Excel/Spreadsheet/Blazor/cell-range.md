@@ -49,14 +49,14 @@ Cell formatting can be applied to or removed from a cell or range of cells by us
 
 ## Autofill
 
-Autofill is used to fill cells with data based on adjacent cells. It follows patterns from adjacent cells when available, eliminating the need to enter repeated data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) property can be used to enable or disable the autofill support.
+Autofill is used to fill cells with data based on adjacent cells. It follows patterns from adjacent cells when available, eliminating the need to enter repeated data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable or disable the autofill support.
 
 > * The default value of the `AllowAutofill` property is **true**.
 
 Autofill can be performed in one of the following ways:
 
 * Drag and drop the cell using the fill handle element.
-* Use the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_System_String_) method programmatically.
+* Use the [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method programmatically.
 
 The available parameters in the `AutofillAsync()` method are:
 
