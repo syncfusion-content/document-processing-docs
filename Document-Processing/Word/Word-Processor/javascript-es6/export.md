@@ -35,7 +35,7 @@ The following example shows how to export documents in Document Editor as Syncfu
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-cs1" %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -46,7 +46,7 @@ The following example shows how to export documents in Document Editor as Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs1" %}
 
 ## Word export
 
@@ -65,7 +65,7 @@ The following example shows how to export the document as Word document (.docx).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-cs2" %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -76,7 +76,7 @@ The following example shows how to export the document as Word document (.docx).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs2" %}
 
 ## Word Template Export 
 
@@ -95,7 +95,7 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-cs4" %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -106,7 +106,7 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs4" %}
 
 ## Text export
 
@@ -123,7 +123,7 @@ The following example shows how to export document as text document (.txt).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-cs3" %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -134,7 +134,7 @@ The following example shows how to export document as text document (.txt).
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/export-container-cs3" %}
 
 ## Export as blob
 

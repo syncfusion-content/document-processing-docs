@@ -10,7 +10,7 @@ documentation: ug
 
 # How to move the selection to specific position in Document Editor component
 
-Using [`select`](https://ej2.syncfusion.com/aspnetcore/documentation/api/document-editor/selection/#select) API in selection module, You can set cursor position to anywhere in the document.
+Using [`select`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/#select) API in selection module, You can set cursor position to anywhere in the document.
 
 ## Selects content based on start and end hierarchical index
 
