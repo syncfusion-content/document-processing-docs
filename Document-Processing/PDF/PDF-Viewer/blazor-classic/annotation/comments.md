@@ -109,7 +109,7 @@ The annotation comment and comment replies can be edited by the following ways:
 
 N> The annotation will be deleted on deleting the comment using comment panel.
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
 
 ### Show or hide the Comment panel
 

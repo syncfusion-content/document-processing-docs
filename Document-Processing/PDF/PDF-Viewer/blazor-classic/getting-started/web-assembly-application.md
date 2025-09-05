@@ -11,7 +11,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF
 
 # Getting Started with Blazor PDF Viewer Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor WebAssembly (WASM) App using Visual Studio.
+This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in your Blazor WebAssembly (WASM) App using Visual Studio.
 
 ## Prerequisites
 

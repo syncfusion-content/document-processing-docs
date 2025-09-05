@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Overview of Blazor Smart PDF Viewer
 
-The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.SmartPdfViewer.html)** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. Its features include [**Document Summarization with Q&A**](./document-summarizer), [**Smart Redaction**](./smart-redaction), and [**Smart Fill**](./smart-fill). It enables users to manage documents more efficiently and securely.
+The **[Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer)** is an advanced component in Syncfusion’s Blazor suite that integrates artificial intelligence to enhance document interaction. Its features include [**Document Summarization with Q&A**](./document-summarizer), [**Smart Redaction**](./smart-redaction), and [**Smart Fill**](./smart-fill). It enables users to manage documents more efficiently and securely.
 
 ## Document Summarization
 
@@ -45,7 +45,7 @@ The **[Blazor Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusio
 
 ## Integration
 
-* Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), Syncfusion.AI.PdfViewer, [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
+* Powered by AI services such as [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI), [Syncfusion.AI.PdfViewer](https://www.nuget.org/packages/Syncfusion.AI.PdfViewer), [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
 * Features can be selectively enabled based on application needs.
 * Compatible with Blazor Server Application
 
