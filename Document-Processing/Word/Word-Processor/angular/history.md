@@ -70,4 +70,4 @@ this.documentEditor.editorHistory.redoLimit = 400;
 ## See Also
 
 * [Feature modules](./feature-module)
-* [Keyboard shortcuts](./keyboard-shortcut.md)
+* [Keyboard shortcuts](./keyboard-shortcut)

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The Localization library allows you to localize default text content of the DocumentEditor. The document editor component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://document.syncfusion.com/demos/word-editor/angular/index.html)
+The Localization library allows you to localize default text content of the DocumentEditor. The document editor component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/default)
 
 Note: Please refer the [Locale](https://github.com/syncfusion/ej2-locale).
 
