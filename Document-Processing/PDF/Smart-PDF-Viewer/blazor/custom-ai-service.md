@@ -134,6 +134,7 @@ builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
 @page "/"
 
 <Syncfusion.Blazor.Popups.SfDialogProvider/>
+@* Add Smart PDF Viewer Component *@
 
 {% endhighlight %}
 {% endtabs %}
