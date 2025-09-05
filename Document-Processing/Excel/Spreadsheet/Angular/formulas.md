@@ -44,7 +44,7 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 
 ## Create User Defined Functions / Custom Functions
 
-The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://ej2.syncfusion.com/angular/documentation/spreadsheet/formulas#supported-formulas).
+The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/formulas#supported-formulas).
 
 You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
 
@@ -159,7 +159,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 ## Supported Formulas
 
-The list of supported formulas can be find in following [`link`](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
+The list of supported formulas can be find in following [`link`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/formulas#supported-formulas).
 
 ## Formula Error Dialog
 
@@ -181,7 +181,7 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/angular-ui-components/angular-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://ej2.syncfusion.com/angular/demos/#/material/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 
