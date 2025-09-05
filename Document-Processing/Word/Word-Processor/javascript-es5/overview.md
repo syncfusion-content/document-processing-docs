@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Overview of ##Platform_Name## Document editor control | Syncfusion
-description: Document editor for ##Platform_Name## is used to create, edit, view and print word documents.
+title: Overview of EJ2 Javascript Document editor control | Syncfusion
+description: Document editor for EJ2 Javascript is used to create, edit, view and print word documents.
 platform: document-processing
 control: Index 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

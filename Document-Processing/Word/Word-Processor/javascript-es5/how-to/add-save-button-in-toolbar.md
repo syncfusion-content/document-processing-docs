@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Add save button in ##Platform_Name## Document editor toolbar | Syncfusion
-description: Learn here to add save button in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Add save button in EJ2 Javascript Document editor toolbar | Syncfusion
+description: Learn here to add save button in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add save button tool bar 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add save button in ##Platform_Name## Document editor toolbar
+# Add save button in EJ2 Javascript Document editor toolbar
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 

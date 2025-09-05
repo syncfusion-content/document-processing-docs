@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Hide tool bar and properties pane in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Hide tool bar and properties pane in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Hide tool bar and properties pane in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Hide tool bar and properties pane in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Hide tool bar and properties pane 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide tool bar and properties pane in ##Platform_Name## Document editor control
+# Hide tool bar and properties pane in EJ2 Javascript Document editor control
 
 **Document editor container** provides the main document view area along with the built-in toolbar and properties pane.
 

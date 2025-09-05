@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Open default document in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Open default document in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Open default document in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Open default document in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open default document 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open default document in ##Platform_Name## Document editor control
+# Open default document in EJ2 Javascript Document editor control
 
 In this article, we are going to see how to open a default document when DocumentEditor & DocumentEditorContainer is initialized.
 

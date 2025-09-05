@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Table of contents in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Table of contents in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Table of contents in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Table of contents in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table of contents 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents in ##Platform_Name## Document editor control
+# Table of contents in EJ2 Javascript Document editor control
 
 The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Content control in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Content control in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Content control in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Content control in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Content control 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content control in ##Platform_Name## Document editor control
+# Content control in EJ2 Javascript Document editor control
 
 Document Editor provides support for inserting, editing content controls
 

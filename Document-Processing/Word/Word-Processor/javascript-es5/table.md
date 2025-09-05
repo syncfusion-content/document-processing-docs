@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Table in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Table in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Table in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Table in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in ##Platform_Name## Document editor control
+# Table in EJ2 Javascript Document editor control
 
 Tables are an efficient way to present information. Document Editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 

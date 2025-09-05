@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize context menu in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Customize context menu in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Customize context menu in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize context menu 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in ##Platform_Name## Document editor control
+# Customize context menu in EJ2 Javascript Document editor control
 
 ## How to customize context menu in Document Editor
 
