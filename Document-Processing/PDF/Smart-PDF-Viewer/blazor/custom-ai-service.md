@@ -79,7 +79,7 @@ public class ErrorDialogService
 ## Step 2: Add the ErrorDialogService in MyCustomService class
 
 {% tabs %}
-{% highlight c# tabtitle="~/MyCustomService.cs" hl_lines="1 3 6 18 19" %}
+{% highlight c# tabtitle="~/MyCustomService.cs" hl_lines="1 3 6 18 19 20" %}
 
  private readonly ErrorDialogService _errorDialogService;
 
@@ -134,7 +134,7 @@ In the Smart PDF Viewer, error messages are displayed using SfDialogService. The
 2.Add the following implementation:
 
 {% tabs %}
-{% highlight c# tabtitle="~/Home.razor.cs"%}
+{% highlight cs tabtitle="~/Home.razor.cs" %}
 
 public partial class Home : IDisposable
 {
