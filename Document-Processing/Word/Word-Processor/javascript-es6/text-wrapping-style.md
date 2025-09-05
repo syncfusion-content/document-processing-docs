@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Text wrapping style in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Text wrapping style in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Text wrapping style in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Text wrapping style in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text wrapping style 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text wrapping style in ##Platform_Name## Document editor control
+# Text wrapping style in JavaScript (ES6) Document editor control
 
 Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, DocumentEditor has only preservation support for image and textbox shape with below wrapping styles.
 

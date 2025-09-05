@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Comments in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Comments in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Comments in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Comments in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in ##Platform_Name## Document editor control
+# Comments in JavaScript (ES6) Document editor control
 
 Document Editor allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
