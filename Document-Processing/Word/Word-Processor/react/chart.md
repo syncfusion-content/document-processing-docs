@@ -26,7 +26,7 @@ The following example shows chart preservation in Document Editor.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/chart-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/chart-cs1" %}
 
 ## Supported Chart Types
 

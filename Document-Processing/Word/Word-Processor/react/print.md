@@ -26,7 +26,7 @@ Refer to the following example for showing a document and print it.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/print-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/print-cs1" %}
 
 Refer to the following example for creating a document and print it.
 
@@ -42,7 +42,7 @@ Refer to the following example for creating a document and print it.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/print-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/print-cs2" %}
 
 > DocumentEditor features are segregated into individual feature-wise modules. To use print inject `Print` module using the `DocumentEditor.Inject(Print)`.
 > To enable print for a document editor instance, set enablePrint as true.
@@ -232,7 +232,7 @@ The following example shows how to customize layout options only for printing.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/print-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/print-cs3" %}
 
 ## See Also
 

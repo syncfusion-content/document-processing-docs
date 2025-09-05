@@ -33,7 +33,7 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/dialog-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/dialog-cs1" %}
 
 ## Paragraph dialog
 
