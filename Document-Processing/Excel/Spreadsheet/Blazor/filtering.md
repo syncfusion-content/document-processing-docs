@@ -380,7 +380,7 @@ Filters can be reapplied using the interface through the following methods:
 
 ### Reapply filter programmatically
 
-The [ReapplyFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ReapplyFilterAsync) method refreshes all active filters to match updated worksheet data. This method is especially beneficial when rows are modified, inserted, or imported.
+The [ReapplyFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ReapplyFiltersAsync) method refreshes all active filters to match updated worksheet data. This method is especially beneficial when rows are modified, inserted, or imported.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
