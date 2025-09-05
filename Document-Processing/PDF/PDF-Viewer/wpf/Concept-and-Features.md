@@ -2,7 +2,7 @@
 layout: post
 title: Concept and Features in WPF PdfViewer Control | Syncfusion
 description: Concept and features in Syncfusion Essential Studio WPF PdfViewer Control, its elements, features, and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

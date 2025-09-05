@@ -2,7 +2,7 @@
 layout: post
 title: Page Navigation | Windows Forms | Syncfusion&reg;
 description: Learn here all about how to programatically navigate between pages and inside pages of Syncfusion&reg; Windows Forms PdfViewer Control and more.
-platform: windowsforms
+platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---

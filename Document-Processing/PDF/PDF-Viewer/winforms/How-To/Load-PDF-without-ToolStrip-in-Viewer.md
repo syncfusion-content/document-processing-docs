@@ -2,7 +2,7 @@
 layout: post
 title: Load-PDF-without-ToolStrip-in-Viewer | Windows Forms | Syncfusion&reg;
 description: Learn how to load the pdf without the toolstrip in viewer by using PdfDocumentView control instead of PdfViewerControl.
-platform: windowsforms
+platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---

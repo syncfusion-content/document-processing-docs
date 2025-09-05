@@ -2,7 +2,7 @@
 layout: post
 title: Ink Annotation in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
 description: Learn about Ink Annotation support in Syncfusion&reg; Essential Studio<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

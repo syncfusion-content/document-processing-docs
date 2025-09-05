@@ -2,7 +2,7 @@
 layout: post
 title: Searching Text in Windows Forms PDF Viewer control | Syncfusion&reg;
 description: Learn about Searching Text support in Syncfusion<sup>&reg;</sup>; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
-platform: windowsforms
+platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---

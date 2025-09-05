@@ -2,7 +2,7 @@
 layout: post
 title: Magnifying PDF documents | Windows Forms | Syncfusion®
 description: Learn about Magnifying PDF documents support in Syncfusion<sup>&reg;</sup>;WinForms Pdf Viewer control, its elements and more.
-platform: windowsforms
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
