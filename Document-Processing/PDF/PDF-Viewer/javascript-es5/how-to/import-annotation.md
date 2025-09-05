@@ -15,7 +15,7 @@ To import annotations into a Syncfusion PDF Viewer when loading a PDF document, 
 
 Here is an example of how you can use the [**importAnnotations()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations when loading a PDF document:
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to import annotations on load PDF document.
 

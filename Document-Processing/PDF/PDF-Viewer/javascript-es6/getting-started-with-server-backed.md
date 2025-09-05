@@ -174,7 +174,7 @@ To create PDF Viewer with additional features, inject the required modules. The 
 
 These modules should be injected into the PDF Viewer using `PdfViewer.Inject` method.
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
+> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
 
 ## How to run the PDF Viewer web service
 

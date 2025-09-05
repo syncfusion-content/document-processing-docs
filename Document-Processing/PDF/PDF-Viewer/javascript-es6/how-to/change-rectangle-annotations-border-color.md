@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The Essential JavaScript PDF Viewer supports customizing the rectangle annotation's property by using the [rectangleSettings](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#rectanglesettings) API.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to change the rectangle annotation's border color using the [rectangleSettings](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#rectanglesettings) API.
 

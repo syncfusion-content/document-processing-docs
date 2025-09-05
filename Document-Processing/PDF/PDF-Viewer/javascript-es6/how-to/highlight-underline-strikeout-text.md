@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer library allows you to highlight, underline and strikeout text in the loaded PDF document programmatically using the [**setAnnotationMode()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to highlight, underline, and strikeout text in index.ts file with button click events.
 

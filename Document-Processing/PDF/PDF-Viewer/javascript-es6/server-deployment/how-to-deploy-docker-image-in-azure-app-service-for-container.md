@@ -53,6 +53,6 @@ az webapp create --resource-group pdfviewerappservice --plan pdfviewerappservice
 
 Browse to the deployed app at `http://<app_name>.azurewebsites.net`,. i.e. `http://pdfviewerappservice.azurewebsites.net`. Open this link in a browser and navigate to the PDF Viewer Web API control `http://pdfviewerappservice.azurewebsites.net/api/pdfviewer`. It returns the default get method response.
 
-Append the app service running the URL `http://pdfviewerappservice.azurewebsites.net/api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/?).
+Append the app service running the URL `http://pdfviewerappservice.azurewebsites.net/api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://helpej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/?).
 
 For more information about the app container service, please look deeper into the [`Microsoft Azure Container Service`](https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-multi-container) for a production-ready setup.

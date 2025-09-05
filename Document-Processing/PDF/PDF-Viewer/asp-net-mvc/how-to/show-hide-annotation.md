@@ -18,7 +18,7 @@ This guide demonstrates how to implement functionality to dynamically show and h
 
 **Step 1:** Set Up the PdfViewer in Your ASP.NET MVC Project
 
-First, follow the steps provided in the [getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+First, follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Add Toggle Button and Implementation
 

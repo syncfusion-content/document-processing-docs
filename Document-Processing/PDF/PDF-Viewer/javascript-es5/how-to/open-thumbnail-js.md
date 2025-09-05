@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Open thumbnail js in ##Platform_Name## Pdfviewer control
 
-The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
+The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
 
 The following steps are used to open the thumbnail.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to open thumbnail.
 

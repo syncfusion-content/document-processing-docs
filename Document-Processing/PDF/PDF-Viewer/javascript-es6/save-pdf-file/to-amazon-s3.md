@@ -19,7 +19,7 @@ To save a PDF file to AWS S3, you can follow the steps below:
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
@@ -101,7 +101,7 @@ To save a PDF file to AWS S3, you can follow the steps below:
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

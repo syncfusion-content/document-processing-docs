@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer library allows you to download a PDF document rendered in the viewer while refreshing the window or clicking the close window using the [onbeforeunload](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#unload) event.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Add the following code sample to download a PDF document while refreshing or closing the window.
 
