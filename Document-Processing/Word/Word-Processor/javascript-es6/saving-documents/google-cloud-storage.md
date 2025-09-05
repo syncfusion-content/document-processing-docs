@@ -136,7 +136,7 @@ In the client-side, to export the document into blob the document using [`saveAs
 {% include code-snippet/document-editor/javascript-es6/document-editor/save-google-cloud-storage/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/save-google-cloud-storage/ts/index.html %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/save-google-cloud-storage/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
