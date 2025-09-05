@@ -10,7 +10,7 @@ documentation: ug
 
 # Getting Started with ASP.NET MVC Spreadsheet Control
 
-This section briefly explains about how to include [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) control in your ASP.NET MVC application using Visual Studio.
+This section briefly explains about how to include [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-mvc-spreadsheet-editor) control in your ASP.NET MVC application using Visual Studio.
 
 ## Prerequisites
 
@@ -103,4 +103,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Get
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)
 
-N> You can refer to our [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET MVC Spreadsheet example](https://ej2.syncfusion.com/aspnetmvc/Spreadsheet/DefaultFunctionalities#/material) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
+N> You can refer to our [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-mvc-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET MVC Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/asp-net-mvc/spreadsheet/defaultfunctionalities) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
