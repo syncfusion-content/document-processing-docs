@@ -35,7 +35,7 @@ The following example shows how to export documents in document editor as Syncfu
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-cs1" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-cs1" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -49,7 +49,7 @@ The following example shows how to export documents in document editor as Syncfu
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-container-cs1" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-container-cs1" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -75,7 +75,7 @@ The following example shows how to export the document as Word document (.docx).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-cs2" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-cs2" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -89,7 +89,7 @@ The following example shows how to export the document as Word document (.docx).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-container-cs2" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-container-cs2" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -115,7 +115,7 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-cs4" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-cs4" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -129,7 +129,7 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-container-cs4" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-container-cs4" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -153,7 +153,7 @@ The following example shows how to export document as text document (.txt).
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-cs3" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-cs3" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -169,7 +169,7 @@ The following example shows how to export document as text document (.txt).
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/export-container-cs3" %}
+{% previewsample "document-processing/code-snippet/document-editor/react/document-editor/export-container-cs3" %}
 
 >Document Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
 >
