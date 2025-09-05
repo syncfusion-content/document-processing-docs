@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Best Practices in Angular Spreadsheet Component
 
-Performance optimization is crucial when working with large datasets in the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
+Performance optimization is crucial when working with large datasets in the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
 ## How to improve performance when opening Excel files in the Spreadsheet?
 
