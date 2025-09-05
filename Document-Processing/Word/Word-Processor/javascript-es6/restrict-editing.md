@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Restrict editing in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about Restrict editing in Syncfusion ##Platform_Name## Document Editor control of Syncfusion Essential JS 2 and more.
+title: Restrict editing in JavaScript (ES6) Document Editor Control | Syncfusion
+description: Learn here all about Restrict editing in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Restrict editing 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict Editing in ##Platform_Name## Document Editor Control
+# Restrict Editing in JavaScript (ES6) Document Editor Control
 
 Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 

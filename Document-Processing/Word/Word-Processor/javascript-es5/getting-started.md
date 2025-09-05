@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with ##Platform_Name## Document editor control | Syncfusion
-description:  Checkout and learn about Getting started with ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript (ES5) Document editor control | Syncfusion
+description:  Checkout and learn about Getting started with JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in ##Platform_Name## Document editor control
+# Getting started in JavaScript (ES5) Document editor control
 
 The Essential<sup style="font-size:70%">&reg;</sup> JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
 

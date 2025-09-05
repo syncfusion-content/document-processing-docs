@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about How to in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: How to in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about How to in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to in ##Platform_Name## Document editor control
+# How to in JavaScript (ES6) Document editor control
 
 Document Editor triggers the [`keyDown`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorKeyDownEventArgs/) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 

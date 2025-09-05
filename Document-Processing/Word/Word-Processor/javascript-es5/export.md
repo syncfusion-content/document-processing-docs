@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Export in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Export in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Export in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Export in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in ##Platform_Name## Document editor control
+# Export in JavaScript (ES5) Document editor control
 
 Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 

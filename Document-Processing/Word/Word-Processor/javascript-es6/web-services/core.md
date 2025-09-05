@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Core in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Core in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Core in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Core in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Core 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Core in ##Platform_Name## Document editor control
+# Core in JavaScript (ES6) Document editor control
 
 DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 

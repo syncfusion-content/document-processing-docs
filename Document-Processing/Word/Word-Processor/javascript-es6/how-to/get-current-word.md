@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Get current word in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Get current word in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Get current word in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Get current word in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get current word 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get current word in ##Platform_Name## Document editor control
+# Get current word in JavaScript (ES6) Document editor control
 
 You can get the current word or paragraph content from the JavaScript Document Editor component as plain text and SFDT (rich text).
 

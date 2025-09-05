@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Print in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Print in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Print in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in ##Platform_Name## Document editor control
+# Print in JavaScript (ES6) Document editor control
 
 To print the document, use the [`print`](https://ej2.syncfusion.com/documentation/api/document-editor#print) method from Document Editor instance.
 
