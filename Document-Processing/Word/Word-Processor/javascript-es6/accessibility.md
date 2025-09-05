@@ -47,7 +47,7 @@ The Document editor component's accessibility levels are ensured through an [acc
 
 The accessibility compliance of the Document editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document editor component with accessibility tools.
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/accessibility-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/accessibility-cs1" %}
 
 ## See also
 

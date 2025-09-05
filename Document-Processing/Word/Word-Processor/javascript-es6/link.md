@@ -32,7 +32,7 @@ The following example illustrates how to add requestNavigate event for DocumentE
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs1" %}
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
@@ -103,7 +103,7 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs2" %}
 
 Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserthyperlink)to insert hyperlink.
 
@@ -148,7 +148,7 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs16" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs16" %}
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 

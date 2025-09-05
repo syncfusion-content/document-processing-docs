@@ -34,6 +34,6 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/spinner-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/spinner-cs1" %}
 
 >Note: In above example, we have used setInterval to hide spinner, just for demo purpose.

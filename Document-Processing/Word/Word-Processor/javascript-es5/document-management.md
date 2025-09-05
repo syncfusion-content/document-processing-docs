@@ -64,7 +64,7 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs1" %}
 
 ## See Also
 
