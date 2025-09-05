@@ -23,7 +23,7 @@ The following example shows chart preservation in Document Editor.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/chart-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/chart-cs1" %}
 
 # Supported Chart Types
 
