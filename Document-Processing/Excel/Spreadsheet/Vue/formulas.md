@@ -153,7 +153,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 ## Supported Formulas
 
-The list of supported formulas can be find in following [`link`](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
+The list of supported formulas can be find in following [`link`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/formulas#supported-formulas).
 
 ## Formula Error Dialog
 
