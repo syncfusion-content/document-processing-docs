@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to disable drag and drop in document editor in React Document editor component
 
-Document Editor provides support to drag and drop contents within the component and it can be customized(enable and disable) using [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documenteditorsettings#allowDragAndDrop)  property in Document editor settings.
+Document Editor provides support to drag and drop contents within the component and it can be customized(enable and disable) using [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorSettingsModel/#allowdraganddrop)  property in Document editor settings.
 
 The following example illustrates to customize the drag and drop option.
 
