@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Table format in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Table format in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Table format in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Table format in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table format 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table format in ##Platform_Name## Document editor control
+# Table format in EJ2 Javascript Document editor control
 
 Document Editor customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
 

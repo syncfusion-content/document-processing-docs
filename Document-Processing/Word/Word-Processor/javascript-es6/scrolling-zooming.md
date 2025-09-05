@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Scrolling zooming in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Scrolling zooming in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Scrolling zooming in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Scrolling zooming in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling zooming 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling zooming in ##Platform_Name## Document editor control
+# Scrolling zooming in EJ2 TypeScript Document editor control
 
 The Document Editor renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
 

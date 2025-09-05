@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save document to One Drive in ##Platform_Name## Document editor control | Syncfusion
-description:  Learn about how to Save document to One Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to One Drive in EJ2 TypeScript Document editor control | Syncfusion
+description:  Learn about how to Save document to One Drive in EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to One Drive
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---

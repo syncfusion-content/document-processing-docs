@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Open document by address in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Open document by address in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Open document by address in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Open document by address in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open document by address 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document by address in ##Platform_Name## Document editor control
+# Open document by address in EJ2 TypeScript Document editor control
 
 ## How to open a document from URL in DocumentEditor
 

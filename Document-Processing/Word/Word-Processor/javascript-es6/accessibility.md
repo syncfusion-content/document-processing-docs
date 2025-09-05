@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Accessibility in ##Platform_Name## Document editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion ##Platform_Name## Document editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in EJ2 TypeScript Document editor component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion EJ2 TypeScript Document editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: document-processing
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---

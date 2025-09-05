@@ -1,15 +1,15 @@
 ---
 layout: post
-title: R t l in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about R t l in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: R t l in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about R t l in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: R t l 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# R t l in ##Platform_Name## Document editor control
+# R t l in EJ2 Javascript Document editor control
 
 Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
 

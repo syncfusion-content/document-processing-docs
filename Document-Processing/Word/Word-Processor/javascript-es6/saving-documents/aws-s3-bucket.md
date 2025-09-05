@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save document to AWS S3 in ##Platform_Name## Document editor control | Syncfusion
-description:  Learn about how to Save document to AWS S3 in ##Platform_Name## Document editor of Syncfusion Essential JS 2 and more details.
+title: Save document to AWS S3 in EJ2 TypeScript Document editor control | Syncfusion
+description:  Learn about how to Save document to AWS S3 in EJ2 TypeScript Document editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---

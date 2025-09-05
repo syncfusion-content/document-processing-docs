@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Page number and navigate Page in Document editor control | Syncfusion
-description: Learn here all about Insert page number and navigate to page in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Insert page number and navigate to page in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Insert page number and navigate to page 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert page number and navigate to page in ##Platform_Name## Document editor control
+# Insert page number and navigate to page in EJ2 Javascript Document editor control
 
 You can insert page number and navigate to specific page in JavaScript Document Editor component by following ways.
 

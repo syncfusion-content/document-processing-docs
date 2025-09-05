@@ -1,11 +1,11 @@
 ---
 layout: post
-title: how to enable ruler in ##Platform_Name## Document editor control | Syncfusion
+title: how to enable ruler in EJ2 TypeScript Document editor control | Syncfusion
 component: "DocumentEditor"
-description: Learn how to enable ruler in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+description: Learn how to enable ruler in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Enable ruler 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---

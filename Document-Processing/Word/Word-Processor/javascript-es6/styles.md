@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Styles in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Styles in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Styles in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Styles in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Styles 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in ##Platform_Name## Document editor control
+# Styles in EJ2 TypeScript Document editor control
 
 Styles are useful for applying a set of formatting consistently throughout the document. In Document Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 

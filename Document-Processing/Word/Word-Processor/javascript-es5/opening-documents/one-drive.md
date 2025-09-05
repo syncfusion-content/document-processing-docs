@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open document from One Drive in ##Platform_Name## Document editor control | Syncfusion
-description: Learn about how to Open document from One Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open document from One Drive in EJ2 Javascript Document editor control | Syncfusion
+description: Learn about how to Open document from One Drive in EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from One Drive
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

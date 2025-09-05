@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Disable header and footer edit in ##Platform_Name## Document editor | Syncfusion
-description: Learn here all about disabling editing in header and footer ##Platform_Name## Document editor control.
+title: Disable header and footer edit in EJ2 Javascript Document editor | Syncfusion
+description: Learn here all about disabling editing in header and footer EJ2 Javascript Document editor control.
 platform: document-processing
 control: Disable header and footer edit in document editor 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable header and footer edit in ##Platform_Name## Document editor
+# Disable header and footer edit in EJ2 Javascript Document editor
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 

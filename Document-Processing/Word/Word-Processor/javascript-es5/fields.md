@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Fields in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Fields in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Fields in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Fields in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Fields 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fields in ##Platform_Name## Document editor control
+# Fields in EJ2 Javascript Document editor control
 
 Document Editor has preservation support for all types of fields in an existing word document without any data loss.
 

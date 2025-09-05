@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Dialog in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Dialog in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Dialog in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Dialog in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Dialog 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in ##Platform_Name## Document editor control
+# Dialog in EJ2 TypeScript Document editor control
 
 Document Editor provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
 

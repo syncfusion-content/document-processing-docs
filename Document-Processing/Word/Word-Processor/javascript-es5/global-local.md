@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Global local in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Global local in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Global local in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Global local in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global local 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in ##Platform_Name## Document editor control
+# Global local in EJ2 Javascript Document editor control
 
 ## Localization
 

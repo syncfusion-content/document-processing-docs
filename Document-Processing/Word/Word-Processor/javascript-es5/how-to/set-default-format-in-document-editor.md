@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Set default format in document editor in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Set default format in document editor in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Set default format in document editor in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Set default format in document editor in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Set default format in document editor 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set default format in document editor in ##Platform_Name## Document editor control
+# Set default format in document editor in EJ2 Javascript Document editor control
 
 You can set the default character format, paragraph format and section format in Document editor.
 

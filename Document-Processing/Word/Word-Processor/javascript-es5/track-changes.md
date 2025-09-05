@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Track changes in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Track changes in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Track changes in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Track changes in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Track changes 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track changes in ##Platform_Name## Document editor control
+# Track changes in EJ2 Javascript Document editor control
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
 

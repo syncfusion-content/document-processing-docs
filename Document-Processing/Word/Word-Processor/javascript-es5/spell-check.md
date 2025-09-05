@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Spell check in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Spell check in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Spell check in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Spell check in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spell check 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell check in ##Platform_Name## Document editor control
+# Spell check in EJ2 Javascript Document editor control
 
 Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
 

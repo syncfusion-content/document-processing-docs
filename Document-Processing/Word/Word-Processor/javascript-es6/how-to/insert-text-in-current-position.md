@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to insert text in ##Platform_Name## Document editor | Syncfusion
-description: Learn here all about Insert text in current position in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: How to insert text in EJ2 TypeScript Document editor | Syncfusion
+description: Learn here all about Insert text in current position in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Insert text in current position 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text in current position in ##Platform_Name## Document editor
+# Insert text in current position in EJ2 TypeScript Document editor
 
 You can insert the text, paragraph and rich-text content in JavaScript Document Editor component.
 

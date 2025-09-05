@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bookmark in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Bookmark in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Bookmark in EJ2 Javascript Document editor control | Syncfusion
+description: Learn here all about Bookmark in Syncfusion EJ2 Javascript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Bookmark 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in ##Platform_Name## Document editor control
+# Bookmark in EJ2 Javascript Document editor control
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
