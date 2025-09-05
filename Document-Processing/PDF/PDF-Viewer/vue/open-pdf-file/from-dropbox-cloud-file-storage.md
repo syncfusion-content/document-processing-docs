@@ -24,7 +24,7 @@ To create a Dropbox API App, you should follow the official documentation provid
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
 
-**Step 3:** Modify the `src/App.vue` File in the Angular Project
+**Step 3:** Modify the `src/App.vue` File in the Vue Project
 
 1. Import the required namespaces at the top of the file:
 

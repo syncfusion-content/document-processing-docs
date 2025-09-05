@@ -20,7 +20,7 @@ To save a PDF file to Azure Blob Storage, you can follow the steps below:
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `src/index.js` File in the Angular Project
+**Step 2:** Modify the `src/index.js` File in the React Project
 
 1. Import the required namespaces at the top of the file:
 
