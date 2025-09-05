@@ -52,7 +52,7 @@ You can deploy web APIs for server-side dependencies of Document Editor componen
 * [ASP.NET MVC](./web-services/mvc)
 * [Java](./web-services/java)
 
-To know more about server-side dependencies, refer this [page](./web-services).
+To know more about server-side dependencies, refer this [page](./web-services-overview).
 
 #### Which operations require server-side interaction
 
