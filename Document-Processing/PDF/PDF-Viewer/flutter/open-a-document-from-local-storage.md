@@ -2,7 +2,7 @@
 layout: post
 title: Open a PDF From Local Storage in Flutter PDF Viewer | Syncfusion
 description: Learn here about opening a PDF document from local storage in Syncfusion® Flutter PDF Viewer widget (SfPdfViewer).
-platform: flutter
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

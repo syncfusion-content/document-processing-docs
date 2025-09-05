@@ -2,7 +2,7 @@
 layout: post
 title:  Select & copy text using PDF viewer Xamarin.Android | Syncfusion
 description: Select and copy text support allows user to select the text in the PDF document and copy it to the clipboard using PDF Viewer Xamarin.Android
-platform: Xamarin.Android
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

@@ -142,5 +142,5 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 ## See Also
 
-* [Options pane](./dialog.md)
+* [Options pane](./dialog)
 * [Feature modules](./feature-module)

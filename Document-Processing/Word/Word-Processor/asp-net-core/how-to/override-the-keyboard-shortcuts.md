@@ -35,7 +35,7 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/override/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/override/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Override.cs" %}
 {% endhighlight %}{% endtabs %}

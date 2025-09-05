@@ -2,7 +2,7 @@
 layout: post
 title: Single page view mode in PDF Viewer Xamarin.iOS | Syncfusion
 description: Learn about single page view mode support in Syncfusion Xamarin.iOS Pdf Viewer (SfPdfViewer) control and more details.
-platform: Xamarin.iOS
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

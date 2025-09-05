@@ -2,7 +2,7 @@
 layout: post
 title: UI Customization in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about the UI customization options in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

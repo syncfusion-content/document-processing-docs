@@ -2,7 +2,7 @@
 layout: post
 title:  View & review PDF using PDF Viewer Xamarin.iOS | Syncfusion
 description: Getting started section demonstrates how to create an application that displays a PDF file using Xamarin.iOS PDF Viewer
-platform: xamarin.ios
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

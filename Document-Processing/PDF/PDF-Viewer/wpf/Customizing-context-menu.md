@@ -2,7 +2,7 @@
 layout: post
 title: Customizing context menu in WPF Pdf Viewer | Syncfusion&reg;
 description: Learn about Customizing context menu support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

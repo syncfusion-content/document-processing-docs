@@ -85,7 +85,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React Spreadsheet component](https://www.syncfusion.com/react-components/react-spreadsheet) is used in the project. To install the React Spreadsheet component, use the following command:
+Here, the [React Spreadsheet component](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is used in the project. To install the React Spreadsheet component, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -445,6 +445,6 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/spreadsheet/feature-list).
+To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/feature-list).
 
 > [View the NEXT.js Spreadsheet sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-spreadsheet).

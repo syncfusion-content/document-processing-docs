@@ -2,7 +2,7 @@
 layout: post
 title:  Add & modify shapes using PDF viewer Xamarin.Android | Syncfusion
 description: PDF viewer Xamarin.Android allows user to add, move and delete shapes such as line, rectangle & ellipse PDF document
-platform: Xamarin.Android
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
