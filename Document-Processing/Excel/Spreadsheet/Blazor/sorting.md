@@ -73,7 +73,7 @@ If the range **B2:D10** is selected and the active cell is in **Column D**, the 
 
 ### Sort via programmatically
 
-The [SortRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SortRangeAsync_System_String_System_String_System_String_) method enables sorting of a specified range of cells based on the values in a specific column. This method provides a programmatic way to sort data without using the UI. The available parameters in the `SortRangeAsync` method are:
+The [SortRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SortRangeAsync_System_String_Syncfusion_Blazor_Spreadsheet_SortDirection_) method enables sorting of a specified range of cells based on the values in a specific column. This method provides a programmatic way to sort data without using the UI. The available parameters in the `SortRangeAsync` method are:
 
 | **Parameter**     | **Type**                   | **Description** |
 |-------------------|----------------------------|-----------------|
