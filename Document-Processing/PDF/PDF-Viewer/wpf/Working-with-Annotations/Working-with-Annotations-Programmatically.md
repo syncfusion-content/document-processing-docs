@@ -2,7 +2,7 @@
 layout: post
 title: Working with annotations using WPF PDF Viewer | Syncfusion&reg;
 description: Learn about Selecting and Modifying the annotation's properties programmatically using WPF Pdf Viewer.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  Changing the current toolbar design to the old design | Syncfusion®
 description: This section explains how to change the current toolbar to the old toolbar and contains the sample link for this.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

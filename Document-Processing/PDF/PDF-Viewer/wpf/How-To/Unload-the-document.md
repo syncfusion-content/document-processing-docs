@@ -2,7 +2,7 @@
 layout: post
 title: Unload the document in WPF Pdf Viewer | Syncfusion®
 description: Learn how the Syncfusion® WPF PDF Viewer control automatically unloads the current document when loading a new one, eliminating the need for manual unloading.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
