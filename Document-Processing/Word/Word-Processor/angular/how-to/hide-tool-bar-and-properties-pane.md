@@ -89,4 +89,4 @@ export class AppComponent implements OnInit {
 
 ## See Also
 
-* [How to customize the toolbar](./how-to/customize-tool-bar)
+* [How to customize the toolbar](../how-to/customize-tool-bar)
