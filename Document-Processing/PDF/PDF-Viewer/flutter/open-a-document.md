@@ -2,7 +2,7 @@
 layout: post
 title: Open a Document in Flutter PDF Viewer | Syncfusion
 description: Learn here all about opening a PDF document in Syncfusion® Flutter PDF Viewer (SfPdfViewer) and more.
-platform: flutter
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
