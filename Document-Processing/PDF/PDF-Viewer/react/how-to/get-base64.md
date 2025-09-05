@@ -16,7 +16,7 @@ This guide demonstrates how to fetch the base64-encoded value of a PDF document 
 
 ### How to Retrieve Base64 Value
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
 
 
 **Step 2:** Set Up Your React Component

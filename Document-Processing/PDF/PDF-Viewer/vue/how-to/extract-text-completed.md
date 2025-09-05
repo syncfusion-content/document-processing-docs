@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Extract text using extractTextCompleted Event in Vue Pdfviewer component
 
-The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#extracttextcompleted) event.
+The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#extracttextcompleted) event.
 
 The following steps are used to extract the text from the page.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** The following code snippet explains how to extract the text from a page.
 

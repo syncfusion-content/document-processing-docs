@@ -30,7 +30,7 @@ The PDF Viewer control provides the support to different Form Field events. The 
 
 ## formFieldAdd event
 
-The [formFieldAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formfieldaddargs/) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide the necessary information about the form field addition.
+The [formFieldAdd](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/formfieldaddargs/) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide the necessary information about the form field addition.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -116,7 +116,7 @@ export default {
 
 ## formFieldClick event
 
-The [formFieldClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldClickArgs/) event is triggered when a form field is clicked. The event arguments provide the necessary information about the form field click event.
+The [formFieldClick](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldClickArgs/) event is triggered when a form field is clicked. The event arguments provide the necessary information about the form field click event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -202,7 +202,7 @@ export default {
 
 ## formFieldDoubleClick event
 
-The [formFieldDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldDoubleClickArgs/) event is triggered when a form field is double-clicked. The event arguments provide the necessary information about the form field double-click event.
+The [formFieldDoubleClick](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldDoubleClickArgs/) event is triggered when a form field is double-clicked. The event arguments provide the necessary information about the form field double-click event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -288,7 +288,7 @@ export default {
 
 ## formFieldFocusOut event
 
-The [formFieldFocusOut](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formfieldfocusouteventargs/) event is triggered when a form field loses focus. The event arguments provide the necessary information about the form field focus out event.
+The [formFieldFocusOut](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/formfieldfocusouteventargs/) event is triggered when a form field loses focus. The event arguments provide the necessary information about the form field focus out event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -374,7 +374,7 @@ export default {
 
 ## formFieldMouseLeave event
 
-The [formFieldMouseLeave](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formfieldmouseleaveargs/) event is triggered when the mouse leaves a form field. The event arguments provide the necessary information about the form field mouse leave event.
+The [formFieldMouseLeave](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/formfieldmouseleaveargs/) event is triggered when the mouse leaves a form field. The event arguments provide the necessary information about the form field mouse leave event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

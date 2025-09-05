@@ -395,7 +395,7 @@ export default {
 
 ## Highlight a text programmatically
 
-The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply highlighting programmatically:
 
@@ -942,7 +942,7 @@ export default {
 
 ## Underline a text programmatically
 
-The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Underline programmatically:
 
@@ -1491,7 +1491,7 @@ export default {
 
 ## Strikethrough a text programmatically
 
-The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
 
@@ -2042,7 +2042,7 @@ export default {
 
 ## Squiggly a text programmatically
 
-The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
 

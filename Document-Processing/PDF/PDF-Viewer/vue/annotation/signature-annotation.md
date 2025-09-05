@@ -276,7 +276,7 @@ export default {
 
 ## Adding Handwritten signature programmatically to the PDF document
 
-With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here is an example of how you can use the **addAnnotation()** method to add the Handwritten signature programmatically
 

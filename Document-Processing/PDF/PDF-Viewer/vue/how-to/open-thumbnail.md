@@ -14,7 +14,7 @@ The PDF Viewer library allows you to open the thumbnail of the PDF document usin
 
 The following steps are used to open the thumbnail of the PDF Document.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create simple PDF Viewer sample in Vue.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create simple PDF Viewer sample in Vue.
 
 **Step 2:** Add the following code snippet to open the thumbnail in the resizing event of splitter.
 

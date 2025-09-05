@@ -14,7 +14,7 @@ Change the Font Family in Type Signature of the Syncfusion<sup style="font-size:
 ### Signature Field property
 The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the ability to change the font family for Signature and Initial Field using `typeSignatureFonts` and `typeInitialFonts` property.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
 

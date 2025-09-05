@@ -209,7 +209,7 @@ export default {
 
 ## Customizing Print Quality using printScaleFactor API
 
-The PDF Viewer allows you to adjust the print quality using the [printScaleFactor](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printScaleFactor) API. The quality of the print improves as the printScaleFactor value increases from 0.5 to 5.
+The PDF Viewer allows you to adjust the print quality using the [printScaleFactor](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#printScaleFactor) API. The quality of the print improves as the printScaleFactor value increases from 0.5 to 5.
 
 When the value is less than 0.5, the PDF is printed at a standard quality. When the value exceeds 5, the PDF is still printed at the standard quality. In standard quality, printScaleFactor value is set to 1 as default value.
 The effective range for printScaleFactor is between 0.5 and 5. Higher values within this range will result in better print quality, but also increase the print time.

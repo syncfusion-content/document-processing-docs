@@ -14,7 +14,7 @@ The PDF Viewer library allows you to select an annotation from a PDF document. S
 
 The following steps are used to select an annotation from a PDF Document.
 
-**Step 1:** Follow the steps provided in this [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** The following code sample represents how to select an annotation in a button click.
 

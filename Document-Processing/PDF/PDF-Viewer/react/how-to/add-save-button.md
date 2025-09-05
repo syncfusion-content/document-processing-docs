@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Save Button - New `save` button-item can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Newly added save button-item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
+* Save Button - New `save` button-item can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Newly added save button-item click action can be defined in [`toolbarclick`](https://helpej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - `Save` button-item can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - `Save` button-item can be shown or hidden using the [`ToolbarSettings`](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable -  `Save` button-item can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  `Save` button-item can be enabled or disable using [`enabletoolbaritem`](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

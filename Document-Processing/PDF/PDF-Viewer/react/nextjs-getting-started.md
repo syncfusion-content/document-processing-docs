@@ -175,6 +175,6 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the PDF Viewer component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started#module-injection).
+To learn more about the functionality of the PDF Viewer component, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
 
 > [View the NEXT.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs).

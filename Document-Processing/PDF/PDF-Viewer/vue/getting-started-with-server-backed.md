@@ -113,7 +113,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the PDF Viewer component with [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#documentpath) and [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#serviceurl) property.
+2. In the `template` section, define the PDF Viewer component with [documentPath](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#documentpath) and [serviceUrl](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#serviceurl) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -339,7 +339,7 @@ N> When configuring the server-backed PDF viewer, it's Essential<sup style="font
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20server-back).
 
-> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
+> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
 
 N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
 

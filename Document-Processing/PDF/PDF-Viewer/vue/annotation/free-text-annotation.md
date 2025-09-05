@@ -190,7 +190,7 @@ export default {
 
 ## Adding a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows you to add the free text annotation in the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows you to add the free text annotation in the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here is an example of how you can use the **addAnnotation()** method to move the free text annotation programmatically:
 

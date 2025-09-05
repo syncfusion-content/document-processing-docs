@@ -335,4 +335,4 @@ The output will appear as follows:
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20Vue-3%20-%20Standalone).
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started-application) documentation.

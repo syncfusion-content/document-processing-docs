@@ -17,7 +17,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the abi
 
 The following steps are used to include custom fonts for signature and initial field.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
 

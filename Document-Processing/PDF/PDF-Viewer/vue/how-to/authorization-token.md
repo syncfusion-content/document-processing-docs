@@ -14,7 +14,7 @@ The PDF Viewer library allows you to include the authorization token in the PDF 
 
 The following steps are used to include the authorization token to the PDF viewer control.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample in React.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create simple PDF Viewer sample in React.
 
 **Step 2:** Add the following code snippet to include the authorization token.
 
