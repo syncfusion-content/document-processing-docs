@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Image in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Image in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Image in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Image in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Image 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in ##Platform_Name## Document editor control
+# Image in EJ2 TypeScript Document editor control
 
 Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 

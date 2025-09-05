@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Link in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Link in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Link in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Link in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in ##Platform_Name## Document editor control
+# Link in EJ2 TypeScript Document editor control
 
 Document Editor supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
 

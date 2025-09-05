@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Change the cursor color in document editor in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Change the cursor color in document editor in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Change the cursor color in document editor in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Change the cursor color in document editor in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change the cursor color in document editor 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the cursor color in document editor in ##Platform_Name## Document editor control
+# Change the cursor color in document editor in EJ2 TypeScript Document editor control
 
 Document Editor default cursor color is black. The user can change the color by overriding the css property using class name. The Document editor cursor css have a class named `e-de-blink-cursor`.
 

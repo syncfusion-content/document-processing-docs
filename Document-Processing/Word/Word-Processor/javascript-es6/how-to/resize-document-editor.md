@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Resize document editor in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Resize document editor in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Resize document editor in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Resize document editor in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resize document editor 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize document editor in ##Platform_Name## Document editor control
+# Resize document editor in EJ2 TypeScript Document editor control
 
 In this article, we are going to see how to change height and width of Document Editor.
 

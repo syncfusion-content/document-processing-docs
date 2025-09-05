@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Import in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Import in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Import in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Import in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in ##Platform_Name## Document editor control
+# Import in EJ2 TypeScript Document editor control
 
 In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 

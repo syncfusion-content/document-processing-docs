@@ -1,15 +1,15 @@
 ---
 layout: post
-title: History in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about History in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: History in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about History in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: History 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# History in ##Platform_Name## Document editor control
+# History in EJ2 TypeScript Document editor control
 
 Document Editor tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 

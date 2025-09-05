@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Read only default in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Read only default in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Read only default in EJ2 TypeScript Document editor control | Syncfusion
+description: Learn here all about Read only default in Syncfusion EJ2 TypeScript Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read only default 
-publishingplatform: ##Platform_Name##
+publishingplatform: EJ2 TypeScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read only default in ##Platform_Name## Document editor control
+# Read only default in EJ2 TypeScript Document editor control
 
 In this article, we are going to see how to open a document in read only mode by default in DocumentEditor & DocumentEditorContainer.
 
