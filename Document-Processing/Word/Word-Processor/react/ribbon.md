@@ -34,7 +34,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
-    let hostUrl = "https://document.syncfusion.com/web-services/word-editor/api/documenteditor/";
+    let hostUrl = "https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/";
     let container = React.useRef(null);
     // Initialize the Document Editor Container with Ribbon mode enabled
     return (
@@ -82,7 +82,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
-    let hostUrl = "https://document.syncfusion.com/web-services/word-editor/api/documenteditor/";
+    let hostUrl = "https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/";
     let container = React.useRef(null);;
     // Initialize the Document Editor Container with Ribbon mode enabled
     return (

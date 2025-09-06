@@ -285,7 +285,7 @@ ej.base.L10n.load({
         }
     }
 });
-var documenteditor = new ej.documenteditor.DocumentEditor({isReadOnly: false,enableRtl: true,locale: 'ar-AE', serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'});
+var documenteditor = new ej.documenteditor.DocumentEditor({isReadOnly: false,enableRtl: true,locale: 'ar-AE', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'});
 documenteditor.enableAllModules();
 var containerPanel = document.getElementById('container');
 function updateContainerSize() {

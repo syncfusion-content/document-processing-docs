@@ -29,7 +29,7 @@ You can use the `maximumRows` property to set the maximum number of rows allowed
 Refer to the following sample code.
 
 ```ts
- <ejs-documenteditorcontainer id="container" serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" enableToolbar=true created="onCreated" height="590px"></ejs-documenteditorcontainer>
+ <ejs-documenteditorcontainer id="container" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar=true created="onCreated" height="590px"></ejs-documenteditorcontainer>
 
 <script>
     var container;
@@ -57,7 +57,7 @@ You can use the `maximumColumns` property to set the maximum number of columns a
 Refer to the following sample code.
 
 ```ts
- <ejs-documenteditorcontainer id="container" serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" enableToolbar=true created="onCreated" height="590px"></ejs-documenteditorcontainer>
+ <ejs-documenteditorcontainer id="container" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar=true created="onCreated" height="590px"></ejs-documenteditorcontainer>
 
 <script>
     var container;

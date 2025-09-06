@@ -175,7 +175,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
   import { provide } from 'vue';
   import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
 
-  const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+  const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
   const documenteditor = null;
 
   provide('DocumentEditor', [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]);
@@ -196,7 +196,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
     },
     data () {
       return {
-        serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/'
+        serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
       };
     },
     provide: {
@@ -208,7 +208,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 **Step 4:** Summarizing the above steps, update the `src/App.vue` file with following code.
 
@@ -223,7 +223,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
   import { provide } from 'vue';
   import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
 
-  const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+  const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
   const documenteditor = null;
 
   provide('DocumentEditor', [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]);
@@ -260,7 +260,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
     },
     data () {
       return {
-        serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/'
+        serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
       };
     },
     provide: {
@@ -284,7 +284,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 #### Running the DocumentEditor application
 
@@ -352,7 +352,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
   import { provide } from 'vue';
   import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+  const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
   const documentEditorContainer = null;
 
   provide('DocumentEditorContainer', [Toolbar]);
@@ -373,7 +373,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
     },
     data () {
       return {
-        serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/'
+        serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
       };
     },
     provide: {
@@ -385,7 +385,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 **Step 4:** Summarizing the above steps, update the `src/App.vue` file with following code.
 
@@ -400,7 +400,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
   import { provide, ref } from 'vue';
   import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+  const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
   const documentEditorContainer = ref(null);
 
   provide('DocumentEditorContainer', [Toolbar]);
@@ -437,7 +437,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
     },
     data () {
       return {
-        serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/'
+        serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
       };
     },
     provide: {
@@ -461,7 +461,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 #### Running the DocumentEditorContainer application
 

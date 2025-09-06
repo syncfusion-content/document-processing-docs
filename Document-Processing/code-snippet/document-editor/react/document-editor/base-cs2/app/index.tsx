@@ -15,7 +15,7 @@ import {
 DocumentEditorComponent.Inject(Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog);
 function Default() {
     return (
-        <DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" isReadOnly={false} enablePrint={true}
+        <DocumentEditorComponent id="container" height={'330px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" isReadOnly={false} enablePrint={true}
             enableSelection={true} enableEditor={true} enableEditorHistory={true}
             enableContextMenu={true} enableSearch={true} enableOptionsPane={true}
             enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true}

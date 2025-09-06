@@ -21,7 +21,7 @@ The following code shows how to add custom option in context menu.
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
@@ -59,7 +59,7 @@ The following code shows how to hide default context menu and add custom option 
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
@@ -80,7 +80,7 @@ The following code shows how to hide/show added custom option in context menu us
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');

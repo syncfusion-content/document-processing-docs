@@ -31,7 +31,7 @@ function App() {
         });
     }
     return (
-        <DocumentEditorComponent id="container" ref={(scope) => { documentEditor = scope; }} serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" isReadOnly={false} enablePrint={true}
+        <DocumentEditorComponent id="container" ref={(scope) => { documentEditor = scope; }} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" isReadOnly={false} enablePrint={true}
             enableSelection={true} enableEditor={true} enableEditorHistory={true}
             enableContextMenu={true} enableSearch={true} enableOptionsPane={true}
             enableBookmarkDialog={true} enableBordersAndShadingDialog={true} enableFontDialog={true} enableTableDialog={true} enableParagraphDialog={true} enableHyperlinkDialog={true} enableImageResizer={true} enableListDialog={true}

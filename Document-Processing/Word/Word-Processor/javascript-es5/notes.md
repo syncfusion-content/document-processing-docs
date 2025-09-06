@@ -27,7 +27,7 @@ import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor
 DocumentEditorContainer.Inject(Toolbar);
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 container.appendTo('#DocumentEditor');
 //Insert footnote in current selection.
@@ -44,7 +44,7 @@ import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor
 DocumentEditorContainer.Inject(Toolbar);
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 container.appendTo('#DocumentEditor');
 //Insert endnote in current selection.
