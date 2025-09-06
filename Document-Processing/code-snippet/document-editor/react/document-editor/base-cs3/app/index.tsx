@@ -9,7 +9,7 @@ import {
 DocumentEditorContainerComponent.Inject(Toolbar);
 function Default() {
     return (
-    <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" enableToolbar={true} />);
+    <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true} />);
 }
 export default Default
 const root = ReactDOM.createRoot(document.getElementById('sample'));

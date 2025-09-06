@@ -43,7 +43,7 @@
           <div id='DocumentEditor' style='height:350px'></div>
       <script>
           // Initialize DocumentEditor component.
-          var documenteditor = new ej.documenteditor.DocumentEditor({ height: '370px', isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/' });
+          var documenteditor = new ej.documenteditor.DocumentEditor({ height: '370px', isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
 
           documenteditor.acceptTab = true;
           //Enable all the build in modules.

@@ -33,7 +33,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
-  let hostUrl = "https://document.syncfusion.com/web-services/word-editor/api/documenteditor/";
+  let hostUrl = "https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/";
   let container = React.useRef(null);
   const fileMenuItemClick = (args) => {
     if (args.item.id) {
@@ -83,7 +83,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
-    let hostUrl = "https://document.syncfusion.com/web-services/word-editor/api/documenteditor/";
+    let hostUrl = "https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/";
     let container = React.useRef(null);
     return (
         <div className="control-pane">
@@ -147,7 +147,7 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
-  const hostUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+  const hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
   const container = React.useRef(null);
 
   // To add the tab at end of tab
@@ -241,7 +241,7 @@ import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/e
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 
 const Default = () => {
-  const hostUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+  const hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
   const container = React.useRef(null);
 
   // Add the new group at the end of the Home tab
@@ -350,7 +350,7 @@ import {
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 
 const Default = () => {
-  const hostUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+  const hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
   const container = React.useRef(null);
   
   // To add the item at the end of the specified group (the item will be added at the end of the Undo group)

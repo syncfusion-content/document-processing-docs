@@ -14,7 +14,7 @@ new Vue({
 `,
 
       data(){
-          return {serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/'}
+          return {serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'}
       },
       provide: {
           DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
