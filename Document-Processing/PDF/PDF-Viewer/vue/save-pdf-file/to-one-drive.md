@@ -18,7 +18,7 @@ Need to create a Microsoft Graph API application and obtain the necessary creden
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Follow the instructions provided in this [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
 
 **Step 3:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

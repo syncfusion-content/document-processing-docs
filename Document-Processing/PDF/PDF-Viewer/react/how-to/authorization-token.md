@@ -21,7 +21,7 @@ Here is an example of how you can use the **AjaxRequestSettings** property to in
   <PdfViewerComponent
     id="container"
     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+    serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
     style={{ height: '640px' }}
     ajaxRequestSettings={{
       ajaxHeaders: [

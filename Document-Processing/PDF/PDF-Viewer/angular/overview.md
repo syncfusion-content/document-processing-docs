@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of Angular PDF Viewer Component
 
-The [`angular PDF Viewer`](https://document.syncfusion.com/#/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [`angular PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
 
 ## Setup
