@@ -47,7 +47,7 @@ import { SwitchModule } from '@syncfusion/ej2-angular-buttons';
     imports: [DocumentEditorContainerModule, SwitchModule,  ]
 })
 export class AppComponent {
-    public hostUrl: string = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+    public hostUrl: string = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
     @ViewChild('documenteditor_default')
     public container: DocumentEditorContainerComponent;
@@ -88,7 +88,7 @@ import { SwitchModule } from '@syncfusion/ej2-angular-buttons';
     imports: [DocumentEditorContainerModule, SwitchModule,  ]
 })
 export class AppComponent {
-    public hostUrl: string = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+    public hostUrl: string = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
     @ViewChild('documenteditor_default')
     public container: DocumentEditorContainerComponent;

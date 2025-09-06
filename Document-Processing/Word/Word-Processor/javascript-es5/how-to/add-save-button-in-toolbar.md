@@ -16,7 +16,7 @@ domainurl: ##DomainURL##
 DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
 
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
-var hostUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+var hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 let toolItem = {
     prefixIcon: "e-save icon",
     tooltipText: "Save the Document",

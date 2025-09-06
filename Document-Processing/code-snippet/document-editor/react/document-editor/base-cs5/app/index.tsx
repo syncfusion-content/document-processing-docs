@@ -24,7 +24,7 @@ function App() {
         });
     }
     return (<DocumentEditorContainerComponent id="container" ref={(scope) => { documenteditorcontainer = scope; onLoadDefault(); }}
-        serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" height={'590px'} enableToolbar={true} />);
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height={'590px'} enableToolbar={true} />);
 
 }
 export default App;

@@ -71,7 +71,7 @@ export class Default extends React.Component {
           this.container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
         enableToolbar={true}
         created={this.onCreated.bind(this)}
       />
@@ -81,7 +81,7 @@ export class Default extends React.Component {
 ReactDOM.render(<Default />, document.getElementById('sample'));
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 If the selection is in hyperlink, trigger this event by calling ‘navigateHyperlink’ method of ‘Selection’ instance. Refer to the following example.
 
