@@ -7,8 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components 
-
+# Creating a Spreadsheet Application in Next.js
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet component.
 
 ## What is Next.js?
