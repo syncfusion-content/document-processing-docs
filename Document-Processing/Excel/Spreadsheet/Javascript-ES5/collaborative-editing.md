@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative editing in EJ2 Javascript Spreadsheet control | Syncfusion
+title: Collaborative-editing EJ2 Javascript Spreadsheet | Syncfusion
 description: Learn here all about Collaborative editing in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative editing 
