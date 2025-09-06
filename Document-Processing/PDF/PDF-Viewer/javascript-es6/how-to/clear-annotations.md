@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Clear annotations in ##Platform_Name## Pdfviewer control
 
-To clear all the annotations in a PDF document using the Syncfusion PDF Viewer, you can use the [**deleteAnnotations**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method. This method is used to clear all the annotations present in the currently loaded document.
+To clear all the annotations in a PDF document using the Syncfusion PDF Viewer, you can use the [**deleteAnnotations**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method. This method is used to clear all the annotations present in the currently loaded document.
 
 Here is an example of how you can clear all the annotations present in the currently loaded document:
 

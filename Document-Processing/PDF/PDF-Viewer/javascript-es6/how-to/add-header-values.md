@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Add header values in ##Platform_Name## Pdfviewer control
 
-To add header values to an AJAX request made by a Syncfusion PDF Viewer, you can use the **ajaxHeaders** property available in the [**ajaxRequestSettings**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#ajaxrequestsettings) module of the PDF Viewer. This property allows you to specify custom headers for the AJAX request.
+To add header values to an AJAX request made by a Syncfusion PDF Viewer, you can use the **ajaxHeaders** property available in the [**ajaxRequestSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#ajaxrequestsettings) module of the PDF Viewer. This property allows you to specify custom headers for the AJAX request.
 
 Here is an example of how you can use the **ajaxRequestSettings** property to add a custom header to an AJAX request made by the PDF Viewer:
 

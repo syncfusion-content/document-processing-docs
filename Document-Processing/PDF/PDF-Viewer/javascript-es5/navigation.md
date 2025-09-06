@@ -62,7 +62,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableNavigation: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -146,7 +146,7 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl:'https://services.syncfusion.com/js/production/api/pdfviewer'
+  serviceUrl:'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 ej.pdfviewer.PdfViewer.Inject(
   ej.pdfviewer.Toolbar,
@@ -208,7 +208,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableBookmark: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -272,7 +272,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableThumbnail: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -310,7 +310,7 @@ pdfviewer.appendTo('#PdfViewer');
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableHyperlink: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -338,7 +338,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableHyperlink: true,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     hyperlinkOpenState:'NewTab',
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -351,5 +351,5 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## See also
 
-* [Toolbar items](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/toolbar/)
-* [Feature Modules](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/feature-module/)
+* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/toolbar/)
+* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/feature-module/)

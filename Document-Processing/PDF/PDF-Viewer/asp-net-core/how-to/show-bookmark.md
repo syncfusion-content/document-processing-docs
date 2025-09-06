@@ -16,7 +16,7 @@ N>Default value of `enableBookmark` property is true.
 
 The following steps are used to show the bookmark.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to Show the Bookmark.
 

@@ -37,21 +37,21 @@ The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaS
 {% endhighlight %}
 {% endtabs %}
 
-N> We have provided the support to dynamically change the [serviceURL](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl). So, after changing the `serviceURL` dynamically, you need invoke the `pdfViewer.dataBind()` method to update the `serviceURL` quickly. This will effectively change the `serviceURL` dynamically. Ensure that this step is performed after version 23.1.36.
+N> We have provided the support to dynamically change the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl). So, after changing the `serviceURL` dynamically, you need invoke the `pdfViewer.dataBind()` method to update the `serviceURL` quickly. This will effectively change the `serviceURL` dynamically. Ensure that this step is performed after version 23.1.36.
 document.getElementById('load').addEventListener('click', function () {
-   pdfViewer.serviceUrl = "https://services.syncfusion.com/angular/production/api/pdfviewer";
+   pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
    pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
    pdfViewer.dataBind();
    pdfViewer.load(pdfViewer.documentPath, null);
 });
 
-N> The Web API hosted link https://services.syncfusion.com/js/production/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-getting-started-cs1" %}
 
 **Step 4:** Now, run the `index.html` in web browser, it will render the `Essential JS 2 PDF Viewer` component.
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/how-to/create-pdfviewer-service)
+> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/how-to/create-pdfviewer-service)
 
 ## How to run the PDF Viewer web service
 

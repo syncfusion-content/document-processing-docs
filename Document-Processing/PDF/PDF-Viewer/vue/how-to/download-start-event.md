@@ -112,7 +112,7 @@ import {
   PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -151,7 +151,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },

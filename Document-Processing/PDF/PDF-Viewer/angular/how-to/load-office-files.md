@@ -14,7 +14,7 @@ The PDF Viewer library allows you to load Microsoft office files such as PowerPo
 
 The following steps are used to load the office files in the PDF Viewer.
 
-**Step 1:** Follow the steps provided in this [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample in Angular.
+**Step 1:** Follow the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create simple PDF Viewer sample in Angular.
 
 **Step 2:** Add the following code to the controller.cs file in the web service project to load the Microsoft office files. In the `GetImageStream()` method, a word document is converted into a PDF document, and return that PDF document into a base64 string. Similarly, load the PowerPoint, Excel and image into the PDF Viewer.
 

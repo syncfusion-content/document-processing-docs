@@ -96,7 +96,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs2" %}
 
@@ -176,7 +176,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs3" %}
 
@@ -248,7 +248,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs4" %}
 
@@ -324,7 +324,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs5" %}
 
@@ -475,7 +475,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             toolbarSettings={{ showTooltip : true, toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']}}
             toolbarClick={toolbarClick}
             style={{ 'height': '640px' }}>
@@ -529,7 +529,7 @@ N> When customizing toolbar items, you have the flexibility to include either ic
 
 The PDF Viewer provides API for user interactions options provided in it's built-in toolbar. Using this we can create our own User Interface for toolbar actions in application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Now, add an HTML div element in template to act as the custom toolbar PDF Viewer using the following code.
 
@@ -639,7 +639,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
                         documentLoad={this.documentLoaded}
                         pageChange={this.onPageChange}
                         documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-                        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+                        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
                         style={{ 'display': 'block', 'height': '640px' }}>
 
                                 <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -718,7 +718,7 @@ style={{ 'display': 'block', 'height': '640px' }}>
     documentLoad={this.documentLoaded}
     pageChange={this.onPageChange}
     documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+    serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
     style={{ 'display': 'block', 'height': '640px' }}>
 
             <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -967,7 +967,7 @@ style={{ 'display': 'block', 'height': '640px' }}>
  ```
 
 Sample :
-[https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/custom-toolbar](https://ej2.syncfusion.com/react/demos/#/material/pdfviewer/custom-toolbar)
+[https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/custom-toolbar](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/custom-toolbar)
 
 ## See also
 
