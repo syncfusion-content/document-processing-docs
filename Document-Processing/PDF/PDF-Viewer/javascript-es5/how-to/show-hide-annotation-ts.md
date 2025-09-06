@@ -17,7 +17,7 @@ This guide demonstrates how to toggle the visibility of annotations in the Syncf
 
 ### How to Toggle Annotation Visibility
 
-**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Create Toggle Buttons in Your HTML File
 

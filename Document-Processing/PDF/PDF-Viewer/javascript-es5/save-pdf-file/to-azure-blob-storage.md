@@ -117,7 +117,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Download()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to Azure Blob Storage container
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to Azure Blob Storage container
 
 ```csharp
 
@@ -211,7 +211,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 **Step 3:**   Set the PDF Viewer Properties in JavaScript PDF viewer component
 
-Modify the [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
 
 ```javascript
 

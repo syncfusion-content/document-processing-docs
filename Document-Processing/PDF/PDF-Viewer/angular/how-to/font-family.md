@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Change the font family in the Type Signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document, and then apply the desired font family to the Type Signature element. Include the Google Font link in the HTML head section to apply the Google Font.
 
-use the [handWrittenSignatureSettings](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/handWrittenSignatureSettings/) property of the PdfViewer component and modify the fontFamily property.
+use the [handWrittenSignatureSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/handWrittenSignatureSettings/) property of the PdfViewer component and modify the fontFamily property.
 
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura" >

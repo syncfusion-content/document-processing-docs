@@ -117,7 +117,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.enablePageOrganizer = true;
 pdfviewer.appendTo('#PdfViewer');
@@ -148,7 +148,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.isPageOrganizerOpen = true;
 pdfviewer.appendTo('#PdfViewer');
@@ -179,7 +179,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.pageOrganizerSettings = {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true,  imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5};
 pdfviewer.appendTo('#PdfViewer');

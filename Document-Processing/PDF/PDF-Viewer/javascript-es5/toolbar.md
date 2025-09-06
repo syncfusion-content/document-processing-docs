@@ -64,8 +64,8 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-hide-cs1" %}
 
@@ -79,7 +79,7 @@ Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfv
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-method-cs1" %}
 
@@ -97,7 +97,7 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-cs1" %}
 
@@ -111,7 +111,7 @@ Add the below `serviceUrl` in the `index.html` file
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
-`serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'`
+`serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-method-cs1" %}
 
@@ -119,11 +119,11 @@ Add the below `serviceUrl` in the `index.html` file
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem/) and with existing items in [**ToolbarSettings**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://helpej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -208,7 +208,7 @@ var toolItem4 = {
 }
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     toolbarSettings : { toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm'] }
                });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
@@ -336,7 +336,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
                     enableToolbar: false,
                     enableThumbnail: false,
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
@@ -1188,7 +1188,7 @@ this.default = function () {
         enableToolbar: true,
         enableThumbnail: true,
         documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer/'
+        serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
     });
    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
     viewer.appendTo('#pdfViewer');
@@ -1249,7 +1249,7 @@ this.default = function () {
 {% endtabs %}
 
 Sample :
-[https://ej2.syncfusion.com/javascript/demos/#/material/pdfviewer/custom-toolbar.html](https://ej2.syncfusion.com/javascript/demos/#/material/pdfviewer/custom-toolbar.html)
+[https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html](https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html)
 
 ## See also
 

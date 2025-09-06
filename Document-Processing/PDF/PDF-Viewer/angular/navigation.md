@@ -81,7 +81,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -152,7 +152,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
 })
 export class AppComponent implements OnInit {
-  public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 }
 
@@ -221,7 +221,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -297,7 +297,7 @@ You can enable/disable link navigation by using the following code snippet.,
                  PrintService]
     })
     export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     }
 
@@ -362,7 +362,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       public linkOpenState = 'NewTab';
   }

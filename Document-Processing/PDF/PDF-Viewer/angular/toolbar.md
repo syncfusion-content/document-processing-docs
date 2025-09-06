@@ -89,7 +89,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
               PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -169,7 +169,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
               PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       public toolbarSettings = { showTooltip: true, toolbarItems: 'DownloadOption' }
   }
@@ -250,7 +250,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       public toolbarSettings = { showTooltip: true, toolbarItems: ['OpenOption'] };
   }
@@ -262,11 +262,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://helpej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable - Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable - Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -382,7 +382,7 @@ import { ClickEventArgs } from '@syncfusion/ej2-angular-navigations';
 })
 export class AppComponent implements OnInit {
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
   public toolItem1: CustomToolbarItemModel = {
       prefixIcon: 'e-icons e-paste',
@@ -868,7 +868,7 @@ public customToolbar: ToolbarComponent;
 @ViewChild('zoomToolbar')
 public zoomToolbar: ToolbarComponent;
 public service: string =
-  'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 public document: string = 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf';
 constructor() { }
 ngOnInit(): void {

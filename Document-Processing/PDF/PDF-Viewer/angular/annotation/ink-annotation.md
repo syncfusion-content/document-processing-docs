@@ -90,7 +90,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
                  FormFieldsService, AnnotationService, PageOrganizerService]
     })
   export class AppComponent implements OnInit {
-      public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       ngOnInit(): void {
       }
@@ -105,7 +105,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 
 ## Adding a Ink annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Ink annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, you can add a Ink annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a Ink annotation programmatically
 
@@ -180,7 +180,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -280,7 +280,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     editAnnotation() {
@@ -393,7 +393,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
                  AnnotationService]
     })
     export class AppComponent implements OnInit {
-        public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+        public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
         public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
         public inkAnnotationSettings = { author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6 }
         ngOnInit(): void {

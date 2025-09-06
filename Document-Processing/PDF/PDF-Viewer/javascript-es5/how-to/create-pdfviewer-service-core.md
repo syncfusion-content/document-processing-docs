@@ -14,7 +14,7 @@ The Essential JavaScript PDF Viewer have server side dependency to get the detai
 
 ## Prerequisites
 
-To get started with ASP.NET CORE Web API service, refer [System requirements for ASP.NET Core controls](https://helpej2.syncfusion.com/aspnetcore/documentation/system-requirements).
+To get started with ASP.NET CORE Web API service, refer [System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements).
 
 ## Setup ASP.NET CORE application with Web API for PDF Viewer service
 

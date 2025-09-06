@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Disable context menu in ##Platform_Name## Pdfviewer control
 
-To disable the context menu in the Syncfusion PDF viewer control, you can use the [**ContextMenuOption**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) property as `'None'` to hide all context menu options. Default value of the **ContextMenuOption** is `'RightClick'`.
+To disable the context menu in the Syncfusion PDF viewer control, you can use the [**ContextMenuOption**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) property as `'None'` to hide all context menu options. Default value of the **ContextMenuOption** is `'RightClick'`.
 
 Here is an example of how you can use the **ContextMenuOption** to disable context menu in the PDF Viewer:
 

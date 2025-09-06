@@ -68,7 +68,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
@@ -86,7 +86,7 @@ if (distanceMode) {
 
 ## Adding a measurement annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a measurement annotation programmatically:
 
@@ -191,7 +191,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 
 pdfviewer.appendTo('#PdfViewer');
 
@@ -383,7 +383,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
@@ -536,7 +536,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer. =
 pdfviewer.appendTo('#PdfViewer');
@@ -569,7 +569,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.distanceSettings = {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'};
 pdfviewer.perimeterSettings = {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'};
@@ -623,7 +623,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.measurementSettings={scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'};
 pdfviewer.appendTo('#PdfViewer');

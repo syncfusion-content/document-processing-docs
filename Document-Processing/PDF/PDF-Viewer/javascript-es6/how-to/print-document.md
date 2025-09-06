@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Print document in ##Platform_Name## Pdfviewer control
 
-The PDF Viewer library allows you to print the PDF document programmatically using the [**print()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the **PrintModule**.
+The PDF Viewer library allows you to print the PDF document programmatically using the [**print()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the **PrintModule**.
 
 The following steps are used to print the PDF document programmatically.
 

@@ -14,9 +14,9 @@ The PDF Viewer component offers the ability to enable or disable the locking opt
 
 ## Locking Form Fields Programmatically
 
-Form fields can be locked either by default settings or by utilizing an event and the [isReadOnly](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API.
+Form fields can be locked either by default settings or by utilizing an event and the [isReadOnly](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API.
 
-The provided code snippet exemplifies how to lock form fields in a PDF document during the document loading process. It utilizes the `documentLoad` event to add form fields and subsequently sets them as read-only using the [isReadOnly](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API. This ensures that users cannot modify the form fields, thereby preserving data integrity.
+The provided code snippet exemplifies how to lock form fields in a PDF document during the document loading process. It utilizes the `documentLoad` event to add form fields and subsequently sets them as read-only using the [isReadOnly](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API. This ensures that users cannot modify the form fields, thereby preserving data integrity.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -183,7 +183,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 export class AppComponent implements OnInit {
 
   public document: string = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-  public service: string = "https://services.syncfusion.com/angular/production/api/pdfviewer";
+  public service: string = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   ngOnInit(): void {
   }
   public documentLoaded(e: LoadEventArgs): void {

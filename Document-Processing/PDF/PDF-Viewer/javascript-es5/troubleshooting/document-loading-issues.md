@@ -16,7 +16,7 @@ If you're experiencing problems with your document not rendering in the viewer, 
 
 ```javascript
 var viewer = new ej.pdfviewer.PdfViewer ({
-serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'});
+serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'});
 
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner);
 
@@ -37,6 +37,6 @@ viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 
 8. **Cross-Origin Resource Sharing (CORS)**: If you're loading documents from a different domain, ensure that CORS headers are correctly configured to allow cross-origin requests.
 
-9. **Content Security Policies (CSP)**: Check if your application's Content Security Policy allows the loading of external resources, as this can affect document loading. Refer [here](https://helpej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) to troubleshoot.
+9. **Content Security Policies (CSP)**: Check if your application's Content Security Policy allows the loading of external resources, as this can affect document loading. Refer [here](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) to troubleshoot.
 
 By following these troubleshooting steps, you should be able to address issues related to document loading in version 23.1 or newer, ensuring that your documents render correctly in the viewer.

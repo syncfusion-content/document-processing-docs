@@ -101,7 +101,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     addAnnotation() {
@@ -114,7 +114,7 @@ export class AppComponent implements OnInit {
 
 ## Adding a measurement annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a measurement annotation programmatically:
 
@@ -236,7 +236,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
 
@@ -431,7 +431,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
 
@@ -617,7 +617,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public distanceSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
     public perimeterSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
     public areaSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
@@ -714,7 +714,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
     ngOnInit(): void {
     }
