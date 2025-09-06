@@ -100,7 +100,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const initialRenderPages = 10;
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -135,7 +135,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       initialRenderPages: 10
     };
   },
@@ -168,7 +168,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 const initialRenderPages = 10;
 
@@ -203,7 +203,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "PDF_Succinctly.pdf",
       initialRenderPages: 10
     };

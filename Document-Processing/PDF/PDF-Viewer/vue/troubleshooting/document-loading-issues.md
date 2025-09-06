@@ -22,7 +22,7 @@ If you're experiencing problems with your document not rendering in the viewer, 
 </ejs-pdfviewer>
 
 documentLoad: function (args) {
-       pdfViewer.serviceUrl = "https://ej2services.syncfusion.com/angular/development/api/pdfviewer";
+       pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
        pdfViewer.dataBind();
        pdfViewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf");
     }

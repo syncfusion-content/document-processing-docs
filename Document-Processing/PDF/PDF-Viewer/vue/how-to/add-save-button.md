@@ -157,7 +157,7 @@ let toolItem1 = {
 
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const toolbarSettings = {
   toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 }
@@ -209,7 +209,7 @@ export default {
 
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       toolbarSettings: {
         toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
       }

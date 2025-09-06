@@ -78,7 +78,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         downloadStart={downloadStart}
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation,
