@@ -394,8 +394,8 @@ export default function Home(this: any) {
   return (
     <>
       <h2>Syncfusion React Spreadsheet Component</h2>
-      <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open'
-        saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save'
+      <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
+        saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
         ref={(Obj) => { spreadsheet = Obj as SpreadsheetComponent }} created={onCreated.bind(this)} >
         <SheetsDirective>
           <SheetDirective name="Car Sales Report">

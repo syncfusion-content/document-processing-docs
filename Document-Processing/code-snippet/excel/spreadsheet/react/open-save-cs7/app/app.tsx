@@ -18,7 +18,7 @@ function App() {
         formData.append('saveType', 'Xlsx');
         formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' }));
         fetch(
-          'https://services.syncfusion.com/react/production/api/spreadsheet/save',
+          'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
           {
             method: 'POST',
             headers: { Authorization: 'YOUR TEXT' },
@@ -44,7 +44,7 @@ function App() {
 
   return (
     <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} fileMenuItemSelect={fileMenuItemSelect}
-      saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save" >
+      saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save" >
       <SheetsDirective>
         <SheetDirective>
           <RangesDirective>

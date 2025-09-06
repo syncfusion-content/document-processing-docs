@@ -28,7 +28,7 @@ function App() {
             <button className="e-btn custom-btn" onClick={readOnlyCol}>Make Column A readOnly</button>
             <button className="e-btn custom-btn" onClick={readOnlyCell}>Make E5 cell readOnly</button>
             <button className="e-btn custom-btn" onClick={removeReadOnly}>Remove readOnly</button>
-                <SpreadsheetComponent height={300} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open'  ref={spreadsheetRef} >
+                <SpreadsheetComponent height={300} openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'  ref={spreadsheetRef} >
                     <SheetsDirective>
                         <SheetDirective name="Car Sales Report">
                             <RangesDirective>

@@ -7,7 +7,7 @@ control: Global Local
 documentation: ug
 ---
 
-# Globalization in ASP.NET MVC Spreadsheet control
+# Globalization in ASP.NET Core Spreadsheet control
 
 ## Localization
 
