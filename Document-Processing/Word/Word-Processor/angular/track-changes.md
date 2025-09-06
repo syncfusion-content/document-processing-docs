@@ -122,7 +122,7 @@ import { DocumentEditorContainerComponent, ToolbarService } from '@syncfusion/ej
       // specifies the template string for the Document Editor component
       template: `<div><button ejs-button (click)="protectDocument()" >Protect</button>
       <button ejs-button (click)="unProtectDocument()" >Unprotect</button>
-      <ejs-documenteditorcontainer #document_editor serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer></div>`,
+      <ejs-documenteditorcontainer #document_editor serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer></div>`,
       encapsulation: ViewEncapsulation.None,
       providers: [ToolbarService]
 })
@@ -142,7 +142,7 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
@@ -173,7 +173,7 @@ import {
   providers: [ToolbarService],
   template: `
     <ejs-documenteditorcontainer #documenteditor_default 
-      serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" 
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
       height="600px" 
       style="display:block" 
       (beforeAcceptRejectChanges)="beforeAcceptRejectChanges($event)"
