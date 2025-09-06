@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Identify added annotation mode in ##Platform_Name## Pdfviewer control
 
-The PDF Viewer library allows you to identify whether the added annotations in PDF document is UI drawn, imported or existing annotation. Annotation mode can be identified using the [**annotationAddMode**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#annotationadd) property of [**annotationSelect**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.
+The PDF Viewer library allows you to identify whether the added annotations in PDF document is UI drawn, imported or existing annotation. Annotation mode can be identified using the [**annotationAddMode**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationadd) property of [**annotationSelect**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
 

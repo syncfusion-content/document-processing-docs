@@ -55,7 +55,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to One Drive bucket
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to One Drive bucket
 
 ```csharp
 [HttpPost("Download")]

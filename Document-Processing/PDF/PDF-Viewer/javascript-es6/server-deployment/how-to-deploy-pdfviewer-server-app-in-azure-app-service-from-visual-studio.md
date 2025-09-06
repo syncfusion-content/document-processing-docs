@@ -38,6 +38,6 @@ domainurl: ##DomainURL##
 
 **Step 6:** Navigate to the PDF Viewer Web API control `http://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`. It returns the default get method response.
 
-Append the app service running the URL `http://ej2-pdfviewer-server20200513053326.azurewebsites.net./api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://helpej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/?).
+Append the app service running the URL `http://ej2-pdfviewer-server20200513053326.azurewebsites.net./api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/?).
 
 For more information about the app container service, please look deeper into the [`Microsoft Azure App Service`](https://docs.microsoft.com/en-us/visualstudio/deployment/) for a production-ready setup.

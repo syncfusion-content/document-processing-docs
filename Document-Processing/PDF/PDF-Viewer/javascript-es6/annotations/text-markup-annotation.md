@@ -99,7 +99,7 @@ document.getElementById('set').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/highlight-mode-cs1" %}
 
@@ -169,14 +169,14 @@ document.getElementById('setNone').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/highlight-normal-mode-cs1" %}
 
 
 ## Highlight a text programmatically
 
-The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply highlighting programmatically:
 
@@ -216,7 +216,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
@@ -317,7 +317,7 @@ document.getElementById('set').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/underline-mode-cs1" %}
 
@@ -387,13 +387,13 @@ document.getElementById('setNone').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/underline-normal-mode-cs1" %}
 
 ## Underline a text programmatically
 
-The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Underline programmatically:
 
@@ -433,7 +433,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
@@ -533,7 +533,7 @@ document.getElementById('set').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/strikethrough-mode-cs1" %}
 
@@ -605,13 +605,13 @@ document.getElementById('setNone').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/strikethrough-normal-mode-cs1" %}
 
 ## Strikethrough a text programmatically
 
-The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
 
@@ -651,7 +651,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
@@ -750,7 +750,7 @@ document.getElementById('set').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/squiggly-mode-cs1" %}
 
@@ -822,13 +822,13 @@ document.getElementById('setNone').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/squiggly-normal-mode-cs1" %}
 
 ## Squiggly a text programmatically
 
-The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
 
@@ -868,7 +868,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
@@ -955,7 +955,7 @@ highlightSettings: {author: 'Guest User', subject: 'Important', color: '#ffff00'
 underlineSettings: {author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: ''},
 strikethroughSettings: {author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''},
 squigglySettings: {author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9, modifiedDate: ''} });
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -1041,7 +1041,7 @@ document.getElementById('redo').addEventListener('click', ()=> {
 
 N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/text-markup-annotation/undo-redo-cs1" %}
 
@@ -1079,7 +1079,7 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,
 TextSelection, Annotation);
 
 let pdfviewer: PdfViewer = new PdfViewer({ documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', enableTextMarkupAnnotation: false });
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

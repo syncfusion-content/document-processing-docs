@@ -117,7 +117,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
 
 ```csharp
 
@@ -180,7 +180,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Set the PDF Viewer Properties in Typescript PDF viewer component
 
-Modify the [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your AWS S3 bucket to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your AWS S3 bucket to the documentPath property.
 
 ```typescript
 

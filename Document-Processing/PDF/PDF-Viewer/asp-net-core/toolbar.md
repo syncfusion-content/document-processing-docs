@@ -342,7 +342,7 @@ N> When customizing toolbar items, you have the flexibility to include either ic
 
 The PDF Viewer provides API for user interactions options provided in its built-in toolbar. Using this, you can create your own User Interface for toolbar actions in application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer:-
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add EJ2 toolbar for performing primary actions like Open,Previous page,Next page,Go to page,Print and Download using the following code snippet.,
 
@@ -762,7 +762,7 @@ N>The icons are embedded in the font file used in the previous code snippet.
 {% endtabs %}
 
 Sample:
-[https://ej2.syncfusion.com/aspnetcore/PdfViewer/CustomToolbar#/material](https://ej2.syncfusion.com/aspnetcore/PdfViewer/CustomToolbar#/material)
+[https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/customtoolbar#/tailwind](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/customtoolbar#/tailwind)
 
 ## See also
 

@@ -10,7 +10,7 @@ documentation: ug
 
 # Open Thumbnail pane programmatically
 
-The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
+The PDF Viewer library allows you to open the thumbnail pane programmatically using the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method.
 
 The following steps are used to open the thumbnail.
 

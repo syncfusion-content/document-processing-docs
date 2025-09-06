@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Overlapped annotation in ##Platform_Name## Pdfviewer control
 
-To get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer, you can use the [**annotationCollection**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#annotationcollection) property of [**annotationSelect**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.This event is triggered when the user clicks on an annotation in the PDF document.
+To get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer, you can use the [**annotationCollection**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationcollection) property of [**annotationSelect**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.This event is triggered when the user clicks on an annotation in the PDF document.
 
 Here is an example of how you can use the **annotationSelect** event to get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer:
 

@@ -13,11 +13,11 @@ domainurl: ##DomainURL##
 
 PDF Viewer allows you to customize (add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Save button - `Save` button-item can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem/) and with existing items in [**ToolbarSettings**](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Newly added save button-item click action can be defined in [`toolbarclick`](https://helpej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
+* Save button - `Save` button-item can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Newly added save button-item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - `Save` button-item can be shown or hidden using the [`ToolbarSettings`](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - `Save` button-item can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable -  `Save` button-item can be enabled or disable using [`enabletoolbaritem`](https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  `Save` button-item can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -60,7 +60,7 @@ var toolItem1 = {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
                     toolbarSettings : { toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm'] }
                });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);

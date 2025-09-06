@@ -101,7 +101,7 @@ Refer to the following code sample to switch to the stamp annotation mode.
                  AnnotationService]
     })
   export class AppComponent implements OnInit {
-      public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       ngOnInit(): void {
       }
@@ -116,7 +116,7 @@ Refer to the following code sample to switch to the stamp annotation mode.
 
 ## Adding a Stamp annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
 
@@ -230,7 +230,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
   addDynamicStamp() {
@@ -360,7 +360,7 @@ import { LinkAnnotationService, BookmarkViewService,
 })
 export class AppComponent implements OnInit {
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     ngOnInit(): void {
     }
     editAnnotation() {
@@ -458,7 +458,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
                  AnnotationService]
      })
   export class AppComponent implements OnInit {
-    public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     public stampSettings = { opacity: 0.3, author: 'Guest User' };
   }

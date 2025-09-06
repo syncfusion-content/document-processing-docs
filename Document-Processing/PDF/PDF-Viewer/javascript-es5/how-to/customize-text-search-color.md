@@ -31,8 +31,8 @@ viewer.textSearchColorSettings.searchHighlightColor = "#0000FF";
 
 This will set the highlight color of the search results to blue.
 
-* [**searchColor**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchcolor)
-* [**searchHighlightColor**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchhighlightcolor)
+* [**searchColor**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchcolor)
+* [**searchHighlightColor**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchhighlightcolor)
 
 Here is an example of how you can use the searchHighlightColor property and searchColor property:
 

@@ -317,7 +317,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer({locale: 'ar-AE'});
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Customize context menu in ##Platform_Name## Pdfviewer control
 
-PDF Viewer allows you to add custom option in context menu. It can be achieved by using the [addCustomMenu()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method and custom action is defined using the [customContextMenuSelect()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#customcontextmenuselect)method.
+PDF Viewer allows you to add custom option in context menu. It can be achieved by using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#addcustommenu) method and custom action is defined using the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextmenuselect)method.
 
 ### Add Custom Option
 
@@ -107,7 +107,7 @@ pdfviewer.documentLoad = function (args) {
 
 #### Customize added context menu items
 
-The following code shows how to hide/show added custom option in context menu using the [customContextMenuBeforeOpen()](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#customcontextmenubeforeopen) method.
+The following code shows how to hide/show added custom option in context menu using the [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#customcontextmenubeforeopen) method.
 
 ```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -273,8 +273,8 @@ The following is the output of custom context menu with customization.
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';`
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
+`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/custom-context-menu" %}
 

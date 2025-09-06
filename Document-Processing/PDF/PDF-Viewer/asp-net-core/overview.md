@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of ASP.NET CORE PDF Viewer Component
 
-The [`ASP.NET CORE`](https://document.syncfusion.com/#/pdf-viewer-sdk) PDF Viewer component is a lightweight, modular control for viewing and printing PDF files in your web applications. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. Thumbnail, bookmark, hyperlink, and table of contents support provides easy navigation within and outside the PDF files.
+The [`ASP.NET CORE`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer component is a lightweight, modular control for viewing and printing PDF files in your web applications. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. Thumbnail, bookmark, hyperlink, and table of contents support provides easy navigation within and outside the PDF files.
 
 ## Key Features
 

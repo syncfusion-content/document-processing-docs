@@ -144,7 +144,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public serviceUrl: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public serviceUrl: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
   public customStampSettings = {
     isAddToMenu: true,
