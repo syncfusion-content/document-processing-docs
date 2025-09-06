@@ -14,7 +14,7 @@ The PDF Viewer library allows you to retrieves the information of a specified pa
 
 The following steps are used to getPageInfo.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** The following code snippet to implement the functionality for retrieving height, width and rotation of a specified page in the viewer.
 

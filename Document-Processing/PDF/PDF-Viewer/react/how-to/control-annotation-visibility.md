@@ -16,7 +16,7 @@ This guide demonstrates how to control the visibility of PDF annotations in docu
 
 ### How to Control Annotation Visibility
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started/) to create a simple PDF Viewer sample.
 
 
 **Step 2:**  Set Up Your React Component
