@@ -106,8 +106,6 @@ The Spreadsheet control can bind the data to individual cell in a sheet . To ach
 
 Refer to the following code example for cell data binding.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/excel/spreadsheet/asp-net-core/cell-data-binding/tagHelper %}
