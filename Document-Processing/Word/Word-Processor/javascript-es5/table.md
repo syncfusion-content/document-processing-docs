@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Table in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Table in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Table in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Table in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in ##Platform_Name## Document editor control
+# Table in JavaScript (ES5) Document editor control
 
 Tables are an efficient way to present information. Document Editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 
@@ -183,7 +183,7 @@ The following sample demonstrates how to delete the table row or columns, merge 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/table-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/table-cs1" %}
 
 ## See Also
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: List format in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about List format in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: List format in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about List format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: List format 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# List format in ##Platform_Name## Document editor control
+# List format in JavaScript (ES5) Document editor control
 
 Document Editor supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph either using supported APIs.
 
@@ -68,7 +68,7 @@ The following sample demonstrates how to create bullet and numbering lists in Do
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/list-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/list-cs1" %}
 
 ## Editing numbered list
 

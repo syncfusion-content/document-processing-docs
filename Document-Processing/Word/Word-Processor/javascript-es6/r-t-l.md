@@ -1,15 +1,15 @@
 ---
 layout: post
-title: R t l in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about R t l in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: R t l in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about R t l in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: R t l 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# R t l in ##Platform_Name## Document editor control
+# R t l in JavaScript (ES6) Document editor control
 
 Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
 
@@ -24,5 +24,5 @@ Document Editor provides RTL (right-to-left) support. This can be enabled using 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/rtl-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/rtl-cs1" %}
 

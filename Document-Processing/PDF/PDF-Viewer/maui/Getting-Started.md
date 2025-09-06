@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here about getting started with Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control, its elements, and more.
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

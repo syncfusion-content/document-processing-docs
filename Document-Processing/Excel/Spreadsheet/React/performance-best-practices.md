@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Best Practices in React Spreadsheet Component
 
-Performance optimization is crucial when working with large datasets in the [Syncfusion® React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
+Performance optimization is crucial when working with large datasets in the [Syncfusion® React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
 ## How to improve performance when opening Excel files in the Spreadsheet?
 
@@ -19,7 +19,7 @@ Virtual scrolling is an essential performance feature in the React Spreadsheet t
 
 This approach significantly reduces initial load time, DOM size, and memory usage — resulting in smoother rendering and interaction, especially when working with thousands of rows or columns.
 
-For more details, refer to the [virtual scrolling documentation](https://ej2.syncfusion.com/react/documentation/spreadsheet/scrolling#virtual-scrolling).
+For more details, refer to the [virtual scrolling documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/scrolling#virtual-scrolling).
 
 ### Chunk response processing
 
@@ -28,7 +28,7 @@ When opening large Excel files with extensive data and features, server response
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
 To enable the chunk response processing feature, you can refer to the following UG section:
-* [Chunk Response Processing](https://ej2.syncfusion.com/react/documentation/spreadsheet/open-save#chunk-response-processing)
+* [Chunk Response Processing](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#chunk-response-processing)
 
 ### Configure JSON serialization options during open
 
@@ -41,7 +41,7 @@ This is particularly useful when:
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during open](https://ej2.syncfusion.com/react/documentation/spreadsheet/open-save#configure-json-deserialization-options)
+* [Configure JSON serialization options during open](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#configure-json-deserialization-options)
 
 ### Configuring threshold limits
 
@@ -80,7 +80,7 @@ public IActionResult Open(IFormCollection openRequest)
 To improve performance when opening large Excel files, use parsing options like `IgnoreStyle` and `IgnoreFormat` to skip unnecessary styles and formats. This reduces memory usage, speeds up loading, and minimizes JSON size—especially helpful for files with many styled but empty cells.
 
 To learn how to configure these parsing options, please refer to the UG section below.
-* [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
+* [Configure Parsing Options](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#improving-excel-file-open-performance-with-parsing-options)
 
 ## How to improve performance on formula calculation in Spreadsheet?
 
@@ -96,7 +96,7 @@ Enabling manual mode is highly beneficial when:
 * Applying formulas dynamically to a large number of cells.
 * You want to postpone calculations until all content or changes are finalized.
 
-To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://ej2.syncfusion.com/react/documentation/spreadsheet/formulas#manual-mode).
+To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#manual-mode).
 
 ## How to improve save performance in the Spreadsheet?
 
@@ -121,7 +121,7 @@ function App() {
     }
     return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' ref={spreadsheetRef} beforeSave={beforeSave}  >
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' ref={spreadsheetRef} beforeSave={beforeSave}  >
         </SpreadsheetComponent>
     </div>
   );
@@ -145,7 +145,7 @@ function App() {
       }
     return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save'  ref={spreadsheetRef} beforeSave={beforeSave}  >
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'  ref={spreadsheetRef} beforeSave={beforeSave}  >
         </SpreadsheetComponent>
     </div>
   );
@@ -171,7 +171,7 @@ Proper use of serialization options during save improves performance and reduces
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during save](https://ej2.syncfusion.com/react/documentation/spreadsheet/open-save#configure-json-serialization-options)
+* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#configure-json-serialization-options)
 
 ## How to improve cell selection performance in Spreadsheet?
 
@@ -199,7 +199,7 @@ function App() {
   const spreadsheetRef = React.useRef(null);
   return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false} >
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false} >
         </SpreadsheetComponent>
     </div>
   );
@@ -219,7 +219,7 @@ function App() {
   const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
   return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open'  saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false}>
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'  saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false}>
         </SpreadsheetComponent>
     </div>
   );
@@ -234,6 +234,6 @@ root.render(<App />);
 
 ## See Also
 
-* [Open and Save](https://ej2.syncfusion.com/react/documentation/spreadsheet/open-save)
-* [Docker Deployment](https://ej2.syncfusion.com/react/documentation/spreadsheet/docker-deployment)
-* [Scrolling](https://ej2.syncfusion.com/react/documentation/spreadsheet/scrolling)
+* [Open and Save](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save)
+* [Docker Deployment](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/docker-deployment)
+* [Scrolling](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/scrolling)

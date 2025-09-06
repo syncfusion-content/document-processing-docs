@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Best Practices in EJ2 Javascript Spreadsheet Control
 
-Performance optimization is crucial when working with large datasets in the [Syncfusion® JavaScript Spreadsheet](https://www.syncfusion.com/javascript-ui-controls/js-spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
+Performance optimization is crucial when working with large datasets in the [Syncfusion® JavaScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
 ## How to improve performance when opening Excel files in the Spreadsheet?
 
@@ -28,7 +28,7 @@ When opening large Excel files with extensive data and features, server response
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
 To enable the chunk response processing feature, you can refer to the following UG section:
-* [Chunk Response Processing](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/open-save#chunk-response-processing)
+* [Chunk Response Processing](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/open-save#chunk-response-processing)
 
 ### Configure JSON serialization options during open
 
@@ -41,7 +41,7 @@ This is particularly useful when:
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during open](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/open-save#configure-json-deserialization-options)
+* [Configure JSON serialization options during open](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/open-save#configure-json-serialization-options)
 
 ### Configuring threshold limits
 
@@ -96,8 +96,7 @@ Enabling manual mode is highly beneficial when:
 * Applying formulas dynamically to a large number of cells.
 * You want to postpone calculations until all content or changes are finalized.
 
-To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/formulas#manual-mode).
-
+To learn more about Manual Calculation Mode and how to enable it, you can refer to the following [UG link](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/formulas#manual-mode).
 ## How to improve save performance in the Spreadsheet?
 
 ### Handling large file saves with `isFullPost` option
@@ -129,7 +128,7 @@ Proper use of serialization options during save improves performance and reduces
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during save](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/open-save#configure-json-serialization-options)
+* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/open-save#configure-json-serialization-options)
 
 ## How to improve cell selection performance in Spreadsheet?
 
@@ -155,6 +154,6 @@ spreadsheet.appendTo('#spreadsheet');
 
 ## See Also
 
-* [Open and Save](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/open-save)
-* [Docker Deployment](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/docker-deployment)
-* [Scrolling](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/scrolling)
+* [Open and Save](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/open-save)
+* [Docker Deployment](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/docker-deployment)
+* [Scrolling](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/scrolling)

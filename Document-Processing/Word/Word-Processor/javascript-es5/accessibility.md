@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Accessibility in ##Platform_Name## Document editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion ##Platform_Name## Document editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in JavaScript (ES5) Document editor component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion JavaScript (ES5) Document editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: document-processing
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -47,7 +47,7 @@ The Document editor component's accessibility levels are ensured through an [acc
 
 The accessibility compliance of the Document editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document editor component with accessibility tools.
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/accessibility-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/accessibility-cs1" %}
 
 ## See also
 

@@ -36,7 +36,7 @@ function App() {
                 <input type="checkbox" id="gridline" /><label htmlFor="gridline">Allow Grid Lines</label>
                 <input type="checkbox" id="header" /><label htmlFor="header">Allow Row Column Header </label>
             </div>
-            <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} allowSave={true} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' created={onCreated.bind(this)}>
+            <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} allowSave={true} openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' created={onCreated.bind(this)}>
                 <SheetsDirective>
                     <SheetDirective name={"Budget"}>
                         <RangesDirective>

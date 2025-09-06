@@ -7,7 +7,7 @@ DocumentEditorContainer.Inject(Toolbar);
 //Initiliaze Document Editor Container component.
 let documenteditorContainer: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '500px' });
 
-documenteditorContainer.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 //Enable read only mode inside `documentChange` event.
 documenteditorContainer.documentChange = (): void => {

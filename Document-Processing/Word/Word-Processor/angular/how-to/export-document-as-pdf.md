@@ -46,7 +46,7 @@ import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documente
   providers: [ToolbarService],
   template: `<button id='export'(click)="onClick()">Export</button>
     <ejs-documenteditorcontainer #documenteditor_default 
-      serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" 
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
       height="600px" 
       style="display:block" 
     [enableToolbar]=true >
@@ -111,7 +111,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Export document as pdf in server-side using Syncfusion DocIO
 
@@ -139,7 +139,7 @@ import {
   standalone: true,
   selector: 'app-container',
   // specifies the template string for the DocumentEditorContainer component
-  template: `<button id='export'(click)="onClick()">Export</button><ejs-documenteditorcontainer #documenteditor_default serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
+  template: `<button id='export'(click)="onClick()">Export</button><ejs-documenteditorcontainer #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
   providers: [ToolbarService],
 })
 export class AppComponent implements OnInit {
@@ -162,7 +162,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * Using Save API in server-side, you can convert the sfdt to stream.
 * Finally, convert the stream to PDF using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.

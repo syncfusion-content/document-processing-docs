@@ -59,4 +59,4 @@ Then, click `Go` and select the `CMD` options under `Debug console`.
 
 Browse to the deployed app at `http://<app_name>.azurewebsites.net`, i.e. `http://documenteditorjava.azurewebsites.net`. Browse this link and it navigate to the Document Editor Web API control `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT`. It returns the default get method response.
 
-Append the app service running the URL `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../../javascript-es5/getting-started).
+Append the app service running the URL `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).

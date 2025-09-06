@@ -2,7 +2,7 @@
 layout: post
 title: Stamp Annotation in WPF Pdf Viewer control | Syncfusion&reg;
 description: Learn about Stamp Annotation support in Syncfusion<sup>&reg;</sup>; Essential Studio<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
-platform: wpf
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---

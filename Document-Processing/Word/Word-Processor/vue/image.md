@@ -23,7 +23,7 @@ The following example shows how to open bookmark dialog in Document Editor.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/bookmark-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/bookmark-cs2" %}
 
 Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
 

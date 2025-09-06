@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Notes in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Notes in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Notes in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Notes in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in ##Platform_Name## Document editor control
+# Notes in JavaScript (ES5) Document editor control
 
 DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
 
@@ -27,7 +27,7 @@ import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor
 DocumentEditorContainer.Inject(Toolbar);
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 container.appendTo('#DocumentEditor');
 //Insert footnote in current selection.
@@ -44,7 +44,7 @@ import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor
 DocumentEditorContainer.Inject(Toolbar);
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 container.appendTo('#DocumentEditor');
 //Insert endnote in current selection.

@@ -32,9 +32,9 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/ruler-cs1" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Heading Navigation Pane 
 
@@ -56,7 +56,7 @@ The following example demonstrates how to enable the heading navigation pane in 
 
   export default {
     data() {
-      return { serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
+      return { serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
       settings:{ showNavigationPane : true} };
     },
     provide: {
@@ -67,4 +67,4 @@ The following example demonstrates how to enable the heading navigation pane in 
 </script>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

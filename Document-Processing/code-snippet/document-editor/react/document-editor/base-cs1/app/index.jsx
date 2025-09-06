@@ -15,7 +15,7 @@ function App() {
             //Open the document in Document Editor.
             container.documentEditor.open(sfdt);
         });
-        container.serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+        container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
     }
     return (<DocumentEditorContainerComponent id="container" height={'590px'} enableToolbar={true} ref={(scope) => { container = scope; }}/>);
 }

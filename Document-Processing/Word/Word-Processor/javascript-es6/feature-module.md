@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Feature module in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Feature module in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Feature module in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Feature module in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature module 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in ##Platform_Name## Document editor control
+# Feature module in JavaScript (ES6) Document editor control
 
 Document Editor features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
 * **Print** - Prints the document.

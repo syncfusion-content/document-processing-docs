@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Word processor server docker image overview in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Overview in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Word processor server docker image overview in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Word processor server docker image overview 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Word processor server docker image overview in ##Platform_Name## Document editor control
+# Word processor server docker image overview in JavaScript (ES5) Document editor control
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> **Word Processor (also known as Document Editor)** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 
@@ -228,4 +228,4 @@ container.created = function () {
 container.appendTo('#container');
 ```
 
-Refer to these getting started pages to create a Word Processor in [`Angular`](../../angular/getting-started), [`React`](../../react/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../../blazor/document-editor/getting-started/server-side-application).
+Refer to these getting started pages to create a Word Processor in [`Angular`](../../angular/getting-started), [`React`](../../react/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../blazor/getting-started/server-side-application).

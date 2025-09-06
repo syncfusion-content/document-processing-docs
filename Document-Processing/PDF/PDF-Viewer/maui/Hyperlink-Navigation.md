@@ -2,7 +2,7 @@
 layout: post
 title: Hyperlink navigation in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about how to perform hyperlink navigation in the PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
-platform: MAUI
+platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---

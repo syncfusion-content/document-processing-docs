@@ -250,4 +250,4 @@ You can use the `addItem` API in the Document Editor ribbon to add a new item. A
 
 ## Related Links
 
-- [File menu Customization Demo](https://ej2.syncfusion.com/demos/#/material/document-editor/ribbon-customization)
+- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/ribboncustomization#/tailwind3)

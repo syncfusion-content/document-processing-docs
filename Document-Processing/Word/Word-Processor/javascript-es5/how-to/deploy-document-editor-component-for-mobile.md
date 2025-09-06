@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Deploy document editor component for mobile in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Deploy document editor component for mobile in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Deploy document editor component for mobile in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Deploy document editor component for mobile in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Deploy document editor component for mobile 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy document editor component for mobile in ##Platform_Name## Document editor control
+# Deploy document editor component for mobile in JavaScript (ES5) Document editor control
 
 ## Document editor component for Mobile
 
@@ -27,7 +27,7 @@ DocumentEditorContainer.Inject(Toolbar);
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true, height: '590px'
 });
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#DocumentEditor');
 
 //To detect the device
@@ -46,7 +46,7 @@ container.documentChange = () => {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 You can download the complete working example from this [GitHub location](https://github.com/SyncfusionExamples/Deploy-Document-Editor-in-Mobile-Friendly-Web-page/)
 

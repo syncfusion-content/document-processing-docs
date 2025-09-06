@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Link in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Link in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Link in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Link in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in ##Platform_Name## Document editor control
+# Link in JavaScript (ES6) Document editor control
 
 Document Editor supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
 
@@ -32,7 +32,7 @@ The following example illustrates how to add requestNavigate event for DocumentE
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs1" %}
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
@@ -103,7 +103,7 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/hyperlink-cs2" %}
 
 Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserthyperlink)to insert hyperlink.
 
@@ -148,7 +148,7 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs16" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/dialog-cs16" %}
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 

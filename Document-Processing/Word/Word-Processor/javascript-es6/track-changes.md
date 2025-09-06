@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Track changes in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Track changes in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Track changes in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Track changes in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Track changes 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track changes in ##Platform_Name## Document editor control
+# Track changes in JavaScript (ES6) Document editor control
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
 
@@ -56,7 +56,7 @@ DocumentEditorContainer.Inject(Toolbar);
 let container: DocumentEditorContainer = new DocumentEditorContainer({
   enableTrackChanges: true,
 });
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 container.documentEditor.showRevisions = true; // To show revisions pane
 container.documentEditor.showRevisions = false; // To hide revisions pane
@@ -65,7 +65,7 @@ container.documentEditor.showRevisions = false; // To hide revisions pane
 
 
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Get all tracked revisions
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize context menu in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Customize context menu in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Customize context menu in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize context menu 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in ##Platform_Name## Document editor control
+# Customize context menu in JavaScript (ES5) Document editor control
 
 ## How to customize context menu in Document Editor
 
@@ -21,7 +21,7 @@ The following code shows how to add custom option in context menu.
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
@@ -59,7 +59,7 @@ The following code shows how to hide default context menu and add custom option 
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
@@ -80,7 +80,7 @@ The following code shows how to hide/show added custom option in context menu us
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documentEditor.enableAllModules();
 documentEditor.appendTo('#DocumentEditor');
@@ -128,7 +128,7 @@ The following is the output of custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/customize-context-menu-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/customize-context-menu-cs1" %}
 
 #### Customize Context Menu with sub-menu items
 

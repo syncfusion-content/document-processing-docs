@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Resize document editor in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Resize document editor in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Resize document editor in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Resize document editor in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resize document editor 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize document editor in ##Platform_Name## Document editor control
+# Resize document editor in JavaScript (ES6) Document editor control
 
 In this article, we are going to see how to change height and width of Document Editor.
 
@@ -58,7 +58,7 @@ import {
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl =
-    'https://services.syncfusion.com/js/production/api/documenteditor/';
+    'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.created = (): void => {
     setInterval(() => {
@@ -81,4 +81,4 @@ function updateDocumentEditorSize() {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

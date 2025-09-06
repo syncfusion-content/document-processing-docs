@@ -28,7 +28,7 @@ The following code shows the how to enable the `Ribbon` in Document Editor.
 
 ```typescript
 
-<ejs-documenteditorcontainer id="container" toolbarMode="Ribbon" serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"></ejs-documenteditorcontainer>
+<ejs-documenteditorcontainer id="container" toolbarMode="Ribbon" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"></ejs-documenteditorcontainer>
 <script>
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
 </script>
@@ -47,7 +47,7 @@ The following code shows the how to configure the ribbon layout in Document Edit
 
 ```typescript
 
-<ejs-documenteditorcontainer id="container" toolbarMode="Ribbon" ribbonLayout="Classic" serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"></ejs-documenteditorcontainer>
+<ejs-documenteditorcontainer id="container" toolbarMode="Ribbon" ribbonLayout="Classic" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"></ejs-documenteditorcontainer>
 <script>
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
 </script>

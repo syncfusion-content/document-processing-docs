@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Export document as pdf in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Export document as pdf in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Export document as pdf in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Export document as pdf in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export document as pdf 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export document as pdf in ##Platform_Name## Document editor control
+# Export document as pdf in JavaScript (ES6) Document editor control
 
 In this article, we are going to see how to export the document as Pdf format. You can export the document as Pdf in following ways:
 
@@ -46,7 +46,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl =
-    'https://services.syncfusion.com/js/production/api/documenteditor/';
+    'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 
@@ -114,7 +114,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl =
-    'https://services.syncfusion.com/js/production/api/documenteditor/';
+    'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 
@@ -131,7 +131,7 @@ document.getElementById('export').addEventListener('click', function () {
 });
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * Using Save API in server-side, you can convert the sfdt to stream.
 * Finally, convert the stream to Pdf using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.

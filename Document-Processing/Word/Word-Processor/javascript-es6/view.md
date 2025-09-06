@@ -1,14 +1,14 @@
 ---
 layout: post
-title: View in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about View in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: View in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about View in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: View 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# View in ##Platform_Name## Document editor control
+# View in JavaScript (ES6) Document editor control
 
 ## Web layout
 
@@ -37,7 +37,7 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/ruler-cs1" %}
 
 ## Navigation Pane
 
@@ -53,7 +53,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToo
   }
 });
 DocumentEditorContainer.Inject(Toolbar);
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

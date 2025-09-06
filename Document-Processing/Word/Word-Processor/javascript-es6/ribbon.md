@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Ribbon in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about the Ribbon UI in Syncfusion ##Platform_Name## Document editor control, how to switch between Ribbon and Toolbar modes.
+title: Ribbon in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about the Ribbon UI in Syncfusion JavaScript (ES6) Document editor control, how to switch between Ribbon and Toolbar modes.
 platform: document-processing
 control: Ribbon
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon in ##Platform_Name## Document Editor Control
+# Ribbon in JavaScript (ES6) Document Editor Control
 
 The Document Editor provides a modern Ribbon interface similar to Microsoft Word's interface. This Ribbon UI provides an efficient and intuitive way to access editing features, organizing commands within well-structured tabs and groups to enhance your document editing experience. Additionally, the Ribbon interface supports contextual tabs. Contextual tabs appear only when certain elements, such as tables, images, or headers/footers, are selected in the document.
 
@@ -37,7 +37,7 @@ var container = new ej.documenteditor.DocumentEditorContainer({
     toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
     height: '590px'
 });
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
 
@@ -64,7 +64,7 @@ var container = new ej.documenteditor.DocumentEditorContainer({
     ribbonLayout: 'Classic', // Options: 'Simplified' or 'Classic'
     height: '590px'
 });
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
 

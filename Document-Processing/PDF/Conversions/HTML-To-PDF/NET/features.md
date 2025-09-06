@@ -2456,7 +2456,7 @@ The Blink HTML converter support adding the image background from HTML to Image 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Image_Background_In_HTML_to_PDF).
 
-## Get Html Bounds
+## Get HTML Bounds
 
 We can calculate and retrieve the dimensions (width and height) of the HTML content based on the current settings, such as viewport width and scale, using the [GetHtmlBounds](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_GetHtmlBounds_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
@@ -2820,3 +2820,73 @@ public void AddPdfSignatureField(MemoryStream stream)
 {% endtabs %}
 
 You can download a complete working sample from GitHub.
+
+## Wait until browser navigation completes
+
+The Blink rendering engine now supports waiting for specific browser navigation events before starting the HTML to PDF conversion. This ensures that the conversion begins only after the desired level of page loading is complete, improving accuracy and consistency in rendering.
+
+<b>Supported Navigation Events</b>
+
+You can configure the wait behavior using the [WaitForNavigation](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WaitForNavigation) property in [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html). The following options are available via the [WaitOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.WaitOption.html) enum:
+
+<b>Load</b>: Waits until the `load` event is fired. Ensures all external resources (images, styles, scripts) are fully loaded.
+<b>DomContentLoaded</b>: Waits until the `DOMContentLoaded` event is fired. Does not wait for external resources.
+<b>NetworkIdle0</b>: Waits until there are no more than 0 network connections for at least 500 ms.
+<b>NetworkIdle2</b>: Waits until there are no more than 2 network connections for at least 500 ms.
+<b>None</b>: No waiting; conversion starts immediately.
+
+N> This feature is applicable only to the Blink rendering engine and is supported in both .NET Core and .NET Framework libraries.
+
+Refer to the following code sample to wait until browser navigation completes.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlToPdfConverter = new HtmlToPdfConverter();
+// Initialize BlinkConverterSettings.
+BlinkConverterSettings settings = new BlinkConverterSettings();
+ 
+// Set the navigation wait event.
+settings.WaitForNavigation = WaitOption.DomContentLoaded;
+ 
+// Assign settings to the converter.
+htmlToPdfConverter.ConverterSettings = settings;
+// Convert HTML to PDF.
+PdfDocument document = htmlToPdfConverter.Convert("input.html");
+ 
+// Save the document.
+using (FileStream fileStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    document.Save(fileStream);
+}
+// Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Initialize HTML to PDF converter.
+Dim htmlToPdfConverter As New HtmlToPdfConverter()
+' Initialize BlinkConverterSettings.
+Dim settings As New BlinkConverterSettings()
+
+' Set the navigation wait event.
+settings.WaitForNavigation = WaitOption.DomContentLoaded
+
+' Assign settings to the converter.
+htmlToPdfConverter.ConverterSettings = settings
+' Convert HTML to PDF.
+Dim document As PdfDocument = htmlToPdfConverter.Convert("input.html")
+
+' Save the document.
+Using fileStream As New FileStream("Output.pdf", FileMode.Create, FileAccess.Write)
+    document.Save(fileStream)
+End Using
+' Close the document.
+document.Close(True)
+
+{% endhighlight %}
+{% endtabs %}

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Form fields in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Form fields in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Form fields in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Form fields in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Form fields 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in ##Platform_Name## Document editor control
+# Form fields in JavaScript (ES6) Document editor control
 
 DocumentEditorContainer component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
@@ -136,7 +136,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl =
-  'https://services.syncfusion.com/js/production/api/documenteditor/';
+  'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 
 //enforce protection
@@ -145,6 +145,6 @@ container.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
 //stop the document protection
 container.documentEditor.editor.stopProtection('123');
 ```
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 >Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.

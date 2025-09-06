@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Scrolling zooming in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Scrolling zooming in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Scrolling zooming in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Scrolling zooming in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling zooming 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling zooming in ##Platform_Name## Document editor control
+# Scrolling zooming in JavaScript (ES6) Document editor control
 
 The Document Editor renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
 
@@ -24,7 +24,7 @@ The Document Editor renders the document as page by page. You can scroll through
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/scrolling-zooming-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/scrolling-zooming-cs1" %}
 
 > Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
@@ -41,7 +41,7 @@ In case, if you wish to move the selection to any page in Document Editor and br
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/scrolling-zooming-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/scrolling-zooming-cs2" %}
 
 ## Zooming
 
@@ -52,7 +52,7 @@ import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
 
 //Initialize the Document Editor module.
 let documenteditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 
 // Enable all the built in modules.
@@ -71,7 +71,7 @@ Apart from specifying the zoom factor as value, the Document Editor provides opt
 import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
 //Initialize the Document Editor module.
 let documenteditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 
 // Enable all the built in modules.
@@ -96,4 +96,4 @@ The following code example shows how to provide zoom options in Document Editor.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/scrolling-zooming-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/scrolling-zooming-cs3" %}

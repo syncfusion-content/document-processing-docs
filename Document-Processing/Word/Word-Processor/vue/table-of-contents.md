@@ -44,7 +44,7 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs8" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/export-cs8" %}
 
 ## Update or edit table of contents
 

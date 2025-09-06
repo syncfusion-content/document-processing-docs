@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Retrieve the bookmark content as text in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Retrieve the bookmark content as text in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Retrieve the bookmark content as text in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Retrieve the bookmark content as text in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Retrieve the bookmark content as text 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the bookmark content as text in ##Platform_Name## Document editor control
+# Retrieve the bookmark content as text in JavaScript (ES5) Document editor control
 
 You can get the bookmark or whole document content from the JavaScript Document Editor component as plain text and SFDT (rich text).
 
@@ -26,7 +26,7 @@ DocumentEditorContainer.Inject(Toolbar);
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 // To insert text in cursor position
@@ -43,7 +43,7 @@ container.documentEditor.selection.selectBookmark('Bookmark1');
  let selectedContent: string = container.documentEditor.selection.text;
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 To get the bookmark content as SFDT (rich text), please check this [`link`](../how-to/get-the-selected-content#get-the-selected-content-as-sfdt-rich-text)
 
@@ -60,7 +60,7 @@ DocumentEditorContainer.Inject(Toolbar);
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 // To insert text in cursor position
@@ -72,7 +72,7 @@ container.documentEditor.selection.selectAll();
  let selectedContent: string = container.documentEditor.selection.text;
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Get the whole document content as SFDT(rich text)
 
@@ -87,7 +87,7 @@ DocumentEditorContainer.Inject(Toolbar);
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 // To insert text in cursor position
@@ -111,7 +111,7 @@ DocumentEditorContainer.Inject(Toolbar);
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 // To navigate the selection to header
@@ -125,6 +125,6 @@ container.documentEditor.selection.selectAll();
  let selectedContent: string = container.documentEditor.selection.text;
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Similarly, you can use [`goToFooter`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#gotofooter) API to navigate the selection to the footer and then use [`text`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the content as plain text.

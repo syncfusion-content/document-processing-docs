@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Print in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Print in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Print in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in ##Platform_Name## Document editor control
+# Print in JavaScript (ES6) Document editor control
 
 To print the document, use the [`print`](https://ej2.syncfusion.com/documentation/api/document-editor#print) method from Document Editor instance.
 
@@ -26,7 +26,7 @@ Refer to the following example for showing a document and print it.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/print-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs1" %}
 
 Refer to the following example for creating a document and print it.
 
@@ -41,7 +41,7 @@ Refer to the following example for creating a document and print it.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/print-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs2" %}
 
 ## Improve print quality
 
@@ -56,10 +56,10 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToo
    }
  });
  DocumentEditorContainer.Inject(Toolbar);
- container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
  container.appendTo('#container');
 ```
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 >Note: By default, printDevicePixelRatio value is 1
 
@@ -121,7 +121,7 @@ The following example shows how to customize layout options only for printing.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/print-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs3" %}
 
 ## See Also
 

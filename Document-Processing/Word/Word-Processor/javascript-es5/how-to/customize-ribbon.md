@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize Ribbon in ##Platform_Name## Document Editor | Syncfusion
-description: Learn how to customize the ribbon in Syncfusion ##Platform_Name## Document Editor - file menu, backstage, tabs, groups, and items.
+title: Customize Ribbon in JavaScript (ES5) Document Editor | Syncfusion
+description: Learn how to customize the ribbon in Syncfusion JavaScript (ES5) Document Editor - file menu, backstage, tabs, groups, and items.
 platform: document-processing
 control: Ribbon Customization
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in ##Platform_Name## Document Editor
+# Customize Ribbon in JavaScript (ES5) Document Editor
 
 The Syncfusion Document Editor provides an extensive and flexible API to customize the built-in ribbon UI. You can:
 
@@ -42,7 +42,7 @@ fileMenuItemClick: function (args) {
 },
 height: '590px' });
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Ribbon);
-documenteditorContainer.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 //DocumentEditorContainer control rendering starts
 documenteditorContainer.appendTo('#DocumentEditor');
 ```
@@ -67,7 +67,7 @@ backstageMenu: {
 },
 height: '590px' });
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Ribbon);
-documenteditorContainer.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 //DocumentEditorContainer control rendering starts
 documenteditorContainer.appendTo('#DocumentEditor');
 

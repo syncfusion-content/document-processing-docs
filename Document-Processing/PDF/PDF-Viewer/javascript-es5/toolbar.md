@@ -105,7 +105,7 @@ Add the below `serviceUrl` in the `index.html` file
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-method-cs1/index.html %}
+{% include code-snippet/pdfviewer/javascript/es5-toolbar/toolbar-items-method-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
