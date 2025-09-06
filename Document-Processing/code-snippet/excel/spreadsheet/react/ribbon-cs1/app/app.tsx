@@ -103,8 +103,8 @@ function App() {
         <div>
             <SpreadsheetComponent ref={spreadsheetRef} fileMenuBeforeOpen={fileMenuBeforeOpen} fileMenuItemSelect={fileMenuItemSelect}
                 showFormulaBar={false} showSheetTabs={false} allowInsert={false} allowDelete={false} allowMerge={false}
-                openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
-                saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save">
+                openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"
+                saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save">
                 <SheetsDirective>
                     <SheetDirective>
                         <RangesDirective>

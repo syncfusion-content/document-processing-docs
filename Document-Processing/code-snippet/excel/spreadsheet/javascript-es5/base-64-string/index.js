@@ -2,7 +2,7 @@
 var base64String;
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+  openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
   sheets: [{
     name: 'Car Sales Report',
     ranges: [{ dataSource: data }],
@@ -48,7 +48,7 @@ document.getElementById("import").onclick = () => {
 
 document.getElementById("export").onclick = () => {
   spreadsheet.save({
-    url: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     fileName: 'Worksheet',
     saveType: 'Xlsx',
   }); // Specifies the save URL, file name, file type need to be saved.

@@ -5,7 +5,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         var valueOnlyCheckbox = document.getElementById("valueOnly").checked;
         var options = valueOnlyCheckbox ? { onlyValues: true } : createOptions();
         fetch(
-            'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+            'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
             args.requestData
         ).then((response) => {
             response.json().then((data) => {

@@ -45,13 +45,13 @@ const items = [
 
 const itemSelect = function (args) {
   if (args.item.text === 'Save As xlsx')
-    spreadsheet.value.save({ url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save', fileName: "Sample", saveType: "Xlsx" });
+    spreadsheet.value.save({ url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save', fileName: "Sample", saveType: "Xlsx" });
   if (args.item.text === 'Save As xls')
-    spreadsheet.value.save({ url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save', fileName: "Sample", saveType: "Xls" });
+    spreadsheet.value.save({ url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save', fileName: "Sample", saveType: "Xls" });
   if (args.item.text === 'Save As csv')
-    spreadsheet.value.save({ url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save', fileName: "Sample", saveType: "Csv" });
+    spreadsheet.value.save({ url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save', fileName: "Sample", saveType: "Csv" });
   if (args.item.text === 'Save As pdf')
-    spreadsheet.value.save({ url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save', fileName: "Sample", saveType: "Pdf" });
+    spreadsheet.value.save({ url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save', fileName: "Sample", saveType: "Pdf" });
 }
 </script>
 <style>

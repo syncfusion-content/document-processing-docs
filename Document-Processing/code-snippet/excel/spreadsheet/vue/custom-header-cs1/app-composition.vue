@@ -5,7 +5,7 @@
 <script setup>
 import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
 
-const openUrl = "https://services.syncfusion.com/vue/production/api/spreadsheet/open";
+const openUrl = "https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open";
 
 const beforeOpen = function (args) {
   args.requestData = {

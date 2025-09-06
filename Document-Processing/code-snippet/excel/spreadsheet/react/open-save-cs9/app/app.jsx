@@ -27,7 +27,7 @@ function App() {
       ></UploaderComponent>
       <SpreadsheetComponent
         ref={spreadsheetRef}
-        openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
+        openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"
       />
     </div>
   );

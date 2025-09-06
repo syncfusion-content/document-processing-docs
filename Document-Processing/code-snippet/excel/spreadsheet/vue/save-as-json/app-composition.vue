@@ -26,7 +26,7 @@ import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spre
 import { createElement } from "@syncfusion/ej2-base";
 
 const spreadsheet = ref(null);
-const openUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
+const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
 
 const saveFile = () => {
   var spreadsheet = this.$refs.spreadsheet;
@@ -42,7 +42,7 @@ const saveFile = () => {
     formData.append('saveType', 'Xlsx');
     formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
       fetch(
-        'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
+        'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
         {
           method: 'POST',
           body: formData,

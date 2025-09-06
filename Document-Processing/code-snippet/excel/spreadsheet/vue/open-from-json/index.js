@@ -66,7 +66,7 @@ methods: {
       "spreadsheet"
     );
     fetch(
-        'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
+        'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
         args.requestData
     ).then((response) => {
         response.json().then((data) => {

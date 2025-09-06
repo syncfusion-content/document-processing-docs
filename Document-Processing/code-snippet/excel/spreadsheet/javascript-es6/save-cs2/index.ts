@@ -63,7 +63,7 @@ let sheet: SheetModel[] = [{
 let spreadsheet: Spreadsheet = new Spreadsheet({
     sheets: sheet,
     allowSave: true,
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save'
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
 });
 //Render the initialized Spreadsheet
 spreadsheet.appendTo('#spreadsheet');
