@@ -52,7 +52,6 @@ The following example shows `Protect Sheet` functionality with password in the S
 {% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-sheet/protectSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 

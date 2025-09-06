@@ -166,9 +166,6 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
         
 {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/chart-cs1" %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/chart-cs1" %}
-{% endif %}
-
 #### Customization of line chart markers
 
 Using the [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
