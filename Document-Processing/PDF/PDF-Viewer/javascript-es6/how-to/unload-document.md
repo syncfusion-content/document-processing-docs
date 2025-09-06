@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Unload document in ##Platform_Name## Pdfviewer control
 
-The PDF Viewer library allows you to unload the PDF document being display in the PDF Viewer control programmatically using the [**unload()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#unload) method.
+The PDF Viewer library allows you to unload the PDF document being display in the PDF Viewer control programmatically using the [**unload()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) method.
 
 The following steps are used to unload the PDF document programmatically.
 

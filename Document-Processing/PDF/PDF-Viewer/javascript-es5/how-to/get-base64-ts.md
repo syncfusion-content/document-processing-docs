@@ -17,7 +17,7 @@ This guide demonstrates how to fetch the base64-encoded value of a PDF document 
 
 ### How to Retrieve Base64 Value
 
-**Step 1:** Follow the steps provided in the [link](https://helpej2.syncfusion.com/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample.
 
 
 **Step 2:** Create a Button in Your HTML File

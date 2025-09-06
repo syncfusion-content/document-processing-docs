@@ -15,7 +15,7 @@ The PDF Viewer server library allows to save original PDF document pages at the 
 
 The following steps are used to save original document at the server side.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to create a button click event in PDF Viewer Control.
 

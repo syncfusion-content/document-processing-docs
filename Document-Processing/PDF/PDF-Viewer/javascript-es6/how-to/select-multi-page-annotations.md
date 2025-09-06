@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Select multi page annotations in ##Platform_Name## Pdfviewer control
 
-To select a multi-page TextMarkup annotation as a single annotation in a Syncfusion PDF viewer, you can use by enabling the [**enableMultiPageAnnotation**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property. By default it is `false`.
+To select a multi-page TextMarkup annotation as a single annotation in a Syncfusion PDF viewer, you can use by enabling the [**enableMultiPageAnnotation**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property. By default it is `false`.
 
-Here is an example of how you can use the [**enableMultiPageAnnotation**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property to select the multi page TextMarkup annotation as a single annotation, export and import multi page annotation:
+Here is an example of how you can use the [**enableMultiPageAnnotation**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property to select the multi page TextMarkup annotation as a single annotation, export and import multi page annotation:
 
 ```ts
 

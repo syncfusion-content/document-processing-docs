@@ -44,7 +44,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
     enableFormDesignerToolbar: true
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
@@ -119,7 +119,7 @@ document.getElementById('redo').addEventListener('click', function () {
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields);
 pdfviewer.appendTo('#PdfViewer');

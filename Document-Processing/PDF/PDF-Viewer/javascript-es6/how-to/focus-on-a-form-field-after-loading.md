@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Focus on a form field after loading in ##Platform_Name## Pdfviewer control
 
-The PDF Viewer library allows you to focus to the respective form field using the [`focusFormField()`](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#focusformfield) API.
+The PDF Viewer library allows you to focus to the respective form field using the [`focusFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#focusformfield) API.
 
 The following steps are used to focus to the respective form field.
 

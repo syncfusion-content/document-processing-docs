@@ -24,7 +24,7 @@ If you're experiencing problems with your document not rendering in the viewer, 
 <script>
     function documentLoad() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.serviceUrl = "https://ej2services.syncfusion.com/angular/development/api/pdfviewer";
+        pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
         pdfViewer.dataBind();
         pdfViewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf");
     }

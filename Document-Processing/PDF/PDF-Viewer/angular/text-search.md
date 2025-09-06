@@ -66,7 +66,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -102,10 +102,10 @@ When the 'Match Any Word' option is enabled, the entered text in the search inpu
 
 The following text search methods are available in the PDF Viewer,
 
-* [**Search text**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
-* [**Search next**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Search previous**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Cancel text search**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
+* [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
+* [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
+* [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
+* [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
 
 ![Alt text](images/search.png)
 
@@ -221,7 +221,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 
@@ -343,7 +343,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 
@@ -465,7 +465,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 
@@ -587,7 +587,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 

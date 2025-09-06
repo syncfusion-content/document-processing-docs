@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # PageRenderInitiate and pageRenderComplete event
 
-In Syncfusion PDF Viewer, [pageRenderInitiate](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) actions are events that occur during the rendering process of PDF documents.
+In Syncfusion PDF Viewer, [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) actions are events that occur during the rendering process of PDF documents.
 
 **PageRenderInitiate**
 
@@ -38,4 +38,4 @@ pdfviewer.pageRenderComplete = (args: any) => {
 
 ```
 
-The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events in the Syncfusion PDF Viewer component.
+The provided code demonstrates how to subscribe to the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events in the Syncfusion PDF Viewer component.

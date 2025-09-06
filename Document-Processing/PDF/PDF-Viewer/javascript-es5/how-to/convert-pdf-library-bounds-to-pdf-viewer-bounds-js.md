@@ -24,7 +24,7 @@ Create an instance of the PdfViewer and configure it with the required services.
 ```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 
 ej.pdfviewer.PdfViewer.Inject(

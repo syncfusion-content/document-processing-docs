@@ -66,7 +66,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -89,7 +89,7 @@ You can invoke print action using the following code snippet.,
 
 ## Print the PDF document in the new window.
 
-PDF Viewer extension supports printing functionality for loaded PDF files directly within the browser. You can utilize the [printMode](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) parameter to specify the printing mode, with the option to choose [NewWindow](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) for printing. Below is a code snippet demonstrating how to implement this functionality
+PDF Viewer extension supports printing functionality for loaded PDF files directly within the browser. You can utilize the [printMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) parameter to specify the printing mode, with the option to choose [NewWindow](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) for printing. Below is a code snippet demonstrating how to implement this functionality
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -148,7 +148,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     public printMode: string = "NewWindow";
   }
@@ -156,11 +156,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-By setting the printMode to [NewWindow](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/), the extension will open a new window for printing the PDF document, providing a seamless and user-friendly printing experience.
+By setting the printMode to [NewWindow](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/), the extension will open a new window for printing the PDF document, providing a seamless and user-friendly printing experience.
 
 ## Limiting the Dialog Opening for Printing
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can control the printing process by leveraging the [printStart](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) event. This event enables you to customize the printing behavior, particularly restricting the dialog opening. Below is a code snippet demonstrating how to utilize this event
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can control the printing process by leveraging the [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) event. This event enables you to customize the printing behavior, particularly restricting the dialog opening. Below is a code snippet demonstrating how to utilize this event
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -224,7 +224,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 
     ngOnInit(): void {
@@ -238,11 +238,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-In this code snippet, the [printStart](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) function is defined to handle the printStart event. By setting args.cancel to **true**, the print dialog opening is restricted. By default, the [cancel](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) property is set to `false`.
+In this code snippet, the [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) function is defined to handle the printStart event. By setting args.cancel to **true**, the print dialog opening is restricted. By default, the [cancel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) property is set to `false`.
 
 ## Customizing Print Quality using printScaleFactor API
 
-The PDF Viewer allows you to adjust the print quality using the [printScaleFactor](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/PrintScaleFactor/) API. The quality of the print improves as the print quality value increases from 0.5 to 5.
+The PDF Viewer allows you to adjust the print quality using the [printScaleFactor](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/PrintScaleFactor/) API. The quality of the print improves as the print quality value increases from 0.5 to 5.
 
 When the value is less than 0.5, the PDF is printed at a standard quality. When the value exceeds 5, the PDF is still printed at the standard quality. In standard quality, printScaleFactor value is set to 1 as default value.
 The effective range for print quality is between 0.5 and 5. Higher values within this range will result in better print quality, but also increase the print time.
@@ -308,7 +308,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     //pdf with low quality. By changing values you can change the quality of the pdf.
   public printScaleFactor = 0.5;
