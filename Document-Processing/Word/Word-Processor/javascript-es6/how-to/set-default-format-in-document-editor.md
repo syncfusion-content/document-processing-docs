@@ -19,7 +19,7 @@ You can use [`setDefaultCharacterFormat`](https://ej2.syncfusion.com/documentati
 
 The following example code illustrates how to change the default font size in Document editor.
 
-```ts
+```ts  
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ height: "590px" });
