@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of JavaScript PDF Viewer Component
 
-The Syncfusion [`JavaScript PDF Viewer`](https://www.syncfusion.com/javascript-ui-controls/js-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=javascript-pdf-viewer-npm) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The Syncfusion [`JavaScript PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
 ## Setup
 

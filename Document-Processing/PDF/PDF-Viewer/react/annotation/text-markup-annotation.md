@@ -3,7 +3,7 @@ layout: post
 title: Text markup annotation in React Pdfviewer component | Syncfusion
 description: Learn here all about Text markup annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Text markup annotation
-platform: ej2-react
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---

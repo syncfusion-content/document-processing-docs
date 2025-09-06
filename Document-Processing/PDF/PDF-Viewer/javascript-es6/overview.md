@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of JavaScript PDF Viewer Component
 
-The Syncfusion [`TypeScript PDF Viewer`](https://www.syncfusion.com/javascript-ui-controls/js-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=javascript-pdf-viewer-npm) control enables you to view, annotate, prepare and fill forms, and print PDF files from your web applications.
+The Syncfusion [`TypeScript PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) control enables you to view, annotate, prepare and fill forms, and print PDF files from your web applications.
 
 ## Setup
 
