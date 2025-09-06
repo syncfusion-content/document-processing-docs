@@ -19,7 +19,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight js tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/prevent-keyboard-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/prevent-keyboard-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/document-editor/javascript-es5/document-editor/prevent-keyboard-cs2/index.html %}
