@@ -33,7 +33,7 @@ import {
   providers: [ToolbarService],
   template: `
     <ejs-documenteditorcontainer #documenteditor_default 
-      serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" 
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
       height="600px" 
       style="display:block" 
       [toolbarItems]="items" 

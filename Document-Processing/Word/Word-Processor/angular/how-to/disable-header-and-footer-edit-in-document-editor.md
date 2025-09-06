@@ -34,7 +34,7 @@ import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documente
   providers: [ToolbarService],
   template: `
     <ejs-documenteditorcontainer #documenteditor_default 
-      serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" 
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
       height="600px" 
       style="display:block" 
       [enableToolbar]=true 
@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Otherwise, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#closeheaderfooter) API in selection module.
 
@@ -94,7 +94,7 @@ import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documente
   providers: [ToolbarService],
   template: `
     <ejs-documenteditorcontainer #documenteditor_default 
-      serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" 
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
       height="600px" 
       style="display:block" 
       [enableToolbar]=true 
@@ -124,7 +124,7 @@ export class AppComponent implements OnInit {
   }
 }
 ```
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Disable header and footer edit in DocumentEditor instance
 
@@ -141,7 +141,7 @@ The following example code illustrates how to header and footer edit in `Documen
 // @Component({
 //   selector: 'app-root',
 //   // specifies the template string for the DocumentEditorContainer component
-//   template: `<ejs-documenteditorcontainer #documenteditor_default serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=false (selectionChange)="selectionChanges()"> </ejs-documenteditorcontainer>`
+//   template: `<ejs-documenteditorcontainer #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=false (selectionChange)="selectionChanges()"> </ejs-documenteditorcontainer>`
 // })
 // export class AppComponent implements OnInit {
 //   @ViewChild('documenteditor_default')
@@ -161,7 +161,7 @@ import {
 
 @Component({
       selector: 'app-root',
-      template: `<ejs-documenteditor #documenteditor_default serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true
+      template: `<ejs-documenteditor #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true
       [enablePrint]=true [enableSfdtExport]=true [enableWordExport]=true [enableOptionsPane]=true [enableContextMenu]=true
       [enableHyperlinkDialog]=true [enableBookmarkDialog]=true [enableTableOfContentsDialog]=true [enableSearch]=true
       [enableParagraphDialog]=true [enableListDialog]=true [enableTablePropertiesDialog]=true [enableBordersAndShadingDialog]=true
@@ -194,4 +194,4 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
