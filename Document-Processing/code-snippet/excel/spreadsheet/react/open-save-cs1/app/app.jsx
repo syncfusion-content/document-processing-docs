@@ -5,7 +5,7 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 function App() {
     const beforeOpen = () => {};
     return (
-        <SpreadsheetComponent allowOpen={true} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' beforeOpen={beforeOpen} />
+        <SpreadsheetComponent allowOpen={true} openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' beforeOpen={beforeOpen} />
     );
 };
 export default App;
