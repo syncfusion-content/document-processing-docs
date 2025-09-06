@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# How to Configure Annotation Selector Settings
+# How to Configure Annotation Selector in JS-ES5 PDF Viewer
 
 ### Annotation Selector Settings
 

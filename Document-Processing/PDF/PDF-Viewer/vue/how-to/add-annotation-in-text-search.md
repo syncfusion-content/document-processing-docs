@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Rectangle Annotations Using Search Text Bounds in PDF Viewer
+# Add Rectangle Annotations Using Search Text Bounds in Vue PDF Viewer
 
 ## Overview
 

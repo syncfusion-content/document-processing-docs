@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky notes annotation in React Pdfviewer component
+# Sticky notes annotation in React Pdf viewer component
 
 The PDF Viewer control provides the options to add, edit, and delete the sticky note annotations in the PDF document.
 

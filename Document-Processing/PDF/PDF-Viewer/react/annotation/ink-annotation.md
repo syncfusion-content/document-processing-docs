@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink annotation in React Pdfviewer component
+# Ink annotation in React Pdf viewer component
 
 The PDF Viewer control provides the options to add, edit, and delete the ink annotations.
 

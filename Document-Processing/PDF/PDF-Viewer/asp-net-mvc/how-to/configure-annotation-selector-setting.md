@@ -8,7 +8,7 @@ publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
-# How to Configure Annotation Selector Settings
+# HHow to Configure Annotation Selector in ASP.NET MVC PDF Viewer
 
 ### Annotation Selector Settings
 

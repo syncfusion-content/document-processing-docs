@@ -8,7 +8,7 @@ publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control Annotation Visibility in ASP.NET MVC PDF Viewer
 
 ### Overview
 

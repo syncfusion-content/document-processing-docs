@@ -8,7 +8,7 @@ publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
-# Add Rectangle Annotations Using Search Text Bounds in PDF Viewer
+# Add Rectangle Annotations Using Search Text Bounds ASP.NET MVC
 
 ## Overview
 

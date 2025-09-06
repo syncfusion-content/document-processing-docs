@@ -8,7 +8,7 @@ publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
-# How to Configure Annotation Selector Settings
+# How to Configure Annotation Selector in ASP.NET CORE PDF Viewer
 
 ### Annotation Selector Settings
 

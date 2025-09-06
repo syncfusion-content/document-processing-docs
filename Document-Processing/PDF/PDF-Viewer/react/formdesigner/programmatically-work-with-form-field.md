@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programmatically work with form field in React Pdfviewer component | Syncfusion
+title: Programmatically work with formfield in React Pdfviewer | Syncfusion
 description: Learn here all about Programmatically work with form field in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Programmatically work with form field
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically work with form field in React Pdfviewer component
+# Programmatically work with form field in React Pdf viewer component
 
 The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in React Pdfviewer component
+# Stamp annotation in React Pdf viewer component
 
 The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotation in the PDF documents:
 

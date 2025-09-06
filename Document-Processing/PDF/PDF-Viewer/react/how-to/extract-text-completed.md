@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract text using extractTextCompleted Event in React Pdfviewer component
+# Extract text using extractTextCompleted Event in React Pdfviewer
 
 The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#extracttextcompleted) event.
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in React Pdfviewer component
+# Text markup annotation in React Pdf viewer component
 
 The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline,  strikethrough and squiggly annotations in the PDF document.
 

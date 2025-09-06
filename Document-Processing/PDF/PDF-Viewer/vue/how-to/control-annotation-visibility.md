@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control PDF Annotations Visibility in Vue PDF Viewer
 
 ### Overview
 

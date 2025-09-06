@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control Annotation Visibility in JavaScript-JS PDF Viewer
 
 ### Overview
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer library allows you to lock the rectangle or square annotations using the **isLock** property in the **rectangleSettings**.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create simple PDF Viewer sample in React.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create simple PDF Viewer sample in React.
 
 **Step 2:** Add the following code snippet to lock the rectangle or square annotations.
 

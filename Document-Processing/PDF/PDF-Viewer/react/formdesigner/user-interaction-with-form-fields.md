@@ -1,6 +1,6 @@
 ---
 layout: post
-title: User interaction with form fields in React Pdfviewer component | Syncfusion
+title: User interaction formfields in React Pdfviewer component | Syncfusion
 description: Learn here all about User interaction with form fields in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: User interaction with form fields
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interaction with form fields in React Pdfviewer component
+# User interaction with form fields in React Pdf viewer component
 
 The PDF viewer control provides the option for interaction with Form Fields such as Drag and resize. you can draw a Form Field dynamically by clicking the Form Field icon on the toolbar and draw it in the PDF document. The Form Fields type supported by the PDF Viewer Control are:
 

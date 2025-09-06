@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in React Pdfviewer component
+# Download in React Pdf viewer component
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
 

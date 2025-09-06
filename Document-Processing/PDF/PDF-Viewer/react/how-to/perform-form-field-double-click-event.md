@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Perform form field double click event in React Pdfviewer component | Syncfusion
+title: Form field double click event in Pdfviewer component | Syncfusion
 description: Learn here all about Perform form field double click event in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Perform form field double click event
 platform: document-processing
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer library allows you to trigger an event when you double click on the form field using the `formFieldDoubleClick` event.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create simple PDF Viewer sample in React.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create simple PDF Viewer sample in React.
 
 **Step 2:** Add the following code snippet in the `index.js` file to add the form field double click event in the PDF Viewer.
 

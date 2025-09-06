@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add custom fonts to the PDF Viewer using the PDF document | Syncfusion
+title: Add customfonts to the PDFViewer using the PDF in Vue | Syncfusion
 description: Learn here all about how to add custom fonts using the PDF document in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to add custom fonts to the PDF viewer used in the PDF document
+# How to Add Custom Fonts in vue PDF Viewer
 
 To use custom fonts in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer within your PDF document, you need to add the custom TTF font files to the resource URL directory and configure the viewer to load these fonts. You can specify the custom font names using the
 **customFonts** property, which accepts an array of font names.

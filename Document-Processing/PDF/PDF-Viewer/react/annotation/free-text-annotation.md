@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in React Pdfviewer component
+# Free text annotation in React Pdf viewer component
 
 The PDF Viewer control provides the options to add, edit, and delete the free text annotations.
 

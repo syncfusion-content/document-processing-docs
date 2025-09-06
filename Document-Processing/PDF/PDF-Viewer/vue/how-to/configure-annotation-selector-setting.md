@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Configure Annotation Selector Settings
+# How to Configure Annotation Selector in Vue PDF Viewer
 
 ### Annotation Selector Settings
 
