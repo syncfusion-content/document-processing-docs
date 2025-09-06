@@ -181,7 +181,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:4
 }).build();
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
     actionComplete: (args) => {
         if (args.action === 'import') {
             // Send the action data to the server in args.response at the time of importing an excel file.

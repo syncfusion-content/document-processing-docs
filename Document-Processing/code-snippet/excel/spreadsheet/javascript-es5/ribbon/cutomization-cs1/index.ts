@@ -74,8 +74,8 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
                 break;
         }
     },
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     // Removed the unwanted support for this samples
     showFormulaBar: false, showSheetTabs: false, allowInsert: false, allowDelete: false, allowMerge: false
 });

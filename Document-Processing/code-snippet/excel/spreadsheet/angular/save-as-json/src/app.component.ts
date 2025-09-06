@@ -36,7 +36,7 @@ export class AppComponent {
   }
   @ViewChild('spreadsheet')
   public spreadsheetObj!: SpreadsheetComponent;
-  public openUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
+  public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
 
   createOptions() {
       const options: SerializationOptions = {};
@@ -75,7 +75,7 @@ export class AppComponent {
           formData.append('saveType', 'Xlsx');
           formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
               fetch(
-                  'https://services.syncfusion.com/angular/production/api/spreadsheet/save',
+                  'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
                   {
                       method: 'POST',
                       body: formData,

@@ -20,7 +20,7 @@ imports: [
 
 standalone: true,
     selector: 'app-container',
-    template: "<ejs-spreadsheet #spreadsheet (fileMenuItemSelect)='onFileItemSelect($event)' saveUrl='https://services.syncfusion.com/angular/production/api/spreadsheet/save' allowSave='true'> <e-sheets> <e-sheet> <e-ranges> <e-range [dataSource]='data'></e-range></e-ranges><e-columns><e-column [width]=90></e-column><e-column [width]=100></e-column><e-column [width]=96></e-column><e-column [width]=120></e-column><e-column [width]=130></e-column><e-column [width]=120></e-column></e-columns></e-sheet></e-sheets></ejs-spreadsheet>"
+    template: "<ejs-spreadsheet #spreadsheet (fileMenuItemSelect)='onFileItemSelect($event)' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' allowSave='true'> <e-sheets> <e-sheet> <e-ranges> <e-range [dataSource]='data'></e-range></e-ranges><e-columns><e-column [width]=90></e-column><e-column [width]=100></e-column><e-column [width]=96></e-column><e-column [width]=120></e-column><e-column [width]=130></e-column><e-column [width]=120></e-column></e-columns></e-sheet></e-sheets></ejs-spreadsheet>"
 })
 export class AppComponent implements OnInit {
     public data: object[] | undefined;
@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
           formData.append('saveType', 'Xlsx');
           formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
           fetch(
-            'https://services.syncfusion.com/angular/production/api/spreadsheet/save',
+            'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
             {
               method: 'POST',
               headers: { Authorization: 'YOUR TEXT' },

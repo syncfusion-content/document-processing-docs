@@ -50,8 +50,8 @@ export class AppComponent {
   @ViewChild('spreadsheet')
   public spreadsheetObj!: SpreadsheetComponent;
   public data: Object[] = getDefaultData();
-  public openUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
-  public saveUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/save';
+  public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+  public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 
   readOnlyRow(): void {
     this.spreadsheetObj.setRangeReadOnly(true, '2:2', this.spreadsheetObj.activeSheetIndex);

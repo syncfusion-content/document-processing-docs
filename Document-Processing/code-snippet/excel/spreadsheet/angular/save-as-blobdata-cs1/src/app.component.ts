@@ -12,7 +12,7 @@ import { getDefaultData } from './datasource';
   standalone: true,
   selector: 'app-container',
   template: `<div class="control-section">
-  <ejs-spreadsheet #spreadsheet openUrl="https://services.syncfusion.com/angular/production/api/spreadsheet/open" saveUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/save' (beforeSave)="beforeSave($event)" (saveComplete)="saveComplete($event)">
+  <ejs-spreadsheet #spreadsheet openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' (beforeSave)="beforeSave($event)" (saveComplete)="saveComplete($event)">
         <e-sheets>
             <e-sheet name="Car Sales Report">
                 <e-ranges>

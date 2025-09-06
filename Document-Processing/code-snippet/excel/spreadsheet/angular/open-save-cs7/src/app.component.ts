@@ -25,9 +25,9 @@ export class AppComponent {
   @ViewChild('default')
   public spreadsheetObj!: SpreadsheetComponent;
   public openUrl: string =
-    'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
+    'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
   public saveUrl: string =
-    'https://services.syncfusion.com/angular/production/api/spreadsheet/save';
+    'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
   public path: Object = {
     saveUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Save',
     removeUrl: 'https://services.syncfusion.com/angular/production/api/FileUploader/Remove'
