@@ -2,7 +2,7 @@ import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { Uploader } from '@syncfusion/ej2-inputs';
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+  openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
 });
 spreadsheet.appendTo('#spreadsheet');
 

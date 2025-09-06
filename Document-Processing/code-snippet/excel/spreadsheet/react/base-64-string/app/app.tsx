@@ -30,7 +30,7 @@ function App() {
     const exportBtn = (): void => {
       let spreadsheet: SpreadsheetComponent = spreadsheetRef.current;
         spreadsheet.save({
-            url: 'https://services.syncfusion.com/react/production/api/spreadsheet/save',
+            url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
             fileName: 'Worksheet',
             saveType: 'Xlsx',
           }); // Specifies the save URL, file name, file type need to be saved.

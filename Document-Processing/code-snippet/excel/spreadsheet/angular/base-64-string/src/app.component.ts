@@ -18,7 +18,7 @@ standalone: true,
     template: `<div class="control-section">
     <button class="e-btn custom-btn" (click)='import()'>Import Base64</button>
     <button class="e-btn custom-btn" (click)='export()'>Export as Base64</button>
-    <ejs-spreadsheet #spreadsheet openUrl="https://services.syncfusion.com/angular/production/api/spreadsheet/open" (beforeSave)="beforeSave($event)" (saveComplete)="saveComplete($event)">
+    <ejs-spreadsheet #spreadsheet openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" (beforeSave)="beforeSave($event)" (saveComplete)="saveComplete($event)">
         <e-sheets>
             <e-sheet name="Car Sales Report">
                 <e-ranges>
@@ -66,7 +66,7 @@ export class AppComponent {
     };
     export(): void {
         this.spreadsheetObj.save({
-            url: 'https://services.syncfusion.com/angular/production/api/spreadsheet/save',
+            url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
             fileName: 'Worksheet',
             saveType: 'Xlsx',
         }); // Specifies the save URL, file name, file type need to be saved.

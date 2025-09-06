@@ -14,7 +14,7 @@ imports: [
 
 standalone: true,
     selector: 'app-container',
-    template: `<ejs-spreadsheet #spreadsheet (openComplete)='openCompleteHandler($event)' openUrl='https://services.syncfusion.com/angular/production/api/spreadsheet/open'></ejs-spreadsheet>`
+    template: `<ejs-spreadsheet #spreadsheet (openComplete)='openCompleteHandler($event)' openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'></ejs-spreadsheet>`
 })
 export class AppComponent {
     @ViewChild('spreadsheet')

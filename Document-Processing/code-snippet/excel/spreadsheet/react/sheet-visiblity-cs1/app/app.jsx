@@ -19,8 +19,8 @@ function App() {
     }, []);
 
     return (
-        <SpreadsheetComponent showFormulaBar={false} ref={spreadsheetRef} openUrl={"https://services.syncfusion.com/react/production/api/spreadsheet/open"}
-            saveUrl={"https://services.syncfusion.com/react/production/api/spreadsheet/save"}>
+        <SpreadsheetComponent showFormulaBar={false} ref={spreadsheetRef} openUrl={"https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"}
+            saveUrl={"https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save"}>
             <SheetsDirective>
                 <SheetDirective name='Visible Sheet' state={'Visible'}>
                     <RangesDirective>

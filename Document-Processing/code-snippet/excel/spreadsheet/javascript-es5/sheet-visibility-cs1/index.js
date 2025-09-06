@@ -35,8 +35,8 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'Hidden Sheet!A1:H1');
         spreadsheet.cellFormat({ textAlign: 'center' }, 'Hidden Sheet!D2:H11');
     },
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     // Removed the unwanted support for this samples
     showFormulaBar: false, showRibbon: false
 });

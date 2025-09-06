@@ -30,7 +30,7 @@ export default {
  },  
  data: () => {
   return {
-    openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open'
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
   }
 },
 methods: {
@@ -48,7 +48,7 @@ methods: {
       formData.append('saveType', 'Xlsx');
       formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
           fetch(
-              'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
+              'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
               {
                   method: 'POST',
                   body: formData,

@@ -27,7 +27,7 @@ const dataSource = data;
 const width1 = 180;
 const width2 = 130;
 const width3 = 120;
-const saveUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/save';
+const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 
 const beforeSave = function (args) {
   args.customParams = { customParams: 'you can pass custom params in server side' }; // you can pass the custom params

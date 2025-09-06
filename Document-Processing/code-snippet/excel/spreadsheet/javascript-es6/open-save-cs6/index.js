@@ -60,7 +60,7 @@ var sheet = [{
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
     allowSave: true,
     sheets: sheet,
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     beforeSave: function (args) {
             args.customParams = { customParams: 'you can pass custom params in server side'}; // you can pass the custom params
         }

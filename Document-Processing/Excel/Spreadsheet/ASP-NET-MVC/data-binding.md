@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Data Binding in Spreadsheet Control
+# Data Binding in ASP.NET MVC Spreadsheet Control
 
 The Spreadsheet uses `DataManager`, which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of `DataManager` or JavaScript object array collection.
 
@@ -102,7 +102,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achive this you can use the `value` property.
+The Spreadsheet control can bind the data to individual cell in a sheet . To achieve this you can use the `value` property.
 
 Refer to the following code example for cell data binding.
 

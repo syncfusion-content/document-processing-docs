@@ -45,7 +45,7 @@ function App() {
       formData.append('saveType', 'Xlsx');
       formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
         fetch(
-          'https://services.syncfusion.com/react/production/api/spreadsheet/save',
+          'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
           {
             method: 'POST',
             body: formData,

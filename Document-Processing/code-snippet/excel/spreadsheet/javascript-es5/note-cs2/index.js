@@ -125,9 +125,9 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: sheet,
     enableNotes: false,
     allowOpen: true,
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
     allowSave: true,
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     created: function () {
       spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A1:H1');
     }

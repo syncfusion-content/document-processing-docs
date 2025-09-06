@@ -57,8 +57,8 @@ const spreadsheet = new ej.spreadsheet.Spreadsheet({
         ranges: [{ dataSource: data }],
         columns: [{ width: 130 }, { width: 92 }, { width: 96 }, { width: 80 }, { width: 80 }, { width: 80 }, { width: 80 }, { width: 80 }]
     }],
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     created: () => {
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:H1');
         applyFormats();

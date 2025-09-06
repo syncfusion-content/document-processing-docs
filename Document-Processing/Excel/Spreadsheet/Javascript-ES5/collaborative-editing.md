@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative editing in EJ2 Javascript Spreadsheet control | Syncfusion
+title: Collaborative-editing EJ2 Javascript Spreadsheet | Syncfusion
 description: Learn here all about Collaborative editing in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative editing 
@@ -181,7 +181,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:4
 }).build();
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
     actionComplete: (args) => {
         if (args.action === 'import') {
             // Send the action data to the server in args.response at the time of importing an excel file.

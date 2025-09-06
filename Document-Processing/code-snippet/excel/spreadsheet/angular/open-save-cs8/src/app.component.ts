@@ -19,7 +19,7 @@ imports: [
 standalone: true,
   selector: 'app-container',
   template:
-    "<ejs-spreadsheet #spreadsheet openUrl='https://services.syncfusion.com/angular/production/api/spreadsheet/open' allowOpen='true' (beforeOpen)='beforeOpen($event)'> </ejs-spreadsheet>",
+    "<ejs-spreadsheet #spreadsheet openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' allowOpen='true' (beforeOpen)='beforeOpen($event)'> </ejs-spreadsheet>",
 })
 
 export class AppComponent {

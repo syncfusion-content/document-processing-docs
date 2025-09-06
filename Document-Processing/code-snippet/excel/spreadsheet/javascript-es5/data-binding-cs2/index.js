@@ -19,8 +19,8 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
             ranges: [{ dataSource: data, query: query, showFieldAsHeader: false, startCell: 'A2' }],
             columns: [{ width: 100 }, { width: 130 }, { width: 100 }, { width: 220 }, { width: 150 }, { width: 180 }]
         }],
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
 });
 
 spreadsheet.appendTo('#spreadsheet');
