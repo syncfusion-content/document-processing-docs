@@ -139,7 +139,7 @@ This dialog allows managing the styles in a document. It will display all the st
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs8/index.js %}
+{% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs8/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/document-editor/javascript-es6/document-editor/dialog-cs8/index.html %}
