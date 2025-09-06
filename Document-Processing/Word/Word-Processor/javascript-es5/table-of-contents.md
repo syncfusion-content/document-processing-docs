@@ -39,7 +39,7 @@ editor.editorModule.insertTableOfContents(tocSettings);
 
 {% tabs %}
 {% highlight js tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es5/document-editor/table-of-contents-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es5/document-editor/table-of-contents-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/document-editor/javascript-es5/document-editor/table-of-contents-cs1/index.html %}

@@ -20,7 +20,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/asp-net-core/document-editor/prevent-default/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/document-editor/prevent-default/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Prevent-default.cs" %}
 {% endhighlight %}{% endtabs %}
