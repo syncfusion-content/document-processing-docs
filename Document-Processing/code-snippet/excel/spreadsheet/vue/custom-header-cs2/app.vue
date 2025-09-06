@@ -39,7 +39,7 @@ export default {
       width2: 130,
       width3: 120,
       saveUrl:
-        "https://services.syncfusion.com/vue/production/api/spreadsheet/save"
+        "https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save"
     };
   },
   methods: {
@@ -57,7 +57,7 @@ export default {
           formData.append("saveType", "Xlsx");
           formData.append("pdfLayoutSettings", JSON.stringify({ fitSheetOnOnePage: false, orientation: "Portrait" }));
           fetch(
-            "https://services.syncfusion.com/vue/production/api/spreadsheet/save",
+            "https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save",
             {
               method: "POST",
               headers: { Authorization: "YOUR TEXT" },

@@ -41,12 +41,12 @@ yarn create next-app
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-spreadsheet`.
+1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-next-js-spreadsheet`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? » ej2-nextjs-spreadsheet
+√ What is your project named? » ej2-next-js-spreadsheet
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,24 +56,24 @@ Using one of the above commands will lead you to set up additional configuration
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? ... ej2-nextjs-spreadsheet
+√ What is your project named? ... ej2-next-js-spreadsheet
 √ Would you like to use TypeScript? ... No / `Yes`
 √ Would you like to use ESLint? ... No / `Yes`
 √ Would you like to use Tailwind CSS? ... `No` / Yes
 √ Would you like to use `src/` directory? ... No / `Yes`
 √ Would you like to use App Router? (recommended) ... No / `Yes`
 √ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-spreadsheet.
+Creating a new Next.js app in D:\ej2-next-js-spreadsheet.
 
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-spreadsheet`, navigate to the directory using the below command:
+3.Once complete the above mentioned steps to create `ej2-next-js-spreadsheet`, navigate to the directory using the below command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-cd ej2-nextjs-spreadsheet
+cd ej2-next-js-spreadsheet
 
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +82,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npm js](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
 Here, the [React Spreadsheet component](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is used in the project. To install the React Spreadsheet component, use the following command:
 
