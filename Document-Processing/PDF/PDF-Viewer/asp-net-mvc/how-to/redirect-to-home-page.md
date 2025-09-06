@@ -15,7 +15,7 @@ The PDF Viewer library allows you to redirect to a home page after submitting PD
 
 The following example steps are used to redirect to a home page programmatically after submitting PDF forms.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Add the following codes in new View pages HomePage.cshtml and FormFillingData.cshtml inside a folder(say FormFilling).
 

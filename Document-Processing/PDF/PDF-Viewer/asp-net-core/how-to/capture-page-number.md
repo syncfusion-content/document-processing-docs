@@ -14,7 +14,7 @@ The PDF Viewer server library allows you to capture the page number that is curr
 
 The following steps are used to capture the current page number.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to Capture the current page number being viewed.
 

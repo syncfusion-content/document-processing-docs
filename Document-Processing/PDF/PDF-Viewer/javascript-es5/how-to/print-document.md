@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Print document in ##Platform_Name## Pdfviewer control
 
-The PDF Viewer library allows you to print the PDF document programmatically using the [**print()**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the **PrintModule**.
+The PDF Viewer library allows you to print the PDF document programmatically using the [**print()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the **PrintModule**.
 
 The following steps are used to print the PDF document programmatically.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to perform the print operation.
 

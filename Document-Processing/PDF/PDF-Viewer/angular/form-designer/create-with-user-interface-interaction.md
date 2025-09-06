@@ -91,7 +91,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 export class AppComponent implements OnInit {
   @ViewChild('pdfviewer')
   public pdfviewerControl: PdfViewerComponent;
-  public service: string = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
   public document: string = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
   ngOnInit(): void {
   }

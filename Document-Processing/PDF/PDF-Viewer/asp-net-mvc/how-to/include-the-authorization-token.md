@@ -15,7 +15,7 @@ The PDF Viewer server library allows you to include the Authorization token in t
 
 The following steps are used to include the Authorization token for PDF viewer control,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to include the authorization token,
 

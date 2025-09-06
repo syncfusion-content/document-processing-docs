@@ -86,7 +86,7 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-Here, the [React PDF Viewer component](https://www.syncfusion.com/react-components/react-pdf-viewer) is used as an example. To install the React PDF Viewer component in the project, use the following command:
+Here, the [React PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) is used as an example. To install the React PDF Viewer component in the project, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -143,7 +143,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -175,6 +175,6 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the functionality of the PDF Viewer component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started#module-injection).
+To learn more about the functionality of the PDF Viewer component, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
 
 > [View the NEXT.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs).

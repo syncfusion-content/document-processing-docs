@@ -29,7 +29,7 @@ We should inject FormDesigner module and set enableFormDesignerToolbar as true t
 ```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "FormDesigner.pdf",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
     enableFormDesignerToolbar: true
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner);
@@ -77,7 +77,7 @@ We provided support to undo/redo the Form Field actions that are performed at ru
 ```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: "FormDesigner.pdf",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner);
 pdfviewer.appendTo('#PdfViewer');

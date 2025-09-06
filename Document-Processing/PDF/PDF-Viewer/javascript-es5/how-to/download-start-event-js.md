@@ -28,4 +28,4 @@ By default, the cancel argument is set to `false`, indicating that the download 
 
 ### Enhanced Flexibility
 
-By leveraging the [downloadStart](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.
+By leveraging the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event and its cancel argument, you gain the ability to implement custom logic to control and potentially prevent download actions based on your application's specific requirements. This enhancement provides greater flexibility in managing user interactions with PDF documents, empowering you to tailor the experience according to your needs.
