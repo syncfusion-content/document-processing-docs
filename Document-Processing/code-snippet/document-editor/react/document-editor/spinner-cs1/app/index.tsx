@@ -45,7 +45,7 @@ function App() {
                     container = scope;
                 }}
                 height={'590px'}
-                serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"
+                serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
                 enableToolbar={true}
             />
         </div>

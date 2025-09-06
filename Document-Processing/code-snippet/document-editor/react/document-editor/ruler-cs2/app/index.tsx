@@ -27,7 +27,7 @@ function App() {
                 documenteditorcontainer = scope;
                 created();
             }}
-            serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" enableToolbar={true} />
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true} />
         </div>
 
         

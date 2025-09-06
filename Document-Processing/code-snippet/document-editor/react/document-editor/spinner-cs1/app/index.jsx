@@ -31,7 +31,7 @@ function App() {
             <button id='import' onClick={onClick}>Load Document</button>
             <DocumentEditorContainerComponent id="container" ref={(scope) => {
             container = scope;
-        }} height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/" enableToolbar={true}/>
+        }} height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true}/>
         </div>);
 }
 export default App;
