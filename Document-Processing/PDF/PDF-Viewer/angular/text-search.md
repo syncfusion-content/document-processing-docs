@@ -66,7 +66,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -221,7 +221,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 
@@ -343,7 +343,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 
@@ -465,7 +465,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 
@@ -587,7 +587,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public service =
-    "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 

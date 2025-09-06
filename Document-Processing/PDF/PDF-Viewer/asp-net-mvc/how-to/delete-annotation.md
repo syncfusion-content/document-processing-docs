@@ -14,7 +14,7 @@ The PDF Viewer server library allows you to delete a specific annotation from a 
 
 The following steps are used to delete a specific annotation from PDF Document.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to delete a specific annotation using `deleteAnnotationById()` method.
 
