@@ -56,10 +56,10 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToo
    }
  });
  DocumentEditorContainer.Inject(Toolbar);
- container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
  container.appendTo('#container');
 ```
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 >Note: By default, printDevicePixelRatio value is 1
 

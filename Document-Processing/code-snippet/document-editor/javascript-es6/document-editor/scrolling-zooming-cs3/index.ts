@@ -5,7 +5,7 @@ import { createElement } from '@syncfusion/ej2-base';
 import { DropDownButton, ItemModel, MenuEventArgs } from '@syncfusion/ej2-splitbuttons';
 
 let documenteditor: DocumentEditor = new DocumentEditor({
-    isReadOnly: false, height: '370px', serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/'
+    isReadOnly: false, height: '370px', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 documenteditor.enableAllModules();
 

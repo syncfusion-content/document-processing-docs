@@ -37,7 +37,7 @@ var container = new ej.documenteditor.DocumentEditorContainer({
     toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
     height: '590px'
 });
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
 
@@ -64,7 +64,7 @@ var container = new ej.documenteditor.DocumentEditorContainer({
     ribbonLayout: 'Classic', // Options: 'Simplified' or 'Classic'
     height: '590px'
 });
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
 

@@ -31,7 +31,7 @@ import {
 
 @Component({
       selector: 'app-container',
-      template: `<ejs-documenteditor id="container" [documentEditorSettings]= "settings" serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true
+      template: `<ejs-documenteditor id="container" [documentEditorSettings]= "settings" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true
       [enablePrint]=true [enableSfdtExport]=true [enableWordExport]=true [enableOptionsPane]=true [enableContextMenu]=true
       [enableHyperlinkDialog]=true [enableBookmarkDialog]=true [enableTableOfContentsDialog]=true [enableSearch]=true
       [enableParagraphDialog]=true [enableListDialog]=true [enableTablePropertiesDialog]=true [enableBordersAndShadingDialog]=true
@@ -52,7 +52,7 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Disable optimized text measuring in `DocumentEditor` instance
 
@@ -64,7 +64,7 @@ import { ToolbarService } from '@syncfusion/ej2-angular-documenteditor';
 @Component({
       selector: 'app-container',
       // specifies the template string for the DocumentEditorContainer component
-      template: `<ejs-documenteditorcontainer [documentEditorSettings]= "settings" serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
+      template: `<ejs-documenteditorcontainer [documentEditorSettings]= "settings" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
       providers: [ToolbarService]
 })
 export class AppComponent {
@@ -74,4 +74,4 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

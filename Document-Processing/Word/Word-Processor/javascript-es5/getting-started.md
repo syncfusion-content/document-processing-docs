@@ -127,7 +127,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 JavaScript components c
         <div id='DocumentEditor'></div>
     <script>
         // Initialize DocumentEditor component.
-        var documenteditor = new ej.documenteditor.DocumentEditor({ isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/' });
+        var documenteditor = new ej.documenteditor.DocumentEditor({ isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
 
         documenteditor.acceptTab = true;
 
@@ -142,7 +142,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 JavaScript components c
   </html>
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 **Step 6:** Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditor** component.
 
@@ -196,7 +196,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 JavaScript components c
 
           //Inject require modules.
           ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
-          documenteditorContainer.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+          documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
           //DocumentEditorContainer control rendering starts
           documenteditorContainer.appendTo('#DocumentEditor');
       </script>
@@ -204,7 +204,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 JavaScript components c
   </html>
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditorContainer** component.
 
@@ -269,7 +269,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
       <div id='DocumentEditor' style='height:350px'></div>
   <script>
       // Initialize DocumentEditor component.
-      var documenteditor = new ej.documenteditor.DocumentEditor({ height: '370px', isReadOnly: false, serviceUrl: 'https://services.syncfusion.com/js/production/api/documenteditor/' });
+      var documenteditor = new ej.documenteditor.DocumentEditor({ height: '370px', isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
 
       documenteditor.acceptTab = true;
       //Enable all the build in modules.
@@ -285,7 +285,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
   </html>
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 {% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/es5-getting-started-cs1" %}
 
@@ -341,7 +341,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
     // Initialize DocumentEditorContainer component.
     var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, height: '590px' });
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
-    documenteditorContainer.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+    documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
     //DocumentEditorContainer control rendering starts
     documenteditorContainer.appendTo('#DocumentEditor');
   </script>
@@ -350,7 +350,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
 </html>
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 {% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/es5-getting-started-cs2" %}
 
