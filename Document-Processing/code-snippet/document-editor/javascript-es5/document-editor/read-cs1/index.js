@@ -2,7 +2,7 @@ var documenteditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false
 });
 
-documenteditor.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+documenteditor.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 documenteditor.documentChange = () => {
     documenteditor.isReadOnly=true;
 };

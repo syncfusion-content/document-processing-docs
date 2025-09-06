@@ -22,7 +22,7 @@ function App() {
     return (<DocumentEditorComponent id="container" height={'590px'} ref={(scope) => {
             container = scope;
             created();
-        }} serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"/>);
+        }} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"/>);
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));

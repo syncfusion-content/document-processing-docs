@@ -40,7 +40,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
         enableToolbar={true}
         created={onCreate}
       />
@@ -52,7 +52,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Similarly, you can change the required [`CharacterFormatProperties`](https://ej2.syncfusion.com/react/documentation/api/document-editor/characterFormatProperties) default value.
 
@@ -90,7 +90,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
         enableToolbar={true}
         created={onCreate}
       />
@@ -102,7 +102,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Set the default paragraph format
 
@@ -139,7 +139,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
         enableToolbar={true}
         created={onCreate}
       />
@@ -151,7 +151,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Set the default section format
 
@@ -192,7 +192,7 @@ function App() {
           container = scope;
         }}
         height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
         enableToolbar={true}
         created={onCreate}
       />
@@ -205,4 +205,4 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

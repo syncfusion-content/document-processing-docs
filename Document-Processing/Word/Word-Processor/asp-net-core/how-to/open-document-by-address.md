@@ -58,7 +58,7 @@ export class App extends React.Component<{}, {}> {
       <button id='import' onClick={this.onClick.bind(this)}>Import</button>
       <DocumentEditorContainerComponent id="container" ref={(scope) => { this.container = scope; }}
         height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/word-editor/api/documenteditor/"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
         enableToolbar={true}
       />
       </div>

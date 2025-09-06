@@ -28,7 +28,7 @@ DocumentEditorContainer.Inject(Toolbar);
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 // To insert text in cursor position
@@ -39,7 +39,7 @@ container.documentEditor.selection.goToHeader();
 container.documentEditor.editor.insertPageNumber();
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Also, you use [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertfield) API in Editor module to insert the Page number in current position
 
@@ -61,7 +61,7 @@ DocumentEditorContainer.Inject(Toolbar);
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 // To insert text in cursor position
@@ -84,7 +84,7 @@ DocumentEditorContainer.Inject(Toolbar);
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
 
-container.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 let sfdt: any = {sfdt: 'UEsDBAoAAAAIAPaKZVrvd0ouRgMAAPguAAAEAAAAc2ZkdO1ZW2/aMBj9K8h7RRVJICF5mzqhPUxTpT1WPDiJTaw5lznuaIv63+dbuBRC05ZLNJmXY+LY5/g7nw3ytwJlxUlOntEvnHIQcfaAhqBGCYjuV0BgxUC0AtUSRL7jDkGVgSgIRYPmoiGQGeQGY4NZCiLPHwJsMMUViEYCS6QbMdEgmMBPtLyDCwSGABUYRGI4lii6GWkQKSS4AJEjEGmsFkUtJvjKYEwSMb5ISlqrHvRnqZDGPFFDdc/9/EWQqtVVWC4tTlktkQtZK9FHuUa20Bib75mGvxIE1ryQwkuWQyp4qdSpOhI9q1gdhrRG4glRbPvPORWUABNWc/AiZJ1VkdFhaSyNpbE0lsbSWBpLY2ksjaWxNJbG0lgaS2NpLM1/QdN+4VajpCxSe+NmaSyNpbE0H6KZi4G6Z74ueZiDVr1iWrh+BpHjiIZ4BdxCSmJGxLQPqiJTc10CggoyXaYRQ+SZrQfJ1tYwmGxmxnCnC+MCo60nQumn4kBJYQpPGrFBrsXGtQKowZScqFlQSdcVLqP2t2Rt2sti3V4mTcltE2hcG0UcU91I+VIX0UwlC5niWCbEArH22iDONX+lIc14rpVgrAUmZV6ZyD/x2KiUcQCyCvdlpj5AZcGT+g3dyQUz+eei+jqdiscNhUxeyfgdwZQUi4FzKtI3rZSlzW0vb0ZB6Pi+PxkFgTsKx8Guuc5+wU9nur+b6YMfZJFx6YyKrzubjEMfvErezUu7KWye63Ll1o7cDtDgNoMMvBHF5iWuc+Aicr8hDB8oH9xBBhcMVtlgVhZ8ra2le0fjy+uFuBdLh/dlg9uWDd5ls8Htkg1uezZ418qGRpvXU4O9NoPdoxFzZl7geyc02OtisNdu8PnkdjR43FODx/sGk+aH+ZI7eNzF4PEhg88tt6PBk54aPDmwgy/o66SLr5ODG/eqdvo9tdN/l50nP4f9Lnb677TzAsdv0FM7g48dvyf3Nejia/DR4/cCBk97avC07Q/U6GZyNGae+pzQ4mkXi6ftf6HOKbijyWFPTQ6P7eLruB12cTs8vqH7YDtip/H88HXV/qXMTkBV7IyKRtSsLPn1RRkV8gqSqmtJMRnVmOQamfn6qJHki1pN+w9QSwECFAAKAAAACAD2imVa73dKLkYDAAD4LgAABAAAAAAAAAAAAAAAAAAAAAAAc2ZkdFBLBQYAAAAAAQABADIAAABoAwAAAAA=',};
@@ -93,4 +93,4 @@ container.documentEditor.open(sfdt);
 container.documentEditor.selection.goToPage(2);
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/js/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

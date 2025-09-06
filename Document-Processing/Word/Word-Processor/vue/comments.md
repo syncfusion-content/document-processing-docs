@@ -139,7 +139,7 @@ import { onMounted, ref, provide } from 'vue';
 import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 const container = ref(null);
-const serviceUrl = 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/';
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 provide('DocumentEditorContainer', [Toolbar]);
 
@@ -170,7 +170,7 @@ export default {
     'ejs-documenteditorcontainer': DocumentEditorContainerComponent
   },
   data() {
-    return { serviceUrl: 'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/' };
+    return { serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' };
   },
   provide: {//Inject require modules.
     DocumentEditorContainer: [Toolbar]
@@ -187,7 +187,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Comment only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
@@ -218,7 +218,7 @@ The following example illustrates how to enable mention support in the Document 
             ];
   export default {
     data() {
-      return { serviceUrl:'https://document.syncfusion.com/web-services/word-editor/api/documenteditor/',
+      return { serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
       settings: { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }},
     },
     provide: {
@@ -229,7 +229,7 @@ The following example illustrates how to enable mention support in the Document 
 </script>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/word-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Events
 

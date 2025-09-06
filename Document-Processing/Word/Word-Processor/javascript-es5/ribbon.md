@@ -34,7 +34,7 @@ var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ en
 toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
 height: '590px' });
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Ribbon);
-documenteditorContainer.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 //DocumentEditorContainer control rendering starts
 documenteditorContainer.appendTo('#DocumentEditor');
 ```
@@ -59,7 +59,7 @@ toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
 ribbonLayout: 'Classic', // Options: 'Simplified' or 'Classic'
 height: '590px' });
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Ribbon);
-documenteditorContainer.serviceUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 //DocumentEditorContainer control rendering starts
 documenteditorContainer.appendTo('#DocumentEditor');
 ```
