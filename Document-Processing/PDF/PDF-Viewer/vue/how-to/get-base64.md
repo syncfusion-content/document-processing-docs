@@ -137,7 +137,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
     };
   },
   provide: {

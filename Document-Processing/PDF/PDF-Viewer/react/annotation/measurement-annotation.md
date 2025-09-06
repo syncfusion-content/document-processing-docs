@@ -92,7 +92,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -110,7 +110,7 @@ root.render(<App />);
 
 ## Adding a measurement annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a measurement annotation programmatically:
 
@@ -257,7 +257,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -459,7 +459,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -566,7 +566,7 @@ export function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         distanceSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
         perimeterSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
         areaSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}
@@ -656,7 +656,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         measurementSettings={{scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}}
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,

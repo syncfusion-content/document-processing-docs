@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Load document in React Pdfviewer component
 
-The PDF Viewer library allows to switch or load PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or the file name into the PDF Viewer control using the  [**Load()**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method dynamically.
+The PDF Viewer library allows to switch or load PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or the file name into the PDF Viewer control using the  [**Load()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method dynamically.
 
 The following steps are used to load the PDF document dynamically.
 
@@ -93,7 +93,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,

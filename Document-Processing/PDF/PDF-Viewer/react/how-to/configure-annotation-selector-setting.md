@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ### Annotation Selector Settings
 
-The [**annotationSelectorSettings**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings/) property allows you to customize the appearance and behavior of the annotation selector in the UI.
+The [**annotationSelectorSettings**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings/) property allows you to customize the appearance and behavior of the annotation selector in the UI.
 
-The [**AnnotationSelectorSettingsModel**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
+The [**AnnotationSelectorSettingsModel**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
 
 ### How to Configure Annotation Selector Settings
 

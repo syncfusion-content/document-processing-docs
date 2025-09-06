@@ -104,7 +104,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the PDF Viewer component with [documentPath](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [resourceUrl](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#resourceurl) property.
+2\. In the `template` section, define the PDF Viewer component with [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [resourceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#resourceurl) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

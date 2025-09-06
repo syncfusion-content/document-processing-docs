@@ -99,7 +99,7 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-hide-cs1" %}
@@ -185,7 +185,7 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-method-cs1" %}
@@ -265,7 +265,7 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-items-cs1" %}
@@ -350,7 +350,7 @@ export default {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+**serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
   {% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-items-method-cs1" %}
@@ -360,11 +360,11 @@ Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serv
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://helpej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -576,7 +576,7 @@ let toolItem4 = {
 }
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 const toolbarSettings = {
   toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
 }
@@ -652,7 +652,7 @@ export default {
     }
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       toolbarSettings: {
         toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
       }
@@ -841,7 +841,7 @@ export default Vue.extend({
 export default Vue.extend({
     data: function () {
         return {
-            serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+            serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
             documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
             enableToolbar: false,
             pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
@@ -1209,7 +1209,7 @@ export default Vue.extend({
     export default Vue.extend({
         data: function () {
             return {
-                serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+                serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
                 documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
                 enableToolbar: false,
                 pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',

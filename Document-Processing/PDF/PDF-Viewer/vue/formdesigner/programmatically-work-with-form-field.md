@@ -96,7 +96,7 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 const documentPath = "PDF_Succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -135,7 +135,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       documentPath: "PDF_Succinctly.pdf"
     };
   },
@@ -184,7 +184,7 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 const documentPath = "PDF_Succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
@@ -223,7 +223,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       documentPath: "PDF_Succinctly.pdf"
     };
   },

@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of React PDF Viewer Component
 
-The [`React PDF Viewer`](https://document.syncfusion.com/#/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
 ## Setup
 
@@ -34,10 +34,10 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 Add CSS references needed for a PDF Viewer in `src/index.css` from the `../node_modules/@syncfusion` package folder.
 
 ```
-   @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+   @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-   @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-   @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+   @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+   @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
@@ -64,7 +64,7 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl="https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
-         
+
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
                              ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
 
@@ -76,7 +76,7 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 ```
 
-## Key Features 
+## Key Features
 
 *[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
 *[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
@@ -95,7 +95,7 @@ root.render(<App />);
 * [Javascript(ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
 * [Javascript](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
 * [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
-* [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
+* [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
 * [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core-mvc/asp-net-core/getting-started)
 * [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core-mvc/asp-net-mvc/getting-started)
 * [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)

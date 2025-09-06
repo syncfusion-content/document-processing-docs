@@ -37,7 +37,7 @@ The PDF Viewer library allows you to lock the rectangle or square annotations us
      <PdfViewerComponent
       id="container"
        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-       serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
       // lock annotation
       rectangleSettings={{ isLock: true }}
       style={{ height: '640px' }}>

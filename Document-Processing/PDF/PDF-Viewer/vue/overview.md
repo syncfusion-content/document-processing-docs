@@ -8,7 +8,7 @@ documentation: UG
 
 # Overview of vue PDF Viewer Component
 
-The [`Vue PDF Viewer`](https://document.syncfusion.com/#/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [`Vue PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
 
 ## Setup
 
@@ -57,7 +57,7 @@ Add CSS references needed for PDF Viewer in `style` section of the `App.vue` fil
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css";
 </style>
 ```
@@ -68,18 +68,18 @@ Add the Vue PDF Viewer by using `ejs-pdfviewer` selector in template section of 
 ```
 <template>
   <div id="app">
-    <ejs-pdfviewer 
-      id="pdfViewer" 
+    <ejs-pdfviewer
+      id="pdfViewer"
       :documentPath="documentPath"
-      :resourceUrl="resourceUrl"> 
+      :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
          Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 export default {
@@ -101,7 +101,7 @@ export default {
 ```
 Refer the [Getting Started with Vue3](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started-application) for using Syncfusion Vue components in Vue 3 applications.
 ```
-## Key Features 
+## Key Features
 
 *[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
 *[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.

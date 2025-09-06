@@ -74,7 +74,7 @@ The PDF Viewer library allows you to add signature in the signature field of the
   <PdfViewerComponent
     id="container"
     documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+    serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
     style={{ height: '640px' }}
     formFieldClick={fieldClick}>
     <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,

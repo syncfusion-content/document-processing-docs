@@ -87,7 +87,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
           <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -160,7 +160,7 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         // Enable or disable handwritten signature.
         enableHandwrittenSignature = {true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
           <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -178,7 +178,7 @@ root.render(<App />);
 
 ## Adding Handwritten signature to the PDF document Programmatically
 
-With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here is an example of how you can use the **addAnnotation()** method to add the Handwritten signature programmatically
 
@@ -310,7 +310,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,

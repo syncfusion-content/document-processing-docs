@@ -16,11 +16,11 @@ The PDF Viewer supports different internal and external navigations.
 
 The default toolbar of PDF Viewer contains the following navigation options
 
-* [**Go to page**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
+* [**Show previous page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
 
 You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
 
@@ -73,7 +73,7 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableNavigation={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation,
@@ -144,7 +144,7 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableBookmark={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation,
@@ -217,7 +217,7 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableThumbnail={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation,
@@ -298,7 +298,7 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableHyperlink={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation,
@@ -369,7 +369,7 @@ function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enableHyperlink="true"
         hyperlinkOpenState="NewTab"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation,

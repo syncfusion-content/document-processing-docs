@@ -143,7 +143,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,

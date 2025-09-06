@@ -96,7 +96,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs2" %}
 
@@ -176,7 +176,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs3" %}
 
@@ -248,7 +248,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs4" %}
 
@@ -324,7 +324,7 @@ root.render(<App />);
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
-**serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"**.
+**serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"**.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/react/base-cs5" %}
 
@@ -332,11 +332,11 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://helpej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -639,7 +639,7 @@ The PDF Viewer provides API for user interactions options provided in it's built
                         documentLoad={this.documentLoaded}
                         pageChange={this.onPageChange}
                         documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-                        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+                        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
                         style={{ 'display': 'block', 'height': '640px' }}>
 
                                 <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -718,7 +718,7 @@ style={{ 'display': 'block', 'height': '640px' }}>
     documentLoad={this.documentLoaded}
     pageChange={this.onPageChange}
     documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+    serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
     style={{ 'display': 'block', 'height': '640px' }}>
 
             <Inject services={[ Magnification, Navigation, LinkAnnotation, BookmarkView,

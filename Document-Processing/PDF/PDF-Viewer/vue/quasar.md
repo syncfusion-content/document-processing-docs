@@ -126,7 +126,7 @@ import { provide } from 'vue';
 import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
-const serviceUrl = 'https://services.syncfusion.com/vue/production/api/pdfviewer';
+const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 const pdfViewer = null;
 
@@ -157,7 +157,7 @@ import { provide } from 'vue';
 import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
-const serviceUrl = 'https://services.syncfusion.com/vue/production/api/pdfviewer';
+const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 const pdfViewer = null;
 

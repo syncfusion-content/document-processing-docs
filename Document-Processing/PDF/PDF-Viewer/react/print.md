@@ -60,7 +60,7 @@ function App() {
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         enablePrint={true}
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -137,7 +137,7 @@ function App() {
       <PdfViewerComponent
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
             <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
@@ -155,7 +155,7 @@ root.render(<App />);
 
 ## Customizing Print Quality using printScaleFactor API
 
-The PDF Viewer allows you to adjust the print quality using the [PrintScaleFactor](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/#printScaleFactor) API. The quality of the print improves as the printScaleFactor value increases from 0.5 to 5.
+The PDF Viewer allows you to adjust the print quality using the [PrintScaleFactor](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#printScaleFactor) API. The quality of the print improves as the printScaleFactor value increases from 0.5 to 5.
 
 When the value is less than 0.5, the PDF is printed at a standard quality. When the value exceeds 5, the PDF is still printed at the standard quality. In standard quality, printScaleFactor value is set to 1 as default value.
 The effective range for printScaleFactor is between 0.5 and 5. Higher values within this range will result in better print quality, but also increase the print time.
@@ -216,7 +216,7 @@ function App() {
         enablePrint={true}
         {/* pdf with low quality. By changing values you can change the quality of the pdf. */}
         printScaleFactor= {0.5};
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView,

@@ -97,7 +97,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
           style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
@@ -185,7 +185,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -203,7 +203,7 @@ root.render(<App />);
 
 ## Highlight a text programmatically
 
-The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply highlighting programmatically:
 
@@ -274,7 +274,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -371,7 +371,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -458,7 +458,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
                                   Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
@@ -476,7 +476,7 @@ root.render(<App />);
 
 ## Underline a text programmatically
 
-The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Underline programmatically:
 
@@ -547,7 +547,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -645,7 +645,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -735,7 +735,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -754,7 +754,7 @@ root.render(<App />);
 
 ## Strikethrough a text programmatically
 
-The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
 
@@ -825,7 +825,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -923,7 +923,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1013,7 +1013,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1032,7 +1032,7 @@ root.render(<App />);
 
 ## Squiggly a text programmatically
 
-The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
 
@@ -1103,7 +1103,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1212,7 +1212,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
           style={{ 'height': '640px' }}
           highlightSettings = {{author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''}}
           underlineSettings = {{author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9,modifiedDate: ''}}
@@ -1321,7 +1321,7 @@ function App() {
         <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -1404,7 +1404,7 @@ function App() {
           id="container"
           documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
           enableTextMarkupAnnotation = {false}
-          serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
           style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,

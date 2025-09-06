@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Extract text using extractTextCompleted Event in React Pdfviewer component
 
-The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://helpej2.syncfusion.com/react/documentation/api/pdfviewer/#extracttextcompleted) event.
+The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#extracttextcompleted) event.
 
 Here is an example of how you can use the isExtractText property and extractTextCompleted event:
 
@@ -20,7 +20,7 @@ Here is an example of how you can use the isExtractText property and extractText
 <PdfViewerComponent
     id="container"
     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    serviceUrl="https://services.syncfusion.com/react/production/api/pdfviewer"
+    serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
     isExtractText={true}
     extractTextCompleted={extractTextCompleted}
     style={{ height: '640px' }}>

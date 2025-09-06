@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Save button - `Save` button-item can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Newly added `save` button-item click action can be defined in [`toolbarClick`](https://helpej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
+* Save button - `Save` button-item can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Newly added `save` button-item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
 
-* Show, Hide - `Save` button-item can be shown or hidden using the [`ToolbarSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - `Save` button-item can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarItem/).
 
-* Enable, Disable -  `Save` button-item can be enabled or disable using [`enabletoolbaritem`].(https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  `Save` button-item can be enabled or disable using [`enabletoolbaritem`].(https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -157,7 +157,7 @@ let toolItem1 = {
 
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 const toolbarSettings = {
   toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 }
@@ -209,7 +209,7 @@ export default {
 
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       toolbarSettings: {
         toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
       }

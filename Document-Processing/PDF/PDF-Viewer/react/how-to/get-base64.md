@@ -148,7 +148,7 @@ class App extends React.Component {
                         ref={this.viewerRef}
                         id="PdfViewer"
                         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                        serviceUrl= "https://services.syncfusion.com/react/production/api/pdfviewer"
+                        serviceUrl= "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
                         style={{ height: '640px' }}
                     >
                         <Inject services={[

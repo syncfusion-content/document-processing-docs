@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Extract text using extractTextCompleted Event in Vue Pdfviewer component
 
-The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#extracttextcompleted) event.
+The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#extracttextcompleted) event.
 
 The following steps are used to extract the text from the page.
 
@@ -35,7 +35,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 const documentPath = "PDF_Succinctly.pdf";
 const extractTextCompleted = function (args) {
   // Extract the Complete text of load document
@@ -75,7 +75,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       documentPath: "PDF_Succinctly.pdf",
       extractTextCompleted: function (args) {
         // Extract the Complete text of load document

@@ -37,7 +37,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 const documentPath = "PDF_Succinctly.pdf";
 const retryTimeout = 10;
 const retryCount = 10;
@@ -72,7 +72,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       documentPath: "PDF_Succinctly.pdf",
       retryTimeout: 10,
       retryCount: 10
@@ -91,7 +91,7 @@ export default {
 
 In the given example, the `retryTimeout` is set to 10 seconds, and the `retryCount` is set to 5. This means that if a request made by the PDF Viewer takes longer than 10 seconds to receive a response, it will be considered a timeout. In such cases, The PDF Viewer will resend the same request based on the retryCount. Here, this process will repeat up to maximum of 5 retries.
 
-When an exception occurs during the AJAX request in the context of the PDF Viewer, the request will wait for the specified `retryTimeout` duration. If the timeout duration is exceeded, the PDF Viewer will decrement the [retryCount](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#retrycount) and attempt to load the document again. This retry process continues until the document is successfully loaded or the retryCount limit is reached.
+When an exception occurs during the AJAX request in the context of the PDF Viewer, the request will wait for the specified `retryTimeout` duration. If the timeout duration is exceeded, the PDF Viewer will decrement the [retryCount](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#retrycount) and attempt to load the document again. This retry process continues until the document is successfully loaded or the retryCount limit is reached.
 
 The `retryCount` property of the PDF Viewer allows you to set the number of retries for a specific request. This feature is particularly useful for handling temporary errors such as network timeouts or server issues. By initiating new requests according to the retry count, ensure a smoother user experience and efficiently handle network or server problems.
 

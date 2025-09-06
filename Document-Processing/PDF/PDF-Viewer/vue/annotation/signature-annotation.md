@@ -134,7 +134,7 @@ import {
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -174,7 +174,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -260,7 +260,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -276,7 +276,7 @@ export default {
 
 ## Adding Handwritten signature programmatically to the PDF document
 
-With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
 
 Here is an example of how you can use the **addAnnotation()** method to add the Handwritten signature programmatically
 
@@ -450,7 +450,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, DisplayMode])
@@ -525,7 +525,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/",
     };
   },
   provide: {
