@@ -36,8 +36,8 @@ export class AppComponent {
   @ViewChild('spreadsheet')
   public spreadsheetObj: SpreadsheetComponent | undefined;
   public data: object[] = dataSource;
-  public openUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
-  public saveUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/save';
+  public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+  public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
   created() {
     this.spreadsheetObj!.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:H1');
   };

@@ -18,7 +18,7 @@ imports: [
 
 standalone: true,
     selector: 'app-container',
-    template: "<ejs-spreadsheet (beforeOpen)='beforeOpen($event)' openUrl='https://services.syncfusion.com/angular/production/api/spreadsheet/open' allowOpen='true'> </ejs-spreadsheet>"
+    template: "<ejs-spreadsheet (beforeOpen)='beforeOpen($event)' openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' allowOpen='true'> </ejs-spreadsheet>"
 })
 export class AppComponent {
      beforeOpen (args: BeforeOpenEventArgs) {

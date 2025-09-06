@@ -15,7 +15,7 @@ function App() {
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} allowSave={true} openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' created={onCreated.bind(this)} enableNotes={false}>
+            <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} allowSave={true} openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' created={onCreated.bind(this)} enableNotes={false}>
                 <SheetsDirective>
                     <SheetDirective name="Price Details">
                         <RangesDirective>

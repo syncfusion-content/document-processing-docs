@@ -29,8 +29,8 @@ import { createElement } from '@syncfusion/ej2-base';
 
 const spreadsheet = ref(null);
 const dataSource = data;
-const openUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
-const saveUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/save';
+const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 
 const created = function () {
   spreadsheet.value.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:F1');

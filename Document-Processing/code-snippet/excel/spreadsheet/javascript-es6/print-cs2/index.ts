@@ -57,9 +57,9 @@ let columns: ColumnModel[] = [
 ];
 let spreadsheet: Spreadsheet = new Spreadsheet({
   allowOpen: true,
-  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+  openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
   allowSave: true,
-  saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+  saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
   sheets: [
     { name: 'Budget', ranges: [{ dataSource: budgetData }], columns: columns },
     { name: 'Salary', ranges: [{ dataSource: salaryData }], columns: columns },

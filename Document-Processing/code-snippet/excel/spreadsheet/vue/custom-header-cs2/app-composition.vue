@@ -27,7 +27,7 @@ const dataSource = data;
 const width1 = 180;
 const width2 = 130;
 const width3 = 120;
-const saveUrl = "https://services.syncfusion.com/vue/production/api/spreadsheet/save";
+const saveUrl = "https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save";
 
 const fileMenuItemSelect = function (args) {
   if (args.item.text === "Microsoft Excel") {
@@ -42,7 +42,7 @@ const fileMenuItemSelect = function (args) {
       formData.append("saveType", "Xlsx");
       formData.append("pdfLayoutSettings", JSON.stringify({ fitSheetOnOnePage: false, orientation: "Portrait" }));
       fetch(
-        "https://services.syncfusion.com/vue/production/api/spreadsheet/save",
+        "https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save",
         {
           method: "POST",
           headers: { Authorization: "YOUR TEXT" },

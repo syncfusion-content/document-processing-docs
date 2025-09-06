@@ -1,7 +1,7 @@
 //Initialize the Spreadsheet control
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
     allowOpen: true,
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
     beforeOpen: (args) => {
         // your code snippets here
     }
@@ -26,7 +26,7 @@ if (saveElement) {
             formData.append('saveType', 'Xlsx');
             formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
                 fetch(
-                    'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+                    'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
                     {
                         method: 'POST',
                         body: formData,

@@ -18,7 +18,7 @@ imports: [
 
 standalone: true,
     selector: 'app-container',
-    template: "<ejs-spreadsheet (beforeSave)='beforeSave($event)' saveUrl='https://services.syncfusion.com/angular/production/api/spreadsheet/save' allowSave='true'> </ejs-spreadsheet>"
+    template: "<ejs-spreadsheet (beforeSave)='beforeSave($event)' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' allowSave='true'> </ejs-spreadsheet>"
 })
 export class AppComponent {
      beforeSave (args: BeforeSaveEventArgs) {

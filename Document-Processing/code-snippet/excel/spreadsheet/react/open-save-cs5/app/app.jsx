@@ -8,7 +8,7 @@ function App() {
     const beforeSave = () => {};
 
     return (
-        <SpreadsheetComponent allowSave={true} saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' beforeSave={beforeSave}>
+        <SpreadsheetComponent allowSave={true} saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' beforeSave={beforeSave}>
             <SheetsDirective>
                 <SheetDirective>
                     <RangesDirective>

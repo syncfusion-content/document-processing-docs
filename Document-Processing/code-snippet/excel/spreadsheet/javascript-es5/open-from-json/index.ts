@@ -8,7 +8,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
         const valueOnlyCheckbox: boolean = (document.getElementById("valueOnly") as HTMLInputElement).checked;
         const options: SerializationOptions = valueOnlyCheckbox ? { onlyValues: true } : createOptions();
         fetch(
-            'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+            'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
             args.requestData
         ).then((response) => {
             response.json().then((data) => {

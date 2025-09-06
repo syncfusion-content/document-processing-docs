@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   standalone: true,
   selector: 'app-container',
   template: `<div class="control-section">
-  <ejs-spreadsheet #spreadsheet openUrl="https://services.syncfusion.com/angular/production/api/spreadsheet/open" saveUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/save' (created)="created()">
+  <ejs-spreadsheet #spreadsheet openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' (created)="created()">
     </ejs-spreadsheet>
 </div>`
 })

@@ -11,7 +11,7 @@ function App() {
     };
 
     return (
-        <SpreadsheetComponent openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open" beforeOpen={beforeOpen} />
+        <SpreadsheetComponent openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" beforeOpen={beforeOpen} />
     );
 };
 export default App;

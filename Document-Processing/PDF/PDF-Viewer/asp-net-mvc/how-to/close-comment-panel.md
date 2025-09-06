@@ -15,7 +15,7 @@ The PDF Viewer server library allows you to close the comment panel programmatic
 
 The following steps are used to close the comment panel programmatically in PDF Viewer,
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to close the comment panel using button click event
 

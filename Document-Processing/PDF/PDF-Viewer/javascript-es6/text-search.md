@@ -61,7 +61,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer({enableTextSearch: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -139,7 +139,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,Thumbnail
     TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
 
     let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
     document.getElementById('textbounds').addEventListener('click', function() {
         console.log(viewer.textSearch.findText('pdf', false));
@@ -182,7 +182,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,Thumbnail
     TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
 
     let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
     document.getElementById('textbounds').addEventListener('click', function() {
         console.log(viewer.textSearch.findText('pdf', false, 7));
@@ -225,7 +225,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,Thumbnail
     TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
 
     let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
     document.getElementById('listTextbounds').addEventListener('click', function() {
         console.log(viewer.textSearch.findText(['adobe', 'pdf'], false));
@@ -268,7 +268,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,Thumbnail
     TextSelection, TextSearch, Print, Annotation,FormFields,FormDesigner, PageOrganizer);
 
     let viewer: PdfViewer = new PdfViewer();
-    viewer.serviceUrl = "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer";
+    viewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
     viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
     document.getElementById('listTextbounds').addEventListener('click', function() {
         console.log(viewer.textSearch.findText(['adobe', 'pdf'], false, 7));

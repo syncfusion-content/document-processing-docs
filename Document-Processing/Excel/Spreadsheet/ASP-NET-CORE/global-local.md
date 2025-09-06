@@ -7,7 +7,7 @@ control: Global Local
 documentation: ug
 ---
 
-# Globalization in ASP.NET MVC Spreadsheet control
+# Globalization in ASP.NET Core Spreadsheet control
 
 ## Localization
 
@@ -425,12 +425,4 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 ## See Also
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 * [Localization](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization)
-
-{% elsif page.publishingplatform == "aspnet-mvc" %}
-
-* [Localization](https://ej2.syncfusion.com/aspnetmvc/documentation/common/localization/)
-
-{% endif %}

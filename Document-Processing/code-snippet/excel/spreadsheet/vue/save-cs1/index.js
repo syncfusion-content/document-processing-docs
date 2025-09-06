@@ -52,13 +52,13 @@ new Vue({
     itemSelect: function(args) {
       var spreadsheet = this.$refs.spreadsheet;
       if (args.item.text === 'Save As xlsx')
-      spreadsheet.save({url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save', fileName: "Sample", saveType: "Xlsx"});
+      spreadsheet.save({url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save', fileName: "Sample", saveType: "Xlsx"});
     if (args.item.text === 'Save As xls')
-      spreadsheet.save({url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save', fileName: "Sample", saveType: "Xls"});
+      spreadsheet.save({url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save', fileName: "Sample", saveType: "Xls"});
     if (args.item.text === 'Save As csv')
-      spreadsheet.save({url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',fileName: "Sample", saveType: "Csv"});
+      spreadsheet.save({url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',fileName: "Sample", saveType: "Csv"});
     if (args.item.text === 'Save As pdf')
-      spreadsheet.save({url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',fileName: "Sample", saveType: "Pdf"});
+      spreadsheet.save({url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',fileName: "Sample", saveType: "Pdf"});
    }
   }
 

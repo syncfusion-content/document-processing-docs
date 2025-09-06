@@ -17,7 +17,7 @@ This guide demonstrates how to load a PDF document from a Base64 string into the
 
 **Step 1:** Set Up the PdfViewer in Your ASP.NET MVC Project
 
- Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+ Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to load PDF document using base64 string.
 

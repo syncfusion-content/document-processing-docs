@@ -59,8 +59,8 @@ var sheet = [{
 //Initialize Spreadsheet component.
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
   sheets: sheet,
-  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-  saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+  openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+  saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
   fileMenuItemSelect: function (args) {
     if (args.item.text === 'Microsoft Excel') {
       args.cancel = true;
@@ -74,7 +74,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         formData.append('saveType', 'Xlsx');
         formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
         fetch(
-          'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+          'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
           {
             method: 'POST',
             headers: { Authorization: 'YOUR TEXT' },

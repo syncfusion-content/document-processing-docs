@@ -89,7 +89,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
               PrintService]
   })
   export class AppComponent implements OnInit {
-    public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
     public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -169,7 +169,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
               PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       public toolbarSettings = { showTooltip: true, toolbarItems: 'DownloadOption' }
   }
@@ -250,7 +250,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       public toolbarSettings = { showTooltip: true, toolbarItems: ['OpenOption'] };
   }
@@ -262,7 +262,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
 
 * Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem/).
 
@@ -382,7 +382,7 @@ import { ClickEventArgs } from '@syncfusion/ej2-angular-navigations';
 })
 export class AppComponent implements OnInit {
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public service = 'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
   public toolItem1: CustomToolbarItemModel = {
       prefixIcon: 'e-icons e-paste',
@@ -470,7 +470,7 @@ N> When customizing toolbar items, you have the flexibility to include either ic
 
 The PDF Viewer provides API for user interactions options provided in its built-in toolbar. Using this, you can create your own User Interface for toolbar actions at the application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer:
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Hide the built-in toolbar of PDF Viewer using the following code snippet.,
 
@@ -868,7 +868,7 @@ public customToolbar: ToolbarComponent;
 @ViewChild('zoomToolbar')
 public zoomToolbar: ToolbarComponent;
 public service: string =
-  'https://services.syncfusion.com/angular/production/api/pdfviewer';
+  'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 public document: string = 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf';
 constructor() { }
 ngOnInit(): void {

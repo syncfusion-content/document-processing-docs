@@ -11,7 +11,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
                 columns: [{ width: 80 }, { width: 80 },{ width: 80},
                           { width: 160 }, { width: 100 }, {width: 150}]
             }],
-            saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+            saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
             beforeSave: (args: BeforeSaveEventArgs) => {
                args.customParams = { customParams: 'you can pass custom params in server side'}; // you can pass the custom params
             }
