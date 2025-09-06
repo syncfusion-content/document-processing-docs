@@ -16,7 +16,7 @@ imports: [
 standalone: true,
     selector: 'app-container',
     // specifies the template string for the DocumentEditorContainer component
-    template: `<ejs-documenteditorcontainer serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
+    template: `<ejs-documenteditorcontainer serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
     providers: [ToolbarService]
 })
 export class AppComponent implements OnInit {

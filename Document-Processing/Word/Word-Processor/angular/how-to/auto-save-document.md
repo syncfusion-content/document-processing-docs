@@ -31,7 +31,7 @@ import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documente
   providers: [ToolbarService],
   template: `
     <ejs-documenteditorcontainer #documenteditor_default 
-      serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" 
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
       height="600px" 
       style="display:block" 
       [enableToolbar]=true 
@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
   public contentChanged: boolean | undefined;
   onCreate(): void {
     (this.container as DocumentEditorContainerComponent).serviceUrl =
-      'https://services.syncfusion.com/angular/production/api/documenteditor/';
+      'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
     setInterval(() => {
       if (this.contentChanged) {
@@ -87,7 +87,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://services.syncfusion.com/angular/production/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * In server-side, Receives the stream content from client-side and process it to save the document in Server or Database from the received stream. Add Web API in controller file like below to save the document.
 
