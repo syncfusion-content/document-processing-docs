@@ -9,7 +9,7 @@ documentation: ug
 
 # Deploy Blazor Server App in AWS Elastic Beanstalk Linux
 
-This section briefly explains about how to integrate [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio and deploy it on AWS Elastic Beanstalk.
+This section briefly explains about how to integrate [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio and deploy it on AWS Elastic Beanstalk.
 
 ## Prerequisites
 

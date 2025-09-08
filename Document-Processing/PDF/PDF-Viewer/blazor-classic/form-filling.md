@@ -254,4 +254,4 @@ The following code shows how to export the form fields as a JSON data stream and
 }
 ```
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.

@@ -11,7 +11,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF
 
 # Overview of Blazor PDF Viewer Classic Component
 
-The [Blazor PDF Viewer component](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) allows to view, print, and annotate the PDF files in your Blazor applications and its key features are,
+The [Blazor PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) allows to view, print, and annotate the PDF files in your Blazor applications and its key features are,
 * Accurate and reliable rendering of PDF pages.
 * Provides easy page navigation with,
     * Thumbnail page view
@@ -40,4 +40,4 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides separate PDF Viewer
 <br/>* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 <br/>* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations.
