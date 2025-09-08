@@ -128,7 +128,7 @@ The following is the output of custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/customize-context-menu-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/customize-context-menu-cs1/index.js" %}
 
 #### Customize Context Menu with sub-menu items
 

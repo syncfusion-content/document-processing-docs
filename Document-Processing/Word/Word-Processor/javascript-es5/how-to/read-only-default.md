@@ -24,7 +24,7 @@ In this article, we are going to see how to open a document in read only mode by
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/read-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/read-cs1/index.js" %}
 
 ## Opening a document in ready only mode by default in DocumentEditorContainer
 
@@ -37,6 +37,6 @@ In this article, we are going to see how to open a document in read only mode by
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/read-container-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/read-container-cs1/index.js" %}
 
 >Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
