@@ -28,7 +28,7 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs2/index.js" %}
 
 ## Paragraph dialog
 
@@ -45,7 +45,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs3/index.js" %}
 
 ## Table dialog
 
@@ -62,7 +62,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs4/index.js" %}
 
 ## Bookmark dialog
 
@@ -83,7 +83,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs5" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs5/index.js" %}
 
 ## Hyperlink dialog
 
@@ -100,7 +100,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs6" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs6/index.js" %}
 
 ## Table of contents dialog
 
@@ -117,7 +117,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs7" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs7/index.js" %}
 
 ## Styles Dialog
 
@@ -132,7 +132,7 @@ This dialog allows managing the styles in a document. It will display all the st
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs8" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs8/index.js" %}
 
 ## Style dialog
 
@@ -149,7 +149,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs9" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs9/index.js" %}
 
 ## List dialog
 
@@ -166,7 +166,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs10" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs10/index.js" %}
 
 ## Borders and shading dialog
 
@@ -183,7 +183,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs11" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs11/index.js" %}
 
 ## Table options dialog
 
@@ -200,7 +200,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs12" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs12/index.js" %}
 
 ## Table properties dialog
 
@@ -217,7 +217,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs13" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs13/index.js" %}
 
 ## Page setup dialog
 
@@ -234,7 +234,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs14" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs14/index.js" %}
 
 ## Column dialog
 
@@ -252,7 +252,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs15" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs15/index.js" %}
 
 ## See Also
 
