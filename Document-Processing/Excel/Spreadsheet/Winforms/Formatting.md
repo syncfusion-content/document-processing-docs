@@ -307,7 +307,7 @@ spreadsheet.ActiveGrid.InvalidateCells();
 
 For more information regarding formatting options, please go through [XlsIO](https://help.syncfusion.com/file-formats/xlsio/working-with-cell-or-range-formatting)
 
-N> Users need to [refresh the view](https://help.syncfusion.com/windowsforms/spreadsheet/working-with-spreadsheet#refreshing-the-view) after the formatting is applied on the XlsIO range to update the styles in `SpreadsheetGrid`.
+N> Users need to [refresh the view](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/working-with-spreadsheet#refreshing-the-view) after the formatting is applied on the XlsIO range to update the styles in `SpreadsheetGrid`.
 
 ## Clear formatting
 

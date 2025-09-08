@@ -67,7 +67,7 @@ void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 
 For more details, please go through the documentation of the [XlsIO](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#data-sorting) UG.
 
-N>If you have programmatically applied the sorting or filtering at runtime, [refresh the view](https://help.syncfusion.com/windowsforms/spreadsheet/working-with-spreadsheet#refreshing-the-view) to change it in `SpreadsheetGrid`. But even after refreshing the view, these changes won't be updated in Filter popup.
+N>If you have programmatically applied the sorting or filtering at runtime, [refresh the view](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/working-with-spreadsheet#refreshing-the-view) to change it in `SpreadsheetGrid`. But even after refreshing the view, these changes won't be updated in Filter popup.
  
 ## Unsupported Features
 
