@@ -104,13 +104,14 @@ The `restrictLineAngleTo` property defines the angle increment (in degrees) that
 
 **Angle Snapping Rules:**
 
-The initial drawing direction is treated as the 0° reference point
-Snapped angles are calculated based on the increment
-If the increment doesn’t divide 360 evenly, angles reset after 360°
+- The initial drawing direction is treated as the 0° reference point
+- Snapped angles are calculated based on the increment
+- If the increment doesn’t divide 360 evenly, angles reset after 360°
+
 **Examples:**
 
-restrictLineAngleTo: 45 → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
-restrictLineAngleTo: 100 → Snapped angles: 0°, 100°, 200°, 300°, 360°
+- restrictLineAngleTo: 45 → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
+- restrictLineAngleTo: 100 → Snapped angles: 0°, 100°, 200°, 300°, 360°
 
 ## Working with Constrained Annotations
 
