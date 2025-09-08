@@ -45,7 +45,7 @@ this.documentEditor.editor.insertTableOfContents(tocSettings);
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/link-cs8" %}
+{% previewsample "/document-processing/samples/document-editor/link-cs8" %}
 
 ## Update or edit table of contents
 

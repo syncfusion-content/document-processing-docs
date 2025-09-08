@@ -24,7 +24,7 @@ In this article, we are going to see how to open a default document when Documen
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/open-default-document-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/open-default-document-cs1" %}
 
 ## Opening a default document in DocumentEditorContainer
 
@@ -38,4 +38,4 @@ In this article, we are going to see how to open a default document when Documen
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/document-editor-container-cs4" %}
+{% previewsample "/document-processing/samples/document-editor/document-editor-container-cs4" %}

@@ -55,7 +55,7 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/ruler-cs1" %}
 
 ## Heading Navigation Pane 
 
