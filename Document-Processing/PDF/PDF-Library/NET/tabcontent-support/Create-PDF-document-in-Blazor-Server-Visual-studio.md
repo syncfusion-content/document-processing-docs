@@ -3,19 +3,13 @@
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-Step 1: Create a new C# Blazor server-side application project. Select Blazor App from the template and click the Next button.
-![Blazor sample creation](Create-PDF-Blazor/Blazor_project_creation.png)
+Step 1: Create a new C# Blazor Server app project. Select Blazor Server App from the template and click the Next button.
+![Blazor sample creation](Create-PDF-Blazor/Blazor-Server-App.png)
 
-Step 2: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
-![Blazor project configuration window](Create-PDF-Blazor/Blazor_configuration_window.png)
-
-Step 3: Choose Blazor Server App from the dashboard and click Create button to create a new Blazor server-side application.
-![Blazor Server side application](Create-PDF-Blazor/Select_server_app.png)
-
-Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 2: To create a PDF document in a Blazor Server app, install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) package into your Blazor project.
 ![Blazor NuGet installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
 
-Step 5: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
+Step 3: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -28,7 +22,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
+Step 4: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
 Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
@@ -103,7 +97,7 @@ public void ConfigureServices(IServiceCollection services)
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following code.
+Step 5: Inject ``ExportService`` in-to ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
@@ -140,7 +134,7 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 6: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
 
@@ -159,7 +153,7 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
+Step 7: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
 
 {% tabs %}
 
@@ -192,10 +186,10 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
 
 {% endtabs %}
 
-Step 10: Build the project.
+Step 8: Build the project.
 
 Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
-Step 11: Run the project.
+Step 9: Run the project.
 
 Click the Start button (green arrow) or press F5 to run the app.
