@@ -4184,6 +4184,99 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Remove-the-form-fields-form-the-existing-PDF-document).
 
+## Disable Auto Formatting
+
+When [DisableAutoFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_DisableAutoFormat) property is set to true, the form field will preserve the original input exactly as entered, offering greater control over data integrity.
+
+The following code example illustrates this.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the existing PDF document from file stream with read-write access
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(new FileStream(@"Input.pdf", FileMode.Open, FileAccess.ReadWrite));
+
+// Access the form field named "email" from the PDF form
+PdfLoadedField field = loadedDocument.Form.Fields["email"] as PdfLoadedField;
+
+// Disable automatic formatting to prevent behaviors like JavaScript execution or auto-formatting of input
+loadedDocument.Form.DisableAutoFormat = true;
+
+// Check if the field is a text box and assign a plain string value
+if (field is PdfLoadedTextBoxField textBoxField)
+{
+    // Set the text box value to a raw email string without formatting
+    textBoxField.Text = "12345@gmail.com";
+}
+
+// Save the modified PDF document to a new file using a file stream
+using (FileStream outputStream = new FileStream(@"Output.pdf", FileMode.Create, FileAccess.Write))
+{
+    loadedDocument.Save(outputStream);
+}
+
+// Close and dispose the document to release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"Input.pdf");
+
+// Access the form field named "email"
+PdfLoadedField field = loadedDocument.Form.Fields["email"] as PdfLoadedField;
+
+// Disable automatic formatting to prevent unwanted behaviors like JavaScript execution or auto-formatting of input
+loadedDocument.Form.DisableAutoFormat = true;
+
+// Check if the field is a text box and set its value
+if (field is PdfLoadedTextBoxField textBoxField)
+{
+    // Assign a plain string value to the text box field
+    textBoxField.Text = "12345@gmail.com";
+}
+
+// Save the modified PDF document to a new file
+loadedDocument.Save("Output.pdf");
+
+// Close and dispose the document to release resources
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Access the form field named "email"
+Dim field As PdfLoadedField = TryCast(loadedDocument.Form.Fields("email"), PdfLoadedField)
+
+' Disable automatic formatting to prevent unwanted behaviors like JavaScript execution or auto-formatting
+loadedDocument.Form.DisableAutoFormat = True
+
+' Check if the field is a text box and set its value
+If TypeOf field Is PdfLoadedTextBoxField Then
+    Dim textBoxField As PdfLoadedTextBoxField = CType(field, PdfLoadedTextBoxField)
+    ' Assign a plain string value to the text box field
+    textBoxField.Text = "12345@gmail.com"
+End If
+
+' Save the modified PDF document to a new file
+loadedDocument.Save("Output.pdf")
+
+' Close and dispose the document to release resources
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from GitHub.
+
 ## Importing form fields
 ### Importing FDF file to PDF
 
