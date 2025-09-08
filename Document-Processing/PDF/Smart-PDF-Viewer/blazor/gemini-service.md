@@ -30,15 +30,216 @@ After completing this setup, you can:
 1. [Add Smart PDF Viewer to your Blazor pages](../blazor/getting-started/web-app)
 
 ---
-## Install the following NuGet packages to your project:
 
-open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install the following packages
+## Step 1: Create a Gemini AI Service
 
-1.[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI).
-2.[Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
-3.[Microsoft.SemanticKernel.Connectors.Google](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.Google/).
+The `GeminiService` class serves as the foundation for integrating Gemini AI into your Blazor application. This service manages:
 
-## Step 1: Create a Custom AI Service
+* API communication with Gemini endpoints
+* Request/response handling
+* Message formatting
+* Safety settings configuration
+
+### Implementation Steps
+
+1. Create a new class file named `GeminiService.cs` in your project
+2. Add the following implementation:
+
+{% tabs %}
+{% highlight c# tabtitle="~/GeminiService.cs" %}
+using Microsoft.Extensions.AI;
+using System.Net;
+using System.Text;
+using System.Text.Json;
+
+public class GeminiService
+{
+    // HTTP client configuration for optimal performance
+    private static readonly Version _httpVersion = HttpVersion.Version30;
+    private static readonly HttpClient HttpClient = new HttpClient(new SocketsHttpHandler
+    {
+        PooledConnectionLifetime = TimeSpan.FromMinutes(30),
+        EnableMultipleHttp2Connections = true,
+    })
+    {
+        DefaultRequestVersion = _httpVersion
+    };
+
+    // Configuration settings
+    private const string ApiKey = "YOUR_API_KEY_HERE";
+    private const string ModelName = "YOUR_MODEL_NAME"; 
+
+    // JSON serialization settings
+    private static readonly JsonSerializerOptions JsonOptions = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
+
+    public GeminiService()
+    {
+        // Set up authentication headers
+        HttpClient.DefaultRequestHeaders.Clear();
+        HttpClient.DefaultRequestHeaders.Add("x-goog-api-key", ApiKey);
+    }
+
+    // Main method for interacting with Gemini API
+    public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
+    {
+        // Construct the API endpoint URL
+         string requestUri = $"https://generativelanguage.googleapis.com/v1beta/models/{ModelName}:generateContent";
+
+         // Prepare the request parameters
+         GeminiChatParameters parameters = BuildGeminiChatParameters(chatMessages);
+         StringContent payload = new StringContent(
+             JsonSerializer.Serialize(parameters, JsonOptions),
+             Encoding.UTF8,
+             new System.Net.Http.Headers.MediaTypeHeaderValue("application/json")
+         );
+
+         try
+         {
+             // Send request and process response
+             HttpResponseMessage response = await HttpClient.PostAsync(requestUri, payload);
+             response.EnsureSuccessStatusCode();
+
+             string json = await response.Content.ReadAsStringAsync();
+             GeminiResponseObject result = JsonSerializer.Deserialize<GeminiResponseObject>(json, JsonOptions);
+
+             // Extract and return the generated text
+             return result?.Candidates?.FirstOrDefault()?.Content?.Parts?.FirstOrDefault()?.Text
+                 ?? "No response from model.";
+         }
+         catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
+         {
+             throw new InvalidOperationException("Gemini API error.", ex);
+         }
+     }
+
+     private GeminiChatParameters BuildGeminiChatParameters(IList<ChatMessage> messages)
+     {
+         // Convert chat messages to Gemini's format
+         List<ResponseContent> contents = messages.Select(m => new ResponseContent(
+             m.Text,
+             m.Role == ChatRole.User ? "user" : "model"
+         )).ToList();
+
+         // Configure request parameters including safety settings
+         GeminiChatParameters parameters = new GeminiChatParameters
+         {
+             Contents = contents,
+             GenerationConfig = new GenerationConfig
+             {
+                 MaxOutputTokens = 2000,
+                 StopSequences = new List<string> { "END_INSERTION", "NEED_INFO", "END_RESPONSE" }
+             },
+             SafetySettings = new List<SafetySetting>
+     {
+         new SafetySetting { Category = "HARM_CATEGORY_HARASSMENT", Threshold = "BLOCK_ONLY_HIGH" },
+         new SafetySetting { Category = "HARM_CATEGORY_HATE_SPEECH", Threshold = "BLOCK_ONLY_HIGH" },
+         new SafetySetting { Category = "HARM_CATEGORY_SEXUALLY_EXPLICIT", Threshold = "BLOCK_ONLY_HIGH" },
+         new SafetySetting { Category = "HARM_CATEGORY_DANGEROUS_CONTENT", Threshold = "BLOCK_ONLY_HIGH" }
+     }
+         };
+
+         return parameters;
+     }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 2: Define Request and Response Models
+
+To efficiently communicate with the Gemini AI API, we need to define a set of C# classes that map to Gemini's JSON request and response format. These models ensure type safety and provide a clean interface for working with the API.
+
+1. Create a new file named `GeminiModels.cs` in your project
+2. Add the following model classes:
+
+{% tabs %}
+{% highlight c# tabtitle="~/GeminiModels.cs" %}
+// Represents a text segment in the API communication
+public class Part
+{
+    public string Text { get; set; }
+}
+
+// Contains an array of text parts
+public class Content
+{
+    public Part[] Parts { get; init; } = Array.Empty<Part>();
+}
+
+// Represents a generated response candidate
+public class Candidate
+{
+    public Content Content { get; init; } = new();
+}
+
+// The main response object from Gemini API
+public class GeminiResponseObject
+{
+    public Candidate[] Candidates { get; init; } = Array.Empty<Candidate>();
+}
+
+// Represents a message in the chat conversation
+public class ResponseContent
+{
+    public List<Part> Parts { get; init; }
+    public string Role { get; init; }  // "user" or "model"
+
+    public ResponseContent(string text, string role)
+    {
+        Parts = new List<Part> { new Part { Text = text } };
+        Role = role;
+    }
+}
+
+// Configuration for text generation
+public class GenerationConfig
+{
+    // Controls randomness (0.0 to 1.0)
+    public int Temperature { get; init; } = 0;
+    
+    // Limits token consideration (1 to 40)
+    public int TopK { get; init; } = 0;
+    
+    // Nucleus sampling threshold (0.0 to 1.0)
+    public int TopP { get; init; } = 0;
+    
+    // Maximum tokens in response
+    public int MaxOutputTokens { get; init; } = 2048;
+    
+    // Sequences that stop generation
+    public List<string> StopSequences { get; init; } = new();
+}
+
+// Controls content filtering
+public class SafetySetting
+{
+    // Harm category to filter
+    public string Category { get; init; } = string.Empty;
+    
+    // Filtering threshold level
+    public string Threshold { get; init; } = string.Empty;
+}
+
+// Main request parameters for Gemini API
+public class GeminiChatParameters
+{
+    // Chat message history
+    public List<ResponseContent> Contents { get; init; } = new();
+    
+    // Generation settings
+    public GenerationConfig GenerationConfig { get; init; } = new();
+    
+    // Content safety filters
+    public List<SafetySetting> SafetySettings { get; init; } = new();
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 3: Create a Custom AI Service
 
 The Syncfusion Smart PDF Viewer are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart PDF Viewer to the Gemini AI service.
 
@@ -51,85 +252,41 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 
 {% tabs %}
 {% highlight c# tabtitle="~/MyCustomService.cs" %}
-
 using Syncfusion.Blazor.AI;
-using Microsoft.Extensions.AI;
 
 public class MyCustomService : IChatInferenceService
 {
-     private IChatClient _chatClient;
+    private readonly GeminiService _geminiService;
 
-     public MyCustomService(IChatClient client)
-     {
-         this._chatClient = client ?? throw new ArgumentNullException(nameof(client));
-     }
+    public MyCustomService(GeminiService geminiService)
+    {
+        _geminiService = geminiService;
+    }
 
-     /// <summary>
-     /// Sends the chat parameters to the AI client and returns the response.
-     /// Also checks and updates token usage.
-     /// </summary>
-     /// <param name="options">Chat parameters including messages and settings.</param>
-     /// <returns>AI-generated response text.</returns
-     public async Task<string> GenerateResponseAsync(ChatParameters options)
-     {
-         ChatOptions completionRequest = new ChatOptions
-         {
-             Temperature = options.Temperature ?? 0.5f,
-             TopP = options.TopP ?? 1.0f,
-             MaxOutputTokens = options.MaxTokens ?? 2000,
-             FrequencyPenalty = options.FrequencyPenalty ?? 0.0f,
-             PresencePenalty = options.PresencePenalty ?? 0.0f,
-             StopSequences = options.StopSequences
-         };
-         try
-         {
-             ChatResponse completion = await _chatClient.GetResponseAsync(options.Messages[0].Text, completionRequest);
-             string rawResponse = completion.Text.ToString();
-             if (rawResponse.Contains("```html") || rawResponse.Contains("```"))
-             {
-                 rawResponse = rawResponse.Replace("```html", "").Replace("```", "").Trim();
-             }
-             return rawResponse;
-         }
-         catch (Exception ex)
-         {
-             throw new ApplicationException("Error generating AI response", ex);
-         }
-     }
-
+    public Task<string> GenerateResponseAsync(ChatParameters options)
+    {
+        // Forward the chat parameters to our Gemini service
+        return _geminiService.CompleteAsync(options.Messages);
+    }
 }
- 
+
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Configure the Blazor App
+## Step 4: Configure the Blazor App
 
 Configure your Blazor application to use the Gemini AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21" %}
-
+{% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 using Syncfusion.Blazor.AI;
-using Microsoft.Extensions.AI;
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.ChatCompletion;
 var builder = WebApplication.CreateBuilder(args);
 
 ....
 
 builder.Services.AddSyncfusionBlazor();
-string geminiApiKey = "Your API Key" ?? throw new InvalidOperationException("GEMINI_API_KEY environment variable is not set.");
-string geminiAiModel = "Your Model Name";
-#pragma warning disable SKEXP0070
-var kernelBuilder = Kernel.CreateBuilder().AddGoogleAIGeminiChatCompletion(geminiAiModel, geminiApiKey);
-Kernel kernel = kernelBuilder.Build();
-#pragma warning disable SKEXP0001
-IChatClient geminiChatClient = kernel.GetRequiredService<IChatCompletionService>().AsChatClient();
-builder.Services.AddChatClient(geminiChatClient);
-builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
-{
-    return new MyCustomService(geminiChatClient);
-});
+builder.Services.AddSingleton<GeminiService>();
+builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 
 var app = builder.Build();
 ....

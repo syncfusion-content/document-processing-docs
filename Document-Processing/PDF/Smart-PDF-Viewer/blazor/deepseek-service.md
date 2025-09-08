@@ -39,15 +39,137 @@ After completing this setup, you can:
 
 ---
 
-## Install the following NuGet packages to your project:
+## Step 1: Create a DeepSeek AI Service
 
-open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install the following packages
+The `DeepSeekAIService` class is responsible for managing all interactions with the DeepSeek API. This service:
 
-1.[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI).
-2.[Microsoft.SemanticKernel](https://www.nuget.org/packages/Microsoft.SemanticKernel).
-3.[Microsoft.SemanticKernel.Connectors.AzureOpenAI](https://www.nuget.org/packages/Microsoft.SemanticKernel.Connectors.AzureOpenAI).
+### Implementation Steps
 
-## Step 1: Create a Custom AI Service
+1. Create a new file named `DeepSeekAIService.cs`
+2. Add the following using statements for required dependencies
+3. Implement the service class as shown below
+
+{% tabs %}
+{% highlight c# tabtitle="~/DeepSeekAIService.cs" %}
+
+using System.Text;
+using System.Text.Json;
+using System.Net;
+using Microsoft.Extensions.AI;
+// Define the DeepSeekAIService class to interact with the DeepSeek API
+public class DeepSeekAIService
+{
+    // Constants for API configuration
+    private const string ApiKey = "Your API Key";
+    private const string ModelName = "Your Model Name";
+    private const string Endpoint = "https://api.deepseek.com/v1/chat/completions";
+
+    private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
+    {
+        PooledConnectionLifetime = TimeSpan.FromMinutes(30),
+        EnableMultipleHttp2Connections = true,
+    })
+    {
+        DefaultRequestVersion = HttpVersion.Version30
+    };
+
+    // Set JSON serialization options to use camelCase naming
+    private static readonly JsonSerializerOptions JsonOptions = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
+
+    // Constructor to initialize the HttpClient with authorization header
+    public DeepSeekAIService()
+    {
+        if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
+        {
+            HttpClient.DefaultRequestHeaders.Clear();
+            HttpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {ApiKey}");
+        }
+    }
+
+    // Method to send chat messages to DeepSeek API and receive a response
+    public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
+    {
+        DeepSeekChatRequest requestBody = new DeepSeekChatRequest
+        {
+            Model = ModelName,
+            Temperature = 0.7f,
+            Messages = chatMessages.Select(m => new DeepSeekMessage
+            {
+                Role = m.Role == ChatRole.User ? "user" : "system",
+                Content = m.Text
+            }).ToList()
+        };
+
+        // Serialize the request body to JSON
+        string json = JsonSerializer.Serialize(requestBody, JsonOptions);
+        StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+        try
+        {
+            // Send POST request to DeepSeek API/ Send POST request to DeepSeek API
+            HttpResponseMessage response = await HttpClient.PostAsync(Endpoint, content);
+            response.EnsureSuccessStatusCode();
+
+            // Read and deserialize the response
+            string responseString = await response.Content.ReadAsStringAsync();
+            DeepSeekChatResponse? responseObject = JsonSerializer.Deserialize<DeepSeekChatResponse>(responseString, JsonOptions);
+
+            return responseObject?.Choices?.FirstOrDefault()?.Message?.Content ?? "No response from DeepSeek.";
+        }
+        catch (Exception ex) when (ex is HttpRequestException || ex is JsonException)
+        {
+                
+            throw new InvalidOperationException("Failed to communicate with DeepSeek API.", ex);
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 2: Define Request and Response Models
+
+To effectively communicate with DeepSeek's API, we need to create strongly-typed models that represent the request and response data structures. 
+
+Create a new file named `DeepSeekModels.cs` with the following models:
+
+{% tabs %}
+{% highlight c# tabtitle="~/DeepSeekModels.cs" %}
+
+// Represents a single message in the chat conversation
+public class DeepSeekMessage
+{
+    public string Role { get; set; }
+    public string Content { get; set; }
+}
+
+// Represents the request payload sent to the DeepSeek API
+public class DeepSeekChatRequest
+{
+    public string Model { get; set; }
+    public float Temperature { get; set; }
+    public List<DeepSeekMessage> Messages { get; set; }
+}
+
+// Represents the response received from the DeepSeek API
+public class DeepSeekChatResponse
+{
+    public List<DeepSeekChoice> Choices { get; set; }
+}
+
+// Represents a single choice in the response
+public class DeepSeekChoice
+{
+    public DeepSeekMessage Message { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 3: Create a Custom AI Service
 
 To integrate DeepSeek with Syncfusion Smart PDF Viewer, we'll create a custom implementation of the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion Smart PDF Viewer and your AI service.
 
@@ -60,97 +182,49 @@ The `IChatInferenceService` interface is the bridge between Syncfusion Smart PDF
 {% highlight c# tabtitle="~/MyCustomService.cs" %}
 
 using Syncfusion.Blazor.AI;
-using Microsoft.Extensions.AI;
-
+// Custom implementation of the IChatInferenceService interface
 public class MyCustomService : IChatInferenceService
 {
-     private IChatClient _chatClient;
+    private readonly DeepSeekAIService _DeepSeekService;
 
-     public MyCustomService(IChatClient client)
-     {
-         this._chatClient = client ?? throw new ArgumentNullException(nameof(client));
-     }
+    // Constructor injection of DeepSeekAIService
+    public MyCustomService(DeepSeekAIService DeepSeekService)
+    {
+        _DeepSeekService = DeepSeekService;
+    }
 
-     /// <summary>
-     /// Sends the chat parameters to the AI client and returns the response.
-     /// Also checks and updates token usage.
-     /// </summary>
-     /// <param name="options">Chat parameters including messages and settings.</param>
-     /// <returns>AI-generated response text.</returns
-     public async Task<string> GenerateResponseAsync(ChatParameters options)
-     {
-         ChatOptions completionRequest = new ChatOptions
-         {
-             Temperature = options.Temperature ?? 0.5f,
-             TopP = options.TopP ?? 1.0f,
-             MaxOutputTokens = options.MaxTokens ?? 2000,
-             FrequencyPenalty = options.FrequencyPenalty ?? 0.0f,
-             PresencePenalty = options.PresencePenalty ?? 0.0f,
-             StopSequences = options.StopSequences
-         };
-         try
-         {
-             ChatResponse completion = await _chatClient.GetResponseAsync(options.Messages[0].Text, completionRequest);
-             string rawResponse = completion.Text.ToString();
-             if (rawResponse.Contains("```html") || rawResponse.Contains("```"))
-             {
-                 rawResponse = rawResponse.Replace("```html", "").Replace("```", "").Trim();
-             }
-             return rawResponse;
-         }
-         catch (Exception ex)
-         {
-             throw new ApplicationException("Error generating AI response", ex);
-         }
-     }
-
+    public Task<string> GenerateResponseAsync(ChatParameters options)
+    {
+        return _DeepSeekService.CompleteAsync(options.Messages);
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Configure the Blazor App
+## Step 4: Configure the Blazor App
 
 Configure your Blazor application to use the DeepSeek AI service with Syncfusion Smart PDF Viewer. This involves registering necessary services and setting up the dependency injection container.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21 22 23" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 
 using Syncfusion.Blazor.AI;
-using Microsoft.Extensions.AI;
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.ChatCompletion;
 var builder = WebApplication.CreateBuilder(args);
 
 ....
 
 builder.Services.AddSyncfusionBlazor();
-string deepSeekApiKey = "Your API Key" ?? throw new InvalidOperationException("DEEPSEEK_API_KEY environment variable is not set.");
-string deploymentName = "Your Modle Name"; // This must match your Azure deployment name
-string endpoint = "https://deepseek-resourceres.services.ai.azure.com/"; // Base endpoint only
-var kernelBuilder = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(
-        deploymentName: deploymentName,
-        endpoint: endpoint,
-        apiKey: deepSeekApiKey);
-Kernel kernel = kernelBuilder.Build();
-IChatClient deepSeekChatClient = kernel.GetRequiredService<IChatCompletionService>().AsChatClient();
-builder.Services.AddChatClient(deepSeekChatClient);
-builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
-{
-    return new MyCustomService(deepSeekChatClient);
-});
- 
+builder.Services.AddSingleton<DeepSeekAIService>();
+builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
+
 var app = builder.Build();
 ....
 
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/DeepseekService)
-
-N> Running Deepseek service may lead to slower response times due to system resource usage.
-To accommodate this, you can configure the Syncfusion Smart PDF Viewer to disable timeout for AI assist view operations by setting the timeout to 0.
-[Learn more](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/document-summarizer#timeout)
+[View sample in GitHub]()
 
 ## See also
 

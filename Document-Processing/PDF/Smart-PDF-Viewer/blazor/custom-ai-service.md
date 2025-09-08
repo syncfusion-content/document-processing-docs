@@ -58,104 +58,54 @@ Since the Custom AI service operates independently from the built-in AI service,
 
 Exceptions that occur while creating a request to the custom AI service are captured using try-catch blocks. The resulting error message is assigned to the DialogMessage property, and the OnDialogOpen event is triggered to notify other components such as Home so they can display the error in a dialog appropriately.
 
-## Step 1: Create a ErrorDialog Service
-
-1.Create a new class file named ErrorDialogService.cs in your project
-2.Add the following implementation:
-
 ```cs
-public class ErrorDialogService 
+public class GeminiService
 {
     public event Action OnDialogOpen;
 
-    public string DialogMessage { get; set; }
+    public string DialogMessage { get; private set; }
 
-    internal void RaiseDialogOpen()
+    private void RaiseDialogOpen()
     {
         OnDialogOpen?.Invoke();
     }
-}
-```
-## Step 2: Add the ErrorDialogService in MyCustomService class
 
-{% tabs %}
-{% highlight c# tabtitle="~/MyCustomService.cs" hl_lines="1 3 6 18 19 20" %}
-
- private readonly ErrorDialogService _errorDialogService;
-
- public MyCustomService(IChatClient client,ErrorDialogService errorDialogService)
- {
-    // initialize your chat client instance
-    this._errorDialogService = errorDialogService ?? throw new ArgumentNullException(nameof(errorDialogService));
- }
-
- public async Task<string> GenerateResponseAsync(ChatParameters options)
+    public async Task<string> CompleteAsync(IList<ChatMessage> chatMessages)
     {
-        //Add completion request
         try
         {
             // Add the request logic for the Custom AI service.
         }
         catch (Exception ex)
         {
-            _errorDialogService.DialogMessage = ex.Message; // Set the value
-            _errorDialogService.RaiseDialogOpen();
+            DialogMessage = ex.Message; // Set the value
+            RaiseDialogOpen();
             return "";
         }
     }
+}
+```
 
-{% endhighlight %}
-{% endtabs %}
-
-
-### Step 3: Configure the Dialog Service
+### Configure the Dialog Service
 
 Configure the dialog service in `Program.cs` to enable error display functionality when a request or response to the Custom AI service fails. This setup ensures that any errors encountered during communication with the service can be shown in a dialog component.
 
-{% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="1 2 5 6" %}
+```cs
 
-builder.Services.AddScoped<ErrorDialogService>();
 builder.Services.AddScoped<SfDialogService>();
-builder.Services.AddScoped<IChatInferenceService, MyCustomService>(sp =>
-{
-    ErrorDialogService errorDialogService = sp.GetRequiredService<ErrorDialogService>();
-    return new MyCustomService( "YourChatclient" ,errorDialogService );
-});
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-### step 4: Add the SfDialogProvider in the **~Pages/Home.razor** file.
-
-{% tabs %}
-{% highlight razor tabtitle="~/Home.razor" %}
-
-@page "/"
-
-<Syncfusion.Blazor.Popups.SfDialogProvider/>
-@* Add Smart PDF Viewer Component *@
-
-{% endhighlight %}
-{% endtabs %}
-
-### Step 5: Show the Error Dialog
+### Show the Error Dialog
 
 In the Smart PDF Viewer, error messages are displayed using SfDialogService. The component listens for the OnDialogOpen event from CustomService, and when triggered, the OpenDialog method calculates the dialog size dynamically based on the length of the error message and presents it accordingly. To ensure efficient resource management, the event subscription is properly disposed of when the component is no longer in use.
 
-1.Create a new class file named Home.razor.cs by right-clicking on the Pages folder, then selecting Add → Class.
-2.Add the following implementation:
-
-{% tabs %}
-{% highlight cs tabtitle="~/Home.razor.cs" %}
-
-using Microsoft.AspNetCore.Components;
-using Syncfusion.Blazor.Popups;
+```C#
 
 public partial class Home : IDisposable
 {
     [Inject]
-    public ErrorDialogService? ErrorDialogService { get; set; }
+    public GeminiService? GeminiService { get; set; }
 
     [Inject]
     public SfDialogService? DialogService { get; set; }
@@ -164,7 +114,7 @@ public partial class Home : IDisposable
 
     public async void OpenDialog()
     {
-        DialogText = ErrorDialogService!.DialogMessage;
+        DialogText = GeminiService!.DialogMessage;
         int fontSize = 16; // px
         int charWidth = (int)(fontSize * 0.6); // Approximate width per character in px
         int baseWidth = 48; // Common addition to width
@@ -190,19 +140,18 @@ public partial class Home : IDisposable
 
     protected override void OnInitialized()
     {
-        ErrorDialogService!.OnDialogOpen += OpenDialog;
+        GeminiService!.OnDialogOpen += OpenDialog;
     }
 
     public void Dispose()
     {
-        ErrorDialogService!.OnDialogOpen -= OpenDialog;
+        GeminiService!.OnDialogOpen -= OpenDialog;
     }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pdf-viewer-examples/tree/master/Custom%20Services/GeminiService)
 
 ## See also
 
