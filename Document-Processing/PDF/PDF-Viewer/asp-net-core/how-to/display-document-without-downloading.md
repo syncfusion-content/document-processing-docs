@@ -14,7 +14,7 @@ The PDF Viewer server library allows you to display the downloaded PDF document 
 
 The following steps are used to display the downloaded without downloading in the local machine.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to Display document without downloading.
 

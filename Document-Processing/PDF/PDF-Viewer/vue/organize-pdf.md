@@ -158,7 +158,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
@@ -237,7 +237,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
@@ -317,7 +317,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       pageOrganizerSettings : {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}
     };

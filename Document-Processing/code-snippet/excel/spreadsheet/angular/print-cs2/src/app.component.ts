@@ -51,8 +51,8 @@ export class AppComponent {
   spreadsheetObj: SpreadsheetComponent | undefined;
   public budgetData: object[] = dataSource1;
   public salaryData: object[] = dataSource2;
-  public openUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
-  public saveUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/save';
+  public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+  public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
   public items: ItemModel[] = [{ text: 'ActiveSheet' }, { text: 'Workbook' }];
   created() {
     this.spreadsheetObj!.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');

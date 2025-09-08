@@ -15,7 +15,7 @@ const path = {
   saveUrl: "https://services.syncfusion.com/vue/production/api/FileUploader/Save",
   removeUrl: "https://services.syncfusion.com/vue/production/api/FileUploader/Remove",
 }
-const openUrl = "https://services.syncfusion.com/vue/production/api/spreadsheet/open";
+const openUrl = "https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open";
 
 const onSuccess = (args) => {
   let spreadsheet = getComponent(

@@ -5,7 +5,7 @@ import { data } from './datasource.ts';
 let base64String: string | ArrayBuffer;
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+  openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
   sheets: [{
     name: 'Car Sales Report',
     ranges: [{ dataSource: data }],
@@ -50,7 +50,7 @@ document.getElementById("import")!.onclick = (): void => {
 
 document.getElementById("export")!.onclick = (): void => {
   spreadsheet.save({
-    url: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+    url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     fileName: 'Worksheet',
     saveType: 'Xlsx',
   }); // Specifies the save URL, file name, file type need to be saved.

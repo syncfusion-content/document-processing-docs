@@ -112,7 +112,7 @@ The annotation comment and comment replies can be edited in the following ways:
 
 ## How to check the comments added by the user
 
-The comments added to the PDF document can be viewed by using the [comments](https://helpej2.syncfusion.com/documentation/api/pdfviewer/commentEventArgs/) property of the annotation.
+The comments added to the PDF document can be viewed by using the [comments](https://ej2.syncfusion.com/documentation/api/pdfviewer/commentEventArgs/) property of the annotation.
 
 Refer to the following code to check the comments added in the PDF document using a button click event.
 
@@ -136,7 +136,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);

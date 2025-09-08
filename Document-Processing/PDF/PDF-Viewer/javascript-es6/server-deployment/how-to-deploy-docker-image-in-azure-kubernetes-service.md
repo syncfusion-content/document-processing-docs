@@ -113,6 +113,6 @@ kubectl get all
 
 Browse the copied external IP address and navigate to the PDF Viewer Web API control `http://<external-ip>/api/pdfviewer`. It returns the default get method response.
 
-**Step 6:** Append the Kubernetes service running the URL `http://<external-ip>/api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started/?).
+**Step 6:** Append the Kubernetes service running the URL `http://<external-ip>/api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/?).
 
 For more details about the Azure Kubernetes service, please look deeper into [`Microsoft Azure Kubernetes Service`](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) for a production-ready setup.

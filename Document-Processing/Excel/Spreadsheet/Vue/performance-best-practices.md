@@ -123,8 +123,8 @@ import { ref } from "vue";
 import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
 
 const spreadsheet = ref(null);
-const openUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
-const saveUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/save';
+const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 const beforeSave = function (args) {
     args.isFullPost = false; 
 }
@@ -162,8 +162,8 @@ export default {
   },
   data: () => {
     return {
-         openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
-	 saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save'
+         openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+	 saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
     }
   },
   methods: {
@@ -235,8 +235,8 @@ import { ref } from "vue";
 import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
 
 const spreadsheet = ref(null);
-const openUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
-const saveUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/save';
+const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 </script>
 
 <style>
@@ -271,8 +271,8 @@ export default {
   },
   data: () => {
     return {
-      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
-	    saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save'
+      openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+	    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
     }
   },
   methods: {

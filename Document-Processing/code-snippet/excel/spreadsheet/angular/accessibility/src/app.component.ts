@@ -16,7 +16,7 @@ imports: [
 standalone: true,
     selector: 'app-container',
     template: `<div class="control-section">
-    <ejs-spreadsheet #spreadsheet openUrl="https://services.syncfusion.com/angular/production/api/spreadsheet/open" saveUrl="https://services.syncfusion.com/angular/production/api/spreadsheet/save" (created)="created()">
+    <ejs-spreadsheet #spreadsheet openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save" (created)="created()">
         <e-sheets>
             <e-sheet name="Inventory List" selectedRange="A2:A2">
                 <e-ranges>

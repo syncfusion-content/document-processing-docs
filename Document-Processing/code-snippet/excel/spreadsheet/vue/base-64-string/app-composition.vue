@@ -31,7 +31,7 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 let base64String;
 const spreadsheet = ref(null);
 const dataSource = data;
-const openUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
+const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
 const beforeSave = function (args) {
   args.needBlobData = true; // To trigger the saveComplete event.
   args.isFullPost = false; // Get the spreadsheet data as blob data in the saveComplete event.
@@ -55,7 +55,7 @@ const importBtn = function () {
 
 const exportBtn = function () {
   spreadsheet.value.save({
-    url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
+    url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
     fileName: 'Worksheet',
     saveType: 'Xlsx',
   }); // Specifies the save URL, file name, file type need to be saved.

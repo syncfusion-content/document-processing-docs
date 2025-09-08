@@ -14,7 +14,7 @@ The PDF Viewer library allows you to extract the text from a page along with the
 
 The following steps are used to extract the text from the page.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** The following code snippet explains how to extract the text from a page.
 
@@ -35,7 +35,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 const extractTextCompleted = function (args) {
   // Extract the Complete text of load document
@@ -75,7 +75,7 @@ export default {
   },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
       documentPath: "PDF_Succinctly.pdf",
       extractTextCompleted: function (args) {
         // Extract the Complete text of load document

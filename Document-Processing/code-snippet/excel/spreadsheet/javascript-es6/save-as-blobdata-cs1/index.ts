@@ -3,8 +3,8 @@ import { Spreadsheet, BeforeSaveEventArgs, SaveCompleteEventArgs } from '@syncfu
 import { data } from './datasource.ts';
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-  saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
+  openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+  saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
   sheets: [{
     name: 'Car Sales Report',
     ranges: [{ dataSource: data }],

@@ -121,7 +121,7 @@ function App() {
     }
     return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' ref={spreadsheetRef} beforeSave={beforeSave}  >
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' ref={spreadsheetRef} beforeSave={beforeSave}  >
         </SpreadsheetComponent>
     </div>
   );
@@ -145,7 +145,7 @@ function App() {
       }
     return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save'  ref={spreadsheetRef} beforeSave={beforeSave}  >
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'  ref={spreadsheetRef} beforeSave={beforeSave}  >
         </SpreadsheetComponent>
     </div>
   );
@@ -199,7 +199,7 @@ function App() {
   const spreadsheetRef = React.useRef(null);
   return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open' saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false} >
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false} >
         </SpreadsheetComponent>
     </div>
   );
@@ -219,7 +219,7 @@ function App() {
   const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
   return (
     <div className='control-section spreadsheet-control'>
-        <SpreadsheetComponent openUrl='https://services.syncfusion.com/react/production/api/spreadsheet/open'  saveUrl='https://services.syncfusion.com/react/production/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false}>
+        <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'  saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' ref={spreadsheetRef}  showAggregate={false}>
         </SpreadsheetComponent>
     </div>
   );

@@ -19,7 +19,7 @@ The PDF Viewer server library allows you to show the notification dialog in UI w
 
 The following steps are used to show the notification dialog in UI.
 
-**Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to show the notification dialog when form fields are empty.
 

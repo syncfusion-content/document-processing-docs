@@ -134,8 +134,8 @@ export class AppComponent {
     }
     @ViewChild('default')
     public spreadsheetObj: SpreadsheetComponent;
-    public openUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
-    public saveUrl = 'https://services.syncfusion.com/angular/production/api/spreadsheet/save';
+    public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+    public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
     
     beforeSave(args: BeforeSaveEventArgs) {
         args.isFullPost = false;

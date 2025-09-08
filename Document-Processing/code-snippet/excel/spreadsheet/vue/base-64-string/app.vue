@@ -43,7 +43,7 @@ export default {
   data: () => {
     return {
       dataSource: data,
-      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open'
+      openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
     }
   },
   methods: {
@@ -71,7 +71,7 @@ export default {
     exportBtn: function () {
       let spreadsheet = this.$refs.spreadsheet;
       spreadsheet.save({
-        url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
+        url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
         fileName: 'Worksheet',
         saveType: 'Xlsx',
       }); // Specifies the save URL, file name, file type need to be saved.

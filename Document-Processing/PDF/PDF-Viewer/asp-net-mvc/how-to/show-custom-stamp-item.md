@@ -18,7 +18,7 @@ This guide explains how to add and display custom items in the custom stamp drop
 
 **Step 1:** Set Up the PdfViewer in Your ASP.NET MVC Project
 
- Follow the steps provided in the [link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample.
+ Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
 **Step 2:** Configure Custom Stamp Settings
 

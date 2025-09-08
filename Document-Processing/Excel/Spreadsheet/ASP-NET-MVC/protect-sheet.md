@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Protection in Spreadsheet Control
+# Protection in ASP.NET MVC Spreadsheet Control
 
 Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 
@@ -52,7 +52,6 @@ The following example shows `Protect Sheet` functionality with password in the S
 {% include code-snippet/excel/spreadsheet/asp-net-mvc/protect-sheet/protectSheetController.cs %}
 {% endhighlight %}
 {% endtabs %}
-{% endif %}
 
 
 
@@ -66,7 +65,7 @@ Unprotect sheet is used to enable all the functionalities that are already disab
 
 **User Interface**:
 
-In the active Spreadsheet, the sheet Unprotection can be done by any of the following ways:
+In the active Spreadsheet, the sheet can be unprotected by any of the following ways:
 
 * Select the `Unprotect Sheet` item in the Ribbon toolbar under the Data Tab.
 * Right-click the sheet tab, select the `Unprotect Sheet` item in the context menu.
@@ -169,7 +168,7 @@ Unprotect Workbook is used to enable the insert, delete, rename, move, copy, hid
 
 **User Interface**:
 
-In the active Spreadsheet, the workbook Unprotection can be done in any of the following ways:
+In the active Spreadsheet, the workbook can be unprotected in any of the following ways:
 
 * Select the `Unprotect Workbook` item in the Ribbon toolbar under the Data Tab and provide the valid password in the dialog box.
 

@@ -16,7 +16,7 @@ If you're experiencing problems with your document not rendering in the viewer, 
 
 ```javascript
 var viewer = new ej.pdfviewer.PdfViewer ({
-serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'});
+serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'});
 
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner);
 

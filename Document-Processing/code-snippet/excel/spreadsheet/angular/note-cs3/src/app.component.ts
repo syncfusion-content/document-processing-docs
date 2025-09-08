@@ -44,9 +44,9 @@ export class AppComponent {
     public spreadsheetObj: SpreadsheetComponent | undefined;
     public data: object[] = dataSource;
     public openUrl =
-        'https://services.syncfusion.com/angular/production/api/spreadsheet/open';
+        'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
     public saveUrl =
-        'https://services.syncfusion.com/angular/production/api/spreadsheet/save';
+        'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
     created() {
         this.spreadsheetObj!.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:H1');
     }

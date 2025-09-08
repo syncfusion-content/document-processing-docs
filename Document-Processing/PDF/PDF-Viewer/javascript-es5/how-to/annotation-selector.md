@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Annotation selector in ##Platform_Name## Pdfviewer control
 
-To customize the annotation selector in Syncfusion PDF Viewer, you can use the [**annotationSelectorSettings**](https://helpej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PdfViewer control.
+To customize the annotation selector in Syncfusion PDF Viewer, you can use the [**annotationSelectorSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PdfViewer control.
 
 Here is an example of how you can customize the selector of the shape annotation:
 
