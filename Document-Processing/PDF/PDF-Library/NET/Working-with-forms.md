@@ -4190,6 +4190,8 @@ When [DisableAutoFormat](https://help.syncfusion.com/cr/document-processing/Sync
 
 The following code example illustrates this.
 
+{% tabs %} 
+
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Load the existing PDF document from file stream with read-write access
