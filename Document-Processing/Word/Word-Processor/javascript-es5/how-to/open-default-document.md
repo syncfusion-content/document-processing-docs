@@ -30,7 +30,7 @@ The following example illustrates how to open the default SFDT content once Docu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs1" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs1/index.js" %}
 
 ## Opening a default document in DocumentEditorContainer
 
@@ -47,4 +47,4 @@ Document editor Container have [`created`](https://ej2.syncfusion.com/javascript
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs2" %}
+{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/open-default-document-cs2/index.js" %}
