@@ -4275,7 +4275,7 @@ loadedDocument.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Disable-Auto-Formatting-in-FormFields/.NET).
 
 ## Importing form fields
 ### Importing FDF file to PDF
