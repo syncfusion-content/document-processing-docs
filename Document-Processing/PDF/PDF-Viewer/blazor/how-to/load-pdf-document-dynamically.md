@@ -62,7 +62,7 @@ The following code example shows how to load the PDF dynamically by specifying f
 }
 ```
 
-N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor SfPdfViewer example](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of SfPdfViewer.
+N> You can refer to our [Blazor SfPdfViewer]() feature tour page for its groundbreaking feature representations. You can also explore our [Blazor SfPdfViewer example](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of SfPdfViewer.
 
 ## See also
 
