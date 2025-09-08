@@ -28,7 +28,7 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/dialog-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/dialog-cs1" %}
 
 ## Paragraph dialog
 
@@ -46,7 +46,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/dialog-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/dialog-cs2" %}
 
 ## Table dialog
 
@@ -64,7 +64,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/dialog-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/dialog-cs3" %}
 
 ## Bookmark dialog
 
@@ -86,7 +86,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/dialog-cs4" %}
+{% previewsample "/document-processing/samples/document-editor/dialog-cs4" %}
 
 ## Hyperlink dialog
 
@@ -104,7 +104,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/dialog-cs5" %}
+{% previewsample "/document-processing/samples/document-editor/dialog-cs5" %}
 
 ## Table of contents dialog
 
@@ -494,7 +494,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/dialog-cs6" %}
+{% previewsample "/document-processing/samples/document-editor/dialog-cs6" %}
 
 ## See Also
 

@@ -22,4 +22,4 @@ Document Editor provides RTL (right-to-left) support. This can be enabled using 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/rtl-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/rtl-cs1" %}

@@ -100,7 +100,7 @@ The following example shows how to open bookmark dialog in document editor.
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/bookmark-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/bookmark-cs1" %}
 
 
 ## See Also

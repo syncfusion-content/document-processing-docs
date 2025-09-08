@@ -157,7 +157,7 @@ The following sample demonstrates the paragraph formatting options using a toolb
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/paragraph-formatting-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/paragraph-formatting-cs1" %}
 
 ## See Also
 
