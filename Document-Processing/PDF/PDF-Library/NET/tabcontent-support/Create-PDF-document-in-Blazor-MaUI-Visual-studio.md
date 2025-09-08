@@ -3,15 +3,13 @@
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid App` template in Visual Studio.![Blazor client project creation step1](Create-PDF-Blazor/Blazor_Maui_project_creation.png)
+Step 1: Create a new project by choosing `.NET MAUI Blazor Hybrid and Web App` template in Visual Studio.
+![Blazor client project creation step1](Create-PDF-Blazor/Maui-web-app.png)
 
-Step 2: Now, the project configuration window appears. Set the project name and location, then select  `Create` button to create a new project with the default project configuration.
-![Blazor client configuration window](Create-PDF-Blazor/Maui_Blazor_configuration_window.png)
-
-Step 3: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.PDF.NET](https://www.nuget.org/packages/Syncfusion.pdf.Net) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet_Net.png)
 
-Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
+Step 3: Next, include the following namespaces in the ``_Imports.razor`` file.
 
 {% tabs %}
 
@@ -27,7 +25,7 @@ Step 4: Next, include the following namespaces in the ``_Imports.razor`` file.
 
 {% endtabs %}
 
-Step 5: Create a button in the ``Weather.razor`` using the following code.
+Step 4: Create a button in the ``Weather.razor`` using the following code.
 
 {% tabs %}
 
@@ -39,7 +37,7 @@ Step 5: Create a button in the ``Weather.razor`` using the following code.
 
 {% endtabs %}
 
-Step 6: Define the ``@ExportToPdf`` click function on ``Weather.razor`` file.
+Step 5: Define the ``@ExportToPdf`` click function on ``Weather.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data source.
 
@@ -98,10 +96,10 @@ The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Pdf
 
 {% endtabs %}
 
-Step 7: Build the project.
+Step 6: Build the project.
 
 Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
-Step 8: Run the project.
+Step 7: Run the project.
 
 Click the Start button (green arrow) or press F5 to run the app.

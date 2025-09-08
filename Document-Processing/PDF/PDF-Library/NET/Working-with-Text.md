@@ -2539,3 +2539,57 @@ If your test reveals that the standard font cannot display certain characters, s
 </td>
 </tr>
 </table>
+
+### Optimizing PDF text replacement: common issues, causes, and proven solutions
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">When replacing multiple texts in a PDF file, the process becomes very slow and sometimes duplicates labels, inserting them multiple times.
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>This issue typically arises due to:<br>
+1.<b>Inefficient text search</b> – Searching for each label individually across all pages increases processing time.<br>
+2.<b>Unnecessary page processing</b> – Pages without relevant labels are still being scanned and modified.<br>
+3.<b>Redundant resource creation</b> – Fonts, brushes, and pens are recreated repeatedly, consuming memory and slowing down rendering.<br>
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>
+To improve performance and accuracy, implement the following optimizations:<br>
+1.<b>Batch Text Search</b>
+<br>
+Use a single batched search per page instead of individual label searches:<br>
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+document.FindText(searchText, pageIndex, TextSearchOptions.None, out List matchedItems);
+
+{% endhighlight %}
+{% endtabs %}
+<br>
+2.<b>Early Page Skipping</b>
+
+Skip pages that don't contain any of the target labels:<br>
+
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+if (!searchText.Any(text => pageText.Contains(text)))
+{
+    continue; // Skip to next page
+}
+{% endhighlight %}
+{% endtabs %}
+3.<b>Font and Brush Reuse</b>
+<br>
+Create fonts, brushes, and pens once and reuse them throughout the document to reduce memory usage and improve rendering speed.
+
+</td>
+</tr>
+</table>

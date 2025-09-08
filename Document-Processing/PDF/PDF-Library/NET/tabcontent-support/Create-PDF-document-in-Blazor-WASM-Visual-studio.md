@@ -3,14 +3,11 @@
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
-Step 1: Create a new C# Blazor client-side application project. Select Blazor App from the template and click the Next button.
-![Blazor client project creation step1](Create-PDF-Blazor/Blazor_project_creation.png)
+Step 1: Create a new C# Blazor client-side application project. Select Blazor Web App from the template and click the Next button.
+![Blazor client project creation step1](Create-PDF-Blazor/Blazor-web-app.png)
 
-Step 2: Now, the project configuration window appears. Click Create button to create a new project with the default project configuration.
-![Blazor client configuration window](Create-PDF-Blazor/Blazor_configuration_window.png)
-
-Step 3: Blazor WebAssembly App from the dashboard and click Create button to create a new Blazor client-side application. 
-![Select Blazor WASM app](Create-PDF-Blazor/Blazor_Client_Template.png)
+Step 2: In the **Interactive Render Mode section**, choose `WebAssembly` as the render mode. Then, click the `Create` button to generate a new Blazor client-Side Application.
+![Select Blazor WASM app](Create-PDF-Blazor/Blazor-Web-Assembly.png)
 
 Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
 ![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
