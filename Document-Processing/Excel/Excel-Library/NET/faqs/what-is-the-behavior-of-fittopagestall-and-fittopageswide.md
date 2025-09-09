@@ -1,5 +1,5 @@
 ---
-title: Fit-to-Page Settings in Print Layouts | XlsIO | Syncfusion®
+title: Fit-to-Page Settings in Print Layouts | XlsIO | Syncfusion
 description: This page explains the behavior of the FitToPagesTall and FitToPagesWide settings in print layouts when using the .NET Excel Library (XlsIO).
 platform: document-processing
 control: XlsIO
