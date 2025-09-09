@@ -75,7 +75,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Options API (Standalone)" %}
+{% endtabs %}
 
 ## Configuration Properties
 
