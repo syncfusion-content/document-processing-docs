@@ -7,6 +7,11 @@ documentation: UG
 ---
 # Working with PDF Conformance in File Formats PDF
 
+Essential<sup>&reg;</sup> PDF enables working with PDF Conformance standards such as PDF/A, PDF/X, and PDF/UA to ensure compliance with archival and accessibility requirements.
+
+To quickly get started, work with PDF Conformance standards in .NET using the PDF Library. Please, check this video:
+{% youtube "https://youtu.be/jgvYqQlfs5Q?si=R8RE_KKenGVoFgzX" %}
+
 <b>PDF/A Standards & Conformance Levels Comparison</b>
 
 <table>
