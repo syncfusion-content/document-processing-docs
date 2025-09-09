@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Line Angle Constraints with ASP.NET Core PDF Viewer Control | Syncfusion
+title: Line Angle Constraints ASP.NET Core PDF Viewer Control | Syncfusion
 description: Learn how to enable Line Angle Constraints the PDF Viewer component in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Line Angle Constraints
