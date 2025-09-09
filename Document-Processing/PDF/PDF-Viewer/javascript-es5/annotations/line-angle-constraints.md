@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Line Angle Constraints in ##Platform_Name## Pdfviewer control | Syncfusion
+title: Line Angle Constraint in JavaScript PdfViewer | Syncfusion
 description: Learn here all about Line Angle Constraints in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Line Angle Constraints
