@@ -226,6 +226,6 @@ Add the below serviceUrl in the `app.component.ts` file
 `public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`;
 Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
 
-{% previewsample "page.domainurl/samples/pdfviewer/angular/custom-context-menu" %}
+{% previewsample "Document-Processing/samples/pdfviewer/angular/custom-context-menu/index.html" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu)

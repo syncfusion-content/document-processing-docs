@@ -295,7 +295,7 @@ or
 yarn run serve
 ```
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/getting-started-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/getting-started-cs1/index.html" %}
 
 > For PDF Viewer serviceUrl creation, follow the steps provided in the [link]https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
 

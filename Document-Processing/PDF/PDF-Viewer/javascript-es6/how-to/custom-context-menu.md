@@ -293,4 +293,4 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
 `viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/custom-context-menu" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript/custom-context-menu/ts/index.html" %}
