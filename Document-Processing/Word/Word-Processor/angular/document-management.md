@@ -34,7 +34,7 @@ this.container.documentEditor.userColor = '#fff000';
 
 You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
 
-The folowing code shows how to toggle the highlight editable region value.
+The following code shows how to toggle the highlight editable region value.
 
 ```typescript
 container.documentEditor.documentEditorSettings.highlightEditableRanges = true; 
