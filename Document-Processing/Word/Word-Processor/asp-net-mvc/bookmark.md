@@ -4,7 +4,6 @@ title: Bookmark in ##Platform_Name## Document Editor Component
 description: Learn here all about Bookmark in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Bookmark
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

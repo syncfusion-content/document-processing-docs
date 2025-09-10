@@ -86,7 +86,7 @@ cd my-app
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
 
 To install Document Editor component, use the following command.
 

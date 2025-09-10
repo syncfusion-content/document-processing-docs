@@ -4,7 +4,6 @@ title: how to enable ruler in Document Editor Component
 description: Learn how to enable ruler in Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Enable Ruler
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

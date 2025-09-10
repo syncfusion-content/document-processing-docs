@@ -4,7 +4,6 @@ title: Add save button in Document Editor Component | Syncfusion
 description: Learn here to add save button in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add save button tool bar 
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

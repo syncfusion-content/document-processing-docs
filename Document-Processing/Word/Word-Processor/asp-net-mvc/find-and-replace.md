@@ -4,7 +4,6 @@ title: Find And Replace in ##Platform_Name## Document Editor Component | Syncfus
 description: Learn here all about find and replace in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find And Replace
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

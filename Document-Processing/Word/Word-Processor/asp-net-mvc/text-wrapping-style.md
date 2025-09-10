@@ -4,7 +4,6 @@ title: Text Wrapping Style in ##Platform_Name## Document Editor Component
 description: Learn here all about text wrapping style in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text Wrapping Style
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

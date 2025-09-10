@@ -4,7 +4,6 @@ title: Open document from AWS S3 in ##Platform_Name## Document editor control | 
 description:  Learn about how to Open document from AWS S3 in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from AWS S3
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

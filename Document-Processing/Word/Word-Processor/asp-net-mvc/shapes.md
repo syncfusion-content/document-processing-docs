@@ -4,7 +4,6 @@ title: Shapes in ##Platform_Name## Document Editor Component | Syncfusion
 description: Learn here all about shapes in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Shapes
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

@@ -4,7 +4,6 @@ title: Override The Keyboard Shortcuts in ##Platform_Name## Document Editor Comp
 description: Learn here all about override the keyboard shortcuts in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Override The Keyboard Shortcuts
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

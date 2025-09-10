@@ -4,7 +4,6 @@ title: Export in Document Editor Component | Syncfusion
 description: Learn here all about Export in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

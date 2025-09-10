@@ -4,7 +4,6 @@ title: Save document to One Drive in ##Platform_Name## Document editor control |
 description:  Learn about how to Save document to One Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to One Drive
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -4,7 +4,6 @@ title: Get current Word/Para in ##Platform_Name## Document editor control | Sync
 description: Learn how to select and retrieve current word and Paragraph from the Syncfusion ##Platform_Name## Document Editor Component
 platform: document-processing
 control: Get The Current Word And Paragrapgh
-publishingplatform: ##Platform_Name##
 documentation: ug 
 ---
 

@@ -4,7 +4,6 @@ title: Dialog in ##Platform_Name## Document Editor Component | Syncfusion
 description: Learn here all about dialog in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Dialog
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

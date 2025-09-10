@@ -4,7 +4,6 @@ title: Opening the document from Box cloud file storage in Syncfusion ##Platform
 description: Learn here to open a document from Box cloud file storage in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 --- 

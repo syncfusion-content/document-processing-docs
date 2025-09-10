@@ -4,7 +4,6 @@ title: Fields in Document Editor Component | Syncfusion
 description: Learn here all about overview of Fields in the ##Platform_Name## of Syncfusion Document Editor Component.
 platform: document-processing
 control: Fields
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

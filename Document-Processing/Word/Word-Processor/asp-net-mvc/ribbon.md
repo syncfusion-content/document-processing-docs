@@ -4,7 +4,6 @@ title: Ribbon in ##Platform_Name## Document editor control | Syncfusion
 description: Learn here all about the Ribbon UI in Syncfusion ##Platform_Name## Document editor control, how to switch between Ribbon and Toolbar modes.
 platform: document-processing
 control: Ribbon
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

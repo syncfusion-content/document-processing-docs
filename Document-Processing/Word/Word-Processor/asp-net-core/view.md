@@ -4,7 +4,6 @@ title: View in Document Editor Control | Syncfusion
 description: Learn here all about View in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: View
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

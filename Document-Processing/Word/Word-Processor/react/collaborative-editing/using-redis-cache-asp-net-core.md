@@ -4,7 +4,6 @@ title: Collaborative Editing in React Document editor control | Syncfusion
 description: Learn how to enable collaborative editing in Syncfusion React Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

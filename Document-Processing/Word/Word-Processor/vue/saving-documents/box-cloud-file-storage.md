@@ -4,7 +4,6 @@ title: Save document to Box cloud file storage in ##Platform_Name## Document edi
 description:  Learn about how to Save document to Box cloud file storage in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Box cloud file storage
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

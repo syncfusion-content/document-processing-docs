@@ -4,7 +4,6 @@ title: Set Default Format In Document Editor in ##Platform_Name## Document Edito
 description: Learn here all about how to set default format in Document Editor in Syncfusion ##Platform_Name## Document Editor component of syncfusion and more.
 platform: document-processing
 control: Set Default Format In Document Editor
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

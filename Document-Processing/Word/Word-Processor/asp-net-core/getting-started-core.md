@@ -4,7 +4,6 @@ title: Getting Started with Syncfusion Document Editor Control
 description: Checkout and learn about getting started with Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started Core
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

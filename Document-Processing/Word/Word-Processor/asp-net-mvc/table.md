@@ -4,7 +4,6 @@ title: Table in ##Platform_Name## Document Editor Component | Syncfusion
 description: Learn here all about table in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

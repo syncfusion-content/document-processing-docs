@@ -4,7 +4,6 @@ title: Move the selection to specific position in ##Platform_Name## Document Edi
 description: Learn how to move the selection to specific position in Document from the ##Platform_Name## Document Editor Component
 platform: document-processing
 control: Move The Selection To Specific Position
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

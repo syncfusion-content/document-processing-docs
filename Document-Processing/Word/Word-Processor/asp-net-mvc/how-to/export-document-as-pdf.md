@@ -4,7 +4,6 @@ title: Export PDF Document in ##Platform_Name## Document Editor Component |Syncf
 description: Learn here all about export document as PDF in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export Document As PDF
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

@@ -4,7 +4,6 @@ title: Open Document By Address in ##Platform_Name## Document Editor Component
 description: Learn here all about open document by address in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open Document By Address
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

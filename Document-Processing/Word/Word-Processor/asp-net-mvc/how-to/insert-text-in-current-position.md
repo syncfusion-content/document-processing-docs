@@ -4,7 +4,6 @@ title: Insert text, paragraph and rich-text content in ##Platform_Name## Documen
 description: Learn how to insert text, paragraph and rich-text content in ##Platform_Name## Document Editor Component
 platform: document-processing
 control: Insert Text, Paragraph And Rich-Text Content
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

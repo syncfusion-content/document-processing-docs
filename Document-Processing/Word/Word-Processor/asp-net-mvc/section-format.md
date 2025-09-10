@@ -4,7 +4,6 @@ title: Section Format in ##Platform_Name## Document Editor Control | Syncfusion
 description: Learn here all about section format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Section Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

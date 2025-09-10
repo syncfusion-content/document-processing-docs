@@ -4,7 +4,6 @@ title: Print in ##Platform_Name## Document Editor Control | Syncfusion
 description: Learn here all about print in Syncfusion ##Platform_Name## Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

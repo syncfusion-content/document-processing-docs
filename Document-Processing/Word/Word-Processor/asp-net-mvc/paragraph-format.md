@@ -4,7 +4,6 @@ title: Paragraph Format in ##Platform_Name## Document Editor Control | Syncfusio
 description: Learn here all about paragraph format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

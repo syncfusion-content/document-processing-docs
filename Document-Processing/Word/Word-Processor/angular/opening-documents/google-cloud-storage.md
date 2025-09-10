@@ -4,7 +4,6 @@ title: Open document from Google Cloud Storage in ##Platform_Name## Document edi
 description: Learn about how to Open document from Google Cloud Storage in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Google Cloud Storage
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

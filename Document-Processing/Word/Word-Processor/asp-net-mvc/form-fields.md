@@ -4,7 +4,6 @@ title: Form Fields in ##Platform_Name## Document Editor Control | Syncfusion
 description: Learn here all about Form Fields in Syncfusion ##Platform_Name## Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Form Fields
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

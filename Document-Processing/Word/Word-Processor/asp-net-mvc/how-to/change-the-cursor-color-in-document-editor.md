@@ -4,7 +4,6 @@ title: How to change the cursor color in document editor using CSS ##Platform_Na
 description: Learn how to change the cursor color using CSS in ##Platform_Name## Document Editor component of syncfusion and more.
 platform: document-processing
 control: Change The Cursor Color
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

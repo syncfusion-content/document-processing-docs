@@ -4,7 +4,6 @@ title: Customize Tool Bar in Document Editor Component | Syncfusion
 description: Learn here all about how to customize Tool Bar in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Tool Bar
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

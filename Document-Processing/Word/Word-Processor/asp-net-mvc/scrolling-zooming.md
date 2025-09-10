@@ -4,7 +4,6 @@ title: Scrolling Zooming in ##Platform_Name## Document Editor Component
 description: Learn here all about scrolling zooming in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling Zooming
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

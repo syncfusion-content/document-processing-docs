@@ -4,7 +4,6 @@ title: Hide the default tool bar and properties pane in ##Platform_Name## Docume
 description: Learn how to hide the default tool bar properties pane from the Syncfusion ##Platform_Name## Document Editor Component
 platform: document-processing
 control: Hide The Default Tool Bar And Properties Pane
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

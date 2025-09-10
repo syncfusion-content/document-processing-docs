@@ -4,7 +4,6 @@ title: Change Document View in Document Editor Component | Syncfusion
 description: Learn here all about how to change document view in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change Document View
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

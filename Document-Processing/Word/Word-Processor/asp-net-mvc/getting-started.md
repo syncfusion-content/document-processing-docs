@@ -4,7 +4,6 @@ title: Getting Started with ##Platform_Name## DocumentEditor | Syncfusion
 description: Checkout and learn about getting started with ##Platform_Name## DocumentEditor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

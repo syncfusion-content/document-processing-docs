@@ -1,5 +1,5 @@
 ---
-title: "how to enable ruler in document edior"
+title: "how to enable ruler in document edior  | Syncfusion"
 component: "DocumentEditor"
 description: "Learn how to enable ruler in Angular Document Editor component."
 platform: document-processing

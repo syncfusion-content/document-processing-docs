@@ -4,7 +4,6 @@ title: How to disable header and footer edit in ##Platform_Name## Document Edito
 description: Learn how to to disable header and footer edit in Document from the Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS2 and more.
 platform: document-processing
 control: Disable Header And Footer
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

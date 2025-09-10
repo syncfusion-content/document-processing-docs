@@ -4,7 +4,6 @@ title: Auto Save Document  in Document Editor Component | Syncfusion
 description: Learn here all about auto save document in Document Editor in Syncfusion Document Editor component of syncfusion and more.
 platform: document-processing
 control: Auto Save Document In Document Editor
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

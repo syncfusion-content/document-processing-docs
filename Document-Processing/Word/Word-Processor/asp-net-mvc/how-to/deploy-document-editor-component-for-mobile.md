@@ -4,7 +4,6 @@ title: Deploy Document Editor For Mobile in ##Platform_Name## | Syncfusion
 description: Learn here all about deploy document editor component for mobile in Syncfusion ##Platform_Name## Document Editor component of syncfusion and more.
 platform: document-processing
 control: Deploy Document Editor Component For Mobile
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

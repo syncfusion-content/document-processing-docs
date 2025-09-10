@@ -4,7 +4,6 @@ title: Open Default Document in ##Platform_Name## Document Editor Component
 description: Learn here all about how to open default document in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open Default Document
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

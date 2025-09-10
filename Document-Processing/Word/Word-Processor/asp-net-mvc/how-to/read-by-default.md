@@ -4,7 +4,6 @@ title: Read By Default in ##Platform_Name## Document Editor Component | Syncfusi
 description: Learn here all about read by default in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read By Default
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

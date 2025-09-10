@@ -4,7 +4,6 @@ title: Spell Check in Document Editor Component
 description: Learn here all about spell check in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spell Check
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

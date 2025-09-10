@@ -4,7 +4,6 @@ title: Security Advisories in ##Platform_Name## Document Editor Control | Syncfu
 description: Learn here all about Security Advisories in  ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
 control: Security advisories 
 platform: document-processing
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

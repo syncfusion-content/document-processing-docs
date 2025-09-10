@@ -4,7 +4,6 @@ title: Save document to Dropbox cloud file storage in ##Platform_Name## Document
 description:  Learn about how to Save document to Dropbox cloud file storage in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
