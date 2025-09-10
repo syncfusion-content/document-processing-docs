@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Angular Document editor component
+# Accessibility in JavaScript (ES5) Document editor component
 
 The accessibility compliance for the Document editor component is outlined below.
 

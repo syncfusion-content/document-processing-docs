@@ -90,7 +90,7 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetcontentcontroldata`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#resetContentControlData)
 
 {% highlight js %}
 var data = [];
