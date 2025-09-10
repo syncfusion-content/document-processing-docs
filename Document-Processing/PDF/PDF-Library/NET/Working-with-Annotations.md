@@ -4209,7 +4209,7 @@ The following code example demonstrates how to get values from a PDF annotation.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Get-value-from-PDF-annotation/.NET/Get-value-from-PDF-annotation/Program.cs" %}
 
 // Load the existing PDF document using FileStream
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -4307,12 +4307,12 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Get-value-from-PDF-annotation/.NET).
 
 The following code example demonstrates how to set values from a PDF annotation.
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Set-value-from-PDF-annotation/.NET/Set-value-from-PDF-annotation/Program.cs" %}
 
 // Load the existing PDF document using FileStream
 using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read))
@@ -4407,7 +4407,7 @@ using (FileStream inputStream = new FileStream(@"Input.pdf", FileMode.Open, File
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Set-value-from-PDF-annotation/.NET).
 
 ## Setting transparency for annotations 
 
