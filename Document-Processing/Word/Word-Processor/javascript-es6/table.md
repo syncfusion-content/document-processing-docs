@@ -189,7 +189,7 @@ The following sample demonstrates how to delete the table row or columns, merge 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/table-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/table-cs1" %}
 
 
 

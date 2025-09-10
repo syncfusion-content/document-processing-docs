@@ -205,7 +205,7 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/text-format-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/text-format-cs1" %}
 
 ## See Also
 

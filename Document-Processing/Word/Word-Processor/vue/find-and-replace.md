@@ -245,4 +245,4 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/replace-all-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/replace-all-cs1" %}

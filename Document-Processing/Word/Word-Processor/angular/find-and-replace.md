@@ -26,7 +26,7 @@ This provides the options to search for a portion of text in the document. After
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/find-replace-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/find-replace-cs1" %}
 
 You can close the options pane by pressing `Esc` key.
 
@@ -162,4 +162,4 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/find-replace-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/find-replace-cs2" %}

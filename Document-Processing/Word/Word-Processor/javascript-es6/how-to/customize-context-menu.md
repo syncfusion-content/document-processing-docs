@@ -130,7 +130,7 @@ The following is the output of custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1" %}
 
 
 

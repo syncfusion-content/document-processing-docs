@@ -166,7 +166,7 @@ The following sample demonstrates the paragraph formatting options using a toolb
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/paragraph-format-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/paragraph-format-cs1" %}
 
 ## See Also
 

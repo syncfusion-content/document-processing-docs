@@ -26,7 +26,7 @@ Refer to the following example for showing a document and print it.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/print-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs1" %}
 
 Refer to the following example for creating a document and print it.
 
@@ -41,7 +41,7 @@ Refer to the following example for creating a document and print it.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/print-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs2" %}
 
 ## Improve print quality
 
@@ -121,7 +121,7 @@ The following example shows how to customize layout options only for printing.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/print-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/print-cs3" %}
 
 ## See Also
 

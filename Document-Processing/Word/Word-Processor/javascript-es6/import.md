@@ -26,7 +26,7 @@ The following example shows how to open SFDT data in Document Editor.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/import-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/import-cs1" %}
 
 ## Import document from local machine
 
@@ -43,7 +43,7 @@ The following example shows how to import document from local machine.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1" %}
 
 ## Convert word documents into SFDT
 

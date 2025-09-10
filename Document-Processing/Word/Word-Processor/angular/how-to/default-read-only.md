@@ -24,7 +24,7 @@ In this article, we are going to see how to open a document in read only mode by
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/getting-started-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/getting-started-cs2" %}
 
 ## Opening a document in ready only mode by default in DocumentEditorContainer
 
@@ -38,6 +38,6 @@ In this article, we are going to see how to open a document in read only mode by
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/document-editor-container-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/document-editor-container-cs3" %}
 
 Note: You can use the `restrictEditing` in `DocumentEditorContainer` and `isReadOnly` in `DocumentEditor` based on your requirement to change component to read only mode.

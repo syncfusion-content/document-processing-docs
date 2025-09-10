@@ -26,7 +26,7 @@ In this article, we are going to see how to open a document in read only mode by
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/read-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/read-cs1" %}
 
 
 
@@ -43,7 +43,7 @@ In this article, we are going to see how to open a document in read only mode by
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/read-container-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/read-container-cs1" %}
 
 
 

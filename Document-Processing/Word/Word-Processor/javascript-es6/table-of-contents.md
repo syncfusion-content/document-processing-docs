@@ -46,7 +46,7 @@ editor.editorModule.insertTableOfContents(tocSettings);
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/table-of-contents-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/table-of-contents-cs1" %}
 
 ## Update or edit table of contents
 

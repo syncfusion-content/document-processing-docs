@@ -188,7 +188,7 @@ Document Editor output will be displayed as follows.
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1" %}
 
 ### Document Editor Container component
 
@@ -267,7 +267,7 @@ DocumentEditorContainer output will be displayed as follows.
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2" %}
 
 ## Frequently Asked Questions
 
