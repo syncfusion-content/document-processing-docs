@@ -38,7 +38,7 @@ The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaS
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/javascript/es5-getting-started-cs2" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript/es5-getting-started-cs2/js/index.html" %}
 
 
 ### Steps to Load PDF Viewer with Local Resources
