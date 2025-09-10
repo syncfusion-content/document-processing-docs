@@ -4,7 +4,6 @@ title: Find and replace in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about Find and replace in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find and replace 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

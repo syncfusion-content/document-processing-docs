@@ -4,7 +4,6 @@ title: Open default document in JavaScript (ES6) Document editor control | Syncf
 description: Learn here all about Open default document in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open default document 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -4,7 +4,6 @@ title: Save document to AWS S3 in JavaScript (ES6) Document editor control | Syn
 description:  Learn about how to Save document to AWS S3 in JavaScript (ES6) Document editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

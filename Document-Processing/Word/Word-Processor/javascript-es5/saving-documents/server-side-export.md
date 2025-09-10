@@ -4,7 +4,6 @@ title: Server side export in JavaScript (ES5) Document editor control | Syncfusi
 description: Learn here all about Server side export in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Server side export 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

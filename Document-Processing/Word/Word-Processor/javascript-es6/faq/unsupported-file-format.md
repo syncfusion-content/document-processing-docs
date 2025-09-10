@@ -4,7 +4,6 @@ title: Unsupported file in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about Unsupported file in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unsupported file 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

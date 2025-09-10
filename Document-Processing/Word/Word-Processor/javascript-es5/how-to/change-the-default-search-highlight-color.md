@@ -4,7 +4,6 @@ title: Change the default search highlight color in JavaScript (ES5) Document ed
 description: Learn here all about Change the default search highlight color in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change the default search highlight color 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

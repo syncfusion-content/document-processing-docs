@@ -4,7 +4,6 @@ title: Collaborative Editing in JavaScript (ES5) Document editor control | Syncf
 description: Learn how to enable collaborative editing in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing Java
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

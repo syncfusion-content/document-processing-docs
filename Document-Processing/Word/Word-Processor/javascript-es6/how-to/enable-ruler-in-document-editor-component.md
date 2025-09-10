@@ -5,7 +5,6 @@ component: "DocumentEditor"
 description: Learn how to enable ruler in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Enable ruler 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

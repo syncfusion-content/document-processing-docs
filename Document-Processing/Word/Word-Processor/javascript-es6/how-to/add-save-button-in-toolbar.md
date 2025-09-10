@@ -4,7 +4,6 @@ title: Add save button in JavaScript (ES6) Document editor toolbar | Syncfusion
 description: Learn here to add save button in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add save button tool bar 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

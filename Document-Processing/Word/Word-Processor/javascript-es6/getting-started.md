@@ -4,7 +4,6 @@ title: Getting started with JavaScript (ES6) Document editor control | Syncfusio
 description:  Checkout and learn about Getting started with JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

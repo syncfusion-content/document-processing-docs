@@ -4,7 +4,6 @@ title: Accessibility in JavaScript (ES5) Document editor component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion JavaScript (ES5) Document editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: document-processing
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

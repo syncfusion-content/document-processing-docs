@@ -4,7 +4,6 @@ title: Table of contents in JavaScript (ES6) Document editor control | Syncfusio
 description: Learn here all about Table of contents in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table of contents 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

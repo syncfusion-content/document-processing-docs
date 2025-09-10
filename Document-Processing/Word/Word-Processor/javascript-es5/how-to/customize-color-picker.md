@@ -4,7 +4,6 @@ title: Customize color picker in JavaScript (ES5) Document editor control | Sync
 description: Learn here all about Customize color picker in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Color Picker 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

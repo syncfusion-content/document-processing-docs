@@ -4,7 +4,6 @@ title: Change document view in JavaScript (ES5) Document editor control | Syncfu
 description: Learn here all about Change document view in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change document view 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

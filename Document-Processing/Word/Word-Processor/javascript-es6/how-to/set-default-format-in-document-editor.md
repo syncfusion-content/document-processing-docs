@@ -4,7 +4,6 @@ title: Set default format in document editor in JavaScript (ES6) Document editor
 description: Learn here all about Set default format in document editor in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Set default format in document editor 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

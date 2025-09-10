@@ -4,7 +4,6 @@ title: Move to specific position in JavaScript (ES5) Document editor | Syncfusio
 description: Learn here all about Move selection to specific position in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Move selection to specific position 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

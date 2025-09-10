@@ -4,7 +4,6 @@ title: Save document to One Drive in JavaScript (ES6) Document editor control | 
 description:  Learn about how to Save document to One Drive in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to One Drive
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

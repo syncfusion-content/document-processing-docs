@@ -4,7 +4,6 @@ title: Open document from Dropbox cloud file storage in JavaScript (ES6) Documen
 description: Learn about how to Open document from Dropbox cloud file storage in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

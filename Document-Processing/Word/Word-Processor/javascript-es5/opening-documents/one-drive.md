@@ -4,7 +4,6 @@ title: Open document from One Drive in JavaScript (ES5) Document editor control 
 description: Learn about how to Open document from One Drive in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from One Drive
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

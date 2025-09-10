@@ -4,7 +4,6 @@ title: Save document to Box cloud file storage in JavaScript (ES6) Document edit
 description:  Learn about how to Save document to Box cloud file storage in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Box cloud file storage
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -4,7 +4,6 @@ title: Overview in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about Word processor server docker image overview in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Word processor server docker image overview 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

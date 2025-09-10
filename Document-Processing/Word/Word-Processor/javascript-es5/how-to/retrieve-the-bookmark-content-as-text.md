@@ -4,7 +4,6 @@ title: Retrieve the bookmark content as text in JavaScript (ES5) Document editor
 description: Learn here all about Retrieve the bookmark content as text in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Retrieve the bookmark content as text 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

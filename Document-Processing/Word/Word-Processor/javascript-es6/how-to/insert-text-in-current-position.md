@@ -4,7 +4,6 @@ title: How to insert text in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Insert text in current position in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Insert text in current position 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -4,7 +4,6 @@ title: Save document to Google Cloud Storage in JavaScript (ES6) Document editor
 description:  Learn about how to Save document to Google Cloud Storage in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Cloud Storage
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

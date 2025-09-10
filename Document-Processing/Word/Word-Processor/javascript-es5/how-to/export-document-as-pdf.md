@@ -4,7 +4,6 @@ title: Export document as pdf in JavaScript (ES5) Document editor control | Sync
 description: Learn here all about Export document as pdf in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export document as pdf 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

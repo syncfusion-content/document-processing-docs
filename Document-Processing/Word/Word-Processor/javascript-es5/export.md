@@ -4,7 +4,6 @@ title: Export in JavaScript (ES5) Document editor control | Syncfusion
 description: Learn here all about Export in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

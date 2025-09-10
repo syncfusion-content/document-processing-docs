@@ -4,7 +4,6 @@ title: How to in JavaScript (ES6) Document editor control | Syncfusion
 description: Learn here all about How to in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

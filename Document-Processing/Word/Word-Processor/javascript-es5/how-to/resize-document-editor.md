@@ -4,7 +4,6 @@ title: Resize document editor in JavaScript (ES5) Document editor control | Sync
 description: Learn here all about Resize document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resize document editor 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

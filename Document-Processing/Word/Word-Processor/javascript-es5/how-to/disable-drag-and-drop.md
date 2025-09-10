@@ -4,7 +4,6 @@ title: Disable drag and drop in JavaScript (ES5) Document editor control | Syncf
 description: Learn here all about Disable drag and drop in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable drag and drop 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

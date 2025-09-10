@@ -4,7 +4,6 @@ title: Disable header and footer edit in JavaScript (ES5) Document editor | Sync
 description: Learn here all about disabling editing in header and footer JavaScript (ES5) Document editor control.
 platform: document-processing
 control: Disable header and footer edit in document editor 
-publishingplatform: JavaScript (ES5)
 documentation: ug
 domainurl: ##DomainURL##
 ---

@@ -4,7 +4,6 @@ title: Scrolling zooming in JavaScript (ES6) Document editor control | Syncfusio
 description: Learn here all about Scrolling zooming in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling zooming 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

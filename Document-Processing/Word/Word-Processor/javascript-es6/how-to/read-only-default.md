@@ -4,7 +4,6 @@ title: Read only default in JavaScript (ES6) Document editor control | Syncfusio
 description: Learn here all about Read only default in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read only default 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

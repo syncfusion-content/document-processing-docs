@@ -4,7 +4,6 @@ title: Security Advisories in  JavaScript (ES6) Document Editor control | Syncfu
 description: Learn here all about Security Advisories in Syncfusion  JavaScript (ES6)  Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Security advisories
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

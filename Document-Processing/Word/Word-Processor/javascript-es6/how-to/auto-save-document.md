@@ -4,7 +4,6 @@ title: Auto save document in JavaScript (ES6) Document Editor | Syncfusion
 description: Learn here all about Auto save document in document editor in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Auto save document in document editor 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---

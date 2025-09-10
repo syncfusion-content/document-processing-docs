@@ -4,7 +4,6 @@ title: Insert text or image in table programmatically in JavaScript (ES6) Docume
 description: Learn here all about Insert text or image in table programmatically in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Insert text or image in table programmatically 
-publishingplatform: JavaScript (ES6)
 documentation: ug
 domainurl: ##DomainURL##
 ---
