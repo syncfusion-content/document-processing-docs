@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Text_search in ##Platform_Name## Pdfviewer Component | Syncfusion
-description: Learn here all about Text_search in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Text_search in ASP.NET MVC Pdfviewer Component | Syncfusion
+description: Learn here all about Text_search in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text_search
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

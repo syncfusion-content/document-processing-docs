@@ -4,7 +4,7 @@ title: Free Text Annotation in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn here all about Free Text Annotation in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Free Text Annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

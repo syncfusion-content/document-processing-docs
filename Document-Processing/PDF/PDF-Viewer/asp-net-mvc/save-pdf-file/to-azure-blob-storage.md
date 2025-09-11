@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save PDF to Azure Blob Storage in ##Platform_Name## PdfViewer | Syncfusion
+title: Save PDF to Azure Blob Storage in ASP.NET MVC PdfViewer | Syncfusion
 description: Save PDF files to Azure Blob Storage in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

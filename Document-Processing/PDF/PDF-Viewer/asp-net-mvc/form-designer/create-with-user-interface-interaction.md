@@ -4,7 +4,7 @@ title: User Interface Interaction in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how User Interface Interaction in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create With User Interface Interaction
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

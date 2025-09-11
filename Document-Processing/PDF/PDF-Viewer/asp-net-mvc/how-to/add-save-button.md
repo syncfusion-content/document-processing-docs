@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Add Save Button in Built-In Toolbar | Syncfusion
-description:  Learn here all about adding save button in built-in Toolbar in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+description:  Learn here all about adding save button in built-in Toolbar in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add Save Button
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

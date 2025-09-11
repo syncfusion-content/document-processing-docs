@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Shape Annotation in ##Platform_Name## PDF Viewer Component | Syncfusion
-description: Learn here all about Shape Annotation in Syncfusion ##Platform_Name## PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Shape Annotation in ASP.NET MVC PDF Viewer Component | Syncfusion
+description: Learn here all about Shape Annotation in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Shape Annotation
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
