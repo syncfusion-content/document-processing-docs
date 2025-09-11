@@ -42,7 +42,7 @@ Refer to the following example for creating a document and print it.
 
 ## Improve print quality
 
-Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio/) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
+Document editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#printdevicepixelratio/) in Document editor settings. Document editor using canvas approach to render content. Then, canvas are converted to image and it process for print. Using printDevicePixelRatio API, you can increase the image quality based on your requirement.
 
 The following example code illustrates how to improve the print quality in Document editor container.
 

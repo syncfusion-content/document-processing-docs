@@ -17,7 +17,7 @@ Document Editor Container allows you to customize(add, show, hide, enable, and d
 * Add - New items can defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
 
 * Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#toolbaritems) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/toolbarItem/).
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/toolbar#enableitems)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/toolbar/#enableitems)
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';

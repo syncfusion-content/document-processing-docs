@@ -9,9 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable ruler
-
-## How to enable ruler in Document Editor component
+## How to enable ruler in JavaScript (ES6) Document Editor component
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
 
