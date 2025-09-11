@@ -25,22 +25,22 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/export-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-cs1" %}
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/document-editor/vue/document-editor/export-container-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/export-container-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-container-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-container-cs1" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -52,22 +52,22 @@ The following example shows how to export the document as Word document (.docx).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs2/app-composition.vue %}
+{% include code-snippet/document-editor/vue/export-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs2/app.vue %}
+{% include code-snippet/document-editor/vue/export-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-cs2" %}
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/document-editor/vue/document-editor/export-container-cs2/app.vue %}
+{% include code-snippet/document-editor/vue/export-container-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-container-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-container-cs2" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -79,19 +79,19 @@ The following example shows how to export the document as Word Template (.dotx).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs9/app.vue %}
+{% include code-snippet/document-editor/vue/export-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs9" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-cs9" %}
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/document-editor/vue/document-editor/export-container-cs4/app.vue %}
+{% include code-snippet/document-editor/vue/export-container-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-container-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-container-cs4" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -101,22 +101,22 @@ The following example shows how to export document as text document (.txt).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs3/app-composition.vue %}
+{% include code-snippet/document-editor/vue/export-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs3/app.vue %}
+{% include code-snippet/document-editor/vue/export-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-cs3" %}
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/document-editor/vue/document-editor/export-container-cs3/app.vue %}
+{% include code-snippet/document-editor/vue/export-container-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-container-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-container-cs3" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 

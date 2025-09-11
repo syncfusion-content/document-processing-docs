@@ -25,15 +25,15 @@ The following example shows how to export documents in document editor as Syncfu
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/export-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/export-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/export-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/export-cs1" %}
 
 ## Word export
 
@@ -43,15 +43,15 @@ The following example shows how to export the document as Word document (.docx).
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/export-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/export-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/export-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/export-cs2" %}
 
 ## Template export
 
@@ -61,15 +61,15 @@ The following example shows how to export the document as Word Template (.dotx).
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs4/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/export-cs4/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs4/src/main.ts %}
+{% include code-snippet/document-editor/angular/export-cs4/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/export-cs4" %}
+{% previewsample "/document-processing/samples/document-editor/angular/export-cs4" %}
 
 ## Text export
 
@@ -77,15 +77,15 @@ The following example shows how to export document as text document (.txt).
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs3/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/export-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/export-cs3/src/main.ts %}
+{% include code-snippet/document-editor/angular/export-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/export-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/angular/export-cs3" %}
 
 ## Export as blob
 

@@ -22,17 +22,17 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs1/app/index.jsx %}
+{% include code-snippet/document-editor/react/link-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs1/app/index.tsx %}
+{% include code-snippet/document-editor/react/link-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs1/index.html %}
+{% include code-snippet/document-editor/react/link-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/link-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/link-cs1" %}
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
@@ -111,17 +111,17 @@ Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs2/app/index.jsx %}
+{% include code-snippet/document-editor/react/link-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs2/app/index.tsx %}
+{% include code-snippet/document-editor/react/link-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs2/index.html %}
+{% include code-snippet/document-editor/react/link-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/link-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/link-cs2" %}
 
 ## Customize screen tip
 
@@ -149,17 +149,17 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs3/app/index.jsx %}
+{% include code-snippet/document-editor/react/link-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs3/app/index.tsx %}
+{% include code-snippet/document-editor/react/link-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/link-cs3/index.html %}
+{% include code-snippet/document-editor/react/link-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/link-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/link-cs3" %}
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 

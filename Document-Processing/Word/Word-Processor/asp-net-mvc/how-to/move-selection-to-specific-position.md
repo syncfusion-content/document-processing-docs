@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Move the selection to specific position in ##Platform_Name## Document Editor Component
-description: Learn how to move the selection to specific position in Document from the ##Platform_Name## Document Editor Component
+title: Move the selection to specific position in ASP.NET MVC Document Editor Component
+description: Learn how to move the selection to specific position in Document from the ASP.NET MVC Document Editor Component
 platform: document-processing
 control: Move The Selection To Specific Position
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

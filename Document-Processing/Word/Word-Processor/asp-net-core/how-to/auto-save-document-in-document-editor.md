@@ -4,7 +4,6 @@ title: Auto Save Document  in Document Editor Component | Syncfusion
 description: Learn here all about auto save document in Document Editor in Syncfusion Document Editor component of syncfusion and more.
 platform: document-processing
 control: Auto Save Document In Document Editor
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -18,10 +17,10 @@ This article explains how to auto save the document in AWS S3. You can automatic
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/auto-save/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/auto-save/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

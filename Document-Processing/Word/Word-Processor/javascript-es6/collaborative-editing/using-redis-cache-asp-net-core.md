@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Collaborative Editing in ##Platform_Name## Document editor control | Syncfusion
-description: Learn how to enable collaborative editing using Redis in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn how to enable collaborative editing using Redis in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -86,7 +85,7 @@ To enable collaborative editing, inject `CollaborativeEditingHandler` and set th
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/collaborative-editing-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/collaborative-editing-cs1/index.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,7 +96,7 @@ To broadcast the changes made and receive changes from remote users, configure S
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/collaborative-editing-cs1/script-1.ts %}
+{% include code-snippet/document-editor/javascript-es6/collaborative-editing-cs1/script-1.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,7 +107,7 @@ When opening a document, we need to generate a unique ID for each document. Thes
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/collaborative-editing-cs1/script-2.ts %}
+{% include code-snippet/document-editor/javascript-es6/collaborative-editing-cs1/script-2.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -119,7 +118,7 @@ Changes made on the client-side need to be sent to the server-side to broadcast 
  
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/collaborative-editing-cs1/script-3.ts %}
+{% include code-snippet/document-editor/javascript-es6/collaborative-editing-cs1/script-3.ts %}
 {% endhighlight %}
 {% endtabs %}
 

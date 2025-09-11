@@ -60,15 +60,15 @@ The following sample demonstrates how to create bullet and numbering lists in do
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/list-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/list-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/list-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/list-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/list-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/list-cs1" %}
 
 ## Editing numbered list
 

@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Image in Angular Document editor component
 
-Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
+Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertimage/) method. Refer to the following sample code.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/link-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs1" %}
 
 Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
 

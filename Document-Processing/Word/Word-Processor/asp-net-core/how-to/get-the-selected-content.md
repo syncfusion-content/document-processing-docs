@@ -4,7 +4,6 @@ title: Get Selected Content in Document Editor Component | Syncfusion
 description: Learn here all about get the selected content in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get The Selected Content
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Save document to AWS S3 in ##Platform_Name## Document editor control | Syncfusion
-description:  Learn about how to Save document to AWS S3 in ##Platform_Name## Document editor of Syncfusion Essential JS 2 and more details.
+title: Save document to AWS S3 in JavaScript (ES6) Document editor control | Syncfusion
+description:  Learn about how to Save document to AWS S3 in JavaScript (ES6) Document editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -129,10 +128,10 @@ In the client-side, to export the document into blob the document using [`saveAs
 
 {% tabs %}
 {% highlight ts tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/save-aws-s3/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/save-aws-s3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/save-aws-s3/index.html %}
+{% include code-snippet/document-editor/javascript-es6/save-aws-s3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

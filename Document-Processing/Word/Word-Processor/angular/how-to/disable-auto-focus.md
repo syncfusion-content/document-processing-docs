@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to disable auto focus in Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor component
+# How to disable auto focus in Syncfusion Angular Document Editor
 
 Document Editor gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
 
@@ -18,11 +18,11 @@ The following example illustrates to disable the auto focus in DocumentEditorCon
 <ejs-documenteditorcontainer [enableAutoFocus]=false></ejs-documenteditorcontainer>
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#enableautofocus) property is `true`.
 The following example illustrates to disable the auto focus in DocumentEditor.
 
 ```typescript
 <ejs-documenteditor [enableAutoFocus]=false></ejs-documenteditor>
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#enableautofocus) property is `true`.
+>Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enableautofocus) property is `true`.

@@ -4,7 +4,6 @@ title: Add save button in Document Editor Component | Syncfusion
 description: Learn here to add save button in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add save button tool bar 
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -18,10 +17,10 @@ DocumentEditorContainer allows you to add a new button to the existing items in 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/add-save-button-in-toolbar/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/add-save-button-in-toolbar/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/add-save-button-in-toolbar/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/add-save-button-in-toolbar/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

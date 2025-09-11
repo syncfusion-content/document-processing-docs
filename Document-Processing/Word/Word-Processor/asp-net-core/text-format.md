@@ -4,7 +4,6 @@ title: Text Format in Document Editor Component | Syncfusion
 description: Learn here all about text format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text Format
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -166,10 +165,10 @@ documenteditor.selection.characterFormat.highlightColor= '#FFC0CB';
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/text-format/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/text-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Text-format.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/text-format/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/text-format/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

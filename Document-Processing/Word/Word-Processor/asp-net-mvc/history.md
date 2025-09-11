@@ -1,10 +1,9 @@
 ---
 layout: post
-title: History in ##Platform_Name## Document Editor Component
-description: Learn here all about history in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: History in ASP.NET MVC Document Editor Component
+description: Learn here all about history in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: History
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -21,7 +20,7 @@ Inject the `EditorHistory` module in your application to provide history preserv
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/history/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/history/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="History.cs" %}
 {% endhighlight %}{% endtabs %}

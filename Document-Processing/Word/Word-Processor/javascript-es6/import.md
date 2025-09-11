@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Import in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Import in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Import in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Import in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in ##Platform_Name## Document editor control
+# Import in JavaScript (ES6) Document editor control
 
 In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
@@ -19,14 +18,14 @@ The following example shows how to open SFDT data in Document Editor.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/import-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/import-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/import-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/import-cs1" %}
 
 ## Import document from local machine
 
@@ -36,14 +35,14 @@ The following example shows how to import document from local machine.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/import-sfdt-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/import-sfdt-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/import-sfdt-cs1" %}
 
 ## Convert word documents into SFDT
 

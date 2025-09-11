@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Move to specific position in ##Platform_Name## Document editor | Syncfusion
-description: Learn here all about Move selection to specific position in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Move to specific position in JavaScript (ES5) Document editor | Syncfusion
+description: Learn here all about Move selection to specific position in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Move selection to specific position 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Move selection to specific position in ##Platform_Name## Document editor
+# Move selection to specific position in JavaScript (ES5) Document editor
 
 Using [`select`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#select) API in selection module, You can set cursor position to anywhere in the document.
 

@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Get the selected content in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Get the selected content in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Get the selected content in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Get the selected content in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get the selected content 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the selected content in ##Platform_Name## Document editor control
+# Get the selected content in JavaScript (ES6) Document editor control
 
 You can get the selected content from the JavaScript Document Editor component as plain text and SFDT (rich text).
 

@@ -37,14 +37,14 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs8/app-composition.vue %}
+{% include code-snippet/document-editor/vue/export-cs8/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/export-cs8/app.vue %}
+{% include code-snippet/document-editor/vue/export-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/vue/document-editor/export-cs8" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/export-cs8" %}
 
 ## Update or edit table of contents
 

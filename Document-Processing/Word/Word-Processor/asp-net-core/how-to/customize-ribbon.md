@@ -4,7 +4,6 @@ title: Customize Ribbon in Document Editor | Syncfusion
 description: Learn how to customize the ribbon in Syncfusion Document Editor - file menu, backstage, tabs, groups, and items.
 platform: document-processing
 control: Ribbon Customization
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

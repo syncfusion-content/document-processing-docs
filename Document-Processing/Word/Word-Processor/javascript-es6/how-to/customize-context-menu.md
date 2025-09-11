@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Customize context menu in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Customize context menu in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Customize context menu in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize context menu 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in ##Platform_Name## Document editor control
+# Customize context menu in JavaScript (ES6) Document editor control
 
 ## How to customize context menu in Document Editor
 
@@ -123,14 +122,14 @@ The following is the output of custom context menu with customization.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/customize-context-menu-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/customize-context-menu-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es6/document-editor/customize-context-menu-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/customize-context-menu-cs1" %}
 
 
 

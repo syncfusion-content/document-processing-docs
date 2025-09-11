@@ -1,14 +1,13 @@
 ---
 layout: post
-title: How to deploy documenteditor java web api in azure in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about How to deploy documenteditor java web api in azure in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: How to deploy documenteditor java web api in azure in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about How to deploy documenteditor java web api in azure in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: How to deploy documenteditor java web api in azure 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy documenteditor java web api in azure in ##Platform_Name## Document editor control
+# How to deploy documenteditor java web api in azure in JavaScript (ES6) Document editor control
 
 ## Prerequisites
 

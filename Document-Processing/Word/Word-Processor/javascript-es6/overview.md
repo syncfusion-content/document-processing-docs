@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Overview of ##Platform_Name## Document editor control | Syncfusion
-description: Document editor for ##Platform_Name## is used to create, edit, view and print word documents.
+title: Overview of JavaScript (ES6) Document editor control | Syncfusion
+description: Document editor for JavaScript (ES6) is used to create, edit, view and print word documents.
 platform: document-processing
 control: Index 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---

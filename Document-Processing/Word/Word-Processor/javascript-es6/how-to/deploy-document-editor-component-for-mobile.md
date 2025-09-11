@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Deploy document editor component for mobile in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Deploy document editor component for mobile in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Deploy document editor component for mobile in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Deploy document editor component for mobile in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Deploy document editor component for mobile 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy document editor component for mobile in ##Platform_Name## Document editor control
+# Deploy document editor component for mobile in JavaScript (ES6) Document editor control
 
 ## Document editor component for Mobile
 
