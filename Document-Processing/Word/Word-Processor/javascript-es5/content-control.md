@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Content control in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Content control in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Content control in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Content control in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Content control 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content control in ##Platform_Name## Document editor control
+# Content control in JavaScript (ES5) Document editor control
 
 Document Editor provides support for inserting, editing content controls
 
@@ -90,7 +89,7 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetcontentcontroldata`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#resetContentControlData)
 
 {% highlight js %}
 var data = [];

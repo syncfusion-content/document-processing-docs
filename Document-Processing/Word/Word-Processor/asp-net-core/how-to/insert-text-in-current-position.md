@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Insert text, paragraph and rich-text content in Document Editor Component
+title: Insert text, paragraph and rich-text content in Document Editor Component | Syncfusion
 description: Learn how to insert text, paragraph and rich-text content in Document Editor Component
 platform: document-processing
 control: Insert Text, Paragraph And Rich-Text Content
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -14,7 +13,7 @@ You can insert the text, paragraph and rich-text content in Document Editor comp
 
 ## Insert text in current cursor position
 
-You can use [`insertText`](https://ej2.syncfusion.com/aspnetcore/documentation/api/document-editor/editor/#inserttext) API in editor module to insert the text in current cursor position.
+You can use [`insertText`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#inserttext) API in editor module to insert the text in current cursor position.
 
 The following example code illustrates how to add the text in current selection.
 
@@ -46,7 +45,7 @@ this.container.documentEditor.editor.insertText('\n');
 
 To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`]. Then use [`paste`] API to insert the sfdt at current cursor position.
 
-N> Html string should be welformatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only welformatted XHTML.  
+N> HTML string should be well formatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
 
 The following example illustrates how to insert the HTML content at current cursor position.
 

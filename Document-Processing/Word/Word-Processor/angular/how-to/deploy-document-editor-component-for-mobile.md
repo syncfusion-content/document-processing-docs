@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 At present, Document editor component is not responsive for mobile, and we haven't ensured the editing functionalities in mobile browsers. Whereas it works properly as a document viewer in mobile browsers.
 
-Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke [`fitPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#fitpage) method with [`FitPageWidth`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/pageFitType/) parameter in document change event, such as to display one full page by adjusting the zoom factor.
+Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke [`fitPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#fitpage) method with [`FitPageWidth`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/pageFitType/) parameter in document change event, such as to display one full page by adjusting the zoom factor.
 
 The following example code illustrates how to deploy Document Editor component for Mobile.
 
@@ -55,4 +55,4 @@ export class AppComponent {
 
 You can download the complete working example from this [GitHub location](https://github.com/SyncfusionExamples/Deploy-Document-Editor-in-Mobile-Friendly-Web-page/)
 
->Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
+>Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.

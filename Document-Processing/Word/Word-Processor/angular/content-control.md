@@ -28,7 +28,7 @@ BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFo
 
 ## Insert content control
 
-Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertcontentcontrol) method in editor module.
+Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertcontentcontrol) method in editor module.
 
 {% highlight ts %}
 //Insert Rich Text Content Control
@@ -70,7 +70,7 @@ this.container.documentEditor.editor.insertContentControl('Picture', 'data:image
 
 ## Import content control properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contentControlInfo/) and import it using [`importContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#importcontentcontroldata)
+Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contentControlInfo/) and import it using [`importContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#importcontentcontroldata)
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];
@@ -81,7 +81,7 @@ this.container.documentEditor.importContentControlData(data);
 
 ## Export content control properties
 
-Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#exportcontentcontroldata)
+Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportcontentcontroldata)
 
 {% highlight ts %}
 let contentControlInfos: ContentControlInfo[] = this.container.documentEditor.exportContentControlData();
@@ -89,7 +89,7 @@ let contentControlInfos: ContentControlInfo[] = this.container.documentEditor.ex
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetcontentcontroldata`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#resetcontentcontroldata)
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];

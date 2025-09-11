@@ -4,7 +4,6 @@ title: Content Control in Syncfusion Document Editor Component
 description: Learn here all about Content Control in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Content Control
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

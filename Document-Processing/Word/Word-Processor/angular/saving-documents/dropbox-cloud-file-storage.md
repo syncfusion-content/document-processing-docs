@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Save document to Dropbox cloud file storage in ##Platform_Name## Document editor control | Syncfusion
-description:  Learn about how to Save document to Dropbox cloud file storage in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to Dropbox cloud file storage in Angular Document editor control | Syncfusion
+description:  Learn about how to Save document to Dropbox cloud file storage in Angular Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -120,7 +119,7 @@ private string GetValue(IFormCollection data, string key)
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and sent to server-side for saving in Dropbox cloud file storage.
+In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and sent to server-side for saving in Dropbox cloud file storage.
 
 ```typescript
 

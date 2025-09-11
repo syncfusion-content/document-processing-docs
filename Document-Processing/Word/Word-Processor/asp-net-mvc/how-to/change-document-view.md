@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Change Document View in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about how to change document view in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Change Document View in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about how to change document view in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change Document View
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -18,7 +17,7 @@ DocumentEditor allows to change the view to web layout and print using the [`lay
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/web-layout/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/web-layout/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Web-layout.cs" %}
 {% endhighlight %}{% endtabs %}

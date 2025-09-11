@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Keyboard shortcut in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Keyboard shortcut in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Keyboard shortcut in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Keyboard shortcut in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Keyboard shortcut 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcut in ##Platform_Name## Document editor control
+# Keyboard shortcut in JavaScript (ES5) Document editor control
 
 ## Text formatting
 

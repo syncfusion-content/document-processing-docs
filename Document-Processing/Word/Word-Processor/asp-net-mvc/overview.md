@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Overview in ##Platform_Name## Document Editor Component
-description: Learn here all about overview in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Overview in ASP.NET MVC Document Editor Component
+description: Learn here all about overview in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Index
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

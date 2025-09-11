@@ -4,7 +4,6 @@ title: Customize Tool Bar in Document Editor Component | Syncfusion
 description: Learn here all about how to customize Tool Bar in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Tool Bar
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -22,10 +21,10 @@ DocumentEditorContainer allows to customize (add, show, hide, enable, and disabl
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/custom-toolbar/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/custom-toolbar/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/custom-toolbar/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/custom-toolbar/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Bookmark in ##Platform_Name## Document Editor Component
-description: Learn here all about Bookmark in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Bookmark in ASP.NET MVC Document Editor Component
+description: Learn here all about Bookmark in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Bookmark
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -59,10 +58,10 @@ The following example shows how to open bookmark dialog in Document Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/bookmark-dialog/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/bookmark-dialog/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/bookmark-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/bookmark-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

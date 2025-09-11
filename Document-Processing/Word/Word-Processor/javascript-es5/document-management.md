@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Document management in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Document management in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Document management in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Document management in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document management 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document management in ##Platform_Name## Document editor control
+# Document management in JavaScript (ES5) Document editor control
 
 Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
@@ -37,7 +36,7 @@ documentEditor.userColor = '#fff000';
 
 You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
 
-The folowing code shows how to toggle the highlight editable region value.
+The following code shows how to toggle the highlight editable region value.
 
 ```javascript
 documentEditor.documentEditorSettings.highlightEditableRanges = true; 
@@ -64,7 +63,7 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/data-protection-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/data-protection-cs1" %}
 
 ## See Also
 

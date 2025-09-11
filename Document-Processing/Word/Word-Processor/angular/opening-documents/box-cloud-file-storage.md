@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Opening the document from Box cloud file storage in Syncfusion ##Platform_Name## Document editor control | Syncfusion
-description: Learn here to open a document from Box cloud file storage in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Opening the document from Box cloud file storage in Syncfusion Angular Document editor control | Syncfusion
+description: Learn here to open a document from Box cloud file storage in Syncfusion Angular Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Opening from Box cloud file storage
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 --- 
@@ -123,7 +122,7 @@ public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string>
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
+In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#open) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';

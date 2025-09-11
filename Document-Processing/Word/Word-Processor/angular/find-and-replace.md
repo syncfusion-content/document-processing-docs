@@ -18,15 +18,15 @@ This provides the options to search for a portion of text in the document. After
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/find-replace-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/find-replace-cs1" %}
 
 You can close the options pane by pressing `Esc` key.
 
@@ -36,13 +36,13 @@ The [`Search`](https://ej2.syncfusion.com/angular/documentation/api/document-edi
 
 |API Name|Type |Description|
 |---|---|---|
-|[`findAll()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search#findall)| Method |Searches for specified text in the whole document and highlights it with yellow.|
-|[`searchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search#searchresults) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/).|
-|[`find()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search#find) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
+|[`findAll()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search/#findall/)| Method |Searches for specified text in the whole document and highlights it with yellow.|
+|[`searchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search/#searchresults/) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/).|
+|[`find()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search/#find/) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
 
 ### Find the immediate occurrence in the document
 
-Using [`find()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
+Using [`find()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search/#find/) method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
 The following example code illustrates how to use find in Document editor.
 
@@ -54,7 +54,7 @@ this.documenteditor.search.find('Some text', 'None');
 
 ### Find all the occurrences in the document
 
-Using [`findAll()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search#findall) method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
+Using [`findAll()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search/#findall/) method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
 
 The following example code illustrates how to find All the text in the document.
 
@@ -66,18 +66,18 @@ this.documenteditor.search.findAll('Some text', 'None');
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#searchresultschange/) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
-|[`length`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults#length)|Property|Returns the total number of results found on the search.|
-|[`index`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults#index)|Property|Returns the index of selected search result. You can change the value for this property to move the selection.|
-|[`replaceAll()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchresults#replaceall)|Method|Replaces all the occurrences with specified text.|
-|[`clear()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults#clear)|Method|Clears the search result.|
+|[`length`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/#length/)|Property|Returns the total number of results found on the search.|
+|[`index`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/#index/)|Property|Returns the index of selected search result. You can change the value for this property to move the selection.|
+|[`replaceAll()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/#replaceall/)|Method|Replaces all the occurrences with specified text.|
+|[`clear()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/#clear/)|Method|Clears the search result.|
 
 ### Replace all the occurrences
 
-Using [`replaceAll`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults#replaceall), you can replace all the occurrences with specified text.
+Using [`replaceAll`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/#replaceall/), you can replace all the occurrences with specified text.
 
 The following example code illustrates how to use replace All in Document editor.
 
@@ -89,9 +89,9 @@ this.documentEditor.search.searchResults.replaceAll("Mike");
 
 ### Replace
 
-Using [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#inserttext), you can replace the current searched text with specified text and it replace single occurrence.
+Using [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#inserttext/), you can replace the current searched text with specified text and it replace single occurrence.
 
->Note: This [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#inserttext) API accepts following control characters
+>Note: This [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#inserttext/) API accepts following control characters
 >* New line characters ("\r", "\r\n", "\n") - Inserts a new paragraph and appends the remaining text to the new paragraph.
 >* Line break character ("\v") - Moves the remaining text to start in new line.
 >* Tab character ("\t") - Allocates a tab space and continue the next character.
@@ -115,7 +115,7 @@ this.container.documentEditor.search.searchResults.clear();
 
 ## SearchResultsChange event
 
-[`DocumentEditor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#searchresultschange) event that will be triggered whenever search results are changed. Consider the following scenarios:
+[`DocumentEditor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#searchresultschange/) event that will be triggered whenever search results are changed. Consider the following scenarios:
 
 * A search operation is completed with some results.
 * The results are replaced with some other text, since it will be cleared automatically.
@@ -154,12 +154,12 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/document-editor/find-replace-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/find-replace-cs2" %}

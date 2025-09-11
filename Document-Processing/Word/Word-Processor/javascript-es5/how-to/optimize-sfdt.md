@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Optimize sfdt in ##Platform_Name## Document editor control | Syncfusion
-description: Learn here all about Optimize sfdt in Syncfusion ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more.
+title: Optimize sfdt in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Optimize sfdt in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Optimize sfdt 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Optimize sfdt in ##Platform_Name## Document editor control
+# Optimize sfdt in JavaScript (ES5) Document editor control
 
 Starting from version v21.1.x, the SFDT file generated in Word Processor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits,
 * File transfer between client and server through the internet gets faster.

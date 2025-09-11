@@ -4,7 +4,6 @@ title: Table Of Contents in Document Editor Component
 description: Learn here all about table of contents in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table Of Contents
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -37,7 +36,7 @@ documenteditor.editor.insertTableOfContents(tocSettings);
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table-of-contents/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/table-of-contents/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table-of-contents.cs" %}
 {% endhighlight %}{% endtabs %}

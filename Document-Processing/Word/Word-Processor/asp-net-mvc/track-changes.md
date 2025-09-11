@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Track Changes in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about track changes in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in ASP.NET MVC Document Editor Control | Syncfusion
+description: Learn here all about track changes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Track Changes
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 

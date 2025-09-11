@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Getting started with ##Platform_Name## Document editor control | Syncfusion
-description:  Checkout and learn about Getting started with ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript (ES5) Document editor control | Syncfusion
+description:  Checkout and learn about Getting started with JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
-publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in ##Platform_Name## Document editor control
+# Getting started in JavaScript (ES5) Document editor control
 
 The Essential<sup style="font-size:70%">&reg;</sup> JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
 
@@ -287,7 +286,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/es5-getting-started-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs1" %}
 
 **Step 4:** Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditor** component.
 
@@ -352,7 +351,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-{% previewsample "page.domainurl/code-snippet/document-editor/javascript-es5/document-editor/es5-getting-started-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs2" %}
 
 Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditorContainer** component.
 
@@ -368,7 +367,7 @@ The Document Editor component requires server-side interactions for the followin
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
-Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#serviceurl).
+Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#serviceurl/).
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it in server on the go. You can also create own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker).
 

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Customize Tool Bar in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about how to customize Tool Bar in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Customize Tool Bar in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about how to customize Tool Bar in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Tool Bar
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -22,7 +21,7 @@ DocumentEditorContainer allows to customize (add, show, hide, enable, and disabl
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/custom-toolbar/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/custom-toolbar/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Custom-toolbar.cs" %}
 {% endhighlight %}{% endtabs %}

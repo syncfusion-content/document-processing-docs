@@ -161,17 +161,17 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/base-cs3/app/index.jsx %}
+{% include code-snippet/document-editor/react/base-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/base-cs3/app/index.tsx %}
+{% include code-snippet/document-editor/react/base-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="app.html" %}
-{% include code-snippet/document-editor/react/document-editor/base-cs3/index.html %}
+{% include code-snippet/document-editor/react/base-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/base-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -209,17 +209,17 @@ Document Editor output will be displayed as follows.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/base-cs2/app/index.jsx %}
+{% include code-snippet/document-editor/react/base-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/base-cs2/app/index.tsx %}
+{% include code-snippet/document-editor/react/base-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="App.html" %}
-{% include code-snippet/document-editor/react/document-editor/base-cs2/index.html %}
+{% include code-snippet/document-editor/react/base-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/document-editor/react/document-editor/base-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/getting-started/base-cs2" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 

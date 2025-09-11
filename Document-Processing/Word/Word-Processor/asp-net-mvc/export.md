@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Export in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about Export in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about Export in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export
-publishingplatform: ##Platform_Name##
 documentation: ug
 ---
 
@@ -28,10 +27,10 @@ The following example shows how to export documents in document editor as Syncfu
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/export-sfdt/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-sfdt/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/export-sfdt/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,10 +55,10 @@ The following example shows how to export the document as Word document (.docx).
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-docx/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/export-docx/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-docx/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/export-docx/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,10 +85,10 @@ The following example shows how to export the document as Word Template (.dotx).
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-dotx/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/export-dotx/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-dotx/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/export-dotx/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,10 +110,10 @@ The following example shows how to export document as text document (.txt).
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-txt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/export-txt/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-txt/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/export-txt/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -140,7 +139,7 @@ Document editor also supports API to store the document into a blob.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-blob/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/export-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-blob.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -179,7 +178,7 @@ In client-side, you can consume this web service and save the document as Rich T
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/export-rtf/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/export-rtf/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-rtf.cs" %}
 {% endhighlight %}{% endtabs %}
