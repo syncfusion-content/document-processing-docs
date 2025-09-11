@@ -47,7 +47,7 @@ The following type of fields are automatically updated in Document Editor.
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/) module.
+You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/) module.
 
 ```typescript
 //Gets the field information of the selected field.

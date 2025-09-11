@@ -66,7 +66,7 @@ this.documenteditor.search.findAll('Some text', 'None');
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#searchresultschange/) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#searchresultschange/) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -115,7 +115,7 @@ this.container.documentEditor.search.searchResults.clear();
 
 ## SearchResultsChange event
 
-[`DocumentEditor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#searchresultschange/) event that will be triggered whenever search results are changed. Consider the following scenarios:
+[`DocumentEditor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#searchresultschange/) event that will be triggered whenever search results are changed. Consider the following scenarios:
 
 * A search operation is completed with some results.
 * The results are replaced with some other text, since it will be cleared automatically.

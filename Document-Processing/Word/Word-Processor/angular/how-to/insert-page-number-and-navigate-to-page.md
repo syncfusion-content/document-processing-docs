@@ -59,7 +59,7 @@ this.container.documentEditor.editor.insertField('PAGE \* MERGEFORMAT', '1');
 
 ## Get page count
 
-You can use [`pageCount`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#pagecount) API to gets the total number of pages in Document.
+You can use [`pageCount`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#pagecount) API to gets the total number of pages in Document.
 
 The following example code illustrates how to get the number of pages in Document.
 
@@ -92,7 +92,7 @@ export class AppComponent implements OnInit {
 
 ## Navigate to specific page
 
-You can use [`goToPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotopage) API in Selection module to move selection to the start of the specified page number.
+You can use [`goToPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#gotopage) API in Selection module to move selection to the start of the specified page number.
 
 The following example code illustrates how to move selection to specific page.
 

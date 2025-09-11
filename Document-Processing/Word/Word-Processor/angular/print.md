@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in Angular Document editor component
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#print/) method from document editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#print/) method from document editor instance.
 
 Refer to the following example for showing a document and print it.
 
@@ -148,7 +148,7 @@ However, you can customize margins, paper, and layout options by modifying the s
 this.documentEditor.showPageSetupDialog();
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in document editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#serialize/) method in document editor instance and open the SFDT data in another instance of document editor in separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in document editor. To modify these options during print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#serialize/) method in document editor instance and open the SFDT data in another instance of document editor in separate window.
 
 The following example shows how to customize layout options only for printing.
 

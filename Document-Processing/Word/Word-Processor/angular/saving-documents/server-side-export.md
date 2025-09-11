@@ -71,4 +71,4 @@ export class AppComponent {
 }
 ```
 
-> `DocumentEditor` object is available in `DocumentEditorContainer` component(DocumentEditor packaged with toolbar, statusbar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#documenteditor)
+> `DocumentEditor` object is available in `DocumentEditorContainer` component(DocumentEditor packaged with toolbar, statusbar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/-container#documenteditor)

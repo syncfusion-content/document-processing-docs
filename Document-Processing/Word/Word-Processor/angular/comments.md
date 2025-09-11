@@ -72,7 +72,7 @@ this.documentEditor.editor.insertReplyComment(comment.id, 'Hello world', comment
 
 ## Get Comments
 
-Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getcomments).
+Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#getcomments).
 
 ```typescript
 //Get Comments in the document along with the properties author, date, status.
@@ -210,7 +210,7 @@ export class AppComponent implements OnInit {
 
 ## Events
 
-DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/angular/documentation/api/document-editor#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/angular/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
+DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/angular/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
