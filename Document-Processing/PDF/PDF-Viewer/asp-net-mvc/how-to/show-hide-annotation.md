@@ -4,7 +4,7 @@ title: Show and Hide Annotations in EJ2 ASP.NET MVC PdfViewer | Syncfusion
 description: Learn how to dynamically show and hide annotations in the Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show and Hide Annotations
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

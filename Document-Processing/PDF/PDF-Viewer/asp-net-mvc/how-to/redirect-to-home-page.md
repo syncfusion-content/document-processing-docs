@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Redirect To Home Page in Syncfusion ##Platform_Name## Pdfviewer Component
-description: Learn here all about Redirect To Home Page in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Redirect To Home Page in Syncfusion ASP.NET MVC Pdfviewer Component
+description: Learn here all about Redirect To Home Page in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Redirect To Home Page
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Form Filling in ##Platform_Name## Pdfviewer Component | Syncfusion
-description: Learn here all about Form Filling in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Form Filling in ASP.NET MVC Pdfviewer Component | Syncfusion
+description: Learn here all about Form Filling in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

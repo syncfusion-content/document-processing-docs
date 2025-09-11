@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Resolve Pdfium Issue in Syncfusion ##Platform_Name## Pdfviewer Component
-description: Learn here all about Resolve Pdfium Issue in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Resolve Pdfium Issue in Syncfusion ASP.NET MVC Pdfviewer Component
+description: Learn here all about Resolve Pdfium Issue in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resolve Pdfium Issue
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

@@ -4,7 +4,7 @@ title: Getting Started with EJ2 ASP.NET MVC PDF Viewer Control | Syncfusion
 description: Learn how to getting started with PDF Viewer control in ASP.NET MVC application. You can view and comment on PDFs in ease and also can fill form fields.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
