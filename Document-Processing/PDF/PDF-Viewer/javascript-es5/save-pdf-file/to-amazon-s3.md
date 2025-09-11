@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in ##Platform_Name## Pdfviewer control | Syncfusion
-description:  Learn about how to Save PDF files to AWS S3 in ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Save PDF files to AWS S3 in Javascript Pdfviewer control | Syncfusion
+description:  Learn about how to Save PDF files to AWS S3 in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save PDF files to AWS S3
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

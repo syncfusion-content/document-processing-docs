@@ -4,7 +4,7 @@ title: Selection events in | Syncfusion
 description: Learn here all about the SignatureSelect and SignatureUnselect event in Syncfusion Javascript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

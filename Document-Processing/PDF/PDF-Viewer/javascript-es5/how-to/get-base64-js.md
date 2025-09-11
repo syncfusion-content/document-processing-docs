@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Retrieving Base64 Value in JavaScript PdfViewer | Syncfusion
-description: Learn how to retrieve the Base64 value of a loaded PDF document in the Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn how to retrieve the Base64 value of a loaded PDF document in the Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

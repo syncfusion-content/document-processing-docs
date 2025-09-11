@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Annotation Selector Setting in Javascript Pdfviewer|Syncfusion.
-description: Learn here all about Annotation Selector Settings in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Annotation Selector Settings in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
