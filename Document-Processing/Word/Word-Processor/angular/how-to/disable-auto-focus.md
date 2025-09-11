@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to disable auto focus in Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor
+# How to disable auto focus in Syncfusion Angular Document Editor
 
 Document Editor gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
 
