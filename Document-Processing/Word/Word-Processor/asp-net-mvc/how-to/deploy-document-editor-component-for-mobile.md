@@ -19,7 +19,7 @@ Hence, it is recommended to switch the Document editor component as read-only in
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/mobile-view/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/mobile-view/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Mobile-view.cs" %}
 {% endhighlight %}{% endtabs %}

@@ -18,10 +18,10 @@ The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/ruler/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/ruler/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/ruler/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/ruler/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -67,7 +67,7 @@ The following sample demonstrates how to create bullet and numbering lists in Do
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/list-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/list-cs1" %}
 
 ## Editing numbered list
 

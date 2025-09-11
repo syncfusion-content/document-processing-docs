@@ -56,10 +56,10 @@ The following example shows how to open bookmark dialog in Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/bookmark-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/bookmark-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/bookmark-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -20,10 +20,10 @@ This provides the options to search for a portion of text in the document. After
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/options-pane/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/options-pane/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Options-pane.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/options-pane/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/options-pane/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,10 +129,10 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/find-replace/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/find-replace/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Find-replace.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/find-replace/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/find-replace/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

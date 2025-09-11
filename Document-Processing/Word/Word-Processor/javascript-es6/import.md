@@ -18,14 +18,14 @@ The following example shows how to open SFDT data in Document Editor.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/import-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/import-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/import-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/import-cs1" %}
 
 ## Import document from local machine
 
@@ -35,14 +35,14 @@ The following example shows how to import document from local machine.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/import-sfdt-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/import-sfdt-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/import-sfdt-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/import-sfdt-cs1" %}
 
 ## Convert word documents into SFDT
 

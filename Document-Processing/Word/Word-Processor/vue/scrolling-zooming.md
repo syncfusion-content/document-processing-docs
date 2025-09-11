@@ -14,14 +14,14 @@ The Document Editor renders the document as page by page. You can scroll through
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs1/app-composition.vue %}
+{% include code-snippet/document-editor/vue/scrolling-zooming-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs1/app.vue %}
+{% include code-snippet/document-editor/vue/scrolling-zooming-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/scrolling-zooming-cs1" %}
 
 > Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
@@ -29,14 +29,14 @@ In case, if you wish to move the selection to any page in Document Editor and br
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs2/app-composition.vue %}
+{% include code-snippet/document-editor/vue/scrolling-zooming-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs2/app.vue %}
+{% include code-snippet/document-editor/vue/scrolling-zooming-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/scrolling-zooming-cs2" %}
 
 ## Zooming
 
@@ -161,11 +161,11 @@ The following code example shows how to provide zoom options in Document Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs3/app-composition.vue %}
+{% include code-snippet/document-editor/vue/scrolling-zooming-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs3/app.vue %}
+{% include code-snippet/document-editor/vue/scrolling-zooming-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/vue/document-editor/scrolling-zooming-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/vue/scrolling-zooming-cs3" %}

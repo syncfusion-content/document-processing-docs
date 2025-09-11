@@ -55,7 +55,7 @@ documenteditor.editor.clearList();
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/list/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/list/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="List.cs" %}
 {% endhighlight %}{% endtabs %}

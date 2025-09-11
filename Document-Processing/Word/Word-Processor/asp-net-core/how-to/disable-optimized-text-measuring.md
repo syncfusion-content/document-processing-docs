@@ -21,7 +21,7 @@ The following example code illustrates how to disable optimized text measuring i
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/optimized-text/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/optimized-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Optimized-text.cs" %}
 {% endhighlight %}{% endtabs %}

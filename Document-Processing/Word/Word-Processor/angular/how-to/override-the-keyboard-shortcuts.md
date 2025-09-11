@@ -18,15 +18,15 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/prevent-keyboard-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/prevent-keyboard-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/prevent-keyboard-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/prevent-keyboard-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/prevent-keyboard-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/prevent-keyboard-cs2" %}
 
 ## Override or define the keyboard shortcut
 
@@ -36,12 +36,12 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/override-keyboard-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/override-keyboard-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/override-keyboard-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/override-keyboard-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/override-keyboard-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/override-keyboard-cs2" %}

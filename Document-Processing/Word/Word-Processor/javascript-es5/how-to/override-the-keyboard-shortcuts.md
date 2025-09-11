@@ -25,7 +25,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/prevent-keyboard-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/prevent-keyboard-cs2" %}
 
 ## Override or define the keyboard shortcut
 
@@ -42,4 +42,4 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/override-keyboard-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/override-keyboard-cs2" %}

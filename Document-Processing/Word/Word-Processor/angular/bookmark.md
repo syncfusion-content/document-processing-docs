@@ -92,15 +92,15 @@ The following example shows how to open bookmark dialog in document editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/bookmark-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/bookmark-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/bookmark-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/bookmark-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/bookmark-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/bookmark-cs1" %}
 
 
 ## See Also

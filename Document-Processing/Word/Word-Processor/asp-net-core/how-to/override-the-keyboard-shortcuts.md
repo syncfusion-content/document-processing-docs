@@ -19,7 +19,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/prevent-default/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/prevent-default/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Prevent-default.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -34,7 +34,7 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/override/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/override/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Override.cs" %}
 {% endhighlight %}{% endtabs %}

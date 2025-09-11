@@ -101,7 +101,7 @@ The following example shows how to open bookmark dialog in Document Editor.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs1" %}
 
 ## See Also
 

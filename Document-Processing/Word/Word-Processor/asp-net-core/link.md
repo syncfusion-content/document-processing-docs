@@ -23,10 +23,10 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,10 +38,10 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/link/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/link/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/link/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/link/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,10 +73,10 @@ N> `<http://>`<br>
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-edit/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-edit/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-edit/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-edit/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -108,10 +108,10 @@ Document editor provides dialog support to insert or edit a hyperlink.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/hyperlink-dialog/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/hyperlink-dialog/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

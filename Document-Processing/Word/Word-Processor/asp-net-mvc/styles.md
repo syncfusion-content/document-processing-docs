@@ -75,7 +75,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/character-style/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/character-style/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-style.cs" %}
 {% endhighlight %}
@@ -88,7 +88,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/paragraph-style/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/paragraph-style/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-style.cs" %}
 {% endhighlight %}
@@ -101,7 +101,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/linked-style/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/linked-style/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Linked-style.cs" %}
 {% endhighlight %}

@@ -17,7 +17,7 @@ DocumentEditor allows to change the view to web layout and print using the [`lay
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/web-layout/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/web-layout/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Web-layout.cs" %}
 {% endhighlight %}{% endtabs %}

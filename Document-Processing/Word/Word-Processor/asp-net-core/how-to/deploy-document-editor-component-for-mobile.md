@@ -19,7 +19,7 @@ Hence, it is recommended to switch the Document editor component as read-only in
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/mobile-view/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/mobile-view/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Mobile-view.cs" %}
 {% endhighlight %}{% endtabs %}

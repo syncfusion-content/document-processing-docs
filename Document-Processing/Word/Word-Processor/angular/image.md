@@ -14,15 +14,15 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/link-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs1" %}
 
 Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
 

@@ -25,31 +25,31 @@ The following example shows how to export documents in document editor as Syncfu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs1/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs1/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs1/index.html %}
+{% include code-snippet/document-editor/react/export-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-cs1" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs1/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-container-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs1/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-container-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs1/index.html %}
+{% include code-snippet/document-editor/react/export-container-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-container-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs1" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -65,31 +65,31 @@ The following example shows how to export the document as Word document (.docx).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs2/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs2/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs2/index.html %}
+{% include code-snippet/document-editor/react/export-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-cs2" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs2/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-container-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs2/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-container-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs2/index.html %}
+{% include code-snippet/document-editor/react/export-container-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-container-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs2" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -105,31 +105,31 @@ The following example shows how to export the document as Word Template (.dotx).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs4/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs4/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs4/index.html %}
+{% include code-snippet/document-editor/react/export-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-cs4" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs4/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-container-cs4/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs4/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-container-cs4/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs4/index.html %}
+{% include code-snippet/document-editor/react/export-container-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-container-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs4" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
@@ -143,33 +143,33 @@ The following example shows how to export document as text document (.txt).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs3/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs3/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-cs3/index.html %}
+{% include code-snippet/document-editor/react/export-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-cs3" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs3/app/index.jsx %}
+{% include code-snippet/document-editor/react/export-container-cs3/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs3/app/index.tsx %}
+{% include code-snippet/document-editor/react/export-container-cs3/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/react/document-editor/export-container-cs3/index.html %}
+{% include code-snippet/document-editor/react/export-container-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
         
-{% previewsample "/document-processing/code-snippet/document-editor/react/document-editor/export-container-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs3" %}
 
 >Document Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
 >

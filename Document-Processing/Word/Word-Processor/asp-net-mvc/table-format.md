@@ -85,7 +85,7 @@ Set the desired width of table cells that will be considered when the table is l
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/cell-width/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/cell-width/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Cell-width.cs" %}
 {% endhighlight %}
@@ -100,7 +100,7 @@ You can set the desired width of a table in `Point` or `Percent` type.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/table-width/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/table-width/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table-width.cs" %}
 {% endhighlight %}
@@ -115,7 +115,7 @@ Document editor exposes API to customize the borders for table cells by specifyi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/apply-borders/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/apply-borders/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Apply-borders.cs" %}
 {% endhighlight %}
@@ -134,7 +134,7 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/row-height/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/row-height/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Row-height.cs" %}
 {% endhighlight %}{% endtabs %}

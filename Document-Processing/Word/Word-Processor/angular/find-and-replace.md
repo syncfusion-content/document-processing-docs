@@ -18,15 +18,15 @@ This provides the options to search for a portion of text in the document. After
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/find-replace-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/find-replace-cs1" %}
 
 You can close the options pane by pressing `Esc` key.
 
@@ -154,12 +154,12 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/find-replace-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/find-replace-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/find-replace-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/find-replace-cs2" %}

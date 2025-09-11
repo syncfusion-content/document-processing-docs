@@ -17,10 +17,10 @@ This article explains how to auto save the document in AWS S3. You can automatic
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/auto-save/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/auto-save/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

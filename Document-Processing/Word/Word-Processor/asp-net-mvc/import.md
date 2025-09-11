@@ -18,10 +18,10 @@ The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/import/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/import/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,10 +36,10 @@ The following example shows how to import document from local machine.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/import-sfdt/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-sfdt/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/import-sfdt/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,10 +54,10 @@ You can convert word documents into SFDT format using the [`Syncfusion.EJ2.WordE
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-docx/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/import-docx/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/import-docx/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/import-docx/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

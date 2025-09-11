@@ -19,7 +19,7 @@ Using [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/read-only/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/read-only/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Read-only.cs" %}
 {% endhighlight %}{% endtabs %}

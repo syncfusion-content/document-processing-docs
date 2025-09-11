@@ -27,7 +27,7 @@ Refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs2" %}
 
 ## Paragraph dialog
 
@@ -44,7 +44,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs3" %}
 
 ## Table dialog
 
@@ -61,7 +61,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs4" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs4" %}
 
 ## Bookmark dialog
 
@@ -82,7 +82,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs5" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs5" %}
 
 ## Hyperlink dialog
 
@@ -99,7 +99,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs6" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs6" %}
 
 ## Table of contents dialog
 
@@ -116,7 +116,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs7" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs7" %}
 
 ## Styles Dialog
 
@@ -131,7 +131,7 @@ This dialog allows managing the styles in a document. It will display all the st
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs8" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs8" %}
 
 ## Style dialog
 
@@ -148,7 +148,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs9" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs9" %}
 
 ## List dialog
 
@@ -165,7 +165,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs10" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs10" %}
 
 ## Borders and shading dialog
 
@@ -182,7 +182,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs11" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs11" %}
 
 ## Table options dialog
 
@@ -199,7 +199,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs12" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs12" %}
 
 ## Table properties dialog
 
@@ -216,7 +216,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs13" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs13" %}
 
 ## Page setup dialog
 
@@ -233,7 +233,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs14" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs14" %}
 
 ## Column dialog
 
@@ -251,7 +251,7 @@ To open this dialog, refer to the following example.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/dialog-cs15" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/dialog-cs15" %}
 
 ## See Also
 

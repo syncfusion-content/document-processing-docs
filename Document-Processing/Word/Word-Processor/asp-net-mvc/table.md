@@ -196,10 +196,10 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/table/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/table/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/table/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/table/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

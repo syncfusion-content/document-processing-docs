@@ -121,10 +121,10 @@ In the client-side, the document is returned from the web service is opening usi
 
 {% tabs %}
 {% highlight ts tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-google-cloud-storage/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/open-google-cloud-storage/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/open-google-cloud-storage/index.html %}
+{% include code-snippet/document-editor/javascript-es6/open-google-cloud-storage/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

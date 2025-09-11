@@ -15,10 +15,10 @@ The Document editor renders the document page by page. You can scroll through th
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-page/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-page/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-page/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-page/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,10 +31,10 @@ In case, if you wish to move the selection to any page in document editor and br
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-goto-page/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-goto-page/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-goto-page/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-goto-page/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,7 +47,7 @@ You can scale the contents in document editor ranging from 10% to 500% of the ac
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-zooming/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-zooming/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-zooming.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -61,7 +61,7 @@ Apart from specifying the zoom factor as value, the Document editor provides opt
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-page-fit/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-page-fit/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-page-fit.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -73,10 +73,10 @@ Apart from specifying the zoom factor as value, the Document editor provides opt
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-status-bar/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-status-bar/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/scrolling-status-bar/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/scrolling-status-bar/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -19,7 +19,7 @@ The following example illustrates how to auto save the document in server.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/auto-save-server/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/auto-save-server/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Auto-save-server.cs" %}
 {% endhighlight %}{% endtabs %}

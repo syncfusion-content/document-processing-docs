@@ -16,29 +16,29 @@ Refer to the following example for showing a document and print it.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs5/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs5/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs5/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs5/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/link-cs5" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs5" %}
 
 Refer to the following example for creating a document and print it.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs6/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs6/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs6/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs6/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/link-cs6" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs6" %}
 
 ## Improve print quality
 
@@ -154,12 +154,12 @@ The following example shows how to customize layout options only for printing.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs7/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/link-cs7/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/link-cs7/src/main.ts %}
+{% include code-snippet/document-editor/angular/link-cs7/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/link-cs7" %}
+{% previewsample "/document-processing/samples/document-editor/angular/link-cs7" %}

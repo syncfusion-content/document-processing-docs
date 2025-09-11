@@ -29,7 +29,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/optimize-sfdt/razorOld %}
+{% include code-snippet/document-editor/asp-net-mvc/optimize-sfdt/razorOld %}
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -38,7 +38,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/optimize-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/optimize-sfdt/razor %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,7 +80,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/optimize-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/optimize-sfdt/razor %}
 {% endhighlight %}
 {% endtabs %}
 </td>

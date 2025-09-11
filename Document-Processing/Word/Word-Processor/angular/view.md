@@ -47,15 +47,15 @@ The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/ruler-cs1/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/ruler-cs1/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/ruler-cs1/src/main.ts %}
+{% include code-snippet/document-editor/angular/ruler-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/samples/document-editor/angular/ruler-cs1" %}
 
 ## Heading Navigation Pane 
 

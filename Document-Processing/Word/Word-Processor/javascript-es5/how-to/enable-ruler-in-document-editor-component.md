@@ -26,7 +26,7 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/ruler-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/ruler-cs1" %}
 
 ## How to enable ruler in Document Editor Container component
 
@@ -43,4 +43,4 @@ The following example illustrates how to enable ruler in Document Editor Contain
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/ruler-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/ruler-cs2" %}

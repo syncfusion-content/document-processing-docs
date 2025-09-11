@@ -195,10 +195,10 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/table/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/table/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/table/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

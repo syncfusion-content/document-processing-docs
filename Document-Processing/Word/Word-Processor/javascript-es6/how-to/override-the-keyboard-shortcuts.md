@@ -18,14 +18,14 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/prevent-keyboard-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/prevent-keyboard-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/prevent-keyboard-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/prevent-keyboard-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/prevent-keyboard-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/prevent-keyboard-cs2" %}
 
 ## Override or define the keyboard shortcut
 
@@ -35,11 +35,11 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/override-keyboard-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/override-keyboard-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/override-keyboard-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/override-keyboard-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/override-keyboard-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/override-keyboard-cs2" %}

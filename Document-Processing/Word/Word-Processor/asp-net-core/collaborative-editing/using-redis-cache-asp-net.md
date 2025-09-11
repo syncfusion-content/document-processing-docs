@@ -85,10 +85,10 @@ To enable collaborative editing, inject `CollaborativeEditingHandler` and set th
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/collaborative-editing/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/collaborative-editing/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/collaborative-editing/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/collaborative-editing/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,7 +100,7 @@ To broadcast the changes made and receive changes from remote users, configure S
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/collaborative-editing/script-1 %}
+{% include code-snippet/document-editor/asp-net-core/collaborative-editing/script-1 %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,7 +112,7 @@ When opening a document, we need to generate a unique ID for each document. Thes
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/collaborative-editing/script-2 %}
+{% include code-snippet/document-editor/asp-net-core/collaborative-editing/script-2 %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,7 +124,7 @@ Changes made on the client-side need to be sent to the server-side to broadcast 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/collaborative-editing/script-3 %}
+{% include code-snippet/document-editor/asp-net-core/collaborative-editing/script-3 %}
 {% endhighlight %}
 {% endtabs %}
 

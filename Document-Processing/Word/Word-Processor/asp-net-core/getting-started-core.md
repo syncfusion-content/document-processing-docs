@@ -90,7 +90,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Docum
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/getting-started/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/getting-started/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -16,14 +16,14 @@ The following example shows chart preservation in Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/chart-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/chart-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/chart-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/chart-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/chart-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/chart-cs1" %}
 
 ## Supported Chart Types
 

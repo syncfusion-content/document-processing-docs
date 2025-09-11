@@ -19,10 +19,10 @@ The following example illustrates how to auto save the document in server.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save-server/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/auto-save-server/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/auto-save-server/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/auto-save-server/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

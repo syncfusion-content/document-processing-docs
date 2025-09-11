@@ -16,28 +16,28 @@ In this article, we are going to see how to open a document in read only mode by
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/getting-started-cs2/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/getting-started-cs2/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/getting-started-cs2/src/main.ts %}
+{% include code-snippet/document-editor/angular/getting-started-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/getting-started-cs2" %}
+{% previewsample "/document-processing/samples/document-editor/angular/getting-started-cs2" %}
 
 ## Opening a document in ready only mode by default in DocumentEditorContainer
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs3/src/app.component.ts %}
+{% include code-snippet/document-editor/angular/document-editor-container-cs3/src/app.component.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor/document-editor-container-cs3/src/main.ts %}
+{% include code-snippet/document-editor/angular/document-editor-container-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "/document-processing/samples/document-editor/document-editor-container-cs3" %}
+{% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs3" %}
 
 Note: You can use the `restrictEditing` in `DocumentEditorContainer` and `isReadOnly` in `DocumentEditor` based on your requirement to change component to read only mode.

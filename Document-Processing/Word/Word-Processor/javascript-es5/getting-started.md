@@ -286,7 +286,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/es5-getting-started-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs1" %}
 
 **Step 4:** Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditor** component.
 
@@ -351,7 +351,7 @@ Now, run the `index.html` in web browser, it will render the **Essential<sup sty
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/es5-getting-started-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs2" %}
 
 Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditorContainer** component.
 

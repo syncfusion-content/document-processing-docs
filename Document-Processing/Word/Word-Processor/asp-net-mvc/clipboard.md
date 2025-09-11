@@ -43,7 +43,7 @@ Document editor exposes API to enable local paste within the control. On enablin
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/clipboard/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/clipboard/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Clipboard.cs" %}
 {% endhighlight %}{% endtabs %}

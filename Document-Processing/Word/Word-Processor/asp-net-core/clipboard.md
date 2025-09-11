@@ -42,10 +42,10 @@ Document editor exposes API to enable local paste within the control. On enablin
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/clipboard/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/clipboard/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/clipboard/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/clipboard/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

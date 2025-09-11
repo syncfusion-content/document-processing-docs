@@ -15,20 +15,20 @@ To print the document, use the `print` method from document editor instance.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print-sfdt/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/print-sfdt/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print-sfdt/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/print-sfdt/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/print/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/print/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,7 +58,7 @@ You can print the document in document editor by passing the window instance. Th
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print-window/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/print-window/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Print-window.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -76,7 +76,7 @@ However, you can customize margins, paper, and layout options by modifying the s
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print-dialog/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/print-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Print-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -87,10 +87,10 @@ By customizing margins, papers, and layouts, the layout of the document will be 
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print-doc/tagHelper %}
+{% include code-snippet/document-editor/asp-net-core/print-doc/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor/print-doc/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-core/print-doc/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 

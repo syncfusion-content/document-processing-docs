@@ -21,7 +21,7 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/image-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/image-cs1" %}
 
 N> 1. Image files will be internally converted to base64 string. Whereas, online images are preserved as URL. N> 2. EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
 

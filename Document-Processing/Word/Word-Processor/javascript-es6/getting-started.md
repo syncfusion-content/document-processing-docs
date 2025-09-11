@@ -180,14 +180,14 @@ Document Editor output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs1" %}
 
 ### Document Editor Container component
 
@@ -259,14 +259,14 @@ DocumentEditorContainer output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2/index.html %}
+{% include code-snippet/document-editor/javascript-es6/getting-started-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/getting-started-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs2" %}
 
 ## Frequently Asked Questions
 

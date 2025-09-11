@@ -20,7 +20,7 @@ Inject the `EditorHistory` module in your application to provide history preserv
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/history/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/history/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="History.cs" %}
 {% endhighlight %}{% endtabs %}

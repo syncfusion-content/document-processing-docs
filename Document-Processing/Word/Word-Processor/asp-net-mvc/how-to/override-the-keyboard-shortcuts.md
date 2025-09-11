@@ -19,7 +19,7 @@ The following code shows how to prevent the `CTRL + C` keyboard shortcut for cop
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/prevent-default/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/prevent-default/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Prevent-default.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -35,7 +35,7 @@ For example, `Ctrl + S` keyboard shortcut saves the document in SFDT format by d
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/override/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/override/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Override.cs" %}
 {% endhighlight %}{% endtabs %}

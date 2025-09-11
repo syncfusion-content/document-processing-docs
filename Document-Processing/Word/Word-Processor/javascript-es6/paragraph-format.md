@@ -160,14 +160,14 @@ The following sample demonstrates the paragraph formatting options using a toolb
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/paragraph-format-cs1/index.ts %}
+{% include code-snippet/document-editor/javascript-es6/paragraph-format-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/document-editor/paragraph-format-cs1/index.html %}
+{% include code-snippet/document-editor/javascript-es6/paragraph-format-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/document-editor/paragraph-format-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/paragraph-format-cs1" %}
 
 ## See Also
 

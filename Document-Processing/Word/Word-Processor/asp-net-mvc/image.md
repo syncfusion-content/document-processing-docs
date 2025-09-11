@@ -16,7 +16,7 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/image/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/image/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Image.cs" %}
 {% endhighlight %}{% endtabs %}

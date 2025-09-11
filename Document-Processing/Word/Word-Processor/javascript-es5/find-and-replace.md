@@ -25,7 +25,7 @@ This provides the options to search for a portion of text in the document. After
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/find-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/find-cs1" %}
 
 You can close the options pane by pressing `Esc` key.
 
@@ -141,4 +141,4 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/replace-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/replace-cs1" %}

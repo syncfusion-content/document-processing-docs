@@ -21,7 +21,7 @@ The Document Editor renders the document as page by page. You can scroll through
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs1" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/scrolling-zooming-cs1" %}
 
 > Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
@@ -36,7 +36,7 @@ In case, if you wish to move the selection to any page in Document Editor and br
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs2" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/scrolling-zooming-cs2" %}
 
 ## Zooming
 
@@ -90,4 +90,4 @@ The following code example shows how to provide zoom options in Document Editor.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/document-editor/scrolling-zooming-cs3" %}
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/scrolling-zooming-cs3" %}

@@ -15,10 +15,10 @@ To print the document, use the `print` method from document editor instance.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print-sfdt/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/print-sfdt/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print-sfdt/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/print-sfdt/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -27,10 +27,10 @@ To print the document, use the `print` method from document editor instance.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/print/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/print/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,7 +61,7 @@ You can print the document in document editor by passing the window instance. Th
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print-window/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/print-window/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Print-window.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -80,7 +80,7 @@ However, you can customize margins, paper, and layout options by modifying the s
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print-dialog/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/print-dialog/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Print-dialog.cs" %}
 {% endhighlight %}{% endtabs %}
@@ -92,10 +92,10 @@ By customizing margins, papers, and layouts, the layout of the document will be 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print-doc/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/print-doc/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor/print-doc/document-editor.cs %}
+{% include code-snippet/document-editor/asp-net-mvc/print-doc/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
 
