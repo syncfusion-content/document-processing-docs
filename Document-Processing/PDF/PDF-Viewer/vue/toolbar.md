@@ -102,7 +102,7 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-hide-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-hide-cs1/index.html" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -188,7 +188,7 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-method-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-method-cs1/index.html" %}
 
 ## Show/Hide the built-in toolbaritem
 
@@ -268,7 +268,7 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-items-cs1" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-cs1/index.html" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -353,7 +353,7 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-  {% previewsample "page.domainurl/code-snippet/pdfviewer/vue/toolbar/toolbar-items-method-cs1" %}
+  {% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-method-cs1/index.html" %}
 
 
 ## Customize Built-In Toolbar

@@ -1,0 +1,42 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+     <title>Essential JS 2</title>
+     <!-- Essential JS 2 material theme -->
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-base/styles/material.css" rel="stylesheet">    
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-pdfviewer/styles/material.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-buttons/styles/material.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-popups/styles/material.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-navigations/styles/material.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-dropdowns/styles/material.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-lists/styles/material.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-inputs/styles/material.css" rel="stylesheet">    
+     <link href="https://cdn.syncfusion.com/ej2/25.1.35/ej2-splitbuttons/styles/material.css" rel="stylesheet">
+
+     <!-- Essential JS 2 PDF Viewer's script --> 
+     <script src="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2.min.js" type="text/javascript"></script>
+     
+</head>
+     <body>
+          <!--element which is going to render-->
+          <div id="container">
+               <div id="PdfViewer" style="height:580px;width:100%;">
+               </div>
+          </div>
+          <script>                
+               //Initialize PDF Viewer component
+               var pdfviewer = new ej.pdfviewer.PdfViewer({
+                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+                    serviceUrl:'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+               });
+               ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
+                                             ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
+               //PDF Viewer control rendering starts
+               pdfviewer.appendTo('#PdfViewer');
+          </script>       
+	     <script>
+			var ele = document.getElementById('container');
+			if(ele) {
+				ele.style.visibility = "visible";
+			}   
+        </script>	
+</script>
+</body></html>
