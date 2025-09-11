@@ -38,7 +38,7 @@ The PDF Viewer supports printing the loaded PDF file. You can enable/disable the
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/print.png)
+![Alt text](../images/print.png)
 
 You can invoke print action using the following code snippet.,
 

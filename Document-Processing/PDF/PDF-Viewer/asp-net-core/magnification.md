@@ -51,7 +51,7 @@ The following magnification options are available in the default toolbar of PDF 
 * **FitWidth**:- Fits the view port width based on the page content size.
 * **Auto**:- Fits the page content with-in the viewport on resizing action.
 
-![Alt text ](./images/zoom.png)
+![Alt text ](../images/zoom.png)
 
 N>PDF Viewer can support the zoom value ranges from 10 to 400.
 
