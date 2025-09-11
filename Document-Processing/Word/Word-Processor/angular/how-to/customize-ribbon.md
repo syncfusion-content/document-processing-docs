@@ -362,4 +362,4 @@ export class AppComponent implements AfterViewInit {
 
 ## Related Links
 
-- [File menu Customization Demo](https://ej2.syncfusion.com/angular/demos#/tailwind3/document-editor/ribbon-customization)
+- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/ribbon-customization)
