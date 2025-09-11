@@ -89,7 +89,7 @@ let contentControlInfos: ContentControlInfo[] = container.documentEditor.exportC
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetcontentcontroldata`](https://ej2.syncfusion.com/documentation/api/document-editor#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#resetcontentcontroldata)
 
  
 {% highlight ts %}
