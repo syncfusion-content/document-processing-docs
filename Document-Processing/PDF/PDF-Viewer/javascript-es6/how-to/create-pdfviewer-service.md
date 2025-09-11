@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create pdfviewer service in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Create pdfviewer service in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Create pdfviewer service in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Create pdfviewer service in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create pdfviewer service
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Create pdfviewer service in ##Platform_Name## Pdfviewer control
+# Create pdfviewer service in Typescript Pdfviewer control
 
 The Essential JavaScript PDF Viewer have server side dependency to get the details from PDF Documents for rendering. This section explains how to create the service for PDF Viewer to perform server-side preprocessing of the PDF document to be rendered in client side.
 

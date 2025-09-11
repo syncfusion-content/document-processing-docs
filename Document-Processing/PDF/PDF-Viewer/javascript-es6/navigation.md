@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Navigation in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Navigation in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Navigation in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Navigation
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in ##Platform_Name## Pdfviewer control
+# Navigation in Typescript Pdfviewer control
 
 The ASP.NET Core PDF Viewer supports different internal and external navigations.
 

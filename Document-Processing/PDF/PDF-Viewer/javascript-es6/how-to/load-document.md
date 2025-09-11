@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Load document in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Load document in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Load document in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Load document in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Load document
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load document in ##Platform_Name## Pdfviewer control
+# Load document in Typescript Pdfviewer control
 
 The PDF Viewer library allows to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file name in PDF Viewer control using the [**Load()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method dynamically.
 

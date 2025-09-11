@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Measurement annotation in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Measurement annotation in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Measurement annotation in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about Measurement annotation in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement annotation in ##Platform_Name## PDF Viewer control
+# Measurement annotation in Typescript PDF Viewer control
 
 The PDF Viewer provides the options to add measurement annotations. You can measure the page annotations with the help of measurement annotation. The supported measurement annotations in the PDF Viewer control are:
 

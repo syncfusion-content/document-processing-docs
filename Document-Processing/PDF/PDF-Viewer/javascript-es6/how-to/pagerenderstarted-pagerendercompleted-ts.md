@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Rendering events in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about pageRenderInitiate and pageRenderComplete event in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Rendering events in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about pageRenderInitiate and pageRenderComplete event in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
