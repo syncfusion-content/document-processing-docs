@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize text search colors in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Customize text search colors in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize text search colors in Javascript Pdfviewer control | Syncfusion
+description: Learn here all about Customize text search colors in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize text search colors
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize text search colors in ##Platform_Name## Pdfviewer control
+# Customize text search colors in Javascript Pdfviewer control
 
 To change the text search color in the Syncfusion PDF viewer, you can use the **searchColor** property of the searchModule object. This property accepts a string value that represents the color in hexadecimal format.
 

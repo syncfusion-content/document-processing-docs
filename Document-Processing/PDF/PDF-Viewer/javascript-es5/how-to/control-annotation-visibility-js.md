@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Control Annotations Visibility in JavaScript PdfViewer | Syncfusion
-description: Learn how to Control Annotations Visibility in the Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+description: Learn how to Control Annotations Visibility in the Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---

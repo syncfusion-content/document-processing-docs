@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Style and appearance in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn all about style and appearance in the Annotation module in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Style and appearance in Javascript Pdfviewer control | Syncfusion
+description: Learn all about style and appearance in the Annotation module in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in Annotation module ##Platform_Name## Pdfviewer control
+# Style and Appearance in Annotation module Javascript Pdfviewer control
 
 ## Customizing the Highlight icon
 
