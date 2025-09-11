@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Programmatically work with form field in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Programmatically work with form field in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Programmatically work with form field in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Programmatically work with form field in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Programmatically work with form field
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically work with form field in ##Platform_Name## Pdfviewer control
+# Programmatically work with form field in Typescript Pdfviewer control
 
 The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
 

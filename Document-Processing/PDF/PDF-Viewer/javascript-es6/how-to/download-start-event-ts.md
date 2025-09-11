@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Controlling File Downloads in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here how to Controlling File Downloads in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Controlling File Downloads in Typescript Pdfviewer control | Syncfusion
+description: Learn here how to Controlling File Downloads in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

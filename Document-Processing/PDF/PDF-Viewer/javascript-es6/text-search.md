@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text search in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Text search in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Text search in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Text search in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text search
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text search in ##Platform_Name## Pdfviewer control
+# Text search in Typescript Pdfviewer control
 
 The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
 

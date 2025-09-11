@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Save PDF files to Box cloud file storage ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about how to Save PDF files to Box cloud file storage in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save PDF files to Box cloud file storage Typescript Pdfviewer control | Syncfusion
+description: Learn here all about how to Save PDF files to Box cloud file storage in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to Box cloud file storage
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

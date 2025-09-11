@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Saving PDF files ##Platform_Name## Pdfviewer control | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Saving PDF files Typescript Pdfviewer control | Syncfusion
+description: This page helps you to learn here all about saving PDF files in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Saving PDF files
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

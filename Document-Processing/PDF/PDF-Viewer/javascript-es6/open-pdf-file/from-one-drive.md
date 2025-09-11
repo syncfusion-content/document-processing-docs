@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Open PDF files from One Drive in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Open PDF files from One Drive in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Open PDF files from One Drive in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Open PDF files from One Drive in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open PDF files from One Drive
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---

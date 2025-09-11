@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Comments in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Comments in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Comments in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about Comments in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in ##Platform_Name## PDF Viewer control
+# Comments in Typescript PDF Viewer control
 
 The PDF Viewer control provides options to add, edit, and delete the comments to the following annotation in the PDF documents:
 

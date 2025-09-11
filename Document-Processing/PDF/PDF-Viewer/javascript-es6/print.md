@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in ##Platform_Name## Pdfviewer control | Syncfusion
-description: Learn here all about Print in Syncfusion ##Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Print in Typescript Pdfviewer control | Syncfusion
+description: Learn here all about Print in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Print
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Print in ##Platform_Name## Pdfviewer control
+# Print in Typescript Pdfviewer control
 
 The PDF Viewer supports printing the loaded PDF file. You can enable/disable the print using the following code snippet.
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Shape annotation in ##Platform_Name## PDF Viewer control | Syncfusion
-description: Learn here all about Shape annotation in Syncfusion ##Platform_Name## PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Shape annotation in Typescript PDF Viewer control | Syncfusion
+description: Learn here all about Shape annotation in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in ##Platform_Name## PDF Viewer control
+# Shape annotation in Typescript PDF Viewer control
 
 The PDF Viewer control provides the options to add, edit, and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:
 
