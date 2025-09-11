@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Globalization in ##Platform_Name## Pdfviewer Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Globalization in ASP.NET Core Pdfviewer Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Globalization
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

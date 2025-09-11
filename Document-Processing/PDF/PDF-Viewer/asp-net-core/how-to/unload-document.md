@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Unload Document in ##Platform_Name## Pdfviewer Component
-description: Learn here all about Unload Document in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Unload Document in ASP.NET Core Pdfviewer Component
+description: Learn here all about Unload Document in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unload Document
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
