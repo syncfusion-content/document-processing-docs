@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Table Format in ##Platform_Name## Document Editor Component
-description: Learn here all about table format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table Format in ASP.NET MVC Document Editor Component
+description: Learn here all about table format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table Format
 documentation: ug

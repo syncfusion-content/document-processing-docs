@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Security Advisories in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about Security Advisories in  ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Security Advisories in ASP.NET MVC Document Editor Control | Syncfusion
+description: Learn here all about Security Advisories in  ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 control: Security advisories 
 platform: document-processing
 documentation: ug

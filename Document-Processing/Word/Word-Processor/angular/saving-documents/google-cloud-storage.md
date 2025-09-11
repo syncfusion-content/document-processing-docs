@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save document to Google Cloud Storage in ##Platform_Name## Document editor control | Syncfusion
-description:  Learn about how to Save document to Google Cloud Storage in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to Google Cloud Storage in Angular Document editor control | Syncfusion
+description:  Learn about how to Save document to Google Cloud Storage in Angular Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug

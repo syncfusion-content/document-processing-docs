@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Insert text, paragraph and rich-text content in ##Platform_Name## Document Editor Component
-description: Learn how to insert text, paragraph and rich-text content in ##Platform_Name## Document Editor Component
+title: Insert text, paragraph and rich-text content in ASP.NET MVC Document Editor Component
+description: Learn how to insert text, paragraph and rich-text content in ASP.NET MVC Document Editor Component
 platform: document-processing
 control: Insert Text, Paragraph And Rich-Text Content
 documentation: ug

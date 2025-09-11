@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open document from AWS S3 in ##Platform_Name## Document editor control | Syncfusion
-description:  Learn about how to Open document from AWS S3 in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open document from AWS S3 in Vue Document editor control | Syncfusion
+description:  Learn about how to Open document from AWS S3 in Vue Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug

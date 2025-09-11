@@ -2,7 +2,7 @@
 layout: post
 title: Collaborative Editing in Document Editor Control | Syncfusion
 component: DocumentEditor
-description: Learn how to enable and perform the collaborative editing in ##Platform_Name## Syncfusion Document editor Component.
+description: Learn how to enable and perform the collaborative editing in ASP.NET Core Syncfusion Document editor Component.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

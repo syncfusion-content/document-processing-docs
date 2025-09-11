@@ -1,7 +1,7 @@
 ---
 layout: post
-title: List Format in ##Platform_Name## Document Editor Component
-description: Learn here all about List Format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: List Format in ASP.NET MVC Document Editor Component
+description: Learn here all about List Format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: List Format
 documentation: ug

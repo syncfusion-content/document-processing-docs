@@ -28,7 +28,7 @@ BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFo
 
 ## Insert content control
 
-Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertcontentcontrol) method in editor module.
+Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertcontentcontrol) method in editor module.
 
 {% highlight ts %}
 //Insert Rich Text Content Control

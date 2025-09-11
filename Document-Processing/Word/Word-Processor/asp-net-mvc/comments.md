@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Comments in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about comments in Syncfusion ##Platform_Name## Document Editor control of Syncfusion Essential JS 2 and more.
+title: Comments in ASP.NET MVC Document Editor Control | Syncfusion
+description: Learn here all about comments in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments
 documentation: ug

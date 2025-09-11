@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about Import in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about Import in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import
 documentation: ug
 ---
 
 
-# Importing in the ##Platform_Name## Document Editor Component
+# Importing in the ASP.NET MVC Document Editor Component
 
 In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 

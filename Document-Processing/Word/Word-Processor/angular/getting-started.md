@@ -86,7 +86,7 @@ cd my-app
 
 ## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
 
 To install Document Editor component, use the following command.
 
@@ -213,7 +213,7 @@ export class AppComponent implements OnInit {
 
 #### Run the  DocumentEditor application
 
-The quickstart project is configured to compile and run the application in a browser. Use the following command to run the application.
+The quick start project is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```javascript
 ng serve --open

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: View in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about View in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: View in ASP.NET MVC Document Editor Control | Syncfusion
+description: Learn here all about View in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: View
 documentation: ug

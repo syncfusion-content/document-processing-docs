@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Selected Content in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about get the selected content in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Get Selected Content in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about get the selected content in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get The Selected Content
 documentation: ug

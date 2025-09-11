@@ -82,7 +82,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [`npmjs.com`](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
 This article uses the [Vue Document editor component](https://www.syncfusion.com/vue-components/vue-wysiwyg-document-editor) as an example. Install the `@syncfusion/ej2-vue-documenteditor` package by running the following command:
 

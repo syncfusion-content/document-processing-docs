@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header Footer in ##Platform_Name## Document Editor Component
-description: Learn here all about Header Footer in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Header Footer in ASP.NET MVC Document Editor Component
+description: Learn here all about Header Footer in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Header Footer
 documentation: ug

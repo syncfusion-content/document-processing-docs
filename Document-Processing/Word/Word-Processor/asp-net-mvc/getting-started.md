@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with ##Platform_Name## DocumentEditor | Syncfusion
-description: Checkout and learn about getting started with ##Platform_Name## DocumentEditor control of Syncfusion Essential JS 2 and more details.
+title: Getting Started with ASP.NET MVC DocumentEditor | Syncfusion
+description: Checkout and learn about getting started with ASP.NET MVC DocumentEditor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started
 documentation: ug

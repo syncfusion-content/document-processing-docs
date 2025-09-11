@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Retrieve the whole document and bookmark content as text in ##Platform_Name## Document Editor Component
-description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion ##Platform_Name## Document Editor Component
+title: Retrieve the whole document and bookmark content as text in ASP.NET MVC Document Editor Component
+description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion ASP.NET MVC Document Editor Component
 platform: document-processing
 control: Retrieve The Whole Document And Bookmark Content As Text
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Tool Bar in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about how to customize Tool Bar in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Customize Tool Bar in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about how to customize Tool Bar in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Tool Bar
 documentation: ug

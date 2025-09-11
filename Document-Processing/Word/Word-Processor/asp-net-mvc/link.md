@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Link in ##Platform_Name## Document Editor Component
-description: Learn here all about Link in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Link in ASP.NET MVC Document Editor Component
+description: Learn here all about Link in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link
 documentation: ug

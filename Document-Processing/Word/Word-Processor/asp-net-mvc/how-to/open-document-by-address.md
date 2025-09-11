@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Document By Address in ##Platform_Name## Document Editor Component
-description: Learn here all about open document by address in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Open Document By Address in ASP.NET MVC Document Editor Component
+description: Learn here all about open document by address in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open Document By Address
 documentation: ug

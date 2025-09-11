@@ -1,7 +1,7 @@
 ---
 layout: post
 title: how to change the default search highlight color | Syncfusion
-description: Learn how to change the default search highlight color in ##Platform_Name## Syncfusion Document Editor component.
+description: Learn how to change the default search highlight color in ASP.NET Core Syncfusion Document Editor component.
 platform: document-processing
 control: Change The Default Search Highlight Color
 documentation: ug

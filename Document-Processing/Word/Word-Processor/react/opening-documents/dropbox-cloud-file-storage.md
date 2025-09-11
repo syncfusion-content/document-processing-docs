@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open document from Dropbox cloud file storage in ##Platform_Name## Document editor control | Syncfusion
-description: Learn about how to Open document from Dropbox cloud file storage in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open document from Dropbox cloud file storage in React Document editor control | Syncfusion
+description: Learn about how to Open document from Dropbox cloud file storage in React Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug

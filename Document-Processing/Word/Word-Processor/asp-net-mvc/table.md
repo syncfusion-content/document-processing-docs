@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Table in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about table in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about table in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table
 documentation: ug

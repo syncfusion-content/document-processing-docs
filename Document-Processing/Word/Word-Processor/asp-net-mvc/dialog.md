@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dialog in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about dialog in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Dialog in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about dialog in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Dialog
 documentation: ug

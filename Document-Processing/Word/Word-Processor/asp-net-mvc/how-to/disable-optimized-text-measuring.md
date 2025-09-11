@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disable Optimized Text Measuring in ##Platform_Name## Document Editor Component
-description: Learn here all about disable optimized text measuring in Syncfusion ##Platform_Name## Document Editor component of syncfusion and more.
+title: Disable Optimized Text Measuring in ASP.NET MVC Document Editor Component
+description: Learn here all about disable optimized text measuring in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
 platform: document-processing
 control: Disable Optimized Text Measuring
 documentation: ug

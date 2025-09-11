@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Notes in ##Platform_Name## Document Editor Component
-description: Learn here all about notes in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Notes in ASP.NET MVC Document Editor Component
+description: Learn here all about notes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Notes
 documentation: ug

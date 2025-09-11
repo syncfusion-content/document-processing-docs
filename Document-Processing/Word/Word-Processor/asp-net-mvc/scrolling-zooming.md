@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scrolling Zooming in ##Platform_Name## Document Editor Component
-description: Learn here all about scrolling zooming in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Scrolling Zooming in ASP.NET MVC Document Editor Component
+description: Learn here all about scrolling zooming in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling Zooming
 documentation: ug

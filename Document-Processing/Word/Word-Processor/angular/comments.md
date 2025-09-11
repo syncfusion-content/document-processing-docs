@@ -22,7 +22,7 @@ this.documentEditor.editor.insertComment('Test comment');
 
 ## Add a New Comment with Date, Author, and Status
 
-Comments can be inserted into the selected text with a specified date, author, and status [`insertComment`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertcomment).
+Comments can be inserted into the selected text with a specified date, author, and status [`insertComment`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertcomment).
 
 ```typescript
 // In this example, a comment with the text "Hello world"
@@ -46,7 +46,7 @@ this.documentEditor.editor.insertComment('Hello world', commentProperties);
 
 ## Add a Reply Comment with Date, Author, and Status
 
-Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertreplycomment).
+Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertreplycomment).
 
 ```typescript
 // In this example, a comment with the text "Hello world"
@@ -93,7 +93,7 @@ this.documentEditor.selection.navigatePreviousComment();
 
 ## Delete comment
 
-Current comment can be deleted using [`deleteComment`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#deletecomment).
+Current comment can be deleted using [`deleteComment`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#deletecomment).
 
 ```typescript
 //Delete the current selected comment.
@@ -121,7 +121,7 @@ this.documentEditor.editor.deleteAllComments();
 
 Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 

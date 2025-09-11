@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles in ##Platform_Name## Document Editor Component | Syncfusion
-description: Learn here all about styles in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Styles in ASP.NET MVC Document Editor Component | Syncfusion
+description: Learn here all about styles in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Styles
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spell Check in ##Platform_Name## Document Editor Component
-description: Learn here all about spell check in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Spell Check in ASP.NET MVC Document Editor Component
+description: Learn here all about spell check in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spell Check
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy Document Editor For Mobile in ##Platform_Name## | Syncfusion
-description: Learn here all about deploy document editor component for mobile in Syncfusion ##Platform_Name## Document Editor component of syncfusion and more.
+title: Deploy Document Editor For Mobile in ASP.NET MVC | Syncfusion
+description: Learn here all about deploy document editor component for mobile in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
 platform: document-processing
 control: Deploy Document Editor Component For Mobile
 documentation: ug

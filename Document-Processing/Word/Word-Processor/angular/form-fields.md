@@ -16,7 +16,7 @@ DocumentEditorContainer component provide support for inserting Text, CheckBox, 
 
 ## Insert form field
 
-Form fields can be inserted using [`insertFormField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertformfield) method in editor module.
+Form fields can be inserted using [`insertFormField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertformfield) method in editor module.
 
 ```typescript
 //Insert Text form field
@@ -124,7 +124,7 @@ this.documentEditor.resetFormFields();
 
 Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open document from One Drive in ##Platform_Name## Document editor control | Syncfusion
-description: Learn about how to Open document from One Drive in ##Platform_Name## Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open document from One Drive in Vue Document editor control | Syncfusion
+description: Learn about how to Open document from One Drive in Vue Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from One Drive
 documentation: ug
@@ -129,7 +129,7 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 
 ```
 
-N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 

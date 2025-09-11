@@ -19,7 +19,7 @@ Document Editor provides built-in dialog to add, delete, and navigate bookmarks 
 
 ## Add bookmark
 
-Using [`insertBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertbookmark/) method, Bookmark can be added to the selected text.
+Using [`insertBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertbookmark) method, Bookmark can be added to the selected text.
 
 ```csharp
 this.container.documentEditor.editor.insertBookmark("Bookmark1");
@@ -36,7 +36,7 @@ container.documentEditor.selection.selectBookmark("Bookmark1", true);
 
 ## Delete Bookmark
 
-You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#deletebookmark/) method as shown in the following code snippet.
+You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#deletebookmark/) method as shown in the following code snippet.
 
 ```csharp
 this.container.documentEditor.editor.deleteBookmark("Bookmark1");

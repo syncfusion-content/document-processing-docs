@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paragraph Format in ##Platform_Name## Document Editor Control | Syncfusion
-description: Learn here all about paragraph format in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph Format in ASP.NET MVC Document Editor Control | Syncfusion
+description: Learn here all about paragraph format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph Format
 documentation: ug

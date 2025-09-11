@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export PDF Document in ##Platform_Name## Document Editor Component |Syncfusion
-description: Learn here all about export document as PDF in Syncfusion ##Platform_Name## Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export PDF Document in ASP.NET MVC Document Editor Component |Syncfusion
+description: Learn here all about export document as PDF in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
