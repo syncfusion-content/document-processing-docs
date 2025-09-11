@@ -35,7 +35,7 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript/addformfield-cs4/ts/index.html" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/addformfield-cs4/index.html" %}
 
 ## Edit/Update form field programmatically
 
@@ -50,7 +50,7 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript/updateformfield-cs4/ts/index.html" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/updateformfield-cs4/index.html" %}
 
 ## Delete form field programmatically
 
@@ -65,7 +65,7 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript/deleteformfield-cs4/ts/index.html" %}
+{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/deleteformfield-cs4/index.html" %}
 
 ## Saving the form fields
 
