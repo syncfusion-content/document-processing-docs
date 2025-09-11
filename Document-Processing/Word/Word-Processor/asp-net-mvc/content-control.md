@@ -87,7 +87,7 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 
 ## Reset content control
 
-Content control properties can be reset using the `resetcontentcontroldata`
+Content control properties can be reset using the `resetContentControlData`
 
 {% highlight ts %}
 var data = [];

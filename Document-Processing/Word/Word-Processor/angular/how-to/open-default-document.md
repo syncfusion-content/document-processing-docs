@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open default document in Angular Document editor component | Syncfusion
+title: Open default document in Angular DocumentEditor component | Syncfusion
 description: Learn here all about Open default document in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open default document 

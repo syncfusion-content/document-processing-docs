@@ -14,7 +14,7 @@ Document Editor has preservation support for all types of fields in an existing 
 
 ## Adding Fields
 
-You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertfield) method in [`Editor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/) module.
+You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertfield) method in [`Editor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/) module.
 
 The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
 
@@ -58,7 +58,7 @@ let fieldInfo: FieldInfo = this.documentEditor.selection.getFieldInfo();
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/) module.
+You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/) module.
 
 ```typescript
 //Gets the field information for the selected field.

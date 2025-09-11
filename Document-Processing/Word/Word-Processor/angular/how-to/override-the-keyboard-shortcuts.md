@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Override the keyboard shortcuts in Angular Document editor component | Syncfusion
+title: Override the keyboard shortcuts in Angular Document editor| Syncfusion
 description: Learn here all about Override the keyboard shortcuts in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Override the keyboard shortcuts 

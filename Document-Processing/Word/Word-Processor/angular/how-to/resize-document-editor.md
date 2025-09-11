@@ -14,7 +14,7 @@ In this article, we are going to see how to change height and width of Document 
 
 ## Change height of Document Editor
 
-DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/-container/documentEditorContainerModel#height) property, the value which is in pixel.
+DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel#height) property, the value which is in pixel.
 
 The following example code illustrates how to change height of Document Editor.
 
@@ -44,7 +44,7 @@ Similarly, you can use [`height`](https://ej2.syncfusion.com/angular/documentati
 
 ## Change width of Document Editor
 
-DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/-container/documentEditorContainerModel#width) property, the value which is in percent.
+DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel#width) property, the value which is in percent.
 
 The following example code illustrates how to change width of Document Editor.
 
@@ -74,7 +74,7 @@ Similarly, you can use [`width`](https://ej2.syncfusion.com/angular/documentatio
 
 ## Resize Document Editor
 
-Using [`resize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/-container/) method, you change height and width of Document editor.
+Using [`resize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/) method, you change height and width of Document editor.
 
 The following example code illustrates how to fit Document Editor to browser window size.
 

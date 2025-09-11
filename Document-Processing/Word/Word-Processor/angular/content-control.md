@@ -89,7 +89,7 @@ let contentControlInfos: ContentControlInfo[] = this.container.documentEditor.ex
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetcontentcontroldata`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#resetcontentcontroldata)
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];
