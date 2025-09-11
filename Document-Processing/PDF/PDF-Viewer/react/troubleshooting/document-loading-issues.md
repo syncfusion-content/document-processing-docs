@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Document Loading Issues in Version 23.1 or Newer ##Platform_Name## Pdfviewer Component
-description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in ##Platform_Name## Pdfviewer of Syncfusion Essential JS 2 and more.
+title: Document Loading Issues in Version 23.1 or Newer React Pdfviewer Component
+description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in React Pdfviewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: React
 documentation: ug
 ---
 
