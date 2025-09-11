@@ -43,7 +43,7 @@ The PDF Viewer supports printing the loaded PDF file. You can enable/disable the
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/print.png)
+![Alt text](../images/print.png)
 
 ## Customization of Print Quality using printScaleFactor API.
 
