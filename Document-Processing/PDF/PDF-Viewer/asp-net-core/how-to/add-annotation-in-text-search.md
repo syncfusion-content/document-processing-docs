@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Add Annotation in Text Search in ##Platform_Name## | Syncfusion
-description: Learn how to add rectangle annotations using search text bounds in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Add Annotation in Text Search in ASP.NET Core | Syncfusion
+description: Learn how to add rectangle annotations using search text bounds in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Retrieve Annotation Coordinates
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

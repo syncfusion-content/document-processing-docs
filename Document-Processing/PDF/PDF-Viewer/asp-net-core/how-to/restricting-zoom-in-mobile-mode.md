@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Restrict Zoom Percentage in ##Platform_Name## PDF Viewer Component| Syncfusion
-description: Learn here all about how to restrict zoom percentage in Syncfusion ##Platform_Name## PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Restrict Zoom Percentage in ASP.NET Core PDF Viewer Component| Syncfusion
+description: Learn here all about how to restrict zoom percentage in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 

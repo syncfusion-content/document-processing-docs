@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Toolbar in ##Platform_Name## Pdfviewer Component|Syncfusion
-description: Learn here all about Toolbar in Syncfusion ##Platform_Name## Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Toolbar in ASP.NET Core Pdfviewer Component|Syncfusion
+description: Learn here all about Toolbar in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
-publishingplatform: ##Platform_Name##
+publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
