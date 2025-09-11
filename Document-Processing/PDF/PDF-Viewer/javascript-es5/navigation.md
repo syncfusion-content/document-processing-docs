@@ -70,7 +70,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/navigation.png)
+![Alt text](./images/navigation.png)
 
 Also, you can programmatically perform page navigation options as follows.
 
@@ -216,7 +216,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/bookmark.png)
+![Alt text](./images/bookmark.png)
 
 To perform bookmark navigation, you can use the **goToBookmark** method. It's important to note that the **goToBookmark** method will throw an error if the specified bookmark does not exist in the PDF document.
 
@@ -280,13 +280,13 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/thumbnail.png)
+![Alt text](./images/thumbnail.png)
 
 ## Hyperlink navigation
 
 Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
 
-![Alt text](../images/link.png)
+![Alt text](./images/link.png)
 
 ## Table of content navigation
 
@@ -347,7 +347,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endtabs %}
 ```
 
-![Alt text](../images/toc.png)
+![Alt text](./images/toc.png)
 
 ## See also
 
