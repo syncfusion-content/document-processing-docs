@@ -55,4 +55,4 @@ export class AppComponent {
 
 You can download the complete working example from this [GitHub location](https://github.com/SyncfusionExamples/Deploy-Document-Editor-in-Mobile-Friendly-Web-page/)
 
->Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
+>Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
